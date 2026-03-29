@@ -49,6 +49,37 @@ async function fetchServeurPriveVotes(): Promise<{ today: number; week: number }
   return { today: 0, week: 0 }
 }
 
+async function fetchTopServeursVotes(): Promise<{ today: number; month: number }> {
+  try {
+    const res = await fetch('https://top-serveurs.net/minecraft/serveur-create-france', { headers })
+    const html = await res.text()
+
+    let today = 0
+    let month = 0
+
+    // Weekly data: "Votes","data":[13,21,22,35,56,72,5] -> dernier = aujourd'hui (Dimanche)
+    // Les jours sont Lundi->Dimanche, le dernier correspond au jour actuel de la semaine
+    const weeklyMatch = html.match(/"weekly"[\s\S]*?"Votes"[^[]*\[([\d,]+)\]/)
+    if (weeklyMatch) {
+      const values = weeklyMatch[1].split(',').map(Number)
+      // Le jour actuel = index basé sur le jour de la semaine (0=Lundi, 6=Dimanche)
+      const dayIndex = (new Date().getDay() + 6) % 7 // JS: 0=Dim -> converti en 6
+      today = values[dayIndex] || 0
+    }
+
+    // Monthly data: "Votes","data":[691,163,329,0,...] -> index = mois-1
+    const monthlyMatch = html.match(/"monthly"[\s\S]*?"Votes"[^[]*\[([\d,]+)\]/)
+    if (monthlyMatch) {
+      const values = monthlyMatch[1].split(',').map(Number)
+      const currentMonth = new Date().getMonth() // 0-based
+      month = values[currentMonth] || 0
+    }
+
+    return { today, month }
+  } catch {}
+  return { today: 0, month: 0 }
+}
+
 export default defineEventHandler(async () => {
   const now = Date.now()
 
@@ -56,17 +87,18 @@ export default defineEventHandler(async () => {
     return cached
   }
 
-  const [lsm, sp] = await Promise.all([
+  const [lsm, sp, ts] = await Promise.all([
     fetchListeServeursVotes(),
     fetchServeurPriveVotes(),
+    fetchTopServeursVotes(),
   ])
 
   const d = new Date()
   const today = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0')
 
   cached = {
-    votesToday: lsm.today + sp.today,
-    votesMonth: lsm.month + sp.week,
+    votesToday: lsm.today + sp.today + ts.today,
+    votesMonth: lsm.month + sp.week + ts.month,
     date: today,
   }
   cacheTimestamp = now
