@@ -3,7 +3,17 @@ export function useServerStats() {
   const votesToday = ref('--')
   const totalVotes = ref('--')
 
-  async function fetchLiveStats() {
+  async function fetchPlayerCount() {
+    try {
+      const res = await fetch('/api/server-status')
+      const data = await res.json()
+      playersOnline.value = String(data.players ?? 0)
+    } catch {
+      playersOnline.value = '--'
+    }
+  }
+
+  async function fetchDailyVotes() {
     const apiUrl = 'https://www.liste-serveurs-minecraft.org/wp-content/themes/DL/mcstat-master/stats/207127.json'
 
     let data: Record<string, any> | null = null
@@ -16,7 +26,6 @@ export function useServerStats() {
         const res = await fetch('https://api.allorigins.win/raw?url=' + encodeURIComponent(apiUrl))
         data = await res.json()
       } catch {
-        playersOnline.value = '--'
         votesToday.value = '--'
         return
       }
@@ -24,9 +33,6 @@ export function useServerStats() {
 
     try {
       const keys = Object.keys(data!).sort()
-      const latest = data![keys[keys.length - 1]]
-      playersOnline.value = String(latest.maxplayers || '0')
-
       const now = new Date()
       const today = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0')
       let dayVotes = 0
@@ -35,7 +41,6 @@ export function useServerStats() {
       })
       votesToday.value = String(dayVotes)
     } catch {
-      playersOnline.value = '--'
       votesToday.value = '--'
     }
   }
@@ -52,15 +57,19 @@ export function useServerStats() {
     }
   }, { immediate: true })
 
-  let interval: ReturnType<typeof setInterval> | null = null
+  let playerInterval: ReturnType<typeof setInterval> | null = null
+  let votesInterval: ReturnType<typeof setInterval> | null = null
 
   onMounted(() => {
-    fetchLiveStats()
-    interval = setInterval(fetchLiveStats, 60000)
+    fetchPlayerCount()
+    fetchDailyVotes()
+    playerInterval = setInterval(fetchPlayerCount, 30000) // 30s
+    votesInterval = setInterval(fetchDailyVotes, 60000)   // 60s
   })
 
   onUnmounted(() => {
-    if (interval) clearInterval(interval)
+    if (playerInterval) clearInterval(playerInterval)
+    if (votesInterval) clearInterval(votesInterval)
   })
 
   return { playersOnline, votesToday, totalVotes }
