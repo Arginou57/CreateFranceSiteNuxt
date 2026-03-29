@@ -27,7 +27,10 @@
         <svg class="bento-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-6 0v4"/><rect x="2" y="9" width="20" height="12" rx="2"/><line x1="12" y1="14" x2="12" y2="17"/></svg>
         <div class="bento-stat-value">{{ totalVotes }}</div>
         <div class="bento-stat-label">Votes total</div>
-        <div class="bento-votes-today">{{ votesToday }} aujourd'hui</div>
+        <div class="bento-votes-details">
+          <span class="bento-votes-today">{{ votesToday }} aujourd'hui</span>
+          <span class="bento-votes-month">{{ votesMonth }} ce mois</span>
+        </div>
       </a>
 
       <!-- Boutique (scroll vers grades) -->
@@ -68,7 +71,7 @@
 </template>
 
 <script setup lang="ts">
-const { playersOnline, votesToday, totalVotes } = useServerStats()
+const { playersOnline, votesToday, votesMonth, totalVotes } = useServerStats()
 const { downloads: curseforgeDownloads } = useCurseForgeStats()
 
 const ipCopied = ref(false)
@@ -172,8 +175,16 @@ onMounted(() => {
 .bento-votes { grid-column: 3 / 5; grid-row: 2; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; color: inherit; }
 .bento-votes:hover { border-color: rgba(212, 118, 78, 0.25); }
 
+.bento-votes-details {
+    display: flex; gap: 0.8rem; margin-top: 0.3rem; align-items: center;
+}
+
 .bento-votes-today {
-    font-size: 0.72rem; color: var(--sauge); margin-top: 0.3rem; font-weight: 500;
+    font-size: 0.72rem; color: var(--sauge); font-weight: 500;
+}
+
+.bento-votes-month {
+    font-size: 0.72rem; color: var(--mandarine); font-weight: 500;
 }
 
 .bento-live-dot {

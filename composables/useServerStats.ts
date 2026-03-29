@@ -1,6 +1,7 @@
 export function useServerStats() {
   const playersOnline = ref('--')
   const votesToday = ref('--')
+  const votesMonth = ref('--')
   const totalVotes = ref('--')
 
   async function fetchPlayerCount() {
@@ -18,8 +19,10 @@ export function useServerStats() {
       const res = await fetch('/api/daily-votes')
       const data = await res.json()
       votesToday.value = String(data.votesToday ?? 0)
+      votesMonth.value = String(data.votesMonth ?? 0)
     } catch {
       votesToday.value = '--'
+      votesMonth.value = '--'
     }
   }
 
@@ -50,5 +53,5 @@ export function useServerStats() {
     if (votesInterval) clearInterval(votesInterval)
   })
 
-  return { playersOnline, votesToday, totalVotes }
+  return { playersOnline, votesToday, votesMonth, totalVotes }
 }
