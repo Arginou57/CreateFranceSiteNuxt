@@ -11,7 +11,7 @@ export function useCurseForgeStats() {
       const count = (val as any).downloads as number
       downloads.value = count.toLocaleString('fr-FR') + '+'
     }
-  })
+  }, { immediate: true })
 
   return { downloads }
 }
