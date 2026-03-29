@@ -38,6 +38,9 @@ export default defineNuxtConfig({
         { property: 'og:image', content: '/images/fond.png' },
         { property: 'og:type', content: 'website' },
       ],
+      link: [
+        { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+      ],
       script: [
         {
           src: 'https://www.paypal.com/sdk/js?client-id=AS93E-_QKCB8stw2HU5dxk4c6WjAI_Qbyp8fa5iIoPbHEtXPfhLmpP4qPgccCVIw5k4PK10gGz78eopO&vault=true&intent=subscription',
