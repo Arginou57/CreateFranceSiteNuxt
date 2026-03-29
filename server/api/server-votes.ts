@@ -22,8 +22,18 @@ async function fetchServeurPrive(): Promise<number> {
   try {
     const res = await fetch('https://serveur-prive.net/minecraft/serveur-create-france', { headers })
     const html = await res.text()
-    // Cherche "Votes total" ou le total dans la page
     const match = html.match(/Votes?\s*(?:total)?\s*[:：]\s*([\d\s]+)/i)
+    if (match) return parseInt(match[1].replace(/\s/g, ''), 10)
+  } catch {}
+  return 0
+}
+
+async function fetchTopServeurs(): Promise<number> {
+  try {
+    const res = await fetch('https://top-serveurs.net/minecraft/serveur-create-france', { headers })
+    const html = await res.text()
+    // Cherche "5722 votes" dans la page
+    const match = html.match(/([\d\s]+)\s*votes/i)
     if (match) return parseInt(match[1].replace(/\s/g, ''), 10)
   } catch {}
   return 0
@@ -36,13 +46,17 @@ export default defineEventHandler(async () => {
     return { totalVotes: cachedVotes }
   }
 
-  const [lsm, sp] = await Promise.all([fetchListeServeurs(), fetchServeurPrive()])
+  const [lsm, sp, ts] = await Promise.all([
+    fetchListeServeurs(),
+    fetchServeurPrive(),
+    fetchTopServeurs(),
+  ])
 
-  const total = lsm + sp
+  const total = lsm + sp + ts
   if (total > 0) {
     cachedVotes = total
     cacheTimestamp = now
   }
 
-  return { totalVotes: cachedVotes ?? 680 }
+  return { totalVotes: cachedVotes ?? 6400 }
 })
