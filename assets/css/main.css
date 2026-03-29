@@ -1,0 +1,70 @@
+/* ========================================
+   CREATE FRANCE - VARIABLES & GLOBAL
+   ======================================== */
+
+:root {
+    --bg: #1C1816;
+    --bg-lighter: #231F1C;
+    --bg-card: rgba(255, 255, 255, 0.04);
+    --bg-card-hover: rgba(255, 255, 255, 0.07);
+    --glass: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(212, 118, 78, 0.1);
+    --terre-cuite: #D4764E;
+    --terre-cuite-light: #E8926A;
+    --terre-cuite-dark: #B05A35;
+    --sauge: #8FAE8B;
+    --sauge-dark: #6E9468;
+    --mandarine: #F2A65A;
+    --mandarine-light: #F7BE82;
+    --accent-gold: #E8A030;
+    --text-primary: #F0E8E0;
+    --text-secondary: #A89A90;
+    --text-muted: #6A5E56;
+    --border: rgba(212, 118, 78, 0.08);
+    --border-light: rgba(255, 255, 255, 0.04);
+    --shadow: rgba(0, 0, 0, 0.2);
+    --shadow-md: rgba(0, 0, 0, 0.3);
+    --discord: #5865F2;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+/* ========================================
+   SHARED ANIMATIONS
+   ======================================== */
+
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+@keyframes piston-pump { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(20px); } }
+@keyframes steam-rise { 0% { opacity: 0.5; transform: translateY(0) scale(1); } 100% { opacity: 0; transform: translateY(-30px) scale(2); } }
+@keyframes belt-move { from { transform: translateX(0); } to { transform: translateX(-28px); } }
+@keyframes box-travel { 0%{left:calc(100% + 16px);height:14px;top:-14px;opacity:0} 5%{opacity:1} 40%{left:calc(50% - 7px);height:14px;top:-14px} 50%{left:calc(50% - 9px);height:5px;width:18px;top:-5px} 55%{left:calc(50% - 9px);height:5px;width:18px;top:-5px} 90%{left:-20px;height:5px;width:18px;top:-5px;opacity:1} 95%{opacity:0} 100%{left:-20px;height:5px;top:-5px;opacity:0} }
+@keyframes sleepers-scroll { from { transform: translateX(0); } to { transform: translateX(25px); } }
+@keyframes train-rock { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-1px); } }
+@keyframes train-smoke-rise { 0%{opacity:.5;transform:translateY(0) translateX(0) scale(1)} 100%{opacity:0;transform:translateY(-45px) translateX(-20px) scale(3)} }
+@keyframes rod-pump { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(3px); } }
+@keyframes discord-pulse { 0%, 100% { box-shadow: 0 4px 15px rgba(88,101,242,0.3); } 50% { box-shadow: 0 4px 25px rgba(88,101,242,0.45), 0 0 0 8px rgba(88,101,242,0.06); } }
+@keyframes curseforge-pulse { 0%, 100% { box-shadow: 0 4px 15px rgba(241,100,54,0.3); } 50% { box-shadow: 0 4px 25px rgba(241,100,54,0.45), 0 0 0 8px rgba(241,100,54,0.06); } }
+
+/* ========================================
+   SECTION TITLES (shared)
+   ======================================== */
+
+.section-title {
+    font-family: 'Orbitron', sans-serif; font-size: clamp(1.4rem, 2.5vw, 2rem);
+    text-align: center; color: var(--terre-cuite); text-transform: uppercase;
+    letter-spacing: 2px; margin-bottom: 0.6rem; font-weight: 700;
+}
+
+.section-subtitle {
+    text-align: center; color: var(--text-secondary); font-size: 0.9rem;
+    margin-bottom: 3.5rem; font-weight: 300;
+}
