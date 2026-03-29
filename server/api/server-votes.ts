@@ -4,6 +4,31 @@ let cachedVotes: number | null = null
 let cacheTimestamp = 0
 const CACHE_DURATION = 10 * 60 * 1000 // 10 minutes
 
+const headers = {
+  'User-Agent': 'Mozilla/5.0 (compatible; CreateFranceBot/1.0)',
+}
+
+async function fetchListeServeurs(): Promise<number> {
+  try {
+    const res = await fetch('https://www.liste-serveurs-minecraft.org/?s=create+france', { headers })
+    const html = await res.text()
+    const match = html.match(/fa-thumbs-up[^>]*><\/i>\s*([\d\s]+)/)
+    if (match) return parseInt(match[1].replace(/\s/g, ''), 10)
+  } catch {}
+  return 0
+}
+
+async function fetchServeurPrive(): Promise<number> {
+  try {
+    const res = await fetch('https://serveur-prive.net/minecraft/serveur-create-france', { headers })
+    const html = await res.text()
+    // Cherche "Votes total" ou le total dans la page
+    const match = html.match(/Votes?\s*(?:total)?\s*[:：]\s*([\d\s]+)/i)
+    if (match) return parseInt(match[1].replace(/\s/g, ''), 10)
+  } catch {}
+  return 0
+}
+
 export default defineEventHandler(async () => {
   const now = Date.now()
 
@@ -11,25 +36,13 @@ export default defineEventHandler(async () => {
     return { totalVotes: cachedVotes }
   }
 
-  try {
-    const res = await fetch(
-      'https://www.liste-serveurs-minecraft.org/?s=create+france',
-      {
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (compatible; CreateFranceBot/1.0)',
-        },
-      }
-    )
-    const html = await res.text()
-    // Cherche le nombre de votes dans le HTML (ex: <i class="fa fa-thumbs-up" ...></i> 333)
-    const match = html.match(/fa-thumbs-up[^>]*><\/i>\s*([\d\s]+)/)
-    if (match) {
-      cachedVotes = parseInt(match[1].replace(/\s/g, ''), 10)
-      cacheTimestamp = now
-      return { totalVotes: cachedVotes }
-    }
-    return { totalVotes: cachedVotes ?? 333 }
-  } catch {
-    return { totalVotes: cachedVotes ?? 333 }
+  const [lsm, sp] = await Promise.all([fetchListeServeurs(), fetchServeurPrive()])
+
+  const total = lsm + sp
+  if (total > 0) {
+    cachedVotes = total
+    cacheTimestamp = now
   }
+
+  return { totalVotes: cachedVotes ?? 680 }
 })
