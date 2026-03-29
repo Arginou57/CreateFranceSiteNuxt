@@ -1,6 +1,7 @@
 export function useServerStats() {
   const playersOnline = ref('--')
   const votesToday = ref('--')
+  const totalVotes = ref('--')
 
   async function fetchLiveStats() {
     const apiUrl = 'https://www.liste-serveurs-minecraft.org/wp-content/themes/DL/mcstat-master/stats/207127.json'
@@ -28,16 +29,28 @@ export function useServerStats() {
 
       const now = new Date()
       const today = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0')
-      let totalVotes = 0
+      let dayVotes = 0
       keys.forEach(k => {
-        if (k.startsWith(today) && data![k].votes) totalVotes += data![k].votes
+        if (k.startsWith(today) && data![k].votes) dayVotes += data![k].votes
       })
-      votesToday.value = String(totalVotes)
+      votesToday.value = String(dayVotes)
     } catch {
       playersOnline.value = '--'
       votesToday.value = '--'
     }
   }
+
+  // Fetch total votes via server proxy
+  const { data: votesData } = useFetch('/api/server-votes', {
+    server: true,
+    lazy: true,
+  })
+
+  watch(votesData, (val) => {
+    if (val && (val as any).totalVotes) {
+      totalVotes.value = String((val as any).totalVotes)
+    }
+  }, { immediate: true })
 
   let interval: ReturnType<typeof setInterval> | null = null
 
@@ -50,5 +63,5 @@ export function useServerStats() {
     if (interval) clearInterval(interval)
   })
 
-  return { playersOnline, votesToday }
+  return { playersOnline, votesToday, totalVotes }
 }
