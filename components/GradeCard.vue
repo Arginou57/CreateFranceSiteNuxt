@@ -15,6 +15,10 @@
         <span class="perk-icon">&#9881;</span> {{ perk }}
       </li>
     </ul>
+    <div class="donate-notice">
+      <span class="notice-icon">&#9888;</span>
+      Avant de vous abonner, merci d'envoyer un message à <strong>arginouhastag9106</strong> sur Discord.
+    </div>
     <div :id="`paypal-button-container-${planId}`" class="paypal-container"></div>
   </div>
 </template>
@@ -110,6 +114,15 @@ onMounted(() => {
 .perks-list li { display: flex; align-items: center; gap: 0.6rem; padding: 0.5rem 0; color: var(--text-secondary); font-size: 0.85rem; border-bottom: 1px solid var(--border-light); font-weight: 300; }
 .perks-list li:last-child { border-bottom: none; }
 .perk-icon { color: var(--terre-cuite); font-size: 0.7rem; flex-shrink: 0; }
+
+.donate-notice {
+    display: flex; align-items: flex-start; gap: 0.5rem;
+    background: rgba(242, 166, 90, 0.08); border: 1px solid rgba(242, 166, 90, 0.25);
+    border-radius: 8px; padding: 0.6rem 0.8rem; margin-bottom: 0.8rem;
+    font-size: 0.78rem; color: var(--text-secondary); line-height: 1.4;
+}
+.donate-notice .notice-icon { color: var(--mandarine); font-size: 0.9rem; flex-shrink: 0; margin-top: 0.1rem; }
+.donate-notice strong { color: var(--terre-cuite); }
 
 .paypal-container { position: relative; z-index: 3; margin-top: 0.5rem; }
 
