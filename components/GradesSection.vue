@@ -2,6 +2,10 @@
   <section id="grades" class="grades-section">
     <h2 class="section-title">Soutenir le Serveur</h2>
     <p class="section-subtitle">Choisissez votre grade et aidez-nous a faire tourner les engrenages !</p>
+    <div class="donate-notice">
+      <span class="notice-icon">&#9888;</span>
+      <span>Avant de vous abonner, merci d'envoyer un message à <strong>arginouhastag9106</strong> sur Discord afin de recevoir votre grade.</span>
+    </div>
     <div class="grades-container">
       <GradeCard
         v-for="grade in grades"
@@ -84,6 +88,16 @@ onMounted(() => {
 .grades-section { position: relative; z-index: 2; padding: 5rem 2rem; max-width: 1100px; margin: 0 auto; }
 
 .grades-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; align-items: start; }
+
+.donate-notice {
+    display: flex; align-items: center; gap: 0.6rem;
+    background: rgba(242, 166, 90, 0.08); border: 1px solid rgba(242, 166, 90, 0.25);
+    border-radius: 10px; padding: 0.8rem 1.2rem; margin-bottom: 2rem;
+    font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;
+    text-align: left;
+}
+.donate-notice .notice-icon { color: var(--mandarine); font-size: 1.2rem; flex-shrink: 0; }
+.donate-notice strong { color: var(--terre-cuite); }
 
 @media (max-width: 768px) {
     .grades-container { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
