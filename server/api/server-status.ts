@@ -1,4 +1,5 @@
 import { defineEventHandler } from 'h3'
+import { recordPlayers } from '../utils/playerHistory'
 
 let cached: { players: number; max: number } | null = null
 let cacheTimestamp = 0
@@ -25,6 +26,7 @@ export default defineEventHandler(async () => {
     }
 
     cacheTimestamp = now
+    recordPlayers(cached.players)
     return cached
   } catch {
     return cached ?? { players: 0, max: 0 }

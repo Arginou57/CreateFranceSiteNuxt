@@ -13,7 +13,7 @@
       </div>
 
       <!-- Joueurs en ligne (live) -->
-      <div class="bento-card bento-players" ref="cards">
+      <div class="bento-card bento-players" ref="cards" @click="showPlayerChart = true">
         <div class="bento-card-bg"></div>
         <div class="bento-live-dot"></div>
         <div class="bento-stat-value">{{ playersOnline }}</div>
@@ -67,6 +67,8 @@
       </div>
 
     </div>
+
+    <PlayerChart v-if="showPlayerChart" @close="showPlayerChart = false" />
   </header>
 </template>
 
@@ -75,6 +77,7 @@ const { playersOnline, votesToday, votesMonth, totalVotes } = useServerStats()
 const { downloads: curseforgeDownloads } = useCurseForgeStats()
 
 const ipCopied = ref(false)
+const showPlayerChart = ref(false)
 
 function copyIp() {
   navigator.clipboard.writeText('play.createfrance.fr').then(() => {
@@ -171,7 +174,7 @@ onMounted(() => {
 .bento-main p { color: var(--text-secondary); font-size: 0.95rem; font-weight: 300; max-width: 300px; }
 
 /* Cartes stats */
-.bento-players { grid-column: 3 / 5; grid-row: 1; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.bento-players { grid-column: 3 / 5; grid-row: 1; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; }
 .bento-votes { grid-column: 3 / 5; grid-row: 2; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; color: inherit; }
 .bento-votes:hover { border-color: rgba(212, 118, 78, 0.25); }
 
