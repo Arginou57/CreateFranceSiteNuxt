@@ -4,7 +4,7 @@
     <p class="section-subtitle">Choisissez votre grade et aidez-nous a faire tourner les engrenages !</p>
     <div class="donate-notice">
       <span class="notice-icon">&#9888;</span>
-      <span>Avant de vous abonner, merci d'envoyer un message à <strong>arginouhastag9106</strong> sur Discord afin de recevoir votre grade.</span>
+      <span>Avant de vous abonner, merci d'envoyer un message à <strong>arginou#9106</strong> sur Discord afin de recevoir votre grade.</span>
     </div>
     <div class="grades-container">
       <GradeCard
