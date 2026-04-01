@@ -3,7 +3,16 @@
     <div class="chart-overlay" @click.self="$emit('close')">
       <div class="chart-modal">
         <button class="chart-close" @click="$emit('close')">&times;</button>
-        <h3 class="chart-title">Joueurs en ligne — 24h</h3>
+        <h3 class="chart-title">Joueurs en ligne</h3>
+        <div class="chart-range-bar">
+          <button
+            v-for="r in ranges"
+            :key="r.key"
+            class="chart-range-btn"
+            :class="{ active: activeRange === r.key }"
+            @click="setRange(r.key)"
+          >{{ r.label }}</button>
+        </div>
         <div class="chart-container">
           <canvas ref="canvasRef"></canvas>
         </div>
@@ -21,10 +30,42 @@ interface PlayerRecord {
   players: number
 }
 
+type RangeKey = '24h' | '7d' | '30d'
+
+const ranges = [
+  { key: '24h' as RangeKey, label: '24h', ms: 24 * 60 * 60 * 1000 },
+  { key: '7d' as RangeKey, label: '7 jours', ms: 7 * 24 * 60 * 60 * 1000 },
+  { key: '30d' as RangeKey, label: '1 mois', ms: 30 * 24 * 60 * 60 * 1000 },
+]
+
 const canvasRef = ref<HTMLCanvasElement | null>(null)
 const noData = ref(false)
+const activeRange = ref<RangeKey>('24h')
+let allData: PlayerRecord[] = []
 
-function drawChart(canvas: HTMLCanvasElement, data: PlayerRecord[]) {
+function filterData(data: PlayerRecord[], rangeKey: RangeKey): PlayerRecord[] {
+  const range = ranges.find(r => r.key === rangeKey)!
+  const cutoff = Date.now() - range.ms
+  return data.filter(d => d.time >= cutoff)
+}
+
+function formatXLabel(time: number, rangeKey: RangeKey): string {
+  const date = new Date(time)
+  if (rangeKey === '24h') {
+    return `${date.getHours()}h`
+  }
+  return `${date.getDate()}/${date.getMonth() + 1}`
+}
+
+function getXLabelKey(time: number, rangeKey: RangeKey): string {
+  const date = new Date(time)
+  if (rangeKey === '24h') {
+    return `${date.getHours()}`
+  }
+  return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
+}
+
+function drawChart(canvas: HTMLCanvasElement, data: PlayerRecord[], rangeKey: RangeKey) {
   const ctx = canvas.getContext('2d')
   if (!ctx) return
 
@@ -80,25 +121,22 @@ function drawChart(canvas: HTMLCanvasElement, data: PlayerRecord[]) {
     ctx.fillText(String(val), pad.left - 8, y)
   }
 
-  // Labels X (heures)
+  // Labels X
   ctx.textAlign = 'center'
   ctx.textBaseline = 'top'
-  const hours = new Set<string>()
+  const seenKeys = new Set<string>()
+  const labelPositions: { x: number; label: string }[] = []
   for (const d of data) {
-    const date = new Date(d.time)
-    hours.add(`${date.getHours()}:00`)
+    const key = getXLabelKey(d.time, rangeKey)
+    if (seenKeys.has(key)) continue
+    seenKeys.add(key)
+    labelPositions.push({ x: toX(d.time), label: formatXLabel(d.time, rangeKey) })
   }
-  const uniqueHours = [...hours]
-  const maxLabels = Math.min(uniqueHours.length, 8)
-  const step = Math.max(1, Math.floor(uniqueHours.length / maxLabels))
-  for (let i = 0; i < data.length; i++) {
-    const date = new Date(data[i].time)
-    const label = `${date.getHours()}h`
-    const hourKey = `${date.getHours()}:00`
-    if (i > 0 && new Date(data[i - 1].time).getHours() === date.getHours()) continue
-    const hourIndex = uniqueHours.indexOf(hourKey)
-    if (hourIndex % step !== 0) continue
-    ctx.fillText(label, toX(data[i].time), pad.top + chartH + 8)
+  const maxLabels = 8
+  const step = Math.max(1, Math.floor(labelPositions.length / maxLabels))
+  for (let i = 0; i < labelPositions.length; i++) {
+    if (i % step !== 0) continue
+    ctx.fillText(labelPositions[i].label, labelPositions[i].x, pad.top + chartH + 8)
   }
 
   // Area fill gradient
@@ -128,8 +166,12 @@ function drawChart(canvas: HTMLCanvasElement, data: PlayerRecord[]) {
   ctx.lineCap = 'round'
   ctx.stroke()
 
-  // Points
-  for (const d of data) {
+  // Points (limiter pour ne pas surcharger sur 7j/30j)
+  const maxPoints = 80
+  const pointStep = Math.max(1, Math.floor(data.length / maxPoints))
+  for (let i = 0; i < data.length; i++) {
+    if (i % pointStep !== 0 && i !== data.length - 1) continue
+    const d = data[i]
     ctx.beginPath()
     ctx.arc(toX(d.time), toY(d.players), 3, 0, Math.PI * 2)
     ctx.fillStyle = '#D4764E'
@@ -140,12 +182,21 @@ function drawChart(canvas: HTMLCanvasElement, data: PlayerRecord[]) {
   }
 }
 
+function redraw() {
+  if (!canvasRef.value) return
+  const filtered = filterData(allData, activeRange.value)
+  drawChart(canvasRef.value, filtered, activeRange.value)
+}
+
+function setRange(key: RangeKey) {
+  activeRange.value = key
+  redraw()
+}
+
 async function loadAndDraw() {
   try {
-    const data = await $fetch<PlayerRecord[]>('/api/player-history')
-    if (canvasRef.value) {
-      drawChart(canvasRef.value, data)
-    }
+    allData = await $fetch<PlayerRecord[]>('/api/player-history')
+    redraw()
   } catch {
     noData.value = true
   }
@@ -153,11 +204,11 @@ async function loadAndDraw() {
 
 onMounted(() => {
   loadAndDraw()
-  window.addEventListener('resize', loadAndDraw)
+  window.addEventListener('resize', redraw)
 })
 
 onUnmounted(() => {
-  window.removeEventListener('resize', loadAndDraw)
+  window.removeEventListener('resize', redraw)
 })
 </script>
 
@@ -208,7 +259,37 @@ onUnmounted(() => {
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--terre-cuite, #D4764E);
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.8rem 0;
+}
+
+.chart-range-bar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 1rem;
+}
+
+.chart-range-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0.3rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.chart-range-btn:hover {
+  border-color: rgba(212, 118, 78, 0.3);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.chart-range-btn.active {
+  background: rgba(212, 118, 78, 0.15);
+  border-color: rgba(212, 118, 78, 0.4);
+  color: #D4764E;
 }
 
 .chart-container {
