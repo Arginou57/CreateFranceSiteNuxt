@@ -65,6 +65,26 @@ function getXLabelKey(time: number, rangeKey: RangeKey): string {
   return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
 }
 
+function getGapThreshold(rangeKey: RangeKey): number {
+  // Seuil pour considérer un trou dans les données (pas de trait diagonal)
+  if (rangeKey === '24h') return 5 * 60 * 1000       // 5 min
+  if (rangeKey === '7d') return 30 * 60 * 1000        // 30 min
+  return 2 * 60 * 60 * 1000                            // 2h
+}
+
+function splitSegments(data: PlayerRecord[], gapThreshold: number): PlayerRecord[][] {
+  if (data.length === 0) return []
+  const segments: PlayerRecord[][] = [[data[0]]]
+  for (let i = 1; i < data.length; i++) {
+    if (data[i].time - data[i - 1].time > gapThreshold) {
+      segments.push([data[i]])
+    } else {
+      segments[segments.length - 1].push(data[i])
+    }
+  }
+  return segments
+}
+
 function drawChart(canvas: HTMLCanvasElement, data: PlayerRecord[], rangeKey: RangeKey) {
   const ctx = canvas.getContext('2d')
   if (!ctx) return
@@ -139,46 +159,58 @@ function drawChart(canvas: HTMLCanvasElement, data: PlayerRecord[], rangeKey: Ra
     ctx.fillText(labelPositions[i].label, labelPositions[i].x, pad.top + chartH + 8)
   }
 
+  // Découper les données en segments (couper aux trous)
+  const gapThreshold = getGapThreshold(rangeKey)
+  const segments = splitSegments(data, gapThreshold)
+
   // Area fill gradient
   const grad = ctx.createLinearGradient(0, pad.top, 0, pad.top + chartH)
   grad.addColorStop(0, 'rgba(212, 118, 78, 0.35)')
   grad.addColorStop(1, 'rgba(212, 118, 78, 0.02)')
 
-  ctx.beginPath()
-  ctx.moveTo(toX(data[0].time), toY(0))
-  for (const d of data) {
-    ctx.lineTo(toX(d.time), toY(d.players))
-  }
-  ctx.lineTo(toX(data[data.length - 1].time), toY(0))
-  ctx.closePath()
-  ctx.fillStyle = grad
-  ctx.fill()
+  // Dessiner chaque segment séparément (pas de trait diagonal entre segments)
+  for (const seg of segments) {
+    if (seg.length < 2) continue
 
-  // Ligne de la courbe
-  ctx.beginPath()
-  ctx.moveTo(toX(data[0].time), toY(data[0].players))
-  for (let i = 1; i < data.length; i++) {
-    ctx.lineTo(toX(data[i].time), toY(data[i].players))
-  }
-  ctx.strokeStyle = '#D4764E'
-  ctx.lineWidth = 2.5
-  ctx.lineJoin = 'round'
-  ctx.lineCap = 'round'
-  ctx.stroke()
-
-  // Points (limiter pour ne pas surcharger sur 7j/30j)
-  const maxPoints = 80
-  const pointStep = Math.max(1, Math.floor(data.length / maxPoints))
-  for (let i = 0; i < data.length; i++) {
-    if (i % pointStep !== 0 && i !== data.length - 1) continue
-    const d = data[i]
+    // Area fill pour ce segment
     ctx.beginPath()
-    ctx.arc(toX(d.time), toY(d.players), 3, 0, Math.PI * 2)
-    ctx.fillStyle = '#D4764E'
+    ctx.moveTo(toX(seg[0].time), toY(0))
+    for (const d of seg) {
+      ctx.lineTo(toX(d.time), toY(d.players))
+    }
+    ctx.lineTo(toX(seg[seg.length - 1].time), toY(0))
+    ctx.closePath()
+    ctx.fillStyle = grad
     ctx.fill()
-    ctx.strokeStyle = 'rgba(28, 24, 22, 0.8)'
-    ctx.lineWidth = 1.5
+
+    // Ligne de la courbe pour ce segment
+    ctx.beginPath()
+    ctx.moveTo(toX(seg[0].time), toY(seg[0].players))
+    for (let i = 1; i < seg.length; i++) {
+      ctx.lineTo(toX(seg[i].time), toY(seg[i].players))
+    }
+    ctx.strokeStyle = '#D4764E'
+    ctx.lineWidth = 2.5
+    ctx.lineJoin = 'round'
+    ctx.lineCap = 'round'
     ctx.stroke()
+  }
+
+  // Points : uniquement sur la vue 1 mois (trop chargé sur 24h/7j)
+  if (rangeKey === '30d') {
+    const maxPoints = 60
+    const pointStep = Math.max(1, Math.floor(data.length / maxPoints))
+    for (let i = 0; i < data.length; i++) {
+      if (i % pointStep !== 0 && i !== data.length - 1) continue
+      const d = data[i]
+      ctx.beginPath()
+      ctx.arc(toX(d.time), toY(d.players), 3, 0, Math.PI * 2)
+      ctx.fillStyle = '#D4764E'
+      ctx.fill()
+      ctx.strokeStyle = 'rgba(28, 24, 22, 0.8)'
+      ctx.lineWidth = 1.5
+      ctx.stroke()
+    }
   }
 }
 
