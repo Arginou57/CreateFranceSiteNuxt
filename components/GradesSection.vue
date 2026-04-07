@@ -13,10 +13,31 @@
         v-bind="grade"
       />
     </div>
+
+    <div ref="fundingBar" class="funding-progress">
+      <div class="funding-header">
+        <span class="funding-title">Objectif mensuel</span>
+        <span class="funding-percent">{{ progressPercent }}%</span>
+      </div>
+      <div class="funding-bar">
+        <div class="funding-fill" :style="{ width: barVisible ? progressPercent + '%' : '0%' }" />
+      </div>
+      <div class="funding-details">
+        <span class="funding-amount">{{ currentFunding.toFixed(2) }}€ recoltés</span>
+        <span class="funding-goal">{{ goalFunding }}€</span>
+      </div>
+    </div>
   </section>
 </template>
 
 <script setup lang="ts">
+const currentFunding = 14.82
+const goalFunding = 143
+const progressPercent = computed(() => Math.round((currentFunding / goalFunding) * 100))
+
+const fundingBar = ref<HTMLElement | null>(null)
+const barVisible = ref(false)
+
 const grades = [
   {
     tier: 1,
@@ -81,6 +102,16 @@ onMounted(() => {
   }, { threshold: 0.1 })
 
   document.querySelectorAll('.grade-card').forEach(c => observer.observe(c))
+
+  if (fundingBar.value) {
+    const fundingObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        barVisible.value = true
+        fundingObserver.disconnect()
+      }
+    }, { threshold: 0.3 })
+    fundingObserver.observe(fundingBar.value)
+  }
 })
 </script>
 
@@ -98,6 +129,60 @@ onMounted(() => {
 }
 .donate-notice .notice-icon { color: var(--mandarine); font-size: 1.2rem; flex-shrink: 0; }
 .donate-notice strong { color: var(--terre-cuite); }
+
+.funding-progress {
+    margin-top: 2.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 1.4rem 1.6rem;
+    backdrop-filter: blur(10px);
+}
+
+.funding-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.funding-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.funding-percent {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--terre-cuite);
+}
+
+.funding-bar {
+    width: 100%;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.funding-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--terre-cuite), var(--mandarine));
+    border-radius: 6px;
+    transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.funding-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.6rem;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
+
+.funding-amount { font-weight: 500; }
+.funding-goal { opacity: 0.7; }
 
 @media (max-width: 768px) {
     .grades-container { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
