@@ -67,20 +67,21 @@
       </div>
 
       <!-- Objectif mensuel -->
-      <div class="bento-card bento-funding" ref="cards">
+      <a href="#grades" class="bento-card bento-funding" ref="cards">
         <div class="bento-card-bg"></div>
         <div class="funding-header">
           <span class="funding-title">Objectif mensuel</span>
-          <span class="funding-percent">{{ progressPercent }}%</span>
+          <span class="funding-percent" :style="{ color: fundingColor }">{{ progressPercent }}%</span>
         </div>
         <div class="funding-bar">
-          <div class="funding-fill" :style="{ width: barVisible ? progressPercent + '%' : '0%' }" />
+          <div class="funding-fill" :style="{ width: barVisible ? progressPercent + '%' : '0%', background: fundingGradient }" />
         </div>
         <div class="funding-details">
           <span class="funding-amount">{{ currentFunding.toFixed(2) }}€ recoltés</span>
           <span class="funding-goal">{{ goalFunding }}€</span>
         </div>
-      </div>
+        <span class="bento-arrow">&rarr;</span>
+      </a>
 
     </div>
 
@@ -99,6 +100,20 @@ const currentFunding = 14.82
 const goalFunding = 143
 const progressPercent = computed(() => Math.round((currentFunding / goalFunding) * 100))
 const barVisible = ref(false)
+
+const fundingColor = computed(() => {
+  const p = progressPercent.value
+  if (p >= 100) return '#4ade80'
+  if (p >= 50) return '#facc15'
+  return '#ef4444'
+})
+
+const fundingGradient = computed(() => {
+  const p = progressPercent.value
+  if (p >= 100) return 'linear-gradient(90deg, #22c55e, #4ade80)'
+  if (p >= 50) return 'linear-gradient(90deg, #eab308, #facc15)'
+  return 'linear-gradient(90deg, #dc2626, #ef4444)'
+})
 
 function copyIp() {
   navigator.clipboard.writeText('play.createfrance.fr').then(() => {
@@ -306,7 +321,11 @@ onMounted(() => {
 .bento-funding {
     grid-column: 1 / -1; grid-row: 4;
     padding: 1.2rem 1.5rem;
+    text-decoration: none; color: inherit; cursor: pointer;
 }
+
+.bento-funding:hover { border-color: rgba(212, 118, 78, 0.25); }
+.bento-funding .bento-arrow { top: 50%; bottom: auto; transform: translateY(-50%); }
 
 .funding-header {
     display: flex; justify-content: space-between; align-items: center;
@@ -321,7 +340,8 @@ onMounted(() => {
 
 .funding-percent {
     font-family: 'Orbitron', sans-serif;
-    font-size: 0.9rem; font-weight: 900; color: var(--mandarine);
+    font-size: 0.9rem; font-weight: 900;
+    transition: color 0.5s ease;
 }
 
 .funding-bar {
@@ -332,9 +352,8 @@ onMounted(() => {
 
 .funding-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--terre-cuite), var(--mandarine));
     border-radius: 5px;
-    transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1), background 0.5s ease;
 }
 
 .funding-details {
