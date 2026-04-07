@@ -66,6 +66,22 @@
         <div class="ip-copied" :class="{ show: ipCopied }">Copie !</div>
       </div>
 
+      <!-- Objectif mensuel -->
+      <div class="bento-card bento-funding" ref="cards">
+        <div class="bento-card-bg"></div>
+        <div class="funding-header">
+          <span class="funding-title">Objectif mensuel</span>
+          <span class="funding-percent">{{ progressPercent }}%</span>
+        </div>
+        <div class="funding-bar">
+          <div class="funding-fill" :style="{ width: barVisible ? progressPercent + '%' : '0%' }" />
+        </div>
+        <div class="funding-details">
+          <span class="funding-amount">{{ currentFunding.toFixed(2) }}€ recoltés</span>
+          <span class="funding-goal">{{ goalFunding }}€</span>
+        </div>
+      </div>
+
     </div>
 
     <PlayerChart v-if="showPlayerChart" @close="showPlayerChart = false" />
@@ -78,6 +94,11 @@ const { downloads: curseforgeDownloads } = useCurseForgeStats()
 
 const ipCopied = ref(false)
 const showPlayerChart = ref(false)
+
+const currentFunding = 14.82
+const goalFunding = 143
+const progressPercent = computed(() => Math.round((currentFunding / goalFunding) * 100))
+const barVisible = ref(false)
 
 function copyIp() {
   navigator.clipboard.writeText('play.createfrance.fr').then(() => {
@@ -96,6 +117,17 @@ onMounted(() => {
   }, { threshold: 0.1 })
 
   document.querySelectorAll('.bento-card').forEach(c => observer.observe(c))
+
+  const fundingEl = document.querySelector('.bento-funding')
+  if (fundingEl) {
+    const fundingObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        setTimeout(() => { barVisible.value = true }, 400)
+        fundingObserver.disconnect()
+      }
+    }, { threshold: 0.3 })
+    fundingObserver.observe(fundingEl)
+  }
 
   // Smooth scroll for anchor links
   document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -270,6 +302,49 @@ onMounted(() => {
 
 .ip-copied.show { opacity: 1; }
 
+/* Carte Objectif mensuel */
+.bento-funding {
+    grid-column: 1 / -1; grid-row: 4;
+    padding: 1.2rem 1.5rem;
+}
+
+.funding-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 0.6rem;
+}
+
+.funding-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem; font-weight: 700; color: var(--terre-cuite);
+    text-transform: uppercase; letter-spacing: 1px;
+}
+
+.funding-percent {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem; font-weight: 900; color: var(--mandarine);
+}
+
+.funding-bar {
+    width: 100%; height: 10px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 5px; overflow: hidden;
+}
+
+.funding-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--terre-cuite), var(--mandarine));
+    border-radius: 5px;
+    transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.funding-details {
+    display: flex; justify-content: space-between;
+    margin-top: 0.5rem; font-size: 0.75rem; color: var(--text-secondary);
+}
+
+.funding-amount { font-weight: 500; }
+.funding-goal { opacity: 0.7; }
+
 /* ======== RESPONSIVE ======== */
 @media (max-width: 900px) {
     .bento-grid { grid-template-columns: repeat(2, 1fr); }
@@ -280,6 +355,7 @@ onMounted(() => {
     .bento-discord { grid-column: 2; grid-row: 3; }
     .bento-curseforge { grid-column: 1; grid-row: 4; }
     .bento-ip { grid-column: 2; grid-row: 4; }
+    .bento-funding { grid-column: 1 / -1; grid-row: 5; }
 }
 
 @media (max-width: 480px) {
@@ -291,6 +367,7 @@ onMounted(() => {
     .bento-discord { grid-column: 1; grid-row: 5; }
     .bento-curseforge { grid-column: 1; grid-row: 6; }
     .bento-ip { grid-column: 1; grid-row: 7; }
+    .bento-funding { grid-column: 1; grid-row: 8; }
     .bento-main h1 { font-size: 2rem; }
     .hero { padding-top: 5rem; }
 }
