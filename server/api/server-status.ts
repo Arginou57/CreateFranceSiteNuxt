@@ -13,7 +13,7 @@ export default defineEventHandler(async () => {
   }
 
   try {
-    const res = await fetch('https://api.mcsrvstat.us/3/88.99.1.96:25566')
+    const res = await fetch('https://api.mcsrvstat.us/3/78.46.72.171:25565')
     const data = await res.json()
 
     if (data.online) {
