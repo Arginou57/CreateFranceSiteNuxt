@@ -96,7 +96,7 @@ const { downloads: curseforgeDownloads } = useCurseForgeStats()
 const ipCopied = ref(false)
 const showPlayerChart = ref(false)
 
-const currentFunding = 24.17
+const currentFunding = 26.72
 const goalFunding = 143
 const progressPercent = computed(() => Math.round((currentFunding / goalFunding) * 100))
 const barVisible = ref(false)
