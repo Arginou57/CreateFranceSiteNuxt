@@ -13,7 +13,7 @@
       </div>
       <div class="footer-col">
         <h4>Communaute</h4>
-        <a href="https://discord.gg/6GYtAuW2ns" target="_blank">Discord</a>
+        <a href="https://discord.gg/JW7XQKPpVC" target="_blank">Discord</a>
         <a href="https://www.liste-serveurs-minecraft.org/serveur-minecraft/serveur-create-france/" target="_blank">Voter</a>
       </div>
     </div>

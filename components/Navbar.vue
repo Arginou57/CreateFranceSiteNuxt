@@ -12,7 +12,7 @@
         <li><a href="#serveur" @click="menuOpen = false">Le Serveur</a></li>
         <li><a href="#grades" @click="menuOpen = false">Boutique</a></li>
         <li><a href="https://www.curseforge.com/minecraft/modpacks/serveur-create-france-communauty-friends-coop" target="_blank">CurseForge</a></li>
-        <li><a href="https://discord.gg/6GYtAuW2ns" target="_blank" class="nav-discord">Discord</a></li>
+        <li><a href="https://discord.gg/JW7XQKPpVC" target="_blank" class="nav-discord">Discord</a></li>
       </ul>
     </div>
   </nav>
