@@ -4,6 +4,20 @@
       <div class="footer-brand">
         <div class="footer-logo"><span class="footer-gear">&#9881;</span> Create France</div>
         <p>Un serveur communautaire propulse par la passion et les engrenages.</p>
+        <a
+          href="https://topmoddedservers.com/serveur/create-france/vote"
+          target="_blank"
+          class="footer-badge"
+          title="Votez pour Create France sur TopModdedServers"
+        >
+          <img
+            src="https://topmoddedservers.com/badge/create-france.svg"
+            alt="Votez pour Create France sur TopModdedServers, le classement des serveurs Minecraft moddes"
+            width="330"
+            height="64"
+            loading="lazy"
+          >
+        </a>
       </div>
       <div class="footer-col">
         <h4>Liens</h4>
@@ -14,7 +28,9 @@
       <div class="footer-col">
         <h4>Communaute</h4>
         <a href="https://discord.gg/JW7XQKPpVC" target="_blank">Discord</a>
-        <a href="https://www.liste-serveurs-minecraft.org/serveur-minecraft/serveur-create-france/" target="_blank">Voter</a>
+        <a href="https://topmoddedservers.com/serveur/create-france/vote" target="_blank">Voter</a>
+        <a href="https://topmoddedservers.com/serveurs/create" target="_blank">Classement serveurs Create</a>
+        <a href="https://www.liste-serveurs-minecraft.org/serveur-minecraft/serveur-create-france/" target="_blank">liste-serveurs.org</a>
       </div>
     </div>
     <div class="footer-bottom">
@@ -47,6 +63,10 @@ const currentYear = new Date().getFullYear()
 
 .footer-gear { display: inline-block; animation: spin 15s linear infinite; }
 .footer-brand p { color: var(--text-muted); font-size: 0.8rem; line-height: 1.5; font-weight: 300; }
+
+.footer-badge { display: inline-block; margin-top: 0.9rem; }
+.footer-badge img { max-width: 100%; height: auto; border-radius: 10px; transition: transform 0.3s; }
+.footer-badge:hover img { transform: translateY(-2px); }
 
 .footer-col { display: flex; flex-direction: column; gap: 0.5rem; }
 .footer-col h4 { font-family: 'Orbitron', sans-serif; font-size: 0.7rem; color: var(--terre-cuite-light); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 0.3rem; }

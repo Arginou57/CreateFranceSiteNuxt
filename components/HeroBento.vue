@@ -22,7 +22,7 @@
       </div>
 
       <!-- Votes (live) -->
-      <a href="https://www.liste-serveurs-minecraft.org/serveur-minecraft/serveur-create-france/" target="_blank" class="bento-card bento-votes" ref="cards">
+      <a href="https://topmoddedservers.com/serveur/create-france/vote" target="_blank" title="Voter pour Create France sur TopModdedServers" class="bento-card bento-votes" ref="cards">
         <div class="bento-card-bg"></div>
         <svg class="bento-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-6 0v4"/><rect x="2" y="9" width="20" height="12" rx="2"/><line x1="12" y1="14" x2="12" y2="17"/></svg>
         <div class="bento-stat-value">{{ totalVotes }}</div>
