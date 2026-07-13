@@ -35,11 +35,15 @@ export default defineNuxtConfig({
           content:
             'Serveur Minecraft communautaire propulsé par le mod Create. Construisez, automatisez, explorez — ensemble.',
         },
-        { property: 'og:image', content: '/images/fond.png' },
+        { property: 'og:image', content: 'https://create-france.com/images/fond.png' },
         { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://create-france.com/' },
+        { property: 'og:locale', content: 'fr_FR' },
+        { name: 'twitter:card', content: 'summary_large_image' },
       ],
       link: [
         { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+        { rel: 'canonical', href: 'https://create-france.com/' },
       ],
       script: [
         {
