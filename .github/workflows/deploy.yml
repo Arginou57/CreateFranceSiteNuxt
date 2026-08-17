@@ -16,4 +16,8 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
+            cd /var/www/createfrance
+            git checkout -- package-lock.json
             /var/www/createfrance/deploy.sh
+            export NUXT_CURSEFORGE_API_KEY='${{ secrets.NUXT_CURSEFORGE_API_KEY }}'
+            pm2 restart createfrance --update-env
