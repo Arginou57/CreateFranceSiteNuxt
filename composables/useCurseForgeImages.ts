@@ -1,5 +1,7 @@
 export interface GalleryImage {
   url: string
+  thumbnail?: string
+  title?: string
   type: 'image' | 'gif'
 }
 

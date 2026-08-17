@@ -14,8 +14,13 @@
         @click="openLightbox(i)"
         :aria-label="`Agrandir l'image ${i + 1}`"
       >
-        <img :src="img.url" :alt="`Screenshot du serveur Create France ${i + 1}`" loading="lazy" />
+        <img
+          :src="img.thumbnail || img.url"
+          :alt="img.title || `Screenshot du serveur Create France ${i + 1}`"
+          loading="lazy"
+        />
         <span v-if="img.type === 'gif'" class="gif-badge">GIF</span>
+        <span v-if="img.title" class="gallery-caption">{{ img.title }}</span>
         <span class="gallery-zoom">&#8853;</span>
       </button>
     </div>
@@ -29,11 +34,14 @@
           <img
             :key="lightboxIndex"
             :src="images[lightboxIndex].url"
-            :alt="`Screenshot du serveur Create France ${lightboxIndex + 1}`"
+            :alt="images[lightboxIndex].title || `Screenshot du serveur Create France ${lightboxIndex + 1}`"
             class="lightbox-img"
           />
           <button class="lightbox-nav lightbox-next" @click.stop="next" aria-label="Image suivante">&#8250;</button>
-          <div class="lightbox-counter">{{ lightboxIndex + 1 }} / {{ images.length }}</div>
+          <div class="lightbox-counter">
+            <span v-if="images[lightboxIndex].title" class="lightbox-title">{{ images[lightboxIndex].title }}</span>
+            {{ lightboxIndex + 1 }} / {{ images.length }}
+          </div>
         </div>
       </Transition>
     </Teleport>
@@ -146,6 +154,17 @@ onUnmounted(() => {
 
 .gallery-item:hover .gallery-zoom { opacity: 1; }
 
+.gallery-caption {
+    position: absolute; left: 0; right: 0; bottom: 0; z-index: 1;
+    padding: 1.4rem 0.8rem 0.6rem; text-align: left;
+    font-size: 0.72rem; font-weight: 500; color: var(--text-primary);
+    background: linear-gradient(to top, rgba(28, 24, 22, 0.85), transparent);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    opacity: 0; transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption { opacity: 1; }
+
 .gif-badge {
     position: absolute; top: 10px; right: 10px; z-index: 1;
     font-family: 'Orbitron', sans-serif; font-size: 0.6rem; font-weight: 700;
@@ -194,6 +213,13 @@ onUnmounted(() => {
     position: absolute; bottom: 1.2rem; left: 50%; transform: translateX(-50%);
     font-family: 'Orbitron', sans-serif; font-size: 0.8rem;
     color: var(--text-secondary); letter-spacing: 2px;
+    display: flex; align-items: center; gap: 1rem; white-space: nowrap;
+}
+
+.lightbox-title {
+    font-family: 'Poppins', sans-serif; font-size: 0.85rem;
+    color: var(--text-primary); letter-spacing: 0.3px;
+    max-width: 50vw; overflow: hidden; text-overflow: ellipsis;
 }
 
 .lightbox-fade-enter-active, .lightbox-fade-leave-active { transition: opacity 0.3s ease; }

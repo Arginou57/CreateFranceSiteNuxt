@@ -14,6 +14,12 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  runtimeConfig: {
+    // Clé API CurseForge (console.curseforge.com) — surchargée par
+    // la variable d'environnement NUXT_CURSEFORGE_API_KEY sur le serveur.
+    curseforgeApiKey: '',
+  },
+
   app: {
     head: {
       htmlAttrs: { lang: 'fr' },
