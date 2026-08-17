@@ -10,6 +10,7 @@
       </button>
       <ul class="nav-links" :class="{ open: menuOpen }">
         <li><a href="#serveur" @click="menuOpen = false">Le Serveur</a></li>
+        <li><a href="#galerie" @click="menuOpen = false">Galerie</a></li>
         <li><a href="#grades" @click="menuOpen = false">Boutique</a></li>
         <li><a href="https://www.curseforge.com/minecraft/modpacks/serveur-create-france-communauty-friends-coop" target="_blank">CurseForge</a></li>
         <li><a href="https://topmoddedservers.com/serveur/create-france/vote" target="_blank" title="Voter pour Create France sur TopModdedServers">Voter</a></li>
