@@ -9,6 +9,12 @@
           <span class="bento-badge">Serveur Minecraft</span>
           <h1>Create<br>France</h1>
           <p>Construisez, automatisez, explorez &mdash; ensemble.</p>
+          <!-- Launcher Create France : installe le modpack et connecte au serveur (hébergé sur le VPS deadzonemc.com) -->
+          <a href="https://deadzonemc.com/launcher-createfrance/CreateFrance-Launcher-Setup.exe" class="bento-launcher-btn" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+            Télécharger le launcher
+          </a>
+          <span class="bento-launcher-sub">Windows &middot; installe le modpack et rejoint le serveur en un clic</span>
         </div>
       </div>
 
@@ -219,6 +225,18 @@ onMounted(() => {
 }
 
 .bento-main p { color: var(--text-secondary); font-size: 0.95rem; font-weight: 300; max-width: 300px; }
+
+/* Bouton launcher */
+.bento-launcher-btn {
+    display: inline-flex; align-items: center; gap: 0.6rem; margin-top: 1.6rem;
+    padding: 0.85rem 1.4rem; border-radius: 10px; text-decoration: none;
+    background: linear-gradient(135deg, var(--terre-cuite), var(--mandarine));
+    color: #1C1816; font-family: 'Orbitron', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.5px;
+    box-shadow: 0 6px 24px rgba(212, 118, 78, 0.35); transition: transform 0.2s, box-shadow 0.2s;
+}
+.bento-launcher-btn svg { width: 18px; height: 18px; flex: none; }
+.bento-launcher-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(212, 118, 78, 0.5); }
+.bento-launcher-sub { display: block; margin-top: 0.6rem; font-size: 0.72rem; color: var(--text-muted); }
 
 /* Cartes stats */
 .bento-players { grid-column: 3 / 5; grid-row: 1; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; }
