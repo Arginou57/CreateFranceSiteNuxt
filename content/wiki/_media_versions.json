@@ -1,6 +1,18 @@
 {
   "boite-a-roues-dentees": 2,
+  "chariot-de-portique": 2,
+  "colle-extra-forte": 2,
+  "deployeur": 2,
+  "detecteur-de-seuil": 2,
+  "ejecteur": 2,
+  "manivelle": 2,
+  "piston-mecanique": 2,
+  "poulie-a-corde": 2,
+  "poulie-a-tuyau": 2,
   "rotor": 2,
   "roue-dentee": 2,
-  "stressometre-compteur-de-vitesse": 2
+  "stressometre-compteur-de-vitesse": 2,
+  "support-de-moulin-a-vent": 2,
+  "tapis-roulant": 2,
+  "tunnel": 2
 }

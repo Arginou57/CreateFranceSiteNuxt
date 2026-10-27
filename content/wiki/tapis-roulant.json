@@ -11,16 +11,54 @@
   "mcVersion": "1.21.1",
   "intro": "Le <strong>tapis roulant</strong> fait deux choses à la fois : il <strong>transmet la rotation</strong> d'un arbre à un autre et il <strong>transporte les objets</strong> posés dessus. C'est la colonne vertébrale de presque toutes les usines Create. Voici comment le poser, dans quelles directions, et à quelle vitesse il fait avancer tes objets.",
   "facts": [
-    { "label": "Catégorie", "value": "Logistique" },
-    { "label": "Stress", "value": "Aucun (seules les machines branchées consomment)" },
-    { "label": "Longueur", "value": "Jusqu'à 20 blocs (réglage serveur maxBeltLength)" },
-    { "label": "Vitesse des objets", "value": "tr/min ÷ 24 blocs par seconde (1,33 bloc/s à 32 tr/min)" },
-    { "label": "Espacement", "value": "1 bloc entre deux objets" },
-    { "label": "Version", "value": "Create 6.0.8 · Minecraft 1.21.1" }
+    {
+      "label": "Catégorie",
+      "value": "Logistique"
+    },
+    {
+      "label": "Stress",
+      "value": "Aucun (seules les machines branchées consomment)"
+    },
+    {
+      "label": "Longueur",
+      "value": "Jusqu'à 20 blocs (réglage serveur maxBeltLength)"
+    },
+    {
+      "label": "Vitesse des objets",
+      "value": "tr/min ÷ 24 blocs par seconde (1,33 bloc/s à 32 tr/min)"
+    },
+    {
+      "label": "Espacement",
+      "value": "1 bloc entre deux objets"
+    },
+    {
+      "label": "Boitier",
+      "value": "Andésite ou laiton, en clic droit sur chaque segment, retiré à la clé ; non consommé"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
   ],
   "recipe": {
     "label": "Fabrication à l'établi",
-    "grid": [["Varech séché", "Varech séché", "Varech séché"], ["Varech séché", "Varech séché", "Varech séché"], [null, null, null]],
+    "grid": [
+      [
+        "Varech séché",
+        "Varech séché",
+        "Varech séché"
+      ],
+      [
+        "Varech séché",
+        "Varech séché",
+        "Varech séché"
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
     "result": "1 tapis roulant (un seul suffit pour toute la longueur)"
   },
   "videos": [
@@ -35,6 +73,18 @@
       "name": "Tapis roulant : les orientations possibles",
       "description": "Les quatre façons de poser un tapis : à l'horizontale, en diagonale, à la verticale, et entre deux arbres verticaux.",
       "duration": "PT20S"
+    },
+    {
+      "id": "belt_transport",
+      "name": "Tapis roulant : transporter et reprendre des objets",
+      "description": "Des blocs de cuivre lâchés sur un tapis en pente sont emportés, puis le tapis s'arrête et on en reprend un à la main.",
+      "duration": "PT14S"
+    },
+    {
+      "id": "belt_encasing",
+      "name": "Tapis roulant : poser et retirer un boitier",
+      "description": "Les segments de trois tapis reçoivent un boitier, en laiton ou en andésite, puis la clé en retire un.",
+      "duration": "PT12S"
     }
   ],
   "sections": [
@@ -50,7 +100,7 @@
       "title": "Annuler une mauvaise sélection",
       "image": "belt_connector_annuler.webp",
       "alt": "Une sélection sur un mauvais arbre, entourée en rouge",
-      "html": "<p>Tu as cliqué sur le mauvais arbre ? Fais un <strong>clic droit en étant accroupi</strong> pour oublier la première sélection, puis recommence. La sélection s'efface aussi d'elle-même si le premier arbre disparaît ou devient trop éloigné.</p>"
+      "html": "<p>Tu as cliqué sur le mauvais arbre ? <strong>Accroupis-toi et fais un clic droit</strong> pour oublier la première sélection, puis recommence. La sélection s'efface aussi d'elle-même si le premier arbre disparaît ou devient trop éloigné.</p>"
     },
     {
       "id": "arbres",
@@ -65,6 +115,14 @@
       "image": "belt_connector_teinture.webp",
       "alt": "Tapis roulant teint en bleu",
       "html": "<p>Un clic droit avec un <strong>colorant</strong> teint tout le tapis, pour repérer tes lignes d'un coup d'œil (minerai, nourriture, déchets…). Un seau d'eau ou une fiole d'eau enlève la couleur. Tu peux aussi recouvrir le tapis d'un <strong>boîtier d'andésite ou de laiton</strong> pour un rendu plus propre ; il continue de transmettre la rotation.</p>"
+    },
+    {
+      "id": "boitier",
+      "title": "Habiller le tapis d'un boitier",
+      "image": "belt_encasing_boitier.webp",
+      "alt": "Trois tapis roulants dont les segments sont recouverts de boitiers de laiton et d'andésite",
+      "video": "belt_encasing",
+      "html": "<p>Un clic droit avec un <strong>boitier d'andésite</strong> ou un <strong>boitier de laiton</strong> sur un segment de tapis l'habille : les flancs disparaissent sous le boitier, le dessus continue de défiler. Chaque segment s'habille à part, ce qui permet de ne cacher que les parties visibles d'une ligne, en pente comme à plat, et de passer d'un boitier à l'autre en cliquant avec le second. Le tapis garde toutes ses fonctions : il transmet la rotation et transporte les objets comme avant. La <strong>clé</strong> retire le boitier d'un segment. Le boitier n'est pas consommé à la pose, et rien n'est rendu quand on le retire.</p>"
     },
     {
       "id": "orientations",
@@ -82,12 +140,26 @@
       "html": "<p>Les objets avancent à la vitesse de rotation divisée par 24, en blocs par seconde : 0,67 bloc/s à 16 tr/min, <strong>1,33 bloc/s à 32</strong>, 2,67 à 64 et près de 11 blocs/s à 256 tr/min. Ils gardent toujours <strong>un bloc d'écart</strong> : un tapis plein transporte donc au mieux une pile par bloc. Pour plus de débit, pose des piles entières (avec un entonnoir ou un bras mécanique) plutôt que des objets un par un.</p><p>En bout de tapis, les objets s'arrêtent s'il n'y a rien pour les prendre : place un entonnoir, un dépôt, un coffre ou un autre tapis.</p>"
     },
     {
+      "id": "transport",
+      "title": "Ce que le tapis emporte, et comment reprendre un objet",
+      "image": "belt_transport_transport.webp",
+      "alt": "Tapis roulant en pente qui emporte des blocs de cuivre lâchés au-dessus de lui",
+      "video": "belt_transport",
+      "html": "<p>Un tapis en marche déplace tout ce qui repose dessus : les objets lâchés, mais aussi les <strong>créatures et les joueurs</strong>, à la même vitesse que les objets. Le code prévoit deux exceptions : un joueur accroupi n'est pas emporté, et une créature qui se tient sur un tapis reçoit un effet de lenteur tant qu'elle y reste. Dans la boucle, des blocs de cuivre lâchés au-dessus du tapis atterrissent dessus et filent avec lui ; le perroquet qui les accompagne dans la scène Ponder n'est pas dessiné.</p><p>Pour <strong>reprendre</strong> un objet, fais un clic droit main vide sur le segment où il se trouve : tout ce qui est posé sur ce bloc de tapis part dans ton inventaire.</p>"
+    },
+    {
       "id": "erreurs",
       "title": "Erreurs fréquentes",
       "html": "<ul><li><strong>Le tapis refuse de se poser</strong> : arbres d'axes différents, pas alignés, diagonale qui n'est pas à 45°, ou distance trop grande.</li><li><strong>Bloc sur le chemin</strong> : seuls l'air, les blocs remplaçables et les arbres de même axe sont acceptés entre les deux bouts.</li><li><strong>Sens de rotation opposés</strong> : si les deux arbres tournent déjà en sens contraire, la pose échoue.</li><li><strong>Objets qui ne passent pas sous une machine</strong> : une <a href=\"/wiki/presse-mecanique\">presse mécanique</a> les bloque volontairement le temps du traitement.</li></ul>"
     }
   ],
-  "related": ["presse-mecanique", "perceuse-mecanique", "bec-verseur", "egouttoir-a-objets", "scie-mecanique"],
+  "related": [
+    "presse-mecanique",
+    "perceuse-mecanique",
+    "bec-verseur",
+    "egouttoir-a-objets",
+    "scie-mecanique"
+  ],
   "sources": [
     "Stress : AllBlocks.java, BELT, CStress.setNoImpact()",
     "Pose : BeltConnectorItem.canConnect (même axe, déplacement nul le long de l'axe, une seule paire de composantes égales en valeur absolue, pas de diagonale entre arbres verticaux, sens de rotation compatibles, cases libres ou arbres de même axe) ; un objet consommé par tapis (shrink(1))",
@@ -95,7 +167,11 @@
     "Vitesse : BeltBlockEntity.getBeltMovementSpeed = vitesse / 480 bloc par tick (× 20 ticks/s)",
     "Espacement : BeltInventory (spacing = 1)",
     "Teinture : BeltBlock.useItemOn (colorants, eau)",
-    "Recette : data/create/recipe/crafting/kinetics/belt_connector.json"
+    "Recette : data/create/recipe/crafting/kinetics/belt_connector.json",
+    "Transport des entités : BeltMovementHandler.canBeTransported (joueur accroupi exclu) et transportEntity (lenteur pour les créatures)",
+    "Reprendre un objet : BeltBlock.useItemOn (main vide : objets du segment rendus au joueur)",
+    "Boitier : BeltBlock.useItemOn (boitier de laiton / d’andésite, objet non consommé), BeltBlock.onWrenched (retrait), BeltBlockEntity.setCasingType",
+    "Scènes : BeltScenes.beltConnector, directions, transport et beltsCanBeEncased"
   ],
   "en": {
     "slugEn": "conveyor-belt",
@@ -123,6 +199,10 @@
       {
         "label": "Spacing",
         "value": "1 block between two items"
+      },
+      {
+        "label": "Casing",
+        "value": "Andesite or brass, right-click on each segment, removed with the Wrench; not used up"
       },
       {
         "label": "Version",
@@ -160,6 +240,16 @@
         "id": "belt_directions",
         "name": "Mechanical Belt: the possible orientations",
         "description": "The four ways to place a belt: horizontal, diagonal, vertical, and between two vertical shafts."
+      },
+      {
+        "id": "belt_transport",
+        "name": "Mechanical Belt: carrying items and taking them back",
+        "description": "Copper blocks dropped on a sloped belt are carried along, then the belt stops and one is taken back by hand."
+      },
+      {
+        "id": "belt_encasing",
+        "name": "Mechanical Belt: adding and removing casing",
+        "description": "The segments of three belts get Brass or Andesite Casing, then the Wrench removes one."
       }
     ],
     "sections": [
@@ -188,6 +278,12 @@
         "html": "<p>Right-clicking with a <strong>dye</strong> colours the whole belt, so you can tell your lines apart at a glance (ores, food, waste…). A water bucket or a water bottle removes the colour. You can also cover the belt with <strong>Andesite or Brass Casing</strong> for a cleaner look; it keeps transmitting rotation.</p>"
       },
       {
+        "id": "boitier",
+        "title": "Encasing the belt",
+        "alt": "Three mechanical belts whose segments are covered with Brass and Andesite Casing",
+        "html": "<p>Right-clicking a belt segment with <strong>Andesite Casing</strong> or <strong>Brass Casing</strong> covers it: the sides vanish behind the casing while the top keeps rolling. Each segment is cased on its own, so you can hide only the visible parts of a line, sloped or flat, and switch from one casing to the other by clicking with the second one. The belt keeps all its functions: it still passes rotation along and carries items as before. The <strong>Wrench</strong> strips the casing from a segment. The casing item is not used up when you apply it, and nothing is handed back when you remove it.</p>"
+      },
+      {
         "id": "orientations",
         "title": "The possible orientations",
         "alt": "The four belt orientations: horizontal, diagonal, vertical and between vertical shafts",
@@ -198,6 +294,12 @@
         "title": "Item speed and spacing",
         "alt": "Horizontal mechanical belt moving between two shafts",
         "html": "<p>Items move at the rotation speed divided by 24, in blocks per second: 0.67 blocks/s at 16 RPM, <strong>1.33 blocks/s at 32</strong>, 2.67 at 64 and almost 11 blocks/s at 256 RPM. They always keep <strong>one block of spacing</strong>, so a full belt carries at best one stack per block. For more throughput, put whole stacks on it (with a funnel or a Mechanical Arm) rather than single items.</p><p>At the end of the belt, items stop if nothing picks them up: place a funnel, a depot, a chest or another belt there.</p>"
+      },
+      {
+        "id": "transport",
+        "title": "What the belt carries, and taking an item back",
+        "alt": "A sloped mechanical belt carrying copper blocks dropped above it",
+        "html": "<p>A running belt moves everything resting on it: dropped items, but also <strong>mobs and players</strong>, at the same speed as the items. The code has two exceptions: a sneaking player is not carried, and a mob standing on a belt gets a Slowness effect for as long as it stays there. In the loop, copper blocks dropped above the belt land on it and travel along; the parrot riding with them in the Ponder scene is not drawn.</p><p>To <strong>take an item back</strong>, right-click the segment it sits on, empty-handed: everything on that belt block goes into your inventory.</p>"
       },
       {
         "id": "erreurs",
@@ -212,7 +314,11 @@
       "Speed: BeltBlockEntity.getBeltMovementSpeed = speed / 480 blocks per tick (× 20 ticks/s)",
       "Spacing: BeltInventory (spacing = 1)",
       "Dyeing: BeltBlock.useItemOn (dyes, water)",
-      "Recipe: data/create/recipe/crafting/kinetics/belt_connector.json"
+      "Recipe: data/create/recipe/crafting/kinetics/belt_connector.json",
+      "Carrying entities: BeltMovementHandler.canBeTransported (sneaking players excluded) and transportEntity (Slowness for mobs)",
+      "Taking items back: BeltBlock.useItemOn (empty hand: items on the segment handed to the player)",
+      "Casing: BeltBlock.useItemOn (Brass / Andesite Casing, item not used up), BeltBlock.onWrenched (removal), BeltBlockEntity.setCasingType",
+      "Scenes: BeltScenes.beltConnector, directions, transport and beltsCanBeEncased"
     ]
   }
 }

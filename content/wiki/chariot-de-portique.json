@@ -40,6 +40,10 @@
       "value": "Un rotor posé sur un chariot (ou l’inverse) suit sans colle"
     },
     {
+      "label": "Pose du chariot",
+      "value": "Contre un rotor de portique d'un autre axe ; démarre seul quand la vitesse change"
+    },
+    {
       "label": "Version",
       "value": "Create 6.0.8 · Minecraft 1.21.1"
     }
@@ -89,6 +93,12 @@
       "name": "Portique : en cascade",
       "description": "Un rotor de portique est porté par un chariot, et un second chariot glisse sur lui : la machine se déplace sur deux axes.",
       "duration": "PT11S"
+    },
+    {
+      "id": "gantry_pinion",
+      "name": "Portique : le chariot de près",
+      "description": "Un chariot de portique, vu de près, se déplace sur son rotor puis emporte une structure de planches collées.",
+      "duration": "PT14S"
     }
   ],
   "sections": [
@@ -165,6 +175,14 @@
       "html": "<p>Le <strong>chariot de portique</strong> se fabrique comme un roulement, avec une <a href=\"/wiki/roue-dentee\">roue dentée</a> à la place du rotor : dalle en bois, boitier d'andésite, roue dentée, de haut en bas. Il glisse à <strong>tr/min ÷ 512</strong> bloc par tick, comme un piston.</p>"
     },
     {
+      "id": "pignon",
+      "title": "Le chariot de près",
+      "image": "gantry_pinion_chariot.webp",
+      "alt": "Chariot de portique posé sur son rotor de portique, vu de près",
+      "video": "gantry_pinion",
+      "html": "<p>Le <strong>chariot de portique</strong> ne tient que contre un rotor de portique dont l'axe diffère du sien : retire le rotor et le chariot tombe en objet. Sa face avant, tournée à l'opposé du rotor, porte la structure. Il n'y a rien à activer : dès que la vitesse du rotor change, le chariot assemble ce qui est collé sur lui et se met en route. Il avance de tr/min ÷ 512 bloc par tick, plafonné à 0,49 bloc par tick, soit 2,5 blocs par seconde à 64 tr/min. Dans la boucle, cadrée sur lui, il emporte une structure de planches collées jusqu'au bout du rotor.</p>"
+    },
+    {
       "id": "montages",
       "title": "Idées de montages",
       "html": "<p>Une <strong>grue</strong> : un rotor de portique en hauteur, un chariot qui porte une <a href=\"/wiki/poulie-a-corde\">poulie à corde</a>. Une <strong>machine à miner en surface</strong> : deux portiques en cascade qui balaient un carré avec des perceuses. Un <strong>ascenseur latéral</strong> le long d'une façade, commandé par un levier.</p>"
@@ -202,7 +220,8 @@
     "Cascade : Contraption.moveGantryPinion / moveGantryShaft",
     "Rendu : OrientedRotatingVisual.gantryShaft, GantryCarriageRenderer (ajoutés par nous, voir engine_create/REQUESTS.md)",
     "Simulation : WIKI/contraption_sim.py (blocs embarqués, durées des mouvements, cordes et acteurs recalculés d'après le code de Create)",
-    "Scènes : GantryScenes.introForShaft (= introForPinion), redstone, direction, subgantry"
+    "Chariot : GantryCarriageBlock.canSurvive / getFacingForPlacement, GantryCarriageBlockEntity.onSpeedChanged (assemblage)",
+    "Scènes : GantryScenes.introForShaft, introForPinion (vue rapprochée du chariot), redstone, direction, subgantry"
   ],
   "en": {
     "slugEn": "gantry-carriage",
@@ -238,6 +257,10 @@
       {
         "label": "Cascade",
         "value": "A shaft on a carriage (or the reverse) follows without glue"
+      },
+      {
+        "label": "Carriage placement",
+        "value": "Against a Gantry Shaft on another axis; starts by itself when the speed changes"
       },
       {
         "label": "Version",
@@ -285,6 +308,11 @@
         "id": "gantry_subgantry",
         "name": "Gantry: cascaded",
         "description": "A Gantry Shaft is carried by a carriage and a second carriage slides along it: the machine moves on two axes."
+      },
+      {
+        "id": "gantry_pinion",
+        "name": "Gantry: the carriage up close",
+        "description": "A Gantry Carriage, seen up close, travels along its shaft and then carries a structure of glued planks."
       }
     ],
     "sections": [
@@ -348,6 +376,12 @@
         "html": "<p>The <strong>Gantry Carriage</strong> is crafted like a bearing, with a <a href=\"/en/wiki/cogwheel\">cogwheel</a> instead of the shaft: wooden slab, andesite casing, cogwheel, top to bottom. It slides at <strong>RPM ÷ 512</strong> block per tick, like a piston.</p>"
       },
       {
+        "id": "pignon",
+        "title": "The carriage up close",
+        "alt": "A Gantry Carriage on its Gantry Shaft, seen up close",
+        "html": "<p>A <strong>Gantry Carriage</strong> only holds on against a Gantry Shaft whose axis differs from its own: remove the shaft and the carriage drops as an item. Its front face, pointing away from the shaft, carries the structure. There is nothing to switch on: as soon as the shaft's speed changes, the carriage assembles whatever is glued to it and gets going. It moves RPM ÷ 512 block per tick, capped at 0.49 block per tick, which is 2.5 blocks per second at 64 RPM. In the loop, framed on the carriage, it takes a structure of glued planks along to the end of the shaft.</p>"
+      },
+      {
         "id": "montages",
         "title": "Build ideas",
         "html": "<p>A <strong>crane</strong>: a Gantry Shaft up high, a carriage carrying a <a href=\"/en/wiki/rope-pulley\">Rope Pulley</a>. A <strong>quarry</strong>: two cascaded gantries sweeping a square with drills. A <strong>side lift</strong> running along a building front, driven by a lever.</p>"
@@ -376,7 +410,8 @@
       "Cascade: Contraption.moveGantryPinion / moveGantryShaft",
       "Rendering: OrientedRotatingVisual.gantryShaft, GantryCarriageRenderer (added by us, see engine_create/REQUESTS.md)",
       "Simulation: WIKI/contraption_sim.py (carried blocks, movement times, ropes and actors recomputed from Create's code)",
-      "Scenes: GantryScenes.introForShaft (= introForPinion), redstone, direction, subgantry"
+      "Carriage: GantryCarriageBlock.canSurvive / getFacingForPlacement, GantryCarriageBlockEntity.onSpeedChanged (assembly)",
+      "Scenes: GantryScenes.introForShaft, introForPinion (close-up on the carriage), redstone, direction, subgantry"
     ]
   }
 }

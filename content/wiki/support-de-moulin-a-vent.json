@@ -4,12 +4,12 @@
   "blockId": "create:windmill_bearing",
   "category": "cinetique",
   "title": "Moulin à vent — Create : guide en français",
-  "description": "Le support de moulin à vent de Create : coller des voiles, 8 voiles par tr/min, jusqu'à 16 tr/min et 8 192 SU, sens de rotation et formes de moulin.",
+  "description": "Support de moulin à vent de Create : coller des voiles, 8 voiles par tr/min, jusqu'à 16 tr/min et 8 192 SU, sens de rotation et formes de moulin.",
   "datePublished": "2026-10-27",
   "dateModified": "2026-10-27",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
-  "intro": "Le <strong>support de moulin à vent</strong> transforme une structure de voiles en source de rotation. Contrairement à la roue à eau, il ne dépend de rien d'autre que de lui-même : pas de courant, pas de carburant, il tourne partout, même dans le Nether. Sa puissance dépend du <strong>nombre de voiles</strong> : un petit moulin suffit pour démarrer, un grand moulin fait tourner une usine entière.",
+  "intro": "Un <strong>support de moulin à vent</strong> transforme une structure de voiles en source de rotation. Contrairement à la roue à eau, il ne dépend de rien d'autre que de lui-même : pas de courant, pas de carburant, il tourne partout, même dans le Nether. Sa puissance dépend du <strong>nombre de voiles</strong> : un petit moulin suffit pour démarrer, un grand moulin fait tourner une usine entière.",
   "facts": [
     {
       "label": "Catégorie",
@@ -30,6 +30,10 @@
     {
       "label": "Voiles",
       "value": "Voiles et cadres de voile de Create, toute laine"
+    },
+    {
+      "label": "Teinture",
+      "value": "Colorant : la voile visée, puis sa voisine, puis toute la surface ; cisailles : retour au cadre"
     },
     {
       "label": "Version",
@@ -69,6 +73,18 @@
       "name": "Support de moulin à vent : n'importe quelle forme",
       "description": "Une structure qui ne ressemble pas à un moulin, avec de la laine et des blocs décoratifs, tourne quand même dès qu'elle compte assez de voiles.",
       "duration": "PT20S"
+    },
+    {
+      "id": "sails",
+      "name": "Voiles de moulin à vent : sans colle, teinture et cadres",
+      "description": "Douze voiles s'accrochent seules autour d'une colonne de bois sur un support de moulin à vent ; pendant que le moulin tourne, des voiles sont teintes en bleu et d'autres redeviennent des cadres.",
+      "duration": "PT20S"
+    },
+    {
+      "id": "sail_frames",
+      "name": "Cadres de voile de moulin à vent",
+      "description": "Les mêmes ailes, construites cette fois en cadres de voile ajourés : ils tiennent seuls et le moulin tourne.",
+      "duration": "PT12S"
     }
   ],
   "sections": [
@@ -84,21 +100,21 @@
       "title": "Construire les ailes avec de la colle",
       "image": "windmill_source_colle.webp",
       "alt": "Croix de bois et de voiles construite devant le support, entourée de contours verts de colle",
-      "html": "<p>Pour que la structure tourne d'un seul bloc, ses éléments doivent tenir ensemble. Les voiles s'accrochent seules à leurs voisins, mais les autres blocs (planches, bûches de la croix) doivent être reliés avec de la <strong>colle extra-forte</strong> : sélectionne la zone à coller, comme dans l'animation où les contours verts entourent les bras.</p>"
+      "html": "<p>Pour que la structure tourne d'un seul bloc, ses éléments doivent tenir ensemble. Les voiles s'accrochent seules à leurs voisins, mais les autres blocs (planches, bûches de la croix) doivent être reliés à la <strong>colle extra-forte</strong> : sélectionne la zone à coller, comme dans l'animation où les contours verts entourent les bras.</p>"
     },
     {
       "id": "voiles",
       "title": "Assez de voiles pour faire un moulin",
       "image": "windmill_source_voiles.webp",
       "alt": "Moulin à quatre ailes garnies de voiles blanches et de cadres de voile",
-      "html": "<p>La structure ne devient un moulin que si elle contient au moins <strong>8 blocs de voile</strong> : voiles de moulin à vent (de toutes les couleurs), cadres de voile ou n'importe quelle <strong>laine</strong>. En dessous, le support refuse de s'assembler. La voile se fabrique avec de la laine, deux bâtons et de l'alliage d'andésite, et donne deux voiles par fabrication.</p>"
+      "html": "<p>La structure ne devient un moulin que si elle compte au moins <strong>8 blocs de voile</strong> : voiles de moulin à vent (de toutes les couleurs), cadres de voile ou n'importe quelle <strong>laine</strong>. En dessous, le support refuse de s'assembler. La voile se fabrique avec de la laine, deux bâtons et de l'alliage d'andésite, et donne deux voiles par fabrication.</p>"
     },
     {
       "id": "activer",
       "title": "Lancer le moulin d'un clic droit",
       "image": "windmill_source_activer.webp",
       "alt": "Le moulin tourne, la roue dentée et le rotor qui en sortent entraînent un compteur de vitesse",
-      "html": "<p><strong>Clic droit sur le support</strong> : la structure s'assemble et se met à tourner. Le support devient alors une source : le réseau branché à l'arrière tourne. Un nouveau clic droit l'arrête et repose les blocs, pour modifier les ailes. Laisse de la place tout autour : les ailes balaient un cercle complet et ne passent pas à travers les blocs.</p>"
+      "html": "<p><strong>Active le support d'un clic droit</strong> : la structure s'assemble et se met à tourner. Le support devient alors une source : le réseau branché à l'arrière tourne. Un nouveau clic droit l'arrête et repose les blocs, pour modifier les ailes. Laisse de la place tout autour : les ailes balaient un cercle complet et ne passent pas à travers les blocs.</p>"
     },
     {
       "id": "vitesse",
@@ -119,6 +135,22 @@
       "alt": "Une structure en forme de bâtiment, avec de la laine et des pots de fleurs, qui tourne sur son support",
       "video": "windmill_structure",
       "html": "<p>Rien n'oblige à faire une croix : <strong>toute structure</strong> collée au support compte comme moulin dès qu'elle contient 8 voiles ou blocs de laine. Une maison qui tourne, un logo, une hélice de bateau… seuls comptent les blocs de voile, la forme et les autres blocs sont libres.</p>"
+    },
+    {
+      "id": "voiles-sans-colle",
+      "title": "Des voiles qui tiennent seules, et qui se teignent",
+      "image": "sails_teinture.webp",
+      "alt": "Moulin de voiles blanches sur son support, dont une aile vient d'être teinte en bleu",
+      "video": "sails",
+      "html": "<p>Les <strong>voiles de moulin à vent</strong> se passent de colle et de châssis : chaque voile s'accroche d'elle-même aux blocs qui la bordent dans son propre plan, donc au bloc central et aux autres voiles. Dans la boucle, douze voiles posées autour d'une colonne de bois forment ainsi les ailes sans un seul contour de colle. Le compte des voiles fixe la vitesse : le code divise leur nombre par 8 et garde la partie entière, soit 1 tr/min pour ces 12 voiles, 2 tr/min à partir de 16 et 16 tr/min, le maximum, dès 128.</p><p>Un <strong>colorant</strong> en clic droit teint la voile visée ; un deuxième clic teint sa voisine, un troisième toute la surface de voiles reliées. Les <strong>cisailles</strong> enlèvent la toile et rendent un cadre.</p>"
+    },
+    {
+      "id": "cadres-de-voile",
+      "title": "Les cadres de voile",
+      "image": "sail_frames_cadres.webp",
+      "alt": "Ailes faites de cadres de voile ajourés autour d’une colonne de bois, sur le support",
+      "video": "sail_frames",
+      "html": "<p>Le <strong>cadre de voile de moulin à vent</strong> est la version ajourée de la voile : même rôle, même accroche sans colle, et il compte autant qu'une voile pleine dans le calcul de la vitesse. Il ne se teint pas ; c'est l'étape d'avant la toile. Pour passer de l'un à l'autre, pose l'objet seul dans une grille de fabrication : une voile donne un cadre, un cadre donne une voile blanche. La voile, elle, se fabrique avec un bloc de laine, deux bâtons et un alliage d'andésite, pour deux voiles. Les cadres conviennent aux moulins décoratifs, ou aux ailes à travers lesquelles on veut voir.</p>"
     },
     {
       "id": "erreurs",
@@ -142,7 +174,10 @@
     "Voiles : tag create:windmill_sails (voiles, cadre de voile, #minecraft:wool)",
     "Sens : WindmillBearingBlockEntity.movementDirection (RotationDirection, horaire / antihoraire)",
     "Recettes : crafting/kinetics/windmill_bearing.json, white_sail.json (laine + 2 bâtons + alliage d'andésite -> 2 voiles)",
-    "Scènes : BearingScenes.windmillsAsSource et windmillsAnyStructure"
+    "Voiles sans colle : BlockMovementChecksImpl (une voile est attachée vers les faces hors de l'axe de son FACING)",
+    "Teinture : SailBlock.useItemOn / applyDye (bloc visé, puis un voisin, puis la surface reliée ; cisailles -> cadre ; un cadre ne se teint pas)",
+    "Voile <-> cadre : CreateStandardRecipeGen.SAIL_CYCLE (conversion en grille de fabrication)",
+    "Scènes : BearingScenes.windmillsAsSource, windmillsAnyStructure, sail et sailFrame"
   ],
   "en": {
     "slugEn": "windmill-bearing",
@@ -170,6 +205,10 @@
       {
         "label": "Sails",
         "value": "Create sails and sail frames, any wool"
+      },
+      {
+        "label": "Dyeing",
+        "value": "Dye: the sail you aim at, then its neighbour, then the whole surface; shears: back to a frame"
       },
       {
         "label": "Version",
@@ -207,14 +246,24 @@
         "id": "windmill_structure",
         "name": "Windmill Bearing: any shape will do",
         "description": "A structure that looks nothing like a windmill, with wool and decorative blocks, still turns as soon as it has enough sails."
+      },
+      {
+        "id": "sails",
+        "name": "Windmill Sails: no glue, dyeing and frames",
+        "description": "Twelve sails attach by themselves around a wooden column on a Windmill Bearing; while the windmill turns, some sails are dyed blue and others become frames again."
+      },
+      {
+        "id": "sail_frames",
+        "name": "Windmill Sail Frames",
+        "description": "The same blades, this time built from open sail frames: they hold on their own and the windmill turns."
       }
     ],
     "sections": [
       {
         "id": "support",
-        "title": "The bearing attaches to the block in front",
-        "alt": "A Windmill Bearing placed against a cogwheel, with the block in front of it highlighted",
-        "html": "<p>The bearing has two useful faces. At the back is the rotation output, which connects to a shaft or a cogwheel. At the front is its wooden plate: that is where it <strong>grabs the block in front of it</strong>, and everything glued to that block. So face it towards the spot where you want to build the blades.</p>"
+        "title": "The bearing grabs what sits ahead of it",
+        "alt": "A Windmill Bearing placed against a cogwheel, with the block ahead of it highlighted",
+        "html": "<p>The bearing has two useful faces. At the back is the rotation output, which connects to a shaft or a cogwheel. At the front is its wooden plate: that is where it <strong>grabs the block placed ahead of it</strong>, and everything glued to that block. So face it towards the spot where you want to build the blades.</p>"
       },
       {
         "id": "colle",
@@ -226,7 +275,7 @@
         "id": "voiles",
         "title": "Enough sails to make a windmill",
         "alt": "A four-bladed windmill fitted with white sails and sail frames",
-        "html": "<p>The structure only counts as a windmill if it contains at least <strong>8 sail blocks</strong>: Windmill Sails (in any colour), Windmill Sail Frames or any <strong>wool</strong>. Below that, the bearing refuses to assemble. A sail is crafted from wool, two sticks and Andesite Alloy, and the recipe makes two.</p>"
+        "html": "<p>The structure only counts as a windmill if it holds at least <strong>8 sail blocks</strong>: Windmill Sails (in any colour), Windmill Sail Frames or any <strong>wool</strong>. Below that, the bearing refuses to assemble. A sail is crafted from wool, two sticks and Andesite Alloy, and the recipe makes two.</p>"
       },
       {
         "id": "activer",
@@ -252,6 +301,18 @@
         "html": "<p>Nothing forces you to build a cross: <strong>any structure</strong> glued to the bearing counts as a windmill once it holds 8 sail or wool blocks. A spinning house, a logo, a ship's propeller… only the sail blocks matter; the shape and the other blocks are up to you.</p>"
       },
       {
+        "id": "voiles-sans-colle",
+        "title": "Sails hold on by themselves, and take dye",
+        "alt": "A windmill of white sails on its bearing, with one blade just dyed blue",
+        "html": "<p><strong>Windmill Sails</strong> need neither glue nor chassis: each sail grabs the blocks next to it within its own plane, so the central block and the other sails. In the loop, twelve sails placed around a wooden column make up the blades without a single glue outline. The sail count sets the speed: the code divides it by 8 and drops the remainder, so these 12 sails give 1 RPM, 16 sails give 2 RPM and 128 reach the 16 RPM maximum.</p><p>Right-clicking with a <strong>dye</strong> colours the sail you aim at; a second click colours its neighbour, a third one the whole connected surface of sails. <strong>Shears</strong> strip the cloth off and leave a frame.</p>"
+      },
+      {
+        "id": "cadres-de-voile",
+        "title": "Windmill Sail Frames",
+        "alt": "Blades made of open sail frames around a wooden column, on the bearing",
+        "html": "<p>The <strong>Windmill Sail Frame</strong> is the open version of the sail: same job, same glue-free grip, and it counts exactly like a full sail when the speed is worked out. It cannot be dyed; think of it as the step before the cloth. To switch between the two, put the item alone in a crafting grid: a sail becomes a frame, a frame becomes a white sail. The sail itself is crafted from one wool block, two sticks and one Andesite Alloy, and the recipe makes two. Frames suit decorative windmills, or blades you want to see through.</p>"
+      },
+      {
         "id": "erreurs",
         "title": "Common mistakes",
         "html": "<ul><li><strong>The bearing refuses to assemble</strong>: fewer than 8 sails, or some blocks of the cross are not glued and are not part of the structure.</li><li><strong>The windmill stops dead</strong>: a blade hits a block nearby while turning. Clear the whole circle, down to the ground.</li><li><strong>The network stalls despite a big windmill</strong>: the speed is too low for your machines. Speed it up with cogwheels: the SU capacity stays the same, but each machine gets the speed it needs.</li><li><strong>The windmill spins the wrong way</strong>: change the direction on its panel, there is no need to rebuild it.</li></ul>"
@@ -264,7 +325,10 @@
       "Sails: tag create:windmill_sails (sails, sail frame, #minecraft:wool)",
       "Direction: WindmillBearingBlockEntity.movementDirection (RotationDirection, clockwise / counter-clockwise)",
       "Recipes: crafting/kinetics/windmill_bearing.json, white_sail.json (wool + 2 sticks + Andesite Alloy -> 2 sails)",
-      "Scenes: BearingScenes.windmillsAsSource and windmillsAnyStructure"
+      "Glue-free sails: BlockMovementChecksImpl (a sail is attached towards the faces off the axis of its FACING)",
+      "Dyeing: SailBlock.useItemOn / applyDye (aimed block, then one neighbour, then the connected surface; shears -> frame; frames cannot be dyed)",
+      "Sail <-> frame: CreateStandardRecipeGen.SAIL_CYCLE (crafting grid conversion)",
+      "Scenes: BearingScenes.windmillsAsSource, windmillsAnyStructure, sail and sailFrame"
     ]
   }
 }

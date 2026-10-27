@@ -84,7 +84,7 @@
       "id": "deployer_redstone",
       "name": "Déployeur : l'arrêter et le déclencher à la redstone",
       "description": "Un levier bloque le déployeur ; une brève coupure du signal lui fait faire un seul cycle.",
-      "duration": "PT17S"
+      "duration": "PT18S"
     },
     {
       "id": "deployer_contraption",
@@ -120,9 +120,9 @@
       "id": "modes",
       "title": "Clic droit ou clic gauche",
       "image": "deployer_modes_clic-gauche.webp",
-      "alt": "Déployeur face à un bloc de terre, réglé pour imiter un clic gauche",
+      "alt": "Déployeur face à un bloc de terre, réglé pour frapper comme un clic gauche",
       "video": "deployer_modes",
-      "html": "<p>Par défaut, le déployeur imite un <strong>clic droit</strong> : il utilise et pose. Un coup de <strong>clé</strong> le passe en <strong>clic gauche</strong> : il frappe et casse, avec l'outil qu'il tient. Une pioche en main, il mine ; une épée en main, il attaque les créatures devant lui. Pratique pour casser des blocs que la perceuse ne doit pas toucher, ou pour une ferme à monstres.</p>"
+      "html": "<p>Par défaut, le déployeur imite un <strong>clic droit</strong> : il utilise et pose. Un coup de <strong>clé</strong> le passe en <strong>clic gauche</strong> : il frappe et casse, avec l'outil qu'il tient. Une pioche en main, il mine ; une épée en main, il attaque les créatures devant lui. Pratique pour casser des blocs que la perceuse ne doit pas toucher, ou pour une ferme à monstres. Dans l'animation, il tient une houe en or : en clic droit, il laboure l'herbe ; passé en clic gauche, il frappe la terre jusqu'à la casser.</p>"
     },
     {
       "id": "traitement",
@@ -130,7 +130,7 @@
       "image": "deployer_processing_tapis.webp",
       "alt": "Déployeur au-dessus d'un tapis roulant, des objets attendent leur tour sur le tapis",
       "video": "deployer_processing",
-      "html": "<p>Posé deux blocs au-dessus d'un <a href=\"/wiki/depot\">dépôt</a> ou d'un <a href=\"/wiki/tapis-roulant\">tapis roulant</a>, le déployeur <strong>applique l'objet qu'il tient</strong> sur ce qui passe dessous : un rotor plus des planches donne une roue dentée, une hache retire la cire ou l'oxydation du cuivre, un alliage d'andésite sur une bûche écorcée donne un boîtier d'andésite. Sur un tapis, chaque objet est retenu le temps du cycle, puis repart. C'est aussi la machine clé de l'assemblage séquencé.</p>"
+      "html": "<p>Posé deux blocs au-dessus d'un <a href=\"/wiki/depot\">dépôt</a> ou d'un <a href=\"/wiki/tapis-roulant\">tapis roulant</a>, le déployeur <strong>applique l'objet qu'il tient</strong> sur ce qui passe dessous : un rotor plus des planches donne une roue dentée, une hache retire la cire ou l'oxydation du cuivre, un alliage d'andésite sur une bûche écorcée donne un boîtier d'andésite. Sur un tapis, chaque objet est retenu le temps du cycle, puis repart. C'est aussi la machine clé de l'assemblage séquencé. Dans l’animation, il tient une feuille de <a href=\"/wiki/papier-de-verre\">papier de verre</a> et polit du quartz rose, sur le dépôt puis au passage sur le tapis.</p>"
     },
     {
       "id": "redstone",
@@ -187,7 +187,7 @@
       },
       {
         "label": "Reach",
-        "value": "Acts on the block 2 blocks in front of it"
+        "value": "Acts on the block two spaces ahead"
       },
       {
         "label": "Rate",
@@ -258,7 +258,7 @@
       {
         "id": "portee",
         "title": "It acts two blocks ahead",
-        "alt": "A Deployer reaching for a spot two blocks in front of it, outlined in green",
+        "alt": "A Deployer reaching for a spot two blocks ahead, outlined in green",
         "html": "<p>Connect the Deployer to rotation from its back: every cycle, its hand extends and <strong>acts on the block two spaces in front of it</strong>. The block right in front does not get in the way, since the hand reaches over it, so you can fit a belt or a depot in between. A cycle takes about 4 seconds at 16 RPM and 2 seconds at 32 RPM; at the maximum of 256 RPM, a quarter of a second.</p>"
       },
       {
@@ -271,19 +271,19 @@
         "id": "filtre",
         "title": "The Deployer's filter",
         "alt": "The filter slot on top of the Deployer",
-        "html": "<p>The Deployer has a <strong>filter slot</strong>. Once set, it only activates while holding a matching item, only accepts those items as input, and gives back all the others when something extracts from it. It is essential on a line carrying mixed items, so it never wastes the wrong tool.</p>"
+        "html": "<p>The Deployer has a <strong>filter slot</strong>. Once set, it only fires when it holds a matching item, only accepts those items as input, and gives back all the others when something extracts from it. It is essential on a line carrying mixed items, so it never wastes the wrong tool.</p>"
       },
       {
         "id": "modes",
         "title": "Right-click or left-click",
         "alt": "A Deployer facing a dirt block, set to mimic a left-click",
-        "html": "<p>By default, the Deployer mimics a <strong>right-click</strong>: it uses and places. One click with the <strong>Wrench</strong> switches it to <strong>left-click</strong>: it punches and breaks, with whatever tool it holds. With a pickaxe it mines; with a sword it attacks mobs in front of it. Handy for breaking blocks a drill should not touch, or for a mob farm.</p>"
+        "html": "<p>By default, the Deployer mimics a <strong>right-click</strong>: it uses and places. One click with the <strong>Wrench</strong> switches it to <strong>left-click</strong>: it punches and breaks, with whatever tool it holds. With a pickaxe it mines; with a sword it attacks mobs in front of it. Handy for breaking blocks a drill should not touch, or for a mob farm. In the animation it holds a golden hoe: in right-click mode it tills the grass; switched to left-click, it strikes the dirt until it breaks.</p>"
       },
       {
         "id": "traitement",
         "title": "Processing items on a depot or a belt",
         "alt": "A Deployer above a Mechanical Belt, with items waiting their turn on the belt",
-        "html": "<p>Placed two blocks above a <a href=\"/en/wiki/depot\">Depot</a> or a <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a>, the Deployer <strong>applies its held item</strong> to whatever passes underneath: a shaft plus planks gives a cogwheel, an axe strips wax or oxidation off copper, Andesite Alloy on a stripped log gives Andesite Casing. On a belt, each item is held for the length of the cycle and then moves on. It is also the key machine of sequenced assembly.</p>"
+        "html": "<p>Placed two blocks above a <a href=\"/en/wiki/depot\">Depot</a> or a <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a>, the Deployer <strong>applies its held item</strong> to whatever passes underneath: a shaft plus planks gives a cogwheel, an axe strips wax or oxidation off copper, Andesite Alloy on a stripped log gives Andesite Casing. On a belt, each item is held for the length of the cycle and then moves on. It is also the key machine of sequenced assembly. In the animation it holds a sheet of <a href=\"/en/wiki/sand-paper\">Sand Paper</a> and polishes rose quartz, first on the Depot and then on the belt as it goes by.</p>"
       },
       {
         "id": "redstone",

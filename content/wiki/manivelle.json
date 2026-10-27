@@ -217,13 +217,13 @@
         "id": "gauche",
         "title": "Right-click: rotation one way",
         "alt": "The crank turns and the speedometer shows the network spinning",
-        "html": "<p>Hold <strong>right-click</strong> on the crank: it spins at <strong>32 RPM</strong> and drives the whole network behind it. Each use keeps it turning for half a second, so keep the button pressed. As soon as you let go, the rotation stops.</p><p>Its capacity is <strong>8 SU per RPM, so 256 SU</strong>: enough for one Mechanical Press at 32 RPM, but not two.</p>"
+        "html": "<p>Keep <strong>right-click</strong> pressed while aiming at the crank: it spins at <strong>32 RPM</strong> and drives the whole network behind it. Each use keeps it turning for half a second, so keep the button pressed. As soon as you let go, the rotation stops.</p><p>Its capacity is <strong>8 SU per RPM, so 256 SU</strong>: enough for one Mechanical Press at 32 RPM, but not two.</p>"
       },
       {
         "id": "droite",
         "title": "Sneaking: rotation the other way",
         "alt": "The crank turns the other way and the network follows",
-        "html": "<p><strong>Sneak and hold right-click</strong> to turn the other way. It is the only Create source whose direction you flip on the fly, which is great for pushing a Mechanical Piston or a gantry forward and back.</p><p>Cranking is tiring: every use costs <strong>0.32 exhaustion</strong>, a bit like sprinting. For a machine that has to run for a long time, move on to a water wheel or a windmill.</p>"
+        "html": "<p>To reverse it, <strong>crouch while pressing right-click</strong>: the crank then turns the other way. It is the only Create source whose direction you flip on the fly, which is great for pushing a Mechanical Piston or a gantry forward and back.</p><p>Cranking is tiring: every use costs <strong>0.32 exhaustion</strong>, a bit like sprinting. For a machine that has to run for a long time, move on to a water wheel or a windmill.</p>"
       },
       {
         "id": "usages",

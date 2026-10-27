@@ -155,7 +155,7 @@
       "image": "tunnel_modes_repartir.webp",
       "alt": "Trois tunnels de laiton qui coupent des piles de boules de neige en trois parts",
       "video": "tunnel_modes",
-      "html": "<p>Le mode se règle sur le panneau de valeur du tunnel et vaut pour tout le groupe. <strong>Partager</strong> coupe chaque pile en parts égales entre les sorties libres ; si une sortie est bouchée, sa part va aux autres. <strong>Partage forcé</strong> est plus strict : si une seule sortie ne peut pas prendre sa part, le tunnel attend et ne donne rien. Dans la boucle, un bloc vient boucher une sortie pour montrer la différence.</p>"
+      "html": "<p>Le mode se règle sur le panneau de valeur du tunnel et vaut pour tout le groupe. <strong>Partager</strong> coupe chaque pile en parts égales entre les sorties libres ; si une sortie est bouchée, sa part va aux autres. <strong>Partage forcé</strong> est plus strict : dès qu'une sortie est pleine et refuse sa part, le tunnel attend et ne donne rien. Dans la boucle, un bloc vient boucher une sortie pour montrer la différence.</p>"
     },
     {
       "id": "tourniquet",

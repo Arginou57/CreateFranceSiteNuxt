@@ -128,14 +128,14 @@
       "image": "hose_level_surface.webp",
       "alt": "La surface de l’eau descend jusque sous l’embout",
       "video": "hose_level",
-      "html": "<p>Une poulie rétractée ne fait rien : il faut d'abord descendre le tuyau. En vidange, elle retire les couches du haut vers le bas, et la surface finit <strong>juste sous le bout du tuyau</strong>. Pour vider plus profond, descends le tuyau davantage.</p>"
+      "html": "<p>Une poulie rétractée ne fait rien : il faut d'abord descendre le tuyau. En vidange, elle retire d'abord la couche la plus haute, puis descend couche par couche, et la surface finit <strong>juste sous le bout du tuyau</strong>. Pour vider plus profond, descends le tuyau davantage.</p>"
     },
     {
       "id": "remplissage",
       "title": "Remplir jusqu’où ?",
       "image": "hose_level_remplissage.webp",
       "alt": "Le bassin se remplit par le bas autour de l’embout",
-      "html": "<p>En remplissage, la poulie travaille <strong>du bas vers le haut</strong>, et le bassin ne monte pas plus haut que la couche située juste au-dessus du bout du tuyau. La hauteur de l'embout règle donc le niveau final, dans un sens comme dans l'autre.</p>"
+      "html": "<p>En remplissage, la poulie remplit <strong>en commençant par le fond</strong>, et le bassin ne monte pas plus haut que la couche située juste au-dessus du bout du tuyau. La hauteur de l'embout règle donc le niveau final, dans un sens comme dans l'autre.</p>"
     },
     {
       "id": "ocean",

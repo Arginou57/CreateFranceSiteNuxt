@@ -94,7 +94,7 @@
       "image": "ejector_pose.webp",
       "alt": "Éjecteur posé face à un bloc cible encadré",
       "video": "ejector",
-      "html": "<p>Comme le <a href=\"/wiki/bras-mecanique\">bras mécanique</a>, l'éjecteur se règle avant d'être posé. Éjecteur en main, <strong>clic droit sur le bloc</strong> qui doit recevoir les objets : il est mémorisé. Pose ensuite l'éjecteur à l'endroit voulu, il s'oriente tout seul vers sa cible. Sans cible choisie, il lance simplement sur le bloc juste devant lui.</p>"
+      "html": "<p>Comme le <a href=\"/wiki/bras-mecanique\">bras mécanique</a>, l'éjecteur se règle avant d'être posé. Éjecteur en main, vise le bloc qui doit recevoir les objets et fais <strong>clic droit</strong> : il est mémorisé. Pose ensuite l'éjecteur à l'endroit voulu, il s'oriente tout seul vers sa cible. Sans cible choisie, il lance simplement sur le bloc juste devant lui.</p>"
     },
     {
       "id": "portee",
