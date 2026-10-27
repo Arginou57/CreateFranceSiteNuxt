@@ -1,0 +1,315 @@
+{
+  "slug": "pompe-mecanique",
+  "name": "Pompe mécanique",
+  "blockId": "create:mechanical_pump",
+  "category": "fluides",
+  "title": "Pompe mécanique — Create : guide en français",
+  "description": "La pompe mécanique de Create : sens de la flèche, portée de 16 blocs, débit selon la vitesse, stress et pompes en parallèle pour aller plus vite.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>pompe mécanique</strong> est le moteur des réseaux de fluides. Sans elle, les <a href=\"/wiki/tuyau-a-fluide\">tuyaux</a> restent immobiles ; avec elle, l'eau, la lave ou le miel avancent d'un réservoir à l'autre. Elle se fabrique avec une roue dentée et un tuyau, reçoit sa rotation comme n'importe quelle machine cinétique, et son débit dépend directement de sa vitesse.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Fluides"
+    },
+    {
+      "label": "Fabrication",
+      "value": "Roue dentée + tuyau à fluide (sans forme)"
+    },
+    {
+      "label": "Stress",
+      "value": "4 SU par tr/min (256 SU à 64 tr/min)"
+    },
+    {
+      "label": "Portée",
+      "value": "16 blocs de tuyau de chaque côté (réglage mechanicalPumpRange)"
+    },
+    {
+      "label": "Débit",
+      "value": "Vitesse ÷ 2 en mB par tick : 640 mB/s à 64 tr/min, 2 560 mB/s à 256 tr/min"
+    },
+    {
+      "label": "Sens",
+      "value": "Celui de la flèche, quel que soit le sens de rotation ; la clé l’inverse"
+    },
+    {
+      "label": "Plusieurs pompes",
+      "value": "En parallèle sur le même réseau, leurs débits s’additionnent"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (sans forme)",
+    "grid": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        "Roue dentée",
+        "Tuyau à fluide",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 pompe mécanique"
+  },
+  "videos": [
+    {
+      "id": "pump_flow",
+      "name": "Pompe mécanique : le sens du courant",
+      "description": "Une pompe fait passer l'eau d'un réservoir à l'autre ; inverser la rotation ne change rien, la clé retourne la pompe et le courant.",
+      "duration": "PT20S"
+    },
+    {
+      "id": "pump_speed",
+      "name": "Pompe mécanique : vitesse, débit et pompes en parallèle",
+      "description": "Une pompe accélérée remplit plus vite un réservoir de lave, puis trois pompes côte à côte combinent leur débit.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "pompe",
+      "title": "Le cœur du réseau",
+      "image": "pump_flow_pompe.webp",
+      "alt": "Pompe mécanique dans la conduite entre deux réservoirs d'eau",
+      "video": "pump_flow",
+      "html": "<p>Pose la pompe dans une conduite, comme un tuyau droit, puis donne-lui de la rotation par son axe : un <a href=\"/wiki/rotor\">rotor</a>, une <a href=\"/wiki/roue-dentee\">roue dentée</a> ou une grande roue dentée. Tant qu'elle ne tourne pas, rien ne bouge. Dès qu'elle tourne, elle met en mouvement tout le réseau qui lui est relié, d'un côté comme de l'autre.</p>"
+    },
+    {
+      "id": "fleche",
+      "title": "Suivre la flèche",
+      "image": "pump_flow_fleche.webp",
+      "alt": "La flèche de la pompe pointe vers le réservoir à remplir",
+      "html": "<p>La flèche sur la pompe indique le <strong>sens du courant</strong>. Le réseau situé derrière la flèche est aspiré : la pompe y cherche une source et la vide. Le réseau situé devant est refoulé : le fluide y est poussé jusqu'aux réservoirs, bassins ou machines qui l'acceptent. Chaque côté porte jusqu'à 16 blocs de tuyau.</p>"
+    },
+    {
+      "id": "aspire",
+      "title": "Aspirer derrière, pousser devant",
+      "image": "pump_flow_aspire.webp",
+      "alt": "L'eau est aspirée d'un réservoir et poussée vers l'autre",
+      "html": "<p>On voit le fluide partir de la source, rejoindre la pompe puis continuer vers la destination à travers les tuyaux à fenêtre. Le réservoir de départ baisse pendant que l'autre se remplit. Le transfert s'arrête de lui-même quand la source est vide ou la destination pleine.</p>"
+    },
+    {
+      "id": "cle",
+      "title": "Inverser le courant",
+      "image": "pump_flow_cle.webp",
+      "alt": "Pompe retournée à la clé, l'eau revient vers le premier réservoir",
+      "html": "<p>Changer le sens de rotation ne change <strong>pas</strong> le sens de la pompe : elle pousse toujours vers sa flèche. Pour inverser le courant, fais un clic droit à la <strong>clé</strong> sur la pompe : elle se retourne, et le fluide repart dans l'autre sens, du second réservoir vers le premier. Un réseau réversible n'a donc besoin que d'une clé, pas d'un inverseur de rotation.</p>"
+    },
+    {
+      "id": "portee",
+      "title": "Une portée de 16 blocs",
+      "image": "pump_speed_portee.webp",
+      "alt": "Longues conduites autour de la pompe pour montrer sa portée",
+      "video": "pump_speed",
+      "html": "<p>Quelle que soit sa vitesse, une pompe agit sur les tuyaux reliés jusqu'à <strong>16 blocs</strong> de chaque côté. Au-delà, le fluide ne va pas plus loin : pour une longue conduite, il faut une seconde pompe en relais. Sur un serveur, cette portée se règle avec l'option mechanicalPumpRange.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "Plus vite, plus loin",
+      "image": "pump_speed_vitesse.webp",
+      "alt": "Pompe accélérée entre deux réservoirs, la lave avance",
+      "html": "<p>La vitesse joue deux fois. Elle règle d'abord l'avancée du fluide dans les tuyaux : à 8 tr/min il met plusieurs secondes à traverser une petite installation, à 128 tr/min et plus il arrive presque aussitôt. Elle règle ensuite le <strong>débit</strong> : la moitié de la vitesse en millibuckets par tick, soit 640 mB par seconde à 64 tr/min et 2 560 mB par seconde à 256 tr/min.</p>"
+    },
+    {
+      "id": "debit",
+      "title": "Le coût en stress",
+      "image": "pump_speed_debit.webp",
+      "alt": "La lave remplit le réservoir plus vite à grande vitesse",
+      "html": "<p>Chaque pompe consomme <strong>4 SU par tr/min</strong>, soit 256 SU à 64 tr/min et 1 024 SU à 256 tr/min. Aller vite coûte donc cher : vérifie ta source de rotation avec un <a href=\"/wiki/stressometre-compteur-de-vitesse\">stressomètre</a> avant d'emballer un réseau. Pour remplir un grand réservoir sans hâte, une vitesse moyenne suffit.</p>"
+    },
+    {
+      "id": "combiner",
+      "title": "Plusieurs pompes en parallèle",
+      "image": "pump_speed_combiner.webp",
+      "alt": "Trois pompes en parallèle entre deux réservoirs de lave",
+      "html": "<p>Plusieurs pompes posées <strong>côte à côte</strong> entre les mêmes réservoirs additionnent leurs débits : trois pompes à 64 tr/min déplacent trois fois plus de fluide qu'une seule. C'est la solution quand une pompe atteint la vitesse maximale de ton réseau cinétique.</p>"
+    },
+    {
+      "id": "meme-sens",
+      "title": "Toutes dans le même sens",
+      "image": "pump_speed_meme-sens.webp",
+      "alt": "Une pompe retournée à la clé pour suivre les deux autres",
+      "html": "<p>Les pompes d'un même réseau doivent toutes pointer <strong>dans le même sens</strong>. Une pompe retournée travaille contre les autres et le débit chute. Vérifie leurs flèches, et retourne à la clé celle qui ne suit pas.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Astuces",
+      "html": "<p>Une pompe directement collée à un réservoir peut le vider sans tuyau intermédiaire. Pour une ferme à lave ou une alimentation de <a href=\"/wiki/moteur-a-vapeur\">moteur à vapeur</a>, une seule pompe rapide vaut mieux qu'une longue chaîne. Et si le fluide ne part pas, vérifie que la source contient bien quelque chose et que la destination a de la place.</p>"
+    }
+  ],
+  "related": [
+    "tuyau-a-fluide",
+    "reservoir-a-fluide",
+    "tuyau-a-fluide-intelligent",
+    "poulie-a-tuyau",
+    "moteur-a-vapeur",
+    "stressometre-compteur-de-vitesse"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/mechanical_pump.json (sans forme)",
+    "Stress : AllBlocks.MECHANICAL_PUMP, CStress.setImpact(4.0)",
+    "Portée : FluidPropagator.getPumpRange, CFluids.mechanicalPumpRange = 16",
+    "Débit : FluidNetwork, transferSpeed = max(1, pression / 2) mB par tick, pression = |tr/min|",
+    "Avancée du fluide : PipeConnection.tickFlowProgress, 1/32 + clamp(pression / 128) × 31/32 par connexion et par tick",
+    "Sens : PumpBlock FACING, la rotation ne l'inverse pas",
+    "Scènes : PumpScenes.flow, speed ; débit simulé d'après le code ci-dessus"
+  ],
+  "en": {
+    "slugEn": "mechanical-pump",
+    "name": "Mechanical Pump",
+    "title": "Mechanical Pump — Create mod guide",
+    "description": "The Create Mechanical Pump: arrow direction, 16-block reach, throughput set by speed, stress cost and parallel pumps to move fluids faster.",
+    "intro": "The <strong>Mechanical Pump</strong> is the engine of fluid networks. Without it, <a href=\"/en/wiki/fluid-pipe\">pipes</a> stay still; with it, water, lava or honey move from one tank to another. It is crafted from a cogwheel and a pipe, takes rotation like any kinetic machine, and its throughput depends directly on its speed.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Fluids"
+      },
+      {
+        "label": "Crafting",
+        "value": "Cogwheel + Fluid Pipe (shapeless)"
+      },
+      {
+        "label": "Stress",
+        "value": "4 SU per RPM (256 SU at 64 RPM)"
+      },
+      {
+        "label": "Reach",
+        "value": "16 pipe blocks on each side (mechanicalPumpRange setting)"
+      },
+      {
+        "label": "Throughput",
+        "value": "Speed ÷ 2 in mB per tick: 640 mB/s at 64 RPM, 2,560 mB/s at 256 RPM"
+      },
+      {
+        "label": "Direction",
+        "value": "Follows the arrow, whatever the rotation direction; a Wrench reverses it"
+      },
+      {
+        "label": "Several pumps",
+        "value": "In parallel on the same network, their throughputs add up"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (shapeless)",
+      "grid": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          "Cogwheel",
+          "Fluid Pipe",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Mechanical Pump"
+    },
+    "videos": [
+      {
+        "id": "pump_flow",
+        "name": "Mechanical Pump: flow direction",
+        "description": "A pump moves water from one tank into the other; reversing rotation changes nothing, a wrench flips the pump and the flow."
+      },
+      {
+        "id": "pump_speed",
+        "name": "Mechanical Pump: speed, throughput and parallel pumps",
+        "description": "A faster pump fills a lava tank more quickly, then three pumps side by side combine their throughput."
+      }
+    ],
+    "sections": [
+      {
+        "id": "pompe",
+        "title": "The heart of the network",
+        "alt": "Mechanical Pump in the line between two water tanks",
+        "html": "<p>Place the pump in a line, like a straight pipe, then feed rotation into its shaft: a <a href=\"/en/wiki/shaft\">Shaft</a>, a <a href=\"/en/wiki/cogwheel\">Cogwheel</a> or a Large Cogwheel. As long as it does not turn, nothing moves. As soon as it turns, it drives the whole network connected to it, on both sides.</p>"
+      },
+      {
+        "id": "fleche",
+        "title": "Follow the arrow",
+        "alt": "The pump's arrow points towards the tank to fill",
+        "html": "<p>The arrow on the pump shows the <strong>flow direction</strong>. The network behind the arrow is pulled from: the pump looks for a source there and drains it. The network in front is pushed into: fluid goes to whichever tanks, basins or machines accept it. Each side reaches up to 16 pipe blocks.</p>"
+      },
+      {
+        "id": "aspire",
+        "title": "Pull behind, push ahead",
+        "alt": "Water is pulled from one tank and pushed into the other",
+        "html": "<p>You can see the fluid leave the source, reach the pump and carry on towards the destination through the glass pipes. The source tank goes down while the other one fills. Transfer stops on its own when the source is empty or the destination is full.</p>"
+      },
+      {
+        "id": "cle",
+        "title": "Reversing the flow",
+        "alt": "Pump flipped with a wrench, the water returns to the first tank",
+        "html": "<p>Changing the rotation direction does <strong>not</strong> change the pump's direction: it always pushes towards its arrow. To reverse the flow, right-click the pump with a <strong>Wrench</strong>: it flips over and the fluid heads back the other way, from the second tank to the first. A reversible network therefore needs a wrench, not a gearshift.</p>"
+      },
+      {
+        "id": "portee",
+        "title": "A 16-block reach",
+        "alt": "Long pipe runs around the pump to show its reach",
+        "html": "<p>Whatever its speed, a pump acts on connected pipes up to <strong>16 blocks</strong> away on each side. Fluid does not go further: for a long pipeline, add a second pump as a relay. On a server, the reach is set with the mechanicalPumpRange option.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "Faster and further",
+        "alt": "A faster pump between two tanks, the lava moves along",
+        "html": "<p>Speed matters twice. First it sets how fast fluid advances through pipes: at 8 RPM it takes several seconds to cross a small setup, at 128 RPM and above it arrives almost at once. Then it sets the <strong>throughput</strong>: half the speed in millibuckets per tick, that is 640 mB per second at 64 RPM and 2,560 mB per second at 256 RPM.</p>"
+      },
+      {
+        "id": "debit",
+        "title": "The stress cost",
+        "alt": "The lava fills the tank faster at high speed",
+        "html": "<p>Each pump uses <strong>4 SU per RPM</strong>: 256 SU at 64 RPM and 1,024 SU at 256 RPM. Going fast is expensive, so check your rotation source with a <a href=\"/en/wiki/stressometer-speedometer\">Stressometer</a> before speeding a network up. To fill a big tank without hurry, a medium speed is enough.</p>"
+      },
+      {
+        "id": "combiner",
+        "title": "Several pumps in parallel",
+        "alt": "Three pumps in parallel between two lava tanks",
+        "html": "<p>Pumps placed <strong>side by side</strong> between the same tanks add up their throughput: three pumps at 64 RPM move three times as much fluid as one. That is the answer when a single pump already runs at the top speed of your kinetic network.</p>"
+      },
+      {
+        "id": "meme-sens",
+        "title": "All facing the same way",
+        "alt": "A pump flipped with a wrench to match the other two",
+        "html": "<p>Every pump on one network must point <strong>the same way</strong>. A reversed pump works against the others and the throughput collapses. Check their arrows, and flip the odd one out with a wrench.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<p>A pump placed directly against a tank can drain it without any pipe in between. For a lava farm or a <a href=\"/en/wiki/steam-engine\">Steam Engine</a> water supply, one fast pump beats a long chain. And if nothing flows, make sure the source actually contains something and the destination has room.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/mechanical_pump.json (shapeless)",
+      "Stress: AllBlocks.MECHANICAL_PUMP, CStress.setImpact(4.0)",
+      "Reach: FluidPropagator.getPumpRange, CFluids.mechanicalPumpRange = 16",
+      "Throughput: FluidNetwork, transferSpeed = max(1, pressure / 2) mB per tick, pressure = |RPM|",
+      "Flow advance: PipeConnection.tickFlowProgress, 1/32 + clamp(pressure / 128) × 31/32 per connection per tick",
+      "Direction: PumpBlock FACING, rotation does not reverse it",
+      "Scenes: PumpScenes.flow, speed; flow simulated from the code above"
+    ]
+  }
+}

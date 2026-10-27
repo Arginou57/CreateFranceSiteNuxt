@@ -1,0 +1,337 @@
+{
+  "slug": "tuyau-a-fluide",
+  "name": "Tuyau à fluide",
+  "blockId": "create:fluid_pipe",
+  "category": "fluides",
+  "title": "Tuyau à fluide — Create : guide en français",
+  "description": "Le tuyau à fluide de Create : relier réservoirs et machines, fenêtre à la clé, boîtier de cuivre, vanne à fluide et blocs qu'un tuyau sait vider.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>tuyau à fluide</strong> est la plomberie de Create. Il relie entre eux les réservoirs, bassins, becs verseurs, égouttoirs et poulies, et transporte l'eau, la lave, le miel, le chocolat ou le lait d'un bout à l'autre du réseau. Un tuyau seul ne fait rien : c'est une <a href=\"/wiki/pompe-mecanique\">pompe mécanique</a> qui met le fluide en mouvement. Cette page couvre aussi le tuyau avec fenêtre, le boîtier de cuivre et la vanne à fluide.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Fluides"
+    },
+    {
+      "label": "Fabrication",
+      "value": "2 plaques de cuivre + 1 lingot de cuivre = 4 tuyaux"
+    },
+    {
+      "label": "Contenu",
+      "value": "Aucun : le tuyau ne stocke rien, le fluide passe d'une extrémité à l'autre"
+    },
+    {
+      "label": "Moteur",
+      "value": "Une pompe mécanique, portée de 16 blocs de chaque côté"
+    },
+    {
+      "label": "Fenêtre",
+      "value": "Clé sur un tuyau droit : on voit le fluide passer"
+    },
+    {
+      "label": "Boîtier",
+      "value": "Boitier de cuivre : connexions figées"
+    },
+    {
+      "label": "Vanne à fluide",
+      "value": "Tuyau + plaque de fer, s'ouvre et se ferme par rotation"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        "Plaque de cuivre",
+        "Lingot de cuivre",
+        "Plaque de cuivre"
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "4 tuyaux à fluide"
+  },
+  "videos": [
+    {
+      "id": "pipe_flow",
+      "name": "Tuyau à fluide : relier deux réservoirs",
+      "description": "Des tuyaux relient deux réservoirs, une fenêtre est posée à la clé, puis une pompe fait passer la lave d'un réservoir à l'autre.",
+      "duration": "PT20S"
+    },
+    {
+      "id": "pipe_encasing",
+      "name": "Tuyau à fluide : le boîtier de cuivre",
+      "description": "Un boîtier de cuivre posé sur un tuyau fige ses connexions : les tuyaux voisins ne s'y raccordent plus.",
+      "duration": "PT11S"
+    },
+    {
+      "id": "pipe_interaction",
+      "name": "Tuyau à fluide : remplir et vider des blocs",
+      "description": "Une pompe vide un égouttoir, remplit un réservoir et un bassin, aspire une source d'eau, en crée une autre puis tire le miel d'une ruche.",
+      "duration": "PT20S"
+    },
+    {
+      "id": "valve",
+      "name": "Vanne à fluide : ouvrir et fermer un réseau",
+      "description": "Une vanne bloque le miel entre deux réservoirs ; une rotation dans un sens l'ouvre, dans l'autre sens la referme.",
+      "duration": "PT14S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "relier",
+      "title": "Relier des réservoirs",
+      "image": "pipe_flow_relier.webp",
+      "alt": "Deux réservoirs à fluide reliés par une ligne de tuyaux en cuivre",
+      "video": "pipe_flow",
+      "html": "<p>Pose les tuyaux bout à bout entre deux blocs qui contiennent du fluide : ils se raccordent tout seuls aux tuyaux voisins et aux réservoirs, bassins ou machines qu'ils touchent. Un réseau peut avoir plus de deux extrémités : chaque bloc touché devient une source ou une destination possible. Un tuyau qui ne touche rien reste un <strong>bout ouvert</strong>, qui peut aspirer ou déverser du fluide dans le monde.</p>"
+    },
+    {
+      "id": "fenetre",
+      "title": "Une fenêtre pour voir le fluide",
+      "image": "pipe_flow_fenetre.webp",
+      "alt": "Tuyau à fluide avec fenêtre posé à la clé au milieu de la ligne",
+      "html": "<p>Un clic droit à la <strong>clé</strong> sur un tuyau droit lui ajoute une fenêtre en verre : c'est le seul moyen de voir le fluide circuler. Le même geste retire la fenêtre. Attention, un tuyau avec fenêtre reste droit : il <strong>refuse toute connexion sur ses côtés</strong>, ce qui sert aussi à faire passer deux tuyaux l'un contre l'autre sans les mélanger.</p>"
+    },
+    {
+      "id": "transfert",
+      "title": "La pompe fait tout le travail",
+      "image": "pipe_flow_transfert.webp",
+      "alt": "La lave passe dans les tuyaux à fenêtre et remplit le second réservoir",
+      "html": "<p>Sans <a href=\"/wiki/pompe-mecanique\">pompe mécanique</a>, rien ne bouge. Une fois la pompe en rotation, le fluide avance de tuyau en tuyau depuis la source, traverse la pompe puis rejoint la destination, plus ou moins vite selon la vitesse. Le transfert commence quand le fluide est arrivé au bout : le premier réservoir se vide peu à peu, le second se remplit. Les tuyaux eux-mêmes ne retiennent rien : casser une conduite ne fait pas perdre de fluide.</p>"
+    },
+    {
+      "id": "boitier",
+      "title": "Le boîtier de cuivre",
+      "image": "pipe_encasing_verrouille.webp",
+      "alt": "Tuyau dans un boitier de cuivre dont les connexions restent figées",
+      "video": "pipe_encasing",
+      "html": "<p>Un clic droit avec un <strong>boitier de cuivre</strong> enferme un tuyau dans un bloc plein, plus propre dans une usine. Ce n'est pas que décoratif : un tuyau dans un boîtier garde exactement les connexions qu'il avait. Poser ou retirer un tuyau à côté ne change plus rien, ce qui évite qu'un réseau se raccorde par erreur à une conduite voisine. La clé retire le boîtier.</p>"
+    },
+    {
+      "id": "extremites",
+      "title": "Ce que les tuyaux savent remplir",
+      "image": "pipe_interaction_stockage.webp",
+      "alt": "Une pompe relie un égouttoir, un réservoir et un bassin",
+      "video": "pipe_interaction",
+      "html": "<p>Au bout d'un réseau, un tuyau peut remplir ou vider tout bloc qui stocke du fluide : <a href=\"/wiki/reservoir-a-fluide\">réservoir à fluide</a>, <a href=\"/wiki/bassin\">bassin</a>, <a href=\"/wiki/bec-verseur\">bec verseur</a>, <a href=\"/wiki/egouttoir-a-objets\">égouttoir à objets</a>, <a href=\"/wiki/poulie-a-tuyau\">poulie à tuyau</a> ou chaudron. Le bec verseur ne se branche pas par-dessous, l'égouttoir pas par-dessus.</p>"
+    },
+    {
+      "id": "aspirer",
+      "title": "Aspirer et déverser dans le monde",
+      "image": "pipe_interaction_aspirer.webp",
+      "alt": "Un bout de tuyau ouvert face à une source d'eau",
+      "html": "<p>Un bout ouvert placé juste devant une <strong>source</strong> d'eau ou de lave l'aspire et la fait entrer dans le réseau. Dans l'autre sens, un bout ouvert qui pousse dans le vide y <strong>crée une source</strong> : de quoi remplir une piscine, alimenter une roue à eau ou éteindre un feu. Sur un serveur, ce comportement peut être désactivé par l'option pipesPlaceFluidSourceBlocks.</p>"
+    },
+    {
+      "id": "ruche",
+      "title": "Le miel des ruches",
+      "image": "pipe_interaction_ruche.webp",
+      "alt": "Un tuyau tire le miel d'un nid d'abeilles vers un réservoir",
+      "html": "<p>Quelques blocs ordinaires se vident directement : un tuyau collé à une <strong>ruche</strong> ou à un nid d'abeilles plein en tire le miel, sans fiole ni ciseaux. Avec un réservoir au bout, la ferme d'abeilles devient une source de miel liquide pour les becs verseurs.</p>"
+    },
+    {
+      "id": "vanne",
+      "title": "La vanne à fluide",
+      "image": "valve_vanne.webp",
+      "alt": "Vanne à fluide au milieu de la conduite entre deux réservoirs",
+      "video": "valve",
+      "html": "<p>La <strong>vanne à fluide</strong> s'intercale dans une conduite pour la couper ou l'ouvrir. Elle se commande par un axe : un <a href=\"/wiki/rotor\">rotor</a>, une roue dentée ou un volant de vanne posé dessus. Fermée, elle arrête le fluide comme un mur ; ouverte, elle se comporte comme un tuyau ordinaire.</p>"
+    },
+    {
+      "id": "ouverte",
+      "title": "Ouvrir et fermer",
+      "image": "valve_ouverte.webp",
+      "alt": "Le miel passe la vanne ouverte et remplit le second réservoir",
+      "html": "<p>Une rotation dans le sens d'ouverture déplie la vanne, et le miel reprend sa course vers le second réservoir. La vanne garde son état quand la rotation s'arrête : il suffit d'un court quart de tour. Une rotation dans l'autre sens la referme et coupe le réseau. Avec une <a href=\"/wiki/manivelle\">manivelle</a> ou un volant de vanne, on obtient un robinet manuel.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Si rien ne coule, vérifie d'abord la pompe : elle doit tourner et sa flèche doit pointer vers la destination. Ensuite, regarde les raccords : un tuyau avec fenêtre ou dans un boîtier ne se connecte pas sur les côtés, et deux réseaux voisins peuvent se mélanger si on les laisse se toucher. Enfin, un réseau ne porte qu'un fluide à la fois : pour trier, utilise un <a href=\"/wiki/tuyau-a-fluide-intelligent\">tuyau à fluide intelligent</a>.</p>"
+    }
+  ],
+  "related": [
+    "pompe-mecanique",
+    "reservoir-a-fluide",
+    "tuyau-a-fluide-intelligent",
+    "bec-verseur",
+    "egouttoir-a-objets",
+    "bassin"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/fluid_pipe.json (4 tuyaux), fluid_valve.json",
+    "Raccords : FluidPipeBlock.canConnectTo, FluidPropagator.hasFluidCapability (bec verseur : pas par-dessous, égouttoir : pas par-dessus)",
+    "Fenêtre : GlassFluidPipeBlock (tuyau droit, pas de connexion latérale) ; boîtier : EncasedPipeBlock",
+    "Bouts ouverts : OpenEndedPipe, CFluids.pipesPlaceFluidSourceBlocks ; ruches : VanillaFluidTargets",
+    "Vanne : FluidValveBlock (état ENABLED), FluidValveBlockEntity",
+    "Scènes : PipeScenes.flow, encasing, interaction, valve ; débit simulé d'après PumpBlockEntity et PipeConnection"
+  ],
+  "en": {
+    "slugEn": "fluid-pipe",
+    "name": "Fluid Pipe",
+    "title": "Fluid Pipe — Create mod guide",
+    "description": "The Create Fluid Pipe: linking tanks and machines, wrench windows, Copper Casing, the Fluid Valve and the blocks a pipe can fill or drain directly.",
+    "intro": "The <strong>Fluid Pipe</strong> is Create's plumbing. It links tanks, basins, spouts, item drains and hose pulleys, and carries water, lava, honey, chocolate or milk from one end of a network to the other. A pipe on its own does nothing: a <a href=\"/en/wiki/mechanical-pump\">Mechanical Pump</a> is what sets the fluid moving. This page also covers the Glass Fluid Pipe, Copper Casing and the Fluid Valve.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Fluids"
+      },
+      {
+        "label": "Crafting",
+        "value": "2 Copper Sheets + 1 Copper Ingot = 4 pipes"
+      },
+      {
+        "label": "Contents",
+        "value": "None: a pipe stores nothing, fluid only passes through from one end to the other"
+      },
+      {
+        "label": "Driven by",
+        "value": "A Mechanical Pump, with a 16-block reach on each side"
+      },
+      {
+        "label": "Window",
+        "value": "Wrench on a straight pipe: you can see the fluid flow"
+      },
+      {
+        "label": "Casing",
+        "value": "Copper Casing: connections are locked"
+      },
+      {
+        "label": "Fluid Valve",
+        "value": "Pipe + Iron Sheet, opened and closed by rotation"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          "Copper Sheet",
+          "Copper Ingot",
+          "Copper Sheet"
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "4 Fluid Pipes"
+    },
+    "videos": [
+      {
+        "id": "pipe_flow",
+        "name": "Fluid Pipe: linking two tanks",
+        "description": "Pipes link two tanks, a window is added with a wrench, then a pump moves the lava from one tank into the other."
+      },
+      {
+        "id": "pipe_encasing",
+        "name": "Fluid Pipe: Copper Casing",
+        "description": "Copper Casing on a pipe locks its connections: neighbouring pipes no longer join it."
+      },
+      {
+        "id": "pipe_interaction",
+        "name": "Fluid Pipe: filling and draining blocks",
+        "description": "A pump empties an item drain, fills a tank and a basin, picks up a water source, places another and pulls honey from a bee nest."
+      },
+      {
+        "id": "valve",
+        "name": "Fluid Valve: opening and closing a network",
+        "description": "A valve holds the honey back between two tanks; rotation one way opens it, the other way closes it again."
+      }
+    ],
+    "sections": [
+      {
+        "id": "relier",
+        "title": "Linking tanks",
+        "alt": "Two Fluid Tanks linked by a line of copper pipes",
+        "html": "<p>Lay pipes end to end between two blocks that hold fluid: they join neighbouring pipes and any tank, basin or machine they touch on their own. A network can have more than two ends: every block it touches becomes a possible source or destination. A pipe that touches nothing stays an <strong>open end</strong>, which can pick up or spill fluid into the world.</p>"
+      },
+      {
+        "id": "fenetre",
+        "title": "A window to see the fluid",
+        "alt": "Glass Fluid Pipe placed with a wrench in the middle of the line",
+        "html": "<p>Right-clicking a straight pipe with a <strong>Wrench</strong> adds a glass window: it is the only way to watch the fluid travel. The same action removes it. Note that a Glass Fluid Pipe stays straight: it <strong>refuses any connection on its sides</strong>, which is also handy for running two pipes side by side without merging them.</p>"
+      },
+      {
+        "id": "transfert",
+        "title": "The pump does all the work",
+        "alt": "Lava flows through the glass pipes and fills the second tank",
+        "html": "<p>Without a <a href=\"/en/wiki/mechanical-pump\">Mechanical Pump</a>, nothing moves. Once the pump turns, fluid advances pipe by pipe from the source, goes through the pump and on to the destination, faster or slower depending on the speed. Transfer starts when the fluid has reached the far end: the first tank slowly drains while the second one fills. The pipes themselves hold nothing back: breaking a pipe line loses no fluid.</p>"
+      },
+      {
+        "id": "boitier",
+        "title": "Copper Casing",
+        "alt": "Pipe in Copper Casing whose connections stay locked",
+        "html": "<p>Right-clicking with <strong>Copper Casing</strong> wraps a pipe in a full block, which looks tidier in a factory. It is not only cosmetic: an Encased Fluid Pipe keeps exactly the connections it had. Placing or removing a pipe next to it changes nothing any more, so a network cannot accidentally join a neighbouring line. A Wrench takes the casing off.</p>"
+      },
+      {
+        "id": "extremites",
+        "title": "What pipes can fill",
+        "alt": "A pump links an item drain, a tank and a basin",
+        "html": "<p>At the end of a network, a pipe can fill or empty any block that stores fluid: <a href=\"/en/wiki/fluid-tank\">Fluid Tank</a>, <a href=\"/en/wiki/basin\">Basin</a>, <a href=\"/en/wiki/spout\">Spout</a>, <a href=\"/en/wiki/item-drain\">Item Drain</a>, <a href=\"/en/wiki/hose-pulley\">Hose Pulley</a> or cauldron. A Spout cannot be connected from below, and an Item Drain cannot be connected from above.</p>"
+      },
+      {
+        "id": "aspirer",
+        "title": "Picking up and spilling",
+        "alt": "An open pipe end facing a water source",
+        "html": "<p>An open end placed right in front of a water or lava <strong>source</strong> picks it up and draws it into the network. The other way round, an open end pushing into empty space <strong>places a source block</strong> there: enough to fill a pool, feed a water wheel or put out a fire. On a server, this can be turned off with the pipesPlaceFluidSourceBlocks option.</p>"
+      },
+      {
+        "id": "ruche",
+        "title": "Honey from beehives",
+        "alt": "A pipe pulls honey from a bee nest towards a tank",
+        "html": "<p>A few ordinary blocks can be emptied directly: a pipe against a full <strong>beehive</strong> or bee nest pulls its honey out, no bottle or shears needed. With a tank at the other end, a bee farm becomes a liquid honey supply for your spouts.</p>"
+      },
+      {
+        "id": "vanne",
+        "title": "The Fluid Valve",
+        "alt": "Fluid Valve in the middle of the line between two tanks",
+        "html": "<p>The <strong>Fluid Valve</strong> sits inside a pipe line to cut it off or open it. It is controlled through its shaft: a <a href=\"/en/wiki/shaft\">Shaft</a>, a cogwheel or a valve handle on top. Closed, it stops fluid like a wall; open, it behaves like an ordinary pipe.</p>"
+      },
+      {
+        "id": "ouverte",
+        "title": "Opening and closing",
+        "alt": "Honey goes through the open valve and fills the second tank",
+        "html": "<p>Rotation in the opening direction unfolds the valve and the honey resumes its way to the second tank. The valve keeps its state once rotation stops: a short turn is enough. Rotation the other way closes it and cuts the network. With a <a href=\"/en/wiki/hand-crank\">Hand Crank</a> or a valve handle, you get a manual tap.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Common mistakes",
+        "html": "<p>If nothing flows, check the pump first: it must be turning and its arrow must point towards the destination. Then look at the joints: a glass or encased pipe does not connect on its sides, and two neighbouring networks can merge if they touch. Finally, a network carries one fluid at a time: to sort them, use a <a href=\"/en/wiki/smart-fluid-pipe\">Smart Fluid Pipe</a>.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/fluid_pipe.json (4 pipes), fluid_valve.json",
+      "Connections: FluidPipeBlock.canConnectTo, FluidPropagator.hasFluidCapability (Spout: not from below, Item Drain: not from above)",
+      "Window: GlassFluidPipeBlock (straight, no side connection); casing: EncasedPipeBlock",
+      "Open ends: OpenEndedPipe, CFluids.pipesPlaceFluidSourceBlocks; beehives: VanillaFluidTargets",
+      "Valve: FluidValveBlock (ENABLED state), FluidValveBlockEntity",
+      "Scenes: PipeScenes.flow, encasing, interaction, valve; flow simulated from PumpBlockEntity and PipeConnection"
+    ]
+  }
+}

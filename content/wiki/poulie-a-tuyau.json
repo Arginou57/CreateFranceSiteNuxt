@@ -1,0 +1,318 @@
+{
+  "slug": "poulie-a-tuyau",
+  "name": "Poulie à tuyau",
+  "blockId": "create:hose_pulley",
+  "category": "fluides",
+  "title": "Poulie à tuyau — Create : guide en français",
+  "description": "La poulie à tuyau de Create : vider ou remplir un lac, hauteur du tuyau réglée par la rotation, niveau final et source infinie dans l'océan.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>poulie à tuyau</strong> descend un tuyau souple dans une étendue de fluide pour la vider ou la remplir. Elle assèche un lac de lave, remplit une piscine bloc par bloc ou, plongée dans un océan, fournit de l'eau sans fin. Son tuyau monte et descend avec la rotation, et son débit est celui du réseau de <a href=\"/wiki/pompe-mecanique\">pompes</a> qui lui est relié.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Fluides"
+    },
+    {
+      "label": "Fabrication",
+      "value": "Boitier de cuivre + bloc d’algues séchées + plaque de cuivre"
+    },
+    {
+      "label": "Stress",
+      "value": "4 SU par tr/min"
+    },
+    {
+      "label": "Tuyau",
+      "value": "Vitesse ÷ 512 bloc par tick : 1,25 bloc/s à 32 tr/min"
+    },
+    {
+      "label": "Portée",
+      "value": "128 blocs autour du bout du tuyau (réglage hosePulleyRange)"
+    },
+    {
+      "label": "Source infinie",
+      "value": "À partir de 10 000 blocs de fluide, eau et lave seulement"
+    },
+    {
+      "label": "Débit",
+      "value": "Celui de la pompe du réseau"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Boitier de cuivre",
+        null
+      ],
+      [
+        null,
+        "Bloc d’algues séchées",
+        null
+      ],
+      [
+        null,
+        "Plaque de cuivre",
+        null
+      ]
+    ],
+    "result": "1 poulie à tuyau"
+  },
+  "videos": [
+    {
+      "id": "hose_intro",
+      "name": "Poulie à tuyau : remplir et vider une piscine",
+      "description": "Le tuyau descend et remonte avec la rotation, puis une pompe remplit une piscine par la poulie avant de la vider.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "hose_level",
+      "name": "Poulie à tuyau : niveau de vidange et de remplissage",
+      "description": "Rétractée, la poulie ne fait rien ; déployée, elle vide le bassin par le haut jusqu'au bout du tuyau, puis le remplit par le bas.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "hose_infinite",
+      "name": "Poulie à tuyau : source infinie",
+      "description": "Plongée dans une grande étendue d'eau, la poulie remplit un réservoir sans faire baisser le niveau.",
+      "duration": "PT10S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "poulie",
+      "title": "Un tuyau qui descend",
+      "image": "hose_intro_poulie.webp",
+      "alt": "Poulie à tuyau en hauteur au-dessus de la plaque",
+      "video": "hose_intro",
+      "html": "<p>La poulie se pose au-dessus de l'étendue de fluide, à la verticale de l'endroit où plonger. Elle porte un tuyau souple terminé par un embout. Pose-la sur un bord, avec le vide en dessous : le tuyau doit pouvoir descendre jusqu'au fluide.</p>"
+    },
+    {
+      "id": "hauteur",
+      "title": "Régler la hauteur par la rotation",
+      "image": "hose_intro_hauteur.webp",
+      "alt": "Le tuyau de la poulie descend vers la plaque",
+      "html": "<p>La rotation fait <strong>descendre</strong> le tuyau, à la vitesse de rotation divisée par 512 blocs par tick, soit 1,25 bloc par seconde à 32 tr/min. Le tuyau s'arrête de lui-même sur un bloc solide. Arrête la rotation quand l'embout est à la bonne profondeur.</p>"
+    },
+    {
+      "id": "remonter",
+      "title": "Remonter le tuyau",
+      "image": "hose_intro_remonter.webp",
+      "alt": "Le tuyau remonte quand la rotation est inversée",
+      "html": "<p>Une rotation dans l'autre sens <strong>remonte</strong> le tuyau à la même vitesse. Il s'enroule jusqu'à la poulie, qui ne fonctionne plus une fois complètement rétractée. À l'arrêt de la rotation, le tuyau se cale sur un bloc entier : sa profondeur est toujours un nombre rond.</p>"
+    },
+    {
+      "id": "fournir",
+      "title": "Remplir un bassin",
+      "image": "hose_intro_fournir.webp",
+      "alt": "La poulie remplit une piscine d’eau bloc par bloc",
+      "html": "<p>De l'autre côté, la poulie se branche sur un réseau de <a href=\"/wiki/tuyau-a-fluide\">tuyaux</a>. Si la pompe pousse vers la poulie, celle-ci <strong>remplit</strong> l'espace autour du bout du tuyau, de bas en haut. Ici, une piscine se remplit d'eau bloc par bloc.</p>"
+    },
+    {
+      "id": "vider",
+      "title": "Vider un lac",
+      "image": "hose_intro_vider.webp",
+      "alt": "La poulie vide la piscine de haut en bas",
+      "html": "<p>Si la pompe tire depuis la poulie, celle-ci <strong>vide</strong> l'étendue de fluide, de haut en bas, et envoie le liquide dans le réseau. Le débit ne dépend que du réseau : une pompe plus rapide vide plus vite. La poulie atteint les blocs jusqu'à 128 blocs du bout du tuyau.</p>"
+    },
+    {
+      "id": "surface",
+      "title": "Le niveau final",
+      "image": "hose_level_surface.webp",
+      "alt": "La surface de l’eau descend jusque sous l’embout",
+      "video": "hose_level",
+      "html": "<p>Une poulie rétractée ne fait rien : il faut d'abord descendre le tuyau. En vidange, elle retire les couches du haut vers le bas, et la surface finit <strong>juste sous le bout du tuyau</strong>. Pour vider plus profond, descends le tuyau davantage.</p>"
+    },
+    {
+      "id": "remplissage",
+      "title": "Remplir jusqu’où ?",
+      "image": "hose_level_remplissage.webp",
+      "alt": "Le bassin se remplit par le bas autour de l’embout",
+      "html": "<p>En remplissage, la poulie travaille <strong>du bas vers le haut</strong>, et le bassin ne monte pas plus haut que la couche située juste au-dessus du bout du tuyau. La hauteur de l'embout règle donc le niveau final, dans un sens comme dans l'autre.</p>"
+    },
+    {
+      "id": "ocean",
+      "title": "Une source sans fond",
+      "image": "hose_infinite_illimite.webp",
+      "alt": "La poulie plongée dans l’eau remplit un réservoir",
+      "video": "hose_infinite",
+      "html": "<p>Plongée dans une étendue d'au moins <strong>10 000 blocs</strong> d'eau ou de lave, un océan ou une mer de lave du Nether, la poulie devient une source infinie : elle fournit du fluide sans jamais faire baisser le niveau, et peut aussi y déverser sans le faire monter. Les autres fluides ne sont jamais infinis.</p>"
+    },
+    {
+      "id": "montre",
+      "title": "Ce que montrent les animations",
+      "html": "<p>Le tuyau et l'embout de la poulie sont redessinés par nos soins d'après le code du jeu, et l'eau est opaque dans nos rendus. L'enroulement du tuyau dans la poulie n'est pas animé.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Astuces",
+      "html": "<p>Pour assécher un lac de lave, descends le tuyau jusqu'au fond avant de lancer la pompe, puis laisse la poulie travailler couche par couche. Pour une source d'eau illimitée, rien ne vaut une poulie dans l'océan reliée à un grand <a href=\"/wiki/reservoir-a-fluide\">réservoir</a> : elle alimente une chaudière ou une <a href=\"/wiki/roue-a-eau\">roue à eau</a> sans jamais vider la mer. Et pense au stress : la poulie consomme 4 SU par tr/min en plus de la pompe.</p>"
+    }
+  ],
+  "related": [
+    "pompe-mecanique",
+    "tuyau-a-fluide",
+    "reservoir-a-fluide",
+    "roue-a-eau"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/hose_pulley.json",
+    "Stress : AllBlocks.HOSE_PULLEY, CStress.setImpact(4.0)",
+    "Tuyau : HosePulleyBlockEntity.getMovementSpeed = KineticBlockEntity.convertToLinear (vitesse / 512)",
+    "Portée et source infinie : CFluids.hosePulleyRange = 128, hosePulleyBlockThreshold = 10 000, tag create:bottomless/allow (eau, lave)",
+    "Scènes : HosePulleyScenes.intro, level, infinite ; tuyau dessiné d'après HosePulleyRenderer / AbstractPulleyRenderer"
+  ],
+  "en": {
+    "slugEn": "hose-pulley",
+    "name": "Hose Pulley",
+    "title": "Hose Pulley — Create mod guide",
+    "description": "The Create Hose Pulley: draining or filling a lake, hose height set by rotation, the final surface level and an infinite source in the ocean.",
+    "intro": "The <strong>Hose Pulley</strong> lowers a flexible hose into a body of fluid to drain or fill it. It dries up a lava lake, fills a pool block by block or, dipped into an ocean, supplies endless water. Its hose goes up and down with rotation, and its throughput is that of the <a href=\"/en/wiki/mechanical-pump\">pump</a> network connected to it.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Fluids"
+      },
+      {
+        "label": "Crafting",
+        "value": "Copper Casing + Dried Kelp Block + Copper Sheet"
+      },
+      {
+        "label": "Stress",
+        "value": "4 SU per RPM"
+      },
+      {
+        "label": "Hose",
+        "value": "Speed ÷ 512 blocks per tick: 1.25 blocks/s at 32 RPM"
+      },
+      {
+        "label": "Reach",
+        "value": "128 blocks around the hose end (hosePulleyRange setting)"
+      },
+      {
+        "label": "Infinite source",
+        "value": "From 10,000 fluid blocks, water and lava only"
+      },
+      {
+        "label": "Throughput",
+        "value": "That of the network's pump"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Copper Casing",
+          null
+        ],
+        [
+          null,
+          "Dried Kelp Block",
+          null
+        ],
+        [
+          null,
+          "Copper Sheet",
+          null
+        ]
+      ],
+      "result": "1 Hose Pulley"
+    },
+    "videos": [
+      {
+        "id": "hose_intro",
+        "name": "Hose Pulley: filling and draining a pool",
+        "description": "The hose goes down and up with rotation, then a pump fills a pool through the pulley before draining it."
+      },
+      {
+        "id": "hose_level",
+        "name": "Hose Pulley: drain and fill levels",
+        "description": "Retracted, the pulley does nothing; deployed, it drains the pool from the top down to the hose end, then fills it from the bottom."
+      },
+      {
+        "id": "hose_infinite",
+        "name": "Hose Pulley: infinite source",
+        "description": "Dipped into a large body of water, the pulley fills a tank without lowering the level."
+      }
+    ],
+    "sections": [
+      {
+        "id": "poulie",
+        "title": "A hose that goes down",
+        "alt": "Hose Pulley high above the plate",
+        "html": "<p>The pulley goes above the body of fluid, straight over the spot where the hose should dive. It carries a flexible hose ending in a nozzle. Place it on an edge with empty space below: the hose must be able to reach the fluid, and nothing solid may stand in its way.</p>"
+      },
+      {
+        "id": "hauteur",
+        "title": "Setting the height with rotation",
+        "alt": "The pulley's hose goes down towards the plate",
+        "html": "<p>Rotation <strong>lowers</strong> the hose by the rotation speed divided by 512 blocks per tick, that is 1.25 blocks per second at 32 RPM. The hose stops on its own on a solid block. Stop the rotation once the nozzle is deep enough.</p>"
+      },
+      {
+        "id": "remonter",
+        "title": "Raising the hose",
+        "alt": "The hose goes up when rotation is reversed",
+        "html": "<p>Rotation the other way <strong>raises</strong> the hose at the same speed. It winds back up to the pulley, which no longer works once fully retracted. When rotation stops, the hose settles on a whole block, so its depth is always a round number.</p>"
+      },
+      {
+        "id": "fournir",
+        "title": "Filling a pool",
+        "alt": "The pulley fills a pool with water block by block",
+        "html": "<p>On its other side, the pulley connects to a <a href=\"/en/wiki/fluid-pipe\">pipe</a> network. If the pump pushes towards the pulley, it <strong>fills</strong> the space around the hose end from the bottom up. Here a pool fills with water block by block.</p>"
+      },
+      {
+        "id": "vider",
+        "title": "Draining a lake",
+        "alt": "The pulley drains the pool from the top down",
+        "html": "<p>If the pump pulls from the pulley, it <strong>drains</strong> the body of fluid from the top down and sends the liquid into the network. Throughput depends only on the network: a faster pump drains faster. The pulley reaches blocks up to 128 blocks from the hose end.</p>"
+      },
+      {
+        "id": "surface",
+        "title": "The final level",
+        "alt": "The water surface drops to just below the nozzle",
+        "html": "<p>A retracted pulley does nothing: lower the hose first. When draining, it removes the layers from the top down, and the surface ends up <strong>just below the hose end</strong>. To drain deeper, lower the hose further.</p>"
+      },
+      {
+        "id": "remplissage",
+        "title": "Filling up to where?",
+        "alt": "The pool fills from the bottom around the nozzle",
+        "html": "<p>When filling, the pulley works <strong>from the bottom up</strong>, and the pool never rises above the layer right above the hose end. The nozzle height therefore sets the final level, either way.</p>"
+      },
+      {
+        "id": "ocean",
+        "title": "A bottomless source",
+        "alt": "The pulley dipped into water fills a tank",
+        "html": "<p>Dipped into a body of at least <strong>10,000 blocks</strong> of water or lava, an ocean or a Nether lava sea, the pulley becomes an infinite source: it supplies fluid without ever lowering the level, and can also pour into it without raising it. Other fluids are never infinite.</p>"
+      },
+      {
+        "id": "montre",
+        "title": "What the animations show",
+        "html": "<p>The pulley's hose and nozzle are redrawn by us from the game's code, and water is opaque in our renders. The hose winding inside the pulley is not animated.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<p>To dry up a lava lake, lower the hose to the bottom before starting the pump, then let the pulley work layer by layer. For an unlimited water supply, nothing beats a pulley in the ocean connected to a big <a href=\"/en/wiki/fluid-tank\">Fluid Tank</a>: it feeds a boiler or a <a href=\"/en/wiki/water-wheel\">Water Wheel</a> without ever emptying the sea. And mind the stress: the pulley uses 4 SU per RPM on top of the pump, so a fast drain needs a strong rotation source.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/hose_pulley.json",
+      "Stress: AllBlocks.HOSE_PULLEY, CStress.setImpact(4.0)",
+      "Hose: HosePulleyBlockEntity.getMovementSpeed = KineticBlockEntity.convertToLinear (speed / 512)",
+      "Reach and infinite source: CFluids.hosePulleyRange = 128, hosePulleyBlockThreshold = 10,000, tag create:bottomless/allow (water, lava)",
+      "Scenes: HosePulleyScenes.intro, level, infinite; hose drawn after HosePulleyRenderer / AbstractPulleyRenderer"
+    ]
+  }
+}

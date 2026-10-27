@@ -1,0 +1,282 @@
+{
+  "slug": "interface-de-fluide-portable",
+  "name": "Interface de fluide portable",
+  "blockId": "create:portable_fluid_interface",
+  "category": "fluides",
+  "title": "Interface de fluide portable — Create : guide",
+  "description": "L'interface de fluide portable de Create : remplir et vider les réservoirs d'une contraption en mouvement, écart d'1 ou 2 blocs et départ après 3 s.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "L'<strong>interface de fluide portable</strong> fait passer des fluides entre une contraption en mouvement et une installation fixe. Les réservoirs embarqués sur un roulement, un piston ou un train ne se raccordent à aucun tuyau ; deux interfaces face à face, l'une sur la contraption et l'autre au sol, ouvrent le passage le temps d'un arrêt. C'est l'équivalent pour les liquides de l'interface de stockage portable pour les objets.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Fluides"
+    },
+    {
+      "label": "Fabrication",
+      "value": "Boitier de cuivre + chute (sans forme)"
+    },
+    {
+      "label": "Écart",
+      "value": "1 ou 2 blocs entre les deux interfaces"
+    },
+    {
+      "label": "Échange",
+      "value": "L’interface fixe représente tous les réservoirs de la contraption"
+    },
+    {
+      "label": "Départ",
+      "value": "3 s sans échange (réglage psiTimeout, 60 ticks)"
+    },
+    {
+      "label": "Redstone",
+      "value": "Un signal sur l’interface fixe coupe la connexion"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (sans forme)",
+    "grid": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        "Boitier de cuivre",
+        "Chute",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 interface de fluide portable"
+  },
+  "videos": [
+    {
+      "id": "pfi_transfer",
+      "name": "Interface de fluide portable : remplir une contraption",
+      "description": "Une contraption à réservoirs tourne sur un roulement ; à chaque passage devant l'interface fixe, une pompe la remplit de chocolat puis la vide.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "contraption",
+      "title": "Des réservoirs qui bougent",
+      "image": "pfi_transfer_contraption.webp",
+      "alt": "Deux réservoirs montés sur une contraption qui tourne",
+      "video": "pfi_transfer",
+      "html": "<p>Un <a href=\"/wiki/reservoir-a-fluide\">réservoir</a> fixé à une contraption, un manège sur roulement mécanique par exemple, voyage avec elle. Pendant le mouvement, il n'est raccordé à rien : aucun <a href=\"/wiki/tuyau-a-fluide\">tuyau</a> ne peut le remplir ni le vider. Il faut un point de passage.</p>"
+    },
+    {
+      "id": "interface",
+      "title": "Une interface sur la contraption",
+      "image": "pfi_transfer_interface.webp",
+      "alt": "Interface de fluide portable fixée à la contraption",
+      "html": "<p>La première interface se fixe à la contraption, collée au reste de la structure avec de la colle, face vers l'extérieur. Elle se déplace avec elle et donne accès à <strong>tous les réservoirs</strong> embarqués, sans qu'il soit nécessaire d'arrêter la contraption à la main. Une seule interface suffit, quel que soit le nombre de réservoirs à bord : elle les traite comme un ensemble.</p>"
+    },
+    {
+      "id": "ecart",
+      "title": "La seconde, à 1 ou 2 blocs",
+      "image": "pfi_transfer_ecart.webp",
+      "alt": "Interface fixe posée avec un bloc d’écart",
+      "html": "<p>La seconde interface est posée au sol, sur le trajet, tournée vers la première. Entre les deux, il faut <strong>un ou deux blocs</strong> d'écart : collées, elles ne se connectent pas. C'est à cette interface fixe qu'on raccorde les tuyaux et la pompe.</p>"
+    },
+    {
+      "id": "connexion",
+      "title": "Le temps d’un arrêt",
+      "image": "pfi_transfer_connexion.webp",
+      "alt": "Les deux interfaces face à face pendant l’arrêt",
+      "html": "<p>Quand la contraption passe et que les deux interfaces se retrouvent face à face, elles <strong>s'accrochent</strong> : la contraption s'arrête et l'échange commence. L'interface fixe se comporte alors comme un grand réservoir qui représente tous ceux de la contraption. Les tuyaux qui y sont branchés ne voient pas la différence avec une cuve ordinaire.</p>"
+    },
+    {
+      "id": "inserer",
+      "title": "Remplir…",
+      "image": "pfi_transfer_inserer.webp",
+      "alt": "Le chocolat remplit les réservoirs de la contraption",
+      "html": "<p>Une <a href=\"/wiki/pompe-mecanique\">pompe</a> qui pousse vers l'interface fixe remplit les réservoirs de la contraption, l'un après l'autre. Ici, le chocolat passe du grand réservoir au sol vers les deux réservoirs embarqués.</p>"
+    },
+    {
+      "id": "extraire",
+      "title": "… ou vider",
+      "image": "pfi_transfer_extraire.webp",
+      "alt": "Les réservoirs de la contraption se vident vers le sol",
+      "html": "<p>Retourne la pompe à la clé et le courant s'inverse : les réservoirs de la contraption se vident vers l'installation fixe. Une même gare peut ainsi charger un train-citerne à l'aller et le décharger au retour.</p>"
+    },
+    {
+      "id": "reprise",
+      "title": "Le départ",
+      "image": "pfi_transfer_reprise.webp",
+      "alt": "La contraption repart après l’échange",
+      "html": "<p>Quand plus rien n'a été échangé depuis <strong>3 secondes</strong>, les interfaces se séparent et la contraption repart. Ce délai se règle sur le serveur avec l'option psiTimeout. Un signal de redstone sur l'interface fixe coupe aussi la connexion, par exemple pour libérer un train à l'heure.</p>"
+    },
+    {
+      "id": "montre",
+      "title": "Ce que montre l’animation",
+      "html": "<p>Dans notre rendu, les réservoirs se remplissent et se vident comme dans le jeu, mais le petit mouvement des interfaces qui s'allongent l'une vers l'autre n'est pas animé.</p>"
+    },
+    {
+      "id": "train",
+      "title": "Le train-citerne",
+      "html": "<p>L'usage le plus courant est le <strong>train-citerne</strong> : des réservoirs sur un wagon, une interface sur son flanc, et une interface fixe au bord du quai de chaque gare. Le train s'arrête à la gare, l'interface s'accroche, la pompe remplit ou vide les citernes, puis le train repart quand l'échange est fini. On transporte ainsi la lave d'une mer du Nether, le lait d'une ferme ou l'eau d'une chaudière lointaine.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Si rien ne se passe, vérifie l'écart : les deux interfaces doivent se faire face, avec un ou deux blocs vides entre elles, jamais collées. Vérifie aussi que l'interface mobile est bien collée à la contraption, et que la pompe pousse dans le bon sens.</p>"
+    }
+  ],
+  "related": [
+    "reservoir-a-fluide",
+    "pompe-mecanique",
+    "tuyau-a-fluide"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/portable_fluid_interface.json (sans forme)",
+    "Écart : PortableStorageInterfaceBlockEntity.startTransferringTo (distance ≤ 2)",
+    "Départ : CLogistics.psiTimeout = 60 ticks ; redstone : PortableStorageInterfaceBlockEntity (powered)",
+    "Réservoirs embarqués : PortableFluidInterfaceBlockEntity (tous les réservoirs de la contraption)",
+    "Scène : FluidMovementActorScenes.transfer ; niveaux dessinés d'après FluidTankRenderer"
+  ],
+  "en": {
+    "slugEn": "portable-fluid-interface",
+    "name": "Portable Fluid Interface",
+    "title": "Portable Fluid Interface — Create mod guide",
+    "description": "The Create Portable Fluid Interface: filling and emptying the tanks of a moving contraption, a gap of 1 or 2 blocks and departure after 3 seconds.",
+    "intro": "The <strong>Portable Fluid Interface</strong> moves fluids between a moving contraption and a fixed setup. Tanks carried on a bearing, a piston or a train never connect to a pipe; two interfaces facing each other, one on the contraption and one on the ground, open a passage while it stops. It is the liquid counterpart of the Portable Storage Interface for items.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Fluids"
+      },
+      {
+        "label": "Crafting",
+        "value": "Copper Casing + Chute (shapeless)"
+      },
+      {
+        "label": "Gap",
+        "value": "1 or 2 blocks between the two interfaces"
+      },
+      {
+        "label": "Exchange",
+        "value": "The fixed interface stands for all of the contraption's tanks"
+      },
+      {
+        "label": "Departure",
+        "value": "3 s without exchange (psiTimeout setting, 60 ticks)"
+      },
+      {
+        "label": "Redstone",
+        "value": "A signal on the fixed interface cuts the connection"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (shapeless)",
+      "grid": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          "Copper Casing",
+          "Chute",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Portable Fluid Interface"
+    },
+    "videos": [
+      {
+        "id": "pfi_transfer",
+        "name": "Portable Fluid Interface: filling a contraption",
+        "description": "A contraption carrying tanks spins on a bearing; each time it passes the fixed interface, a pump fills it with chocolate and then empties it."
+      }
+    ],
+    "sections": [
+      {
+        "id": "contraption",
+        "title": "Tanks on the move",
+        "alt": "Two tanks mounted on a spinning contraption",
+        "html": "<p>A <a href=\"/en/wiki/fluid-tank\">tank</a> attached to a contraption, a carousel on a Mechanical Bearing for instance, travels with it. While moving, it is connected to nothing: no <a href=\"/en/wiki/fluid-pipe\">pipe</a> can fill or empty it. It needs a docking point.</p>"
+      },
+      {
+        "id": "interface",
+        "title": "One interface on the contraption",
+        "alt": "Portable Fluid Interface attached to the contraption",
+        "html": "<p>The first interface is attached to the contraption, glued to the rest of the structure, facing outwards. It moves with it and gives access to <strong>all of its tanks</strong>, without having to stop the contraption by hand. One interface is enough however many tanks are on board: it handles them as a whole, filling one before moving on to the next.</p>"
+      },
+      {
+        "id": "ecart",
+        "title": "The second one, 1 or 2 blocks away",
+        "alt": "Fixed interface placed one block away",
+        "html": "<p>The second interface sits on the ground, along the path, facing the first one. There must be <strong>one or two blocks</strong> of gap between them: touching interfaces do not connect. Pipes and the pump are connected to this fixed interface.</p>"
+      },
+      {
+        "id": "connexion",
+        "title": "For the length of a stop",
+        "alt": "The two interfaces face to face during the stop",
+        "html": "<p>When the contraption passes and the two interfaces face each other, they <strong>latch on</strong>: the contraption stops and the exchange begins. The fixed interface then acts as one big tank standing for all of the contraption's tanks. The pipes connected to it cannot tell the difference from an ordinary tank.</p>"
+      },
+      {
+        "id": "inserer",
+        "title": "Filling…",
+        "alt": "Chocolate fills the contraption's tanks",
+        "html": "<p>A <a href=\"/en/wiki/mechanical-pump\">pump</a> pushing towards the fixed interface fills the contraption's tanks one after the other. Here, chocolate goes from the big tank on the ground into the two tanks on board.</p>"
+      },
+      {
+        "id": "extraire",
+        "title": "… or emptying",
+        "alt": "The contraption's tanks empty towards the ground",
+        "html": "<p>Flip the pump with a wrench and the flow reverses: the contraption's tanks empty into the fixed setup. The same station can load a tanker train on the way out and unload it on the way back.</p>"
+      },
+      {
+        "id": "reprise",
+        "title": "Departure",
+        "alt": "The contraption moves on after the exchange",
+        "html": "<p>Once nothing has been exchanged for <strong>3 seconds</strong>, the interfaces let go and the contraption moves on. That delay is set on the server with the psiTimeout option. A redstone signal on the fixed interface also cuts the connection, for instance to release a train on schedule.</p>"
+      },
+      {
+        "id": "montre",
+        "title": "What the animation shows",
+        "html": "<p>In our render, the tanks fill and empty as in the game, but the small motion of the interfaces reaching towards each other is not animated.</p>"
+      },
+      {
+        "id": "train",
+        "title": "The tanker train",
+        "html": "<p>The most common use is the <strong>tanker train</strong>: tanks on a wagon, an interface on its side, and a fixed interface at the edge of each station's platform. The train stops at the station, the interface latches on, the pump fills or empties the tanks, then the train leaves once the exchange is done. That is how you haul lava from a Nether sea, milk from a farm or water to a distant boiler.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Common mistakes",
+        "html": "<p>If nothing happens, check the gap: the two interfaces must face each other with one or two empty blocks between them, never touching. Also check that the moving interface is actually glued to the contraption, and that the pump pushes the right way.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/portable_fluid_interface.json (shapeless)",
+      "Gap: PortableStorageInterfaceBlockEntity.startTransferringTo (distance ≤ 2)",
+      "Departure: CLogistics.psiTimeout = 60 ticks; redstone: PortableStorageInterfaceBlockEntity (powered)",
+      "Tanks on board: PortableFluidInterfaceBlockEntity (all of the contraption's tanks)",
+      "Scene: FluidMovementActorScenes.transfer; levels drawn after FluidTankRenderer"
+    ]
+  }
+}

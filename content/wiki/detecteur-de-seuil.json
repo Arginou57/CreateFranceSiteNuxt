@@ -135,7 +135,8 @@
     "observateur-intelligent",
     "coffre-a-objet-renforce",
     "entonnoir",
-    "chute"
+    "chute",
+    "reservoir-a-fluide"
   ],
   "sources": [
     "Seuils : ThresholdSwitchBlockEntity (onWhenAbove = 128, offWhenBelow = 64, Inverted), état gardé entre les deux seuils",

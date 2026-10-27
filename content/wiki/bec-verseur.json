@@ -1,0 +1,272 @@
+{
+  "slug": "bec-verseur",
+  "name": "Bec verseur",
+  "blockId": "create:spout",
+  "category": "fluides",
+  "title": "Bec verseur (spout) — Create : guide en français",
+  "description": "Le bec verseur de Create : remplir bouteilles, seaux et recettes de remplissage sur un dépôt ou un tapis, réservoir de 1 000 mB alimenté par tuyaux.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>bec verseur</strong>, le « spout » des joueurs anglophones, verse du fluide sur l'objet placé sous lui. Il remplit les bouteilles et les seaux, et réalise les recettes de remplissage de Create : pommes au miel, petits pains au lait, gâteaux à blaze… Posé au-dessus d'un <a href=\"/wiki/depot\">dépôt</a> ou d'un <a href=\"/wiki/tapis-roulant\">tapis roulant</a>, il travaille tout seul, alimenté par des tuyaux.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Fluides"
+    },
+    {
+      "label": "Fabrication",
+      "value": "Boitier de cuivre + algues séchées"
+    },
+    {
+      "label": "Réservoir",
+      "value": "1 000 mB, rempli par tuyau (pas à la main)"
+    },
+    {
+      "label": "Durée",
+      "value": "20 ticks (1 seconde) par objet"
+    },
+    {
+      "label": "Sous le bec",
+      "value": "Un dépôt, un tapis roulant, ou un objet sur la chaîne"
+    },
+    {
+      "label": "Exemples",
+      "value": "Bouteille de miel (250 mB), bloc d’herbe (terre + 500 mB d’eau), petit pain au lait"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Boitier de cuivre",
+        null
+      ],
+      [
+        null,
+        "Algues séchées",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 bec verseur"
+  },
+  "videos": [
+    {
+      "id": "spout",
+      "name": "Bec verseur : remplir des bouteilles",
+      "description": "Un bec verseur alimenté en miel remplit une bouteille posée sur un dépôt, puis traite à la chaîne les bouteilles d'un tapis.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "bec",
+      "title": "Verser sur l’objet du dessous",
+      "image": "spout_bec.webp",
+      "alt": "Bec verseur au-dessus d’un dépôt",
+      "video": "spout",
+      "html": "<p>Le bec verseur se pose au-dessus de l'endroit où passent les objets, avec un bloc d'écart. Il verse son fluide sur l'objet qui se trouve dessous, à condition que cet objet puisse le recevoir : une bouteille vide, un seau, ou l'ingrédient d'une recette de remplissage.</p>"
+    },
+    {
+      "id": "acces",
+      "title": "Pas d’accès à la main",
+      "image": "spout_acces.webp",
+      "alt": "Le bec verseur ne s’ouvre pas à la main",
+      "html": "<p>On ne remplit pas le bec verseur avec un seau, et on n'en retire rien à la main. Son réservoir interne de <strong>1 000 mB</strong> ne se remplit que par un <a href=\"/wiki/tuyau-a-fluide\">tuyau à fluide</a>, branché sur le côté ou par-dessus, jamais par-dessous : c'est là que se trouve la buse.</p>"
+    },
+    {
+      "id": "tuyaux",
+      "title": "L’alimenter par tuyaux",
+      "image": "spout_tuyaux.webp",
+      "alt": "Réservoir de miel relié au bec verseur par une pompe",
+      "html": "<p>Relie le bec verseur à un <a href=\"/wiki/reservoir-a-fluide\">réservoir</a> avec des tuyaux et une <a href=\"/wiki/pompe-mecanique\">pompe mécanique</a> qui pousse vers le bec. Le réseau garde le bec plein : à chaque objet rempli, la pompe recomplète son réservoir.</p>"
+    },
+    {
+      "id": "depot",
+      "title": "Sur un dépôt",
+      "image": "spout_depot.webp",
+      "alt": "Une bouteille sur le dépôt devient une bouteille de miel",
+      "html": "<p>Pose un objet sur un <a href=\"/wiki/depot\">dépôt</a> sous le bec : la buse s'abaisse, verse pendant <strong>20 ticks</strong>, soit une seconde, et l'objet ressort rempli. Une bouteille vide devient une bouteille de miel. Un <a href=\"/wiki/bras-mecanique\">bras mécanique</a> peut alimenter et vider le dépôt.</p>"
+    },
+    {
+      "id": "tapis",
+      "title": "Sur un tapis roulant",
+      "image": "spout_tapis.webp",
+      "alt": "Bouteilles en file sur un tapis roulant sous le bec",
+      "html": "<p>Au-dessus d'un <a href=\"/wiki/tapis-roulant\">tapis roulant</a>, le bec verseur <strong>arrête</strong> chaque objet qui passe sous lui, le remplit, puis le laisse repartir. Les objets suivants attendent leur tour. Rien à régler : la chaîne se fait toute seule. Un objet qui ne peut pas recevoir le fluide du bec passe dessous sans s'arrêter.</p>"
+    },
+    {
+      "id": "auto",
+      "title": "Une chaîne automatique",
+      "image": "spout_auto.webp",
+      "alt": "Le bec verseur remplit les bouteilles du tapis une à une",
+      "html": "<p>Un tapis, un bec et un réservoir suffisent pour une petite usine de bouteilles de miel ou de thé du constructeur. Plusieurs becs à la suite sur un même tapis appliquent plusieurs fluides, ce qui sert aussi dans l'assemblage séquentiel de Create.</p>"
+    },
+    {
+      "id": "recettes",
+      "title": "Ce que le bec sait remplir",
+      "html": "<p>Une bouteille ou un seau se remplit de n'importe quel fluide : 250 mB par bouteille, 1 000 mB par seau. Le bec réalise aussi les recettes de remplissage : terre et 500 mB d'eau pour un bloc d'herbe, pomme et miel pour une pomme au miel, pain et lait pour un petit pain au lait, baies et chocolat pour des baies enrobées, base de gâteau et lave pour le gâteau à blaze du <a href=\"/wiki/bruleur-a-blaze\">brûleur à blaze</a>.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Astuces",
+      "html": "<p>Si le bec ne verse pas, vérifie trois choses : qu'il a du fluide, que l'objet dessous accepte ce fluide, et qu'il n'y a qu'un bloc d'écart. Un <a href=\"/wiki/tuyau-a-fluide-intelligent\">tuyau intelligent</a> garantit que le bon liquide arrive au bon bec.</p>"
+    },
+    {
+      "id": "assemblage",
+      "title": "Dans l’assemblage séquentiel",
+      "html": "<p>Les recettes les plus avancées de Create, comme les mécanismes de précision, passent par un <strong>assemblage séquentiel</strong> : un objet en cours de fabrication circule sur un tapis et reçoit plusieurs étapes à la suite, parmi lesquelles des coups de <a href=\"/wiki/deployeur\">déployeur</a>, de presse et de bec verseur. Le bec y verse la dose demandée par l'étape, puis laisse repartir l'objet vers la machine suivante. Une boucle de tapis avec un bec, un déployeur et une presse suffit souvent à automatiser une recette entière.</p>"
+    }
+  ],
+  "related": [
+    "depot",
+    "tapis-roulant",
+    "reservoir-a-fluide",
+    "pompe-mecanique",
+    "egouttoir-a-objets",
+    "bras-mecanique"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/spout.json",
+    "Réservoir : SpoutBlockEntity, SmartFluidTankBehaviour.single(1 000 mB) ; durée : SpoutBlockEntity.FILLING_TIME = 20 ticks",
+    "Raccord : FluidPropagator.hasFluidCapability (pas de connexion par-dessous)",
+    "Recettes : recipe/filling/*.json (grass_block 500 mB d'eau, honey_bottle, honeyed_apple, sweet_roll, chocolate_glazed_berries, blaze_cake : 250 mB)",
+    "Scène : SpoutScenes.filling ; filet dessiné d'après SpoutRenderer, bouteilles simulées sur le dépôt et le tapis"
+  ],
+  "en": {
+    "slugEn": "spout",
+    "name": "Spout",
+    "title": "Spout — Create mod guide",
+    "description": "The Create Spout: filling bottles, buckets and filling recipes on a Depot or Mechanical Belt, with a 1,000 mB internal tank fed by pipes.",
+    "intro": "The <strong>Spout</strong> pours fluid onto the item placed below it. It fills bottles and buckets, and performs Create's filling recipes: honeyed apples, sweet rolls, blaze cakes… Placed above a <a href=\"/en/wiki/depot\">Depot</a> or a <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a>, it works on its own, fed by pipes.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Fluids"
+      },
+      {
+        "label": "Crafting",
+        "value": "Copper Casing + Dried Kelp"
+      },
+      {
+        "label": "Tank",
+        "value": "1,000 mB, filled through pipes (not by hand)"
+      },
+      {
+        "label": "Duration",
+        "value": "20 ticks (1 second) per item"
+      },
+      {
+        "label": "Below the spout",
+        "value": "A Depot, a Mechanical Belt, or an item on the line"
+      },
+      {
+        "label": "Examples",
+        "value": "Honey Bottle (250 mB), Grass Block (dirt + 500 mB of water), Sweet Roll"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Copper Casing",
+          null
+        ],
+        [
+          null,
+          "Dried Kelp",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Spout"
+    },
+    "videos": [
+      {
+        "id": "spout",
+        "name": "Spout: filling bottles",
+        "description": "A spout fed with honey fills a bottle placed on a depot, then processes the bottles of a belt one after the other."
+      }
+    ],
+    "sections": [
+      {
+        "id": "bec",
+        "title": "Pouring onto the item below",
+        "alt": "Spout above a depot",
+        "html": "<p>The Spout goes above the place where items pass, with one block of gap. It pours its fluid onto the item below, provided that item can take it: an empty bottle, a bucket, or the ingredient of a filling recipe.</p>"
+      },
+      {
+        "id": "acces",
+        "title": "No hand access",
+        "alt": "The spout cannot be opened by hand",
+        "html": "<p>You cannot fill a Spout with a bucket, and you cannot take anything out of it by hand. Its <strong>1,000 mB</strong> internal tank only fills through a <a href=\"/en/wiki/fluid-pipe\">Fluid Pipe</a>, connected on a side or on top, never from below: that is where the nozzle is.</p>"
+      },
+      {
+        "id": "tuyaux",
+        "title": "Feeding it through pipes",
+        "alt": "Honey tank linked to the spout through a pump",
+        "html": "<p>Link the Spout to a <a href=\"/en/wiki/fluid-tank\">tank</a> with pipes and a <a href=\"/en/wiki/mechanical-pump\">Mechanical Pump</a> pushing towards it. The network keeps it full: each time an item is filled, the pump tops its tank back up. A slow pump is enough, since a spout only needs a quarter of a bucket per bottle.</p>"
+      },
+      {
+        "id": "depot",
+        "title": "On a Depot",
+        "alt": "A bottle on the depot becomes a honey bottle",
+        "html": "<p>Place an item on a <a href=\"/en/wiki/depot\">Depot</a> under the spout: the nozzle lowers, pours for <strong>20 ticks</strong>, one second, and the item comes out filled. An empty bottle becomes a honey bottle. A <a href=\"/en/wiki/mechanical-arm\">Mechanical Arm</a> can load and unload the depot.</p>"
+      },
+      {
+        "id": "tapis",
+        "title": "On a Mechanical Belt",
+        "alt": "Bottles queuing on a belt under the spout",
+        "html": "<p>Above a <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a>, the spout <strong>stops</strong> every item passing underneath, fills it, then lets it go. The next items wait their turn. Nothing to set up: the line runs on its own. An item that cannot take the spout's fluid simply passes underneath without stopping, so mixed belts are not a problem.</p>"
+      },
+      {
+        "id": "auto",
+        "title": "An automatic line",
+        "alt": "The spout fills the bottles on the belt one by one",
+        "html": "<p>A belt, a spout and a tank are enough for a small honey bottle or Builder's Tea factory. Several spouts in a row over one belt apply several fluids, which is also used in Create's sequenced assembly.</p>"
+      },
+      {
+        "id": "recettes",
+        "title": "What the spout can fill",
+        "html": "<p>A bottle or a bucket fills with any fluid: 250 mB per bottle, 1,000 mB per bucket. The spout also performs filling recipes: dirt and 500 mB of water for a Grass Block, apple and honey for a Honeyed Apple, bread and milk for a Sweet Roll, berries and chocolate for Chocolate Glazed Berries, cake base and lava for the Blaze Cake of the <a href=\"/en/wiki/blaze-burner\">Blaze Burner</a>.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<p>If the spout does not pour, check three things: that it has fluid, that the item below accepts that fluid, and that there is exactly one block of gap. A <a href=\"/en/wiki/smart-fluid-pipe\">Smart Fluid Pipe</a> makes sure the right liquid reaches the right spout.</p>"
+      },
+      {
+        "id": "assemblage",
+        "title": "In sequenced assembly",
+        "html": "<p>Create's most advanced recipes, such as precision mechanisms, go through <strong>sequenced assembly</strong>: an item being built travels along a belt and receives several steps in a row, including hits from a <a href=\"/en/wiki/deployer\">Deployer</a>, a press and a spout. The spout pours the dose the step asks for, then lets the item move on to the next machine. A belt loop with a spout, a deployer and a press is often enough to automate a whole recipe, and the spout only needs a steady fluid supply from a tank nearby.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/spout.json",
+      "Tank: SpoutBlockEntity, SmartFluidTankBehaviour.single(1,000 mB); duration: SpoutBlockEntity.FILLING_TIME = 20 ticks",
+      "Connection: FluidPropagator.hasFluidCapability (no connection from below)",
+      "Recipes: recipe/filling/*.json (grass_block 500 mB of water, honey_bottle, honeyed_apple, sweet_roll, chocolate_glazed_berries, blaze_cake: 250 mB)",
+      "Scene: SpoutScenes.filling; stream drawn after SpoutRenderer, bottles simulated on the depot and belt"
+    ]
+  }
+}

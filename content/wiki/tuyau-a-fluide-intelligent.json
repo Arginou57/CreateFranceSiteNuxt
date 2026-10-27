@@ -1,0 +1,243 @@
+{
+  "slug": "tuyau-a-fluide-intelligent",
+  "name": "Tuyau à fluide intelligent",
+  "blockId": "create:smart_fluid_pipe",
+  "category": "fluides",
+  "title": "Tuyau à fluide intelligent — Create : guide",
+  "description": "Le tuyau à fluide intelligent de Create : filtre par fluide avec un seau, choix du fluide pompé à la source et tri du lait et du chocolat dans un réseau.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>tuyau à fluide intelligent</strong> est un <a href=\"/wiki/tuyau-a-fluide\">tuyau à fluide</a> muni d'un filtre. Il ne laisse passer qu'un fluide, celui de l'objet qu'on lui donne : un seau de lave, une bouteille de miel, un seau de chocolat. C'est l'outil pour pomper un seul liquide dans un bassin qui en contient plusieurs, ou pour envoyer chaque fluide vers son propre réservoir.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Fluides"
+    },
+    {
+      "label": "Fabrication",
+      "value": "Plaque de laiton + tuyau à fluide + tube électronique"
+    },
+    {
+      "label": "Filtre",
+      "value": "Clic droit avec un objet contenant le fluide voulu (seau, bouteille…)"
+    },
+    {
+      "label": "À la source",
+      "value": "Choisit le fluide aspiré dans un bassin ou un réservoir"
+    },
+    {
+      "label": "Dans le réseau",
+      "value": "Ne laisse continuer que le fluide du filtre"
+    },
+    {
+      "label": "Forme",
+      "value": "Tuyau droit, posé au sol, au mur ou au plafond"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Plaque de laiton",
+        null
+      ],
+      [
+        null,
+        "Tuyau à fluide",
+        null
+      ],
+      [
+        null,
+        "Tube électronique",
+        null
+      ]
+    ],
+    "result": "1 tuyau à fluide intelligent"
+  },
+  "videos": [
+    {
+      "id": "smart_pipe",
+      "name": "Tuyau à fluide intelligent : trier les fluides",
+      "description": "Un tuyau intelligent choisit le chocolat dans un bassin qui contient aussi du lait, puis deux autres envoient chaque fluide vers son réservoir.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "intelligent",
+      "title": "Un tuyau avec un filtre",
+      "image": "smart_pipe_intelligent.webp",
+      "alt": "Tuyau à fluide intelligent entre un bassin et une ligne de tuyaux",
+      "video": "smart_pipe",
+      "html": "<p>Le tuyau intelligent se pose comme un tuyau droit, avec une petite fente de filtre sur le dessus. Tant que le filtre est vide, il laisse tout passer et se comporte comme un tuyau ordinaire. Il se place au sol, au mur ou au plafond, ce qui permet de garder le filtre accessible quelle que soit l'orientation de la conduite. Il se raccorde aux tuyaux, réservoirs et pompes exactement comme un tuyau droit, par ses deux extrémités.</p>"
+    },
+    {
+      "id": "source",
+      "title": "Choisir ce qu’on aspire",
+      "image": "smart_pipe_source.webp",
+      "alt": "Tuyau intelligent collé au bassin, filtre réglé sur le chocolat",
+      "html": "<p>Placé <strong>directement contre la source</strong>, le tuyau intelligent décide du fluide extrait. Un <a href=\"/wiki/bassin\">bassin</a> peut contenir deux fluides à la fois, par exemple du lait et du chocolat : avec un filtre chocolat, la pompe n'aspire que le chocolat et laisse le lait dans le bassin. Sans filtre, elle prendrait le premier fluide venu.</p>"
+    },
+    {
+      "id": "filtre",
+      "title": "Régler le filtre",
+      "image": "smart_pipe_filtre.webp",
+      "alt": "Filtre du tuyau intelligent réglé avec un seau de chocolat",
+      "html": "<p>Pour régler le filtre, fais un clic droit sur la fente avec un objet qui contient le fluide voulu : <strong>seau d'eau, seau de lave, seau de lait, seau de chocolat, bouteille de miel</strong>… L'objet n'est pas consommé, il sert d'étiquette. Un clic droit à main vide retire le filtre. Comme tous les filtres de Create, il se règle aussi sans casser la conduite.</p>"
+    },
+    {
+      "id": "reseau",
+      "title": "Trier dans un réseau",
+      "image": "smart_pipe_reseau.webp",
+      "alt": "Deux branches filtrées remplissent chacune son réservoir",
+      "html": "<p>Placé <strong>plus loin dans le réseau</strong>, le tuyau intelligent laisse passer le fluide de son filtre et bloque les autres. Avec deux branches, l'une filtrée sur le lait et l'autre sur le chocolat, chaque fluide rejoint son propre <a href=\"/wiki/reservoir-a-fluide\">réservoir</a>, même si la pompe aspire les deux depuis le même bassin. C'est la base d'un tri de fluides en sortie de mélangeur.</p>"
+    },
+    {
+      "id": "usages",
+      "title": "Exemples d’usages",
+      "html": "<p>En sortie de <a href=\"/wiki/mixeur-mecanique\">mixeur mécanique</a>, un tuyau intelligent récupère le fluide produit sans aspirer les ingrédients liquides restés dans le bassin. Devant un ensemble de <a href=\"/wiki/bec-verseur\">becs verseurs</a>, il garantit que chaque bec reçoit le bon liquide. Pour une réserve de lave, il évite qu'une erreur de branchement y envoie de l'eau.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Bien l’utiliser",
+      "html": "<p>Le filtre agit dans les deux sens de circulation. Une branche filtrée qui ne trouve pas son fluide reste vide, sans gêner les autres branches. Si une pompe semble bloquée, vérifie qu'aucun tuyau intelligent du trajet ne porte un filtre oublié. Pour couper complètement un réseau, une vanne à fluide est plus simple : le tuyau intelligent trie, il ne ferme pas.</p>"
+    },
+    {
+      "id": "comparer",
+      "title": "Tuyau intelligent, vanne ou tuyau ordinaire ?",
+      "html": "<p>Le tuyau ordinaire transporte tout, la <a href=\"/wiki/tuyau-a-fluide\">vanne à fluide</a> coupe ou ouvre tout le passage, et le tuyau intelligent choisit <strong>quel</strong> fluide passe. Les trois se combinent : une vanne pour arrêter la production la nuit, des tuyaux intelligents pour répartir les liquides, et des tuyaux à fenêtre pour vérifier d'un coup d'œil que chaque branche reçoit bien le sien. Un réseau bien filtré évite surtout de polluer un grand réservoir : une fois qu'un fluide y est entré, il faut le vider entièrement avant d'y stocker autre chose.</p>"
+    }
+  ],
+  "related": [
+    "tuyau-a-fluide",
+    "pompe-mecanique",
+    "reservoir-a-fluide",
+    "bassin",
+    "mixeur-mecanique"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/smart_fluid_pipe.json",
+    "Filtre : SmartFluidPipeBlockEntity (FilteringBehaviour, fluide de l'objet), SmartFluidPipeBlock (sol, mur, plafond)",
+    "Bassin à deux réservoirs d'entrée : BasinBlockEntity (inputTank, 2 × 1 000 mB)",
+    "Scène : PipeScenes.smart ; débit simulé d'après PumpBlockEntity et FluidNetwork"
+  ],
+  "en": {
+    "slugEn": "smart-fluid-pipe",
+    "name": "Smart Fluid Pipe",
+    "title": "Smart Fluid Pipe — Create mod guide",
+    "description": "The Create Smart Fluid Pipe: a fluid filter set with a bucket, choosing which fluid is pumped at the source and sorting milk and chocolate in a network.",
+    "intro": "The <strong>Smart Fluid Pipe</strong> is a <a href=\"/en/wiki/fluid-pipe\">Fluid Pipe</a> with a filter. It only lets one fluid through, the one held by the item you give it: a lava bucket, a honey bottle, a chocolate bucket. It is the tool to pump a single liquid out of a basin that holds several, or to send each fluid to its own tank.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Fluids"
+      },
+      {
+        "label": "Crafting",
+        "value": "Brass Sheet + Fluid Pipe + Electron Tube"
+      },
+      {
+        "label": "Filter",
+        "value": "Right-click with an item containing the wanted fluid (bucket, bottle…)"
+      },
+      {
+        "label": "At the source",
+        "value": "Chooses which fluid is drawn from a basin or tank"
+      },
+      {
+        "label": "In the network",
+        "value": "Only lets the filtered fluid continue"
+      },
+      {
+        "label": "Shape",
+        "value": "Straight pipe, placed on the floor, a wall or the ceiling"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Brass Sheet",
+          null
+        ],
+        [
+          null,
+          "Fluid Pipe",
+          null
+        ],
+        [
+          null,
+          "Electron Tube",
+          null
+        ]
+      ],
+      "result": "1 Smart Fluid Pipe"
+    },
+    "videos": [
+      {
+        "id": "smart_pipe",
+        "name": "Smart Fluid Pipe: sorting fluids",
+        "description": "A smart pipe picks the chocolate out of a basin that also holds milk, then two more send each fluid to its own tank."
+      }
+    ],
+    "sections": [
+      {
+        "id": "intelligent",
+        "title": "A pipe with a filter",
+        "alt": "Smart Fluid Pipe between a basin and a pipe line",
+        "html": "<p>The Smart Fluid Pipe is placed like a straight pipe, with a small filter slot on top. While the filter is empty, it lets everything through and acts like an ordinary pipe. It can sit on the floor, on a wall or on the ceiling, so the filter stays reachable whatever the direction of the line. It joins pipes, tanks and pumps exactly like a straight pipe, through its two ends, so it can replace any straight section of an existing line.</p>"
+      },
+      {
+        "id": "source",
+        "title": "Choosing what is drawn",
+        "alt": "Smart pipe against the basin, filter set to chocolate",
+        "html": "<p>Placed <strong>right against the source</strong>, the smart pipe decides which fluid is extracted. A <a href=\"/en/wiki/basin\">Basin</a> can hold two fluids at once, say milk and chocolate: with a chocolate filter, the pump only draws the chocolate and leaves the milk in the basin. Without a filter, it would take whichever fluid comes first.</p>"
+      },
+      {
+        "id": "filtre",
+        "title": "Setting the filter",
+        "alt": "Smart pipe filter set with a chocolate bucket",
+        "html": "<p>To set the filter, right-click the slot with an item holding the fluid you want: <strong>water bucket, lava bucket, milk bucket, chocolate bucket, honey bottle</strong>… The item is not used up, it works as a label. Right-clicking with an empty hand clears the filter. Like every Create filter, it can be changed without breaking the line.</p>"
+      },
+      {
+        "id": "reseau",
+        "title": "Sorting inside a network",
+        "alt": "Two filtered branches each fill their own tank",
+        "html": "<p>Placed <strong>further along the network</strong>, the smart pipe lets its filtered fluid through and blocks the others. With two branches, one filtered for milk and one for chocolate, each fluid ends up in its own <a href=\"/en/wiki/fluid-tank\">tank</a>, even though the pump draws both from the same basin. This is the basis of fluid sorting at a mixer's output.</p>"
+      },
+      {
+        "id": "usages",
+        "title": "Use cases",
+        "html": "<p>At the output of a <a href=\"/en/wiki/mechanical-mixer\">Mechanical Mixer</a>, a smart pipe collects the fluid produced without drawing the liquid ingredients left in the basin. In front of a row of <a href=\"/en/wiki/spout\">Spouts</a>, it makes sure each one receives the right liquid. On a lava store, it prevents a wiring mistake from sending water into it, which would otherwise block the tank for good.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Using it well",
+        "html": "<p>The filter works in both flow directions. A filtered branch that cannot find its fluid simply stays empty, without bothering the other branches. If a pump seems stuck, check that no smart pipe along the way still carries a forgotten filter. To cut a network off completely, a Fluid Valve is simpler: the smart pipe sorts, it does not close.</p>"
+      },
+      {
+        "id": "comparer",
+        "title": "Smart pipe, valve or plain pipe?",
+        "html": "<p>A plain pipe carries everything, the <a href=\"/en/wiki/fluid-pipe\">Fluid Valve</a> shuts or opens the whole passage, and the smart pipe chooses <strong>which</strong> fluid goes through. The three work together: a valve to stop production at night, smart pipes to share out the liquids, and glass pipes to check at a glance that each branch gets its own. Above all, a well-filtered network keeps a big tank clean: once a fluid has gone in, the tank must be emptied completely before it can store anything else.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/smart_fluid_pipe.json",
+      "Filter: SmartFluidPipeBlockEntity (FilteringBehaviour, the item's fluid), SmartFluidPipeBlock (floor, wall, ceiling)",
+      "Basin with two input tanks: BasinBlockEntity (inputTank, 2 × 1,000 mB)",
+      "Scene: PipeScenes.smart; flow simulated from PumpBlockEntity and FluidNetwork"
+    ]
+  }
+}

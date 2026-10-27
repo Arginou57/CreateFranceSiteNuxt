@@ -118,7 +118,8 @@
     "bassin",
     "bruleur-a-blaze",
     "presse-mecanique",
-    "meule"
+    "meule",
+    "tuyau-a-fluide-intelligent"
   ],
   "sources": [
     "Stress : AllBlocks.java, MECHANICAL_MIXER, CStress.setImpact(4.0)",

@@ -1,0 +1,266 @@
+{
+  "slug": "egouttoir-a-objets",
+  "name": "Égouttoir à objets",
+  "blockId": "create:item_drain",
+  "category": "fluides",
+  "title": "Égouttoir à objets (item drain) — Create : guide",
+  "description": "L'égouttoir à objets de Create : vider seaux et bouteilles posés à la main ou amenés par tapis, réservoir de 1 500 mB, sortie par le côté opposé.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "L'<strong>égouttoir à objets</strong>, l'« item drain » des joueurs anglophones, fait l'inverse du <a href=\"/wiki/bec-verseur\">bec verseur</a> : il vide les objets qui contiennent un fluide. Un seau de lave posé dessus y laisse sa lave et ressort vide. Placé au bout d'un <a href=\"/wiki/tapis-roulant\">tapis roulant</a>, il vide les seaux à la chaîne, et une <a href=\"/wiki/pompe-mecanique\">pompe</a> récupère le fluide dans son réservoir interne.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Fluides"
+    },
+    {
+      "label": "Fabrication",
+      "value": "Barreaux de fer + boitier de cuivre"
+    },
+    {
+      "label": "Réservoir",
+      "value": "1 500 mB"
+    },
+    {
+      "label": "Vidage",
+      "value": "20 ticks (1 seconde) par objet"
+    },
+    {
+      "label": "Passage",
+      "value": "L’objet avance de 1/8 de bloc par tick, ressort par le côté opposé"
+    },
+    {
+      "label": "Tuyaux",
+      "value": "Sur les côtés et par-dessous, pas par-dessus"
+    },
+    {
+      "label": "Objets vidés",
+      "value": "Seaux, bouteilles de miel, potions, et tout objet qui contient un fluide"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Barreaux de fer",
+        null
+      ],
+      [
+        null,
+        "Boitier de cuivre",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 égouttoir à objets"
+  },
+  "videos": [
+    {
+      "id": "drain",
+      "name": "Égouttoir à objets : vider des seaux de lave",
+      "description": "Un seau de lave est vidé à la main dans l'égouttoir, puis des seaux arrivent par tapis, se vident et ressortent ; une pompe envoie la lave dans un réservoir.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "egouttoir",
+      "title": "Vider les objets",
+      "image": "drain_egouttoir.webp",
+      "alt": "Égouttoir à objets seul sur la plaque",
+      "video": "drain",
+      "html": "<p>L'égouttoir est un bloc bas avec une grille sur le dessus. Il reçoit un objet à la fois, en extrait le fluide qu'il contient et le garde dans son réservoir de <strong>1 500 mB</strong>. On voit le liquide monter sous la grille. L'objet vidé, seau ou bouteille, ressort ensuite de l'autre côté.</p>"
+    },
+    {
+      "id": "verser",
+      "title": "Verser à la main",
+      "image": "drain_verser.webp",
+      "alt": "La lave versée à la main brille sous la grille de l’égouttoir",
+      "html": "<p>Un clic droit sur l'égouttoir avec un objet plein y <strong>verse son contenu</strong> : un seau de lave y laisse ses 1 000 mB et revient vide dans la main. C'est la façon la plus simple de faire entrer à la main du fluide dans un réseau, puisqu'un <a href=\"/wiki/reservoir-a-fluide\">réservoir</a> refuse les seaux en survie.</p>"
+    },
+    {
+      "id": "cote",
+      "title": "Par le côté",
+      "image": "drain_cote.webp",
+      "alt": "Un tapis roulant amène des seaux vers l’égouttoir",
+      "html": "<p>Un objet qui arrive <strong>par le côté</strong>, depuis un tapis roulant ou un entonnoir, roule sur la grille. Il avance d'un huitième de bloc par tick jusqu'au centre, s'y arrête pendant <strong>20 ticks</strong>, une seconde, le temps de se vider, puis continue sa route.</p>"
+    },
+    {
+      "id": "vider",
+      "title": "Ressortir de l’autre côté",
+      "image": "drain_vider.webp",
+      "alt": "Le seau vidé ressort de l’égouttoir",
+      "html": "<p>Une fois vidé, l'objet sort par le <strong>côté opposé</strong> à son entrée. Si un tapis, un dépôt ou un autre égouttoir l'attend, il y passe ; si le côté est libre, il est éjecté au sol. Des égouttoirs à la suite vident ainsi les objets qui contiennent plusieurs doses.</p>"
+    },
+    {
+      "id": "reseau",
+      "title": "Récupérer le fluide",
+      "image": "drain_reseau.webp",
+      "alt": "La lave de l’égouttoir remplit un réservoir par une pompe",
+      "html": "<p>Une <a href=\"/wiki/pompe-mecanique\">pompe mécanique</a> branchée sur l'égouttoir tire le fluide de son réservoir et l'envoie dans un <a href=\"/wiki/reservoir-a-fluide\">réservoir à fluide</a>. Les tuyaux se branchent sur les côtés ou par-dessous, jamais par-dessus, où se trouve la grille. Avec un réservoir plein, l'égouttoir s'arrête et retient l'objet suivant.</p>"
+    },
+    {
+      "id": "usages",
+      "title": "À quoi ça sert",
+      "html": "<p>L'égouttoir sert à collecter la lave d'une ferme de chaudrons, à vider les bouteilles de miel d'une ferme d'abeilles, ou à récupérer le fluide d'objets achetés ou pillés, comme les seaux de lait d'une vache ou les potions d'un coffre de donjon. Associé à un <a href=\"/wiki/bec-verseur\">bec verseur</a>, il permet de transvaser un fluide d'un type d'objet à un autre : seaux vidés d'un côté, bouteilles remplies de l'autre.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Un égouttoir qui garde un seau plein est souvent un égouttoir plein : vérifie que la pompe tourne et que le réservoir a de la place. Un objet qui ne contient pas de fluide traverse simplement l'égouttoir sans s'arrêter, ce qui permet de faire passer un tapis mélangé sans le trier d'abord. Un réservoir qui contient déjà un autre fluide refuse celui de l'égouttoir : vide-le, ou envoie chaque fluide vers sa cuve avec un tuyau intelligent. Et un tuyau posé sur la grille ne s'y connecte pas.</p>"
+    },
+    {
+      "id": "chaine",
+      "title": "Égouttoirs en série",
+      "html": "<p>Des égouttoirs posés <strong>bout à bout</strong> se passent les objets : un seau entre dans le premier, se vide, glisse dans le second, et ainsi de suite. C'est utile pour vider des objets qui contiennent plusieurs doses, ou pour répartir la charge sur plusieurs réservoirs. En fin de ligne, un tapis ou un <a href=\"/wiki/entonnoir\">entonnoir</a> récupère les récipients vides, prêts à repartir vers un <a href=\"/wiki/bec-verseur\">bec verseur</a>.</p>"
+    }
+  ],
+  "related": [
+    "bec-verseur",
+    "tapis-roulant",
+    "reservoir-a-fluide",
+    "pompe-mecanique",
+    "tuyau-a-fluide"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/item_drain.json",
+    "Réservoir : ItemDrainBlockEntity, SmartFluidTankBehaviour.single(1 500 mB)",
+    "Passage : ItemDrainBlockEntity.tick (itemMovementPerTick = 1/8, FILLING_TIME = 20, sortie par le côté opposé ou éjection en entité)",
+    "Raccord : FluidPropagator.hasFluidCapability (pas de connexion par-dessus)",
+    "Scène : DrainScenes.emptying ; seaux simulés sur le tapis et l'égouttoir, niveau dessiné d'après ItemDrainRenderer"
+  ],
+  "en": {
+    "slugEn": "item-drain",
+    "name": "Item Drain",
+    "title": "Item Drain — Create mod guide",
+    "description": "The Create Item Drain: emptying buckets and bottles placed by hand or brought by belt, a 1,500 mB internal tank, and items leaving on the opposite side.",
+    "intro": "The <strong>Item Drain</strong> does the opposite of the <a href=\"/en/wiki/spout\">Spout</a>: it empties items that hold a fluid. A lava bucket placed on it leaves its lava behind and comes out empty. At the end of a <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a>, it empties buckets one after the other, and a <a href=\"/en/wiki/mechanical-pump\">pump</a> collects the fluid from its internal tank.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Fluids"
+      },
+      {
+        "label": "Crafting",
+        "value": "Iron Bars + Copper Casing"
+      },
+      {
+        "label": "Tank",
+        "value": "1,500 mB"
+      },
+      {
+        "label": "Emptying",
+        "value": "20 ticks (1 second) per item"
+      },
+      {
+        "label": "Passage",
+        "value": "The item moves 1/8 of a block per tick and leaves on the opposite side"
+      },
+      {
+        "label": "Pipes",
+        "value": "On the sides and from below, not from above"
+      },
+      {
+        "label": "Items emptied",
+        "value": "Buckets, honey bottles, potions, and any item holding a fluid"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Iron Bars",
+          null
+        ],
+        [
+          null,
+          "Copper Casing",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Item Drain"
+    },
+    "videos": [
+      {
+        "id": "drain",
+        "name": "Item Drain: emptying lava buckets",
+        "description": "A lava bucket is poured into the drain by hand, then buckets arrive by belt, empty and leave; a pump sends the lava into a tank."
+      }
+    ],
+    "sections": [
+      {
+        "id": "egouttoir",
+        "title": "Emptying items",
+        "alt": "Item Drain alone on the plate",
+        "html": "<p>The Item Drain is a low block with a grate on top. It takes one item at a time, extracts the fluid it holds and keeps it in its <strong>1,500 mB</strong> tank. You can see the liquid rise under the grate. The emptied item, bucket or bottle, then leaves on the other side.</p>"
+      },
+      {
+        "id": "verser",
+        "title": "Pouring by hand",
+        "alt": "Lava poured by hand glows under the drain grate",
+        "html": "<p>Right-clicking the drain with a full item <strong>pours its contents in</strong>: a lava bucket leaves its 1,000 mB and comes back empty in your hand. It is the easiest way to put fluid into a network by hand, since a <a href=\"/en/wiki/fluid-tank\">Fluid Tank</a> refuses buckets in Survival.</p>"
+      },
+      {
+        "id": "cote",
+        "title": "From the side",
+        "alt": "A belt brings buckets towards the drain",
+        "html": "<p>An item arriving <strong>from the side</strong>, from a belt or a funnel, rolls onto the grate. It moves an eighth of a block per tick to the centre, stops there for <strong>20 ticks</strong>, one second, while it empties, then carries on. Only one item is on the drain at a time; the next one waits on the belt.</p>"
+      },
+      {
+        "id": "vider",
+        "title": "Out the other side",
+        "alt": "The emptied bucket leaves the drain",
+        "html": "<p>Once emptied, the item leaves through the side <strong>opposite</strong> its entry. If a belt, a depot or another drain waits there, it moves onto it; if that side is open, it is thrown onto the ground. Drains in a row can empty items that hold several doses.</p>"
+      },
+      {
+        "id": "reseau",
+        "title": "Collecting the fluid",
+        "alt": "The drain's lava fills a tank through a pump",
+        "html": "<p>A <a href=\"/en/wiki/mechanical-pump\">Mechanical Pump</a> connected to the drain pulls the fluid from its tank and sends it into a <a href=\"/en/wiki/fluid-tank\">Fluid Tank</a>. Pipes connect on the sides or from below, never from above, where the grate is. When its tank is full, the drain stops and holds the next item back.</p>"
+      },
+      {
+        "id": "usages",
+        "title": "What it is for",
+        "html": "<p>The Item Drain collects lava from a cauldron farm, empties honey bottles from a bee farm, or recovers the fluid of items you bought or looted, such as milk buckets from a cow or potions from a dungeon chest. Together with a <a href=\"/en/wiki/spout\">Spout</a>, it moves a fluid from one kind of container to another: buckets emptied on one side, bottles filled on the other.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Common mistakes",
+        "html": "<p>A drain that keeps a full bucket is usually a full drain: check that the pump turns and the tank has room. An item that holds no fluid simply rolls across without stopping, so a mixed belt can go through without being sorted first. A tank that already holds another fluid refuses the drain's one: empty it, or send each fluid to its own tank with a Smart Fluid Pipe. And a pipe placed on top of the grate does not connect to it.</p>"
+      },
+      {
+        "id": "chaine",
+        "title": "Drains in a row",
+        "html": "<p>Item Drains placed <strong>end to end</strong> hand items to each other: a bucket enters the first one, empties, slides into the second, and so on. This helps to empty items holding several doses, or to spread the load over several tanks. At the end of the line, a belt or a <a href=\"/en/wiki/funnel\">funnel</a> collects the empty containers, ready to travel back to a <a href=\"/en/wiki/spout\">Spout</a>.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/item_drain.json",
+      "Tank: ItemDrainBlockEntity, SmartFluidTankBehaviour.single(1,500 mB)",
+      "Passage: ItemDrainBlockEntity.tick (itemMovementPerTick = 1/8, FILLING_TIME = 20, exit on the opposite side or thrown as an entity)",
+      "Connection: FluidPropagator.hasFluidCapability (no connection from above)",
+      "Scene: DrainScenes.emptying; buckets simulated on the belt and drain, level drawn after ItemDrainRenderer"
+    ]
+  }
+}

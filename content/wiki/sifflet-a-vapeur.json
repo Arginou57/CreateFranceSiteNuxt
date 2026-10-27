@@ -1,0 +1,277 @@
+{
+  "slug": "sifflet-a-vapeur",
+  "name": "Sifflet à vapeur",
+  "blockId": "create:steam_whistle",
+  "category": "fluides",
+  "title": "Sifflet à vapeur — Create : guide en français",
+  "description": "Le sifflet à vapeur de Create : le poser sur une chaudière chauffée, le faire sonner à la redstone, baisser sa note avec des extensions, changer d'octave.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>sifflet à vapeur</strong> transforme une chaudière en instrument. Posé sur un <a href=\"/wiki/reservoir-a-fluide\">réservoir à fluide</a> chauffé, il siffle tant qu'il reçoit un signal de redstone. Des extensions empilées baissent sa note, la clé change son octave, et plusieurs sifflets réglés différemment jouent des accords, des sirènes d'usine ou des klaxons de train.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Fluides"
+    },
+    {
+      "label": "Fabrication",
+      "value": "Plaque d’or + lingot de cuivre"
+    },
+    {
+      "label": "Support",
+      "value": "Une face d’un réservoir à fluide utilisé comme chaudière"
+    },
+    {
+      "label": "Condition",
+      "value": "Chaudière chauffée + signal de redstone"
+    },
+    {
+      "label": "Note",
+      "value": "Chaque bloc d’extension baisse de 2 demi-tons, jusqu’à 24 (2 octaves)"
+    },
+    {
+      "label": "Octaves",
+      "value": "Petit, moyen, grand : la clé passe de l’un à l’autre"
+    },
+    {
+      "label": "Lire la note",
+      "value": "Lunettes d’ingénieur"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Plaque d’or",
+        null
+      ],
+      [
+        null,
+        "Lingot de cuivre",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 sifflet à vapeur"
+  },
+  "videos": [
+    {
+      "id": "whistle",
+      "name": "Sifflet à vapeur : chaudière, redstone et hauteur de note",
+      "description": "Un sifflet posé sur une chaudière chauffée sonne au signal d'un levier ; des extensions s'empilent pour baisser la note, puis la clé change d'octave.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "reservoir",
+      "title": "Sur un réservoir",
+      "image": "whistle_reservoir.webp",
+      "alt": "Sifflet à vapeur posé sur le côté d’un réservoir",
+      "video": "whistle",
+      "html": "<p>Le sifflet se pose sur une face d'un <a href=\"/wiki/reservoir-a-fluide\">réservoir à fluide</a>, sur le côté ou par-dessus. Ce réservoir devient une chaudière, comme pour le <a href=\"/wiki/moteur-a-vapeur\">moteur à vapeur</a> : on peut d'ailleurs mettre moteurs et sifflets sur la même cuve.</p>"
+    },
+    {
+      "id": "chaleur",
+      "title": "Il faut de la chaleur",
+      "image": "whistle_chaleur.webp",
+      "alt": "Un feu de camp chauffe le réservoir sous le sifflet",
+      "html": "<p>Le sifflet ne sonne que si la chaudière est <strong>chauffée</strong>. Un feu de camp ou un <a href=\"/wiki/bruleur-a-blaze\">brûleur à blaze</a> sous le réservoir suffit : même une chaleur passive, sans carburant, fait l'affaire. Une cuve froide reste muette, même avec un signal de redstone. La cuve n'a pas besoin d'être pleine d'eau.</p>"
+    },
+    {
+      "id": "note",
+      "title": "Siffler à la redstone",
+      "image": "whistle_note.webp",
+      "alt": "Un levier active le sifflet à vapeur",
+      "html": "<p>Un signal de <strong>redstone</strong> sur le sifflet le fait siffler, aussi longtemps que le signal dure. Un levier donne une note tenue, un bouton un coup bref. Avec une horloge de redstone ou un séquenceur, on compose une mélodie ou une alarme. Le signal peut venir de n'importe quel côté du sifflet, comme pour une lampe.</p>"
+    },
+    {
+      "id": "grave",
+      "title": "Baisser la note",
+      "image": "whistle_grave.webp",
+      "alt": "Extensions empilées au-dessus du sifflet",
+      "html": "<p>Un clic droit avec un autre sifflet sur le sifflet posé ajoute une <strong>extension</strong> au-dessus et rend la note plus grave. Chaque demi-bloc baisse d'un demi-ton, chaque bloc entier de deux. On peut descendre de <strong>24 demi-tons</strong>, soit deux octaves, avec une colonne de douze blocs. La clé retire les extensions.</p>"
+    },
+    {
+      "id": "octave",
+      "title": "Trois tailles, trois octaves",
+      "image": "whistle_octave.webp",
+      "alt": "Sifflet agrandi à la clé, extensions comprises",
+      "html": "<p>Le sifflet existe en <strong>trois tailles</strong> : petit, moyen et grand. Un clic droit à la clé passe de l'une à l'autre, extensions comprises, et décale toute la gamme d'une octave. Les petits sifflets sonnent aigu, les grands comme une corne de brume.</p>"
+    },
+    {
+      "id": "lunettes",
+      "title": "Lire la note",
+      "image": "whistle_lunettes.webp",
+      "alt": "Le sifflet vu avec des lunettes d’ingénieur",
+      "html": "<p>Avec des <strong>lunettes d'ingénieur</strong>, viser un sifflet affiche le nom de sa note. C'est le moyen le plus simple d'accorder plusieurs sifflets avant de les relier à la redstone. Deux sifflets de même taille et de même hauteur jouent la même note : pour un accord, varie les extensions.</p>"
+    },
+    {
+      "id": "usages",
+      "title": "Idées d’usages",
+      "html": "<p>Un sifflet grave relié à un détecteur fait une sirène qui annonce la fin d'un cycle d'usine. Sur un train à vapeur, il sert de klaxon à l'approche d'une gare. Et plusieurs sifflets réglés sur des notes différentes, déclenchés par un séquenceur de redstone, jouent un air entier sur une seule chaudière.</p>"
+    },
+    {
+      "id": "chaudiere",
+      "title": "Sifflets et moteurs sur la même chaudière",
+      "html": "<p>Le sifflet ne consomme presque rien : il se contente de compter parmi les appareils accrochés à la chaudière. Une cuve qui alimente déjà des <a href=\"/wiki/moteur-a-vapeur\">moteurs à vapeur</a> peut donc porter un ou plusieurs sifflets sans perte notable de puissance. À l'inverse, un petit réservoir posé sur un simple feu de camp suffit pour un sifflet décoratif, sans eau ni brûleur à blaze.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Astuces",
+      "html": "<p>Accorde tes sifflets avant de les cacher dans un mur : une fois couverts, les extensions sont difficiles à modifier. Pour une mélodie, note les hauteurs avec les lunettes et relie chaque sifflet à une sortie d'un séquenceur. Et si un sifflet reste muet, vérifie d'abord la chaleur sous la cuve, puis le signal de redstone.</p>"
+    }
+  ],
+  "related": [
+    "moteur-a-vapeur",
+    "reservoir-a-fluide",
+    "bruleur-a-blaze"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/steam_whistle.json",
+    "Condition : WhistleBlockEntity.tick (signal de redstone, chaudière active avec chaleur passive ou active)",
+    "Note : WhistleBlockEntity.updatePitch (2 demi-tons par extension, 1 par demi-bloc, jusqu'à 24), son à 2^(-note / 12)",
+    "Tailles : WhistleBlock.SIZE (petit, moyen, grand)",
+    "Scène : SteamScenes.whistle (son et vapeur non rendus)"
+  ],
+  "en": {
+    "slugEn": "steam-whistle",
+    "name": "Steam Whistle",
+    "title": "Steam Whistle — Create mod guide",
+    "description": "The Create Steam Whistle: placing it on a heated boiler, sounding it with redstone, lowering its note with extensions and switching octaves with a wrench.",
+    "intro": "The <strong>Steam Whistle</strong> turns a boiler into an instrument. Placed on a heated <a href=\"/en/wiki/fluid-tank\">Fluid Tank</a>, it whistles as long as it receives a redstone signal. Stacked extensions lower its note, a Wrench changes its octave, and several whistles tuned differently play chords, factory sirens or train horns.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Fluids"
+      },
+      {
+        "label": "Crafting",
+        "value": "Golden Sheet + Copper Ingot"
+      },
+      {
+        "label": "Support",
+        "value": "A face of a Fluid Tank used as a boiler"
+      },
+      {
+        "label": "Condition",
+        "value": "Heated boiler + redstone signal"
+      },
+      {
+        "label": "Note",
+        "value": "Each extension block lowers it by 2 semitones, down to 24 (2 octaves)"
+      },
+      {
+        "label": "Octaves",
+        "value": "Small, medium, large: a Wrench cycles between them"
+      },
+      {
+        "label": "Reading the note",
+        "value": "Engineer's Goggles"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Golden Sheet",
+          null
+        ],
+        [
+          null,
+          "Copper Ingot",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Steam Whistle"
+    },
+    "videos": [
+      {
+        "id": "whistle",
+        "name": "Steam Whistle: boiler, redstone and pitch",
+        "description": "A whistle on a heated boiler sounds when a lever is pulled; extensions are stacked to lower the note, then a wrench changes the octave."
+      }
+    ],
+    "sections": [
+      {
+        "id": "reservoir",
+        "title": "On a tank",
+        "alt": "Steam Whistle placed on the side of a tank",
+        "html": "<p>The whistle goes on a face of a <a href=\"/en/wiki/fluid-tank\">Fluid Tank</a>, on a side or on top. That tank becomes a boiler, just like for the <a href=\"/en/wiki/steam-engine\">Steam Engine</a>: engines and whistles can share the same tank. The whistle faces away from the tank, its mouth pointing outwards.</p>"
+      },
+      {
+        "id": "chaleur",
+        "title": "It needs heat",
+        "alt": "A campfire heats the tank under the whistle",
+        "html": "<p>The whistle only sounds if the boiler is <strong>heated</strong>. A campfire or a <a href=\"/en/wiki/blaze-burner\">Blaze Burner</a> under the tank is enough: even passive heat, with no fuel, will do. A cold tank stays silent, even with a redstone signal. The tank does not need to be full of water, which makes whistles easy to add anywhere.</p>"
+      },
+      {
+        "id": "note",
+        "title": "Whistling with redstone",
+        "alt": "A lever triggers the steam whistle",
+        "html": "<p>A <strong>redstone</strong> signal on the whistle makes it sound for as long as the signal lasts. A lever gives a held note, a button a short blast. With a redstone clock or a sequencer, you can compose a tune or an alarm. The signal can come from any side of the whistle, just like for a lamp.</p>"
+      },
+      {
+        "id": "grave",
+        "title": "Lowering the note",
+        "alt": "Extensions stacked above the whistle",
+        "html": "<p>Right-clicking a placed whistle with another whistle adds an <strong>extension</strong> on top and makes the note lower. Each half block lowers it by one semitone, each full block by two. You can go down <strong>24 semitones</strong>, two octaves, with a twelve-block column. A Wrench removes extensions.</p>"
+      },
+      {
+        "id": "octave",
+        "title": "Three sizes, three octaves",
+        "alt": "Whistle enlarged with a wrench, extensions included",
+        "html": "<p>The whistle comes in <strong>three sizes</strong>: small, medium and large. Right-clicking with a Wrench cycles between them, extensions included, and shifts the whole range by an octave. Small whistles sound shrill, large ones like a foghorn. Combined with the extensions, the three sizes cover a wide range of notes from one single block footprint.</p>"
+      },
+      {
+        "id": "lunettes",
+        "title": "Reading the note",
+        "alt": "The whistle seen through Engineer's Goggles",
+        "html": "<p>With <strong>Engineer's Goggles</strong>, looking at a whistle shows the name of its note. It is the easiest way to tune several whistles before wiring them to redstone. Two whistles of the same size and height play the same note: for a chord, vary the extensions.</p>"
+      },
+      {
+        "id": "usages",
+        "title": "Ideas",
+        "html": "<p>A low whistle wired to a detector makes a siren announcing the end of a factory cycle. On a steam train, it works as a horn when approaching a station. And several whistles tuned to different notes, triggered by a redstone sequencer, play a whole tune on a single boiler.</p>"
+      },
+      {
+        "id": "chaudiere",
+        "title": "Whistles and engines on one boiler",
+        "html": "<p>A whistle uses almost nothing: it simply counts among the devices attached to the boiler. A tank already running <a href=\"/en/wiki/steam-engine\">Steam Engines</a> can therefore carry one or several whistles without any noticeable loss of power. The other way round, a small tank on a plain campfire is enough for a decorative whistle, with no water and no blaze burner.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<p>Tune your whistles before hiding them in a wall: once covered, extensions are hard to change. For a melody, write down the notes with the goggles and wire each whistle to one output of a sequencer. And if a whistle stays silent, check the heat under the tank first, then the redstone signal.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/steam_whistle.json",
+      "Condition: WhistleBlockEntity.tick (redstone signal, active boiler with passive or active heat)",
+      "Note: WhistleBlockEntity.updatePitch (2 semitones per extension, 1 per half block, down to 24), sound at 2^(-note / 12)",
+      "Sizes: WhistleBlock.SIZE (small, medium, large)",
+      "Scene: SteamScenes.whistle (sound and steam not rendered)"
+    ]
+  }
+}

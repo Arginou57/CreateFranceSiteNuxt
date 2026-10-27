@@ -130,7 +130,9 @@
     "mixeur-mecanique",
     "presse-mecanique",
     "bruleur-a-blaze",
-    "depot"
+    "depot",
+    "tuyau-a-fluide",
+    "tuyau-a-fluide-intelligent"
   ],
   "sources": [
     "Capacité : BasinBlockEntity (inputInventory 9, outputInventory 9, inputTank / outputTank : 2 réservoirs de 1 000 mB chacun)",

@@ -1,0 +1,341 @@
+{
+  "slug": "reservoir-a-fluide",
+  "name": "Réservoir à fluide",
+  "blockId": "create:fluid_tank",
+  "category": "fluides",
+  "title": "Réservoir à fluide — Create : guide en français",
+  "description": "Le réservoir à fluide de Create : 8 seaux par bloc, base jusqu'à 3 × 3, 32 blocs de haut, fenêtre, comparateur et réservoir créatif sans fond.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>réservoir à fluide</strong> stocke les liquides de Create. Chaque bloc contient 8 seaux, et les blocs voisins s'assemblent en un seul grand réservoir, jusqu'à 3 × 3 de base et 32 blocs de haut. On le remplit et on le vide par des <a href=\"/wiki/tuyau-a-fluide\">tuyaux</a> et une <a href=\"/wiki/pompe-mecanique\">pompe</a>, on lit son niveau au comparateur, et c'est aussi la chaudière du <a href=\"/wiki/moteur-a-vapeur\">moteur à vapeur</a>.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Fluides"
+    },
+    {
+      "label": "Fabrication",
+      "value": "Plaque de cuivre + tonneau + plaque de cuivre"
+    },
+    {
+      "label": "Capacité",
+      "value": "8 seaux (8 000 mB) par bloc (réglage fluidTankCapacity)"
+    },
+    {
+      "label": "Base",
+      "value": "1 × 1, 2 × 2 ou 3 × 3 blocs"
+    },
+    {
+      "label": "Hauteur",
+      "value": "Jusqu’à 32 blocs (réglage fluidTankMaxHeight)"
+    },
+    {
+      "label": "Maximum",
+      "value": "3 × 3 × 32 = 288 blocs, soit 2 304 seaux"
+    },
+    {
+      "label": "Accès",
+      "value": "Tuyaux par toutes les faces ; pas de seau à la main en survie"
+    },
+    {
+      "label": "Redstone",
+      "value": "Sortie pour comparateur selon le remplissage"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Plaque de cuivre",
+        null
+      ],
+      [
+        null,
+        "Tonneau",
+        null
+      ],
+      [
+        null,
+        "Plaque de cuivre",
+        null
+      ]
+    ],
+    "result": "1 réservoir à fluide"
+  },
+  "videos": [
+    {
+      "id": "tank_sizes",
+      "name": "Réservoir à fluide : les tailles",
+      "description": "Des réservoirs voisins fusionnent en un réservoir plus large, jusqu'à 3 × 3, puis grandissent en hauteur ; la clé retire la fenêtre.",
+      "duration": "PT15S"
+    },
+    {
+      "id": "tank_storage",
+      "name": "Réservoir à fluide : remplir, vider, mesurer",
+      "description": "Un réservoir se remplit de chocolat, des pompes le vident et le remplissent par les côtés, un comparateur lit son niveau.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "tank_creative",
+      "name": "Réservoir à fluide créatif",
+      "description": "Un réservoir créatif réglé sur la lave remplit sans fin un réservoir voisin, puis avale ce qu'on lui renvoie.",
+      "duration": "PT15S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "combiner",
+      "title": "Des blocs qui s’assemblent",
+      "image": "tank_sizes_combiner.webp",
+      "alt": "Quatre réservoirs à fluide posés côte à côte",
+      "video": "tank_sizes",
+      "html": "<p>Pose des réservoirs côte à côte ou les uns sur les autres : ils <strong>fusionnent</strong> en un seul réservoir, avec un seul contenu et une capacité qui s'additionne, 8 seaux par bloc. Le fluide se répartit tout seul dans l'ensemble, et le niveau monte comme dans un grand aquarium.</p>"
+    },
+    {
+      "id": "largeur",
+      "title": "Une base jusqu’à 3 × 3",
+      "image": "tank_sizes_largeur.webp",
+      "alt": "Réservoir à fluide de 3 × 3 blocs de base",
+      "html": "<p>La base d'un réservoir est toujours carrée : <strong>1 × 1, 2 × 2 ou 3 × 3</strong> blocs. Quatre blocs en carré forment un réservoir de 2 × 2, neuf blocs un 3 × 3. Au-delà de trois de large, il faut construire un second réservoir à côté.</p>"
+    },
+    {
+      "id": "hauteur",
+      "title": "Jusqu’à 32 blocs de haut",
+      "image": "tank_sizes_hauteur.webp",
+      "alt": "Trois réservoirs de hauteurs et de largeurs différentes",
+      "html": "<p>En hauteur, le réservoir grandit jusqu'à <strong>32 blocs</strong>. Le plus grand fait donc 3 × 3 × 32 = 288 blocs et contient 2 304 seaux, de quoi stocker la production d'une usine entière. Les deux réglages serveur fluidTankCapacity et fluidTankMaxHeight changent ces chiffres.</p>"
+    },
+    {
+      "id": "fenetre",
+      "title": "Avec ou sans fenêtre",
+      "image": "tank_sizes_fenetre.webp",
+      "alt": "Réservoir dont les fenêtres ont été retirées à la clé",
+      "html": "<p>Un clic droit à la <strong>clé</strong> ajoute ou retire les fenêtres du réservoir. Avec fenêtres, on voit le niveau du fluide ; sans, le réservoir est opaque, plus discret dans une base. La clé n'a aucun effet sur la capacité.</p>"
+    },
+    {
+      "id": "stocker",
+      "title": "Remplir un réservoir",
+      "image": "tank_storage_stocker.webp",
+      "alt": "Réservoir à fluide rempli de chocolat",
+      "video": "tank_storage",
+      "html": "<p>Un réservoir se remplit par n'importe quelle face, avec un <a href=\"/wiki/tuyau-a-fluide\">tuyau à fluide</a> et une <a href=\"/wiki/pompe-mecanique\">pompe mécanique</a>. Il accepte un seul fluide à la fois : eau, lave, miel, chocolat, lait, thé… Tant qu'il n'est pas vide, un autre fluide ne peut pas y entrer.</p>"
+    },
+    {
+      "id": "cotes",
+      "title": "Pousser et tirer par les côtés",
+      "image": "tank_storage_cotes.webp",
+      "alt": "Une pompe vide le réservoir par le côté",
+      "html": "<p>Les pompes peuvent pousser ou tirer le fluide <strong>par toutes les faces</strong>, en haut comme en bas. Une même cuve sert ainsi de tampon : une pompe la remplit d'un côté pendant qu'une autre la vide de l'autre.</p>"
+    },
+    {
+      "id": "comparateur",
+      "title": "Mesurer avec un comparateur",
+      "image": "tank_storage_comparateur.webp",
+      "alt": "Comparateur et tube nixie contre le réservoir",
+      "html": "<p>Un <strong>comparateur</strong> collé au réservoir donne un signal proportionnel au remplissage. Relié à un tube nixie, il affiche le niveau ; relié à une pompe ou à une vanne, il arrête une production quand la cuve est pleine. Le <a href=\"/wiki/detecteur-de-seuil\">détecteur de seuil</a> fait la même chose avec des seuils réglables.</p>"
+    },
+    {
+      "id": "objets",
+      "title": "Remplir des objets",
+      "image": "tank_storage_objets.webp",
+      "alt": "Égouttoir et bec verseur reliés au réservoir",
+      "html": "<p>En survie, on ne remplit pas un réservoir avec un seau à la main, et on ne le vide pas non plus. Pour passer d'un objet au réservoir, il faut un <a href=\"/wiki/egouttoir-a-objets\">égouttoir à objets</a> ou un <a href=\"/wiki/bassin\">bassin</a> ; pour l'inverse, un <a href=\"/wiki/bec-verseur\">bec verseur</a> qui remplit seaux et bouteilles.</p>"
+    },
+    {
+      "id": "creatif",
+      "title": "Le réservoir créatif",
+      "image": "tank_creative_infini.webp",
+      "alt": "Réservoir créatif réglé sur la lave qui remplit un réservoir voisin",
+      "video": "tank_creative",
+      "html": "<p>En mode créatif, le <strong>réservoir à fluide créatif</strong> fournit un fluide sans fin. Un clic droit avec un seau le règle sur ce fluide, puis les pompes peuvent en tirer autant qu'elles veulent. Tout fluide qu'on lui renvoie disparaît : c'est aussi une poubelle à liquides, pratique pour tester une usine.</p>"
+    },
+    {
+      "id": "chaudiere",
+      "title": "La chaudière du moteur à vapeur",
+      "html": "<p>Un réservoir rempli d'eau et chauffé par un <a href=\"/wiki/bruleur-a-blaze\">brûleur à blaze</a> devient une chaudière : plus il est grand, plus il alimente de <a href=\"/wiki/moteur-a-vapeur\">moteurs à vapeur</a>. On y accroche aussi les <a href=\"/wiki/sifflet-a-vapeur\">sifflets à vapeur</a>.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Bien dimensionner",
+      "html": "<p>Un réservoir de 2 × 2 × 4 blocs contient déjà 128 seaux, bien assez pour une ligne de becs verseurs. Pour une chaudière, c'est la taille qui compte et non le contenu : prévois la place de grandir en largeur. Garde aussi une face libre pour les tuyaux d'entrée et une autre pour la sortie, et souviens-toi qu'un réservoir haut et étroit se lit plus facilement à travers ses fenêtres qu'un réservoir large.</p>"
+    }
+  ],
+  "related": [
+    "pompe-mecanique",
+    "tuyau-a-fluide",
+    "moteur-a-vapeur",
+    "bec-verseur",
+    "egouttoir-a-objets",
+    "detecteur-de-seuil"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/fluid_tank.json",
+    "Capacité : CFluids.fluidTankCapacity = 8 seaux par bloc ; hauteur : CFluids.fluidTankMaxHeight = 32",
+    "Base : FluidTankBlockEntity.MAX_SIZE = 3 ; rendu du niveau : FluidTankRenderer",
+    "Réservoir créatif : CreativeFluidTankBlockEntity (CreativeSmartFluidTank)",
+    "Scènes : FluidTankScenes.sizes, storage, creative ; niveaux dessinés d'après FluidTankRenderer"
+  ],
+  "en": {
+    "slugEn": "fluid-tank",
+    "name": "Fluid Tank",
+    "title": "Fluid Tank — Create mod guide",
+    "description": "The Create Fluid Tank: 8 buckets per block, a base up to 3 × 3, 32 blocks tall, windows, comparator output and the bottomless Creative Fluid Tank.",
+    "intro": "The <strong>Fluid Tank</strong> stores Create's liquids. Each block holds 8 buckets, and neighbouring blocks merge into one big tank, up to a 3 × 3 base and 32 blocks tall. You fill and empty it through <a href=\"/en/wiki/fluid-pipe\">pipes</a> and a <a href=\"/en/wiki/mechanical-pump\">pump</a>, read its level with a comparator, and it is also the boiler of the <a href=\"/en/wiki/steam-engine\">Steam Engine</a>.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Fluids"
+      },
+      {
+        "label": "Crafting",
+        "value": "Copper Sheet + Barrel + Copper Sheet"
+      },
+      {
+        "label": "Capacity",
+        "value": "8 buckets (8,000 mB) per block (fluidTankCapacity setting)"
+      },
+      {
+        "label": "Base",
+        "value": "1 × 1, 2 × 2 or 3 × 3 blocks"
+      },
+      {
+        "label": "Height",
+        "value": "Up to 32 blocks (fluidTankMaxHeight setting)"
+      },
+      {
+        "label": "Maximum",
+        "value": "3 × 3 × 32 = 288 blocks, i.e. 2,304 buckets"
+      },
+      {
+        "label": "Access",
+        "value": "Pipes on every face; no hand bucket in Survival"
+      },
+      {
+        "label": "Redstone",
+        "value": "Comparator output based on fill level"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Copper Sheet",
+          null
+        ],
+        [
+          null,
+          "Barrel",
+          null
+        ],
+        [
+          null,
+          "Copper Sheet",
+          null
+        ]
+      ],
+      "result": "1 Fluid Tank"
+    },
+    "videos": [
+      {
+        "id": "tank_sizes",
+        "name": "Fluid Tank: sizes",
+        "description": "Neighbouring tanks merge into a wider tank, up to 3 × 3, then grow taller; a wrench removes the window."
+      },
+      {
+        "id": "tank_storage",
+        "name": "Fluid Tank: filling, emptying, measuring",
+        "description": "A tank fills with chocolate, pumps empty and refill it through its sides, and a comparator reads its level."
+      },
+      {
+        "id": "tank_creative",
+        "name": "Creative Fluid Tank",
+        "description": "A Creative Fluid Tank set to lava endlessly fills a neighbouring tank, then swallows whatever is sent back."
+      }
+    ],
+    "sections": [
+      {
+        "id": "combiner",
+        "title": "Blocks that merge",
+        "alt": "Four Fluid Tanks placed side by side",
+        "html": "<p>Place tanks side by side or on top of each other: they <strong>merge</strong> into a single tank, with one content and a capacity that adds up, 8 buckets per block. The fluid spreads through the whole thing on its own and the level rises like in a big aquarium.</p>"
+      },
+      {
+        "id": "largeur",
+        "title": "A base up to 3 × 3",
+        "alt": "Fluid Tank with a 3 × 3 base",
+        "html": "<p>A tank's base is always square: <strong>1 × 1, 2 × 2 or 3 × 3</strong> blocks. Four blocks in a square make a 2 × 2 tank, nine blocks a 3 × 3. Beyond three wide, build a second tank next to it.</p>"
+      },
+      {
+        "id": "hauteur",
+        "title": "Up to 32 blocks tall",
+        "alt": "Three tanks of different heights and widths",
+        "html": "<p>Upwards, the tank grows to <strong>32 blocks</strong>. The largest one is therefore 3 × 3 × 32 = 288 blocks and holds 2,304 buckets, enough for a whole factory's output. The fluidTankCapacity and fluidTankMaxHeight server settings change these numbers.</p>"
+      },
+      {
+        "id": "fenetre",
+        "title": "With or without windows",
+        "alt": "Tank whose windows were removed with a wrench",
+        "html": "<p>Right-clicking with a <strong>Wrench</strong> adds or removes the tank's windows. With windows you can see the fluid level; without, the tank is opaque and blends into a base. The wrench has no effect on capacity.</p>"
+      },
+      {
+        "id": "stocker",
+        "title": "Filling a tank",
+        "alt": "Fluid Tank filled with chocolate",
+        "html": "<p>A tank fills through any face, with a <a href=\"/en/wiki/fluid-pipe\">Fluid Pipe</a> and a <a href=\"/en/wiki/mechanical-pump\">Mechanical Pump</a>. It accepts one fluid at a time: water, lava, honey, chocolate, milk, tea… While it is not empty, no other fluid can get in.</p>"
+      },
+      {
+        "id": "cotes",
+        "title": "Pushing and pulling through the sides",
+        "alt": "A pump drains the tank through its side",
+        "html": "<p>Pumps can push or pull fluid <strong>through every face</strong>, top and bottom included. The same tank then works as a buffer: one pump fills it on one side while another empties it on the other.</p>"
+      },
+      {
+        "id": "comparateur",
+        "title": "Measuring with a comparator",
+        "alt": "Comparator and nixie tube against the tank",
+        "html": "<p>A <strong>comparator</strong> against the tank gives a signal proportional to its fill level. Wired to a nixie tube it shows the level; wired to a pump or a valve, it stops production when the tank is full. The <a href=\"/en/wiki/threshold-switch\">Threshold Switch</a> does the same with adjustable thresholds.</p>"
+      },
+      {
+        "id": "objets",
+        "title": "Filling items",
+        "alt": "Item drain and spout connected to the tank",
+        "html": "<p>In Survival, you cannot fill a tank with a bucket by hand, nor empty it. To get fluid from an item into a tank you need an <a href=\"/en/wiki/item-drain\">Item Drain</a> or a <a href=\"/en/wiki/basin\">Basin</a>; for the reverse, a <a href=\"/en/wiki/spout\">Spout</a> that fills buckets and bottles.</p>"
+      },
+      {
+        "id": "creatif",
+        "title": "The Creative Fluid Tank",
+        "alt": "Creative tank set to lava filling a neighbouring tank",
+        "html": "<p>In Creative mode, the <strong>Creative Fluid Tank</strong> supplies an endless fluid. Right-click it with a bucket to set that fluid, then pumps can draw as much as they like. Any fluid sent back into it vanishes: it is also a liquid bin, handy to test a factory.</p>"
+      },
+      {
+        "id": "chaudiere",
+        "title": "The Steam Engine's boiler",
+        "html": "<p>A tank filled with water and heated by a <a href=\"/en/wiki/blaze-burner\">Blaze Burner</a> becomes a boiler: the bigger it is, the more <a href=\"/en/wiki/steam-engine\">Steam Engines</a> it can run. <a href=\"/en/wiki/steam-whistle\">Steam Whistles</a> are attached to it too.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Sizing it right",
+        "html": "<p>A 2 × 2 × 4 tank already holds 128 buckets, plenty for a row of spouts. For a boiler, size matters rather than contents: leave room to grow wider. Also keep one face free for input pipes and another for the output, and remember that a tall, thin tank is easier to read through its windows than a wide one.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/fluid_tank.json",
+      "Capacity: CFluids.fluidTankCapacity = 8 buckets per block; height: CFluids.fluidTankMaxHeight = 32",
+      "Base: FluidTankBlockEntity.MAX_SIZE = 3; level rendering: FluidTankRenderer",
+      "Creative tank: CreativeFluidTankBlockEntity (CreativeSmartFluidTank)",
+      "Scenes: FluidTankScenes.sizes, storage, creative; levels drawn after FluidTankRenderer"
+    ]
+  }
+}
