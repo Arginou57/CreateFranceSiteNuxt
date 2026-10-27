@@ -19,8 +19,7 @@ const page: WikiPageView = localizeWikiPage(raw, lang)
 const site = lang === 'en' ? 'https://create-france.com/en' : 'https://create-france.com/'
 const inLanguage = t('lang.inLanguage')
 const category = getWikiCategory(page.category, lang)
-const firstVideo = page.videos[0]
-const poster = wikiAbs(firstVideo ? wikiVideoFiles(page.slug, firstVideo.id).poster : '/images/fond.png')
+const poster = wikiAbs(wikiCover(page))
 // date de mise en ligne des vidéos, avec fuseau (Paris, heure d'hiver)
 const uploadDate = `${page.datePublished}T12:00:00+01:00`
 

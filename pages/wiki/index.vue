@@ -57,7 +57,7 @@ const pages = wikiPagesIn(lang)
 const categories = wikiCategories.map((c) => getWikiCategory(c.id, lang)!)
 const byCat = (id: string) => pages.filter((p) => p.category === id)
 const catName = (id: string) => getWikiCategory(id, lang)?.name
-const poster = (p: WikiPageView) => wikiVideoFiles(p.slug, p.videos[0]?.id || '').poster
+const poster = (p: WikiPageView) => wikiCover(p)
 
 const title = t('wiki.seoTitle')
 const description = t('wiki.seoDescription')

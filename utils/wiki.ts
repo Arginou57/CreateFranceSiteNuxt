@@ -179,6 +179,13 @@ export function wikiVideoFiles(slug: string, id: string) {
   }
 }
 
+/** Thumbnail of a page: poster of its first video, else its first step image (image-only pages). */
+export function wikiCover(p: Pick<WikiPage, 'slug' | 'videos' | 'sections'>): string {
+  if (p.videos[0]) return wikiVideoFiles(p.slug, p.videos[0].id).poster
+  const img = p.sections.find((s) => s.image)?.image
+  return img ? wikiMedia(p.slug, img) : '/images/fond.png'
+}
+
 export function wikiAbs(path: string): string {
   return WIKI_SITE + path
 }

@@ -68,7 +68,7 @@
         <h2 id="wiki-related-title">{{ t('wiki.related') }}</h2>
         <div class="wiki-related-grid">
           <NuxtLink v-for="r in related" :key="r.slug" :to="r.path" class="wiki-card wiki-related-card">
-            <img :src="media(r.slug, `${r.videos[0]?.id}_poster.jpg`)" :alt="r.name" width="96" height="96" loading="lazy" decoding="async">
+            <img :src="wikiCover(r)" :alt="r.name" width="96" height="96" loading="lazy" decoding="async">
             <span>
               <strong>{{ r.name }}</strong>
               <small>{{ catName(r.category) }}</small>
