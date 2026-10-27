@@ -1,9 +1,7 @@
 <template>
   <section id="galerie" class="gallery-section" v-if="images.length > 0">
-    <h2 class="section-title">Galerie du serveur Create</h2>
-    <p class="section-subtitle">
-      Les images du modpack, détectées automatiquement depuis CurseForge
-    </p>
+    <h2 class="section-title">{{ t('gallery.title') }}</h2>
+    <p class="section-subtitle">{{ t('gallery.subtitle') }}</p>
 
     <div class="gallery-grid">
       <button
@@ -12,11 +10,11 @@
         class="gallery-item"
         :class="{ wide: i % 5 === 0 }"
         @click="openLightbox(i)"
-        :aria-label="`Agrandir l'image ${i + 1}`"
+        :aria-label="t('gallery.zoom', { n: i + 1 })"
       >
         <img
           :src="img.thumbnail || img.url"
-          :alt="img.title || `Screenshot du serveur Create France ${i + 1}`"
+          :alt="img.title || t('gallery.alt', { n: i + 1 })"
           loading="lazy"
         />
         <span v-if="img.type === 'gif'" class="gif-badge">GIF</span>
@@ -29,15 +27,15 @@
     <Teleport to="body">
       <Transition name="lightbox-fade">
         <div v-if="lightboxIndex !== null" class="lightbox" @click.self="closeLightbox">
-          <button class="lightbox-close" @click="closeLightbox" aria-label="Fermer">&times;</button>
-          <button class="lightbox-nav lightbox-prev" @click.stop="prev" aria-label="Image précédente">&#8249;</button>
+          <button class="lightbox-close" @click="closeLightbox" :aria-label="t('gallery.close')">&times;</button>
+          <button class="lightbox-nav lightbox-prev" @click.stop="prev" :aria-label="t('gallery.prev')">&#8249;</button>
           <img
             :key="lightboxIndex"
             :src="images[lightboxIndex].url"
-            :alt="images[lightboxIndex].title || `Screenshot du serveur Create France ${lightboxIndex + 1}`"
+            :alt="images[lightboxIndex].title || t('gallery.alt', { n: lightboxIndex + 1 })"
             class="lightbox-img"
           />
-          <button class="lightbox-nav lightbox-next" @click.stop="next" aria-label="Image suivante">&#8250;</button>
+          <button class="lightbox-nav lightbox-next" @click.stop="next" :aria-label="t('gallery.next')">&#8250;</button>
           <div class="lightbox-counter">
             <span v-if="images[lightboxIndex].title" class="lightbox-title">{{ images[lightboxIndex].title }}</span>
             {{ lightboxIndex + 1 }} / {{ images.length }}
@@ -49,6 +47,7 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
 const { images } = useCurseForgeImages()
 
 const lightboxIndex = ref<number | null>(null)

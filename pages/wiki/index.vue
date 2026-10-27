@@ -1,27 +1,23 @@
 <template>
   <main class="wiki-home">
-    <nav class="wiki-crumbs" aria-label="Fil d'Ariane">
+    <nav class="wiki-crumbs" :aria-label="t('wiki.breadcrumb')">
       <ol>
-        <li><NuxtLink to="/">Accueil</NuxtLink></li>
-        <li aria-current="page">Wiki</li>
+        <li><NuxtLink :to="localePath('/')">{{ t('wiki.home') }}</NuxtLink></li>
+        <li aria-current="page">{{ t('wiki.wiki') }}</li>
       </ol>
     </nav>
 
     <header class="wiki-home-head">
-      <p class="wiki-kicker">Mod Create 6 · Minecraft 1.21.1</p>
-      <h1>Wiki Create en français</h1>
-      <p class="wiki-lead">
-        Des guides clairs pour comprendre chaque bloc du <strong>mod Create</strong> : à quoi il sert, comment
-        l'alimenter, à quelle vitesse il travaille et les erreurs à éviter. Chaque page est illustrée par des
-        animations rejouées d'après les scènes Ponder du jeu, et les chiffres viennent directement du code du mod.
-      </p>
+      <p class="wiki-kicker">{{ t('wiki.kicker') }}</p>
+      <h1>{{ t('wiki.h1') }}</h1>
+      <p class="wiki-lead" v-html="t('wiki.lead')" />
     </header>
 
     <section class="wiki-featured" aria-labelledby="wiki-featured-title">
-      <h2 id="wiki-featured-title">Premiers guides</h2>
+      <h2 id="wiki-featured-title">{{ t('wiki.featured') }}</h2>
       <div class="wiki-featured-grid">
-        <NuxtLink v-for="p in pages" :key="p.slug" :to="`/wiki/${p.slug}`" class="wiki-card wiki-feature">
-          <img :src="poster(p)" :alt="`Animation : ${p.name} dans le mod Create`" width="720" height="720" loading="lazy" decoding="async">
+        <NuxtLink v-for="p in pages" :key="p.slug" :to="p.path" class="wiki-card wiki-feature">
+          <img :src="poster(p)" :alt="t('wiki.posterAlt', { name: p.name })" width="720" height="720" loading="lazy" decoding="async">
           <span class="wiki-feature-body">
             <small>{{ catName(p.category) }}</small>
             <strong>{{ p.name }}</strong>
@@ -32,55 +28,55 @@
     </section>
 
     <section class="wiki-cats" aria-labelledby="wiki-cats-title">
-      <h2 id="wiki-cats-title">Les catégories</h2>
+      <h2 id="wiki-cats-title">{{ t('wiki.categories') }}</h2>
       <div class="wiki-cats-grid">
         <div v-for="c in categories" :id="c.id" :key="c.id" class="wiki-card wiki-cat" :class="{ soon: !byCat(c.id).length }">
           <h3>{{ c.name }}</h3>
           <p>{{ c.description }}</p>
           <ul v-if="byCat(c.id).length">
-            <li v-for="p in byCat(c.id)" :key="p.slug"><NuxtLink :to="`/wiki/${p.slug}`">{{ p.name }}</NuxtLink></li>
+            <li v-for="p in byCat(c.id)" :key="p.slug"><NuxtLink :to="p.path">{{ p.name }}</NuxtLink></li>
           </ul>
-          <span v-else class="wiki-soon">Bientôt</span>
+          <span v-else class="wiki-soon">{{ t('wiki.soon') }}</span>
         </div>
       </div>
     </section>
 
-    <WikiCta lead="Le meilleur moyen d'apprendre Create, c'est de construire." />
+    <WikiCta :lead="t('wiki.homeCtaLead')" />
   </main>
 </template>
 
 <script setup lang="ts">
-import type { WikiPage } from '~/utils/wiki'
+import type { WikiPageView } from '~/utils/wiki'
 
-const pages = wikiPages
-const categories = wikiCategories
-const byCat = (id: string) => wikiPages.filter((p) => p.category === id)
-const catName = (id: string) => getWikiCategory(id)?.name
-const poster = (p: WikiPage) => wikiVideoFiles(p.slug, p.videos[0]?.id || '').poster
+const { t, locale } = useI18n()
+const localePath = useLocalePath()
+const lang: WikiLocale = locale.value === 'en' ? 'en' : 'fr'
 
-const title = 'Wiki Create en français — guides du mod Create'
-const description = 'Wiki du mod Create en français : presse, perceuse, tapis roulant… Fonctionnement, vitesses, stress et astuces, avec animations. Par Create France.'
-const url = wikiAbs('/wiki')
+// only the pages that exist in this language (a page without "en.slugEn" stays French-only)
+const pages = wikiPagesIn(lang)
+const categories = wikiCategories.map((c) => getWikiCategory(c.id, lang)!)
+const byCat = (id: string) => pages.filter((p) => p.category === id)
+const catName = (id: string) => getWikiCategory(id, lang)?.name
+const poster = (p: WikiPageView) => wikiVideoFiles(p.slug, p.videos[0]?.id || '').poster
+
+const title = t('wiki.seoTitle')
+const description = t('wiki.seoDescription')
+const site = lang === 'en' ? 'https://create-france.com/en' : 'https://create-france.com/'
 const ogImage = wikiAbs(pages[0] ? poster(pages[0]) : '/images/fond.png')
 
-useSeoMeta({
+const { url } = useI18nSeo({
+  paths: { fr: '/wiki', en: '/en/wiki' },
   title,
   description,
-  ogTitle: title,
-  ogDescription: description,
-  ogType: 'website',
-  ogUrl: url,
   ogImage,
   ogImageWidth: 720,
   ogImageHeight: 720,
   ogImageAlt: title,
-  twitterCard: 'summary_large_image',
-  twitterImage: ogImage,
 })
 
 useHead({
-  link: [{ rel: 'canonical', href: url }],
   script: [{
+    key: 'ld-page',
     type: 'application/ld+json',
     innerHTML: JSON.stringify({
       '@context': 'https://schema.org',
@@ -88,8 +84,8 @@ useHead({
         {
           '@type': 'BreadcrumbList',
           itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://create-france.com/' },
-            { '@type': 'ListItem', position: 2, name: 'Wiki', item: url },
+            { '@type': 'ListItem', position: 1, name: t('wiki.home'), item: site },
+            { '@type': 'ListItem', position: 2, name: t('wiki.wiki'), item: url },
           ],
         },
         {
@@ -98,9 +94,9 @@ useHead({
           name: title,
           description,
           url,
-          inLanguage: 'fr-FR',
-          isPartOf: { '@id': 'https://create-france.com/#site' },
-          hasPart: pages.map((p) => ({ '@type': 'Article', headline: p.title, url: wikiAbs(`/wiki/${p.slug}`) })),
+          inLanguage: t('lang.inLanguage'),
+          isPartOf: { '@id': `${site}#site` },
+          hasPart: pages.map((p) => ({ '@type': 'Article', headline: p.title, url: wikiAbs(p.path) })),
         },
       ],
     }),
@@ -119,7 +115,7 @@ useHead({
 .wiki-kicker { font-family: 'Orbitron', sans-serif; font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--sauge); margin-bottom: 0.4rem; }
 .wiki-home-head h1 { font-family: 'Orbitron', sans-serif; color: var(--terre-cuite); font-weight: 900; font-size: clamp(1.7rem, 6vw, 2.7rem); line-height: 1.15; margin-bottom: 0.9rem; }
 .wiki-lead { color: var(--text-primary); font-size: 1rem; line-height: 1.75; font-weight: 300; max-width: 760px; }
-.wiki-lead strong { color: var(--mandarine-light); font-weight: 600; }
+.wiki-lead :deep(strong) { color: var(--mandarine-light); font-weight: 600; }
 
 .wiki-card { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 14px; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
 

@@ -1,29 +1,29 @@
 <template>
   <main class="wiki-page">
-    <nav class="wiki-crumbs" aria-label="Fil d'Ariane">
+    <nav class="wiki-crumbs" :aria-label="t('wiki.breadcrumb')">
       <ol>
-        <li><NuxtLink to="/">Accueil</NuxtLink></li>
-        <li><NuxtLink to="/wiki">Wiki</NuxtLink></li>
-        <li v-if="category"><NuxtLink :to="`/wiki#${category.id}`">{{ category.name }}</NuxtLink></li>
+        <li><NuxtLink :to="localePath('/')">{{ t('wiki.home') }}</NuxtLink></li>
+        <li><NuxtLink :to="wikiHome">{{ t('wiki.wiki') }}</NuxtLink></li>
+        <li v-if="category"><NuxtLink :to="`${wikiHome}#${category.id}`">{{ category.name }}</NuxtLink></li>
         <li aria-current="page">{{ page.name }}</li>
       </ol>
     </nav>
 
     <article class="wiki-article">
       <header class="wiki-head">
-        <p class="wiki-kicker">Wiki Create · {{ category?.name }}</p>
+        <p class="wiki-kicker">{{ t('wiki.articleKicker', { category: category?.name || '' }) }}</p>
         <h1>{{ page.name }}</h1>
         <p class="wiki-lead" v-html="page.intro" />
         <p class="wiki-meta">
-          Create {{ page.createVersion }} · Minecraft {{ page.mcVersion }} · mis à jour le
-          <time :datetime="page.dateModified">{{ dateFr(page.dateModified) }}</time>
+          Create {{ page.createVersion }} · Minecraft {{ page.mcVersion }} · {{ t('wiki.updated') }}
+          <time :datetime="page.dateModified">{{ formatDate(page.dateModified) }}</time>
         </p>
       </header>
 
       <div class="wiki-top">
         <WikiVideo v-if="page.videos[0]" class="wiki-top-video" :slug="page.slug" :video="page.videos[0]" />
         <div class="wiki-card wiki-facts">
-          <h2 class="wiki-card-title">Fiche technique</h2>
+          <h2 class="wiki-card-title">{{ t('wiki.facts') }}</h2>
           <dl>
             <template v-for="f in page.facts" :key="f.label">
               <dt>{{ f.label }}</dt>
@@ -32,7 +32,7 @@
           </dl>
           <div v-if="page.recipe" class="wiki-recipe">
             <p class="wiki-recipe-label">{{ page.recipe.label }}</p>
-            <div class="wiki-recipe-grid" role="table" :aria-label="`Recette : ${page.recipe.result}`">
+            <div class="wiki-recipe-grid" role="table" :aria-label="t('wiki.recipeAria', { result: page.recipe.result })">
               <div v-for="(row, i) in page.recipe.grid" :key="i" class="wiki-recipe-row" role="row">
                 <span v-for="(cell, j) in row" :key="j" class="wiki-recipe-cell" :class="{ empty: !cell }" role="cell">{{ cell || '' }}</span>
               </div>
@@ -42,8 +42,8 @@
         </div>
       </div>
 
-      <nav class="wiki-toc" aria-label="Sommaire">
-        <p>Sommaire</p>
+      <nav class="wiki-toc" :aria-label="t('wiki.toc')">
+        <p>{{ t('wiki.toc') }}</p>
         <ol>
           <li v-for="s in page.sections" :key="s.id"><a :href="`#${s.id}`">{{ s.title }}</a></li>
         </ol>
@@ -62,12 +62,12 @@
         </div>
       </section>
 
-      <WikiCta :lead="`Envie de construire ta propre ${page.name.toLowerCase()} ?`" />
+      <WikiCta :lead="t('wiki.ctaLead', { name: page.name.toLowerCase() })" />
 
-      <section class="wiki-related" aria-labelledby="wiki-related-title">
-        <h2 id="wiki-related-title">Pages liées</h2>
+      <section v-if="related.length" class="wiki-related" aria-labelledby="wiki-related-title">
+        <h2 id="wiki-related-title">{{ t('wiki.related') }}</h2>
         <div class="wiki-related-grid">
-          <NuxtLink v-for="r in related" :key="r.slug" :to="`/wiki/${r.slug}`" class="wiki-card wiki-related-card">
+          <NuxtLink v-for="r in related" :key="r.slug" :to="r.path" class="wiki-card wiki-related-card">
             <img :src="media(r.slug, `${r.videos[0]?.id}_poster.jpg`)" :alt="r.name" width="96" height="96" loading="lazy" decoding="async">
             <span>
               <strong>{{ r.name }}</strong>
@@ -75,37 +75,47 @@
             </span>
           </NuxtLink>
         </div>
-        <p class="wiki-back"><NuxtLink to="/wiki">← Tous les guides du wiki Create</NuxtLink></p>
       </section>
+      <p class="wiki-back"><NuxtLink :to="wikiHome">{{ t('wiki.back') }}</NuxtLink></p>
 
       <details class="wiki-sources">
-        <summary>Sources des chiffres (code de Create {{ page.createVersion }})</summary>
+        <summary>{{ t('wiki.sources', { version: page.createVersion }) }}</summary>
         <ul>
           <li v-for="(src, i) in page.sources" :key="i">{{ src }}</li>
         </ul>
-        <p>Textes et animations originaux de Create France, rendus d'après les scènes Ponder du mod. Create est un mod de la Create Team, non affilié à Create France.</p>
+        <p>{{ t('wiki.credits') }}</p>
       </details>
     </article>
   </main>
 </template>
 
 <script setup lang="ts">
-import type { WikiPage } from '~/utils/wiki'
+import type { WikiPage, WikiPageView } from '~/utils/wiki'
 
-const props = defineProps<{ page: WikiPage }>()
+const props = defineProps<{ page: WikiPageView }>()
+const { t, tm, rt } = useI18n()
+const localePath = useLocalePath()
 const media = wikiMedia
-const catName = (id: string) => getWikiCategory(id)?.name
-const category = computed(() => getWikiCategory(props.page.category))
-const related = computed(() => props.page.related.map((s) => getWikiPage(s)).filter((p): p is WikiPage => !!p))
+const lang = computed(() => props.page.locale)
+const wikiHome = computed(() => wikiHomePath(lang.value))
+const catName = (id: string) => getWikiCategory(id, lang.value)?.name
+const category = computed(() => getWikiCategory(props.page.category, lang.value))
+// related pages that exist in this language (no link to a page that is not translated yet)
+const related = computed(() =>
+  props.page.related
+    .map((s) => getWikiPage(s))
+    .filter((p): p is WikiPage => !!p && !!wikiPagePath(p, lang.value))
+    .map((p) => localizeWikiPage(p, lang.value)),
+)
 
 function videoOf(id: string) {
   return props.page.videos.find((v) => v.id === id)
 }
 
-function dateFr(d: string) {
+function formatDate(d: string) {
   const [y, m, day] = d.split('-').map(Number)
-  const mois = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre']
-  return `${day} ${mois[m - 1]} ${y}`
+  const months = (tm('wiki.months') as unknown as unknown[]).map((x) => rt(x as any))
+  return t('wiki.date', { day, month: months[m - 1], year: y })
 }
 </script>
 

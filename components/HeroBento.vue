@@ -6,15 +6,15 @@
       <div class="bento-card bento-main" ref="cards">
         <div class="bento-card-bg"></div>
         <div class="bento-main-content">
-          <span class="bento-badge">Serveur Minecraft</span>
+          <span class="bento-badge">{{ t('hero.badge') }}</span>
           <h1>Create<br>France</h1>
-          <p>Construisez, automatisez, explorez &mdash; ensemble.</p>
+          <p>{{ t('hero.tagline') }}</p>
           <!-- Launcher Create France : installe le modpack et connecte au serveur (servi par create-france.com/launcher/) -->
           <a href="/launcher/CreateFrance-Launcher-Setup.exe" class="bento-launcher-btn" download>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
-            Télécharger le launcher
+            {{ t('hero.launcherBtn') }}
           </a>
-          <span class="bento-launcher-sub">Windows &middot; installe le modpack et rejoint le serveur en un clic</span>
+          <span class="bento-launcher-sub">{{ t('hero.launcherSub') }}</span>
         </div>
       </div>
 
@@ -23,19 +23,19 @@
         <div class="bento-card-bg"></div>
         <div class="bento-live-dot"></div>
         <div class="bento-stat-value">{{ playersOnline }}</div>
-        <div class="bento-stat-label">Joueurs en ligne</div>
+        <div class="bento-stat-label">{{ t('hero.playersOnline') }}</div>
         <div class="bento-stat-icon">&#9881;</div>
       </div>
 
       <!-- Votes (live) -->
-      <a href="https://topmoddedservers.com/serveur/create-france/vote" target="_blank" title="Voter pour Create France sur TopModdedServers" class="bento-card bento-votes" ref="cards">
+      <a href="https://topmoddedservers.com/serveur/create-france/vote" target="_blank" :title="t('nav.voteTitle')" class="bento-card bento-votes" ref="cards">
         <div class="bento-card-bg"></div>
         <svg class="bento-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-6 0v4"/><rect x="2" y="9" width="20" height="12" rx="2"/><line x1="12" y1="14" x2="12" y2="17"/></svg>
         <div class="bento-stat-value">{{ totalVotes }}</div>
-        <div class="bento-stat-label">Votes total</div>
+        <div class="bento-stat-label">{{ t('hero.votesTotal') }}</div>
         <div class="bento-votes-details">
-          <span class="bento-votes-today">{{ votesToday }} aujourd'hui</span>
-          <span class="bento-votes-month">{{ votesMonth }} ce mois</span>
+          <span class="bento-votes-today">{{ t('hero.votesToday', { n: votesToday }) }}</span>
+          <span class="bento-votes-month">{{ t('hero.votesMonth', { n: votesMonth }) }}</span>
         </div>
       </a>
 
@@ -43,8 +43,8 @@
       <a href="#grades" class="bento-card bento-shop" ref="cards">
         <div class="bento-card-bg"></div>
         <svg class="bento-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-        <span class="bento-card-title">Boutique</span>
-        <span class="bento-card-sub">Soutenir le serveur</span>
+        <span class="bento-card-title">{{ t('hero.shop') }}</span>
+        <span class="bento-card-sub">{{ t('hero.shopSub') }}</span>
         <span class="bento-arrow">&rarr;</span>
       </a>
 
@@ -52,39 +52,39 @@
       <a href="https://discord.gg/JW7XQKPpVC" target="_blank" class="bento-card bento-discord" ref="cards">
         <div class="bento-card-bg"></div>
         <svg class="bento-icon-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
-        <span class="bento-card-title">Discord</span>
-        <span class="bento-card-sub">Rejoindre la communauté</span>
+        <span class="bento-card-title">{{ t('hero.discord') }}</span>
+        <span class="bento-card-sub">{{ t('hero.discordSub') }}</span>
       </a>
 
       <!-- CurseForge + Downloads -->
       <a href="https://www.curseforge.com/minecraft/modpacks/serveur-create-france-communauty-friends-coop" target="_blank" class="bento-card bento-curseforge" ref="cards">
         <div class="bento-card-bg"></div>
         <div class="bento-stat-value">{{ curseforgeDownloads }}</div>
-        <div class="bento-stat-label">Téléchargements</div>
+        <div class="bento-stat-label">{{ t('hero.downloads') }}</div>
         <span class="bento-card-sub">CurseForge</span>
       </a>
 
       <!-- IP Serveur -->
-      <div class="bento-card bento-ip" title="Cliquer pour copier" @click="copyIp" ref="cards">
+      <div class="bento-card bento-ip" :title="t('hero.copyTitle')" @click="copyIp" ref="cards">
         <div class="bento-card-bg"></div>
         <div class="ip-text">play.createfrance.fr</div>
-        <button class="ip-copy-btn">Copier l'IP</button>
-        <div class="ip-copied" :class="{ show: ipCopied }">Copie !</div>
+        <button class="ip-copy-btn">{{ t('hero.copyIp') }}</button>
+        <div class="ip-copied" :class="{ show: ipCopied }">{{ t('hero.copied') }}</div>
       </div>
 
       <!-- Objectif mensuel -->
       <a href="#grades" class="bento-card bento-funding" ref="cards">
         <div class="bento-card-bg"></div>
         <div class="funding-header">
-          <span class="funding-title">Objectif mensuel</span>
+          <span class="funding-title">{{ t('hero.fundingTitle') }}</span>
           <span class="funding-percent" :style="{ color: fundingColor }">{{ progressPercent }}%</span>
         </div>
         <div class="funding-bar">
           <div class="funding-fill" :style="{ width: barVisible ? progressPercent + '%' : '0%', background: fundingGradient }" />
         </div>
         <div class="funding-details">
-          <span class="funding-amount">{{ currentFunding.toFixed(2) }}€ récoltés</span>
-          <span class="funding-goal">{{ goalFunding }}€</span>
+          <span class="funding-amount">{{ t('hero.fundingRaised', { amount: money(currentFunding) }) }}</span>
+          <span class="funding-goal">{{ t('hero.fundingGoal', { amount: goalFunding }) }}</span>
         </div>
         <span class="bento-arrow">&rarr;</span>
       </a>
@@ -96,6 +96,7 @@
 </template>
 
 <script setup lang="ts">
+const { t, locale } = useI18n()
 const { playersOnline, votesToday, votesMonth, totalVotes } = useServerStats()
 const { downloads: curseforgeDownloads } = useCurseForgeStats()
 
@@ -104,6 +105,8 @@ const showPlayerChart = ref(false)
 
 const currentFunding = 43.27
 const goalFunding = 143
+// 43,27 in French, 43.27 in English
+const money = (n: number) => n.toFixed(2).replace('.', locale.value === 'en' ? '.' : ',')
 const progressPercent = computed(() => Math.round((currentFunding / goalFunding) * 100))
 const barVisible = ref(false)
 

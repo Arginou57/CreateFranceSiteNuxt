@@ -1,10 +1,10 @@
 <template>
   <div class="grade-card" :class="{ featured }" :data-tier="tier">
-    <div v-if="featured" class="popular-badge">Populaire</div>
+    <div v-if="featured" class="popular-badge">{{ t('grades.popular') }}</div>
     <div class="card-header">
       <div class="tier-badge">{{ tierLabel }}</div>
       <h3 class="grade-name">{{ name }}</h3>
-      <div class="price">{{ price }}&euro;<span>/30 jours</span></div>
+      <div class="price">{{ t('grades.price', { price: displayPrice }) }}<span>{{ t('grades.period') }}</span></div>
     </div>
     <div class="card-scene" :class="`scene-${slug}`">
       <div class="scene-bg"></div>
@@ -32,13 +32,17 @@ const props = defineProps<{
   featured?: boolean
 }>()
 
+const { t, locale } = useI18n()
+// 2,99 in French, 2.99 in English
+const displayPrice = computed(() => (locale.value === 'en' ? props.price : props.price.replace('.', ',')))
+
 onMounted(() => {
   const selector = `#paypal-button-container-${props.planId}`
   const renderPayPal = () => loadPayPal().then((paypal) => {
     paypal.Buttons({
       style: { shape: 'rect', color: 'gold', layout: 'vertical', label: 'subscribe' },
       createSubscription: (_d: any, actions: any) => actions.subscription.create({ plan_id: props.planId }),
-      onApprove: (data: any) => { alert('Merci pour votre soutien ! ID: ' + data.subscriptionID) },
+      onApprove: (data: any) => { alert(t('grades.thanks', { id: data.subscriptionID })) },
     }).render(selector)
   }).catch(() => { /* PayPal blocked or offline: the card stays without its button */ })
   // the SDK is only fetched when the card gets close to the screen (composables/usePayPal.ts)

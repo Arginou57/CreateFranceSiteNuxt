@@ -17,7 +17,7 @@
         <source :src="files.webm" type="video/webm">
         <source :src="files.mp4" type="video/mp4">
       </video>
-      <button v-if="paused" type="button" class="wiki-video-play" aria-label="Lire l'animation" @click="toggle">
+      <button v-if="paused" type="button" class="wiki-video-play" :aria-label="t('wiki.play')" @click="toggle">
         <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor" /></svg>
       </button>
     </div>
@@ -29,6 +29,7 @@
 import type { WikiVideo } from '~/utils/wiki'
 
 const props = defineProps<{ slug: string; video: WikiVideo }>()
+const { t } = useI18n()
 const files = computed(() => wikiVideoFiles(props.slug, props.video.id))
 const videoRef = ref<HTMLVideoElement | null>(null)
 const paused = ref(true)

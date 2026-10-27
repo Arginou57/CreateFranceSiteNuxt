@@ -2,8 +2,8 @@
   <Teleport to="body">
     <div class="chart-overlay" @click.self="$emit('close')">
       <div class="chart-modal">
-        <button class="chart-close" @click="$emit('close')">&times;</button>
-        <h3 class="chart-title">Joueurs en ligne</h3>
+        <button class="chart-close" :aria-label="t('chart.close')" @click="$emit('close')">&times;</button>
+        <h3 class="chart-title">{{ t('chart.title') }}</h3>
         <div class="chart-range-bar">
           <button
             v-for="r in ranges"
@@ -11,12 +11,12 @@
             class="chart-range-btn"
             :class="{ active: activeRange === r.key }"
             @click="setRange(r.key)"
-          >{{ r.label }}</button>
+          >{{ t(r.label) }}</button>
         </div>
         <div class="chart-container">
           <canvas ref="canvasRef"></canvas>
         </div>
-        <p v-if="noData" class="chart-empty">Pas encore assez de donnees. Revenez dans quelques minutes.</p>
+        <p v-if="noData" class="chart-empty">{{ t('chart.empty') }}</p>
       </div>
     </div>
   </Teleport>
@@ -24,6 +24,7 @@
 
 <script setup lang="ts">
 defineEmits<{ close: [] }>()
+const { t } = useI18n()
 
 interface PlayerRecord {
   time: number
@@ -33,9 +34,9 @@ interface PlayerRecord {
 type RangeKey = '24h' | '7d' | '30d'
 
 const ranges = [
-  { key: '24h' as RangeKey, label: '24h', ms: 24 * 60 * 60 * 1000 },
-  { key: '7d' as RangeKey, label: '7 jours', ms: 7 * 24 * 60 * 60 * 1000 },
-  { key: '30d' as RangeKey, label: '1 mois', ms: 30 * 24 * 60 * 60 * 1000 },
+  { key: '24h' as RangeKey, label: 'chart.range24h', ms: 24 * 60 * 60 * 1000 },
+  { key: '7d' as RangeKey, label: 'chart.range7d', ms: 7 * 24 * 60 * 60 * 1000 },
+  { key: '30d' as RangeKey, label: 'chart.range30d', ms: 30 * 24 * 60 * 60 * 1000 },
 ]
 
 const canvasRef = ref<HTMLCanvasElement | null>(null)

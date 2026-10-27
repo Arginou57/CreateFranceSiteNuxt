@@ -3,45 +3,49 @@
 </template>
 
 <script setup lang="ts">
-import type { WikiPage } from '~/utils/wiki'
+import type { WikiPage, WikiPageView } from '~/utils/wiki'
 
 const route = useRoute()
-const found = getWikiPage(String(route.params.slug))
+const { t, locale } = useI18n()
+const lang: WikiLocale = locale.value === 'en' ? 'en' : 'fr'
+// French URL = French slug (file name), English URL = en.slugEn; anything else is a 404 (no redirect)
+const found = findWikiPage(String(route.params.slug), lang)
 if (!found) {
-  throw createError({ statusCode: 404, statusMessage: 'Page du wiki introuvable', fatal: true })
+  throw createError({ statusCode: 404, statusMessage: t('wiki.notFound'), fatal: true })
 }
-const page = found as WikiPage
-const category = getWikiCategory(page.category)
-const url = wikiAbs(`/wiki/${page.slug}`)
+const raw = found as WikiPage
+const page: WikiPageView = localizeWikiPage(raw, lang)
+
+const site = lang === 'en' ? 'https://create-france.com/en' : 'https://create-france.com/'
+const inLanguage = t('lang.inLanguage')
+const category = getWikiCategory(page.category, lang)
 const firstVideo = page.videos[0]
 const poster = wikiAbs(firstVideo ? wikiVideoFiles(page.slug, firstVideo.id).poster : '/images/fond.png')
 // date de mise en ligne des vidéos, avec fuseau (Paris, heure d'hiver)
 const uploadDate = `${page.datePublished}T12:00:00+01:00`
 
-useSeoMeta({
+const { url } = useI18nSeo({
+  paths: page.paths,
   title: page.title,
   description: page.description,
-  ogTitle: page.title,
-  ogDescription: page.description,
   ogType: 'article',
-  ogUrl: url,
   ogImage: poster,
   ogImageWidth: 720,
   ogImageHeight: 720,
   ogImageAlt: page.name,
-  twitterCard: 'summary_large_image',
-  twitterTitle: page.title,
-  twitterDescription: page.description,
-  twitterImage: poster,
+})
+
+useSeoMeta({
   articlePublishedTime: page.datePublished,
   articleModifiedTime: page.dateModified,
 })
 
 const org = { '@type': 'Organization', '@id': 'https://create-france.com/#org', name: 'Create France', url: 'https://create-france.com/' }
+const wikiHome = wikiAbs(wikiHomePath(lang))
 
 useHead({
-  link: [{ rel: 'canonical', href: url }],
   script: [{
+    key: 'ld-page',
     type: 'application/ld+json',
     innerHTML: JSON.stringify({
       '@context': 'https://schema.org',
@@ -49,9 +53,9 @@ useHead({
         {
           '@type': 'BreadcrumbList',
           itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://create-france.com/' },
-            { '@type': 'ListItem', position: 2, name: 'Wiki', item: wikiAbs('/wiki') },
-            { '@type': 'ListItem', position: 3, name: category?.name || 'Wiki', item: wikiAbs(`/wiki#${page.category}`) },
+            { '@type': 'ListItem', position: 1, name: t('wiki.home'), item: site },
+            { '@type': 'ListItem', position: 2, name: t('wiki.wiki'), item: wikiHome },
+            { '@type': 'ListItem', position: 3, name: category?.name || t('wiki.wiki'), item: `${wikiHome}#${page.category}` },
             { '@type': 'ListItem', position: 4, name: page.name, item: url },
           ],
         },
@@ -61,13 +65,14 @@ useHead({
           headline: page.title,
           description: page.description,
           image: [poster],
-          inLanguage: 'fr-FR',
+          inLanguage,
           datePublished: page.datePublished,
           dateModified: page.dateModified,
           author: org,
           publisher: { ...org, logo: { '@type': 'ImageObject', url: 'https://create-france.com/favicon.png' } },
           mainEntityOfPage: url,
-          about: { '@type': 'Thing', name: `${page.name} (mod Create pour Minecraft)` },
+          isPartOf: { '@id': `${site}#site` },
+          about: { '@type': 'Thing', name: t('wiki.about', { name: page.name }) },
           video: page.videos.map((v) => ({ '@id': `${url}#video-${v.id}` })),
         },
         ...page.videos.map((v) => {
@@ -81,7 +86,7 @@ useHead({
             contentUrl: wikiAbs(f.mp4),
             uploadDate,
             duration: v.duration,
-            inLanguage: 'fr-FR',
+            inLanguage,
             isFamilyFriendly: true,
             publisher: org,
           }

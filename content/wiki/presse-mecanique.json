@@ -111,5 +111,136 @@
     "Recettes : data/create/recipe/pressing, data/create/recipe/compacting, crafting/kinetics/mechanical_press.json",
     "Espacement sur tapis : BeltInventory (1 bloc) ; vitesse du tapis : BeltBlockEntity.getBeltMovementSpeed",
     "Sortie du bassin : BasinBlock.FACING (dessous par défaut)"
-  ]
+  ],
+  "en": {
+    "slugEn": "mechanical-press",
+    "name": "Mechanical Press",
+    "title": "Mechanical Press — Create mod guide",
+    "description": "How to use the Create Mechanical Press: placement, speed and stress, iron and copper sheets, compacting in a basin. Illustrated guide.",
+    "intro": "The <strong>Mechanical Press</strong> is often the first processing machine you build with Create. It flattens whatever passes under its head: an ingot becomes a sheet, sugar cane becomes paper. Placed above a basin, it can also <strong>compact</strong> several items into a single block. Here is how to set it up, power it and automate it.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Processing"
+      },
+      {
+        "label": "Stress",
+        "value": "8 SU per RPM (256 SU at 32 RPM)"
+      },
+      {
+        "label": "Cycle",
+        "value": "≈ 3 s at 32 RPM · ≈ 1.5 s at 64 · ≈ 0.45 s at 256"
+      },
+      {
+        "label": "Work area",
+        "value": "2 blocks below the press (belt, depot, basin), or an item on the ground right below it"
+      },
+      {
+        "label": "Rotation",
+        "value": "Through the horizontal shaft, on one side"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Shaft",
+          null
+        ],
+        [
+          null,
+          "Andesite Casing",
+          null
+        ],
+        [
+          null,
+          "Block of Iron",
+          null
+        ]
+      ],
+      "result": "1 Mechanical Press"
+    },
+    "videos": [
+      {
+        "id": "mechanical_press",
+        "name": "Mechanical Press: pressing on a depot, then on a belt",
+        "description": "The press flattens a copper ingot placed on a depot, then automatically processes the ingots arriving on a mechanical belt."
+      },
+      {
+        "id": "mechanical_press_compacting",
+        "name": "Mechanical Press: compacting in a basin",
+        "description": "Above a basin, the press turns nine copper ingots into a block of copper and four oak logs into oak wood; a Blaze Burner adds heat."
+      }
+    ],
+    "sections": [
+      {
+        "id": "installer",
+        "title": "Placing and powering the press",
+        "alt": "Mechanical Press placed two blocks above a depot, driven by cogwheels on the side",
+        "html": "<p>The press goes up high. Its head travels down a little over one block, so the item to process must sit <strong>two blocks below it</strong>, with one block of air in between. It takes rotation through its horizontal shaft, on one of its sides: a shaft or a cogwheel is enough, as in the animation.</p><p>Power-wise, count on <strong>8 SU per RPM</strong>. At 32 RPM, one press uses 256 SU, exactly what a single Water Wheel provides (32 SU per RPM, at 8 RPM). An overstressed network stops entirely: check yours with a Stressometer.</p>"
+      },
+      {
+        "id": "depot",
+        "title": "Pressing an item by hand on a depot",
+        "alt": "The press head comes down on a copper ingot sitting on a depot",
+        "html": "<p>For manual use, the simplest option is a <strong>Depot</strong> under the press. Right-click it with an ingot to place it: the head comes down and the ingot comes out as a sheet. The pressing happens halfway through the stroke, about 1.5 s after the start of the cycle at 32 RPM.</p><p>Without a depot, you can also throw items <strong>on the ground right below the press</strong> (only one block of gap in that case). By default it only processes one item per stroke, even if you drop a whole stack: the <code>bulkPressing</code> server setting is off.</p>"
+      },
+      {
+        "id": "tapis",
+        "title": "Automating with a belt",
+        "alt": "A funnel puts copper ingots on a mechanical belt that runs under the Mechanical Press",
+        "html": "<p>Run a <a href=\"/en/wiki/conveyor-belt\">mechanical belt</a> two blocks below the press. Each item that arrives under the head is <strong>held automatically</strong> while it is pressed, then moves on down the belt. The next items wait behind it, one block apart.</p><p>A funnel on a chest feeds the belt at the start of the line; another one stores the sheets at the end.</p>"
+      },
+      {
+        "id": "cadence",
+        "title": "Setting the production rate",
+        "alt": "Two ingots wait on the belt while the press flattens the first one into a copper sheet",
+        "html": "<p>Rotation speed sets the pace. A full cycle takes about <strong>6 s at 16 RPM, 3 s at 32, 1.5 s at 64 and under half a second at 256 RPM</strong>. At 32 RPM, the belt brings 1.33 blocks' worth of items per second, so the press is what limits the rate. To produce more, speed up the press (keeping an eye on stress) or build parallel lines: two presses in a row on the same belt don't help, because the first one processes everything.</p><p>The most common pressing jobs: iron, copper, gold and brass ingots into sheets, sugar cane into paper, pulp into cardboard, dirt or grass into dirt paths.</p>"
+      },
+      {
+        "id": "compactage",
+        "title": "Compacting items in a basin",
+        "alt": "Mechanical Press above a basin fed by a vertical belt",
+        "html": "<p>Place a <strong>Basin</strong> two blocks below the press: it switches to compacting mode and presses the basin's contents together. In the animation, nine copper ingots become a block of copper. The result comes out of the bottom of the basin, or out of the side if you turned its output with a wrench: a belt, depot or funnel placed there collects it.</p>"
+      },
+      {
+        "id": "recettes",
+        "title": "Which compacting recipes?",
+        "alt": "A block of copper and a block of oak wood leaving the basin on a mechanical belt",
+        "html": "<p>The press accepts every <strong>square, completely filled crafting recipe</strong>, 2×2 or 3×3: nine ingots into a block, four logs into wood, nine snow blocks into ice… The basin must hold the exact amount: with eight ingots, nothing happens.</p><p>Create adds its own recipes: andesite, granite or diorite from two flint, a base block (gravel, red sand or calcite) and 100 mB of lava; a bar of chocolate from 250 mB of chocolate; a honey block from 1,000 mB of honey; and blaze cake base.</p>"
+      },
+      {
+        "id": "chaleur",
+        "title": "Heat from the Blaze Burner",
+        "alt": "Lit Blaze Burner under the basin and the Mechanical Press",
+        "html": "<p>A <strong>Blaze Burner</strong> under the basin heats the recipe. In Create alone, no compacting recipe needs it (heat is mostly used by the Mechanical Mixer), but some add-ons add heated recipes: the burner then becomes essential, and you have to keep feeding it so it doesn't go out.</p>"
+      },
+      {
+        "id": "filtre",
+        "title": "Choosing the recipe with the basin filter",
+        "alt": "Filter slot on the side of the basin",
+        "html": "<p>When two recipes use the same ingredients, the machine can't tell which one to make. Put the item you want in the basin's <strong>filter slot</strong>: only the matching recipe will be made.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<ul><li><strong>The press doesn't move</strong>: the network is overstressed (8 SU per RPM) or the rotation is connected on the wrong side.</li><li><strong>It strikes thin air</strong>: the item is too high or too low. Belts, depots and basins go two blocks below the press.</li><li><strong>Nothing comes out of the basin</strong>: incomplete recipe, blocked basin output, or a filter set to another item.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Stress: AllBlocks.java, MECHANICAL_PRESS, CStress.setImpact(8.0); water wheel CStress.setCapacity(32)",
+      "Cycle: PressingBehaviour.java (CYCLE = 240, getRunningTickSpeed = lerp(|speed| / 512, 1, 60), pressing at CYCLE / 2)",
+      "Modes and heights: PressingBehaviour.Mode (WORLD, BELT, BASIN), applyInWorld (block right below the press)",
+      "One item per stroke: CRecipes.bulkPressing = false; MechanicalPressBlockEntity.tryProcessInWorld",
+      "Compacting square recipes: CRecipes.allowShapedSquareInPress = true",
+      "Recipes: data/create/recipe/pressing, data/create/recipe/compacting, crafting/kinetics/mechanical_press.json",
+      "Belt spacing: BeltInventory (1 block); belt speed: BeltBlockEntity.getBeltMovementSpeed",
+      "Basin output: BasinBlock.FACING (down by default)"
+    ]
+  }
 }

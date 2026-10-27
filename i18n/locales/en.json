@@ -1,0 +1,190 @@
+{
+  "lang": {
+    "switchName": "Français",
+    "switchShort": "FR",
+    "switchLabel": "Lire cette page en français",
+    "ogLocale": "en_US",
+    "inLanguage": "en"
+  },
+  "seo": {
+    "home": {
+      "title": "Create France — French Minecraft Create 1.21.1 server",
+      "description": "Join Create France, a French modded Minecraft server running Create 6 (1.21.1): trains, factories, Aeronautics. Free launcher · IP play.createfrance.fr"
+    },
+    "ogImageAlt": "Create France, French Minecraft Create 1.21.1 server. IP play.createfrance.fr",
+    "siteAlternateName": "Create France — Minecraft Create server",
+    "orgDescription": "French modded Minecraft server built around the Create mod (Create 6, Minecraft 1.21.1). IP play.createfrance.fr"
+  },
+  "nav": {
+    "home": "Home",
+    "server": "The Server",
+    "wiki": "Wiki",
+    "gallery": "Gallery",
+    "shop": "Shop",
+    "curseforge": "CurseForge",
+    "vote": "Vote",
+    "voteTitle": "Vote for Create France on TopModdedServers",
+    "discord": "Discord",
+    "menu": "Menu"
+  },
+  "hero": {
+    "badge": "Minecraft Server",
+    "tagline": "Build, automate, explore — together.",
+    "launcherBtn": "Download the launcher",
+    "launcherSub": "Windows · installs the modpack and joins the server in one click",
+    "playersOnline": "Players online",
+    "votesTotal": "Total votes",
+    "votesToday": "{n} today",
+    "votesMonth": "{n} this month",
+    "shop": "Shop",
+    "shopSub": "Support the server",
+    "discord": "Discord",
+    "discordSub": "Join the community",
+    "downloads": "Downloads",
+    "copyTitle": "Click to copy",
+    "copyIp": "Copy IP",
+    "copied": "Copied!",
+    "fundingTitle": "Monthly goal",
+    "fundingRaised": "€{amount} raised",
+    "fundingGoal": "€{amount}"
+  },
+  "features": {
+    "title": "The Create server",
+    "subtitle": "A world of endless creativity powered by the Create mod",
+    "items": [
+      { "title": "Build", "description": "Complex machines, automated systems and spectacular structures." },
+      { "title": "Explore", "description": "Discover new worlds and find rare resources." },
+      { "title": "Community", "description": "Take part in events and team up on ambitious projects." }
+    ]
+  },
+  "gallery": {
+    "title": "Create server gallery",
+    "subtitle": "Pictures of the modpack, pulled automatically from CurseForge",
+    "zoom": "Enlarge picture {n}",
+    "alt": "Screenshot of the Create France server {n}",
+    "close": "Close",
+    "prev": "Previous picture",
+    "next": "Next picture"
+  },
+  "grades": {
+    "title": "Ranks and server support",
+    "subtitle": "Pick your rank and help us keep the gears turning!",
+    "notice": "Before subscribing, please send a message to <strong>arginou#9106</strong> on Discord so you can receive your rank.",
+    "popular": "Popular",
+    "price": "€{price}",
+    "period": "/30 days",
+    "thanks": "Thank you for your support! ID: {id}",
+    "perks": {
+      "mecene": [
+        "In-game rank [Mecene]",
+        "1 home",
+        "/tpa - Teleport to other players",
+        "/spawn - Go back to spawn",
+        "/hdv - Auction house from anywhere"
+      ],
+      "bienfaiteur": [
+        "In-game rank [Bienfaiteur]",
+        "3 homes",
+        "/tpa - Teleport to other players",
+        "/tpahere - Teleport a player to you",
+        "/spawn - Go back to spawn",
+        "/hdv - Auction house from anywhere"
+      ],
+      "patron": [
+        "All Bienfaiteur perks",
+        "In-game rank [Patron]",
+        "5 homes",
+        "/spawn - Go back to spawn",
+        "/hdv - Auction house from anywhere",
+        "Early access to events"
+      ]
+    }
+  },
+  "faq": {
+    "title": "French Minecraft Create server",
+    "intro": "Create France is a <strong>French modded Minecraft server</strong> built around the <strong>Create</strong> mod (Create 6, Minecraft 1.21.1 on NeoForge). Players build automated factories, <strong>train</strong> networks, mining machines and flying contraptions with Create Aeronautics, alone or as a team, on a map shared with the whole community.",
+    "items": [
+      {
+        "q": "How do I join the Create France server?",
+        "a": "The easiest way: download the <a href=\"/launcher/CreateFrance-Launcher-Setup.exe\">Create France Launcher</a>, sign in with your Microsoft account and click Play. It installs Java, Minecraft 1.21.1, NeoForge and the whole modpack, then connects you straight to the server. You can also install the Create France modpack from CurseForge and join the IP <strong>play.createfrance.fr</strong>."
+      },
+      {
+        "q": "What is the server IP?",
+        "a": "The IP is <strong>play.createfrance.fr</strong>. The server runs Minecraft Java 1.21.1 and requires the Create France modpack (installed automatically by the launcher)."
+      },
+      {
+        "q": "Which mods are on the server?",
+        "a": "The heart of the server is the <strong>Create</strong> mod (version 6) and its add-ons: Create Aeronautics for flying machines, Create Big Cannons, Railways Untold for trains, plus many decoration and quality-of-life mods. The full list is in the modpack on CurseForge."
+      },
+      {
+        "q": "Is the server free?",
+        "a": "Yes, playing is free. All you need is an official Minecraft Java Edition account. The shop ranks are there to support the server."
+      },
+      {
+        "q": "Do I need to know the Create mod to play?",
+        "a": "No. The server welcomes beginners: the mod's Ponder scenes (hold W over a block) show how each machine works, and the community is happy to help on <a href=\"https://discord.gg/JW7XQKPpVC\" target=\"_blank\" rel=\"noopener\">Discord</a>."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "A community server powered by passion and gears.",
+    "badgeTitle": "Vote for Create France on TopModdedServers",
+    "badgeAlt": "Vote for Create France on TopModdedServers, the ranking of modded Minecraft servers",
+    "links": "Links",
+    "server": "The Server",
+    "wiki": "Create Wiki",
+    "shop": "Shop",
+    "community": "Community",
+    "vote": "Vote",
+    "ranking": "Create server ranking",
+    "rights": "© {year} Create France Server — Not affiliated with Mojang AB"
+  },
+  "floating": {
+    "discord": "Join the Discord"
+  },
+  "chart": {
+    "title": "Players online",
+    "close": "Close",
+    "range24h": "24h",
+    "range7d": "7 days",
+    "range30d": "1 month",
+    "empty": "Not enough data yet. Check back in a few minutes."
+  },
+  "wiki": {
+    "breadcrumb": "Breadcrumb",
+    "home": "Home",
+    "wiki": "Wiki",
+    "kicker": "Create 6 mod · Minecraft 1.21.1",
+    "h1": "Create mod wiki",
+    "lead": "Clear guides to understand every block of the <strong>Create mod</strong>: what it does, how to power it, how fast it works and the mistakes to avoid. Every page is illustrated with animations replayed from the game's Ponder scenes, and the numbers come straight from the mod's code.",
+    "featured": "First guides",
+    "categories": "Categories",
+    "soon": "Coming soon",
+    "posterAlt": "Animation: {name} in the Create mod",
+    "homeCtaLead": "The best way to learn Create is to build.",
+    "seoTitle": "Create mod wiki — guides by Create France",
+    "seoDescription": "Create mod wiki: Mechanical Press, Mechanical Drill, Mechanical Belt… How each block works, speeds, stress and tips, with animations. By Create France.",
+    "articleKicker": "Create Wiki · {category}",
+    "updated": "updated on",
+    "facts": "Quick facts",
+    "recipeAria": "Recipe: {result}",
+    "toc": "Contents",
+    "ctaLead": "Want to build your own {name}?",
+    "related": "Related pages",
+    "back": "← All Create wiki guides",
+    "sources": "Sources for the numbers (Create {version} code)",
+    "credits": "Original texts and animations by Create France, rendered from the mod's Ponder scenes. Create is a mod by the Create Team, not affiliated with Create France.",
+    "about": "{name} (Create mod for Minecraft)",
+    "notFound": "Wiki page not found",
+    "play": "Play the animation",
+    "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    "date": "{month} {day}, {year}",
+    "cta": {
+      "title": "Play Create on our server",
+      "text": "{lead} On <strong>Create France</strong>, a French Minecraft Create 1.21.1 server, you build your factories with a community that loves gears. The launcher installs Java, NeoForge and the whole modpack, then connects you in one click.",
+      "launcher": "Download the launcher",
+      "discord": "Join the Discord",
+      "ip": "IP: <strong>play.createfrance.fr</strong> · Java 1.21.1 · Windows"
+    }
+  }
+}

@@ -2,36 +2,64 @@
   {
     "id": "cinetique",
     "name": "Cinétique",
-    "description": "Produire et transmettre la rotation : arbres, roues dentées, moteurs, moulins, boîtes de vitesses, et la gestion du stress."
+    "description": "Produire et transmettre la rotation : arbres, roues dentées, moteurs, moulins, boîtes de vitesses, et la gestion du stress.",
+    "en": {
+      "name": "Kinetics",
+      "description": "Generate and transmit rotation: shafts, cogwheels, engines, windmills, gearboxes, and stress management."
+    }
   },
   {
     "id": "traitement",
     "name": "Traitement",
-    "description": "Transformer les objets : presse, mélangeur, broyeur, meule, ventilateur, bassin et brûleur à blaze."
+    "description": "Transformer les objets : presse, mélangeur, broyeur, meule, ventilateur, bassin et brûleur à blaze.",
+    "en": {
+      "name": "Processing",
+      "description": "Transform items: press, mixer, crushing wheels, millstone, fan, basin and blaze burner."
+    }
   },
   {
     "id": "logistique",
     "name": "Logistique",
-    "description": "Déplacer et trier les objets : tapis roulants, entonnoirs, tunnels, bras mécaniques, dépôts et coffres-forts."
+    "description": "Déplacer et trier les objets : tapis roulants, entonnoirs, tunnels, bras mécaniques, dépôts et coffres-forts.",
+    "en": {
+      "name": "Logistics",
+      "description": "Move and sort items: belts, funnels, tunnels, mechanical arms, depots and item vaults."
+    }
   },
   {
     "id": "fluides",
     "name": "Fluides",
-    "description": "Pomper, stocker et utiliser les liquides : tuyaux, pompes, réservoirs, becs verseurs et égouttoirs."
+    "description": "Pomper, stocker et utiliser les liquides : tuyaux, pompes, réservoirs, becs verseurs et égouttoirs.",
+    "en": {
+      "name": "Fluids",
+      "description": "Pump, store and use liquids: pipes, pumps, tanks, spouts and item drains."
+    }
   },
   {
     "id": "trains",
     "name": "Trains",
-    "description": "Construire un réseau ferré : rails, gares, signaux, assemblage des trains et horaires automatiques."
+    "description": "Construire un réseau ferré : rails, gares, signaux, assemblage des trains et horaires automatiques.",
+    "en": {
+      "name": "Trains",
+      "description": "Build a rail network: tracks, stations, signals, train assembly and automatic schedules."
+    }
   },
   {
     "id": "contraptions",
     "name": "Contraptions",
-    "description": "Faire bouger des blocs : pistons mécaniques, roulements, portiques, perceuses, scies et colle."
+    "description": "Faire bouger des blocs : pistons mécaniques, roulements, portiques, perceuses, scies et colle.",
+    "en": {
+      "name": "Contraptions",
+      "description": "Make blocks move: mechanical pistons, bearings, gantries, drills, saws and glue."
+    }
   },
   {
     "id": "redstone",
     "name": "Redstone",
-    "description": "Commander les machines : liens redstone, compteurs, détecteurs, horloges et contrôleurs de vitesse."
+    "description": "Commander les machines : liens redstone, compteurs, détecteurs, horloges et contrôleurs de vitesse.",
+    "en": {
+      "name": "Redstone",
+      "description": "Control your machines: redstone links, counters, detectors, clocks and speed controllers."
+    }
   }
 ]

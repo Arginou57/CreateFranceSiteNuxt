@@ -1,7 +1,7 @@
 <template>
   <section id="serveur" class="serveur-section">
-    <h2 class="section-title">Le serveur Create</h2>
-    <p class="section-subtitle">Un univers de créativité infinie propulsé par le mod Create</p>
+    <h2 class="section-title">{{ t('features.title') }}</h2>
+    <p class="section-subtitle">{{ t('features.subtitle') }}</p>
     <div class="features-grid">
       <div v-for="feature in features" :key="feature.title" class="feature-card">
         <div class="feature-icon">
@@ -15,23 +15,15 @@
 </template>
 
 <script setup lang="ts">
-const features = [
-  {
-    title: 'Construisez',
-    icon: '/images/icon-construisez.webp',
-    description: 'Machines complexes, systèmes automatisés et structures spectaculaires.',
-  },
-  {
-    title: 'Explorez',
-    icon: '/images/icon-explorez.webp',
-    description: 'Découvrez de nouveaux mondes et trouvez des ressources rares.',
-  },
-  {
-    title: 'Communauté',
-    icon: '/images/icon-communaute.webp',
-    description: 'Participez aux events et collaborez sur des projets ambitieux.',
-  },
-]
+const { t, tm, rt } = useI18n()
+const icons = ['/images/icon-construisez.webp', '/images/icon-explorez.webp', '/images/icon-communaute.webp']
+const features = computed(() =>
+  (tm('features.items') as unknown as { title: unknown; description: unknown }[]).map((f, i) => ({
+    title: rt(f.title as any),
+    description: rt(f.description as any),
+    icon: icons[i],
+  })),
+)
 
 onMounted(() => {
   const observer = new IntersectionObserver((entries) => {

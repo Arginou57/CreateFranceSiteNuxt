@@ -1,10 +1,10 @@
 <template>
   <section id="grades" class="grades-section">
-    <h2 class="section-title">Grades et soutien du serveur</h2>
-    <p class="section-subtitle">Choisissez votre grade et aidez-nous à faire tourner les engrenages !</p>
+    <h2 class="section-title">{{ t('grades.title') }}</h2>
+    <p class="section-subtitle">{{ t('grades.subtitle') }}</p>
     <div class="donate-notice">
       <span class="notice-icon">&#9888;</span>
-      <span>Avant de vous abonner, merci d'envoyer un message à <strong>arginou#9106</strong> sur Discord afin de recevoir votre grade.</span>
+      <span v-html="t('grades.notice')" />
     </div>
     <div class="grades-container">
       <GradeCard
@@ -17,7 +17,12 @@
 </template>
 
 <script setup lang="ts">
-const grades = [
+// Rank names are the in-game tags ([Mecene], [Bienfaiteur], [Patron]) and the PayPal plan ids never change;
+// the perks come from the locale files (grades.perks.<slug>).
+const { t, tm, rt } = useI18n()
+const perksOf = (slug: string) => (tm(`grades.perks.${slug}`) as unknown as unknown[]).map((p) => rt(p as any))
+
+const gradeData = [
   {
     tier: 1,
     tierLabel: 'I',
@@ -26,13 +31,6 @@ const grades = [
     price: '2.99',
     image: '/images/mecene.webp',
     planId: 'P-0MC85129CX493101DNHDRBOA',
-    perks: [
-      'Grade en jeu [Mecene]',
-      '1 home',
-      '/tpa - Se téléporter aux joueurs',
-      '/spawn - Retourner au spawn',
-      '/hdv - Hôtel des ventes à distance',
-    ],
   },
   {
     tier: 2,
@@ -43,14 +41,6 @@ const grades = [
     image: '/images/bienfaiteur.webp',
     planId: 'P-48M95932LE9502235NHDRDCY',
     featured: true,
-    perks: [
-      'Grade en jeu [Bienfaiteur]',
-      '3 homes',
-      '/tpa - Se téléporter aux joueurs',
-      '/tpahere - Téléporter un joueur à soi',
-      '/spawn - Retourner au spawn',
-      '/hdv - Hôtel des ventes à distance',
-    ],
   },
   {
     tier: 3,
@@ -60,16 +50,9 @@ const grades = [
     price: '9.99',
     image: '/images/patron.webp',
     planId: 'P-3DT928258J300445TNHDRFMA',
-    perks: [
-      'Tous les avantages Bienfaiteur',
-      'Grade en jeu [Patron]',
-      '5 homes',
-      '/spawn - Retourner au spawn',
-      '/hdv - Hôtel des ventes à distance',
-      'Accès anticipé aux events',
-    ],
   },
 ]
+const grades = computed(() => gradeData.map((g) => ({ ...g, perks: perksOf(g.slug) })))
 
 onMounted(() => {
   const observer = new IntersectionObserver((entries) => {
@@ -98,7 +81,7 @@ onMounted(() => {
     text-align: left;
 }
 .donate-notice .notice-icon { color: var(--mandarine); font-size: 1.2rem; flex-shrink: 0; }
-.donate-notice strong { color: var(--terre-cuite); }
+.donate-notice :deep(strong) { color: var(--terre-cuite); }
 
 
 @media (max-width: 768px) {

@@ -1,24 +1,23 @@
 <template>
   <aside class="wiki-cta" aria-labelledby="wiki-cta-title">
     <div class="wiki-cta-gear" aria-hidden="true">&#9881;</div>
-    <h2 id="wiki-cta-title">Joue avec Create sur notre serveur</h2>
-    <p>
-      {{ lead }} Sur <strong>Create France</strong>, serveur Minecraft Create 1.21.1 français, tu construis tes usines
-      avec une communauté qui aime les engrenages. Le launcher installe Java, NeoForge et tout le modpack, puis te
-      connecte en un clic.
-    </p>
+    <h2 id="wiki-cta-title">{{ t('wiki.cta.title') }}</h2>
+    <p v-html="t('wiki.cta.text', { lead: safeLead })" />
     <div class="wiki-cta-actions">
-      <a :href="launcher" class="wiki-cta-btn" download>Télécharger le launcher</a>
-      <a :href="discord" class="wiki-cta-link" target="_blank" rel="noopener">Rejoindre le Discord</a>
+      <a :href="launcher" class="wiki-cta-btn" download>{{ t('wiki.cta.launcher') }}</a>
+      <a :href="discord" class="wiki-cta-link" target="_blank" rel="noopener">{{ t('wiki.cta.discord') }}</a>
     </div>
-    <p class="wiki-cta-ip">IP : <strong>play.createfrance.fr</strong> · Java 1.21.1 · Windows</p>
+    <p class="wiki-cta-ip" v-html="t('wiki.cta.ip')" />
   </aside>
 </template>
 
 <script setup lang="ts">
-defineProps<{ lead?: string }>()
+const props = defineProps<{ lead?: string }>()
+const { t } = useI18n()
 const launcher = WIKI_LAUNCHER
 const discord = WIKI_DISCORD
+// the lead is plain text (page name inside): escape it, the rest of the message is our own HTML
+const safeLead = computed(() => (props.lead || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'))
 </script>
 
 <style scoped>
@@ -36,7 +35,7 @@ const discord = WIKI_DISCORD
   margin-bottom: 0.7rem; position: relative;
 }
 .wiki-cta p { color: var(--text-secondary); font-size: 0.92rem; line-height: 1.7; position: relative; }
-.wiki-cta strong { color: var(--text-primary); }
+.wiki-cta :deep(strong) { color: var(--text-primary); }
 .wiki-cta-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center; margin-top: 1.2rem; position: relative; }
 .wiki-cta-btn {
   display: inline-flex; padding: 0.8rem 1.3rem; border-radius: 10px; text-decoration: none;

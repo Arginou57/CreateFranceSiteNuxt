@@ -88,5 +88,116 @@
     "Contraption : BlockBreakingMovementBehaviour.getBlockBreakingSpeed (minimum 1 sur wagonnet, 2 sur train), DrillMovementBehaviour.isActive (pas en marche arrière) et canBreak (ni blocs sans collision, ni rails)",
     "Objets : BlockBreakingKineticBlockEntity.onBlockBroken (au centre, sans vitesse) ; BlockBreakingMovementBehaviour.collectOrDropItem (stockage embarqué)",
     "Recette : data/create/recipe/crafting/kinetics/mechanical_drill.json"
-  ]
+  ],
+  "en": {
+    "slugEn": "mechanical-drill",
+    "name": "Mechanical Drill",
+    "title": "Mechanical Drill — Create mod guide",
+    "description": "How the Create Mechanical Drill works: automatic block breaking, mining speed, stress, piston-mounted drills and onboard chests. Illustrated guide.",
+    "intro": "The <strong>Mechanical Drill</strong> breaks the block in front of its tip as soon as it spins. Stationary, it works as a cobblestone generator or a harvester. Mounted on a <strong>contraption</strong> (piston, bearing, minecart or train), it digs whole tunnels and quarries. Here is how it works, how fast it mines and how to collect what it breaks.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Contraptions"
+      },
+      {
+        "label": "Stress",
+        "value": "4 SU per RPM (128 SU at 32 RPM)"
+      },
+      {
+        "label": "Stone at 32 RPM",
+        "value": "≈ 2.4 s per block (≈ 0.55 s at 256 RPM)"
+      },
+      {
+        "label": "Damage",
+        "value": "3.5 at 32 RPM, up to 10 at 256 RPM"
+      },
+      {
+        "label": "Rotation",
+        "value": "From the back, opposite the tip"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Andesite Alloy",
+          null
+        ],
+        [
+          "Andesite Alloy",
+          "Iron Ingot",
+          "Andesite Alloy"
+        ],
+        [
+          null,
+          "Andesite Casing",
+          null
+        ]
+      ],
+      "result": "1 Mechanical Drill"
+    },
+    "videos": [
+      {
+        "id": "mechanical_drill",
+        "name": "Mechanical Drill: breaking a block of planks",
+        "description": "A stationary drill breaks the planks in front of it, then does it again four times faster once the rotation speeds up."
+      },
+      {
+        "id": "mechanical_drill_contraption",
+        "name": "Mechanical Drill on a piston: the tunnel bore",
+        "description": "Four drills held together by chassis move forward on a Mechanical Piston, break through a wall of planks and store the blocks in an onboard chest."
+      }
+    ],
+    "sections": [
+      {
+        "id": "casser",
+        "title": "Breaking the block in front of the tip",
+        "alt": "Mechanical Drill driven by a shaft, cracking a block of planks",
+        "html": "<p>Point the tip at the block to break and supply rotation from the back, with a shaft or a cogwheel. The drill cracks the block stage by stage, then breaks it: the item drops on the ground right in front of it, without being flung away. If a new block appears in the same spot (cobblestone generator, growing tree, block pushed by a piston), it starts again on its own.</p><p>It doesn't break liquids, bedrock or unbreakable blocks. Also watch out for players and mobs getting close to the tip: it hurts, from 3.5 damage at 32 RPM up to 10 at most.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "The faster it spins, the faster it mines",
+        "alt": "The same drill, sped up, breaks the planks much faster",
+        "html": "<p>The drill's strength is its speed divided by 100, compared with the hardness of the block. The result, as an approximate time to break one block:</p><table><thead><tr><th>Block</th><th>16 RPM</th><th>32 RPM</th><th>64 RPM</th><th>256 RPM</th></tr></thead><tbody><tr><td>Dirt</td><td>1.9 s</td><td>1 s</td><td>0.55 s</td><td>0.15 s</td></tr><tr><td>Stone</td><td>4.6 s</td><td>2.4 s</td><td>1.45 s</td><td>0.55 s</td></tr><tr><td>Planks</td><td>6 s</td><td>3.3 s</td><td>1.9 s</td><td>0.55 s</td></tr><tr><td>Obsidian</td><td>141 s</td><td>71 s</td><td>36 s</td><td>9 s</td></tr></tbody></table><p>Stress rises with speed: <strong>4 SU per RPM</strong>, so 1,024 SU for one drill at 256 RPM. For a cobblestone generator, 32 to 64 RPM is plenty.</p>"
+      },
+      {
+        "id": "contraption",
+        "title": "Mounting drills on a contraption",
+        "alt": "Four Mechanical Drills attached to linear chassis at the end of a Mechanical Piston",
+        "html": "<p>The drill's real power is movement. Attach several drills to a chassis (or with Super Glue) and push the whole thing with a <strong>Mechanical Piston</strong>, a bearing, a gantry, a minecart or a train. Each drill then breaks the blocks the machine moves into, like a tunnel boring machine.</p><p>On a contraption, the drill no longer needs a shaft: the movement of the machine is what makes it work. On a minecart or a train, a minimum breaking speed is guaranteed, and it is even higher on a train.</p>"
+      },
+      {
+        "id": "regles",
+        "title": "What a moving drill breaks",
+        "alt": "The tunnel bore pushes into a wall of planks and breaks it apart",
+        "html": "<p>A mounted drill only works when the machine moves <strong>in the direction of its tip</strong>: in reverse, it breaks nothing. It leaves blocks without collision alone (tall grass, flowers, torches) and never touches train tracks, so you can dig around a line without damaging it. If a block holds out too long, the machine stays stuck in front of it until it gives way.</p>"
+      },
+      {
+        "id": "stockage",
+        "title": "Collecting the blocks in an onboard chest",
+        "alt": "A chest glued to the tunnel bore collects the broken planks",
+        "html": "<p>Without storage, broken blocks fall on the ground and quickly get lost. Glue a <strong>chest, a barrel or an Item Vault</strong> to the contraption: everything the drills break goes straight into it. Once the machine is back, empty it with a funnel or a Portable Storage Interface.</p>"
+      },
+      {
+        "id": "astuces",
+        "title": "Tips and common mistakes",
+        "html": "<ul><li><strong>It doesn't spin</strong>: the rotation comes in through the tip instead of the back, or the network is overstressed.</li><li><strong>The bore stops</strong>: the piston has reached the end of its range, or a hard block (obsidian, deepslate ore) slows it down a lot.</li><li><strong>Blocks are left behind</strong>: a drill is missing from the grid; you need one for every cell of the front face.</li><li>Pair it with <a href=\"/en/wiki/conveyor-belt\">mechanical belts</a> to carry away the blocks from a stationary drill, or with a <a href=\"/en/wiki/mechanical-press\">Mechanical Press</a> in a processing line.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Stress: AllBlocks.java, MECHANICAL_DRILL, CStress.setImpact(4.0)",
+      "Stationary breaking: BlockBreakingKineticBlockEntity (strength = |speed| / 100, progress clamp(strength / hardness, 1, 10), wait hardness / strength ticks); vanilla hardness (dirt 0.5, stone 1.5, planks 2, obsidian 50)",
+      "Damage: DrillBlock.getDamage (min(v/16, 2) + min(v/32, 4) + min(v/64, 4), capped at 10)",
+      "Contraption: BlockBreakingMovementBehaviour.getBlockBreakingSpeed (minimum 1 on a minecart, 2 on a train), DrillMovementBehaviour.isActive (not in reverse) and canBreak (no collision-less blocks, no tracks)",
+      "Items: BlockBreakingKineticBlockEntity.onBlockBroken (centred, no velocity); BlockBreakingMovementBehaviour.collectOrDropItem (onboard storage)",
+      "Recipe: data/create/recipe/crafting/kinetics/mechanical_drill.json"
+    ]
+  }
 }

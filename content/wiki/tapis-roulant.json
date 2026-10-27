@@ -96,5 +96,123 @@
     "Espacement : BeltInventory (spacing = 1)",
     "Teinture : BeltBlock.useItemOn (colorants, eau)",
     "Recette : data/create/recipe/crafting/kinetics/belt_connector.json"
-  ]
+  ],
+  "en": {
+    "slugEn": "conveyor-belt",
+    "name": "Mechanical Belt",
+    "title": "Mechanical Belt (Conveyor Belt) — Create mod guide",
+    "description": "The Create Mechanical Belt, a conveyor belt: connecting two shafts, maximum length, slopes and orientations, item speed, dyeing. Illustrated guide.",
+    "intro": "The <strong>Mechanical Belt</strong> does two jobs at once: it <strong>transmits rotation</strong> from one shaft to another and it <strong>carries the items</strong> placed on it. It is the backbone of nearly every Create factory. Here is how to place it, in which directions, and how fast it moves your items.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Logistics"
+      },
+      {
+        "label": "Stress",
+        "value": "None (only the machines connected to it use stress)"
+      },
+      {
+        "label": "Length",
+        "value": "Up to 20 blocks (maxBeltLength server setting)"
+      },
+      {
+        "label": "Item speed",
+        "value": "RPM ÷ 24 blocks per second (1.33 blocks/s at 32 RPM)"
+      },
+      {
+        "label": "Spacing",
+        "value": "1 block between two items"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Dried Kelp",
+          "Dried Kelp",
+          "Dried Kelp"
+        ],
+        [
+          "Dried Kelp",
+          "Dried Kelp",
+          "Dried Kelp"
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Mechanical Belt (a single one covers the whole length)"
+    },
+    "videos": [
+      {
+        "id": "belt_connector",
+        "name": "Mechanical Belt: connecting two shafts, adding a shaft, dyeing",
+        "description": "Two shafts are connected with a belt, a wrong selection is cancelled, an extra shaft is added and then removed, and the belt is dyed blue."
+      },
+      {
+        "id": "belt_directions",
+        "name": "Mechanical Belt: the possible orientations",
+        "description": "The four ways to place a belt: horizontal, diagonal, vertical, and between two vertical shafts."
+      }
+    ],
+    "sections": [
+      {
+        "id": "relier",
+        "title": "Connecting two shafts",
+        "alt": "Two shafts selected one after the other with a mechanical belt in hand, outlined in green",
+        "html": "<p>Place two <strong>parallel shafts</strong>, right-click the first one with a mechanical belt in hand, then right-click the second. The belt appears between them and drives everything connected to it. One item is enough, whatever the length: six dried kelp for 20 blocks of belt is a great deal.</p><p>The belt itself uses no stress. It copies the rotation: all its shafts spin <strong>at the same speed and in the same direction</strong>.</p>"
+      },
+      {
+        "id": "annuler",
+        "title": "Cancelling a wrong selection",
+        "alt": "A selection on the wrong shaft, outlined in red",
+        "html": "<p>Clicked the wrong shaft? <strong>Sneak and right-click</strong> to forget the first selection, then start over. The selection also clears on its own if the first shaft disappears or ends up too far away.</p>"
+      },
+      {
+        "id": "arbres",
+        "title": "Adding or removing shafts on the belt",
+        "alt": "Two extra shafts connected to the side of the belt spin with it",
+        "html": "<p>Right-clicking a belt segment with a <strong>shaft</strong> adds a pulley there. That way you can take rotation from, or feed it into, the middle of the belt, for example to power a press or a fan along the way. To remove an added pulley, use the <strong>wrench</strong> on that segment.</p>"
+      },
+      {
+        "id": "teinture",
+        "title": "Dyeing and casing the belt",
+        "alt": "Mechanical belt dyed blue",
+        "html": "<p>Right-clicking with a <strong>dye</strong> colours the whole belt, so you can tell your lines apart at a glance (ores, food, waste…). A water bucket or a water bottle removes the colour. You can also cover the belt with <strong>Andesite or Brass Casing</strong> for a cleaner look; it keeps transmitting rotation.</p>"
+      },
+      {
+        "id": "orientations",
+        "title": "The possible orientations",
+        "alt": "The four belt orientations: horizontal, diagonal, vertical and between vertical shafts",
+        "html": "<p>A belt can't go in just any direction. Both shafts must share the <strong>same axis</strong>, and the belt runs at a right angle to that axis:</p><ol><li><strong>horizontally</strong>, in a straight line;</li><li><strong>diagonally</strong>, at a slope of exactly 45° (as many blocks up as across);</li><li><strong>vertically</strong>, to move items up or down;</li><li>between two <strong>vertical shafts</strong>, horizontally only, with the belt standing on its edge.</li></ol><p>It can be at most <strong>20 blocks</strong> long by default (less on a diagonal, since the actual distance is what counts).</p>"
+      },
+      {
+        "id": "objets",
+        "title": "Item speed and spacing",
+        "alt": "Horizontal mechanical belt moving between two shafts",
+        "html": "<p>Items move at the rotation speed divided by 24, in blocks per second: 0.67 blocks/s at 16 RPM, <strong>1.33 blocks/s at 32</strong>, 2.67 at 64 and almost 11 blocks/s at 256 RPM. They always keep <strong>one block of spacing</strong>, so a full belt carries at best one stack per block. For more throughput, put whole stacks on it (with a funnel or a Mechanical Arm) rather than single items.</p><p>At the end of the belt, items stop if nothing picks them up: place a funnel, a depot, a chest or another belt there.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<ul><li><strong>The belt won't place</strong>: the shafts are on different axes or not aligned, the diagonal isn't 45°, or the distance is too long.</li><li><strong>Block in the way</strong>: only air, replaceable blocks and shafts on the same axis are allowed between the two ends.</li><li><strong>Opposite rotation directions</strong>: if the two shafts already spin in opposite directions, placement fails.</li><li><strong>Items don't pass under a machine</strong>: a <a href=\"/en/wiki/mechanical-press\">Mechanical Press</a> holds them on purpose while it processes them.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Stress: AllBlocks.java, BELT, CStress.setNoImpact()",
+      "Placement: BeltConnectorItem.canConnect (same axis, no offset along the axis, a single pair of components equal in absolute value, no diagonal between vertical shafts, compatible rotation directions, free cells or shafts on the same axis); one item used per belt (shrink(1))",
+      "Length: CKinetics.maxBeltLength = 20 (minimum 5)",
+      "Speed: BeltBlockEntity.getBeltMovementSpeed = speed / 480 blocks per tick (× 20 ticks/s)",
+      "Spacing: BeltInventory (spacing = 1)",
+      "Dyeing: BeltBlock.useItemOn (dyes, water)",
+      "Recipe: data/create/recipe/crafting/kinetics/belt_connector.json"
+    ]
+  }
 }

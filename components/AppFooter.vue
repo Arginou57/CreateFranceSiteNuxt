@@ -3,16 +3,16 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-logo"><span class="footer-gear">&#9881;</span> Create France</div>
-        <p>Un serveur communautaire propulsé par la passion et les engrenages.</p>
+        <p>{{ t('footer.tagline') }}</p>
         <a
           href="https://topmoddedservers.com/serveur/create-france/vote"
           target="_blank"
           class="footer-badge"
-          title="Votez pour Create France sur TopModdedServers"
+          :title="t('footer.badgeTitle')"
         >
           <img
             src="https://topmoddedservers.com/badge/create-france.svg"
-            alt="Votez pour Create France sur TopModdedServers, le classement des serveurs Minecraft moddes"
+            :alt="t('footer.badgeAlt')"
             width="330"
             height="64"
             loading="lazy"
@@ -20,27 +20,30 @@
         </a>
       </div>
       <div class="footer-col">
-        <h4>Liens</h4>
-        <a href="/#serveur">Le Serveur</a>
-        <NuxtLink to="/wiki">Wiki Create</NuxtLink>
-        <a href="/#grades">Boutique</a>
+        <h4>{{ t('footer.links') }}</h4>
+        <a :href="`${home}#serveur`">{{ t('footer.server') }}</a>
+        <NuxtLink :to="localePath('/wiki')">{{ t('footer.wiki') }}</NuxtLink>
+        <a :href="`${home}#grades`">{{ t('footer.shop') }}</a>
         <a href="https://www.curseforge.com/minecraft/modpacks/serveur-create-france-communauty-friends-coop" target="_blank">CurseForge</a>
       </div>
       <div class="footer-col">
-        <h4>Communaute</h4>
+        <h4>{{ t('footer.community') }}</h4>
         <a href="https://discord.gg/JW7XQKPpVC" target="_blank">Discord</a>
-        <a href="https://topmoddedservers.com/serveur/create-france/vote" target="_blank">Voter</a>
-        <a href="https://topmoddedservers.com/serveurs/create" target="_blank">Classement serveurs Create</a>
+        <a href="https://topmoddedservers.com/serveur/create-france/vote" target="_blank">{{ t('footer.vote') }}</a>
+        <a href="https://topmoddedservers.com/serveurs/create" target="_blank">{{ t('footer.ranking') }}</a>
         <a href="https://www.liste-serveurs-minecraft.org/serveur-minecraft/serveur-create-france/" target="_blank">liste-serveurs.org</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; {{ currentYear }} Create France Serveur &mdash; Non affilié à Mojang AB</p>
+      <p>{{ t('footer.rights', { year: currentYear }) }}</p>
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
+const { t, locale } = useI18n()
+const localePath = useLocalePath()
+const home = computed(() => (locale.value === 'en' ? '/en' : '/'))
 const currentYear = new Date().getFullYear()
 </script>
 

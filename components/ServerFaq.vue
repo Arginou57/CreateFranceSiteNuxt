@@ -1,13 +1,7 @@
 <template>
   <section id="faq" class="faq-section">
-    <h2 class="section-title">Serveur Minecraft Create français</h2>
-    <p class="faq-intro">
-      Create France est un <strong>serveur Minecraft français moddé</strong> autour du mod <strong>Create</strong>
-      (Create 6, Minecraft 1.21.1 sous NeoForge). On y construit des usines automatisées, des réseaux de
-      <strong>trains</strong>, des machines de minage et des engins volants avec Create Aeronautics, seul ou en équipe,
-      sur une carte partagée avec toute la communauté.
-    </p>
-
+    <h2 class="section-title">{{ t('faq.title') }}</h2>
+    <p class="faq-intro" v-html="t('faq.intro')" />
     <div class="faq-list">
       <details v-for="(item, i) in faq" :key="item.q" class="faq-item" :open="i === 0">
         <summary>{{ item.q }}</summary>
@@ -18,42 +12,26 @@
 </template>
 
 <script setup lang="ts">
-// Same questions as the FAQPage structured data (useFaqSchema below), so what Google reads matches the page.
-const faq = [
-  {
-    q: 'Comment rejoindre le serveur Create France ?',
-    a: 'Le plus simple : télécharge le <a href="/launcher/CreateFrance-Launcher-Setup.exe">Create France Launcher</a>, connecte-toi avec ton compte Microsoft et clique sur Jouer. Il installe Java, Minecraft 1.21.1, NeoForge et tout le modpack, puis te connecte directement au serveur. Tu peux aussi installer le modpack Create France depuis CurseForge et rejoindre l\'IP <strong>play.createfrance.fr</strong>.',
-  },
-  {
-    q: 'Quelle est l\'IP du serveur ?',
-    a: 'L\'IP est <strong>play.createfrance.fr</strong>. Le serveur est en Minecraft Java 1.21.1 et demande le modpack Create France (installé automatiquement par le launcher).',
-  },
-  {
-    q: 'Quels mods sont sur le serveur ?',
-    a: 'Le cœur du serveur est le mod <strong>Create</strong> (version 6), avec ses extensions : Create Aeronautics pour les engins volants, Create Big Cannons, Railways Untold pour les trains, et de nombreux mods de décoration et de confort. La liste complète est dans le modpack sur CurseForge.',
-  },
-  {
-    q: 'Le serveur est-il gratuit ?',
-    a: 'Oui, jouer est gratuit. Il faut seulement un compte Minecraft Java Édition officiel. Les grades de la boutique servent à soutenir le serveur.',
-  },
-  {
-    q: 'Faut-il connaître le mod Create pour jouer ?',
-    a: 'Non. Le serveur est ouvert aux débutants : les Ponders du mod (touche W au-dessus d\'un bloc) montrent comment chaque machine fonctionne, et la communauté aide volontiers sur le <a href="https://discord.gg/JW7XQKPpVC" target="_blank" rel="noopener">Discord</a>.',
-  },
-]
+// Same questions as the FAQPage structured data below, so what Google reads matches the page (in the page language).
+const { t, tm, rt, locale } = useI18n()
+const faq = computed(() =>
+  (tm('faq.items') as unknown as { q: unknown; a: unknown }[]).map((f) => ({ q: rt(f.q as any), a: rt(f.a as any) })),
+)
 
 useHead({
   script: [{
+    key: 'ld-faq',
     type: 'application/ld+json',
-    innerHTML: JSON.stringify({
+    innerHTML: computed(() => JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
-      mainEntity: faq.map((f) => ({
+      inLanguage: locale.value === 'en' ? 'en' : 'fr-FR',
+      mainEntity: faq.value.map((f) => ({
         '@type': 'Question',
         name: f.q,
         acceptedAnswer: { '@type': 'Answer', text: f.a.replace(/<[^>]+>/g, '') },
       })),
-    }),
+    })),
   }],
 })
 </script>
@@ -61,7 +39,7 @@ useHead({
 <style scoped>
 .faq-section { position: relative; z-index: 2; padding: 4rem 2rem 5rem; max-width: 900px; margin: 0 auto; }
 .faq-intro { color: var(--text-secondary); line-height: 1.75; font-size: 0.98rem; margin: 0 auto 2rem; max-width: 760px; text-align: center; }
-.faq-intro strong { color: var(--terre-cuite-light); font-weight: 600; }
+.faq-intro :deep(strong) { color: var(--terre-cuite-light); font-weight: 600; }
 .faq-list { display: flex; flex-direction: column; gap: 0.7rem; }
 .faq-item {
   background: var(--glass); border: 1px solid var(--glass-border); border-radius: 12px;
