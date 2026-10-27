@@ -115,7 +115,8 @@
     "bras-mecanique",
     "ventilateur-enchasse",
     "deployeur",
-    "bec-verseur"
+    "bec-verseur",
+    "papier-de-verre"
   ],
   "sources": [
     "Contenu : DepotBehaviour (heldItem, une pile ; processingOutputBuffer de 8 emplacements)",

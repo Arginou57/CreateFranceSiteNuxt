@@ -96,7 +96,8 @@
     "meule",
     "ventilateur-enchasse",
     "tapis-roulant",
-    "roue-a-eau"
+    "roue-a-eau",
+    "pierres-et-blocs-de-deco"
   ],
   "sources": [
     "Stress : AllBlocks.java, CRUSHING_WHEEL, CStress.setImpact(8.0)",

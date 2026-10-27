@@ -1,0 +1,215 @@
+{
+  "slug": "main-extensible",
+  "name": "Main extensible",
+  "blockId": "create:extendo_grip",
+  "category": "outils",
+  "title": "Main extensible (extendo grip) — Create : guide",
+  "description": "La main extensible de Create : 3 blocs de portée en plus, 5 avec une dans chaque main, durabilité, air du réservoir dorsal et recette.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>main extensible</strong> est une pince au bout d'une longue perche articulée. Tenue dans une main, elle allonge ta portée pour poser, casser et frapper : <strong>3 blocs de plus</strong>, et même 5 avec une main extensible dans chaque main. L'outil parfait pour bâtir une façade, un pont ou une usine sans échafaudage.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Outils et équipement"
+    },
+    {
+      "label": "Portée",
+      "value": "+3 blocs pour poser et casser ; +5 avec une dans chaque main (les deux ne s’additionnent pas)"
+    },
+    {
+      "label": "Durabilité",
+      "value": "200 actions ; avec un réservoir dorsal, 1 unité d’air par action à la place"
+    },
+    {
+      "label": "Combat",
+      "value": "+2 de recul sur les coups portés"
+    },
+    {
+      "label": "Enchantements",
+      "value": "Ceux de durabilité (Solidité, Raccommodage)"
+    },
+    {
+      "label": "Fabrication",
+      "value": "Établi mécanique : lingot de laiton, mécanisme de précision, 6 bâtons, main de laiton"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "videos": [],
+  "sections": [
+    {
+      "id": "objet",
+      "title": "L’objet",
+      "image": "grip_hero_objet.webp",
+      "alt": "La main extensible vue de trois quarts",
+      "html": "<p>Une poignée, un mécanisme de précision, deux étages de croisillons en bois qui se déplient, et une main de laiton au bout. La recette passe par l'<a href=\"/wiki/etabli-mecanique\">établi mécanique</a> : un lingot de laiton en haut, le mécanisme de précision, deux rangées de trois bâtons, puis la main de laiton en bas.</p>"
+    },
+    {
+      "id": "profil",
+      "title": "Une ou deux mains",
+      "image": "grip_hero_profil.webp",
+      "alt": "La main extensible de profil",
+      "html": "<p>Une seule main extensible ajoute <strong>3 blocs</strong> à la distance d'interaction avec les blocs. En tenir une dans chaque main porte le bonus à <strong>5</strong> au lieu de 6 : les deux ne s'additionnent pas, mais la seconde fait gagner deux blocs de plus. Les créatures sont visées avec la même portée allongée : on peut frapper ou utiliser un mob plus loin que d'habitude.</p>"
+    },
+    {
+      "id": "pieces",
+      "title": "Les pièces",
+      "image": "grip_hero_pieces.webp",
+      "alt": "La main de laiton et le mécanisme de précision",
+      "html": "<p>La <strong>main de laiton</strong> se fabrique à l'établi avec du laiton et un alliage d'andésite ; c'est la même pièce que celle du <a href=\"/wiki/deployeur\">déployeur</a>. Le <a href=\"/wiki/papier-de-verre\">mécanisme de précision</a> demande un assemblage séquencé : c'est le vrai coût de la main extensible.</p>"
+    },
+    {
+      "id": "usure",
+      "title": "Usure et air",
+      "html": "<p>Chaque bloc posé, cassé ou chaque coup porté coûte 1 point de durabilité sur 200. Avec un <a href=\"/wiki/reservoir-dorsal\">réservoir dorsal</a> plein sur le dos, la main puise 1 unité d'air à la place : un réservoir de 900 unités couvre 900 actions, et la barre de l'objet montre l'air qui reste. Sur un gros chantier, c'est la combinaison à adopter.</p>"
+    },
+    {
+      "id": "chantier",
+      "title": "Sur un chantier",
+      "html": "<p>Pour une façade haute, reste sur le toit et pose les blocs jusqu'à 7 ou 8 blocs plus bas. Pour un pont, avance sans parapet provisoire. En usine, elle permet d'atteindre une machine coincée derrière une rangée de tapis sans tout démonter. Elle va très bien avec la <a href=\"/wiki/cle\">clé</a> dans l'autre main : on oriente les blocs de loin.</p>"
+    },
+    {
+      "id": "combat",
+      "title": "En combat",
+      "html": "<p>La main extensible donne +2 de recul aux coups portés : un mob repoussé loin ne revient pas tout de suite. Elle ne change pas les dégâts. Les deux mains occupées, il ne reste plus de place pour un bouclier : à garder pour le chantier plutôt que pour l'aventure.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur notre serveur",
+      "html": "<p>La portée allongée respecte les zones protégées comme le reste. La configuration du serveur peut rendre la main incassable (réglage maxExtendoGripActions à 0) : par défaut, elle s'use.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>La portée allongée ne traverse pas les murs : il faut toujours voir le bloc visé. Sans réservoir rempli, la main s'use vite sur un gros chantier ; un enchantement Solidité ou Raccommodage prolonge sa vie. Et deux mains extensibles donnent 5 blocs, pas 6 : la seconde vaut surtout pour son air partagé avec le réservoir.</p>"
+    },
+    {
+      "id": "comparaison",
+      "title": "Main extensible ou échafaudage ?",
+      "html": "<p>Pour une tour ou une façade, la main extensible évite de monter puis démonter des échafaudages. Pour un chantier très haut, les <a href=\"/wiki/pierres-et-blocs-de-deco\">échafaudages de Create</a> restent utiles : ils ne tombent pas et se grimpent. Les deux ensemble couvrent presque tout.</p>"
+    },
+    {
+      "id": "combo",
+      "title": "Avec le réservoir et le canon",
+      "html": "<p>La main extensible, le <a href=\"/wiki/canon-a-pomme-de-terre\">canon à pomme de terre</a> et le casque de plongée puisent tous dans le même réservoir dorsal. Sur une longue expédition, ils se partagent ses 900 unités : la main n'en prend qu'une par action, mais un canon qui tire beaucoup peut vider le réservoir avant le retour. Un enchantement Capacité sur le réservoir donne de la marge.</p>"
+    }
+  ],
+  "related": [
+    "reservoir-dorsal",
+    "canon-a-pomme-de-terre",
+    "etabli-mecanique",
+    "papier-de-verre",
+    "deployeur",
+    "cle"
+  ],
+  "sources": [
+    "Recette : mechanical_crafting/extendo_grip.json (L / R / SSS / SSS / H)",
+    "Portée : ExtendoGripItem (BLOCK_INTERACTION_RANGE +3, +5 à deux mains), ExtendoGripInteractionPacket",
+    "Durabilité 200, recul +2, air par action = max(airInBacktank / maxExtendoGripActions, 1) = 1 : ExtendoGripItem, CEquipment",
+    "Images : objets et blocs du jeu (modèles de Create) rendus seuls par notre moteur, joueur non dessiné"
+  ],
+  "en": {
+    "slugEn": "extendo-grip",
+    "name": "Extendo Grip",
+    "title": "Extendo Grip — Create mod guide",
+    "description": "The Create Extendo Grip: 3 extra blocks of reach, 5 with one in each hand, durability, Backtank air use and the mechanical crafting recipe.",
+    "intro": "The <strong>Extendo Grip</strong> is a claw on the end of a long folding arm. Held in one hand, it stretches your reach to place, break and hit: <strong>3 extra blocks</strong>, and even 5 with one grip in each hand. The perfect tool to build a wall, a bridge or a factory without scaffolding.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Tools and equipment"
+      },
+      {
+        "label": "Reach",
+        "value": "+3 blocks to place and break; +5 with one in each hand (the two do not stack)"
+      },
+      {
+        "label": "Durability",
+        "value": "200 actions; with a Backtank, 1 air per action instead"
+      },
+      {
+        "label": "Combat",
+        "value": "+2 knockback on your hits"
+      },
+      {
+        "label": "Enchantments",
+        "value": "Durability ones (Unbreaking, Mending)"
+      },
+      {
+        "label": "Crafting",
+        "value": "Mechanical Crafter: Brass Ingot, Precision Mechanism, 6 Sticks, Brass Hand"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "videos": [],
+    "sections": [
+      {
+        "id": "objet",
+        "title": "The item",
+        "alt": "The Extendo Grip seen from three quarters",
+        "html": "<p>A handle, a precision mechanism, two stages of wooden scissor arms that unfold, and a brass hand on the end. The recipe goes through a <a href=\"/en/wiki/mechanical-crafter\">Mechanical Crafter</a>: a brass ingot at the top, the precision mechanism, two rows of three sticks, then the brass hand at the bottom.</p>"
+      },
+      {
+        "id": "profil",
+        "title": "One hand or two",
+        "alt": "The Extendo Grip from the side",
+        "html": "<p>A single grip adds <strong>3 blocks</strong> to your block interaction range. Holding one in each hand raises the bonus to <strong>5</strong> rather than 6: the two do not stack, but the second one still buys two more blocks. Creatures are targeted with the same longer reach: you can hit or use a mob further away than usual.</p>"
+      },
+      {
+        "id": "pieces",
+        "title": "The parts",
+        "alt": "The Brass Hand and the Precision Mechanism",
+        "html": "<p>The <strong>Brass Hand</strong> is crafted from brass and andesite alloy; it is the same part as on the <a href=\"/en/wiki/deployer\">Deployer</a>. The <a href=\"/en/wiki/sand-paper\">Precision Mechanism</a> needs sequenced assembly: that is the real cost of the grip.</p>"
+      },
+      {
+        "id": "usure",
+        "title": "Wear and air",
+        "html": "<p>Every block placed or broken and every hit costs 1 durability out of 200. With a full <a href=\"/en/wiki/backtank\">Backtank</a> on your back, the grip draws 1 air instead: a 900-air tank covers 900 actions, and the item's bar shows the air left. On a big build, that is the combo to use.</p>"
+      },
+      {
+        "id": "chantier",
+        "title": "On a building site",
+        "html": "<p>For a tall wall, stay on the roof and place blocks 7 or 8 blocks down. For a bridge, walk out with no temporary railing. In a factory, it reaches a machine stuck behind a row of belts without taking it all apart. It pairs very well with the <a href=\"/en/wiki/wrench\">Wrench</a> in the other hand: you turn blocks from afar.</p>"
+      },
+      {
+        "id": "combat",
+        "title": "In combat",
+        "html": "<p>The Extendo Grip gives +2 knockback to your hits: a mob knocked far away does not come back at once. It does not change the damage. With both hands busy, there is no room for a shield: keep it for building rather than adventuring.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On our server",
+        "html": "<p>The longer reach follows protected areas like everything else. The server config can make the grip unbreakable (maxExtendoGripActions set to 0); by default it wears out.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>The longer reach does not go through walls: you still need to see the block you aim at. Without a filled tank, the grip wears out fast on a big build; Unbreaking or Mending makes it last longer. And two grips give 5 blocks, not 6: the second one adds two more blocks, nothing beyond that.</p>"
+      },
+      {
+        "id": "comparaison",
+        "title": "Extendo Grip or scaffolding?",
+        "html": "<p>For a tower or a wall, the Extendo Grip saves you from putting scaffolding up and taking it down. For a very tall build, <a href=\"/en/wiki/decorative-stones-and-blocks\">Create's scaffolding</a> still helps: it never falls and you can climb it. Used together, they cover almost every case.</p>"
+      },
+      {
+        "id": "combo",
+        "title": "With the Backtank and the cannon",
+        "html": "<p>The Extendo Grip, the <a href=\"/en/wiki/potato-cannon\">Potato Cannon</a> and the Diving Helmet all draw from the same Backtank. On a long trip they share its 900 air: the grip only takes one per action, but a cannon that fires a lot can empty the tank before you get home. A Capacity enchantment on the tank gives you some headroom.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: mechanical_crafting/extendo_grip.json (L / R / SSS / SSS / H)",
+      "Reach: ExtendoGripItem (BLOCK_INTERACTION_RANGE +3, +5 with two), ExtendoGripInteractionPacket",
+      "Durability 200, knockback +2, air per action = max(airInBacktank / maxExtendoGripActions, 1) = 1: ExtendoGripItem, CEquipment",
+      "Images: the game's items and blocks (Create's models) rendered on their own by our engine, player not drawn"
+    ]
+  }
+}

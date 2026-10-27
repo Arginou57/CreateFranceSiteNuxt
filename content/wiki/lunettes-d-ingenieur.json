@@ -1,0 +1,249 @@
+{
+  "slug": "lunettes-d-ingenieur",
+  "name": "Lunettes d'ingénieur",
+  "blockId": "create:goggles",
+  "category": "outils",
+  "title": "Lunettes d'ingénieur — Create : guide en français",
+  "description": "Les lunettes d'ingénieur de Create : voir le stress, la vitesse et le contenu des machines en les regardant. Recette, ce qu'elles affichent, astuces.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Les <strong>lunettes d'ingénieur</strong> sont la vision à rayons X de Create. Portées sur la tête, elles affichent une petite fiche dès que tu regardes une machine : le <strong>stress</strong> qu'elle consomme ou fournit, sa vitesse, le fluide d'un réservoir. Sans elles, impossible de savoir pourquoi une ligne s'arrête.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Outils et équipement"
+    },
+    {
+      "label": "Emplacement",
+      "value": "Tête (clic droit pour les mettre) ; aussi l’emplacement « tête » de Curios s’il est installé"
+    },
+    {
+      "label": "Affiche",
+      "value": "Stress consommé ou fourni (SU), réseau saturé, contenu des réservoirs, bassins, becs…"
+    },
+    {
+      "label": "Stress affiché",
+      "value": "Impact de base × vitesse actuelle en tr/min"
+    },
+    {
+      "label": "Autres casques",
+      "value": "Non : elles prennent la place du casque (sauf Curios)"
+    },
+    {
+      "label": "Pile",
+      "value": "1"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Ficelle",
+        null
+      ],
+      [
+        "Verre",
+        "Plaque d'or",
+        "Verre"
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 paire de lunettes d'ingénieur"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "objet",
+      "title": "L’objet",
+      "image": "goggles_hero_objet.webp",
+      "alt": "Les lunettes d'ingénieur vues de trois quarts",
+      "html": "<p>Une monture en cuir et en laiton, deux verres ronds : la recette demande une ficelle, deux blocs de verre et une plaque d'or. Elles se mettent comme un casque, d'un clic droit ou en les glissant dans l'emplacement de tête. Un distributeur peut aussi les poser sur la tête d'un joueur qui passe devant.</p>"
+    },
+    {
+      "id": "profil",
+      "title": "Ce qu’elles affichent",
+      "image": "goggles_hero_profil.webp",
+      "alt": "Les lunettes vues de profil",
+      "html": "<p>Regarde un bloc cinétique : une fiche apparaît à côté du viseur. Pour une machine, elle donne l'<strong>impact sur le stress</strong> à sa vitesse du moment, en SU. Pour une source (moteur, roue à eau, moulin), elle donne la <strong>capacité</strong> fournie. Pour un <a href=\"/wiki/reservoir-a-fluide\">réservoir</a>, un <a href=\"/wiki/bassin\">bassin</a>, un <a href=\"/wiki/bec-verseur\">bec verseur</a> ou un égouttoir, chaque fluide avec sa quantité sur la capacité en mB. Le <a href=\"/wiki/moteur-a-vapeur\">moteur à vapeur</a>, le sifflet, les jauges et le levier analogique ont aussi leur ligne.</p>"
+    },
+    {
+      "id": "face",
+      "title": "Lire la fiche",
+      "image": "goggles_hero_face.webp",
+      "alt": "Les lunettes vues de face",
+      "html": "<p>Le chiffre de stress suit une règle simple : impact de base du bloc multiplié par sa vitesse en tr/min. Une presse mécanique de 8 SU par tr/min coûte 256 SU à 32 tr/min, le double à 64. Quand la somme des machines dépasse la capacité des sources, tout le réseau s'arrête : c'est le <strong>réseau saturé</strong>, et la fiche le signale. Le <a href=\"/wiki/stressometre-compteur-de-vitesse\">stressomètre</a> montre la même chose en permanence, sur un cadran.</p>"
+    },
+    {
+      "id": "sans",
+      "title": "Sans les lunettes",
+      "html": "<p>Certaines informations s'affichent même sans lunettes, au survol : celles des entonnoirs, du port grenouille, du téléscripteur de stock, et le résumé de vitesse des blocs cinétiques. Les lunettes ajoutent le détail chiffré, celui qui sert à équilibrer une usine.</p>"
+    },
+    {
+      "id": "casque",
+      "title": "Lunettes ou casque ?",
+      "html": "<p>Dans Create seul, les lunettes prennent l'emplacement du casque : il faut choisir entre protection et informations. Si le serveur a le mod <strong>Curios</strong>, Create ajoute un emplacement de tête où les lunettes comptent comme portées, avec un vrai casque par-dessus.</p>"
+    },
+    {
+      "id": "usage",
+      "title": "Quand s’en servir",
+      "html": "<p>Avant de brancher une nouvelle machine, regarde la capacité de la source et l'impact total : tu sais tout de suite s'il reste de la marge. Quand une ligne ne tourne pas, les lunettes montrent si le réseau est saturé ou si la vitesse est trop basse pour la machine. Pour régler un contrôleur de vitesse, elles évitent les essais à l'aveugle.</p>"
+    },
+    {
+      "id": "reglages",
+      "title": "Réglages",
+      "html": "<p>La position de la fiche et ses couleurs se règlent dans la configuration client de Create, groupe « goggleOverlay ». Pratique si la fiche cache le viseur ou une autre interface.</p>"
+    },
+    {
+      "id": "exemple",
+      "title": "Un exemple chiffré",
+      "html": "<p>Une <a href=\"/wiki/roue-a-eau\">roue à eau</a> tourne à 8 tr/min et fournit 256 SU. Branche-lui une presse à 8 tr/min : elle consomme 8 × 8 = 64 SU, il reste de la marge. Monte la ligne à 32 tr/min avec des roues dentées : la presse coûte alors 256 SU à elle seule, mais la capacité de la roue ne change pas avec la vitesse de sortie. Les lunettes affichent chacun de ces chiffres dès que tu regardes les blocs.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur notre serveur",
+      "html": "<p>Les lunettes sont la meilleure aide pour poser une question sur le Discord : une capture de la fiche d'une machine qui cale dit tout de suite si le problème vient du stress, de la vitesse ou d'un réservoir vide. Garde-les sur la tête dès que tu travailles sur une usine.</p>"
+    }
+  ],
+  "related": [
+    "stressometre-compteur-de-vitesse",
+    "cle",
+    "reservoir-a-fluide",
+    "bassin",
+    "moteur-a-vapeur",
+    "roue-dentee"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/goggles.json (ficelle, 2 verres, plaque d'or)",
+    "Port : GogglesItem (Equipable, tête), isWearingGoggles, compat Curios (emplacement « head »)",
+    "Fiche : IHaveGoggleInformation, GoggleOverlayRenderer ; stress : KineticBlockEntity (impact × vitesse), GeneratingKineticBlockEntity (capacité)",
+    "Sans lunettes : IHaveHoveringInformation ; réglages : CClient (goggleOverlay)",
+    "Images : objets et blocs du jeu (modèles de Create) rendus seuls par notre moteur, joueur non dessiné"
+  ],
+  "en": {
+    "slugEn": "engineers-goggles",
+    "name": "Engineer's Goggles",
+    "title": "Engineer's Goggles — Create mod guide",
+    "description": "Create's Engineer's Goggles: see stress, speed and the contents of machines just by looking at them. Recipe, what they show, and tips.",
+    "intro": "<strong>Engineer's Goggles</strong> are Create's X-ray vision. Worn on your head, they show a small panel as soon as you look at a machine: the <strong>stress</strong> it uses or provides, its speed, the fluid in a tank. Without them, there is no way to tell why a line stopped.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Tools and equipment"
+      },
+      {
+        "label": "Slot",
+        "value": "Head (right-click to put them on); also the Curios « head » slot when Curios is installed"
+      },
+      {
+        "label": "Shows",
+        "value": "Stress used or provided (SU), overstressed network, contents of tanks, basins, spouts…"
+      },
+      {
+        "label": "Stress shown",
+        "value": "Base impact × current speed in RPM"
+      },
+      {
+        "label": "Other helmets",
+        "value": "No: they take the helmet slot (except with Curios)"
+      },
+      {
+        "label": "Stack",
+        "value": "1"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "String",
+          null
+        ],
+        [
+          "Glass",
+          "Golden Sheet",
+          "Glass"
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Engineer's Goggles"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "objet",
+        "title": "The item",
+        "alt": "Engineer's Goggles seen from three quarters",
+        "html": "<p>A leather and brass frame with two round lenses: the recipe takes a string, two glass blocks and a golden sheet. You wear them like a helmet, with a right-click or by dropping them in the head slot. A dispenser can also put them on a player standing in front of it.</p>"
+      },
+      {
+        "id": "profil",
+        "title": "What they show",
+        "alt": "The goggles seen from the side",
+        "html": "<p>Look at a kinetic block: a panel pops up next to the crosshair. For a machine it gives the <strong>stress impact</strong> at its current speed, in SU. For a source (motor, water wheel, windmill) it gives the <strong>capacity</strong> provided. For a <a href=\"/en/wiki/fluid-tank\">tank</a>, a <a href=\"/en/wiki/basin\">basin</a>, a <a href=\"/en/wiki/spout\">spout</a> or an item drain, each fluid with its amount over the capacity in mB. The <a href=\"/en/wiki/steam-engine\">steam engine</a>, the whistle, the gauges and the analog lever have their own line too.</p>"
+      },
+      {
+        "id": "face",
+        "title": "Reading the panel",
+        "alt": "The goggles seen from the front",
+        "html": "<p>The stress figure follows one simple rule: the block's base impact times its speed in RPM. A mechanical press at 8 SU per RPM costs 256 SU at 32 RPM, twice that at 64. When the machines add up to more than the sources can give, the whole network stops: it is <strong>overstressed</strong>, and the panel says so. The <a href=\"/en/wiki/stressometer-speedometer\">Stressometer</a> shows the same thing all the time, on a dial.</p>"
+      },
+      {
+        "id": "sans",
+        "title": "Without the goggles",
+        "html": "<p>Some information shows even without goggles, on hover: funnels, the Frogport, the Stock Ticker, and the speed summary of kinetic blocks. The goggles add the numbers, the part you need to balance a factory.</p>"
+      },
+      {
+        "id": "casque",
+        "title": "Goggles or helmet?",
+        "html": "<p>In plain Create the goggles take the helmet slot: you choose between armour and information. If the server runs <strong>Curios</strong>, Create adds a head slot where the goggles count as worn, with a real helmet on top.</p>"
+      },
+      {
+        "id": "usage",
+        "title": "When to use them",
+        "html": "<p>Before plugging in a new machine, look at the source's capacity and the total impact: you know at once whether there is room left. When a line will not turn, the goggles show whether the network is overstressed or the speed is too low for the machine. When setting a rotation speed controller, they save you blind guessing.</p>"
+      },
+      {
+        "id": "reglages",
+        "title": "Settings",
+        "html": "<p>The position and colours of the panel are set in Create's client config, under « goggleOverlay ». Handy when the panel covers the crosshair or another interface.</p>"
+      },
+      {
+        "id": "exemple",
+        "title": "A worked example",
+        "html": "<p>A <a href=\"/en/wiki/water-wheel\">water wheel</a> turns at 8 RPM and provides 256 SU. Hook a press to it at 8 RPM: it uses 8 × 8 = 64 SU, there is room to spare. Speed the line up to 32 RPM with cogwheels: the press now costs 256 SU on its own, but the wheel's capacity does not grow with the output speed. The goggles show each of these numbers as soon as you look at the blocks.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On our server",
+        "html": "<p>The goggles are the best help when you ask a question on our Discord: a screenshot of a stalled machine's panel shows at once whether the problem is stress, speed or an empty tank. Keep them on whenever you work on a factory.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/goggles.json (string, 2 glass, golden sheet)",
+      "Wearing: GogglesItem (Equipable, head), isWearingGoggles, Curios compat (« head » slot)",
+      "Panel: IHaveGoggleInformation, GoggleOverlayRenderer; stress: KineticBlockEntity (impact × speed), GeneratingKineticBlockEntity (capacity)",
+      "Without goggles: IHaveHoveringInformation; settings: CClient (goggleOverlay)",
+      "Images: the game's items and blocks (Create's models) rendered on their own by our engine, player not drawn"
+    ]
+  }
+}

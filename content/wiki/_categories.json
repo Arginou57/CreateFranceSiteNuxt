@@ -70,5 +70,23 @@
       "name": "Redstone",
       "description": "Control your machines: redstone links, counters, detectors, clocks and speed controllers."
     }
+  },
+  {
+    "id": "outils",
+    "name": "Outils et équipement",
+    "description": "La clé, les lunettes d'ingénieur, la main extensible, le canon à pomme de terre, le réservoir dorsal et l'équipement de plongée, le papier de verre, les filtres et le presse-papiers.",
+    "en": {
+      "name": "Tools and equipment",
+      "description": "The Wrench, Engineer's Goggles, Extendo Grip, Potato Cannon, Backtank and diving gear, Sand Paper, filters and the Clipboard."
+    }
+  },
+  {
+    "id": "deco",
+    "name": "Décoration",
+    "description": "Les pierres de Create et leurs variantes, les tuiles de cuivre, les verres encadrés, les échafaudages et les portes coulissantes.",
+    "en": {
+      "name": "Decoration",
+      "description": "Create's stones and their variants, copper tiles, framed glass, scaffolding and sliding doors."
+    }
   }
 ]

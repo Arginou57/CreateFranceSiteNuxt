@@ -1,0 +1,288 @@
+{
+  "slug": "portes-coulissantes",
+  "name": "Portes coulissantes et pliantes",
+  "blockId": "create:train_door",
+  "category": "deco",
+  "title": "Portes coulissantes et de train — Create : guide",
+  "description": "Les portes de Create : andésite, laiton, cuivre, train et verre encadré, coulissantes ou pliantes, doubles, à la redstone et sur les trains.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Create ajoute cinq <strong>portes</strong> qui ne pivotent pas comme une porte en bois : elles <strong>coulissent</strong> dans le mur ou se <strong>plient</strong> en accordéon. Elles s'ouvrent à la main ou à la redstone, se jumellent en portes doubles, et surtout, posées sur un train ou un ascenseur, elles s'ouvrent toutes seules à l'arrêt en gare.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Décoration"
+    },
+    {
+      "label": "Coulissantes",
+      "value": "Porte de laiton, porte de train, porte en verre encadré"
+    },
+    {
+      "label": "Pliantes",
+      "value": "Porte d’andésite, porte de cuivre (deux battants en accordéon)"
+    },
+    {
+      "label": "Ouverture",
+      "value": "À la main ou avec la redstone ; environ 7 ticks (0,35 s) pour s’ouvrir"
+    },
+    {
+      "label": "Course",
+      "value": "Le battant glisse de 13/16 de bloc vers la charnière, dans le mur voisin"
+    },
+    {
+      "label": "Fabrication",
+      "value": "Une porte en bois + le boîtier ou le verre assorti, sans forme"
+    },
+    {
+      "label": "Trains",
+      "value": "S’ouvrent à l’arrêt en gare, selon le réglage des portes de la station"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Porte de train (sans forme)",
+    "grid": [
+      [
+        "Porte en bois",
+        "Boitier de train",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 porte de train"
+  },
+  "videos": [
+    {
+      "id": "doors_types",
+      "name": "Les quatre portes à boîtier de Create",
+      "description": "Porte d'andésite, de laiton, de train et de cuivre dans un mur : elles s'ouvrent l'une après l'autre, les deux pliantes en accordéon, les deux coulissantes dans le mur, puis se referment.",
+      "duration": "PT12S"
+    },
+    {
+      "id": "doors_double",
+      "name": "Portes doubles et bouton",
+      "description": "Deux paires de portes, en train et en verre encadré. Un bouton en bois sur le mur voisin ouvre toute la paire, qui se referme quand le bouton se relâche.",
+      "duration": "PT10S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "fermees",
+      "title": "Cinq portes",
+      "image": "doors_types_fermees.webp",
+      "alt": "Portes d’andésite, de laiton, de train et de cuivre fermées",
+      "video": "doors_types",
+      "html": "<p>Chaque porte se fabrique sans forme avec n'importe quelle porte en bois et le matériau assorti : boîtier d'andésite, de laiton, de cuivre, de train, ou verre encadré. Elles ont deux blocs de haut comme une porte vanilla et s'utilisent au clic droit, sans outil.</p>"
+    },
+    {
+      "id": "ouvertes",
+      "title": "Glisser ou se plier",
+      "image": "doors_types_ouvertes.webp",
+      "alt": "Les mêmes portes ouvertes : deux glissent, deux se plient",
+      "html": "<p>Les portes de <strong>laiton</strong>, de <strong>train</strong> et en <strong>verre encadré</strong> glissent de côté, vers la charnière, de 13/16 de bloc : le battant rentre dans le mur voisin et il n'en dépasse qu'une fine tranche. Les portes d'<strong>andésite</strong> et de <strong>cuivre</strong> se plient en deux battants qui pivotent l'un sur l'autre. Dans les deux cas, le battant sort d'abord d'un trente-deuxième de bloc vers l'extérieur, puis accélère : le mouvement suit le carré du temps.</p>"
+    },
+    {
+      "id": "train",
+      "title": "Portes doubles",
+      "image": "doors_double_train.webp",
+      "alt": "Une porte double de train ouverte par un bouton",
+      "video": "doors_double",
+      "html": "<p>Deux portes identiques côte à côte, charnières opposées et tournées du même côté, forment une <strong>porte double</strong> : en ouvrir une ouvre l'autre. Un signal de redstone sur l'une des deux alimente la paire. Dans la boucle, le bouton en bois alimente le mur ; la porte qui le touche reçoit le signal, sa jumelle suit, et toutes deux se referment au bout des 30 ticks du bouton (20 pour un bouton en pierre).</p>"
+    },
+    {
+      "id": "verre",
+      "title": "Verre encadré",
+      "image": "doors_double_verre.webp",
+      "alt": "Une porte double en verre encadré",
+      "html": "<p>La <strong>porte en verre encadré</strong> laisse passer la lumière et la vue : idéale pour une vitrine ou un quai de gare. Elle a son pendant, la <strong>trappe en verre encadré</strong>, comme la <strong>trappe de train</strong> pour les portes de train ; ces deux trappes s'ouvrent comme des trappes vanilla.</p>"
+    },
+    {
+      "id": "trains",
+      "title": "Sur un train ou un ascenseur",
+      "html": "<p>Une porte posée sur un <a href=\"/wiki/assembler-un-train\">train</a> s'anime avec lui. Elle ne s'ouvre que quand le train est arrêté : en <a href=\"/wiki/station-de-train\">gare</a>, c'est la station qui décide, avec son réglage des portes (toutes, aucune, ou seulement celles d'un côté : nord, est, sud ou ouest). Sur une <a href=\"/wiki/poulie-d-ascenseur\">poulie d'ascenseur</a>, c'est le contact de l'étage d'arrivée. Quand une porte du train s'ouvre, une porte du quai en face, sur le même axe, s'ouvre avec elle.</p>"
+    },
+    {
+      "id": "astuces",
+      "title": "Astuces",
+      "html": "<p>Comme le battant rentre dans le bloc voisin, laisse un mur plein des deux côtés : contre le vide, la porte ouverte se voit sur le côté. Les villageois savent les ouvrir comme des portes en bois. Pour une porte de base, une <a href=\"/wiki/liaison-de-redstone\">liaison de redstone</a> sur le mur voisin l'ouvre à distance.</p>"
+    },
+    {
+      "id": "choisir",
+      "title": "Laquelle choisir",
+      "html": "<p>Pour un train, la <strong>porte de train</strong> va avec le boîtier de train des wagons. Pour une usine, la porte d'andésite ou de laiton reprend la couleur des machines. Pour une boutique ou un hall de gare, la porte en verre encadré laisse voir l'intérieur. Les portes pliantes prennent moins de place dans le mur : leurs battants restent dans l'ouverture.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Deux portes qui ne s'ouvrent pas ensemble n'ont pas les charnières opposées, ou ne regardent pas du même côté : repose l'une des deux. Sur un train, des portes qui restent fermées en gare viennent souvent du réglage de la station, mis sur « aucune » ou sur le mauvais côté.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "Commander à la redstone",
+      "html": "<p>Un levier, un bouton, une plaque de pression ou un récepteur de liaison posé contre la porte ou contre le bloc qui la touche l'ouvre tant qu'il y a du courant. Les plaques de pression sont sensibles à tout ce qui passe, joueurs, mobs et objets : pratique pour une porte d'usine automatique.</p>"
+    }
+  ],
+  "related": [
+    "station-de-train",
+    "assembler-un-train",
+    "poulie-d-ascenseur",
+    "liaison-de-redstone",
+    "pierres-et-blocs-de-deco",
+    "contact-de-redstone"
+  ],
+  "sources": [
+    "Recettes : crafting/kinetics/andesite_door.json, brass_door.json, copper_door.json, train_door.json, framed_glass_door.json (porte en bois + boîtier ou verre)",
+    "Types : AllBlocks (SlidingDoorBlock.stone / metal / glass, folds = true pour andésite et cuivre)",
+    "Animation : SlidingDoorBlockEntity (chase 0,15 par tick), SlidingDoorRenderer (glissement v² × 13/16 + 1/32 vers l’extérieur ; battants pliants 91° et −181° × v²)",
+    "Portes doubles et redstone : SlidingDoorBlock.isDoorPowered ; bouton en bois 30 ticks, en pierre 20 (BlockSetType)",
+    "Trains et ascenseurs : SlidingDoorMovementBehaviour, DoorControl (ALL, NORTH, EAST, SOUTH, WEST, NONE), DoorControlBehaviour",
+    "Scène écrite pour ce wiki (Create n'a pas de scène Ponder sur ce sujet) : make_wiki_serie7.py, rendue par notre moteur ; vitesses recalculées par WIKI/redstone_sim.py (propagation de la rotation du code de Create) (ouverture des portes jouée par la scène ; animation d’après SlidingDoorRenderer)"
+  ],
+  "en": {
+    "slugEn": "sliding-doors",
+    "name": "Sliding and folding doors",
+    "title": "Sliding and train doors — Create mod guide",
+    "description": "Create's doors: andesite, brass, copper, train and framed glass, sliding or folding, double doors, redstone control and doors on trains.",
+    "intro": "Create adds five <strong>doors</strong> that do not swing like a wooden door: they <strong>slide</strong> into the wall or <strong>fold</strong> like an accordion. They open by hand or with redstone, pair up into double doors, and above all, placed on a train or a lift, they open on their own when it stops at a station.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Decoration"
+      },
+      {
+        "label": "Sliding",
+        "value": "Brass Door, Train Door, Framed Glass Door"
+      },
+      {
+        "label": "Folding",
+        "value": "Andesite Door, Copper Door (two leaves folding like an accordion)"
+      },
+      {
+        "label": "Opening",
+        "value": "By hand or with a redstone signal; about 7 ticks (0.35 s) to open"
+      },
+      {
+        "label": "Travel",
+        "value": "The leaf slides 13/16 of a block toward the hinge, into the next wall"
+      },
+      {
+        "label": "Crafting",
+        "value": "One wooden door + the matching casing or glass, shapeless"
+      },
+      {
+        "label": "Trains",
+        "value": "Open when stopped at a station, following the station door setting"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Train Door (shapeless)",
+      "grid": [
+        [
+          "Wooden Door",
+          "Train Casing",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Train Door"
+    },
+    "videos": [
+      {
+        "id": "doors_types",
+        "name": "Create's four casing doors",
+        "description": "Andesite, brass, train and copper doors in a wall: they open one after the other, the two folding ones like an accordion, the two sliding ones into the wall, then close again."
+      },
+      {
+        "id": "doors_double",
+        "name": "Double doors and a button",
+        "description": "Two pairs of doors, train and framed glass. A wooden button on the next wall opens the whole pair, which closes again when the button pops back out."
+      }
+    ],
+    "sections": [
+      {
+        "id": "fermees",
+        "title": "Five doors",
+        "alt": "Andesite, brass, train and copper doors, closed",
+        "html": "<p>Each door is shapeless: any wooden door plus the matching material, andesite, brass, copper or train casing, or framed glass. They are two blocks tall like a vanilla door and work with a right-click, no tool needed.</p>"
+      },
+      {
+        "id": "ouvertes",
+        "title": "Sliding or folding",
+        "alt": "The same doors open: two slide, two fold",
+        "html": "<p>The <strong>brass</strong>, <strong>train</strong> and <strong>framed glass</strong> doors slide sideways, toward the hinge, by 13/16 of a block: the leaf goes into the next wall and only a thin edge sticks out. The <strong>andesite</strong> and <strong>copper</strong> doors fold into two leaves that turn over each other. Either way, the leaf first pops out by a thirty-second of a block, then speeds up: the motion follows the square of time.</p>"
+      },
+      {
+        "id": "train",
+        "title": "Double doors",
+        "alt": "A train double door opened by a button",
+        "html": "<p>Two identical doors side by side, with opposite hinges and facing the same way, make a <strong>double door</strong>: opening one opens the other. A redstone signal on either one powers the pair. In the loop, the wooden button powers the wall; the door touching it gets the signal, its twin follows, and both close after the button's 30 ticks (20 for a stone button).</p>"
+      },
+      {
+        "id": "verre",
+        "title": "Framed glass",
+        "alt": "A framed glass double door",
+        "html": "<p>The <strong>Framed Glass Door</strong> lets light and the view through: ideal for a shop window or a station platform. It has a matching <strong>Framed Glass Trapdoor</strong>, just as the <strong>Train Trapdoor</strong> goes with the train doors; both trapdoors open like vanilla trapdoors.</p>"
+      },
+      {
+        "id": "trains",
+        "title": "On a train or a lift",
+        "html": "<p>A door placed on a <a href=\"/en/wiki/train-assembly\">train</a> moves with it. It only opens once the train has stopped: at a <a href=\"/en/wiki/train-station\">station</a>, the station decides with its door setting (all, none, or only the doors on one side: north, east, south or west). On an <a href=\"/en/wiki/elevator-pulley\">elevator pulley</a>, the contact of the arrival floor decides. When a train door opens, a platform door facing it on the same axis opens too.</p>"
+      },
+      {
+        "id": "astuces",
+        "title": "Tips",
+        "html": "<p>Since the leaf slides into the next block, keep a solid wall on both sides: against empty space, the open door shows from the side. Villagers can open them like wooden doors. For a base door, a <a href=\"/en/wiki/redstone-link\">Redstone Link</a> on the next wall opens it from afar.</p>"
+      },
+      {
+        "id": "choisir",
+        "title": "Which one to pick",
+        "html": "<p>For a train, the <strong>Train Door</strong> matches the carriages' train casing. For a factory, the andesite or brass door matches the machines. For a shop or a station hall, the framed glass door shows what is inside. Folding doors need less room in the wall: their leaves stay inside the opening.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>Two doors that do not open together either have the same hinge side or do not face the same way: place one of them again. On a train, doors that stay shut at a station usually come from the station setting, left on « none » or on the wrong side.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "Redstone control",
+        "html": "<p>A lever, a button, a pressure plate or a link receiver against the door, or against the block touching it, keeps it open as long as there is power. Pressure plates react to anything passing over them, players, mobs and items: handy for an automatic factory door.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: crafting/kinetics/andesite_door.json, brass_door.json, copper_door.json, train_door.json, framed_glass_door.json (wooden door + casing or glass)",
+      "Types: AllBlocks (SlidingDoorBlock.stone / metal / glass, folds = true for andesite and copper)",
+      "Animation: SlidingDoorBlockEntity (chase 0.15 per tick), SlidingDoorRenderer (slide v² × 13/16 + 1/32 outward; folding leaves 91° and −181° × v²)",
+      "Double doors and redstone: SlidingDoorBlock.isDoorPowered; wooden button 30 ticks, stone 20 (BlockSetType)",
+      "Trains and lifts: SlidingDoorMovementBehaviour, DoorControl (ALL, NORTH, EAST, SOUTH, WEST, NONE), DoorControlBehaviour",
+      "Scene written for this wiki (Create has no Ponder scene on this topic): make_wiki_serie7.py, rendered by our engine; speeds recomputed by WIKI/redstone_sim.py (rotation propagation from Create's code) (door openings played by the scene; animation from SlidingDoorRenderer)"
+    ]
+  }
+}

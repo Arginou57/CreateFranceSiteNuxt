@@ -157,7 +157,8 @@
     "depot",
     "entonnoir",
     "deployeur",
-    "bruleur-a-blaze"
+    "bruleur-a-blaze",
+    "filtres"
   ],
   "sources": [
     "Stress : AllBlocks.java, MECHANICAL_ARM, CStress.setImpact(2.0)",

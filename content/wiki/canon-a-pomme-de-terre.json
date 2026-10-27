@@ -1,0 +1,198 @@
+{
+  "slug": "canon-a-pomme-de-terre",
+  "name": "Canon à pomme de terre",
+  "blockId": "create:potato_cannon",
+  "category": "outils",
+  "title": "Canon à pomme de terre — Create : guide et munitions",
+  "description": "Le canon à pomme de terre de Create : munitions, dégâts et recharge de chaque légume, air du réservoir dorsal, enchantements et recette.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>canon à pomme de terre</strong> est l'arme à air comprimé de Create. Il tire ce que tu mets dans l'inventaire : pommes de terre, carottes, baies, gâteaux, et même des pastèques entières. Chaque munition a ses dégâts, sa vitesse et son effet. Avec un <a href=\"/wiki/reservoir-dorsal\">réservoir dorsal</a> sur le dos, il ne s'use plus : c'est l'air qui paie chaque tir.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Outils et équipement"
+    },
+    {
+      "label": "Durabilité",
+      "value": "100 tirs ; avec un réservoir dorsal, 4 unités d’air par tir à la place"
+    },
+    {
+      "label": "Munitions",
+      "value": "Plus de 20 aliments, chacun avec ses dégâts, sa recharge et son effet"
+    },
+    {
+      "label": "Plus fort",
+      "value": "Cake pour Blaze : 15 dégâts ; carotte dorée : 12"
+    },
+    {
+      "label": "Enchantements",
+      "value": "Ceux de l’arc, Butin, et Récupération de pomme de terre (I à III)"
+    },
+    {
+      "label": "Fabrication",
+      "value": "Établi mécanique : alliage d’andésite, mécanisme de précision, 3 tuyaux à fluide, 2 lingots de cuivre"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "videos": [],
+  "sections": [
+    {
+      "id": "objet",
+      "title": "L’objet",
+      "image": "cannon_hero_objet.webp",
+      "alt": "Le canon à pomme de terre vu de trois quarts",
+      "html": "<p>Un long tube en cuivre, un mécanisme de précision au centre et une crosse en andésite. Il se fabrique à l'<a href=\"/wiki/etabli-mecanique\">établi mécanique</a>, la recette ne tenant pas dans un établi normal : alliage d'andésite et mécanisme de précision sur une ligne, suivis de trois tuyaux à fluide, avec deux lingots de cuivre en dessous.</p>"
+    },
+    {
+      "id": "munitions",
+      "title": "Les munitions",
+      "image": "cannon_hero_munitions.webp",
+      "alt": "Le canon et quelques munitions posées devant",
+      "html": "<p>Garde le clic droit : le canon prend la première munition valable de ton inventaire. Chaque projectile part à deux blocs par tick multipliés par son facteur de vitesse, puis retombe doucement. Voici les plus utiles :</p><ul><li><strong>Pomme de terre</strong> : 5 dégâts, recul 1,5, 15 ticks de recharge ; plantée si elle tombe sur de la terre labourée.</li><li><strong>Carotte</strong> : 4 dégâts, plus rapide (×1,45), 12 ticks ; plantée elle aussi.</li><li><strong>Carotte dorée</strong> : 12 dégâts, la plus forte des munitions simples.</li><li><strong>Baies sucrées</strong> : 3 dégâts, tir en gerbe de 3 projectiles.</li><li><strong>Pomme au miel</strong> : 6 dégâts et lenteur II pendant 8 s.</li><li><strong>Cake pour Blaze</strong> : 15 dégâts, met le feu 12 s, collant.</li><li><strong>Fruit de chorus</strong> : 3 dégâts et téléporte la cible dans un rayon de 10 blocs.</li><li><strong>Pastèque</strong> ou <strong>citrouille</strong> entières : gros recul (2), le bloc est posé là où il tombe.</li><li><strong>Pomme d'or</strong> : 1 dégât, mais soigne un zombie villageois.</li></ul>"
+    },
+    {
+      "id": "profil",
+      "title": "L’air et l’usure",
+      "image": "cannon_hero_profil.webp",
+      "alt": "Le canon de profil",
+      "html": "<p>Sans réservoir, chaque tir retire 1 point de durabilité sur 100. Avec un réservoir dorsal porté et rempli, le canon puise <strong>4 unités d'air</strong> par tir : un réservoir plein de 900 unités tire 225 fois, et la barre de l'objet affiche alors l'air restant au lieu de l'usure. Une vraie réserve pour un raid ou une défense de base.</p>"
+    },
+    {
+      "id": "enchant",
+      "title": "Enchantements",
+      "html": "<p>Le canon accepte les enchantements de l'arc à la table d'enchantement, et <strong>Butin</strong> pour les mobs. Il a aussi le sien, <strong>Récupération de pomme de terre</strong>, jusqu'au niveau III : chaque projectile a 25, 37,5 puis 50 % de chances de redevenir un objet ramassable. Infinité est refusée. Attention : dans le code de cette version, seule Récupération est transmise au projectile ; Puissance et Frappe s'affichent dans la fiche de l'objet sans changer le tir.</p>"
+    },
+    {
+      "id": "recharge",
+      "title": "Recharge et cadence",
+      "html": "<p>La recharge dépend de la munition : 5 ticks pour la betterave, 15 pour la pomme de terre, 100 pour les pommes d'or. Quand la recharge est très courte, la cible garde un temps d'invulnérabilité plus long : spammer la betterave ne multiplie pas les dégâts. Les gerbes (baies) n'envoient qu'un projectile récupérable.</p>"
+    },
+    {
+      "id": "usages",
+      "title": "Au-delà du combat",
+      "html": "<p>Une pomme de terre ou une carotte qui touche de la terre labourée y reste plantée : on peut semer un champ de loin. Une pastèque ou une citrouille entière se pose en bloc là où elle tombe. Le fruit de chorus téléporte la cible, utile pour éloigner un mob gênant. Et la pomme d'or soigne un zombie villageois à distance.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur notre serveur",
+      "html": "<p>Les tirs restent soumis aux règles PvP et aux zones protégées. Un réservoir dorsal rempli au moteur avant de partir, une pile de carottes dorées, et le canon devient l'arme de poing la plus économique du jeu.</p>"
+    },
+    {
+      "id": "choisir",
+      "title": "Quelle munition choisir",
+      "html": "<p>Pour le quotidien, la pomme de terre cuite : 5 dégâts et la cible prend feu. Contre un groupe, les baies sucrées et leur gerbe. Pour un gros coup, la carotte dorée ou le cake pour blaze.</p>"
+    }
+  ],
+  "related": [
+    "reservoir-dorsal",
+    "main-extensible",
+    "etabli-mecanique",
+    "papier-de-verre",
+    "cle"
+  ],
+  "sources": [
+    "Recette : mechanical_crafting/potato_cannon.json (LRSSS / CC)",
+    "Durabilité 100, air par tir = airInBacktank / maxPotatoCannonShots = 900 / 200 : PotatoCannonItem, CEquipment",
+    "Munitions : data/create/create/potato_projectile/type/*.json (dégâts, recharge, recul, vitesse, gerbe, collant) ; vitesse 2 × facteur, gravité 0,05 par tick, frein 0,99 : PotatoProjectileEntity, PotatoCannonProjectileType",
+    "Effets : AllPotatoProjectileEntityHitActions, AllPotatoProjectileBlockHitActions",
+    "Enchantements : tags enchantable/bow, enchantment/potato_recovery.json (0,125 + 0,125 × niveau)",
+    "Images : objets et blocs du jeu (modèles de Create) rendus seuls par notre moteur, joueur non dessiné"
+  ],
+  "en": {
+    "slugEn": "potato-cannon",
+    "name": "Potato Cannon",
+    "title": "Potato Cannon — Create mod guide and ammo",
+    "description": "The Create Potato Cannon: ammo, damage and reload of every vegetable, Backtank air, enchantments and the mechanical crafting recipe.",
+    "intro": "The <strong>Potato Cannon</strong> is Create's compressed-air weapon. It fires whatever you carry: potatoes, carrots, berries, cakes, even whole melons. Each kind of ammo has its own damage, speed and effect. With a <a href=\"/en/wiki/backtank\">Backtank</a> on your back it stops wearing out: the air pays for every shot.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Tools and equipment"
+      },
+      {
+        "label": "Durability",
+        "value": "100 shots; with a Backtank, 4 air per shot instead"
+      },
+      {
+        "label": "Ammo",
+        "value": "Over 20 foods, each with its own damage, reload and effect"
+      },
+      {
+        "label": "Strongest",
+        "value": "Blaze Cake: 15 damage; Golden Carrot: 12"
+      },
+      {
+        "label": "Enchantments",
+        "value": "Bow enchantments, Looting, and Potato Recovery (I to III)"
+      },
+      {
+        "label": "Crafting",
+        "value": "Mechanical Crafter: Andesite Alloy, Precision Mechanism, 3 Fluid Pipes, 2 Copper Ingots"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "videos": [],
+    "sections": [
+      {
+        "id": "objet",
+        "title": "The item",
+        "alt": "The Potato Cannon seen from three quarters",
+        "html": "<p>A long copper barrel, a precision mechanism in the middle and an andesite stock. It is made in a <a href=\"/en/wiki/mechanical-crafter\">Mechanical Crafter</a>, since the recipe does not fit a normal crafting table: andesite alloy and a precision mechanism on one row, then three fluid pipes, with two copper ingots below.</p>"
+      },
+      {
+        "id": "munitions",
+        "title": "Ammo",
+        "alt": "The cannon with some ammo laid in front",
+        "html": "<p>Hold right-click: the cannon takes the first valid ammo in your inventory. Each projectile leaves at two blocks per tick times its speed factor, then slowly drops. The most useful ones:</p><ul><li><strong>Potato</strong>: 5 damage, knockback 1.5, 15-tick reload; planted if it lands on farmland.</li><li><strong>Carrot</strong>: 4 damage, faster (×1.45), 12 ticks; planted too.</li><li><strong>Golden Carrot</strong>: 12 damage, the strongest plain ammo.</li><li><strong>Sweet Berries</strong>: 3 damage, fired as a spread of 3.</li><li><strong>Honeyed Apple</strong>: 6 damage and Slowness II for 8 s.</li><li><strong>Blaze Cake</strong>: 15 damage, sets the target on fire for 12 s, sticky.</li><li><strong>Chorus Fruit</strong>: 3 damage and teleports the target within 10 blocks.</li><li>Whole <strong>Melon</strong> or <strong>Pumpkin</strong>: big knockback (2), the block is placed where it lands.</li><li><strong>Golden Apple</strong>: 1 damage, but cures a zombie villager.</li></ul>"
+      },
+      {
+        "id": "profil",
+        "title": "Air and wear",
+        "alt": "The cannon from the side",
+        "html": "<p>Without a tank, each shot takes 1 durability out of 100. With a filled Backtank worn, the cannon draws <strong>4 air</strong> per shot: a full tank of 900 air fires 225 times, and the item's bar then shows the air left instead of wear. A real reserve for a raid or a base defence.</p>"
+      },
+      {
+        "id": "enchant",
+        "title": "Enchantments",
+        "html": "<p>The cannon takes bow enchantments at the enchanting table, plus <strong>Looting</strong> for mobs. It also has its own, <strong>Potato Recovery</strong>, up to level III: each projectile has a 25, 37.5 then 50% chance to turn back into an item you can pick up. Infinity is refused. Note: in this version's code, only Potato Recovery is passed on to the projectile; Power and Punch show in the item's tooltip without changing the shot.</p>"
+      },
+      {
+        "id": "recharge",
+        "title": "Reload and fire rate",
+        "html": "<p>Reload depends on the ammo: 5 ticks for beetroot, 15 for a potato, 100 for golden apples. When the reload is very short, the target keeps a longer invulnerability window: spamming beetroot does not multiply the damage. Spreads (berries) only send one projectile that can be recovered.</p>"
+      },
+      {
+        "id": "usages",
+        "title": "Beyond combat",
+        "html": "<p>A potato or a carrot that hits farmland stays there, planted: you can sow a field from afar. A whole melon or pumpkin is placed as a block where it lands. Chorus fruit teleports the target, handy to send a pesky mob away. And a golden apple cures a zombie villager from a distance.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On our server",
+        "html": "<p>Shots still follow the PvP rules and protected areas. A Backtank filled at a motor before you leave, a stack of golden carrots, and the cannon becomes the cheapest sidearm in the game.</p>"
+      },
+      {
+        "id": "choisir",
+        "title": "Which ammo to pick",
+        "html": "<p>For everyday use, the baked potato: 5 damage and the target catches fire. Against a group, sweet berries and their spread. For one big hit, the golden carrot or the blaze cake, if you can spare them.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: mechanical_crafting/potato_cannon.json (LRSSS / CC)",
+      "Durability 100, air per shot = airInBacktank / maxPotatoCannonShots = 900 / 200: PotatoCannonItem, CEquipment",
+      "Ammo: data/create/create/potato_projectile/type/*.json (damage, reload, knockback, speed, split, sticky); speed 2 × factor, gravity 0.05 per tick, drag 0.99: PotatoProjectileEntity, PotatoCannonProjectileType",
+      "Effects: AllPotatoProjectileEntityHitActions, AllPotatoProjectileBlockHitActions",
+      "Enchantments: enchantable/bow tags, enchantment/potato_recovery.json (0.125 + 0.125 × level)",
+      "Images: the game's items and blocks (Create's models) rendered on their own by our engine, player not drawn"
+    ]
+  }
+}

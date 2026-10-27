@@ -124,7 +124,8 @@
     "coffre-a-objet-renforce",
     "observateur-de-train",
     "liaison-de-redstone",
-    "horloges-et-impulsions"
+    "horloges-et-impulsions",
+    "filtres"
   ],
   "sources": [
     "Détection : SmartObserverBlockEntity.tick (bloc filtré, TransportedItemStackHandlerBehaviour au centre 0,45, FluidTransportBehaviour, ChainConveyorBlockEntity.getLoopingPackages, inventaire, réservoir)",

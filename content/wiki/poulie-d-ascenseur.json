@@ -210,7 +210,8 @@
     "liaison-d-affichage",
     "piston-mecanique",
     "liaison-de-redstone",
-    "contact-de-redstone"
+    "contact-de-redstone",
+    "portes-coulissantes"
   ],
   "sources": [
     "Recette : crafting/kinetics/elevator_pulley.json",

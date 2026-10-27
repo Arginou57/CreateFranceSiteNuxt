@@ -174,7 +174,8 @@
     "bec-verseur",
     "egouttoir-a-objets",
     "detecteur-de-seuil",
-    "observateur-de-train"
+    "observateur-de-train",
+    "lunettes-d-ingenieur"
   ],
   "sources": [
     "Recette : crafting/kinetics/fluid_tank.json",

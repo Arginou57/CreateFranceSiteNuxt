@@ -1,0 +1,286 @@
+{
+  "slug": "papier-de-verre",
+  "name": "Papier de verre, quartz rose poli et mécanisme de précision",
+  "blockId": "create:sand_paper",
+  "category": "outils",
+  "title": "Papier de verre et polissage — Create : guide",
+  "description": "Le papier de verre de Create : polir le quartz rose à la main ou au déployeur, puis fabriquer tubes électroniques et mécanismes de précision.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>papier de verre</strong> sert à <strong>polir</strong>. Dans Create, une seule recette en dépend, mais elle est capitale : le <strong>quartz rose poli</strong>, qui donne le tube électronique, et toute la chaîne qui mène au <strong>mécanisme de précision</strong>. On polit à la main pour démarrer, puis un <a href=\"/wiki/deployeur\">déployeur</a> tient la feuille et le fait tout seul.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Outils et équipement"
+    },
+    {
+      "label": "Durabilité",
+      "value": "8 utilisations (papier de verre et papier de verre rouge)"
+    },
+    {
+      "label": "À la main",
+      "value": "Garder le clic droit 32 ticks (1,6 s) par objet poli"
+    },
+    {
+      "label": "Recette de polissage",
+      "value": "Quartz rose → quartz rose poli"
+    },
+    {
+      "label": "Au déployeur",
+      "value": "Polit les objets posés sur un dépôt ou un tapis en dessous"
+    },
+    {
+      "label": "Bonus",
+      "value": "Gratte l’oxydation ou la cire d’un bloc de cuivre"
+    },
+    {
+      "label": "Mécanisme de précision",
+      "value": "Plaque d’or, 5 tours de 3 déploiements, 80 % de réussite"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Papier de verre (sans forme)",
+    "grid": [
+      [
+        "Papier",
+        "Sable",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 papier de verre"
+  },
+  "videos": [
+    {
+      "id": "sandpaper_deployer",
+      "name": "Papier de verre : polir au déployeur",
+      "description": "Un déployeur reçoit une feuille de papier de verre ; un quartz rose est posé sur le dépôt en dessous, la main descend et remonte : le quartz est poli.",
+      "duration": "PT14S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "deployeur",
+      "title": "Donner le papier à un déployeur",
+      "image": "sandpaper_deployer_deployeur.webp",
+      "alt": "Le déployeur tient la feuille de papier de verre",
+      "video": "sandpaper_deployer",
+      "html": "<p>Un clic droit sur le <a href=\"/wiki/deployeur\">déployeur</a> avec le papier de verre en main le lui confie : sa main passe en position « tenir ». Dans la boucle, la feuille est à peine visible entre les doigts, comme dans le jeu. Le déployeur doit être en mode utilisation et tourner, ici à 32 tr/min.</p>"
+    },
+    {
+      "id": "poli",
+      "title": "Polir sur le dépôt",
+      "image": "sandpaper_deployer_poli.webp",
+      "alt": "Le quartz rose poli sur le dépôt",
+      "html": "<p>Pose le quartz rose sur un <a href=\"/wiki/depot\">dépôt</a> ou un <a href=\"/wiki/tapis-roulant\">tapis</a> sous la main. Le déployeur descend, frotte, remonte : le quartz rose devient <strong>quartz rose poli</strong>. Chaque passage use le papier d'un point ; un entonnoir ou un bras mécanique peut le lui rendre neuf. Sur un tapis, les objets s'arrêtent un par un sous la main.</p>"
+    },
+    {
+      "id": "chaine",
+      "title": "La chaîne de fabrication",
+      "image": "polish_chain_chaine.webp",
+      "alt": "Papier de verre, quartz rose, quartz poli, tube électronique et mécanismes",
+      "html": "<p>Le <strong>quartz rose</strong> se fabrique sans forme : un quartz du Nether et huit poudres de redstone. Une fois poli, il donne avec une plaque de fer un <strong>tube électronique</strong>, qu'on retrouve dans la liaison de redstone, l'observateur intelligent ou le bras mécanique. La plaque d'or, elle, sert de base au mécanisme de précision.</p>"
+    },
+    {
+      "id": "objets",
+      "title": "Le mécanisme de précision",
+      "image": "polish_chain_objets.webp",
+      "alt": "Mécanisme de précision incomplet et mécanisme terminé",
+      "html": "<p>C'est un <strong>assemblage séquencé</strong> : une plaque d'or passe cinq fois sous trois déployeurs qui posent une roue dentée, une grande roue dentée, puis une pépite de fer. Entre deux tours, l'objet s'appelle mécanisme de précision incomplet. À la fin, 80 % des objets sortent en mécanismes ; les autres redonnent une plaque d'or, un alliage d'andésite, une roue dentée, une pépite d'or, un rotor ou, plus rarement, un lingot de fer ou une horloge.</p>"
+    },
+    {
+      "id": "main",
+      "title": "Polir à la main",
+      "html": "<p>Tiens le papier de verre dans une main et l'objet à polir dans l'autre, puis garde le clic droit : au bout de 32 ticks, l'objet est poli. Ça marche aussi sur un objet posé par terre, à moins d'un bloc de l'endroit visé et à moins de trois blocs de toi. Huit objets par feuille : assez pour les premiers tubes, pas pour une usine.</p>"
+    },
+    {
+      "id": "rouge",
+      "title": "Papier de verre rouge",
+      "html": "<p>Le <strong>papier de verre rouge</strong> se fait avec du sable rouge au lieu du sable ordinaire. Il fait exactement la même chose : même durée, mêmes recettes. Prends celui dont tu as le sable.</p>"
+    },
+    {
+      "id": "cuivre",
+      "title": "Gratter le cuivre",
+      "html": "<p>Un clic droit sur un bloc de cuivre oxydé retire une couche de vert-de-gris, comme une hache ; sur un bloc ciré, il enlève la cire. Une durabilité par usage. Pratique pour les <a href=\"/wiki/pierres-et-blocs-de-deco\">tuiles et bardeaux de cuivre</a> de Create.</p>"
+    },
+    {
+      "id": "usine",
+      "title": "Automatiser",
+      "html": "<p>Un tapis, un déployeur avec du papier, un entonnoir qui recharge la feuille : voilà un poste de polissage qui tourne seul. Le mécanisme de précision demande lui une ligne de trois déployeurs au-dessus d'un tapis, avec la plaque d'or qui boucle cinq fois.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Un déployeur en mode « frapper » ne polit pas : passe-le en mode utilisation à la clé. Sans rotation, la main ne descend pas. Et seul le quartz rose se polit dans Create : d'autres mods peuvent ajouter leurs propres recettes, mais rien d'autre ne réagit sans eux.</p>"
+    },
+    {
+      "id": "quantites",
+      "title": "Combien en faut-il",
+      "html": "<p>Une feuille polit huit quartz. Un tube électronique demande un quartz poli, et un bras mécanique, une liaison de redstone ou un observateur intelligent en consomment chacun un. Pour une première base, deux ou trois feuilles suffisent ; au-delà, le déployeur avec un entonnoir de recharge est plus simple.</p>"
+    }
+  ],
+  "related": [
+    "deployeur",
+    "depot",
+    "tapis-roulant",
+    "presse-mecanique",
+    "main-extensible",
+    "canon-a-pomme-de-terre"
+  ],
+  "sources": [
+    "Recettes : crafting/materials/sand_paper.json, red_sand_paper.json, rose_quartz.json, electron_tube.json",
+    "Polissage : sandpaper_polishing/rose_quartz.json ; SandPaperItem (durabilité 8, 32 ticks, objet de l’autre main ou au sol, AXE_SCRAPE / AXE_WAX_OFF)",
+    "Déployeur : DeployerApplicationRecipe (recettes *_using_deployer, tag create:sandpaper), DeployerRenderer (main « holding », objet à 11/16 du centre)",
+    "Mécanisme de précision : sequenced_assembly/precision_mechanism.json (5 tours, poids 120 sur 150 = 80 %)",
+    "Scène : DeployerScenes.processing (partie dépôt, rendue par notre moteur ; feuille tenue ajoutée par nous)",
+    "Images : objets et blocs du jeu (modèles de Create) rendus seuls par notre moteur, joueur non dessiné"
+  ],
+  "en": {
+    "slugEn": "sand-paper",
+    "name": "Sand Paper, Polished Rose Quartz and Precision Mechanism",
+    "title": "Sand Paper and polishing — Create mod guide",
+    "description": "Create's Sand Paper: polish Rose Quartz by hand or with a Deployer, then make Electron Tubes and Precision Mechanisms. Recipes and numbers.",
+    "intro": "<strong>Sand Paper</strong> is for <strong>polishing</strong>. In Create only one recipe depends on it, but it matters a lot: <strong>Polished Rose Quartz</strong>, which gives the Electron Tube, and the whole chain that leads to the <strong>Precision Mechanism</strong>. You polish by hand to get started, then a <a href=\"/en/wiki/deployer\">Deployer</a> holds the sheet and does it alone.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Tools and equipment"
+      },
+      {
+        "label": "Durability",
+        "value": "8 uses (Sand Paper and Red Sand Paper)"
+      },
+      {
+        "label": "By hand",
+        "value": "Hold right-click for 32 ticks (1.6 s) per polished item"
+      },
+      {
+        "label": "Polishing recipe",
+        "value": "Rose Quartz → Polished Rose Quartz"
+      },
+      {
+        "label": "With a Deployer",
+        "value": "Polishes items on a depot or belt below"
+      },
+      {
+        "label": "Bonus",
+        "value": "Scrapes oxidation or wax off a copper block"
+      },
+      {
+        "label": "Precision Mechanism",
+        "value": "Golden Sheet, 5 loops of 3 deploying steps, 80% success"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Sand Paper (shapeless)",
+      "grid": [
+        [
+          "Paper",
+          "Sand",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Sand Paper"
+    },
+    "videos": [
+      {
+        "id": "sandpaper_deployer",
+        "name": "Sand Paper: polishing with a Deployer",
+        "description": "A Deployer is given a sheet of Sand Paper; a Rose Quartz is placed on the depot below, the hand goes down and back up: the quartz is polished."
+      }
+    ],
+    "sections": [
+      {
+        "id": "deployeur",
+        "title": "Give the paper to a Deployer",
+        "alt": "The Deployer holds the sheet of Sand Paper",
+        "html": "<p>Right-click the <a href=\"/en/wiki/deployer\">Deployer</a> with Sand Paper in hand to give it the sheet: its hand switches to the « holding » pose. In the loop the sheet is barely visible between the fingers, just like in the game. The Deployer must be in use mode and spinning, here at 32 RPM.</p>"
+      },
+      {
+        "id": "poli",
+        "title": "Polishing on the depot",
+        "alt": "The Polished Rose Quartz on the depot",
+        "html": "<p>Put the Rose Quartz on a <a href=\"/en/wiki/depot\">depot</a> or a <a href=\"/en/wiki/conveyor-belt\">belt</a> under the hand. The Deployer goes down, rubs, goes back up: the Rose Quartz becomes <strong>Polished Rose Quartz</strong>. Each pass costs the paper one point; a funnel or a mechanical arm can hand it a fresh one. On a belt, items stop one at a time under the hand.</p>"
+      },
+      {
+        "id": "chaine",
+        "title": "The crafting chain",
+        "alt": "Sand Paper, Rose Quartz, polished quartz, Electron Tube and mechanisms",
+        "html": "<p><strong>Rose Quartz</strong> is shapeless: one Nether quartz and eight redstone dust. Once polished, it makes an <strong>Electron Tube</strong> with an iron sheet, a part found in the Redstone Link, the Smart Observer or the Mechanical Arm. The golden sheet, for its part, is the base of the Precision Mechanism.</p>"
+      },
+      {
+        "id": "objets",
+        "title": "The Precision Mechanism",
+        "alt": "Incomplete and finished Precision Mechanism",
+        "html": "<p>It is a <strong>sequenced assembly</strong>: a golden sheet goes five times under three Deployers that add a cogwheel, a large cogwheel, then an iron nugget. Between loops the item is called an Incomplete Precision Mechanism. At the end, 80% of the items come out as mechanisms; the rest give back a golden sheet, andesite alloy, a cogwheel, a gold nugget, a shaft or, more rarely, an iron ingot or a clock.</p>"
+      },
+      {
+        "id": "main",
+        "title": "Polishing by hand",
+        "html": "<p>Hold the Sand Paper in one hand and the item to polish in the other, then keep right-click pressed: after 32 ticks the item is polished. It also works on an item lying on the ground, within one block of where you aim and three blocks of you. Eight items per sheet: enough for the first tubes, not for a factory.</p>"
+      },
+      {
+        "id": "rouge",
+        "title": "Red Sand Paper",
+        "html": "<p><strong>Red Sand Paper</strong> is made with red sand instead of regular sand. It does exactly the same: same time, same recipes. Use whichever sand you have.</p>"
+      },
+      {
+        "id": "cuivre",
+        "title": "Scraping copper",
+        "html": "<p>Right-clicking an oxidised copper block removes one layer of verdigris, like an axe; on a waxed block it removes the wax. One durability per use. Handy for Create's <a href=\"/en/wiki/decorative-stones-and-blocks\">copper tiles and shingles</a>.</p>"
+      },
+      {
+        "id": "usine",
+        "title": "Automating it",
+        "html": "<p>A belt, a Deployer with paper, a funnel that refills the sheet: that is a polishing station that runs on its own. The Precision Mechanism needs a line of three Deployers over a belt, with the golden sheet looping five times.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>A Deployer in « punch » mode does not polish: switch it to use mode with the Wrench. Without rotation the hand does not go down. And only Rose Quartz can be polished in Create itself: other mods may add their own recipes, but nothing else reacts without them.</p>"
+      },
+      {
+        "id": "quantites",
+        "title": "How much you need",
+        "html": "<p>One sheet polishes eight quartz. An Electron Tube takes one polished quartz, and a mechanical arm, a redstone link or a smart observer each use one tube. For a first base, two or three sheets are plenty; beyond that, a Deployer with a refilling funnel is simpler.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: crafting/materials/sand_paper.json, red_sand_paper.json, rose_quartz.json, electron_tube.json",
+      "Polishing: sandpaper_polishing/rose_quartz.json; SandPaperItem (durability 8, 32 ticks, item in the other hand or on the ground, AXE_SCRAPE / AXE_WAX_OFF)",
+      "Deployer: DeployerApplicationRecipe (*_using_deployer recipes, create:sandpaper tag), DeployerRenderer (« holding » hand, item 11/16 from the centre)",
+      "Precision Mechanism: sequenced_assembly/precision_mechanism.json (5 loops, weight 120 of 150 = 80%)",
+      "Scene: DeployerScenes.processing (depot part, rendered by our engine; held sheet added by us)",
+      "Images: the game's items and blocks (Create's models) rendered on their own by our engine, player not drawn"
+    ]
+  }
+}

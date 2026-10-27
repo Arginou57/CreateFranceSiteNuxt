@@ -116,7 +116,8 @@
     "stressometre-compteur-de-vitesse",
     "tapis-roulant",
     "inverseur-de-rotation",
-    "chaine-de-transmission"
+    "chaine-de-transmission",
+    "cle"
   ],
   "sources": [
     "Sorties : GearboxBlock.hasShaftTowards (toute face dont l'axe diffère de AXIS) ; GearboxBlock.getStateForPlacement (AXIS = Y)",

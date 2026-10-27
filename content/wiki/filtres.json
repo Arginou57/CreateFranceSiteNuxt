@@ -1,0 +1,248 @@
+{
+  "slug": "filtres",
+  "name": "Filtres et presse-papiers",
+  "blockId": "create:filter",
+  "category": "outils",
+  "title": "Filtres et presse-papiers — Create : guide",
+  "description": "Les filtres de Create : filtre de liste, filtre d'attribut et filtre de colis, où les poser, et le presse-papiers qui copie les réglages.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Les <strong>filtres</strong> disent à une machine quels objets elle a le droit de prendre. Un <strong>filtre de liste</strong> nomme des objets précis, un <strong>filtre d'attribut</strong> décrit une famille (« tout ce qui se cuit », « tout ce qui est enchanté »), un <strong>filtre de colis</strong> lit les adresses. Le <strong>presse-papiers</strong>, lui, copie ces réglages d'un bloc à l'autre.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Outils et équipement"
+    },
+    {
+      "label": "Filtre de liste",
+      "value": "18 cases fantômes, liste blanche ou noire, données (NBT) respectées ou ignorées"
+    },
+    {
+      "label": "Filtre d’attribut",
+      "value": "Correspond à un attribut au moins, à tous, ou liste noire ; chaque attribut peut être inversé"
+    },
+    {
+      "label": "Filtre de colis",
+      "value": "Une adresse : laisse passer les colis qui la portent"
+    },
+    {
+      "label": "Se pose sur",
+      "value": "Entonnoirs, tunnel en laiton, chute intelligente, déployeur, scie, bassin, observateur intelligent…"
+    },
+    {
+      "label": "Presse-papiers",
+      "value": "Liste de tâches (51 pages) et copier-coller des réglages des blocs"
+    },
+    {
+      "label": "Vider",
+      "value": "Un filtre ou un presse-papiers seul dans l’établi est remis à neuf"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Filtre de liste à l'établi",
+    "grid": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        "Pépite de fer",
+        "Laine",
+        "Pépite de fer"
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 filtre de liste"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "filtres",
+      "title": "Les trois filtres",
+      "image": "filters_hero_filtres.webp",
+      "alt": "Filtre de liste, filtre d’attribut et filtre de colis",
+      "html": "<p>Tous se fabriquent avec une laine entre deux pépites : <strong>fer</strong> pour le filtre de liste, <strong>laiton</strong> pour le filtre d'attribut, <strong>zinc</strong> pour le filtre de colis. Un clic droit dans le vide ouvre leur interface. Pour en poser un, clique avec lui sur la case de filtre d'une machine : la petite fente qui affiche un objet. Un objet seul dans cette case marche aussi comme filtre d'un seul objet.</p>"
+    },
+    {
+      "id": "liste",
+      "title": "Filtre de liste",
+      "html": "<p>Glisse jusqu'à 18 objets dans ses cases : ils n'y sont pas vraiment, ce sont des modèles. En <strong>liste blanche</strong>, seuls ces objets passent ; en <strong>liste noire</strong>, tout passe sauf eux. L'option des données décide si une épée enchantée compte comme une épée ordinaire ou non. On peut même mettre des filtres dans un filtre : chacun est testé à son tour.</p>"
+    },
+    {
+      "id": "attribut",
+      "title": "Filtre d’attribut",
+      "html": "<p>Pose un objet de référence, puis choisis dans sa liste les propriétés qui comptent. Les attributs possibles : plaçable, consommable, contient un fluide, enchanté, enchanté au maximum, renommé, abîmé, très abîmé (plus de 75 % d'usure), non empilable, équipable, combustible, lavable, hantable, broyable, cuisable au four, au fumoir, au haut fourneau, compostable ; et avec une valeur : dans un tag, dans un onglet créatif, ajouté par un mod, porte tel enchantement, remplissage d'une boîte de Shulker, couleur, fluide contenu, nom, auteur et copie d'un livre. Trois modes : un attribut suffit, tous sont exigés, ou liste noire. Un filtre « cuisable au four » envoie tous les minerais concassés vers le four sans en nommer un seul.</p>"
+    },
+    {
+      "id": "colis",
+      "title": "Filtre de colis",
+      "html": "<p>Pour le <a href=\"/wiki/emballeur\">réseau de colis</a> : écris une adresse et le filtre ne laisse passer que les colis qui la portent. Une adresse vide le fait marcher comme un filtre normal. Il se pose sur un entonnoir ou un tunnel, devant une <a href=\"/wiki/boite-aux-lettres\">boîte aux lettres</a> ou un tapis de tri.</p>"
+    },
+    {
+      "id": "ou",
+      "title": "Où poser un filtre",
+      "html": "<p>Les <a href=\"/wiki/entonnoir\">entonnoirs</a>, le <a href=\"/wiki/tunnel\">tunnel en laiton</a>, la <a href=\"/wiki/chute\">chute intelligente</a>, le <a href=\"/wiki/tuyau-a-fluide-intelligent\">tuyau intelligent</a>, le <a href=\"/wiki/deployeur\">déployeur</a>, la scie, le <a href=\"/wiki/bassin\">bassin</a>, l'<a href=\"/wiki/observateur-intelligent\">observateur intelligent</a>, le <a href=\"/wiki/detecteur-de-seuil\">détecteur de seuil</a>, l'observateur de train, les contrôles de machine, le rouleau et la jauge d'usine. Le bras mécanique n'a pas de case à lui : ce sont les entonnoirs en laiton qu'il vise qui lui transmettent leur filtre.</p>"
+    },
+    {
+      "id": "presse-papiers",
+      "title": "Le presse-papiers",
+      "image": "filters_hero_presse-papiers.webp",
+      "alt": "Le presse-papiers à côté des filtres",
+      "html": "<p>Un clic droit dans le vide ouvre une liste de tâches : des pages à cocher, avec des icônes d'objets, jusqu'à 51 pages. Accroupi, un clic droit sur un mur, un sol ou un plafond le pose comme une affiche ; un clic droit l'ouvre, un clic gauche le reprend. Il se fabrique avec un alliage d'andésite, une feuille de papier et des planches.</p>"
+    },
+    {
+      "id": "copier",
+      "title": "Copier les réglages",
+      "html": "<p>Presse-papiers en main, un <strong>clic droit</strong> sur un bloc copie ses réglages, un <strong>clic gauche</strong> sur un autre bloc les colle. Ça copie les filtres, les valeurs réglées à la molette (vitesse d'un moteur ou d'un contrôleur, délai d'une diode en laiton), les fréquences d'une <a href=\"/wiki/liaison-de-redstone\">liaison de redstone</a> ou la portée d'un châssis. Pour régler vingt entonnoirs pareils, c'est imbattable.</p>"
+    },
+    {
+      "id": "exemple",
+      "title": "Un exemple de tri",
+      "html": "<p>Un tapis qui ramène tout le butin d'une mine : un entonnoir en laiton avec un filtre de liste « minerais » envoie vers les <a href=\"/wiki/roues-de-concassage\">roues de concassage</a>, un filtre d'attribut « cuisable au four » vers les fours, et le reste continue vers un coffre.</p>"
+    }
+  ],
+  "related": [
+    "entonnoir",
+    "tunnel",
+    "chute",
+    "deployeur",
+    "bras-mecanique",
+    "observateur-intelligent",
+    "emballeur",
+    "cle"
+  ],
+  "sources": [
+    "Recettes : crafting/kinetics/filter.json, attribute_filter.json, package_filter.json (ASA), crafting/appliances/clipboard.json",
+    "Filtres : FilterItem, FilterMenu (18 cases, liste blanche / noire, NBT), FilterItemStack (filtres imbriqués)",
+    "Attributs : AllItemAttributeTypes ; modes : AttributeFilterWhitelistMode (WHITELIST_DISJ / CONJ, BLACKLIST)",
+    "Colis : PackageFilterMenu, PackageItem.matchAddress ; emplacements : FilteringBehaviour des blocs cités",
+    "Presse-papiers : ClipboardScreen (51 pages), ClipboardBlock, ClipboardValueSettingsHandler (clic droit copie, clic gauche colle), ClipboardCloneable",
+    "Images : objets et blocs du jeu (modèles de Create) rendus seuls par notre moteur, joueur non dessiné"
+  ],
+  "en": {
+    "slugEn": "filters",
+    "name": "Filters and Clipboard",
+    "title": "Filters and Clipboard — Create mod guide",
+    "description": "Create's filters: List Filter, Attribute Filter and Package Filter, where they go, and the Clipboard that copies block settings between machines.",
+    "intro": "<strong>Filters</strong> tell a machine which items it may take. A <strong>List Filter</strong> names exact items, an <strong>Attribute Filter</strong> describes a family (« anything that smelts », « anything enchanted »), a <strong>Package Filter</strong> reads addresses. The <strong>Clipboard</strong> copies these settings from one block to the next.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Tools and equipment"
+      },
+      {
+        "label": "List Filter",
+        "value": "18 ghost slots, whitelist or blacklist, data (NBT) respected or ignored"
+      },
+      {
+        "label": "Attribute Filter",
+        "value": "Match any attribute, all of them, or blacklist; each attribute can be inverted"
+      },
+      {
+        "label": "Package Filter",
+        "value": "One address: lets through packages that carry it"
+      },
+      {
+        "label": "Goes on",
+        "value": "Funnels, Brass Tunnel, Smart Chute, Deployer, Saw, Basin, Smart Observer…"
+      },
+      {
+        "label": "Clipboard",
+        "value": "To-do list (51 pages) and copy-paste of block settings"
+      },
+      {
+        "label": "Clearing",
+        "value": "A filter or clipboard alone in the crafting grid is reset"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "List Filter, crafting table",
+      "grid": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          "Iron Nugget",
+          "Wool",
+          "Iron Nugget"
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 List Filter"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "filtres",
+        "title": "The three filters",
+        "alt": "List Filter, Attribute Filter and Package Filter",
+        "html": "<p>All of them take one wool between two nuggets: <strong>iron</strong> for the List Filter, <strong>brass</strong> for the Attribute Filter, <strong>zinc</strong> for the Package Filter. Right-click in the air to open them. To use one, click a machine's filter slot with it: the small slot that shows an item. A single item in that slot also works as a one-item filter.</p>"
+      },
+      {
+        "id": "liste",
+        "title": "List Filter",
+        "html": "<p>Drop up to 18 items in its slots: they are not really stored, they are templates. As a <strong>whitelist</strong>, only those items pass; as a <strong>blacklist</strong>, everything passes but them. The data option decides whether an enchanted sword counts as a plain sword or not. You can even put filters inside a filter: each one is tested in turn.</p>"
+      },
+      {
+        "id": "attribut",
+        "title": "Attribute Filter",
+        "html": "<p>Put in a reference item, then pick from its list the properties that matter. The available attributes: placeable, consumable, fluid container, enchanted, max enchanted, renamed, damaged, badly damaged (over 75% worn), not stackable, equipable, furnace fuel, washable, hauntable, crushable, smeltable, smokable, blastable, compostable; and with a value: in a tag, in a creative tab, added by a mod, has a given enchantment, shulker box fill level, colour, fluid held, name, book author and book copy. Three modes: any attribute is enough, all are required, or blacklist. A « smeltable » filter sends every crushed ore to the furnace without naming a single one.</p>"
+      },
+      {
+        "id": "colis",
+        "title": "Package Filter",
+        "html": "<p>For the <a href=\"/en/wiki/packager\">package network</a>: type an address and the filter only lets through packages that carry it. A blank address makes it act as a normal filter. It goes on a funnel or a tunnel, in front of a <a href=\"/en/wiki/postbox\">postbox</a> or a sorting belt.</p>"
+      },
+      {
+        "id": "ou",
+        "title": "Where a filter goes",
+        "html": "<p><a href=\"/en/wiki/funnel\">Funnels</a>, the <a href=\"/en/wiki/tunnel\">Brass Tunnel</a>, the <a href=\"/en/wiki/chute\">Smart Chute</a>, the <a href=\"/en/wiki/smart-fluid-pipe\">Smart Fluid Pipe</a>, the <a href=\"/en/wiki/deployer\">Deployer</a>, the saw, the <a href=\"/en/wiki/basin\">basin</a>, the <a href=\"/en/wiki/smart-observer\">Smart Observer</a>, the <a href=\"/en/wiki/threshold-switch\">Threshold Switch</a>, the train observer, contraption controls, the roller and the factory gauge. The mechanical arm has no slot of its own: the brass funnels it targets pass their filter on to it.</p>"
+      },
+      {
+        "id": "presse-papiers",
+        "title": "The Clipboard",
+        "alt": "The Clipboard next to the filters",
+        "html": "<p>Right-click in the air to open a to-do list: pages of tick boxes with item icons, up to 51 pages. While sneaking, right-click a wall, floor or ceiling to hang it like a poster; right-click opens it, left-click takes it back. It is crafted from andesite alloy, a sheet of paper and planks.</p>"
+      },
+      {
+        "id": "copier",
+        "title": "Copying settings",
+        "html": "<p>With the Clipboard in hand, <strong>right-click</strong> a block to copy its settings and <strong>left-click</strong> another block to paste them. It copies filters, values set with the scroll wheel (a motor's or controller's speed, a brass diode's delay), a <a href=\"/en/wiki/redstone-link\">Redstone Link</a>'s frequency or a chassis range. To set up twenty identical funnels, nothing beats it.</p>"
+      },
+      {
+        "id": "exemple",
+        "title": "A sorting example",
+        "html": "<p>A belt bringing back everything from a mine: a brass funnel with a List Filter « ores » sends to the <a href=\"/en/wiki/crushing-wheel\">crushing wheels</a>, an Attribute Filter « smeltable » to the furnaces, and the rest goes on to a chest.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: crafting/kinetics/filter.json, attribute_filter.json, package_filter.json (ASA), crafting/appliances/clipboard.json",
+      "Filters: FilterItem, FilterMenu (18 slots, whitelist / blacklist, NBT), FilterItemStack (nested filters)",
+      "Attributes: AllItemAttributeTypes; modes: AttributeFilterWhitelistMode (WHITELIST_DISJ / CONJ, BLACKLIST)",
+      "Packages: PackageFilterMenu, PackageItem.matchAddress; slots: FilteringBehaviour of the blocks listed",
+      "Clipboard: ClipboardScreen (51 pages), ClipboardBlock, ClipboardValueSettingsHandler (right-click copies, left-click pastes), ClipboardCloneable",
+      "Images: the game's items and blocks (Create's models) rendered on their own by our engine, player not drawn"
+    ]
+  }
+}

@@ -120,7 +120,8 @@
     "pompe-mecanique",
     "reservoir-a-fluide",
     "bassin",
-    "mixeur-mecanique"
+    "mixeur-mecanique",
+    "filtres"
   ],
   "sources": [
     "Recette : crafting/kinetics/smart_fluid_pipe.json",

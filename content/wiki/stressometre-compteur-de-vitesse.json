@@ -123,7 +123,9 @@
     "roue-dentee",
     "roue-a-eau",
     "moteur-a-vapeur",
-    "controleur-de-vitesse-de-rotation"
+    "controleur-de-vitesse-de-rotation",
+    "lunettes-d-ingenieur",
+    "moteur-creatif"
   ],
   "sources": [
     "Stress : AllBlocks.java, SPEEDOMETER et STRESSOMETER, CStress.setNoImpact()",

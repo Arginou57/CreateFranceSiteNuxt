@@ -1,0 +1,236 @@
+{
+  "slug": "moteur-creatif",
+  "name": "Moteur créatif",
+  "blockId": "create:creative_motor",
+  "category": "cinetique",
+  "title": "Moteur créatif — Create : guide en français",
+  "description": "Le moteur créatif de Create : une source de rotation sans limite, réglable de −256 à 256 tr/min, pour tester une usine en mode créatif.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>moteur créatif</strong> fait tourner un arbre sans carburant, sans eau, sans vent, et presque sans limite de stress. Il n'existe qu'en mode créatif : c'est l'outil des architectes et des testeurs, pour essayer une machine avant de lui construire une vraie source, ou pour animer une démonstration.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Cinétique"
+    },
+    {
+      "label": "Vitesse",
+      "value": "Réglable de −256 à 256 tr/min, 16 par défaut"
+    },
+    {
+      "label": "Capacité",
+      "value": "16 384 SU par tr/min : 262 144 SU à 16 tr/min, plus de 4 millions à 256"
+    },
+    {
+      "label": "Sortie",
+      "value": "Un demi-arbre sur la face avant"
+    },
+    {
+      "label": "Obtention",
+      "value": "Mode créatif seulement (aucune recette)"
+    },
+    {
+      "label": "Commande",
+      "value": "Pilotable par ComputerCraft si le mod est installé"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "videos": [
+    {
+      "id": "creative_motor",
+      "name": "Moteur créatif : régler la vitesse",
+      "description": "Un moteur créatif fait tourner deux rotors et un compteur de vitesse à 16 tr/min ; réglé quatre fois plus vite, toute la ligne passe à 64 tr/min et l'aiguille monte.",
+      "duration": "PT8S"
+    },
+    {
+      "id": "creative_motor_mojang",
+      "name": "Moteur créatif : une petite usine de démonstration",
+      "description": "Une scène bonus de Create : une construction pleine de moteurs créatifs, de tapis et de roues dentées apparaît morceau par morceau et se met à tourner.",
+      "duration": "PT7S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "moteur",
+      "title": "Brancher le moteur",
+      "image": "creative_motor_moteur.webp",
+      "alt": "Un moteur créatif, deux rotors et un compteur de vitesse",
+      "video": "creative_motor",
+      "html": "<p>Pose le moteur créatif comme un bloc orientable : sa face avant porte un demi-arbre qui tourne. Colle-lui un <a href=\"/wiki/rotor\">rotor</a>, une <a href=\"/wiki/roue-dentee\">roue dentée</a> ou une machine, et la rotation part. Dans la boucle, il entraîne deux rotors et un <a href=\"/wiki/stressometre-compteur-de-vitesse\">compteur de vitesse</a>.</p>"
+    },
+    {
+      "id": "reglage",
+      "title": "Choisir la vitesse",
+      "image": "creative_motor_reglage.webp",
+      "alt": "La ligne quatre fois plus rapide",
+      "html": "<p>Sur le côté du moteur, une case de valeur se règle à la molette ou au clic : de 1 à 256 tr/min dans un sens ou dans l'autre. La boucle passe de 16 à 64 tr/min : les rotors accélèrent et l'aiguille du compteur grimpe. Le réglage se copie avec le <a href=\"/wiki/filtres\">presse-papiers</a>, pratique pour aligner plusieurs moteurs.</p>"
+    },
+    {
+      "id": "stress",
+      "title": "Un stress presque illimité",
+      "html": "<p>Sa capacité est de 16 384 SU par tr/min : plus de 260 000 SU à la vitesse de départ, plus de quatre millions à fond. Aucune usine raisonnable ne le sature. C'est justement son défaut pour les tests : une machine qui marche sur un moteur créatif peut caler sur une vraie <a href=\"/wiki/roue-a-eau\">roue à eau</a> ou un <a href=\"/wiki/moteur-a-vapeur\">moteur à vapeur</a>. Vérifie la consommation avec les <a href=\"/wiki/lunettes-d-ingenieur\">lunettes d'ingénieur</a>.</p>"
+    },
+    {
+      "id": "demo",
+      "title": "La scène bonus",
+      "html": "<p>Le Ponder du moteur créatif cache une seconde scène, sans texte, qui monte une petite usine fantaisiste pièce par pièce, pleine de moteurs créatifs. Nous la rejouons telle quelle en seconde boucle : un clin d'œil des auteurs du mod.</p>"
+    },
+    {
+      "id": "usages",
+      "title": "À quoi il sert",
+      "html": "<p>En créatif, pour bâtir et régler une usine avant de savoir quelle source elle demandera. Pour un <a href=\"/wiki/reservoir-dorsal\">réservoir dorsal</a> qu'on veut remplir en dix secondes. Pour les cartes d'aventure, où il anime un décor sans que le joueur puisse le récupérer en survie.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur notre serveur",
+      "html": "<p>En survie, aucun joueur ne peut l'obtenir : il est réservé aux constructions de l'équipe et aux zones de démonstration. Pour ta propre usine, regarde du côté de la roue à eau, du moulin à vent et du moteur à vapeur.</p>"
+    },
+    {
+      "id": "sens",
+      "title": "Le sens de rotation",
+      "html": "<p>La case de valeur a deux rangées, une par sens : choisis la rangée avant de régler la vitesse. Le sens compte pour un tapis, un ventilateur ou un piston : un moteur réglé à l'envers fait reculer la machine. Un <a href=\"/wiki/inverseur-de-rotation\">inverseur de rotation</a> sur la ligne donne le même effet à la demande.</p>"
+    },
+    {
+      "id": "tests",
+      "title": "Tester une usine",
+      "html": "<p>La bonne méthode : construis avec un moteur créatif, règle-le à la vitesse que donnera ta vraie source, puis regarde l'impact total avec les lunettes. S'il dépasse ce que fournira ta roue à eau ou ton moulin, ajoute une source ou baisse la vitesse avant de passer en survie. Le moteur créatif ne pardonne aucun oubli : il cache tous les problèmes de stress.</p>"
+    },
+    {
+      "id": "alternatives",
+      "title": "Les vraies sources",
+      "html": "<p>En survie, la rotation vient de la <a href=\"/wiki/manivelle\">manivelle</a> pour commencer, de la <a href=\"/wiki/roue-a-eau\">roue à eau</a>, du <a href=\"/wiki/support-de-moulin-a-vent\">moulin à vent</a> et du <a href=\"/wiki/moteur-a-vapeur\">moteur à vapeur</a> pour les grosses usines. Chacune a sa page avec ses chiffres.</p>"
+    },
+    {
+      "id": "ordinateur",
+      "title": "Avec ComputerCraft",
+      "html": "<p>Si le serveur a ComputerCraft, un ordinateur posé à côté du moteur créatif peut lire et changer sa vitesse par programme. C'est le moyen le plus simple de faire tourner une démonstration qui accélère et ralentit toute seule, ou de tester une usine en montant la vitesse pas à pas pour voir où le stress manque.</p>"
+    }
+  ],
+  "related": [
+    "rotor",
+    "roue-dentee",
+    "stressometre-compteur-de-vitesse",
+    "roue-a-eau",
+    "moteur-a-vapeur",
+    "support-de-moulin-a-vent",
+    "reservoir-dorsal"
+  ],
+  "sources": [
+    "Vitesse : CreativeMotorBlockEntity (DEFAULT_SPEED 16, MAX_SPEED 256, deux rangées de sens)",
+    "Capacité : CStress.setCapacity(16384) × |vitesse| (KineticNetwork) ; aucune recette ; CreativeMotorPeripheral (ComputerCraft)",
+    "Scènes : KineticsScenes.creativeMotor et creativeMotorMojang, rendues par notre moteur (bulles jamais recopiées)"
+  ],
+  "en": {
+    "slugEn": "creative-motor",
+    "name": "Creative Motor",
+    "title": "Creative Motor — Create mod guide",
+    "description": "The Create Creative Motor: an unlimited rotation source, adjustable from −256 to 256 RPM, to test a factory in creative mode. Speed and stress.",
+    "intro": "The <strong>Creative Motor</strong> turns a shaft with no fuel, no water, no wind, and almost no stress limit. It only exists in creative mode: it is the tool of builders and testers, to try a machine before giving it a real source, or to bring a showcase to life.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Kinetics"
+      },
+      {
+        "label": "Speed",
+        "value": "Adjustable from −256 to 256 RPM, 16 by default"
+      },
+      {
+        "label": "Capacity",
+        "value": "16,384 SU per RPM: 262,144 SU at 16 RPM, over 4 million at 256"
+      },
+      {
+        "label": "Output",
+        "value": "A half shaft on the front face"
+      },
+      {
+        "label": "How to get",
+        "value": "Creative mode only (no recipe)"
+      },
+      {
+        "label": "Control",
+        "value": "Can be driven by ComputerCraft if installed"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "videos": [
+      {
+        "id": "creative_motor",
+        "name": "Creative Motor: setting the speed",
+        "description": "A Creative Motor spins two shafts and a speedometer at 16 RPM; set four times faster, the whole line goes to 64 RPM and the needle rises."
+      },
+      {
+        "id": "creative_motor_mojang",
+        "name": "Creative Motor: a little showcase factory",
+        "description": "A bonus scene from Create: a build full of Creative Motors, belts and cogwheels appears piece by piece and starts turning."
+      }
+    ],
+    "sections": [
+      {
+        "id": "moteur",
+        "title": "Hooking up the motor",
+        "alt": "A Creative Motor, two shafts and a speedometer",
+        "html": "<p>Place the Creative Motor like any directional block: its front face carries a spinning half shaft. Put a <a href=\"/en/wiki/shaft\">shaft</a>, a <a href=\"/en/wiki/cogwheel\">cogwheel</a> or a machine against it and the rotation flows. In the loop it drives two shafts and a <a href=\"/en/wiki/stressometer-speedometer\">speedometer</a>.</p>"
+      },
+      {
+        "id": "reglage",
+        "title": "Choosing the speed",
+        "alt": "The line four times faster",
+        "html": "<p>On the side of the motor, a value slot is set with the scroll wheel or a click: from 1 to 256 RPM in either direction. The loop goes from 16 to 64 RPM: the shafts speed up and the speedometer needle climbs. The setting can be copied with the <a href=\"/en/wiki/filters\">Clipboard</a>, handy to line up several motors.</p>"
+      },
+      {
+        "id": "stress",
+        "title": "Almost unlimited stress",
+        "html": "<p>Its capacity is 16,384 SU per RPM: over 260,000 SU at the starting speed, over four million flat out. No sensible factory will overstress it. That is exactly its flaw for testing: a machine that runs on a Creative Motor may stall on a real <a href=\"/en/wiki/water-wheel\">water wheel</a> or <a href=\"/en/wiki/steam-engine\">steam engine</a>. Check the usage with <a href=\"/en/wiki/engineers-goggles\">Engineer's Goggles</a>.</p>"
+      },
+      {
+        "id": "demo",
+        "title": "The bonus scene",
+        "html": "<p>The Creative Motor's Ponder hides a second scene, with no text, that builds a whimsical little factory piece by piece, full of Creative Motors. We replay it as it is in the second loop: a wink from the mod's authors.</p>"
+      },
+      {
+        "id": "usages",
+        "title": "What it is for",
+        "html": "<p>In creative, to build and tune a factory before you know which source it will need. For a <a href=\"/en/wiki/backtank\">Backtank</a> you want full in ten seconds. For adventure maps, where it drives scenery the player cannot take in survival.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On our server",
+        "html": "<p>In survival no player can get it: it is kept for the team's builds and showcase areas. For your own factory, look at the water wheel, the windmill and the steam engine.</p>"
+      },
+      {
+        "id": "sens",
+        "title": "Direction of rotation",
+        "html": "<p>The value slot has two rows, one per direction: pick the row before you set the speed. Direction matters for a belt, a fan or a piston: a motor set the other way makes the machine run backwards. A <a href=\"/en/wiki/gearshift\">Gearshift</a> on the line does the same on demand.</p>"
+      },
+      {
+        "id": "tests",
+        "title": "Testing a factory",
+        "html": "<p>The right method: build with a Creative Motor, set it to the speed your real source will give, then read the total impact with the goggles. If it is more than your water wheel or windmill will provide, add a source or lower the speed before going to survival. The Creative Motor forgives every mistake: it hides all stress problems.</p>"
+      },
+      {
+        "id": "alternatives",
+        "title": "The real sources",
+        "html": "<p>In survival, rotation comes from the <a href=\"/en/wiki/hand-crank\">hand crank</a> at first, then the <a href=\"/en/wiki/water-wheel\">water wheel</a>, the <a href=\"/en/wiki/windmill-bearing\">windmill</a> and the <a href=\"/en/wiki/steam-engine\">steam engine</a> for big factories. Each one has its own page with its numbers.</p>"
+      },
+      {
+        "id": "ordinateur",
+        "title": "With ComputerCraft",
+        "html": "<p>If the server runs ComputerCraft, a computer placed next to the Creative Motor can read and change its speed from a program. It is the easiest way to run a showcase that speeds up and slows down on its own, or to test a factory by raising the speed step by step to see where the stress runs out.</p>"
+      }
+    ],
+    "sources": [
+      "Speed: CreativeMotorBlockEntity (DEFAULT_SPEED 16, MAX_SPEED 256, two direction rows)",
+      "Capacity: CStress.setCapacity(16384) × |speed| (KineticNetwork); no recipe; CreativeMotorPeripheral (ComputerCraft)",
+      "Scenes: KineticsScenes.creativeMotor and creativeMotorMojang, rendered by our engine (bubbles never copied)"
+    ]
+  }
+}

@@ -158,7 +158,9 @@
     "controles-de-machine",
     "piston-mecanique",
     "recolteur-mecanique",
-    "horloges-et-impulsions"
+    "horloges-et-impulsions",
+    "main-extensible",
+    "papier-de-verre"
   ],
   "sources": [
     "Stress : AllBlocks.java, DEPLOYER, CStress.setImpact(4.0)",

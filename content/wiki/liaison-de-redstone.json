@@ -156,7 +156,8 @@
     "liaison-d-affichage",
     "verrou-alimente",
     "inverseur-de-rotation",
-    "poulie-d-ascenseur"
+    "poulie-d-ascenseur",
+    "cle"
   ],
   "sources": [
     "Recettes : crafting/logistics/redstone_link.json (2 liaisons), crafting/appliances/linked_controller.json",

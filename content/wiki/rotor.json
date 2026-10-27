@@ -116,7 +116,10 @@
     "pompe-mecanique",
     "chariot-de-portique",
     "inverseur-de-rotation",
-    "chaine-de-transmission"
+    "chaine-de-transmission",
+    "cle",
+    "reservoir-dorsal",
+    "moteur-creatif"
   ],
   "sources": [
     "Stress : AllBlocks.java, SHAFT, CStress.setNoImpact()",

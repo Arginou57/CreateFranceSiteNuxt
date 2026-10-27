@@ -129,7 +129,8 @@
     "rotor",
     "stressometre-compteur-de-vitesse",
     "presse-mecanique",
-    "pompe-mecanique"
+    "pompe-mecanique",
+    "moteur-creatif"
   ],
   "sources": [
     "Vitesse : WaterWheelBlockEntity.getGeneratedSpeed = clamp(flowScore, -1, 1) × 8 / taille (petite : 1, grande : 2)",

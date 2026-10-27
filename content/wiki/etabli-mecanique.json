@@ -128,7 +128,9 @@
     "deployeur",
     "entonnoir",
     "depot",
-    "jauge-d-usine"
+    "jauge-d-usine",
+    "canon-a-pomme-de-terre",
+    "main-extensible"
   ],
   "sources": [
     "Stress : AllBlocks.java, MECHANICAL_CRAFTER, CStress.setImpact(2.0)",

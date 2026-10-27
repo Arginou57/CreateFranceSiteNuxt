@@ -1,0 +1,283 @@
+{
+  "slug": "reservoir-dorsal",
+  "name": "Réservoir dorsal et équipement de plongée",
+  "blockId": "create:copper_backtank",
+  "category": "outils",
+  "title": "Réservoir dorsal et plongée — Create : guide",
+  "description": "Le réservoir dorsal de Create : le remplir avec un moteur, sa capacité d'air, le casque et les bottes de plongée en cuivre ou en Netherite.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>réservoir dorsal</strong> est une bouteille d'air comprimé qu'on porte sur le dos. Posé au sol et entraîné par un rotor, il se <strong>remplit</strong> ; porté en plastron, il nourrit le <strong>casque de plongée</strong>, la <a href=\"/wiki/main-extensible\">main extensible</a> et le <a href=\"/wiki/canon-a-pomme-de-terre\">canon à pomme de terre</a>. En Netherite, avec le casque et les bottes assortis, il permet même de marcher dans la lave.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Outils et équipement"
+    },
+    {
+      "label": "Capacité",
+      "value": "900 unités d’air, +300 par niveau de Capacité (III max : 1 800)"
+    },
+    {
+      "label": "Remplissage",
+      "value": "Posé au sol, un rotor sur le dessus ; plus c’est rapide, plus ça remplit vite"
+    },
+    {
+      "label": "Stress",
+      "value": "4 SU par tr/min quand il est posé"
+    },
+    {
+      "label": "Respirer",
+      "value": "1 unité d’air par seconde sous l’eau (900 s avec un réservoir plein)"
+    },
+    {
+      "label": "Armure",
+      "value": "Cuivre : 4 ; Netherite : 8 et 3 de robustesse"
+    },
+    {
+      "label": "Netherite",
+      "value": "Ensemble complet + réservoir en Netherite : immunité au feu"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Réservoir en cuivre à l'établi",
+    "grid": [
+      [
+        "Alliage d'andésite",
+        "Rotor",
+        "Alliage d'andésite"
+      ],
+      [
+        "Lingot de cuivre",
+        "Bloc de cuivre",
+        "Lingot de cuivre"
+      ],
+      [
+        null,
+        "Lingot de cuivre",
+        null
+      ]
+    ],
+    "result": "1 réservoir dorsal en cuivre"
+  },
+  "videos": [
+    {
+      "id": "backtank_fill",
+      "name": "Réservoir dorsal : le remplir au moteur",
+      "description": "Deux réservoirs dorsaux posés, en cuivre et en Netherite, un moteur créatif sur chacun. Le moteur démarre : l'arbre et les engrenages tournent, l'air entre ; à 256 tr/min, ils tournent beaucoup plus vite.",
+      "duration": "PT13S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "pose",
+      "title": "Le poser au sol",
+      "image": "backtank_fill_pose.webp",
+      "alt": "Deux réservoirs dorsaux posés sur la plaque",
+      "video": "backtank_fill",
+      "html": "<p>Avec le réservoir en main, fais un clic droit sur un bloc : il se pose. Son arbre d'entrée est <strong>sur le dessus</strong> : c'est là qu'il faut amener la rotation, par un <a href=\"/wiki/rotor\">rotor</a>, une roue dentée ou un moteur posé dessus. Pour le reprendre, clic droit sans t'accroupir, l'emplacement de plastron libre : il revient directement sur ton dos.</p>"
+    },
+    {
+      "id": "remplir",
+      "title": "Le remplir",
+      "image": "backtank_fill_remplir.webp",
+      "alt": "Les réservoirs entraînés par les moteurs",
+      "html": "<p>Dès que l'arbre tourne, le réservoir se remplit d'air et ses engrenages tournent. La vitesse compte beaucoup : à 32 tr/min, il gagne 1 unité toutes les 14 ticks environ, soit plus de dix minutes pour un réservoir plein. Un comparateur posé contre lui lit son niveau.</p>"
+    },
+    {
+      "id": "vite",
+      "title": "Plus vite",
+      "image": "backtank_fill_vite.webp",
+      "alt": "Les réservoirs à 256 tr/min",
+      "html": "<p>Dès 100 tr/min, l'attente entre deux remplissages disparaît ; dès 140 tr/min, chaque remplissage ajoute 2 unités, et 5 à partir de 200. À <strong>256 tr/min</strong>, il prend 5 unités par tick : environ 100 par seconde, un réservoir de 900 en une dizaine de secondes. Il consomme alors 4 SU par tr/min, soit 1 024 SU : prévois la source.</p>"
+    },
+    {
+      "id": "equipement",
+      "title": "Casque et bottes de plongée",
+      "image": "diving_hero_equipement.webp",
+      "alt": "Casques et bottes de plongée en cuivre et en Netherite",
+      "html": "<p>Le <strong>casque de plongée</strong> se fabrique avec cinq lingots de cuivre et un bloc de verre, les <strong>bottes de plongée</strong> avec quatre lingots de cuivre et deux alliages d'andésite. Avec un réservoir plein sur le dos, le casque te laisse respirer sous l'eau en puisant <strong>1 unité d'air par seconde</strong>, et la vue sous l'eau porte six fois plus loin. Les bottes te gardent au fond : tu marches sur le sable au lieu de nager, et un saut depuis le fond donne un bon élan.</p>"
+    },
+    {
+      "id": "cuivre-netherite",
+      "title": "Cuivre ou Netherite",
+      "image": "diving_hero_cuivre-netherite.webp",
+      "alt": "Les deux ensembles de plongée côte à côte",
+      "html": "<p>Les versions en Netherite s'obtiennent à la table de forgeron, avec un modèle d'amélioration en Netherite et un lingot. Elles ne brûlent pas et protègent comme une armure en Netherite. Avec le <strong>casque, le réservoir et les bottes en Netherite</strong> et des jambières résistantes au feu, tu deviens insensible au feu et à la lave, le casque te laisse voir à 20 blocs dans la lave et les bottes y accélèrent la marche.</p>"
+    },
+    {
+      "id": "consommation",
+      "title": "Ce qui consomme l’air",
+      "html": "<p>Le casque de plongée : 1 unité par seconde quand tu manques d'air. La main extensible : 1 unité par action. Le canon à pomme de terre : 4 unités par tir. Un message prévient quand il reste 10 % d'air, puis quand le réservoir est vide. L'enchantement <strong>Capacité</strong> ajoute 300 unités par niveau, jusqu'au niveau III.</p>"
+    },
+    {
+      "id": "station",
+      "title": "Une station de remplissage",
+      "html": "<p>Le plus simple : un moteur ou une ligne de rotors sous un toit, et une rangée de réservoirs posés dessous, un arbre sur chacun. Un comparateur contre un réservoir allume une lampe quand il est plein. Pense à garder la vitesse haute : à 32 tr/min il faut plus de dix minutes, à 256 une dizaine de secondes.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Un réservoir dans l'eau ne se remplit pas : il doit être au sec. L'arbre doit arriver par le dessus, pas par les côtés. Le réservoir n'a pas de durabilité, mais il ne protège qu'un peu : en cuivre, c'est une armure légère.</p>"
+    },
+    {
+      "id": "capacite",
+      "title": "Plus d’air",
+      "html": "<p>L'enchantement <strong>Capacité</strong> se met sur le réservoir à la table d'enchantement ou avec un livre : chaque niveau ajoute 300 unités, soit 1 800 au niveau III, une demi-heure sous l'eau. Raccommodage et Solidité sont refusés : le réservoir ne s'use pas, il se vide.</p>"
+    }
+  ],
+  "related": [
+    "canon-a-pomme-de-terre",
+    "main-extensible",
+    "rotor",
+    "roue-a-eau",
+    "moteur-creatif",
+    "lunettes-d-ingenieur"
+  ],
+  "sources": [
+    "Recettes : crafting/appliances/copper_backtank.json, copper_diving_helmet.json (PPP / PGP), copper_diving_boots.json (P P / P P / G G), versions en Netherite à la table de forgeron",
+    "Capacité : BacktankUtil.maxAir (airInBacktank 900 + enchantedBacktankCapacity 300 × niveau)",
+    "Remplissage : BacktankBlockEntity (clamp((|v| − 100) / 20, 1, 5) unités, attente clamp(128 − |v| / 5 − 108, 0, 20) ticks) ; arbre : BacktankBlock.hasShaftTowards(UP) ; stress 4 : BuilderTransformers.backtank",
+    "Casque : DivingHelmetItem (1 unité / 20 ticks), ClientEvents (brouillard × 6,25 sous l’eau, 20 blocs dans la lave) ; bottes : DivingBootsItem ; Netherite : NetheriteDivingHandler",
+    "Armure : AllArmorMaterials (cuivre), matériau Netherite vanilla",
+    "Animation : BacktankRenderer (arbre d’axe Y, engrenages autour de l’axe est, vitesse / 4 degrés par tick)",
+    "Scène écrite pour ce wiki (Create n'a pas de scène Ponder sur ce sujet) : make_wiki_serie7.py, rendue par notre moteur ; vitesses recalculées par WIKI/redstone_sim.py (propagation de la rotation du code de Create)",
+    "Images : objets et blocs du jeu (modèles de Create) rendus seuls par notre moteur, joueur non dessiné"
+  ],
+  "en": {
+    "slugEn": "backtank",
+    "name": "Backtank and diving gear",
+    "title": "Backtank and diving gear — Create mod guide",
+    "description": "The Create Backtank: filling it with a motor, its air capacity, and the copper or Netherite Diving Helmet and Diving Boots.",
+    "intro": "The <strong>Backtank</strong> is a bottle of compressed air you wear on your back. Placed on the ground and driven by a shaft, it <strong>fills up</strong>; worn as a chestplate, it feeds the <strong>Diving Helmet</strong>, the <a href=\"/en/wiki/extendo-grip\">Extendo Grip</a> and the <a href=\"/en/wiki/potato-cannon\">Potato Cannon</a>. In Netherite, with the matching helmet and boots, it even lets you walk through lava.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Tools and equipment"
+      },
+      {
+        "label": "Capacity",
+        "value": "900 air, +300 per Capacity level (III max: 1,800)"
+      },
+      {
+        "label": "Filling",
+        "value": "Placed on the ground, a shaft on top; the faster it spins, the faster it fills"
+      },
+      {
+        "label": "Stress",
+        "value": "4 SU per RPM when placed"
+      },
+      {
+        "label": "Breathing",
+        "value": "1 air per second underwater (900 s with a full tank)"
+      },
+      {
+        "label": "Armour",
+        "value": "Copper: 4; Netherite: 8 and 3 toughness"
+      },
+      {
+        "label": "Netherite",
+        "value": "Full set + Netherite Backtank: fire immunity"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Copper Backtank, crafting table",
+      "grid": [
+        [
+          "Andesite Alloy",
+          "Shaft",
+          "Andesite Alloy"
+        ],
+        [
+          "Copper Ingot",
+          "Block of Copper",
+          "Copper Ingot"
+        ],
+        [
+          null,
+          "Copper Ingot",
+          null
+        ]
+      ],
+      "result": "1 Copper Backtank"
+    },
+    "videos": [
+      {
+        "id": "backtank_fill",
+        "name": "Backtank: filling it with a motor",
+        "description": "Two Backtanks placed, copper and Netherite, a Creative Motor on each. The motor starts: the shaft and cogs spin and air flows in; at 256 RPM they spin much faster."
+      }
+    ],
+    "sections": [
+      {
+        "id": "pose",
+        "title": "Placing it",
+        "alt": "Two Backtanks placed on the plate",
+        "html": "<p>With the Backtank in hand, right-click a block: it is placed. Its input shaft is <strong>on top</strong>: that is where the rotation must come in, through a <a href=\"/en/wiki/shaft\">shaft</a>, a cogwheel or a motor set on it. To take it back, right-click without sneaking, with a free chestplate slot: it goes straight onto your back.</p>"
+      },
+      {
+        "id": "remplir",
+        "title": "Filling it",
+        "alt": "The Backtanks driven by the motors",
+        "html": "<p>As soon as the shaft turns, the tank fills with air and its cogs spin. Speed matters a lot: at 32 RPM it gains 1 air about every 14 ticks, more than ten minutes for a full tank. A comparator against it reads its level.</p>"
+      },
+      {
+        "id": "vite",
+        "title": "Faster",
+        "alt": "The Backtanks at 256 RPM",
+        "html": "<p>From 100 RPM the wait between refills goes away; from 140 RPM each refill adds 2 air, and 5 from 200 RPM. At <strong>256 RPM</strong> it takes 5 air per tick: about 100 per second, a 900 tank in around ten seconds. It then uses 4 SU per RPM, that is 1,024 SU: plan the source.</p>"
+      },
+      {
+        "id": "equipement",
+        "title": "Diving Helmet and Boots",
+        "alt": "Copper and Netherite Diving Helmets and Boots",
+        "html": "<p>The <strong>Diving Helmet</strong> takes five copper ingots and a glass block, the <strong>Diving Boots</strong> four copper ingots and two andesite alloys. With a full tank on your back, the helmet lets you breathe underwater by drawing <strong>1 air per second</strong>, and underwater view reaches six times further. The boots keep you on the bottom: you walk on the sand instead of swimming, and a jump from the floor gives a good boost.</p>"
+      },
+      {
+        "id": "cuivre-netherite",
+        "title": "Copper or Netherite",
+        "alt": "The two diving sets side by side",
+        "html": "<p>The Netherite versions come from the smithing table, with a Netherite upgrade template and an ingot. They do not burn and protect like Netherite armour. With the <strong>Netherite helmet, tank and boots</strong> plus fire-resistant leggings, you become immune to fire and lava, the helmet lets you see 20 blocks through lava and the boots speed up your walk in it.</p>"
+      },
+      {
+        "id": "consommation",
+        "title": "What uses the air",
+        "html": "<p>The Diving Helmet: 1 air per second when you are out of breath. The Extendo Grip: 1 air per action. The Potato Cannon: 4 air per shot. A message warns you at 10% air left, then when the tank is empty. The <strong>Capacity</strong> enchantment adds 300 air per level, up to level III.</p>"
+      },
+      {
+        "id": "station",
+        "title": "A refill station",
+        "html": "<p>The simplest setup: a motor or a line of shafts under a roof, and a row of Backtanks placed below, a shaft on each. A comparator against a tank lights a lamp when it is full. Keep the speed high: at 32 RPM it takes over ten minutes, at 256 about ten seconds.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>A tank sitting in water does not fill: it must be dry. The shaft has to come from above, not from the sides. The Backtank has no durability, but it only protects a little: in copper, it is light armour.</p>"
+      },
+      {
+        "id": "capacite",
+        "title": "More air",
+        "html": "<p>The <strong>Capacity</strong> enchantment goes on the tank at the enchanting table or with a book: each level adds 300 air, so 1,800 at level III, half an hour underwater. Mending and Unbreaking are refused: the tank does not wear out, it only runs empty.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: crafting/appliances/copper_backtank.json, copper_diving_helmet.json (PPP / PGP), copper_diving_boots.json (P P / P P / G G), Netherite versions at the smithing table",
+      "Capacity: BacktankUtil.maxAir (airInBacktank 900 + enchantedBacktankCapacity 300 × level)",
+      "Filling: BacktankBlockEntity (clamp((|v| − 100) / 20, 1, 5) air, wait clamp(128 − |v| / 5 − 108, 0, 20) ticks); shaft: BacktankBlock.hasShaftTowards(UP); stress 4: BuilderTransformers.backtank",
+      "Helmet: DivingHelmetItem (1 air / 20 ticks), ClientEvents (fog × 6.25 underwater, 20 blocks in lava); boots: DivingBootsItem; Netherite: NetheriteDivingHandler",
+      "Armour: AllArmorMaterials (copper), vanilla Netherite material",
+      "Animation: BacktankRenderer (Y-axis shaft, cogs around the east axis, speed / 4 degrees per tick)",
+      "Scene written for this wiki (Create has no Ponder scene on this topic): make_wiki_serie7.py, rendered by our engine; speeds recomputed by WIKI/redstone_sim.py (rotation propagation from Create's code)",
+      "Images: the game's items and blocks (Create's models) rendered on their own by our engine, player not drawn"
+    ]
+  }
+}

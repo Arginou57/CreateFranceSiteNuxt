@@ -148,7 +148,8 @@
     "telescripteur-de-stock",
     "reemballeur",
     "roue-a-chaine-roulante",
-    "tunnel"
+    "tunnel",
+    "filtres"
   ],
   "sources": [
     "Colis : PackageItem.SLOTS = 9 ; adresse : PackageItem.addAddress / matchAddress (« * » et jokers Glob)",

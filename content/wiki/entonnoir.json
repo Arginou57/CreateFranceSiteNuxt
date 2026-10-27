@@ -179,7 +179,9 @@
     "depot",
     "bras-mecanique",
     "meule",
-    "interface-de-stockage-portable"
+    "interface-de-stockage-portable",
+    "cle",
+    "filtres"
   ],
   "sources": [
     "Quantité : FunnelBlockEntity.getAmountToExtract (filtre inactif : 1 objet ; entonnoir de laiton : quantité du filtre, jusqu'à 64)",

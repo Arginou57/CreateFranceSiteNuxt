@@ -1,0 +1,279 @@
+{
+  "slug": "pierres-et-blocs-de-deco",
+  "name": "Pierres et blocs de déco de Create",
+  "blockId": "create:cut_asurine",
+  "category": "deco",
+  "title": "Pierres et blocs de déco de Create : guide",
+  "description": "Les pierres de Create (asurine, crimsite, calcaire, ochrum, scorie, scorchia, veridium), leurs variantes, le cuivre, les verres et les échafaudages.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Create apporte sa propre palette de construction : <strong>sept pierres</strong> à lui, chacune déclinée en six variantes avec escaliers, dalles et murets, plus des <strong>tuiles de cuivre</strong> qui s'oxydent, des <strong>verres encadrés</strong>, du fer industriel et des <strong>échafaudages</strong> métalliques. Voici à quoi elles ressemblent, posées sur la plaque, et comment les obtenir.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Décoration"
+    },
+    {
+      "label": "Pierres de Create",
+      "value": "Asurine, crimsite, calcaire, ochrum, scorie, scorchia, veridium"
+    },
+    {
+      "label": "Variantes",
+      "value": "Taillée, taillée polie, briques taillées, petites briques, couches, pilier"
+    },
+    {
+      "label": "Formes",
+      "value": "Escalier, dalle et muret pour les quatre premières variantes"
+    },
+    {
+      "label": "Tailleur de pierre",
+      "value": "Toute variante d’une pierre se change en n’importe quelle autre, et retour"
+    },
+    {
+      "label": "Aussi pour",
+      "value": "Granite, diorite, andésite, calcite, spéléothème, ardoise des abîmes et tuf"
+    },
+    {
+      "label": "Broyage",
+      "value": "Crimsite : fer ; veridium : cuivre ; asurine : zinc ; ochrum : or"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "videos": [],
+  "sections": [
+    {
+      "id": "variantes",
+      "title": "Six variantes par pierre",
+      "html": "<p>Chaque pierre existe brute, puis <strong>taillée</strong>, <strong>taillée polie</strong>, en <strong>briques taillées</strong>, en <strong>petites briques</strong>, en <strong>couches</strong> (textures qui se raccordent à l'horizontale) et en <strong>pilier</strong> orientable. Les quatre premières variantes ont leur escalier, leur dalle et leur muret. Au <strong>tailleur de pierre</strong>, n'importe quelle variante redevient n'importe quelle autre ; seules les dalles ne repassent pas. Les sept pierres vanilla de la liste ont les mêmes variantes.</p>"
+    },
+    {
+      "id": "asurine",
+      "title": "Asurine",
+      "image": "deco_gallery_asurine.webp",
+      "alt": "Asurine et ses variantes : taillée, polie, briques, petites briques, couches, pilier, escalier, dalle, muret",
+      "html": "<p>L'<strong>asurine</strong> est bleue, aux reflets de glace. Elle se trouve en couches dans les profondeurs de l'Overworld, avec le tuf et l'ardoise des abîmes. Broyée, elle donne du <strong>zinc brut concassé</strong> et des pépites de zinc (30 % chacun).</p>"
+    },
+    {
+      "id": "crimsite",
+      "title": "Crimsite",
+      "image": "deco_gallery_crimsite.webp",
+      "alt": "Crimsite et ses variantes : taillée, polie, briques, petites briques, couches, pilier, escalier, dalle, muret",
+      "html": "<p>La <strong>crimsite</strong> est rouge sang, en couches profondes avec le tuf et le calcaire. C'est la pierre du <strong>fer</strong> : broyée, elle rend du fer brut concassé et des pépites de fer (40 % chacun).</p>"
+    },
+    {
+      "id": "limestone",
+      "title": "Calcaire",
+      "image": "deco_gallery_limestone.webp",
+      "alt": "Calcaire et ses variantes : taillée, polie, briques, petites briques, couches, pilier, escalier, dalle, muret",
+      "html": "<p>Le <strong>calcaire</strong> est beige clair et doux. Il se trouve en couches avec la pierre, la calcite et la diorite, et se fabrique aussi : du <strong>miel qui coule</strong> au contact de la lave se fige en calcaire.</p>"
+    },
+    {
+      "id": "ochrum",
+      "title": "Ochrum",
+      "image": "deco_gallery_ochrum.webp",
+      "alt": "Ochrum et ses variantes : taillée, polie, briques, petites briques, couches, pilier, escalier, dalle, muret",
+      "html": "<p>L'<strong>ochrum</strong> est jaune ocre, en couches avec le tuf, l'ardoise des abîmes et le bloc de spéléothème. Broyé, il donne de l'<strong>or</strong> brut concassé et des pépites d'or (20 % chacun).</p>"
+    },
+    {
+      "id": "scoria",
+      "title": "Scorie",
+      "image": "deco_gallery_scoria.webp",
+      "alt": "Scorie et ses variantes : taillée, polie, briques, petites briques, couches, pilier, escalier, dalle, muret",
+      "html": "<p>La <strong>scorie</strong> est brun foncé, poreuse. On la trouve dans l'Overworld et dans le Nether ; elle se fait aussi en cuisant du sable des âmes au four, ou avec du <strong>chocolat qui coule</strong> sur de la lave.</p>"
+    },
+    {
+      "id": "scorchia",
+      "title": "Scorchia",
+      "image": "deco_gallery_scorchia.webp",
+      "alt": "Scorchia et ses variantes : taillée, polie, briques, petites briques, couches, pilier, escalier, dalle, muret",
+      "html": "<p>La <strong>scorchia</strong> est presque noire. Elle se trouve en couches dans le Nether, près du sable des âmes et du basalte, et se fabrique : huit scories autour d'un colorant noir donnent huit scorchias.</p>"
+    },
+    {
+      "id": "veridium",
+      "title": "Veridium",
+      "image": "deco_gallery_veridium.webp",
+      "alt": "Veridium et ses variantes : taillée, polie, briques, petites briques, couches, pilier, escalier, dalle, muret",
+      "html": "<p>Le <strong>veridium</strong> est vert de cuivre, en couches avec le tuf, l'andésite et le basalte lisse. Broyé, il donne du <strong>cuivre</strong> brut concassé et des pépites de cuivre (80 % chacun) : une excellente source de cuivre.</p>"
+    },
+    {
+      "id": "cuivre",
+      "title": "Tuiles et bardeaux de cuivre",
+      "image": "deco_gallery_cuivre.webp",
+      "alt": "Bardeaux et tuiles de cuivre aux quatre stades d’oxydation",
+      "html": "<p>Au tailleur de pierre, un lingot de cuivre donne deux <strong>bardeaux de cuivre</strong> ou deux <strong>tuiles de cuivre</strong>, avec leurs escaliers et dalles. Comme le cuivre vanilla, ils s'oxydent : exposé, érodé, oxydé. Un rayon de miel les cire ; une hache ou du <a href=\"/wiki/papier-de-verre\">papier de verre</a> les gratte.</p>"
+    },
+    {
+      "id": "verre-fer",
+      "title": "Verres encadrés et fer",
+      "image": "deco_gallery_verre-fer.webp",
+      "alt": "Verres encadrés, fenêtre ornée, fer industriel et poutres",
+      "html": "<p>Le verre ordinaire, au tailleur de pierre, devient <strong>verre carrelé</strong>, <strong>encadré</strong>, <strong>encadré horizontal</strong> ou <strong>vertical</strong>, avec leurs vitres. La <strong>fenêtre ornée de fer</strong> se fait avec des pépites de fer et du verre. Un lingot de fer donne deux blocs de <strong>fer industriel</strong> ; lavé au <a href=\"/wiki/ventilateur-enchasse\">ventilateur</a>, il devient <strong>fer érodé</strong>. La <strong>poutre en métal</strong>, faite de plaques de fer et d'alliage d'andésite, se raccorde en charpente.</p>"
+    },
+    {
+      "id": "echafaudages",
+      "title": "Échafaudages",
+      "image": "deco_gallery_echafaudages.webp",
+      "alt": "Échafaudages d’andésite, de laiton et de cuivre",
+      "html": "<p>Les échafaudages d'<strong>andésite</strong>, de <strong>laiton</strong> et de <strong>cuivre</strong> sortent du tailleur de pierre, deux par alliage ou lingot. Ils se grimpent comme l'échafaudage en bambou, mais ne tombent jamais : pas de limite de distance. Un clic sur un échafaudage avec le même objet le prolonge vers le haut, ou à l'horizontale jusqu'à 7 blocs.</p>"
+    },
+    {
+      "id": "trouver",
+      "title": "Où les trouver",
+      "html": "<p>Les couches de pierres de Create apparaissent sous terre dans l'Overworld, entre les hauteurs −30 et 70, en bandes de deux à cinq blocs d'épaisseur mêlées au tuf, à l'ardoise des abîmes ou à la calcite. Dans le Nether, la scorie et la scorchia se trouvent entre 40 et 90. Un tunnel de mine en traverse vite plusieurs.</p>"
+    },
+    {
+      "id": "construire",
+      "title": "Idées de construction",
+      "html": "<p>Le calcaire et le cuivre vont très bien ensemble pour une gare ; la scorie et la scorchia donnent un air de fonderie aux usines du Nether ; les briques d'asurine et le verre encadré font une serre élégante. Mélange les variantes d'une même pierre pour casser les grands murs plats.</p>"
+    }
+  ],
+  "related": [
+    "roues-de-concassage",
+    "meule",
+    "ventilateur-enchasse",
+    "portes-coulissantes",
+    "papier-de-verre"
+  ],
+  "sources": [
+    "Pierres et variantes : AllPaletteStoneTypes, PaletteBlockPattern (6 variantes, escalier / dalle / muret), tags create:stone_types/* (tailleur de pierre)",
+    "Monde : worldgen/configured_feature/striated_ores_overworld.json et _nether.json (couches, Y −30 à 70 et 40 à 90)",
+    "Fluides : AllFluids (miel qui coule + lave = calcaire ; chocolat qui coule + lave = scorie)",
+    "Recettes : scorchia (8 scories + colorant noir), scorie (four, sable des âmes) ; broyage : recipe/crushing/*.json (250 ticks)",
+    "Cuivre : CopperBlockSet, stonecutting depuis c:ingots/copper ; verres : AllPaletteBlocks ; fer : industrial_iron_block (tailleur), splashing → weathered_iron_block",
+    "Échafaudages : MetalScaffoldingBlock (pas de chute), MetalScaffoldingBlockItem (prolongement, 7 blocs à l’horizontale)",
+    "Images : objets et blocs du jeu (modèles de Create) rendus seuls par notre moteur, joueur non dessiné"
+  ],
+  "en": {
+    "slugEn": "decorative-stones-and-blocks",
+    "name": "Create's decorative stones and blocks",
+    "title": "Create's decorative stones and blocks — mod guide",
+    "description": "Create's stones (asurine, crimsite, limestone, ochrum, scoria, scorchia, veridium), their variants, copper tiles, framed glass and scaffolding.",
+    "intro": "Create brings its own building palette: <strong>seven stones</strong> of its own, each in six variants with stairs, slabs and walls, plus <strong>copper tiles</strong> that oxidise, <strong>framed glass</strong>, industrial iron and metal <strong>scaffolding</strong>. Here is what they look like, placed on the plate, and how to get them.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Decoration"
+      },
+      {
+        "label": "Create's stones",
+        "value": "Asurine, crimsite, limestone, ochrum, scoria, scorchia, veridium"
+      },
+      {
+        "label": "Variants",
+        "value": "Cut, polished cut, cut bricks, small bricks, layered, pillar"
+      },
+      {
+        "label": "Shapes",
+        "value": "Stairs, slab and wall for the first four variants"
+      },
+      {
+        "label": "Stonecutter",
+        "value": "Any variant of a stone turns into any other, and back"
+      },
+      {
+        "label": "Also for",
+        "value": "Granite, diorite, andesite, calcite, dripstone, deepslate and tuff"
+      },
+      {
+        "label": "Crushing",
+        "value": "Crimsite: iron; veridium: copper; asurine: zinc; ochrum: gold"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "videos": [],
+    "sections": [
+      {
+        "id": "variantes",
+        "title": "Six variants per stone",
+        "html": "<p>Each stone comes raw, then <strong>cut</strong>, <strong>polished cut</strong>, as <strong>cut bricks</strong>, <strong>small bricks</strong>, <strong>layered</strong> (textures that join horizontally) and as a <strong>pillar</strong> you can orient. The first four variants have stairs, a slab and a wall. At the <strong>stonecutter</strong>, any variant turns back into any other; only slabs cannot go back. The seven vanilla stones listed get the same variants.</p>"
+      },
+      {
+        "id": "asurine",
+        "title": "Asurine",
+        "alt": "Asurine and its variants: cut, polished, bricks, small bricks, layered, pillar, stairs, slab, wall",
+        "html": "<p><strong>Asurine</strong> is blue, with an icy sheen. It comes in layers deep in the Overworld, with tuff and deepslate. Crushed, it gives <strong>Crushed Raw Zinc</strong> and zinc nuggets (30% each).</p>"
+      },
+      {
+        "id": "crimsite",
+        "title": "Crimsite",
+        "alt": "Crimsite and its variants: cut, polished, bricks, small bricks, layered, pillar, stairs, slab, wall",
+        "html": "<p><strong>Crimsite</strong> is blood red, in deep layers with tuff and limestone. It is the <strong>iron</strong> stone: crushed, it gives crushed raw iron and iron nuggets (40% each).</p>"
+      },
+      {
+        "id": "limestone",
+        "title": "Limestone",
+        "alt": "Limestone and its variants: cut, polished, bricks, small bricks, layered, pillar, stairs, slab, wall",
+        "html": "<p><strong>Limestone</strong> is pale beige and smooth. It comes in layers with stone, calcite and diorite, and can be made too: <strong>flowing honey</strong> touching lava sets into limestone.</p>"
+      },
+      {
+        "id": "ochrum",
+        "title": "Ochrum",
+        "alt": "Ochrum and its variants: cut, polished, bricks, small bricks, layered, pillar, stairs, slab, wall",
+        "html": "<p><strong>Ochrum</strong> is ochre yellow, in layers with tuff, deepslate and dripstone. Crushed, it gives crushed raw <strong>gold</strong> and gold nuggets (20% each).</p>"
+      },
+      {
+        "id": "scoria",
+        "title": "Scoria",
+        "alt": "Scoria and its variants: cut, polished, bricks, small bricks, layered, pillar, stairs, slab, wall",
+        "html": "<p><strong>Scoria</strong> is dark brown and porous. It is found in the Overworld and the Nether; you can also smelt soul sand into it, or let <strong>flowing chocolate</strong> meet lava.</p>"
+      },
+      {
+        "id": "scorchia",
+        "title": "Scorchia",
+        "alt": "Scorchia and its variants: cut, polished, bricks, small bricks, layered, pillar, stairs, slab, wall",
+        "html": "<p><strong>Scorchia</strong> is almost black. It comes in layers in the Nether, near soul sand and basalt, and can be crafted: eight scoria around a black dye give eight scorchia.</p>"
+      },
+      {
+        "id": "veridium",
+        "title": "Veridium",
+        "alt": "Veridium and its variants: cut, polished, bricks, small bricks, layered, pillar, stairs, slab, wall",
+        "html": "<p><strong>Veridium</strong> is copper green, in layers with tuff, andesite and smooth basalt. Crushed, it gives crushed raw <strong>copper</strong> and copper nuggets (80% each): an excellent copper source.</p>"
+      },
+      {
+        "id": "cuivre",
+        "title": "Copper tiles and shingles",
+        "alt": "Copper shingles and tiles at the four oxidation stages",
+        "html": "<p>At the stonecutter, one copper ingot makes two <strong>Copper Shingles</strong> or two <strong>Copper Tiles</strong>, with their stairs and slabs. Like vanilla copper, they oxidise: exposed, weathered, oxidised. Honeycomb waxes them; an axe or <a href=\"/en/wiki/sand-paper\">Sand Paper</a> scrapes them.</p>"
+      },
+      {
+        "id": "verre-fer",
+        "title": "Framed glass and iron",
+        "alt": "Framed glass, ornate window, industrial iron and girders",
+        "html": "<p>At the stonecutter, plain glass becomes <strong>Tiled</strong>, <strong>Framed</strong>, <strong>Horizontal Framed</strong> or <strong>Vertical Framed Glass</strong>, with matching panes. The <strong>Ornate Iron Window</strong> takes iron nuggets and glass. An iron ingot gives two <strong>Blocks of Industrial Iron</strong>; washed by a <a href=\"/en/wiki/encased-fan\">fan</a>, they turn into <strong>Weathered Iron</strong>. The <strong>Metal Girder</strong>, made of iron sheets and andesite alloy, joins up into a frame.</p>"
+      },
+      {
+        "id": "echafaudages",
+        "title": "Scaffolding",
+        "alt": "Andesite, brass and copper scaffolding",
+        "html": "<p><strong>Andesite</strong>, <strong>brass</strong> and <strong>copper</strong> scaffolding come out of the stonecutter, two per alloy or ingot. You climb them like bamboo scaffolding, but they never fall: no distance limit. Clicking a scaffold with the same item extends it upward, or sideways up to 7 blocks.</p>"
+      },
+      {
+        "id": "trouver",
+        "title": "Where to find them",
+        "html": "<p>Create's stone layers appear underground in the Overworld, between heights −30 and 70, in bands two to five blocks thick mixed with tuff, deepslate or calcite. In the Nether, scoria and scorchia show up between 40 and 90. A mining tunnel soon runs through several of them.</p>"
+      },
+      {
+        "id": "construire",
+        "title": "Build ideas",
+        "html": "<p>Limestone and copper go very well together for a train station; scoria and scorchia give Nether factories a foundry look; asurine bricks and framed glass make a fine greenhouse. Mix the variants of one stone to break up large flat walls.</p>"
+      }
+    ],
+    "sources": [
+      "Stones and variants: AllPaletteStoneTypes, PaletteBlockPattern (6 variants, stairs / slab / wall), create:stone_types/* tags (stonecutter)",
+      "World: worldgen/configured_feature/striated_ores_overworld.json and _nether.json (layers, Y −30 to 70 and 40 to 90)",
+      "Fluids: AllFluids (flowing honey + lava = limestone; flowing chocolate + lava = scoria)",
+      "Recipes: scorchia (8 scoria + black dye), scoria (furnace, soul sand); crushing: recipe/crushing/*.json (250 ticks)",
+      "Copper: CopperBlockSet, stonecutting from c:ingots/copper; glass: AllPaletteBlocks; iron: industrial_iron_block (stonecutter), splashing → weathered_iron_block",
+      "Scaffolding: MetalScaffoldingBlock (no falling), MetalScaffoldingBlockItem (extension, 7 blocks sideways)",
+      "Images: the game's items and blocks (Create's models) rendered on their own by our engine, player not drawn"
+    ]
+  }
+}

@@ -118,7 +118,8 @@
     "roues-de-concassage",
     "tapis-roulant",
     "entonnoir",
-    "roue-dentee"
+    "roue-dentee",
+    "pierres-et-blocs-de-deco"
   ],
   "sources": [
     "Stress : AllBlocks.java, MILLSTONE, CStress.setImpact(4.0)",

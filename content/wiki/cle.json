@@ -1,0 +1,271 @@
+{
+  "slug": "cle",
+  "name": "Clé",
+  "blockId": "create:wrench",
+  "category": "outils",
+  "title": "Clé (wrench) — Create : guide en français",
+  "description": "La clé de Create : tourner un bloc d'un clic, le ramasser accroupi sans rien perdre, régler entonnoirs, tapis et trains. Recette et astuces.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>clé</strong> est l'outil de réglage de Create, et le premier objet à fabriquer. Un clic droit fait pivoter presque tous les blocs du mod d'un quart de tour ; accroupi, le même clic les <strong>ramasse</strong> d'un coup, sans pioche et sans rien perdre. Sans elle, chaque rotor mal tourné oblige à casser puis reposer le bloc.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Outils et équipement"
+    },
+    {
+      "label": "Clic droit",
+      "value": "Tourne le bloc d’un quart de tour autour de l’axe de la face visée"
+    },
+    {
+      "label": "Accroupi + clic droit",
+      "value": "Ramasse le bloc, qui va directement dans l’inventaire"
+    },
+    {
+      "label": "Usure",
+      "value": "Aucune : la clé ne s’abîme jamais (pile de 1)"
+    },
+    {
+      "label": "En combat",
+      "value": "Frappe comme la main nue ; un wagonnet touché est cassé d’un coup (100 dégâts)"
+    },
+    {
+      "label": "Blocs vanilla",
+      "value": "Leviers, fils, répéteurs, pistons, rails… se ramassent accroupi (tag create:wrench_pickup)"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Plaque d'or",
+        "Plaque d'or",
+        null
+      ],
+      [
+        "Plaque d'or",
+        "Roue dentée",
+        null
+      ],
+      [
+        null,
+        "Bâton",
+        null
+      ]
+    ],
+    "result": "1 clé"
+  },
+  "videos": [
+    {
+      "id": "wrench_rotate",
+      "name": "Clé : tourner, orienter, ramasser",
+      "description": "Une ligne de rotors s'arrête sur un rotor posé de travers : un clic de clé le remet dans l'axe et toute la ligne tourne. Un second clic oriente la perceuse, un clic accroupi la ramasse.",
+      "duration": "PT13S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "rotor",
+      "title": "Tourner un bloc d’un clic",
+      "image": "wrench_rotate_rotor.webp",
+      "alt": "La clé remet un rotor dans l’axe de la ligne",
+      "video": "wrench_rotate",
+      "html": "<p>Vise un bloc de Create et fais un <strong>clic droit</strong> en tenant la clé. Le bloc pivote d'un quart de tour autour de l'axe de la face que tu regardes : clique sur le dessus pour le faire tourner à plat, sur un côté pour le basculer. Dans la boucle, le <a href=\"/wiki/rotor\">rotor</a> du milieu était posé en travers : un seul clic, et la rotation du moteur traverse enfin toute la ligne.</p>"
+    },
+    {
+      "id": "perceuse",
+      "title": "Orienter une machine",
+      "image": "wrench_rotate_perceuse.webp",
+      "alt": "La perceuse tournée vers la ligne de rotors",
+      "html": "<p>Le même geste règle l'orientation des machines : <a href=\"/wiki/perceuse-mecanique\">perceuse</a>, <a href=\"/wiki/deployeur\">déployeur</a>, ventilateur, piston. La perceuse de la scène regardait vers le haut, son arbre d'entrée tourné vers la plaque. Un clic sur sa face nord la couche vers l'ouest : son arbre arrière touche maintenant le rotor et la tête se met à tourner. Si l'orientation voulue n'est pas possible à cet endroit, le clic ne fait rien.</p>"
+    },
+    {
+      "id": "ramasser",
+      "title": "Ramasser sans casser",
+      "image": "wrench_rotate_ramasser.webp",
+      "alt": "La perceuse ramassée d’un clic accroupi",
+      "html": "<p><strong>Accroupi + clic droit</strong> : le bloc disparaît et arrive tout de suite dans ton inventaire. C'est plus rapide qu'une pioche et rien ne tombe par terre. Le jeu traite ce geste comme une casse normale, donc les protections de zone du serveur s'appliquent aussi.</p>"
+    },
+    {
+      "id": "objet",
+      "title": "L’objet",
+      "image": "wrench_hero_objet.webp",
+      "alt": "La clé de Create vue de trois quarts",
+      "html": "<p>Une poignée de bois, une mâchoire en plaques d'or et une petite roue dentée au centre. Elle se fabrique avec trois plaques d'or, pressées par une <a href=\"/wiki/presse-mecanique\">presse mécanique</a>, une roue dentée et un bâton. Elle ne s'use pas : une seule suffit pour toute la partie.</p>"
+    },
+    {
+      "id": "blocs",
+      "title": "Les blocs qui ont leur propre réglage",
+      "html": "<p>Certains blocs ne tournent pas, ils changent de mode. Un <a href=\"/wiki/entonnoir\">entonnoir</a> passe de l'extraction à l'insertion. Un <a href=\"/wiki/tunnel\">tunnel</a> ouvre ou ferme sa fenêtre. Sur un <a href=\"/wiki/tapis-roulant\">tapis roulant</a>, la clé retire l'habillage ou le rotor d'une poulie. Une <a href=\"/wiki/liaison-de-redstone\">liaison de redstone</a> bascule entre émetteur et récepteur. Un <a href=\"/wiki/signal-de-train\">signal de train</a> change de type, un bogie change de modèle. Un <a href=\"/wiki/roulement-mecanique\">roulement</a> désassemble sa structure. Une roue dentée habillée gagne ou perd son arbre si l'on vise sa face d'axe ; accroupi, on lui retire son boîtier.</p>"
+    },
+    {
+      "id": "vanilla",
+      "title": "Blocs vanilla, wagonnets et trains",
+      "html": "<p>Accroupi, la clé ramasse aussi d'un coup la plupart des blocs de redstone vanilla : fil, torche, levier, répéteur, comparateur, observateur, piston, trémie, rails, boutons et plaques de pression. Elle casse un wagonnet en une frappe. Sur un wagonnet qui porte une contraption, un clic droit le récupère en objet, contraption comprise. Sur un wagon de train, elle lance le déplacement du train à la main.</p>"
+    },
+    {
+      "id": "astuces",
+      "title": "Astuces",
+      "html": "<p>Une touche de menu de rotation existe, sans raccourci par défaut : attribue-la dans les commandes pour choisir l'orientation dans une roue au lieu de cliquer plusieurs fois. Les boîtiers ne se tournent pas, c'est voulu. Garde la clé dans la barre rapide : on s'en sert à chaque construction, pour corriger un bloc sans tout casser.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Un bloc qui refuse de tourner n'est pas toujours bloqué : certaines orientations sont impossibles à cet endroit, par exemple une machine qui n'aurait plus de support. Vise une autre face, le résultat change. Sur un tapis, la clé ne fait pas pivoter le tapis : pour changer son sens, il faut inverser la rotation qui l'entraîne.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur notre serveur",
+      "html": "<p>Sur Create France, la clé est le premier outil conseillé aux nouveaux joueurs : elle évite de casser des blocs chers comme une perceuse ou un déployeur pour les reposer. Dans une zone protégée qui n'est pas la tienne, elle ne fait rien, comme une pioche.</p>"
+    }
+  ],
+  "related": [
+    "rotor",
+    "roue-dentee",
+    "boite-a-roues-dentees",
+    "entonnoir",
+    "tunnel",
+    "perceuse-mecanique",
+    "lunettes-d-ingenieur"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/wrench.json (plaques d’or, roue dentée, bâton)",
+    "Rotation et ramassage : IWrenchable.onWrenched / onSneakWrenched, getRotatedBlockState (axe de la face cliquée)",
+    "Blocs vanilla : tag create:wrench_pickup ; wagonnets : config wrenchInstaKillsMinecarts, MinecartContraptionItem",
+    "Réglages propres : FunnelBlock, BeltTunnelBlock, BeltBlock, RedstoneLinkBlock, BearingBlock, EncasedCogwheelBlock…",
+    "Menu de rotation : RadialWrenchHandler, AllKeys (rotate_menu)",
+    "Scène écrite pour ce wiki (Create n'a pas de scène Ponder sur ce sujet) : make_wiki_serie7.py, rendue par notre moteur ; vitesses recalculées par WIKI/redstone_sim.py (propagation de la rotation du code de Create)",
+    "Images : objets et blocs du jeu (modèles de Create) rendus seuls par notre moteur, joueur non dessiné"
+  ],
+  "en": {
+    "slugEn": "wrench",
+    "name": "Wrench",
+    "title": "Wrench — Create mod guide",
+    "description": "The Create Wrench: rotate a block with one click, pick it up while sneaking with no loss, and tune funnels, belts and trains. Recipe and tips.",
+    "intro": "The <strong>Wrench</strong> is Create's adjustment tool, and the first thing worth crafting. A right-click turns almost any block of the mod by a quarter turn; while sneaking, the same click <strong>picks it up</strong> at once, with no pickaxe and nothing lost. Without it, every shaft placed the wrong way means breaking the block and placing it again.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Tools and equipment"
+      },
+      {
+        "label": "Right-click",
+        "value": "Turns the block a quarter turn around the axis of the face you aim at"
+      },
+      {
+        "label": "Sneak + right-click",
+        "value": "Picks the block up, straight into your inventory"
+      },
+      {
+        "label": "Wear",
+        "value": "None: the Wrench never breaks (stack of 1)"
+      },
+      {
+        "label": "In combat",
+        "value": "Hits like a bare hand; a minecart it hits breaks at once (100 damage)"
+      },
+      {
+        "label": "Vanilla blocks",
+        "value": "Levers, dust, repeaters, pistons, rails… are picked up while sneaking (create:wrench_pickup tag)"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Golden Sheet",
+          "Golden Sheet",
+          null
+        ],
+        [
+          "Golden Sheet",
+          "Cogwheel",
+          null
+        ],
+        [
+          null,
+          "Stick",
+          null
+        ]
+      ],
+      "result": "1 Wrench"
+    },
+    "videos": [
+      {
+        "id": "wrench_rotate",
+        "name": "Wrench: rotate, orient, pick up",
+        "description": "A line of shafts stops at one shaft placed crosswise: one click of the Wrench lines it up and the whole line spins. A second click turns the drill, a sneaking click picks it up."
+      }
+    ],
+    "sections": [
+      {
+        "id": "rotor",
+        "title": "Turn a block with one click",
+        "alt": "The Wrench lines a shaft up with the rest",
+        "html": "<p>Aim at a Create block and <strong>right-click</strong> with the Wrench. The block turns a quarter turn around the axis of the face you are looking at: click the top to spin it flat, a side to tip it over. In the loop, the middle <a href=\"/en/wiki/shaft\">shaft</a> was placed crosswise: one click, and the motor's rotation finally runs through the whole line.</p>"
+      },
+      {
+        "id": "perceuse",
+        "title": "Orient a machine",
+        "alt": "The drill turned toward the line of shafts",
+        "html": "<p>The same move sets the facing of machines: <a href=\"/en/wiki/mechanical-drill\">drill</a>, <a href=\"/en/wiki/deployer\">deployer</a>, fan, piston. The drill in the scene was pointing up, its input shaft facing the plate. A click on its north face lays it down toward the west: its rear shaft now meets the line and the head starts spinning. If the facing you want is not possible there, the click does nothing.</p>"
+      },
+      {
+        "id": "ramasser",
+        "title": "Pick up without breaking",
+        "alt": "The drill picked up with a sneaking click",
+        "html": "<p><strong>Sneak + right-click</strong>: the block vanishes and lands in your inventory right away. It beats a pickaxe and nothing drops on the floor. The game handles this as a normal block break, so the server's land claims apply to it as well.</p>"
+      },
+      {
+        "id": "objet",
+        "title": "The item",
+        "alt": "The Create Wrench seen from three quarters",
+        "html": "<p>A wooden grip, a jaw made of golden sheets and a small cogwheel in the middle. It takes three golden sheets, made by a <a href=\"/en/wiki/mechanical-press\">Mechanical Press</a>, a cogwheel and a stick. It never wears out: one is enough for the whole game.</p>"
+      },
+      {
+        "id": "blocs",
+        "title": "Blocks with a setting of their own",
+        "html": "<p>Some blocks do not turn, they switch modes. A <a href=\"/en/wiki/funnel\">funnel</a> goes from extracting to inserting. A <a href=\"/en/wiki/tunnel\">tunnel</a> opens or shuts its window. On a <a href=\"/en/wiki/conveyor-belt\">belt</a>, the Wrench removes the casing or a pulley's shaft. A <a href=\"/en/wiki/redstone-link\">Redstone Link</a> flips between transmitter and receiver. A <a href=\"/en/wiki/train-signal\">train signal</a> changes type, a bogey changes style. A <a href=\"/en/wiki/mechanical-bearing\">bearing</a> disassembles its structure. An encased cogwheel gains or loses its shaft when you aim at its axis face; while sneaking, its casing comes off.</p>"
+      },
+      {
+        "id": "vanilla",
+        "title": "Vanilla blocks, minecarts and trains",
+        "html": "<p>While sneaking, the Wrench also picks up most vanilla redstone blocks at once: dust, torches, levers, repeaters, comparators, observers, pistons, hoppers, rails, buttons and pressure plates. It breaks a minecart in one hit. On a minecart that carries a contraption, a right-click takes it back as an item, contraption included. On a train carriage, it starts moving the train by hand.</p>"
+      },
+      {
+        "id": "astuces",
+        "title": "Tips",
+        "html": "<p>There is a rotation menu key with no default binding: set it in the controls to pick the facing from a wheel instead of clicking several times. Casings cannot be turned, on purpose. Keep the Wrench on your hotbar: you will use it on every build, to fix a block without tearing everything down.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>A block that will not turn is not always stuck: some facings are simply impossible at that spot, for instance a machine that would lose its support. Aim at another face and the result changes. On a belt the Wrench does not spin the belt around: to change its direction, reverse the rotation that drives it.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On our server",
+        "html": "<p>On Create France the Wrench is the first tool we recommend to new players: it saves you from breaking costly blocks like a drill or a deployer just to place them again. In a protected area that is not yours it does nothing, just like a pickaxe.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/wrench.json (golden sheets, cogwheel, stick)",
+      "Rotation and pickup: IWrenchable.onWrenched / onSneakWrenched, getRotatedBlockState (axis of the clicked face)",
+      "Vanilla blocks: create:wrench_pickup tag; minecarts: wrenchInstaKillsMinecarts config, MinecartContraptionItem",
+      "Own settings: FunnelBlock, BeltTunnelBlock, BeltBlock, RedstoneLinkBlock, BearingBlock, EncasedCogwheelBlock…",
+      "Rotation menu: RadialWrenchHandler, AllKeys (rotate_menu)",
+      "Scene written for this wiki (Create has no Ponder scene on this topic): make_wiki_serie7.py, rendered by our engine; speeds recomputed by WIKI/redstone_sim.py (rotation propagation from Create's code)",
+      "Images: the game's items and blocks (Create's models) rendered on their own by our engine, player not drawn"
+    ]
+  }
+}
