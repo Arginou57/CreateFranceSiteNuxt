@@ -9,8 +9,8 @@
           <span class="bento-badge">Serveur Minecraft</span>
           <h1>Create<br>France</h1>
           <p>Construisez, automatisez, explorez &mdash; ensemble.</p>
-          <!-- Launcher Create France : installe le modpack et connecte au serveur (hébergé sur le VPS deadzonemc.com) -->
-          <a href="https://deadzonemc.com/launcher-createfrance/CreateFrance-Launcher-Setup.exe" class="bento-launcher-btn" download>
+          <!-- Launcher Create France : installe le modpack et connecte au serveur (servi par create-france.com/launcher/) -->
+          <a href="/launcher/CreateFrance-Launcher-Setup.exe" class="bento-launcher-btn" download>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
             Télécharger le launcher
           </a>
