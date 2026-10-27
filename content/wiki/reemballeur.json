@@ -1,0 +1,266 @@
+{
+  "slug": "reemballeur",
+  "name": "Réemballeur",
+  "blockId": "create:repackager",
+  "category": "colis",
+  "title": "Réemballeur (re-packager) — Create : guide en français",
+  "description": "Le réemballeur de Create 6 : réunir les morceaux d'une commande envoyée en plusieurs colis, pour qu'elle arrive complète à une machine ou un établi.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Une grosse commande passée sur le réseau de colis part souvent en <strong>plusieurs morceaux</strong> : un colis ne contient que 9 piles, et les objets peuvent venir de plusieurs entrepôts. Le <strong>réemballeur</strong> attend tous les morceaux d'une même commande et les remballe en colis complets avant de les laisser repartir. Indispensable quand une machine, comme une grille d'établis mécaniques, doit recevoir toute sa recette d'un coup.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Réseau de colis"
+    },
+    {
+      "label": "Rôle",
+      "value": "Réunit les fragments d'une même commande en colis complets"
+    },
+    {
+      "label": "Colis ordinaires",
+      "value": "Ressortent tels quels, sans attendre"
+    },
+    {
+      "label": "Fabrication",
+      "value": "Un emballeur converti à l'établi (et inversement)"
+    },
+    {
+      "label": "Stress",
+      "value": "Aucun"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Conversion à l'établi",
+    "grid": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "Emballeur",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 réemballeur"
+  },
+  "videos": [
+    {
+      "id": "repackager",
+      "name": "Réemballeur : une commande en plusieurs morceaux",
+      "description": "Deux commandes partent d'un entrepôt en plusieurs colis qui avancent sur le tapis, mélangés.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "repackager_merge",
+      "name": "Réemballeur : remballer avant la livraison",
+      "description": "Les colis passent par le réemballeur, qui attend chaque commande complète avant de la renvoyer.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "probleme",
+      "title": "Le problème des commandes fragmentées",
+      "image": "repackager_commande.webp",
+      "alt": "Entrepôt et grille d'établis reliés par un tapis qui transporte des colis",
+      "video": "repackager",
+      "html": "<p>Quand le réseau doit livrer beaucoup d'objets, l'<a href=\"/wiki/emballeur\">emballeur</a> les répartit en plusieurs colis de 9 piles au plus. Chaque morceau porte la marque de sa commande, mais ils voyagent séparément et peuvent arriver mélangés avec ceux d'une autre commande. Pour un coffre, ce n'est pas grave. Pour une machine qui attend une recette précise, c'est le chaos.</p>"
+    },
+    {
+      "id": "separes",
+      "title": "Deux commandes qui se croisent",
+      "image": "repackager_separes.webp",
+      "alt": "Colis de deux commandes mêlés sur le même tapis",
+      "html": "<p>Dans la boucle, deux commandes A et B partent du même entrepôt. Leurs colis se suivent sur le tapis dans le désordre : un morceau de A, deux de B, le reste de A… Livrés tels quels à une <a href=\"/wiki/etabli-mecanique\">grille d'établis</a>, ils rempliraient les emplacements avec un mélange des deux recettes.</p>"
+    },
+    {
+      "id": "reemballeur",
+      "title": "Le réemballeur remet de l'ordre",
+      "image": "repackager_merge_reemballeur.webp",
+      "alt": "Réemballeur placé sur la ligne entre l'entrepôt et la machine",
+      "video": "repackager_merge",
+      "html": "<p>Placé sur le trajet, contre un inventaire tampon, le réemballeur accueille les colis. Un colis normal ressort aussitôt. Un <strong>fragment</strong>, lui, est mis de côté jusqu'à ce que tous les morceaux de sa commande soient arrivés. Alors seulement, le réemballeur les ouvre, regroupe leur contenu et refait des colis complets, dans le bon ordre.</p>"
+    },
+    {
+      "id": "complet",
+      "title": "Une commande, un envoi",
+      "image": "repackager_merge_colis-unique.webp",
+      "alt": "Colis remballés qui repartent vers la machine",
+      "html": "<p>À la sortie, chaque commande repart d'un bloc, sans morceau d'une autre commande au milieu. La machine en bout de ligne reçoit tous ses ingrédients ensemble et peut fabriquer tout de suite. C'est exactement ce dont ont besoin les <a href=\"/wiki/jauge-d-usine\">jauges d'usine</a> qui commandent des recettes entières.</p>"
+    },
+    {
+      "id": "fabriquer",
+      "title": "D'emballeur à réemballeur",
+      "html": "<p>Le réemballeur ne se fabrique pas à partir de rien : on <strong>convertit un emballeur</strong> en le posant seul dans l'établi, et la conversion inverse marche aussi. Il se pose et se branche comme un emballeur, contre un inventaire, avec la même sortie. Il garde même la pancarte d'adresse si on lui en fixe une.</p>"
+    },
+    {
+      "id": "ou",
+      "title": "Où le placer",
+      "html": "<p>Le bon endroit est juste avant la destination qui a besoin de commandes complètes : à l'entrée d'une salle de fabrication, d'une ligne de <a href=\"/wiki/deployeur\">déployeurs</a> ou d'une grille d'établis. Inutile en revanche devant un simple entrepôt : un <a href=\"/wiki/coffre-a-objet-renforce\">coffre renforcé</a> range très bien les morceaux dans n'importe quel ordre.</p>"
+    },
+    {
+      "id": "exemple",
+      "title": "Exemple : une grille d'établis alimentée par le réseau",
+      "html": "<p>Une salle de fabrication reçoit ses ingrédients par une seule chaîne. Devant la grille d'établis, un crapauport dépose les colis dans un coffre tampon ; un réemballeur collé à ce coffre attend que chaque commande soit complète et la renvoie d'un bloc sur le tapis qui alimente la grille. Sans lui, deux commandes passées à quelques secondes d'intervalle se mélangeraient dans les établis et bloqueraient la machine jusqu'à ce qu'on la vide à la main.</p>"
+    },
+    {
+      "id": "conseil",
+      "title": "Un conseil",
+      "html": "<p>Garde le coffre tampon du réemballeur assez grand pour plusieurs commandes à la fois, et réserve-le aux colis : un objet ordinaire qui s'y glisserait ne gênerait pas, mais occuperait de la place.</p>"
+    },
+    {
+      "id": "images",
+      "title": "Ce que montrent nos boucles",
+      "html": "<p>Nos boucles montrent les colis sur les tapis et sur le plateau des emballeurs, dessinés comme l'objet « colis en carton ». Le regroupement à l'intérieur du réemballeur, la marque de commande et l'adresse ne se voient pas : ce sont des boucles partielles, que le texte complète.</p>"
+    }
+  ],
+  "related": [
+    "emballeur",
+    "jauge-d-usine",
+    "etabli-mecanique",
+    "telescripteur-de-stock"
+  ],
+  "sources": [
+    "Réemballeur : RepackagerBlockEntity (sous-classe de PackagerBlockEntity), PackageRepackageHelper.isFragmented / addPackageFragment / repack",
+    "Contenu d'un colis : PackageItem.SLOTS = 9",
+    "Recettes : crafting/logistics/repackager_from_conversion.json, packager_from_conversion.json",
+    "Scène : RepackagerScenes.repackager (deux boucles partielles : colis dessinés comme l'objet « colis en carton », regroupement non montré)"
+  ],
+  "en": {
+    "slugEn": "re-packager",
+    "name": "Re-Packager",
+    "title": "Re-Packager — Create mod guide",
+    "description": "The Create 6 Re-Packager: gathering the pieces of an order shipped in several packages, so that it reaches a machine or a crafter grid complete.",
+    "intro": "A large order placed on the package network often leaves in <strong>several pieces</strong>: a package only holds 9 stacks, and items can come from several warehouses. The <strong>Re-Packager</strong> waits for every piece of the same order and repacks them into complete packages before letting them go on. It is essential when a machine, such as a Mechanical Crafter grid, must receive its whole recipe at once.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Package network"
+      },
+      {
+        "label": "Role",
+        "value": "Gathers the fragments of one order into complete packages"
+      },
+      {
+        "label": "Ordinary packages",
+        "value": "Come straight back out, without waiting"
+      },
+      {
+        "label": "Crafting",
+        "value": "A Packager converted in the crafting grid (and back)"
+      },
+      {
+        "label": "Stress",
+        "value": "None"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting grid conversion",
+      "grid": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "Packager",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Re-Packager"
+    },
+    "videos": [
+      {
+        "id": "repackager",
+        "name": "Re-Packager: an order in several pieces",
+        "description": "Two orders leave a warehouse as several packages moving along the belt, all mixed up."
+      },
+      {
+        "id": "repackager_merge",
+        "name": "Re-Packager: repacking before delivery",
+        "description": "The packages go through the Re-Packager, which waits for each complete order before sending it on."
+      }
+    ],
+    "sections": [
+      {
+        "id": "probleme",
+        "title": "The problem with fragmented orders",
+        "alt": "Warehouse and crafter grid linked by a belt carrying packages",
+        "html": "<p>When the network has to deliver many items, the <a href=\"/en/wiki/packager\">Packager</a> splits them into several packages of 9 stacks at most. Each piece carries the mark of its order, but they travel separately and can arrive mixed with another order's pieces. For a chest it does not matter. For a machine expecting a precise recipe, it is chaos.</p>"
+      },
+      {
+        "id": "separes",
+        "title": "Two orders crossing paths",
+        "alt": "Packages from two orders mixed on the same belt",
+        "html": "<p>In the loop, two orders A and B leave the same warehouse. Their packages follow one another on the belt in no particular order: a piece of A, two of B, the rest of A… Delivered as they are to a <a href=\"/en/wiki/mechanical-crafter\">crafter grid</a>, they would fill the slots with a mix of both recipes.</p>"
+      },
+      {
+        "id": "reemballeur",
+        "title": "The Re-Packager restores order",
+        "alt": "Re-Packager placed on the line between the warehouse and the machine",
+        "html": "<p>Placed along the route, against a buffer inventory, the Re-Packager takes in the packages. An ordinary package comes straight back out. A <strong>fragment</strong> is put aside until every piece of its order has arrived. Only then does the Re-Packager open them, gather their contents and build complete packages again, in the right order.</p>"
+      },
+      {
+        "id": "complet",
+        "title": "One order, one shipment",
+        "alt": "Repacked packages heading back towards the machine",
+        "html": "<p>On the way out, each order leaves in one go, with no piece of another order in the middle. The machine at the end of the line receives all its ingredients together and can craft straight away. This is exactly what <a href=\"/en/wiki/factory-gauge\">Factory Gauges</a> need when they order whole recipes.</p>"
+      },
+      {
+        "id": "fabriquer",
+        "title": "From Packager to Re-Packager",
+        "html": "<p>The Re-Packager is not crafted from scratch: you <strong>convert a Packager</strong> by putting it alone in the crafting grid, and the reverse conversion works too. It is placed and wired like a Packager, against an inventory, with the same output. It even keeps the address sign if you attach one.</p>"
+      },
+      {
+        "id": "ou",
+        "title": "Where to place it",
+        "html": "<p>The right spot is just before the destination that needs complete orders: at the entrance of a crafting room, a line of <a href=\"/en/wiki/deployer\">Deployers</a> or a crafter grid. It is pointless in front of a plain warehouse though: an <a href=\"/en/wiki/item-vault\">Item Vault</a> stores the pieces perfectly well in any order.</p>"
+      },
+      {
+        "id": "exemple",
+        "title": "Example: a crafter grid fed by the network",
+        "html": "<p>A crafting room receives its ingredients through a single chain. In front of the crafter grid, a Frogport drops packages into a buffer chest; a Re-Packager against that chest waits until every order is complete and sends it back out in one go onto the belt feeding the grid. Without it, two orders placed a few seconds apart would mix inside the crafters and jam the machine until someone emptied it by hand. With it, you can queue as many orders as you like and each one is crafted cleanly, one after the other.</p>"
+      },
+      {
+        "id": "conseil",
+        "title": "A tip",
+        "html": "<p>Keep the Re-Packager's buffer chest large enough for several orders at once, and reserve it for packages: an ordinary item slipping in would not break anything, but it would take up room that the next order needs.</p>"
+      },
+      {
+        "id": "images",
+        "title": "What our loops show",
+        "html": "<p>Our loops show packages on belts and on the Packagers' trays, drawn as the \"cardboard package\" item. The grouping inside the Re-Packager, the order mark and the address are not visible: these are partial loops, completed by the text.</p>"
+      }
+    ],
+    "sources": [
+      "Re-Packager: RepackagerBlockEntity (subclass of PackagerBlockEntity), PackageRepackageHelper.isFragmented / addPackageFragment / repack",
+      "Package contents: PackageItem.SLOTS = 9",
+      "Recipes: crafting/logistics/repackager_from_conversion.json, packager_from_conversion.json",
+      "Scene: RepackagerScenes.repackager (two partial loops: packages drawn as the \"cardboard package\" item, grouping not shown)"
+    ]
+  }
+}

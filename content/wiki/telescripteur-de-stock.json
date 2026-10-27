@@ -1,0 +1,268 @@
+{
+  "slug": "telescripteur-de-stock",
+  "name": "Téléscripteur de stock",
+  "blockId": "create:stock_ticker",
+  "category": "colis",
+  "title": "Téléscripteur de stock — Create : guide en français",
+  "description": "Le téléscripteur de stock de Create 6 : voir tout le stock du réseau, commander des objets livrés en colis à une adresse, vendeur assis et verrouillage.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>téléscripteur de stock</strong> est le guichet du réseau de colis. Relié à la même fréquence que les liaisons de stock, il affiche la liste de tout ce que contiennent les entrepôts du réseau et permet de <strong>commander</strong> : choisis les objets, les quantités et une adresse, et les emballeurs préparent les colis qui partent vers toi. Avec un vendeur assis à côté, il devient même une vraie boutique.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Réseau de colis"
+    },
+    {
+      "label": "Réseau",
+      "value": "Même fréquence que les liaisons de stock, copiée en cliquant l'une d'elles avant la pose"
+    },
+    {
+      "label": "Affiche",
+      "value": "Le stock total de tous les entrepôts reliés, classé par catégories"
+    },
+    {
+      "label": "Commande",
+      "value": "Objets, quantités et adresse de livraison"
+    },
+    {
+      "label": "Vendeur",
+      "value": "Une créature assise sur un siège à côté sert de guichet"
+    },
+    {
+      "label": "Recette",
+      "value": "1 verre + 1 liaison de stock + 1 lingot d'or"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Verre",
+        null
+      ],
+      [
+        null,
+        "Liaison de stock",
+        null
+      ],
+      [
+        null,
+        "Lingot d'or",
+        null
+      ]
+    ],
+    "result": "1 téléscripteur de stock"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "relier",
+      "title": "Le brancher sur le réseau",
+      "image": "stock_ticker_reseau.webp",
+      "alt": "Téléscripteur de stock et entrepôt équipé de liaisons de stock",
+      "html": "<p>Comme une <a href=\"/wiki/liaison-de-stock\">liaison de stock</a>, le téléscripteur rejoint un réseau en copiant sa fréquence : téléscripteur en main, clic droit sur une liaison déjà posée, puis pose-le où tu veux, dans ton atelier, ta base ou ta boutique. Il n'a pas besoin d'être près des entrepôts.</p>"
+    },
+    {
+      "id": "stock",
+      "title": "Voir tout le stock",
+      "image": "stock_ticker_stock.webp",
+      "alt": "Entrepôt relié au téléscripteur de stock posé plus loin",
+      "html": "<p>Un clic droit sur le téléscripteur ouvre la <strong>liste de tous les objets</strong> disponibles dans le réseau, avec leurs quantités, tous entrepôts confondus. On peut ranger cette liste en catégories, en masquer certaines et chercher un objet par son nom. C'est l'inventaire de toute une base dans un seul écran.</p>"
+    },
+    {
+      "id": "commande",
+      "title": "Passer une commande",
+      "image": "stock_ticker_commande.webp",
+      "alt": "Colis qui partent sur un tapis après une commande",
+      "html": "<p>Choisis les objets voulus et leurs quantités, écris une <strong>adresse</strong> de livraison et valide. Les liaisons de stock transmettent la demande à leurs <a href=\"/wiki/emballeur\">emballeurs</a>, qui prélèvent exactement ce qu'il faut et expédient des colis à cette adresse, par tapis, <a href=\"/wiki/roue-a-chaine-roulante\">chaînes</a> ou <a href=\"/wiki/boite-aux-lettres\">trains</a>. Il ne reste qu'à attendre la livraison.</p>"
+    },
+    {
+      "id": "retrait",
+      "title": "Recevoir sa commande",
+      "image": "stock_ticker_retrait.webp",
+      "alt": "Dépôt où arrivent les colis commandés, près du téléscripteur",
+      "html": "<p>Le plus simple est de prévoir, près du téléscripteur, un point d'arrivée à l'adresse que tu tapes : un crapauport ou une boîte aux lettres à ton nom, suivi d'un emballeur qui déballe dans un coffre. Tu commandes, tu attends quelques secondes, tu ouvres le coffre.</p>"
+    },
+    {
+      "id": "adresses",
+      "title": "Livrer ailleurs",
+      "image": "stock_ticker_address_livraison.webp",
+      "alt": "Réseau de tapis qui achemine un colis commandé vers une autre adresse",
+      "html": "<p>Rien n'oblige à se faire livrer soi-même : l'adresse peut être celle d'une machine, d'un ami ou d'un autre entrepôt. Le téléscripteur sert alors de télécommande pour toute l'usine, par exemple pour envoyer du charbon vers la chaudière depuis la salle de contrôle.</p>"
+    },
+    {
+      "id": "exemple",
+      "title": "Exemple : la salle de commande",
+      "html": "<p>Au centre de la base, un téléscripteur relié à tous les entrepôts, un crapauport nommé « Atelier » sous une roue à chaîne, un emballeur et un coffre. Tu commandes 32 plaques de fer et 16 tubes électroniques, adresse « Atelier » : les entrepôts concernés préparent leurs colis, la chaîne les apporte, l'emballeur les déballe dans le coffre. Plus aucun aller-retour à la mine pour une construction.</p>"
+    },
+    {
+      "id": "categories",
+      "title": "Ranger la liste",
+      "html": "<p>Sur un gros réseau, la liste devient longue. Crée des catégories, minerais, nourriture, pièces de Create, et masque celles qui ne servent jamais : chaque joueur retrouve vite ce qu'il cherche, et la recherche par nom fait le reste.</p>"
+    },
+    {
+      "id": "vendeur",
+      "title": "Un vendeur assis",
+      "image": "stock_ticker_address_ticker.webp",
+      "alt": "Téléscripteur de stock posé à côté d'un siège",
+      "html": "<p>Installe un siège à côté du téléscripteur et fais-y asseoir une créature, un villageois ou un blaze par exemple : elle devient <strong>vendeur</strong>. Les joueurs passent alors commande en lui parlant, sans toucher au téléscripteur. C'est la base des boutiques de Create 6, avec la <a href=\"/wiki/commandeur-a-redstone\">nappe</a> pour afficher les articles et leur prix.</p>"
+    },
+    {
+      "id": "verrou",
+      "title": "Verrouiller le réseau",
+      "image": "stock_ticker_address_retour.webp",
+      "alt": "Téléscripteur et colis de retour près d'un emballeur",
+      "html": "<p>Le propriétaire du réseau peut le <strong>verrouiller</strong> depuis le téléscripteur : les autres joueurs ne peuvent plus commander librement. Sur un serveur comme Create France, c'est indispensable dès que la base est ouverte aux visiteurs ou qu'on y tient une boutique.</p>"
+    },
+    {
+      "id": "images",
+      "title": "À propos des images",
+      "html": "<p>L'écran de commande et les colis préparés à la demande ne sont pas animés par notre moteur : cette page est illustrée par des images fixes des scènes Ponder.</p>"
+    }
+  ],
+  "related": [
+    "liaison-de-stock",
+    "emballeur",
+    "commandeur-a-redstone",
+    "roue-a-chaine-roulante",
+    "coffre-a-objet-renforce"
+  ],
+  "sources": [
+    "Téléscripteur : StockTickerBlockEntity, StockKeeperRequestScreen (liste, catégories, commande avec adresse), StockKeeperCategoryScreen",
+    "Vendeur : StockTickerInteractionHandler (créature assise sur un siège, SeatEntity, interactWithShop), verrouillage : StockKeeperLockPacket, Create.LOGISTICS.isLocked",
+    "Recette : crafting/logistics/stock_ticker.json",
+    "Scènes : StockTickerScenes.stockTicker, stockTickerAddress ; images seules"
+  ],
+  "en": {
+    "slugEn": "stock-ticker",
+    "name": "Stock Ticker",
+    "title": "Stock Ticker — Create mod guide",
+    "description": "The Create 6 Stock Ticker: seeing all of the network's stock, ordering items delivered as packages to an address, seated stock keepers and locking.",
+    "intro": "The <strong>Stock Ticker</strong> is the package network's counter. Set to the same frequency as the Stock Links, it shows the list of everything the network's warehouses hold and lets you <strong>order</strong>: pick the items, the amounts and an address, and the Packagers prepare packages that head your way. With a keeper seated next to it, it even becomes a real shop.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Package network"
+      },
+      {
+        "label": "Network",
+        "value": "Same frequency as the Stock Links, copied by clicking one of them before placing"
+      },
+      {
+        "label": "Shows",
+        "value": "The total stock of every linked warehouse, sorted into categories"
+      },
+      {
+        "label": "Order",
+        "value": "Items, amounts and a delivery address"
+      },
+      {
+        "label": "Keeper",
+        "value": "A creature seated on a seat next to it acts as the counter"
+      },
+      {
+        "label": "Recipe",
+        "value": "1 Glass + 1 Stock Link + 1 Gold Ingot"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Glass",
+          null
+        ],
+        [
+          null,
+          "Stock Link",
+          null
+        ],
+        [
+          null,
+          "Gold Ingot",
+          null
+        ]
+      ],
+      "result": "1 Stock Ticker"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "relier",
+        "title": "Plugging it into the network",
+        "alt": "Stock Ticker and a warehouse fitted with Stock Links",
+        "html": "<p>Like a <a href=\"/en/wiki/stock-link\">Stock Link</a>, the ticker joins a network by copying its frequency: holding the ticker, right-click a link already placed, then put it wherever you want, in your workshop, your base or your shop. It does not need to be near the warehouses.</p>"
+      },
+      {
+        "id": "stock",
+        "title": "Seeing all the stock",
+        "alt": "Warehouse linked to the Stock Ticker placed further away",
+        "html": "<p>Right-clicking the ticker opens the <strong>list of every item</strong> available on the network, with their amounts, all warehouses combined. The list can be sorted into categories, some of them hidden, and searched by name. It is a whole base's inventory on a single screen.</p>"
+      },
+      {
+        "id": "commande",
+        "title": "Placing an order",
+        "alt": "Packages leaving on a belt after an order",
+        "html": "<p>Pick the items you want and their amounts, type a delivery <strong>address</strong> and confirm. The Stock Links pass the request to their <a href=\"/en/wiki/packager\">Packagers</a>, which take exactly what is needed and ship packages to that address, by belt, <a href=\"/en/wiki/chain-conveyor\">chains</a> or <a href=\"/en/wiki/postbox\">trains</a>. All that is left is to wait for the delivery.</p>"
+      },
+      {
+        "id": "retrait",
+        "title": "Receiving your order",
+        "alt": "Depot where ordered packages arrive, near the ticker",
+        "html": "<p>The simplest is to set up, near the ticker, an arrival point for the address you type: a Frogport or a Postbox with your name, followed by a Packager unpacking into a chest. You order, wait a few seconds, open the chest.</p>"
+      },
+      {
+        "id": "adresses",
+        "title": "Delivering elsewhere",
+        "alt": "Belt network carrying an ordered package to another address",
+        "html": "<p>Nothing forces you to deliver to yourself: the address can be a machine's, a friend's or another warehouse's. The ticker then works as a remote control for the whole factory, for instance to send coal to the boiler from the control room.</p>"
+      },
+      {
+        "id": "exemple",
+        "title": "Example: the control room",
+        "html": "<p>At the centre of the base: a ticker linked to every warehouse, a Frogport named \"Workshop\" under a Chain Conveyor, a Packager and a chest. You order 32 iron sheets and 16 electron tubes, address \"Workshop\": the warehouses involved prepare their packages, the chain brings them over, the Packager unpacks them into the chest. No more trips to the mine for a build, and the stock list tells you straight away what is running low so you can plan the next production run.</p>"
+      },
+      {
+        "id": "categories",
+        "title": "Organising the list",
+        "html": "<p>On a big network the list gets long. Create categories, ores, food, Create parts, and hide the ones nobody ever uses: every player quickly finds what they are looking for, and searching by name does the rest. A tidy list also makes shops much nicer for visitors.</p>"
+      },
+      {
+        "id": "vendeur",
+        "title": "A seated keeper",
+        "alt": "Stock Ticker placed next to a seat",
+        "html": "<p>Put a seat next to the ticker and sit a creature on it, a villager or a blaze for example: it becomes a <strong>stock keeper</strong>. Players then order by talking to it, without touching the ticker. It is the basis of Create 6 shops, with the <a href=\"/en/wiki/redstone-requester\">Table Cloth</a> to display the articles and their price.</p>"
+      },
+      {
+        "id": "verrou",
+        "title": "Locking the network",
+        "alt": "Ticker and returning packages near a Packager",
+        "html": "<p>The network's owner can <strong>lock</strong> it from the ticker: other players can then no longer order freely. On a server like Create France it is essential as soon as the base is open to visitors or hosts a shop.</p>"
+      },
+      {
+        "id": "images",
+        "title": "About the pictures",
+        "html": "<p>The ordering screen and the packages prepared on demand are not animated by our renderer: this page is illustrated with stills of the Ponder scenes.</p>"
+      }
+    ],
+    "sources": [
+      "Stock Ticker: StockTickerBlockEntity, StockKeeperRequestScreen (list, categories, order with address), StockKeeperCategoryScreen",
+      "Keeper: StockTickerInteractionHandler (creature seated on a seat, SeatEntity, interactWithShop), locking: StockKeeperLockPacket, Create.LOGISTICS.isLocked",
+      "Recipe: crafting/logistics/stock_ticker.json",
+      "Scenes: StockTickerScenes.stockTicker, stockTickerAddress; stills only"
+    ]
+  }
+}

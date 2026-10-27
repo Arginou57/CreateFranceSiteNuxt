@@ -1,0 +1,261 @@
+{
+  "slug": "jauge-d-usine",
+  "name": "Jauge d'usine",
+  "blockId": "create:factory_gauge",
+  "category": "colis",
+  "title": "Jauge d'usine (factory gauge) — Create : guide en français",
+  "description": "La jauge d'usine de Create 6 : garder un stock à niveau, enchaîner des recettes entre jauges, piloter des établis mécaniques et le lien avec la redstone.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>jauge d'usine</strong> est le cerveau d'une usine en réseau. Fixée sur un emballeur, elle surveille un objet et une quantité cible : dès que le stock passe en dessous, elle commande au réseau de quoi le remettre à niveau. Reliées entre elles, plusieurs jauges décrivent une <strong>recette</strong> : ingrédients d'un côté, produit de l'autre, et l'usine se met à produire toute seule ce qui manque.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Réseau de colis"
+    },
+    {
+      "label": "Pose",
+      "value": "Jusqu'à 4 jauges par face, sur un emballeur pour réapprovisionner son inventaire"
+    },
+    {
+      "label": "Réglage",
+      "value": "Un objet et une quantité cible, plus l'adresse où livrer"
+    },
+    {
+      "label": "Rythme",
+      "value": "Une demande toutes les 100 ticks (5 s) au plus, réglage serveur factoryGaugeTimer"
+    },
+    {
+      "label": "Liaisons",
+      "value": "Jauge vers jauge pour les recettes, vers des établis mécaniques, liaisons redstone et d'affichage"
+    },
+    {
+      "label": "Recette",
+      "value": "1 liaison de stock + 1 mécanisme de précision → 2 jauges"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (sans forme)",
+    "grid": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        "Liaison de stock",
+        "Mécanisme de précision",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "2 jauges d'usine"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "reserve",
+      "title": "Garder un stock à niveau",
+      "image": "gauge_restocker_reserve.webp",
+      "alt": "Coffres derrière un emballeur, emplacement de la jauge encadré",
+      "html": "<p>Pose une jauge sur un <a href=\"/wiki/emballeur\">emballeur</a> et règle-la sur un objet et une quantité, par exemple 64 pains. Elle lit l'inventaire que l'emballeur dessert et, dès que le stock descend sous ce nombre, <strong>commande le complément</strong> au réseau, livré à l'adresse de cet emballeur. Un garde-manger qui se remplit tout seul. Plus besoin de vérifier les coffres.</p>"
+    },
+    {
+      "id": "ticker",
+      "title": "Branchée sur le réseau",
+      "image": "gauge_restocker_ticker.webp",
+      "alt": "Téléscripteur de stock et entrepôt du même réseau que la jauge",
+      "html": "<p>La jauge se connecte au réseau comme les autres blocs logistiques, en copiant la fréquence d'une <a href=\"/wiki/liaison-de-stock\">liaison de stock</a> avant la pose. Elle puise alors dans tous les entrepôts reliés. Son voyant montre si l'objectif est atteint ; une flèche indique si une commande est en route.</p>"
+    },
+    {
+      "id": "reappro",
+      "title": "La commande en route",
+      "image": "gauge_restocker_reapprovisionner.webp",
+      "alt": "Colis qui arrivent par tapis jusqu'à l'emballeur de la jauge",
+      "html": "<p>La jauge tient compte des colis déjà commandés : elle ne redemande pas ce qui est en chemin. Elle attend au moins <strong>5 secondes</strong> entre deux demandes, un délai réglable sur le serveur. Les colis arrivent par tapis, chaîne ou train, et l'emballeur les déballe dans l'inventaire surveillé.</p>"
+    },
+    {
+      "id": "jauge",
+      "title": "Décrire une recette",
+      "image": "gauge_recipe_jauge.webp",
+      "alt": "Jauges d'usine posées sur un grand entrepôt",
+      "html": "<p>Une jauge peut aussi représenter un <strong>produit</strong>. Relie-lui d'autres jauges, celles de ses ingrédients, en cliquant de l'une à l'autre : une flèche s'affiche entre elles. Indique combien d'unités de chaque ingrédient la recette demande et combien elle rend. La jauge du produit sait alors ce qu'il faut envoyer à la machine pour en fabriquer.</p>"
+    },
+    {
+      "id": "recette",
+      "title": "Envoyer les ingrédients",
+      "image": "gauge_recipe_recette.webp",
+      "alt": "Jauges reliées entre l'entrepôt et une machine",
+      "html": "<p>Quand le stock du produit est trop bas et que les ingrédients sont disponibles, la jauge commande les ingrédients et les fait livrer à l'<strong>adresse de la machine</strong> qui fabrique : un mélangeur, une presse, un four… Le produit fini revient au stock par le chemin habituel, et la boucle recommence tant que l'objectif n'est pas atteint.</p>"
+    },
+    {
+      "id": "chaine",
+      "title": "Enchaîner les étapes",
+      "image": "gauge_recipe_chaine.webp",
+      "alt": "Tapis en boucle autour de l'entrepôt et des machines",
+      "html": "<p>Les jauges se combinent en <strong>chaînes de production</strong> : la jauge d'un produit intermédiaire sert d'ingrédient à la suivante. Demande du pain et la jauge commandera de la farine, que sa propre jauge fera moudre à partir du blé disponible. L'usine produit ainsi à la demande, sans stock inutile.</p>"
+    },
+    {
+      "id": "etabli",
+      "title": "Avec des établis mécaniques",
+      "image": "gauge_crafting_grille.webp",
+      "alt": "Grille d'établis mécaniques reliée aux jauges",
+      "html": "<p>Pour une recette d'artisanat, relie la jauge à une grille d'<a href=\"/wiki/etabli-mecanique\">établis mécaniques</a> : elle sait alors placer chaque ingrédient dans le bon emplacement. Les ingrédients arrivent en colis, passent par un <a href=\"/wiki/reemballeur\">réemballeur</a> pour arriver ensemble, et la grille fabrique, ici une pioche en diamant.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "Redstone et affichage",
+      "image": "gauge_links_redstone.webp",
+      "alt": "Jauge d'usine reliée à un lien de redstone",
+      "html": "<p>Une jauge peut être reliée à un <strong>lien de redstone</strong> : elle émet un signal quand son objectif est atteint, ou se bloque si le lien reçoit un signal. Une <a href=\"/wiki/liaison-d-affichage\">liaison d'affichage</a> posée dessus écrit son état sur un panneau, pour suivre toute l'usine d'un coup d'œil.</p>"
+    },
+    {
+      "id": "images",
+      "title": "À propos des images",
+      "html": "<p>Les cadrans des jauges, leurs flèches de liaison et les colis commandés ne sont pas dessinés par notre moteur : cette page est illustrée par des images fixes des scènes Ponder, et le texte décrit ce qu'elles ne montrent pas.</p>"
+    }
+  ],
+  "related": [
+    "emballeur",
+    "liaison-de-stock",
+    "reemballeur",
+    "etabli-mecanique",
+    "telescripteur-de-stock"
+  ],
+  "sources": [
+    "Jauge : FactoryPanelBehaviour (objectif count, satisfied, recipeOutput, liaisons targetedBy et targetedByLinks, redstonePowered), FactoryPanelBlockEntity.getRestockedPackager (emballeur sous la jauge, pas un réemballeur), FactoryPanelPosition (4 emplacements par bloc)",
+    "Délai : CLogistics.factoryGaugeTimer = 100 ticks",
+    "Recette : crafting/logistics/factory_gauge.json (sans forme)",
+    "Scènes : FactoryGaugeScenes.restocker, recipe, crafting, links ; images seules (cadrans des jauges non dessinés)"
+  ],
+  "en": {
+    "slugEn": "factory-gauge",
+    "name": "Factory Gauge",
+    "title": "Factory Gauge — Create mod guide",
+    "description": "The Create 6 Factory Gauge: keeping a stock topped up, chaining recipes between gauges, driving Mechanical Crafters, and its links with redstone.",
+    "intro": "The <strong>Factory Gauge</strong> is the brain of a networked factory. Attached to a Packager, it watches an item and a target amount: as soon as stock drops below it, it orders from the network whatever is needed to top it up. Linked together, several gauges describe a <strong>recipe</strong>: ingredients on one side, product on the other, and the factory starts producing whatever is missing on its own.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Package network"
+      },
+      {
+        "label": "Placement",
+        "value": "Up to 4 gauges per face, on a Packager to restock its inventory"
+      },
+      {
+        "label": "Settings",
+        "value": "An item and a target amount, plus the delivery address"
+      },
+      {
+        "label": "Rate",
+        "value": "One request every 100 ticks (5 s) at most, server setting factoryGaugeTimer"
+      },
+      {
+        "label": "Links",
+        "value": "Gauge to gauge for recipes, to Mechanical Crafters, redstone links and Display Links"
+      },
+      {
+        "label": "Recipe",
+        "value": "1 Stock Link + 1 Precision Mechanism → 2 gauges"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (shapeless)",
+      "grid": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          "Stock Link",
+          "Precision Mechanism",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "2 Factory Gauges"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "reserve",
+        "title": "Keeping a stock topped up",
+        "alt": "Chests behind a Packager, the gauge's spot outlined",
+        "html": "<p>Put a gauge on a <a href=\"/en/wiki/packager\">Packager</a> and set it to an item and an amount, for instance 64 bread. It reads the inventory the Packager serves and, as soon as stock drops below that number, <strong>orders the difference</strong> from the network, delivered to that Packager's address. A pantry that fills itself. No need to check the chests any more.</p>"
+      },
+      {
+        "id": "ticker",
+        "title": "Plugged into the network",
+        "alt": "Stock Ticker and warehouse on the same network as the gauge",
+        "html": "<p>The gauge joins the network like the other logistics blocks, by copying a <a href=\"/en/wiki/stock-link\">Stock Link</a>'s frequency before placing. It then draws from every linked warehouse. Its light shows whether the goal is met; an arrow shows whether an order is on its way.</p>"
+      },
+      {
+        "id": "reappro",
+        "title": "The order on its way",
+        "alt": "Packages arriving by belt at the gauge's Packager",
+        "html": "<p>The gauge takes packages already ordered into account: it does not ask again for what is on the way. It waits at least <strong>5 seconds</strong> between two requests, a delay set on the server. Packages arrive by belt, chain or train, and the Packager unpacks them into the watched inventory.</p>"
+      },
+      {
+        "id": "jauge",
+        "title": "Describing a recipe",
+        "alt": "Factory Gauges placed on a large warehouse",
+        "html": "<p>A gauge can also stand for a <strong>product</strong>. Link other gauges to it, those of its ingredients, by clicking from one to the other: an arrow appears between them. Set how many units of each ingredient the recipe takes and how many it gives. The product's gauge then knows what to send to the machine to make more.</p>"
+      },
+      {
+        "id": "recette",
+        "title": "Sending the ingredients",
+        "alt": "Gauges linked between the warehouse and a machine",
+        "html": "<p>When the product's stock is too low and the ingredients are available, the gauge orders the ingredients and has them delivered to the <strong>address of the machine</strong> that makes it: a mixer, a press, a furnace… The finished product returns to the store the usual way, and the loop starts again until the goal is met.</p>"
+      },
+      {
+        "id": "chaine",
+        "title": "Chaining steps",
+        "alt": "Belt loop around the warehouse and the machines",
+        "html": "<p>Gauges combine into <strong>production chains</strong>: the gauge of an intermediate product is an ingredient of the next one. Ask for bread and the gauge will order flour, which its own gauge will have milled from the available wheat. The factory then produces on demand, with no useless stock.</p>"
+      },
+      {
+        "id": "etabli",
+        "title": "With Mechanical Crafters",
+        "alt": "Grid of Mechanical Crafters linked to the gauges",
+        "html": "<p>For a crafting recipe, link the gauge to a grid of <a href=\"/en/wiki/mechanical-crafter\">Mechanical Crafters</a>: it then knows where each ingredient goes. Ingredients arrive as packages, go through a <a href=\"/en/wiki/re-packager\">Re-Packager</a> so they arrive together, and the grid crafts, here a diamond pickaxe.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "Redstone and display",
+        "alt": "Factory Gauge linked to a redstone link",
+        "html": "<p>A gauge can be linked to a <strong>redstone link</strong>: it sends a signal when its goal is met, or is held back if the link receives a signal. A <a href=\"/en/wiki/display-link\">Display Link</a> placed on it writes its status on a board, to follow the whole factory at a glance.</p>"
+      },
+      {
+        "id": "images",
+        "title": "About the pictures",
+        "html": "<p>The gauges' dials, their link arrows and the ordered packages are not drawn by our renderer: this page is illustrated with stills of the Ponder scenes, and the text describes what they do not show.</p>"
+      }
+    ],
+    "sources": [
+      "Gauge: FactoryPanelBehaviour (count goal, satisfied, recipeOutput, targetedBy and targetedByLinks links, redstonePowered), FactoryPanelBlockEntity.getRestockedPackager (Packager under the gauge, not a Re-Packager), FactoryPanelPosition (4 slots per block)",
+      "Delay: CLogistics.factoryGaugeTimer = 100 ticks",
+      "Recipe: crafting/logistics/factory_gauge.json (shapeless)",
+      "Scenes: FactoryGaugeScenes.restocker, recipe, crafting, links; stills only (gauge dials not drawn)"
+    ]
+  }
+}

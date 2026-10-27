@@ -1,0 +1,245 @@
+{
+  "slug": "observateur-intelligent",
+  "name": "Observateur intelligent",
+  "blockId": "create:content_observer",
+  "category": "redstone",
+  "title": "Observateur intelligent — Create : guide en français",
+  "description": "L'observateur intelligent de Create : détecter un objet dans un coffre, un bloc, un tapis, un tuyau ou une chute, avec filtre et impulsion de redstone.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "L'<strong>observateur intelligent</strong> est la version Create de l'observateur vanilla. Au lieu de réagir à n'importe quel changement de bloc, il regarde ce qu'il y a devant lui et émet un signal de redstone quand il y voit <strong>l'objet de son filtre</strong> : dans un coffre, sur un tapis, dans une chute, dans un tuyau, ou même sous forme de bloc posé. C'est le capteur idéal pour compter, trier ou déclencher une machine au bon moment.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Redstone"
+    },
+    {
+      "label": "Ce qu'il voit",
+      "value": "Bloc posé, objets sur tapis ou dépôt, contenu d'un inventaire, fluide dans un tuyau ou un réservoir, colis sur une roue à chaîne"
+    },
+    {
+      "label": "Filtre",
+      "value": "Un objet ou un filtre ; vide, il réagit à tout"
+    },
+    {
+      "label": "Signal",
+      "value": "Allumé tant qu'il voit l'objet, puis 6 ticks (0,3 s) après le dernier passage"
+    },
+    {
+      "label": "Recette",
+      "value": "1 tube électronique + 1 boîtier de laiton + 1 observateur"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Tube électronique",
+        null
+      ],
+      [
+        null,
+        "Boîtier de laiton",
+        null
+      ],
+      [
+        null,
+        "Observateur",
+        null
+      ]
+    ],
+    "result": "1 observateur intelligent"
+  },
+  "videos": [
+    {
+      "id": "smart_observer",
+      "name": "Observateur intelligent : inventaires, blocs, tapis et tuyaux",
+      "description": "L'observateur s'allume devant un coffre qui contient son objet, devant un bloc d'améthyste, puis surveille un tapis, une chute et un tuyau.",
+      "duration": "PT20S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "principe",
+      "title": "Un observateur qui regarde le contenu",
+      "image": "smart_observer_inventaire.webp",
+      "alt": "Observateur intelligent collé à un coffre, la redstone allumée",
+      "video": "smart_observer",
+      "html": "<p>Pose l'observateur intelligent face à un bloc : il en lit le <strong>contenu</strong>. Devant un coffre, un tonneau ou un <a href=\"/wiki/coffre-a-objet-renforce\">coffre à objet renforcé</a>, il s'allume dès que l'inventaire contient l'objet de son filtre, et reste allumé tant qu'il y en a. Filtre vide, il réagit au moindre objet : c'est un détecteur « le coffre n'est pas vide ».</p>"
+    },
+    {
+      "id": "filtre",
+      "title": "Régler le filtre",
+      "html": "<p>Le filtre se trouve sur le côté de l'observateur. Clic droit avec un objet pour le régler, ou avec un filtre de Create pour viser une liste d'objets ou un attribut. Un seul observateur peut ainsi surveiller une famille entière, par exemple tous les minerais bruts, sans rien câbler de plus.</p>"
+    },
+    {
+      "id": "bloc",
+      "title": "Reconnaître un bloc posé",
+      "image": "smart_observer_bloc.webp",
+      "alt": "Observateur intelligent face à un bloc d'améthyste",
+      "html": "<p>S'il n'y a pas d'inventaire devant lui, l'observateur compare le <strong>bloc lui-même</strong> à son filtre. Réglé sur l'améthyste, il s'allume quand un bloc d'améthyste apparaît devant lui. C'est parfait pour une ferme qui doit réagir quand une culture a poussé ou quand un générateur de pierre a produit le bon bloc.</p>"
+    },
+    {
+      "id": "tapis",
+      "title": "Tapis, chutes et tuyaux",
+      "image": "smart_observer_tapis.webp",
+      "alt": "Observateurs intelligents tournés vers un tapis, une chute et un tuyau",
+      "html": "<p>Tourné vers un <a href=\"/wiki/tapis-roulant\">tapis roulant</a> ou un <a href=\"/wiki/depot\">dépôt</a>, il réagit aux objets qui passent <strong>au centre</strong> du segment observé. Devant une <a href=\"/wiki/chute\">chute</a>, il voit ce qui la traverse ; devant un tuyau, le fluide qui y coule. Chaque passage donne une courte impulsion, de quoi compter des objets avec un compteur de redstone.</p>"
+    },
+    {
+      "id": "entonnoir",
+      "title": "Avec un entonnoir",
+      "image": "smart_observer_entonnoir.webp",
+      "alt": "Entonnoir sur un coffre qui pose des objets sur un tapis surveillé",
+      "html": "<p>Un montage classique : un <a href=\"/wiki/entonnoir\">entonnoir</a> sort des objets d'un coffre sur un tapis, l'observateur surveille la suite de la ligne et coupe une machine ou allume une lampe quand le bon objet arrive. Comme il a un filtre, il ne réagit qu'à ce qui compte et ignore le reste du flux.</p>"
+    },
+    {
+      "id": "signal",
+      "title": "Un signal qui dure juste assez",
+      "html": "<p>Après le dernier objet vu, le signal reste allumé <strong>6 ticks</strong>, soit 0,3 seconde, puis s'éteint. Pour un inventaire, il reste allumé en continu tant que l'objet est présent. Pour un signal proportionnel à la quantité plutôt qu'un simple oui ou non, utilise le <a href=\"/wiki/detecteur-de-seuil\">détecteur de seuil</a>.</p>"
+    },
+    {
+      "id": "montages",
+      "title": "Trois montages utiles",
+      "html": "<p><strong>Alarme de stock</strong> : un observateur sans filtre contre le coffre de sortie d'une usine allume une lampe dès qu'il reste quelque chose à ramasser. <strong>Tri de secours</strong> : réglé sur un objet indésirable, il ouvre une trappe ou bascule un tunnel quand cet objet passe sur la ligne principale. <strong>Compteur de production</strong> : tourné vers le dernier segment d'un tapis et relié à un compteur de redstone, il donne le nombre de piles produites. Dans chaque cas, le filtre fait tout le travail que demanderaient sinon plusieurs comparateurs.</p>"
+    },
+    {
+      "id": "colis",
+      "title": "Et les colis",
+      "html": "<p>Dans le réseau de colis de Create 6, l'observateur intelligent tourné vers une <a href=\"/wiki/roue-a-chaine-roulante\">roue à chaîne roulante</a> réagit aux colis qui tournent autour quand ils correspondent à son filtre ; avec un filtre de colis, c'est l'adresse qui compte. On s'en sert pour signaler une livraison ou déclencher un déballage.</p>"
+    }
+  ],
+  "related": [
+    "detecteur-de-seuil",
+    "entonnoir",
+    "tapis-roulant",
+    "chute",
+    "coffre-a-objet-renforce"
+  ],
+  "sources": [
+    "Détection : SmartObserverBlockEntity.tick (bloc filtré, TransportedItemStackHandlerBehaviour au centre 0,45, FluidTransportBehaviour, ChainConveyorBlockEntity.getLoopingPackages, inventaire, réservoir)",
+    "Durée du signal : SmartObserverBlockEntity.DEFAULT_DELAY = 6 ticks",
+    "Recette : crafting/logistics/content_observer.json",
+    "Scène : DetectorScenes.smartObserver ; objets sur tapis simulés"
+  ],
+  "en": {
+    "slugEn": "smart-observer",
+    "name": "Smart Observer",
+    "title": "Smart Observer — Create mod guide",
+    "description": "The Create Smart Observer: detecting an item in a chest, a block, on a belt, in a pipe or a chute, with a filter and a redstone pulse, plus packages.",
+    "intro": "The <strong>Smart Observer</strong> is Create's take on the vanilla observer. Instead of reacting to any block change, it looks at what is in front of it and emits a redstone signal when it sees <strong>the item in its filter</strong>: in a chest, on a belt, inside a chute, in a pipe, or even as a placed block. It is the ideal sensor for counting, sorting or starting a machine at the right moment.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Redstone"
+      },
+      {
+        "label": "What it sees",
+        "value": "Placed block, items on belts or depots, inventory contents, fluid in a pipe or tank, packages on a Chain Conveyor"
+      },
+      {
+        "label": "Filter",
+        "value": "An item or a filter; empty, it reacts to anything"
+      },
+      {
+        "label": "Signal",
+        "value": "On while it sees the item, then 6 ticks (0.3 s) after the last one"
+      },
+      {
+        "label": "Recipe",
+        "value": "1 Electron Tube + 1 Brass Casing + 1 Observer"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Electron Tube",
+          null
+        ],
+        [
+          null,
+          "Brass Casing",
+          null
+        ],
+        [
+          null,
+          "Observer",
+          null
+        ]
+      ],
+      "result": "1 Smart Observer"
+    },
+    "videos": [
+      {
+        "id": "smart_observer",
+        "name": "Smart Observer: inventories, blocks, belts and pipes",
+        "description": "The observer lights up in front of a chest holding its item, in front of an amethyst block, then watches a belt, a chute and a pipe."
+      }
+    ],
+    "sections": [
+      {
+        "id": "principe",
+        "title": "An observer that looks at contents",
+        "alt": "Smart Observer against a chest, with lit redstone",
+        "html": "<p>Place the Smart Observer facing a block and it reads its <strong>contents</strong>. In front of a chest, a barrel or an <a href=\"/en/wiki/item-vault\">Item Vault</a>, it turns on as soon as the inventory holds the item in its filter, and stays on as long as there is some. With an empty filter it reacts to any item: a \"chest is not empty\" detector.</p>"
+      },
+      {
+        "id": "filtre",
+        "title": "Setting the filter",
+        "html": "<p>The filter sits on the side of the observer. Right-click it with an item to set it, or with a Create filter to target a list of items or an attribute. A single observer can then watch a whole family, for instance every raw ore, without any extra wiring.</p>"
+      },
+      {
+        "id": "bloc",
+        "title": "Recognising a placed block",
+        "alt": "Smart Observer facing a block of amethyst",
+        "html": "<p>If there is no inventory in front of it, the observer compares the <strong>block itself</strong> with its filter. Set to amethyst, it turns on when an amethyst block appears in front of it. Perfect for a farm that must react when a crop has grown or when a stone generator has produced the right block.</p>"
+      },
+      {
+        "id": "tapis",
+        "title": "Belts, chutes and pipes",
+        "alt": "Smart Observers facing a belt, a chute and a pipe",
+        "html": "<p>Facing a <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a> or a <a href=\"/en/wiki/depot\">Depot</a>, it reacts to items passing <strong>through the centre</strong> of the watched segment. In front of a <a href=\"/en/wiki/chute\">Chute</a> it sees what goes through; in front of a pipe, the fluid flowing in it. Each passage gives a short pulse, enough to count items with a redstone counter.</p>"
+      },
+      {
+        "id": "entonnoir",
+        "title": "With a funnel",
+        "alt": "Funnel on a chest putting items onto a watched belt",
+        "html": "<p>A classic setup: a <a href=\"/en/wiki/funnel\">Funnel</a> takes items out of a chest onto a belt, the observer watches further down the line and stops a machine or lights a lamp when the right item comes by. Because it has a filter, it only reacts to what matters and ignores the rest of the flow.</p>"
+      },
+      {
+        "id": "signal",
+        "title": "A signal that lasts just long enough",
+        "html": "<p>After the last item it saw, the signal stays on for <strong>6 ticks</strong>, that is 0.3 seconds, then turns off. For an inventory it stays on continuously while the item is present. For a signal based on quantity rather than a simple yes or no, use the <a href=\"/en/wiki/threshold-switch\">Threshold Switch</a>.</p>"
+      },
+      {
+        "id": "montages",
+        "title": "Three useful setups",
+        "html": "<p><strong>Stock alarm</strong>: an observer with no filter against a factory's output chest lights a lamp as soon as something is waiting to be collected. <strong>Emergency sorting</strong>: set to an unwanted item, it opens a trapdoor or switches a tunnel when that item passes on the main line. <strong>Production counter</strong>: facing the last segment of a belt and wired to a redstone counter, it gives the number of stacks produced. In each case the filter does the work that would otherwise take several comparators.</p>"
+      },
+      {
+        "id": "colis",
+        "title": "And packages",
+        "html": "<p>In the Create 6 package network, a Smart Observer facing a <a href=\"/en/wiki/chain-conveyor\">Chain Conveyor</a> reacts to the packages looping around it when they match its filter; with a Package Filter, the address is what counts. It is used to signal a delivery or trigger unpacking.</p>"
+      }
+    ],
+    "sources": [
+      "Detection: SmartObserverBlockEntity.tick (filtered block, TransportedItemStackHandlerBehaviour at the centre 0.45, FluidTransportBehaviour, ChainConveyorBlockEntity.getLoopingPackages, inventory, tank)",
+      "Signal length: SmartObserverBlockEntity.DEFAULT_DELAY = 6 ticks",
+      "Recipe: crafting/logistics/content_observer.json",
+      "Scene: DetectorScenes.smartObserver; belt items simulated"
+    ]
+  }
+}

@@ -27,6 +27,15 @@
     }
   },
   {
+    "id": "colis",
+    "name": "Réseau de colis",
+    "description": "Create 6 : emballer, adresser et livrer des colis entre entrepôts, avec roues à chaîne, crapauports, boîtes aux lettres, téléscripteurs et jauges d'usine.",
+    "en": {
+      "name": "Package network",
+      "description": "Create 6: pack, address and deliver packages between warehouses, with Chain Conveyors, Frogports, Postboxes, Stock Tickers and Factory Gauges."
+    }
+  },
+  {
     "id": "fluides",
     "name": "Fluides",
     "description": "Pomper, stocker et utiliser les liquides : tuyaux, pompes, réservoirs, becs verseurs et égouttoirs.",

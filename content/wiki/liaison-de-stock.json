@@ -1,0 +1,259 @@
+{
+  "slug": "liaison-de-stock",
+  "name": "Liaison de stock",
+  "blockId": "create:stock_link",
+  "category": "colis",
+  "title": "Liaison de stock (stock link) — Create : guide en français",
+  "description": "La liaison de stock de Create 6 : relier un emballeur au réseau logistique sans fil, partager une fréquence et rendre un entrepôt commandable de loin.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>liaison de stock</strong> est l'antenne du réseau de colis. Fixée sur un emballeur, elle déclare au réseau ce que contient l'inventaire derrière lui et transmet les commandes qu'on lui adresse. Toutes les liaisons réglées sur la même <strong>fréquence</strong> forment un seul réseau logistique, sans fil et sans limite de distance : un téléscripteur de stock y voit alors tous les entrepôts à la fois.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Réseau de colis"
+    },
+    {
+      "label": "Pose",
+      "value": "Sur une face d'un emballeur, au sol, au mur ou au plafond"
+    },
+    {
+      "label": "Réseau",
+      "value": "Une fréquence partagée, copiée en cliquant une liaison existante avant la pose"
+    },
+    {
+      "label": "Portée",
+      "value": "Sans fil, sans distance maximale"
+    },
+    {
+      "label": "Redstone",
+      "value": "Un signal de puissance 15 la déconnecte"
+    },
+    {
+      "label": "Recette",
+      "value": "1 transmetteur + 1 coffre à objet renforcé"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Transmetteur",
+        null
+      ],
+      [
+        null,
+        "Coffre à objet renforcé",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 liaison de stock"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "pose",
+      "title": "Sur un emballeur",
+      "image": "stock_link_pose.webp",
+      "alt": "Emplacement encadré où la liaison de stock va être posée",
+      "html": "<p>Une liaison de stock ne sert qu'en <strong>contact d'un <a href=\"/wiki/emballeur\">emballeur</a></strong>. Pose-la sur l'une de ses faces, posée au sol, accrochée au mur ou au plafond. Elle lit l'inventaire que l'emballeur dessert, coffre ou <a href=\"/wiki/coffre-a-objet-renforce\">coffre à objet renforcé</a>, et le met à disposition du réseau.</p>"
+    },
+    {
+      "id": "reseau",
+      "title": "Une fréquence, un réseau",
+      "image": "stock_link_reseau.webp",
+      "alt": "Coffre renforcé, emballeurs et liaisons de stock reliés au même réseau",
+      "html": "<p>Chaque liaison appartient à un réseau. Pour qu'une nouvelle liaison rejoigne un réseau existant, fais d'abord un <strong>clic droit sur une liaison déjà posée</strong> avec la nouvelle en main : elle en copie la fréquence. Pose-la ensuite où tu veux, même à l'autre bout de la carte. Sans cette étape, elle crée un réseau neuf, rien qu'à elle.</p>"
+    },
+    {
+      "id": "stocks",
+      "title": "Voir tous les stocks",
+      "image": "stock_link_emballeur.webp",
+      "alt": "Plusieurs emballeurs munis de liaisons de stock autour d'un entrepôt",
+      "html": "<p>Toutes les liaisons d'un réseau additionnent leurs inventaires. Un <a href=\"/wiki/telescripteur-de-stock\">téléscripteur de stock</a> du même réseau affiche alors la liste complète des objets disponibles, quel que soit l'entrepôt où ils se trouvent. Plus besoin de courir de coffre en coffre pour savoir s'il reste du fer.</p>"
+    },
+    {
+      "id": "demande",
+      "title": "Répondre aux commandes",
+      "image": "stock_link_demande.webp",
+      "alt": "Colis qui sort d'un emballeur relié au réseau",
+      "html": "<p>Quand quelqu'un commande des objets sur le réseau, la liaison transmet la demande à son emballeur, qui prélève exactement ce qu'il faut, l'emballe avec l'adresse de destination et l'expédie. Si plusieurs entrepôts ont l'objet, la commande peut être servie par morceaux, d'où l'utilité du <a href=\"/wiki/reemballeur\">réemballeur</a>.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "La couper à la redstone",
+      "html": "<p>Un signal de redstone de <strong>puissance maximale</strong> sur la liaison la débranche du réseau : son entrepôt disparaît de la liste et ne reçoit plus de commandes. C'est pratique pour réserver un stock pendant une construction, ou fermer une boutique la nuit. Une petite ampoule sur la liaison clignote à chaque échange.</p>"
+    },
+    {
+      "id": "proteger",
+      "title": "Protéger son réseau",
+      "html": "<p>Sur un serveur, un réseau peut être <strong>verrouillé</strong> depuis le téléscripteur de stock : seuls son propriétaire et les joueurs autorisés peuvent alors passer commande. Sur Create France, c'est le réglage conseillé pour une base partagée avec des visiteurs.</p>"
+    },
+    {
+      "id": "jauges",
+      "title": "Avec les jauges d'usine",
+      "html": "<p>Les <a href=\"/wiki/jauge-d-usine\">jauges d'usine</a> utilisent aussi la fréquence du réseau : une jauge qui doit réapprovisionner une machine commande ses ingrédients aux entrepôts reliés par des liaisons de stock. La liaison est donc le premier bloc à poser quand on construit une usine en réseau.</p>"
+    },
+    {
+      "id": "exemple",
+      "title": "Exemple : trois entrepôts, un seul réseau",
+      "html": "<p>Un coffre renforcé de minerais à la mine, un entrepôt de bois à la scierie et la cave de la base reçoivent chacun un emballeur et une liaison de stock réglée sur la même fréquence. Depuis le téléscripteur de l'atelier, on voit d'un coup le fer, le bois et la nourriture, et une commande mélangée part de chaque entrepôt vers la même adresse. Ajouter un quatrième entrepôt plus tard ne demande que deux blocs.</p>"
+    },
+    {
+      "id": "conseil",
+      "title": "Un conseil",
+      "html": "<p>Donne à chaque emballeur relié une pancarte avec l'adresse de son entrepôt : les colis qui y reviennent trouveront leur chemin, et le téléscripteur saura où livrer les retours.</p>"
+    },
+    {
+      "id": "images",
+      "title": "À propos des images",
+      "html": "<p>Les échanges du réseau, l'ampoule de la liaison et les colis préparés à la demande ne sont pas animés par notre moteur : cette page est illustrée par des images fixes de la scène Ponder.</p>"
+    }
+  ],
+  "related": [
+    "emballeur",
+    "telescripteur-de-stock",
+    "commandeur-a-redstone",
+    "jauge-d-usine",
+    "coffre-a-objet-renforce"
+  ],
+  "sources": [
+    "Liaison de stock : PackagerLinkBlockEntity (getPackager : emballeur contre la liaison, désactivée à une puissance de 15 ; processRequest), PackagerLinkBlock (FACE : sol, mur, plafond)",
+    "Réseau : LogisticallyLinkedBehaviour (fréquence freqId), verrouillage : Create.LOGISTICS.isLockable / isLocked",
+    "Recette : crafting/logistics/stock_link.json",
+    "Scène : StockLinkScenes.stockLink ; images seules"
+  ],
+  "en": {
+    "slugEn": "stock-link",
+    "name": "Stock Link",
+    "title": "Stock Link — Create mod guide",
+    "description": "The Create 6 Stock Link: connecting a Packager to the wireless logistics network, sharing a frequency and making a warehouse orderable from afar.",
+    "intro": "The <strong>Stock Link</strong> is the package network's antenna. Attached to a Packager, it tells the network what the inventory behind it holds and passes on the orders addressed to it. All links set to the same <strong>frequency</strong> form a single logistics network, wireless and with no distance limit: a Stock Ticker then sees every warehouse at once.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Package network"
+      },
+      {
+        "label": "Placement",
+        "value": "On a face of a Packager, on the floor, a wall or the ceiling"
+      },
+      {
+        "label": "Network",
+        "value": "A shared frequency, copied by clicking an existing link before placing"
+      },
+      {
+        "label": "Range",
+        "value": "Wireless, no maximum distance"
+      },
+      {
+        "label": "Redstone",
+        "value": "A signal strength of 15 disconnects it"
+      },
+      {
+        "label": "Recipe",
+        "value": "1 Transmitter + 1 Item Vault"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Transmitter",
+          null
+        ],
+        [
+          null,
+          "Item Vault",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Stock Link"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "pose",
+        "title": "On a Packager",
+        "alt": "Outlined spot where the Stock Link is about to be placed",
+        "html": "<p>A Stock Link is only useful <strong>against a <a href=\"/en/wiki/packager\">Packager</a></strong>. Put it on one of its faces, standing on the floor, hanging on a wall or from the ceiling. It reads the inventory the Packager serves, chest or <a href=\"/en/wiki/item-vault\">Item Vault</a>, and makes it available to the network.</p>"
+      },
+      {
+        "id": "reseau",
+        "title": "One frequency, one network",
+        "alt": "Item Vault, Packagers and Stock Links on the same network",
+        "html": "<p>Each link belongs to a network. For a new link to join an existing network, first <strong>right-click a link already placed</strong> while holding the new one: it copies its frequency. Then place it wherever you like, even at the other end of the map. Without that step, it starts a brand new network of its own.</p>"
+      },
+      {
+        "id": "stocks",
+        "title": "Seeing every store",
+        "alt": "Several Packagers fitted with Stock Links around a warehouse",
+        "html": "<p>All the links of a network add their inventories together. A <a href=\"/en/wiki/stock-ticker\">Stock Ticker</a> on the same network then shows the complete list of available items, whatever warehouse they sit in. No more running from chest to chest to find out whether there is any iron left.</p>"
+      },
+      {
+        "id": "demande",
+        "title": "Answering orders",
+        "alt": "Package coming out of a Packager linked to the network",
+        "html": "<p>When someone orders items on the network, the link passes the request to its Packager, which takes exactly what is needed, packs it with the destination address and ships it. If several warehouses hold the item, the order may be served in pieces, which is where the <a href=\"/en/wiki/re-packager\">Re-Packager</a> comes in.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "Switching it off with redstone",
+        "html": "<p>A redstone signal at <strong>full strength</strong> on the link unplugs it from the network: its warehouse vanishes from the list and receives no more orders. It is handy to reserve a store during a build, or to close a shop at night. A small bulb on the link flashes at every exchange.</p>"
+      },
+      {
+        "id": "proteger",
+        "title": "Protecting your network",
+        "html": "<p>On a server, a network can be <strong>locked</strong> from the Stock Ticker: only its owner and authorised players can then place orders. On Create France, it is the recommended setting for a base shared with visitors.</p>"
+      },
+      {
+        "id": "jauges",
+        "title": "With Factory Gauges",
+        "html": "<p><a href=\"/en/wiki/factory-gauge\">Factory Gauges</a> use the network's frequency too: a gauge that has to restock a machine orders its ingredients from the warehouses connected through Stock Links. The link is therefore the first block to place when building a networked factory.</p>"
+      },
+      {
+        "id": "exemple",
+        "title": "Example: three warehouses, one network",
+        "html": "<p>An ore vault at the mine, a timber store at the sawmill and the base's cellar each get a Packager and a Stock Link set to the same frequency. From the workshop's Stock Ticker you see iron, wood and food at once, and a mixed order leaves each warehouse for the same address. Adding a fourth warehouse later only takes two blocks, and nothing has to be rewired anywhere else. That is the real strength of the system: the network grows with the base, one Packager at a time.</p>"
+      },
+      {
+        "id": "conseil",
+        "title": "A tip",
+        "html": "<p>Give every linked Packager a sign with its warehouse's address: packages coming back will find their way, and the ticker will know where returns should be delivered. Clear, consistent names save a lot of debugging once the network grows.</p>"
+      },
+      {
+        "id": "images",
+        "title": "About the pictures",
+        "html": "<p>Network exchanges, the link's bulb and packages prepared on demand are not animated by our renderer: this page is illustrated with stills of the Ponder scene.</p>"
+      }
+    ],
+    "sources": [
+      "Stock Link: PackagerLinkBlockEntity (getPackager: Packager against the link, disabled at strength 15; processRequest), PackagerLinkBlock (FACE: floor, wall, ceiling)",
+      "Network: LogisticallyLinkedBehaviour (freqId frequency), locking: Create.LOGISTICS.isLockable / isLocked",
+      "Recipe: crafting/logistics/stock_link.json",
+      "Scene: StockLinkScenes.stockLink; stills only"
+    ]
+  }
+}

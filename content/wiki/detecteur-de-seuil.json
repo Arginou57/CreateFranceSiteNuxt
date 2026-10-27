@@ -1,0 +1,272 @@
+{
+  "slug": "detecteur-de-seuil",
+  "name": "Détecteur de seuil",
+  "blockId": "create:stockpile_switch",
+  "category": "redstone",
+  "title": "Détecteur de seuil — Create : guide en français",
+  "description": "Le détecteur de seuil de Create : un signal de redstone selon le remplissage d'un coffre, d'un réservoir ou d'une poulie, avec deux seuils et inversion.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>détecteur de seuil</strong> surveille le remplissage d'un inventaire et allume la redstone quand il dépasse un niveau, puis l'éteint quand il redescend sous un autre. Avec ces <strong>deux seuils</strong>, une usine sait s'arrêter quand le stock est plein et repartir quand il se vide, sans clignoter sans cesse. Il lit aussi les réservoirs de fluide et la hauteur d'une poulie à corde.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Redstone"
+    },
+    {
+      "label": "Lit",
+      "value": "Coffres, coffres à objet renforcé, réservoirs de fluide, poulies à corde (hauteur)…"
+    },
+    {
+      "label": "Seuils par défaut",
+      "value": "S'allume à 128 objets ou plus, s'éteint à 64 ou moins"
+    },
+    {
+      "label": "Filtre",
+      "value": "Ne compte que les objets du filtre (vide : tous)"
+    },
+    {
+      "label": "Indicateur",
+      "value": "Cinq niveaux de remplissage affichés sur la face"
+    },
+    {
+      "label": "Recette",
+      "value": "1 tube électronique + 1 boîtier de laiton + 1 comparateur"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Tube électronique",
+        null
+      ],
+      [
+        null,
+        "Boîtier de laiton",
+        null
+      ],
+      [
+        null,
+        "Comparateur",
+        null
+      ]
+    ],
+    "result": "1 détecteur de seuil"
+  },
+  "videos": [
+    {
+      "id": "threshold_switch",
+      "name": "Détecteur de seuil : surveiller un stock",
+      "description": "Un tapis remplit des coffres ; le détecteur collé à eux suit le remplissage et s'allume quand le seuil haut est atteint.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "threshold_switch_more",
+      "name": "Détecteur de seuil : redescendre, réservoir et poulie",
+      "description": "Le stock baisse jusqu'au seuil bas et le signal s'éteint ; le détecteur lit ensuite un réservoir de fluide puis une poulie.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "poser",
+      "title": "Le poser contre un inventaire",
+      "image": "threshold_switch_detecteur.webp",
+      "alt": "Détecteur de seuil collé à une rangée de coffres",
+      "video": "threshold_switch",
+      "html": "<p>Le détecteur se pose <strong>contre</strong> le bloc à surveiller, comme un comparateur : coffre, tonneau, <a href=\"/wiki/coffre-a-objet-renforce\">coffre à objet renforcé</a>… Il compte les objets que contient cet inventaire, ou seulement ceux de son filtre, et compare ce nombre à ses deux seuils. Le signal de redstone sort par ses autres faces.</p>"
+    },
+    {
+      "id": "remplissage",
+      "title": "Un indicateur de remplissage",
+      "image": "threshold_switch_remplissage.webp",
+      "alt": "Tapis qui remplit les coffres surveillés par le détecteur",
+      "html": "<p>Sur sa face avant, le détecteur affiche le remplissage en <strong>cinq crans</strong>, du vide au plein. On voit ainsi d'un coup d'œil où en est un stock, sans ouvrir le coffre. Dans la boucle, un tapis livre des lingots de fer et l'indicateur monte au fil des arrivées.</p>"
+    },
+    {
+      "id": "seuils",
+      "title": "Deux seuils, pas un",
+      "image": "threshold_switch_seuils.webp",
+      "alt": "Détecteur de seuil allumé une fois le stock suffisant",
+      "html": "<p>Le détecteur <strong>s'allume</strong> quand la quantité atteint le seuil haut, 128 objets par défaut, et ne <strong>s'éteint</strong> que lorsqu'elle redescend au seuil bas, 64 par défaut. Entre les deux, il garde son état. Cet écart évite qu'une machine démarre et s'arrête à chaque objet qui entre ou sort. Les deux valeurs se règlent dans son interface, en objets ou en piles.</p>"
+    },
+    {
+      "id": "arret",
+      "title": "Redescendre sous le seuil bas",
+      "image": "threshold_switch_more_arret.webp",
+      "alt": "Le stock diminue et le détecteur de seuil s'éteint",
+      "video": "threshold_switch_more",
+      "html": "<p>Quand on vide le stock, le signal reste allumé jusqu'au seuil bas, puis se coupe. Un montage typique : le signal du détecteur coupe un <a href=\"/wiki/entonnoir\">entonnoir</a> d'entrée quand le coffre est plein, et le relance quand il s'est assez vidé. L'option <strong>Inverser le signal</strong> donne l'effet contraire, pour démarrer une production quand le stock manque.</p>"
+    },
+    {
+      "id": "reservoir",
+      "title": "Lire un réservoir",
+      "image": "threshold_switch_more_reservoir.webp",
+      "alt": "Détecteur de seuil collé à un réservoir de fluide",
+      "html": "<p>Contre un réservoir de fluide, le détecteur compte en <strong>millibuckets</strong> au lieu d'objets. Il peut ainsi arrêter une pompe quand la cuve est pleine, ou lancer un mélangeur quand il y a assez de lave ou d'eau. Le filtre accepte un fluide, par exemple un seau d'eau, pour ne compter que lui.</p>"
+    },
+    {
+      "id": "poulie",
+      "title": "La hauteur d'une poulie",
+      "image": "threshold_switch_more_poulie.webp",
+      "alt": "Détecteur de seuil fixé sur une poulie à corde",
+      "html": "<p>Fixé sur une poulie à corde, le détecteur lit la <strong>hauteur</strong> de ce qu'elle porte. On s'en sert pour un ascenseur ou une benne : la redstone change d'état quand la charge atteint l'étage voulu. Les seuils s'expriment alors en niveaux y.</p>"
+    },
+    {
+      "id": "exemple",
+      "title": "Exemple : une ferme qui se régule seule",
+      "html": "<p>Une ferme à canne à sucre remplit un coffre à objet renforcé. Pose le détecteur contre le coffre avec un seuil haut de 2 000 et un seuil bas de 500, et relie sa sortie à l'embrayage qui transmet la rotation aux récolteuses. Quand le stock atteint 2 000, la redstone coupe l'embrayage et la ferme s'arrête ; elle ne redémarre que lorsque l'usine en aval a consommé assez pour redescendre à 500. Le moteur ne tourne plus pour rien et le coffre ne déborde jamais.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Quand le préférer à un comparateur",
+      "html": "<p>Un comparateur vanilla donne un signal de 0 à 15, difficile à régler finement sur un grand coffre. Le détecteur de seuil, lui, travaille avec des quantités exactes et ses deux seuils. Pour réagir à la simple présence d'un objet, l'<a href=\"/wiki/observateur-intelligent\">observateur intelligent</a> reste plus simple. Les deux se complètent très bien dans une même usine.</p>"
+    }
+  ],
+  "related": [
+    "observateur-intelligent",
+    "coffre-a-objet-renforce",
+    "entonnoir",
+    "chute"
+  ],
+  "sources": [
+    "Seuils : ThresholdSwitchBlockEntity (onWhenAbove = 128, offWhenBelow = 64, Inverted), état gardé entre les deux seuils",
+    "Indicateur : ThresholdSwitchBlock.LEVEL (1 + remplissage × 4)",
+    "Cibles : inventaires, réservoirs (IFluidHandler), ThresholdSwitchObservable (poulie : niveau y)",
+    "Recette : crafting/logistics/stockpile_switch.json",
+    "Scène : DetectorScenes.thresholdSwitch (deux boucles) ; objets sur tapis simulés"
+  ],
+  "en": {
+    "slugEn": "threshold-switch",
+    "name": "Threshold Switch",
+    "title": "Threshold Switch — Create mod guide",
+    "description": "The Create Threshold Switch: a redstone signal based on how full a chest, a fluid tank or a rope pulley is, with two thresholds and an invert option.",
+    "intro": "The <strong>Threshold Switch</strong> watches how full an inventory is and turns redstone on when it goes above one level, then off when it drops below another. With these <strong>two thresholds</strong>, a factory knows when to stop because the store is full and when to restart as it empties, without flickering all the time. It also reads fluid tanks and the height of a rope pulley.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Redstone"
+      },
+      {
+        "label": "Reads",
+        "value": "Chests, Item Vaults, fluid tanks, rope pulleys (height)…"
+      },
+      {
+        "label": "Default thresholds",
+        "value": "Turns on at 128 items or more, off at 64 or fewer"
+      },
+      {
+        "label": "Filter",
+        "value": "Only counts the filtered items (empty: all of them)"
+      },
+      {
+        "label": "Indicator",
+        "value": "Five fill levels shown on the front"
+      },
+      {
+        "label": "Recipe",
+        "value": "1 Electron Tube + 1 Brass Casing + 1 Comparator"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Electron Tube",
+          null
+        ],
+        [
+          null,
+          "Brass Casing",
+          null
+        ],
+        [
+          null,
+          "Comparator",
+          null
+        ]
+      ],
+      "result": "1 Threshold Switch"
+    },
+    "videos": [
+      {
+        "id": "threshold_switch",
+        "name": "Threshold Switch: watching a store",
+        "description": "A belt fills chests; the switch against them follows the fill level and turns on once the upper threshold is reached."
+      },
+      {
+        "id": "threshold_switch_more",
+        "name": "Threshold Switch: going down, tanks and pulleys",
+        "description": "The stock drops to the lower threshold and the signal turns off; the switch then reads a fluid tank and a pulley."
+      }
+    ],
+    "sections": [
+      {
+        "id": "poser",
+        "title": "Placing it against an inventory",
+        "alt": "Threshold Switch against a row of chests",
+        "html": "<p>The switch is placed <strong>against</strong> the block to watch, like a comparator: chest, barrel, <a href=\"/en/wiki/item-vault\">Item Vault</a>… It counts the items in that inventory, or only those of its filter, and compares that number with its two thresholds. The redstone signal comes out of its other faces.</p>"
+      },
+      {
+        "id": "remplissage",
+        "title": "A fill indicator",
+        "alt": "Belt filling the chests watched by the switch",
+        "html": "<p>On its front the switch shows the fill level in <strong>five steps</strong>, from empty to full. You can see at a glance how a store is doing without opening the chest. In the loop, a belt delivers iron ingots and the indicator climbs as they arrive.</p>"
+      },
+      {
+        "id": "seuils",
+        "title": "Two thresholds, not one",
+        "alt": "Threshold Switch turned on once there is enough stock",
+        "html": "<p>The switch <strong>turns on</strong> when the amount reaches the upper threshold, 128 items by default, and only <strong>turns off</strong> when it drops to the lower threshold, 64 by default. In between it keeps its state. That gap stops a machine from starting and stopping with every item that comes in or goes out. Both values are set in its interface, in items or in stacks.</p>"
+      },
+      {
+        "id": "arret",
+        "title": "Dropping below the lower threshold",
+        "alt": "The stock goes down and the Threshold Switch turns off",
+        "html": "<p>As the store is emptied, the signal stays on down to the lower threshold, then cuts out. A typical setup: the switch's signal locks an input <a href=\"/en/wiki/funnel\">Funnel</a> when the chest is full and releases it once it has emptied enough. The <strong>Invert Signal</strong> option does the opposite, to start production when stock runs low.</p>"
+      },
+      {
+        "id": "reservoir",
+        "title": "Reading a tank",
+        "alt": "Threshold Switch against a fluid tank",
+        "html": "<p>Against a fluid tank the switch counts in <strong>millibuckets</strong> instead of items. It can stop a pump when the tank is full, or start a mixer when there is enough lava or water. The filter accepts a fluid, for example a water bucket, to count only that one.</p>"
+      },
+      {
+        "id": "poulie",
+        "title": "The height of a pulley",
+        "alt": "Threshold Switch attached to a rope pulley",
+        "html": "<p>Attached to a rope pulley, the switch reads the <strong>height</strong> of what it carries. Use it for a lift or a skip: the redstone changes state when the load reaches the right floor. Thresholds are then expressed as y levels.</p>"
+      },
+      {
+        "id": "exemple",
+        "title": "Example: a farm that regulates itself",
+        "html": "<p>A sugar cane farm fills an Item Vault. Place the switch against the vault with an upper threshold of 2,000 and a lower one of 500, and wire its output to the clutch that passes rotation to the harvesters. When the stock reaches 2,000, the redstone disengages the clutch and the farm stops; it only restarts once the factory downstream has used enough to bring it back down to 500. The engine no longer runs for nothing and the vault never overflows.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "When to prefer it over a comparator",
+        "html": "<p>A vanilla comparator gives a signal from 0 to 15, hard to tune precisely on a big chest. The Threshold Switch works with exact amounts and its two thresholds. To react to the mere presence of an item, the <a href=\"/en/wiki/smart-observer\">Smart Observer</a> is simpler. The two complement each other very well in the same factory, one for quantities and one for presence.</p>"
+      }
+    ],
+    "sources": [
+      "Thresholds: ThresholdSwitchBlockEntity (onWhenAbove = 128, offWhenBelow = 64, Inverted), state kept between the two thresholds",
+      "Indicator: ThresholdSwitchBlock.LEVEL (1 + fill × 4)",
+      "Targets: inventories, tanks (IFluidHandler), ThresholdSwitchObservable (pulley: y level)",
+      "Recipe: crafting/logistics/stockpile_switch.json",
+      "Scene: DetectorScenes.thresholdSwitch (two loops); belt items simulated"
+    ]
+  }
+}

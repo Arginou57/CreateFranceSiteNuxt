@@ -1,0 +1,302 @@
+{
+  "slug": "ejecteur",
+  "name": "Éjecteur",
+  "blockId": "create:weighted_ejector",
+  "category": "logistique",
+  "title": "Éjecteur — Create : guide en français",
+  "description": "L'éjecteur de Create : choisir sa cible, portée de 32 blocs, trajectoire, taille de pile, prélèvement avec un tunnel de laiton et redstone.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "L'<strong>éjecteur</strong> est une catapulte à objets : posé au bout d'une ligne, il projette ce qu'il reçoit vers une cible choisie à l'avance, jusqu'à 32 blocs plus loin, en hauteur comme en contrebas. Il remplace des dizaines de blocs de tapis pour franchir un ravin, monter un étage ou relier deux îlots d'usine. Il sait aussi attendre une quantité précise avant de tirer, servir de répartiteur à côté d'un tunnel de laiton, et même lancer un joueur d'un bout à l'autre de la base.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Logistique"
+    },
+    {
+      "label": "Stress",
+      "value": "2 SU par tr/min (64 SU à 32 tr/min)"
+    },
+    {
+      "label": "Portée",
+      "value": "Jusqu'à 32 blocs dans l'axe, et autant en hauteur (réglage serveur maxEjectorDistance)"
+    },
+    {
+      "label": "Cible",
+      "value": "Sur l'un des quatre axes horizontaux, choisie avant la pose"
+    },
+    {
+      "label": "Réarmement",
+      "value": "Le plateau remonte de tr/min ÷ 256 ÷ distance par tick : 1,6 s à 32 tr/min pour 4 blocs"
+    },
+    {
+      "label": "Taille de pile",
+      "value": "Attend de 1 à 64 objets avant de lancer (« * » : tout ce qui arrive)"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Plaque d'or",
+        null
+      ],
+      [
+        null,
+        "Dépôt",
+        null
+      ],
+      [
+        null,
+        "Roue dentée",
+        null
+      ]
+    ],
+    "result": "1 éjecteur"
+  },
+  "videos": [
+    {
+      "id": "ejector",
+      "name": "Éjecteur : choisir sa cible",
+      "description": "Une cible est choisie avant la pose ; les lignes montrent la zone autorisée, dans l'axe de l'éjecteur, et une cible en biais refusée.",
+      "duration": "PT15S"
+    },
+    {
+      "id": "ejector_launch",
+      "name": "Éjecteur : lancer, recevoir, attendre une pile",
+      "description": "Un bloc de cuivre est lancé sur un boîtier, puis sur un dépôt ; réglé sur 10, l'éjecteur attend une pile complète venue d'un tapis.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "ejector_split",
+      "name": "Éjecteur et tunnel de laiton : prélever un lot",
+      "description": "Un tunnel de laiton propose une pile de 64 lingots ; l'éjecteur réglé sur 10 en prend 10 et les lance sur un autre tapis.",
+      "duration": "PT20S"
+    },
+    {
+      "id": "ejector_redstone",
+      "name": "Éjecteur et redstone",
+      "description": "Un levier bloque l'éjecteur ; un observateur placé contre lui émet une impulsion à chaque lancer.",
+      "duration": "PT20S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "cible",
+      "title": "Choisir la cible avant la pose",
+      "image": "ejector_pose.webp",
+      "alt": "Éjecteur posé face à un bloc cible encadré",
+      "video": "ejector",
+      "html": "<p>Comme le <a href=\"/wiki/bras-mecanique\">bras mécanique</a>, l'éjecteur se règle avant d'être posé. Éjecteur en main, <strong>clic droit sur le bloc</strong> qui doit recevoir les objets : il est mémorisé. Pose ensuite l'éjecteur à l'endroit voulu, il s'oriente tout seul vers sa cible. Sans cible choisie, il lance simplement sur le bloc juste devant lui.</p>"
+    },
+    {
+      "id": "portee",
+      "title": "Une cible dans l'axe",
+      "image": "ejector_portee.webp",
+      "alt": "Lignes vertes partant de l'éjecteur : la zone des cibles possibles dans son axe",
+      "html": "<p>La cible doit se trouver dans le <strong>prolongement de l'éjecteur</strong>, sur l'un des quatre axes horizontaux, jamais à la verticale. Elle peut être plus haute ou plus basse, jusqu'à <strong>32 blocs</strong> dans chaque sens. Une cible décalée sur le côté, même d'un seul bloc, est refusée : il faut alors déplacer l'éjecteur, pas la cible.</p>"
+    },
+    {
+      "id": "lancer",
+      "title": "Le lancer",
+      "image": "ejector_launch_lancer.webp",
+      "alt": "Bloc de cuivre arrivé sur le boîtier visé par l'éjecteur",
+      "video": "ejector_launch",
+      "html": "<p>L'éjecteur a besoin de rotation : 2 SU par tr/min. Pose un objet dessus et le plateau <strong>bascule d'un coup</strong> ; l'objet suit une trajectoire calculée pour retomber pile sur la cible. Le plateau se réarme ensuite lentement, d'autant plus vite que la rotation est rapide et la cible proche : il faut 1,6 s à 32 tr/min pour une cible à 4 blocs.</p>"
+    },
+    {
+      "id": "reception",
+      "title": "Qui reçoit l'objet",
+      "image": "ejector_launch_depot.webp",
+      "alt": "Bloc de cuivre arrivé sur un dépôt au bout de sa course",
+      "html": "<p>À l'arrivée, l'objet entre directement dans ce qui sait le recevoir : <a href=\"/wiki/depot\">dépôt</a>, <a href=\"/wiki/tapis-roulant\">tapis roulant</a>, autre éjecteur, <a href=\"/wiki/entonnoir\">entonnoir</a>, <a href=\"/wiki/chute\">chute</a>… Sur un bloc ordinaire, il retombe au sol à l'endroit visé. S'il heurte un obstacle en route, il s'arrête là et tombe : garde la trajectoire dégagée.</p>"
+    },
+    {
+      "id": "pile",
+      "title": "Attendre une pile complète",
+      "image": "ejector_launch_pile.webp",
+      "alt": "Tapis qui livre des blocs de cuivre un par un sur l'éjecteur",
+      "html": "<p>Le panneau de valeur règle une <strong>taille de pile</strong> : l'éjecteur attend d'avoir ce nombre d'objets avant de lancer. Réglé sur 10, il laisse un tapis lui livrer les blocs un par un, patiente, puis envoie les 10 d'un coup. Sur « * », il lance tout ce qu'il reçoit, aussitôt.</p>"
+    },
+    {
+      "id": "lot",
+      "title": "Prélever un lot exact",
+      "image": "ejector_split_quantite.webp",
+      "alt": "Éjecteur à côté d'un tunnel de laiton, qui prend une partie de la pile",
+      "video": "ejector_split",
+      "html": "<p>Placé contre le flanc d'un <a href=\"/wiki/tunnel\">tunnel de laiton</a>, l'éjecteur devient une de ses sorties. Le tunnel lui propose une pile de 64 lingots : réglé sur 10, l'éjecteur n'en accepte que 10 et le reste continue sur le tapis. Il les lance ensuite vers une autre ligne. C'est la façon la plus simple de dériver une quantité précise.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "Redstone et observateur",
+      "image": "ejector_redstone_redstone.webp",
+      "alt": "Éjecteur relié à un levier, qui garde son objet",
+      "video": "ejector_redstone",
+      "html": "<p>Un signal de redstone <strong>bloque</strong> l'éjecteur : il garde son objet sur le plateau tant que le levier est actif, et tire dès qu'on le coupe. Dans l'autre sens, un <strong>observateur</strong> posé contre l'éjecteur émet une impulsion à chaque lancer, de quoi compter les envois ou déclencher la machine suivante.</p>"
+    },
+    {
+      "id": "tremplin",
+      "title": "Un tremplin pour les joueurs",
+      "html": "<p>L'éjecteur ne lance pas que des objets : un joueur ou un animal debout sur le plateau s'envole avec lui. Avec des élytres, le joueur les déploie automatiquement en l'air. Un raccourci spectaculaire entre deux bâtiments, à condition de bien viser l'arrivée. Cette partie de la scène Ponder, un perroquet lancé, n'est pas montrée dans nos boucles.</p>"
+    }
+  ],
+  "related": [
+    "depot",
+    "tapis-roulant",
+    "tunnel",
+    "bras-mecanique",
+    "entonnoir"
+  ],
+  "sources": [
+    "Stress : AllBlocks.java, WEIGHTED_EJECTOR, CStress.setImpact(2.0)",
+    "Portée : CKinetics.maxEjectorDistance = 32 ; cible dans l'axe : EjectorTargetHandler.getValidTargetDirection",
+    "Trajectoire : EntityLauncher (getGlobalPos, totalFlyingTicks), arrêt sur obstacle : EjectorBlockEntity.scanTrajectoryForObstacles",
+    "Réarmement : EjectorBlockEntity.getWindUpSpeed (|tr/min| / 256 / distance par tick) ; taille de pile : maxStackSize (0 à 64) ; redstone : updateSignal / ejectIfTriggered",
+    "Recette : crafting/kinetics/weighted_ejector.json",
+    "Scènes : EjectorScenes.ejector (deux boucles, la fin avec le perroquet coupée), splitY, redstone ; lancers simulés d'après les classes ci-dessus"
+  ],
+  "en": {
+    "slugEn": "weighted-ejector",
+    "name": "Weighted Ejector",
+    "title": "Weighted Ejector — Create mod guide",
+    "description": "The Create Weighted Ejector: picking a target, 32-block range, how items fly, stack size, splitting lots with a Brass Tunnel and redstone control.",
+    "intro": "The <strong>Weighted Ejector</strong> is an item catapult: placed at the end of a line, it throws whatever it receives towards a target chosen in advance, up to 32 blocks away, above or below. It replaces dozens of belt segments to cross a ravine, climb a floor or link two factory islands. It can also wait for an exact amount before firing, and even launch a player.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Logistics"
+      },
+      {
+        "label": "Stress",
+        "value": "2 SU per RPM (64 SU at 32 RPM)"
+      },
+      {
+        "label": "Range",
+        "value": "Up to 32 blocks along its axis, and as much in height (server setting maxEjectorDistance)"
+      },
+      {
+        "label": "Target",
+        "value": "On one of the four horizontal axes, chosen before placing"
+      },
+      {
+        "label": "Reload",
+        "value": "The plate rises by RPM ÷ 256 ÷ distance per tick: 1.6 s at 32 RPM for 4 blocks"
+      },
+      {
+        "label": "Stack size",
+        "value": "Waits for 1 to 64 items before launching (\"*\": anything that arrives)"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Golden Sheet",
+          null
+        ],
+        [
+          null,
+          "Depot",
+          null
+        ],
+        [
+          null,
+          "Cogwheel",
+          null
+        ]
+      ],
+      "result": "1 Weighted Ejector"
+    },
+    "videos": [
+      {
+        "id": "ejector",
+        "name": "Weighted Ejector: picking a target",
+        "description": "A target is picked before placing; the lines show the allowed area along the ejector's axis, and an off-axis target is refused."
+      },
+      {
+        "id": "ejector_launch",
+        "name": "Weighted Ejector: launching, receiving, waiting for a stack",
+        "description": "A copper block is thrown onto a casing, then onto a Depot; set to 10, the ejector waits for a full stack coming from a belt."
+      },
+      {
+        "id": "ejector_split",
+        "name": "Weighted Ejector and Brass Tunnel: taking a lot",
+        "description": "A Brass Tunnel offers a stack of 64 ingots; the ejector, set to 10, takes 10 and throws them onto another belt."
+      },
+      {
+        "id": "ejector_redstone",
+        "name": "Weighted Ejector and redstone",
+        "description": "A lever blocks the ejector; an observer placed against it sends a pulse at every launch."
+      }
+    ],
+    "sections": [
+      {
+        "id": "cible",
+        "title": "Picking the target before placing",
+        "alt": "Weighted Ejector placed facing an outlined target block",
+        "html": "<p>Like the <a href=\"/en/wiki/mechanical-arm\">Mechanical Arm</a>, the ejector is set up before it is placed. Holding it, <strong>right-click the block</strong> that should receive the items: it is remembered. Then place the ejector where you want it and it turns towards its target on its own. With no target picked, it simply throws onto the block right in front of it.</p>"
+      },
+      {
+        "id": "portee",
+        "title": "A target along the axis",
+        "alt": "Green lines from the ejector: the area of possible targets along its axis",
+        "html": "<p>The target must lie <strong>straight in line with the ejector</strong>, on one of the four horizontal axes, never directly above or below. It can be higher or lower, up to <strong>32 blocks</strong> each way. A target shifted sideways, even by a single block, is refused: move the ejector, not the target.</p>"
+      },
+      {
+        "id": "lancer",
+        "title": "The launch",
+        "alt": "Copper block landed on the casing the ejector aimed at",
+        "html": "<p>The ejector needs rotation: 2 SU per RPM. Put an item on it and the plate <strong>flips up at once</strong>; the item follows a trajectory computed to land right on the target. The plate then winds back down slowly, faster when the rotation is fast and the target close: it takes 1.6 s at 32 RPM for a target 4 blocks away.</p>"
+      },
+      {
+        "id": "reception",
+        "title": "What receives the item",
+        "alt": "Copper block landed on a Depot at the end of its flight",
+        "html": "<p>On arrival, the item goes straight into whatever can take it: <a href=\"/en/wiki/depot\">Depot</a>, <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a>, another ejector, <a href=\"/en/wiki/funnel\">Funnel</a>, <a href=\"/en/wiki/chute\">Chute</a>… On an ordinary block it drops to the ground at the aimed spot. If it hits an obstacle on the way, it stops there and falls: keep the path clear.</p>"
+      },
+      {
+        "id": "pile",
+        "title": "Waiting for a full stack",
+        "alt": "A belt delivering copper blocks one by one onto the ejector",
+        "html": "<p>The value panel sets a <strong>stack size</strong>: the ejector waits until it holds that many items before launching. Set to 10, it lets a belt deliver blocks one at a time, waits, then sends all 10 at once. On \"*\", it throws everything it gets straight away.</p>"
+      },
+      {
+        "id": "lot",
+        "title": "Taking an exact lot",
+        "alt": "Weighted Ejector next to a Brass Tunnel, taking part of the stack",
+        "html": "<p>Placed against the side of a <a href=\"/en/wiki/tunnel\">Brass Tunnel</a>, the ejector becomes one of its outputs. The tunnel offers it a stack of 64 ingots: set to 10, the ejector only accepts 10 and the rest carries on along the belt. It then throws them towards another line. It is the simplest way to divert an exact amount.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "Redstone and observers",
+        "alt": "Weighted Ejector wired to a lever, holding on to its item",
+        "html": "<p>A redstone signal <strong>blocks</strong> the ejector: it keeps its item on the plate while the lever is on, and fires as soon as it is turned off. The other way round, an <strong>observer</strong> placed against the ejector sends a pulse at every launch, enough to count shipments or trigger the next machine.</p>"
+      },
+      {
+        "id": "tremplin",
+        "title": "A springboard for players",
+        "html": "<p>The ejector does not only throw items: a player or an animal standing on the plate flies off with it. Wearing an elytra, the player deploys it automatically in mid-air. A spectacular shortcut between two buildings, as long as you aim the landing well. This part of the Ponder scene, a parrot being launched, is not shown in our loops.</p>"
+      }
+    ],
+    "sources": [
+      "Stress: AllBlocks.java, WEIGHTED_EJECTOR, CStress.setImpact(2.0)",
+      "Range: CKinetics.maxEjectorDistance = 32; target along the axis: EjectorTargetHandler.getValidTargetDirection",
+      "Trajectory: EntityLauncher (getGlobalPos, totalFlyingTicks), stop on obstacles: EjectorBlockEntity.scanTrajectoryForObstacles",
+      "Reload: EjectorBlockEntity.getWindUpSpeed (|RPM| / 256 / distance per tick); stack size: maxStackSize (0 to 64); redstone: updateSignal / ejectIfTriggered",
+      "Recipe: crafting/kinetics/weighted_ejector.json",
+      "Scenes: EjectorScenes.ejector (two loops, the parrot ending cut), splitY, redstone; launches simulated from the classes above"
+    ]
+  }
+}

@@ -1,0 +1,301 @@
+{
+  "slug": "chute",
+  "name": "Chute et chute intelligente",
+  "blockId": "create:chute",
+  "category": "logistique",
+  "title": "Chute — Create : guide en français",
+  "description": "La chute de Create : descendre des objets à 4 blocs par seconde, les monter avec un ventilateur, chutes en diagonale et chute intelligente filtrée.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>chute</strong> est un tuyau vertical pour les objets. Empilées, les chutes font descendre ce qu'on y met d'un inventaire à l'autre, sans rotation ni redstone : la gravité suffit. Avec un ventilateur, elles montent aussi. La <strong>chute intelligente</strong> ajoute un filtre, une quantité précise et un arrêt par redstone. Ensemble, elles relient les étages d'une usine bien plus simplement qu'un tapis en pente.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Logistique"
+    },
+    {
+      "label": "Descente",
+      "value": "4 blocs par seconde par gravité, jusqu'à 20 avec des ventilateurs"
+    },
+    {
+      "label": "Montée",
+      "value": "Un ventilateur dessous qui souffle vers le haut : tr/min ÷ 64 blocs par seconde (0,5 bloc/s à 32 tr/min)"
+    },
+    {
+      "label": "Capacité",
+      "value": "Une pile en transit par bloc de chute"
+    },
+    {
+      "label": "Prélèvement",
+      "value": "Jusqu'à 16 objets à la fois dans l'inventaire du dessus ; chute intelligente : filtre et quantité exacte"
+    },
+    {
+      "label": "Chute intelligente",
+      "value": "1 plaque de laiton + 1 chute + 1 tube électronique"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (chute)",
+    "grid": [
+      [
+        null,
+        "Plaque de fer",
+        null
+      ],
+      [
+        null,
+        "Lingot de fer",
+        null
+      ],
+      [
+        null,
+        "Plaque de fer",
+        null
+      ]
+    ],
+    "result": "4 chutes"
+  },
+  "videos": [
+    {
+      "id": "chute_down",
+      "name": "Chute : descendre des objets",
+      "description": "Des blocs de cuivre traversent une colonne de chutes d'un coffre à l'autre ; la chute passe en version fenêtre, puis habillée, puis en diagonale.",
+      "duration": "PT20S"
+    },
+    {
+      "id": "chute_up",
+      "name": "Chute : monter avec un ventilateur",
+      "description": "Un ventilateur souffle sous une colonne de chutes : un bloc venu d'un tapis remonte jusqu'en haut.",
+      "duration": "PT10S"
+    },
+    {
+      "id": "chute_smart",
+      "name": "Chute intelligente : filtre et redstone",
+      "description": "Une chute intelligente puise dans le coffre du dessus et s'arrête quand un levier l'alimente.",
+      "duration": "PT20S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "descendre",
+      "title": "Des objets qui tombent d'un inventaire à l'autre",
+      "image": "chute_down_transport.webp",
+      "alt": "Colonne de chutes entre deux coffres, un bloc de cuivre en transit",
+      "video": "chute_down",
+      "html": "<p>Une chute se pose comme un bloc ordinaire et se relie à celles du dessus et du dessous. Un objet qui y entre <strong>tombe</strong> à 4 blocs par seconde, sans aucune rotation. En bas, il entre dans ce qu'il trouve : coffre, tonneau, <a href=\"/wiki/coffre-a-objet-renforce\">coffre à objet renforcé</a>, <a href=\"/wiki/tapis-roulant\">tapis roulant</a>, <a href=\"/wiki/depot\">dépôt</a>… S'il n'y a rien, il tombe au sol. Chaque bloc de chute transporte une seule pile à la fois.</p>"
+    },
+    {
+      "id": "remplir",
+      "title": "Elle se remplit toute seule",
+      "image": "chute_down_fenetre.webp",
+      "alt": "Chute en version fenêtre entre un coffre en haut et un coffre en bas",
+      "html": "<p>Sous un coffre, une chute <strong>se sert elle-même</strong> : elle prend jusqu'à 16 objets à la fois dans l'inventaire du dessus et les fait descendre. Elle ramasse aussi les objets qu'on jette dans son ouverture. Un coup de <strong>clé</strong> la passe en version fenêtre pour voir les objets défiler ; un autre la remet pleine.</p>"
+    },
+    {
+      "id": "habiller",
+      "title": "Habiller une chute",
+      "image": "chute_down_boitier.webp",
+      "alt": "Chute habillée de fer industriel sous un coffre",
+      "html": "<p>Un clic droit avec un <strong>bloc de fer industriel</strong> habille la chute d'une coque lisse, plus discrète dans un mur d'usine. Elle fonctionne exactement pareil. Pour retirer l'habillage, un coup de clé suffit et le bloc de fer est rendu.</p>"
+    },
+    {
+      "id": "diagonale",
+      "title": "Les chutes en diagonale",
+      "image": "chute_down_diagonale.webp",
+      "alt": "Chutes reliées en diagonale qui descendent en escalier",
+      "html": "<p>Pose une chute <strong>contre le flanc</strong> d'une autre et elles se relient en biais : la colonne descend alors en escalier, d'un bloc de côté par bloc de hauteur. C'est pratique pour contourner un obstacle ou décaler une ligne sans ajouter de tapis.</p>"
+    },
+    {
+      "id": "monter",
+      "title": "Monter avec un ventilateur",
+      "image": "chute_up_montee.webp",
+      "alt": "Ventilateur enchâssé sous une colonne de chutes, un bloc qui remonte",
+      "video": "chute_up",
+      "html": "<p>Un <a href=\"/wiki/ventilateur-enchasse\">ventilateur enchâssé</a> placé <strong>sous la colonne</strong> et soufflant vers le haut inverse le courant : les objets montent, à tr/min ÷ 64 blocs par seconde, soit 0,5 bloc par seconde à 32 tr/min et jusqu'à 20 blocs par seconde à pleine vitesse. Un ventilateur en haut qui aspire marche aussi. Dans ce sens, la chute prend les objets d'un tapis passant dessous ou d'un inventaire placé en bas.</p>"
+    },
+    {
+      "id": "intelligente",
+      "title": "La chute intelligente",
+      "image": "chute_smart_intelligente.webp",
+      "alt": "Chute intelligente en laiton posée sous un coffre",
+      "video": "chute_smart",
+      "html": "<p>La <strong>chute intelligente</strong> se place comme une chute ordinaire, avec un emplacement de <strong>filtre</strong> en plus. Elle ne laisse passer que les objets acceptés et peut prélever une <strong>quantité exacte</strong> : réglée sur 8, elle attend qu'il y en ait 8 dans le coffre au-dessus pour les prendre d'un coup.</p>"
+    },
+    {
+      "id": "inventaire",
+      "title": "Puiser dans un coffre",
+      "image": "chute_smart_inventaire.webp",
+      "alt": "Coffre posé sur une chute intelligente, elle-même sur un coffre",
+      "html": "<p>Placée sous un inventaire, la chute intelligente se comporte comme un <a href=\"/wiki/entonnoir\">entonnoir</a> de laiton vertical : elle extrait seulement ce qui correspond à son filtre et laisse le reste. Deux coffres séparés par une chute intelligente forment ainsi un tri simple, sans tapis ni redstone.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "L'arrêter à la redstone",
+      "image": "chute_smart_redstone.webp",
+      "alt": "Chute intelligente reliée à un levier",
+      "html": "<p>Un signal de redstone <strong>met en pause</strong> la chute intelligente : elle cesse de prendre des objets tant que le levier est actif. Une chute ordinaire, elle, ne s'arrête jamais. C'est le moyen le plus simple de vider un coffre à la demande.</p>"
+    },
+    {
+      "id": "astuces",
+      "title": "Quelques réflexes",
+      "html": "<p>Une chute qui débouche sur un <a href=\"/wiki/tapis-roulant\">tapis</a> y pose les objets au milieu du segment, prêts à repartir. Une colonne bouchée en bas se remplit bloc par bloc, une pile par chute, puis refuse les objets du haut : c'est un petit tampon gratuit entre deux machines. Et pour remplir plusieurs coffres alignés, mieux vaut un tunnel de laiton sur un tapis qu'une forêt de chutes.</p>"
+    }
+  ],
+  "related": [
+    "ventilateur-enchasse",
+    "entonnoir",
+    "tapis-roulant",
+    "coffre-a-objet-renforce",
+    "tunnel"
+  ],
+  "sources": [
+    "Vitesse : ChuteBlockEntity.getItemMotion (gravité 4 chutes/s, (tirage + poussée) / 64, plafond 20), poussée d'un ventilateur : calculatePush (EncasedFanBlockEntity.getSpeed)",
+    "Prélèvement : ChuteBlockEntity.handleInput (16 objets, mode UPTO), SmartChuteBlockEntity (filtre, quantité exacte, POWERED = pause)",
+    "Formes : ChuteBlock.Shape (INTERSECTION, WINDOW, NORMAL, ENCASED), clé : onWrenched, habillage : bloc de fer industriel",
+    "Recettes : crafting/kinetics/chute.json, crafting/kinetics/smart_chute.json",
+    "Scènes : ChuteScenes.downward, upward, smart ; trajets simulés d'après les classes ci-dessus"
+  ],
+  "en": {
+    "slugEn": "chute",
+    "name": "Chute and Smart Chute",
+    "title": "Chute — Create mod guide",
+    "description": "The Create Chute: dropping items at 4 blocks per second, lifting them with a fan, diagonal chutes and the filtered Smart Chute with redstone control.",
+    "intro": "The <strong>Chute</strong> is a vertical pipe for items. Stacked up, chutes carry whatever goes in down from one inventory to another, with no rotation and no redstone: gravity does the job. With a fan, they go up too. The <strong>Smart Chute</strong> adds a filter, an exact amount and a redstone stop. Together they link the floors of a factory far more simply than a sloped belt.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Logistics"
+      },
+      {
+        "label": "Going down",
+        "value": "4 blocks per second by gravity, up to 20 with fans"
+      },
+      {
+        "label": "Going up",
+        "value": "A fan underneath blowing upwards: RPM ÷ 64 blocks per second (0.5 block/s at 32 RPM)"
+      },
+      {
+        "label": "Capacity",
+        "value": "One stack in transit per chute block"
+      },
+      {
+        "label": "Pulling",
+        "value": "Up to 16 items at a time from the inventory above; Smart Chute: filter and exact amount"
+      },
+      {
+        "label": "Smart Chute",
+        "value": "1 Brass Sheet + 1 Chute + 1 Electron Tube"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (Chute)",
+      "grid": [
+        [
+          null,
+          "Iron Sheet",
+          null
+        ],
+        [
+          null,
+          "Iron Ingot",
+          null
+        ],
+        [
+          null,
+          "Iron Sheet",
+          null
+        ]
+      ],
+      "result": "4 Chutes"
+    },
+    "videos": [
+      {
+        "id": "chute_down",
+        "name": "Chute: moving items down",
+        "description": "Copper blocks travel down a column of chutes from one chest to another; the chute is switched to a window, then encased, then set diagonally."
+      },
+      {
+        "id": "chute_up",
+        "name": "Chute: going up with a fan",
+        "description": "A fan blows under a column of chutes: a block coming from a belt rises to the top."
+      },
+      {
+        "id": "chute_smart",
+        "name": "Smart Chute: filter and redstone",
+        "description": "A Smart Chute pulls from the chest above and stops when a lever powers it."
+      }
+    ],
+    "sections": [
+      {
+        "id": "descendre",
+        "title": "Items falling from one inventory to another",
+        "alt": "Column of chutes between two chests, a copper block in transit",
+        "html": "<p>A chute is placed like any block and connects to the ones above and below. An item that goes in <strong>falls</strong> at 4 blocks per second, with no rotation at all. At the bottom it enters whatever it finds: chest, barrel, <a href=\"/en/wiki/item-vault\">Item Vault</a>, <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a>, <a href=\"/en/wiki/depot\">Depot</a>… If there is nothing, it drops to the ground. Each chute block carries a single stack at a time.</p>"
+      },
+      {
+        "id": "remplir",
+        "title": "It fills itself",
+        "alt": "Window chute between a chest at the top and a chest at the bottom",
+        "html": "<p>Under a chest, a chute <strong>serves itself</strong>: it takes up to 16 items at a time from the inventory above and sends them down. It also picks up items thrown into its opening. A tap of the <strong>Wrench</strong> switches it to a window version so you can watch the items go by; another tap makes it solid again.</p>"
+      },
+      {
+        "id": "habiller",
+        "title": "Encasing a chute",
+        "alt": "Chute encased in industrial iron under a chest",
+        "html": "<p>Right-clicking with a <strong>Block of Industrial Iron</strong> encases the chute in a smooth shell, more discreet inside a factory wall. It works exactly the same. To remove the casing, one tap of the Wrench is enough and the iron block is given back.</p>"
+      },
+      {
+        "id": "diagonale",
+        "title": "Diagonal chutes",
+        "alt": "Chutes linked diagonally, going down like stairs",
+        "html": "<p>Place a chute <strong>against the side</strong> of another and they link at an angle: the column then goes down like a staircase, one block sideways for each block of height. It is handy to get around an obstacle or shift a line without adding belts.</p>"
+      },
+      {
+        "id": "monter",
+        "title": "Going up with a fan",
+        "alt": "Encased Fan under a column of chutes, a block rising",
+        "html": "<p>An <a href=\"/en/wiki/encased-fan\">Encased Fan</a> placed <strong>under the column</strong> and blowing upwards reverses the flow: items rise at RPM ÷ 64 blocks per second, that is 0.5 block per second at 32 RPM and up to 20 blocks per second at full speed. A fan at the top pulling air works too. In this direction the chute takes items from a belt running underneath or from an inventory at the bottom.</p>"
+      },
+      {
+        "id": "intelligente",
+        "title": "The Smart Chute",
+        "alt": "Brass Smart Chute placed under a chest",
+        "html": "<p>The <strong>Smart Chute</strong> is placed like an ordinary chute, with an extra <strong>filter</strong> slot. It only lets accepted items through and can take an <strong>exact amount</strong>: set to 8, it waits until there are 8 in the chest above and takes them in one go.</p>"
+      },
+      {
+        "id": "inventaire",
+        "title": "Pulling from a chest",
+        "alt": "Chest on top of a Smart Chute, itself on top of a chest",
+        "html": "<p>Placed under an inventory, the Smart Chute behaves like a vertical Brass <a href=\"/en/wiki/funnel\">Funnel</a>: it only extracts what matches its filter and leaves the rest. Two chests separated by a Smart Chute make a simple sorter, with no belt and no redstone.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "Stopping it with redstone",
+        "alt": "Smart Chute wired to a lever",
+        "html": "<p>A redstone signal <strong>pauses</strong> the Smart Chute: it stops taking items while the lever is on. An ordinary chute never stops. It is the easiest way to empty a chest on demand.</p>"
+      },
+      {
+        "id": "astuces",
+        "title": "A few good habits",
+        "html": "<p>A chute ending on a <a href=\"/en/wiki/conveyor-belt\">belt</a> puts the items in the middle of the segment, ready to move on. A column blocked at the bottom fills up block by block, one stack per chute, then refuses items at the top: a small free buffer between two machines. And to fill several chests in a row, a Brass Tunnel on a belt is better than a forest of chutes.</p>"
+      }
+    ],
+    "sources": [
+      "Speed: ChuteBlockEntity.getItemMotion (gravity 4 chutes/s, (pull + push) / 64, capped at 20), fan push: calculatePush (EncasedFanBlockEntity.getSpeed)",
+      "Pulling: ChuteBlockEntity.handleInput (16 items, UPTO mode), SmartChuteBlockEntity (filter, exact amount, POWERED = pause)",
+      "Shapes: ChuteBlock.Shape (INTERSECTION, WINDOW, NORMAL, ENCASED), Wrench: onWrenched, casing: Block of Industrial Iron",
+      "Recipes: crafting/kinetics/chute.json, crafting/kinetics/smart_chute.json",
+      "Scenes: ChuteScenes.downward, upward, smart; item paths simulated from the classes above"
+    ]
+  }
+}

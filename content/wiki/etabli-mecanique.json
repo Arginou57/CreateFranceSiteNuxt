@@ -1,0 +1,260 @@
+{
+  "slug": "etabli-mecanique",
+  "name": "Établi mécanique",
+  "blockId": "create:mechanical_crafter",
+  "category": "logistique",
+  "title": "Établi mécanique — Create : guide en français",
+  "description": "L'établi mécanique de Create : monter une grille, orienter les flèches, relier les entrées, couvercles d'emplacement et démarrage par redstone.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "L'<strong>établi mécanique</strong> automatise l'artisanat. Un établi tout seul ne sert à rien : on en assemble plusieurs en une <strong>grille</strong> qui reproduit la grille de fabrication, chaque bloc tenant un ingrédient. Dès que la grille est complète et qu'elle tourne, les établis se passent les objets jusqu'à un établi de sortie qui livre le résultat. Il réalise les recettes ordinaires et les grandes recettes de Create, jusqu'à 9 × 9.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Logistique"
+    },
+    {
+      "label": "Stress",
+      "value": "2 SU par tr/min et par établi"
+    },
+    {
+      "label": "Grille",
+      "value": "Autant d'établis que d'emplacements de la recette, de 1 × 1 à 9 × 9"
+    },
+    {
+      "label": "Remplissage",
+      "value": "Entonnoirs, bras mécaniques, tapis, déployeurs, ou à la main"
+    },
+    {
+      "label": "Couvercle d'emplacement",
+      "value": "Marque un emplacement volontairement vide"
+    },
+    {
+      "label": "Redstone",
+      "value": "Une impulsion lance la fabrication même si la grille n'est pas pleine"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Tube électronique",
+        null
+      ],
+      [
+        null,
+        "Boîtier de laiton",
+        null
+      ],
+      [
+        null,
+        "Établi",
+        null
+      ]
+    ],
+    "result": "3 établis mécaniques"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "grille",
+      "title": "Monter une grille",
+      "image": "crafter_setup_grille.webp",
+      "alt": "Grille de trois établis mécaniques sur trois",
+      "html": "<p>Pose les établis côte à côte, tous tournés du même côté, en reproduisant la forme de la recette : un carré de 3 × 3 pour une recette classique, une seule colonne pour une recette en ligne. Chaque établi est un emplacement de la grille de fabrication. Il en faut autant que d'emplacements occupés par la recette, pas forcément neuf.</p>"
+    },
+    {
+      "id": "fleches",
+      "title": "Les flèches dirigent les objets",
+      "html": "<p>Chaque établi affiche une <strong>flèche</strong> sur sa face. Elle indique où il enverra son ingrédient au moment de la fabrication. Toutes les flèches doivent finir par converger vers un seul établi, celui qui sortira le résultat. Un coup de <strong>clé</strong> sur un établi fait tourner sa flèche. Par défaut, la pose les oriente déjà de façon logique, du haut vers le bas.</p>"
+    },
+    {
+      "id": "rotation",
+      "title": "Rotation et sortie",
+      "image": "crafter_setup_rotation.webp",
+      "alt": "Grille d'établis mécaniques reliée à une source de rotation, un dépôt devant",
+      "html": "<p>La grille a besoin de rotation, 2 SU par tr/min pour chaque établi, transmise par l'arrière comme à une roue dentée. Une fois tous les emplacements remplis, les établis glissent leurs objets le long des flèches, les assemblent et l'établi de sortie dépose le résultat devant lui : sur un <a href=\"/wiki/depot\">dépôt</a>, un tapis ou dans un entonnoir.</p>"
+    },
+    {
+      "id": "remplir",
+      "title": "Remplir la grille",
+      "image": "crafter_connect_entree.webp",
+      "alt": "Tapis et entonnoir qui alimentent un établi mécanique",
+      "html": "<p>On met les ingrédients à la main, un par établi, ou automatiquement : <a href=\"/wiki/entonnoir\">entonnoirs</a>, <a href=\"/wiki/bras-mecanique\">bras mécaniques</a>, <a href=\"/wiki/deployeur\">déployeurs</a>, tapis qui débouchent sur la face d'un établi. Chaque établi ne garde qu'un seul objet : un entonnoir qui l'alimente en pose un, attend que la fabrication soit faite, puis recommence.</p>"
+    },
+    {
+      "id": "relier",
+      "title": "Relier les entrées",
+      "image": "crafter_connect_relier.webp",
+      "alt": "Établis mécaniques reliés entre eux, encadrés",
+      "html": "<p>Alimenter chaque établi séparément devient vite lourd. Un coup de clé sur la <strong>jonction entre deux établis</strong> relie leurs inventaires : un objet inséré dans l'un est distribué aux autres, dans l'ordre de la grille. Avec toute la grille reliée, un seul entonnoir suffit à la remplir, à condition d'envoyer les ingrédients dans l'ordre de la recette.</p>"
+    },
+    {
+      "id": "couvercle",
+      "title": "Les couvercles d'emplacement",
+      "image": "crafter_covers_cache.webp",
+      "alt": "Établi mécanique muni d'un couvercle d'emplacement",
+      "html": "<p>Certaines recettes ont des trous, comme un seau ou un coffre. Pour qu'une grille reliée ne mette pas d'objet à cet endroit, pose un <strong>couvercle d'emplacement d'établi</strong> sur l'établi concerné : il compte comme rempli et vide à la fois. La grille sait alors qu'elle est complète sans attendre un ingrédient qui n'existe pas.</p>"
+    },
+    {
+      "id": "recette",
+      "title": "Exemple de recette à trous",
+      "image": "crafter_covers_recette.webp",
+      "alt": "Grille d'établis avec un couvercle et des ingrédients autour",
+      "html": "<p>Dans la scène Ponder, quelques établis couverts et les autres remplis produisent une recette en forme d'anneau. Le même principe vaut pour toutes les recettes à emplacements vides : couvre les trous, relie le reste, et un seul tapis d'entrée alimente toute la machine.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "Forcer le départ à la redstone",
+      "image": "crafter_setup_redstone.webp",
+      "alt": "Grille d'établis mécaniques reliée à un levier",
+      "html": "<p>Une impulsion de redstone sur un établi lance la fabrication <strong>tout de suite</strong>, même si certains emplacements sont vides. C'est l'autre façon de faire une recette à trous : remplir les bons établis, puis donner le signal. Si les objets présents ne forment aucune recette, la grille les recrache.</p>"
+    },
+    {
+      "id": "images",
+      "title": "À propos des images",
+      "html": "<p>Notre moteur de rendu ne dessine pas encore les objets tenus par les établis, ni leur glissement d'un établi à l'autre : cette page est donc illustrée par des images fixes des montages Ponder, sans animation.</p>"
+    }
+  ],
+  "related": [
+    "bras-mecanique",
+    "deployeur",
+    "entonnoir",
+    "depot",
+    "jauge-d-usine"
+  ],
+  "sources": [
+    "Stress : AllBlocks.java, MECHANICAL_CRAFTER, CStress.setImpact(2.0)",
+    "Grille et recettes : RecipeGridHandler, MechanicalCraftingInput (recettes vanilla et mechanical_crafting jusqu'à 9 × 9)",
+    "Redstone : MechanicalCrafterBlockEntity (front montant -> checkCompletedRecipe(true)) ; couvercle : MechanicalCrafterBlockEntity.covered",
+    "Recette : crafting/kinetics/mechanical_crafter.json",
+    "Scènes : CrafterScenes.setup, connect, covers ; images seules (objets des établis non dessinés)"
+  ],
+  "en": {
+    "slugEn": "mechanical-crafter",
+    "name": "Mechanical Crafter",
+    "title": "Mechanical Crafter — Create mod guide",
+    "description": "The Create Mechanical Crafter: building a grid, turning the arrows, linking inputs, Crafter Slot Covers and starting a craft with a redstone pulse.",
+    "intro": "The <strong>Mechanical Crafter</strong> automates crafting. One crafter on its own does nothing: you assemble several into a <strong>grid</strong> that mirrors the crafting grid, each block holding one ingredient. As soon as the grid is complete and turning, the crafters pass the items along to an output crafter that delivers the result. It handles ordinary recipes and Create's large ones, up to 9 × 9.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Logistics"
+      },
+      {
+        "label": "Stress",
+        "value": "2 SU per RPM per crafter"
+      },
+      {
+        "label": "Grid",
+        "value": "As many crafters as the recipe has slots, from 1 × 1 to 9 × 9"
+      },
+      {
+        "label": "Filling",
+        "value": "Funnels, Mechanical Arms, belts, Deployers, or by hand"
+      },
+      {
+        "label": "Crafter Slot Cover",
+        "value": "Marks a slot that is meant to stay empty"
+      },
+      {
+        "label": "Redstone",
+        "value": "A pulse starts crafting even if the grid is not full"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Electron Tube",
+          null
+        ],
+        [
+          null,
+          "Brass Casing",
+          null
+        ],
+        [
+          null,
+          "Crafting Table",
+          null
+        ]
+      ],
+      "result": "3 Mechanical Crafters"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "grille",
+        "title": "Building a grid",
+        "alt": "Three-by-three grid of Mechanical Crafters",
+        "html": "<p>Place the crafters side by side, all facing the same way, copying the shape of the recipe: a 3 × 3 square for a classic recipe, a single column for a recipe in a line. Each crafter is one slot of the crafting grid. You need as many as the recipe has filled slots, not necessarily nine.</p>"
+      },
+      {
+        "id": "fleches",
+        "title": "Arrows guide the items",
+        "html": "<p>Each crafter shows an <strong>arrow</strong> on its face. It tells where the crafter will send its ingredient when crafting. All the arrows must eventually converge on a single crafter, the one that will output the result. A tap of the <strong>Wrench</strong> on a crafter turns its arrow. By default, placement already points them sensibly, from top to bottom.</p>"
+      },
+      {
+        "id": "rotation",
+        "title": "Rotation and output",
+        "alt": "Grid of Mechanical Crafters linked to a rotation source, a Depot in front",
+        "html": "<p>The grid needs rotation, 2 SU per RPM for each crafter, fed from the back like a cogwheel. Once every slot is filled, the crafters slide their items along the arrows, put them together, and the output crafter drops the result in front of it: on a <a href=\"/en/wiki/depot\">Depot</a>, a belt or into a funnel.</p>"
+      },
+      {
+        "id": "remplir",
+        "title": "Filling the grid",
+        "alt": "Belt and funnel feeding a Mechanical Crafter",
+        "html": "<p>Ingredients go in by hand, one per crafter, or automatically: <a href=\"/en/wiki/funnel\">Funnels</a>, <a href=\"/en/wiki/mechanical-arm\">Mechanical Arms</a>, <a href=\"/en/wiki/deployer\">Deployers</a>, belts ending at a crafter's face. Each crafter holds only one item: a funnel feeding it puts one in, waits for the craft to happen, then starts again.</p>"
+      },
+      {
+        "id": "relier",
+        "title": "Linking the inputs",
+        "alt": "Mechanical Crafters linked together, outlined",
+        "html": "<p>Feeding every crafter separately quickly becomes tedious. A tap of the Wrench on the <strong>joint between two crafters</strong> links their inventories: an item inserted into one is passed on to the others, in grid order. With the whole grid linked, a single funnel is enough to fill it, as long as you send the ingredients in the recipe's order.</p>"
+      },
+      {
+        "id": "couvercle",
+        "title": "Crafter Slot Covers",
+        "alt": "Mechanical Crafter fitted with a Crafter Slot Cover",
+        "html": "<p>Some recipes have holes, like a bucket or a chest. So that a linked grid does not put an item there, place a <strong>Crafter Slot Cover</strong> on that crafter: it counts as both filled and empty. The grid then knows it is complete without waiting for an ingredient that does not exist.</p>"
+      },
+      {
+        "id": "recette",
+        "title": "An example of a recipe with holes",
+        "alt": "Crafter grid with a cover and ingredients around it",
+        "html": "<p>In the Ponder scene, a few covered crafters and the filled ones produce a ring-shaped recipe. The same idea works for every recipe with empty slots: cover the holes, link the rest, and a single input belt feeds the whole machine.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "Forcing a start with redstone",
+        "alt": "Grid of Mechanical Crafters wired to a lever",
+        "html": "<p>A redstone pulse on a crafter starts crafting <strong>right away</strong>, even if some slots are empty. It is the other way to make a recipe with holes: fill the right crafters, then send the signal. If the items present do not match any recipe, the grid spits them back out.</p>"
+      },
+      {
+        "id": "images",
+        "title": "About the pictures",
+        "html": "<p>Our renderer does not draw the items held by the crafters yet, nor their sliding from one crafter to the next: this page is therefore illustrated with stills of the Ponder setups, without animation.</p>"
+      }
+    ],
+    "sources": [
+      "Stress: AllBlocks.java, MECHANICAL_CRAFTER, CStress.setImpact(2.0)",
+      "Grid and recipes: RecipeGridHandler, MechanicalCraftingInput (vanilla and mechanical_crafting recipes up to 9 × 9)",
+      "Redstone: MechanicalCrafterBlockEntity (rising edge -> checkCompletedRecipe(true)); cover: MechanicalCrafterBlockEntity.covered",
+      "Recipe: crafting/kinetics/mechanical_crafter.json",
+      "Scenes: CrafterScenes.setup, connect, covers; stills only (crafter contents not drawn)"
+    ]
+  }
+}

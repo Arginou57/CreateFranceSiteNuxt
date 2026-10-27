@@ -1,0 +1,271 @@
+{
+  "slug": "roue-a-chaine-roulante",
+  "name": "Roue à chaîne roulante et crapauport à colis",
+  "blockId": "create:chain_conveyor",
+  "category": "colis",
+  "title": "Roue à chaîne roulante et crapauport — Create : guide",
+  "description": "La roue à chaîne roulante de Create 6 : relier des roues avec des chaînes, 32 blocs par liaison, et le crapauport qui envoie et reçoit les colis.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>roue à chaîne roulante</strong> porte les colis dans les airs. On relie plusieurs roues avec des chaînes vanilla et les colis suspendus filent d'une roue à l'autre, par-dessus les bâtiments, sans un seul tapis au sol. Pour charger et décharger ce réseau aérien, on pose à côté un <strong>crapauport à colis</strong> : une grenouille qui attrape au vol les colis portant son adresse et lance sur la chaîne ceux qu'on lui confie.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Réseau de colis"
+    },
+    {
+      "label": "Stress",
+      "value": "1 SU par tr/min par roue"
+    },
+    {
+      "label": "Liaison",
+      "value": "Avec des chaînes vanilla, jusqu'à 32 blocs (maxChainConveyorLength), pente de 45° au plus, jamais à la verticale"
+    },
+    {
+      "label": "Liaisons par roue",
+      "value": "4 au maximum (maxChainConveyorConnections)"
+    },
+    {
+      "label": "Capacité",
+      "value": "20 colis par roue (chainConveyorCapacity)"
+    },
+    {
+      "label": "Crapauport",
+      "value": "À 5 blocs au plus de sa roue (packagePortRange), 18 emplacements de colis"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (roue à chaîne roulante)",
+    "grid": [
+      [
+        null,
+        "Boîtier d'andésite",
+        null
+      ],
+      [
+        "Boîtier d'andésite",
+        "Grande roue dentée",
+        "Boîtier d'andésite"
+      ],
+      [
+        null,
+        "Boîtier d'andésite",
+        null
+      ]
+    ],
+    "result": "2 roues à chaîne roulante"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "relier",
+      "title": "Relier deux roues",
+      "image": "chain_conveyor_relier.webp",
+      "alt": "Deux roues à chaîne roulante encadrées en vert, reliées par une chaîne",
+      "html": "<p>La roue se pose en hauteur, souvent sur un poteau ou un <a href=\"/wiki/rotor\">rotor</a>. Une <strong>chaîne vanilla</strong> en main, clic droit sur une roue, puis sur une autre : elles sont reliées. La liaison coûte quelques chaînes selon sa longueur, peut atteindre 32 blocs, monter ou descendre jusqu'à 45°, mais jamais à la verticale. Une roue accepte jusqu'à quatre liaisons.</p>"
+    },
+    {
+      "id": "reseau",
+      "title": "Un réseau aérien",
+      "image": "chain_conveyor_reseau.webp",
+      "alt": "Plusieurs roues à chaîne reliées entre elles au-dessus de la plaque",
+      "html": "<p>Avec plusieurs roues, on dessine un vrai réseau, avec des embranchements. Les colis y trouvent leur chemin tout seuls : chaque roue sait par quelle chaîne passer pour rejoindre l'adresse d'un colis et l'y aiguille. Chaque roue peut porter jusqu'à 20 colis à la fois ; au-delà, les nouveaux attendent.</p>"
+    },
+    {
+      "id": "rotation",
+      "title": "Donner de la rotation",
+      "image": "chain_conveyor_rotation.webp",
+      "alt": "Roue à chaîne entraînée par une roue dentée posée dessus",
+      "html": "<p>Les chaînes avancent grâce à la rotation : 1 SU par tr/min et par roue. Il suffit d'entraîner une seule roue du réseau, la rotation passe par les chaînes à toutes les autres. Plus elle tourne vite, plus les colis circulent vite. Un compteur de vitesse sur la roue d'entrée aide à régler le débit.</p>"
+    },
+    {
+      "id": "crapauport",
+      "title": "Le crapauport à colis",
+      "image": "frogport_emballeur.webp",
+      "alt": "Crapauport posé près d'un emballeur, sous la chaîne",
+      "html": "<p>Le <strong>crapauport</strong> est la gare de la chaîne. Choisis sa roue en cliquant dessus avant de le poser, à 5 blocs au plus. Il possède son propre inventaire de 18 emplacements, réservé aux colis. Un <a href=\"/wiki/emballeur\">emballeur</a> qui sort ses colis dedans, ou un entonnoir qui l'alimente, suffit à les envoyer sur la chaîne.</p>"
+    },
+    {
+      "id": "envoyer",
+      "title": "Envoyer un colis",
+      "image": "frogport_chaine.webp",
+      "alt": "Ligne verte entre le crapauport et la chaîne au-dessus de lui",
+      "html": "<p>Quand un colis arrive dans son inventaire, la grenouille le <strong>lance sur la chaîne</strong> d'un coup de langue. Le colis part alors vers son adresse, de roue en roue. Un réglage permet de ne faire qu'envoyer, sans jamais recevoir, pour un poste d'expédition.</p>"
+    },
+    {
+      "id": "recevoir",
+      "title": "Recevoir un colis",
+      "image": "frogport_livraison.webp",
+      "alt": "Second crapauport à l'autre bout du réseau, près d'un emballeur",
+      "html": "<p>Chaque crapauport porte une <strong>adresse</strong>, son nom. Quand un colis à cette adresse passe sur la chaîne, la grenouille l'attrape et le range dans son inventaire. De là, un entonnoir ou un emballeur collé dessous le récupère et le déballe. Les jokers « * » marchent comme sur les emballeurs.</p>"
+    },
+    {
+      "id": "coffres",
+      "title": "Une livraison complète",
+      "image": "frogport_coffres.webp",
+      "alt": "Coffres reliés par emballeurs et crapauports aux deux bouts de la chaîne",
+      "html": "<p>Le circuit complet tient en quatre blocs à chaque bout : un coffre, un emballeur, un crapauport, et la roue. Le contenu d'un coffre part en colis, file sur les chaînes et se range dans le coffre de destination. Combiné au <a href=\"/wiki/telescripteur-de-stock\">téléscripteur de stock</a>, c'est une vraie poste entre les bâtiments d'une base.</p>"
+    },
+    {
+      "id": "observateur",
+      "title": "Surveiller la chaîne",
+      "html": "<p>Un <a href=\"/wiki/observateur-intelligent\">observateur intelligent</a> tourné vers une roue réagit aux colis qui tournent autour d'elle s'ils correspondent à son filtre. On s'en sert pour allumer une lampe à l'arrivée d'une livraison attendue.</p>"
+    },
+    {
+      "id": "conseil",
+      "title": "Conseils de tracé",
+      "html": "<p>Place les roues assez haut pour que les colis passent au-dessus des joueurs, et évite les liaisons trop longues dans une base dense. Une roue par carrefour suffit : c'est elle qui aiguille.</p>"
+    },
+    {
+      "id": "images",
+      "title": "À propos des images",
+      "html": "<p>Nos images dessinent les chaînes à partir des liaisons enregistrées dans les roues, mais pas encore les colis suspendus ni la grenouille animée du crapauport : cette page est illustrée par des images fixes des scènes Ponder.</p>"
+    }
+  ],
+  "related": [
+    "emballeur",
+    "boite-aux-lettres",
+    "telescripteur-de-stock",
+    "observateur-intelligent"
+  ],
+  "sources": [
+    "Stress : AllBlocks.java, CHAIN_CONVEYOR, CStress.setImpact(1)",
+    "Liaisons : ChainConveyorConnectionHandler.validateAndConnect (chaînes vanilla, pas de liaison verticale, pente ≤ 1), CKinetics.maxChainConveyorLength = 32, maxChainConveyorConnections = 4",
+    "Capacité : CLogistics.chainConveyorCapacity = 20 ; itinéraires : ChainConveyorRoutingTable",
+    "Crapauport : PackagePortBlockEntity (18 emplacements de colis, adresse addressFilter, acceptsPackages), CLogistics.packagePortRange = 5",
+    "Recettes : crafting/kinetics/chain_conveyor.json, crafting/logistics/package_frogport.json",
+    "Scènes : FrogAndConveyorScenes.conveyor, frogPort ; images seules (chaînes dessinées d'après les liaisons, colis et grenouille non dessinés)"
+  ],
+  "en": {
+    "slugEn": "chain-conveyor",
+    "name": "Chain Conveyor and Package Frogport",
+    "title": "Chain Conveyor and Package Frogport — Create mod guide",
+    "description": "The Create 6 Chain Conveyor: linking wheels with chains up to 32 blocks apart, and the Package Frogport that sends and catches packages on the chain.",
+    "intro": "The <strong>Chain Conveyor</strong> carries packages through the air. Link several wheels with vanilla chains and hanging packages zip from one wheel to the next, over buildings, without a single belt on the ground. To load and unload this aerial network, place a <strong>Package Frogport</strong> next to it: a frog that catches packages carrying its address in mid-air and throws the ones you give it onto the chain.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Package network"
+      },
+      {
+        "label": "Stress",
+        "value": "1 SU per RPM per wheel"
+      },
+      {
+        "label": "Connection",
+        "value": "With vanilla chains, up to 32 blocks (maxChainConveyorLength), 45° slope at most, never vertical"
+      },
+      {
+        "label": "Connections per wheel",
+        "value": "4 at most (maxChainConveyorConnections)"
+      },
+      {
+        "label": "Capacity",
+        "value": "20 packages per wheel (chainConveyorCapacity)"
+      },
+      {
+        "label": "Frogport",
+        "value": "Within 5 blocks of its wheel (packagePortRange), 18 package slots"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (Chain Conveyor)",
+      "grid": [
+        [
+          null,
+          "Andesite Casing",
+          null
+        ],
+        [
+          "Andesite Casing",
+          "Large Cogwheel",
+          "Andesite Casing"
+        ],
+        [
+          null,
+          "Andesite Casing",
+          null
+        ]
+      ],
+      "result": "2 Chain Conveyors"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "relier",
+        "title": "Linking two wheels",
+        "alt": "Two Chain Conveyors outlined in green, joined by a chain",
+        "html": "<p>The wheel is placed up high, often on a post or a <a href=\"/en/wiki/shaft\">Shaft</a>. Holding a <strong>vanilla chain</strong>, right-click one wheel, then another: they are linked. The connection costs a few chains depending on its length, can reach 32 blocks, climb or drop at up to 45°, but never go straight up. A wheel accepts up to four connections.</p>"
+      },
+      {
+        "id": "reseau",
+        "title": "An aerial network",
+        "alt": "Several Chain Conveyors linked together above the plate",
+        "html": "<p>With several wheels you can draw a real network, with branches. Packages find their own way: each wheel knows which chain leads towards a package's address and sends it along. Each wheel can carry up to 20 packages at once; beyond that, new ones wait.</p>"
+      },
+      {
+        "id": "rotation",
+        "title": "Providing rotation",
+        "alt": "Chain Conveyor driven by a cogwheel placed on top",
+        "html": "<p>The chains move thanks to rotation: 1 SU per RPM per wheel. Driving a single wheel of the network is enough, the rotation travels through the chains to all the others. The faster it spins, the faster packages travel. A Speedometer on the input wheel helps tune the throughput.</p>"
+      },
+      {
+        "id": "crapauport",
+        "title": "The Package Frogport",
+        "alt": "Frogport placed near a Packager, below the chain",
+        "html": "<p>The <strong>Frogport</strong> is the chain's station. Pick its wheel by clicking it before placing the port, 5 blocks away at most. It has its own 18-slot inventory, reserved for packages. A <a href=\"/en/wiki/packager\">Packager</a> outputting into it, or a funnel feeding it, is enough to send packages onto the chain.</p>"
+      },
+      {
+        "id": "envoyer",
+        "title": "Sending a package",
+        "alt": "Green line between the Frogport and the chain above it",
+        "html": "<p>When a package reaches its inventory, the frog <strong>throws it onto the chain</strong> with a flick of its tongue. The package then heads for its address, wheel after wheel. A setting lets the port only send, never receive, for a shipping post.</p>"
+      },
+      {
+        "id": "recevoir",
+        "title": "Receiving a package",
+        "alt": "Second Frogport at the other end of the network, near a Packager",
+        "html": "<p>Each Frogport has an <strong>address</strong>, its name. When a package for that address goes by on the chain, the frog catches it and stores it in its inventory. From there, a funnel or a Packager underneath collects and unpacks it. \"*\" wildcards work as on Packagers.</p>"
+      },
+      {
+        "id": "coffres",
+        "title": "A complete delivery",
+        "alt": "Chests linked by Packagers and Frogports at both ends of the chain",
+        "html": "<p>The full circuit takes four blocks at each end: a chest, a Packager, a Frogport and the wheel. A chest's contents leave as packages, zip along the chains and end up in the destination chest. Combined with the <a href=\"/en/wiki/stock-ticker\">Stock Ticker</a>, it is a real postal service between the buildings of a base.</p>"
+      },
+      {
+        "id": "observateur",
+        "title": "Watching the chain",
+        "html": "<p>A <a href=\"/en/wiki/smart-observer\">Smart Observer</a> facing a wheel reacts to the packages looping around it when they match its filter. Use it to light a lamp when an expected delivery arrives.</p>"
+      },
+      {
+        "id": "conseil",
+        "title": "Layout tips",
+        "html": "<p>Place the wheels high enough for packages to pass above players' heads, and avoid very long connections inside a dense base. One wheel per junction is enough: that wheel does the routing. Keep a little spare rotation too, because a chain network that turns slowly also delivers slowly.</p>"
+      },
+      {
+        "id": "images",
+        "title": "About the pictures",
+        "html": "<p>Our pictures draw the chains from the connections stored in the wheels, but not yet the hanging packages nor the Frogport's animated frog: this page is illustrated with stills of the Ponder scenes.</p>"
+      }
+    ],
+    "sources": [
+      "Stress: AllBlocks.java, CHAIN_CONVEYOR, CStress.setImpact(1)",
+      "Connections: ChainConveyorConnectionHandler.validateAndConnect (vanilla chains, no vertical link, slope ≤ 1), CKinetics.maxChainConveyorLength = 32, maxChainConveyorConnections = 4",
+      "Capacity: CLogistics.chainConveyorCapacity = 20; routing: ChainConveyorRoutingTable",
+      "Frogport: PackagePortBlockEntity (18 package slots, addressFilter, acceptsPackages), CLogistics.packagePortRange = 5",
+      "Recipes: crafting/kinetics/chain_conveyor.json, crafting/logistics/package_frogport.json",
+      "Scenes: FrogAndConveyorScenes.conveyor, frogPort; stills only (chains drawn from the connections, packages and frog not drawn)"
+    ]
+  }
+}

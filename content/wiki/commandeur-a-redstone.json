@@ -1,0 +1,269 @@
+{
+  "slug": "commandeur-a-redstone",
+  "name": "Commandeur à redstone et nappe",
+  "blockId": "create:redstone_requester",
+  "category": "colis",
+  "title": "Commandeur à redstone et nappe — Create : guide",
+  "description": "Le commandeur à redstone de Create 6 envoie une commande toute prête à chaque impulsion ; la nappe transforme une table en étal de boutique avec prix.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>commandeur à redstone</strong> est un téléscripteur sans écran : il garde en mémoire une commande, des objets, des quantités et une adresse, et l'envoie au réseau de colis à chaque <strong>impulsion de redstone</strong>. Un bouton, une horloge ou un capteur suffisent à lancer une livraison. La <strong>nappe</strong>, elle, sert aux boutiques : posée sur une table, elle présente un article et son prix aux clients du vendeur.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Réseau de colis"
+    },
+    {
+      "label": "Commandeur",
+      "value": "Une commande enregistrée, envoyée à chaque impulsion de redstone"
+    },
+    {
+      "label": "Réglage",
+      "value": "Fréquence du réseau copiée d'une liaison de stock ; commande et adresse réglées dans son interface"
+    },
+    {
+      "label": "Recette du commandeur",
+      "value": "1 poudre de redstone + 1 liaison de stock + 1 lingot de fer"
+    },
+    {
+      "label": "Nappe",
+      "value": "Décor, ou étal de boutique avec un article et un prix ; 2 par recette"
+    },
+    {
+      "label": "Achat",
+      "value": "Le client prend une liste de courses à l'étal et paie le vendeur assis au téléscripteur"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (commandeur à redstone)",
+    "grid": [
+      [
+        null,
+        "Poudre de redstone",
+        null
+      ],
+      [
+        null,
+        "Liaison de stock",
+        null
+      ],
+      [
+        null,
+        "Lingot de fer",
+        null
+      ]
+    ],
+    "result": "1 commandeur à redstone"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "commandeur",
+      "title": "Une commande enregistrée",
+      "image": "requester_commandeur.webp",
+      "alt": "Commandeur à redstone posé sur la plaque, son emplacement encadré",
+      "html": "<p>Le commandeur se relie au réseau comme une <a href=\"/wiki/liaison-de-stock\">liaison de stock</a> : clic droit sur une liaison existante avant de le poser, pour copier sa fréquence. Son interface permet ensuite de composer une <strong>commande</strong> : les objets voulus, leurs quantités et l'adresse où les livrer. Elle reste enregistrée dans le bloc.</p>"
+    },
+    {
+      "id": "reseau",
+      "title": "Relié aux entrepôts",
+      "image": "requester_reseau.webp",
+      "alt": "Commandeur près d'un coffre renforcé équipé d'emballeurs et de liaisons",
+      "html": "<p>Comme pour un <a href=\"/wiki/telescripteur-de-stock\">téléscripteur</a>, ce sont les entrepôts du réseau qui servent la commande : chaque <a href=\"/wiki/emballeur\">emballeur</a> relié prépare sa part et l'expédie à l'adresse demandée. Le commandeur, lui, ne stocke rien et peut se trouver n'importe où.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "Une impulsion, une livraison",
+      "image": "requester_redstone.webp",
+      "alt": "Commandeur relié à un levier, des colis qui partent sur un tapis",
+      "html": "<p>Chaque <strong>impulsion de redstone</strong> envoie la commande une fois. Un bouton près d'une forge peut ainsi faire venir 64 charbons à la demande. Une horloge de redstone en fait une livraison régulière, et un <a href=\"/wiki/detecteur-de-seuil\">détecteur de seuil</a> une commande automatique dès qu'un stock local baisse.</p>"
+    },
+    {
+      "id": "exemple",
+      "title": "Exemple : la forge automatique",
+      "html": "<p>Un commandeur réglé sur « 16 charbons, adresse Forge » est relié à un détecteur de seuil collé au coffre de combustible de la forge. Quand le coffre descend sous 32 charbons, le détecteur envoie une impulsion, le réseau livre 16 charbons, et la forge ne s'éteint jamais. Le même montage marche pour la nourriture d'une ferme, les flèches d'une tourelle ou le ciment d'un chantier.</p>"
+    },
+    {
+      "id": "nappe",
+      "title": "La nappe",
+      "image": "table_cloth_nappe.webp",
+      "alt": "Nappe blanche posée sur une table",
+      "html": "<p>La <strong>nappe</strong> existe en seize couleurs et en versions d'andésite, de laiton et de cuivre (couvre-tables). Posée au sol ou sur un bloc, elle couvre le dessus et pend sur les côtés, de quoi habiller un marché ou une salle à manger. Les nappes voisines se raccordent entre elles.</p>"
+    },
+    {
+      "id": "boutique",
+      "title": "Ouvrir une boutique",
+      "image": "table_cloth_boutique.webp",
+      "alt": "Téléscripteur de stock, nappes et entrepôt d'une boutique",
+      "html": "<p>Une boutique de Create 6 associe un <strong>téléscripteur de stock</strong> avec un vendeur assis, des nappes et un entrepôt relié au réseau. Le propriétaire configure chaque nappe depuis le téléscripteur : elle affiche alors l'article proposé, posé sur la table, et son lot.</p>"
+    },
+    {
+      "id": "prix",
+      "title": "Fixer un prix",
+      "image": "table_cloth_prix.webp",
+      "alt": "Nappe configurée en étal, avec un emplacement de prix",
+      "html": "<p>Chaque étal a un emplacement de <strong>prix</strong> : on y règle l'objet demandé en paiement et sa quantité, par exemple 3 diamants pour un lot de 16 lingots. Un clic droit du client sur la nappe ajoute l'article à sa <strong>liste de courses</strong>, un objet que l'on peut remplir à plusieurs étals.</p>"
+    },
+    {
+      "id": "livraison",
+      "title": "Payer et être livré",
+      "image": "table_cloth_livraison.webp",
+      "alt": "Colis qui sortent de l'entrepôt de la boutique sur un tapis",
+      "html": "<p>Le client apporte sa liste au <strong>vendeur</strong> assis près du téléscripteur et paie. Le réseau prépare aussitôt les colis de la commande, qui sortent de l'entrepôt vers l'adresse de la boutique, où le client les récupère. Le paiement est gardé par le téléscripteur, où le propriétaire vient le récupérer.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur Create France",
+      "html": "<p>Les boutiques à nappes sont la façon la plus simple de commercer entre joueurs sur notre serveur : elles fonctionnent même quand le vendeur est déconnecté. Pense à <strong>verrouiller</strong> le réseau depuis le téléscripteur, pour que les clients ne puissent qu'acheter.</p>"
+    },
+    {
+      "id": "images",
+      "title": "À propos des images",
+      "html": "<p>Les interfaces, les articles posés sur les nappes et les colis préparés à la demande ne sont pas animés par notre moteur : cette page est illustrée par des images fixes des scènes Ponder.</p>"
+    }
+  ],
+  "related": [
+    "telescripteur-de-stock",
+    "liaison-de-stock",
+    "emballeur",
+    "detecteur-de-seuil"
+  ],
+  "sources": [
+    "Commandeur : RedstoneRequesterBlockEntity, AutoRequestData (commande et adresse enregistrées)",
+    "Nappe : TableClothBlockEntity (isShop, priceTag, addPurchases), ShoppingListItem (liste de courses)",
+    "Vendeur et paiement : StockTickerInteractionHandler.interactWithShop",
+    "Recettes : crafting/logistics/redstone_requester.json, white_table_cloth.json (laine blanche + alliage d'andésite → 2)",
+    "Scènes : RequesterAndShopScenes.requester, TableClothScenes.tableCloth ; images seules"
+  ],
+  "en": {
+    "slugEn": "redstone-requester",
+    "name": "Redstone Requester and Table Cloth",
+    "title": "Redstone Requester and Table Cloth — Create mod guide",
+    "description": "The Create 6 Redstone Requester sends a ready-made order at every redstone pulse; the Table Cloth turns a table into a priced shop stall for a keeper.",
+    "intro": "The <strong>Redstone Requester</strong> is a ticker without a screen: it remembers one order, items, amounts and an address, and sends it to the package network at every <strong>redstone pulse</strong>. A button, a clock or a sensor is enough to trigger a delivery. The <strong>Table Cloth</strong> is for shops: placed on a table, it shows an article and its price to the keeper's customers.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Package network"
+      },
+      {
+        "label": "Requester",
+        "value": "One stored order, sent at every redstone pulse"
+      },
+      {
+        "label": "Setup",
+        "value": "Network frequency copied from a Stock Link; order and address set in its interface"
+      },
+      {
+        "label": "Requester recipe",
+        "value": "1 Redstone Dust + 1 Stock Link + 1 Iron Ingot"
+      },
+      {
+        "label": "Table Cloth",
+        "value": "Decoration, or a shop stall with an article and a price; 2 per recipe"
+      },
+      {
+        "label": "Buying",
+        "value": "The customer takes a Shopping List at the stall and pays the keeper seated at the ticker"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (Redstone Requester)",
+      "grid": [
+        [
+          null,
+          "Redstone Dust",
+          null
+        ],
+        [
+          null,
+          "Stock Link",
+          null
+        ],
+        [
+          null,
+          "Iron Ingot",
+          null
+        ]
+      ],
+      "result": "1 Redstone Requester"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "commandeur",
+        "title": "A stored order",
+        "alt": "Redstone Requester on the plate, its spot outlined",
+        "html": "<p>The requester joins the network like a <a href=\"/en/wiki/stock-link\">Stock Link</a>: right-click an existing link before placing it, to copy its frequency. Its interface then lets you build an <strong>order</strong>: the items you want, their amounts and the address to deliver them to. It stays stored in the block.</p>"
+      },
+      {
+        "id": "reseau",
+        "title": "Linked to the warehouses",
+        "alt": "Requester near an Item Vault fitted with Packagers and links",
+        "html": "<p>As with a <a href=\"/en/wiki/stock-ticker\">Stock Ticker</a>, the network's warehouses fill the order: each linked <a href=\"/en/wiki/packager\">Packager</a> prepares its share and ships it to the requested address. The requester itself stores nothing and can be anywhere.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "One pulse, one delivery",
+        "alt": "Requester wired to a lever, packages leaving on a belt",
+        "html": "<p>Every <strong>redstone pulse</strong> sends the order once. A button next to a forge can thus bring 64 coal on demand. A redstone clock turns it into a regular delivery, and a <a href=\"/en/wiki/threshold-switch\">Threshold Switch</a> into an automatic order as soon as a local store runs low.</p>"
+      },
+      {
+        "id": "exemple",
+        "title": "Example: the automatic forge",
+        "html": "<p>A requester set to \"16 coal, address Forge\" is wired to a Threshold Switch against the forge's fuel chest. When the chest drops below 32 coal, the switch sends a pulse, the network delivers 16 coal, and the forge never goes out. The same setup works for a farm's food, a turret's arrows or a building site's cement. Because the order is stored in the block, nobody needs to open any screen once it is set up: the redstone does all the asking.</p>"
+      },
+      {
+        "id": "nappe",
+        "title": "The Table Cloth",
+        "alt": "White Table Cloth on a table",
+        "html": "<p>The <strong>Table Cloth</strong> comes in sixteen colours, plus andesite, brass and copper versions (Table Covers). Placed on the floor or on a block, it covers the top and hangs over the sides, enough to dress up a market or a dining hall. Neighbouring cloths join up.</p>"
+      },
+      {
+        "id": "boutique",
+        "title": "Opening a shop",
+        "alt": "Stock Ticker, Table Cloths and a shop's warehouse",
+        "html": "<p>A Create 6 shop combines a <strong>Stock Ticker</strong> with a seated keeper, table cloths and a warehouse linked to the network. The owner sets up each cloth from the ticker: it then shows the article on offer, lying on the table, and its lot size.</p>"
+      },
+      {
+        "id": "prix",
+        "title": "Setting a price",
+        "alt": "Table Cloth set up as a stall, with a price slot",
+        "html": "<p>Each stall has a <strong>price</strong> slot: set the item asked as payment and its amount, for instance 3 diamonds for a lot of 16 ingots. A customer's right-click on the cloth adds the article to their <strong>Shopping List</strong>, an item that can be filled at several stalls.</p>"
+      },
+      {
+        "id": "livraison",
+        "title": "Paying and getting delivered",
+        "alt": "Packages leaving the shop's warehouse on a belt",
+        "html": "<p>The customer brings the list to the <strong>keeper</strong> seated by the ticker and pays. The network immediately prepares the order's packages, which leave the warehouse for the shop's address, where the customer collects them. The payment is kept by the ticker, where the owner collects it.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On Create France",
+        "html": "<p>Table cloth shops are the simplest way to trade between players on our server: they work even while the shopkeeper is offline. Remember to <strong>lock</strong> the network from the ticker, so that customers can only buy.</p>"
+      },
+      {
+        "id": "images",
+        "title": "About the pictures",
+        "html": "<p>Interfaces, articles on the cloths and packages prepared on demand are not animated by our renderer: this page is illustrated with stills of the Ponder scenes.</p>"
+      }
+    ],
+    "sources": [
+      "Requester: RedstoneRequesterBlockEntity, AutoRequestData (stored order and address)",
+      "Table Cloth: TableClothBlockEntity (isShop, priceTag, addPurchases), ShoppingListItem",
+      "Keeper and payment: StockTickerInteractionHandler.interactWithShop",
+      "Recipes: crafting/logistics/redstone_requester.json, white_table_cloth.json (White Wool + Andesite Alloy → 2)",
+      "Scenes: RequesterAndShopScenes.requester, TableClothScenes.tableCloth; stills only"
+    ]
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "slug": "coffre-a-objet-renforce",
+  "name": "Coffre à objet renforcé",
+  "blockId": "create:item_vault",
+  "category": "logistique",
+  "title": "Coffre à objet renforcé (item vault) — Create : guide",
+  "description": "Le coffre à objet renforcé de Create : 20 piles par bloc, assemblage jusqu'à 3 × 3 × 9, accès par entonnoirs et chutes, sortie pour comparateur.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>coffre à objet renforcé</strong>, l'« item vault » des joueurs anglophones, est le grand entrepôt de Create. Chaque bloc contient 20 piles, et des blocs voisins s'assemblent en un seul coffre géant, jusqu'à 81 blocs. Il n'a pas d'interface : on ne l'ouvre pas à la main, on le remplit et on le vide avec des entonnoirs, des chutes ou des bras. C'est le cœur du stockage d'une usine automatisée et du réseau de colis.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Logistique"
+    },
+    {
+      "label": "Capacité",
+      "value": "20 piles par bloc (réglage serveur vaultCapacity, de 1 à 2048)"
+    },
+    {
+      "label": "Section",
+      "value": "1 × 1, 2 × 2 ou 3 × 3 blocs"
+    },
+    {
+      "label": "Longueur",
+      "value": "Jusqu'à 3 fois la largeur : 3, 6 ou 9 blocs"
+    },
+    {
+      "label": "Maximum",
+      "value": "3 × 3 × 9 = 81 blocs, soit 1 620 piles (103 680 objets de 64)"
+    },
+    {
+      "label": "Accès",
+      "value": "Pas d'interface : entonnoirs, chutes, bras mécaniques, emballeurs"
+    },
+    {
+      "label": "Redstone",
+      "value": "Sortie pour comparateur selon le remplissage"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Plaque de fer",
+        null
+      ],
+      [
+        null,
+        "Tonneau",
+        null
+      ],
+      [
+        null,
+        "Plaque de fer",
+        null
+      ]
+    ],
+    "result": "1 coffre à objet renforcé"
+  },
+  "videos": [
+    {
+      "id": "vault_sizes",
+      "name": "Coffre à objet renforcé : assembler les blocs",
+      "description": "Des coffres posés côte à côte fusionnent en un coffre plus large, jusqu'aux plus grandes tailles possibles.",
+      "duration": "PT12S"
+    },
+    {
+      "id": "vault_storage",
+      "name": "Coffre à objet renforcé : entrer et sortir des objets",
+      "description": "Un entonnoir remplit le coffre depuis un tapis, un autre en ressort les objets sur un deuxième tapis.",
+      "duration": "PT18S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "blocs",
+      "title": "Un bloc, vingt piles",
+      "image": "vault_sizes_blocs.webp",
+      "alt": "Deux coffres à objet renforcé d'un seul bloc posés sur la plaque",
+      "video": "vault_sizes",
+      "html": "<p>Un seul bloc de coffre renforcé contient <strong>20 piles</strong>, soit 1 280 objets de 64 : un peu moins qu'un coffre ordinaire et ses 27 emplacements. Son intérêt n'est pas là. Il s'oriente selon le sens dans lequel on le pose, comme un tonneau couché, et surtout il <strong>s'assemble</strong> avec ses voisins.</p>"
+    },
+    {
+      "id": "fusion",
+      "title": "Les blocs voisins fusionnent",
+      "image": "vault_sizes_fusion.webp",
+      "alt": "Coffre de 2 × 2 blocs formé par plusieurs blocs voisins",
+      "html": "<p>Pose des coffres renforcés côte à côte dans le même sens et ils <strong>s'assemblent</strong> en un seul inventaire, à condition de former un pavé régulier. La capacité s'additionne : un coffre de 2 × 2 × 2 blocs contient 160 piles. Le motif sur les flancs s'étire pour montrer la taille du coffre assemblé.</p>"
+    },
+    {
+      "id": "tailles",
+      "title": "Les tailles possibles",
+      "image": "vault_sizes_tailles.webp",
+      "alt": "Coffres renforcés de plusieurs tailles, jusqu'à 3 × 3 de section",
+      "html": "<p>La section va de <strong>1 × 1 à 3 × 3</strong> blocs, et la longueur peut atteindre <strong>3 fois la largeur</strong> : 3 blocs pour un coffre fin, 6 pour un 2 × 2, 9 pour un 3 × 3. Le plus grand coffre possible fait donc 81 blocs et 1 620 piles. Au-delà, il faut construire un second coffre.</p>"
+    },
+    {
+      "id": "capacite",
+      "title": "Un seul inventaire géant",
+      "image": "vault_storage_capacite.webp",
+      "alt": "Coffre à objet renforcé à côté d'une pile de coffres ordinaires",
+      "video": "vault_storage",
+      "html": "<p>Contrairement à une rangée de coffres, tout le contenu est réuni dans <strong>un seul inventaire</strong> : un entonnoir posé sur n'importe quelle face voit l'ensemble du stock, et un coffre de 81 blocs se gère comme un seul. Plus besoin de chaîner des coffres ni de répartir les objets à la main.</p>"
+    },
+    {
+      "id": "interface",
+      "title": "Pas d'interface",
+      "html": "<p>Le coffre renforcé <strong>ne s'ouvre pas à la main</strong> : un clic droit ne montre rien. Tout passe par la logistique de Create. Pour y prendre quelque chose à la main, on pose un <a href=\"/wiki/entonnoir\">entonnoir</a> de laiton filtré, ou mieux, un <a href=\"/wiki/telescripteur-de-stock\">téléscripteur de stock</a> qui le relie au réseau de colis.</p>"
+    },
+    {
+      "id": "entree",
+      "title": "Le remplir",
+      "image": "vault_storage_entree.webp",
+      "alt": "Entonnoir sur le coffre renforcé, alimenté par un tapis roulant",
+      "html": "<p>Un <a href=\"/wiki/tapis-roulant\">tapis roulant</a> qui finit contre un entonnoir posé sur le coffre le remplit en continu. Les <a href=\"/wiki/chute\">chutes</a> qui y débouchent, les <a href=\"/wiki/bras-mecanique\">bras mécaniques</a> et les <a href=\"/wiki/ejecteur\">éjecteurs</a> visant un entonnoir fonctionnent aussi. Chaque objet trouve sa place tout seul, sur n'importe quelle face.</p>"
+    },
+    {
+      "id": "sortie",
+      "title": "Le vider",
+      "image": "vault_storage_sortie.webp",
+      "alt": "Un second entonnoir sort les objets du coffre sur un autre tapis",
+      "html": "<p>Dans l'autre sens, un entonnoir tourné vers l'extérieur <strong>extrait</strong> les objets et les dépose sur un tapis. Avec un filtre, il ne sort que ce qu'on lui demande. Un comparateur collé au coffre donne un signal proportionnel au remplissage, de quoi arrêter une production quand le stock est plein.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Bien le placer",
+      "html": "<p>Un coffre renforcé s'agrandit après coup : il suffit de poser de nouveaux blocs dans l'alignement pour que le pavé grandisse, jusqu'aux limites de taille. Garde une face libre pour les entonnoirs d'entrée et une autre pour la sortie, et pose un <a href=\"/wiki/detecteur-de-seuil\">détecteur de seuil</a> contre lui si une machine doit s'arrêter quand le stock est plein. Avec un <a href=\"/wiki/emballeur\">emballeur</a> relié au réseau de colis, son contenu devient consultable et commandable depuis un téléscripteur de stock à l'autre bout de la base.</p>"
+    },
+    {
+      "id": "reseau",
+      "title": "Le coffre du réseau de colis",
+      "html": "<p>Dans les usines de Create 6, le coffre renforcé sert souvent d'entrepôt central : les emballeurs y puisent pour fabriquer des colis, les boîtes aux lettres et les crapauports y livrent. Sa grande capacité et son inventaire unique en font le meilleur stockage à brancher derrière un emballeur.</p>"
+    }
+  ],
+  "related": [
+    "entonnoir",
+    "chute",
+    "tapis-roulant",
+    "telescripteur-de-stock",
+    "detecteur-de-seuil"
+  ],
+  "sources": [
+    "Capacité : CLogistics.vaultCapacity = 20 piles par bloc (de 1 à 2048)",
+    "Tailles : ItemVaultBlockEntity.getMaxWidth = 3, getMaxLength(largeur) = largeur × 3",
+    "Comparateur : ItemVaultBlock.getAnalogOutputSignal",
+    "Recette : crafting/kinetics/item_vault.json",
+    "Scènes : ItemVaultScenes.sizes, storage ; trajets simulés d'après les entonnoirs et tapis de Create"
+  ],
+  "en": {
+    "slugEn": "item-vault",
+    "name": "Item Vault",
+    "title": "Item Vault — Create mod guide",
+    "description": "The Create Item Vault: 20 stacks per block, multiblocks up to 3 × 3 × 9, access through funnels and chutes, and a comparator output for fill level.",
+    "intro": "The <strong>Item Vault</strong> is Create's big warehouse. Each block holds 20 stacks, and neighbouring blocks merge into one giant vault of up to 81 blocks. It has no interface: you never open it by hand, you fill and empty it with funnels, chutes or arms. It is the heart of an automated factory's storage and of the package network.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Logistics"
+      },
+      {
+        "label": "Capacity",
+        "value": "20 stacks per block (server setting vaultCapacity, 1 to 2048)"
+      },
+      {
+        "label": "Cross-section",
+        "value": "1 × 1, 2 × 2 or 3 × 3 blocks"
+      },
+      {
+        "label": "Length",
+        "value": "Up to 3 times the width: 3, 6 or 9 blocks"
+      },
+      {
+        "label": "Maximum",
+        "value": "3 × 3 × 9 = 81 blocks, i.e. 1,620 stacks (103,680 items of 64)"
+      },
+      {
+        "label": "Access",
+        "value": "No interface: funnels, chutes, Mechanical Arms, Packagers"
+      },
+      {
+        "label": "Redstone",
+        "value": "Comparator output based on fill level"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Iron Sheet",
+          null
+        ],
+        [
+          null,
+          "Barrel",
+          null
+        ],
+        [
+          null,
+          "Iron Sheet",
+          null
+        ]
+      ],
+      "result": "1 Item Vault"
+    },
+    "videos": [
+      {
+        "id": "vault_sizes",
+        "name": "Item Vault: assembling blocks",
+        "description": "Vaults placed side by side merge into a wider vault, up to the largest possible sizes."
+      },
+      {
+        "id": "vault_storage",
+        "name": "Item Vault: putting items in and taking them out",
+        "description": "A funnel fills the vault from a belt, another one takes the items back out onto a second belt."
+      }
+    ],
+    "sections": [
+      {
+        "id": "blocs",
+        "title": "One block, twenty stacks",
+        "alt": "Two single-block Item Vaults on the plate",
+        "html": "<p>A single vault block holds <strong>20 stacks</strong>, that is 1,280 items of 64: a little less than an ordinary chest and its 27 slots. That is not where its strength lies. It faces the way you place it, like a barrel lying down, and above all it <strong>merges</strong> with its neighbours.</p>"
+      },
+      {
+        "id": "fusion",
+        "title": "Neighbouring blocks merge",
+        "alt": "A 2 × 2 vault formed by several neighbouring blocks",
+        "html": "<p>Place vaults side by side facing the same way and they <strong>merge</strong> into a single inventory, as long as they form a regular box. Capacity adds up: a 2 × 2 × 2 vault holds 160 stacks. The pattern on the sides stretches to show the size of the assembled vault.</p>"
+      },
+      {
+        "id": "tailles",
+        "title": "Possible sizes",
+        "alt": "Item Vaults of several sizes, up to a 3 × 3 cross-section",
+        "html": "<p>The cross-section ranges from <strong>1 × 1 to 3 × 3</strong> blocks, and the length can reach <strong>3 times the width</strong>: 3 blocks for a thin vault, 6 for a 2 × 2, 9 for a 3 × 3. The largest vault is therefore 81 blocks and 1,620 stacks. Beyond that, build a second vault.</p>"
+      },
+      {
+        "id": "capacite",
+        "title": "One giant inventory",
+        "alt": "Item Vault next to a stack of ordinary chests",
+        "html": "<p>Unlike a row of chests, the whole content sits in <strong>a single inventory</strong>: a funnel on any face sees the entire stock, and an 81-block vault is handled as one. No more chaining chests or spreading items around by hand.</p>"
+      },
+      {
+        "id": "interface",
+        "title": "No interface",
+        "html": "<p>The Item Vault <strong>cannot be opened by hand</strong>: right-clicking shows nothing. Everything goes through Create's logistics. To take something out by hand, place a filtered Brass <a href=\"/en/wiki/funnel\">Funnel</a>, or better, a <a href=\"/en/wiki/stock-ticker\">Stock Ticker</a> that links it to the package network. This is deliberate: the vault is meant to be the back end of a factory, not a player's chest.</p>"
+      },
+      {
+        "id": "entree",
+        "title": "Filling it",
+        "alt": "Funnel on the vault, fed by a Mechanical Belt",
+        "html": "<p>A <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a> ending against a funnel on the vault fills it continuously. <a href=\"/en/wiki/chute\">Chutes</a> leading into it, <a href=\"/en/wiki/mechanical-arm\">Mechanical Arms</a> and <a href=\"/en/wiki/weighted-ejector\">Weighted Ejectors</a> aiming at a funnel work too. Every item finds its place on its own, through any face.</p>"
+      },
+      {
+        "id": "sortie",
+        "title": "Emptying it",
+        "alt": "A second funnel takes items out of the vault onto another belt",
+        "html": "<p>The other way round, a funnel facing outwards <strong>extracts</strong> items and drops them on a belt. With a filter, it only takes out what you ask for. A comparator against the vault gives a signal proportional to how full it is, enough to stop production when the store is full.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Placing it well",
+        "html": "<p>A vault can grow later on: just place new blocks in line and the box grows, up to the size limits. Keep one face free for input funnels and another for the output, and put a <a href=\"/en/wiki/threshold-switch\">Threshold Switch</a> against it if a machine should stop when the store is full. With a <a href=\"/en/wiki/packager\">Packager</a> linked to the package network, its contents can be browsed and ordered from a Stock Ticker at the other end of the base.</p>"
+      },
+      {
+        "id": "reseau",
+        "title": "The package network's vault",
+        "html": "<p>In Create 6 factories the vault is often the central warehouse: Packagers pull from it to build packages, and postboxes and frogports deliver into it. Its large capacity and single inventory make it the best storage to put behind a Packager.</p>"
+      }
+    ],
+    "sources": [
+      "Capacity: CLogistics.vaultCapacity = 20 stacks per block (1 to 2048)",
+      "Sizes: ItemVaultBlockEntity.getMaxWidth = 3, getMaxLength(width) = width × 3",
+      "Comparator: ItemVaultBlock.getAnalogOutputSignal",
+      "Recipe: crafting/kinetics/item_vault.json",
+      "Scenes: ItemVaultScenes.sizes, storage; item paths simulated from Create's funnels and belts"
+    ]
+  }
+}

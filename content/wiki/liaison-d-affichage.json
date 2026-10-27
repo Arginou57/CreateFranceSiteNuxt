@@ -1,0 +1,266 @@
+{
+  "slug": "liaison-d-affichage",
+  "name": "Liaison d'affichage et panneau d'affichage",
+  "blockId": "create:display_link",
+  "category": "redstone",
+  "title": "Liaison d'affichage — Create : guide en français",
+  "description": "La liaison d'affichage de Create : relier une source à un panneau d'affichage, une pancarte ou un tube Nixie, les sources disponibles et la redstone.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>liaison d'affichage</strong> lit une information sur un bloc, l'heure, un stock, une vitesse, l'état d'un train, et l'écrit à distance sur un écran. Le plus grand de ces écrans est le <strong>panneau d'affichage</strong>, un tableau à palettes comme dans les gares, que l'on agrandit à volonté. Ensemble, ils transforment une usine en tableau de bord lisible de loin : production du jour, stocks restants, prochain départ.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Redstone"
+    },
+    {
+      "label": "Portée",
+      "value": "Jusqu'à 64 blocs entre la liaison et son écran (réglage serveur displayLinkRange)"
+    },
+    {
+      "label": "Écrans",
+      "value": "Panneau d'affichage, pancartes, tubes Nixie, pupitres…"
+    },
+    {
+      "label": "Sources",
+      "value": "Heure, chronomètre, vitesse, stress, remplissage, objets comptés ou listés, fluides, gares et trains, adresse des colis…"
+    },
+    {
+      "label": "Panneau d'affichage",
+      "value": "Demande de la rotation, sans stress ; s'agrandit en posant des panneaux voisins ; 2 par recette"
+    },
+    {
+      "label": "Redstone",
+      "value": "Une liaison alimentée cesse de mettre l'écran à jour"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (liaison d'affichage)",
+    "grid": [
+      [
+        null,
+        "Transmetteur",
+        null
+      ],
+      [
+        null,
+        "Boîtier de laiton",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 liaison d'affichage"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "principe",
+      "title": "Une source, un écran",
+      "image": "display_link_panneau.webp",
+      "alt": "Panneau d'affichage noir de trois blocs sur deux, encadré",
+      "html": "<p>Une liaison d'affichage relie deux choses : la <strong>source</strong>, le bloc sur lequel elle est posée, et l'<strong>écran</strong>, choisi à l'avance. Elle lit régulièrement la source et réécrit le texte sur l'écran, jusqu'à 64 blocs plus loin. Il n'y a ni câble ni redstone à tirer entre les deux.</p>"
+    },
+    {
+      "id": "relier",
+      "title": "Choisir l'écran, puis poser la liaison",
+      "image": "display_link_liaison.webp",
+      "alt": "Liaison d'affichage encadrée, posée sur le bloc source",
+      "html": "<p>Liaison en main, fais d'abord un <strong>clic droit sur l'écran</strong> : panneau d'affichage, pancarte, tube Nixie… Il est mémorisé. Pose ensuite la liaison <strong>contre le bloc source</strong>, comme un levier. Une petite lampe s'allume sur la liaison à chaque mise à jour, ce qui permet de vérifier qu'elle travaille.</p>"
+    },
+    {
+      "id": "source",
+      "title": "Que peut-on afficher",
+      "image": "display_link_source.webp",
+      "alt": "Liaison d'affichage posée sur un brûleur à blaze",
+      "html": "<p>La liste est longue. Sur un coffre ou un <a href=\"/wiki/coffre-a-objet-renforce\">coffre à objet renforcé</a> : le nombre d'un objet ou la liste du contenu. Sur un <a href=\"/wiki/stressometre-compteur-de-vitesse\">compteur de vitesse ou un stressomètre</a> : la valeur mesurée. Sur un <a href=\"/wiki/tunnel\">tunnel</a> : les objets passés. Sur un réservoir : les fluides. Et encore l'heure, un chronomètre, la chaudière d'un moteur à vapeur, l'étage d'un ascenseur, l'état d'une gare ou d'un train, l'adresse des colis.</p>"
+    },
+    {
+      "id": "reglages",
+      "title": "Régler ce qui s'affiche",
+      "image": "display_link_autre-source.webp",
+      "alt": "La même liaison déplacée sur une autre source, une horloge",
+      "html": "<p>Un clic droit sur la liaison ouvre ses réglages : choix de l'information quand la source en offre plusieurs, ligne de départ sur l'écran, format. On peut empiler plusieurs liaisons vers le même panneau, chacune sur sa ligne, pour construire un vrai tableau de bord.</p>"
+    },
+    {
+      "id": "panneau",
+      "title": "Le panneau d'affichage",
+      "image": "display_board_rotation.webp",
+      "alt": "Panneau d'affichage relié à des roues dentées",
+      "html": "<p>Le panneau d'affichage est un écran à <strong>palettes</strong>, comme les tableaux des gares. Il a besoin de rotation pour faire tourner ses palettes, mais ne coûte aucun stress. Pose des panneaux côte à côte et l'un sous l'autre : ils fusionnent en un écran plus grand, plus large pour des textes longs, plus haut pour plus de lignes.</p>"
+    },
+    {
+      "id": "texte",
+      "title": "Écrire et colorer",
+      "image": "display_board_liaison.webp",
+      "alt": "Liaison d'affichage reliée au panneau, le panneau encadré",
+      "html": "<p>Une liaison écrit sur les lignes du panneau, mais on peut aussi y écrire à la main : un clic droit avec une étiquette renommée ou un presse-papiers rempli. Un colorant appliqué sur une ligne change la couleur de son texte. Un clic droit à main nue efface la ligne.</p>"
+    },
+    {
+      "id": "affichage",
+      "title": "Ce que nos images ne montrent pas",
+      "image": "display_board_affichage.webp",
+      "alt": "Panneau d'affichage alimenté, relié à sa source",
+      "html": "<p>Notre moteur de rendu ne dessine pas encore le <strong>texte</strong> des panneaux ni le battement de leurs palettes : sur ces images, l'écran reste noir là où le jeu afficherait les lignes. Les montages, eux, sont exacts. C'est pour cette raison que cette page est illustrée par des images fixes plutôt que par des boucles.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "Figer l'affichage à la redstone",
+      "image": "display_redstone_redstone.webp",
+      "alt": "Liaison d'affichage reliée à un levier",
+      "html": "<p>Une liaison qui reçoit un signal de redstone <strong>s'arrête</strong> : l'écran garde le dernier texte écrit. Un levier permet ainsi de figer un compteur à un instant donné, et une horloge de redstone de ne mettre à jour l'affichage qu'à intervalles réguliers.</p>"
+    },
+    {
+      "id": "idees",
+      "title": "Idées de tableaux de bord",
+      "image": "display_redstone_pause.webp",
+      "alt": "Source encadrée en rouge pendant que la liaison est en pause",
+      "html": "<p>Un panneau à l'entrée de l'usine avec le stock de chaque minerai, une ligne par coffre. Un tableau des départs dans une gare, alimenté par la source « gare ». Un tube Nixie au-dessus d'un moteur qui montre sa vitesse. Sur notre serveur, ces tableaux sont souvent la première chose qu'on remarque en visitant une base.</p>"
+    }
+  ],
+  "related": [
+    "observateur-intelligent",
+    "detecteur-de-seuil",
+    "stressometre-compteur-de-vitesse",
+    "tunnel",
+    "coffre-a-objet-renforce"
+  ],
+  "sources": [
+    "Portée : CLogistics.displayLinkRange = 64",
+    "Sources : AllDisplaySources (nixie_tube, item_names, boiler, current_floor, fill_level, gauge_status, entity_name, time_of_day, stopwatch, kinetic_speed, kinetic_stress, station_summary, train_status, observed_train_name, accumulate_items, item_throughput, count_items, list_items, count_fluids, list_fluids, read_package_address)",
+    "Panneau d'affichage : AllBlocks.DISPLAY_BOARD (FlapDisplayBlock, CStress.setNoImpact), recette crafting/kinetics/display_board.json (2 alliages d'andésite + 1 tube électronique → 2)",
+    "Recette de la liaison : crafting/logistics/display_link.json",
+    "Scènes : DisplayScenes.link, board, redstone ; images seules (texte des panneaux non dessiné par notre moteur)"
+  ],
+  "en": {
+    "slugEn": "display-link",
+    "name": "Display Link and Display Board",
+    "title": "Display Link — Create mod guide",
+    "description": "The Create Display Link: linking a source to a Display Board, a sign or a Nixie Tube, the information it can show, and pausing it with redstone.",
+    "intro": "The <strong>Display Link</strong> reads a piece of information from a block, the time, a stock level, a speed, a train's status, and writes it remotely on a screen. The biggest of those screens is the <strong>Display Board</strong>, a split-flap board like in railway stations, which can be made as large as you like. Together they turn a factory into a dashboard readable from afar: today's output, remaining stock, the next departure.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Redstone"
+      },
+      {
+        "label": "Range",
+        "value": "Up to 64 blocks between the link and its screen (server setting displayLinkRange)"
+      },
+      {
+        "label": "Screens",
+        "value": "Display Board, signs, Nixie Tubes, lecterns…"
+      },
+      {
+        "label": "Sources",
+        "value": "Time, stopwatch, speed, stress, fill level, counted or listed items, fluids, stations and trains, package address…"
+      },
+      {
+        "label": "Display Board",
+        "value": "Needs rotation, no stress; grows by placing neighbouring boards; 2 per recipe"
+      },
+      {
+        "label": "Redstone",
+        "value": "A powered link stops updating its screen"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (Display Link)",
+      "grid": [
+        [
+          null,
+          "Transmitter",
+          null
+        ],
+        [
+          null,
+          "Brass Casing",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Display Link"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "principe",
+        "title": "One source, one screen",
+        "alt": "Black three-by-two Display Board, outlined",
+        "html": "<p>A Display Link connects two things: the <strong>source</strong>, the block it is placed on, and the <strong>screen</strong>, chosen beforehand. It regularly reads the source and rewrites the text on the screen, up to 64 blocks away. There is no cable and no redstone to run between them.</p>"
+      },
+      {
+        "id": "relier",
+        "title": "Pick the screen, then place the link",
+        "alt": "Display Link outlined, placed on the source block",
+        "html": "<p>Holding the link, first <strong>right-click the screen</strong>: Display Board, sign, Nixie Tube… It is remembered. Then place the link <strong>against the source block</strong>, like a lever. A small bulb on the link lights up at every update, which lets you check that it is working.</p>"
+      },
+      {
+        "id": "source",
+        "title": "What can be shown",
+        "alt": "Display Link placed on a Blaze Burner",
+        "html": "<p>The list is long. On a chest or an <a href=\"/en/wiki/item-vault\">Item Vault</a>: the count of an item or the list of contents. On a <a href=\"/en/wiki/stressometer-speedometer\">Speedometer or Stressometer</a>: the measured value. On a <a href=\"/en/wiki/tunnel\">tunnel</a>: the items that went through. On a tank: the fluids. And also the time, a stopwatch, a steam engine's boiler, an elevator's floor, a station's or a train's status, package addresses.</p>"
+      },
+      {
+        "id": "reglages",
+        "title": "Choosing what is shown",
+        "alt": "The same link moved to another source, a clock",
+        "html": "<p>Right-clicking the link opens its settings: which piece of information when the source offers several, the starting line on the screen, the format. Several links can write to the same board, each on its own line, to build a real dashboard.</p>"
+      },
+      {
+        "id": "panneau",
+        "title": "The Display Board",
+        "alt": "Display Board connected to cogwheels",
+        "html": "<p>The Display Board is a <strong>split-flap</strong> screen, like station departure boards. It needs rotation to turn its flaps but costs no stress at all. Place boards side by side and on top of each other: they merge into a larger screen, wider for long texts, taller for more lines.</p>"
+      },
+      {
+        "id": "texte",
+        "title": "Writing and colouring",
+        "alt": "Display Link connected to the board, the board outlined",
+        "html": "<p>A link writes on the board's lines, but you can also write by hand: right-click with a renamed Name Tag or a filled Clipboard. A dye applied to a line changes the colour of its text. Right-clicking with an empty hand clears the line.</p>"
+      },
+      {
+        "id": "affichage",
+        "title": "What our pictures do not show",
+        "alt": "Powered Display Board linked to its source",
+        "html": "<p>Our renderer does not draw the boards' <strong>text</strong> or the flapping of their flaps yet: in these pictures the screen stays black where the game would show the lines. The setups themselves are accurate. That is why this page is illustrated with stills rather than loops.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "Freezing the display with redstone",
+        "alt": "Display Link wired to a lever",
+        "html": "<p>A link that receives a redstone signal <strong>stops</strong>: the screen keeps the last text written. A lever can therefore freeze a counter at a given moment, and a redstone clock can make the display update only at regular intervals.</p>"
+      },
+      {
+        "id": "idees",
+        "title": "Dashboard ideas",
+        "alt": "Source outlined in red while the link is paused",
+        "html": "<p>A board at the factory entrance with the stock of each ore, one line per chest. A departures board in a station, fed by the \"station\" source. A Nixie Tube above an engine showing its speed. On our server, these boards are often the first thing you notice when visiting a base. They are also the best way to spot a broken line before it runs dry.</p>"
+      }
+    ],
+    "sources": [
+      "Range: CLogistics.displayLinkRange = 64",
+      "Sources: AllDisplaySources (nixie_tube, item_names, boiler, current_floor, fill_level, gauge_status, entity_name, time_of_day, stopwatch, kinetic_speed, kinetic_stress, station_summary, train_status, observed_train_name, accumulate_items, item_throughput, count_items, list_items, count_fluids, list_fluids, read_package_address)",
+      "Display Board: AllBlocks.DISPLAY_BOARD (FlapDisplayBlock, CStress.setNoImpact), recipe crafting/kinetics/display_board.json (2 Andesite Alloy + 1 Electron Tube → 2)",
+      "Display Link recipe: crafting/logistics/display_link.json",
+      "Scenes: DisplayScenes.link, board, redstone; stills only (board text not drawn by our renderer)"
+    ]
+  }
+}

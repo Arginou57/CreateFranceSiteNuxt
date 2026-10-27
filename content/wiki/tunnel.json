@@ -1,0 +1,363 @@
+{
+  "slug": "tunnel",
+  "name": "Tunnel d'andésite et de laiton",
+  "blockId": "create:brass_tunnel",
+  "category": "logistique",
+  "title": "Tunnel de laiton — Create : guide en français",
+  "description": "Les tunnels de Create : couvrir un tapis, le tunnel d'andésite qui détache un objet, le tunnel de laiton, ses filtres par côté et ses 7 modes.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Les <strong>tunnels</strong> se posent sur un tapis roulant et décident de ce qui passe dessous. Le <strong>tunnel d'andésite</strong> se contente de détacher un objet vers chaque tapis branché sur son flanc. Le <strong>tunnel de laiton</strong>, lui, répartit vraiment : il partage une pile entre plusieurs tapis, alterne les sorties, filtre côté par côté et peut synchroniser plusieurs lignes. C'est la pièce maîtresse des lignes de tri et des usines qui nourrissent plusieurs machines à la fois.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Logistique"
+    },
+    {
+      "label": "Pose",
+      "value": "Sur un segment de tapis roulant horizontal"
+    },
+    {
+      "label": "Tunnel d'andésite",
+      "value": "Une pile qui passe laisse 1 objet à chaque sortie latérale"
+    },
+    {
+      "label": "Tunnel de laiton",
+      "value": "7 modes de répartition, un filtre par côté, groupes de tunnels voisins"
+    },
+    {
+      "label": "Rythme",
+      "value": "Une répartition toutes les 10 ticks (0,5 s) au plus, réglage serveur brassTunnelTimer (1 à 10)"
+    },
+    {
+      "label": "Recette d'andésite",
+      "value": "2 alliages d'andésite + 2 algues séchées → 2 tunnels"
+    },
+    {
+      "label": "Stress",
+      "value": "Aucun (le tapis dessous fournit le mouvement)"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (tunnel de laiton)",
+    "grid": [
+      [
+        "Tube électronique",
+        null,
+        null
+      ],
+      [
+        "Lingot de laiton",
+        "Lingot de laiton",
+        null
+      ],
+      [
+        "Algue séchée",
+        "Algue séchée",
+        null
+      ]
+    ],
+    "result": "2 tunnels de laiton"
+  },
+  "videos": [
+    {
+      "id": "tunnel_andesite",
+      "name": "Tunnel d'andésite : couvrir un tapis et détacher un objet",
+      "description": "Des tunnels d'andésite couvrent un tapis, puis un tapis latéral est branché : une pile de cuivre y laisse un lingot en passant.",
+      "duration": "PT20S"
+    },
+    {
+      "id": "tunnel_brass",
+      "name": "Tunnel de laiton : sorties et filtres",
+      "description": "Un tunnel de laiton répartit les lingots entre ses sorties ; des filtres réservent chaque côté au zinc ou au cuivre.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "tunnel_brass_group",
+      "name": "Tunnels de laiton reliés en groupe",
+      "description": "Une pile de 63 lingots est coupée en deux, puis trois tunnels voisins filtrés trient carottes, miel et baies sur trois tapis.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "tunnel_modes",
+      "name": "Tunnel de laiton : Partager et Partage forcé",
+      "description": "Des piles de boules de neige sont coupées en trois parts ; une sortie bouchée montre la différence entre les deux modes.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "tunnel_modes_robin",
+      "name": "Tunnel de laiton : Chacun un par un",
+      "description": "Chaque pile part entière vers la sortie suivante ; en version forcée, le tunnel attend la sortie bouchée.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "tunnel_modes_sync",
+      "name": "Tunnel de laiton : entrées synchronisées",
+      "description": "Trois tunnels retiennent leurs objets et ne les relâchent que lorsque chaque ligne en a un.",
+      "duration": "PT14S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "poser",
+      "title": "Un tunnel se pose sur un tapis",
+      "image": "tunnel_andesite_boitier.webp",
+      "alt": "Trois tunnels d'andésite posés sur un tapis roulant, comme un petit hangar",
+      "video": "tunnel_andesite",
+      "html": "<p>Un tunnel ne tient que sur un <a href=\"/wiki/tapis-roulant\">tapis roulant</a> horizontal : clic droit sur un segment, et il le recouvre comme un petit hangar, avec un volet à l'entrée et un à la sortie. Seul, il ne change rien au trajet des objets. Il sert alors de cache, pratique pour un tapis qui traverse un mur ou un plancher.</p>"
+    },
+    {
+      "id": "jonction",
+      "title": "Brancher des tapis sur les côtés",
+      "image": "tunnel_andesite_jonction.webp",
+      "alt": "Tunnel d'andésite au croisement d'un tapis principal et d'un tapis latéral",
+      "html": "<p>Tout devient intéressant quand un autre tapis arrive <strong>contre le flanc</strong> du tunnel : celui-ci s'ouvre de ce côté et y ajoute un volet. Un tapis d'un seul côté donne une dérivation en T, un de chaque côté donne un carrefour. Une sortie latérale peut aussi être un <a href=\"/wiki/depot\">dépôt</a>, un <a href=\"/wiki/ejecteur\">éjecteur</a> ou une <a href=\"/wiki/chute\">chute</a>.</p>"
+    },
+    {
+      "id": "division",
+      "title": "Le tunnel d'andésite détache un objet",
+      "image": "tunnel_andesite_division.webp",
+      "alt": "Une pile de lingots de cuivre laisse un lingot sur le tapis latéral en traversant le tunnel",
+      "html": "<p>Quand une <strong>pile de plusieurs objets</strong> traverse un tunnel d'andésite qui a des sorties latérales, il en donne <strong>un seul</strong> à chaque côté ouvert et le reste continue tout droit. Un objet isolé ne se divise pas. C'est simple et bon marché, idéal pour prélever un échantillon sur une grosse ligne, mais ce n'est pas un vrai répartiteur.</p>"
+    },
+    {
+      "id": "laiton",
+      "title": "Le tunnel de laiton répartit",
+      "image": "tunnel_brass_sorties.webp",
+      "alt": "Tunnel de laiton au centre d'un carrefour de tapis, avec un dépôt sur un côté",
+      "video": "tunnel_brass",
+      "html": "<p>Le tunnel de laiton prend la pile entière, la garde un court instant, puis la <strong>distribue entre toutes ses sorties</strong> : tout droit et chaque côté ouvert. Par défaut, il coupe la pile en parts égales : 63 lingots deviennent 32 d'un côté et 31 de l'autre. Il laisse au moins <strong>10 ticks</strong>, une demi-seconde, entre deux répartitions. Tant qu'il est occupé, l'objet suivant attend à l'entrée.</p>"
+    },
+    {
+      "id": "filtre",
+      "title": "Un filtre par côté",
+      "image": "tunnel_brass_filtre.webp",
+      "alt": "Tunnel de laiton vu de côté, avec des lingots triés vers ses sorties",
+      "html": "<p>Chaque volet d'un tunnel de laiton a son propre <strong>emplacement de filtre</strong>. Pose-y un objet et cette sortie n'acceptera plus que lui. Les sorties filtrées sont servies en premier, les autres reçoivent ce qui ne correspond à aucun filtre. Avec du zinc d'un côté et du cuivre de l'autre, un seul tunnel trie déjà deux métaux sans le moindre <a href=\"/wiki/entonnoir\">entonnoir</a>.</p>"
+    },
+    {
+      "id": "groupe",
+      "title": "Plusieurs tunnels côte à côte",
+      "image": "tunnel_brass_group_groupe.webp",
+      "alt": "Trois tunnels de laiton reliés sur trois tapis parallèles",
+      "video": "tunnel_brass_group",
+      "html": "<p>Des tunnels de laiton posés sur des <strong>tapis parallèles et voisins</strong> se relient en un seul groupe : un objet qui entre dans l'un peut ressortir sur n'importe quel tapis du groupe. Avec un filtre différent sur chaque tunnel, on obtient un trieur très compact, où chaque objet prend la ligne qui lui est réservée. Les sorties sont classées par distance, celle du tunnel d'entrée d'abord.</p>"
+    },
+    {
+      "id": "partager",
+      "title": "Partager et Partage forcé",
+      "image": "tunnel_modes_repartir.webp",
+      "alt": "Trois tunnels de laiton qui coupent des piles de boules de neige en trois parts",
+      "video": "tunnel_modes",
+      "html": "<p>Le mode se règle sur le panneau de valeur du tunnel et vaut pour tout le groupe. <strong>Partager</strong> coupe chaque pile en parts égales entre les sorties libres ; si une sortie est bouchée, sa part va aux autres. <strong>Partage forcé</strong> est plus strict : si une seule sortie ne peut pas prendre sa part, le tunnel attend et ne donne rien. Dans la boucle, un bloc vient boucher une sortie pour montrer la différence.</p>"
+    },
+    {
+      "id": "tourniquet",
+      "title": "Chacun un par un",
+      "image": "tunnel_modes_robin_tourniquet.webp",
+      "alt": "Piles de boules de neige envoyées tour à tour sur chacun des trois tapis",
+      "video": "tunnel_modes_robin",
+      "html": "<p>En mode <strong>Chacun un par un</strong>, le tunnel ne coupe plus les piles : il envoie la pile entière à une sortie, la suivante à la sortie d'après, et ainsi de suite. Une sortie pleine est simplement sautée. La version <strong>forcée</strong> ne saute personne : tant que la sortie dont c'est le tour est bouchée, tout s'arrête. C'est la garantie d'une distribution parfaitement régulière.</p>"
+    },
+    {
+      "id": "proche",
+      "title": "Préférer le plus proche, Aléatoire",
+      "image": "tunnel_modes_nearest_proche.webp",
+      "alt": "Les boules de neige partent sur le tapis le plus proche de l'entrée",
+      "html": "<p><strong>Préférer le plus proche</strong> envoie tout vers la sortie la plus proche de l'entrée et ne passe à la suivante que lorsqu'elle est pleine : c'est un trop-plein, parfait pour remplir un stock principal avant d'alimenter une réserve. <strong>Aléatoire</strong> tire une sortie au hasard pour chaque pile, utile pour mélanger les arrivages. Ces deux modes sont montrés ici en image seulement.</p>"
+    },
+    {
+      "id": "synchro",
+      "title": "Entrées synchronisées",
+      "image": "tunnel_modes_sync_synchro.webp",
+      "alt": "Une carotte et une bouteille de miel retenues dans deux tunnels de laiton",
+      "video": "tunnel_modes_sync",
+      "html": "<p>Dernier mode : <strong>Entrées synchronisées</strong>. Chaque tunnel du groupe retient son objet jusqu'à ce que <strong>tous</strong> en aient un, puis ils les relâchent ensemble. Les ingrédients d'une recette arrivent ainsi en même temps au bout de leurs tapis. Tant qu'une ligne reste vide, les autres patientent : dans la boucle, la carotte et le miel attendent le quartz rose.</p>"
+    }
+  ],
+  "related": [
+    "tapis-roulant",
+    "entonnoir",
+    "ejecteur",
+    "chute",
+    "depot"
+  ],
+  "sources": [
+    "Pose et formes : BeltTunnelBlock (straight, window, t_left, t_right, cross), BeltTunnelBlockEntity (volets)",
+    "Tunnel d'andésite : BeltTunnelInteractionHandler.flapTunnelsAndCheckIfStuck (une pile de plus d'un objet laisse un objet par sortie latérale)",
+    "Tunnel de laiton : BrassTunnelBlockEntity.tick / distribute, SelectionMode (SPLIT, FORCED_SPLIT, ROUND_ROBIN, FORCED_ROUND_ROBIN, PREFER_NEAREST, RANDOMIZE, SYNCHRONIZE), filtres SidedFilteringBehaviour",
+    "Délai : CLogistics.brassTunnelTimer = 10 ticks (de 1 à 10)",
+    "Recettes : crafting/logistics/andesite_tunnel.json, crafting/logistics/brass_tunnel.json",
+    "Scènes : TunnelScenes.andesite, brass (deux boucles), brassModes (trois boucles et une image) ; trajets des objets simulés d'après les classes ci-dessus"
+  ],
+  "en": {
+    "slugEn": "tunnel",
+    "name": "Andesite and Brass Tunnel",
+    "title": "Brass Tunnel — Create mod guide",
+    "description": "Create's Andesite and Brass Tunnels: covering a belt, side outputs, splitting stacks, per-side filters and the seven Brass Tunnel distribution modes.",
+    "intro": "<strong>Tunnels</strong> sit on top of a Mechanical Belt and decide what happens to the items passing underneath. The <strong>Andesite Tunnel</strong> simply peels off one item for each belt connected to its side. The <strong>Brass Tunnel</strong> is a real distributor: it splits a stack across several belts, takes turns between outputs, filters each side and can even synchronise several lines. It is the centrepiece of sorting lines and of factories that feed many machines at once.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Logistics"
+      },
+      {
+        "label": "Placement",
+        "value": "On a horizontal Mechanical Belt segment"
+      },
+      {
+        "label": "Andesite Tunnel",
+        "value": "A passing stack leaves 1 item at each side output"
+      },
+      {
+        "label": "Brass Tunnel",
+        "value": "7 distribution modes, one filter per side, groups of neighbouring tunnels"
+      },
+      {
+        "label": "Rate",
+        "value": "One distribution every 10 ticks (0.5 s) at most, server setting brassTunnelTimer (1 to 10)"
+      },
+      {
+        "label": "Andesite recipe",
+        "value": "2 Andesite Alloy + 2 Dried Kelp → 2 tunnels"
+      },
+      {
+        "label": "Stress",
+        "value": "None (the belt underneath provides the motion)"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (Brass Tunnel)",
+      "grid": [
+        [
+          "Electron Tube",
+          null,
+          null
+        ],
+        [
+          "Brass Ingot",
+          "Brass Ingot",
+          null
+        ],
+        [
+          "Dried Kelp",
+          "Dried Kelp",
+          null
+        ]
+      ],
+      "result": "2 Brass Tunnels"
+    },
+    "videos": [
+      {
+        "id": "tunnel_andesite",
+        "name": "Andesite Tunnel: covering a belt and peeling off one item",
+        "description": "Andesite Tunnels cover a belt, then a side belt is connected: a stack of copper drops one ingot there on its way."
+      },
+      {
+        "id": "tunnel_brass",
+        "name": "Brass Tunnel: outputs and filters",
+        "description": "A Brass Tunnel shares ingots between its outputs; filters reserve each side for zinc or copper."
+      },
+      {
+        "id": "tunnel_brass_group",
+        "name": "Brass Tunnels linked into a group",
+        "description": "A stack of 63 ingots is split in two, then three filtered neighbouring tunnels sort carrots, honey and berries onto three belts."
+      },
+      {
+        "id": "tunnel_modes",
+        "name": "Brass Tunnel: Split and Forced Split",
+        "description": "Stacks of snowballs are cut into three shares; a blocked output shows the difference between the two modes."
+      },
+      {
+        "id": "tunnel_modes_robin",
+        "name": "Brass Tunnel: Round Robin",
+        "description": "Each stack goes whole to the next output; in the forced version, the tunnel waits for the blocked output."
+      },
+      {
+        "id": "tunnel_modes_sync",
+        "name": "Brass Tunnel: Synchronize Inputs",
+        "description": "Three tunnels hold their items and only release them once every line has one."
+      }
+    ],
+    "sections": [
+      {
+        "id": "poser",
+        "title": "A tunnel goes on a belt",
+        "alt": "Three Andesite Tunnels placed over a Mechanical Belt, like a small shed",
+        "html": "<p>A tunnel only fits on a horizontal <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a>: right-click a segment and it covers it like a small shed, with a flap at the entrance and another at the exit. On its own it does not change the items' path at all. It then works as a cover, handy for a belt that goes through a wall or a floor.</p>"
+      },
+      {
+        "id": "jonction",
+        "title": "Connecting belts on the sides",
+        "alt": "Andesite Tunnel where a main belt meets a side belt",
+        "html": "<p>Things get interesting when another belt arrives <strong>against the side</strong> of the tunnel: the tunnel opens on that side and adds a flap there. A belt on one side makes a T junction, one on each side makes a crossroads. A side output can also be a <a href=\"/en/wiki/depot\">Depot</a>, a <a href=\"/en/wiki/weighted-ejector\">Weighted Ejector</a> or a <a href=\"/en/wiki/chute\">Chute</a>.</p>"
+      },
+      {
+        "id": "division",
+        "title": "The Andesite Tunnel peels off one item",
+        "alt": "A stack of copper ingots leaves one ingot on the side belt as it goes through the tunnel",
+        "html": "<p>When a <strong>stack of several items</strong> goes through an Andesite Tunnel that has side outputs, it hands <strong>just one</strong> item to each open side and the rest carries straight on. A single item is never split. It is simple and cheap, ideal for taking a sample off a busy line, but it is not a real distributor.</p>"
+      },
+      {
+        "id": "laiton",
+        "title": "The Brass Tunnel distributes",
+        "alt": "Brass Tunnel at the centre of a belt crossroads, with a Depot on one side",
+        "html": "<p>The Brass Tunnel takes the whole stack, holds it for a moment, then <strong>distributes it across all its outputs</strong>: straight ahead and every open side. By default it cuts the stack into equal shares: 63 ingots become 32 on one side and 31 on the other. It waits at least <strong>10 ticks</strong>, half a second, between two distributions. While it is busy, the next item waits at the entrance.</p>"
+      },
+      {
+        "id": "filtre",
+        "title": "One filter per side",
+        "alt": "Brass Tunnel seen from the side, with ingots sorted towards its outputs",
+        "html": "<p>Each flap of a Brass Tunnel has its own <strong>filter slot</strong>. Put an item in it and that output will only accept that item. Filtered outputs are served first; the others get whatever matches no filter. With zinc on one side and copper on the other, a single tunnel already sorts two metals without a single <a href=\"/en/wiki/funnel\">Funnel</a>.</p>"
+      },
+      {
+        "id": "groupe",
+        "title": "Several tunnels side by side",
+        "alt": "Three Brass Tunnels linked over three parallel belts",
+        "html": "<p>Brass Tunnels placed on <strong>neighbouring parallel belts</strong> link up into one group: an item entering one of them can come out on any belt of the group. With a different filter on each tunnel you get a very compact sorter, where every item takes the line reserved for it. Outputs are ranked by distance, the entry tunnel's own output first.</p>"
+      },
+      {
+        "id": "partager",
+        "title": "Split and Forced Split",
+        "alt": "Three Brass Tunnels cutting stacks of snowballs into three shares",
+        "html": "<p>The mode is set on the tunnel's value panel and applies to the whole group. <strong>Split</strong> cuts each stack into equal shares across the free outputs; if one output is blocked, its share goes to the others. <strong>Forced Split</strong> is stricter: if a single output cannot take its share, the tunnel waits and hands out nothing. In the loop, a block comes to block one output to show the difference.</p>"
+      },
+      {
+        "id": "tourniquet",
+        "title": "Round Robin",
+        "alt": "Stacks of snowballs sent in turn onto each of the three belts",
+        "html": "<p>In <strong>Round Robin</strong> mode the tunnel stops cutting stacks: it sends the whole stack to one output, the next one to the following output, and so on. A full output is simply skipped. <strong>Forced Round Robin</strong> skips no one: as long as the output whose turn it is stays blocked, everything stops. It guarantees a perfectly even distribution.</p>"
+      },
+      {
+        "id": "proche",
+        "title": "Prefer Nearest, Randomize",
+        "alt": "Snowballs going onto the belt closest to the input",
+        "html": "<p><strong>Prefer Nearest</strong> sends everything to the output closest to the input and only moves on to the next one when it is full: an overflow, perfect for filling a main store before feeding a reserve. <strong>Randomize</strong> picks a random output for every stack, which is useful for mixing deliveries. These two modes are only shown as a still here.</p>"
+      },
+      {
+        "id": "synchro",
+        "title": "Synchronize Inputs",
+        "alt": "A carrot and a honey bottle held back inside two Brass Tunnels",
+        "html": "<p>The last mode is <strong>Synchronize Inputs</strong>. Each tunnel of the group holds its item until <strong>all of them</strong> have one, then they release them together. The ingredients of a recipe therefore reach the end of their belts at the same time. As long as one line stays empty the others wait: in the loop, the carrot and the honey wait for the rose quartz.</p>"
+      }
+    ],
+    "sources": [
+      "Placement and shapes: BeltTunnelBlock (straight, window, t_left, t_right, cross), BeltTunnelBlockEntity (flaps)",
+      "Andesite Tunnel: BeltTunnelInteractionHandler.flapTunnelsAndCheckIfStuck (a stack of more than one item leaves one item per side output)",
+      "Brass Tunnel: BrassTunnelBlockEntity.tick / distribute, SelectionMode (SPLIT, FORCED_SPLIT, ROUND_ROBIN, FORCED_ROUND_ROBIN, PREFER_NEAREST, RANDOMIZE, SYNCHRONIZE), SidedFilteringBehaviour filters",
+      "Delay: CLogistics.brassTunnelTimer = 10 ticks (1 to 10)",
+      "Recipes: crafting/logistics/andesite_tunnel.json, crafting/logistics/brass_tunnel.json",
+      "Scenes: TunnelScenes.andesite, brass (two loops), brassModes (three loops and a still); item paths simulated from the classes above"
+    ]
+  }
+}

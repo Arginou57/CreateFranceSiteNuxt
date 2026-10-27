@@ -1,0 +1,240 @@
+{
+  "slug": "boite-aux-lettres",
+  "name": "Boîte aux lettres",
+  "blockId": "create:white_postbox",
+  "category": "colis",
+  "title": "Boîte aux lettres (postbox) — Create : guide en français",
+  "description": "La boîte aux lettres de Create 6 : relier une gare de train au réseau de colis, charger les colis dans les trains et les recevoir à la bonne adresse.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>boîte aux lettres</strong> fait pour les trains ce que le crapauport fait pour les chaînes. Posée près d'une gare, elle confie ses colis aux trains qui s'y arrêtent et récupère ceux qui portent son adresse. Le réseau de colis peut ainsi traverser toute une carte : une usine expédie, un train roule, un entrepôt à l'autre bout du monde réceptionne. Elle existe dans les seize couleurs.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Réseau de colis"
+    },
+    {
+      "label": "Cible",
+      "value": "Une gare de train, à 5 blocs au plus (packagePortRange)"
+    },
+    {
+      "label": "Inventaire",
+      "value": "18 emplacements réservés aux colis"
+    },
+    {
+      "label": "Adresse",
+      "value": "Le nom de la boîte ; jokers « * » acceptés"
+    },
+    {
+      "label": "Couleurs",
+      "value": "16, selon le colorant de la recette"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (boîte aux lettres blanche)",
+    "grid": [
+      [
+        null,
+        "Colorant blanc",
+        null
+      ],
+      [
+        null,
+        "Tonneau",
+        null
+      ],
+      [
+        null,
+        "Alliage d'andésite",
+        null
+      ]
+    ],
+    "result": "1 boîte aux lettres blanche"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "poser",
+      "title": "La relier à une gare",
+      "image": "postbox_boite.webp",
+      "alt": "Boîte aux lettres posée près d'une voie ferrée",
+      "html": "<p>Boîte aux lettres en main, fais un clic droit sur la <strong>gare</strong> de train voisine pour la choisir comme cible, puis pose la boîte à 5 blocs au plus. Elle se tourne vers la voie et sert désormais de guichet à cette gare. Une même gare peut avoir plusieurs boîtes, une par adresse.</p>"
+    },
+    {
+      "id": "remplir",
+      "title": "Y déposer des colis",
+      "image": "postbox_emballeur.webp",
+      "alt": "Emballeur et tapis qui alimentent la boîte aux lettres",
+      "html": "<p>Comme un crapauport, la boîte a un inventaire de <strong>18 emplacements</strong> réservé aux colis. Un <a href=\"/wiki/emballeur\">emballeur</a> qui sort ses colis dedans, un tapis ou un entonnoir suffit à la remplir. Les colis y attendent le prochain train qui s'arrête à la gare.</p>"
+    },
+    {
+      "id": "train",
+      "title": "Le train fait la tournée",
+      "image": "postbox_gare.webp",
+      "alt": "Gare de train entourée de boîtes aux lettres et d'emballeurs",
+      "html": "<p>Quand un train s'arrête à la gare, les colis de la boîte montent dans son <strong>stockage</strong> : coffres, tonneaux ou coffres renforcés montés sur ses wagons. À chaque gare suivante, les boîtes aux lettres prennent les colis qui portent leur adresse. Le train n'a besoin d'aucun réglage particulier : un horaire ordinaire entre les gares suffit.</p>"
+    },
+    {
+      "id": "adresse",
+      "title": "L'adresse de la boîte",
+      "image": "postbox_train.webp",
+      "alt": "Voie ferrée avec les zones de chargement encadrées",
+      "html": "<p>Le nom de la boîte est son <strong>adresse</strong>. Un colis adressé « Mine » attendra dans le train jusqu'à une gare où une boîte s'appelle « Mine ». Les jokers fonctionnent : une boîte « Mine* » accepte « Mine de fer » et « Mine d'or ». Un réglage permet aussi de faire une boîte qui expédie sans jamais rien recevoir.</p>"
+    },
+    {
+      "id": "reception",
+      "title": "Réceptionner",
+      "html": "<p>Une fois rangés dans la boîte d'arrivée, les colis se récupèrent comme dans un coffre : un entonnoir les sort, un emballeur collé dessous les déballe directement dans son inventaire. Avec un <a href=\"/wiki/coffre-a-objet-renforce\">coffre à objet renforcé</a> derrière l'emballeur, la livraison finit rangée sans intervention.</p>"
+    },
+    {
+      "id": "reseau",
+      "title": "Trains et chaînes ensemble",
+      "html": "<p>Boîtes aux lettres et <a href=\"/wiki/roue-a-chaine-roulante\">crapauports</a> parlent le même langage d'adresses. Une usine peut envoyer ses colis par chaîne jusqu'à la gare, où une boîte les confie au train, puis un autre réseau de chaînes les distribue à l'arrivée. Le <a href=\"/wiki/telescripteur-de-stock\">téléscripteur de stock</a> peut même passer commande dans un entrepôt lointain : la réponse arrive par le train.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils",
+      "html": "<p>Donne à chaque gare un nom d'adresse simple et cohérent, et réserve un wagon de stockage au courrier. Si les colis restent bloqués, vérifie que le train a de la place libre et qu'il s'arrête bien à la gare reliée, et non à une gare voisine. Les boîtes de couleur aident à repérer les adresses sur un quai chargé.</p>"
+    },
+    {
+      "id": "exemple",
+      "title": "Exemple : une mine reliée à la base",
+      "html": "<p>À la mine, un emballeur colle chaque soir le contenu du coffre de minerai dans des colis adressés « Base », qui tombent dans une boîte aux lettres près de la gare. Le train de la ligne s'y arrête, embarque les colis, puis repart. À la gare de la base, une boîte aux lettres nommée « Base » les récupère, un emballeur les déballe dans un coffre à objet renforcé, et un téléscripteur de stock affiche aussitôt le nouveau stock de fer.</p>"
+    },
+    {
+      "id": "images",
+      "title": "À propos des images",
+      "html": "<p>La scène Ponder de la boîte aux lettres met en jeu un train en mouvement et des colis dans ses wagons, que notre moteur ne sait pas encore animer : cette page est illustrée par des images fixes des montages.</p>"
+    }
+  ],
+  "related": [
+    "roue-a-chaine-roulante",
+    "emballeur",
+    "telescripteur-de-stock",
+    "coffre-a-objet-renforce"
+  ],
+  "sources": [
+    "Boîte aux lettres : PackagePortBlockEntity (inventaire de 18 colis, addressFilter, acceptsPackages), cible : gare (PackagePortTarget), CLogistics.packagePortRange = 5",
+    "Adresses : PackageItem.matchAddress (« * » et jokers Glob)",
+    "Recette : crafting/logistics/white_postbox.json (et les quinze autres couleurs)",
+    "Scène : PostboxScenes.postbox ; images seules (train et colis embarqués non animés)"
+  ],
+  "en": {
+    "slugEn": "postbox",
+    "name": "Postbox",
+    "title": "Postbox — Create mod guide",
+    "description": "The Create 6 Postbox: linking a train station to the package network, loading packages into trains and receiving them at the right address.",
+    "intro": "The <strong>Postbox</strong> does for trains what the Frogport does for chains. Placed near a station, it hands its packages to the trains that stop there and picks up the ones carrying its address. The package network can then cross a whole map: a factory ships, a train rolls, a warehouse at the other end of the world receives. It comes in all sixteen colours.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Package network"
+      },
+      {
+        "label": "Target",
+        "value": "A train station, 5 blocks away at most (packagePortRange)"
+      },
+      {
+        "label": "Inventory",
+        "value": "18 slots reserved for packages"
+      },
+      {
+        "label": "Address",
+        "value": "The box's name; \"*\" wildcards accepted"
+      },
+      {
+        "label": "Colours",
+        "value": "16, depending on the dye in the recipe"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (White Postbox)",
+      "grid": [
+        [
+          null,
+          "White Dye",
+          null
+        ],
+        [
+          null,
+          "Barrel",
+          null
+        ],
+        [
+          null,
+          "Andesite Alloy",
+          null
+        ]
+      ],
+      "result": "1 White Postbox"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "poser",
+        "title": "Linking it to a station",
+        "alt": "Postbox placed next to a railway track",
+        "html": "<p>Holding the Postbox, right-click the nearby train <strong>station</strong> to pick it as the target, then place the box no more than 5 blocks away. It turns towards the track and now acts as that station's counter. A station can have several boxes, one per address.</p>"
+      },
+      {
+        "id": "remplir",
+        "title": "Putting packages in",
+        "alt": "Packager and belt feeding the Postbox",
+        "html": "<p>Like a Frogport, the box has an inventory of <strong>18 slots</strong> reserved for packages. A <a href=\"/en/wiki/packager\">Packager</a> outputting into it, a belt or a funnel is enough to fill it. Packages wait there for the next train stopping at the station.</p>"
+      },
+      {
+        "id": "train",
+        "title": "The train does the round",
+        "alt": "Train station surrounded by Postboxes and Packagers",
+        "html": "<p>When a train stops at the station, the box's packages go into its <strong>storage</strong>: chests, barrels or vaults mounted on its carriages. At each following station, the Postboxes take the packages carrying their address. The train needs no special setting: an ordinary schedule between the stations is enough.</p>"
+      },
+      {
+        "id": "adresse",
+        "title": "The box's address",
+        "alt": "Railway track with the loading areas outlined",
+        "html": "<p>The box's name is its <strong>address</strong>. A package addressed \"Mine\" stays on the train until a station where a box is called \"Mine\". Wildcards work: a \"Mine*\" box accepts \"Mine iron\" and \"Mine gold\". A setting also lets you make a box that ships without ever receiving anything.</p>"
+      },
+      {
+        "id": "reception",
+        "title": "Receiving",
+        "html": "<p>Once stored in the destination box, packages are collected as from a chest: a funnel takes them out, a Packager underneath unpacks them straight into its inventory. With an <a href=\"/en/wiki/item-vault\">Item Vault</a> behind the Packager, the delivery ends up stored with no one lifting a finger.</p>"
+      },
+      {
+        "id": "reseau",
+        "title": "Trains and chains together",
+        "html": "<p>Postboxes and <a href=\"/en/wiki/chain-conveyor\">Frogports</a> speak the same address language. A factory can send its packages by chain to the station, where a box hands them to the train, then another chain network spreads them out at the destination. The <a href=\"/en/wiki/stock-ticker\">Stock Ticker</a> can even place an order in a distant warehouse: the answer arrives by train.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<p>Give each station a simple, consistent address name, and dedicate one storage wagon to the mail. If packages get stuck, check that the train has free room and that it really stops at the linked station rather than a neighbouring one. Coloured boxes help spot addresses on a busy platform.</p>"
+      },
+      {
+        "id": "exemple",
+        "title": "Example: a mine linked to the base",
+        "html": "<p>At the mine, a Packager regularly turns the ore chest's contents into packages addressed \"Base\", which drop into a Postbox next to the station. The line's train stops there, takes the packages on board and leaves again. At the base station, a Postbox named \"Base\" picks them up, a Packager unpacks them into an Item Vault, and a Stock Ticker immediately shows the new iron stock. Nobody has to make the trip with a full inventory any more, and the whole route keeps working while you are busy building somewhere else.</p>"
+      },
+      {
+        "id": "images",
+        "title": "About the pictures",
+        "html": "<p>The Postbox Ponder scene involves a moving train and packages inside its carriages, which our renderer cannot animate yet: this page is illustrated with stills of the setups.</p>"
+      }
+    ],
+    "sources": [
+      "Postbox: PackagePortBlockEntity (18-package inventory, addressFilter, acceptsPackages), target: station (PackagePortTarget), CLogistics.packagePortRange = 5",
+      "Addresses: PackageItem.matchAddress (\"*\" and Glob wildcards)",
+      "Recipe: crafting/logistics/white_postbox.json (and the fifteen other colours)",
+      "Scene: PostboxScenes.postbox; stills only (train and packages on board not animated)"
+    ]
+  }
+}

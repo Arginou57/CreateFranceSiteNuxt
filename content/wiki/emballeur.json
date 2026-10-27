@@ -1,0 +1,294 @@
+{
+  "slug": "emballeur",
+  "name": "Emballeur",
+  "blockId": "create:packager",
+  "category": "colis",
+  "title": "Emballeur (packager) — Create : guide en français",
+  "description": "L'emballeur de Create 6 : mettre un inventaire en colis, déballer les colis reçus, écrire une adresse et trier les colis avec un filtre de colis.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "L'<strong>emballeur</strong> est la porte d'entrée du réseau de colis de Create 6. Collé à un coffre, il en met le contenu dans un <strong>colis</strong> en carton qui peut voyager sur des tapis, des roues à chaîne ou des trains. Dans l'autre sens, il déballe les colis qu'on lui livre et range leur contenu dans son coffre. Avec une adresse écrite sur le colis, chaque envoi sait où il doit arriver.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Réseau de colis"
+    },
+    {
+      "label": "Contenu d'un colis",
+      "value": "Jusqu'à 9 piles"
+    },
+    {
+      "label": "Déclenchement",
+      "value": "Une impulsion de redstone, ou une commande venue du réseau (liaison de stock)"
+    },
+    {
+      "label": "Adresse",
+      "value": "Écrite sur une pancarte fixée à l'emballeur ; « * » accepte tout"
+    },
+    {
+      "label": "Déballage",
+      "value": "Un colis inséré dans l'emballeur est vidé dans l'inventaire derrière lui"
+    },
+    {
+      "label": "Stress",
+      "value": "Aucun, pas de rotation nécessaire"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Lingot de fer",
+        null
+      ],
+      [
+        "Lingot de fer",
+        "Bloc de carton",
+        "Lingot de fer"
+      ],
+      [
+        "Poudre de redstone",
+        "Lingot de fer",
+        "Poudre de redstone"
+      ]
+    ],
+    "result": "1 emballeur"
+  },
+  "videos": [
+    {
+      "id": "packager",
+      "name": "Emballeur : faire un colis",
+      "description": "Un levier déclenche l'emballeur collé à un coffre : le colis sort sur le plateau, puis part sur un tapis.",
+      "duration": "PT20S"
+    },
+    {
+      "id": "packager_unpack",
+      "name": "Emballeur : déballer à l'arrivée",
+      "description": "Au bout du tapis, un second emballeur reçoit le colis et le vide dans son coffre ; quand ce coffre est plein, les colis attendent.",
+      "duration": "PT18S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "principe",
+      "title": "Collé à un inventaire",
+      "image": "packager_colis.webp",
+      "alt": "Emballeur posé contre un coffre, un colis sur son plateau",
+      "video": "packager",
+      "html": "<p>L'emballeur se pose <strong>contre un inventaire</strong> : coffre, tonneau, <a href=\"/wiki/coffre-a-objet-renforce\">coffre à objet renforcé</a>. Sa face opposée est la sortie, avec un petit plateau qui glisse pour présenter les colis. Il ne demande aucune rotation : seuls la redstone ou le réseau le font travailler.</p>"
+    },
+    {
+      "id": "emballer",
+      "title": "Faire un colis",
+      "image": "packager_tapis.webp",
+      "alt": "Colis en carton qui part de l'emballeur sur un tapis roulant",
+      "html": "<p>À chaque <strong>impulsion de redstone</strong>, l'emballeur prend le contenu de son inventaire et en fait un colis, jusqu'à 9 piles par colis. S'il y a plus, il en fait plusieurs. Le colis sort sur ce qui se trouve devant : <a href=\"/wiki/tapis-roulant\">tapis</a>, <a href=\"/wiki/entonnoir\">entonnoir</a>, <a href=\"/wiki/chute\">chute</a>, crapauport ou boîte aux lettres. Un colis est un objet ordinaire : il se transporte avec tous les outils de Create.</p>"
+    },
+    {
+      "id": "deballer",
+      "title": "Déballer à l'arrivée",
+      "image": "packager_unpack_deballer.webp",
+      "alt": "Second emballeur qui reçoit le colis au bout du tapis",
+      "video": "packager_unpack",
+      "html": "<p>Un colis qu'on <strong>fait entrer dans un emballeur</strong>, par un tapis ou un entonnoir, est ouvert et son contenu rangé dans l'inventaire derrière lui. Le même bloc sert donc aux deux bouts d'une ligne : un emballeur expédie, un autre réceptionne. Le carton, lui, disparaît.</p>"
+    },
+    {
+      "id": "plein",
+      "title": "Quand l'arrivée est pleine",
+      "image": "packager_unpack_plein.webp",
+      "alt": "Coffre d'arrivée encadré en rouge, plein",
+      "html": "<p>L'emballeur ne déballe un colis que si <strong>tout son contenu tient</strong> dans l'inventaire. Si le coffre d'arrivée est plein, le colis reste devant lui et la ligne attend. Rien n'est perdu, mais rien ne passe non plus : prévois assez de place à l'arrivée, ou un débordement vers un second coffre.</p>"
+    },
+    {
+      "id": "adresse",
+      "title": "Écrire une adresse",
+      "image": "packager_address_adresse.webp",
+      "alt": "Emballeur avec une pancarte qui porte son adresse",
+      "html": "<p>Fixe une <strong>pancarte</strong> sur l'emballeur et écris-y un nom, par exemple « Forge ». Chaque colis qu'il fabrique portera cette adresse. Elle s'affiche dans l'info-bulle du colis et sert de destination pour tout le réseau. Les adresses acceptent le joker « * » : « Forge* » correspond à « Forge nord » comme à « Forge sud ».</p>"
+    },
+    {
+      "id": "tri",
+      "title": "Trier les colis par adresse",
+      "image": "packager_address_tri.webp",
+      "alt": "Tunnel de laiton qui dirige des colis vers deux tapis",
+      "html": "<p>Pour aiguiller les colis, on utilise un <strong>filtre de colis</strong> : un filtre sur lequel on écrit une adresse. Posé sur un <a href=\"/wiki/tunnel\">tunnel de laiton</a>, un entonnoir de laiton ou une chute intelligente, il ne laisse passer que les colis de cette adresse. Un carrefour de tapis devient ainsi un centre de tri postal.</p>"
+    },
+    {
+      "id": "etiquette",
+      "title": "Lire l'adresse d'un colis",
+      "image": "packager_address_etiquette.webp",
+      "alt": "Colis posé sur un dépôt près d'un emballeur",
+      "html": "<p>Une <a href=\"/wiki/liaison-d-affichage\">liaison d'affichage</a> posée sur un dépôt ou un tapis peut écrire sur un panneau l'<strong>adresse du colis</strong> qui s'y trouve : idéal pour un quai de chargement. Attention aux colis sans adresse : ils ne passent que par les filtres de colis laissés vides.</p>"
+    },
+    {
+      "id": "reseau",
+      "title": "Dans le réseau de colis",
+      "html": "<p>Un emballeur relié au réseau par une <a href=\"/wiki/liaison-de-stock\">liaison de stock</a> n'attend plus la redstone : il emballe tout seul les objets commandés depuis un <a href=\"/wiki/telescripteur-de-stock\">téléscripteur de stock</a> ou un <a href=\"/wiki/commandeur-a-redstone\">commandeur à redstone</a>, avec l'adresse demandée. C'est le maillon qui transforme un coffre ordinaire en entrepôt consultable de partout.</p>"
+    },
+    {
+      "id": "conseil",
+      "title": "Bien démarrer",
+      "html": "<p>Pour un premier essai, il suffit d'un coffre, d'un emballeur, d'un levier et d'un tapis vers un second emballeur collé à un autre coffre. Une fois ce trajet compris, tout le reste du réseau de colis n'est qu'une affaire de distance et d'adresses.</p>"
+    },
+    {
+      "id": "images",
+      "title": "Ce que montrent nos boucles",
+      "html": "<p>Nos boucles dessinent les colis comme l'objet « colis en carton » sur les tapis et sur le plateau de l'emballeur, d'après son animation dans le jeu. Le texte des adresses n'apparaît pas, et le tri par adresse n'est montré qu'en images.</p>"
+    }
+  ],
+  "related": [
+    "liaison-de-stock",
+    "telescripteur-de-stock",
+    "reemballeur",
+    "roue-a-chaine-roulante",
+    "tunnel"
+  ],
+  "sources": [
+    "Colis : PackageItem.SLOTS = 9 ; adresse : PackageItem.addAddress / matchAddress (« * » et jokers Glob)",
+    "Emballeur : PackagerBlockEntity (activate sur impulsion de redstone, attemptToSend, unwrapBox, updateSignAddress : pancarte fixée), animation du plateau getTrayOffset, CYCLE = 20 ticks",
+    "Recette : crafting/logistics/packager.json",
+    "Scènes : PackagerScenes.packager (deux boucles partielles : colis dessinés comme l'objet « colis en carton »), packagerAddress (images)"
+  ],
+  "en": {
+    "slugEn": "packager",
+    "name": "Packager",
+    "title": "Packager — Create mod guide",
+    "description": "The Create 6 Packager: packing an inventory into a package, unpacking incoming packages, writing an address and sorting packages with a Package Filter.",
+    "intro": "The <strong>Packager</strong> is the way into Create 6's package network. Placed against a chest, it puts its contents into a cardboard <strong>package</strong> that can travel on belts, Chain Conveyors or trains. The other way round, it unpacks the packages delivered to it and stores their contents in its chest. With an address written on the package, every shipment knows where it should arrive.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Package network"
+      },
+      {
+        "label": "Package contents",
+        "value": "Up to 9 stacks"
+      },
+      {
+        "label": "Trigger",
+        "value": "A redstone pulse, or an order coming from the network (Stock Link)"
+      },
+      {
+        "label": "Address",
+        "value": "Written on a sign attached to the Packager; \"*\" accepts anything"
+      },
+      {
+        "label": "Unpacking",
+        "value": "A package inserted into the Packager is emptied into the inventory behind it"
+      },
+      {
+        "label": "Stress",
+        "value": "None, no rotation needed"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Iron Ingot",
+          null
+        ],
+        [
+          "Iron Ingot",
+          "Block of Cardboard",
+          "Iron Ingot"
+        ],
+        [
+          "Redstone Dust",
+          "Iron Ingot",
+          "Redstone Dust"
+        ]
+      ],
+      "result": "1 Packager"
+    },
+    "videos": [
+      {
+        "id": "packager",
+        "name": "Packager: making a package",
+        "description": "A lever triggers the Packager placed against a chest: the package slides out on the tray, then leaves on a belt."
+      },
+      {
+        "id": "packager_unpack",
+        "name": "Packager: unpacking on arrival",
+        "description": "At the end of the belt, a second Packager receives the package and empties it into its chest; once that chest is full, packages wait."
+      }
+    ],
+    "sections": [
+      {
+        "id": "principe",
+        "title": "Against an inventory",
+        "alt": "Packager placed against a chest, a package on its tray",
+        "html": "<p>The Packager goes <strong>against an inventory</strong>: chest, barrel, <a href=\"/en/wiki/item-vault\">Item Vault</a>. Its opposite face is the output, with a small sliding tray that presents the packages. It needs no rotation: only redstone or the network makes it work.</p>"
+      },
+      {
+        "id": "emballer",
+        "title": "Making a package",
+        "alt": "Cardboard package leaving the Packager on a Mechanical Belt",
+        "html": "<p>At every <strong>redstone pulse</strong>, the Packager takes the contents of its inventory and turns them into a package, up to 9 stacks per package. If there is more, it makes several. The package comes out onto whatever is in front: <a href=\"/en/wiki/conveyor-belt\">belt</a>, <a href=\"/en/wiki/funnel\">Funnel</a>, <a href=\"/en/wiki/chute\">Chute</a>, Frogport or Postbox. A package is an ordinary item: it travels with every Create tool.</p>"
+      },
+      {
+        "id": "deballer",
+        "title": "Unpacking on arrival",
+        "alt": "Second Packager receiving the package at the end of the belt",
+        "html": "<p>A package that is <strong>fed into a Packager</strong>, by a belt or a funnel, is opened and its contents stored in the inventory behind it. The same block therefore works at both ends of a line: one Packager ships, another receives. The cardboard simply disappears.</p>"
+      },
+      {
+        "id": "plein",
+        "title": "When the destination is full",
+        "alt": "Destination chest outlined in red, full",
+        "html": "<p>The Packager only unpacks a package if <strong>all of its contents fit</strong> in the inventory. If the destination chest is full, the package stays in front of it and the line waits. Nothing is lost, but nothing gets through either: plan enough room at the destination, or an overflow to a second chest.</p>"
+      },
+      {
+        "id": "adresse",
+        "title": "Writing an address",
+        "alt": "Packager with a sign showing its address",
+        "html": "<p>Attach a <strong>sign</strong> to the Packager and write a name on it, for instance \"Forge\". Every package it makes will carry that address. It shows in the package's tooltip and is the destination for the whole network. Addresses accept the \"*\" wildcard: \"Forge*\" matches \"Forge north\" as well as \"Forge south\".</p>"
+      },
+      {
+        "id": "tri",
+        "title": "Sorting packages by address",
+        "alt": "Brass Tunnel routing packages onto two belts",
+        "html": "<p>To route packages, use a <strong>Package Filter</strong>: a filter with an address written on it. Placed on a <a href=\"/en/wiki/tunnel\">Brass Tunnel</a>, a Brass Funnel or a Smart Chute, it only lets that address's packages through. A belt crossroads thus becomes a postal sorting office.</p>"
+      },
+      {
+        "id": "etiquette",
+        "title": "Reading a package's address",
+        "alt": "Package on a Depot next to a Packager",
+        "html": "<p>A <a href=\"/en/wiki/display-link\">Display Link</a> placed on a Depot or a belt can write the <strong>address of the package</strong> sitting there onto a board: ideal for a loading bay. Watch out for packages without an address: they only go through Package Filters left empty.</p>"
+      },
+      {
+        "id": "reseau",
+        "title": "In the package network",
+        "html": "<p>A Packager linked to the network by a <a href=\"/en/wiki/stock-link\">Stock Link</a> no longer waits for redstone: it packs the items ordered from a <a href=\"/en/wiki/stock-ticker\">Stock Ticker</a> or a <a href=\"/en/wiki/redstone-requester\">Redstone Requester</a> on its own, with the requested address. It is the link that turns an ordinary chest into a warehouse you can browse from anywhere.</p>"
+      },
+      {
+        "id": "conseil",
+        "title": "Getting started",
+        "html": "<p>For a first try you only need a chest, a Packager, a lever and a belt leading to a second Packager against another chest. Once you understand that trip, the rest of the package network is only a matter of distance and addresses: chains for longer hops, trains for the far side of the map, and Stock Links to order from anywhere.</p>"
+      },
+      {
+        "id": "images",
+        "title": "What our loops show",
+        "html": "<p>Our loops draw packages as the \"cardboard package\" item on belts and on the Packager's tray, following its in-game animation. Address text does not appear, and sorting by address is only shown as stills.</p>"
+      }
+    ],
+    "sources": [
+      "Packages: PackageItem.SLOTS = 9; address: PackageItem.addAddress / matchAddress (\"*\" and Glob wildcards)",
+      "Packager: PackagerBlockEntity (activate on a redstone pulse, attemptToSend, unwrapBox, updateSignAddress: attached sign), tray animation getTrayOffset, CYCLE = 20 ticks",
+      "Recipe: crafting/logistics/packager.json",
+      "Scenes: PackagerScenes.packager (two partial loops: packages drawn as the \"cardboard package\" item), packagerAddress (stills)"
+    ]
+  }
+}
