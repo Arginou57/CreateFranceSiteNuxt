@@ -1,7 +1,7 @@
 <template>
   <section id="serveur" class="serveur-section">
-    <h2 class="section-title">Le Serveur</h2>
-    <p class="section-subtitle">Un univers de creativite infinie propulse par le mod Create</p>
+    <h2 class="section-title">Le serveur Create</h2>
+    <p class="section-subtitle">Un univers de créativité infinie propulsé par le mod Create</p>
     <div class="features-grid">
       <div v-for="feature in features" :key="feature.title" class="feature-card">
         <div class="feature-icon">
@@ -19,15 +19,15 @@ const features = [
   {
     title: 'Construisez',
     icon: '/images/icon-construisez.png',
-    description: 'Machines complexes, systemes automatises et structures spectaculaires.',
+    description: 'Machines complexes, systèmes automatisés et structures spectaculaires.',
   },
   {
     title: 'Explorez',
     icon: '/images/icon-explorez.png',
-    description: 'Decouvrez de nouveaux mondes et trouvez des ressources rares.',
+    description: 'Découvrez de nouveaux mondes et trouvez des ressources rares.',
   },
   {
-    title: 'Communaute',
+    title: 'Communauté',
     icon: '/images/icon-communaute.png',
     description: 'Participez aux events et collaborez sur des projets ambitieux.',
   },

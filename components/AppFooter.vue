@@ -3,7 +3,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-logo"><span class="footer-gear">&#9881;</span> Create France</div>
-        <p>Un serveur communautaire propulse par la passion et les engrenages.</p>
+        <p>Un serveur communautaire propulsé par la passion et les engrenages.</p>
         <a
           href="https://topmoddedservers.com/serveur/create-france/vote"
           target="_blank"
@@ -34,7 +34,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; {{ currentYear }} Create France Serveur &mdash; Non affilie a Mojang AB</p>
+      <p>&copy; {{ currentYear }} Create France Serveur &mdash; Non affilié à Mojang AB</p>
     </div>
   </footer>
 </template>

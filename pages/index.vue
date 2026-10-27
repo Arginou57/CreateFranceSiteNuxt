@@ -4,5 +4,6 @@
     <ServerFeatures />
     <GallerySection />
     <GradesSection />
+    <ServerFaq />
   </div>
 </template>

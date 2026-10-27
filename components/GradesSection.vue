@@ -1,7 +1,7 @@
 <template>
   <section id="grades" class="grades-section">
     <h2 class="section-title">Soutenir le Serveur</h2>
-    <p class="section-subtitle">Choisissez votre grade et aidez-nous a faire tourner les engrenages !</p>
+    <p class="section-subtitle">Choisissez votre grade et aidez-nous à faire tourner les engrenages !</p>
     <div class="donate-notice">
       <span class="notice-icon">&#9888;</span>
       <span>Avant de vous abonner, merci d'envoyer un message à <strong>arginou#9106</strong> sur Discord afin de recevoir votre grade.</span>
@@ -29,9 +29,9 @@ const grades = [
     perks: [
       'Grade en jeu [Mecene]',
       '1 home',
-      '/tpa - Se teleporter aux joueurs',
+      '/tpa - Se téléporter aux joueurs',
       '/spawn - Retourner au spawn',
-      '/hdv - Hotel des ventes a distance',
+      '/hdv - Hôtel des ventes à distance',
     ],
   },
   {
@@ -46,10 +46,10 @@ const grades = [
     perks: [
       'Grade en jeu [Bienfaiteur]',
       '3 homes',
-      '/tpa - Se teleporter aux joueurs',
-      '/tpahere - Teleporter un joueur a soi',
+      '/tpa - Se téléporter aux joueurs',
+      '/tpahere - Téléporter un joueur à soi',
       '/spawn - Retourner au spawn',
-      '/hdv - Hotel des ventes a distance',
+      '/hdv - Hôtel des ventes à distance',
     ],
   },
   {
@@ -65,8 +65,8 @@ const grades = [
       'Grade en jeu [Patron]',
       '5 homes',
       '/spawn - Retourner au spawn',
-      '/hdv - Hotel des ventes a distance',
-      'Acces anticipe aux events',
+      '/hdv - Hôtel des ventes à distance',
+      'Accès anticipé aux events',
     ],
   },
 ]
