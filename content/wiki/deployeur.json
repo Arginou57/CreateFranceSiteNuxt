@@ -157,7 +157,8 @@
     "roulement-mecanique",
     "controles-de-machine",
     "piston-mecanique",
-    "recolteur-mecanique"
+    "recolteur-mecanique",
+    "horloges-et-impulsions"
   ],
   "sources": [
     "Stress : AllBlocks.java, DEPLOYER, CStress.setImpact(4.0)",

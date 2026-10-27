@@ -1,0 +1,280 @@
+{
+  "slug": "contact-de-redstone",
+  "name": "Contact de redstone",
+  "blockId": "create:redstone_contact",
+  "category": "redstone",
+  "title": "Contact de redstone — Create : guide en français",
+  "description": "Le contact de redstone de Create : deux contacts face à face donnent un signal, même sur une contraption en mouvement. Ascenseurs, fins de course.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>contact de redstone</strong> marche par paire : quand deux contacts se regardent, chacun émet un signal de redstone. Le vrai intérêt, c'est qu'un contact peut <strong>voyager sur une contraption</strong> : à chaque fois qu'il passe devant son partenaire fixe, celui-ci donne une impulsion. On en fait des fins de course, des détecteurs de passage et les étages d'un <a href=\"/wiki/poulie-d-ascenseur\">ascenseur</a>.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Redstone"
+    },
+    {
+      "label": "Signal",
+      "value": "Puissance 15 vers tous les côtés, sauf le bloc qu’il regarde"
+    },
+    {
+      "label": "Condition",
+      "value": "Deux contacts face à face (chacun tourné vers l’autre)"
+    },
+    {
+      "label": "Sur contraption",
+      "value": "Le contact fixe s’allume au passage du contact mobile"
+    },
+    {
+      "label": "Zone active",
+      "value": "0,65 bloc devant le contact mobile"
+    },
+    {
+      "label": "Coupure",
+      "value": "Un tick après le départ du contact mobile"
+    },
+    {
+      "label": "Ascenseur",
+      "value": "Une clé le change en contact d’ascenseur sous une poulie d’ascenseur"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (2 contacts)",
+    "grid": [
+      [
+        null,
+        "Plaque de fer",
+        null
+      ],
+      [
+        "Pierre",
+        "Poudre de redstone",
+        "Pierre"
+      ],
+      [
+        "Pierre",
+        "Pierre",
+        "Pierre"
+      ]
+    ],
+    "result": "2 contacts de redstone"
+  },
+  "videos": [
+    {
+      "id": "redstone_contact",
+      "name": "Contact de redstone : fixe et en mouvement",
+      "description": "Deux contacts posés l'un sur l'autre allument un fil ; puis l'un d'eux part sur une structure qui tourne sur un roulement et redonne une impulsion à chaque tour.",
+      "duration": "PT21S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "face-a-face",
+      "title": "Deux contacts qui se regardent",
+      "image": "redstone_contact_face-a-face.webp",
+      "alt": "Deux contacts face à face allument un fil",
+      "video": "redstone_contact",
+      "html": "<p>Pose deux contacts <strong>face contre face</strong> : ils s'allument tous les deux et alimentent ce qui les touche, ici un fil de redstone. Le contact n'alimente pas le bloc qu'il regarde, seulement ses autres côtés. Il ne transporte pas non plus le signal à travers les blocs.</p>"
+    },
+    {
+      "id": "placer",
+      "title": "Poser un contact",
+      "html": "<p>Le contact regarde vers le joueur qui le pose. Accroupi, il se tourne vers le bloc cliqué. Posé contre un autre contact, il se tourne tout seul pour lui faire face. La clé le fait pivoter ensuite si besoin.</p>"
+    },
+    {
+      "id": "alimente",
+      "title": "Ce qu'il alimente",
+      "html": "<p>Un contact allumé alimente ses voisins comme une source faible : un fil, une lampe, une porte, un piston collé contre lui. Il ne rend pas conducteur le bloc qui le porte. Pour aller plus loin, pose un fil ou une <a href=\"/wiki/liaison-de-redstone\">liaison de redstone</a> juste à côté. Une porte en fer peut ainsi s'ouvrir au passage d'un wagonnet ou d'une cabine, puis se refermer derrière.</p>"
+    },
+    {
+      "id": "contraption",
+      "title": "Un contact sur une contraption",
+      "image": "redstone_contact_contraption.webp",
+      "alt": "Le contact mobile passe au-dessus du contact fixe",
+      "html": "<p>Le contact du haut est maintenant fixé à une structure qui tourne sur un <a href=\"/wiki/roulement-mecanique\">roulement</a>. À chaque tour, il passe au-dessus du contact fixe : celui-ci <strong>s'allume au passage</strong>, puis s'éteint un tick après. Notre simulation suit la vraie position du contact mobile : l'impulsion dure le temps où sa zone active est au-dessus du bloc.</p>"
+    },
+    {
+      "id": "impulsion",
+      "title": "Une impulsion courte",
+      "html": "<p>Dans la boucle, la structure fait un tour en environ 3,6 secondes et le contact fixe ne reste allumé que trois dixièmes de seconde par tour. Plus la contraption va vite, plus l'impulsion raccourcit : à grande vitesse, elle peut ne durer qu'un tick.</p>"
+    },
+    {
+      "id": "ascenseur",
+      "title": "Pour l'ascenseur",
+      "html": "<p>Sous une <a href=\"/wiki/poulie-d-ascenseur\">poulie d'ascenseur</a>, un clic de clé sur un contact posé sur le côté de la cage le transforme en <strong>contact d'ascenseur</strong> : chaque étage a le sien, et la cabine s'y arrête. Hors d'un ascenseur, le contact reste un contact simple.</p>"
+    },
+    {
+      "id": "montages",
+      "title": "Idées de montages",
+      "html": "<p>Une <strong>fin de course</strong> : un contact sur un <a href=\"/wiki/piston-mecanique\">piston</a> ou un portique, un autre au bout du trajet, branché sur un <a href=\"/wiki/inverseur-de-rotation\">inverseur</a> pour repartir dans l'autre sens. Un <strong>compteur de tours</strong> pour une grande roue. Sur un <a href=\"/wiki/assembleur-de-wagonnet\">wagonnet assemblé</a>, un contact qui déclenche une gare de chargement.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Les deux contacts doivent vraiment se regarder : un contact tourné vers le côté ne détecte rien. Le contact mobile doit passer <strong>juste devant</strong> le fixe, à moins d'un bloc. Et une contraption trop rapide ne laisse qu'une impulsion très courte : un <a href=\"/wiki/horloges-et-impulsions\">extenseur d'impulsions</a> la rallonge.</p>"
+    },
+    {
+      "id": "boucle",
+      "title": "Ce que montre la boucle",
+      "html": "<p>La boucle garde trois tours sur les cinq de la scène. Le contact du haut est sur la contraption : notre simulation suit sa vraie position et allume le contact fixe pendant les quelques degrés où il passe au-dessus, puis l'éteint un tick après.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur notre serveur",
+      "html": "<p>Sur Create France, les contacts servent surtout aux ascenseurs des grandes bases et aux portes de garage à pistons. Une paire suffit par étage.</p>"
+    }
+  ],
+  "related": [
+    "poulie-d-ascenseur",
+    "assembleur-de-wagonnet",
+    "roulement-mecanique",
+    "piston-mecanique",
+    "horloges-et-impulsions",
+    "inverseur-de-rotation"
+  ],
+  "sources": [
+    "Recette : crafting/logistics/redstone_contact.json (2 contacts)",
+    "Signal : RedstoneContactBlock.getSignal (15 sauf vers FACING), hasValidContact, updateShape / tick",
+    "Sur contraption : ContactMovementBehaviour (getActiveAreaOffset 0,65 ; visitNewPosition ; extinction au tick suivant)",
+    "Ascenseur : RedstoneContactBlock.onWrenched (ElevatorColumn -> contact d’ascenseur)",
+    "Simulation : WIKI/redstone_sim.py (signaux, délais, liaisons, verrous et vitesses recalculés tick par tick d'après le code de Create et de Minecraft ; seules les actions du joueur viennent de la scène)",
+    "Scène : RedstoneScenes.contact (3 tours gardés sur 5)"
+  ],
+  "en": {
+    "slugEn": "redstone-contact",
+    "name": "Redstone Contact",
+    "title": "Redstone Contact — Create mod guide",
+    "description": "The Create Redstone Contact: two contacts facing each other give a signal, even when one rides a moving contraption. Lifts, end stops and lap counters.",
+    "intro": "The <strong>Redstone Contact</strong> works in pairs: when two contacts face each other, each one gives off a redstone signal. The real trick is that a contact can <strong>ride on a contraption</strong>: every time it passes in front of its fixed partner, that one fires a pulse. They make end stops, pass detectors and the floors of an <a href=\"/en/wiki/elevator-pulley\">elevator</a>.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Redstone"
+      },
+      {
+        "label": "Signal",
+        "value": "Strength 15 to every side except the block it faces"
+      },
+      {
+        "label": "Condition",
+        "value": "Two contacts face to face (each one turned toward the other)"
+      },
+      {
+        "label": "On a contraption",
+        "value": "The fixed contact lights up as the moving one goes by"
+      },
+      {
+        "label": "Active area",
+        "value": "0.65 blocks in front of the moving contact"
+      },
+      {
+        "label": "Cut-off",
+        "value": "One tick after the moving contact leaves"
+      },
+      {
+        "label": "Elevator",
+        "value": "A Wrench turns it into an Elevator Contact under an Elevator Pulley"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (2 contacts)",
+      "grid": [
+        [
+          null,
+          "Iron Sheet",
+          null
+        ],
+        [
+          "Cobblestone",
+          "Redstone Dust",
+          "Cobblestone"
+        ],
+        [
+          "Cobblestone",
+          "Cobblestone",
+          "Cobblestone"
+        ]
+      ],
+      "result": "2 Redstone Contacts"
+    },
+    "videos": [
+      {
+        "id": "redstone_contact",
+        "name": "Redstone Contact: fixed and moving",
+        "description": "Two contacts stacked on each other light some dust; then one of them leaves on a structure spinning on a bearing and fires a pulse again on every lap."
+      }
+    ],
+    "sections": [
+      {
+        "id": "face-a-face",
+        "title": "Two contacts facing each other",
+        "alt": "Two facing contacts light some dust",
+        "html": "<p>Place two contacts <strong>face to face</strong>: both light up and power whatever touches them, here some redstone dust. A contact does not power the block it faces, only its other sides. It does not carry the signal through blocks either.</p>"
+      },
+      {
+        "id": "placer",
+        "title": "Placing a contact",
+        "html": "<p>A contact faces the player placing it. While sneaking, it turns toward the block you click. Placed against another contact, it turns by itself to face it. The Wrench can rotate it afterwards if needed.</p>"
+      },
+      {
+        "id": "alimente",
+        "title": "What it powers",
+        "html": "<p>A lit contact powers its neighbours like a weak source: dust, a lamp, a door, a piston pressed against it. It does not power the block it sits on through. To carry the signal further, place dust or a <a href=\"/en/wiki/redstone-link\">Redstone Link</a> right next to it. An iron door can open that way as a minecart or a cabin rolls past, and close again right behind it.</p>"
+      },
+      {
+        "id": "contraption",
+        "title": "A contact on a contraption",
+        "alt": "The moving contact passes over the fixed one",
+        "html": "<p>The top contact is now fixed to a structure spinning on a <a href=\"/en/wiki/mechanical-bearing\">bearing</a>. On every lap it passes over the fixed contact, which <strong>lights up as it goes by</strong> and switches off one tick later. Our simulation follows the moving contact's real position: the pulse lasts as long as its active area is over the block.</p>"
+      },
+      {
+        "id": "impulsion",
+        "title": "A short pulse",
+        "html": "<p>In the loop the structure turns once in about 3.6 seconds, and the fixed contact only stays lit for three tenths of a second per lap. The faster the contraption, the shorter the pulse: at high speed it may last a single tick.</p>"
+      },
+      {
+        "id": "ascenseur",
+        "title": "For elevators",
+        "html": "<p>Under an <a href=\"/en/wiki/elevator-pulley\">Elevator Pulley</a>, a Wrench click on a contact placed on the side of the shaft turns it into an <strong>Elevator Contact</strong>: each floor gets one and the cabin stops there. Outside an elevator, the contact stays a plain contact.</p>"
+      },
+      {
+        "id": "montages",
+        "title": "Build ideas",
+        "html": "<p>An <strong>end stop</strong>: one contact on a <a href=\"/en/wiki/mechanical-piston\">piston</a> or a gantry, another at the end of the track, wired to a <a href=\"/en/wiki/gearshift\">Gearshift</a> to head back the other way. A <strong>lap counter</strong> for a big wheel. On an <a href=\"/en/wiki/cart-assembler\">assembled minecart</a>, a contact that triggers a loading station.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>The two contacts must really face each other: a contact turned sideways detects nothing. The moving contact has to pass <strong>right in front</strong> of the fixed one, less than a block away. And a very fast contraption only leaves a very short pulse: a <a href=\"/en/wiki/pulse-repeater-extender-timer\">Pulse Extender</a> stretches it.</p>"
+      },
+      {
+        "id": "boucle",
+        "title": "What the loop shows",
+        "html": "<p>The loop keeps three laps out of the scene's five. The top contact rides the contraption: our simulation follows its real position, lights the fixed contact for the few degrees it spends above it, then switches it off one tick later. The bearing's turns themselves come from the scene.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On our server",
+        "html": "<p>On Create France, contacts are mostly used for the elevators of big bases and for piston garage doors. One pair per floor is enough.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/logistics/redstone_contact.json (2 contacts)",
+      "Signal: RedstoneContactBlock.getSignal (15 except toward FACING), hasValidContact, updateShape / tick",
+      "On a contraption: ContactMovementBehaviour (getActiveAreaOffset 0.65; visitNewPosition; switched off on the next tick)",
+      "Elevator: RedstoneContactBlock.onWrenched (ElevatorColumn -> Elevator Contact)",
+      "Simulation: WIKI/redstone_sim.py (signals, delays, links, latches and speeds recomputed tick by tick from Create's and Minecraft's code; only the player's actions come from the scene)",
+      "Scene: RedstoneScenes.contact (3 laps kept out of 5)"
+    ]
+  }
+}

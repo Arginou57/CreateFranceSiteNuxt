@@ -146,7 +146,9 @@
     "rotor",
     "boite-a-roues-dentees",
     "roue-a-eau",
-    "stressometre-compteur-de-vitesse"
+    "stressometre-compteur-de-vitesse",
+    "controleur-de-vitesse-de-rotation",
+    "chaine-de-transmission"
   ],
   "sources": [
     "Rapports de vitesse : RotationPropagator.getRotationSpeedModifier (petite ↔ petite : -1 ; grande -> petite : -2 ; petite -> grande : -0,5 ; grande ↔ grande perpendiculaires)",

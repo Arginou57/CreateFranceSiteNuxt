@@ -114,7 +114,9 @@
     "stressometre-compteur-de-vitesse",
     "tapis-roulant",
     "pompe-mecanique",
-    "chariot-de-portique"
+    "chariot-de-portique",
+    "inverseur-de-rotation",
+    "chaine-de-transmission"
   ],
   "sources": [
     "Stress : AllBlocks.java, SHAFT, CStress.setNoImpact()",

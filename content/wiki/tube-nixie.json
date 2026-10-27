@@ -1,0 +1,324 @@
+{
+  "slug": "tube-nixie",
+  "name": "Tube Nixie et levier analogique",
+  "blockId": "create:nixie_tube",
+  "category": "redstone",
+  "title": "Tube Nixie et levier analogique — Create : guide",
+  "description": "Tube Nixie et levier analogique de Create : afficher une puissance de 00 à 15 ou un texte, changer la couleur, régler un signal au cran près.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>tube Nixie</strong> affiche la puissance de redstone qu'il reçoit, de <strong>00 à 15</strong>, en chiffres lumineux. Avec un presse-papiers écrit, il affiche du <strong>texte</strong>, réparti sur toute une rangée de tubes. Le <strong>levier analogique</strong> est son compagnon idéal : un levier qui donne la puissance que tu veux, au cran près.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Redstone"
+    },
+    {
+      "label": "Affichage",
+      "value": "Puissance reçue : premier chiffre 0 ou 1, second l’unité"
+    },
+    {
+      "label": "Texte",
+      "value": "Presse-papiers écrit ou nom d’étiquette : 2 caractères par bloc, sur toute la rangée"
+    },
+    {
+      "label": "Couleur",
+      "value": "Un clic avec un colorant change toute la rangée (16 couleurs)"
+    },
+    {
+      "label": "Levier analogique",
+      "value": "Puissance 0 à 15 : clic droit +1, accroupi −1"
+    },
+    {
+      "label": "Délai du levier",
+      "value": "Le signal suit 15 ticks après le dernier cran"
+    },
+    {
+      "label": "Levier à l’établi",
+      "value": "Bâton au-dessus d’un boîtier d’andésite"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Tubes Nixie à l'établi (sans forme)",
+    "grid": [
+      [
+        "Tube électronique",
+        "Tube électronique",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "4 tubes Nixie"
+  },
+  "videos": [
+    {
+      "id": "nixie_tube",
+      "name": "Tube Nixie : chiffres, texte et couleur",
+      "description": "Un levier analogique réglé sur 11 fait afficher 11 au tube ; puis une rangée de trois tubes affiche un mot, et un colorant bleu change leur couleur.",
+      "duration": "PT20S"
+    },
+    {
+      "id": "analog_lever",
+      "name": "Levier analogique : un signal au cran près",
+      "description": "Un levier analogique posé sur un boîtier alimente une longue boucle de fil : plus il monte, plus le fil s'allume loin, jusqu'à la lampe du bout à 15.",
+      "duration": "PT21S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "puissance",
+      "title": "Afficher une puissance",
+      "image": "nixie_tube_puissance.webp",
+      "alt": "Le tube Nixie affiche 11",
+      "video": "nixie_tube",
+      "html": "<p>Un tube qui reçoit un signal l'affiche en <strong>deux chiffres</strong> : 00 à 15. Ici, le levier analogique réglé sur 11 alimente le fil, et le tube montre 11 une fois le signal arrivé. Seul le tube qui touche le fil le reçoit : chaque bloc lit sa propre puissance.</p>"
+    },
+    {
+      "id": "texte",
+      "title": "Afficher du texte",
+      "image": "nixie_tube_texte.webp",
+      "alt": "Une rangée de tubes affiche un mot",
+      "html": "<p>Un clic droit avec un <strong>presse-papiers écrit</strong>, ou une étiquette renommée, affiche son texte sur <strong>toute la rangée</strong> de tubes, deux caractères par bloc. Notre boucle dessine la police du jeu, avec la lueur de chaque chiffre ; le mot affiché est un exemple.</p>"
+    },
+    {
+      "id": "couleur",
+      "title": "Changer la couleur",
+      "image": "nixie_tube_couleur.webp",
+      "alt": "Tubes Nixie teints en bleu",
+      "html": "<p>Un clic avec un <strong>colorant</strong> teint toute la rangée : orange par défaut, ici bleu. Le texte reste en place, seul l'éclat change.</p>"
+    },
+    {
+      "id": "placer",
+      "title": "Poser des tubes",
+      "html": "<p>Les tubes se posent au sol, au plafond ou au mur. Une <strong>rangée</strong>, c'est une suite de tubes de même couleur et de même orientation, côte à côte : le texte s'y répartit de gauche à droite. Un tube Nixie posé sur un <a href=\"/wiki/signal-de-train\">signal de train</a> affiche ses feux.</p>"
+    },
+    {
+      "id": "mesurer",
+      "title": "Afficher une mesure",
+      "html": "<p>Un comparateur contre un coffre, un réservoir ou un <a href=\"/wiki/inverseur-de-rotation-sequence\">inverseur séquencé</a> donne une puissance liée à son contenu ou à son étape : branché sur un tube, il l'affiche directement. Deux tubes voisins lisent chacun leur propre signal. Pratique pour un compteur de stock à l'entrée d'un entrepôt.</p>"
+    },
+    {
+      "id": "levier",
+      "title": "Le levier analogique",
+      "image": "analog_lever_levier.webp",
+      "alt": "Levier analogique posé sur un boîtier",
+      "video": "analog_lever",
+      "html": "<p>Le <strong>levier analogique</strong> se pose sur un bloc et alimente fortement ce bloc, avec la puissance choisie. Son voyant passe du rouge sombre au rouge vif à mesure qu'il monte.</p>"
+    },
+    {
+      "id": "augmenter",
+      "title": "Monter la puissance",
+      "image": "analog_lever_augmenter.webp",
+      "alt": "Le fil s’allume sur sept blocs",
+      "html": "<p>Chaque <strong>clic droit</strong> ajoute 1, jusqu'à 15. Le signal ne suit pas tout de suite : les voisins sont prévenus <strong>15 ticks après le dernier cran</strong>. Dans la boucle, le fil s'allume d'un coup à la valeur finale, puis décroît d'un point par bloc.</p>"
+    },
+    {
+      "id": "diminuer",
+      "title": "Et la redescendre",
+      "image": "analog_lever_diminuer.webp",
+      "alt": "Signal remonté jusqu’à la lampe",
+      "html": "<p>Accroupi, le clic retire 1. À 15, le signal fait toute la boucle et allume la lampe du bout, à quinze blocs du levier.</p>"
+    },
+    {
+      "id": "montages",
+      "title": "Idées de montages",
+      "html": "<p>Un <strong>panneau de contrôle</strong> : un tube Nixie derrière un <a href=\"/wiki/detecteur-de-seuil\">détecteur de seuil</a> ou un comparateur sur un coffre. L'étape en cours d'un <a href=\"/wiki/inverseur-de-rotation-sequence\">inverseur séquencé</a>. Un levier analogique pour doser une <a href=\"/wiki/chaine-de-transmission\">chaîne ajustable</a>. Pour du texte qui change tout seul, vois la <a href=\"/wiki/liaison-d-affichage\">liaison d'affichage</a>.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Un tube qui affiche un texte ne réagit plus à la redstone : un clic à main nue le remet en mode chiffres. Le levier analogique ne se lit pas comme un levier normal sur un fil long : la puissance baisse d'un point par bloc de fil.</p>"
+    },
+    {
+      "id": "boucle",
+      "title": "Ce que montrent les boucles",
+      "html": "<p>Le verre des tubes n'est pas dessiné : notre moteur n'a pas encore de transparence, et le verre cachait les chiffres. On les voit donc posés sur le socle. Le levier analogique, sa poignée et son voyant sont dessinés d'après le rendu du jeu.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur notre serveur",
+      "html": "<p>Sur Create France, les tubes Nixie servent de panneaux de gare, de compteurs de stock et d'enseignes de boutique.</p>"
+    }
+  ],
+  "related": [
+    "liaison-d-affichage",
+    "detecteur-de-seuil",
+    "inverseur-de-rotation-sequence",
+    "chaine-de-transmission",
+    "lampe-a-quartz-rose",
+    "signal-de-train"
+  ],
+  "sources": [
+    "Recettes : crafting/kinetics/nixie_tube.json (4 tubes), analog_lever.json",
+    "Affichage : NixieTubeBlockEntity.updateDisplayedStrings (« 0 » ou « 1 » + unité, texte 2 caractères par tube), NixieTubeBlock.getPower / walkNixies",
+    "Rendu : NixieTubeRenderer.drawTube (police ascii, échelle 1/20, couleurs DyeHelper)",
+    "Levier analogique : AnalogLeverBlockEntity.changeState (lastChange = 15 ticks), AnalogLeverRenderer (angle état / 15 × 90°, voyant 0x2C0300 -> 0xCD0000)",
+    "Simulation : WIKI/redstone_sim.py (signaux, délais, liaisons, verrous et vitesses recalculés tick par tick d'après le code de Create et de Minecraft ; seules les actions du joueur viennent de la scène)",
+    "Scènes : RedstoneScenes.nixieTube, analogLever (verre des tubes non dessiné ; texte d'exemple choisi par nous ; perroquet absent)"
+  ],
+  "en": {
+    "slugEn": "nixie-tube",
+    "name": "Nixie Tube and Analog Lever",
+    "title": "Nixie Tube and Analog Lever — Create mod guide",
+    "description": "The Create Nixie Tube and Analog Lever: show a redstone strength from 00 to 15 or some text, change the colour, and set a signal to the exact level.",
+    "intro": "The <strong>Nixie Tube</strong> shows the redstone strength it receives, from <strong>00 to 15</strong>, in glowing digits. With a written Clipboard it shows <strong>text</strong>, spread over a whole row of tubes. The <strong>Analog Lever</strong> is its ideal partner: a lever that gives exactly the strength you want.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Redstone"
+      },
+      {
+        "label": "Display",
+        "value": "Strength received: first digit 0 or 1, second the units"
+      },
+      {
+        "label": "Text",
+        "value": "Written Clipboard or name tag: 2 characters per block, across the row"
+      },
+      {
+        "label": "Colour",
+        "value": "A click with a dye recolours the whole row (16 colours)"
+      },
+      {
+        "label": "Analog Lever",
+        "value": "Strength 0 to 15: right-click +1, sneak −1"
+      },
+      {
+        "label": "Lever delay",
+        "value": "The signal follows 15 ticks after the last click"
+      },
+      {
+        "label": "Lever recipe",
+        "value": "Stick on top of Andesite Casing"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Nixie Tube recipe (shapeless)",
+      "grid": [
+        [
+          "Electron Tube",
+          "Electron Tube",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "4 Nixie Tubes"
+    },
+    "videos": [
+      {
+        "id": "nixie_tube",
+        "name": "Nixie Tube: digits, text and colour",
+        "description": "An Analog Lever set to 11 makes the tube show 11; then a row of three tubes shows a word, and a blue dye changes their colour."
+      },
+      {
+        "id": "analog_lever",
+        "name": "Analog Lever: a signal to the exact level",
+        "description": "An Analog Lever on a casing powers a long loop of dust: the higher it goes, the further the dust lights up, until the lamp at the end at 15."
+      }
+    ],
+    "sections": [
+      {
+        "id": "puissance",
+        "title": "Showing a strength",
+        "alt": "The Nixie Tube shows 11",
+        "html": "<p>A tube that receives a signal shows it as <strong>two digits</strong>: 00 to 15. Here the Analog Lever set to 11 powers the dust, and the tube shows 11 once the signal arrives. Only the tube touching the dust gets it: each block reads its own strength.</p>"
+      },
+      {
+        "id": "texte",
+        "title": "Showing text",
+        "alt": "A row of tubes shows a word",
+        "html": "<p>A right-click with a <strong>written Clipboard</strong>, or a renamed name tag, shows its text across <strong>the whole row</strong> of tubes, two characters per block. Our loop draws the game's font, with the glow of each character; the word shown is just an example.</p>"
+      },
+      {
+        "id": "couleur",
+        "title": "Changing the colour",
+        "alt": "Nixie Tubes dyed blue",
+        "html": "<p>A click with a <strong>dye</strong> colours the whole row: orange by default, blue here. The text stays, only the glow changes.</p>"
+      },
+      {
+        "id": "placer",
+        "title": "Placing tubes",
+        "html": "<p>Tubes go on the floor, the ceiling or a wall. A <strong>row</strong> is a line of tubes of the same colour and facing, side by side: text is spread over it from left to right. A Nixie Tube placed on a <a href=\"/en/wiki/train-signal\">Train Signal</a> shows its lights.</p>"
+      },
+      {
+        "id": "mesurer",
+        "title": "Showing a reading",
+        "html": "<p>A comparator against a chest, a tank or a <a href=\"/en/wiki/sequenced-gearshift\">Sequenced Gearshift</a> gives a strength tied to its contents or its step: wired to a tube, it shows that number directly. Two neighbouring tubes each read their own signal. Handy for a stock counter at the entrance of a warehouse, or a fuel gauge next to a boiler.</p>"
+      },
+      {
+        "id": "levier",
+        "title": "The Analog Lever",
+        "alt": "Analog Lever on a casing",
+        "html": "<p>The <strong>Analog Lever</strong> sits on a block and strongly powers that block with the chosen strength. Its indicator goes from dark red to bright red as it rises.</p>"
+      },
+      {
+        "id": "augmenter",
+        "title": "Raising the strength",
+        "alt": "The dust lights up over seven blocks",
+        "html": "<p>Each <strong>right-click</strong> adds 1, up to 15. The signal does not follow straight away: neighbours are told <strong>15 ticks after the last click</strong>. In the loop the dust lights up at once at the final value, then fades by one per block.</p>"
+      },
+      {
+        "id": "diminuer",
+        "title": "And lowering it",
+        "alt": "Signal raised all the way to the lamp",
+        "html": "<p>While sneaking, a click takes 1 off. At 15 the signal runs all around the loop and lights the lamp at the end, fifteen blocks from the lever.</p>"
+      },
+      {
+        "id": "montages",
+        "title": "Build ideas",
+        "html": "<p>A <strong>control panel</strong>: a Nixie Tube behind a <a href=\"/en/wiki/threshold-switch\">Threshold Switch</a> or a comparator on a chest. The running step of a <a href=\"/en/wiki/sequenced-gearshift\">Sequenced Gearshift</a>. An Analog Lever to fine-tune an <a href=\"/en/wiki/encased-chain-drive\">Adjustable Chain Gearshift</a>. For text that updates by itself, see the <a href=\"/en/wiki/display-link\">Display Link</a>.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>A tube showing text no longer reacts to redstone: a bare-hand click puts it back in digit mode. The Analog Lever loses strength along long dust like any source: one point per block of dust.</p>"
+      },
+      {
+        "id": "boucle",
+        "title": "What the loops show",
+        "html": "<p>The glass of the tubes is not drawn: our engine has no transparency yet, and the glass hid the digits. So you see them standing on the base. The Analog Lever, its handle and its indicator are drawn after the game's own renderer. The colour of each digit comes from the dye of its tube.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On our server",
+        "html": "<p>On Create France, Nixie Tubes are used as station boards, stock counters and shop signs. A dyed row in your base colours looks great.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: crafting/kinetics/nixie_tube.json (4 tubes), analog_lever.json",
+      "Display: NixieTubeBlockEntity.updateDisplayedStrings (\"0\" or \"1\" + units, text 2 characters per tube), NixieTubeBlock.getPower / walkNixies",
+      "Rendering: NixieTubeRenderer.drawTube (ascii font, scale 1/20, DyeHelper colours)",
+      "Analog Lever: AnalogLeverBlockEntity.changeState (lastChange = 15 ticks), AnalogLeverRenderer (angle state / 15 × 90°, indicator 0x2C0300 -> 0xCD0000)",
+      "Simulation: WIKI/redstone_sim.py (signals, delays, links, latches and speeds recomputed tick by tick from Create's and Minecraft's code; only the player's actions come from the scene)",
+      "Scenes: RedstoneScenes.nixieTube, analogLever (tube glass not drawn; example text chosen by us; parrot left out)"
+    ]
+  }
+}

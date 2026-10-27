@@ -207,7 +207,8 @@
     "perceuse-mecanique",
     "assembler-un-train",
     "rail-de-train",
-    "controles-de-machine"
+    "controles-de-machine",
+    "contact-de-redstone"
   ],
   "sources": [
     "Recettes : crafting/kinetics/cart_assembler.json, controller_rail.json",

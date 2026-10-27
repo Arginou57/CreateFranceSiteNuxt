@@ -172,7 +172,9 @@
     "chassis-lineaire",
     "poulie-a-corde",
     "roulement-mecanique",
-    "deployeur"
+    "deployeur",
+    "inverseur-de-rotation",
+    "inverseur-de-rotation-sequence"
   ],
   "sources": [
     "Recettes : crafting/kinetics/mechanical_piston.json, sticky_mechanical_piston.json, piston_extension_pole.json (8 barres)",

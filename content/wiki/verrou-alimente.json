@@ -1,0 +1,320 @@
+{
+  "slug": "verrou-alimente",
+  "name": "Verrou alimenté et verrou alimenté à bascule",
+  "blockId": "create:powered_latch",
+  "category": "redstone",
+  "title": "Verrou alimenté — Create : guide en français",
+  "description": "Verrou alimenté et verrou à bascule de Create : des leviers commandés par la redstone, pour garder un état après une simple impulsion.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Un <strong>verrou alimenté</strong> est un levier qu'on actionne <strong>avec de la redstone</strong>. Une impulsion par l'arrière l'allume, une impulsion sur le côté l'éteint, et il garde son état entre les deux. Son cousin, un <strong>verrou alimenté à bascule</strong>, n'a qu'une entrée : chaque impulsion inverse son état. Les deux se manient aussi à la main, d'un clic droit.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Redstone"
+    },
+    {
+      "label": "Sortie",
+      "value": "Puissance 15 par l’avant quand il est allumé"
+    },
+    {
+      "label": "Verrou alimenté",
+      "value": "Arrière = allume, côtés = éteint"
+    },
+    {
+      "label": "Verrou à bascule",
+      "value": "Chaque front montant à l’arrière inverse l’état"
+    },
+    {
+      "label": "Délai",
+      "value": "1 tick"
+    },
+    {
+      "label": "Clic droit",
+      "value": "Inverse à la main (le verrou simple refuse si une seule entrée est active)"
+    },
+    {
+      "label": "Verrou à bascule à l’établi",
+      "value": "Torche de redstone + levier + 3 pierres"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Verrou alimenté à l'établi",
+    "grid": [
+      [
+        null,
+        "Torche de redstone",
+        null
+      ],
+      [
+        "Poudre de redstone",
+        "Levier",
+        "Poudre de redstone"
+      ],
+      [
+        "Pierre",
+        "Pierre",
+        "Pierre"
+      ]
+    ],
+    "result": "1 verrou alimenté"
+  },
+  "videos": [
+    {
+      "id": "powered_latch",
+      "name": "Verrou alimenté : allumer et éteindre",
+      "description": "Un bouton derrière le verrou allume la lampe et elle reste allumée ; un bouton sur le côté l'éteint ; enfin deux clics à la main font la même chose.",
+      "duration": "PT19S"
+    },
+    {
+      "id": "toggle_latch",
+      "name": "Verrou alimenté à bascule",
+      "description": "Un seul bouton derrière le verrou : la première impulsion allume la lampe, la seconde l'éteint, puis le clic à la main inverse encore l'état.",
+      "duration": "PT19S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "levier",
+      "title": "Un levier commandé à distance",
+      "image": "powered_latch_levier.webp",
+      "alt": "Verrou alimenté entre un bouton et une lampe",
+      "video": "powered_latch",
+      "html": "<p>Le verrou se pose comme un répéteur, flèche vers la sortie. Sa sortie avant donne <strong>15</strong> quand il est allumé, comme un levier. La différence : on le manœuvre avec de la redstone, depuis un bouton, une <a href=\"/wiki/liaison-de-redstone\">liaison</a> ou un détecteur.</p>"
+    },
+    {
+      "id": "placer",
+      "title": "Poser le verrou",
+      "html": "<p>Comme un répéteur, le verrou se pose à plat sur un bloc, sa sortie à l'opposé du joueur. Le verrou simple prend ses deux entrées de côté à gauche et à droite ; l'arrière et l'avant restent dans l'axe de la flèche. Il ne réagit pas à un signal qui arrive par l'avant.</p>"
+    },
+    {
+      "id": "arriere",
+      "title": "L'arrière l'allume",
+      "image": "powered_latch_arriere.webp",
+      "alt": "La lampe reste allumée après le bouton",
+      "html": "<p>Une impulsion par l'<strong>arrière</strong> allume le verrou un tick plus tard, et il <strong>reste allumé</strong> une fois le bouton relâché. La lampe en sortie le montre : elle ne s'éteint plus.</p>"
+    },
+    {
+      "id": "cote",
+      "title": "Le côté l’éteint",
+      "image": "powered_latch_cote.webp",
+      "alt": "Le bouton de côté éteint le verrou",
+      "html": "<p>Une impulsion sur un <strong>côté</strong> l'éteint. Si les deux entrées sont actives à la fois, c'est la dernière arrivée qui l'emporte : notre simulation suit la logique du bloc tick par tick.</p>"
+    },
+    {
+      "id": "manuel",
+      "title": "À la main",
+      "image": "powered_latch_manuel.webp",
+      "alt": "Le verrou basculé à la main",
+      "html": "<p>Un clic droit à main nue inverse son état. Le verrou simple refuse ce clic quand une seule de ses entrées est alimentée, pour ne pas contredire le signal.</p>"
+    },
+    {
+      "id": "bascule",
+      "title": "Le verrou à bascule",
+      "image": "toggle_latch_bascule.webp",
+      "alt": "Première impulsion : le verrou à bascule s’allume",
+      "video": "toggle_latch",
+      "html": "<p>Un <strong>verrou alimenté à bascule</strong> n'a qu'une entrée, à l'arrière. Chaque <strong>front montant</strong> inverse son état : un bouton allume, le bouton suivant éteint. Un signal qui dure ne compte qu'une fois.</p>"
+    },
+    {
+      "id": "retour",
+      "title": "Et la deuxième impulsion éteint",
+      "image": "toggle_latch_retour.webp",
+      "alt": "Deuxième impulsion : le verrou s’éteint",
+      "html": "<p>La boucle montre la seconde pression du même bouton : la lampe s'éteint. C'est l'interrupteur va-et-vient de Create, en un seul bloc.</p>"
+    },
+    {
+      "id": "lampe",
+      "title": "Verrou ou lampe à quartz rose ?",
+      "html": "<p>Le verrou garde un seul état, allumé ou éteint. Pour retenir un choix entre plusieurs options, une rangée de <a href=\"/wiki/lampe-a-quartz-rose\">lampes à quartz rose</a> fait le travail de plusieurs verrous d'un coup : une seule reste allumée.</p>"
+    },
+    {
+      "id": "montages",
+      "title": "Idées de montages",
+      "html": "<p>Un <strong>bouton unique</strong> qui ouvre et ferme une porte, avec le verrou à bascule. Un récepteur de <a href=\"/wiki/liaison-de-redstone\">liaison</a> suivi d'un verrou, pour qu'une simple impulsion de la télécommande garde une usine allumée. Un verrou devant un <a href=\"/wiki/inverseur-de-rotation\">embrayage</a> pour arrêter une machine jusqu'au prochain ordre.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Le verrou ne lit que l'arrière et les côtés : un fil branché sur l'avant ne fait rien. Avec une horloge sur l'entrée d'un verrou à bascule, il clignote à moitié de la vitesse de l'horloge : c'est voulu.</p>"
+    },
+    {
+      "id": "boucle",
+      "title": "Ce que montrent les boucles",
+      "html": "<p>Les boutons en pierre restent enfoncés 20 ticks et ceux en bois 30, comme dans le jeu. L'état du verrou, du fil et de la lampe est recalculé tick par tick par notre simulation ; les clics à la main viennent de la scène, le joueur n'est pas dessiné.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur notre serveur",
+      "html": "<p>Sur Create France, le verrou à bascule derrière un bouton est la façon la plus simple de commander une porte de base ou l'éclairage d'une salle, sans levier à côté de chaque entrée. Il suffit d'un bouton de chaque côté de la porte, reliés au même verrou.</p>"
+    }
+  ],
+  "related": [
+    "horloges-et-impulsions",
+    "liaison-de-redstone",
+    "inverseur-de-rotation",
+    "lampe-a-quartz-rose",
+    "observateur-intelligent",
+    "detecteur-de-seuil"
+  ],
+  "sources": [
+    "Recettes : crafting/logistics/powered_latch.json, powered_toggle_latch.json",
+    "Logique : PoweredLatchBlock.tick / isPoweredOnSides / activated, ToggleLatchBlock.tick (front montant) / activated, getDelay (1 tick)",
+    "Simulation : WIKI/redstone_sim.py (signaux, délais, liaisons, verrous et vitesses recalculés tick par tick d'après le code de Create et de Minecraft ; seules les actions du joueur viennent de la scène)",
+    "Scènes : RedstoneScenes.poweredLatch, poweredToggleLatch (boutons en pierre 20 ticks, en bois 30 ; joueur non dessiné)"
+  ],
+  "en": {
+    "slugEn": "powered-latch",
+    "name": "Powered Latch and Powered Toggle Latch",
+    "title": "Powered Latch — Create mod guide",
+    "description": "The Create Powered Latch and Powered Toggle Latch: levers driven by redstone, to keep a state after a single pulse. Inputs, timing and build ideas.",
+    "intro": "A <strong>Powered Latch</strong> is a lever you flip <strong>with redstone</strong>. A pulse into the back turns it on, a pulse on the side turns it off, and it keeps its state in between. The <strong>Powered Toggle Latch</strong> has a single input: each pulse flips its state. Both can also be flipped by hand with a right-click.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Redstone"
+      },
+      {
+        "label": "Output",
+        "value": "Strength 15 out of the front while on"
+      },
+      {
+        "label": "Powered Latch",
+        "value": "Back = on, sides = off"
+      },
+      {
+        "label": "Powered Toggle Latch",
+        "value": "Each rising edge into the back flips the state"
+      },
+      {
+        "label": "Delay",
+        "value": "1 tick"
+      },
+      {
+        "label": "Right-click",
+        "value": "Flips it by hand (the plain latch refuses while only one input is on)"
+      },
+      {
+        "label": "Toggle Latch recipe",
+        "value": "Redstone Torch + Lever + 3 Stone"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Powered Latch recipe",
+      "grid": [
+        [
+          null,
+          "Redstone Torch",
+          null
+        ],
+        [
+          "Redstone Dust",
+          "Lever",
+          "Redstone Dust"
+        ],
+        [
+          "Stone",
+          "Stone",
+          "Stone"
+        ]
+      ],
+      "result": "1 Powered Latch"
+    },
+    "videos": [
+      {
+        "id": "powered_latch",
+        "name": "Powered Latch: switching on and off",
+        "description": "A button behind the latch lights the lamp and it stays lit; a button on the side turns it off; finally two clicks by hand do the same."
+      },
+      {
+        "id": "toggle_latch",
+        "name": "Powered Toggle Latch",
+        "description": "A single button behind the latch: the first pulse lights the lamp, the second turns it off, then a click by hand flips it again."
+      }
+    ],
+    "sections": [
+      {
+        "id": "levier",
+        "title": "A remote-controlled lever",
+        "alt": "Powered Latch between a button and a lamp",
+        "html": "<p>The latch is placed like a repeater, arrow toward the output. Its front gives off <strong>15</strong> while it is on, like a lever. The difference: you flip it with redstone, from a button, a <a href=\"/en/wiki/redstone-link\">link</a> or a detector.</p>"
+      },
+      {
+        "id": "placer",
+        "title": "Placing the latch",
+        "html": "<p>Like a repeater, the latch lies flat on a block, its output pointing away from the player. The plain latch takes its side inputs from the left and the right; back and front stay along the arrow. It ignores a signal coming in from the front.</p>"
+      },
+      {
+        "id": "arriere",
+        "title": "The back turns it on",
+        "alt": "The lamp stays lit after the button",
+        "html": "<p>A pulse into the <strong>back</strong> turns the latch on one tick later, and it <strong>stays on</strong> once the button is released. The lamp on its output shows it: it no longer goes dark.</p>"
+      },
+      {
+        "id": "cote",
+        "title": "The side turns it off",
+        "alt": "The side button switches the latch off",
+        "html": "<p>A pulse on a <strong>side</strong> switches it off. If both inputs are on at once, the last one to arrive wins: our simulation follows the block's logic tick by tick.</p>"
+      },
+      {
+        "id": "manuel",
+        "title": "By hand",
+        "alt": "The latch flipped by hand",
+        "html": "<p>A bare-hand right-click flips its state. The plain latch refuses that click while only one of its inputs is powered, so as not to fight the signal.</p>"
+      },
+      {
+        "id": "bascule",
+        "title": "The Toggle Latch",
+        "alt": "First pulse: the Toggle Latch turns on",
+        "html": "<p>The <strong>Powered Toggle Latch</strong> has a single input, at the back. Each <strong>rising edge</strong> flips its state: one press turns it on, the next turns it off. A signal that lasts only counts once.</p>"
+      },
+      {
+        "id": "retour",
+        "title": "And the second pulse turns it off",
+        "alt": "Second pulse: the latch turns off",
+        "html": "<p>The loop shows the second press of the same button: the lamp goes dark. It is Create's two-way switch, in a single block.</p>"
+      },
+      {
+        "id": "lampe",
+        "title": "Latch or Rose Quartz Lamp?",
+        "html": "<p>A latch keeps a single state, on or off. To remember a choice between several options, a row of <a href=\"/en/wiki/rose-quartz-lamp\">Rose Quartz Lamps</a> does the job of several latches at once: only one stays lit.</p>"
+      },
+      {
+        "id": "montages",
+        "title": "Build ideas",
+        "html": "<p>A <strong>single button</strong> that opens and closes a door, with the Toggle Latch. A <a href=\"/en/wiki/redstone-link\">link</a> receiver followed by a latch, so that one short press on the Linked Controller keeps a factory running. A latch in front of a <a href=\"/en/wiki/gearshift\">Clutch</a> to stop a machine until the next order.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>The latch only reads its back and sides: dust wired into the front does nothing. With a clock on the input of a Toggle Latch, it blinks at half the clock's rate: that is by design.</p>"
+      },
+      {
+        "id": "boucle",
+        "title": "What the loops show",
+        "html": "<p>Stone buttons stay pressed for 20 ticks and wooden ones for 30, as in the game. The state of the latch, the dust and the lamp is recomputed tick by tick by our simulation; the hand clicks come from the scene, and the player is not drawn. Each button press is a single short pulse.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On our server",
+        "html": "<p>On Create France, a Toggle Latch behind a button is the simplest way to run a base door or a room's lights, without a lever next to every entrance. One button on each side of the door, both wired to the same latch, is all it takes.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: crafting/logistics/powered_latch.json, powered_toggle_latch.json",
+      "Logic: PoweredLatchBlock.tick / isPoweredOnSides / activated, ToggleLatchBlock.tick (rising edge) / activated, getDelay (1 tick)",
+      "Simulation: WIKI/redstone_sim.py (signals, delays, links, latches and speeds recomputed tick by tick from Create's and Minecraft's code; only the player's actions come from the scene)",
+      "Scenes: RedstoneScenes.poweredLatch, poweredToggleLatch (stone buttons 20 ticks, wooden 30; player not drawn)"
+    ]
+  }
+}

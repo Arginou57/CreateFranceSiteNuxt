@@ -208,7 +208,9 @@
     "controles-de-machine",
     "colle-extra-forte",
     "liaison-d-affichage",
-    "piston-mecanique"
+    "piston-mecanique",
+    "liaison-de-redstone",
+    "contact-de-redstone"
   ],
   "sources": [
     "Recette : crafting/kinetics/elevator_pulley.json",

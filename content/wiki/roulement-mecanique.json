@@ -200,7 +200,9 @@
     "chassis-lineaire",
     "piston-mecanique",
     "roue-dentee",
-    "interface-de-stockage-portable"
+    "interface-de-stockage-portable",
+    "inverseur-de-rotation-sequence",
+    "contact-de-redstone"
   ],
   "sources": [
     "Recettes : crafting/kinetics/mechanical_bearing.json, clockwork_bearing.json",

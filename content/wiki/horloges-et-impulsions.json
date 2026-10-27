@@ -1,0 +1,367 @@
+{
+  "slug": "horloges-et-impulsions",
+  "name": "Répéteur, extenseur et minuteur d'impulsions",
+  "blockId": "create:pulse_timer",
+  "category": "redstone",
+  "title": "Horloges et impulsions — Create : guide en français",
+  "description": "Les diodes en laiton de Create : répéteur d'impulsions, extenseur d'impulsions et minuteur à impulsions, délais de 2 ticks à 1 heure et sortie inversée.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Create ajoute trois <strong>diodes en laiton</strong> qui manient le temps mieux que le répéteur vanilla. Le <strong>répéteur d'impulsions</strong> donne une impulsion brève après un délai, l'<strong>extenseur d'impulsions</strong> prolonge un signal, le <strong>minuteur à impulsions</strong> est une horloge toute faite. Les trois se règlent de <strong>2 ticks à une heure</strong> avec leur panneau de valeur, et leur sortie peut être inversée.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Redstone"
+    },
+    {
+      "label": "Délai",
+      "value": "2 ticks à 1 heure (72 000 ticks), panneau de valeur"
+    },
+    {
+      "label": "Entrée",
+      "value": "Par l’arrière, prise en compte 2 ticks après"
+    },
+    {
+      "label": "Répéteur d’impulsions",
+      "value": "Impulsion de 2 ticks, environ [délai] ticks après le début du signal"
+    },
+    {
+      "label": "Extenseur d’impulsions",
+      "value": "S’allume vite, reste allumé [délai] ticks après la fin du signal"
+    },
+    {
+      "label": "Minuteur à impulsions",
+      "value": "Impulsion de 2 ticks toutes les [délai] ticks (20 par défaut) ; entrée = pause"
+    },
+    {
+      "label": "Inversion",
+      "value": "Clic droit sur le socle : la sortie s’allume quand elle devrait s’éteindre"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Minuteur à l'établi",
+    "grid": [
+      [
+        "Éclat d’améthyste",
+        "Plaque de laiton",
+        "Torche de redstone"
+      ],
+      [
+        "Pierre",
+        "Pierre",
+        "Pierre"
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 minuteur à impulsions"
+  },
+  "videos": [
+    {
+      "id": "pulse_repeater",
+      "name": "Répéteur d'impulsions : une impulsion après un délai",
+      "description": "Un levier reste allumé, mais la lampe ne clignote qu'une fois, brièvement, une seconde et demie plus tard ; avec un délai plus long, l'éclair arrive bien après.",
+      "duration": "PT19S"
+    },
+    {
+      "id": "pulse_extender",
+      "name": "Extenseur d'impulsions : prolonger un signal",
+      "description": "Le levier n'est allumé qu'un instant, mais la lampe reste allumée bien plus longtemps : l'extenseur garde sa sortie active pendant la durée réglée.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "timer_clock",
+      "name": "Minuteur à impulsions : une horloge",
+      "description": "Seul sur la plaque, le minuteur fait clignoter sa lampe à intervalle régulier, puis plus lentement quand l'intervalle passe à cinq secondes.",
+      "duration": "PT16S"
+    },
+    {
+      "id": "timer_modes",
+      "name": "Minuteur à impulsions : pause et inversion",
+      "description": "Un levier sur l'entrée met l'horloge en pause ; le clic sur le socle inverse la sortie, qui reste allumée et ne s'éteint qu'un instant à chaque battement.",
+      "duration": "PT21S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "impulsion",
+      "title": "Le répéteur d'impulsions",
+      "image": "pulse_repeater_impulsion.webp",
+      "alt": "Répéteur d'impulsions : une seule impulsion",
+      "video": "pulse_repeater",
+      "html": "<p>Quel que soit la durée du signal reçu, le <strong>répéteur d'impulsions</strong> ne rend qu'une <strong>impulsion de 2 ticks</strong>, après le délai réglé. Dans la boucle, le délai est de 30 ticks : la lampe s'allume une fois, un peu plus d'une seconde et demie après le levier, et c'est tout.</p>"
+    },
+    {
+      "id": "delai",
+      "title": "Des délais très longs",
+      "image": "pulse_repeater_delai.webp",
+      "alt": "Le délai réglé à 120 ticks",
+      "html": "<p>Le panneau de valeur va de 2 ticks à <strong>une heure</strong>. Avec 120 ticks, l'impulsion arrive six secondes après le levier : notre simulation compte les ticks un par un, comme le bloc.</p>"
+    },
+    {
+      "id": "allonger",
+      "title": "L'extenseur d'impulsions",
+      "image": "pulse_extender_allonger.webp",
+      "alt": "Extenseur d'impulsions alimenté",
+      "video": "pulse_extender",
+      "html": "<p>L'<strong>extenseur</strong> fait l'inverse : il s'allume <strong>deux ticks</strong> après l'entrée et reste allumé tant qu'elle dure, plus le délai réglé. Un bouton furtif devient un signal de plusieurs secondes.</p>"
+    },
+    {
+      "id": "refroidir",
+      "title": "Il garde la sortie après la fin du signal",
+      "image": "pulse_extender_refroidir.webp",
+      "alt": "La lampe reste allumée après le levier",
+      "html": "<p>Une fois l'entrée éteinte, il compte à rebours : la lampe reste allumée pendant le délai, ici 30 ticks, puis s'éteint d'un coup. Un nouveau signal pendant le compte à rebours le remet au début.</p>"
+    },
+    {
+      "id": "duree",
+      "title": "Jusqu’à une heure aussi",
+      "image": "pulse_extender_duree.webp",
+      "alt": "Extenseur d'impulsions réglé plus long",
+      "html": "<p>Avec 120 ticks, la lampe reste allumée six secondes après la fin du signal. Pour un éclairage de couloir ou une porte qui se referme seule, c'est le bloc qu'il faut.</p>"
+    },
+    {
+      "id": "horloge",
+      "title": "Le minuteur, une horloge prête à poser",
+      "image": "timer_clock_horloge.webp",
+      "alt": "Minuteur à impulsions qui fait clignoter une lampe",
+      "video": "timer_clock",
+      "html": "<p>Le <strong>minuteur à impulsions</strong> n'a besoin de rien pour marcher : il envoie une impulsion de 2 ticks toutes les [délai] ticks. Réglé à 30, la lampe clignote une fois par seconde et demie, sans fil ni comparateur.</p>"
+    },
+    {
+      "id": "intervalle",
+      "title": "Régler l'intervalle",
+      "image": "timer_clock_intervalle.webp",
+      "alt": "Intervalle passé à cinq secondes",
+      "html": "<p>Le panneau de valeur règle l'intervalle : ici 100 ticks, soit une impulsion toutes les cinq secondes. La valeur par défaut est de 20 ticks, une par seconde.</p>"
+    },
+    {
+      "id": "pause",
+      "title": "Une entrée qui met en pause",
+      "image": "timer_modes_pause.webp",
+      "alt": "Un levier met le minuteur en pause",
+      "video": "timer_modes",
+      "html": "<p>Alimenter l'<strong>arrière</strong> du minuteur l'arrête et remet son compteur à zéro. Dès que le signal disparaît, il repart d'une impulsion. On peut ainsi couper une horloge avec un levier, un <a href=\"/wiki/detecteur-de-seuil\">détecteur de seuil</a> ou un <a href=\"/wiki/observateur-intelligent\">observateur intelligent</a>.</p>"
+    },
+    {
+      "id": "inverser",
+      "title": "Inverser la sortie",
+      "image": "timer_modes_inverser.webp",
+      "alt": "Minuteur inversé : la sortie reste allumée",
+      "html": "<p>Un clic droit sur le <strong>socle</strong> du minuteur inverse sa sortie : elle reste allumée et <strong>s'éteint un instant</strong> à chaque battement. Les deux autres diodes en laiton s'inversent de la même façon.</p>"
+    },
+    {
+      "id": "regler",
+      "title": "Régler le délai",
+      "html": "<p>La molette sur le panneau de valeur change le délai. L'affichage suit l'échelle : en <strong>ticks</strong> jusqu'à 60, puis en <strong>secondes</strong>, puis en <strong>minutes</strong> au-delà de 1 200 ticks. Un tick vaut un vingtième de seconde. Le même panneau existe sur les trois diodes.</p>"
+    },
+    {
+      "id": "choisir",
+      "title": "Lequel choisir ?",
+      "html": "<p>Pour <strong>retarder et raccourcir</strong> : le répéteur d'impulsions. Pour <strong>allonger</strong> : l'extenseur. Pour <strong>répéter sans fin</strong> : le minuteur. Le répéteur de Minecraft ne retarde que de 4 ticks au plus ; les diodes en laiton vont jusqu'à une heure et se posent sans fil autour.</p>"
+    },
+    {
+      "id": "montages",
+      "title": "Idées de montages",
+      "html": "<p>Un minuteur sur un <a href=\"/wiki/deployeur\">déployeur</a> ou un éjecteur pour cadencer une chaîne de production. Un extenseur derrière un <a href=\"/wiki/contact-de-redstone\">contact</a> trop bref. Un répéteur d'impulsions pour transformer un levier en bouton.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur notre serveur",
+      "html": "<p>Sur Create France, un minuteur réglé à quelques secondes suffit pour la plupart des fermes automatiques. Évite les horloges très rapides sur des machines qui n'en ont pas besoin.</p>"
+    }
+  ],
+  "related": [
+    "verrou-alimente",
+    "liaison-de-redstone",
+    "detecteur-de-seuil",
+    "observateur-intelligent",
+    "contact-de-redstone",
+    "deployeur"
+  ],
+  "sources": [
+    "Recettes : crafting/logistics/pulse_repeater.json, pulse_extender.json, pulse_timer.json (éclat d'améthyste)",
+    "Délai : BrassDiodeBlockEntity (between(2, 60 × 20 × 60), defaultValue 2 ; minuteur 20), BrassDiodeBlock.getDelay (2 ticks)",
+    "Logique : PulseRepeaterBlockEntity, PulseExtenderBlockEntity, PulseTimerBlockEntity (updateState)",
+    "Inversion : BrassDiodeBlock.toggle (INVERTED), getOutputSignal (POWERING xor INVERTED)",
+    "Simulation : WIKI/redstone_sim.py (signaux, délais, liaisons, verrous et vitesses recalculés tick par tick d'après le code de Create et de Minecraft ; seules les actions du joueur viennent de la scène)",
+    "Scènes : RedstoneScenes.pulseRepeater, pulseExtender, RedstoneScenes2.pulseTimer (coupée en deux boucles ; lampe : extinction 4 ticks après le fil)"
+  ],
+  "en": {
+    "slugEn": "pulse-repeater-extender-timer",
+    "name": "Pulse Repeater, Pulse Extender and Pulse Timer",
+    "title": "Pulse Repeater, Extender and Timer — Create guide",
+    "description": "Create's brass diodes: the Pulse Repeater, the Pulse Extender and the Pulse Timer, delays from 2 ticks up to an hour, and inverted outputs. How each works.",
+    "intro": "Create adds three <strong>brass diodes</strong> that handle time better than the vanilla repeater. The <strong>Pulse Repeater</strong> fires a brief pulse once a delay has passed, the <strong>Pulse Extender</strong> stretches a signal, and the <strong>Pulse Timer</strong> is a ready-made clock. All three are set from <strong>2 ticks up to an hour</strong> with their value panel, and their output can be inverted.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Redstone"
+      },
+      {
+        "label": "Delay",
+        "value": "2 ticks to 1 hour (72,000 ticks), value panel"
+      },
+      {
+        "label": "Input",
+        "value": "From the back, picked up 2 ticks later"
+      },
+      {
+        "label": "Pulse Repeater",
+        "value": "A 2-tick pulse, about [delay] ticks after the signal starts"
+      },
+      {
+        "label": "Pulse Extender",
+        "value": "Turns on quickly, stays on [delay] ticks after the signal ends"
+      },
+      {
+        "label": "Pulse Timer",
+        "value": "A 2-tick pulse every [delay] ticks (20 by default); input = pause"
+      },
+      {
+        "label": "Inverting",
+        "value": "Right-click the base: the output is on when it should be off"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Pulse Timer recipe",
+      "grid": [
+        [
+          "Amethyst Shard",
+          "Brass Sheet",
+          "Redstone Torch"
+        ],
+        [
+          "Stone",
+          "Stone",
+          "Stone"
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Pulse Timer"
+    },
+    "videos": [
+      {
+        "id": "pulse_repeater",
+        "name": "Pulse Repeater: one pulse after a delay",
+        "description": "A lever stays on, yet the lamp only blinks once, briefly, a second and a half later; with a longer delay the flash comes much later."
+      },
+      {
+        "id": "pulse_extender",
+        "name": "Pulse Extender: stretching a signal",
+        "description": "The lever is on for just a moment, but the lamp stays lit far longer: the extender keeps its output on for the set duration."
+      },
+      {
+        "id": "timer_clock",
+        "name": "Pulse Timer: a clock",
+        "description": "Alone on the plate, the timer blinks its lamp at a steady rate, then more slowly once the interval is raised to five seconds."
+      },
+      {
+        "id": "timer_modes",
+        "name": "Pulse Timer: pause and invert",
+        "description": "A lever on the input pauses the clock; clicking the base inverts the output, which then stays on and only drops for an instant on every beat."
+      }
+    ],
+    "sections": [
+      {
+        "id": "impulsion",
+        "title": "The Pulse Repeater",
+        "alt": "Pulse Repeater: a single pulse",
+        "html": "<p>However long the incoming signal is, the <strong>Pulse Repeater</strong> only gives back a <strong>2-tick pulse</strong>, after the set delay. In the loop the delay is 30 ticks: the lamp lights once, a little over a second and a half after the lever, and that is all.</p>"
+      },
+      {
+        "id": "delai",
+        "title": "Very long delays",
+        "alt": "Delay set to 120 ticks",
+        "html": "<p>The value panel goes from 2 ticks up to <strong>an hour</strong>. At 120 ticks the pulse comes six seconds after the lever: our simulation counts the ticks one by one, just like the block.</p>"
+      },
+      {
+        "id": "allonger",
+        "title": "The Pulse Extender",
+        "alt": "Powered Pulse Extender",
+        "html": "<p>The <strong>extender</strong> does the opposite: it turns on <strong>two ticks</strong> after its input and stays on for as long as the input lasts, plus the set delay. A quick button press becomes a signal several seconds long.</p>"
+      },
+      {
+        "id": "refroidir",
+        "title": "It holds the output after the signal ends",
+        "alt": "The lamp stays lit after the lever",
+        "html": "<p>Once the input is off, it counts down: the lamp stays lit for the delay, here 30 ticks, then goes dark at once. A new signal during the countdown starts it over.</p>"
+      },
+      {
+        "id": "duree",
+        "title": "Up to an hour as well",
+        "alt": "Pulse Extender set longer",
+        "html": "<p>At 120 ticks the lamp stays lit six seconds after the signal ends. For corridor lights or a door that closes by itself, this is the block you want.</p>"
+      },
+      {
+        "id": "horloge",
+        "title": "The timer, a clock ready to place",
+        "alt": "Pulse Timer blinking a lamp",
+        "html": "<p>The <strong>Pulse Timer</strong> needs nothing to run: it sends a 2-tick pulse every [delay] ticks. Set to 30, the lamp blinks once every second and a half, with no dust or comparator.</p>"
+      },
+      {
+        "id": "intervalle",
+        "title": "Setting the interval",
+        "alt": "Interval raised to five seconds",
+        "html": "<p>The value panel sets the interval: here 100 ticks, one pulse every five seconds. The default is 20 ticks, one per second.</p>"
+      },
+      {
+        "id": "pause",
+        "title": "An input that pauses it",
+        "alt": "A lever pauses the timer",
+        "html": "<p>Powering the <strong>back</strong> of the timer stops it and resets its counter. As soon as the signal goes away, it starts again with a pulse. That way a lever, a <a href=\"/en/wiki/threshold-switch\">Threshold Switch</a> or a <a href=\"/en/wiki/smart-observer\">Smart Observer</a> can switch a clock off.</p>"
+      },
+      {
+        "id": "inverser",
+        "title": "Inverting the output",
+        "alt": "Inverted timer: the output stays on",
+        "html": "<p>A right-click on the timer's <strong>base</strong> inverts its output: it stays on and <strong>drops for an instant</strong> on every beat. The other two brass diodes invert the same way.</p>"
+      },
+      {
+        "id": "regler",
+        "title": "Setting the delay",
+        "html": "<p>Scrolling on the value panel changes the delay. The display follows the scale: in <strong>ticks</strong> up to 60, then in <strong>seconds</strong>, then in <strong>minutes</strong> past 1,200 ticks. One tick is a twentieth of a second. The same panel exists on all three diodes.</p>"
+      },
+      {
+        "id": "choisir",
+        "title": "Which one to pick?",
+        "html": "<p>To <strong>delay and shorten</strong>: the Pulse Repeater. To <strong>stretch</strong>: the Pulse Extender. To <strong>repeat forever</strong>: the Pulse Timer. Minecraft's repeater delays by 4 ticks at most; the brass diodes go up to an hour and need no dust around them.</p>"
+      },
+      {
+        "id": "montages",
+        "title": "Build ideas",
+        "html": "<p>A timer on a <a href=\"/en/wiki/deployer\">Deployer</a> or an ejector to pace a production line. An extender behind a <a href=\"/en/wiki/redstone-contact\">contact</a> whose pulse is too short. A Pulse Repeater to turn a lever into a button.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On our server",
+        "html": "<p>On Create France, a timer set to a few seconds is enough for most automatic farms. Avoid very fast clocks on machines that do not need them, and switch a clock off when its farm is full.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: crafting/logistics/pulse_repeater.json, pulse_extender.json, pulse_timer.json (amethyst shard)",
+      "Delay: BrassDiodeBlockEntity (between(2, 60 × 20 × 60), defaultValue 2; timer 20), BrassDiodeBlock.getDelay (2 ticks)",
+      "Logic: PulseRepeaterBlockEntity, PulseExtenderBlockEntity, PulseTimerBlockEntity (updateState)",
+      "Inverting: BrassDiodeBlock.toggle (INVERTED), getOutputSignal (POWERING xor INVERTED)",
+      "Simulation: WIKI/redstone_sim.py (signals, delays, links, latches and speeds recomputed tick by tick from Create's and Minecraft's code; only the player's actions come from the scene)",
+      "Scenes: RedstoneScenes.pulseRepeater, pulseExtender, RedstoneScenes2.pulseTimer (split into two loops; lamp: goes dark 4 ticks after the dust)"
+    ]
+  }
+}

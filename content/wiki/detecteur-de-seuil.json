@@ -136,7 +136,10 @@
     "coffre-a-objet-renforce",
     "entonnoir",
     "chute",
-    "reservoir-a-fluide"
+    "reservoir-a-fluide",
+    "liaison-de-redstone",
+    "horloges-et-impulsions",
+    "tube-nixie"
   ],
   "sources": [
     "Seuils : ThresholdSwitchBlockEntity (onWhenAbove = 128, offWhenBelow = 64, Inverted), état gardé entre les deux seuils",

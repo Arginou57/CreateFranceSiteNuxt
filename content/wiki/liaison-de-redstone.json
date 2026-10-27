@@ -1,0 +1,316 @@
+{
+  "slug": "liaison-de-redstone",
+  "name": "Liaison de redstone et télécommande",
+  "blockId": "create:redstone_link",
+  "category": "redstone",
+  "title": "Liaison de redstone — Create : guide en français",
+  "description": "La liaison de redstone de Create : envoyer un signal sans fil jusqu'à 256 blocs, émetteur ou récepteur, fréquences à deux objets et télécommande.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>liaison de redstone</strong> fait voyager un signal de redstone <strong>sans aucun fil</strong>. Une liaison qui reçoit du courant le transmet, toutes celles qui écoutent la même fréquence le rendent, jusqu'à 256 blocs plus loin. Avec la <strong>télécommande</strong>, le joueur devient lui-même l'émetteur : idéal pour piloter une porte, une usine ou un ascenseur à distance.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Redstone"
+    },
+    {
+      "label": "Portée",
+      "value": "256 blocs entre émetteur et récepteur (réglage du serveur)"
+    },
+    {
+      "label": "Fréquence",
+      "value": "Une paire de deux objets ; deux cases vides forment aussi une fréquence"
+    },
+    {
+      "label": "Modes",
+      "value": "Émetteur par défaut ; récepteur avec accroupi + clic droit ou la clé"
+    },
+    {
+      "label": "Signal",
+      "value": "Le récepteur rend la plus forte puissance (0 à 15) des émetteurs de sa fréquence"
+    },
+    {
+      "label": "Délai",
+      "value": "Environ 1 tick (le récepteur se met à jour à son tick suivant)"
+    },
+    {
+      "label": "Télécommande",
+      "value": "6 touches, chacune avec sa paire d’objets (12 cases)"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (2 liaisons)",
+    "grid": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "Transmetteur",
+        null
+      ],
+      [
+        null,
+        "Boitier d'andésite",
+        null
+      ]
+    ],
+    "result": "2 liaisons de redstone"
+  },
+  "videos": [
+    {
+      "id": "link_modes",
+      "name": "Liaison de redstone : émetteur et récepteurs",
+      "description": "Un levier alimente une liaison posée au sol ; deux autres liaisons passées en récepteur allument chacune leur lampe, sans un seul fil entre elles.",
+      "duration": "PT16S"
+    },
+    {
+      "id": "link_freq",
+      "name": "Liaison de redstone : les fréquences",
+      "description": "Chaque liaison reçoit deux objets : seules celles qui ont la même paire, pousse de chêne et lingot de fer, restent reliées ; la lampe de la troisième reste éteinte.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "sans-fil",
+      "title": "Un signal sans fil",
+      "image": "link_modes_sans-fil.webp",
+      "alt": "Trois liaisons de redstone et un levier",
+      "video": "link_modes",
+      "html": "<p>Pose la liaison sur n'importe quelle face d'un bloc. Tant qu'elle est en mode <strong>émetteur</strong>, elle lit la redstone qui l'entoure : levier, fil, comparateur. La puissance reçue est envoyée à toutes les liaisons de sa fréquence, quel que soit l'obstacle entre elles.</p>"
+    },
+    {
+      "id": "recepteur",
+      "title": "Passer en récepteur",
+      "image": "link_modes_recepteur.webp",
+      "alt": "Une liaison passe en mode récepteur",
+      "html": "<p>Accroupi, un <strong>clic droit à main nue</strong> fait basculer la liaison en récepteur : son voyant change de forme. Un récepteur ne lit plus rien autour de lui, il ne fait que rendre ce que les émetteurs envoient.</p>"
+    },
+    {
+      "id": "cle",
+      "title": "Ou avec la clé",
+      "image": "link_modes_cle.webp",
+      "alt": "La clé bascule une liaison en récepteur",
+      "html": "<p>La <strong>clé</strong> fait la même chose d'un simple clic droit, sans s'accroupir. Pratique quand on règle tout un tableau de liaisons à la suite.</p>"
+    },
+    {
+      "id": "portee",
+      "title": "Le récepteur alimente son support",
+      "image": "link_freq_portee.webp",
+      "alt": "Les deux lampes allumées par les récepteurs",
+      "video": "link_freq",
+      "html": "<p>Un récepteur alimente le bloc sur lequel il est posé, comme un levier : ici, chaque récepteur est collé à sa lampe. Il rend la <strong>même puissance</strong> que l'émetteur le plus fort, de 1 à 15, jusqu'à 256 blocs. Dans la boucle, la lampe s'allume un tick après le levier et s'éteint quatre ticks après lui, le délai normal d'une lampe.</p>"
+    },
+    {
+      "id": "frequence",
+      "title": "Choisir une fréquence",
+      "image": "link_freq_frequence.webp",
+      "alt": "Objets de fréquence posés sur une liaison",
+      "html": "<p>La face de la liaison porte <strong>deux cases</strong>. Clique dessus avec un objet : il sert de clé, sans être consommé. La fréquence, c'est la paire complète, dans l'ordre des cases. Une pousse et un lingot de fer ne valent pas un lingot et une pousse.</p>"
+    },
+    {
+      "id": "correspondance",
+      "title": "Seules les paires identiques communiquent",
+      "image": "link_freq_correspondance.webp",
+      "alt": "Seul le récepteur de la même fréquence s’allume",
+      "html": "<p>Dans la boucle, l'émetteur et le premier récepteur portent pousse de chêne et lingot de fer ; le second, pousse et lingot d'or. Notre simulation refait les réseaux d'après le code : seule la lampe de la bonne paire suit le levier.</p>"
+    },
+    {
+      "id": "telecommande",
+      "title": "La télécommande",
+      "html": "<p>La <strong>télécommande</strong> se fabrique avec une liaison entourée de boutons en bois. Elle a six touches, chacune réglée sur sa propre paire d'objets. Clic droit pour l'activer : tes touches de déplacement envoient alors un signal aux récepteurs de ces fréquences tant que tu les tiens. Posée sur un pupitre, elle sert à n'importe quel joueur qui s'y installe.</p>"
+    },
+    {
+      "id": "montages",
+      "title": "Idées de montages",
+      "html": "<p>Une <strong>porte de base</strong> ouverte depuis la maison, sans tranchée pour les fils. Un <strong>bouton d'appel</strong> à chaque étage d'un ascenseur. Un récepteur sur un <a href=\"/wiki/inverseur-de-rotation\">inverseur de rotation</a> pour changer le sens d'une machine à distance, ou sur un <a href=\"/wiki/verrou-alimente\">verrou alimenté</a> pour garder l'état après une impulsion.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Deux émetteurs sur la même fréquence s'additionnent mal : le récepteur prend le plus fort, pas la somme. Une liaison qui ne s'allume pas est souvent restée en émetteur. Et une fréquence oubliée vide relie toutes les liaisons neuves du coin : donne toujours deux objets.</p>"
+    },
+    {
+      "id": "boucle",
+      "title": "Ce que montre la boucle",
+      "html": "<p>Le joueur, la clé et les objets tenus en main ne sont pas dessinés. Les objets de fréquence sont posés sur les faces des liaisons, comme dans le jeu. Les lampes s'allument et s'éteignent aux ticks calculés par notre simulation, pas à ceux de la scène.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur notre serveur",
+      "html": "<p>Sur Create France, les liaisons évitent de creuser des tranchées de fil dans les zones partagées. Choisis une paire d'objets peu courante : deux joueurs qui prennent la même fréquence pilotent sans le vouloir les machines l'un de l'autre.</p>"
+    }
+  ],
+  "related": [
+    "observateur-intelligent",
+    "detecteur-de-seuil",
+    "liaison-d-affichage",
+    "verrou-alimente",
+    "inverseur-de-rotation",
+    "poulie-d-ascenseur"
+  ],
+  "sources": [
+    "Recettes : crafting/logistics/redstone_link.json (2 liaisons), crafting/appliances/linked_controller.json",
+    "Portée : CLogistics.linkRange (256)",
+    "Fréquence et modes : RedstoneLinkBlockEntity, LinkBehaviour, RedstoneLinkBlock.toggleMode (accroupi ou clé)",
+    "Signal : RedstoneLinkBlock.getSignal / getDirectSignal (bloc porteur alimenté), updateTransmittedSignal",
+    "Télécommande : LinkedControllerItem (12 cases = 6 fréquences), LinkedControllerClientHandler",
+    "Simulation : WIKI/redstone_sim.py (signaux, délais, liaisons, verrous et vitesses recalculés tick par tick d'après le code de Create et de Minecraft ; seules les actions du joueur viennent de la scène)",
+    "Scène : RedstoneScenes.redstoneLink (coupée en deux boucles ; joueur et clé non dessinés)"
+  ],
+  "en": {
+    "slugEn": "redstone-link",
+    "name": "Redstone Link and Linked Controller",
+    "title": "Redstone Link — Create mod guide",
+    "description": "The Create Redstone Link: send a redstone signal wirelessly up to 256 blocks, transmitter or receiver mode, two-item frequencies and the Linked Controller.",
+    "intro": "The <strong>Redstone Link</strong> carries a redstone signal with <strong>no wire at all</strong>. A link that gets power sends it out, and every link listening on the same frequency gives it back, up to 256 blocks away. With the <strong>Linked Controller</strong> the player becomes the transmitter: perfect for running a door, a factory or a lift from a distance.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Redstone"
+      },
+      {
+        "label": "Range",
+        "value": "256 blocks between transmitter and receiver (server setting)"
+      },
+      {
+        "label": "Frequency",
+        "value": "A pair of two items; two empty slots are a frequency too"
+      },
+      {
+        "label": "Modes",
+        "value": "Transmitter by default; receiver with sneak + right-click or the Wrench"
+      },
+      {
+        "label": "Signal",
+        "value": "A receiver outputs the strongest power (0 to 15) of the transmitters on its frequency"
+      },
+      {
+        "label": "Delay",
+        "value": "About 1 tick (the receiver updates on its next tick)"
+      },
+      {
+        "label": "Linked Controller",
+        "value": "6 buttons, each with its own item pair (12 slots)"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (2 links)",
+      "grid": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "Transmitter",
+          null
+        ],
+        [
+          null,
+          "Andesite Casing",
+          null
+        ]
+      ],
+      "result": "2 Redstone Links"
+    },
+    "videos": [
+      {
+        "id": "link_modes",
+        "name": "Redstone Link: transmitter and receivers",
+        "description": "A lever powers a link on the floor; two other links switched to receiver mode each light their lamp, with not a single wire in between."
+      },
+      {
+        "id": "link_freq",
+        "name": "Redstone Link: frequencies",
+        "description": "Each link is given two items: only the ones with the same pair, oak sapling and iron ingot, stay connected; the third lamp stays dark."
+      }
+    ],
+    "sections": [
+      {
+        "id": "sans-fil",
+        "title": "A wireless signal",
+        "alt": "Three Redstone Links and a lever",
+        "html": "<p>Place the link on any face of a block. While it is in <strong>transmitter</strong> mode it reads the redstone around it: a lever, dust, a comparator. Whatever power it gets is sent to every link on its frequency, whatever stands between them.</p>"
+      },
+      {
+        "id": "recepteur",
+        "title": "Switching to receiver",
+        "alt": "A link switches to receiver mode",
+        "html": "<p>While sneaking, a <strong>bare-hand right-click</strong> turns the link into a receiver: its indicator changes shape. A receiver no longer reads anything around it; it only gives back what the transmitters send.</p>"
+      },
+      {
+        "id": "cle",
+        "title": "Or with the Wrench",
+        "alt": "The Wrench switches a link to receiver",
+        "html": "<p>The <strong>Wrench</strong> does the same with a plain right-click, no sneaking needed. Handy when you set up a whole wall of links in a row.</p>"
+      },
+      {
+        "id": "portee",
+        "title": "The receiver powers its block",
+        "alt": "Both lamps lit by the receivers",
+        "html": "<p>A receiver powers the block it sits on, just like a lever: here each receiver is stuck to its lamp. It outputs the <strong>same strength</strong> as the strongest transmitter, from 1 to 15, up to 256 blocks away. In the loop the lamp lights one tick after the lever and goes dark four ticks after it, a lamp's usual delay.</p>"
+      },
+      {
+        "id": "frequence",
+        "title": "Picking a frequency",
+        "alt": "Frequency items on a link",
+        "html": "<p>The face of the link has <strong>two slots</strong>. Click one with an item: it acts as a key and is not used up. The frequency is the whole pair, in slot order. A sapling then an iron ingot is not the same as an ingot then a sapling.</p>"
+      },
+      {
+        "id": "correspondance",
+        "title": "Only matching pairs talk",
+        "alt": "Only the receiver on the same frequency lights up",
+        "html": "<p>In the loop the transmitter and the first receiver hold an oak sapling and an iron ingot; the second receiver holds a sapling and a gold ingot. Our simulation rebuilds the networks from the code: only the lamp with the right pair follows the lever.</p>"
+      },
+      {
+        "id": "telecommande",
+        "title": "The Linked Controller",
+        "html": "<p>The <strong>Linked Controller</strong> is crafted from a link surrounded by wooden buttons. It has six buttons, each tuned to its own item pair. Right-click to switch it on: your movement keys then send a signal to the receivers on those frequencies for as long as you hold them. Placed on a lectern, it works for any player who steps up to it.</p>"
+      },
+      {
+        "id": "montages",
+        "title": "Build ideas",
+        "html": "<p>A <strong>base door</strong> opened from inside the house, with no trench for dust. A <strong>call button</strong> on every floor of a lift. A receiver on a <a href=\"/en/wiki/gearshift\">Gearshift</a> to flip a machine's direction remotely, or on a <a href=\"/en/wiki/powered-latch\">Powered Latch</a> to keep the state after a single pulse.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>Two transmitters on one frequency do not add up: the receiver takes the strongest, not the sum. A link that never lights is often still a transmitter. And a frequency left empty connects every fresh link nearby, so always give it two items.</p>"
+      },
+      {
+        "id": "boucle",
+        "title": "What the loop shows",
+        "html": "<p>The player, the Wrench and items held in hand are not drawn. The frequency items sit on the faces of the links, as in the game. The lamps switch on and off on the ticks computed by our simulation, not on the scene's own timing.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On our server",
+        "html": "<p>On Create France, links save you from digging dust trenches through shared areas. Pick an unusual item pair: two players who choose the same frequency end up running each other's machines without meaning to.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: crafting/logistics/redstone_link.json (2 links), crafting/appliances/linked_controller.json",
+      "Range: CLogistics.linkRange (256)",
+      "Frequency and modes: RedstoneLinkBlockEntity, LinkBehaviour, RedstoneLinkBlock.toggleMode (sneak or Wrench)",
+      "Signal: RedstoneLinkBlock.getSignal / getDirectSignal (the supporting block is powered), updateTransmittedSignal",
+      "Linked Controller: LinkedControllerItem (12 slots = 6 frequencies), LinkedControllerClientHandler",
+      "Simulation: WIKI/redstone_sim.py (signals, delays, links, latches and speeds recomputed tick by tick from Create's and Minecraft's code; only the player's actions come from the scene)",
+      "Scene: RedstoneScenes.redstoneLink (split into two loops; player and Wrench not drawn)"
+    ]
+  }
+}

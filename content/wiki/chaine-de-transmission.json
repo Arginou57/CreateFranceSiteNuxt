@@ -1,0 +1,350 @@
+{
+  "slug": "chaine-de-transmission",
+  "name": "Chaîne de transmission et chaîne ajustable",
+  "blockId": "create:encased_chain_drive",
+  "category": "cinetique",
+  "title": "Chaîne de transmission — Create : guide en français",
+  "description": "La chaîne de transmission de Create : relayer la rotation en rangée, et la chaîne ajustable qui double ou divise la vitesse avec la redstone.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>chaîne de transmission</strong> relie des arbres <strong>côte à côte</strong> : tous les blocs d'une rangée tournent ensemble, dans le même sens et à la même vitesse. Sa cousine, la <strong>chaîne de transmission ajustable</strong>, change ce rapport avec la redstone : elle double la vitesse du reste de la rangée, ou divise la sienne par deux, et règle tout ce qui se trouve entre les deux avec un signal analogique.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Cinétique"
+    },
+    {
+      "label": "Rangée",
+      "value": "Toutes les chaînes d’une rangée tournent au même sens et à la même vitesse"
+    },
+    {
+      "label": "Orientation",
+      "value": "Chaque bloc de la rangée peut pivoter de 90° (clé)"
+    },
+    {
+      "label": "Ajustable éteinte",
+      "value": "Se comporte comme une chaîne normale"
+    },
+    {
+      "label": "Ajustable alimentée",
+      "value": "Rapport 1 + (signal + 1) ÷ 16 : ×2 à puissance 15, ×1,56 à puissance 8"
+    },
+    {
+      "label": "À la source",
+      "value": "Les autres chaînes tournent plus vite (×2 à pleine puissance)"
+    },
+    {
+      "label": "Ailleurs",
+      "value": "Elle tourne plus lentement (÷2 à pleine puissance)"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (sans forme)",
+    "grid": [
+      [
+        "Boitier d'andésite",
+        "Pépite de fer",
+        "Pépite de fer"
+      ],
+      [
+        "Pépite de fer",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 chaîne de transmission"
+  },
+  "videos": [
+    {
+      "id": "chain_relay",
+      "name": "Chaîne de transmission : relayer en rangée",
+      "description": "Une rangée de cinq chaînes reçoit la rotation par un bout et la rend sur le côté jusqu'à un compteur de vitesse ; un bloc pivoté entraîne ensuite un arbre vertical.",
+      "duration": "PT17S"
+    },
+    {
+      "id": "chain_double",
+      "name": "Chaîne ajustable : doubler la vitesse",
+      "description": "Une chaîne ajustable placée à l'entrée de la rangée : éteinte, elle ne change rien ; alimentée par un levier, les compteurs du reste de la rangée affichent deux fois plus.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "chain_half",
+      "name": "Chaîne ajustable : diviser et doser",
+      "description": "Placée au bout de la rangée, la chaîne ajustable alimentée tourne deux fois moins vite que les autres ; un levier analogique règle ensuite un rapport intermédiaire.",
+      "duration": "PT21S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "rangee",
+      "title": "Une rangée de chaînes",
+      "image": "chain_relay_rangee.webp",
+      "alt": "Rangée de chaînes de transmission",
+      "video": "chain_relay",
+      "html": "<p>Pose les chaînes <strong>côte à côte</strong> : elles se relient d'elles-mêmes, du premier bloc au dernier. La rotation entre par l'arbre d'un bloc et ressort par l'arbre de n'importe quel autre. Pratique pour décaler une ligne d'arbres sans <a href=\"/wiki/roue-dentee\">roues dentées</a>.</p>"
+    },
+    {
+      "id": "placer",
+      "title": "Poser une rangée",
+      "html": "<p>Les chaînes se relient quand leurs axes sont parallèles et qu'elles se suivent sur le côté. La rangée peut faire des coudes si un bloc est pivoté à la <strong>clé</strong>. Chaque bloc a un arbre de chaque côté de son axe, où l'on branche des rotors ou des machines.</p>"
+    },
+    {
+      "id": "meme-sens",
+      "title": "Même sens, même vitesse",
+      "image": "chain_relay_meme-sens.webp",
+      "alt": "Rotors branchés sur la rangée",
+      "html": "<p>Contrairement à deux roues dentées qui s'engrènent, la chaîne <strong>ne change pas le sens</strong> : tous les arbres branchés sur la rangée tournent pareil. Ici, deux rotors ajoutés sur le côté tournent à la vitesse de la source.</p>"
+    },
+    {
+      "id": "tourner",
+      "title": "Un bloc peut pivoter",
+      "image": "chain_relay_tourner.webp",
+      "alt": "Un bloc pivoté entraîne un arbre vertical",
+      "html": "<p>Chaque bloc de la rangée peut être <strong>tourné de 90°</strong> : son arbre sort alors vers le haut ou le bas, et la rangée garde son lien. La boucle finit sur un arbre vertical et une roue dentée entraînés ainsi.</p>"
+    },
+    {
+      "id": "comme-chaine",
+      "title": "La chaîne ajustable éteinte",
+      "image": "chain_double_comme-chaine.webp",
+      "alt": "Chaîne ajustable éteinte, mêmes vitesses",
+      "video": "chain_double",
+      "html": "<p>Sans signal, la <strong>chaîne ajustable</strong> est une chaîne comme les autres : les trois compteurs de vitesse affichent la même valeur que la source.</p>"
+    },
+    {
+      "id": "double",
+      "title": "Alimentée à la source : tout va deux fois plus vite",
+      "image": "chain_double_double.webp",
+      "alt": "Les compteurs du reste de la rangée doublent",
+      "html": "<p>Quand la rotation entre par la chaîne ajustable et qu'elle reçoit un signal de 15, les autres chaînes de la rangée tournent <strong>deux fois plus vite</strong> qu'elle. Les compteurs le montrent : la source ne change pas, le reste double.</p>"
+    },
+    {
+      "id": "moitie",
+      "title": "Ailleurs dans la rangée : elle va deux fois moins vite",
+      "image": "chain_half_moitie.webp",
+      "alt": "La chaîne ajustable au bout de la rangée ralentit",
+      "video": "chain_half",
+      "html": "<p>Si la chaîne ajustable n'est pas celle qui reçoit la rotation, le signal fait l'inverse : c'est <strong>elle qui ralentit</strong>, à la moitié de la rangée. Ici, la rangée a été reconstruite avec la chaîne ajustable à l'autre bout.</p>"
+    },
+    {
+      "id": "deux-fois",
+      "title": "La règle à retenir",
+      "image": "chain_half_deux-fois.webp",
+      "alt": "Rapport entre chaîne ajustable et chaînes normales",
+      "html": "<p>Quel que soit le cas, les chaînes normales tournent toujours <strong>deux fois plus vite</strong> que la chaîne ajustable alimentée à fond. Le code calcule le rapport entre les deux blocs, d'où un doublement d'un côté et une moitié de l'autre.</p>"
+    },
+    {
+      "id": "analogique",
+      "title": "Doser avec un signal analogique",
+      "image": "chain_half_analogique.webp",
+      "alt": "Levier analogique et vitesse intermédiaire",
+      "html": "<p>Le rapport vaut <strong>1 + (signal + 1) ÷ 16</strong>. Avec un <a href=\"/wiki/tube-nixie\">levier analogique</a> réglé sur 8, il passe à environ 1,56. La boucle montre cette vitesse intermédiaire sur le dernier compteur.</p>"
+    },
+    {
+      "id": "stress",
+      "title": "Et le stress ?",
+      "html": "<p>Une chaîne ne consomme pas de stress, mais doubler la vitesse d'une rangée double ce que coûtent les machines branchées dessus. Avant d'alimenter une chaîne ajustable, vérifie la marge de ta source au <a href=\"/wiki/stressometre-compteur-de-vitesse\">stressomètre</a>.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Deux rangées qui se touchent par le côté ne se relient pas : seules les chaînes alignées dans le même sens forment une rangée. Et doubler la vitesse double aussi le stress des machines en bout de ligne.</p>"
+    },
+    {
+      "id": "boucle",
+      "title": "Ce que montrent les boucles",
+      "html": "<p>Les compteurs de vitesse affichent les valeurs recalculées par notre simulation, rapport analogique compris. Quand la première rangée est retirée, les arbres du dessus s'arrêtent le temps que la nouvelle arrive : c'est ce qui se passe en jeu quand on casse la chaîne.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur notre serveur",
+      "html": "<p>Sur Create France, les chaînes sont la façon la plus compacte de passer la rotation d'un étage à l'autre dans une usine serrée.</p>"
+    }
+  ],
+  "related": [
+    "rotor",
+    "roue-dentee",
+    "boite-a-roues-dentees",
+    "stressometre-compteur-de-vitesse",
+    "inverseur-de-rotation",
+    "controleur-de-vitesse-de-rotation"
+  ],
+  "sources": [
+    "Recettes : crafting/kinetics/encased_chain_drive.json, adjustable_chain_gearshift.json (+ tube électronique)",
+    "Rangée et orientation : ChainDriveBlock (Part START / MIDDLE / END, areBlocksConnected), ChainDriveBlock.getRotationSpeedModifier",
+    "Rapport : ChainGearshiftBlockEntity.getModifierForSignal (1 + (signal + 1) / 16)",
+    "Simulation : WIKI/redstone_sim.py (signaux, délais, liaisons, verrous et vitesses recalculés tick par tick d'après le code de Create et de Minecraft ; seules les actions du joueur viennent de la scène)",
+    "Scènes : ChainDriveScenes.chainDriveAsRelay, adjustableChainGearshift (42 s coupées en deux boucles)"
+  ],
+  "en": {
+    "slugEn": "encased-chain-drive",
+    "name": "Encased Chain Drive and Adjustable Chain Gearshift",
+    "title": "Encased Chain Drive — Create mod guide",
+    "description": "The Create Encased Chain Drive: relay rotation along a row and around corners, plus the Adjustable Chain Gearshift that doubles or halves speed with redstone.",
+    "intro": "The <strong>Encased Chain Drive</strong> links shafts <strong>side by side</strong>: every block in a row turns together, the same way and at the same speed. Its sibling, the <strong>Adjustable Chain Gearshift</strong>, changes that ratio with redstone: it doubles the speed of the rest of the row, or halves its own, and an analog signal sets anything in between.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Kinetics"
+      },
+      {
+        "label": "Row",
+        "value": "Every drive in a row turns the same way at the same speed"
+      },
+      {
+        "label": "Orientation",
+        "value": "Each block in the row can be turned 90° (Wrench)"
+      },
+      {
+        "label": "Unpowered Gearshift",
+        "value": "Behaves like a normal Chain Drive"
+      },
+      {
+        "label": "Powered Gearshift",
+        "value": "Ratio 1 + (signal + 1) ÷ 16: ×2 at strength 15, ×1.56 at strength 8"
+      },
+      {
+        "label": "At the source",
+        "value": "The other drives turn faster (×2 at full strength)"
+      },
+      {
+        "label": "Elsewhere",
+        "value": "It turns slower (÷2 at full strength)"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (shapeless)",
+      "grid": [
+        [
+          "Andesite Casing",
+          "Iron Nugget",
+          "Iron Nugget"
+        ],
+        [
+          "Iron Nugget",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Encased Chain Drive"
+    },
+    "videos": [
+      {
+        "id": "chain_relay",
+        "name": "Encased Chain Drive: relaying along a row",
+        "description": "A row of five drives takes rotation in at one end and passes it out sideways to a Speedometer; a turned block then drives a vertical shaft."
+      },
+      {
+        "id": "chain_double",
+        "name": "Adjustable Chain Gearshift: doubling the speed",
+        "description": "An Adjustable Chain Gearshift at the input of the row: unpowered it changes nothing; powered by a lever, the gauges on the rest of the row show twice as much."
+      },
+      {
+        "id": "chain_half",
+        "name": "Adjustable Chain Gearshift: halving and fine-tuning",
+        "description": "Placed at the end of the row, the powered gearshift turns half as fast as the others; an Analog Lever then sets an in-between ratio."
+      }
+    ],
+    "sections": [
+      {
+        "id": "rangee",
+        "title": "A row of drives",
+        "alt": "Row of Encased Chain Drives",
+        "html": "<p>Place the drives <strong>side by side</strong>: they link up on their own, from the first block to the last. Rotation goes in through one block's shaft and comes out through any other's. Handy to shift a line of shafts sideways without <a href=\"/en/wiki/cogwheel\">cogwheels</a>.</p>"
+      },
+      {
+        "id": "placer",
+        "title": "Building a row",
+        "html": "<p>Drives link up when their axes are parallel and they follow each other side by side. The row can bend when a block is turned with the <strong>Wrench</strong>. Each block has a shaft on either side of its axis, where shafts or machines plug in.</p>"
+      },
+      {
+        "id": "meme-sens",
+        "title": "Same direction, same speed",
+        "alt": "Shafts hooked to the row",
+        "html": "<p>Unlike two meshing cogwheels, a chain <strong>does not flip the direction</strong>: every shaft hooked to the row turns the same way. Here two shafts added on the side spin at the source speed.</p>"
+      },
+      {
+        "id": "tourner",
+        "title": "A block can be turned",
+        "alt": "A turned block drives a vertical shaft",
+        "html": "<p>Each block in the row can be <strong>turned 90°</strong>: its shaft then points up or down and the row stays linked. The loop ends on a vertical shaft and a cogwheel driven that way.</p>"
+      },
+      {
+        "id": "comme-chaine",
+        "title": "The unpowered Adjustable Chain Gearshift",
+        "alt": "Unpowered gearshift, same speeds",
+        "html": "<p>With no signal, the <strong>Adjustable Chain Gearshift</strong> is a drive like the others: all three Speedometers show the source speed.</p>"
+      },
+      {
+        "id": "double",
+        "title": "Powered at the source: everything runs twice as fast",
+        "alt": "The gauges on the rest of the row double",
+        "html": "<p>When rotation comes in through the gearshift and it gets a strength-15 signal, the other drives in the row turn <strong>twice as fast</strong> as it does. The gauges show it: the source does not change, the rest doubles.</p>"
+      },
+      {
+        "id": "moitie",
+        "title": "Elsewhere in the row: it runs at half speed",
+        "alt": "The gearshift at the end of the row slows down",
+        "html": "<p>If the gearshift is not the block receiving the rotation, the signal does the opposite: <strong>it is the one that slows down</strong>, to half the row's speed. Here the row was rebuilt with the gearshift at the far end.</p>"
+      },
+      {
+        "id": "deux-fois",
+        "title": "The rule to remember",
+        "alt": "Ratio between the gearshift and the plain drives",
+        "html": "<p>Either way, the plain drives always turn <strong>twice as fast</strong> as a fully powered gearshift. The code computes the ratio between the two blocks, hence a doubling on one side and a half on the other.</p>"
+      },
+      {
+        "id": "analogique",
+        "title": "Fine-tuning with an analog signal",
+        "alt": "Analog Lever and an in-between speed",
+        "html": "<p>The ratio is <strong>1 + (signal + 1) ÷ 16</strong>. With an <a href=\"/en/wiki/nixie-tube\">Analog Lever</a> set to 8, it becomes about 1.56. The loop shows that in-between speed on the last gauge.</p>"
+      },
+      {
+        "id": "stress",
+        "title": "What about stress?",
+        "html": "<p>A chain drive uses no stress itself, but doubling a row's speed doubles what the machines on it cost. Before powering an Adjustable Chain Gearshift, check your source's headroom on a <a href=\"/en/wiki/stressometer-speedometer\">Stressometer</a>.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>Two rows touching side to side do not link: only drives lined up the same way form a row. And doubling the speed also doubles the stress of the machines at the end of the line.</p>"
+      },
+      {
+        "id": "boucle",
+        "title": "What the loops show",
+        "html": "<p>The Speedometers show the values recomputed by our simulation, analog ratio included. When the first row is taken away, the shafts above stop until the new row arrives: that is what happens in game when you break the chain. Each gauge reads the speed of the shaft it sits on.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On our server",
+        "html": "<p>On Create France, chain drives are the most compact way to bring rotation from one floor to the next in a tight factory.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: crafting/kinetics/encased_chain_drive.json, adjustable_chain_gearshift.json (+ Electron Tube)",
+      "Row and orientation: ChainDriveBlock (Part START / MIDDLE / END, areBlocksConnected), ChainDriveBlock.getRotationSpeedModifier",
+      "Ratio: ChainGearshiftBlockEntity.getModifierForSignal (1 + (signal + 1) / 16)",
+      "Simulation: WIKI/redstone_sim.py (signals, delays, links, latches and speeds recomputed tick by tick from Create's and Minecraft's code; only the player's actions come from the scene)",
+      "Scenes: ChainDriveScenes.chainDriveAsRelay, adjustableChainGearshift (42 s split into two loops)"
+    ]
+  }
+}

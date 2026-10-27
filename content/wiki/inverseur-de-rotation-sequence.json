@@ -1,0 +1,299 @@
+{
+  "slug": "inverseur-de-rotation-sequence",
+  "name": "Inverseur de rotation séquencé",
+  "blockId": "create:sequenced_gearshift",
+  "category": "redstone",
+  "title": "Inverseur de rotation séquencé — Create : guide",
+  "description": "L'inverseur de rotation séquencé de Create : programmer des virages précis, des pauses et des attentes, lancés par un signal et lus au comparateur.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "L'<strong>inverseur de rotation séquencé</strong> exécute un petit <strong>programme</strong> : tourner de 90°, repartir dans l'autre sens, attendre une seconde… Chaque signal de redstone lance la liste depuis le début. Il sert à tout ce qui doit bouger d'une quantité exacte : un <a href=\"/wiki/roulement-mecanique\">roulement</a> qui fait un quart de tour, un <a href=\"/wiki/piston-mecanique\">piston</a> qui avance de trois blocs, un portail qui s'ouvre puis se referme.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Redstone"
+    },
+    {
+      "label": "Programme",
+      "value": "5 lignes au plus, la dernière peut être « fin »"
+    },
+    {
+      "label": "Tourner",
+      "value": "D’un angle (jusqu’à 360°, 90° par défaut) ou d’une distance (jusqu’à 128 blocs)"
+    },
+    {
+      "label": "Vitesse",
+      "value": "Par ligne : ×1 ou ×2, en avant ou en arrière"
+    },
+    {
+      "label": "Attendre",
+      "value": "Une durée (jusqu’à 600 ticks, soit 30 s) ou un nouveau signal"
+    },
+    {
+      "label": "Durée d’un virage",
+      "value": "angle ÷ (tr/min × 0,3) ticks, + 2 : 90° à 32 tr/min = 12 ticks"
+    },
+    {
+      "label": "Comparateur",
+      "value": "Numéro de la ligne en cours ; 0 au repos"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (sans forme)",
+    "grid": [
+      [
+        "Boitier de laiton",
+        "Roue dentée",
+        "Tube électronique"
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 inverseur de rotation séquencé"
+  },
+  "videos": [
+    {
+      "id": "sequenced_gearshift",
+      "name": "Inverseur séquencé : un programme de rotation",
+      "description": "Un bouton lance le programme : le roulement fait un quart de tour, revient deux fois plus vite, attend une seconde puis repart ; un comparateur affiche la ligne en cours sur un tube Nixie.",
+      "duration": "PT32S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "instructions",
+      "title": "Un relais qui suit une liste",
+      "image": "sequenced_gearshift_instructions.webp",
+      "alt": "Inverseur séquencé entre une source et un roulement",
+      "video": "sequenced_gearshift",
+      "html": "<p>Le bloc se place dans une ligne d'arbres, comme un <a href=\"/wiki/inverseur-de-rotation\">inverseur simple</a>. <strong>Au repos, sa sortie ne tourne pas</strong> : ici, le rotor entre lui et le roulement reste immobile alors que la source tourne.</p>"
+    },
+    {
+      "id": "interface",
+      "title": "Écrire le programme",
+      "image": "sequenced_gearshift_interface.webp",
+      "alt": "Le bloc mis en évidence avant son réglage",
+      "html": "<p>Un clic droit ouvre la liste. Chaque ligne a un type, une valeur et une vitesse. Les types : <strong>tourner d'un angle</strong>, <strong>tourner d'une distance</strong> pour les pistons, poulies et portiques, <strong>attendre</strong> une durée, <strong>attendre un signal</strong>, et <strong>fin</strong>.</p>"
+    },
+    {
+      "id": "signal",
+      "title": "Un signal lance la séquence",
+      "image": "sequenced_gearshift_signal.webp",
+      "alt": "Le roulement fait un quart de tour",
+      "html": "<p>Un front montant de redstone démarre la première ligne, ici un bouton en bois. Le programme de la boucle : 90° en avant, 180° en arrière à double vitesse, une seconde d'attente, 90° en avant. Le roulement s'arrête <strong>pile à l'angle demandé</strong>, même si le boîtier tourne encore deux ticks.</p>"
+    },
+    {
+      "id": "attente",
+      "title": "Puis il attend le suivant",
+      "image": "sequenced_gearshift_attente.webp",
+      "alt": "La séquence est finie, la structure est revenue droite",
+      "html": "<p>Quand la liste est finie, la sortie s'arrête et le bloc attend un nouveau front montant. Le relâchement du bouton ne fait rien : la séquence, une fois lancée, va jusqu'au bout.</p>"
+    },
+    {
+      "id": "comparateur",
+      "title": "Suivre la progression",
+      "image": "sequenced_gearshift_comparateur.webp",
+      "alt": "Le tube Nixie affiche la ligne en cours",
+      "html": "<p>Un <strong>comparateur</strong> posé contre le bloc sort le numéro de la ligne en cours : 1 pour la première, 2 pour la deuxième… et 0 au repos. Ici il passe par un fil jusqu'à un <a href=\"/wiki/tube-nixie\">tube Nixie</a>, qui affiche ce numéro.</p>"
+    },
+    {
+      "id": "exemple",
+      "title": "Un exemple de programme",
+      "html": "<p>Pour une <strong>porte basculante</strong> : ligne 1, tourner de 90° en avant ; ligne 2, attendre un signal ; ligne 3, tourner de 90° en arrière ; ligne 4, fin. Un premier bouton ouvre, le second referme. Pour un piston qui doit avancer de trois blocs, une seule ligne « tourner d'une distance » réglée sur 3 suffit.</p>"
+    },
+    {
+      "id": "distance",
+      "title": "Tourner d'une distance",
+      "html": "<p>En mode distance, la valeur se compte en <strong>blocs parcourus</strong> par la machine branchée : piston, poulie, portique. Le bloc calcule la durée d'après la vitesse (tr/min ÷ 512 bloc par tick), et la machine s'arrête au bloc demandé grâce au même mécanisme que pour les angles. C'est le bon mode pour toute machine qui avance en ligne droite.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "Vitesse et précision",
+      "html": "<p>Le temps d'une ligne dépend de la vitesse d'entrée : à 32 tr/min, un quart de tour prend 12 ticks, à 64 tr/min la moitié. Notre boucle suit ces durées réelles, plus courtes que dans la scène du jeu, qui étire chaque mouvement sur deux secondes. Le programme de la boucle a été reconstitué à partir de ce que montre la scène.</p>"
+    },
+    {
+      "id": "montages",
+      "title": "Idées de montages",
+      "html": "<p>Un <strong>pont qui pivote</strong> d'un quart de tour à chaque bouton. Une <strong>foreuse</strong> sur <a href=\"/wiki/chariot-de-portique\">portique</a> qui avance d'un bloc, attend, puis avance encore. Une ligne « attendre un signal » au milieu d'un programme crée un arrêt jusqu'au prochain bouton.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Un signal permanent ne relance pas la liste en boucle : il faut un nouveau front montant. Si l'entrée ne tourne pas au moment du signal, rien ne démarre. Et sur un piston, choisis « tourner d'une distance », pas un angle.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur notre serveur",
+      "html": "<p>Sur Create France, on le croise sur les ponts tournants et les grandes portes de base. Pense à noter ton programme : l'interface ne garde pas de commentaires.</p>"
+    }
+  ],
+  "related": [
+    "inverseur-de-rotation",
+    "roulement-mecanique",
+    "piston-mecanique",
+    "chariot-de-portique",
+    "tube-nixie",
+    "horloges-et-impulsions"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/sequenced_gearshift.json (sans forme)",
+    "Instructions : SequencerInstructions (angle ≤ 360, distance ≤ 128, attente ≤ 600 ticks), Instruction.createDefault (5 lignes), InstructionSpeedModifiers",
+    "Durées : Instruction.getDuration (ceil(cible / vitesse angulaire) + 2), KineticBlockEntity.convertToAngular",
+    "Démarrage et sortie : SequencedGearshiftBlockEntity.onRedstoneUpdate / run / getModifier, SequencedGearshiftBlock.getAnalogOutputSignal",
+    "Simulation : WIKI/redstone_sim.py (signaux, délais, liaisons, verrous et vitesses recalculés tick par tick d'après le code de Create et de Minecraft ; seules les actions du joueur viennent de la scène)",
+    "Scène : KineticsScenes.sequencedGearshift (programme reconstitué : 90° avant, 180° arrière rapide, 20 ticks, 90° avant ; interface non montrée)"
+  ],
+  "en": {
+    "slugEn": "sequenced-gearshift",
+    "name": "Sequenced Gearshift",
+    "title": "Sequenced Gearshift — Create mod guide",
+    "description": "The Create Sequenced Gearshift: program exact turns, pauses and waits, started by a redstone signal and read with a comparator. Settings and timings.",
+    "intro": "The <strong>Sequenced Gearshift</strong> runs a small <strong>program</strong>: turn 90°, come back the other way, wait one second… Every redstone signal starts the list from the top. It is the tool for anything that must move by an exact amount: a <a href=\"/en/wiki/mechanical-bearing\">bearing</a> turning a quarter turn, a <a href=\"/en/wiki/mechanical-piston\">piston</a> pushing three blocks, a gate that opens and then closes again.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Redstone"
+      },
+      {
+        "label": "Program",
+        "value": "5 lines at most, the last one can be “end”"
+      },
+      {
+        "label": "Turn",
+        "value": "By an angle (up to 360°, 90° by default) or a distance (up to 128 blocks)"
+      },
+      {
+        "label": "Speed",
+        "value": "Per line: ×1 or ×2, forward or backward"
+      },
+      {
+        "label": "Wait",
+        "value": "A duration (up to 600 ticks, i.e. 30 s) or a new signal"
+      },
+      {
+        "label": "Turn time",
+        "value": "angle ÷ (RPM × 0.3) ticks, + 2: 90° at 32 RPM = 12 ticks"
+      },
+      {
+        "label": "Comparator",
+        "value": "Number of the running line; 0 when idle"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (shapeless)",
+      "grid": [
+        [
+          "Brass Casing",
+          "Cogwheel",
+          "Electron Tube"
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Sequenced Gearshift"
+    },
+    "videos": [
+      {
+        "id": "sequenced_gearshift",
+        "name": "Sequenced Gearshift: a rotation program",
+        "description": "A button starts the program: the bearing turns a quarter turn, comes back twice as fast, waits a second then goes again; a comparator shows the running line on a Nixie Tube."
+      }
+    ],
+    "sections": [
+      {
+        "id": "instructions",
+        "title": "A relay that follows a list",
+        "alt": "Sequenced Gearshift between a source and a bearing",
+        "html": "<p>The block goes into a line of shafts, like a plain <a href=\"/en/wiki/gearshift\">Gearshift</a>. <strong>While idle, its output does not turn</strong>: here the shaft between it and the bearing stays still while the source spins.</p>"
+      },
+      {
+        "id": "interface",
+        "title": "Writing the program",
+        "alt": "The block highlighted before being set up",
+        "html": "<p>Right-click opens the list. Each line has a type, a value and a speed. The types: <strong>turn by angle</strong>, <strong>turn by distance</strong> for pistons, pulleys and gantries, <strong>wait</strong> for a duration, <strong>await a signal</strong>, and <strong>end</strong>.</p>"
+      },
+      {
+        "id": "signal",
+        "title": "A signal starts the sequence",
+        "alt": "The bearing turns a quarter turn",
+        "html": "<p>A rising redstone edge starts the first line, here from a wooden button. The loop's program: 90° forward, 180° backward at double speed, a one-second wait, 90° forward. The bearing stops <strong>exactly at the requested angle</strong>, even though the casing keeps turning for two more ticks.</p>"
+      },
+      {
+        "id": "attente",
+        "title": "Then it sits until the next one",
+        "alt": "The sequence is over, the structure is upright again",
+        "html": "<p>Once the list is done, the output stops and the block waits for a new rising edge. Releasing the button does nothing: once started, the sequence runs to the end.</p>"
+      },
+      {
+        "id": "comparateur",
+        "title": "Following the progress",
+        "alt": "The Nixie Tube shows the running line",
+        "html": "<p>A <strong>comparator</strong> placed against the block outputs the number of the running line: 1 for the first, 2 for the second… and 0 when idle. Here it runs through dust to a <a href=\"/en/wiki/nixie-tube\">Nixie Tube</a> that shows that number.</p>"
+      },
+      {
+        "id": "exemple",
+        "title": "An example program",
+        "html": "<p>For a <strong>swinging door</strong>: line 1, turn 90° forward; line 2, await a signal; line 3, turn 90° backward; line 4, end. A first button opens it, the second closes it. For a piston that must push three blocks, a single “turn by distance” line set to 3 is enough.</p>"
+      },
+      {
+        "id": "distance",
+        "title": "Turning by distance",
+        "html": "<p>In distance mode, the value counts the <strong>blocks travelled</strong> by the machine on the output: a piston, a pulley, a gantry. The block works out the time from the speed (RPM ÷ 512 blocks per tick), and the machine stops on the requested block through the same mechanism as for angles. It is the right mode for any machine that moves in a straight line.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "Speed and accuracy",
+        "html": "<p>How long a line takes depends on the input speed: at 32 RPM a quarter turn takes 12 ticks, at 64 RPM half that. Our loop follows these real timings, shorter than in the in-game scene, which stretches every move over two seconds. The loop's program was rebuilt from what the scene shows.</p>"
+      },
+      {
+        "id": "montages",
+        "title": "Build ideas",
+        "html": "<p>A <strong>swing bridge</strong> that turns a quarter turn per button press. A <strong>drill</strong> on a <a href=\"/en/wiki/gantry-carriage\">gantry</a> that moves one block, waits, then moves again. An “await a signal” line in the middle of a program makes it pause until the next button.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>A constant signal does not loop the list: it needs a new rising edge. If the input is not turning when the signal arrives, nothing starts. And for a piston, pick “turn by distance”, not an angle.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On our server",
+        "html": "<p>On Create France you will find it in swing bridges and big base gates. Write your program down somewhere: the interface keeps no comments.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/sequenced_gearshift.json (shapeless)",
+      "Instructions: SequencerInstructions (angle ≤ 360, distance ≤ 128, wait ≤ 600 ticks), Instruction.createDefault (5 lines), InstructionSpeedModifiers",
+      "Timings: Instruction.getDuration (ceil(target / angular speed) + 2), KineticBlockEntity.convertToAngular",
+      "Start and output: SequencedGearshiftBlockEntity.onRedstoneUpdate / run / getModifier, SequencedGearshiftBlock.getAnalogOutputSignal",
+      "Simulation: WIKI/redstone_sim.py (signals, delays, links, latches and speeds recomputed tick by tick from Create's and Minecraft's code; only the player's actions come from the scene)",
+      "Scene: KineticsScenes.sequencedGearshift (program rebuilt: 90° forward, 180° fast backward, 20 ticks, 90° forward; UI not shown)"
+    ]
+  }
+}

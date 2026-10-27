@@ -200,7 +200,8 @@
     "station-de-train",
     "observateur-de-train",
     "planning-de-train",
-    "controles-de-train"
+    "controles-de-train",
+    "tube-nixie"
   ],
   "sources": [
     "Recette : crafting/kinetics/track_signal.json",

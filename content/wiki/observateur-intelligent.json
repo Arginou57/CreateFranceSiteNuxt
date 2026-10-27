@@ -122,7 +122,9 @@
     "tapis-roulant",
     "chute",
     "coffre-a-objet-renforce",
-    "observateur-de-train"
+    "observateur-de-train",
+    "liaison-de-redstone",
+    "horloges-et-impulsions"
   ],
   "sources": [
     "Détection : SmartObserverBlockEntity.tick (bloc filtré, TransportedItemStackHandlerBehaviour au centre 0,45, FluidTransportBehaviour, ChainConveyorBlockEntity.getLoopingPackages, inventaire, réservoir)",

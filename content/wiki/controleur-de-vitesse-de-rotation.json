@@ -1,0 +1,282 @@
+{
+  "slug": "controleur-de-vitesse-de-rotation",
+  "name": "Contrôleur de vitesse de rotation",
+  "blockId": "create:rotation_speed_controller",
+  "category": "redstone",
+  "title": "Contrôleur de vitesse de rotation — Create : guide",
+  "description": "Contrôleur de vitesse de rotation de Create : régler au tr/min près une grande roue dentée, de -256 à 256 tr/min, quelle que soit la source.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Un <strong>contrôleur de vitesse de rotation</strong> fixe la vitesse d'une machine <strong>au tr/min près</strong>. Il reçoit la rotation par son axe et l'envoie vers une <a href=\"/wiki/roue-dentee\">grande roue dentée</a> posée sur lui, à la vitesse que tu choisis, de -256 à 256. Une source lente devient rapide, une source rapide devient douce, et le sens peut même s'inverser.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Redstone"
+    },
+    {
+      "label": "Sortie",
+      "value": "Une grande roue dentée posée dessus, d’axe horizontal et perpendiculaire au sien"
+    },
+    {
+      "label": "Plage",
+      "value": "-256 à 256 tr/min (vitesse maximale du serveur), 16 par défaut"
+    },
+    {
+      "label": "Condition",
+      "value": "Il doit lui-même tourner : sans rotation en entrée, la roue s’arrête"
+    },
+    {
+      "label": "Réglage",
+      "value": "Panneau de valeur sur le côté (molette ou clic)"
+    },
+    {
+      "label": "Support",
+      "value": "Un support en laiton apparaît quand la grande roue est en place"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "Mécanisme de précision",
+        null
+      ],
+      [
+        null,
+        "Boitier de laiton",
+        null
+      ]
+    ],
+    "result": "1 contrôleur de vitesse de rotation"
+  },
+  "videos": [
+    {
+      "id": "speed_controller",
+      "name": "Contrôleur de vitesse : régler la grande roue",
+      "description": "Une ligne d'arbres fait tourner le contrôleur ; la grande roue posée dessus tourne à la vitesse réglée, qui passe de 8 à 32 puis 128 tr/min, avant de repartir lentement à l'envers.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "grande-roue",
+      "title": "La sortie passe par une grande roue",
+      "image": "speed_controller_grande-roue.webp",
+      "alt": "Grande roue dentée posée sur le contrôleur",
+      "video": "speed_controller",
+      "html": "<p>Le contrôleur prend la rotation par son <strong>axe</strong>, comme un <a href=\"/wiki/rotor\">rotor</a>, mais ne la relaie pas en ligne droite. La sortie se fait par une <strong>grande roue dentée</strong> posée juste au-dessus, couchée en travers de son axe. Le compteur de vitesse branché sur la roue montre la vitesse obtenue.</p>"
+    },
+    {
+      "id": "placer",
+      "title": "Poser la grande roue",
+      "html": "<p>La grande roue se pose <strong>juste au-dessus</strong>, son axe horizontal en travers de celui du bloc. Un support en laiton apparaît alors pour la tenir. Sur la roue, on branche ensuite ce qu'on veut : des rotors, d'autres roues dentées ou des <a href=\"/wiki/boite-a-roues-dentees\">boîtes à roues dentées</a>.</p>"
+    },
+    {
+      "id": "reglage",
+      "title": "Régler la vitesse",
+      "image": "speed_controller_reglage.webp",
+      "alt": "La grande roue tourne à la vitesse réglée",
+      "html": "<p>Sur le côté, un <strong>panneau de valeur</strong> donne la vitesse voulue. Dans la boucle, la roue passe de 8 à 32 puis 128 tr/min, puis à -6 : elle tourne lentement dans l'autre sens. La valeur est un nombre entier, et la source n'a pas changé de vitesse.</p>"
+    },
+    {
+      "id": "entree",
+      "title": "L'entrée doit tourner",
+      "html": "<p>Le contrôleur ne crée pas de rotation : si la ligne qui l'alimente s'arrête, la grande roue s'arrête aussi. Notre simulation le reproduit : la roue ne démarre qu'une fois le contrôleur relié à la source.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "Et la redstone ?",
+      "html": "<p>Le bloc n'a pas d'entrée de redstone : sa vitesse se règle à la main. Pour changer de vitesse avec un levier, combine-le avec un <a href=\"/wiki/inverseur-de-rotation\">embrayage</a> ou une <a href=\"/wiki/chaine-de-transmission\">chaîne ajustable</a>, ou prévois deux contrôleurs réglés différemment et choisis l'un ou l'autre.</p>"
+    },
+    {
+      "id": "stress",
+      "title": "Vitesse et stress",
+      "html": "<p>Le stress d'une machine se paie à sa vitesse : faire tourner une presse à 128 tr/min au lieu de 32 coûte quatre fois plus de SU. Garde un œil sur le <a href=\"/wiki/stressometre-compteur-de-vitesse\">stressomètre</a> quand tu montes la valeur, sinon tout le réseau s'arrête en surcharge.</p>"
+    },
+    {
+      "id": "exemple",
+      "title": "Un exemple chiffré",
+      "html": "<p>Une petite roue à eau donne 8 tr/min. Derrière un contrôleur réglé sur 64, la grande roue tourne huit fois plus vite. Mais le stress des machines branchées derrière se paie à 64 tr/min sur la capacité de la roue à eau : une presse y coûte 512 SU, plus que les 256 SU qu'elle fournit, et le réseau cale. Baisse la valeur ou ajoute une seconde source ; un stressomètre sur la ligne montre la marge avant tout réglage.</p>"
+    },
+    {
+      "id": "montages",
+      "title": "Idées de montages",
+      "html": "<p>Donner la <strong>même vitesse</strong> à plusieurs machines alimentées par des sources différentes. Ralentir un <a href=\"/wiki/roulement-mecanique\">roulement</a> pour une grande roue panoramique. Accélérer une <a href=\"/wiki/roue-a-eau\">roue à eau</a> trop lente pour un ventilateur.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Une petite roue dentée posée dessus ne marche pas : il faut une grande roue, d'axe horizontal. Une roue parallèle à l'axe du contrôleur n'est pas entraînée non plus. Et la valeur 0 arrête la sortie, même si l'entrée tourne.</p>"
+    },
+    {
+      "id": "boucle",
+      "title": "Ce que montre la boucle",
+      "html": "<p>La vitesse de la grande roue est recalculée à partir de la consigne de chaque étape : 8, 32, 128 puis -6 tr/min. Dans la scène du jeu, la dernière valeur vaut -6,4 tr/min ; le panneau n'accepte que des nombres entiers, d'où -6 chez nous.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur notre serveur",
+      "html": "<p>Sur Create France, il sert surtout à caler toutes les machines d'une usine sur la même vitesse, quelle que soit la source qui les nourrit.</p>"
+    }
+  ],
+  "related": [
+    "roue-dentee",
+    "stressometre-compteur-de-vitesse",
+    "rotor",
+    "inverseur-de-rotation",
+    "roue-a-eau",
+    "roulement-mecanique"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/rotation_speed_controller.json",
+    "Vitesse transmise : SpeedControllerBlockEntity.getConveyedSpeed / getDesiredOutputSpeed (DEFAULT_SPEED 16), CKinetics.maxRotationSpeed (256)",
+    "Support : SpeedControllerRenderer (bracket si grande roue horizontale au-dessus)",
+    "Stress : impact × |tr/min| (CStress, propagate.py)",
+    "Simulation : WIKI/redstone_sim.py (signaux, délais, liaisons, verrous et vitesses recalculés tick par tick d'après le code de Create et de Minecraft ; seules les actions du joueur viennent de la scène)",
+    "Scène : KineticsScenes.speedController (vitesses de consigne lues dans la scène : 8, 32, 128 et -6 tr/min ; panneau de valeur non montré)"
+  ],
+  "en": {
+    "slugEn": "rotation-speed-controller",
+    "name": "Rotation Speed Controller",
+    "title": "Rotation Speed Controller — Create mod guide",
+    "description": "The Create Rotation Speed Controller: set the speed of a Large Cogwheel to the exact RPM, from -256 to 256, whatever the source. Setup and tips.",
+    "intro": "The <strong>Rotation Speed Controller</strong> sets a machine's speed <strong>to the exact RPM</strong>. It takes rotation through its axle and passes it to a <a href=\"/en/wiki/cogwheel\">Large Cogwheel</a> placed on top, at the speed you choose, from -256 to 256. A slow source becomes fast, a fast one becomes gentle, and the direction can even flip.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Redstone"
+      },
+      {
+        "label": "Output",
+        "value": "A Large Cogwheel on top, with a horizontal axis across its own"
+      },
+      {
+        "label": "Range",
+        "value": "-256 to 256 RPM (server max speed), 16 by default"
+      },
+      {
+        "label": "Condition",
+        "value": "It must turn itself: with no input rotation the cogwheel stops"
+      },
+      {
+        "label": "Setting",
+        "value": "A value panel on the side (scroll or click)"
+      },
+      {
+        "label": "Bracket",
+        "value": "A brass bracket appears once the Large Cogwheel is in place"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "Precision Mechanism",
+          null
+        ],
+        [
+          null,
+          "Brass Casing",
+          null
+        ]
+      ],
+      "result": "1 Rotation Speed Controller"
+    },
+    "videos": [
+      {
+        "id": "speed_controller",
+        "name": "Rotation Speed Controller: setting the Large Cogwheel",
+        "description": "A line of shafts drives the controller; the Large Cogwheel on top runs at the set speed, going from 8 to 32 then 128 RPM, before slowly running backwards."
+      }
+    ],
+    "sections": [
+      {
+        "id": "grande-roue",
+        "title": "The output goes through a Large Cogwheel",
+        "alt": "Large Cogwheel placed on the controller",
+        "html": "<p>The controller takes rotation through its <strong>axle</strong>, like a <a href=\"/en/wiki/shaft\">shaft</a>, but does not pass it straight on. The output goes through a <strong>Large Cogwheel</strong> placed right above it, lying across its axle. The Speedometer hooked to the cogwheel shows the speed you get.</p>"
+      },
+      {
+        "id": "placer",
+        "title": "Placing the Large Cogwheel",
+        "html": "<p>The Large Cogwheel goes <strong>right on top</strong>, its horizontal axis across the block's own. A brass bracket then appears to hold it. On the cogwheel you can hook up whatever you like: shafts, other cogwheels, a <a href=\"/en/wiki/gearbox\">Gearbox</a>.</p>"
+      },
+      {
+        "id": "reglage",
+        "title": "Setting the speed",
+        "alt": "The Large Cogwheel runs at the set speed",
+        "html": "<p>On the side, a <strong>value panel</strong> holds the target speed. In the loop the cogwheel goes from 8 to 32 then 128 RPM, then to -6: it turns slowly the other way. The value is a whole number, and the source never changed speed.</p>"
+      },
+      {
+        "id": "entree",
+        "title": "The input has to turn",
+        "html": "<p>The controller does not create rotation: if the line feeding it stops, the Large Cogwheel stops too. Our simulation does the same: the cogwheel only starts once the controller is linked to the source.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "What about redstone?",
+        "html": "<p>The block has no redstone input: its speed is set by hand. To change speed with a lever, pair it with a <a href=\"/en/wiki/gearshift\">Clutch</a> or an <a href=\"/en/wiki/encased-chain-drive\">Adjustable Chain Gearshift</a>, or build two controllers set differently and switch between them.</p>"
+      },
+      {
+        "id": "stress",
+        "title": "Speed and stress",
+        "html": "<p>A machine's stress is paid at its speed: running a press at 128 RPM instead of 32 costs four times the SU. Keep an eye on the <a href=\"/en/wiki/stressometer-speedometer\">Stressometer</a> when you raise the value, or the whole network will stall from overstress.</p>"
+      },
+      {
+        "id": "exemple",
+        "title": "A worked example",
+        "html": "<p>A small Water Wheel gives 8 RPM. Behind a controller set to 64, the Large Cogwheel turns eight times faster. But the stress of the machines after it is paid at 64 RPM out of the wheel's capacity: a press costs 512 SU there, more than the 256 SU the wheel provides, and the network stalls. Lower the value or add a second source; a Stressometer on the line shows the margin before you change anything.</p>"
+      },
+      {
+        "id": "montages",
+        "title": "Build ideas",
+        "html": "<p>Give the <strong>same speed</strong> to several machines fed by different sources. Slow a <a href=\"/en/wiki/mechanical-bearing\">bearing</a> down for a big Ferris wheel. Speed up a <a href=\"/en/wiki/water-wheel\">Water Wheel</a> that is too slow for a fan.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>A small cogwheel on top does not work: it needs a Large Cogwheel with a horizontal axis. A cogwheel parallel to the controller's axle is not driven either. And a value of 0 stops the output, even if the input is turning.</p>"
+      },
+      {
+        "id": "boucle",
+        "title": "What the loop shows",
+        "html": "<p>The cogwheel's speed is recomputed from the target of each step: 8, 32, 128 then -6 RPM. In the in-game scene the last value is -6.4 RPM; the panel only takes whole numbers, hence -6 here. The source speed is the one shown in the scene.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On our server",
+        "html": "<p>On Create France it is mostly used to line every machine of a factory up on the same speed, whatever source feeds them.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/rotation_speed_controller.json",
+      "Conveyed speed: SpeedControllerBlockEntity.getConveyedSpeed / getDesiredOutputSpeed (DEFAULT_SPEED 16), CKinetics.maxRotationSpeed (256)",
+      "Bracket: SpeedControllerRenderer (bracket when a horizontal Large Cogwheel sits on top)",
+      "Stress: impact × |RPM| (CStress, propagate.py)",
+      "Simulation: WIKI/redstone_sim.py (signals, delays, links, latches and speeds recomputed tick by tick from Create's and Minecraft's code; only the player's actions come from the scene)",
+      "Scene: KineticsScenes.speedController (target speeds read from the scene: 8, 32, 128 and -6 RPM; value panel not shown)"
+    ]
+  }
+}

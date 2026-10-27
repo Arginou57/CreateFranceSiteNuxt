@@ -134,7 +134,9 @@
     "tunnel",
     "coffre-a-objet-renforce",
     "station-de-train",
-    "poulie-d-ascenseur"
+    "poulie-d-ascenseur",
+    "liaison-de-redstone",
+    "tube-nixie"
   ],
   "sources": [
     "Portée : CLogistics.displayLinkRange = 64",

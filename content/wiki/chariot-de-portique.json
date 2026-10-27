@@ -191,7 +191,8 @@
     "colle-extra-forte",
     "chassis-lineaire",
     "perceuse-mecanique",
-    "deployeur"
+    "deployeur",
+    "inverseur-de-rotation-sequence"
   ],
   "sources": [
     "Recettes : crafting/kinetics/gantry_shaft.json (8 rotors), gantry_carriage.json (dalle en bois, boitier d’andésite, roue dentée)",

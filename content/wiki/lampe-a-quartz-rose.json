@@ -1,0 +1,320 @@
+{
+  "slug": "lampe-a-quartz-rose",
+  "name": "Lampe à quartz rose",
+  "blockId": "create:rose_quartz_lamp",
+  "category": "redstone",
+  "title": "Lampe à quartz rose — Create : guide en français",
+  "description": "La lampe à quartz rose de Create : une lampe qui garde son état, des groupes où une seule reste allumée, et une lecture au comparateur selon la distance.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>lampe à quartz rose</strong> n'est pas qu'un éclairage : c'est une <strong>mémoire</strong>. Un signal l'allume et elle <strong>reste allumée</strong> une fois le signal parti. Posées en groupe, les lampes forment un sélecteur : allumer l'une éteint toutes les autres. Et un comparateur dit laquelle est allumée, selon sa distance.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Redstone"
+    },
+    {
+      "label": "Allumage",
+      "value": "Au début d’un signal ; elle reste allumée ensuite"
+    },
+    {
+      "label": "Groupe",
+      "value": "Lampes qui se touchent, jusqu’à 16 blocs : une seule allumée à la fois"
+    },
+    {
+      "label": "Sortie",
+      "value": "Puissance 15 vers tout bloc voisin, sauf une autre lampe"
+    },
+    {
+      "label": "Comparateur",
+      "value": "15 moins la distance jusqu’à la lampe allumée de la rangée"
+    },
+    {
+      "label": "Clé",
+      "value": "Allume ou éteint une lampe à la main"
+    },
+    {
+      "label": "Délai",
+      "value": "1 tick pour la grappe"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (sans forme)",
+    "grid": [
+      [
+        "Quartz rose poli",
+        "Poudre de redstone",
+        "Lingot de zinc"
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 lampe à quartz rose"
+  },
+  "videos": [
+    {
+      "id": "rose_quartz_lamp",
+      "name": "Lampe à quartz rose : mémoire, groupe et comparateur",
+      "description": "Un bouton allume la lampe, qui reste allumée et alimente un répéteur ; à trois lampes, le bouton déplace la lumière de l'une à l'autre, et un comparateur affiche sa position sur un tube Nixie.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "signal",
+      "title": "Un signal l'allume",
+      "image": "rose_quartz_lamp_signal.webp",
+      "alt": "Lampe à quartz rose allumée par un bouton",
+      "video": "rose_quartz_lamp",
+      "html": "<p>Un bouton suffit : au début du signal, la lampe <strong>s'allume</strong>. Elle est plus vive et rosée allumée que éteinte.</p>"
+    },
+    {
+      "id": "memoire",
+      "title": "Elle reste allumée",
+      "image": "rose_quartz_lamp_memoire.webp",
+      "alt": "La lampe alimente un répéteur",
+      "html": "<p>Le bouton se relâche, la lampe <strong>reste allumée</strong> et alimente ses voisins avec une puissance de 15 : ici un répéteur, qui allume son fil. Le fil qui l'a allumée reste alimenté lui aussi, par la lampe elle-même : c'est ce que fait le code, et notre simulation le montre.</p>"
+    },
+    {
+      "id": "alimente",
+      "title": "Ce qu'elle alimente",
+      "html": "<p>Allumée, la lampe envoie 15 à tous ses voisins, sauf aux autres lampes : un fil, un répéteur, une porte, un piston. Éteinte, elle n'envoie rien. Chaque lampe d'un groupe peut donc commander sa propre machine, et une seule tourne à la fois.</p>"
+    },
+    {
+      "id": "groupe",
+      "title": "Des lampes en groupe",
+      "image": "rose_quartz_lamp_groupe.webp",
+      "alt": "Trois lampes collées en groupe",
+      "html": "<p>Deux lampes de plus, collées à la première : elles forment un <strong>groupe</strong>. Un groupe englobe toutes les lampes qui se touchent, jusqu'à 16 blocs de distance.</p>"
+    },
+    {
+      "id": "taille",
+      "title": "La taille d'un groupe",
+      "html": "<p>Le groupe compte toutes les lampes reliées face contre face dans un rayon de 16 blocs autour de celle qui reçoit le signal. Au-delà, les lampes ne s'éteignent plus ensemble. Garde chaque sélecteur bien séparé des autres.</p>"
+    },
+    {
+      "id": "un-seul",
+      "title": "Une seule allumée à la fois",
+      "image": "rose_quartz_lamp_un-seul.webp",
+      "alt": "Une autre lampe s’allume, la première s’éteint",
+      "html": "<p>Le bouton, déplacé devant une autre lampe, l'allume et <strong>éteint toutes les autres</strong> du groupe. C'est un sélecteur : la lumière indique le dernier bouton pressé.</p>"
+    },
+    {
+      "id": "comparateur",
+      "title": "Lire la position au comparateur",
+      "image": "rose_quartz_lamp_comparateur.webp",
+      "alt": "Le tube Nixie affiche 13",
+      "html": "<p>Un <strong>comparateur</strong> contre la rangée donne 15 si la lampe allumée est la première, 14 si c'est la deuxième, et ainsi de suite. Ici, un <a href=\"/wiki/tube-nixie\">tube Nixie</a> affiche 13 : la lumière est sur la troisième lampe.</p>"
+    },
+    {
+      "id": "cle",
+      "title": "À la clé",
+      "image": "rose_quartz_lamp_cle.webp",
+      "alt": "La clé allume la première lampe",
+      "html": "<p>Un clic de <strong>clé</strong> allume ou éteint une lampe à la main, sans toucher aux autres. Dans la boucle, la troisième s'éteint, le comparateur tombe à 0, puis la première s'allume et il remonte à 15.</p>"
+    },
+    {
+      "id": "fabriquer",
+      "title": "Fabriquer le quartz rose",
+      "html": "<p>Le <strong>quartz rose</strong> se fabrique avec un quartz du Nether et huit poudres de redstone, puis se polit au papier de verre. La lampe y ajoute une poudre de redstone et un lingot de zinc, sans forme.</p>"
+    },
+    {
+      "id": "montages",
+      "title": "Idées de montages",
+      "html": "<p>Un <strong>sélecteur d'étage</strong> : une lampe par étage, un bouton devant chacune, et le comparateur qui dit où envoyer la cabine. Un <strong>choix de recette</strong> pour une usine : chaque lampe allume une ligne différente. Avec des <a href=\"/wiki/liaison-de-redstone\">liaisons</a>, les boutons peuvent être loin.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Deux groupes collés par erreur n'en font plus qu'un : laisse un bloc d'écart. Un fil qui touche la lampe reste allumé tant qu'elle brille, ce qui peut alimenter d'autres machines par surprise. Le comparateur ne lit qu'en ligne droite.</p>"
+    },
+    {
+      "id": "boucle",
+      "title": "Ce que montre la boucle",
+      "html": "<p>Notre simulation suit le code du bloc : la lampe allumée garde aussi sous tension le fil qui l'a allumée, alors que la scène du jeu l'éteint. Le comparateur et le tube Nixie affichent les valeurs calculées. Le joueur et la clé ne sont pas dessinés.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur notre serveur",
+      "html": "<p>Sur Create France, une rangée de lampes à quartz rose fait un beau tableau d'aiguillage pour choisir la destination d'un train ou d'un ascenseur.</p>"
+    }
+  ],
+  "related": [
+    "tube-nixie",
+    "verrou-alimente",
+    "liaison-de-redstone",
+    "horloges-et-impulsions",
+    "detecteur-de-seuil",
+    "observateur-intelligent"
+  ],
+  "sources": [
+    "Recettes : crafting/kinetics/rose_quartz_lamp.json, crafting/materials/rose_quartz.json",
+    "Logique : RoseQuartzLampBlock.neighborChanged (forEachInCluster, 16 blocs), tick, getSignal (0 vers une lampe, 15 sinon), getDistanceToPowered (comparateur)",
+    "Clé : RoseQuartzLampBlock.getRotatedBlockState / onWrenched",
+    "Simulation : WIKI/redstone_sim.py (signaux, délais, liaisons, verrous et vitesses recalculés tick par tick d'après le code de Create et de Minecraft ; seules les actions du joueur viennent de la scène)",
+    "Scène : RedstoneScenes2.roseQuartzLamp (joueur et clé non dessinés)"
+  ],
+  "en": {
+    "slugEn": "rose-quartz-lamp",
+    "name": "Rose Quartz Lamp",
+    "title": "Rose Quartz Lamp — Create mod guide",
+    "description": "The Create Rose Quartz Lamp: a lamp that remembers its state, groups where only one stays lit, and a comparator reading based on distance.",
+    "intro": "The <strong>Rose Quartz Lamp</strong> is more than a light: it is a <strong>memory</strong>. A signal turns it on and it <strong>stays on</strong> once the signal is gone. Placed in a group, the lamps make a selector: lighting one switches all the others off. And a comparator tells which one is lit, from its distance.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Redstone"
+      },
+      {
+        "label": "Lighting",
+        "value": "When a signal starts; it stays lit afterwards"
+      },
+      {
+        "label": "Group",
+        "value": "Lamps touching each other, up to 16 blocks: only one lit at a time"
+      },
+      {
+        "label": "Output",
+        "value": "Strength 15 to every neighbouring block except another lamp"
+      },
+      {
+        "label": "Comparator",
+        "value": "15 minus the distance to the lit lamp of the row"
+      },
+      {
+        "label": "Wrench",
+        "value": "Switches a lamp on or off by hand"
+      },
+      {
+        "label": "Delay",
+        "value": "1 tick for the group"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (shapeless)",
+      "grid": [
+        [
+          "Polished Rose Quartz",
+          "Redstone Dust",
+          "Zinc Ingot"
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Rose Quartz Lamp"
+    },
+    "videos": [
+      {
+        "id": "rose_quartz_lamp",
+        "name": "Rose Quartz Lamp: memory, groups and comparator",
+        "description": "A button lights the lamp, which stays lit and powers a repeater; with three lamps the button moves the light from one to another, and a comparator shows its position on a Nixie Tube."
+      }
+    ],
+    "sections": [
+      {
+        "id": "signal",
+        "title": "A signal lights it",
+        "alt": "Rose Quartz Lamp lit by a button",
+        "html": "<p>A button is enough: when the signal starts, the lamp <strong>lights up</strong>. It looks brighter and pinker when lit than when dark.</p>"
+      },
+      {
+        "id": "memoire",
+        "title": "It stays lit",
+        "alt": "The lamp powers a repeater",
+        "html": "<p>The button pops back, the lamp <strong>stays lit</strong> and powers its neighbours at strength 15: here a repeater, which lights its dust. The dust that lit it stays powered too, by the lamp itself: that is what the code does, and our simulation shows it.</p>"
+      },
+      {
+        "id": "alimente",
+        "title": "What it powers",
+        "html": "<p>While lit, the lamp sends 15 to all its neighbours except other lamps: dust, a repeater, a door, a piston. When dark it sends nothing. So each lamp in a group can drive its own machine, and only one runs at a time.</p>"
+      },
+      {
+        "id": "groupe",
+        "title": "Lamps in a group",
+        "alt": "Three lamps stuck together in a group",
+        "html": "<p>Two more lamps, stuck to the first one: they form a <strong>group</strong>. A group takes in every lamp that touches another, within 16 blocks.</p>"
+      },
+      {
+        "id": "taille",
+        "title": "How big a group can be",
+        "html": "<p>The group counts every lamp linked face to face within 16 blocks of the one getting the signal. Beyond that, lamps no longer switch off together. Keep each selector well apart from the others.</p>"
+      },
+      {
+        "id": "un-seul",
+        "title": "Only one lit at a time",
+        "alt": "Another lamp lights up, the first goes dark",
+        "html": "<p>The button, moved in front of another lamp, lights it and <strong>switches off every other one</strong> in the group. It is a selector: the light points to the last button pressed.</p>"
+      },
+      {
+        "id": "comparateur",
+        "title": "Reading the position with a comparator",
+        "alt": "The Nixie Tube shows 13",
+        "html": "<p>A <strong>comparator</strong> against the row gives 15 if the lit lamp is the first, 14 if it is the second, and so on. Here a <a href=\"/en/wiki/nixie-tube\">Nixie Tube</a> shows 13: the light is on the third lamp.</p>"
+      },
+      {
+        "id": "cle",
+        "title": "With the Wrench",
+        "alt": "The Wrench lights the first lamp",
+        "html": "<p>A <strong>Wrench</strong> click switches a lamp on or off by hand, without touching the others. In the loop the third one goes dark, the comparator drops to 0, then the first one lights and it climbs back to 15.</p>"
+      },
+      {
+        "id": "fabriquer",
+        "title": "Making Rose Quartz",
+        "html": "<p><strong>Rose Quartz</strong> is crafted from one Nether Quartz and eight Redstone Dust, then polished with sandpaper. The lamp adds a Redstone Dust and a Zinc Ingot to it, shapeless.</p>"
+      },
+      {
+        "id": "montages",
+        "title": "Build ideas",
+        "html": "<p>A <strong>floor selector</strong>: one lamp per floor, a button in front of each, and the comparator telling where to send the cabin. A <strong>recipe picker</strong> for a factory: each lamp turns on a different line. With <a href=\"/en/wiki/redstone-link\">links</a>, the buttons can be far away.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>Two groups stuck together by mistake become one: leave a gap of one block. Dust touching the lamp stays powered while it glows, which can power other machines by surprise. The comparator only reads in a straight line.</p>"
+      },
+      {
+        "id": "boucle",
+        "title": "What the loop shows",
+        "html": "<p>Our simulation follows the block's code: the lit lamp also keeps the dust that lit it powered, whereas the in-game scene turns it off. The comparator and the Nixie Tube show the computed values. The player and the Wrench are not drawn. Lit and dark lamps use the game's own textures.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On our server",
+        "html": "<p>On Create France, a row of Rose Quartz Lamps makes a neat switchboard to pick where a train or an elevator should go.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: crafting/kinetics/rose_quartz_lamp.json, crafting/materials/rose_quartz.json",
+      "Logic: RoseQuartzLampBlock.neighborChanged (forEachInCluster, 16 blocks), tick, getSignal (0 toward a lamp, 15 otherwise), getDistanceToPowered (comparator)",
+      "Wrench: RoseQuartzLampBlock.getRotatedBlockState / onWrenched",
+      "Simulation: WIKI/redstone_sim.py (signals, delays, links, latches and speeds recomputed tick by tick from Create's and Minecraft's code; only the player's actions come from the scene)",
+      "Scene: RedstoneScenes2.roseQuartzLamp (player and Wrench not drawn)"
+    ]
+  }
+}

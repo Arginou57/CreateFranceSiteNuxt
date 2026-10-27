@@ -1,0 +1,306 @@
+{
+  "slug": "inverseur-de-rotation",
+  "name": "Inverseur de rotation et embrayage",
+  "blockId": "create:gearshift",
+  "category": "redstone",
+  "title": "Inverseur de rotation et embrayage — Create : guide",
+  "description": "L'inverseur de rotation et l'embrayage de Create : changer le sens ou couper une ligne d'arbres avec la redstone, sans perdre de vitesse.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "L'<strong>inverseur de rotation</strong> et l'<strong>embrayage</strong> sont les deux interrupteurs de la cinétique de Create. Posés dans une ligne de <a href=\"/wiki/rotor\">rotors</a>, ils laissent passer la rotation telle quelle. Dès qu'ils reçoivent de la redstone, l'inverseur fait tourner la suite <strong>dans l'autre sens</strong> et l'embrayage la <strong>coupe</strong>. C'est avec eux qu'on fait reculer un piston ou qu'on arrête une machine.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Redstone"
+    },
+    {
+      "label": "Sans signal",
+      "value": "Les deux laissent passer la rotation d’un bout à l’autre, sans changer la vitesse"
+    },
+    {
+      "label": "Inverseur alimenté",
+      "value": "La sortie tourne en sens inverse, à la même vitesse"
+    },
+    {
+      "label": "Embrayage alimenté",
+      "value": "La sortie s’arrête ; le côté source continue de tourner"
+    },
+    {
+      "label": "Côté source",
+      "value": "Celui d’où vient la rotation ; l’effet porte sur l’autre côté"
+    },
+    {
+      "label": "Stress",
+      "value": "Aucun : ce sont des relais"
+    },
+    {
+      "label": "Embrayage à l’établi",
+      "value": "Boitier d’andésite + rotor + poudre de redstone"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Inverseur à l'établi (sans forme)",
+    "grid": [
+      [
+        "Boitier d'andésite",
+        "Roue dentée",
+        "Poudre de redstone"
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 inverseur de rotation"
+  },
+  "videos": [
+    {
+      "id": "clutch",
+      "name": "Embrayage : couper la rotation",
+      "description": "Une ligne de rotors traverse un embrayage jusqu'à un compteur de vitesse ; un levier l'alimente et toute la partie après l'embrayage s'arrête, puis repart.",
+      "duration": "PT11S"
+    },
+    {
+      "id": "gearshift",
+      "name": "Inverseur de rotation : changer le sens",
+      "description": "Le même montage avec un inverseur : à chaque coup de levier, la roue dentée du bout change de sens de rotation, pendant que la source tourne toujours pareil.",
+      "duration": "PT17S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "embrayage",
+      "title": "L'embrayage laisse passer",
+      "image": "clutch_embrayage.webp",
+      "alt": "Embrayage dans une ligne de rotors",
+      "video": "clutch",
+      "html": "<p>Sans redstone, l'<strong>embrayage</strong> se comporte comme un rotor dans un boîtier : la rotation le traverse et le <a href=\"/wiki/stressometre-compteur-de-vitesse\">compteur de vitesse</a> du bout affiche la vitesse de la source.</p>"
+    },
+    {
+      "id": "coupe",
+      "title": "Alimenté, il coupe",
+      "image": "clutch_coupe.webp",
+      "alt": "Embrayage alimenté : la sortie est à l’arrêt",
+      "html": "<p>Le levier allume le fil, l'embrayage devient rouge et <strong>la moitié de sortie s'arrête</strong>. Regarde les deux demi-arbres du boîtier : celui du côté de la source tourne encore, l'autre est immobile. Tout ce qui suit reste à l'arrêt tant que le signal dure.</p>"
+    },
+    {
+      "id": "relais",
+      "title": "L'inverseur, un relais tant qu'il n'est pas alimenté",
+      "image": "gearshift_relais.webp",
+      "alt": "Inverseur de rotation dans une ligne",
+      "video": "gearshift",
+      "html": "<p>L'<strong>inverseur de rotation</strong> laisse lui aussi passer la rotation d'un bout à l'autre tant qu'il est éteint. Il ne coûte pas de stress et ne change pas la vitesse.</p>"
+    },
+    {
+      "id": "inverse",
+      "title": "Alimenté, il inverse le sens",
+      "image": "gearshift_inverse.webp",
+      "alt": "Inverseur alimenté : la sortie tourne à l’envers",
+      "html": "<p>Avec un signal, la sortie <strong>tourne à l'envers</strong> à la même vitesse. Dans la boucle, le levier bascule trois fois : la roue dentée du bout change de sens à chaque fois, alors que la source ne bouge pas. Notre simulation recalcule tout le réseau à chaque changement, d'après les règles de Create.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "Aucune perte de vitesse",
+      "html": "<p>Contrairement à un jeu de roues dentées, ni l'un ni l'autre ne change le rapport : 32 tr/min entrent, 32 tr/min sortent, dans un sens ou dans l'autre. Le stress des machines branchées après eux reste payé par la source, comme si le boîtier n'était pas là.</p>"
+    },
+    {
+      "id": "alimenter",
+      "title": "Comment l'alimenter",
+      "html": "<p>Toute source qui touche le boîtier convient : un levier posé dessus, un fil qui pointe vers lui, un comparateur, un récepteur de <a href=\"/wiki/liaison-de-redstone\">liaison</a>. La puissance ne compte pas, 1 suffit. Le changement est quasi immédiat : le réseau de rotation est recalculé dès que le signal change.</p>"
+    },
+    {
+      "id": "source",
+      "title": "Le côté source compte",
+      "html": "<p>L'effet ne porte que sur le côté <strong>opposé à la source</strong>. Si la rotation arrive par l'autre bout, c'est l'autre moitié qui s'arrête ou s'inverse. Un inverseur entre deux sources n'est donc pas une bonne idée : les deux réseaux tenteraient de tourner dans des sens opposés et le jeu casserait un bloc.</p>"
+    },
+    {
+      "id": "montages",
+      "title": "Idées de montages",
+      "html": "<p>Un <a href=\"/wiki/piston-mecanique\">piston mécanique</a> derrière un inverseur sort ou rentre au gré d'un levier : c'est la porte la plus simple de Create. Un embrayage en tête de ligne coupe toute une usine d'un coup. Avec une <a href=\"/wiki/liaison-de-redstone\">liaison de redstone</a>, le levier peut être à l'autre bout de la base.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Un fil qui passe à côté du boîtier sans le toucher ne l'alimente pas : vérifie qu'il pointe vers lui. Pour un mouvement qui doit s'arrêter seul après un angle ou une distance précise, l'outil est l'<a href=\"/wiki/inverseur-de-rotation-sequence\">inverseur séquencé</a>, pas un levier.</p>"
+    },
+    {
+      "id": "boucle",
+      "title": "Ce que montre la boucle",
+      "html": "<p>Chaque demi-arbre suit, à chaque instant, la vitesse calculée par notre simulation : on voit la moitié de sortie s'arrêter, ou repartir dans l'autre sens, au moment exact où le levier bascule. Seule la vitesse de la source vient de la scène ; le reste du réseau est recalculé avec les règles de Create.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur notre serveur",
+      "html": "<p>Sur Create France, un embrayage en tête de chaque atelier permet d'arrêter une machine pour la réparer ou la modifier sans couper toute la base.</p>"
+    }
+  ],
+  "related": [
+    "rotor",
+    "boite-a-roues-dentees",
+    "piston-mecanique",
+    "inverseur-de-rotation-sequence",
+    "liaison-de-redstone",
+    "stressometre-compteur-de-vitesse"
+  ],
+  "sources": [
+    "Recettes : crafting/kinetics/gearshift.json, clutch.json (sans forme)",
+    "Comportement : GearshiftBlockEntity / ClutchBlockEntity.getRotationSpeedModifier (-1 ou 0 hors du côté source), SplitShaftBlockEntity",
+    "Rendu des deux demi-arbres : SplitShaftVisual (vitesse × modificateur de chaque face)",
+    "Simulation : WIKI/redstone_sim.py (signaux, délais, liaisons, verrous et vitesses recalculés tick par tick d'après le code de Create et de Minecraft ; seules les actions du joueur viennent de la scène)",
+    "Scènes : KineticsScenes.clutch, gearshift (joueur non dessiné)"
+  ],
+  "en": {
+    "slugEn": "gearshift",
+    "name": "Gearshift and Clutch",
+    "title": "Gearshift and Clutch — Create mod guide",
+    "description": "The Create Gearshift and Clutch: reverse or cut a line of shafts with redstone, without losing any speed. How they work and how to wire them.",
+    "intro": "The <strong>Gearshift</strong> and the <strong>Clutch</strong> are the two switches of Create's kinetics. Placed in a line of <a href=\"/en/wiki/shaft\">shafts</a>, they let rotation through unchanged. As soon as they get redstone, the Gearshift makes everything after it spin <strong>the other way</strong> and the Clutch <strong>cuts</strong> it. They are how you pull a piston back or stop a machine.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Redstone"
+      },
+      {
+        "label": "Without a signal",
+        "value": "Both pass rotation through end to end, at the same speed"
+      },
+      {
+        "label": "Powered Gearshift",
+        "value": "The output turns the other way, at the same speed"
+      },
+      {
+        "label": "Powered Clutch",
+        "value": "The output stops; the source side keeps turning"
+      },
+      {
+        "label": "Source side",
+        "value": "The side the rotation comes from; the effect applies to the other side"
+      },
+      {
+        "label": "Stress",
+        "value": "None: they are relays"
+      },
+      {
+        "label": "Clutch recipe",
+        "value": "Andesite Casing + Shaft + Redstone Dust"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Gearshift recipe (shapeless)",
+      "grid": [
+        [
+          "Andesite Casing",
+          "Cogwheel",
+          "Redstone Dust"
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Gearshift"
+    },
+    "videos": [
+      {
+        "id": "clutch",
+        "name": "Clutch: cutting the rotation",
+        "description": "A line of shafts runs through a Clutch to a Speedometer; a lever powers it and everything past the Clutch stops, then starts again."
+      },
+      {
+        "id": "gearshift",
+        "name": "Gearshift: changing direction",
+        "description": "The same build with a Gearshift: every flick of the lever makes the cogwheel at the end change direction, while the source keeps turning the same way."
+      }
+    ],
+    "sections": [
+      {
+        "id": "embrayage",
+        "title": "The Clutch lets it through",
+        "alt": "Clutch in a line of shafts",
+        "html": "<p>Without redstone the <strong>Clutch</strong> behaves like a shaft in a casing: rotation passes through and the <a href=\"/en/wiki/stressometer-speedometer\">Speedometer</a> at the end shows the source speed.</p>"
+      },
+      {
+        "id": "coupe",
+        "title": "Powered, it cuts",
+        "alt": "Powered Clutch: the output is stopped",
+        "html": "<p>The lever lights the dust, the Clutch turns red and <strong>its output half stops</strong>. Watch the two half shafts in the casing: the one on the source side still turns, the other is still. Everything after it stays put for as long as the signal lasts.</p>"
+      },
+      {
+        "id": "relais",
+        "title": "The Gearshift, a relay while unpowered",
+        "alt": "Gearshift in a line",
+        "html": "<p>The <strong>Gearshift</strong> also passes rotation straight through while it is off. It costs no stress and does not change the speed.</p>"
+      },
+      {
+        "id": "inverse",
+        "title": "Powered, it reverses",
+        "alt": "Powered Gearshift: the output runs backwards",
+        "html": "<p>With a signal, the output <strong>turns backwards</strong> at the same speed. In the loop the lever flips three times: the cogwheel at the end changes direction each time, while the source does not. Our simulation recomputes the whole network on every change, using Create's rules.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "No loss of speed",
+        "html": "<p>Unlike a set of cogwheels, neither block changes the ratio: 32 RPM in, 32 RPM out, one way or the other. The stress of the machines after them is still paid by the source, as if the casing were not there at all.</p>"
+      },
+      {
+        "id": "alimenter",
+        "title": "How to power it",
+        "html": "<p>Any source touching the casing will do: a lever placed on it, dust pointing at it, a comparator, a <a href=\"/en/wiki/redstone-link\">link</a> receiver. The strength does not matter, 1 is enough. The switch is almost instant: the rotation network is recomputed as soon as the signal changes.</p>"
+      },
+      {
+        "id": "source",
+        "title": "The source side matters",
+        "html": "<p>The effect only applies to the side <strong>opposite the source</strong>. If rotation comes in from the other end, the other half is the one that stops or flips. So a Gearshift between two sources is a bad idea: the two networks would try to spin opposite ways and the game would break a block.</p>"
+      },
+      {
+        "id": "montages",
+        "title": "Build ideas",
+        "html": "<p>A <a href=\"/en/wiki/mechanical-piston\">Mechanical Piston</a> behind a Gearshift extends or retracts with a lever: the simplest door in Create. A Clutch at the head of a line shuts a whole factory down at once. With a <a href=\"/en/wiki/redstone-link\">Redstone Link</a>, the lever can sit at the far end of your base.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>Dust running past the casing without touching it does not power it: check that it points at the block. For a movement that must stop by itself after an exact angle or distance, the tool is the <a href=\"/en/wiki/sequenced-gearshift\">Sequenced Gearshift</a>, not a lever.</p>"
+      },
+      {
+        "id": "boucle",
+        "title": "What the loop shows",
+        "html": "<p>Each half shaft follows, at every moment, the speed computed by our simulation: you see the output half stop, or spin back the other way, at the exact moment the lever flips. Only the source speed comes from the scene; the rest of the network is recomputed with Create's rules.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On our server",
+        "html": "<p>On Create France, a Clutch at the head of each workshop lets you stop one machine to fix or change it without shutting down the whole base. Label each lever so everyone knows what it stops.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: crafting/kinetics/gearshift.json, clutch.json (shapeless)",
+      "Behaviour: GearshiftBlockEntity / ClutchBlockEntity.getRotationSpeedModifier (-1 or 0 away from the source side), SplitShaftBlockEntity",
+      "Rendering of the two half shafts: SplitShaftVisual (speed × modifier of each face)",
+      "Simulation: WIKI/redstone_sim.py (signals, delays, links, latches and speeds recomputed tick by tick from Create's and Minecraft's code; only the player's actions come from the scene)",
+      "Scenes: KineticsScenes.clutch, gearshift (player not drawn)"
+    ]
+  }
+}

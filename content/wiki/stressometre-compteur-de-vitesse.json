@@ -122,7 +122,8 @@
     "rotor",
     "roue-dentee",
     "roue-a-eau",
-    "moteur-a-vapeur"
+    "moteur-a-vapeur",
+    "controleur-de-vitesse-de-rotation"
   ],
   "sources": [
     "Stress : AllBlocks.java, SPEEDOMETER et STRESSOMETER, CStress.setNoImpact()",
