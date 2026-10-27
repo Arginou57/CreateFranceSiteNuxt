@@ -101,7 +101,7 @@
       "html": "<ul><li><strong>La presse ne bouge pas</strong> : réseau surchargé (8 SU par tr/min) ou rotation branchée sur le mauvais côté.</li><li><strong>Elle descend dans le vide</strong> : l'objet est trop haut ou trop bas. Tapis, dépôt et bassin se placent deux blocs sous la presse.</li><li><strong>Rien ne sort du bassin</strong> : recette incomplète, sortie du bassin bouchée, ou filtre réglé sur un autre objet.</li></ul>"
     }
   ],
-  "related": ["tapis-roulant", "perceuse-mecanique"],
+  "related": ["tapis-roulant", "perceuse-mecanique", "rail-de-train"],
   "sources": [
     "Stress : AllBlocks.java, MECHANICAL_PRESS, CStress.setImpact(8.0) ; roue à eau CStress.setCapacity(32)",
     "Cycle : PressingBehaviour.java (CYCLE = 240, getRunningTickSpeed = lerp(|vitesse| / 512, 1, 60), écrasement à CYCLE / 2)",

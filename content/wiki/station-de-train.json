@@ -1,0 +1,379 @@
+{
+  "slug": "station-de-train",
+  "name": "Station de train",
+  "blockId": "create:track_station",
+  "category": "trains",
+  "title": "Station de train — Create : guide en français",
+  "description": "La station de train de Create : la poser près d'un rail, assembler et désassembler un train, son sens, le comparateur et les plannings automatiques.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>station de train</strong> est le point de départ de tout réseau ferré de Create. C'est là qu'on <a href=\"/wiki/assembler-un-train\">assemble un train</a> à partir de blocs, qu'on le redémonte, et c'est vers elle que roulent les trains qui suivent un <a href=\"/wiki/planning-de-train\">planning</a>. Une station se pose à côté d'un <a href=\"/wiki/rail-de-train\">rail de train</a> et marque un point précis de la voie, dans un sens donné.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Trains"
+    },
+    {
+      "label": "Fabrication",
+      "value": "1 boitier de train + 1 boussole = 2 stations (sans forme)"
+    },
+    {
+      "label": "Pose",
+      "value": "Clic droit sur un rail avec la station en main, puis la poser à 16 blocs au plus"
+    },
+    {
+      "label": "Rôle",
+      "value": "Arrêt nommé du réseau, assemblage et désassemblage des trains"
+    },
+    {
+      "label": "Sens",
+      "value": "Un train ne s'arrête qu'en arrivant dans le sens de la flèche du repère"
+    },
+    {
+      "label": "Comparateur",
+      "value": "Signal tant qu’un train est à quai"
+    },
+    {
+      "label": "Planning automatique",
+      "value": "Un planning posé dans la station est copié sur chaque train qui s'y arrête"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (sans forme)",
+    "grid": [
+      [
+        "Boitier de train",
+        "Boussole",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "2 stations de train"
+  },
+  "videos": [
+    {
+      "id": "station_assembly",
+      "name": "Station de train : la poser et passer en mode assemblage",
+      "description": "Une station est posée au bord d'un rail ; son interface la fait passer en mode assemblage, pendant lequel aucun train programmé ne vient s'y arrêter.",
+      "duration": "PT17S"
+    },
+    {
+      "id": "station_depart",
+      "name": "Station de train : valider l’assemblage, partir, désassembler",
+      "description": "Le train assemblé quitte la station ; la carte reçoit un repère nommé ; un train déjà assemblé est déplacé sur une voie voisine avec la clé.",
+      "duration": "PT17S"
+    },
+    {
+      "id": "auto_schedule",
+      "name": "Station de train : comparateur et planning automatique",
+      "description": "Un train arrive à quai et allume un comparateur ; il ne s'arrête que dans le bon sens ; un planning posé dans la station est copié sur le train suivant.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "poser",
+      "title": "Poser une station",
+      "image": "station_assembly_poser.webp",
+      "alt": "Station de train posée à côté d’une voie, repère sur le rail",
+      "video": "station_assembly",
+      "html": "<p>Avec la station en main, fais d'abord un <strong>clic droit sur un rail</strong> : la case visée s'entoure de vert. Pose ensuite la station n'importe où dans un rayon de <strong>16 blocs</strong> autour de ce rail, au sol ou dans un mur. Un repère bleu apparaît sur la voie : c'est lui, et non le bloc, qui marque l'arrêt.</p>"
+    },
+    {
+      "id": "reseau",
+      "title": "Les arrêts du réseau",
+      "image": "station_assembly_reseau.webp",
+      "alt": "La station, arrêt nommé sur la voie",
+      "html": "<p>Chaque station porte un <strong>nom</strong>, modifiable dans son interface. Ce nom est ce que vise un <a href=\"/wiki/planning-de-train\">planning de train</a> : « aller à Mine », « aller à Ferme ». Plusieurs stations peuvent partager un nom ; le train va alors à la plus proche.</p>"
+    },
+    {
+      "id": "assemblage",
+      "title": "Le mode assemblage",
+      "image": "station_assembly_assemblage.webp",
+      "alt": "La station passe en mode assemblage",
+      "html": "<p>Un clic droit sur la station ouvre son interface. Le bouton d'<strong>assemblage</strong> change le drapeau de la station et affiche sur la voie l'emplacement des bogies trouvés. C'est dans ce mode qu'on construit son train, bloc par bloc, sur les rails devant la station.</p>"
+    },
+    {
+      "id": "bloquee",
+      "title": "Une station fermée au trafic",
+      "image": "station_assembly_bloquee.webp",
+      "alt": "Repère rouge : la station n’accepte plus de train",
+      "html": "<p>Tant qu'une station est en mode assemblage, <strong>aucun train programmé ne s'y arrête</strong> : les plannings qui la visent attendent. Pense à quitter ce mode une fois le train terminé, sinon une ligne entière peut rester bloquée sur le serveur.</p>"
+    },
+    {
+      "id": "valider",
+      "title": "Valider et partir",
+      "image": "station_depart_valider.webp",
+      "alt": "Le train assemblé à quai, drapeau levé",
+      "video": "station_depart",
+      "html": "<p>Quand le train est prêt, rouvre l'interface et <strong>valide l'assemblage</strong> : les blocs deviennent un train. Le drapeau reste levé tant que le train est à quai, puis s'abaisse quand il démarre. Notre animation reprend l'accélération réelle de Create, 3 blocs par seconde au carré.</p>"
+    },
+    {
+      "id": "desassembler",
+      "title": "Redémonter un train",
+      "image": "station_depart_desassembler.webp",
+      "alt": "La voie vide après le départ du train",
+      "html": "<p>Un train ne redevient des blocs <strong>qu'à une station</strong>. Arrête-le sur le repère, ouvre l'interface et choisis le désassemblage : chaque bloc retrouve sa place sur la voie. Ailleurs, le train reste une entité, même immobile.</p>"
+    },
+    {
+      "id": "carte",
+      "title": "Un repère sur la carte",
+      "image": "station_depart_carte.webp",
+      "alt": "Station de train utilisée avec une carte",
+      "html": "<p>Une <strong>carte remplie</strong> utilisée sur la station y ajoute un marqueur portant son nom. Pratique pour dessiner le plan d'un réseau sur un mur de cartes, ou pour retrouver une gare lointaine.</p>"
+    },
+    {
+      "id": "cle",
+      "title": "Déplacer un train avec la clé",
+      "image": "station_depart_cle.webp",
+      "alt": "Train déplacé d’une voie à l’autre avec la clé",
+      "html": "<p>Un train assemblé peut être <strong>déplacé sur une voie voisine</strong> : clic droit sur le train avec la clé, puis sur le rail visé. Utile quand on a assemblé sur la mauvaise voie d'une gare à plusieurs quais.</p>"
+    },
+    {
+      "id": "planning",
+      "title": "Une destination pour le conducteur",
+      "image": "auto_schedule_planning.webp",
+      "alt": "Train qui arrive à la station",
+      "video": "auto_schedule",
+      "html": "<p>Un train ne roule seul que s'il a un conducteur et un <a href=\"/wiki/planning-de-train\">planning</a>. La station est sa destination : le train y freine pour s'arrêter pile sur le repère, puis repart quand les conditions du planning sont remplies.</p>"
+    },
+    {
+      "id": "comparateur",
+      "title": "Savoir si un train est à quai",
+      "image": "auto_schedule_comparateur.webp",
+      "alt": "Comparateur allumé par un train à quai",
+      "html": "<p>Un <strong>comparateur</strong> posé contre la station émet un signal tant qu'un train est présent. De quoi ouvrir des portes, lancer des <a href=\"/wiki/tapis-roulant\">tapis roulants</a> de chargement ou afficher l'arrivée avec une <a href=\"/wiki/liaison-d-affichage\">liaison d'affichage</a>.</p>"
+    },
+    {
+      "id": "sens",
+      "title": "Le sens compte",
+      "image": "auto_schedule_sens.webp",
+      "alt": "Train retourné : il ne peut pas s’arrêter dans ce sens",
+      "html": "<p>Le repère sur la voie a une <strong>flèche</strong> : la station n'accepte que les trains qui arrivent dans ce sens. Un train venu de l'autre côté passe sans s'arrêter. Pour un terminus desservi dans les deux sens, pose deux stations, une par sens.</p>"
+    },
+    {
+      "id": "automatique",
+      "title": "Le planning automatique",
+      "image": "auto_schedule_automatique.webp",
+      "alt": "Planning de train amené à la station par un tapis",
+      "html": "<p>Un planning peut être <strong>posé dans la station</strong> elle-même, par exemple par un <a href=\"/wiki/tapis-roulant\">tapis roulant</a> ou un entonnoir. Chaque train qui s'arrête ensuite en reçoit une copie, ce qui permet de reprogrammer toute une flotte sans monter à bord.</p>"
+    },
+    {
+      "id": "copie",
+      "title": "Copie, pas déplacement",
+      "image": "auto_schedule_copie.webp",
+      "alt": "Le train repart avec la copie du planning",
+      "html": "<p>Le conducteur garde la <strong>copie</strong> et repart aussitôt avec sa nouvelle mission. Contrairement à un planning donné à la main, l'objet reste dans la station : il ne part pas avec le train et sert au suivant.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur un serveur",
+      "html": "<p>Donne des noms clairs et uniques à tes stations, avec le nom de ta base devant, pour éviter qu'un autre joueur ne les vise par erreur. Les jokers des plannings visent tout ce qui commence pareil.</p>"
+    }
+  ],
+  "related": [
+    "assembler-un-train",
+    "planning-de-train",
+    "rail-de-train",
+    "signal-de-train",
+    "controles-de-train",
+    "liaison-d-affichage"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/track_station.json",
+    "Portée de pose : TrackTargetingBlockItem (16 blocs, plus avec une courbe)",
+    "Assemblage, drapeau, désassemblage : StationBlockEntity (ASSEMBLING, flag.chase 0,1 par tick), StationRenderer",
+    "Planning automatique : StationBlockEntity / ScheduleRuntime.setSchedule (isAutoSchedule)",
+    "Accélération : CTrains : trainTopSpeed 28, trainTurningTopSpeed 14, poweredTrainTopSpeed 40, poweredTrainTurningTopSpeed 20, trainAcceleration 3",
+    "Simulation : WIKI/train_sim.py (cantons, signaux, observateurs et drapeaux recalculés d'après le code de Create)",
+    "Scènes : TrainStationScenes.assembly, autoSchedule (perroquets conducteurs non dessinés)"
+  ],
+  "en": {
+    "slugEn": "train-station",
+    "name": "Train Station",
+    "title": "Train Station — Create mod guide",
+    "description": "The Create Train Station: placing it next to a track, assembling and disassembling trains, its arrival direction, the comparator and auto schedules.",
+    "intro": "The <strong>Train Station</strong> is where every Create railway begins. It is where you <a href=\"/en/wiki/train-assembly\">assemble a train</a> out of blocks, take it apart again, and where trains following a <a href=\"/en/wiki/train-schedule\">schedule</a> drive to. A station is placed next to a <a href=\"/en/wiki/train-track\">Train Track</a> and marks one precise point of the line, in one direction.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Trains"
+      },
+      {
+        "label": "Crafting",
+        "value": "1 Train Casing + 1 Compass = 2 stations (shapeless)"
+      },
+      {
+        "label": "Placement",
+        "value": "Right-click a track with the station in hand, then place it within 16 blocks"
+      },
+      {
+        "label": "Role",
+        "value": "Named stop of the network, train assembly and disassembly"
+      },
+      {
+        "label": "Direction",
+        "value": "A train only stops when arriving in the direction of the marker arrow"
+      },
+      {
+        "label": "Comparator",
+        "value": "Signal while a train is in the station"
+      },
+      {
+        "label": "Auto schedule",
+        "value": "A schedule placed in the station is copied to every train stopping there"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (shapeless)",
+      "grid": [
+        [
+          "Train Casing",
+          "Compass",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "2 Train Stations"
+    },
+    "videos": [
+      {
+        "id": "station_assembly",
+        "name": "Train Station: placing it and switching to assembly mode",
+        "description": "A station is placed next to a track; its interface switches it to assembly mode, during which no scheduled train will stop there."
+      },
+      {
+        "id": "station_depart",
+        "name": "Train Station: confirming assembly, leaving, disassembling",
+        "description": "The assembled train leaves the station; a map gets a named marker; an assembled train is moved to a nearby track with the wrench."
+      },
+      {
+        "id": "auto_schedule",
+        "name": "Train Station: comparator and auto schedule",
+        "description": "A train arrives and lights a comparator; it only stops in the right direction; a schedule placed in the station is copied to the next train."
+      }
+    ],
+    "sections": [
+      {
+        "id": "poser",
+        "title": "Placing a station",
+        "alt": "Train Station placed next to a track, marker on the rail",
+        "html": "<p>With the station in hand, first <strong>right-click a track</strong>: the targeted spot is outlined in green. Then place the station anywhere within <strong>16 blocks</strong> of that track, on the ground or in a wall. A blue marker appears on the track: that marker, not the block, is the actual stop.</p>"
+      },
+      {
+        "id": "reseau",
+        "title": "Stops of the network",
+        "alt": "The station, a named stop on the line",
+        "html": "<p>Every station has a <strong>name</strong>, editable in its interface. That name is what a <a href=\"/en/wiki/train-schedule\">Train Schedule</a> targets: “go to Mine”, “go to Farm”. Several stations may share a name; the train then heads to the nearest one.</p>"
+      },
+      {
+        "id": "assemblage",
+        "title": "Assembly mode",
+        "alt": "The station switches to assembly mode",
+        "html": "<p>Right-clicking the station opens its interface. The <strong>assembly</strong> button changes the station's flag and shows on the track where bogeys were found. This is the mode in which you build your train, block by block, on the tracks in front of the station.</p>"
+      },
+      {
+        "id": "bloquee",
+        "title": "A station closed to traffic",
+        "alt": "Red marker: the station no longer accepts trains",
+        "html": "<p>While a station is in assembly mode, <strong>no scheduled train stops there</strong>: schedules targeting it wait. Remember to leave that mode once the train is done, or a whole line can stay stuck on the server.</p>"
+      },
+      {
+        "id": "valider",
+        "title": "Confirm and leave",
+        "alt": "The assembled train in the station, flag raised",
+        "html": "<p>When the train is ready, open the interface again and <strong>confirm the assembly</strong>: the blocks become a train. The flag stays up while the train is in the station and drops when it leaves. Our animation uses Create's real acceleration, 3 blocks per second squared.</p>"
+      },
+      {
+        "id": "desassembler",
+        "title": "Taking a train apart",
+        "alt": "The empty track after the train left",
+        "html": "<p>A train only turns back into blocks <strong>at a station</strong>. Stop it on the marker, open the interface and choose disassembly: every block returns to its place on the track. Anywhere else the train stays an entity, even when standing still.</p>"
+      },
+      {
+        "id": "carte",
+        "title": "A marker on the map",
+        "alt": "Train Station used with a map",
+        "html": "<p>Using a <strong>filled map</strong> on the station adds a marker with its name. Handy for drawing the plan of a network on a wall of maps, or for finding a distant station again.</p>"
+      },
+      {
+        "id": "cle",
+        "title": "Moving a train with the wrench",
+        "alt": "Train moved from one track to another with the wrench",
+        "html": "<p>An assembled train can be <strong>moved to a nearby track</strong>: right-click the train with a Wrench, then the target track. Useful when you assembled on the wrong platform of a multi-track station.</p>"
+      },
+      {
+        "id": "planning",
+        "title": "A destination for the driver",
+        "alt": "Train arriving at the station",
+        "html": "<p>A train only drives on its own with a conductor and a <a href=\"/en/wiki/train-schedule\">schedule</a>. The station is its destination: the train brakes to stop exactly on the marker, then leaves once the schedule's conditions are met.</p>"
+      },
+      {
+        "id": "comparateur",
+        "title": "Knowing when a train is in",
+        "alt": "Comparator lit by a train in the station",
+        "html": "<p>A <strong>comparator</strong> against the station outputs a signal while a train is present. Use it to open doors, start loading <a href=\"/en/wiki/conveyor-belt\">belts</a> or show the arrival with a <a href=\"/en/wiki/display-link\">Display Link</a>.</p>"
+      },
+      {
+        "id": "sens",
+        "title": "Direction matters",
+        "alt": "Turned train: it cannot stop in this direction",
+        "html": "<p>The marker on the track has an <strong>arrow</strong>: the station only accepts trains arriving that way. A train coming from the other side drives through without stopping. For a terminus served both ways, place two stations, one per direction.</p>"
+      },
+      {
+        "id": "automatique",
+        "title": "Auto schedule",
+        "alt": "Train Schedule brought to the station by a belt",
+        "html": "<p>A schedule can be <strong>placed in the station</strong> itself, for instance by a <a href=\"/en/wiki/conveyor-belt\">belt</a> or a funnel. Every train stopping there afterwards receives a copy, so you can reprogram a whole fleet without boarding a single train.</p>"
+      },
+      {
+        "id": "copie",
+        "title": "A copy, not a transfer",
+        "alt": "The train leaves with the copied schedule",
+        "html": "<p>The conductor keeps the <strong>copy</strong> and leaves at once on its new mission. Unlike a schedule handed over manually, the item stays in the station: it does not leave with the train and serves the next one.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On a server",
+        "html": "<p>Give your stations clear, unique names, with your base's name first, so no other player targets them by mistake. Schedule wildcards match every name that starts the same way.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/track_station.json",
+      "Placement range: TrackTargetingBlockItem (16 blocks, more with a curve)",
+      "Assembly, flag, disassembly: StationBlockEntity (ASSEMBLING, flag.chase 0.1 per tick), StationRenderer",
+      "Auto schedule: StationBlockEntity / ScheduleRuntime.setSchedule (isAutoSchedule)",
+      "Acceleration: CTrains: trainTopSpeed 28, trainTurningTopSpeed 14, poweredTrainTopSpeed 40, poweredTrainTurningTopSpeed 20, trainAcceleration 3",
+      "Simulation: WIKI/train_sim.py (sections, signals, observers and flags recomputed from Create's code)",
+      "Scenes: TrainStationScenes.assembly, autoSchedule (parrot conductors not drawn)"
+    ]
+  }
+}

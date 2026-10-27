@@ -173,7 +173,8 @@
     "moteur-a-vapeur",
     "bec-verseur",
     "egouttoir-a-objets",
-    "detecteur-de-seuil"
+    "detecteur-de-seuil",
+    "observateur-de-train"
   ],
   "sources": [
     "Recette : crafting/kinetics/fluid_tank.json",

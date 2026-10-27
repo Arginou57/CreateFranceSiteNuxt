@@ -139,7 +139,8 @@
   "related": [
     "reservoir-a-fluide",
     "pompe-mecanique",
-    "tuyau-a-fluide"
+    "tuyau-a-fluide",
+    "assembler-un-train"
   ],
   "sources": [
     "Recette : crafting/kinetics/portable_fluid_interface.json (sans forme)",

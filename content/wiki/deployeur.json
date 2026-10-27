@@ -152,7 +152,8 @@
     "depot",
     "tapis-roulant",
     "bras-mecanique",
-    "bruleur-a-blaze"
+    "bruleur-a-blaze",
+    "rail-de-train"
   ],
   "sources": [
     "Stress : AllBlocks.java, DEPLOYER, CStress.setImpact(4.0)",

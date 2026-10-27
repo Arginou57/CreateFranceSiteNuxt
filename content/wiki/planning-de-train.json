@@ -1,0 +1,312 @@
+{
+  "slug": "planning-de-train",
+  "name": "Planning de train",
+  "blockId": "create:schedule",
+  "category": "trains",
+  "title": "Planning de train — Create : guide en français",
+  "description": "Le planning de train de Create : écrire un horaire, destinations et jokers, conditions d'attente, répétition, conducteurs et récupération du planning.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>planning de train</strong> transforme un train en ligne automatique. C'est un objet qu'on programme comme une liste d'étapes : aller à une <a href=\"/wiki/station-de-train\">station</a>, attendre une condition, repartir. Une fois confié à un conducteur assis aux <a href=\"/wiki/controles-de-train\">contrôles</a>, le train roule seul, de jour comme de nuit.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Trains"
+    },
+    {
+      "label": "Fabrication",
+      "value": "1 plaque renforcée + 1 papier = 4 plannings (sans forme)"
+    },
+    {
+      "label": "Ouvrir",
+      "value": "Clic droit avec le planning en main"
+    },
+    {
+      "label": "Actions",
+      "value": "Aller à une station, changer le titre, régler la vitesse, livrer ou récupérer des colis"
+    },
+    {
+      "label": "Jokers",
+      "value": "Jusqu'à 3 « * » dans un nom de station : « Mine* » vise Mine Nord et Mine Sud"
+    },
+    {
+      "label": "Conditions",
+      "value": "Délai, heure, cargaison inactive, seuil d'objets ou de fluides, liaison redstone, passagers, station alimentée ou déchargée"
+    },
+    {
+      "label": "Conducteur",
+      "value": "Un mob ou un brûleur à blaze assis face aux contrôles"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (sans forme)",
+    "grid": [
+      [
+        "Plaque renforcée",
+        "Papier",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "4 plannings de train"
+  },
+  "videos": [
+    {
+      "id": "train_schedule",
+      "name": "Planning de train : programmer et confier à un conducteur",
+      "description": "Un planning est confié au brûleur à blaze assis devant les contrôles et le train part ; un second train reçoit un conducteur amené en laisse, puis le planning est repris.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "conducteur",
+      "title": "Un conducteur à bord",
+      "image": "train_schedule_conducteur.webp",
+      "alt": "Train à quai, brûleur à blaze devant les contrôles",
+      "video": "train_schedule",
+      "html": "<p>Un train automatique a besoin d'un <strong>conducteur</strong> : un mob assis sur un siège face aux contrôles, ou un <a href=\"/wiki/bruleur-a-blaze\">brûleur à blaze</a> posé devant eux. Le joueur, lui, ne fait que programmer : il peut descendre du train.</p>"
+    },
+    {
+      "id": "interface",
+      "title": "Écrire un horaire",
+      "image": "train_schedule_interface.webp",
+      "alt": "Le planning en main près du quai",
+      "html": "<p>Clic droit avec le planning en main : l'interface s'ouvre. Chaque <strong>étape</strong> a une action, souvent « aller à » une station, suivie de ses conditions de départ. Coche <strong>répéter</strong> pour que le train recommence la liste en boucle.</p>"
+    },
+    {
+      "id": "confier",
+      "title": "Confier le planning",
+      "image": "train_schedule_confier.webp",
+      "alt": "Le train part avec son planning",
+      "html": "<p>Fais un clic droit sur le conducteur avec le planning : il le prend, et le train <strong>part aussitôt</strong> vers la première destination. Les brûleurs à blaze portent alors une casquette de conducteur.</p>"
+    },
+    {
+      "id": "mob",
+      "title": "Quel conducteur ?",
+      "image": "train_schedule_mob.webp",
+      "alt": "Second train, siège du conducteur face aux contrôles",
+      "html": "<p>N'importe quel mob assis convient : villageois, perroquet, renard, chat. Il doit rester <strong>assis face aux contrôles</strong>. Un brûleur à blaze ne demande aucun soin, mais doit être posé dans le train avant l'assemblage. Dans nos boucles, les mobs ne sont pas dessinés.</p>"
+    },
+    {
+      "id": "laisse",
+      "title": "Avec une laisse",
+      "image": "train_schedule_laisse.webp",
+      "alt": "Le conducteur installé sur le siège",
+      "html": "<p>Un mob tenu en <strong>laisse</strong> s'installe d'un clic droit sur un siège du train. C'est la façon la plus simple de faire monter un villageois sans le pousser pendant dix minutes.</p>"
+    },
+    {
+      "id": "recuperer",
+      "title": "Reprendre le planning",
+      "image": "train_schedule_recuperer.webp",
+      "alt": "Le planning repris au conducteur",
+      "html": "<p>Un clic droit sur le conducteur, main vide, <strong>reprend le planning</strong> à tout moment : le train s'arrête. Modifie-le, puis rends-le pour repartir.</p>"
+    },
+    {
+      "id": "conditions",
+      "title": "Les conditions de départ",
+      "html": "<p>Chaque étape peut avoir plusieurs <strong>colonnes</strong> de conditions. Dans une colonne, les conditions s'enchaînent : la deuxième n'est testée qu'une fois la première remplie. Le train part dès qu'<strong>une</strong> colonne est terminée. Exemple : « 10 secondes, puis cargaison inactive 5 secondes » dans une colonne, « heure 6:00 » dans une autre.</p>"
+    },
+    {
+      "id": "exemple",
+      "title": "Exemple de navette",
+      "html": "<p>1. Aller à « Mine ». Attendre : cargaison inactive 5 s. 2. Aller à « Usine ». Attendre : seuil d'objets, le train vide. Répéter. Avec une <a href=\"/wiki/interface-de-fluide-portable\">interface portable</a> à chaque quai, le chargement se fait sans joueur.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur un serveur",
+      "html": "<p>Les jokers évitent de réécrire un planning quand tu ajoutes un quai : « Base Lucas* » vise tous les quais qui commencent par ce nom. Un planning posé dans une <a href=\"/wiki/station-de-train\">station</a> se copie sur chaque train qui s'y arrête.</p>"
+    },
+    {
+      "id": "actions",
+      "title": "Les actions possibles",
+      "html": "<p>« <strong>Aller à</strong> » envoie le train vers une station, nom exact ou avec jokers. « Changer le titre » renomme le train, utile pour les tableaux d'affichage. « Régler la vitesse » limite sa vitesse en pourcentage, par exemple en ville. Avec Create 6, deux actions servent au réseau de colis : livrer et récupérer des colis aux <a href=\"/wiki/boite-aux-lettres\">boîtes aux lettres</a> des stations.</p>"
+    },
+    {
+      "id": "attente",
+      "title": "Bien choisir l’attente",
+      "html": "<p>Pour un train de fret, la « cargaison inactive » est la plus sûre : le train part quand plus rien n'entre ni ne sort depuis quelques secondes. Pour une ligne de voyageurs, un simple délai ou une heure fixe suffit. Une « liaison redstone » laisse un joueur donner le départ depuis un levier.</p>"
+    },
+    {
+      "id": "repeter",
+      "title": "Répéter ou non",
+      "html": "<p>Sans la case <strong>répéter</strong>, le train s'arrête après la dernière étape et reste sur place, le planning toujours en poche. Avec elle, il reprend la première étape et tourne sans fin. Une étape sans condition repart dès l'arrivée : pratique pour traverser une gare sans y attendre.</p>"
+    }
+  ],
+  "related": [
+    "station-de-train",
+    "controles-de-train",
+    "assembler-un-train",
+    "bruleur-a-blaze",
+    "boite-aux-lettres",
+    "interface-de-fluide-portable"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/schedule.json (tag c:plates/obsidian = plaque renforcée)",
+    "Actions : schedule/destination (DestinationInstruction, ChangeTitleInstruction, ChangeThrottleInstruction, DeliverPackagesInstruction, FetchPackagesInstruction)",
+    "Jokers : DestinationInstruction (Glob, 3 « * » au plus)",
+    "Conditions : schedule/condition (ScheduledDelay, TimeOfDayCondition, IdleCargoCondition, ItemThresholdCondition, FluidThresholdCondition, RedstoneLinkCondition, PlayerPassengerCondition, StationPoweredCondition, StationUnloadedCondition), enchaînement ScheduleRuntime.tickConditions",
+    "Conducteur brûleur à blaze : BlazeBurnerBlockEntity (TrainHat)",
+    "Scène : TrainScenes.schedule (mobs conducteurs non dessinés)"
+  ],
+  "en": {
+    "slugEn": "train-schedule",
+    "name": "Train Schedule",
+    "title": "Train Schedule — Create mod guide",
+    "description": "The Create Train Schedule: writing a timetable, destinations and wildcards, wait conditions, repeating, conductors and taking the schedule back.",
+    "intro": "The <strong>Train Schedule</strong> turns a train into an automated line. It is an item you program as a list of steps: go to a <a href=\"/en/wiki/train-station\">station</a>, wait for a condition, leave again. Once handed to a conductor sitting at the <a href=\"/en/wiki/train-controls\">controls</a>, the train runs on its own, day and night.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Trains"
+      },
+      {
+        "label": "Crafting",
+        "value": "1 Sturdy Sheet + 1 Paper = 4 schedules (shapeless)"
+      },
+      {
+        "label": "Opening",
+        "value": "Right-click with the schedule in hand"
+      },
+      {
+        "label": "Actions",
+        "value": "Go to a station, change the title, set the throttle, deliver or fetch packages"
+      },
+      {
+        "label": "Wildcards",
+        "value": "Up to 3 “*” in a station name: “Mine*” targets Mine North and Mine South"
+      },
+      {
+        "label": "Conditions",
+        "value": "Delay, time of day, idle cargo, item or fluid threshold, redstone link, passengers, station powered or unloaded"
+      },
+      {
+        "label": "Conductor",
+        "value": "A mob or a Blaze Burner sitting in front of the controls"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (shapeless)",
+      "grid": [
+        [
+          "Sturdy Sheet",
+          "Paper",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "4 Train Schedules"
+    },
+    "videos": [
+      {
+        "id": "train_schedule",
+        "name": "Train Schedule: programming it and handing it to a conductor",
+        "description": "A schedule is given to the Blaze Burner sitting in front of the controls and the train leaves; a second train gets a conductor brought on a lead, then the schedule is taken back."
+      }
+    ],
+    "sections": [
+      {
+        "id": "conducteur",
+        "title": "A conductor on board",
+        "alt": "Train in the station, Blaze Burner in front of the controls",
+        "html": "<p>An automated train needs a <strong>conductor</strong>: a mob sitting on a seat facing the controls, or a <a href=\"/en/wiki/blaze-burner\">Blaze Burner</a> placed in front of them. The player only programs it: you can step off the train.</p>"
+      },
+      {
+        "id": "interface",
+        "title": "Writing a timetable",
+        "alt": "The schedule in hand near the platform",
+        "html": "<p>Right-click while holding the schedule and its editing screen appears. Each <strong>step</strong> has an action, usually “go to” a station, followed by its departure conditions. Tick <strong>repeat</strong> so the train loops through the list forever.</p>"
+      },
+      {
+        "id": "confier",
+        "title": "Handing the schedule over",
+        "alt": "The train leaves with its schedule",
+        "html": "<p>Right-click the conductor with the schedule: it takes it, and the train <strong>leaves at once</strong> for its first destination. Blaze Burners then wear a little conductor cap.</p>"
+      },
+      {
+        "id": "mob",
+        "title": "Which conductor?",
+        "alt": "Second train, the conductor's seat facing the controls",
+        "html": "<p>Any seated mob works: villager, parrot, fox, cat. It must stay <strong>seated facing the controls</strong>. A Blaze Burner needs no care, but has to be placed in the train before assembly. In our loops, mobs are not drawn.</p>"
+      },
+      {
+        "id": "laisse",
+        "title": "With a lead",
+        "alt": "The conductor seated",
+        "html": "<p>A mob held on a <strong>lead</strong> sits down with a right-click on one of the train's seats. It is the easiest way to get a villager on board without pushing it around for ten minutes.</p>"
+      },
+      {
+        "id": "recuperer",
+        "title": "Taking the schedule back",
+        "alt": "The schedule taken back from the conductor",
+        "html": "<p>Right-clicking the conductor with an empty hand <strong>takes the schedule back</strong> at any time: the train stops. Edit it, then give it back to leave again.</p>"
+      },
+      {
+        "id": "conditions",
+        "title": "Departure conditions",
+        "html": "<p>Each step can have several <strong>columns</strong> of conditions. In a column, conditions are chained: the second one is only checked once the first is met. The train leaves as soon as <strong>one</strong> column is complete. Example: “10 seconds, then cargo idle for 5 seconds” in one column, “time 6:00” in another.</p>"
+      },
+      {
+        "id": "exemple",
+        "title": "A shuttle example",
+        "html": "<p>1. Go to “Mine”. Wait: cargo idle 5 s. 2. Go to “Factory”. Wait: item threshold, the train empty. Repeat. With a <a href=\"/en/wiki/portable-fluid-interface\">portable interface</a> at each platform, loading happens without any player.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On a server",
+        "html": "<p>Wildcards spare you rewriting a schedule when you add a platform: “Lucas Base*” targets every platform starting with that name. A schedule placed in a <a href=\"/en/wiki/train-station\">station</a> is copied to every train stopping there.</p>"
+      },
+      {
+        "id": "actions",
+        "title": "Available actions",
+        "html": "<p>“<strong>Travel to</strong>” sends the train to a station, exact name or with wildcards. “Change title” renames the train, handy for display boards. “Throttle” limits its speed as a percentage, in a town for instance. Create 6 adds two actions for the package network: delivering and fetching packages at the stations' <a href=\"/en/wiki/postbox\">Postboxes</a>.</p>"
+      },
+      {
+        "id": "attente",
+        "title": "Choosing the right wait",
+        "html": "<p>For a freight train, “cargo inactivity” is the safest: the train leaves once nothing has gone in or out for a few seconds. For a passenger line, a simple delay or a fixed time is enough. A “redstone link” lets a player give the departure from a lever.</p>"
+      },
+      {
+        "id": "repeter",
+        "title": "Repeating or not",
+        "html": "<p>Without the <strong>repeat</strong> box, the train stops after the last step and stays there, schedule still in hand. With it, the train goes back to the first step and loops forever. A step with no condition leaves as soon as it arrives: handy to pass through a station without waiting.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/schedule.json (tag c:plates/obsidian = Sturdy Sheet)",
+      "Actions: schedule/destination (DestinationInstruction, ChangeTitleInstruction, ChangeThrottleInstruction, DeliverPackagesInstruction, FetchPackagesInstruction)",
+      "Wildcards: DestinationInstruction (Glob, at most 3 “*”)",
+      "Conditions: schedule/condition (ScheduledDelay, TimeOfDayCondition, IdleCargoCondition, ItemThresholdCondition, FluidThresholdCondition, RedstoneLinkCondition, PlayerPassengerCondition, StationPoweredCondition, StationUnloadedCondition), chained by ScheduleRuntime.tickConditions",
+      "Blaze Burner conductor: BlazeBurnerBlockEntity (TrainHat)",
+      "Scene: TrainScenes.schedule (mob conductors not drawn)"
+    ]
+  }
+}

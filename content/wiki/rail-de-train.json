@@ -1,0 +1,354 @@
+{
+  "slug": "rail-de-train",
+  "name": "Rail de train",
+  "blockId": "create:track",
+  "category": "trains",
+  "title": "Rail de train — Create : guide en français",
+  "description": "Le rail de train de Create : fabrication, poser des voies en ligne, virages, pentes, pavage automatique, portails du Nether et chunks non chargés.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>rail de train</strong> est la voie des trains de Create, différente des rails de wagonnet. On le pose bloc par bloc ou par tronçons entiers, en ligne droite, en virage ou en pente, et il traverse même les portails du Nether. C'est sur lui que se fixent la <a href=\"/wiki/station-de-train\">station</a>, les <a href=\"/wiki/signal-de-train\">signaux</a> et les <a href=\"/wiki/observateur-de-train\">observateurs</a>.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Trains"
+    },
+    {
+      "label": "Fabrication",
+      "value": "Assemblage séquencé : dalle de pierre, de pierre lisse ou d’andésite, 2 pépites de fer ou de zinc au déployeur, puis la presse"
+    },
+    {
+      "label": "Pose en ligne",
+      "value": "Clic droit sur un rail, puis sur un second point : 32 blocs au plus"
+    },
+    {
+      "label": "Formes",
+      "value": "Droit, diagonal, virages et pentes en courbes de Bézier"
+    },
+    {
+      "label": "Virage long",
+      "value": "Touche de sprint pendant la connexion"
+    },
+    {
+      "label": "Pavage",
+      "value": "Le bloc de la main secondaire est posé sous la voie"
+    },
+    {
+      "label": "Vitesse",
+      "value": "28 blocs/s en ligne droite, 14 en virage (sans carburant)"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "videos": [
+    {
+      "id": "track_placement",
+      "name": "Rail de train : en ligne et en virage",
+      "description": "Une rangée de rails est posée d'un coup entre deux points, puis deux rails tournés à angle droit sont reliés par une courbe.",
+      "duration": "PT20S"
+    },
+    {
+      "id": "track_bends",
+      "name": "Rail de train : virages égaux, virage long, pentes et pavage",
+      "description": "Les courbes se répartissent en deux virages égaux ; avec la touche de sprint la courbe la plus longue est choisie ; des pentes sont pavées de pierre lisse et de poutres.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "track_portal",
+      "name": "Rail de train : passer un portail du Nether",
+      "description": "Un rail accolé à un portail du Nether crée sa voie jumelle de l'autre côté ; le train passe d'une dimension à l'autre.",
+      "duration": "PT13S"
+    },
+    {
+      "id": "track_chunks",
+      "name": "Rail de train : chunks non chargés",
+      "description": "Loin des joueurs, le train continue sa route sur des chunks non chargés, puis réapparaît en arrivant près d'une station habitée.",
+      "duration": "PT21S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "rail",
+      "title": "Un rail pour les trains",
+      "image": "track_placement_rail.webp",
+      "alt": "Rails de train sur un plateau",
+      "video": "track_placement",
+      "html": "<p>Le rail de train se fabrique par <strong>assemblage séquencé</strong> : une dalle de pierre, de pierre lisse ou d'andésite reçoit deux pépites de fer ou de zinc au <a href=\"/wiki/deployeur\">déployeur</a>, puis passe sous la <a href=\"/wiki/presse-mecanique\">presse mécanique</a>.</p>"
+    },
+    {
+      "id": "rangee",
+      "title": "Poser toute une rangée",
+      "image": "track_placement_rangee.webp",
+      "alt": "Premier rail sélectionné",
+      "html": "<p>Pas besoin de poser chaque bloc : fais un <strong>clic droit sur un rail existant</strong> avec des rails en main. Il se met en surbrillance, et tu peux choisir le point d'arrivée.</p>"
+    },
+    {
+      "id": "second",
+      "title": "Le point d’arrivée",
+      "image": "track_placement_second.webp",
+      "alt": "La rangée de rails entre les deux points",
+      "html": "<p>Clique ensuite un second point, ou un rail déjà posé : toute la voie entre les deux apparaît d'un coup, et les rails sont décomptés de ton inventaire. Un tronçon mesure <strong>32 blocs</strong> au plus avec la configuration par défaut.</p>"
+    },
+    {
+      "id": "virage",
+      "title": "Virages et pentes",
+      "image": "track_placement_virage.webp",
+      "alt": "Courbe entre deux rails tournés à angle droit",
+      "html": "<p>Si les deux points ne sont pas alignés, Create trace une <strong>courbe</strong> : un virage, une pente, ou les deux. La voie suit une courbe de Bézier lisse, sans escaliers, et un train la parcourt à 14 blocs par seconde au plus.</p>"
+    },
+    {
+      "id": "egal",
+      "title": "Des virages équilibrés",
+      "image": "track_bends_egal.webp",
+      "alt": "Deux virages de même taille",
+      "video": "track_bends",
+      "html": "<p>Entre deux voies décalées, Create préfère <strong>deux virages de même rayon</strong> plutôt qu'un virage serré et un large. Le contour vert montre la place prise par chaque courbe avant de valider.</p>"
+    },
+    {
+      "id": "sprint",
+      "title": "Le plus long possible",
+      "image": "track_bends_sprint.webp",
+      "alt": "Connexion faite touche de sprint enfoncée",
+      "html": "<p>Garde la <strong>touche de sprint</strong> enfoncée pendant la connexion pour obtenir la <strong>courbe la plus longue</strong> qui tient entre les deux points. Un grand rayon est plus joli ; la vitesse en virage, elle, reste plafonnée à 14 blocs par seconde.</p>"
+    },
+    {
+      "id": "longue",
+      "title": "Un virage d’un seul tenant",
+      "image": "track_bends_longue.webp",
+      "alt": "La courbe la plus longue entre les deux rails",
+      "html": "<p>La courbe longue occupe tout l'espace disponible, sans tronçon droit. C'est le bon choix pour une ligne principale ou un grand paysage.</p>"
+    },
+    {
+      "id": "paver",
+      "title": "Paver la voie",
+      "image": "track_bends_paver.webp",
+      "alt": "Pentes pavées de pierre lisse et de poutres en métal",
+      "html": "<p>Un bloc tenu en <strong>main secondaire</strong> est posé sous toute la voie au moment de la connexion : pierre lisse, dalles, ou <strong>poutres en métal</strong> pour un pont. Les blocs nécessaires sont pris dans ton inventaire.</p>"
+    },
+    {
+      "id": "portail",
+      "title": "Vers le Nether",
+      "image": "track_portal_portail.webp",
+      "alt": "Rail posé contre un portail du Nether",
+      "video": "track_portal",
+      "html": "<p>Un rail <strong>accolé à un portail du Nether</strong> essaie de créer sa voie jumelle de l'autre côté. Le mieux est que le portail soit déjà relié à son jumeau de l'autre côté.</p>"
+    },
+    {
+      "id": "paire",
+      "title": "Changer de dimension",
+      "image": "track_portal_paire.webp",
+      "alt": "Le train s’engage dans le portail",
+      "html": "<p>Une fois la paire créée, les trains passent d'une dimension à l'autre comme sur une voie normale, avec leur cargaison. Le Nether divise les distances par huit : une ligne idéale entre bases éloignées.</p>"
+    },
+    {
+      "id": "chunks",
+      "title": "Loin des joueurs",
+      "image": "track_chunks_chunks.webp",
+      "alt": "Train en gare avant de partir au loin",
+      "video": "track_chunks",
+      "html": "<p>Un réseau ne s'arrête pas aux <strong>chunks chargés</strong>. Hors de portée des joueurs, le train devient invisible mais continue sa route, et respecte toujours les stations et les feux rouges.</p>"
+    },
+    {
+      "id": "inactif",
+      "title": "Ce qui s’arrête",
+      "image": "track_chunks_inactif.webp",
+      "alt": "Le train invisible, simple contour, sur la voie lointaine",
+      "html": "<p>Hors des chunks chargés, les <strong>machines embarquées</strong> ne travaillent plus : une <a href=\"/wiki/perceuse-mecanique\">perceuse</a> sur un train ne creuse rien. Le train réapparaît dès qu'il approche d'un joueur.</p>"
+    },
+    {
+      "id": "retirer",
+      "title": "Retirer une courbe",
+      "html": "<p>Une courbe appartient à ses deux rails d'extrémité : casser l'un d'eux retire toute la courbe et rend les rails utilisés. Pour corriger un virage raté, casse une extrémité puis reconnecte, c'est plus rapide que de tout refaire.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Astuces",
+      "html": "<p>Prévois des <strong>rails droits</strong> devant chaque station : c'est là qu'on pose les bogies et qu'on assemble les trains. Garde de la place sur les côtés pour les <a href=\"/wiki/signal-de-train\">signaux</a> et les quais, et vise des virages larges sur les lignes principales.</p>"
+    },
+    {
+      "id": "ponts",
+      "title": "Ponts et tunnels",
+      "html": "<p>Un train ne casse aucun bloc : creuse les tunnels toi-même et laisse trois blocs de haut au-dessus des rails. Pour un pont, les poutres en métal en main secondaire donnent un tablier propre.</p>"
+    }
+  ],
+  "related": [
+    "station-de-train",
+    "signal-de-train",
+    "assembler-un-train",
+    "observateur-de-train",
+    "deployeur",
+    "presse-mecanique"
+  ],
+  "sources": [
+    "Recette : sequenced_assembly/track.json (tag create:sleepers : dalles de pierre, de pierre lisse, d’andésite)",
+    "Longueur de pose : CTrains.maxTrackPlacementLength (32)",
+    "Courbes : BezierConnection (déterminées d’après TrackPlacement), rendu TrackRenderer",
+    "Vitesses : CTrains : trainTopSpeed 28, trainTurningTopSpeed 14, poweredTrainTopSpeed 40, poweredTrainTurningTopSpeed 20, trainAcceleration 3",
+    "Portails : AllPortalTracks, chunks : les trains sont simulés côté serveur (Train.tick) hors chunks chargés",
+    "Scènes : TrackScenes.placement, portal, chunks (perroquets conducteurs non dessinés)"
+  ],
+  "en": {
+    "slugEn": "train-track",
+    "name": "Train Track",
+    "title": "Train Track — Create mod guide",
+    "description": "The Create Train Track: crafting, placing whole lines, turns, slopes, automatic paving, crossing Nether portals and running through unloaded chunks.",
+    "intro": "The <strong>Train Track</strong> is the rail for Create's trains, different from minecart rails. You place it block by block or whole stretches at once, straight, curved or sloped, and it even goes through Nether portals. It is what the <a href=\"/en/wiki/train-station\">station</a>, the <a href=\"/en/wiki/train-signal\">signals</a> and the <a href=\"/en/wiki/train-observer\">observers</a> attach to.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Trains"
+      },
+      {
+        "label": "Crafting",
+        "value": "Sequenced assembly: stone, smooth stone or andesite slab, 2 iron or zinc nuggets with a Deployer, then a Press"
+      },
+      {
+        "label": "Line placement",
+        "value": "Right-click a track, then a second point: 32 blocks at most"
+      },
+      {
+        "label": "Shapes",
+        "value": "Straight, diagonal, turns and slopes as Bézier curves"
+      },
+      {
+        "label": "Long turn",
+        "value": "Sprint key held during the connection"
+      },
+      {
+        "label": "Paving",
+        "value": "The block in your off-hand is placed under the track"
+      },
+      {
+        "label": "Speed",
+        "value": "28 blocks/s on straights, 14 in turns (without fuel)"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "videos": [
+      {
+        "id": "track_placement",
+        "name": "Train Track: in a line and in a turn",
+        "description": "A row of tracks is placed at once between two points, then two tracks at a right angle are joined by a curve."
+      },
+      {
+        "id": "track_bends",
+        "name": "Train Track: even turns, long turn, slopes and paving",
+        "description": "Curves are split into two even turns; with the sprint key the longest curve is chosen; slopes are paved with smooth stone and girders."
+      },
+      {
+        "id": "track_portal",
+        "name": "Train Track: through a Nether portal",
+        "description": "A track placed against a Nether portal builds a matching track beyond it; the train travels from one dimension to the other."
+      },
+      {
+        "id": "track_chunks",
+        "name": "Train Track: unloaded chunks",
+        "description": "Far from players the train keeps going through unloaded chunks, then reappears when it comes near an occupied station."
+      }
+    ],
+    "sections": [
+      {
+        "id": "rail",
+        "title": "A rail for trains",
+        "alt": "Train tracks on a plate",
+        "html": "<p>Train Track is made by <strong>sequenced assembly</strong>: a stone, smooth stone or andesite slab gets two iron or zinc nuggets from a <a href=\"/en/wiki/deployer\">Deployer</a>, then goes under a <a href=\"/en/wiki/mechanical-press\">Mechanical Press</a>.</p>"
+      },
+      {
+        "id": "rangee",
+        "title": "Placing a whole row",
+        "alt": "First track selected",
+        "html": "<p>No need to place every block: <strong>right-click an existing track</strong> with tracks in hand. It gets highlighted, and you can pick the end point.</p>"
+      },
+      {
+        "id": "second",
+        "title": "The end point",
+        "alt": "The row of tracks between the two points",
+        "html": "<p>Then click a second point, or a track already placed: the whole line between the two appears at once, and the tracks are taken from your inventory. One stretch is <strong>32 blocks</strong> long at most with the default config.</p>"
+      },
+      {
+        "id": "virage",
+        "title": "Turns and slopes",
+        "alt": "Curve between two tracks at a right angle",
+        "html": "<p>When the two points are not aligned, Create draws a <strong>curve</strong>: a turn, a slope, or both. The track follows a smooth Bézier curve with no steps, and a train runs it at 14 blocks per second at most.</p>"
+      },
+      {
+        "id": "egal",
+        "title": "Balanced turns",
+        "alt": "Two turns of the same size",
+        "html": "<p>Between two offset tracks, Create prefers <strong>two turns of the same radius</strong> to one tight turn and one wide one. The green outline shows the room each curve takes before you confirm.</p>"
+      },
+      {
+        "id": "sprint",
+        "title": "As long as possible",
+        "alt": "Connection made with the sprint key held",
+        "html": "<p>Keep <strong>sprint</strong> held down as you link the two points to get the <strong>longest curve</strong> that fits between the two points. A wide radius looks better; the speed in turns stays capped at 14 blocks per second, though.</p>"
+      },
+      {
+        "id": "longue",
+        "title": "One sweeping turn",
+        "alt": "The longest curve between the two tracks",
+        "html": "<p>The long curve uses all the available room, with no straight bit. It is the right choice for a main line or a wide landscape.</p>"
+      },
+      {
+        "id": "paver",
+        "title": "Paving the track",
+        "alt": "Slopes paved with smooth stone and metal girders",
+        "html": "<p>A block held in your <strong>off-hand</strong> is placed under the whole track when you connect: smooth stone, slabs, or <strong>Metal Girders</strong> for a bridge. The blocks needed are taken from your inventory.</p>"
+      },
+      {
+        "id": "portail",
+        "title": "To the Nether",
+        "alt": "Track placed against a Nether portal",
+        "html": "<p>A track placed <strong>against a Nether portal</strong> tries to build a matching track beyond the portal. It works best when the portal is already linked to its twin on the other side.</p>"
+      },
+      {
+        "id": "paire",
+        "title": "Changing dimension",
+        "alt": "The train enters the portal",
+        "html": "<p>Once the pair exists, trains go from one dimension to the other like on a normal track, cargo included. The Nether divides distances by eight: a perfect line between distant bases.</p>"
+      },
+      {
+        "id": "chunks",
+        "title": "Far from players",
+        "alt": "Train in the station before leaving far away",
+        "html": "<p>A network does not stop at <strong>loaded chunks</strong>. Out of players' range the train becomes invisible but keeps going, and still obeys stations and red lights.</p>"
+      },
+      {
+        "id": "inactif",
+        "title": "What stops",
+        "alt": "The invisible train, just an outline, on the distant track",
+        "html": "<p>Outside loaded chunks, <strong>on-board machines</strong> stop working: a <a href=\"/en/wiki/mechanical-drill\">drill</a> on a train digs nothing. The train reappears as soon as it comes near a player.</p>"
+      },
+      {
+        "id": "retirer",
+        "title": "Removing a curve",
+        "html": "<p>A curve belongs to its two end tracks: breaking one of them removes the whole curve and gives the tracks back. To fix a bad turn, break one end and connect again, it is quicker than starting over.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<p>Plan <strong>straight tracks</strong> in front of every station: that is where bogeys go and trains get assembled. Keep room on the sides for <a href=\"/en/wiki/train-signal\">signals</a> and platforms, and aim for wide turns on main lines.</p>"
+      },
+      {
+        "id": "ponts",
+        "title": "Bridges and tunnels",
+        "html": "<p>A train breaks no blocks: dig tunnels yourself and leave three blocks of headroom above the rails. For a bridge, Metal Girders in your off-hand give a clean deck under the track, and pillars can be added afterwards.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: sequenced_assembly/track.json (tag create:sleepers: stone, smooth stone, andesite slabs)",
+      "Placement length: CTrains.maxTrackPlacementLength (32)",
+      "Curves: BezierConnection (set by TrackPlacement), drawn by TrackRenderer",
+      "Speeds: CTrains: trainTopSpeed 28, trainTurningTopSpeed 14, poweredTrainTopSpeed 40, poweredTrainTurningTopSpeed 20, trainAcceleration 3",
+      "Portals: AllPortalTracks; chunks: trains are simulated server-side (Train.tick) outside loaded chunks",
+      "Scenes: TrackScenes.placement, portal, chunks (parrot conductors not drawn)"
+    ]
+  }
+}

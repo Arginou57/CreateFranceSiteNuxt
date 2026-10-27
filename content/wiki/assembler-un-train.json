@@ -1,0 +1,315 @@
+{
+  "slug": "assembler-un-train",
+  "name": "Assembler un train",
+  "blockId": "create:railway_casing",
+  "category": "trains",
+  "title": "Assembler un train — Create : guide en français",
+  "description": "Assembler un train dans Create : bogies en boitier de train, colle extra-forte, carburant, contrôles, vitesses réelles et erreurs fréquentes.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Dans Create, un train est une <strong>construction libre</strong> : tu bâtis ce que tu veux sur des bogies, devant une <a href=\"/wiki/station-de-train\">station de train</a>, puis la station en fait un véhicule. Ce guide reprend les étapes dans l'ordre : bogies, colle, carburant et <a href=\"/wiki/controles-de-train\">contrôles de train</a>, avec les chiffres tirés du code du mod.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Trains"
+    },
+    {
+      "label": "Boitier de train",
+      "value": "Plaque renforcée appliquée sur un boitier de laiton"
+    },
+    {
+      "label": "Bogies",
+      "value": "Petit ou grand : clic droit du boitier de train sur un rail"
+    },
+    {
+      "label": "Limites",
+      "value": "128 blocs de long, 20 bogies au plus"
+    },
+    {
+      "label": "Vitesse",
+      "value": "28 blocs/s (14 en virage) ; 40 (20 en virage) avec carburant"
+    },
+    {
+      "label": "Accélération",
+      "value": "3 blocs/s²"
+    },
+    {
+      "label": "Carburant",
+      "value": "Dans les coffres et tonneaux du train, pas dans les coffres-forts"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Colle extra-forte à l'établi",
+    "grid": [
+      [
+        "Boule de slime",
+        "Plaque de fer",
+        null
+      ],
+      [
+        "Pépite de fer",
+        "Boule de slime",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 colle extra-forte"
+  },
+  "videos": [
+    {
+      "id": "train_bogeys",
+      "name": "Assembler un train : bogies, colle, carburant et contrôles",
+      "description": "Des bogies sont posés sur la voie au boitier de train, les blocs du train sont collés, du charbon est rangé dans un coffre, puis deux contrôles de train sont ajoutés.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "bogies",
+      "title": "Des bogies sur la voie",
+      "image": "train_bogeys_bogies.webp",
+      "alt": "Bogies posés sur la voie devant la station",
+      "video": "train_bogeys",
+      "html": "<p>Passe la <a href=\"/wiki/station-de-train\">station</a> en mode assemblage, puis fais un clic droit sur un <a href=\"/wiki/rail-de-train\">rail</a> avec un <strong>boitier de train</strong> : un bogie apparaît. Chaque wagon repose sur <strong>un ou deux bogies</strong>. Le premier bogie doit se trouver dans la zone affichée devant la station.</p>"
+    },
+    {
+      "id": "modeles",
+      "title": "Petit ou grand bogie",
+      "image": "train_bogeys_modeles.webp",
+      "alt": "Petit et grands bogies sous le futur train",
+      "html": "<p>Un nouveau clic sur le même rail <strong>change le modèle</strong> : petit bogie, grand bogie à bielles, et les variantes ajoutées par certains addons. Le choix est surtout visuel, mais un grand bogie occupe plus de place sous le wagon. Les roues tournent selon la distance parcourue.</p>"
+    },
+    {
+      "id": "colle",
+      "title": "Tout coller",
+      "image": "train_bogeys_colle.webp",
+      "alt": "Zone de colle extra-forte autour des wagons",
+      "html": "<p>Construis le train sur les bogies, puis relie les blocs à la <strong>colle extra-forte</strong> : clique deux coins pour coller toute la boîte. Un bloc non collé <strong>reste à quai</strong> au départ. Colle chaque wagon séparément de ses voisins.</p>"
+    },
+    {
+      "id": "carburant",
+      "title": "Le carburant",
+      "image": "train_bogeys_carburant.webp",
+      "alt": "Charbon de bois rangé dans un coffre du train",
+      "html": "<p>Un train roule sans carburant, à <strong>28 blocs par seconde</strong> au plus. Avec du combustible dans un coffre ou un tonneau embarqué, il passe à <strong>40</strong>, et 20 dans les virages. Chaque tick de marche brûle un tick de combustible : un charbon de bois tient 80 secondes.</p>"
+    },
+    {
+      "id": "coffre-fort",
+      "title": "Pas dans les coffres-forts",
+      "image": "train_bogeys_coffre-fort.webp",
+      "alt": "Coffre-fort du train, contenu jamais consommé",
+      "html": "<p>Le combustible rangé dans un <a href=\"/wiki/coffre-a-objet-renforce\">coffre à objet renforcé</a> n'est <strong>jamais brûlé</strong>. Les coffres-forts servent donc au fret : ta cargaison de charbon arrive intacte, et une <a href=\"/wiki/interface-de-fluide-portable\">interface portable</a> peut la vider en gare.</p>"
+    },
+    {
+      "id": "controles",
+      "title": "Des contrôles obligatoires",
+      "image": "train_bogeys_controles.webp",
+      "alt": "Contrôles de train posés sur la cabine",
+      "html": "<p>Sans <a href=\"/wiki/controles-de-train\">contrôles de train</a> à bord, la station <strong>refuse l'assemblage</strong>. Leur flèche donne l'avant du train. Place devant eux un siège : c'est là que s'assied le conducteur, joueur, mob ou brûleur à blaze.</p>"
+    },
+    {
+      "id": "deux-sens",
+      "title": "Rouler dans les deux sens",
+      "image": "train_bogeys_deux-sens.webp",
+      "alt": "Deuxième contrôle de train tourné vers l’arrière",
+      "html": "<p>Un second jeu de contrôles, tourné vers l'arrière, permet au train de <strong>repartir en marche arrière</strong> d'une station sans demi-tour. Indispensable pour une navette sur une voie unique avec un terminus à chaque bout.</p>"
+    },
+    {
+      "id": "etapes",
+      "title": "Les étapes en bref",
+      "html": "<p>1. Rails droits devant la station. 2. Mode assemblage. 3. Bogies au boitier de train. 4. Blocs du train. 5. Colle extra-forte. 6. Contrôles et siège. 7. Combustible si tu veux aller vite. 8. Valider dans la station. Le train ne doit pas dépasser <strong>128 blocs</strong> ni <strong>20 bogies</strong>.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Un bogie hors de la zone, des blocs non collés, des contrôles manquants ou deux wagons collés ensemble font échouer l'assemblage : la station indique le wagon en cause. Un train ne casse aucun bloc du décor : il passe au travers. Le vrai danger, c'est un autre train sur la même voie.</p>"
+    },
+    {
+      "id": "wagons",
+      "title": "Plusieurs wagons",
+      "html": "<p>Un long train se compose de <strong>plusieurs wagons</strong>, chacun collé à part sur ses propres bogies. La station les relie entre eux par un attelage. Un wagon peut reposer sur un seul bogie, mais deux bogies le font mieux suivre la voie dans les virages. Les contrôles n'ont besoin d'être que dans un wagon.</p>"
+    },
+    {
+      "id": "cargaison",
+      "title": "Transporter une cargaison",
+      "html": "<p>Les coffres, tonneaux, coffres-forts et <a href=\"/wiki/reservoir-a-fluide\">réservoirs à fluide</a> montés sur le train gardent leur contenu en roulant. En gare, des interfaces de stockage portables posées le long du quai chargent et vident le train sans aucun joueur.</p>"
+    },
+    {
+      "id": "verifier",
+      "title": "Vérifier avant de valider",
+      "html": "<p>Fais le tour du train avant de valider : colle partout, contrôles dans le bon sens, siège en place, combustible rangé. Cela t'évite un aller-retour à la station.</p>"
+    }
+  ],
+  "related": [
+    "station-de-train",
+    "controles-de-train",
+    "rail-de-train",
+    "planning-de-train",
+    "coffre-a-objet-renforce",
+    "interface-de-fluide-portable"
+  ],
+  "sources": [
+    "Recettes : item_application/railway_casing.json, crafting/kinetics/super_glue.json",
+    "Limites : CTrains.maxAssemblyLength (128), maxBogeyCount (20)",
+    "Vitesses : CTrains : trainTopSpeed 28, trainTurningTopSpeed 14, poweredTrainTopSpeed 40, poweredTrainTurningTopSpeed 20, trainAcceleration 3",
+    "Carburant : Train.burnFuel (1 tick de combustible par tick de marche, getBurnTime ; charbon de bois 1600 ticks), stockage hors coffres-forts",
+    "Roues : AbstractBogeyBlockEntity.animate (360 × distance / (2π × rayon), rayons 6,5/16 et 12,5/16)",
+    "Scène : TrainStationScenes.assembly (bulles 5 à 12)"
+  ],
+  "en": {
+    "slugEn": "train-assembly",
+    "name": "Train assembly",
+    "title": "Train assembly — Create mod guide",
+    "description": "How to assemble a train in Create: bogeys made with Train Casing, Super Glue, fuel, Train Controls, real top speeds and the most common mistakes.",
+    "intro": "In Create, a train is a <strong>free-form build</strong>: you build whatever you like on bogeys in front of a <a href=\"/en/wiki/train-station\">Train Station</a>, and the station turns it into a vehicle. This guide goes through the steps in order: bogeys, glue, fuel and <a href=\"/en/wiki/train-controls\">Train Controls</a>, with the numbers taken from the mod's code.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Trains"
+      },
+      {
+        "label": "Train Casing",
+        "value": "Sturdy Sheet applied onto Brass Casing"
+      },
+      {
+        "label": "Bogeys",
+        "value": "Small or large: right-click a track with Train Casing"
+      },
+      {
+        "label": "Limits",
+        "value": "128 blocks long, at most 20 bogeys"
+      },
+      {
+        "label": "Speed",
+        "value": "28 blocks/s (14 in turns); 40 (20 in turns) with fuel"
+      },
+      {
+        "label": "Acceleration",
+        "value": "3 blocks/s²"
+      },
+      {
+        "label": "Fuel",
+        "value": "In the train’s chests and barrels, not in item vaults"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Super Glue crafting recipe",
+      "grid": [
+        [
+          "Slimeball",
+          "Iron Sheet",
+          null
+        ],
+        [
+          "Iron Nugget",
+          "Slimeball",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Super Glue"
+    },
+    "videos": [
+      {
+        "id": "train_bogeys",
+        "name": "Train assembly: bogeys, glue, fuel and controls",
+        "description": "Bogeys are placed on the track with Train Casing, the train blocks are glued, charcoal goes into a chest, then two Train Controls are added."
+      }
+    ],
+    "sections": [
+      {
+        "id": "bogies",
+        "title": "Bogeys on the track",
+        "alt": "Bogeys placed on the track in front of the station",
+        "html": "<p>Switch the <a href=\"/en/wiki/train-station\">station</a> to assembly mode, then right-click a <a href=\"/en/wiki/train-track\">track</a> with <strong>Train Casing</strong>: a bogey appears. Each carriage rests on <strong>one or two bogeys</strong>. The first bogey must be inside the area shown in front of the station.</p>"
+      },
+      {
+        "id": "modeles",
+        "title": "Small or large bogey",
+        "alt": "Small and large bogeys under the future train",
+        "html": "<p>Clicking the same track again <strong>cycles the design</strong>: small bogey, large bogey with drive rods, and the variants added by some addons. The choice is mostly visual, but a large bogey takes more room under the carriage. Wheels spin with the distance travelled.</p>"
+      },
+      {
+        "id": "colle",
+        "title": "Glue everything",
+        "alt": "Super Glue area around the carriages",
+        "html": "<p>Build the train on the bogeys, then join the blocks with <strong>Super Glue</strong>: click two corners to glue the whole box. A block that is not glued <strong>stays behind</strong> when the train leaves. Glue each carriage separately from its neighbours.</p>"
+      },
+      {
+        "id": "carburant",
+        "title": "Fuel",
+        "alt": "Charcoal stored in a chest of the train",
+        "html": "<p>A train runs without fuel, at <strong>28 blocks per second</strong> at most. With fuel in an on-board chest or barrel it goes up to <strong>40</strong>, and 20 in turns. Every tick of travel burns one tick of fuel: a piece of charcoal lasts 80 seconds.</p>"
+      },
+      {
+        "id": "coffre-fort",
+        "title": "Not in item vaults",
+        "alt": "Item vault of the train, contents never consumed",
+        "html": "<p>Fuel stored in an <a href=\"/en/wiki/item-vault\">Item Vault</a> is <strong>never burnt</strong>. Vaults are therefore for freight: your coal shipment arrives untouched, and a <a href=\"/en/wiki/portable-fluid-interface\">portable interface</a> can unload it at the station.</p>"
+      },
+      {
+        "id": "controles",
+        "title": "Controls are mandatory",
+        "alt": "Train Controls placed on the cab",
+        "html": "<p>Without <a href=\"/en/wiki/train-controls\">Train Controls</a> on board, the station <strong>refuses to assemble</strong>. Their arrow sets the front of the train. Put a seat in front of them: that is where the conductor sits, a player, a mob or a Blaze Burner.</p>"
+      },
+      {
+        "id": "deux-sens",
+        "title": "Driving both ways",
+        "alt": "Second Train Controls facing backwards",
+        "html": "<p>A second set of controls facing backwards lets the train <strong>leave a station in reverse</strong> without turning around. Essential for a shuttle on a single track with a terminus at each end.</p>"
+      },
+      {
+        "id": "etapes",
+        "title": "The steps at a glance",
+        "html": "<p>1. Straight tracks in front of the station. 2. Assembly mode. 3. Bogeys with Train Casing. 4. The train's blocks. 5. Super Glue. 6. Controls and a seat. 7. Fuel if you want speed. 8. Confirm in the station. The train must not exceed <strong>128 blocks</strong> or <strong>20 bogeys</strong>.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>A bogey outside the area, unglued blocks, missing controls or two carriages glued together make the assembly fail: the station points out the faulty carriage. A train breaks no block of the world: it drives through. The real danger is another train on the same track.</p>"
+      },
+      {
+        "id": "wagons",
+        "title": "Several carriages",
+        "html": "<p>A long train is made of <strong>several carriages</strong>, each glued separately on its own bogeys. The station links them with a coupling. A carriage can rest on a single bogey, but two bogeys make it follow the track better in turns. The controls only need to be in one carriage.</p>"
+      },
+      {
+        "id": "cargaison",
+        "title": "Carrying cargo",
+        "html": "<p>Chests, barrels, item vaults and <a href=\"/en/wiki/fluid-tank\">Fluid Tanks</a> mounted on the train keep their contents while it runs. At the station, Portable Storage Interfaces placed along the platform load and unload the train without any player.</p>"
+      },
+      {
+        "id": "verifier",
+        "title": "Checking before confirming",
+        "html": "<p>Walk around the train before confirming: glue everywhere, controls facing the right way, seat in place, fuel stored. It saves a trip back to the station.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: item_application/railway_casing.json, crafting/kinetics/super_glue.json",
+      "Limits: CTrains.maxAssemblyLength (128), maxBogeyCount (20)",
+      "Speeds: CTrains: trainTopSpeed 28, trainTurningTopSpeed 14, poweredTrainTopSpeed 40, poweredTrainTurningTopSpeed 20, trainAcceleration 3",
+      "Fuel: Train.burnFuel (1 tick of fuel per tick of travel, getBurnTime; charcoal 1600 ticks), storage other than vaults",
+      "Wheels: AbstractBogeyBlockEntity.animate (360 × distance / (2π × radius), radii 6.5/16 and 12.5/16)",
+      "Scene: TrainStationScenes.assembly (steps 5 to 12)"
+    ]
+  }
+}

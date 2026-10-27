@@ -1,0 +1,335 @@
+{
+  "slug": "controles-de-train",
+  "name": "Contrôles de train",
+  "blockId": "create:controls",
+  "category": "trains",
+  "title": "Contrôles de train — Create : guide en français",
+  "description": "Les contrôles de train de Create : bloc obligatoire de tout train, conduire au clavier, régler la vitesse, s'arrêter en station, siffler et descendre.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Les <strong>contrôles de train</strong> sont le poste de conduite. Sans eux, une <a href=\"/wiki/station-de-train\">station</a> refuse d'assembler le train. Ils servent aussi à le conduire à la main, et c'est devant eux que s'assied le conducteur d'un train automatique qui suit un <a href=\"/wiki/planning-de-train\">planning</a>.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Trains"
+    },
+    {
+      "label": "Fabrication",
+      "value": "Levier, boitier de train et mécanisme de précision en colonne = 1 contrôle"
+    },
+    {
+      "label": "Rôle",
+      "value": "Obligatoire sur chaque train ; sa flèche donne l'avant"
+    },
+    {
+      "label": "Conduire",
+      "value": "Clic droit sur les contrôles du train assemblé"
+    },
+    {
+      "label": "Touches",
+      "value": "Avancer / reculer : accélérer, freiner ; gauche / droite : choisir la voie aux bifurcations"
+    },
+    {
+      "label": "Vitesse manuelle",
+      "value": "× 0,75 : 21 blocs/s, 30 avec carburant"
+    },
+    {
+      "label": "Sifflets",
+      "value": "Touche de sprint"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Levier",
+        null
+      ],
+      [
+        null,
+        "Boitier de train",
+        null
+      ],
+      [
+        null,
+        "Mécanisme de précision",
+        null
+      ]
+    ],
+    "result": "1 contrôle de train"
+  },
+  "videos": [
+    {
+      "id": "train_controls",
+      "name": "Contrôles de train : conduire, régler la vitesse, siffler",
+      "description": "Le joueur prend les commandes, avance, recule, règle la vitesse maximale à la molette, s'approche de la station, puis un sifflet est ajouté et actionné.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "obligatoires",
+      "title": "Obligatoires sur chaque train",
+      "image": "train_controls_obligatoires.webp",
+      "alt": "Contrôles de train sur un petit train",
+      "video": "train_controls",
+      "html": "<p>Pose les contrôles sur le train avant l'assemblage, la <strong>flèche</strong> vers l'avant. Un train peut en avoir deux, dos à dos, pour rouler dans les deux sens. Voir aussi notre guide pour <a href=\"/wiki/assembler-un-train\">assembler un train</a>.</p>"
+    },
+    {
+      "id": "conduire",
+      "title": "Prendre les commandes",
+      "image": "train_controls_conduire.webp",
+      "alt": "Le joueur prend les commandes",
+      "html": "<p>Une fois le train assemblé, fais un <strong>clic droit sur les contrôles</strong> : tu tiens les leviers et le train t'obéit. Tu n'as pas besoin d'être assis, mais rester près du poste aide à voir la voie.</p>"
+    },
+    {
+      "id": "touches",
+      "title": "Conduire au clavier",
+      "image": "train_controls_touches.webp",
+      "alt": "Le train avance sur la voie",
+      "html": "<p>Les touches de <strong>déplacement</strong> pilotent le train : avancer pour accélérer, reculer pour freiner puis repartir en arrière. Gauche et droite choisissent la voie à la prochaine <strong>bifurcation</strong>. Le freinage est deux fois plus fort que l'accélération.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "Régler la vitesse",
+      "image": "train_controls_vitesse.webp",
+      "alt": "Vitesse réglée à la molette",
+      "html": "<p>La <strong>molette</strong> règle la vitesse maximale, par crans. En conduite manuelle, le train plafonne à <strong>21 blocs par seconde</strong>, soit trois quarts de la vitesse d'un train automatique, et 30 avec du carburant.</p>"
+    },
+    {
+      "id": "approche",
+      "title": "S’arrêter en station",
+      "image": "train_controls_approche.webp",
+      "alt": "Le train s’arrête sur le repère de la station",
+      "html": "<p>Garde la <strong>touche de saut</strong> enfoncée près d'une station : le train freine tout seul et s'arrête pile sur le repère. Bien plus précis que de freiner à l'œil.</p>"
+    },
+    {
+      "id": "desassembler",
+      "title": "Redémonter à quai",
+      "image": "train_controls_desassembler.webp",
+      "alt": "Train désassemblé à la station",
+      "html": "<p>Un train arrêté en station peut redevenir des blocs depuis son interface. C'est le moment d'ajouter un bloc, un <a href=\"/wiki/sifflet-a-vapeur\">sifflet à vapeur</a> par exemple, puis de réassembler.</p>"
+    },
+    {
+      "id": "sifflet",
+      "title": "Siffler",
+      "image": "train_controls_sifflet.webp",
+      "alt": "Sifflet à vapeur sur le train",
+      "html": "<p>Les sifflets à vapeur embarqués sonnent avec la <strong>touche de sprint</strong>. C'est le klaxon du train, parfait à l'approche d'une gare.</p>"
+    },
+    {
+      "id": "quitter",
+      "title": "Lâcher les commandes",
+      "image": "train_controls_quitter.webp",
+      "alt": "Le joueur lâche les commandes",
+      "html": "<p>Accroupis-toi ou refais un clic droit pour <strong>lâcher les commandes</strong>. Le train ralentit jusqu'à l'arrêt. Pour le laisser rouler seul, confie un <a href=\"/wiki/planning-de-train\">planning</a> à un conducteur.</p>"
+    },
+    {
+      "id": "signaux",
+      "title": "Et les signaux ?",
+      "html": "<p>En conduite manuelle, les <a href=\"/wiki/signal-de-train\">signaux</a> ne t'arrêtent pas : regarde les feux. Un train qui en percute un autre provoque une explosion qui ne casse aucun bloc, et les deux trains déraillent.</p>"
+    },
+    {
+      "id": "cabine",
+      "title": "Aménager la cabine",
+      "html": "<p>Place un <strong>siège</strong> juste derrière les contrôles, face à eux : c'est la place du conducteur, joueur ou mob. Laisse une vue dégagée vers l'avant, sans bloc devant la tête, et pense à une porte ou une trappe pour monter facilement.</p>"
+    },
+    {
+      "id": "deux",
+      "title": "Deux contrôles à bord",
+      "html": "<p>Avec deux contrôles dos à dos, chaque poste conduit le train dans son propre sens : l'avant devient l'arrière sans demi-tour. C'est le montage classique des navettes sur voie unique, avec une station à chaque terminus.</p>"
+    },
+    {
+      "id": "touches-jeu",
+      "title": "Les touches du jeu",
+      "html": "<p>Les contrôles reprennent les touches de déplacement de Minecraft, celles que tu as réglées dans les options : sur un clavier français, souvent Z, Q, S et D. Rien à configurer en plus.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur un serveur",
+      "html": "<p>Ralentis près des gares et des croisements partagés : un train lancé à pleine vitesse met plusieurs dizaines de blocs à s'arrêter. Et préviens les autres joueurs avant d'emprunter une ligne automatique, ou pose tes propres <a href=\"/wiki/signal-de-train\">signaux</a>.</p>"
+    },
+    {
+      "id": "apprendre",
+      "title": "Apprendre à conduire",
+      "html": "<p>Commence sur une voie droite et courte, avec une station au bout. Accélère, lâche, freine, puis approche la station avec la touche de saut. Une fois à l'aise, essaie une bifurcation : regarde la flèche affichée et choisis ta voie avant d'y arriver, pas dessus.</p>"
+    }
+  ],
+  "related": [
+    "assembler-un-train",
+    "station-de-train",
+    "planning-de-train",
+    "signal-de-train",
+    "sifflet-a-vapeur"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/controls.json",
+    "Vitesse manuelle : CTrains.manualTrainSpeedModifier (0,75) ; CTrains : trainTopSpeed 28, trainTurningTopSpeed 14, poweredTrainTopSpeed 40, poweredTrainTurningTopSpeed 20, trainAcceleration 3",
+    "Leviers : ControlsRenderer ; touches : ControlsHandler",
+    "Collision : Train.collideWithOtherTrains (explosion sans casse, déraillement)",
+    "Scène : TrainScenes.controls (le joueur n’est pas dessiné)"
+  ],
+  "en": {
+    "slugEn": "train-controls",
+    "name": "Train Controls",
+    "title": "Train Controls — Create mod guide",
+    "description": "Create Train Controls: the block every train needs, driving with the keyboard, setting the top speed, stopping at a station, whistling and letting go.",
+    "intro": "<strong>Train Controls</strong> are the driver's cab. Without them a <a href=\"/en/wiki/train-station\">station</a> refuses to assemble the train. They also let you drive it by hand, and they are what the conductor of an automated train following a <a href=\"/en/wiki/train-schedule\">schedule</a> sits in front of.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Trains"
+      },
+      {
+        "label": "Crafting",
+        "value": "Lever, Train Casing and Precision Mechanism in a column = 1 controls"
+      },
+      {
+        "label": "Role",
+        "value": "Required on every train; its arrow sets the front"
+      },
+      {
+        "label": "Driving",
+        "value": "Right-click the controls of the assembled train"
+      },
+      {
+        "label": "Keys",
+        "value": "Forward / back: accelerate, brake; left / right: pick the track at junctions"
+      },
+      {
+        "label": "Manual speed",
+        "value": "× 0.75: 21 blocks/s, 30 with fuel"
+      },
+      {
+        "label": "Whistles",
+        "value": "Sprint key"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Lever",
+          null
+        ],
+        [
+          null,
+          "Train Casing",
+          null
+        ],
+        [
+          null,
+          "Precision Mechanism",
+          null
+        ]
+      ],
+      "result": "1 Train Controls"
+    },
+    "videos": [
+      {
+        "id": "train_controls",
+        "name": "Train Controls: driving, setting the speed, whistling",
+        "description": "The player takes the controls, drives forward and back, sets the top speed with the mouse wheel, approaches the station, then a whistle is added and sounded."
+      }
+    ],
+    "sections": [
+      {
+        "id": "obligatoires",
+        "title": "Required on every train",
+        "alt": "Train Controls on a small train",
+        "html": "<p>Place the controls on the train before assembly, <strong>arrow</strong> pointing forward. A train can have two, back to back, to drive both ways. See also our guide to <a href=\"/en/wiki/train-assembly\">train assembly</a>.</p>"
+      },
+      {
+        "id": "conduire",
+        "title": "Taking the controls",
+        "alt": "The player takes the controls",
+        "html": "<p>Once the train is assembled, <strong>right-click the controls</strong>: you hold the levers and the train obeys you. You do not have to sit down, but staying near the cab helps you see the track.</p>"
+      },
+      {
+        "id": "touches",
+        "title": "Driving with the keyboard",
+        "alt": "The train drives along the track",
+        "html": "<p>The <strong>movement keys</strong> drive the train: forward to accelerate, back to brake and then reverse. Left and right pick the track at the next <strong>junction</strong>. Braking is twice as strong as accelerating.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "Setting the speed",
+        "alt": "Top speed set with the mouse wheel",
+        "html": "<p>The <strong>mouse wheel</strong> sets the top speed, step by step. When driven by hand, the train tops out at <strong>21 blocks per second</strong>, three quarters of an automated train's speed, and 30 with fuel.</p>"
+      },
+      {
+        "id": "approche",
+        "title": "Stopping at a station",
+        "alt": "The train stops on the station's marker",
+        "html": "<p>Hold the <strong>jump key</strong> near a station: the train brakes by itself and stops exactly on the marker. Much more precise than braking by eye.</p>"
+      },
+      {
+        "id": "desassembler",
+        "title": "Taking it apart at the station",
+        "alt": "Train disassembled at the station",
+        "html": "<p>A train stopped at a station can be turned back into blocks from its interface. That is the time to add a block, a <a href=\"/en/wiki/steam-whistle\">Steam Whistle</a> for instance, then assemble again.</p>"
+      },
+      {
+        "id": "sifflet",
+        "title": "Whistling",
+        "alt": "Steam Whistle on the train",
+        "html": "<p>Steam Whistles on board sound with the <strong>sprint key</strong>. It is the train's horn, perfect when pulling into a station.</p>"
+      },
+      {
+        "id": "quitter",
+        "title": "Letting go",
+        "alt": "The player lets go of the controls",
+        "html": "<p>Sneak or right-click again to <strong>let go of the controls</strong>. The train slows down to a stop. To let it run by itself, hand a <a href=\"/en/wiki/train-schedule\">schedule</a> to a conductor.</p>"
+      },
+      {
+        "id": "signaux",
+        "title": "What about signals?",
+        "html": "<p>When you drive by hand, <a href=\"/en/wiki/train-signal\">signals</a> do not stop you: watch the lights. A train hitting another one causes an explosion that breaks no blocks, and both trains derail.</p>"
+      },
+      {
+        "id": "cabine",
+        "title": "Building the cab",
+        "html": "<p>Put a <strong>seat</strong> right behind the controls, facing them: that is the driver's place, player or mob. Keep a clear view ahead, with no block in front of the head, and add a door or trapdoor to get in easily.</p>"
+      },
+      {
+        "id": "deux",
+        "title": "Two sets of controls",
+        "html": "<p>With two sets of controls back to back, each cab drives the train in its own direction: the front becomes the back without turning around. It is the classic setup for shuttles on a single track, with a station at each terminus.</p>"
+      },
+      {
+        "id": "touches-jeu",
+        "title": "The game keys",
+        "html": "<p>The controls use Minecraft's own movement keys, the ones set in your options: usually W, A, S and D on a QWERTY keyboard. If you changed them, the train follows your settings. Nothing else to configure.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On a server",
+        "html": "<p>Slow down near stations and shared junctions: a train at full speed needs dozens of blocks to stop. And warn other players before driving on an automated line, or set up your own <a href=\"/en/wiki/train-signal\">signals</a>.</p>"
+      },
+      {
+        "id": "apprendre",
+        "title": "Learning to drive",
+        "html": "<p>Start on a short straight track with a station at the end. Accelerate, let go, brake, then approach the station with the jump key. Once comfortable, try a junction: watch the arrow on screen and pick your track before you reach it, not on top of it.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/controls.json",
+      "Manual speed: CTrains.manualTrainSpeedModifier (0.75); CTrains: trainTopSpeed 28, trainTurningTopSpeed 14, poweredTrainTopSpeed 40, poweredTrainTurningTopSpeed 20, trainAcceleration 3",
+      "Levers: ControlsRenderer; keys: ControlsHandler",
+      "Collision: Train.collideWithOtherTrains (explosion without block damage, derailment)",
+      "Scene: TrainScenes.controls (the player is not drawn)"
+    ]
+  }
+}

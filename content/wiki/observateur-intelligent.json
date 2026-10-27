@@ -121,7 +121,8 @@
     "entonnoir",
     "tapis-roulant",
     "chute",
-    "coffre-a-objet-renforce"
+    "coffre-a-objet-renforce",
+    "observateur-de-train"
   ],
   "sources": [
     "Détection : SmartObserverBlockEntity.tick (bloc filtré, TransportedItemStackHandlerBehaviour au centre 0,45, FluidTransportBehaviour, ChainConveyorBlockEntity.getLoopingPackages, inventaire, réservoir)",

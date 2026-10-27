@@ -132,7 +132,8 @@
     "detecteur-de-seuil",
     "stressometre-compteur-de-vitesse",
     "tunnel",
-    "coffre-a-objet-renforce"
+    "coffre-a-objet-renforce",
+    "station-de-train"
   ],
   "sources": [
     "Portée : CLogistics.displayLinkRange = 64",

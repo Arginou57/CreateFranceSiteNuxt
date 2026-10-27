@@ -136,7 +136,8 @@
   "related": [
     "moteur-a-vapeur",
     "reservoir-a-fluide",
-    "bruleur-a-blaze"
+    "bruleur-a-blaze",
+    "controles-de-train"
   ],
   "sources": [
     "Recette : crafting/kinetics/steam_whistle.json",

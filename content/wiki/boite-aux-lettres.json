@@ -117,7 +117,9 @@
     "roue-a-chaine-roulante",
     "emballeur",
     "telescripteur-de-stock",
-    "coffre-a-objet-renforce"
+    "coffre-a-objet-renforce",
+    "station-de-train",
+    "planning-de-train"
   ],
   "sources": [
     "Boîte aux lettres : PackagePortBlockEntity (inventaire de 18 colis, addressFilter, acceptsPackages), cible : gare (PackagePortTarget), CLogistics.packagePortRange = 5",

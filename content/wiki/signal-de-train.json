@@ -1,0 +1,391 @@
+{
+  "slug": "signal-de-train",
+  "name": "Signal de train",
+  "blockId": "create:track_signal",
+  "category": "trains",
+  "title": "Signal de train — Create : guide en français",
+  "description": "Le signal de train de Create : découper la voie en cantons, éviter les collisions, le sens des signaux, le mode croisé, les tubes Nixie et la redstone.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>signal de train</strong> évite que deux trains automatiques se percutent. Il découpe la voie en <strong>cantons</strong> : un train par canton, jamais deux. Dans nos boucles, les feux ne sont pas joués à la main : ils sont recalculés d'après la position des trains, comme le fait le code de Create.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Trains"
+    },
+    {
+      "label": "Fabrication",
+      "value": "1 boitier de train + 1 tube électronique = 4 signaux (sans forme)"
+    },
+    {
+      "label": "Pose",
+      "value": "Clic droit sur un rail, puis poser à 16 blocs au plus"
+    },
+    {
+      "label": "Rouge",
+      "value": "Canton suivant occupé (ou croisé par un canton occupé), ou signal de redstone"
+    },
+    {
+      "label": "Sens",
+      "value": "Un signal ne règle que les trains qui le franchissent dans son sens"
+    },
+    {
+      "label": "Mode croisé",
+      "value": "À la clé : vert seulement si le train pourra aussi sortir du canton (sinon rouge ou jaune)"
+    },
+    {
+      "label": "Comparateur",
+      "value": "Signal quand le feu est rouge"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (sans forme)",
+    "grid": [
+      [
+        "Boitier de train",
+        "Tube électronique",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "4 signaux de train"
+  },
+  "videos": [
+    {
+      "id": "signal_placement",
+      "name": "Signal de train : pose, sens et tubes Nixie",
+      "description": "Un signal est posé au bord de la voie ; un second, tourné dans l'autre sens, laisse passer le train vers la station ; des tubes Nixie répètent les feux.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "signal_segments",
+      "name": "Signal de train : les cantons",
+      "description": "Quatre signaux découpent deux voies qui se croisent ; un train entre dans le canton central et les signaux qui y mènent passent au rouge.",
+      "duration": "PT21S"
+    },
+    {
+      "id": "signal_cross",
+      "name": "Signal de train : le mode croisé",
+      "description": "Un signal passé à la clé en mode croisé retient un train tant que le canton suivant est occupé, pour qu'il ne reste pas bloqué au milieu du croisement.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "signal_redstone",
+      "name": "Signal de train : redstone et comparateur",
+      "description": "Un levier force le signal au rouge ; un comparateur s'allume quand un train occupe le canton.",
+      "duration": "PT12S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "poser",
+      "title": "Poser un signal",
+      "image": "signal_placement_poser.webp",
+      "alt": "Signal de train posé à côté de la voie",
+      "video": "signal_placement",
+      "html": "<p>Comme pour la station : <strong>clic droit sur le rail</strong> avec le signal en main, puis pose le bloc à proximité. Le repère apparaît sur la voie à l'endroit choisi. Deux repères de la voie doivent être à plus de trois quarts de bloc l'un de l'autre.</p>"
+    },
+    {
+      "id": "role",
+      "title": "Pour les trains automatiques",
+      "image": "signal_placement_role.webp",
+      "alt": "Train et station derrière le signal",
+      "html": "<p>Les signaux règlent les trains <strong>conduits par un planning</strong>. Un joueur aux <a href=\"/wiki/controles-de-train\">commandes</a> peut passer au rouge : rien ne l'arrête, à lui de regarder les feux.</p>"
+    },
+    {
+      "id": "sens",
+      "title": "Un sens de passage",
+      "image": "signal_placement_sens.webp",
+      "alt": "Le train ne peut pas franchir le signal à contresens",
+      "html": "<p>Un signal n'agit que dans <strong>un sens</strong>, celui de la flèche du repère. Un train programmé ne franchit <strong>jamais</strong> un signal à contresens : s'il n'existe pas d'autre chemin, il attend. Une voie à signaux d'un seul côté devient donc à sens unique.</p>"
+    },
+    {
+      "id": "double",
+      "title": "Deux sens, deux signaux",
+      "image": "signal_placement_double.webp",
+      "alt": "Deux signaux dos à dos, repère double",
+      "html": "<p>Pour qu'une voie serve dans les deux sens, pose un <strong>second signal tourné à l'inverse</strong> au même endroit. Le repère devient double. Dans la boucle, le train passe alors vers la station, et les feux du canton qu'il vient d'occuper passent au rouge.</p>"
+    },
+    {
+      "id": "nixie",
+      "title": "Des feux bien visibles",
+      "image": "signal_placement_nixie.webp",
+      "alt": "Tubes Nixie affichant le feu rouge du signal",
+      "html": "<p>Un <strong>tube Nixie</strong> posé sur le signal, ou contre lui, se change en feu de signalisation : rouge, blanc pour le vert, ou jaune. Utile en haut d'un poteau pour voir les feux de loin.</p>"
+    },
+    {
+      "id": "cantons",
+      "title": "Des cantons",
+      "image": "signal_segments_cantons.webp",
+      "alt": "Deux voies qui se croisent, découpées par quatre signaux",
+      "video": "signal_segments",
+      "html": "<p>Chaque signal <strong>coupe la voie</strong>. Le tronçon entre deux signaux est un canton. Quand deux voies se croisent, leurs cantons du croisement sont liés : un train sur l'un occupe aussi l'autre.</p>"
+    },
+    {
+      "id": "occupe",
+      "title": "Canton occupé, feu rouge",
+      "image": "signal_segments_occupe.webp",
+      "alt": "Le canton central occupé : signaux au rouge",
+      "html": "<p>Dès qu'un train entre dans un canton, les signaux qui y mènent passent au <strong>rouge</strong> : aucun autre train n'y entrera. Ici le train du croisement allume aussi le signal de l'autre voie, puisque les deux cantons sont liés.</p>"
+    },
+    {
+      "id": "un-train",
+      "title": "Un train par canton",
+      "image": "signal_segments_un-train.webp",
+      "alt": "Un deuxième train attend devant le signal rouge",
+      "html": "<p>Un second train <strong>freine et s'arrête</strong> devant le feu rouge, roues avant juste avant le repère. Il repartira quand le canton sera libre. Plus tu poses de signaux, plus tu peux faire rouler de trains sur une même ligne.</p>"
+    },
+    {
+      "id": "cle",
+      "title": "Le mode croisé à la clé",
+      "image": "signal_cross_cle.webp",
+      "alt": "Signal passé en mode croisé avec la clé",
+      "video": "signal_cross",
+      "html": "<p>Un clic droit à la <strong>clé</strong> fait passer le signal en <strong>mode croisé</strong> ; son boîtier change d'aspect. Un signal croisé mène d'habitude vers des signaux normaux, à la sortie d'un croisement ou d'une gare.</p>"
+    },
+    {
+      "id": "condition",
+      "title": "Une condition de plus",
+      "image": "signal_cross_condition.webp",
+      "alt": "Le canton de sortie est occupé",
+      "html": "<p>Un signal croisé est rouge si son canton est occupé, comme les autres, mais aussi si le train <strong>ne pourrait pas en ressortir</strong> : quand tous les signaux de sortie sont rouges. S'ils ne le sont qu'en partie, il passe au jaune.</p>"
+    },
+    {
+      "id": "entrer",
+      "title": "Ne pas bloquer le croisement",
+      "image": "signal_cross_entrer.webp",
+      "alt": "Le train attend avant le croisement",
+      "html": "<p>Sans ce mode, un train pourrait s'engager dans le croisement puis s'y arrêter, coincé derrière un autre : il bloquerait les deux voies. Le signal croisé le retient <strong>avant</strong>, là où il ne gêne personne.</p>"
+    },
+    {
+      "id": "sortir",
+      "title": "File d’attente propre",
+      "image": "signal_cross_sortir.webp",
+      "alt": "Un train traverse sur l’autre voie",
+      "html": "<p>Pendant ce temps, l'autre voie reste libre : un train la traverse sans attendre. Ce réglage est idéal aux entrées de gare et aux carrefours chargés.</p>"
+    },
+    {
+      "id": "forcer",
+      "title": "Forcer le rouge",
+      "image": "signal_redstone_forcer.webp",
+      "alt": "Un levier force le signal au rouge",
+      "video": "signal_redstone",
+      "html": "<p>Un <strong>signal de redstone</strong> sur le bloc le force au rouge, quel que soit le trafic. Avec un levier, une horloge ou un <a href=\"/wiki/observateur-de-train\">observateur de train</a>, tu fais une barrière, un arrêt minuté ou un aiguillage piloté.</p>"
+    },
+    {
+      "id": "comparateur",
+      "title": "Lire un signal",
+      "image": "signal_redstone_comparateur.webp",
+      "alt": "Comparateur allumé par le signal rouge",
+      "html": "<p>À l'inverse, un <strong>comparateur</strong> contre un signal rouge émet un signal. Il suffit d'un fil de redstone pour allumer une lampe en gare ou afficher l'état d'une ligne.</p>"
+    }
+  ],
+  "related": [
+    "rail-de-train",
+    "station-de-train",
+    "observateur-de-train",
+    "planning-de-train",
+    "controles-de-train"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/track_signal.json",
+    "Feux : SignalBoundary.tickState (rouge si forcé ou canton occupé, SignalEdgeGroup.isOccupiedUnless avec les cantons croisés), resolveSignalChain (mode croisé : vert / jaune / rouge)",
+    "Écart entre repères : TrackTargetingBehaviour (plus de 0,75 bloc)",
+    "Tubes Nixie : NixieTubeBlockEntity.tick (signal derrière la face d’accroche), NixieTubeRenderer.renderAsSignal",
+    "Simulation : WIKI/train_sim.py (cantons, signaux, observateurs et drapeaux recalculés d'après le code de Create)",
+    "Scènes : TrainSignalScenes.placement, signaling, redstone (perroquets conducteurs non dessinés)"
+  ],
+  "en": {
+    "slugEn": "train-signal",
+    "name": "Train Signal",
+    "title": "Train Signal — Create mod guide",
+    "description": "The Create Train Signal: splitting the track into sections, preventing collisions, signal direction, the cross signal mode, Nixie Tubes and redstone.",
+    "intro": "The <strong>Train Signal</strong> keeps automated trains from crashing into each other. It splits the track into <strong>sections</strong>: one train per section at a time. In our loops the lights are not scripted by hand: they are recomputed from the trains' positions, the way Create's code does it.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Trains"
+      },
+      {
+        "label": "Crafting",
+        "value": "1 Train Casing + 1 Electron Tube = 4 signals (shapeless)"
+      },
+      {
+        "label": "Placement",
+        "value": "Right-click a track, then place within 16 blocks"
+      },
+      {
+        "label": "Red",
+        "value": "Next section occupied (or crossed by an occupied section), or a redstone signal"
+      },
+      {
+        "label": "Direction",
+        "value": "A signal only governs trains passing it in its direction"
+      },
+      {
+        "label": "Cross mode",
+        "value": "With a Wrench: green only if the train can also leave the section (else red or yellow)"
+      },
+      {
+        "label": "Comparator",
+        "value": "Signal while the light is red"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (shapeless)",
+      "grid": [
+        [
+          "Train Casing",
+          "Electron Tube",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "4 Train Signals"
+    },
+    "videos": [
+      {
+        "id": "signal_placement",
+        "name": "Train Signal: placement, direction and Nixie Tubes",
+        "description": "A signal is placed next to the track; a second one, facing the other way, lets the train through to the station; Nixie Tubes repeat the lights."
+      },
+      {
+        "id": "signal_segments",
+        "name": "Train Signal: sections",
+        "description": "Four signals split two crossing tracks; a train enters the central section and the signals leading into it turn red."
+      },
+      {
+        "id": "signal_cross",
+        "name": "Train Signal: cross signal mode",
+        "description": "A signal switched to cross mode with a wrench holds a train back while the next section is occupied, so it never stops in the middle of the crossing."
+      },
+      {
+        "id": "signal_redstone",
+        "name": "Train Signal: redstone and comparator",
+        "description": "A lever forces the signal to red; a comparator lights up when a train occupies the section."
+      }
+    ],
+    "sections": [
+      {
+        "id": "poser",
+        "title": "Placing a signal",
+        "alt": "Train Signal placed next to the track",
+        "html": "<p>Just like the station: <strong>right-click the track</strong> with the signal in hand, then place the block nearby. The marker appears on the track at the chosen spot. Two markers on a track must be more than three quarters of a block apart.</p>"
+      },
+      {
+        "id": "role",
+        "title": "For automated trains",
+        "alt": "Train and station behind the signal",
+        "html": "<p>Signals govern trains <strong>driven by a schedule</strong>. A player at the <a href=\"/en/wiki/train-controls\">controls</a> can run a red light: nothing stops them, it is up to them to watch the lights.</p>"
+      },
+      {
+        "id": "sens",
+        "title": "One direction of travel",
+        "alt": "The train cannot pass the signal the wrong way",
+        "html": "<p>A signal only works in <strong>one direction</strong>, the one of its marker's arrow. A scheduled train <strong>never</strong> passes a signal the wrong way: if there is no other path, it waits. A track with signals on one side only becomes one-way.</p>"
+      },
+      {
+        "id": "double",
+        "title": "Two directions, two signals",
+        "alt": "Two signals back to back, double marker",
+        "html": "<p>For a track to work both ways, place a <strong>second signal facing the other way</strong> at the same spot. The marker becomes a double one. In the loop the train then goes through to the station, and the lights of the section it just entered turn red.</p>"
+      },
+      {
+        "id": "nixie",
+        "title": "Easy-to-see lights",
+        "alt": "Nixie Tubes showing the signal's red light",
+        "html": "<p>A <strong>Nixie Tube</strong> placed on top of the signal, or against it, turns into a signal light: red, white for green, or yellow. Handy at the top of a post to see the lights from afar.</p>"
+      },
+      {
+        "id": "cantons",
+        "title": "Sections",
+        "alt": "Two crossing tracks split by four signals",
+        "html": "<p>Every signal <strong>cuts the track</strong>. The stretch between two signals is a section. Where two tracks cross, their crossing sections are linked: a train on one also occupies the other.</p>"
+      },
+      {
+        "id": "occupe",
+        "title": "Occupied section, red light",
+        "alt": "The central section occupied: signals at red",
+        "html": "<p>As soon as a train enters a section, the signals leading into it turn <strong>red</strong>: no other train will enter. Here the train on the crossing also turns the other track's signal red, since both sections are linked.</p>"
+      },
+      {
+        "id": "un-train",
+        "title": "One train per section",
+        "alt": "A second train waits at the red signal",
+        "html": "<p>A second train <strong>brakes and stops</strong> in front of the red light, front wheels just before the marker. It leaves again once the section is free. The more signals you place, the more trains can share one line.</p>"
+      },
+      {
+        "id": "cle",
+        "title": "Cross mode with the Wrench",
+        "alt": "Signal switched to cross mode with a wrench",
+        "html": "<p>Right-clicking with a <strong>Wrench</strong> switches the signal to <strong>cross mode</strong>; its casing changes look. A cross signal usually leads into regular signals, at the exit of a junction or a station.</p>"
+      },
+      {
+        "id": "condition",
+        "title": "One more condition",
+        "alt": "The exit section is occupied",
+        "html": "<p>A cross signal is red when its section is occupied, like the others, but also when the train <strong>could not leave it</strong>: when every exit signal is red. If only some of them are, it shows yellow.</p>"
+      },
+      {
+        "id": "entrer",
+        "title": "Keeping the crossing clear",
+        "alt": "The train waits before the crossing",
+        "html": "<p>Without this mode, a train could enter the crossing and then stop in it, stuck behind another one: it would block both tracks. The cross signal holds it back <strong>before</strong>, where it is in nobody's way.</p>"
+      },
+      {
+        "id": "sortir",
+        "title": "A clean queue",
+        "alt": "A train crosses on the other track",
+        "html": "<p>Meanwhile the other track stays free: a train crosses it without waiting. This setting is ideal at station entrances and busy junctions.</p>"
+      },
+      {
+        "id": "forcer",
+        "title": "Forcing red",
+        "alt": "A lever forces the signal to red",
+        "html": "<p>A <strong>redstone signal</strong> on the block forces it to red, whatever the traffic. With a lever, a clock or a <a href=\"/en/wiki/train-observer\">Train Observer</a>, you get a barrier, a timed stop or a controlled junction.</p>"
+      },
+      {
+        "id": "comparateur",
+        "title": "Reading a signal",
+        "alt": "Comparator lit by the red signal",
+        "html": "<p>The other way round, a <strong>comparator</strong> against a red signal outputs a signal. One redstone line is enough to light a lamp at the station or show the state of a line.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/track_signal.json",
+      "Lights: SignalBoundary.tickState (red when forced or section occupied, SignalEdgeGroup.isOccupiedUnless including crossing sections), resolveSignalChain (cross mode: green / yellow / red)",
+      "Spacing of markers: TrackTargetingBehaviour (more than 0.75 block)",
+      "Nixie Tubes: NixieTubeBlockEntity.tick (signal behind the attached face), NixieTubeRenderer.renderAsSignal",
+      "Simulation: WIKI/train_sim.py (sections, signals, observers and flags recomputed from Create's code)",
+      "Scenes: TrainSignalScenes.placement, signaling, redstone (parrot conductors not drawn)"
+    ]
+  }
+}

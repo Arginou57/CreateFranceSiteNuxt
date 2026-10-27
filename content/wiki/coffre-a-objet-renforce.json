@@ -145,7 +145,8 @@
     "chute",
     "tapis-roulant",
     "telescripteur-de-stock",
-    "detecteur-de-seuil"
+    "detecteur-de-seuil",
+    "assembler-un-train"
   ],
   "sources": [
     "Capacité : CLogistics.vaultCapacity = 20 piles par bloc (de 1 à 2048)",

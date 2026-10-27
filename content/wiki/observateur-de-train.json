@@ -1,0 +1,289 @@
+{
+  "slug": "observateur-de-train",
+  "name": "Observateur de train",
+  "blockId": "create:track_observer",
+  "category": "trains",
+  "title": "Observateur de train — Create : guide en français",
+  "description": "L'observateur de train de Create : détecter un train qui passe sur un point de la voie, signal de redstone et filtre de cargaison par objet ou fluide.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "L'<strong>observateur de train</strong> émet un signal de redstone quand un train passe sur un point précis de la voie. Il sert à ouvrir une barrière, sonner un <a href=\"/wiki/sifflet-a-vapeur\">sifflet</a>, compter les passages ou piloter un <a href=\"/wiki/signal-de-train\">signal</a>. Avec un filtre, il ne réagit qu'aux trains qui transportent une cargaison donnée.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Trains"
+    },
+    {
+      "label": "Fabrication",
+      "value": "1 boitier de train + 1 plaque de pression (bois, pierre, roche noire ou pesée) = 2 observateurs"
+    },
+    {
+      "label": "Pose",
+      "value": "Clic droit sur un rail, puis poser à 16 blocs au plus"
+    },
+    {
+      "label": "Détection",
+      "value": "Tout train qui couvre le repère, de sa première à sa dernière roue"
+    },
+    {
+      "label": "Signal",
+      "value": "Pendant le passage, puis encore 8 ticks (0,4 s)"
+    },
+    {
+      "label": "Filtre",
+      "value": "Objet ou fluide : seuls les trains qui en transportent l'activent"
+    },
+    {
+      "label": "Sens",
+      "value": "Les deux sens de passage"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (sans forme)",
+    "grid": [
+      [
+        "Boitier de train",
+        "Plaque de pression en bois",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "2 observateurs de train"
+  },
+  "videos": [
+    {
+      "id": "track_observer",
+      "name": "Observateur de train : détection et filtre",
+      "description": "Des trains passent sur le repère et allument la redstone ; avec un seau d'eau en filtre, seul le train dont le réservoir contient de l'eau déclenche l'observateur.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "poser",
+      "title": "Poser un observateur",
+      "image": "track_observer_poser.webp",
+      "alt": "Observateur de train posé près de la voie",
+      "video": "track_observer",
+      "html": "<p>Avec l'observateur en main, <strong>clic droit sur le rail</strong> à surveiller : la case s'entoure de vert. Pose ensuite le bloc dans un rayon de 16 blocs, par exemple sous le quai ou derrière un mur. Un repère apparaît sur la voie.</p>"
+    },
+    {
+      "id": "detecter",
+      "title": "Détecter un passage",
+      "image": "track_observer_detecter.webp",
+      "alt": "La redstone s’allume au passage du train",
+      "html": "<p>L'observateur s'allume dès qu'un train <strong>couvre le repère</strong>, entre sa première et sa dernière roue, et reste allumé <strong>8 ticks</strong> après son départ. Dans la boucle, la sortie suit le vrai passage des trains : elle s'éteint brièvement entre deux trains rapprochés.</p>"
+    },
+    {
+      "id": "filtre",
+      "title": "Filtrer la cargaison",
+      "image": "track_observer_filtre.webp",
+      "alt": "Filtre au seau d’eau : seul le train chargé d’eau l’active",
+      "html": "<p>Le haut du bloc porte un <strong>emplacement de filtre</strong>. Avec un objet, l'observateur ne réagit qu'aux trains qui en transportent ; avec un seau, il vise le fluide de leurs <a href=\"/wiki/reservoir-a-fluide\">réservoirs</a>. Ici, seul le train chargé d'eau l'allume ; celui qui porte de la lave passe sans rien déclencher.</p>"
+    },
+    {
+      "id": "usages",
+      "title": "Idées d’usages",
+      "html": "<p>Une porte de gare qui s'ouvre quand le train arrive, une alarme avant un passage à niveau, un <a href=\"/wiki/sifflet-a-vapeur\">sifflet</a> qui salue chaque départ. Couplé à un compteur de redstone, l'observateur compte les trains d'une ligne. Relié à une <a href=\"/wiki/liaison-d-affichage\">liaison d'affichage</a>, il annonce les passages en gare.</p>"
+    },
+    {
+      "id": "tri",
+      "title": "Trier les trains",
+      "html": "<p>Avec un filtre, l'observateur devient un <strong>aiguilleur</strong> : un train de minerai déclenche un signal qui ouvre l'accès au quai de déchargement, les autres continuent. Le filtre accepte aussi les filtres de Create, pour viser une liste d'objets.</p>"
+    },
+    {
+      "id": "difference",
+      "title": "Observateur de train ou observateur intelligent",
+      "html": "<p>L'<a href=\"/wiki/observateur-intelligent\">observateur intelligent</a> regarde un bloc ou un inventaire devant lui. L'observateur de train, lui, est relié à un point de la voie et voit les trains, même à pleine vitesse, et même quand ils traversent sans s'arrêter.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Astuces",
+      "html": "<p>Place l'observateur un peu avant l'endroit où tu veux agir : à 28 blocs par seconde, un train parcourt plus de 11 blocs pendant les 8 ticks de signal. Pour savoir si un train est arrêté à quai, préfère le comparateur contre la <a href=\"/wiki/station-de-train\">station</a>.</p>"
+    },
+    {
+      "id": "cantons",
+      "title": "Il ne coupe pas la voie",
+      "html": "<p>Contrairement au <a href=\"/wiki/signal-de-train\">signal</a>, l'observateur ne crée pas de canton : il se contente de regarder. Plusieurs observateurs peuvent suivre la même ligne, sur un rail droit ou sur une courbe, sans rien changer à la circulation des trains.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "La sortie de redstone",
+      "html": "<p>Pendant le passage, le bloc s'allume et alimente la poudre de redstone, les lampes ou les mécanismes qui le touchent, comme un levier qu'on abaisse. Le signal ne dépend ni de la vitesse ni de la longueur du train : il dure tant qu'un wagon couvre le repère.</p>"
+    },
+    {
+      "id": "exemple",
+      "title": "Exemple : un passage à niveau",
+      "html": "<p>Pose un observateur une quinzaine de blocs avant un chemin qui croise la voie, et relie-le à des portillons en fer ou à des lampes. Les barrières se ferment quand le train approche et se rouvrent après le dernier wagon. Un second observateur de l'autre côté gère les trains qui viennent en sens inverse.</p>"
+    },
+    {
+      "id": "sans-filtre",
+      "title": "Sans filtre",
+      "html": "<p>Sans filtre, l'observateur réagit à <strong>tous les trains</strong>, même vides ou conduits par un joueur. Pour retirer un filtre, clique l'emplacement la main vide. Un filtre ne regarde que la cargaison : ni les passagers ni le conducteur.</p>"
+    }
+  ],
+  "related": [
+    "signal-de-train",
+    "station-de-train",
+    "rail-de-train",
+    "observateur-intelligent",
+    "reservoir-a-fluide",
+    "sifflet-a-vapeur"
+  ],
+  "sources": [
+    "Recettes : crafting/kinetics/track_observer.json, track_observer_from_other_plates.json",
+    "Activation : TrackObserver.keepAlive (8 ticks), Train.tickOccupiedObservers (filtre testé sur les objets et les fluides des wagons)",
+    "Simulation : WIKI/train_sim.py (cantons, signaux, observateurs et drapeaux recalculés d'après le code de Create)",
+    "Scène : TrackObserverScenes.observe (perroquets conducteurs non dessinés)"
+  ],
+  "en": {
+    "slugEn": "train-observer",
+    "name": "Train Observer",
+    "title": "Train Observer — Create mod guide",
+    "description": "The Create Train Observer: detecting a train passing a point of the track, its redstone output and the cargo filter for an item or a fluid.",
+    "intro": "The <strong>Train Observer</strong> outputs a redstone signal when a train passes a precise point of the track. Use it to open a gate, sound a <a href=\"/en/wiki/steam-whistle\">whistle</a>, count passing trains or drive a <a href=\"/en/wiki/train-signal\">signal</a>. With a filter, it only reacts to trains carrying a given cargo.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Trains"
+      },
+      {
+        "label": "Crafting",
+        "value": "1 Train Casing + 1 pressure plate (wood, stone, blackstone or weighted) = 2 observers"
+      },
+      {
+        "label": "Placement",
+        "value": "Right-click a track, then place within 16 blocks"
+      },
+      {
+        "label": "Detection",
+        "value": "Any train covering the marker, from its first to its last wheel"
+      },
+      {
+        "label": "Signal",
+        "value": "While the train passes, then 8 more ticks (0.4 s)"
+      },
+      {
+        "label": "Filter",
+        "value": "Item or fluid: only trains carrying it trigger the observer"
+      },
+      {
+        "label": "Direction",
+        "value": "Both directions of travel"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (shapeless)",
+      "grid": [
+        [
+          "Train Casing",
+          "Wooden Pressure Plate",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "2 Train Observers"
+    },
+    "videos": [
+      {
+        "id": "track_observer",
+        "name": "Train Observer: detection and filter",
+        "description": "Trains pass over the marker and light the redstone; with a water bucket as a filter, only the train whose tank holds water triggers the observer."
+      }
+    ],
+    "sections": [
+      {
+        "id": "poser",
+        "title": "Placing an observer",
+        "alt": "Train Observer placed near the track",
+        "html": "<p>With the observer in hand, <strong>right-click the track</strong> to watch: the spot is outlined in green. Then place the block within 16 blocks, for instance under the platform or behind a wall. A marker appears on the track.</p>"
+      },
+      {
+        "id": "detecter",
+        "title": "Detecting a train",
+        "alt": "The redstone lights up as the train passes",
+        "html": "<p>The observer turns on as soon as a train <strong>covers the marker</strong>, between its first and last wheel, and stays on for <strong>8 ticks</strong> after it leaves. In the loop the output follows the real passage of the trains: it briefly turns off between two close trains.</p>"
+      },
+      {
+        "id": "filtre",
+        "title": "Filtering the cargo",
+        "alt": "Water bucket filter: only the train carrying water triggers it",
+        "html": "<p>The top of the block has a <strong>filter slot</strong>. With an item, the observer only reacts to trains carrying it; with a bucket, it looks at the fluid in their <a href=\"/en/wiki/fluid-tank\">tanks</a>. Here only the train loaded with water lights it; the one carrying lava passes without triggering anything.</p>"
+      },
+      {
+        "id": "usages",
+        "title": "Ideas",
+        "html": "<p>A station door that opens when the train arrives, an alarm before a level crossing, a <a href=\"/en/wiki/steam-whistle\">whistle</a> greeting every departure. Paired with a redstone counter, the observer counts the trains on a line. Wired to a <a href=\"/en/wiki/display-link\">Display Link</a>, it announces trains at the station.</p>"
+      },
+      {
+        "id": "tri",
+        "title": "Sorting trains",
+        "html": "<p>With a filter, the observer becomes a <strong>dispatcher</strong>: an ore train triggers a signal that opens the way to the unloading platform, the others carry on. The slot also takes Create filters, to target a list of items.</p>"
+      },
+      {
+        "id": "difference",
+        "title": "Train Observer or Smart Observer",
+        "html": "<p>The <a href=\"/en/wiki/smart-observer\">Smart Observer</a> looks at a block or an inventory in front of it. The Train Observer is tied to a point of the track and sees trains, even at full speed, and even when they drive through without stopping.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<p>Place the observer a little before the spot where you want something to happen: at 28 blocks per second, a train covers more than 11 blocks during the 8 ticks of signal. To know whether a train is standing in a station, use a comparator against the <a href=\"/en/wiki/train-station\">station</a> instead.</p>"
+      },
+      {
+        "id": "cantons",
+        "title": "It does not split the track",
+        "html": "<p>Unlike the <a href=\"/en/wiki/train-signal\">signal</a>, the observer creates no section: it only watches. Several observers can follow the same line, on a straight track or on a curve, without changing how trains run.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "The redstone output",
+        "html": "<p>While a train passes, the block lights up and powers the redstone dust, lamps or mechanisms touching it, like a lever being pulled. The signal depends neither on the train's speed nor on its length: it lasts as long as a carriage covers the marker.</p>"
+      },
+      {
+        "id": "exemple",
+        "title": "Example: a level crossing",
+        "html": "<p>Place an observer about fifteen blocks before a path crossing the track, and wire it to iron gates or lamps. The barriers close as the train approaches and open again after the last carriage. A second observer on the other side handles trains coming the other way.</p>"
+      },
+      {
+        "id": "sans-filtre",
+        "title": "Without a filter",
+        "html": "<p>Without a filter, the observer reacts to <strong>every train</strong>, even empty ones or trains driven by a player. To remove a filter, click the slot with an empty hand. A filter only looks at cargo: not at passengers or the conductor.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: crafting/kinetics/track_observer.json, track_observer_from_other_plates.json",
+      "Activation: TrackObserver.keepAlive (8 ticks), Train.tickOccupiedObservers (filter tested on the carriages’ items and fluids)",
+      "Simulation: WIKI/train_sim.py (sections, signals, observers and flags recomputed from Create's code)",
+      "Scene: TrackObserverScenes.observe (parrot conductors not drawn)"
+    ]
+  }
+}
