@@ -1,0 +1,265 @@
+{
+  "slug": "bassin",
+  "name": "Bassin",
+  "blockId": "create:basin",
+  "category": "traitement",
+  "title": "Bassin — Create : guide en français",
+  "description": "Le bassin de Create : contenir objets et fluides pour le mixeur et la presse, sortie par dessous ou par un robinet latéral, garder ou extraire le résultat.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>bassin</strong> est le récipient de travail de Create. Seul, il ne fait rien ; mais sous un <strong>mixeur mécanique</strong> ou une <strong>presse mécanique</strong>, il devient le cœur des recettes à plusieurs ingrédients : alliage d'andésite, laiton, blocs compactés… Il accepte des objets et des fluides, et sait où envoyer le résultat. Comprendre sa <strong>sortie</strong>, c'est éviter la moitié des usines bouchées.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Traitement"
+    },
+    {
+      "label": "Stress",
+      "value": "Aucun (ce sont le mixeur et la presse qui consomment)"
+    },
+    {
+      "label": "Capacité",
+      "value": "9 emplacements d'entrée, 9 de sortie, 2 + 2 réservoirs de 1 000 mB"
+    },
+    {
+      "label": "Sortie",
+      "value": "Par dessous par défaut, ou par un robinet sur le côté"
+    },
+    {
+      "label": "Avec",
+      "value": "Mixeur mécanique ou presse mécanique deux blocs au-dessus"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Alliage d'andésite",
+        null,
+        "Alliage d'andésite"
+      ],
+      [
+        "Alliage d'andésite",
+        "Alliage d'andésite",
+        "Alliage d'andésite"
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 bassin"
+  },
+  "videos": [
+    {
+      "id": "basin",
+      "name": "Bassin : contenu et sorties",
+      "description": "Des briques tombent dans un bassin, puis des dépôts sont placés tour à tour autour de lui pour montrer les endroits où il peut verser le résultat.",
+      "duration": "PT20S"
+    },
+    {
+      "id": "basin_output",
+      "name": "Bassin : récupérer ou garder le résultat",
+      "description": "Une presse au-dessus du bassin compacte des briques ; le résultat part sur un tapis, puis le bassin, sans sortie, garde les pépites et lingots qu'il produit.",
+      "duration": "PT20S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "contenu",
+      "title": "Un récipient pour objets et fluides",
+      "image": "basin_contenu.webp",
+      "alt": "Des briques tombent dans un bassin posé sur un boîtier",
+      "html": "<p>Le bassin accepte des <strong>objets</strong> (neuf emplacements) et des <strong>fluides</strong> (deux réservoirs de 1 000 mB). Les objets y entrent en les jetant dessus, comme les briques de l'animation, ou avec un entonnoir, une chute ou un tapis qui se termine au-dessus. Les fluides arrivent par un tuyau, un bec verseur, ou à la main : clic droit avec un seau plein pour le vider dedans, avec un seau vide pour le remplir.</p>"
+    },
+    {
+      "id": "machines",
+      "title": "Quelle machine au-dessus ?",
+      "html": "<p>Le bassin ne choisit pas la recette tout seul : c'est la machine du dessus qui décide du type de traitement. Avec un <a href=\"/wiki/mixeur-mecanique\">mixeur mécanique</a>, il fait les mélanges et les recettes d'établi sans forme. Avec une <a href=\"/wiki/presse-mecanique\">presse mécanique</a>, il fait le compactage : neuf lingots en bloc, neuf blocs de neige en glace, deux silex et du gravier avec un peu de lave en andésite. Les deux machines se placent deux blocs au-dessus du bassin.</p>"
+    },
+    {
+      "id": "sortie",
+      "title": "Où va le résultat",
+      "image": "basin_sortie.webp",
+      "alt": "Contours verts sous le bassin et autour de lui, aux endroits où il peut verser son contenu",
+      "html": "<p>Après chaque recette, le bassin essaie de verser le résultat. Par défaut, il le pousse <strong>vers le bas</strong>, dans l'inventaire ou sur le tapis qui se trouve juste en dessous. Si rien ne peut le recevoir dessous, il cherche <strong>sur les côtés, un bloc plus bas</strong>, en diagonale : c'est là que la sortie latérale entre en jeu.</p>"
+    },
+    {
+      "id": "robinet",
+      "title": "Le robinet de sortie latérale",
+      "image": "basin_robinet.webp",
+      "alt": "Un dépôt placé en diagonale sous le bassin, qui fait apparaître un robinet sur le côté",
+      "html": "<p>Place un <strong>dépôt</strong>, un tapis roulant, une chute ou un entonnoir <strong>contre un côté du bassin, un bloc plus bas</strong> : un petit robinet apparaît sur ce flanc, tourné vers lui. Les produits y sont versés. Dans l'animation, un dépôt est posé tour à tour à plusieurs endroits pour montrer les positions possibles. Le bloc juste à côté du bassin doit rester libre (sauf un entonnoir) : c'est par là que le robinet déverse.</p>"
+    },
+    {
+      "id": "dessous",
+      "title": "Récupérer par en dessous",
+      "image": "basin_output_dessous.webp",
+      "alt": "Presse mécanique au-dessus du bassin, avec un tapis roulant qui emporte le bloc produit",
+      "video": "basin_output",
+      "html": "<p>Avec un tapis ou un coffre sous le bassin, rien à régler : chaque résultat descend directement. C'est le montage le plus compact pour une ligne de compactage. Dans l'animation, la presse écrase les briques en bloc de briques, qui part sur le tapis. Attention, un bassin posé sur un brûleur à blaze n'a plus de dessous libre : il faut alors une sortie latérale.</p>"
+    },
+    {
+      "id": "retenir",
+      "title": "Garder le résultat dans le bassin",
+      "image": "basin_output_retenir.webp",
+      "alt": "Bassin sans sortie, qui garde les objets produits à l'intérieur",
+      "html": "<p>Sans aucune sortie possible, le bassin <strong>garde le résultat</strong> dans ses emplacements de sortie. C'est utile quand un produit doit resservir d'ingrédient : dans l'animation, des pépites de cuivre deviennent un lingot, puis un bloc, sans jamais quitter le bassin. Il faudra ensuite extraire le produit final toi-même, ou avec un entonnoir sur le côté.</p>"
+    },
+    {
+      "id": "filtre",
+      "title": "Extraire sans tout vider : le filtre",
+      "image": "basin_output_filtre.webp",
+      "alt": "Le bassin et son emplacement de filtre, avec le bloc de cuivre obtenu",
+      "html": "<p>Un entonnoir qui vide un bassin peut aussi aspirer des ingrédients pas encore traités. Mets un <strong>filtre</strong> sur l'entonnoir (l'entonnoir en laiton a un emplacement de filtre) avec l'objet final voulu : il ne prendra que lui. Le bassin a aussi son propre emplacement de filtre, qui sert à choisir la recette quand plusieurs sont possibles.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<ul><li><strong>Le résultat ne sort pas</strong> : rien dessous, et le bloc à côté du bassin n'est pas libre pour le robinet.</li><li><strong>Le bassin est plein</strong> : neuf emplacements, c'est vite rempli si la machine du dessus est lente ou en panne.</li><li><strong>La mauvaise recette se fait</strong> : utilise l'emplacement de filtre du bassin.</li></ul>"
+    }
+  ],
+  "related": [
+    "mixeur-mecanique",
+    "presse-mecanique",
+    "bruleur-a-blaze",
+    "depot"
+  ],
+  "sources": [
+    "Capacité : BasinBlockEntity (inputInventory 9, outputInventory 9, inputTank / outputTank : 2 réservoirs de 1 000 mB chacun)",
+    "Sortie : BasinBlock.FACING (FACING_HOPPER, DOWN par défaut), BasinBlock.canOutputTo (bloc voisin libre ou entonnoir, cible un bloc plus bas)",
+    "Seaux : BasinBlock.useItemOn (FluidHelper.tryEmptyItemIntoBE / tryFillItemFromBE)",
+    "Recette du bloc : crafting/kinetics/basin.json",
+    "Recettes du bassin : data/create/recipe/mixing et compacting",
+    "Scène : ProcessingScenes.basin, découpée en deux boucles"
+  ],
+  "en": {
+    "slugEn": "basin",
+    "name": "Basin",
+    "title": "Basin — Create mod guide",
+    "description": "The Create Basin: holding items and fluids for the mixer and the press, output below or through a side spout, keeping or extracting the result.",
+    "intro": "The <strong>Basin</strong> is Create's working container. On its own it does nothing, but under a <strong>Mechanical Mixer</strong> or a <strong>Mechanical Press</strong> it becomes the heart of every multi-ingredient recipe: Andesite Alloy, brass, compacted blocks… It takes items and fluids, and it knows where to send the result. Understanding its <strong>output</strong> saves you from half of all clogged factories.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Processing"
+      },
+      {
+        "label": "Stress",
+        "value": "None (the mixer and the press are the ones using SU)"
+      },
+      {
+        "label": "Capacity",
+        "value": "9 input slots, 9 output slots, 2 + 2 tanks of 1,000 mB"
+      },
+      {
+        "label": "Output",
+        "value": "Below by default, or through a spout on the side"
+      },
+      {
+        "label": "Works with",
+        "value": "Mechanical Mixer or Mechanical Press two blocks above"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Andesite Alloy",
+          null,
+          "Andesite Alloy"
+        ],
+        [
+          "Andesite Alloy",
+          "Andesite Alloy",
+          "Andesite Alloy"
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Basin"
+    },
+    "videos": [
+      {
+        "id": "basin",
+        "name": "Basin: contents and outputs",
+        "description": "Bricks drop into a Basin, then depots are placed one after another around it to show where it can pour out the result."
+      },
+      {
+        "id": "basin_output",
+        "name": "Basin: collecting or keeping the result",
+        "description": "A press above the basin compacts bricks; the result leaves on a belt, then the basin, with no output, keeps the nuggets and ingots it makes."
+      }
+    ],
+    "sections": [
+      {
+        "id": "contenu",
+        "title": "A container for items and fluids",
+        "alt": "Bricks dropping into a Basin standing on a casing",
+        "html": "<p>The basin takes <strong>items</strong> (nine slots) and <strong>fluids</strong> (two 1,000 mB tanks). Items go in when you throw them on top, like the bricks in the animation, or through a funnel, a chute or a belt ending above it. Fluids come through a pipe, a spout, or by hand: right-click with a full bucket to pour it in, with an empty one to take fluid out.</p>"
+      },
+      {
+        "id": "machines",
+        "title": "Which machine goes on top?",
+        "html": "<p>The basin does not pick the type of processing by itself: the machine above it decides. With a <a href=\"/en/wiki/mechanical-mixer\">Mechanical Mixer</a>, it handles mixing and shapeless crafting recipes. With a <a href=\"/en/wiki/mechanical-press\">Mechanical Press</a>, it handles compacting: nine ingots into a block, snow blocks into ice, two flint and some gravel with a little lava into andesite. Both machines go two blocks above the basin.</p>"
+      },
+      {
+        "id": "sortie",
+        "title": "Where the result goes",
+        "alt": "Green outlines below and around the basin, at the spots where it can pour its contents",
+        "html": "<p>After each recipe, the basin tries to pour out the result. By default it pushes it <strong>downwards</strong>, into the inventory or onto the belt right below. If nothing below can take it, it looks <strong>to the sides, one block lower</strong>, diagonally: that is where the side output comes in.</p>"
+      },
+      {
+        "id": "robinet",
+        "title": "The side output spout",
+        "alt": "A depot placed diagonally below the basin, making a spout appear on its side",
+        "html": "<p>Place a <strong>Depot</strong>, a belt, a chute or a funnel <strong>against one side of the basin, one block lower</strong>: a small spout appears on that side, facing it, and the products are poured there. In the animation, a depot is placed at several spots in turn to show the possible positions. The block right next to the basin has to stay empty (except for a funnel), since that is where the spout pours through.</p>"
+      },
+      {
+        "id": "dessous",
+        "title": "Collecting from below",
+        "alt": "A Mechanical Press above the basin, with a belt carrying the finished block away",
+        "html": "<p>With a belt or a chest under the basin, there is nothing to set up: every result drops straight down. It is the most compact layout for a compacting line. In the animation, the press squeezes bricks into a block of bricks, which leaves on the belt. Watch out: a basin standing on a Blaze Burner has no free space below, so it needs a side output.</p>"
+      },
+      {
+        "id": "retenir",
+        "title": "Keeping the result in the basin",
+        "alt": "A basin with no output, keeping the products inside",
+        "html": "<p>With no possible output at all, the basin <strong>keeps the result</strong> in its output slots. That is useful when a product has to be reused as an ingredient: in the animation, copper nuggets become an ingot, then a block, without ever leaving the basin. You then take the final product out yourself, or with a funnel on the side.</p>"
+      },
+      {
+        "id": "filtre",
+        "title": "Extracting without emptying everything: the filter",
+        "alt": "The basin and its filter slot, with the copper block it produced",
+        "html": "<p>A funnel emptying a basin can also pull out ingredients that are not processed yet. Put a <strong>filter</strong> on the funnel (the Brass Funnel has a filter slot) with the final item you want, and it will only take that. The basin also has its own filter slot, used to pick the recipe when several are possible.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<ul><li><strong>The result does not come out</strong>: nothing below, and the block next to the basin is not free for the spout.</li><li><strong>The basin is full</strong>: nine slots fill up fast when the machine above is slow or stopped.</li><li><strong>The wrong recipe runs</strong>: use the basin's filter slot.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Capacity: BasinBlockEntity (inputInventory 9, outputInventory 9, inputTank / outputTank: 2 tanks of 1,000 mB each)",
+      "Output: BasinBlock.FACING (FACING_HOPPER, DOWN by default), BasinBlock.canOutputTo (free neighbour block or funnel, target one block lower)",
+      "Buckets: BasinBlock.useItemOn (FluidHelper.tryEmptyItemIntoBE / tryFillItemFromBE)",
+      "Block recipe: crafting/kinetics/basin.json",
+      "Basin recipes: data/create/recipe/mixing and compacting",
+      "Scene: ProcessingScenes.basin, split into two loops"
+    ]
+  }
+}

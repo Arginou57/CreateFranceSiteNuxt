@@ -1,0 +1,247 @@
+{
+  "slug": "meule",
+  "name": "Meule",
+  "blockId": "create:millstone",
+  "category": "traitement",
+  "title": "Meule — Create : guide en français",
+  "description": "La meule de Create : moudre blé, fleurs, os ou gravier, l'alimenter par le côté ou par-dessous, temps de broyage selon la vitesse et sorties.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>meule</strong> est la machine de broyage la plus simple de Create : un bloc qui moud ce qu'on lui jette dessus. Elle transforme le <strong>blé en farine</strong>, les fleurs en colorants, les os en poudre d'os, le gravier en silex ou les pierres en sable. Elle est plus lente et moins rentable que les roues de concassage, mais elle ne demande qu'un seul bloc et presque rien en énergie : c'est la machine idéale pour débuter.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Traitement"
+    },
+    {
+      "label": "Stress",
+      "value": "4 SU par tr/min (128 SU à 32 tr/min)"
+    },
+    {
+      "label": "Rotation",
+      "value": "Par-dessous (rotor) ou par les côtés (roues dentées)"
+    },
+    {
+      "label": "Vitesse de broyage",
+      "value": "Durée de la recette ÷ (tr/min ÷ 16), au moins 1 par tick"
+    },
+    {
+      "label": "Exemple",
+      "value": "Blé : ≈ 3,75 s à 32 tr/min, ≈ 0,5 s à 256 tr/min"
+    },
+    {
+      "label": "Stockage",
+      "value": "1 emplacement d'entrée, 9 de sortie"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Roue dentée",
+        null
+      ],
+      [
+        null,
+        "Boîtier d'andésite",
+        null
+      ],
+      [
+        null,
+        "Pierre",
+        null
+      ]
+    ],
+    "result": "1 meule"
+  },
+  "videos": [
+    {
+      "id": "millstone",
+      "name": "Meule : moudre du blé et récupérer la farine",
+      "description": "Une meule entraînée par des roues dentées reçoit du blé jeté par-dessus ; la farine et les graines ressortent ensuite sur un tapis roulant.",
+      "duration": "PT19S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "meule",
+      "title": "Une machine qui broie ce qu'on lui donne",
+      "image": "millstone_meule.webp",
+      "alt": "Meule posée sur une plaque blanche, avec des roues dentées à côté",
+      "html": "<p>La meule traite les recettes de <strong>broyage</strong> (milling) : une entrée, une ou plusieurs sorties, parfois avec une chance de bonus. Le blé donne une farine de blé, plus une chance de 25 % d'en obtenir deux de plus et 25 % d'avoir une graine. Les fleurs donnent deux colorants, la canne à sucre deux sucres, un os trois poudres d'os, la laine une ficelle, le gravier un silex et le grès du sable.</p><p>Elle ne traite qu'<strong>un objet à la fois</strong> : une pile entière posée dedans passera objet par objet.</p>"
+    },
+    {
+      "id": "cote",
+      "title": "L'alimenter par le côté ou par-dessous",
+      "image": "millstone_cote.webp",
+      "alt": "Roues dentées collées au flanc de la meule pour la faire tourner",
+      "html": "<p>La meule reçoit la rotation de deux façons : un <strong>rotor par-dessous</strong>, ou une <strong>roue dentée posée contre un de ses côtés</strong>, car son flanc engrène comme une petite roue dentée. C'est ce que montre l'animation : la rotation arrive par une roue voisine, et le dessus reste libre pour l'entrée.</p><p>Elle consomme <strong>4 SU par tr/min</strong> : une petite roue à eau suffit à la faire tourner à 64 tr/min.</p>"
+    },
+    {
+      "id": "dessus",
+      "title": "Mettre les objets par le dessus",
+      "image": "millstone_dessus.webp",
+      "alt": "Du blé tombe sur le dessus de la meule, qui l'avale",
+      "html": "<p>Les objets entrent <strong>par le dessus</strong>. À la main, jette-les simplement sur la meule : elle avale l'objet qui tombe. En automatique, un entonnoir, une trémie ou une chute posés au-dessus la remplissent. Le temps de broyage dépend de la vitesse : chaque recette a une durée (150 pour le blé, 50 pour une fleur, 250 pour du gravier), et la meule en retire <strong>tr/min ÷ 16</strong> par tick. À 32 tr/min, un blé prend environ 3,75 s ; à 256 tr/min, une demi-seconde.</p>"
+    },
+    {
+      "id": "recuperer",
+      "title": "Récupérer le résultat",
+      "html": "<p>Le résultat reste <strong>à l'intérieur</strong>, dans neuf emplacements de sortie. Un clic droit à main nue sur la meule te donne tout ce qu'elle contient. Si elle est vide en sortie, ce même clic te rend l'objet en attente d'être broyé : pratique pour annuler une erreur.</p>"
+    },
+    {
+      "id": "automatisation",
+      "title": "Automatiser la sortie",
+      "image": "millstone_automatisation.webp",
+      "alt": "Un tapis roulant à côté de la meule emporte la farine et les graines",
+      "html": "<p>Pour une vraie chaîne, vide la meule avec un <strong>entonnoir</strong> posé sur son flanc, une trémie dessous, ou un <a href=\"/wiki/bras-mecanique\">bras mécanique</a>. Dans l'animation, les produits ressortent sur un <a href=\"/wiki/tapis-roulant\">tapis roulant</a> qui les emporte. Une chaîne classique en début de partie : du blé récolté, une meule, de la farine, puis de la pâte à l'aide d'eau, et enfin du pain au four.</p>"
+    },
+    {
+      "id": "comparaison",
+      "title": "Meule ou roues de concassage ?",
+      "html": "<p>La meule est petite, peu gourmande et suffit pour la farine et les colorants. Pour les <strong>minerais</strong>, préfère les <a href=\"/wiki/roues-de-concassage\">roues de concassage</a> : elles traitent plus vite, prennent les objets en tas et proposent des recettes de concassage absentes de la meule, comme les minerais concassés, qui donnent en plus des pépites d'expérience et, une fois lavés, des sous-produits (de la redstone pour le fer). Les deux machines partagent les recettes de broyage : tout ce qu'une meule sait moudre, les roues de concassage le savent aussi.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<ul><li><strong>La meule ne prend pas l'objet</strong> : il n'a pas de recette de broyage, ou les sorties sont pleines.</li><li><strong>Elle ne tourne pas</strong> : un rotor posé sur le côté n'entre pas, seules les roues dentées marchent sur les côtés ; le rotor doit arriver par-dessous.</li><li><strong>C'est très lent</strong> : à 16 tr/min ou moins, la meule ne retire qu'un point par tick. Accélère-la.</li></ul>"
+    }
+  ],
+  "related": [
+    "roues-de-concassage",
+    "tapis-roulant",
+    "entonnoir",
+    "roue-dentee"
+  ],
+  "sources": [
+    "Stress : AllBlocks.java, MILLSTONE, CStress.setImpact(4.0)",
+    "Rotation : MillstoneBlock.hasShaftTowards (face DOWN seulement), MillstoneBlock implements ICogWheel (engrène sur les côtés)",
+    "Cadence : MillstoneBlockEntity.getProcessingSpeed = clamp(|tr/min| / 16, 1, 512) ; timer = getProcessingDuration de la recette",
+    "Inventaire : MillstoneBlockEntity (inputInv 1 emplacement, outputInv 9) ; MillstoneBlock.useItemOn (clic droit : sorties, sinon entrée)",
+    "Recettes : data/create/recipe/milling/*.json (blé 150 : farine + 25 % ×2 + 25 % graine ; os 100 ; gravier 250…)",
+    "Recette du bloc : crafting/kinetics/millstone.json",
+    "Scène : ProcessingScenes.millstone"
+  ],
+  "en": {
+    "slugEn": "millstone",
+    "name": "Millstone",
+    "title": "Millstone — Create mod guide",
+    "description": "The Create Millstone: grinding wheat, flowers, bones or gravel, powering it from below or the side, grinding time versus speed, and getting the output.",
+    "intro": "The <strong>Millstone</strong> is Create's simplest grinding machine: a block that grinds whatever you throw on top. It turns <strong>wheat into flour</strong>, flowers into dyes, bones into bone meal, gravel into flint and stone into sand. It is slower and less rewarding than Crushing Wheels, but it takes a single block and almost no power, which makes it the perfect starter machine.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Processing"
+      },
+      {
+        "label": "Stress",
+        "value": "4 SU per RPM (128 SU at 32 RPM)"
+      },
+      {
+        "label": "Rotation",
+        "value": "From below (shaft) or from the sides (cogwheels)"
+      },
+      {
+        "label": "Grinding speed",
+        "value": "Recipe duration ÷ (RPM ÷ 16), at least 1 per tick"
+      },
+      {
+        "label": "Example",
+        "value": "Wheat: ≈ 3.75 s at 32 RPM, ≈ 0.5 s at 256 RPM"
+      },
+      {
+        "label": "Storage",
+        "value": "1 input slot, 9 output slots"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Cogwheel",
+          null
+        ],
+        [
+          null,
+          "Andesite Casing",
+          null
+        ],
+        [
+          null,
+          "Stone",
+          null
+        ]
+      ],
+      "result": "1 Millstone"
+    },
+    "videos": [
+      {
+        "id": "millstone",
+        "name": "Millstone: grinding wheat and collecting flour",
+        "description": "A Millstone driven by cogwheels takes wheat dropped on top; the flour and seeds then come out onto a Mechanical Belt."
+      }
+    ],
+    "sections": [
+      {
+        "id": "meule",
+        "title": "A machine that grinds what you give it",
+        "alt": "A Millstone on a white plate, with cogwheels next to it",
+        "html": "<p>The Millstone handles <strong>milling</strong> recipes: one input, one or more outputs, sometimes with a bonus chance. Wheat gives one Wheat Flour, plus a 25% chance of two more and a 25% chance of a seed. Flowers give two dyes, sugar cane two sugar, a bone three bone meal, wool one string, gravel one flint and sandstone some sand.</p><p>It handles <strong>one item at a time</strong>: a whole stack put inside is ground one item after another.</p>"
+      },
+      {
+        "id": "cote",
+        "title": "Powering it from the side or from below",
+        "alt": "Cogwheels against the side of the Millstone to make it turn",
+        "html": "<p>The Millstone takes rotation in two ways: a <strong>shaft from below</strong>, or a <strong>cogwheel placed against one of its sides</strong>, since its rim meshes like a small cogwheel. That is what the animation shows: rotation comes in through a neighbouring wheel, and the top stays free for input.</p><p>It uses <strong>4 SU per RPM</strong>, so a single small water wheel can run it at 64 RPM.</p>"
+      },
+      {
+        "id": "dessus",
+        "title": "Putting items in from the top",
+        "alt": "Wheat drops onto the top of the Millstone, which swallows it",
+        "html": "<p>Items go in <strong>through the top</strong>. By hand, just throw them onto the millstone and it swallows the item that lands. For automation, a funnel, a hopper or a chute above it keeps it fed. Grinding time depends on speed: each recipe has a duration (150 for wheat, 50 for a flower, 250 for gravel), and the millstone removes <strong>RPM ÷ 16</strong> from it every tick. At 32 RPM one wheat takes about 3.75 s; at 256 RPM, half a second.</p>"
+      },
+      {
+        "id": "recuperer",
+        "title": "Collecting the result",
+        "html": "<p>The result stays <strong>inside</strong>, in nine output slots. Right-clicking the millstone with an empty hand gives you everything it holds. If the output is empty, the same click hands back the item waiting to be ground, which is handy to undo a mistake.</p>"
+      },
+      {
+        "id": "automatisation",
+        "title": "Automating the output",
+        "alt": "A Mechanical Belt next to the Millstone carries the flour and seeds away",
+        "html": "<p>For a real production line, empty the millstone with a <strong>funnel</strong> on its side, a hopper underneath, or a <a href=\"/en/wiki/mechanical-arm\">Mechanical Arm</a>. In the animation, the products come out onto a <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a> that carries them away. A classic early chain: harvested wheat, a millstone, flour, then dough with some water, and finally bread in a furnace.</p>"
+      },
+      {
+        "id": "comparaison",
+        "title": "Millstone or Crushing Wheels?",
+        "html": "<p>The millstone is small, cheap to run and fine for flour and dyes. For <strong>ores</strong>, go for <a href=\"/en/wiki/crushing-wheel\">Crushing Wheels</a>: they work faster, take items in bulk and offer crushing recipes the millstone does not have, such as crushed ores, which also give Experience Nuggets and, once washed, by-products (redstone for iron). Both machines share the milling recipes: anything a millstone can grind, crushing wheels can too.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<ul><li><strong>The millstone will not take the item</strong>: it has no milling recipe, or the output slots are full.</li><li><strong>It does not turn</strong>: a shaft against the side does not connect; only cogwheels work on the sides, and a shaft has to come from below.</li><li><strong>It is very slow</strong>: at 16 RPM or less, the millstone only removes one point per tick. Speed it up.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Stress: AllBlocks.java, MILLSTONE, CStress.setImpact(4.0)",
+      "Rotation: MillstoneBlock.hasShaftTowards (DOWN face only), MillstoneBlock implements ICogWheel (meshes on the sides)",
+      "Rate: MillstoneBlockEntity.getProcessingSpeed = clamp(|RPM| / 16, 1, 512); timer = recipe getProcessingDuration",
+      "Inventory: MillstoneBlockEntity (inputInv 1 slot, outputInv 9); MillstoneBlock.useItemOn (right-click: outputs, otherwise input)",
+      "Recipes: data/create/recipe/milling/*.json (wheat 150: flour + 25% ×2 + 25% seed; bone 100; gravel 250…)",
+      "Block recipe: crafting/kinetics/millstone.json",
+      "Scene: ProcessingScenes.millstone"
+    ]
+  }
+}

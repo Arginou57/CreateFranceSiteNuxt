@@ -1,0 +1,201 @@
+{
+  "slug": "roues-de-concassage",
+  "name": "Roues de concassage",
+  "blockId": "create:crushing_wheel",
+  "category": "traitement",
+  "title": "Roues de concassage — Create : guide en français",
+  "description": "Les roues de concassage de Create : monter la paire, sens de rotation, minerais concassés, poudre de blaze, cadence selon la vitesse et automatisation.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Les <strong>roues de concassage</strong> sont le broyeur lourd de Create. Deux grandes roues qui tournent l'une vers l'autre écrasent tout ce qui tombe entre elles : <strong>minerais</strong>, pierres, os, laine, tiges de blaze… Elles travaillent sur des piles entières, connaissent toutes les recettes de la meule et des recettes de concassage en plus. C'est la base de toute usine de minerai.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Traitement"
+    },
+    {
+      "label": "Stress",
+      "value": "8 SU par tr/min et par roue (512 SU la paire à 32 tr/min)"
+    },
+    {
+      "label": "Montage",
+      "value": "2 roues, un bloc d'écart, qui tournent l'une vers l'autre"
+    },
+    {
+      "label": "Entrée",
+      "value": "Par le dessus, pile entière traitée d'un coup"
+    },
+    {
+      "label": "Cadence",
+      "value": "64 fers bruts : ≈ 23 s à 64 tr/min, ≈ 6 s à 256 tr/min"
+    },
+    {
+      "label": "Recettes",
+      "value": "Concassage, sinon broyage de la meule"
+    },
+    {
+      "label": "Fabrication",
+      "value": "Établi mécanique 5 × 5 (alliage d'andésite, planches, pierre) : 2 roues"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "videos": [
+    {
+      "id": "crushing_wheel",
+      "name": "Roues de concassage : écraser du minerai d'or",
+      "description": "Deux roues de concassage entraînées en sens opposés écrasent du minerai d'or jeté entre elles, puis sont alimentées par un tapis roulant.",
+      "duration": "PT20S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "paire",
+      "title": "Toujours par paire",
+      "image": "crushing_wheel_paire.webp",
+      "alt": "Deux roues de concassage posées côte à côte avec un bloc d'écart",
+      "html": "<p>Une roue de concassage seule ne fait rien : il faut <strong>deux roues sur le même axe horizontal, séparées d'un bloc vide</strong>. Entre elles apparaît alors une zone de broyage invisible. Chaque roue occupe un bloc mais déborde d'environ un demi-bloc tout autour : au centre, les deux roues se touchent presque.</p><p>Chaque roue consomme <strong>8 SU par tr/min</strong> : la paire en demande donc 16, soit 512 SU à 32 tr/min. Une petite roue à eau ne suffit pas, il en faut au moins deux, ou une grande roue à eau.</p>"
+    },
+    {
+      "id": "sens",
+      "title": "Elles doivent tourner l'une vers l'autre",
+      "image": "crushing_wheel_sens.webp",
+      "alt": "Les deux roues de concassage tournent en sens opposés, entraînées par des roues dentées",
+      "html": "<p>Le point le plus important : les deux roues doivent tourner <strong>en sens opposés</strong>, de façon à ce que le haut des deux roues aille vers le centre et avale l'objet. Le plus simple est de les entraîner depuis le même côté par deux chemins qui inversent le sens, par exemple avec une roue dentée de plus d'un côté, comme dans l'animation. Si elles tournent dans le même sens, rien n'est broyé. Si l'objet est recraché vers le haut, c'est que les deux roues tournent à l'envers : inverse la source.</p>"
+    },
+    {
+      "id": "dessus",
+      "title": "Jeter les objets par le dessus",
+      "image": "crushing_wheel_dessus.webp",
+      "alt": "Du minerai d'or tombe entre les deux roues de concassage",
+      "html": "<p>Les objets entrent <strong>par le dessus</strong>, entre les roues, et ressortent <strong>par en dessous</strong>. Une pile entière jetée d'un coup est traitée en une fois, plus lentement qu'un objet seul, mais beaucoup plus vite que si on les passait un par un. Par exemple, 64 fers bruts à 64 tr/min prennent environ 23 secondes ; à 256 tr/min, environ 6 secondes. Les créatures qui tombent entre les roues prennent des dégâts.</p>"
+    },
+    {
+      "id": "recettes",
+      "title": "Ce que les roues savent écraser",
+      "html": "<p>Un <strong>fer brut</strong> donne un fer brut concassé et 75 % de chance d'une pépite d'expérience. Un <strong>bloc de minerai</strong> récolté au toucher de soie donne un concassé, plus 75 % de chance d'un second : c'est là que le concassage rapporte vraiment. Les tiges de blaze donnent trois poudres de blaze ou plus, le netherrack de la farine de braise, le tuf des pépites de plusieurs métaux, la diorite du quartz, le gravier du sable. Tout ce qui n'a pas de recette de concassage passe par les recettes de la <a href=\"/wiki/meule\">meule</a>.</p>"
+    },
+    {
+      "id": "automatisation",
+      "title": "Automatiser l'entrée et la sortie",
+      "image": "crushing_wheel_automatisation.webp",
+      "alt": "Un tapis roulant incliné amène les minerais au-dessus des roues, un autre tapis récupère les produits dessous",
+      "html": "<p>Pour une chaîne automatique, amène les minerais avec un <a href=\"/wiki/tapis-roulant\">tapis roulant</a> qui se termine au-dessus de l'espace entre les roues : les objets tombent tout seuls dedans. Dessous, un second tapis ou un entonnoir sur un coffre récupère les produits. La suite logique : laver les minerais concassés avec un <a href=\"/wiki/ventilateur-enchasse\">ventilateur enchâssé</a> à travers de l'eau, qui en tire des pépites et des sous-produits.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<ul><li><strong>Les objets restent posés sur les roues</strong> : les roues tournent dans le même sens, ou l'une ne tourne pas du tout.</li><li><strong>Le réseau cale</strong> : 16 SU par tr/min pour la paire, c'est gourmand. Vérifie avec un stressomètre.</li><li><strong>Les roues sont collées</strong> : sans bloc d'écart, il n'y a pas de zone de broyage.</li><li><strong>Les produits s'entassent sous les roues</strong> : rien ne les ramasse. Un tapis ou un entonnoir dessous évite que la zone ne se bouche.</li></ul>"
+    }
+  ],
+  "related": [
+    "meule",
+    "ventilateur-enchasse",
+    "tapis-roulant",
+    "roue-a-eau"
+  ],
+  "sources": [
+    "Stress : AllBlocks.java, CRUSHING_WHEEL, CStress.setImpact(8.0)",
+    "Cadence : CrushingWheelControllerBlock (crushingspeed = |tr/min| / 50) ; CrushingWheelControllerBlockEntity.tick (vitesse × 4 / log2(taille de la pile), bornée à [0,25 ; 20] par tick), applyRecipe (un tirage par objet de la pile)",
+    "Recettes : CrushingWheelControllerBlockEntity.findRecipe (CRUSHING, sinon MILLING) ; data/create/recipe/crushing/*.json (raw_iron 400, iron_ore 250, blaze_rod, netherrack, tuff, diorite, gravel)",
+    "Dégâts : CKinetics.crushingDamage = 4",
+    "Recette du bloc : mechanical_crafting/crushing_wheel.json (5 × 5, 2 roues)",
+    "Scène : ProcessingScenes.crushingWheels"
+  ],
+  "en": {
+    "slugEn": "crushing-wheel",
+    "name": "Crushing Wheel",
+    "title": "Crushing Wheel — Create mod guide",
+    "description": "Create Crushing Wheels explained: building the pair, spin direction, crushed ores, blaze powder, processing rate versus speed, and automation.",
+    "intro": "<strong>Crushing Wheels</strong> are Create's heavy-duty grinder. Two big wheels spinning towards each other crush everything that falls between them: <strong>ores</strong>, stone, bones, wool, blaze rods… They work on whole stacks, know every Millstone recipe and have crushing recipes of their own on top. They are the heart of any ore processing factory.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Processing"
+      },
+      {
+        "label": "Stress",
+        "value": "8 SU per RPM per wheel (512 SU for the pair at 32 RPM)"
+      },
+      {
+        "label": "Setup",
+        "value": "2 wheels, one block apart, spinning towards each other"
+      },
+      {
+        "label": "Input",
+        "value": "From the top, a whole stack processed at once"
+      },
+      {
+        "label": "Rate",
+        "value": "64 Raw Iron: ≈ 23 s at 64 RPM, ≈ 6 s at 256 RPM"
+      },
+      {
+        "label": "Recipes",
+        "value": "Crushing, otherwise Millstone milling"
+      },
+      {
+        "label": "Crafting",
+        "value": "Mechanical Crafter 5 × 5 (Andesite Alloy, planks, stone): 2 wheels"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "videos": [
+      {
+        "id": "crushing_wheel",
+        "name": "Crushing Wheels: crushing gold ore",
+        "description": "Two Crushing Wheels driven in opposite directions crush gold ore dropped between them, then get fed by a Mechanical Belt."
+      }
+    ],
+    "sections": [
+      {
+        "id": "paire",
+        "title": "Always in pairs",
+        "alt": "Two Crushing Wheels placed side by side with a one-block gap",
+        "html": "<p>A single crushing wheel does nothing: you need <strong>two wheels on the same horizontal axis, with one empty block between them</strong>, right where your input will fall, usually under the end of a belt or a chute. An invisible crushing zone then appears in the gap. Each wheel takes one block but sticks out about half a block all around, so in the middle the two wheels almost touch.</p><p>Each wheel uses <strong>8 SU per RPM</strong>, so the pair takes 16, or 512 SU at 32 RPM. One small water wheel is not enough; you need at least two, or a large water wheel.</p>"
+      },
+      {
+        "id": "sens",
+        "title": "They must spin towards each other",
+        "alt": "The two Crushing Wheels spin in opposite directions, driven by cogwheels",
+        "html": "<p>This is the key point: the two wheels must spin <strong>in opposite directions</strong>, so that the tops of both wheels move towards the centre and pull the item in. The easiest way is to drive them from the same side through two paths where one reverses the direction, for example with one extra cogwheel on one side, as in the animation. If they spin the same way, nothing gets crushed. If items get thrown back up, both wheels run backwards: reverse the source.</p>"
+      },
+      {
+        "id": "dessus",
+        "title": "Dropping items in from the top",
+        "alt": "Gold ore falls between the two Crushing Wheels",
+        "html": "<p>Items go in <strong>from the top</strong>, between the wheels, and come out <strong>underneath</strong>. A whole stack thrown in at once is processed in one go, slower than a single item but much faster than feeding them one by one. For example, 64 Raw Iron at 64 RPM takes about 23 seconds; at 256 RPM, about 6 seconds. Mobs that fall between the wheels take damage.</p>"
+      },
+      {
+        "id": "recettes",
+        "title": "What the wheels can crush",
+        "html": "<p>One <strong>Raw Iron</strong> gives one Crushed Raw Iron and a 75% chance of an Experience Nugget. An <strong>ore block</strong> mined with Silk Touch gives one crushed ore plus a 75% chance of a second one, which is where crushing really pays off. Blaze rods give three or more Blaze Powder, netherrack gives Cinder Flour, tuff gives nuggets of several metals, diorite gives quartz and gravel gives sand. Anything without a crushing recipe falls back to the <a href=\"/en/wiki/millstone\">Millstone</a> recipes.</p>"
+      },
+      {
+        "id": "automatisation",
+        "title": "Automating input and output",
+        "alt": "A sloped Mechanical Belt brings ores above the wheels, another belt collects the products underneath",
+        "html": "<p>For an automatic line, bring the ores on a <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a> that ends above the gap between the wheels: items drop straight in. Underneath, a second belt or a funnel on a chest collects the products. The natural next step: wash the crushed ores with an <a href=\"/en/wiki/encased-fan\">Encased Fan</a> blowing through water, which turns them into nuggets and by-products.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<ul><li><strong>Items just sit on the wheels</strong>: the wheels spin the same way, or one of them is not turning at all.</li><li><strong>The network stalls</strong>: 16 SU per RPM for the pair is a lot. Check with a Stressometer.</li><li><strong>The wheels touch</strong>: without a one-block gap, there is no crushing zone.</li><li><strong>Products pile up under the wheels</strong>: nothing collects them. A belt or a funnel underneath keeps the area from clogging up.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Stress: AllBlocks.java, CRUSHING_WHEEL, CStress.setImpact(8.0)",
+      "Rate: CrushingWheelControllerBlock (crushingspeed = |RPM| / 50); CrushingWheelControllerBlockEntity.tick (speed × 4 / log2(stack size), clamped to [0.25, 20] per tick), applyRecipe (one roll per item in the stack)",
+      "Recipes: CrushingWheelControllerBlockEntity.findRecipe (CRUSHING, otherwise MILLING); data/create/recipe/crushing/*.json (raw_iron 400, iron_ore 250, blaze_rod, netherrack, tuff, diorite, gravel)",
+      "Damage: CKinetics.crushingDamage = 4",
+      "Block recipe: mechanical_crafting/crushing_wheel.json (5 × 5, 2 wheels)",
+      "Scene: ProcessingScenes.crushingWheels"
+    ]
+  }
+}

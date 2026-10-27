@@ -1,0 +1,302 @@
+{
+  "slug": "deployeur",
+  "name": "Déployeur",
+  "blockId": "create:deployer",
+  "category": "traitement",
+  "title": "Déployeur — Create : guide en français",
+  "description": "Le déployeur de Create : la main mécanique qui pose, utilise, récolte et frappe à votre place, portée de 2 blocs, modes, filtre, redstone et contraptions.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>déployeur</strong> est une main mécanique qui imite un joueur. Il tient un objet et s'en sert devant lui : il <strong>pose des blocs</strong>, <strong>utilise des objets</strong>, actionne des leviers, récolte, et peut même frapper des créatures. Il sert aussi de poste d'assemblage : posé au-dessus d'un tapis, il applique un objet sur chaque objet qui passe, par exemple des planches sur un rotor pour fabriquer des roues dentées.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Traitement (automatisation)"
+    },
+    {
+      "label": "Stress",
+      "value": "4 SU par tr/min (128 SU à 32 tr/min)"
+    },
+    {
+      "label": "Portée",
+      "value": "Agit sur le bloc situé 2 blocs devant lui"
+    },
+    {
+      "label": "Cadence",
+      "value": "≈ 4 s par cycle à 16 tr/min, ≈ 2 s à 32, ≈ 0,25 s à 256"
+    },
+    {
+      "label": "Modes",
+      "value": "Clic droit (utiliser, par défaut) ou clic gauche (frapper), à la clé"
+    },
+    {
+      "label": "Redstone",
+      "value": "Alimenté, il s'arrête après le cycle en cours"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Tube électronique",
+        null
+      ],
+      [
+        null,
+        "Boîtier d'andésite",
+        null
+      ],
+      [
+        null,
+        "Main de laiton",
+        null
+      ]
+    ],
+    "result": "1 déployeur"
+  },
+  "videos": [
+    {
+      "id": "deployer_filter",
+      "name": "Déployeur : portée, objet tenu et filtre",
+      "description": "Un déployeur entraîné tend sa main vers le bloc situé deux cases devant lui, pose un pot de fleurs, y plante une tulipe, puis reçoit un filtre.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "deployer_modes",
+      "name": "Déployeur : clic droit ou clic gauche",
+      "description": "Avec une houe en main, le déployeur laboure d'abord l'herbe devant lui en imitant un clic droit, puis, réglé à la clé en clic gauche, casse le bloc.",
+      "duration": "PT20S"
+    },
+    {
+      "id": "deployer_processing",
+      "name": "Déployeur : traiter les objets sur un dépôt ou un tapis",
+      "description": "Un déployeur au-dessus d'un dépôt puis d'un tapis roulant applique l'objet qu'il tient sur chaque objet qui passe sous lui.",
+      "duration": "PT20S"
+    },
+    {
+      "id": "deployer_redstone",
+      "name": "Déployeur : l'arrêter et le déclencher à la redstone",
+      "description": "Un levier bloque le déployeur ; une brève coupure du signal lui fait faire un seul cycle.",
+      "duration": "PT17S"
+    },
+    {
+      "id": "deployer_contraption",
+      "name": "Déployeur : sur une contraption",
+      "description": "Des déployeurs montés sur un piston mécanique plantent des fleurs à chaque position traversée, en puisant dans un coffre embarqué, puis ne prennent que des coquelicots grâce au filtre.",
+      "duration": "PT20S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "portee",
+      "title": "Il agit deux blocs devant lui",
+      "image": "deployer_filter_portee.webp",
+      "alt": "Déployeur tendant sa main vers un emplacement situé deux blocs devant lui, encadré en vert",
+      "video": "deployer_filter",
+      "html": "<p>Branche le déployeur sur une rotation par son arrière : à chaque cycle, sa main s'allonge et <strong>agit sur le bloc situé deux cases devant lui</strong>. Le bloc juste devant, lui, ne gêne pas : la main passe au-dessus, ce qui permet de placer un tapis ou un dépôt entre les deux. Le cycle dure environ 4 secondes à 16 tr/min et 2 secondes à 32 tr/min ; au maximum, à 256 tr/min, un quart de seconde.</p>"
+    },
+    {
+      "id": "donner",
+      "title": "Lui donner un objet",
+      "image": "deployer_filter_donner.webp",
+      "alt": "Déployeur entraîné, main tendue, prêt à recevoir un objet par l'avant",
+      "html": "<p>Clic droit sur l'avant du déployeur avec un objet : il le prend en main. Il peut aussi être alimenté <strong>automatiquement</strong> par un entonnoir, une chute ou un bras mécanique. Selon ce qu'il tient, il pose le bloc (un pot de fleurs dans l'animation), utilise l'objet (une tulipe plantée dans le pot, de la poudre d'os sur une culture, un seau sur une source) ou actionne ce qui se trouve devant lui à main nue, comme un levier ou un bouton.</p>"
+    },
+    {
+      "id": "filtre",
+      "title": "Le filtre du déployeur",
+      "image": "deployer_filter_filtre.webp",
+      "alt": "Emplacement de filtre sur le dessus du déployeur",
+      "html": "<p>Le déployeur a un <strong>emplacement de filtre</strong>. Une fois réglé, il ne se déclenche que s'il tient un objet correspondant, n'accepte que ces objets en entrée, et rend tous les autres quand on vient les extraire. C'est indispensable dans une ligne où passent des objets variés : il ne gaspille pas un mauvais outil.</p>"
+    },
+    {
+      "id": "modes",
+      "title": "Clic droit ou clic gauche",
+      "image": "deployer_modes_clic-gauche.webp",
+      "alt": "Déployeur face à un bloc de terre, réglé pour imiter un clic gauche",
+      "video": "deployer_modes",
+      "html": "<p>Par défaut, le déployeur imite un <strong>clic droit</strong> : il utilise et pose. Un coup de <strong>clé</strong> le passe en <strong>clic gauche</strong> : il frappe et casse, avec l'outil qu'il tient. Une pioche en main, il mine ; une épée en main, il attaque les créatures devant lui. Pratique pour casser des blocs que la perceuse ne doit pas toucher, ou pour une ferme à monstres.</p>"
+    },
+    {
+      "id": "traitement",
+      "title": "Traiter les objets sur un dépôt ou un tapis",
+      "image": "deployer_processing_tapis.webp",
+      "alt": "Déployeur au-dessus d'un tapis roulant, des objets attendent leur tour sur le tapis",
+      "video": "deployer_processing",
+      "html": "<p>Posé deux blocs au-dessus d'un <a href=\"/wiki/depot\">dépôt</a> ou d'un <a href=\"/wiki/tapis-roulant\">tapis roulant</a>, le déployeur <strong>applique l'objet qu'il tient</strong> sur ce qui passe dessous : un rotor plus des planches donne une roue dentée, une hache retire la cire ou l'oxydation du cuivre, un alliage d'andésite sur une bûche écorcée donne un boîtier d'andésite. Sur un tapis, chaque objet est retenu le temps du cycle, puis repart. C'est aussi la machine clé de l'assemblage séquencé.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "Le piloter à la redstone",
+      "image": "deployer_redstone_redstone.webp",
+      "alt": "Déployeur relié à un levier qui l'empêche de s'activer",
+      "html": "<p>Un signal de <strong>redstone</strong> arrête le déployeur ; il termine d'abord le cycle en cours. Une <strong>impulsion négative</strong>, c'est-à-dire un signal coupé un instant, lui fait donc faire <strong>exactement un cycle</strong>. C'est la façon la plus simple de poser un bloc sur commande, par exemple avec un bouton relié à un inverseur de signal.</p>"
+    },
+    {
+      "id": "contraption",
+      "title": "Sur une contraption",
+      "image": "deployer_contraption_champ.webp",
+      "alt": "Déployeurs fixés sur un piston mécanique qui plantent des fleurs sur une bande d'herbe",
+      "video": "deployer_contraption",
+      "html": "<p>Monté sur une contraption (piston mécanique, portique, roulement…), le déployeur <strong>agit à chaque position traversée</strong>, sans même besoin de rotation propre. Il puise les objets dans <strong>n'importe quel inventaire embarqué</strong>, un coffre collé à la machine par exemple, et son filtre choisit lesquels prendre. Dans l'animation, ils replantent une rangée de fleurs, puis seulement des coquelicots une fois le filtre réglé. C'est la base des planteuses et des poseuses de rails automatiques.</p>"
+    }
+  ],
+  "related": [
+    "depot",
+    "tapis-roulant",
+    "bras-mecanique",
+    "bruleur-a-blaze"
+  ],
+  "sources": [
+    "Stress : AllBlocks.java, DEPLOYER, CStress.setImpact(4.0)",
+    "Cadence : DeployerBlockEntity.getTimerSpeed = clamp(|tr/min| × 2, 8, 512), timer de 1 000 par extension et rétraction, 500 d'attente",
+    "Modes : DeployerBlockEntity.Mode (USE par défaut, PUNCH) ; changement à la clé",
+    "Recettes : data/create/recipe/deploying/*.json (cogwheel, large_cogwheel, cire et oxydation du cuivre) et item_application (boîtiers)",
+    "Recette du bloc : crafting/kinetics/deployer.json",
+    "Scènes : DeployerScenes.filter (coupée avant la tonte du mouton : entité), modes, processing, redstone, contraption"
+  ],
+  "en": {
+    "slugEn": "deployer",
+    "name": "Deployer",
+    "title": "Deployer — Create mod guide",
+    "description": "The Create Deployer: a mechanical hand that places, uses, harvests and hits for you, 2-block reach, modes, filter slot, redstone control and contraptions.",
+    "intro": "The <strong>Deployer</strong> is a mechanical hand that mimics a player. It holds an item and uses it in front of itself: it <strong>places blocks</strong>, <strong>uses items</strong>, flips levers, harvests, and can even hit mobs. It also works as an assembly station: placed above a belt, it applies its item to everything passing by, for example planks onto shafts to make cogwheels.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Processing (automation)"
+      },
+      {
+        "label": "Stress",
+        "value": "4 SU per RPM (128 SU at 32 RPM)"
+      },
+      {
+        "label": "Reach",
+        "value": "Acts on the block 2 blocks in front of it"
+      },
+      {
+        "label": "Rate",
+        "value": "≈ 4 s per cycle at 16 RPM, ≈ 2 s at 32, ≈ 0.25 s at 256"
+      },
+      {
+        "label": "Modes",
+        "value": "Right-click (use, default) or left-click (punch), set with the Wrench"
+      },
+      {
+        "label": "Redstone",
+        "value": "When powered, it stops after the current cycle"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Electron Tube",
+          null
+        ],
+        [
+          null,
+          "Andesite Casing",
+          null
+        ],
+        [
+          null,
+          "Brass Hand",
+          null
+        ]
+      ],
+      "result": "1 Deployer"
+    },
+    "videos": [
+      {
+        "id": "deployer_filter",
+        "name": "Deployer: reach, held item and filter",
+        "description": "A powered Deployer reaches for the block two spaces in front of it, places a flower pot, plants a tulip in it, then gets a filter."
+      },
+      {
+        "id": "deployer_modes",
+        "name": "Deployer: right-click or left-click",
+        "description": "Holding a hoe, the Deployer first tills the grass in front of it by mimicking a right-click, then, switched to left-click with the Wrench, breaks the block."
+      },
+      {
+        "id": "deployer_processing",
+        "name": "Deployer: processing items on a depot or a belt",
+        "description": "A Deployer above a Depot and then a Mechanical Belt applies its held item to every item passing underneath."
+      },
+      {
+        "id": "deployer_redstone",
+        "name": "Deployer: stopping and triggering it with redstone",
+        "description": "A lever holds the Deployer still; briefly cutting the signal makes it do a single cycle."
+      },
+      {
+        "id": "deployer_contraption",
+        "name": "Deployer: on a contraption",
+        "description": "Deployers mounted on a Mechanical Piston plant flowers at every position they pass, taking them from a chest carried along, then only poppies thanks to the filter."
+      }
+    ],
+    "sections": [
+      {
+        "id": "portee",
+        "title": "It acts two blocks ahead",
+        "alt": "A Deployer reaching for a spot two blocks in front of it, outlined in green",
+        "html": "<p>Connect the Deployer to rotation from its back: every cycle, its hand extends and <strong>acts on the block two spaces in front of it</strong>. The block right in front does not get in the way, since the hand reaches over it, so you can fit a belt or a depot in between. A cycle takes about 4 seconds at 16 RPM and 2 seconds at 32 RPM; at the maximum of 256 RPM, a quarter of a second.</p>"
+      },
+      {
+        "id": "donner",
+        "title": "Giving it an item",
+        "alt": "A powered Deployer, hand out, ready to take an item through its front",
+        "html": "<p>Right-click the front of the Deployer with an item and it takes it in hand. It can also be fed <strong>automatically</strong> by a funnel, a chute or a Mechanical Arm. Depending on what it holds, it places the block (a flower pot in the animation), uses the item (a tulip planted in the pot, bone meal on a crop, a bucket on a source) or, empty-handed, triggers whatever is in front of it, like a lever or a button.</p>"
+      },
+      {
+        "id": "filtre",
+        "title": "The Deployer's filter",
+        "alt": "The filter slot on top of the Deployer",
+        "html": "<p>The Deployer has a <strong>filter slot</strong>. Once set, it only activates while holding a matching item, only accepts those items as input, and gives back all the others when something extracts from it. It is essential on a line carrying mixed items, so it never wastes the wrong tool.</p>"
+      },
+      {
+        "id": "modes",
+        "title": "Right-click or left-click",
+        "alt": "A Deployer facing a dirt block, set to mimic a left-click",
+        "html": "<p>By default, the Deployer mimics a <strong>right-click</strong>: it uses and places. One click with the <strong>Wrench</strong> switches it to <strong>left-click</strong>: it punches and breaks, with whatever tool it holds. With a pickaxe it mines; with a sword it attacks mobs in front of it. Handy for breaking blocks a drill should not touch, or for a mob farm.</p>"
+      },
+      {
+        "id": "traitement",
+        "title": "Processing items on a depot or a belt",
+        "alt": "A Deployer above a Mechanical Belt, with items waiting their turn on the belt",
+        "html": "<p>Placed two blocks above a <a href=\"/en/wiki/depot\">Depot</a> or a <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a>, the Deployer <strong>applies its held item</strong> to whatever passes underneath: a shaft plus planks gives a cogwheel, an axe strips wax or oxidation off copper, Andesite Alloy on a stripped log gives Andesite Casing. On a belt, each item is held for the length of the cycle and then moves on. It is also the key machine of sequenced assembly.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "Controlling it with redstone",
+        "alt": "A Deployer linked to a lever that keeps it from activating",
+        "html": "<p>A <strong>redstone</strong> signal stops the Deployer, after it finishes the cycle in progress. A <strong>negative pulse</strong>, meaning a signal cut for an instant, therefore makes it do <strong>exactly one cycle</strong>. It is the simplest way to place a block on command, for example with a button wired through a signal inverter.</p>"
+      },
+      {
+        "id": "contraption",
+        "title": "On a contraption",
+        "alt": "Deployers fixed to a Mechanical Piston, planting flowers on a strip of grass",
+        "html": "<p>Mounted on a contraption (Mechanical Piston, gantry, bearing…), the Deployer <strong>acts at every position it passes</strong>, without needing its own rotation. It takes items from <strong>any inventory on the contraption</strong>, such as a chest glued to the machine, and its filter picks which ones. In the animation they replant a row of flowers, then only poppies once the filter is set. That is the basis of automatic planters and track layers.</p>"
+      }
+    ],
+    "sources": [
+      "Stress: AllBlocks.java, DEPLOYER, CStress.setImpact(4.0)",
+      "Rate: DeployerBlockEntity.getTimerSpeed = clamp(|RPM| × 2, 8, 512), timer of 1,000 per extension and retraction, 500 waiting",
+      "Modes: DeployerBlockEntity.Mode (USE by default, PUNCH); switched with the Wrench",
+      "Recipes: data/create/recipe/deploying/*.json (cogwheel, large_cogwheel, copper wax and oxidation) and item_application (casings)",
+      "Block recipe: crafting/kinetics/deployer.json",
+      "Scenes: DeployerScenes.filter (cut before the sheep shearing: entity), modes, processing, redstone, contraption"
+    ]
+  }
+}

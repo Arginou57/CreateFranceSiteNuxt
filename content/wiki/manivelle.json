@@ -1,0 +1,265 @@
+{
+  "slug": "manivelle",
+  "name": "Manivelle et volant de vanne",
+  "blockId": "create:hand_crank",
+  "category": "cinetique",
+  "title": "Manivelle — Create : guide en français",
+  "description": "La manivelle de Create : produire de la rotation à la main (32 tr/min, 256 SU), choisir le sens, et le volant de vanne pour tourner d'un angle précis.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>manivelle</strong> est la toute première source de rotation de Create : pas besoin d'eau ni de vent, c'est toi qui tournes. Elle suffit pour tester une machine, ouvrir une porte mécanique ou faire avancer une contraption de quelques blocs. Sa cousine en cuivre, le <strong>volant de vanne</strong>, ne tourne pas en continu : elle fait pivoter ce qu'elle entraîne d'un <strong>angle précis</strong>, idéal pour les mécanismes.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Cinétique (source)"
+    },
+    {
+      "label": "Vitesse",
+      "value": "32 tr/min tant que tu tiens le clic droit"
+    },
+    {
+      "label": "Capacité",
+      "value": "8 SU par tr/min, soit 256 SU à 32 tr/min"
+    },
+    {
+      "label": "Faim",
+      "value": "0,32 de fatigue par action (crankHungerMultiplier = 0,01)"
+    },
+    {
+      "label": "Volant de vanne",
+      "value": "Même vitesse et capacité, rotation d'un angle réglable de −180° à 180°"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Planches",
+        "Planches",
+        "Planches"
+      ],
+      [
+        null,
+        null,
+        "Alliage d'andésite"
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 manivelle"
+  },
+  "videos": [
+    {
+      "id": "hand_crank",
+      "name": "Manivelle : tourner dans un sens puis dans l'autre",
+      "description": "Une manivelle posée sur une roue dentée fait tourner un réseau et un compteur de vitesse, d'abord dans un sens, puis dans l'autre.",
+      "duration": "PT12S"
+    },
+    {
+      "id": "valve_handle",
+      "name": "Volant de vanne : faire pivoter d'un angle précis",
+      "description": "Un volant de vanne entraîne un roulement et son bras : à chaque action, le bras pivote d'un angle fixé, dans un sens ou dans l'autre, puis le volant est teint en bleu.",
+      "duration": "PT20S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "pose",
+      "title": "Poser et brancher la manivelle",
+      "image": "hand_crank_pose.webp",
+      "alt": "Manivelle posée sur une roue dentée au-dessus d'une plaque, à côté d'un compteur de vitesse",
+      "html": "<p>La manivelle se fixe contre un bloc et transmet sa rotation <strong>par l'arrière</strong>, comme un bout de rotor : pose-la sur une roue dentée, un rotor ou directement sur une machine. Le jeu l'oriente tout seul vers un bloc cinétique voisin ; accroupis-toi pendant la pose pour la coller simplement sur la face visée.</p>"
+    },
+    {
+      "id": "gauche",
+      "title": "Clic droit : rotation dans un sens",
+      "image": "hand_crank_gauche.webp",
+      "alt": "La manivelle tourne et le compteur de vitesse indique la rotation du réseau",
+      "html": "<p>Maintiens le <strong>clic droit</strong> sur la manivelle : elle tourne à <strong>32 tr/min</strong> et entraîne tout le réseau branché derrière elle. Chaque action la fait tourner pendant une demi-seconde, il faut donc garder le bouton enfoncé. Dès que tu lâches, la rotation s'arrête.</p><p>Sa capacité est de <strong>8 SU par tr/min, soit 256 SU</strong> : de quoi faire tourner une presse mécanique à 32 tr/min, mais pas deux.</p>"
+    },
+    {
+      "id": "droite",
+      "title": "Accroupi : rotation dans l'autre sens",
+      "image": "hand_crank_droite.webp",
+      "alt": "La manivelle tourne en sens inverse, le réseau suit",
+      "html": "<p><strong>Accroupis-toi et maintiens le clic droit</strong> pour tourner dans l'autre sens. C'est la seule source de Create dont tu changes le sens à la volée, très pratique pour faire avancer puis reculer un piston mécanique ou un portique.</p><p>Tourner fatigue : chaque action coûte <strong>0,32 point de fatigue</strong>, comme un peu de sprint. Pour une machine qui doit tourner longtemps, passe à une roue à eau ou à un moulin.</p>"
+    },
+    {
+      "id": "usages",
+      "title": "À quoi sert vraiment la manivelle",
+      "html": "<p>Pour une usine, la manivelle est vite limitée : il faut rester devant et ses 256 SU s'épuisent avec une seule machine. Elle brille ailleurs : <strong>tester un montage</strong> avant d'installer une vraie source, <strong>piloter une contraption</strong> à la demande (un pont-levis sur piston mécanique, une porte coulissante sur portique, un monte-charge sur poulie), ou démarrer une petite chaîne en début de partie, avant d'avoir de l'alliage d'andésite en quantité pour une roue à eau.</p><p>Elle se combine aussi avec des roues dentées : derrière un étage ×2, elle donne 64 tr/min, mais les machines y consomment deux fois plus de stress : la capacité reste de 256 SU.</p>"
+    },
+    {
+      "id": "vanne",
+      "title": "Le volant de vanne : tourner d'un angle précis",
+      "image": "valve_handle_angle.webp",
+      "alt": "Volant de vanne en cuivre branché sur un roulement qui porte un bras en bois",
+      "video": "valve_handle",
+      "html": "<p>Le <strong>volant de vanne en cuivre</strong> se pose et se branche comme la manivelle, avec la même vitesse et la même capacité. La différence : un clic ne le fait pas tourner en continu, il fait pivoter le réseau d'un <strong>angle fixé</strong>, puis il s'arrête. Dans l'animation, il entraîne un roulement mécanique dont le bras tourne exactement de l'angle voulu.</p>"
+    },
+    {
+      "id": "activer",
+      "title": "Régler l'angle et déclencher",
+      "image": "valve_handle_activer.webp",
+      "alt": "Le bras porté par le roulement a pivoté d'un quart de tour après un clic sur le volant",
+      "html": "<p>L'angle se règle sur le <strong>panneau de valeur</strong> du volant, de <strong>−180° à 180°</strong>, par pas de 45°. Ensuite, un clic droit déclenche une rotation de cet angle, un clic droit accroupi la déclenche dans l'autre sens. Avec un roulement, pense à le régler pour qu'il ne se désassemble pas à l'arrêt, sinon ta structure retombe en blocs après chaque mouvement.</p>"
+    },
+    {
+      "id": "teinte",
+      "title": "Teindre le volant",
+      "image": "valve_handle_teinte.webp",
+      "alt": "Le volant de vanne est devenu bleu après un clic avec un colorant bleu",
+      "html": "<p>Un clic avec un <strong>colorant</strong> change la couleur du volant (seize couleurs). C'est purement décoratif, mais pratique pour repérer quel volant commande quoi sur un tableau de commandes.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<ul><li><strong>La manivelle tourne mais rien ne suit</strong> : elle n'est pas posée contre le bloc à entraîner, ou elle touche une face sans axe. Pose-la directement sur une roue dentée ou au bout d'un rotor.</li><li><strong>La machine cale</strong> : 256 SU ne suffisent pas. Une presse à 32 tr/min prend tout, un mixeur et un ventilateur ensemble aussi.</li><li><strong>Le bras d'un roulement retombe en blocs</strong> avec le volant de vanne : le roulement se désassemble à l'arrêt, change son mode.</li></ul>"
+    }
+  ],
+  "related": [
+    "roue-dentee",
+    "rotor",
+    "roue-a-eau",
+    "stressometre-compteur-de-vitesse"
+  ],
+  "sources": [
+    "Vitesse : HandCrankBlock.getRotationSpeed() = 32 ; HandCrankBlockEntity.turn (inUse = 10 ticks), getGeneratedSpeed (sens selon accroupi)",
+    "Capacité : AllBlocks.java, HAND_CRANK et COPPER_VALVE_HANDLE, CStress.setCapacity(8.0)",
+    "Faim : HandCrankBlock.useItemOn, causeFoodExhaustion(32 × CKinetics.crankHungerMultiplier = 0,01)",
+    "Volant : ValveHandleBlock extends HandCrankBlock ; ValveHandleBlockEntity.angleInput.between(-180, 180), réglage par pas de 45",
+    "Recettes : crafting/kinetics/hand_crank.json, copper_valve_handle.json (3 plaques de cuivre + alliage d'andésite), *_valve_handle_from_other_valve_handle.json",
+    "Scènes : KineticsScenes.handCrank et valveHandle"
+  ],
+  "en": {
+    "slugEn": "hand-crank",
+    "name": "Hand Crank and Valve Handle",
+    "title": "Hand Crank — Create mod guide",
+    "description": "The Create Hand Crank: making rotation by hand, 32 RPM, 256 SU, choosing the direction, hunger cost, and the Valve Handle for precise turns.",
+    "intro": "The <strong>Hand Crank</strong> is the very first source of rotation in Create: no water or wind needed, you do the turning. It is enough to test a machine, open a mechanical door or nudge a contraption a few blocks. Its copper cousin, the <strong>Valve Handle</strong>, does not spin continuously: it rotates whatever it drives by a <strong>precise angle</strong>, which is perfect for mechanisms.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Kinetics (source)"
+      },
+      {
+        "label": "Speed",
+        "value": "32 RPM while you hold right-click"
+      },
+      {
+        "label": "Capacity",
+        "value": "8 SU per RPM, i.e. 256 SU at 32 RPM"
+      },
+      {
+        "label": "Hunger",
+        "value": "0.32 exhaustion per use (crankHungerMultiplier = 0.01)"
+      },
+      {
+        "label": "Valve Handle",
+        "value": "Same speed and capacity, turns by a set angle from −180° to 180°"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Planks",
+          "Planks",
+          "Planks"
+        ],
+        [
+          null,
+          null,
+          "Andesite Alloy"
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Hand Crank"
+    },
+    "videos": [
+      {
+        "id": "hand_crank",
+        "name": "Hand Crank: turning one way, then the other",
+        "description": "A Hand Crank placed on a cogwheel drives a small network and a speedometer, first in one direction, then in the other."
+      },
+      {
+        "id": "valve_handle",
+        "name": "Valve Handle: rotating by a precise angle",
+        "description": "A Valve Handle drives a bearing and its arm: each use turns the arm by a set angle, one way or the other, then the handle is dyed blue."
+      }
+    ],
+    "sections": [
+      {
+        "id": "pose",
+        "title": "Placing and connecting the crank",
+        "alt": "A Hand Crank sitting on a cogwheel above a plate, next to a speedometer",
+        "html": "<p>The Hand Crank attaches to a block and outputs its rotation <strong>through its back</strong>, like the end of a shaft: put it on a cogwheel, a shaft or straight onto a machine. The game turns it towards a neighbouring kinetic block by itself; sneak while placing to simply stick it on the face you are aiming at.</p>"
+      },
+      {
+        "id": "gauche",
+        "title": "Right-click: rotation one way",
+        "alt": "The crank turns and the speedometer shows the network spinning",
+        "html": "<p>Hold <strong>right-click</strong> on the crank: it spins at <strong>32 RPM</strong> and drives the whole network behind it. Each use keeps it turning for half a second, so keep the button pressed. As soon as you let go, the rotation stops.</p><p>Its capacity is <strong>8 SU per RPM, so 256 SU</strong>: enough for one Mechanical Press at 32 RPM, but not two.</p>"
+      },
+      {
+        "id": "droite",
+        "title": "Sneaking: rotation the other way",
+        "alt": "The crank turns the other way and the network follows",
+        "html": "<p><strong>Sneak and hold right-click</strong> to turn the other way. It is the only Create source whose direction you flip on the fly, which is great for pushing a Mechanical Piston or a gantry forward and back.</p><p>Cranking is tiring: every use costs <strong>0.32 exhaustion</strong>, a bit like sprinting. For a machine that has to run for a long time, move on to a water wheel or a windmill.</p>"
+      },
+      {
+        "id": "usages",
+        "title": "What the Hand Crank is really good for",
+        "html": "<p>For a factory, the crank runs out of steam fast: you have to stand next to it, and its 256 SU are gone after a single machine. It shines elsewhere: <strong>testing a build</strong> before you install a proper source, <strong>driving a contraption on demand</strong> (a drawbridge on a Mechanical Piston, a sliding door on a gantry, a lift on a pulley), or starting a small production line early on, before you have enough Andesite Alloy for a water wheel.</p><p>It also works with cogwheels: behind a ×2 stage it gives 64 RPM, but machines use twice as much stress at that speed: the capacity stays at 256 SU.</p>"
+      },
+      {
+        "id": "vanne",
+        "title": "The Valve Handle: turning by an exact angle",
+        "alt": "A Copper Valve Handle driving a bearing that carries a wooden arm",
+        "html": "<p>The <strong>Copper Valve Handle</strong> is placed and connected like the crank, with the same speed and capacity. The difference: a click does not keep it spinning, it rotates the network by a <strong>set angle</strong> and then stops. In the animation, it drives a Mechanical Bearing whose arm turns by exactly the chosen angle.</p>"
+      },
+      {
+        "id": "activer",
+        "title": "Setting the angle and triggering it",
+        "alt": "The arm on the bearing has swung by a quarter turn after a click on the handle",
+        "html": "<p>The angle is set on the handle's <strong>value panel</strong>, from <strong>−180° to 180°</strong> in steps of 45°. A right-click then triggers one turn of that angle, and a sneaking right-click triggers it the other way. With a bearing, remember to set it so it does not disassemble when it stops, otherwise your structure falls back into blocks after every move.</p>"
+      },
+      {
+        "id": "teinte",
+        "title": "Dyeing the handle",
+        "alt": "The Valve Handle has turned blue after a click with blue dye",
+        "html": "<p>Clicking with a <strong>dye</strong> changes the handle's colour (sixteen colours). It is purely cosmetic, but useful to tell which handle controls what on a control panel.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<ul><li><strong>The crank turns but nothing follows</strong>: it is not attached to the block it should drive, or it touches a face without an axis. Put it straight on a cogwheel or on the end of a shaft.</li><li><strong>The machine stalls</strong>: 256 SU is not enough. A press at 32 RPM takes all of it, and so do a mixer and a fan together.</li><li><strong>The arm on a bearing falls apart</strong> with the Valve Handle: the bearing disassembles when it stops, so change its mode.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Speed: HandCrankBlock.getRotationSpeed() = 32; HandCrankBlockEntity.turn (inUse = 10 ticks), getGeneratedSpeed (direction from sneaking)",
+      "Capacity: AllBlocks.java, HAND_CRANK and COPPER_VALVE_HANDLE, CStress.setCapacity(8.0)",
+      "Hunger: HandCrankBlock.useItemOn, causeFoodExhaustion(32 × CKinetics.crankHungerMultiplier = 0.01)",
+      "Valve Handle: ValveHandleBlock extends HandCrankBlock; ValveHandleBlockEntity.angleInput.between(-180, 180), set in steps of 45",
+      "Recipes: crafting/kinetics/hand_crank.json, copper_valve_handle.json (3 Copper Sheets + Andesite Alloy), *_valve_handle_from_other_valve_handle.json",
+      "Scenes: KineticsScenes.handCrank and valveHandle"
+    ]
+  }
+}

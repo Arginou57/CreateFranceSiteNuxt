@@ -1,0 +1,267 @@
+{
+  "slug": "support-de-moulin-a-vent",
+  "name": "Support de moulin à vent",
+  "blockId": "create:windmill_bearing",
+  "category": "cinetique",
+  "title": "Moulin à vent — Create : guide en français",
+  "description": "Le support de moulin à vent de Create : coller des voiles, 8 voiles par tr/min, jusqu'à 16 tr/min et 8 192 SU, sens de rotation et formes de moulin.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>support de moulin à vent</strong> transforme une structure de voiles en source de rotation. Contrairement à la roue à eau, il ne dépend de rien d'autre que de lui-même : pas de courant, pas de carburant, il tourne partout, même dans le Nether. Sa puissance dépend du <strong>nombre de voiles</strong> : un petit moulin suffit pour démarrer, un grand moulin fait tourner une usine entière.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Cinétique (source)"
+    },
+    {
+      "label": "Vitesse",
+      "value": "1 tr/min par tranche de 8 voiles, de 1 à 16 tr/min"
+    },
+    {
+      "label": "Capacité",
+      "value": "512 SU par tr/min : 512 SU à 1 tr/min, 8 192 SU à 16 tr/min"
+    },
+    {
+      "label": "Minimum",
+      "value": "8 blocs de voile pour démarrer"
+    },
+    {
+      "label": "Voiles",
+      "value": "Voiles et cadres de voile de Create, toute laine"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Dalle en bois",
+        null
+      ],
+      [
+        null,
+        "Pierre",
+        null
+      ],
+      [
+        null,
+        "Rotor",
+        null
+      ]
+    ],
+    "result": "1 support de moulin à vent"
+  },
+  "videos": [
+    {
+      "id": "windmill_source",
+      "name": "Support de moulin à vent : assembler et lancer un moulin",
+      "description": "Un support de moulin à vent reçoit une croix de bois et de voiles collée à la colle extra-forte, puis se met à tourner et entraîne un réseau jusqu'à un compteur de vitesse.",
+      "duration": "PT20S"
+    },
+    {
+      "id": "windmill_structure",
+      "name": "Support de moulin à vent : n'importe quelle forme",
+      "description": "Une structure qui ne ressemble pas à un moulin, avec de la laine et des blocs décoratifs, tourne quand même dès qu'elle compte assez de voiles.",
+      "duration": "PT20S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "support",
+      "title": "Le support s'attache au bloc devant lui",
+      "image": "windmill_source_support.webp",
+      "alt": "Support de moulin à vent posé contre une roue dentée, un bloc devant lui mis en évidence",
+      "html": "<p>Le support a deux faces utiles. À l'arrière, la sortie de rotation, qui se branche sur un rotor ou une roue dentée. À l'avant, son plateau en bois : c'est là qu'il <strong>accroche le bloc posé devant lui</strong>, et tout ce qui est collé à ce bloc. Oriente-le donc face à l'endroit où tu veux construire les ailes.</p>"
+    },
+    {
+      "id": "colle",
+      "title": "Construire les ailes avec de la colle",
+      "image": "windmill_source_colle.webp",
+      "alt": "Croix de bois et de voiles construite devant le support, entourée de contours verts de colle",
+      "html": "<p>Pour que la structure tourne d'un seul bloc, ses éléments doivent tenir ensemble. Les voiles s'accrochent seules à leurs voisins, mais les autres blocs (planches, bûches de la croix) doivent être reliés avec de la <strong>colle extra-forte</strong> : sélectionne la zone à coller, comme dans l'animation où les contours verts entourent les bras.</p>"
+    },
+    {
+      "id": "voiles",
+      "title": "Assez de voiles pour faire un moulin",
+      "image": "windmill_source_voiles.webp",
+      "alt": "Moulin à quatre ailes garnies de voiles blanches et de cadres de voile",
+      "html": "<p>La structure ne devient un moulin que si elle contient au moins <strong>8 blocs de voile</strong> : voiles de moulin à vent (de toutes les couleurs), cadres de voile ou n'importe quelle <strong>laine</strong>. En dessous, le support refuse de s'assembler. La voile se fabrique avec de la laine, deux bâtons et de l'alliage d'andésite, et donne deux voiles par fabrication.</p>"
+    },
+    {
+      "id": "activer",
+      "title": "Lancer le moulin d'un clic droit",
+      "image": "windmill_source_activer.webp",
+      "alt": "Le moulin tourne, la roue dentée et le rotor qui en sortent entraînent un compteur de vitesse",
+      "html": "<p><strong>Clic droit sur le support</strong> : la structure s'assemble et se met à tourner. Le support devient alors une source : le réseau branché à l'arrière tourne. Un nouveau clic droit l'arrête et repose les blocs, pour modifier les ailes. Laisse de la place tout autour : les ailes balaient un cercle complet et ne passent pas à travers les blocs.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "La vitesse dépend du nombre de voiles",
+      "html": "<p>Le moulin tourne à <strong>1 tr/min par tranche de 8 voiles</strong>, au maximum <strong>16 tr/min avec 128 voiles</strong>. Sa capacité est de <strong>512 SU par tr/min</strong> : un petit moulin de 8 à 15 voiles donne 512 SU, un grand moulin à 16 tr/min en donne 8 192. C'est lent mais très puissant : un étage de <a href=\"/wiki/roue-dentee\">roues dentées</a> ×2 ou ×4 adapte la vitesse aux machines.</p>"
+    },
+    {
+      "id": "sens",
+      "title": "Choisir le sens de rotation",
+      "image": "windmill_source_sens.webp",
+      "alt": "Le moulin à vent en rotation, entraînant le rotor et le compteur de vitesse",
+      "html": "<p>Le sens de rotation ne dépend pas du vent : il se règle sur le <strong>panneau de valeur</strong> du support, horaire ou antihoraire. Pratique quand une machine doit tourner dans un sens précis, comme un ventilateur qui doit souffler plutôt qu'aspirer.</p>"
+    },
+    {
+      "id": "structure",
+      "title": "Un moulin de n'importe quelle forme",
+      "image": "windmill_structure_structure.webp",
+      "alt": "Une structure en forme de bâtiment, avec de la laine et des pots de fleurs, qui tourne sur son support",
+      "video": "windmill_structure",
+      "html": "<p>Rien n'oblige à faire une croix : <strong>toute structure</strong> collée au support compte comme moulin dès qu'elle contient 8 voiles ou blocs de laine. Une maison qui tourne, un logo, une hélice de bateau… seuls comptent les blocs de voile, la forme et les autres blocs sont libres.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<ul><li><strong>Le support refuse de s'assembler</strong> : moins de 8 voiles, ou des blocs de la croix ne sont pas collés et ne font pas partie de la structure.</li><li><strong>Le moulin s'arrête net</strong> : une aile touche un bloc du décor en tournant. Dégage le cercle complet, y compris vers le sol.</li><li><strong>Le réseau cale malgré un grand moulin</strong> : la vitesse est trop basse pour tes machines. Accélère avec des roues dentées : la capacité en SU reste la même, mais chaque machine reçoit la vitesse qu'il lui faut.</li><li><strong>Le moulin tourne dans le mauvais sens</strong> : change le sens sur son panneau, inutile de le reconstruire.</li></ul>"
+    }
+  ],
+  "related": [
+    "roue-dentee",
+    "roue-a-eau",
+    "rotor",
+    "stressometre-compteur-de-vitesse"
+  ],
+  "sources": [
+    "Vitesse : WindmillBearingBlockEntity.getGeneratedSpeed = clamp(voiles / windmillSailsPerRPM, 1, 16) ; CKinetics.windmillSailsPerRPM = 8",
+    "Minimum : CKinetics.minimumWindmillSails = 8 ; BearingContraption (AssemblyException not_enough_sails)",
+    "Capacité : AllBlocks.java, WINDMILL_BEARING CStress.setCapacity(512.0)",
+    "Voiles : tag create:windmill_sails (voiles, cadre de voile, #minecraft:wool)",
+    "Sens : WindmillBearingBlockEntity.movementDirection (RotationDirection, horaire / antihoraire)",
+    "Recettes : crafting/kinetics/windmill_bearing.json, white_sail.json (laine + 2 bâtons + alliage d'andésite -> 2 voiles)",
+    "Scènes : BearingScenes.windmillsAsSource et windmillsAnyStructure"
+  ],
+  "en": {
+    "slugEn": "windmill-bearing",
+    "name": "Windmill Bearing",
+    "title": "Windmill Bearing — Create mod guide",
+    "description": "The Create Windmill Bearing: gluing sails, 8 sails per RPM, up to 16 RPM and 8,192 SU, choosing the direction and building windmills of any shape.",
+    "intro": "The <strong>Windmill Bearing</strong> turns a structure of sails into a source of rotation. Unlike a water wheel, it depends on nothing but itself: no current, no fuel, it spins anywhere, even in the Nether. Its power depends on the <strong>number of sails</strong>: a small windmill gets you started, a big one runs a whole factory.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Kinetics (source)"
+      },
+      {
+        "label": "Speed",
+        "value": "1 RPM per 8 sails, from 1 to 16 RPM"
+      },
+      {
+        "label": "Capacity",
+        "value": "512 SU per RPM: 512 SU at 1 RPM, 8,192 SU at 16 RPM"
+      },
+      {
+        "label": "Minimum",
+        "value": "8 sail blocks to start"
+      },
+      {
+        "label": "Sails",
+        "value": "Create sails and sail frames, any wool"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Wooden Slab",
+          null
+        ],
+        [
+          null,
+          "Stone",
+          null
+        ],
+        [
+          null,
+          "Shaft",
+          null
+        ]
+      ],
+      "result": "1 Windmill Bearing"
+    },
+    "videos": [
+      {
+        "id": "windmill_source",
+        "name": "Windmill Bearing: assembling and starting a windmill",
+        "description": "A Windmill Bearing gets a cross of wood and sails held together with Super Glue, then starts turning and drives a network up to a speedometer."
+      },
+      {
+        "id": "windmill_structure",
+        "name": "Windmill Bearing: any shape will do",
+        "description": "A structure that looks nothing like a windmill, with wool and decorative blocks, still turns as soon as it has enough sails."
+      }
+    ],
+    "sections": [
+      {
+        "id": "support",
+        "title": "The bearing attaches to the block in front",
+        "alt": "A Windmill Bearing placed against a cogwheel, with the block in front of it highlighted",
+        "html": "<p>The bearing has two useful faces. At the back is the rotation output, which connects to a shaft or a cogwheel. At the front is its wooden plate: that is where it <strong>grabs the block in front of it</strong>, and everything glued to that block. So face it towards the spot where you want to build the blades.</p>"
+      },
+      {
+        "id": "colle",
+        "title": "Building the blades with glue",
+        "alt": "A cross of wood and sails built in front of the bearing, framed by green glue outlines",
+        "html": "<p>For the structure to turn as one piece, its parts have to stick together. Sails attach to their neighbours on their own, but other blocks (the planks and logs of the cross) must be joined with <strong>Super Glue</strong>: select the area to glue, as in the animation where green outlines surround the arms.</p>"
+      },
+      {
+        "id": "voiles",
+        "title": "Enough sails to make a windmill",
+        "alt": "A four-bladed windmill fitted with white sails and sail frames",
+        "html": "<p>The structure only counts as a windmill if it contains at least <strong>8 sail blocks</strong>: Windmill Sails (in any colour), Windmill Sail Frames or any <strong>wool</strong>. Below that, the bearing refuses to assemble. A sail is crafted from wool, two sticks and Andesite Alloy, and the recipe makes two.</p>"
+      },
+      {
+        "id": "activer",
+        "title": "Starting it with a right-click",
+        "alt": "The windmill turns and the cogwheel and shaft coming out of it drive a speedometer",
+        "html": "<p><strong>Right-click the bearing</strong>: the structure assembles and starts turning. The bearing is now a source, and the network connected at its back spins. Another right-click stops it and places the blocks back down so you can edit the blades. Leave room all around: the blades sweep a full circle and do not pass through blocks.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "Speed depends on the number of sails",
+        "html": "<p>The windmill turns at <strong>1 RPM per 8 sails</strong>, up to <strong>16 RPM with 128 sails</strong>. Its capacity is <strong>512 SU per RPM</strong>: a small windmill with 8 to 15 sails gives 512 SU, a big one at 16 RPM gives 8,192. It is slow but very strong, and a ×2 or ×4 stage of <a href=\"/en/wiki/cogwheel\">cogwheels</a> adapts the speed to your machines.</p>"
+      },
+      {
+        "id": "sens",
+        "title": "Choosing the direction",
+        "alt": "The windmill turning, driving the shaft and the speedometer",
+        "html": "<p>The direction has nothing to do with wind: you set it on the bearing's <strong>value panel</strong>, clockwise or counter-clockwise. Handy when a machine must spin a particular way, such as a fan that should blow rather than suck.</p>"
+      },
+      {
+        "id": "structure",
+        "title": "A windmill of any shape",
+        "alt": "A house-like structure with wool and flower pots, turning on its bearing",
+        "html": "<p>Nothing forces you to build a cross: <strong>any structure</strong> glued to the bearing counts as a windmill once it holds 8 sail or wool blocks. A spinning house, a logo, a ship's propeller… only the sail blocks matter; the shape and the other blocks are up to you.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<ul><li><strong>The bearing refuses to assemble</strong>: fewer than 8 sails, or some blocks of the cross are not glued and are not part of the structure.</li><li><strong>The windmill stops dead</strong>: a blade hits a block nearby while turning. Clear the whole circle, down to the ground.</li><li><strong>The network stalls despite a big windmill</strong>: the speed is too low for your machines. Speed it up with cogwheels: the SU capacity stays the same, but each machine gets the speed it needs.</li><li><strong>The windmill spins the wrong way</strong>: change the direction on its panel, there is no need to rebuild it.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Speed: WindmillBearingBlockEntity.getGeneratedSpeed = clamp(sails / windmillSailsPerRPM, 1, 16); CKinetics.windmillSailsPerRPM = 8",
+      "Minimum: CKinetics.minimumWindmillSails = 8; BearingContraption (AssemblyException not_enough_sails)",
+      "Capacity: AllBlocks.java, WINDMILL_BEARING CStress.setCapacity(512.0)",
+      "Sails: tag create:windmill_sails (sails, sail frame, #minecraft:wool)",
+      "Direction: WindmillBearingBlockEntity.movementDirection (RotationDirection, clockwise / counter-clockwise)",
+      "Recipes: crafting/kinetics/windmill_bearing.json, white_sail.json (wool + 2 sticks + Andesite Alloy -> 2 sails)",
+      "Scenes: BearingScenes.windmillsAsSource and windmillsAnyStructure"
+    ]
+  }
+}

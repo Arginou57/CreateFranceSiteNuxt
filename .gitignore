@@ -21,3 +21,6 @@ logs
 .env
 .env.*
 !.env.example
+
+# Wiki media (~400 MB): served by the VPS at /wiki-media/ (DeadZoneLauncher: python tools/deploy.py wiki-media), not from git
+public/wiki-media/

@@ -1,0 +1,263 @@
+{
+  "slug": "bruleur-a-blaze",
+  "name": "Brûleur à blaze",
+  "blockId": "create:blaze_burner",
+  "category": "traitement",
+  "title": "Brûleur à blaze — Create : guide en français",
+  "description": "Le brûleur à blaze de Create : capturer un blaze, le nourrir, chaleur normale ou surchauffée au cake, durées de combustion et automatisation.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>brûleur à blaze</strong> est la source de chaleur de Create : une cage dans laquelle vit un vrai blaze, qu'il faut nourrir avec du combustible. Placé sous un <strong>bassin</strong>, il débloque les recettes chauffées du mixeur, dont le laiton ; sous une <strong>chaudière</strong>, il fait tourner les moteurs à vapeur. Bien nourri au <strong>cake pour blaze</strong>, il passe en surchauffe et ouvre les recettes les plus exigeantes.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Traitement (chaleur)"
+    },
+    {
+      "label": "Niveaux",
+      "value": "Éteint · faiblissant · alimenté · surchauffé"
+    },
+    {
+      "label": "Combustible normal",
+      "value": "Tout combustible de four, même durée (charbon : 80 s)"
+    },
+    {
+      "label": "Cake pour blaze",
+      "value": "160 s de surchauffe, puis 250 s de chaleur normale"
+    },
+    {
+      "label": "Réserve max",
+      "value": "10 000 ticks (500 s) ; il n'accepte un nouveau combustible que sous 25 s de réserve"
+    },
+    {
+      "label": "Chaudière",
+      "value": "Alimenté : 1 niveau · surchauffé : 2 niveaux"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Brûleur vide à l'établi",
+    "grid": [
+      [
+        null,
+        "Plaque de fer",
+        null
+      ],
+      [
+        "Plaque de fer",
+        "Netherrack",
+        "Plaque de fer"
+      ],
+      [
+        null,
+        "Plaque de fer",
+        null
+      ]
+    ],
+    "result": "1 brûleur à blaze vide (il faut ensuite y capturer un blaze)"
+  },
+  "videos": [
+    {
+      "id": "blaze_burner",
+      "name": "Brûleur à blaze : nourrir le blaze",
+      "description": "Un brûleur à blaze sous un bassin reçoit des planches et s'allume, puis un cake pour blaze le fait passer en surchauffe ; un déployeur prend ensuite le relais pour le nourrir.",
+      "duration": "PT17S"
+    },
+    {
+      "id": "empty_blaze_burner",
+      "name": "Brûleur à blaze vide : capturer et décorer",
+      "description": "Un brûleur vide est utilisé sur un générateur de blazes, puis des brûleurs vides sont allumés au briquet et leur flamme devient bleue avec du sable des âmes.",
+      "duration": "PT20S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "capturer",
+      "title": "Capturer un blaze",
+      "image": "empty_blaze_burner_spawner.webp",
+      "alt": "Générateur de blazes en cage, sur lequel on utilise le brûleur vide",
+      "video": "empty_blaze_burner",
+      "html": "<p>Tout commence par un <strong>brûleur à blaze vide</strong>, fabriqué avec quatre plaques de fer autour d'un bloc de netherrack. Va ensuite dans une forteresse du Nether : <strong>clic droit sur un blaze</strong> avec le brûleur vide en main pour l'enfermer dedans, ou clic droit directement sur un <strong>générateur de blazes</strong>, plus sûr et sans combat. Le brûleur plein se pose ensuite où tu veux, il ne se vide jamais. Cassé à la pioche, il revient avec son blaze toujours à l'intérieur.</p>"
+    },
+    {
+      "id": "chaleur",
+      "title": "Une source de chaleur pour le bassin",
+      "image": "blaze_burner_chaleur.webp",
+      "alt": "Brûleur à blaze posé sous un bassin",
+      "html": "<p>Le brûleur ne sert qu'à <strong>chauffer le bloc posé dessus</strong> : un bassin pour le mixeur ou la presse, ou un réservoir à fluide qui sert de chaudière. Le blaze au repos ne chauffe pas vraiment ; il faut le nourrir pour que les recettes chauffées marchent. Quand il travaille sous un bassin actif, il se tourne et ses flammes s'animent.</p>"
+    },
+    {
+      "id": "nourrir",
+      "title": "Le nourrir avec du combustible",
+      "image": "blaze_burner_nourrir.webp",
+      "alt": "Le blaze du brûleur est allumé, ses tiges dorées tournent autour de lui",
+      "html": "<p>Un clic droit avec un <strong>combustible de four</strong> (planches, charbon, bûches, seau de lave…) le fait passer au niveau <strong>alimenté</strong>. Il brûle aussi longtemps que dans un four : 80 secondes pour un charbon, 15 pour une planche. Quand la réserve tombe sous 1,25 %, il passe en <strong>faiblissant</strong>, encore chaud pour les recettes et les chaudières. Il n'accepte un nouveau combustible que lorsqu'il lui reste moins de 25 secondes : inutile d'en empiler d'avance à la main.</p>"
+    },
+    {
+      "id": "cake",
+      "title": "La surchauffe au cake pour blaze",
+      "image": "blaze_burner_cake.webp",
+      "alt": "Le brûleur surchauffé brille d'une flamme bleue",
+      "html": "<p>Le <strong>cake pour blaze</strong> le fait passer en <strong>surchauffe</strong> (flamme bleue) pendant 160 secondes, puis il reste alimenté 250 secondes de plus. Seules quelques recettes l'exigent, comme la lave à partir de pierre au mixeur, mais une chaudière compte un brûleur surchauffé comme deux niveaux de chaleur. Le cake se prépare en deux temps : compacter un œuf, du sucre et de la farine de braise en base de cake, puis la remplir de 250 mB de lave avec un bec verseur.</p>"
+    },
+    {
+      "id": "automatiser",
+      "title": "Automatiser l'alimentation",
+      "image": "blaze_burner_automatiser.webp",
+      "alt": "Un déployeur posé à côté du brûleur lui donne un cake pour blaze",
+      "html": "<p>Pour une usine qui tourne sans toi, confie la nourriture à un <a href=\"/wiki/deployeur\">déployeur</a> qui tient le combustible et le pousse dans le brûleur, ou à un <a href=\"/wiki/bras-mecanique\">bras mécanique</a> qui va le chercher dans un coffre. Un entonnoir ne marche pas : le brûleur n'a pas d'inventaire, il faut lui donner le combustible comme le ferait un joueur.</p>"
+    },
+    {
+      "id": "decoration",
+      "title": "Les brûleurs décoratifs",
+      "image": "empty_blaze_burner_briquet.webp",
+      "alt": "Deux brûleurs vides allumés au briquet, avec une flamme normale",
+      "html": "<p>Un brûleur <strong>vide</strong> s'allume aussi au <strong>briquet</strong> : il devient une jolie lanterne de feu, sans blaze. Un clic avec du <strong>sable ou de la terre des âmes</strong> rend sa flamme bleue. Attention, ces brûleurs allumés ne donnent qu'une chaleur passive, très faible : ils ne remplacent pas un vrai brûleur à blaze dans une usine.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<ul><li><strong>Le laiton ne se fait pas</strong> : le brûleur n'est pas nourri. Un blaze au repos ne compte pas comme chaleur.</li><li><strong>Le combustible est refusé</strong> : la réserve est encore pleine ; attends qu'elle descende sous 25 s.</li><li><strong>La chaudière reste faible</strong> : un brûleur décoratif ou éteint ne donne qu'une chaleur passive.</li></ul>"
+    }
+  ],
+  "related": [
+    "mixeur-mecanique",
+    "bassin",
+    "moteur-a-vapeur",
+    "deployeur"
+  ],
+  "sources": [
+    "Niveaux : BlazeBurnerBlock.HeatLevel (NONE, SMOULDERING, FADING, KINDLED, SEETHING) ; BlazeBurnerBlockEntity.getHeatLevel (FADING sous 1,25 % de MAX_HEAT_CAPACITY)",
+    "Combustible : BlazeBurnerBlockEntity.tryUpdateFuel (durée de four de l'objet, MAX_HEAT_CAPACITY = 10 000, INSERTION_THRESHOLD = 500) ; data_maps/item/superheated_blaze_burner_fuels.json (cake 3 200 ticks) ; après le cake : MAX_HEAT_CAPACITY / 2",
+    "Chaudière : BoilerHeaters.blazeBurner (surchauffé 2, alimenté 1, sinon passif)",
+    "Capture : BlazeBurnerBlockItem (sur un blaze ou un générateur de blazes)",
+    "Recettes : crafting/kinetics/empty_blaze_burner.json ; compacting/blaze_cake.json ; filling/blaze_cake.json (250 mB de lave)",
+    "Scènes : ProcessingScenes.blazeBurner et emptyBlazeBurner (le blaze, une entité, n'est pas rendu dans nos boucles)"
+  ],
+  "en": {
+    "slugEn": "blaze-burner",
+    "name": "Blaze Burner",
+    "title": "Blaze Burner — Create mod guide",
+    "description": "The Create Blaze Burner: catching a blaze, feeding it, normal or superheated heat with a Blaze Cake, burn times and automating the fuel supply.",
+    "intro": "The <strong>Blaze Burner</strong> is Create's heat source: a cage with a real blaze living inside, which you have to feed with fuel. Placed under a <strong>Basin</strong>, it unlocks the mixer's heated recipes, brass included; under a <strong>boiler</strong>, it drives Steam Engines. Fed with a <strong>Blaze Cake</strong>, it becomes superheated and opens up the most demanding recipes.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Processing (heat)"
+      },
+      {
+        "label": "Levels",
+        "value": "Smouldering · fading · kindled · seething (superheated)"
+      },
+      {
+        "label": "Normal fuel",
+        "value": "Any furnace fuel, same duration (coal: 80 s)"
+      },
+      {
+        "label": "Blaze Cake",
+        "value": "160 s superheated, then 250 s of normal heat"
+      },
+      {
+        "label": "Max reserve",
+        "value": "10,000 ticks (500 s); new fuel is only accepted below 25 s left"
+      },
+      {
+        "label": "Boiler",
+        "value": "Kindled: 1 level · superheated: 2 levels"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Empty burner, crafting table",
+      "grid": [
+        [
+          null,
+          "Iron Sheet",
+          null
+        ],
+        [
+          "Iron Sheet",
+          "Netherrack",
+          "Iron Sheet"
+        ],
+        [
+          null,
+          "Iron Sheet",
+          null
+        ]
+      ],
+      "result": "1 Empty Blaze Burner (you still need to catch a blaze in it)"
+    },
+    "videos": [
+      {
+        "id": "blaze_burner",
+        "name": "Blaze Burner: feeding the blaze",
+        "description": "A Blaze Burner under a basin gets planks and lights up, then a Blaze Cake makes it superheated; a Deployer then takes over the feeding."
+      },
+      {
+        "id": "empty_blaze_burner",
+        "name": "Empty Blaze Burner: catching and decorating",
+        "description": "An empty burner is used on a blaze spawner, then empty burners are lit with Flint and Steel and their flame turns blue with soul sand."
+      }
+    ],
+    "sections": [
+      {
+        "id": "capturer",
+        "title": "Catching a blaze",
+        "alt": "A caged blaze spawner, on which the empty burner is used",
+        "html": "<p>It all starts with an <strong>Empty Blaze Burner</strong>, crafted from four iron sheets around a netherrack block. Then head to a Nether fortress: <strong>right-click a blaze</strong> with the empty burner in hand to trap it inside, or right-click a <strong>blaze spawner</strong> directly, which is safer and needs no fight. The filled burner can then be placed wherever you like, and it never empties. Mining it with a pickaxe gives you the burner back with its blaze still inside.</p>"
+      },
+      {
+        "id": "chaleur",
+        "title": "A heat source for the basin",
+        "alt": "A Blaze Burner placed under a Basin",
+        "html": "<p>The burner's only job is to <strong>heat the block above it</strong>: a basin for the mixer or the press, or a Fluid Tank acting as a boiler. A resting blaze does not really heat anything; you have to feed it for heated recipes to work. When it is working under an active basin, it turns around and its flames come alive, which is a quick way to check that a recipe is really getting heat.</p>"
+      },
+      {
+        "id": "nourrir",
+        "title": "Feeding it fuel",
+        "alt": "The burner's blaze is lit, its golden rods spinning around it",
+        "html": "<p>Right-click with any <strong>furnace fuel</strong> (planks, coal, logs, a lava bucket…) to make it <strong>kindled</strong>. It burns as long as in a furnace: 80 seconds for coal, 15 for a plank. When the reserve drops below 1.25%, it switches to <strong>fading</strong>, still hot enough for recipes and boilers. It only accepts new fuel once less than 25 seconds remain, so there is no point stacking it up by hand.</p>"
+      },
+      {
+        "id": "cake",
+        "title": "Superheating with a Blaze Cake",
+        "alt": "The superheated burner glows with a blue flame",
+        "html": "<p>A <strong>Blaze Cake</strong> makes it <strong>superheated</strong> (blue flame) for 160 seconds, after which it stays kindled for another 250 seconds. Only a few recipes need it, like lava from cobblestone in the mixer, but a boiler counts a superheated burner as two heat levels. The cake takes two steps: compact an egg, sugar and Cinder Flour into a cake base, then fill it with 250 mB of lava using a Spout.</p>"
+      },
+      {
+        "id": "automatiser",
+        "title": "Automating the fuel supply",
+        "alt": "A Deployer next to the burner hands it a Blaze Cake",
+        "html": "<p>For a factory that runs without you, leave the feeding to a <a href=\"/en/wiki/deployer\">Deployer</a> holding the fuel and pushing it into the burner, or to a <a href=\"/en/wiki/mechanical-arm\">Mechanical Arm</a> fetching it from a chest. A funnel will not work: the burner has no inventory, so the fuel has to be handed over the way a player would.</p>"
+      },
+      {
+        "id": "decoration",
+        "title": "Decorative burners",
+        "alt": "Two empty burners lit with Flint and Steel, burning with a normal flame",
+        "html": "<p>An <strong>empty</strong> burner can also be lit with <strong>Flint and Steel</strong>: it becomes a nice fire lantern, without a blaze. Clicking it with <strong>soul sand or soul soil</strong> turns its flame blue. Keep in mind these lit burners only give weak passive heat, so they cannot replace a real Blaze Burner in a factory.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<ul><li><strong>No brass comes out</strong>: the burner is not fed. A resting blaze does not count as heat.</li><li><strong>The fuel is refused</strong>: the reserve is still full; wait for it to drop below 25 s.</li><li><strong>The boiler stays weak</strong>: a decorative or unlit burner only provides passive heat.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Levels: BlazeBurnerBlock.HeatLevel (NONE, SMOULDERING, FADING, KINDLED, SEETHING); BlazeBurnerBlockEntity.getHeatLevel (FADING below 1.25% of MAX_HEAT_CAPACITY)",
+      "Fuel: BlazeBurnerBlockEntity.tryUpdateFuel (item furnace burn time, MAX_HEAT_CAPACITY = 10,000, INSERTION_THRESHOLD = 500); data_maps/item/superheated_blaze_burner_fuels.json (cake 3,200 ticks); after the cake: MAX_HEAT_CAPACITY / 2",
+      "Boiler: BoilerHeaters.blazeBurner (seething 2, kindled 1, otherwise passive)",
+      "Capture: BlazeBurnerBlockItem (on a blaze or a blaze spawner)",
+      "Recipes: crafting/kinetics/empty_blaze_burner.json; compacting/blaze_cake.json; filling/blaze_cake.json (250 mB of lava)",
+      "Scenes: ProcessingScenes.blazeBurner and emptyBlazeBurner (the blaze, an entity, is not rendered in our loops)"
+    ]
+  }
+}

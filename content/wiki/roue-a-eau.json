@@ -1,0 +1,262 @@
+{
+  "slug": "roue-a-eau",
+  "name": "Roue à eau et grande roue à eau",
+  "blockId": "create:water_wheel",
+  "category": "cinetique",
+  "title": "Roue à eau — Create : guide en français",
+  "description": "Roue à eau et grande roue à eau de Create : où mettre l'eau, 8 ou 4 tr/min, 256 ou 512 SU, sens de rotation, bois décoratif et erreurs fréquentes.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>roue à eau</strong> est la première source d'énergie durable de Create : posée dans un courant, elle tourne toute seule, jour et nuit, sans carburant. La <strong>grande roue à eau</strong> fait la même chose en plus lent mais avec deux fois plus de puissance. Toute la difficulté tient dans un mot : le <strong>courant</strong>. Une roue posée dans de l'eau immobile ne bougera jamais.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Cinétique (source)"
+    },
+    {
+      "label": "Roue à eau",
+      "value": "8 tr/min · 32 SU par tr/min = 256 SU"
+    },
+    {
+      "label": "Grande roue à eau",
+      "value": "4 tr/min · 128 SU par tr/min = 512 SU"
+    },
+    {
+      "label": "Condition",
+      "value": "De l'eau qui coule contre la roue (une face suffit)"
+    },
+    {
+      "label": "Taille",
+      "value": "Petite : 1 bloc, pales de 2 × 2 · grande : 3 × 3 blocs"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Planches",
+        "Planches",
+        "Planches"
+      ],
+      [
+        "Planches",
+        "Rotor",
+        "Planches"
+      ],
+      [
+        "Planches",
+        "Planches",
+        "Planches"
+      ]
+    ],
+    "result": "1 roue à eau (une roue à eau au centre : grande roue à eau)"
+  },
+  "videos": [
+    {
+      "id": "water_wheel",
+      "name": "Roue à eau : tourner grâce au courant",
+      "description": "De l'eau qui coule sur une roue à eau la fait tourner et anime un compteur de vitesse ; on retire l'eau, on change le bois de la roue, puis l'eau revient.",
+      "duration": "PT16S"
+    },
+    {
+      "id": "large_water_wheel",
+      "name": "Grande roue à eau : plus lente, plus puissante",
+      "description": "Une grande roue à eau de trois blocs de haut tourne dans le courant à la moitié de la vitesse d'une petite roue ; son bois change ensuite trois fois.",
+      "duration": "PT20S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "courant",
+      "title": "Il faut de l'eau qui coule",
+      "image": "water_wheel_courant.webp",
+      "alt": "Roue à eau avec de l'eau qui coule sur le dessus, encadrée de contours pour montrer les faces qui comptent",
+      "html": "<p>Une roue à eau tourne quand de l'<strong>eau en mouvement</strong> touche ses faces : sur le dessus, sur un côté ou en dessous. Ce qui compte, c'est la direction de l'écoulement par rapport à la roue : une source posée seule ne coule pas et ne fait rien. La méthode la plus simple consiste à verser une source un ou deux blocs au-dessus, pour que l'eau dévale le long de la roue, comme dans l'animation.</p><p>La lave et les colonnes de bulles font aussi tourner la roue : seul compte le mouvement du fluide.</p>"
+    },
+    {
+      "id": "cotes",
+      "title": "Plus de courant ne donne pas plus de vitesse",
+      "image": "water_wheel_cotes.webp",
+      "alt": "Eau ajoutée sur un second côté de la roue, sans changement de vitesse",
+      "html": "<p>Ajouter de l'eau sur d'autres faces <strong>n'accélère pas la roue</strong> : dès qu'un côté reçoit du courant dans le bon sens, elle tourne à pleine vitesse. Par contre, deux courants qui poussent en <strong>sens opposés</strong> s'annulent : la roue ralentit ou s'arrête. Garde donc un écoulement simple et dans un seul sens. Le sens de rotation de la roue suit celui du courant.</p>"
+    },
+    {
+      "id": "puissance",
+      "title": "Combien de puissance ?",
+      "html": "<p>Une roue à eau tourne à <strong>8 tr/min</strong> avec une capacité de <strong>32 SU par tr/min, soit 256 SU</strong>. Ça fait tourner une presse mécanique (8 SU par tr/min) à 32 tr/min, ou un ventilateur et une perceuse à vitesse modérée. Pour plus de puissance, aligne plusieurs roues sur le même rotor : leurs capacités s'additionnent.</p><p>8 tr/min, c'est lent : pour une presse ou un tapis rapide, monte la vitesse avec des <a href=\"/wiki/roue-dentee\">roues dentées</a> (×2 par étage), en sachant que tes machines consommeront plus de stress.</p>"
+    },
+    {
+      "id": "montage",
+      "title": "Un montage simple et fiable",
+      "html": "<p>Le montage le plus courant : une rangée de roues à eau sur un même rotor horizontal, et au-dessus une rigole avec une source d'eau à chaque extrémité. L'eau coule le long du dessus des roues, toutes dans le même sens, et chaque roue ajoute ses 256 SU au réseau. Les pales d'une petite roue débordent d'un demi-bloc tout autour : garde ce dégagement libre. Pense aussi à protéger la rigole : un bloc cassé et l'eau part ailleurs.</p>"
+    },
+    {
+      "id": "grande",
+      "title": "La grande roue à eau",
+      "image": "large_water_wheel_courant.webp",
+      "alt": "Grande roue à eau de trois blocs de haut, l'eau coulant sur son sommet",
+      "video": "large_water_wheel",
+      "html": "<p>La <strong>grande roue à eau</strong> occupe <strong>3 × 3 blocs</strong> dans le plan de rotation. Elle obéit aux mêmes règles : de l'eau qui coule contre une de ses faces suffit, en ajouter ailleurs n'aide pas.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "Deux fois moins vite, deux fois plus fort",
+      "image": "large_water_wheel_vitesse.webp",
+      "alt": "Grande roue à eau reliée à un compteur de vitesse qui indique une rotation lente",
+      "html": "<p>La grande roue tourne à <strong>4 tr/min</strong>, la moitié d'une petite, mais sa capacité est de <strong>128 SU par tr/min, soit 512 SU</strong> : deux fois plus de puissance pour un seul bloc de rotor. Avec un étage de roues dentées ×2, elle tourne à 8 tr/min comme une petite roue, avec deux fois sa puissance.</p>"
+    },
+    {
+      "id": "bois",
+      "title": "Changer le bois de la roue",
+      "image": "large_water_wheel_bois.webp",
+      "alt": "Grande roue à eau devenue rouge après un clic avec des planches carmin",
+      "html": "<p>Un clic droit avec des <strong>planches</strong> change l'essence de la roue : chêne, bouleau, jungle, carmin… La roue est en sapin par défaut. Ça ne change rien à la puissance, c'est uniquement pour l'accorder à tes constructions.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<ul><li><strong>La roue ne tourne pas</strong> : l'eau est immobile (une source sans pente) ou elle coule le long de l'axe, pas contre la roue.</li><li><strong>Elle tourne à peine puis s'arrête</strong> : deux courants opposés se compensent.</li><li><strong>Le réseau cale</strong> : 256 SU, c'est peu. Ajoute des roues sur le même rotor ou passe à la grande roue.</li></ul>"
+    }
+  ],
+  "related": [
+    "roue-dentee",
+    "rotor",
+    "stressometre-compteur-de-vitesse",
+    "presse-mecanique"
+  ],
+  "sources": [
+    "Vitesse : WaterWheelBlockEntity.getGeneratedSpeed = clamp(flowScore, -1, 1) × 8 / taille (petite : 1, grande : 2)",
+    "Courant : WaterWheelBlockEntity.determineAndApplyFlowScore (somme des courants perpendiculaires, lave et colonnes de bulles comprises)",
+    "Capacité : AllBlocks.java, WATER_WHEEL CStress.setCapacity(32), LARGE_WATER_WHEEL CStress.setCapacity(128)",
+    "Bois : WaterWheelBlockEntity (Material, sapin par défaut), applyMaterialIfValid",
+    "Recettes : crafting/kinetics/water_wheel.json (8 planches + rotor), large_water_wheel.json (8 planches + roue à eau)",
+    "Scènes : KineticsScenes.waterWheel et largeWaterWheel"
+  ],
+  "en": {
+    "slugEn": "water-wheel",
+    "name": "Water Wheel and Large Water Wheel",
+    "title": "Water Wheel — Create mod guide",
+    "description": "Create Water Wheel and Large Water Wheel: where the water goes, 8 or 4 RPM, 256 or 512 SU, direction of rotation, wood types and common mistakes.",
+    "intro": "The <strong>Water Wheel</strong> is the first renewable power source in Create: put it in a current and it turns on its own, day and night, with no fuel. The <strong>Large Water Wheel</strong> does the same, more slowly but with twice the power. Everything comes down to one word: <strong>flow</strong>. A wheel sitting in still water will never move.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Kinetics (source)"
+      },
+      {
+        "label": "Water Wheel",
+        "value": "8 RPM · 32 SU per RPM = 256 SU"
+      },
+      {
+        "label": "Large Water Wheel",
+        "value": "4 RPM · 128 SU per RPM = 512 SU"
+      },
+      {
+        "label": "Requirement",
+        "value": "Flowing water against the wheel (one face is enough)"
+      },
+      {
+        "label": "Size",
+        "value": "Small: 1 block, paddles 2 × 2 · large: 3 × 3 blocks"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Planks",
+          "Planks",
+          "Planks"
+        ],
+        [
+          "Planks",
+          "Shaft",
+          "Planks"
+        ],
+        [
+          "Planks",
+          "Planks",
+          "Planks"
+        ]
+      ],
+      "result": "1 Water Wheel (with a Water Wheel in the middle: Large Water Wheel)"
+    },
+    "videos": [
+      {
+        "id": "water_wheel",
+        "name": "Water Wheel: powered by the current",
+        "description": "Water flowing over a Water Wheel makes it turn and drives a speedometer; the water is taken away, the wheel's wood is changed, then the water comes back."
+      },
+      {
+        "id": "large_water_wheel",
+        "name": "Large Water Wheel: slower but stronger",
+        "description": "A three-block-tall Large Water Wheel turns in the current at half the speed of a small wheel; its wood is then changed three times."
+      }
+    ],
+    "sections": [
+      {
+        "id": "courant",
+        "title": "It needs flowing water",
+        "alt": "A Water Wheel with water flowing over its top, outlines showing the faces that count",
+        "html": "<p>A water wheel turns when <strong>moving water</strong> touches its faces: on top, on a side or underneath. What matters is which way the water flows relative to the wheel: a lone source block does not flow and does nothing. The easiest method is to pour a source one or two blocks above, so the water runs down along the wheel, as in the animation.</p><p>Lava and bubble columns turn the wheel too: only the fluid's movement counts.</p>"
+      },
+      {
+        "id": "cotes",
+        "title": "More water does not mean more speed",
+        "alt": "Water added on a second side of the wheel, with no change in speed",
+        "html": "<p>Adding water on other faces <strong>does not speed the wheel up</strong>: as soon as one side gets a current going the right way, it runs at full speed. However, two currents pushing in <strong>opposite directions</strong> cancel out and the wheel slows down or stops. Keep the flow simple and one-directional. The wheel's direction of rotation follows the current.</p>"
+      },
+      {
+        "id": "puissance",
+        "title": "How much power?",
+        "html": "<p>A Water Wheel spins at <strong>8 RPM</strong> with a capacity of <strong>32 SU per RPM, so 256 SU</strong>. That runs a Mechanical Press (8 SU per RPM) at 32 RPM, or a fan and a drill at moderate speed. For more power, line several wheels up on the same shaft: their capacities add up.</p><p>8 RPM is slow: for a press or a fast belt, raise the speed with <a href=\"/en/wiki/cogwheel\">cogwheels</a> (×2 per stage), keeping in mind that your machines will then use more stress.</p>"
+      },
+      {
+        "id": "montage",
+        "title": "A simple, reliable setup",
+        "html": "<p>The most common build: a row of water wheels on one horizontal shaft, with a channel above them and a water source at each end. The water runs along the tops of the wheels, all in the same direction, and each wheel adds its 256 SU to the network. The paddles of a small wheel stick out half a block all around, so keep that space clear. Protect the channel too: one broken block and the water goes somewhere else.</p>"
+      },
+      {
+        "id": "grande",
+        "title": "The Large Water Wheel",
+        "alt": "A three-block-tall Large Water Wheel with water flowing over its top",
+        "html": "<p>The <strong>Large Water Wheel</strong> takes up <strong>3 × 3 blocks</strong> in its plane of rotation. The same rules apply: flowing water against one of its faces is enough, and adding more elsewhere does not help.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "Half as fast, twice as strong",
+        "alt": "A Large Water Wheel linked to a speedometer showing slow rotation",
+        "html": "<p>The large wheel turns at <strong>4 RPM</strong>, half the speed of a small one, but its capacity is <strong>128 SU per RPM, so 512 SU</strong>: twice the power from a single shaft block. With one ×2 cogwheel stage it gives 8 RPM, the speed of a small wheel, with double the power.</p>"
+      },
+      {
+        "id": "bois",
+        "title": "Changing the wheel's wood",
+        "alt": "A Large Water Wheel turned red after a click with crimson planks",
+        "html": "<p>Right-click with <strong>planks</strong> to change the wheel's wood: oak, birch, jungle, crimson… Wheels are spruce by default. It makes no difference to power; it is only there to match your builds.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<ul><li><strong>The wheel does not turn</strong>: the water is still (a source with no slope) or it flows along the axis rather than against the wheel.</li><li><strong>It barely turns, then stops</strong>: two opposite currents cancel each other out.</li><li><strong>The network stalls</strong>: 256 SU is not much. Add wheels on the same shaft or switch to the large wheel.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Speed: WaterWheelBlockEntity.getGeneratedSpeed = clamp(flowScore, -1, 1) × 8 / size (small: 1, large: 2)",
+      "Flow: WaterWheelBlockEntity.determineAndApplyFlowScore (sum of the currents across the wheel, lava and bubble columns included)",
+      "Capacity: AllBlocks.java, WATER_WHEEL CStress.setCapacity(32), LARGE_WATER_WHEEL CStress.setCapacity(128)",
+      "Wood: WaterWheelBlockEntity (Material, spruce by default), applyMaterialIfValid",
+      "Recipes: crafting/kinetics/water_wheel.json (8 Planks + Shaft), large_water_wheel.json (8 Planks + Water Wheel)",
+      "Scenes: KineticsScenes.waterWheel and largeWaterWheel"
+    ]
+  }
+}

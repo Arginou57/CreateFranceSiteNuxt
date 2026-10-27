@@ -1,0 +1,231 @@
+{
+  "slug": "rotor",
+  "name": "Rotor",
+  "blockId": "create:shaft",
+  "category": "cinetique",
+  "title": "Rotor (arbre) — Create : guide en français",
+  "description": "Le rotor de Create, l'arbre de transmission du mod : transmettre la rotation en ligne droite, limite de 256 tr/min, boîtiers d'andésite et de laiton.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>rotor</strong>, que beaucoup de joueurs appellent simplement « arbre », est la pièce la plus simple de Create : une barre qui tourne sur son axe et fait passer la rotation d'un bloc à l'autre. C'est lui qui relie un moulin, une roue à eau ou un moteur à tes machines. Il ne consomme rien, mais il a ses règles : une seule direction, une vitesse partagée et une limite à ne pas dépasser.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Cinétique (transmission)"
+    },
+    {
+      "label": "Stress",
+      "value": "Aucun : le rotor ne consomme pas de SU"
+    },
+    {
+      "label": "Vitesse max",
+      "value": "256 tr/min (au-delà, le bloc casse)"
+    },
+    {
+      "label": "Transmission",
+      "value": "En ligne droite, même vitesse et même sens sur toute la ligne"
+    },
+    {
+      "label": "Variantes",
+      "value": "Rotor dans un boîtier d'andésite ou de laiton"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Alliage d'andésite",
+        null
+      ],
+      [
+        null,
+        "Alliage d'andésite",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "8 rotors"
+  },
+  "videos": [
+    {
+      "id": "shaft_relay",
+      "name": "Rotor : transmettre la rotation en ligne droite",
+      "description": "Une ligne de rotors posée bloc par bloc relie une roue dentée entraînée à un compteur de vitesse, qui se met à tourner dès que la ligne est complète.",
+      "duration": "PT5S"
+    },
+    {
+      "id": "shaft_encasing",
+      "name": "Rotor : l'habiller d'un boîtier",
+      "description": "Deux portions d'une même ligne de rotors reçoivent un boîtier d'andésite puis un boîtier de laiton, sans couper la transmission.",
+      "duration": "PT6S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "relais",
+      "title": "Transmettre la rotation en ligne droite",
+      "image": "shaft_relay_relais.webp",
+      "alt": "Ligne de rotors reliant une roue dentée à un compteur de vitesse sur une plaque blanche",
+      "html": "<p>Un rotor se pose comme un pilier : son axe suit la face sur laquelle tu le places. Mets-en plusieurs bout à bout et la rotation parcourt toute la ligne, quelle que soit sa longueur. Astuce : vise l'extrémité d'un rotor déjà posé avec un autre rotor en main, le jeu prolonge la ligne dans le même axe.</p><p>Tous les blocs d'une même ligne tournent <strong>à la même vitesse et dans le même sens</strong>. Dans l'animation, le compteur de vitesse au bout ne s'anime qu'au moment où le dernier rotor ferme la ligne : tant qu'un bloc manque, rien ne passe.</p>"
+    },
+    {
+      "id": "stress",
+      "title": "Un relais qui ne coûte rien",
+      "html": "<p>Le rotor ne consomme <strong>aucun stress</strong> : tu peux en mettre autant que tu veux sans affaiblir ton réseau. Seules les machines (presse, perceuse, mixeur…) consomment des SU, et seules les sources (roue à eau, moulin, moteur) en fournissent. Une ligne de cinquante rotors ne pèse donc pas plus lourd qu'une ligne de deux.</p><p>Pour savoir ce qui passe vraiment dans la ligne, pose un compteur de vitesse ou un stressomètre au bout, ou regarde le rotor avec les lunettes d'ingénieur.</p>"
+    },
+    {
+      "id": "brancher",
+      "title": "Brancher un rotor sur une machine",
+      "html": "<p>Presque toutes les machines de Create prennent la rotation par un axe : il suffit qu'un rotor arrive dans cet axe, contre la bonne face. Une presse mécanique la reçoit par un côté, une perceuse par l'arrière, un mixeur par le dessus. Si le rotor touche la machine par une face qui n'a pas d'axe, il tourne dans le vide sans rien entraîner.</p><p>Le rotor sert aussi à changer de hauteur ou de direction avec d'autres blocs : à chaque extrémité, tu peux poser une roue dentée, une boîte à roues dentées ou une poulie de tapis.</p>"
+    },
+    {
+      "id": "limite",
+      "title": "La limite de 256 tr/min",
+      "html": "<p>Une ligne de rotors ne peut pas dépasser <strong>256 tr/min</strong> (réglage serveur <code>maxRotationSpeed</code>). Si un montage de roues dentées pousse la vitesse au-delà, le bloc qui recevrait cette vitesse se casse et tombe en objet. Même chose si deux sources essaient de faire tourner la même ligne <strong>dans des sens opposés</strong> : le jeu détruit le bloc en conflit plutôt que de choisir.</p><p>Quand une machine refuse de démarrer, commence par vérifier ces deux points avant d'ajouter des sources.</p>"
+    },
+    {
+      "id": "boitiers",
+      "title": "Habiller un rotor d'un boîtier",
+      "image": "shaft_encasing_boitiers.webp",
+      "alt": "Ligne de rotors dont deux blocs sont habillés, l'un d'un boîtier d'andésite, l'autre d'un boîtier de laiton",
+      "video": "shaft_encasing",
+      "html": "<p>Clic droit sur un rotor avec un <strong>boîtier d'andésite</strong> ou un <strong>boîtier de laiton</strong> en main : il devient un rotor dans un boîtier, un bloc plein qui continue de transmettre la rotation. C'est surtout esthétique, mais pratique pour faire passer une transmission dans un mur ou un sol sans voir de barre qui dépasse.</p><p>Pour revenir au rotor nu, accroupis-toi et clique avec la clé sur le bloc habillé.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<ul><li><strong>Rien ne tourne au bout de la ligne</strong> : un rotor est posé dans le mauvais axe, ou il manque un bloc. Vérifie la ligne avec les lunettes d'ingénieur.</li><li><strong>Un bloc saute</strong> : la vitesse dépasse 256 tr/min ou deux sources tournent en sens contraire sur le même réseau.</li><li><strong>Besoin de tourner à angle droit</strong> : un rotor ne le fait pas. Utilise une <a href=\"/wiki/boite-a-roues-dentees\">boîte à roues dentées</a>, des <a href=\"/wiki/roue-dentee\">roues dentées</a> ou un <a href=\"/wiki/tapis-roulant\">tapis roulant</a>.</li></ul>"
+    }
+  ],
+  "related": [
+    "roue-dentee",
+    "boite-a-roues-dentees",
+    "stressometre-compteur-de-vitesse",
+    "tapis-roulant"
+  ],
+  "sources": [
+    "Stress : AllBlocks.java, SHAFT, CStress.setNoImpact()",
+    "Vitesse maximale : CKinetics.maxRotationSpeed = 256 ; RotationPropagator.propagateNewSource (tooFast / incompatible -> destroyBlock)",
+    "Recette : data/create/recipe/crafting/kinetics/shaft.json (2 alliages d'andésite -> 8 rotors)",
+    "Boîtiers : EncasableBlock.tryEncase, EncasedShaftBlock.onSneakWrenched (retour au rotor nu)",
+    "Scènes : KineticsScenes.shaftAsRelay et shaftsCanBeEncased (structures ponder/shaft/relay.nbt, encasing.nbt)"
+  ],
+  "en": {
+    "slugEn": "shaft",
+    "name": "Shaft",
+    "title": "Shaft — Create mod guide",
+    "description": "The Create Shaft explained: carrying rotation in a straight line, the 256 RPM limit, and dressing shafts up with Andesite or Brass Casing.",
+    "intro": "The <strong>Shaft</strong> is the simplest part in Create: a rod that spins on its axis and passes rotation from one block to the next. It is what links a windmill, a water wheel or a motor to your machines. It costs nothing to run, but it follows a few rules: one axis, one shared speed, and a hard limit you should never cross.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Kinetics (transmission)"
+      },
+      {
+        "label": "Stress",
+        "value": "None: a shaft uses no SU"
+      },
+      {
+        "label": "Max speed",
+        "value": "256 RPM (above that, the block breaks)"
+      },
+      {
+        "label": "Transmission",
+        "value": "Straight line, same speed and direction along the whole line"
+      },
+      {
+        "label": "Variants",
+        "value": "Andesite Encased Shaft, Brass Encased Shaft"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Andesite Alloy",
+          null
+        ],
+        [
+          null,
+          "Andesite Alloy",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "8 Shafts"
+    },
+    "videos": [
+      {
+        "id": "shaft_relay",
+        "name": "Shaft: carrying rotation in a straight line",
+        "description": "A line of shafts is laid block by block between a powered cogwheel and a speedometer, which starts turning as soon as the line is complete."
+      },
+      {
+        "id": "shaft_encasing",
+        "name": "Shaft: adding a casing",
+        "description": "Two parts of the same shaft line get an Andesite Casing and a Brass Casing without breaking the drive."
+      }
+    ],
+    "sections": [
+      {
+        "id": "relais",
+        "title": "Carrying rotation in a straight line",
+        "alt": "A line of shafts linking a cogwheel to a speedometer on a white plate",
+        "html": "<p>A shaft is placed like a pillar: its axis follows the face you click. Put several end to end and the rotation travels the whole line, however long it is. Tip: aim at the end of a shaft you already placed while holding another one, and the game extends the line along the same axis.</p><p>Every block on a line spins <strong>at the same speed and in the same direction</strong>. In the animation, the speedometer at the far end only comes to life when the last shaft closes the gap: as long as one block is missing, nothing gets through.</p>"
+      },
+      {
+        "id": "stress",
+        "title": "A relay that costs nothing",
+        "html": "<p>Shafts use <strong>no stress at all</strong>, so you can place as many as you like without weakening your network. Only machines (press, drill, mixer…) consume SU, and only sources (water wheel, windmill, motor) provide it. A line of fifty shafts weighs no more than a line of two.</p><p>To see what actually runs through a line, put a Speedometer or a Stressometer at the end, or look at the shaft while wearing Engineer's Goggles.</p>"
+      },
+      {
+        "id": "brancher",
+        "title": "Hooking a shaft up to a machine",
+        "html": "<p>Nearly every Create machine takes its rotation through an axis: all you need is a shaft reaching that axis, against the right face. A Mechanical Press takes it from a side, a Mechanical Drill from the back, a Mechanical Mixer from the top. If the shaft touches the machine on a face without an axis, it just spins on its own without driving anything.</p><p>Shafts also let you change height or direction together with other blocks: at either end you can add a cogwheel, a gearbox or a belt pulley.</p>"
+      },
+      {
+        "id": "limite",
+        "title": "The 256 RPM limit",
+        "html": "<p>A shaft line can never go above <strong>256 RPM</strong> (server setting <code>maxRotationSpeed</code>). If a cogwheel setup pushes the speed higher, the block that would receive it breaks and drops as an item. The same happens when two sources try to drive the same line <strong>in opposite directions</strong>: instead of picking a winner, the game destroys the conflicting block.</p><p>When a machine refuses to start, check these two things first before adding more power.</p>"
+      },
+      {
+        "id": "boitiers",
+        "title": "Putting a shaft in a casing",
+        "alt": "A shaft line with one block in Andesite Casing and another in Brass Casing",
+        "html": "<p>Right-click a shaft while holding <strong>Andesite Casing</strong> or <strong>Brass Casing</strong>: it becomes an encased shaft, a full block that still carries rotation. It is mostly cosmetic, but handy when a drive line has to pass through a wall or a floor without a rod sticking out.</p><p>To get the bare shaft back, sneak and use the Wrench on the encased block.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<ul><li><strong>Nothing turns at the end of the line</strong>: one shaft sits on the wrong axis, or a block is missing. Check the line with Engineer's Goggles.</li><li><strong>A block pops off</strong>: the speed is above 256 RPM, or two sources spin the same network in opposite directions.</li><li><strong>You need a 90° turn</strong>: a shaft cannot do it. Use a <a href=\"/en/wiki/gearbox\">Gearbox</a>, <a href=\"/en/wiki/cogwheel\">Cogwheels</a> or a <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a>.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Stress: AllBlocks.java, SHAFT, CStress.setNoImpact()",
+      "Maximum speed: CKinetics.maxRotationSpeed = 256; RotationPropagator.propagateNewSource (tooFast / incompatible -> destroyBlock)",
+      "Recipe: data/create/recipe/crafting/kinetics/shaft.json (2 Andesite Alloy -> 8 Shafts)",
+      "Casings: EncasableBlock.tryEncase, EncasedShaftBlock.onSneakWrenched (back to a bare shaft)",
+      "Scenes: KineticsScenes.shaftAsRelay and shaftsCanBeEncased (structures ponder/shaft/relay.nbt, encasing.nbt)"
+    ]
+  }
+}

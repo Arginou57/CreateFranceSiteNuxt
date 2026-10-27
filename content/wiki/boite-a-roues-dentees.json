@@ -1,0 +1,235 @@
+{
+  "slug": "boite-a-roues-dentees",
+  "name": "Boîte à roues dentées",
+  "blockId": "create:gearbox",
+  "category": "cinetique",
+  "title": "Boîte à roues dentées — Create : guide en français",
+  "description": "La boîte à roues dentées (gearbox) de Create : renvoyer la rotation à angle droit sur quatre faces, sens des sorties, version verticale, erreurs.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>boîte à roues dentées</strong>, souvent appelée gearbox ou boîte de vitesses, sert à faire tourner une transmission <strong>à angle droit</strong> dans un seul bloc. Là où il faudrait quatre grandes roues dentées et beaucoup de place, un boîtier compact suffit. Elle ne change pas la vitesse, mais elle change le sens de rotation selon la sortie utilisée : c'est ce qu'il faut bien comprendre pour ne pas faire tourner un tapis à l'envers.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Cinétique (transmission)"
+    },
+    {
+      "label": "Stress",
+      "value": "Aucun"
+    },
+    {
+      "label": "Sorties",
+      "value": "4 faces, toutes perpendiculaires à l'axe du bloc"
+    },
+    {
+      "label": "Vitesse",
+      "value": "Inchangée sur toutes les sorties"
+    },
+    {
+      "label": "Sens",
+      "value": "Inversé en ligne droite, en miroir sur les côtés"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Roue dentée",
+        null
+      ],
+      [
+        "Roue dentée",
+        "Boîtier d'andésite",
+        "Roue dentée"
+      ],
+      [
+        null,
+        "Roue dentée",
+        null
+      ]
+    ],
+    "result": "1 boîte à roues dentées"
+  },
+  "videos": [
+    {
+      "id": "gearbox",
+      "name": "Boîte à roues dentées : remplacer quatre grandes roues",
+      "description": "Un montage encombrant de grandes roues dentées est remplacé par une seule boîte à roues dentées, qui renvoie la rotation sur quatre rotors autour d'elle.",
+      "duration": "PT14S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "encombrant",
+      "title": "Le problème : tourner à angle droit prend de la place",
+      "image": "gearbox_encombrant.webp",
+      "alt": "Quatre grandes roues dentées engrenées en carré pour renvoyer une rotation dans plusieurs directions",
+      "html": "<p>Sans boîte, renvoyer une rotation vers la gauche, la droite et l'avant demande un carré de <strong>grandes roues dentées</strong> engrenées à angle droit, comme au début de l'animation. Ça marche, mais ça occupe tout un étage et chaque roue doit être placée au bloc près.</p>"
+    },
+    {
+      "id": "compacte",
+      "title": "La boîte : un seul bloc, quatre sorties",
+      "image": "gearbox_compacte.webp",
+      "alt": "Une boîte à roues dentées au centre, reliée à quatre rotors partant dans quatre directions",
+      "html": "<p>La boîte à roues dentées fait la même chose dans un seul bloc. Posée normalement, son axe est <strong>vertical</strong> et elle a une sortie sur chacune de ses <strong>quatre faces latérales</strong>. Branche la source sur une face, et les trois autres tournent : un rotor, une roue dentée ou une poulie de tapis contre ces faces est entraîné à la même vitesse.</p><p>Elle ne consomme <strong>aucun stress</strong> et ne change pas la vitesse. Pour accélérer ou ralentir, il faut des <a href=\"/wiki/roue-dentee\">roues dentées</a> de tailles différentes.</p>"
+    },
+    {
+      "id": "miroir",
+      "title": "Les sorties d'angle tournent en miroir",
+      "image": "gearbox_miroir.webp",
+      "alt": "Rotors sortant sur les côtés de la boîte, avec leurs sens de rotation opposés",
+      "html": "<p>Les deux sorties placées <strong>à 90° de l'entrée</strong> tournent en miroir l'une de l'autre : vues depuis la boîte, elles partent dans des sens opposés, comme si la rotation se reflétait sur les angles. Si une machine branchée sur le côté tourne dans le mauvais sens, essaie la sortie d'en face.</p>"
+    },
+    {
+      "id": "inverse",
+      "title": "La sortie en face de l'entrée est inversée",
+      "image": "gearbox_inverse.webp",
+      "alt": "Rotor traversant la boîte en ligne droite, dont la partie de sortie tourne en sens inverse",
+      "html": "<p>La sortie <strong>en ligne droite</strong>, sur la face opposée à l'entrée, tourne en <strong>sens inverse</strong>. Une boîte posée au milieu d'une ligne de rotors est donc un moyen très compact d'inverser le sens d'une transmission sans rien changer d'autre. C'est souvent la solution la plus simple quand un tapis roulant ou un ventilateur fonctionne à l'envers.</p>"
+    },
+    {
+      "id": "verticale",
+      "title": "La version verticale",
+      "html": "<p>Avec la <strong>boîte à roues dentées verticale</strong>, l'axe du bloc est couché : elle a des sorties vers le <strong>haut et le bas</strong> et sur deux côtés. C'est la même boîte, simplement posée autrement : un passage à l'établi transforme l'une en l'autre, dans les deux sens. Pratique pour monter une transmission d'un étage à l'autre puis repartir à l'horizontale.</p>"
+    },
+    {
+      "id": "usages",
+      "title": "Trois montages utiles",
+      "html": "<p><strong>Distribuer une source</strong> : une roue à eau sur une face, trois lignes de machines sur les trois autres. Toutes les machines partagent le stress de la même source, pense à le vérifier.</p><p><strong>Contourner un obstacle</strong> : deux boîtes à un bloc d'écart font faire un crochet à une ligne de rotors.</p><p><strong>Alimenter une machine par le côté</strong> : quand la ligne passe à côté d'une presse ou d'un ventilateur sans arriver dans son axe, une boîte posée contre la machine renvoie la rotation au bon endroit.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<ul><li><strong>Un rotor posé contre la boîte ne tourne pas</strong> : il arrive sur une face sans sortie (le dessus ou le dessous d'une boîte normale). Utilise la version verticale ou une roue dentée.</li><li><strong>Une machine tourne à l'envers</strong> : passe par une autre sortie, ou ajoute une boîte en ligne droite pour inverser.</li><li><strong>Deux sources branchées sur la même boîte</strong> : si leurs sens ne concordent pas après la boîte, un bloc casse. Une seule source par réseau, c'est plus sûr.</li></ul>"
+    }
+  ],
+  "related": [
+    "rotor",
+    "roue-dentee",
+    "stressometre-compteur-de-vitesse",
+    "tapis-roulant"
+  ],
+  "sources": [
+    "Sorties : GearboxBlock.hasShaftTowards (toute face dont l'axe diffère de AXIS) ; GearboxBlock.getStateForPlacement (AXIS = Y)",
+    "Version verticale : AllItems.VERTICAL_GEARBOX (VerticalGearboxItem) ; recettes gearbox_from_conversion.json et vertical_gearbox_from_conversion.json",
+    "Stress : AllBlocks.java, GEARBOX, CStress.setNoImpact()",
+    "Recette : crafting/kinetics/gearbox.json (4 roues dentées autour d'un boîtier d'andésite)",
+    "Scène : KineticsScenes.gearbox (structure ponder/gearbox.nbt)"
+  ],
+  "en": {
+    "slugEn": "gearbox",
+    "name": "Gearbox",
+    "title": "Gearbox — Create mod guide",
+    "description": "The Create Gearbox explained: sending rotation out at right angles on four faces, which way each output spins, the Vertical Gearbox and common mistakes.",
+    "intro": "The <strong>Gearbox</strong> turns a drive line <strong>at a right angle</strong> inside a single block. Where you would otherwise need four Large Cogwheels and a lot of room, one compact casing does the job. It does not change the speed, but it does change the direction of rotation depending on which output you use, and that is the part worth understanding before your belt runs backwards.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Kinetics (transmission)"
+      },
+      {
+        "label": "Stress",
+        "value": "None"
+      },
+      {
+        "label": "Outputs",
+        "value": "4 faces, all perpendicular to the block's axis"
+      },
+      {
+        "label": "Speed",
+        "value": "Unchanged on every output"
+      },
+      {
+        "label": "Direction",
+        "value": "Reversed straight through, mirrored on the sides"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Cogwheel",
+          null
+        ],
+        [
+          "Cogwheel",
+          "Andesite Casing",
+          "Cogwheel"
+        ],
+        [
+          null,
+          "Cogwheel",
+          null
+        ]
+      ],
+      "result": "1 Gearbox"
+    },
+    "videos": [
+      {
+        "id": "gearbox",
+        "name": "Gearbox: replacing four Large Cogwheels",
+        "description": "A bulky setup of Large Cogwheels is replaced by a single Gearbox, which sends rotation into four shafts around it."
+      }
+    ],
+    "sections": [
+      {
+        "id": "encombrant",
+        "title": "The problem: right angles take up space",
+        "alt": "Four Large Cogwheels meshed in a square to send rotation in several directions",
+        "html": "<p>Without a gearbox, sending rotation left, right and forward takes a square of <strong>Large Cogwheels</strong> meshed at right angles, as at the start of the animation. It works, but it fills a whole floor and every wheel must sit on exactly the right block.</p>"
+      },
+      {
+        "id": "compacte",
+        "title": "The Gearbox: one block, four outputs",
+        "alt": "A Gearbox in the middle, linked to four shafts leaving in four directions",
+        "html": "<p>The Gearbox does the same in a single block. Placed normally, its axis is <strong>vertical</strong> and it has an output on each of its <strong>four side faces</strong>. Feed the source into one face and the other three turn: a shaft, a cogwheel or a belt pulley against those faces is driven at the same speed, and you can use one, two or all three outputs.</p><p>It uses <strong>no stress</strong> and does not change the speed. To speed up or slow down, you need <a href=\"/en/wiki/cogwheel\">cogwheels</a> of different sizes.</p>"
+      },
+      {
+        "id": "miroir",
+        "title": "Corner outputs spin as mirror images",
+        "alt": "Shafts leaving the sides of the Gearbox, spinning in opposite directions",
+        "html": "<p>The two outputs <strong>at 90° to the input</strong> spin as mirror images of each other: seen from the gearbox, they turn opposite ways, as if the rotation bounced off the corners. If a machine on one side runs the wrong way, try the opposite side.</p>"
+      },
+      {
+        "id": "inverse",
+        "title": "The output facing the input is reversed",
+        "alt": "A shaft passing straight through the Gearbox, its far end spinning the other way",
+        "html": "<p>The <strong>straight-through</strong> output, on the face opposite the input, spins in the <strong>reverse direction</strong>. A gearbox dropped into the middle of a shaft line is therefore a very compact way to flip a drive without changing anything else. It is often the simplest fix when a belt or a fan works backwards.</p>"
+      },
+      {
+        "id": "verticale",
+        "title": "The Vertical Gearbox",
+        "html": "<p>With the <strong>Vertical Gearbox</strong>, the block's axis lies flat: it has outputs <strong>up and down</strong> plus two sides. It is the same box placed differently, and one trip through the crafting grid turns one into the other, both ways. Handy to take a drive up a floor and then carry on horizontally, for example from a water wheel at ground level to a row of machines on the floor above.</p>"
+      },
+      {
+        "id": "usages",
+        "title": "Three useful setups",
+        "html": "<p><strong>Splitting one source</strong>: a water wheel on one face, three machine lines on the other three. Every machine shares the same source's stress, so keep an eye on it.</p><p><strong>Going around an obstacle</strong>: two gearboxes one block apart make a shaft line take a detour.</p><p><strong>Feeding a machine from the side</strong>: when the line runs past a press or a fan without reaching its axis, a gearbox placed against the machine sends the rotation exactly where it is needed.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<ul><li><strong>A shaft against the gearbox does not turn</strong>: it reaches a face without an output (the top or bottom of a normal gearbox). Use the vertical version or a cogwheel.</li><li><strong>A machine runs backwards</strong>: use another output, or add a gearbox in line to reverse it.</li><li><strong>Two sources on the same gearbox</strong>: if their directions disagree after the box, a block breaks. One source per network is the safe choice.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Outputs: GearboxBlock.hasShaftTowards (any face whose axis differs from AXIS); GearboxBlock.getStateForPlacement (AXIS = Y)",
+      "Vertical version: AllItems.VERTICAL_GEARBOX (VerticalGearboxItem); recipes gearbox_from_conversion.json and vertical_gearbox_from_conversion.json",
+      "Stress: AllBlocks.java, GEARBOX, CStress.setNoImpact()",
+      "Recipe: crafting/kinetics/gearbox.json (4 Cogwheels around Andesite Casing)",
+      "Scene: KineticsScenes.gearbox (structure ponder/gearbox.nbt)"
+    ]
+  }
+}

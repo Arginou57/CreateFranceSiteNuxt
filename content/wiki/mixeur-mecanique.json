@@ -1,0 +1,243 @@
+{
+  "slug": "mixeur-mecanique",
+  "name": "Mixeur mécanique",
+  "blockId": "create:mechanical_mixer",
+  "category": "traitement",
+  "title": "Mixeur mécanique — Create : guide en français",
+  "description": "Le mixeur mécanique de Create : mélanger dans un bassin, recettes sans forme, laiton et alliage d'andésite, chaleur du brûleur, filtre et cadence.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>mixeur mécanique</strong> plonge un fouet dans un <strong>bassin</strong> et mélange ce qu'il contient. Il automatise toutes les <strong>recettes d'établi sans forme</strong>, les recettes de mélange de Create (alliage d'andésite, laiton, pâte, chocolat…) et même l'alchimie des potions. Avec un brûleur à blaze sous le bassin, il débloque les recettes chauffées, dont le très important <strong>lingot de laiton</strong>.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Traitement"
+    },
+    {
+      "label": "Stress",
+      "value": "4 SU par tr/min (128 SU à 32 tr/min)"
+    },
+    {
+      "label": "Position",
+      "value": "Deux blocs au-dessus d'un bassin (un bloc d'air entre eux)"
+    },
+    {
+      "label": "Rotation",
+      "value": "Comme une roue dentée : une roue dentée à côté ou une grande roue en diagonale (pas de rotor)"
+    },
+    {
+      "label": "Cadence",
+      "value": "≈ 5 s par recette à 32 tr/min, ≈ 4,3 s à 64, ≈ 2,8 s à 256"
+    },
+    {
+      "label": "Chaleur",
+      "value": "Laiton, chocolat, miel : chauffé · lave : surchauffé"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Roue dentée",
+        null
+      ],
+      [
+        null,
+        "Boîtier d'andésite",
+        null
+      ],
+      [
+        null,
+        "Fouet",
+        null
+      ]
+    ],
+    "result": "1 mixeur mécanique"
+  },
+  "videos": [
+    {
+      "id": "mixer",
+      "name": "Mixeur mécanique : mélanger deux colorants dans un bassin",
+      "description": "Un mixeur mécanique au-dessus d'un bassin mélange un colorant rouge et un bleu, le résultat sort sur un tapis ; un brûleur à blaze est ensuite placé sous le bassin.",
+      "duration": "PT20S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "bassin",
+      "title": "Un mixeur, un bassin",
+      "image": "mixer_bassin.webp",
+      "alt": "Mixeur mécanique en hauteur au-dessus d'un bassin, entraîné par une ligne de rotors verticale",
+      "html": "<p>Le mixeur ne fait rien seul : il travaille avec un <a href=\"/wiki/bassin\">bassin</a> placé <strong>deux blocs plus bas</strong>, avec un bloc d'air entre les deux pour la descente du fouet. Attention, il ne se branche pas sur un rotor : sa tête engrène comme une <strong>petite roue dentée</strong> à axe vertical. Pose une roue dentée juste à côté, au même niveau, ou une grande roue dentée en diagonale, comme la colonne d'engrenages de l'animation. Dès que le bassin contient les ingrédients d'une recette, la tête descend, tourne, puis remonte : le résultat apparaît dans le bassin et en sort par sa sortie.</p>"
+    },
+    {
+      "id": "recettes",
+      "title": "Quelles recettes ?",
+      "image": "mixer_recettes.webp",
+      "alt": "Un colorant violet sorti du bassin sur un tapis roulant, après le mélange d'un rouge et d'un bleu",
+      "html": "<p>Le mixeur accepte <strong>toutes les recettes d'établi sans forme</strong> (réglage serveur <code>allowShapelessInMixer</code>, actif par défaut) : deux colorants donnent un colorant mélangé, comme le violet de l'animation, une citrouille, du sucre et un œuf donnent une tarte à la citrouille… Il fait aussi les recettes de mélange propres à Create : <strong>alliage d'andésite</strong> (andésite et pépite de fer ou de zinc), pâte (farine et 1 000 mB d'eau), pulpe de carton, boue. Enfin, il peut <strong>brasser des potions</strong> à partir de fluides : un bon moyen d'en produire en masse.</p>"
+    },
+    {
+      "id": "chaleur",
+      "title": "Les recettes chauffées",
+      "image": "mixer_chaleur.webp",
+      "alt": "Brûleur à blaze allumé placé sous le bassin, la caméra tournée pour le montrer",
+      "html": "<p>Certaines recettes exigent de la chaleur : il faut alors un <a href=\"/wiki/bruleur-a-blaze\">brûleur à blaze</a> nourri sous le bassin. En chaleur normale : le <strong>lingot de laiton</strong> (un lingot de cuivre et un de zinc donnent deux lingots de laiton), le chocolat et le miel fondu. La recette de <strong>lave à partir de pierre</strong> demande un brûleur <strong>surchauffé</strong> au cake pour blaze. Sans chaleur, ces ingrédients restent simplement dans le bassin.</p>"
+    },
+    {
+      "id": "filtre",
+      "title": "Choisir la recette avec le filtre",
+      "image": "mixer_filtre.webp",
+      "alt": "Emplacement de filtre sur le côté du bassin",
+      "html": "<p>Quand deux recettes partagent les mêmes ingrédients, le mixeur peut faire la mauvaise. Place l'objet voulu dans l'<strong>emplacement de filtre</strong> du bassin : seule la recette qui donne cet objet sera faite. C'est aussi utile pour empêcher une recette d'établi parasite de consommer tes ingrédients.</p>"
+    },
+    {
+      "id": "cadence",
+      "title": "Vitesse et cadence",
+      "html": "<p>Un cycle comprend la descente, le mélange et la remontée. Le temps de mélange dépend de la vitesse : environ <strong>5 s par recette à 32 tr/min</strong>, 4,3 s à 64 et 2,8 s à 256. Accélérer au-delà de 128 tr/min rapporte peu, alors que le stress consommé, lui, double à chaque doublement de vitesse : <strong>4 SU par tr/min</strong>, soit 512 SU à 128 tr/min. Pour produire beaucoup, plusieurs mixeurs à vitesse moyenne valent mieux qu'un seul très rapide.</p>"
+    },
+    {
+      "id": "laiton",
+      "title": "Exemple : une petite ligne de laiton",
+      "html": "<p>Le montage le plus demandé : un bassin sur un brûleur à blaze nourri, un mixeur au-dessus, des entonnoirs qui apportent cuivre et zinc, et un dépôt ou un tapis à la sortie du bassin. Chaque cycle consomme un lingot de chaque et rend deux lingots de laiton. Pour que le brûleur ne s'éteigne pas, alimente-le régulièrement avec un bras mécanique ou un déployeur.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<ul><li><strong>Le fouet ne descend pas</strong> : il n'y a pas de bassin deux blocs plus bas, ou les ingrédients ne forment aucune recette.</li><li><strong>Le laiton ne se fait pas</strong> : le brûleur est éteint ou absent. Il doit être nourri, pas seulement posé.</li><li><strong>Rien ne sort du bassin</strong> : sortie bouchée ou absente. Voir la page du <a href=\"/wiki/bassin\">bassin</a>.</li></ul>"
+    }
+  ],
+  "related": [
+    "bassin",
+    "bruleur-a-blaze",
+    "presse-mecanique",
+    "meule"
+  ],
+  "sources": [
+    "Stress : AllBlocks.java, MECHANICAL_MIXER, CStress.setImpact(4.0)",
+    "Cadence : MechanicalMixerBlockEntity.tick (descente 20 ticks, processingTicks = clamp(log2(512 / vitesse) × ⌈durée / 100 × 15⌉ + 1, 1, 512), remontée 20 ticks)",
+    "Recettes : CRecipes.allowShapelessInMixer = true, allowBrewingInMixer = true ; data/create/recipe/mixing/*.json (andesite_alloy, brass_ingot chauffé, chocolate, honey, tea chauffés, lava_from_cobble surchauffé, dough_by_mixing, cardboard_pulp, mud_by_mixing)",
+    "Recette du bloc : crafting/kinetics/mechanical_mixer.json",
+    "Scène : ProcessingScenes.mixing"
+  ],
+  "en": {
+    "slugEn": "mechanical-mixer",
+    "name": "Mechanical Mixer",
+    "title": "Mechanical Mixer — Create mod guide",
+    "description": "The Create Mechanical Mixer: mixing in a Basin, shapeless recipes, brass and Andesite Alloy, Blaze Burner heat, the filter slot and processing speed.",
+    "intro": "The <strong>Mechanical Mixer</strong> dips a whisk into a <strong>Basin</strong> and stirs whatever is inside. It automates every <strong>shapeless crafting recipe</strong>, Create's own mixing recipes (Andesite Alloy, brass, dough, chocolate…) and even potion brewing. With a Blaze Burner under the basin, it unlocks heated recipes, including the all-important <strong>Brass Ingot</strong>.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Processing"
+      },
+      {
+        "label": "Stress",
+        "value": "4 SU per RPM (128 SU at 32 RPM)"
+      },
+      {
+        "label": "Position",
+        "value": "Two blocks above a Basin (one block of air in between)"
+      },
+      {
+        "label": "Rotation",
+        "value": "Like a cogwheel: a cogwheel next to it or a Large Cogwheel diagonally (no shaft)"
+      },
+      {
+        "label": "Rate",
+        "value": "≈ 5 s per recipe at 32 RPM, ≈ 4.3 s at 64, ≈ 2.8 s at 256"
+      },
+      {
+        "label": "Heat",
+        "value": "Brass, chocolate, honey: heated · lava: superheated"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Cogwheel",
+          null
+        ],
+        [
+          null,
+          "Andesite Casing",
+          null
+        ],
+        [
+          null,
+          "Whisk",
+          null
+        ]
+      ],
+      "result": "1 Mechanical Mixer"
+    },
+    "videos": [
+      {
+        "id": "mixer",
+        "name": "Mechanical Mixer: mixing two dyes in a Basin",
+        "description": "A Mechanical Mixer above a Basin mixes red and blue dye, and the result comes out onto a belt; a Blaze Burner is then placed under the basin."
+      }
+    ],
+    "sections": [
+      {
+        "id": "bassin",
+        "title": "One mixer, one basin",
+        "alt": "A Mechanical Mixer high above a Basin, driven by a vertical shaft line",
+        "html": "<p>The mixer does nothing alone: it works with a <a href=\"/en/wiki/basin\">Basin</a> placed <strong>two blocks below</strong>, with one block of air in between for the whisk to come down. Careful: it does not connect to a shaft. Its head meshes like a <strong>small cogwheel</strong> on a vertical axis, so place a cogwheel right next to it at the same height, or a Large Cogwheel diagonally, like the column of gears in the animation. As soon as the basin holds the ingredients of a recipe, the head lowers, spins and rises again: the result appears in the basin and leaves through its output.</p>"
+      },
+      {
+        "id": "recettes",
+        "title": "Which recipes?",
+        "alt": "A purple dye leaving the basin on a belt, after mixing red and blue",
+        "html": "<p>The mixer accepts <strong>every shapeless crafting recipe</strong> (server setting <code>allowShapelessInMixer</code>, on by default): two dyes make a mixed dye, like the purple in the animation, a pumpkin, sugar and an egg make a pumpkin pie… It also handles Create's own mixing recipes: <strong>Andesite Alloy</strong> (andesite plus an iron or zinc nugget), dough (flour and 1,000 mB of water), cardboard pulp, mud. Finally, it can <strong>brew potions</strong> from fluids, which is a great way to mass-produce them.</p>"
+      },
+      {
+        "id": "chaleur",
+        "title": "Heated recipes",
+        "alt": "A lit Blaze Burner placed under the basin, the camera turned to show it",
+        "html": "<p>Some recipes need heat, which means a fed <a href=\"/en/wiki/blaze-burner\">Blaze Burner</a> under the basin. With normal heat: the <strong>Brass Ingot</strong> (one copper ingot and one zinc ingot make two brass ingots), chocolate and melted honey. The <strong>lava from cobblestone</strong> recipe needs a burner <strong>superheated</strong> with a Blaze Cake. Without heat, those ingredients just sit in the basin.</p>"
+      },
+      {
+        "id": "filtre",
+        "title": "Picking the recipe with the filter",
+        "alt": "The filter slot on the side of the basin",
+        "html": "<p>When two recipes share the same ingredients, the mixer might make the wrong one. Put the item you want in the basin's <strong>filter slot</strong>: only the recipe producing that item will run. It is also useful to stop a stray crafting recipe from eating your ingredients.</p>"
+      },
+      {
+        "id": "cadence",
+        "title": "Speed and throughput",
+        "html": "<p>A cycle is the way down, the mixing and the way back up. Mixing time depends on speed: roughly <strong>5 s per recipe at 32 RPM</strong>, 4.3 s at 64 and 2.8 s at 256. Going past 128 RPM gains little, while the stress cost doubles every time the speed doubles: <strong>4 SU per RPM</strong>, so 512 SU at 128 RPM. To produce a lot, several mixers at medium speed beat a single very fast one.</p>"
+      },
+      {
+        "id": "laiton",
+        "title": "Example: a small brass line",
+        "html": "<p>The most requested setup: a basin on a fed Blaze Burner, a mixer above it, funnels bringing in copper and zinc, and a depot or a belt at the basin's output. Each cycle uses one ingot of each and gives back two brass ingots. To keep the burner from going out, feed it regularly with a Mechanical Arm or a Deployer.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<ul><li><strong>The whisk will not come down</strong>: there is no basin two blocks below, or the ingredients do not match any recipe.</li><li><strong>No brass comes out</strong>: the burner is out or missing. It has to be fed, not just placed.</li><li><strong>Nothing leaves the basin</strong>: the output is blocked or missing. See the <a href=\"/en/wiki/basin\">Basin</a> page.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Stress: AllBlocks.java, MECHANICAL_MIXER, CStress.setImpact(4.0)",
+      "Rate: MechanicalMixerBlockEntity.tick (20 ticks down, processingTicks = clamp(log2(512 / speed) × ⌈duration / 100 × 15⌉ + 1, 1, 512), 20 ticks up)",
+      "Recipes: CRecipes.allowShapelessInMixer = true, allowBrewingInMixer = true; data/create/recipe/mixing/*.json (andesite_alloy, brass_ingot heated, chocolate, honey, tea heated, lava_from_cobble superheated, dough_by_mixing, cardboard_pulp, mud_by_mixing)",
+      "Block recipe: crafting/kinetics/mechanical_mixer.json",
+      "Scene: ProcessingScenes.mixing"
+    ]
+  }
+}

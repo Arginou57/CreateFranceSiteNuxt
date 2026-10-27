@@ -1,0 +1,292 @@
+{
+  "slug": "roue-dentee",
+  "name": "Roue dentée et grande roue dentée",
+  "blockId": "create:cogwheel",
+  "category": "cinetique",
+  "title": "Roue dentée — Create : guide en français",
+  "description": "Roue dentée et grande roue dentée de Create : transmettre la rotation, inverser le sens, doubler ou diviser la vitesse, boîtiers et clé.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>roue dentée</strong> fait tout ce qu'un rotor sait faire, plus une chose essentielle : elle engrène avec ses voisines. Avec la <strong>grande roue dentée</strong>, elle permet de passer d'un axe à un autre, d'inverser le sens de rotation et surtout de <strong>changer la vitesse</strong>, en la doublant ou en la divisant par deux. C'est la boîte à outils de base de tout réseau cinétique.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Cinétique (transmission)"
+    },
+    {
+      "label": "Stress",
+      "value": "Aucun"
+    },
+    {
+      "label": "Petite ↔ petite",
+      "value": "Côte à côte : même vitesse, sens inversé"
+    },
+    {
+      "label": "Grande ↔ petite",
+      "value": "En diagonale : vitesse × 2 vers la petite, ÷ 2 vers la grande"
+    },
+    {
+      "label": "Grande ↔ grande",
+      "value": "À angle droit (axes perpendiculaires)"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication sans forme (établi)",
+    "grid": [
+      [
+        "Rotor",
+        "Planches",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 roue dentée (+ 1 planche de plus : grande roue dentée)"
+  },
+  "videos": [
+    {
+      "id": "cog_small",
+      "name": "Roue dentée : relayer la rotation de roue en roue",
+      "description": "Une rangée de roues dentées posées côte à côte transmet la rotation jusqu'à un compteur de vitesse ; deux rotors voisins tournent en sens contraire.",
+      "duration": "PT9S"
+    },
+    {
+      "id": "cog_large",
+      "name": "Grande roue dentée : changer d'axe",
+      "description": "Deux grandes roues dentées s'engrènent à angle droit et font passer la rotation d'un axe horizontal à un axe vertical.",
+      "duration": "PT8S"
+    },
+    {
+      "id": "cog_speedup",
+      "name": "Roues dentées : doubler ou diviser la vitesse",
+      "description": "Une grande et une petite roue dentée posées en diagonale : dans un sens la vitesse double, puis les roues sont échangées et la vitesse est divisée par deux.",
+      "duration": "PT13S"
+    },
+    {
+      "id": "cog_encasing",
+      "name": "Roues dentées dans un boîtier",
+      "description": "Des roues dentées reçoivent un boîtier d'andésite ou de laiton ; la clé ouvre ensuite une sortie de rotor sur le dessus du boîtier.",
+      "duration": "PT16S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "relais",
+      "title": "Relayer la rotation de roue en roue",
+      "image": "cog_small_relais.webp",
+      "alt": "Rangée de roues dentées posées côte à côte entre une source et un compteur de vitesse",
+      "html": "<p>Deux roues dentées de même taille posées <strong>côte à côte, avec des axes parallèles</strong>, s'engrènent : la rotation passe de l'une à l'autre à la même vitesse. Une roue dentée porte aussi un rotor en son centre, elle continue donc de transmettre en ligne droite comme un rotor normal.</p><p>Tu peux ainsi décaler une transmission d'un bloc sur le côté à chaque roue, sans perdre de vitesse ni consommer de stress.</p>"
+    },
+    {
+      "id": "sens",
+      "title": "Le sens s'inverse à chaque roue",
+      "image": "cog_small_sens.webp",
+      "alt": "Deux rotors reliés à des roues dentées voisines, qui tournent en sens opposés",
+      "html": "<p>Chaque engrenage <strong>inverse le sens de rotation</strong>. Deux rotors branchés sur deux roues voisines tournent donc en sens contraire. C'est rarement un problème pour une presse ou un mixeur, mais c'est important pour un tapis roulant, un ventilateur (qui souffle ou aspire selon le sens) ou une foreuse sur piston. Pour retrouver le sens d'origine, ajoute simplement une roue de plus.</p>"
+    },
+    {
+      "id": "angle",
+      "title": "Changer d'axe avec les grandes roues dentées",
+      "image": "cog_large_axes.webp",
+      "alt": "Deux grandes roues dentées engrenées à angle droit, l'une verticale, l'autre horizontale",
+      "video": "cog_large",
+      "html": "<p>Deux <strong>grandes roues dentées</strong> s'engrènent quand leurs axes sont <strong>perpendiculaires</strong> et qu'elles se touchent par la tranche, comme dans l'animation. C'est la façon la plus simple de transformer une rotation horizontale en rotation verticale (ou l'inverse) sans changer la vitesse. Deux grandes roues côte à côte sur le même axe, elles, ne se touchent pas.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "Doubler la vitesse",
+      "image": "cog_speedup_double.webp",
+      "alt": "Grande roue dentée en bas et petite roue dentée en haut posées en diagonale, avec deux compteurs de vitesse",
+      "video": "cog_speedup",
+      "html": "<p>Pose une grande roue et une petite roue <strong>en diagonale</strong>, sur deux axes parallèles décalés d'un bloc en hauteur et d'un bloc sur le côté. Quand la grande entraîne la petite, la vitesse est <strong>multipliée par 2</strong> : 16 tr/min deviennent 32 tr/min. C'est le montage classique pour accélérer une petite roue à eau trop lente.</p>"
+    },
+    {
+      "id": "ralentir",
+      "title": "Diviser la vitesse par deux",
+      "image": "cog_speedup_moitie.webp",
+      "alt": "Les deux roues échangées : la petite entraîne maintenant la grande, et la vitesse est divisée par deux",
+      "html": "<p>Dans l'autre sens, une petite roue qui entraîne une grande <strong>divise la vitesse par 2</strong>. Enchaîne plusieurs étages pour aller plus loin : ×2, ×4, ×8… mais garde en tête la limite de <strong>256 tr/min</strong> : au-delà, le bloc casse. Attention aussi au stress : une machine consomme d'autant plus de SU qu'elle tourne vite, accélérer n'est donc jamais gratuit.</p>"
+    },
+    {
+      "id": "boitier",
+      "title": "Les roues dentées dans un boîtier",
+      "image": "cog_encasing_boitier.webp",
+      "alt": "Roues dentées habillées de boîtiers d'andésite et de laiton",
+      "video": "cog_encasing",
+      "html": "<p>Comme le rotor, une roue dentée ou une grande roue dentée peut recevoir un <strong>boîtier d'andésite ou de laiton</strong> d'un clic droit. Le bloc habillé engrène toujours avec ses voisines. Seule différence : les sorties de rotor sur les faces du boîtier se choisissent.</p>"
+    },
+    {
+      "id": "cle",
+      "title": "Ouvrir ou fermer une sortie à la clé",
+      "image": "cog_encasing_cle.webp",
+      "alt": "Un rotor posé sur le dessus d'une roue dentée dans un boîtier, relié après un coup de clé",
+      "html": "<p>Un rotor posé contre un boîtier après coup ne se connecte pas tout seul. Clique avec la <strong>clé</strong> sur la face du boîtier : la sortie s'ouvre et le rotor se met à tourner. Un second coup de clé la referme. Pratique pour sortir une transmission par le dessus ou le dessous d'une machine compacte.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<ul><li><strong>Deux petites roues ne s'entraînent pas</strong> : elles sont décalées en diagonale ou leurs axes ne sont pas parallèles. Elles doivent se toucher par le côté.</li><li><strong>La grande roue ne prend pas la petite</strong> : la petite doit être en diagonale, un bloc plus haut ou plus bas et un bloc sur le côté, pas juste à côté.</li><li><strong>Un bloc casse en démarrant</strong> : un étage de ×2 de trop a fait dépasser 256 tr/min, ou deux chemins ramènent la rotation avec des sens opposés.</li></ul>"
+    }
+  ],
+  "related": [
+    "rotor",
+    "boite-a-roues-dentees",
+    "roue-a-eau",
+    "stressometre-compteur-de-vitesse"
+  ],
+  "sources": [
+    "Rapports de vitesse : RotationPropagator.getRotationSpeedModifier (petite ↔ petite : -1 ; grande -> petite : -2 ; petite -> grande : -0,5 ; grande ↔ grande perpendiculaires)",
+    "Stress : AllBlocks.java, COGWHEEL et LARGE_COGWHEEL, CStress.setNoImpact()",
+    "Vitesse maximale : CKinetics.maxRotationSpeed = 256",
+    "Recettes : crafting/kinetics/cogwheel.json (rotor + planches), large_cogwheel.json (rotor + 2 planches), large_cogwheel_from_little.json (roue dentée + planches), deploying/cogwheel.json",
+    "Boîtiers et clé : EncasedCogwheelBlock (TOP_SHAFT / BOTTOM_SHAFT)",
+    "Scènes : KineticsScenes.cogAsRelay, largeCogAsRelay, cogsSpeedUp, cogwheelsCanBeEncased"
+  ],
+  "en": {
+    "slugEn": "cogwheel",
+    "name": "Cogwheel and Large Cogwheel",
+    "title": "Cogwheel — Create mod guide",
+    "description": "Create Cogwheel and Large Cogwheel explained: relaying rotation, reversing direction, doubling or halving speed, casings and the Wrench.",
+    "intro": "A <strong>Cogwheel</strong> does everything a Shaft does, plus one key thing: it meshes with its neighbours. Together with the <strong>Large Cogwheel</strong>, it lets you jump between axes, reverse the direction of rotation and, above all, <strong>change the speed</strong> by doubling or halving it. It is the basic toolkit of every kinetic network.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Kinetics (transmission)"
+      },
+      {
+        "label": "Stress",
+        "value": "None"
+      },
+      {
+        "label": "Small ↔ small",
+        "value": "Side by side: same speed, reversed direction"
+      },
+      {
+        "label": "Large ↔ small",
+        "value": "Diagonal: speed × 2 towards the small one, ÷ 2 towards the large one"
+      },
+      {
+        "label": "Large ↔ large",
+        "value": "At right angles (perpendicular axes)"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Shapeless crafting",
+      "grid": [
+        [
+          "Shaft",
+          "Planks",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Cogwheel (+ one more plank: Large Cogwheel)"
+    },
+    "videos": [
+      {
+        "id": "cog_small",
+        "name": "Cogwheel: relaying rotation from wheel to wheel",
+        "description": "A row of cogwheels placed side by side carries rotation to a speedometer; two neighbouring shafts spin in opposite directions."
+      },
+      {
+        "id": "cog_large",
+        "name": "Large Cogwheel: changing axis",
+        "description": "Two Large Cogwheels mesh at a right angle and turn a horizontal rotation into a vertical one."
+      },
+      {
+        "id": "cog_speedup",
+        "name": "Cogwheels: doubling or halving speed",
+        "description": "A large and a small cogwheel placed diagonally: one way the speed doubles, then the wheels are swapped and the speed is halved."
+      },
+      {
+        "id": "cog_encasing",
+        "name": "Encased cogwheels",
+        "description": "Cogwheels get Andesite or Brass Casing; the Wrench then opens a shaft output on top of the casing."
+      }
+    ],
+    "sections": [
+      {
+        "id": "relais",
+        "title": "Relaying rotation from wheel to wheel",
+        "alt": "A row of cogwheels placed side by side between a source and a speedometer",
+        "html": "<p>Two cogwheels of the same size placed <strong>side by side, with parallel axes</strong>, mesh together: rotation passes from one to the other at the same speed. A cogwheel also has a shaft through its centre, so it keeps carrying rotation in a straight line like a regular shaft.</p><p>That way each wheel can shift a drive line one block sideways, with no speed loss and no stress cost.</p>"
+      },
+      {
+        "id": "sens",
+        "title": "Direction flips at every wheel",
+        "alt": "Two shafts linked to neighbouring cogwheels, spinning in opposite directions",
+        "html": "<p>Every mesh <strong>reverses the direction of rotation</strong>, so two shafts plugged into two neighbouring wheels spin opposite ways. It rarely matters for a press or a mixer, but it does for a belt, an Encased Fan (which blows or sucks depending on direction) or a drill on a piston. To get the original direction back, just add one more wheel.</p>"
+      },
+      {
+        "id": "angle",
+        "title": "Changing axis with Large Cogwheels",
+        "alt": "Two Large Cogwheels meshing at a right angle, one vertical and one horizontal",
+        "html": "<p>Two <strong>Large Cogwheels</strong> mesh when their axes are <strong>perpendicular</strong> and their rims touch, as in the animation. It is the easiest way to turn horizontal rotation into vertical rotation (or the other way round) without changing speed. Two large wheels side by side on the same axis, on the other hand, do not touch.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "Doubling the speed",
+        "alt": "A Large Cogwheel below and a small cogwheel above placed diagonally, with two speedometers",
+        "html": "<p>Place a large and a small wheel <strong>diagonally</strong>, on two parallel axes offset by one block up and one block sideways. When the large one drives the small one, the speed is <strong>multiplied by 2</strong>: 16 RPM becomes 32 RPM. It is the classic way to speed up a slow water wheel.</p>"
+      },
+      {
+        "id": "ralentir",
+        "title": "Halving the speed",
+        "alt": "The two wheels swapped: the small one now drives the large one and the speed is halved",
+        "html": "<p>The other way round, a small wheel driving a large one <strong>halves the speed</strong>. Chain several stages to go further: ×2, ×4, ×8… but keep the <strong>256 RPM</strong> limit in mind, because above it the block breaks. Watch your stress too: a machine uses more SU the faster it spins, so speeding things up is never free.</p>"
+      },
+      {
+        "id": "boitier",
+        "title": "Encased cogwheels",
+        "alt": "Cogwheels covered with Andesite and Brass Casing",
+        "html": "<p>Like a shaft, a Cogwheel or a Large Cogwheel can take <strong>Andesite or Brass Casing</strong> with a right-click. The encased block still meshes with its neighbours. The only difference: you choose which faces of the casing have a shaft output.</p>"
+      },
+      {
+        "id": "cle",
+        "title": "Opening or closing an output with the Wrench",
+        "alt": "A shaft placed on top of an encased cogwheel, connected after a Wrench click",
+        "html": "<p>A shaft placed against a casing afterwards does not connect on its own. Click the casing face with the <strong>Wrench</strong>: the output opens and the shaft starts turning. A second click closes it again. Handy to take a drive line out through the top or bottom of a compact machine.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<ul><li><strong>Two small cogwheels do not drive each other</strong>: they are offset diagonally or their axes are not parallel. They must touch side to side.</li><li><strong>The large wheel will not drive the small one</strong>: the small wheel has to sit diagonally, one block higher or lower and one block to the side, not right next to it.</li><li><strong>A block breaks on start-up</strong>: one ×2 stage too many pushed the speed past 256 RPM, or two paths bring rotation back in opposite directions.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Speed ratios: RotationPropagator.getRotationSpeedModifier (small ↔ small: -1; large -> small: -2; small -> large: -0.5; large ↔ large when perpendicular)",
+      "Stress: AllBlocks.java, COGWHEEL and LARGE_COGWHEEL, CStress.setNoImpact()",
+      "Maximum speed: CKinetics.maxRotationSpeed = 256",
+      "Recipes: crafting/kinetics/cogwheel.json (Shaft + Planks), large_cogwheel.json (Shaft + 2 Planks), large_cogwheel_from_little.json (Cogwheel + Planks), deploying/cogwheel.json",
+      "Casings and Wrench: EncasedCogwheelBlock (TOP_SHAFT / BOTTOM_SHAFT)",
+      "Scenes: KineticsScenes.cogAsRelay, largeCogAsRelay, cogsSpeedUp, cogwheelsCanBeEncased"
+    ]
+  }
+}

@@ -1,0 +1,282 @@
+{
+  "slug": "ventilateur-enchasse",
+  "name": "Ventilateur enchâssé",
+  "blockId": "create:encased_fan",
+  "category": "traitement",
+  "title": "Ventilateur enchâssé — Create : guide en français",
+  "description": "Le ventilateur enchâssé de Create : souffler ou aspirer, portée selon la vitesse, cuisson par la lave, fumage, lavage dans l'eau et hantise.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>ventilateur enchâssé</strong> crée un courant d'air qui pousse ou attire les objets et les créatures. Mais son vrai talent est ailleurs : quand ce courant traverse de la <strong>lave</strong>, du <strong>feu</strong> ou de l'<strong>eau</strong>, il transforme les objets qu'il touche. C'est un four, un fumoir et une station de lavage géants, qui traitent des piles entières posées au sol, sur un dépôt ou sur un tapis roulant.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Traitement"
+    },
+    {
+      "label": "Stress",
+      "value": "2 SU par tr/min (64 SU à 32 tr/min)"
+    },
+    {
+      "label": "Portée",
+      "value": "De 3 à 20 blocs selon la vitesse (20 à 256 tr/min)"
+    },
+    {
+      "label": "Sens",
+      "value": "Souffle ou aspire selon le sens de rotation"
+    },
+    {
+      "label": "Traitement",
+      "value": "7,5 s par paquet de 16 objets, quelle que soit la vitesse"
+    },
+    {
+      "label": "Types",
+      "value": "Lave : cuisson · feu : fumage · eau : lavage · feu des âmes : hantise"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Rotor",
+        null
+      ],
+      [
+        null,
+        "Boîtier d'andésite",
+        null
+      ],
+      [
+        null,
+        "Hélice",
+        null
+      ]
+    ],
+    "result": "1 ventilateur enchâssé"
+  },
+  "videos": [
+    {
+      "id": "fan_processing",
+      "name": "Ventilateur enchâssé : cuire et fumer avec le courant d'air",
+      "description": "Le courant d'air d'un ventilateur traverse de la lave et cuit les objets jetés devant, puis traverse un feu pour fumer la nourriture sans la brûler.",
+      "duration": "PT20S"
+    },
+    {
+      "id": "fan_washing",
+      "name": "Ventilateur enchâssé : laver dans l'eau, sur un dépôt ou un tapis",
+      "description": "Le courant traverse de l'eau et lave les objets ; la vitesse change seulement la portée, et le traitement marche aussi sur un dépôt ou un tapis.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "courant",
+      "title": "Un courant d'air qui pousse et attire",
+      "image": "fan_direction_courant.webp",
+      "alt": "Ventilateur enchâssé entraîné par un rotor, avec un levier pour inverser le sens",
+      "html": "<p>Le ventilateur se branche par l'arrière sur un rotor ou une roue dentée. Dès qu'il tourne, il crée un <strong>courant d'air</strong> devant lui, qui déplace les objets au sol, les joueurs et les créatures. Sa portée dépend de la vitesse : <strong>3 blocs</strong> au plus lent, jusqu'à <strong>20 blocs</strong> à 256 tr/min. Un bloc plein sur le chemin coupe le courant.</p><p>Il ne consomme que <strong>2 SU par tr/min</strong>, l'une des machines les moins gourmandes du mod.</p>"
+    },
+    {
+      "id": "sens",
+      "title": "Souffler ou aspirer",
+      "image": "fan_direction_sens.webp",
+      "alt": "Le même ventilateur après inversion du sens de rotation",
+      "html": "<p>Le <strong>sens de rotation</strong> décide si le ventilateur souffle devant lui ou aspire vers lui. Pour changer de sens, inverse la rotation : un inverseur de rotation commandé par un levier, une boîte à roues dentées ou une roue dentée de plus. Dans l'animation d'origine, un perroquet montre le courant ; nos images ne gardent que le ventilateur, les créatures n'étant pas rendues par notre moteur.</p>"
+    },
+    {
+      "id": "lave",
+      "title": "À travers la lave : la cuisson",
+      "image": "fan_processing_lave.webp",
+      "alt": "Ventilateur soufflant à travers un bloc de lave, la zone de cuisson encadrée en rouge",
+      "video": "fan_processing",
+      "html": "<p>Si le courant traverse de la <strong>lave</strong> (ou un brûleur à blaze allumé), l'air devient brûlant. Tout objet atteint dans la zone derrière la lave est <strong>cuit comme dans un haut-fourneau ou un four</strong> : minerais concassés en lingots, sable en verre, argile en briques…</p>"
+    },
+    {
+      "id": "cuisson",
+      "title": "Cuire en masse",
+      "image": "fan_processing_cuisson.webp",
+      "alt": "Des objets posés dans le courant chaud, en train de cuire",
+      "html": "<p>Le traitement prend <strong>7,5 secondes</strong> pour une pile de 1 à 16 objets, puis 7,5 s de plus par tranche de 16 : une pile de 64 met 30 s, sans aucun combustible. Attention, la <strong>nourriture brûle</strong> dans l'air brûlant : un steak cru jeté devant la lave part en fumée.</p>"
+    },
+    {
+      "id": "fumage",
+      "title": "À travers le feu : le fumage",
+      "image": "fan_processing_fumage.webp",
+      "alt": "Ventilateur soufflant à travers un feu pour fumer la nourriture",
+      "html": "<p>Pour la nourriture, remplace la lave par du <strong>feu</strong> ou un <strong>feu de camp allumé</strong> : le courant devient un <strong>fumoir</strong>, qui cuit la viande et le poisson sans les détruire. Avec du <strong>feu des âmes</strong> ou un feu de camp des âmes, le courant fait la <strong>hantise</strong> : il transforme la pierre en roche noire, les baies sucrées en baies lumineuses ou la poche d'encre en poche d'encre luisante.</p>"
+    },
+    {
+      "id": "lavage",
+      "title": "À travers l'eau : le lavage",
+      "image": "fan_washing_lavage.webp",
+      "alt": "Ventilateur soufflant à travers un bloc d'eau, la zone de lavage encadrée",
+      "video": "fan_washing",
+      "html": "<p>Un courant qui traverse de l'<strong>eau</strong> lave les objets. C'est l'étape clé du minerai : un minerai concassé lavé donne <strong>9 pépites</strong>, plus un sous-produit (75 % de redstone pour le fer, 50 % de quartz pour l'or, 50 % d'argile pour le cuivre). Le gravier donne du silex et des pépites de fer, la farine de blé devient de la pâte, la laine colorée redevient blanche, le bloc de magma devient de l'obsidienne.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "La vitesse change la portée, pas la cadence",
+      "image": "fan_washing_vitesse.webp",
+      "alt": "Le ventilateur accéléré pousse son courant plus loin",
+      "html": "<p>Contrairement aux autres machines, accélérer un ventilateur <strong>ne traite pas plus vite</strong> : la durée reste de 7,5 s par paquet de 16. La vitesse ne fait qu'allonger la portée du courant. Inutile donc de dépenser du stress : règle la vitesse pour que le courant atteigne juste la zone de traitement.</p>"
+    },
+    {
+      "id": "depot",
+      "title": "Traiter sur un dépôt ou un tapis",
+      "image": "fan_washing_depot.webp",
+      "alt": "Un dépôt placé dans le courant d'air traité, avec un objet posé dessus",
+      "html": "<p>Le traitement marche aussi sur les objets posés sur un <a href=\"/wiki/depot\">dépôt</a> ou transportés par un <a href=\"/wiki/tapis-roulant\">tapis roulant</a> qui passe dans le courant. C'est la base de toute usine de minerai : des <a href=\"/wiki/roues-de-concassage\">roues de concassage</a>, un tapis, un ventilateur qui souffle à travers l'eau au-dessus du tapis, puis un second à travers la lave pour fondre les pépites restantes.</p>"
+    }
+  ],
+  "related": [
+    "roues-de-concassage",
+    "depot",
+    "tapis-roulant",
+    "bruleur-a-blaze"
+  ],
+  "sources": [
+    "Stress : AllBlocks.java, ENCASED_FAN, CStress.setImpact(2.0)",
+    "Portée : IAirCurrentSource.getMaxDistance = lerp(min(|tr/min| / fanRotationArgmax, 1), 3, fanPushDistance) ; CKinetics.fanPushDistance = fanPullDistance = 20, fanRotationArgmax = 256",
+    "Durée : FanProcessing.applyProcessing (fanProcessingTime = 150 ticks × ((taille - 1) / 16 + 1))",
+    "Types : AllFanProcessingTypes (BLASTING, HAUNTING, SMOKING, SPLASHING) ; tags fan_processing_catalysts (lave, eau, feu, feu de camp, feu des âmes, brûleurs)",
+    "Recettes : data/create/recipe/splashing/*.json (crushed_raw_iron : 9 pépites + 75 % redstone…), haunting/*.json",
+    "Recette du bloc : crafting/kinetics/encased_fan.json",
+    "Scènes : FanScenes.direction (perroquet : entité non rendue, images seules) et FanScenes.processing (deux boucles)"
+  ],
+  "en": {
+    "slugEn": "encased-fan",
+    "name": "Encased Fan",
+    "title": "Encased Fan — Create mod guide",
+    "description": "The Create Encased Fan: blowing or pulling, range versus speed, bulk smelting through lava, smoking, washing through water and haunting.",
+    "intro": "The <strong>Encased Fan</strong> creates an air current that pushes or pulls items and mobs. Its real talent lies elsewhere, though: when that current passes through <strong>lava</strong>, <strong>fire</strong> or <strong>water</strong>, it transforms the items it touches. It is a giant furnace, smoker and washing station in one, processing whole stacks lying on the ground, on a depot or on a belt.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Processing"
+      },
+      {
+        "label": "Stress",
+        "value": "2 SU per RPM (64 SU at 32 RPM)"
+      },
+      {
+        "label": "Range",
+        "value": "From 3 to 20 blocks depending on speed (20 at 256 RPM)"
+      },
+      {
+        "label": "Direction",
+        "value": "Blows or pulls depending on the direction of rotation"
+      },
+      {
+        "label": "Processing",
+        "value": "7.5 s per batch of 16 items, whatever the speed"
+      },
+      {
+        "label": "Types",
+        "value": "Lava: blasting · fire: smoking · water: washing · soul fire: haunting"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Shaft",
+          null
+        ],
+        [
+          null,
+          "Andesite Casing",
+          null
+        ],
+        [
+          null,
+          "Propeller",
+          null
+        ]
+      ],
+      "result": "1 Encased Fan"
+    },
+    "videos": [
+      {
+        "id": "fan_processing",
+        "name": "Encased Fan: smelting and smoking with the air current",
+        "description": "A fan's air current passes through lava and smelts the items dropped in front of it, then through fire to smoke food without burning it."
+      },
+      {
+        "id": "fan_washing",
+        "name": "Encased Fan: washing in water, on a depot or a belt",
+        "description": "The current passes through water and washes items; speed only changes the range, and processing also works on a depot or a belt."
+      }
+    ],
+    "sections": [
+      {
+        "id": "courant",
+        "title": "An air current that pushes and pulls",
+        "alt": "An Encased Fan driven by a shaft, with a lever to reverse the direction",
+        "html": "<p>The fan connects from the back to a shaft or a cogwheel. As soon as it spins, it creates an <strong>air current</strong> in front of it that moves dropped items, players and mobs. Its range depends on speed: <strong>3 blocks</strong> at its slowest, up to <strong>20 blocks</strong> at 256 RPM. A solid block in the way cuts the current, but grates, fences and other open blocks let air through.</p><p>It only uses <strong>2 SU per RPM</strong>, one of the cheapest machines in the mod.</p>"
+      },
+      {
+        "id": "sens",
+        "title": "Blowing or pulling",
+        "alt": "The same fan after reversing its direction of rotation",
+        "html": "<p>The <strong>direction of rotation</strong> decides whether the fan blows away from itself or pulls towards itself. To switch, reverse the rotation: a Gearshift controlled by a lever, a gearbox or one more cogwheel. In the original scene a parrot shows the current; our pictures only keep the fan, since our engine does not render mobs.</p>"
+      },
+      {
+        "id": "lave",
+        "title": "Through lava: blasting",
+        "alt": "A fan blowing through a lava block, the blasting zone outlined in red",
+        "html": "<p>When the current passes through <strong>lava</strong> (or a lit Blaze Burner), the air turns scorching hot. Any item reached in the zone behind the lava is <strong>smelted as in a blast furnace or a furnace</strong>: crushed ores into ingots, sand into glass, clay into bricks…</p>"
+      },
+      {
+        "id": "cuisson",
+        "title": "Bulk smelting",
+        "alt": "Items lying in the hot current, being smelted",
+        "html": "<p>Processing takes <strong>7.5 seconds</strong> for a stack of 1 to 16 items, then 7.5 s more for every extra 16: a stack of 64 takes 30 s, with no fuel at all. Careful, <strong>food burns</strong> in the scorching air: raw beef thrown in front of the lava goes up in smoke.</p>"
+      },
+      {
+        "id": "fumage",
+        "title": "Through fire: smoking",
+        "alt": "A fan blowing through fire to smoke food",
+        "html": "<p>For food, swap the lava for <strong>fire</strong> or a <strong>lit campfire</strong>: the current becomes a <strong>smoker</strong> that cooks meat and fish without destroying them. With <strong>soul fire</strong> or a soul campfire, the current does <strong>haunting</strong> instead: it turns cobblestone into blackstone, sweet berries into glow berries and ink sacs into glow ink sacs.</p>"
+      },
+      {
+        "id": "lavage",
+        "title": "Through water: washing",
+        "alt": "A fan blowing through a water block, the washing zone outlined",
+        "html": "<p>A current passing through <strong>water</strong> washes items. It is the key step for ores: a washed crushed ore gives <strong>9 nuggets</strong> plus a by-product (75% redstone for iron, 50% quartz for gold, 50% clay for copper). Gravel gives flint and iron nuggets, wheat flour becomes dough, dyed wool turns white again and a magma block becomes obsidian.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "Speed changes range, not throughput",
+        "alt": "The sped-up fan pushes its current further",
+        "html": "<p>Unlike other machines, a faster fan <strong>does not process faster</strong>: it still takes 7.5 s per batch of 16. Speed only lengthens the current's reach. So there is no point spending stress: set the speed so the current just reaches the processing zone. A fan at 32 RPM costs only 64 SU and already reaches several blocks past the catalyst.</p>"
+      },
+      {
+        "id": "depot",
+        "title": "Processing on a depot or a belt",
+        "alt": "A Depot placed in the processing air current, with an item on it",
+        "html": "<p>Processing also works on items sitting on a <a href=\"/en/wiki/depot\">Depot</a> or carried by a <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a> running through the current. That is the backbone of any ore factory: <a href=\"/en/wiki/crushing-wheel\">Crushing Wheels</a>, a belt, a fan blowing through water above the belt, then a second one through lava to melt the leftover nuggets.</p>"
+      }
+    ],
+    "sources": [
+      "Stress: AllBlocks.java, ENCASED_FAN, CStress.setImpact(2.0)",
+      "Range: IAirCurrentSource.getMaxDistance = lerp(min(|RPM| / fanRotationArgmax, 1), 3, fanPushDistance); CKinetics.fanPushDistance = fanPullDistance = 20, fanRotationArgmax = 256",
+      "Duration: FanProcessing.applyProcessing (fanProcessingTime = 150 ticks × ((count - 1) / 16 + 1))",
+      "Types: AllFanProcessingTypes (BLASTING, HAUNTING, SMOKING, SPLASHING); fan_processing_catalysts tags (lava, water, fire, campfire, soul fire, burners)",
+      "Recipes: data/create/recipe/splashing/*.json (crushed_raw_iron: 9 nuggets + 75% redstone…), haunting/*.json",
+      "Block recipe: crafting/kinetics/encased_fan.json",
+      "Scenes: FanScenes.direction (parrot: entity not rendered, stills only) and FanScenes.processing (two loops)"
+    ]
+  }
+}

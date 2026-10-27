@@ -1,0 +1,275 @@
+{
+  "slug": "moteur-a-vapeur",
+  "name": "Moteur à vapeur",
+  "blockId": "create:steam_engine",
+  "category": "cinetique",
+  "title": "Moteur à vapeur — Create : guide en français",
+  "description": "Le moteur à vapeur de Create : chaudière en réservoirs, eau, chaleur des brûleurs à blaze, niveaux de puissance, 64 tr/min et 16 384 SU par moteur.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>moteur à vapeur</strong> est la grosse source d'énergie de Create. Posé contre une chaudière faite de <strong>réservoirs à fluide</strong>, chauffée par des <strong>brûleurs à blaze</strong> et alimentée en eau, il fournit une puissance sans commune mesure avec une roue à eau. Le principe tient en trois ingrédients à équilibrer : la <strong>chaleur</strong>, l'<strong>eau</strong> et la <strong>taille de la chaudière</strong>. Le plus faible des trois fixe le niveau.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Cinétique (source)"
+    },
+    {
+      "label": "Puissance",
+      "value": "Jusqu'à 64 tr/min et 16 384 SU par moteur à pleine efficacité"
+    },
+    {
+      "label": "Niveaux",
+      "value": "1 à 18 ; un niveau fait tourner un moteur à plein régime"
+    },
+    {
+      "label": "Taille",
+      "value": "1 niveau tous les 4 blocs de réservoir"
+    },
+    {
+      "label": "Eau",
+      "value": "10 mB par tick (200 mB/s) par niveau"
+    },
+    {
+      "label": "Chaleur",
+      "value": "Brûleur alimenté : 1 niveau · surchauffé (cake) : 2 niveaux"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Plaque d'or",
+        null
+      ],
+      [
+        null,
+        "Alliage d'andésite",
+        null
+      ],
+      [
+        null,
+        "Bloc de cuivre",
+        null
+      ]
+    ],
+    "result": "1 moteur à vapeur"
+  },
+  "videos": [
+    {
+      "id": "steam_engine",
+      "name": "Moteur à vapeur : installer une chaudière minimale",
+      "description": "Un moteur à vapeur est fixé sur un réservoir à fluide, un rotor branché sur sa sortie, puis la chaudière reçoit de l'eau, de la chaleur et la taille de quatre réservoirs.",
+      "duration": "PT20S"
+    },
+    {
+      "id": "steam_engine_levels",
+      "name": "Moteur à vapeur : monter en puissance",
+      "description": "La chaudière grandit, reçoit plus de brûleurs à blaze et d'eau, et fait tourner de plus en plus de moteurs à pleine puissance.",
+      "duration": "PT20S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "reservoir",
+      "title": "Le moteur se fixe sur un réservoir",
+      "image": "steam_engine_reservoir.webp",
+      "alt": "Réservoir à fluide en cuivre posé seul sur la plaque, prêt à recevoir un moteur",
+      "html": "<p>Le moteur à vapeur ne tient que <strong>contre un réservoir à fluide</strong> : pose-le sur une face du réservoir, qui devient alors une chaudière. Un réservoir peut porter plusieurs moteurs sur ses différentes faces, à condition que la chaudière soit assez puissante pour tous.</p>"
+    },
+    {
+      "id": "rotor",
+      "title": "Brancher la sortie avec un rotor",
+      "image": "steam_engine_rotor.webp",
+      "alt": "Le moteur à vapeur fixé au réservoir, avec son rotor de sortie",
+      "html": "<p>Le moteur ne tourne rien tout seul : pose un <strong>rotor</strong> devant sa bielle, perpendiculaire au moteur. Le rotor devient la sortie du moteur et transmet la rotation au reste du réseau comme n'importe quel rotor. Le sens de rotation se règle sur le panneau de valeur du moteur.</p>"
+    },
+    {
+      "id": "minimal",
+      "title": "La chaudière minimale : quatre réservoirs",
+      "image": "steam_engine_minimal.webp",
+      "alt": "Chaudière de quatre blocs de réservoir avec un brûleur à blaze dessous et une pompe qui l'alimente en eau",
+      "html": "<p>Pour atteindre le <strong>niveau 1</strong>, il faut trois choses en même temps : <strong>4 blocs de réservoir</strong> (un niveau tous les quatre blocs), <strong>10 mB d'eau par tick</strong>, soit 200 mB par seconde, apportés par une pompe mécanique, et <strong>une source de chaleur</strong> sous la chaudière, typiquement un brûleur à blaze nourri. Un niveau suffit pour qu'un moteur tourne à pleine efficacité : <strong>64 tr/min et 16 384 SU</strong>, l'équivalent de 64 roues à eau.</p>"
+    },
+    {
+      "id": "bruleurs",
+      "title": "Plus de brûleurs, plus de puissance",
+      "image": "steam_engine_levels_bruleurs.webp",
+      "alt": "Chaudière plus large avec plusieurs brûleurs à blaze alignés sous les réservoirs",
+      "video": "steam_engine_levels",
+      "html": "<p>Chaque brûleur à blaze placé <strong>sous</strong> la chaudière ajoute de la chaleur : un brûleur nourri donne <strong>1 niveau</strong>, un brûleur surchauffé au cake pour blaze en donne <strong>2</strong>. Un brûleur éteint, de la lave, un feu de camp ou du magma ne donnent qu'une chaleur <strong>passive</strong>, très faible : à peine un huitième de la puissance d'un moteur.</p>"
+    },
+    {
+      "id": "niveaux",
+      "title": "Équilibrer eau, taille et chaleur",
+      "image": "steam_engine_levels_niveaux.webp",
+      "alt": "Chaudière agrandie, avec des moteurs à vapeur empilés sur son flanc",
+      "html": "<p>Le niveau de la chaudière est le <strong>plus petit des trois</strong> : chaleur, eau et taille. Une énorme chaudière avec un seul brûleur reste au niveau 1 ; dix brûleurs sur quatre réservoirs aussi. Le maximum est le <strong>niveau 18</strong> (72 blocs de réservoir, 180 mB d'eau par tick). Avec les lunettes d'ingénieur, regarde la chaudière : le jeu affiche les trois jauges et indique laquelle bloque.</p>"
+    },
+    {
+      "id": "huit",
+      "title": "Un niveau par moteur",
+      "image": "steam_engine_levels_huit.webp",
+      "alt": "Huit moteurs à vapeur fixés sur une grande chaudière, chacun relié à un rotor",
+      "html": "<p>Chaque niveau fait tourner <strong>un moteur à plein régime</strong>. Une chaudière de niveau 8 alimente donc huit moteurs à 64 tr/min. Avec plus de moteurs que de niveaux, la puissance est partagée : l'efficacité baisse, et avec elle la vitesse (48, 32 puis 16 tr/min) et la capacité de chaque moteur.</p>"
+    },
+    {
+      "id": "construire",
+      "title": "Construire sa première chaudière",
+      "html": "<p>Un plan qui marche bien pour débuter : un réservoir de <strong>2 × 2 blocs sur 1 de haut</strong> (4 blocs, niveau 1), un brûleur à blaze dessous, une pompe mécanique qui puise dans une source d'eau infinie (deux sources côte à côte suffisent), et un seul moteur sur le flanc. Pour grandir, élargis le réservoir jusqu'à <strong>3 × 3</strong> et monte-le en hauteur : chaque couche de 3 × 3 ajoute 9 blocs, soit deux niveaux. Ajoute alors un brûleur sous chaque colonne et des moteurs sur les côtés, au même rythme que les niveaux.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<ul><li><strong>Le moteur ne démarre pas</strong> : il manque l'un des trois ingrédients. Regarde la chaudière avec les lunettes : la jauge à zéro est le coupable.</li><li><strong>Le brûleur s'éteint au bout d'un moment</strong> : il n'est plus nourri. Automatise son alimentation avec un déployeur ou un bras mécanique.</li><li><strong>La pompe ne suit pas</strong> : une pompe trop lente limite l'eau. Accélère-la ou ajoutes-en une.</li></ul>"
+    }
+  ],
+  "related": [
+    "bruleur-a-blaze",
+    "roue-a-eau",
+    "rotor",
+    "stressometre-compteur-de-vitesse"
+  ],
+  "sources": [
+    "Vitesse : PoweredShaftBlockEntity.getGeneratedSpeed = 16 × getSpeedModifier (1 + 3 à pleine efficacité, sinon min(2, ⌊efficacité × 4⌋)) -> 16 à 64 tr/min",
+    "Capacité : AllBlocks.java, STEAM_ENGINE CStress.setCapacity(1024.0) ; PoweredShaftBlockEntity.getCombinedCapacity / getSpeedModifier",
+    "Niveaux : BoilerData.getMaxHeatLevelForBoilerSize = min(18, taille / 4), getMaxHeatLevelForWaterSupply (waterSupplyPerLevel = 10), getEngineEfficiency, passiveEngineEfficiency = 1/8",
+    "Chaleur : BoilerHeaters.blazeBurner (surchauffé 2, alimenté 1, sinon passif) ; tag passive_boiler_heaters (lave, feu, feux de camp, bloc de magma)",
+    "Pose : SteamEngineBlock.canAttach (réservoir à fluide), isShaftValid (rotor perpendiculaire)",
+    "Recette : crafting/kinetics/steam_engine.json",
+    "Scène : SteamScenes.engine (structure ponder/steam_engine.nbt), découpée en deux boucles"
+  ],
+  "en": {
+    "slugEn": "steam-engine",
+    "name": "Steam Engine",
+    "title": "Steam Engine — Create mod guide",
+    "description": "The Create Steam Engine: a boiler made of Fluid Tanks, water, Blaze Burner heat, power levels, 64 RPM and 16,384 SU per engine at full efficiency.",
+    "intro": "The <strong>Steam Engine</strong> is Create's heavy-duty power source. Attached to a boiler built from <strong>Fluid Tanks</strong>, heated by <strong>Blaze Burners</strong> and fed with water, it delivers far more power than any water wheel. It comes down to three ingredients you have to balance: <strong>heat</strong>, <strong>water</strong> and <strong>boiler size</strong>. The weakest of the three sets the level.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Kinetics (source)"
+      },
+      {
+        "label": "Power",
+        "value": "Up to 64 RPM and 16,384 SU per engine at full efficiency"
+      },
+      {
+        "label": "Levels",
+        "value": "1 to 18; one level runs one engine at full power"
+      },
+      {
+        "label": "Size",
+        "value": "1 level per 4 tank blocks"
+      },
+      {
+        "label": "Water",
+        "value": "10 mB per tick (200 mB/s) per level"
+      },
+      {
+        "label": "Heat",
+        "value": "Fed burner: 1 level · superheated (cake): 2 levels"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Golden Sheet",
+          null
+        ],
+        [
+          null,
+          "Andesite Alloy",
+          null
+        ],
+        [
+          null,
+          "Block of Copper",
+          null
+        ]
+      ],
+      "result": "1 Steam Engine"
+    },
+    "videos": [
+      {
+        "id": "steam_engine",
+        "name": "Steam Engine: building a minimal boiler",
+        "description": "A Steam Engine is attached to a Fluid Tank, a shaft goes on its output, then the boiler gets water, heat and the size of four tanks."
+      },
+      {
+        "id": "steam_engine_levels",
+        "name": "Steam Engine: scaling up",
+        "description": "The boiler grows, gets more Blaze Burners and water, and runs more and more engines at full power."
+      }
+    ],
+    "sections": [
+      {
+        "id": "reservoir",
+        "title": "The engine attaches to a tank",
+        "alt": "A copper Fluid Tank alone on the plate, ready to take an engine",
+        "html": "<p>A Steam Engine only stays put <strong>against a Fluid Tank</strong>: place it on one face of the tank, which then becomes a boiler. One tank can carry several engines on its different faces, as long as the boiler is strong enough for all of them.</p>"
+      },
+      {
+        "id": "rotor",
+        "title": "Connecting the output with a shaft",
+        "alt": "The Steam Engine attached to the tank, with its output shaft",
+        "html": "<p>The engine drives nothing on its own: place a <strong>shaft</strong> in front of its piston rod, perpendicular to the engine. That shaft becomes the engine's output and carries rotation to the rest of the network like any other shaft. The direction of rotation is set on the engine's value panel.</p>"
+      },
+      {
+        "id": "minimal",
+        "title": "The minimal boiler: four tanks",
+        "alt": "A four-block boiler with a Blaze Burner underneath and a pump feeding it water",
+        "html": "<p>To reach <strong>level 1</strong>, you need three things at once: <strong>4 tank blocks</strong> (one level per four blocks), <strong>10 mB of water per tick</strong>, i.e. 200 mB per second, brought in by a Mechanical Pump, and <strong>a heat source</strong> under the boiler, usually a fed Blaze Burner. One level is enough for an engine to run at full efficiency: <strong>64 RPM and 16,384 SU</strong>, the same as 64 water wheels.</p>"
+      },
+      {
+        "id": "bruleurs",
+        "title": "More burners, more power",
+        "alt": "A wider boiler with several Blaze Burners lined up under the tanks",
+        "html": "<p>Every Blaze Burner placed <strong>under</strong> the boiler adds heat: a fed burner gives <strong>1 level</strong>, a burner superheated with a Blaze Cake gives <strong>2</strong>. An unlit burner, lava, a campfire or magma only give <strong>passive</strong> heat, which is very weak: barely an eighth of one engine's power.</p>"
+      },
+      {
+        "id": "niveaux",
+        "title": "Balancing water, size and heat",
+        "alt": "An enlarged boiler with Steam Engines stacked on its side",
+        "html": "<p>The boiler level is the <strong>lowest of the three</strong>: heat, water and size. A huge boiler with a single burner stays at level 1, and so do ten burners under four tanks. The maximum is <strong>level 18</strong> (72 tank blocks, 180 mB of water per tick). Look at the boiler through Engineer's Goggles: the game shows all three gauges and tells you which one is holding it back.</p>"
+      },
+      {
+        "id": "huit",
+        "title": "One level per engine",
+        "alt": "Eight Steam Engines attached to a large boiler, each one linked to a shaft",
+        "html": "<p>Each level runs <strong>one engine at full power</strong>, so a level 8 boiler drives eight engines at 64 RPM. With more engines than levels, the power is shared: efficiency drops, and so do each engine's speed (48, 32, then 16 RPM) and capacity.</p>"
+      },
+      {
+        "id": "construire",
+        "title": "Building your first boiler",
+        "html": "<p>A layout that works well to start with: a tank <strong>2 × 2 blocks and 1 block high</strong> (4 blocks, level 1), a Blaze Burner underneath, a Mechanical Pump drawing from an infinite water source (two source blocks side by side are enough), and a single engine on the side. To grow, widen the tank up to <strong>3 × 3</strong> and build it taller: each 3 × 3 layer adds 9 blocks, so two levels. Then add a burner under each column and engines on the sides, keeping pace with the levels.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<ul><li><strong>The engine will not start</strong>: one of the three ingredients is missing. Check the boiler with Goggles: the gauge at zero is the culprit.</li><li><strong>The burner goes out after a while</strong>: it is no longer being fed. Automate it with a Deployer or a Mechanical Arm.</li><li><strong>The pump cannot keep up</strong>: a slow pump limits the water. Speed it up or add another one.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Speed: PoweredShaftBlockEntity.getGeneratedSpeed = 16 × getSpeedModifier (1 + 3 at full efficiency, otherwise min(2, ⌊efficiency × 4⌋)) -> 16 to 64 RPM",
+      "Capacity: AllBlocks.java, STEAM_ENGINE CStress.setCapacity(1024.0); PoweredShaftBlockEntity.getCombinedCapacity / getSpeedModifier",
+      "Levels: BoilerData.getMaxHeatLevelForBoilerSize = min(18, size / 4), getMaxHeatLevelForWaterSupply (waterSupplyPerLevel = 10), getEngineEfficiency, passiveEngineEfficiency = 1/8",
+      "Heat: BoilerHeaters.blazeBurner (seething 2, fed 1, otherwise passive); tag passive_boiler_heaters (lava, fire, campfires, magma block)",
+      "Placement: SteamEngineBlock.canAttach (Fluid Tank), isShaftValid (perpendicular shaft)",
+      "Recipe: crafting/kinetics/steam_engine.json",
+      "Scene: SteamScenes.engine (structure ponder/steam_engine.nbt), split into two loops"
+    ]
+  }
+}

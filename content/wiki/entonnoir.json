@@ -1,0 +1,348 @@
+{
+  "slug": "entonnoir",
+  "name": "Entonnoir",
+  "blockId": "create:andesite_funnel",
+  "category": "logistique",
+  "title": "Entonnoir — Create : guide en français",
+  "description": "Les entonnoirs de Create : extraire ou insérer dans un inventaire, sur un tapis, sens à la clé, redstone, entonnoir en laiton, quantité et filtre.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "L'<strong>entonnoir</strong> est la porte d'entrée et de sortie de tous les inventaires dans Create. Fixé sur un coffre, il en sort les objets ou les y range ; posé au bout d'un tapis roulant, il le vide ou le remplit. Il existe en deux versions : l'<strong>entonnoir d'andésite</strong>, simple et bon marché, qui déplace un objet à la fois, et l'<strong>entonnoir de laiton</strong>, qui déplace des piles entières et sait filtrer.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Logistique"
+    },
+    {
+      "label": "Stress",
+      "value": "Aucun, pas besoin de rotation"
+    },
+    {
+      "label": "Andésite",
+      "value": "1 objet par extraction"
+    },
+    {
+      "label": "Laiton",
+      "value": "Jusqu'à une pile par extraction, quantité réglable, filtre"
+    },
+    {
+      "label": "Cadence",
+      "value": "Une extraction tous les 8 ticks (0,4 s)"
+    },
+    {
+      "label": "Redstone",
+      "value": "Alimenté, l'entonnoir ne fait plus rien"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Alliage d'andésite",
+        null
+      ],
+      [
+        null,
+        "Algue séchée",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "2 entonnoirs d'andésite (laiton : tube électronique + lingot de laiton + algue séchée)"
+  },
+  "videos": [
+    {
+      "id": "funnel_intro",
+      "name": "Entonnoir : relier inventaires et tapis",
+      "description": "Deux entonnoirs aux deux bouts d'un tapis roulant : l'un sort les objets d'un coffre, l'autre les range dans un second coffre.",
+      "duration": "PT10S"
+    },
+    {
+      "id": "funnel_direction",
+      "name": "Entonnoir : extraire ou insérer",
+      "description": "Un entonnoir posé normalement vide un inventaire, posé accroupi il le remplit ; la clé inverse le sens, et sur un tapis il suit le sens de marche.",
+      "duration": "PT20S"
+    },
+    {
+      "id": "funnel_compat",
+      "name": "Entonnoir : avec d'autres machines",
+      "description": "Des entonnoirs fonctionnent aussi avec une scie mécanique verticale, un dépôt et un égouttoir à objets.",
+      "duration": "PT10S"
+    },
+    {
+      "id": "funnel_redstone",
+      "name": "Entonnoir : bloqué par la redstone",
+      "description": "Un entonnoir qui transfère des objets s'arrête dès qu'un levier l'alimente.",
+      "duration": "PT6S"
+    },
+    {
+      "id": "funnel_transposer",
+      "name": "Entonnoir : passer d'un coffre à l'autre",
+      "description": "Deux entonnoirs collés ne transfèrent rien entre deux coffres ; une chute à la verticale, puis un tapis à l'horizontale, font le travail.",
+      "duration": "PT8S"
+    },
+    {
+      "id": "funnel_brass",
+      "name": "Entonnoir de laiton : piles entières et filtre",
+      "description": "Un entonnoir d'andésite sort les objets un par un, un entonnoir de laiton par piles, avec une quantité réglable et un filtre.",
+      "duration": "PT20S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "intro",
+      "title": "Le lien entre inventaires et transport",
+      "image": "funnel_intro_intro.webp",
+      "alt": "Coffre, entonnoir, tapis roulant, entonnoir et second coffre alignés",
+      "html": "<p>Un entonnoir se pose <strong>contre un inventaire</strong> (coffre, tonneau, coffre-fort, dépôt…) ou <strong>au bout d'un tapis roulant</strong>. Il n'a besoin d'aucune rotation et ne consomme rien. Le montage de base de l'animation résume tout : un entonnoir sort les objets du premier coffre sur le tapis, le tapis les transporte, un second entonnoir les range dans le coffre d'arrivée.</p>"
+    },
+    {
+      "id": "extraire",
+      "title": "Posé normalement : il extrait",
+      "image": "funnel_direction_extraire.webp",
+      "alt": "Entonnoir posé sur un coffre, qui en sort un objet",
+      "video": "funnel_direction",
+      "html": "<p>Posé <strong>normalement</strong> contre un inventaire, l'entonnoir <strong>en sort les objets</strong> et les recrache devant lui, au sol, sur un tapis ou dans un autre bloc qui les accepte. L'entonnoir d'andésite sort <strong>un objet à la fois</strong>, toutes les 0,4 seconde.</p>"
+    },
+    {
+      "id": "inserer",
+      "title": "Posé accroupi : il insère",
+      "image": "funnel_direction_inserer.webp",
+      "alt": "Entonnoir posé accroupi sur un coffre, qui y range un objet",
+      "html": "<p>Posé en étant <strong>accroupi</strong>, il fait l'inverse : il <strong>range dans l'inventaire</strong> tout ce qu'on lui donne, objets jetés dessus, objets qui arrivent d'un tapis ou d'une chute. Les mêmes règles valent pour presque toutes les orientations, sur le dessus, le dessous ou les côtés d'un inventaire.</p>"
+    },
+    {
+      "id": "cle",
+      "title": "Changer d'avis : la clé",
+      "image": "funnel_direction_cle.webp",
+      "alt": "Un coup de clé inverse le sens de l'entonnoir déjà posé",
+      "html": "<p>Pas besoin de casser un entonnoir posé dans le mauvais sens : un coup de <strong>clé</strong> l'inverse, d'extraction en insertion et retour. C'est l'erreur la plus courante des débutants, et la plus rapide à corriger.</p>"
+    },
+    {
+      "id": "tapis",
+      "title": "Sur un tapis roulant",
+      "image": "funnel_direction_tapis.webp",
+      "alt": "Entonnoir posé au bout d'un tapis roulant",
+      "html": "<p>Au bout d'un <a href=\"/wiki/tapis-roulant\">tapis roulant</a>, l'entonnoir s'adapte au <strong>sens de marche</strong> : si le tapis avance vers lui, il prend les objets qui arrivent et les range dans l'inventaire derrière lui ; si le tapis s'éloigne, il y dépose les objets qu'il extrait. Un entonnoir posé sur le côté d'un tapis peut aussi y piocher au passage.</p>"
+    },
+    {
+      "id": "compat",
+      "title": "Avec d'autres machines",
+      "image": "funnel_compat_compat.webp",
+      "alt": "Entonnoirs fixés sur une scie mécanique verticale, un dépôt et un égouttoir à objets",
+      "video": "funnel_compat",
+      "html": "<p>L'entonnoir travaille aussi avec de nombreux blocs de Create : la <strong>scie mécanique</strong> posée à la verticale, le <a href=\"/wiki/depot\">dépôt</a>, l'<strong>égouttoir à objets</strong>, les bassins, les meules… Il en sort les produits finis ou y insère les ingrédients, ce qui évite souvent d'ajouter un tapis.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "Couper un entonnoir à la redstone",
+      "image": "funnel_redstone_redstone.webp",
+      "alt": "Entonnoir relié à un levier, qui s'arrête quand le levier est activé",
+      "video": "funnel_redstone",
+      "html": "<p>Un signal de <strong>redstone</strong> met n'importe quel entonnoir en pause. Avec un comparateur sur le coffre d'arrivée, tu peux par exemple arrêter une ligne quand le stock est plein.</p>"
+    },
+    {
+      "id": "transfert",
+      "title": "D'un coffre à l'autre : chute ou tapis",
+      "image": "funnel_transposer_tapis.webp",
+      "alt": "Deux coffres reliés par deux entonnoirs et un court tapis roulant",
+      "video": "funnel_transposer",
+      "html": "<p>Deux entonnoirs collés entre deux coffres <strong>ne transfèrent rien</strong> : un entonnoir ne passe jamais directement d'un inventaire fermé à un autre. À la verticale, utilise une <strong>chute</strong> ; à l'horizontale, un court tapis roulant entre deux entonnoirs.</p>"
+    },
+    {
+      "id": "laiton",
+      "title": "L'entonnoir de laiton : piles et filtre",
+      "image": "funnel_brass_laiton.webp",
+      "alt": "Entonnoir de laiton qui sort une pile entière d'objets",
+      "video": "funnel_brass",
+      "html": "<p>L'<strong>entonnoir de laiton</strong> sort jusqu'à <strong>une pile entière</strong> à chaque fois. Son panneau de valeur règle la quantité exacte, et son <strong>emplacement de filtre</strong> limite les transferts aux objets choisis : idéal pour trier, ou pour cibler un bras mécanique qui lira son filtre.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<ul><li><strong>L'entonnoir vide le coffre au lieu de le remplir</strong> : il a été posé sans s'accroupir. Un coup de clé suffit.</li><li><strong>Les objets tombent par terre</strong> : un entonnoir qui extrait recrache devant lui ; s'il n'y a ni tapis ni inventaire devant, les objets finissent au sol.</li><li><strong>Rien ne passe entre deux coffres collés</strong> : il faut une chute ou un tapis entre les deux.</li><li><strong>L'entonnoir de laiton ne prend rien</strong> : son filtre est réglé sur un autre objet, ou la quantité demandée n'est pas disponible.</li></ul>"
+    }
+  ],
+  "related": [
+    "tapis-roulant",
+    "depot",
+    "bras-mecanique",
+    "meule"
+  ],
+  "sources": [
+    "Quantité : FunnelBlockEntity.getAmountToExtract (filtre inactif : 1 objet ; entonnoir de laiton : quantité du filtre, jusqu'à 64)",
+    "Filtre : FunnelBlockEntity.supportsFiltering (BRASS_FUNNEL, BRASS_BELT_FUNNEL)",
+    "Cadence : CLogistics.defaultExtractionTimer = 8 ticks",
+    "Recettes : crafting/logistics/andesite_funnel.json, brass_funnel.json (2 entonnoirs chacune)",
+    "Scènes : FunnelScenes.intro, directionality, compat, redstone, transposer, brass"
+  ],
+  "en": {
+    "slugEn": "funnel",
+    "name": "Andesite and Brass Funnel",
+    "title": "Funnel — Create mod guide",
+    "description": "Create Funnels explained: pulling from or pushing into inventories, belts, flipping them with the Wrench, redstone, and the Brass Funnel's stacks and filter.",
+    "intro": "The <strong>Funnel</strong> is the way in and out of every inventory in Create. Attached to a chest, it takes items out or puts them in; placed at the end of a Mechanical Belt, it empties or fills it. It comes in two versions: the <strong>Andesite Funnel</strong>, simple and cheap, which moves one item at a time, and the <strong>Brass Funnel</strong>, which moves whole stacks and can filter.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Logistics"
+      },
+      {
+        "label": "Stress",
+        "value": "None, no rotation needed"
+      },
+      {
+        "label": "Andesite",
+        "value": "1 item per extraction"
+      },
+      {
+        "label": "Brass",
+        "value": "Up to a full stack per extraction, adjustable amount, filter"
+      },
+      {
+        "label": "Rate",
+        "value": "One extraction every 8 ticks (0.4 s)"
+      },
+      {
+        "label": "Redstone",
+        "value": "When powered, the funnel stops working"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Andesite Alloy",
+          null
+        ],
+        [
+          null,
+          "Dried Kelp",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "2 Andesite Funnels (brass: Electron Tube + Brass Ingot + Dried Kelp)"
+    },
+    "videos": [
+      {
+        "id": "funnel_intro",
+        "name": "Funnel: linking inventories and belts",
+        "description": "Two funnels at both ends of a Mechanical Belt: one takes items out of a chest, the other stores them in a second chest."
+      },
+      {
+        "id": "funnel_direction",
+        "name": "Funnel: pulling or pushing",
+        "description": "A funnel placed normally empties an inventory, placed while sneaking it fills it; the Wrench flips it, and on a belt it follows the belt's direction."
+      },
+      {
+        "id": "funnel_compat",
+        "name": "Funnel: with other machines",
+        "description": "Funnels also work with a vertical Mechanical Saw, a Depot and an Item Drain."
+      },
+      {
+        "id": "funnel_redstone",
+        "name": "Funnel: stopped by redstone",
+        "description": "A funnel moving items stops as soon as a lever powers it."
+      },
+      {
+        "id": "funnel_transposer",
+        "name": "Funnel: from one chest to another",
+        "description": "Two funnels stuck together move nothing between two chests; a chute vertically, then a belt horizontally, do the job."
+      },
+      {
+        "id": "funnel_brass",
+        "name": "Brass Funnel: whole stacks and filtering",
+        "description": "An Andesite Funnel takes items out one by one, a Brass Funnel by stacks, with an adjustable amount and a filter."
+      }
+    ],
+    "sections": [
+      {
+        "id": "intro",
+        "title": "The link between inventories and transport",
+        "alt": "A chest, a funnel, a Mechanical Belt, a funnel and a second chest lined up",
+        "html": "<p>A funnel goes <strong>against an inventory</strong> (chest, barrel, item vault, depot…) or <strong>at the end of a Mechanical Belt</strong>. It needs no rotation and uses nothing. The basic setup in the animation sums it all up: one funnel takes items out of the first chest onto the belt, the belt carries them, and a second funnel stores them in the destination chest.</p>"
+      },
+      {
+        "id": "extraire",
+        "title": "Placed normally: it pulls",
+        "alt": "A funnel on a chest, taking an item out of it",
+        "html": "<p>Placed <strong>normally</strong> against an inventory, the funnel <strong>takes items out</strong> and spits them in front of itself: onto the ground, onto a belt or into another block that accepts them. The Andesite Funnel pulls <strong>one item at a time</strong>, every 0.4 seconds.</p>"
+      },
+      {
+        "id": "inserer",
+        "title": "Placed while sneaking: it pushes",
+        "alt": "A funnel placed while sneaking on a chest, storing an item in it",
+        "html": "<p>Placed while <strong>sneaking</strong>, it does the opposite: it <strong>puts into the inventory</strong> everything it is given, whether items thrown on it or items arriving from a belt or a chute. The same rules apply to almost every orientation, on the top, bottom or sides of an inventory.</p>"
+      },
+      {
+        "id": "cle",
+        "title": "Changing your mind: the Wrench",
+        "alt": "A Wrench click flips the already placed funnel",
+        "html": "<p>No need to break a funnel placed the wrong way round: one click with the <strong>Wrench</strong> flips it, from pulling to pushing and back. It is the most common beginner mistake, and the quickest to fix.</p>"
+      },
+      {
+        "id": "tapis",
+        "title": "On a Mechanical Belt",
+        "alt": "A funnel placed at the end of a Mechanical Belt",
+        "html": "<p>At the end of a <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a>, the funnel adapts to the <strong>direction of travel</strong>: if the belt moves towards it, it takes the arriving items and stores them in the inventory behind it; if the belt moves away, it drops the items it pulls onto it. A funnel on the side of a belt can also grab items as they go past.</p>"
+      },
+      {
+        "id": "compat",
+        "title": "With other machines",
+        "alt": "Funnels attached to a vertical Mechanical Saw, a Depot and an Item Drain",
+        "html": "<p>Funnels also work with many Create blocks: a <strong>Mechanical Saw</strong> placed vertically, the <a href=\"/en/wiki/depot\">Depot</a>, the <strong>Item Drain</strong>, basins, millstones… They take finished products out or put ingredients in, which often saves you a belt.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "Turning a funnel off with redstone",
+        "alt": "A funnel linked to a lever, stopping when the lever is on",
+        "html": "<p>A <strong>redstone</strong> signal pauses any funnel. With a comparator on the destination chest, you can for example stop a line when the stock is full.</p>"
+      },
+      {
+        "id": "transfert",
+        "title": "From chest to chest: chute or belt",
+        "alt": "Two chests linked by two funnels and a short Mechanical Belt",
+        "html": "<p>Two funnels stuck together between two chests <strong>move nothing</strong>: a funnel never transfers directly from one closed inventory to another. Vertically, use a <strong>chute</strong>; horizontally, a short belt between two funnels.</p>"
+      },
+      {
+        "id": "laiton",
+        "title": "The Brass Funnel: stacks and filtering",
+        "alt": "A Brass Funnel taking a whole stack of items out",
+        "html": "<p>The <strong>Brass Funnel</strong> pulls up to <strong>a full stack</strong> each time. Its value panel sets the exact amount, and its <strong>filter slot</strong> restricts transfers to the chosen items: ideal for sorting, or as a target for a Mechanical Arm, which reads its filter.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<ul><li><strong>The funnel empties the chest instead of filling it</strong>: it was placed without sneaking. One Wrench click fixes it.</li><li><strong>Items end up on the ground</strong>: an extracting funnel spits items in front of itself; with no belt or inventory there, they drop on the floor.</li><li><strong>Nothing moves between two adjacent chests</strong>: you need a chute or a belt between them.</li><li><strong>The Brass Funnel takes nothing</strong>: its filter is set to another item, or the requested amount is not available.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Amount: FunnelBlockEntity.getAmountToExtract (no active filter: 1 item; Brass Funnel: filter amount, up to 64)",
+      "Filter: FunnelBlockEntity.supportsFiltering (BRASS_FUNNEL, BRASS_BELT_FUNNEL)",
+      "Rate: CLogistics.defaultExtractionTimer = 8 ticks",
+      "Recipes: crafting/logistics/andesite_funnel.json, brass_funnel.json (2 funnels each)",
+      "Scenes: FunnelScenes.intro, directionality, compat, redstone, transposer, brass"
+    ]
+  }
+}

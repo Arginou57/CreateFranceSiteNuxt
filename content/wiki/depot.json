@@ -1,0 +1,233 @@
+{
+  "slug": "depot",
+  "name": "Dépôt",
+  "blockId": "create:depot",
+  "category": "logistique",
+  "title": "Dépôt — Create : guide en français",
+  "description": "Le dépôt de Create : un tapis immobile pour poser des objets, les faire traiter par une presse, un bec verseur, un ventilateur, et servir un bras.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>dépôt</strong> est un petit plateau sur lequel on pose un objet. Pour les machines de Create, c'est un <strong>morceau de tapis roulant immobile</strong> : tout ce qui sait travailler sur un tapis sait aussi travailler sur un dépôt. Il sert de poste de travail manuel sous une presse, de station de lavage devant un ventilateur, ou de relais pour un bras mécanique. Bon marché et sans rotation, c'est l'un des blocs les plus utiles du début de partie.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Logistique"
+    },
+    {
+      "label": "Stress",
+      "value": "Aucun, pas besoin de rotation"
+    },
+    {
+      "label": "Contenu",
+      "value": "Une pile d'objets, plus 8 emplacements pour les produits"
+    },
+    {
+      "label": "Machines compatibles",
+      "value": "Presse, ventilateur, déployeur, bec verseur, bras mécanique, entonnoirs…"
+    },
+    {
+      "label": "Pose et retrait",
+      "value": "Clic droit pour poser ou reprendre l'objet"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication sans forme (établi)",
+    "grid": [
+      [
+        "Alliage d'andésite",
+        "Boîtier d'andésite",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 dépôt"
+  },
+  "videos": [
+    {
+      "id": "depot",
+      "name": "Dépôt : poser, traiter et transmettre des objets",
+      "description": "Un bloc de cuivre est posé sur un dépôt, puis un bec verseur remplit un seau, une presse aplatit un lingot, un ventilateur lave, et un bras mécanique reprend la plaque.",
+      "duration": "PT20S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "depot",
+      "title": "Un tapis qui ne bouge pas",
+      "image": "depot_depot.webp",
+      "alt": "Dépôt posé seul au centre d'une plaque blanche",
+      "html": "<p>Le dépôt se comporte comme <strong>un seul bloc de tapis roulant à l'arrêt</strong>. Les objets qu'on y pose restent au centre, et toutes les machines qui traitent les objets sur un tapis le reconnaissent : elles traitent l'objet posé, puis le laissent sur place. Pas de rotation, pas de stress, il se pose n'importe où.</p>"
+    },
+    {
+      "id": "main",
+      "title": "Poser et reprendre à la main",
+      "image": "depot_main.webp",
+      "alt": "Un objet posé sur le dépôt d'un clic droit",
+      "html": "<p><strong>Clic droit</strong> avec un objet en main : la pile entière est posée sur le dépôt. <strong>Clic droit à main vide</strong> pour la reprendre, avec les produits obtenus. Le dépôt accepte aussi les objets d'un entonnoir, d'une chute ou d'un tapis qui se termine contre lui, et un entonnoir posé sur son flanc peut le vider. Un dépôt ne garde qu'une seule sorte d'objet à la fois : pour en changer, reprends d'abord la pile en place.</p>"
+    },
+    {
+      "id": "traitement",
+      "title": "Un poste de traitement",
+      "image": "depot_traitement.webp",
+      "alt": "Bec verseur au-dessus d'un dépôt, qui remplit un seau posé dessus",
+      "html": "<p>Sous une <a href=\"/wiki/presse-mecanique\">presse mécanique</a>, le dépôt devient une enclume : pose des lingots, ils ressortent en plaques. Devant un <a href=\"/wiki/ventilateur-enchasse\">ventilateur enchâssé</a> qui souffle à travers l'eau ou la lave, il lave ou cuit les objets. Sous un <a href=\"/wiki/deployeur\">déployeur</a>, il reçoit les applications d'objets (planches sur un rotor, par exemple), et sous un <strong>bec verseur</strong>, les remplissages : dans l'animation, un seau vide posé sur le dépôt ressort plein d'eau. Les produits s'accumulent dans huit emplacements, à côté de l'objet en cours.</p>"
+    },
+    {
+      "id": "bras",
+      "title": "Relais pour le bras mécanique",
+      "image": "depot_bras.webp",
+      "alt": "Un bras mécanique reprend l'objet posé sur le dépôt",
+      "html": "<p>Le dépôt est la cible favorite du <a href=\"/wiki/bras-mecanique\">bras mécanique</a> : en entrée, le bras y prend ce qu'on y pose ; en sortie, il y dépose les objets pour qu'une machine les traite. Un montage simple : un dépôt sous une presse, un bras qui l'alimente depuis un entonnoir et reprend les plaques pour les mettre dans un second entonnoir.</p>"
+    },
+    {
+      "id": "manuel",
+      "title": "Le poste de travail du débutant",
+      "html": "<p>En début de partie, un dépôt sous une presse alimentée par une roue à eau suffit pour fabriquer toutes les plaques de fer, de cuivre et de laiton dont tu as besoin, sans construire de ligne automatique. Pose une pile de lingots, va faire autre chose, reviens chercher les plaques. Même chose devant un ventilateur et un bloc d'eau pour laver des minerais concassés.</p>"
+    },
+    {
+      "id": "ejecteur",
+      "title": "Dépôt ou éjecteur ?",
+      "html": "<p>L'<strong>éjecteur</strong> est un dépôt qui projette ses objets vers une cible, avec un ressort. Pour un simple poste de traitement, le dépôt suffit et coûte moins cher ; pour envoyer des objets d'un point à un autre sans tapis, l'éjecteur prend le relais. Les deux se traitent de la même façon par les machines.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<ul><li><strong>La presse ne descend pas</strong> : le dépôt doit être deux blocs sous la presse, avec un bloc d'air entre les deux.</li><li><strong>Le dépôt n'accepte plus rien</strong> : il tient déjà une pile d'un autre objet, ou ses emplacements de produits sont pleins.</li><li><strong>Un entonnoir vide tout le dépôt, y compris les objets non traités</strong> : utilise un entonnoir de laiton avec un filtre sur le produit voulu.</li></ul>"
+    }
+  ],
+  "related": [
+    "presse-mecanique",
+    "bras-mecanique",
+    "ventilateur-enchasse",
+    "deployeur"
+  ],
+  "sources": [
+    "Contenu : DepotBehaviour (heldItem, une pile ; processingOutputBuffer de 8 emplacements)",
+    "Traitement : le dépôt expose le même comportement de transport que le tapis (TransportedItemStackHandlerBehaviour, DirectBeltInputBehaviour)",
+    "Recette : crafting/kinetics/depot.json (alliage d'andésite + boîtier d'andésite)",
+    "Scène : BeltScenes.depot"
+  ],
+  "en": {
+    "slugEn": "depot",
+    "name": "Depot",
+    "title": "Depot — Create mod guide",
+    "description": "The Create Depot: a stationary piece of belt for holding items, getting them processed by a press, fan or Deployer, and feeding a Mechanical Arm.",
+    "intro": "The <strong>Depot</strong> is a small platform you put an item on. For Create's machines, it is a <strong>stationary piece of Mechanical Belt</strong>: anything that knows how to work on a belt also works on a depot. It serves as a manual workstation under a press, a washing station in front of a fan, or a hand-off point for a Mechanical Arm. Cheap and rotation-free, it is one of the most useful early-game blocks.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Logistics"
+      },
+      {
+        "label": "Stress",
+        "value": "None, no rotation needed"
+      },
+      {
+        "label": "Contents",
+        "value": "One stack of items, plus 8 slots for products"
+      },
+      {
+        "label": "Works with",
+        "value": "Press, fan, Deployer, Spout, Mechanical Arm, funnels…"
+      },
+      {
+        "label": "Placing and removing",
+        "value": "Right-click to put down or take back the item"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Shapeless crafting",
+      "grid": [
+        [
+          "Andesite Alloy",
+          "Andesite Casing",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Depot"
+    },
+    "videos": [
+      {
+        "id": "depot",
+        "name": "Depot: placing, processing and passing on items",
+        "description": "A copper block is put on a Depot, then a Spout fills a bucket, a press flattens an ingot, a fan washes, and a Mechanical Arm picks up the sheet."
+      }
+    ],
+    "sections": [
+      {
+        "id": "depot",
+        "title": "A belt that does not move",
+        "alt": "A Depot on its own in the middle of a white plate",
+        "html": "<p>The Depot behaves like <strong>a single stopped belt segment</strong>. Items placed on it stay in the middle, and every machine that processes items on a belt recognises it: it processes the item and leaves it there. No rotation, no stress, it can go anywhere, even far away from any kinetic network.</p>"
+      },
+      {
+        "id": "main",
+        "title": "Placing and taking back by hand",
+        "alt": "An item placed on the depot with a right-click",
+        "html": "<p><strong>Right-click</strong> with an item in hand: the whole stack goes onto the depot. <strong>Right-click with an empty hand</strong> to take it back, together with the products. The depot also accepts items from a funnel, a chute or a belt ending against it, and a funnel on its side can empty it. A depot only holds one kind of item at a time: to switch, take the current stack back first.</p>"
+      },
+      {
+        "id": "traitement",
+        "title": "A processing station",
+        "alt": "A Spout above a Depot, filling a bucket placed on it",
+        "html": "<p>Under a <a href=\"/en/wiki/mechanical-press\">Mechanical Press</a>, the depot becomes an anvil: put ingots on it and they come back as sheets. In front of an <a href=\"/en/wiki/encased-fan\">Encased Fan</a> blowing through water or lava, it washes or smelts items. Under a <a href=\"/en/wiki/deployer\">Deployer</a>, it takes item applications (planks on a shaft, for example), and under a <strong>Spout</strong>, fluid filling: in the animation, an empty bucket put on the depot comes back full of water. Products pile up in eight slots next to the item being processed.</p>"
+      },
+      {
+        "id": "bras",
+        "title": "A hand-off point for the Mechanical Arm",
+        "alt": "A Mechanical Arm picks up the item lying on the Depot",
+        "html": "<p>The depot is the <a href=\"/en/wiki/mechanical-arm\">Mechanical Arm</a>'s favourite target: as an input, the arm takes whatever is put on it; as an output, it drops items there for a machine to process. A simple setup: a depot under a press, and an arm feeding it from a funnel and taking the sheets away into a second funnel.</p>"
+      },
+      {
+        "id": "manuel",
+        "title": "The beginner's workstation",
+        "html": "<p>Early on, a depot under a press driven by a water wheel is enough to make all the iron, copper and brass sheets you need, without building an automatic line. Put a stack of ingots down, go do something else, come back for the sheets. The same goes for a depot in front of a fan and a water block to wash crushed ores.</p>"
+      },
+      {
+        "id": "ejecteur",
+        "title": "Depot or Weighted Ejector?",
+        "html": "<p>The <strong>Weighted Ejector</strong> is a depot that launches its items at a target with a spring. For a simple processing station, the depot is enough and costs less; to send items from one spot to another without a belt, the ejector takes over. Machines treat both the same way.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<ul><li><strong>The press will not come down</strong>: the depot must sit two blocks below the press, with one block of air in between.</li><li><strong>The depot will not take anything</strong>: it already holds a stack of another item, or its product slots are full.</li><li><strong>A funnel empties the whole depot, unprocessed items included</strong>: use a Brass Funnel filtered to the product you want.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Contents: DepotBehaviour (heldItem, one stack; processingOutputBuffer of 8 slots)",
+      "Processing: the depot exposes the same transport behaviour as the belt (TransportedItemStackHandlerBehaviour, DirectBeltInputBehaviour)",
+      "Recipe: crafting/kinetics/depot.json (Andesite Alloy + Andesite Casing)",
+      "Scene: BeltScenes.depot"
+    ]
+  }
+}

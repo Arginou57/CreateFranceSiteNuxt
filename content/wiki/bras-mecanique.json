@@ -1,0 +1,314 @@
+{
+  "slug": "bras-mecanique",
+  "name": "Bras mécanique",
+  "blockId": "create:mechanical_arm",
+  "category": "logistique",
+  "title": "Bras mécanique — Create : guide en français",
+  "description": "Le bras mécanique de Create : choisir ses entrées et sorties avant la pose, portée de 5 blocs, modes de distribution, filtre par entonnoir et redstone.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>bras mécanique</strong> prend un objet à un endroit et le dépose à un autre, dans un rayon de quelques blocs. Il remplace des mètres de tapis et d'entonnoirs dans les usines compactes : il nourrit un brûleur à blaze, sert plusieurs dépôts à tour de rôle, alimente une scie ou un établi mécanique. Tout le secret est dans la <strong>configuration avant la pose</strong> : le bras ne sait atteindre que les cibles que tu lui as montrées.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Logistique"
+    },
+    {
+      "label": "Stress",
+      "value": "2 SU par tr/min (64 SU à 32 tr/min)"
+    },
+    {
+      "label": "Portée",
+      "value": "5 blocs autour du bras (réglage serveur mechanicalArmRange)"
+    },
+    {
+      "label": "Vitesse",
+      "value": "Un mouvement ≈ 1,6 s à 32 tr/min, ≈ 0,2 s à 256 tr/min"
+    },
+    {
+      "label": "Cibles",
+      "value": "Dépôts, tapis, entonnoirs, chutes, bassins, brûleurs, déployeurs, scies, meules, roues de concassage, établis mécaniques, composteurs…"
+    },
+    {
+      "label": "Modes",
+      "value": "Tourniquet, priorité au premier, tourniquet forcé"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Plaque de laiton",
+        "Plaque de laiton",
+        "Alliage d'andésite"
+      ],
+      [
+        "Plaque de laiton",
+        null,
+        null
+      ],
+      [
+        "Mécanisme de précision",
+        "Boîtier de laiton",
+        null
+      ]
+    ],
+    "result": "1 bras mécanique"
+  },
+  "videos": [
+    {
+      "id": "arm_setup",
+      "name": "Bras mécanique : choisir ses cibles avant de le poser",
+      "description": "Avant la pose, des dépôts sont sélectionnés comme entrées (bleu) ou sorties (jaune) autour de l'emplacement du futur bras.",
+      "duration": "PT16S"
+    },
+    {
+      "id": "arm_setup_run",
+      "name": "Bras mécanique : le bras au travail",
+      "description": "Une fois posé, le bras prend les objets sur ses dépôts d'entrée et les répartit sur ses sorties, puis passe par des entonnoirs pour atteindre des inventaires.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "arm_modes",
+      "name": "Bras mécanique : répartir entre plusieurs sorties",
+      "description": "Un bras distribue les objets d'un tapis sur plusieurs dépôts à tour de rôle, en sautant ceux qui sont pleins.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "arm_modes_prefer",
+      "name": "Bras mécanique : priorité et tourniquet forcé",
+      "description": "Le même bras réglé pour servir d'abord sa première sortie, puis pour attendre chaque sortie à tour de rôle sans jamais en sauter.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "arm_redstone",
+      "name": "Bras mécanique : contrôle par redstone",
+      "description": "Un levier met le bras en pause ; une impulsion négative lui fait faire un seul transfert.",
+      "duration": "PT20S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "avant",
+      "title": "Les cibles se choisissent avant la pose",
+      "image": "arm_setup_avant.webp",
+      "alt": "Emplacement du futur bras mécanique, entouré des dépôts à relier",
+      "video": "arm_setup",
+      "html": "<p>Un bras mécanique ne cherche pas ses cibles tout seul. <strong>Avant de le poser</strong>, garde-le en main et vise les blocs avec lesquels il devra travailler : le jeu les mémorise dans l'objet. Une fois posé, il ne connaît que ces cibles. Pour en changer, il faut le casser, refaire la sélection et le reposer.</p>"
+    },
+    {
+      "id": "selection",
+      "title": "Sélectionner entrées et sorties",
+      "image": "arm_setup_selection.webp",
+      "alt": "Dépôts encadrés en blanc, sélectionnés comme cibles du bras",
+      "html": "<p><strong>Clic droit</strong> avec le bras en main sur un dépôt, un tapis, un entonnoir… pour l'ajouter. Un nouveau clic droit sur la même cible la fait passer d'<strong>entrée (bleu)</strong>, là où le bras prend les objets, à <strong>sortie (jaune)</strong>, là où il les dépose. Un <strong>clic gauche</strong> retire une cible de la sélection.</p>"
+    },
+    {
+      "id": "portee",
+      "title": "Portée et vitesse",
+      "image": "arm_setup_run_plusieurs.webp",
+      "alt": "Bras mécanique posé au centre, qui sert plusieurs dépôts autour de lui",
+      "video": "arm_setup_run",
+      "html": "<p>Les cibles doivent être à <strong>5 blocs au plus</strong> du bras. Il peut en avoir autant que tu veux dans ce rayon, entrées et sorties mélangées. Sa vitesse dépend de la rotation : chaque mouvement prend environ <strong>1,6 s à 32 tr/min</strong> et 0,2 s à 256 tr/min, plafond au-delà duquel il ne va pas plus vite. Un transfert complet, c'est deux mouvements : aller chercher, puis déposer.</p>"
+    },
+    {
+      "id": "inventaires",
+      "title": "Atteindre un coffre : entonnoirs et dépôts",
+      "image": "arm_setup_run_depots.webp",
+      "alt": "Le bras dépose des objets dans un entonnoir fixé sur un inventaire",
+      "html": "<p>Le bras ne travaille qu'avec certains blocs : <a href=\"/wiki/depot\">dépôts</a>, tapis roulants, <a href=\"/wiki/entonnoir\">entonnoirs</a>, chutes, bassins, brûleurs à blaze, déployeurs, scies, meules, roues de concassage, établis mécaniques, composteurs, juke-box… Un coffre ou un tonneau ne sont pas des cibles directes : pose un <strong>entonnoir</strong> dessus et vise l'entonnoir. C'est aussi lui qui permet de filtrer, comme on le voit plus bas.</p>"
+    },
+    {
+      "id": "filtre",
+      "title": "Filtrer avec un entonnoir en laiton",
+      "image": "arm_filter_entonnoir.webp",
+      "alt": "Entonnoirs en laiton avec un filtre, ciblés comme sorties par le bras mécanique",
+      "html": "<p>Le bras n'a <strong>pas de filtre</strong> à lui. Pour qu'il trie, vise des <strong>entonnoirs en laiton</strong> réglés avec un filtre : le bras lit leur filtre et ne leur apporte que les objets acceptés. Il est même assez malin pour <strong>ne pas ramasser</strong> un objet qu'aucune sortie ne peut recevoir, ce qui évite qu'il reste bloqué avec un objet en main.</p>"
+    },
+    {
+      "id": "modes",
+      "title": "Choisir comment répartir",
+      "image": "arm_modes_tourniquet.webp",
+      "alt": "Bras mécanique qui dépose un objet sur chacun de ses dépôts de sortie à tour de rôle",
+      "video": "arm_modes",
+      "html": "<p>Quand plusieurs sorties sont possibles, le panneau de valeur du bras règle sa stratégie. En <strong>tourniquet</strong>, le réglage par défaut, il les sert chacune leur tour et <strong>saute</strong> celles qui sont pleines. En <strong>priorité au premier</strong>, il remplit d'abord la première cible sélectionnée et ne passe à la suivante que si elle est pleine. En <strong>tourniquet forcé</strong>, il ne saute jamais une sortie : il attend qu'elle se libère.</p>"
+    },
+    {
+      "id": "exemples",
+      "title": "Deux montages classiques",
+      "html": "<p><strong>Nourrir un brûleur à blaze</strong> : un coffre de charbon avec un entonnoir en entrée, le brûleur en sortie. Le bras ne donne du combustible que lorsque le brûleur en accepte, il ne gaspille donc rien. <strong>Servir une rangée de machines</strong> : un tapis en entrée, quatre dépôts en sortie sous quatre presses ou quatre déployeurs, puis un dernier dépôt d'arrivée. En tourniquet, chaque poste reçoit son objet à son tour, et le bras laisse de côté ceux qui sont encore occupés.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "Le contrôler à la redstone",
+      "image": "arm_redstone_redstone.webp",
+      "alt": "Bras mécanique relié à un levier, au repos tant que le signal est actif",
+      "video": "arm_redstone",
+      "html": "<p>Comme le déployeur, le bras <strong>s'arrête</strong> quand il reçoit un signal de redstone, après avoir terminé le mouvement en cours. Une <strong>impulsion négative</strong> lui fait donc faire un seul transfert : idéal pour doser exactement un objet, par exemple un combustible par cycle de chaudière.</p>"
+    }
+  ],
+  "related": [
+    "depot",
+    "entonnoir",
+    "deployeur",
+    "bruleur-a-blaze"
+  ],
+  "sources": [
+    "Stress : AllBlocks.java, MECHANICAL_ARM, CStress.setImpact(2.0)",
+    "Portée : CLogistics.mechanicalArmRange = 5",
+    "Vitesse : ArmBlockEntity (chasedPointProgress += min(256, |tr/min|) / 1024 par tick)",
+    "Cibles : AllArmInteractionPointTypes (basin, belt, blaze_burner, chute, crafter, crushing_wheels, deployer, depot, funnel, millstone, packager, saw, campfire, composter, jukebox, respawn_anchor) ; positions mémorisées relativement au bras (ArmInteractionPoint)",
+    "Modes : ArmBlockEntity.SelectionMode (ROUND_ROBIN, PREFER_FIRST, FORCED_ROUND_ROBIN)",
+    "Recette : crafting/kinetics/mechanical_arm.json",
+    "Scènes : ArmScenes.setup (deux boucles), filtering (établi mécanique et inventaires : images seules), modes (deux boucles), redstone"
+  ],
+  "en": {
+    "slugEn": "mechanical-arm",
+    "name": "Mechanical Arm",
+    "title": "Mechanical Arm — Create mod guide",
+    "description": "The Create Mechanical Arm: choosing inputs and outputs before placing it, 5-block range, distribution modes, filtering through funnels and redstone control.",
+    "intro": "The <strong>Mechanical Arm</strong> picks an item up in one place and drops it off in another, within a few blocks. It replaces metres of belts and funnels in compact factories: it feeds a Blaze Burner, serves several depots in turn, loads a saw or a Mechanical Crafter. The whole trick lies in <strong>setting it up before you place it</strong>: the arm can only reach the targets you showed it.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Logistics"
+      },
+      {
+        "label": "Stress",
+        "value": "2 SU per RPM (64 SU at 32 RPM)"
+      },
+      {
+        "label": "Range",
+        "value": "5 blocks around the arm (server setting mechanicalArmRange)"
+      },
+      {
+        "label": "Speed",
+        "value": "One move ≈ 1.6 s at 32 RPM, ≈ 0.2 s at 256 RPM"
+      },
+      {
+        "label": "Targets",
+        "value": "Depots, belts, funnels, chutes, basins, burners, deployers, saws, millstones, crushing wheels, Mechanical Crafters, composters…"
+      },
+      {
+        "label": "Modes",
+        "value": "Round Robin, Prefer First, Forced Round Robin"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Brass Sheet",
+          "Brass Sheet",
+          "Andesite Alloy"
+        ],
+        [
+          "Brass Sheet",
+          null,
+          null
+        ],
+        [
+          "Precision Mechanism",
+          "Brass Casing",
+          null
+        ]
+      ],
+      "result": "1 Mechanical Arm"
+    },
+    "videos": [
+      {
+        "id": "arm_setup",
+        "name": "Mechanical Arm: choosing targets before placing it",
+        "description": "Before placing the arm, depots are selected as inputs (blue) or outputs (yellow) around the spot where it will stand."
+      },
+      {
+        "id": "arm_setup_run",
+        "name": "Mechanical Arm: the arm at work",
+        "description": "Once placed, the arm takes items from its input depots and spreads them over its outputs, then uses funnels to reach inventories."
+      },
+      {
+        "id": "arm_modes",
+        "name": "Mechanical Arm: sharing between several outputs",
+        "description": "An arm distributes items from a belt over several depots in turn, skipping the full ones."
+      },
+      {
+        "id": "arm_modes_prefer",
+        "name": "Mechanical Arm: Prefer First and Forced Round Robin",
+        "description": "The same arm set to serve its first output first, then to wait for each output in turn without ever skipping one."
+      },
+      {
+        "id": "arm_redstone",
+        "name": "Mechanical Arm: redstone control",
+        "description": "A lever pauses the arm; a negative pulse makes it do a single transfer."
+      }
+    ],
+    "sections": [
+      {
+        "id": "avant",
+        "title": "Targets are chosen before placing",
+        "alt": "The spot of the future Mechanical Arm, surrounded by the depots to link",
+        "html": "<p>A Mechanical Arm does not look for targets on its own. <strong>Before placing it</strong>, keep it in hand and point at the blocks it should work with: the game stores them in the item. Once placed, it only knows those targets. To change them, you have to break it, redo the selection and place it again.</p>"
+      },
+      {
+        "id": "selection",
+        "title": "Selecting inputs and outputs",
+        "alt": "Depots outlined in white, selected as targets for the arm",
+        "html": "<p><strong>Right-click</strong> a depot, a belt, a funnel… while holding the arm to add it. Right-clicking the same target again switches it from <strong>input (blue)</strong>, where the arm picks items up, to <strong>output (yellow)</strong>, where it drops them off. <strong>Left-click</strong> removes a target from the selection.</p>"
+      },
+      {
+        "id": "portee",
+        "title": "Range and speed",
+        "alt": "A Mechanical Arm in the middle, serving several depots around it",
+        "html": "<p>Targets must be within <strong>5 blocks</strong> of the arm. It can have as many as you like within that radius, inputs and outputs mixed. Its speed depends on rotation: each move takes about <strong>1.6 s at 32 RPM</strong> and 0.2 s at 256 RPM, a ceiling above which it does not get any faster. A full transfer is two moves: fetch, then drop off.</p>"
+      },
+      {
+        "id": "inventaires",
+        "title": "Reaching a chest: funnels and depots",
+        "alt": "The arm drops items into a funnel attached to an inventory",
+        "html": "<p>The arm only works with certain blocks: <a href=\"/en/wiki/depot\">Depots</a>, belts, <a href=\"/en/wiki/funnel\">Funnels</a>, chutes, basins, Blaze Burners, Deployers, saws, millstones, crushing wheels, Mechanical Crafters, composters, jukeboxes… A chest or a barrel is not a direct target: put a <strong>funnel</strong> on it and aim at the funnel. That funnel is also what lets you filter, as shown below.</p>"
+      },
+      {
+        "id": "filtre",
+        "title": "Filtering with a Brass Funnel",
+        "alt": "Brass Funnels with a filter, targeted as outputs by the Mechanical Arm",
+        "html": "<p>The arm has <strong>no filter</strong> of its own. To make it sort, target <strong>Brass Funnels</strong> set with a filter: the arm reads their filter and only brings them the items they accept. It is even smart enough <strong>not to pick up</strong> an item that no output can take, so it never gets stuck holding something.</p>"
+      },
+      {
+        "id": "modes",
+        "title": "Choosing how to share",
+        "alt": "A Mechanical Arm dropping an item on each of its output depots in turn",
+        "html": "<p>When several outputs are available, the arm's value panel sets its strategy. In <strong>Round Robin</strong>, the default, it serves each one in turn and <strong>skips</strong> the full ones. In <strong>Prefer First</strong>, it fills the first selected target first and only moves on to the next when it is full. In <strong>Forced Round Robin</strong>, it never skips an output: it waits until it is free.</p>"
+      },
+      {
+        "id": "exemples",
+        "title": "Two classic setups",
+        "html": "<p><strong>Feeding a Blaze Burner</strong>: a chest of coal with a funnel as input, the burner as output. The arm only hands over fuel when the burner accepts it, so nothing is wasted. <strong>Serving a row of machines</strong>: a belt as input, four depots as outputs under four presses or four Deployers, then one last delivery depot. In Round Robin, each station gets its item in turn, and the arm leaves aside the ones that are still busy.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "Controlling it with redstone",
+        "alt": "A Mechanical Arm linked to a lever, resting while the signal is on",
+        "html": "<p>Like the Deployer, the arm <strong>stops</strong> when it gets a redstone signal, after finishing its current move. A <strong>negative pulse</strong> therefore makes it do a single transfer: perfect for dosing exactly one item, for example one piece of fuel per boiler cycle.</p>"
+      }
+    ],
+    "sources": [
+      "Stress: AllBlocks.java, MECHANICAL_ARM, CStress.setImpact(2.0)",
+      "Range: CLogistics.mechanicalArmRange = 5",
+      "Speed: ArmBlockEntity (chasedPointProgress += min(256, |RPM|) / 1024 per tick)",
+      "Targets: AllArmInteractionPointTypes (basin, belt, blaze_burner, chute, crafter, crushing_wheels, deployer, depot, funnel, millstone, packager, saw, campfire, composter, jukebox, respawn_anchor); positions stored relative to the arm (ArmInteractionPoint)",
+      "Modes: ArmBlockEntity.SelectionMode (ROUND_ROBIN, PREFER_FIRST, FORCED_ROUND_ROBIN)",
+      "Recipe: crafting/kinetics/mechanical_arm.json",
+      "Scenes: ArmScenes.setup (two loops), filtering (Mechanical Crafter and inventories: stills only), modes (two loops), redstone"
+    ]
+  }
+}

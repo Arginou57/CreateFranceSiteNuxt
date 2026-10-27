@@ -1,0 +1,250 @@
+{
+  "slug": "stressometre-compteur-de-vitesse",
+  "name": "Stressomètre et compteur de vitesse",
+  "blockId": "create:stressometer",
+  "category": "cinetique",
+  "title": "Stressomètre — Create : guide en français",
+  "description": "Stressomètre et compteur de vitesse de Create : lire la vitesse et la charge d'un réseau, cadran, lunettes d'ingénieur et signal de comparateur.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Deux petits cadrans à poser sur une transmission pour comprendre ce qui s'y passe. Le <strong>compteur de vitesse</strong> indique à quelle vitesse tourne la ligne ; le <strong>stressomètre</strong> indique quelle part de la puissance du réseau est déjà consommée. Le second est le meilleur ami de l'ingénieur : il prévient avant que tout le réseau ne cale. Les deux envoient aussi un <strong>signal de redstone</strong> pour automatiser.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Cinétique (mesure)"
+    },
+    {
+      "label": "Stress",
+      "value": "Aucun, ils se posent en ligne sur une transmission"
+    },
+    {
+      "label": "Compteur de vitesse",
+      "value": "Cadran : 0-30 tr/min (lent), 30-100 (moyen), 100-256 (rapide)"
+    },
+    {
+      "label": "Stressomètre",
+      "value": "Cadran = stress consommé ÷ capacité du réseau ; au maximum s'il est surchargé"
+    },
+    {
+      "label": "Comparateur",
+      "value": "Signal de 0 à 15, proportionnel au cadran (⌈cadran × 14⌉)"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Boussole",
+        null
+      ],
+      [
+        null,
+        "Boîtier d'andésite",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 compteur de vitesse (stressomètre : convertir un compteur de vitesse à l'établi)"
+  },
+  "videos": [
+    {
+      "id": "speedometer",
+      "name": "Compteur de vitesse : lire la vitesse d'une ligne",
+      "description": "Un compteur de vitesse posé au milieu d'une ligne de rotors affiche la vitesse ; elle est multipliée par quatre, puis un comparateur lit le cadran.",
+      "duration": "PT15S"
+    },
+    {
+      "id": "stressometer",
+      "name": "Stressomètre : suivre la charge du réseau",
+      "description": "Un stressomètre sur une ligne de rotors voit son cadran monter quand des roues de concassage sont ajoutées au réseau, puis un comparateur traduit la charge en signal.",
+      "duration": "PT16S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "pose",
+      "title": "Se poser sur une transmission",
+      "image": "speedometer_vitesse.webp",
+      "alt": "Compteur de vitesse posé au milieu d'une ligne de rotors, cadran tourné vers le haut",
+      "video": "speedometer",
+      "html": "<p>Les deux cadrans se posent <strong>en ligne</strong>, comme un morceau de rotor : la rotation les traverse et continue de l'autre côté, sans rien consommer. Vise la face d'un rotor ou d'une machine pour le placer dans le bon axe ; le cadran se tourne vers toi. Un seul compteur suffit pour toute une ligne, puisque tous les blocs d'un même axe tournent à la même vitesse.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "Lire le compteur de vitesse",
+      "html": "<p>L'aiguille du <strong>compteur de vitesse</strong> monte avec la vitesse en trois zones : de 0 à 30 tr/min, elle couvre moins de la moitié du cadran ; de 30 à 100 tr/min, elle passe au trois quarts ; de 100 à 256 tr/min, elle va au bout. La couleur suit le même découpage : lent, moyen, rapide. Dans l'animation, la vitesse est multipliée par quatre et l'aiguille bondit d'une zone à l'autre.</p><p>C'est le moyen le plus simple de vérifier un étage de <a href=\"/wiki/roue-dentee\">roues dentées</a> : ×2 ou ÷2, l'aiguille le montre tout de suite.</p>"
+    },
+    {
+      "id": "stress",
+      "title": "Lire le stressomètre",
+      "image": "stressometer_lunettes.webp",
+      "alt": "Stressomètre sur une ligne de rotors, avec deux roues de concassage ajoutées au bout",
+      "video": "stressometer",
+      "html": "<p>Le <strong>stressomètre</strong> mesure la charge : son aiguille indique la part de la capacité du réseau déjà utilisée par les machines. Vert, tout va bien ; jaune, on approche de la limite ; rouge, c'est presque plein. Dans l'animation, chaque roue de concassage ajoutée fait grimper l'aiguille, d'abord à la moitié, puis à neuf dixièmes. Si les machines demandent plus que ce que les sources fournissent, le réseau est <strong>surchargé</strong> : tout s'arrête et l'aiguille reste au maximum.</p>"
+    },
+    {
+      "id": "lunettes",
+      "title": "Plus de détails avec les lunettes",
+      "image": "stressometer_stress.webp",
+      "alt": "Stressomètre posé au milieu d'une ligne de rotors, cadran tourné vers le haut",
+      "html": "<p>Avec les <strong>lunettes d'ingénieur</strong> sur la tête, regarde un cadran : le jeu affiche les chiffres exacts, la vitesse en tr/min pour le compteur, le stress utilisé et la capacité totale en SU pour le stressomètre. C'est l'outil de diagnostic indispensable avant d'ajouter une machine : si la marge restante est inférieure à ce que demande la machine, ajoute d'abord une source.</p>"
+    },
+    {
+      "id": "comparateur",
+      "title": "Un signal de redstone selon la mesure",
+      "image": "speedometer_comparateur.webp",
+      "alt": "Comparateur posé contre le compteur de vitesse, relié à de la poudre de redstone",
+      "html": "<p>Un <strong>comparateur</strong> posé contre un cadran émet un signal de 0 à 15, proportionnel à la position de l'aiguille. Avec le stressomètre, on peut par exemple couper un groupe de machines quand le réseau dépasse 90 % de charge, ou allumer une lampe d'alerte. Avec le compteur de vitesse, on détecte qu'une source s'est arrêtée : plus de vent, plus d'eau, plus de combustible.</p>"
+    },
+    {
+      "id": "conversion",
+      "title": "Passer de l'un à l'autre",
+      "html": "<p>Seul le compteur de vitesse a une vraie recette : une boussole sur un boîtier d'andésite. Pour obtenir un stressomètre, mets un compteur de vitesse seul dans la grille de fabrication ; refais-le pour revenir au compteur. Il n'y a donc aucune raison d'hésiter : fabriques-en plusieurs et place-les aux endroits clés de ton usine.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<ul><li><strong>L'aiguille ne bouge pas</strong> : le cadran n'est pas dans l'axe de la ligne, la rotation ne le traverse pas.</li><li><strong>Le stressomètre affiche zéro</strong> alors que tout tourne : le réseau a une capacité énorme comparée aux machines, comme un moteur créatif.</li><li><strong>Le réseau cale sans prévenir</strong> : un seul stressomètre suffit pour tout le réseau ; place-le où tu le verras.</li></ul>"
+    }
+  ],
+  "related": [
+    "rotor",
+    "roue-dentee",
+    "roue-a-eau",
+    "moteur-a-vapeur"
+  ],
+  "sources": [
+    "Stress : AllBlocks.java, SPEEDOMETER et STRESSOMETER, CStress.setNoImpact()",
+    "Compteur : SpeedGaugeBlockEntity.getDialTarget (0 à 0,45 jusqu'à mediumSpeed = 30, 0,75 à fastSpeed = 100, 1,125 à maxRotationSpeed = 256)",
+    "Stressomètre : StressGaugeBlockEntity (stress / capacité, 1,125 si surchargé ; couleur vert -> jaune -> rouge)",
+    "Comparateur : GaugeBlock.getAnalogOutputSignal = ⌈clamp(cadran × 14, 0, 15)⌉",
+    "Recettes : crafting/kinetics/speedometer.json (boussole + boîtier d'andésite), stressometer_from_conversion.json, speedometer_from_conversion.json",
+    "Scènes : KineticsScenes.speedometer et stressometer (structure ponder/gauges.nbt)"
+  ],
+  "en": {
+    "slugEn": "stressometer-speedometer",
+    "name": "Stressometer and Speedometer",
+    "title": "Stressometer — Create mod guide",
+    "description": "Create Stressometer and Speedometer: reading a network's speed and load, the dial, Engineer's Goggles and the comparator signal for automation.",
+    "intro": "Two small dials you put on a drive line to see what is going on. The <strong>Speedometer</strong> shows how fast the line spins; the <strong>Stressometer</strong> shows how much of the network's power is already in use. The second one is an engineer's best friend: it warns you before the whole network stalls. Both also send a <strong>redstone signal</strong> for automation.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Kinetics (measurement)"
+      },
+      {
+        "label": "Stress",
+        "value": "None, they sit inline on a drive line"
+      },
+      {
+        "label": "Speedometer",
+        "value": "Dial: 0-30 RPM (slow), 30-100 (medium), 100-256 (fast)"
+      },
+      {
+        "label": "Stressometer",
+        "value": "Dial = stress used ÷ network capacity; maxed out when overstressed"
+      },
+      {
+        "label": "Comparator",
+        "value": "Signal from 0 to 15, proportional to the dial (⌈dial × 14⌉)"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Compass",
+          null
+        ],
+        [
+          null,
+          "Andesite Casing",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Speedometer (Stressometer: convert a Speedometer in the crafting grid)"
+    },
+    "videos": [
+      {
+        "id": "speedometer",
+        "name": "Speedometer: reading a line's speed",
+        "description": "A Speedometer in the middle of a shaft line shows the speed; it is multiplied by four, then a comparator reads the dial."
+      },
+      {
+        "id": "stressometer",
+        "name": "Stressometer: keeping an eye on network load",
+        "description": "A Stressometer on a shaft line sees its dial rise as Crushing Wheels are added to the network, then a comparator turns the load into a signal."
+      }
+    ],
+    "sections": [
+      {
+        "id": "pose",
+        "title": "Sitting on a drive line",
+        "alt": "A Speedometer in the middle of a shaft line, dial facing up",
+        "html": "<p>Both dials go <strong>inline</strong>, like a piece of shaft: rotation passes through them and carries on out the other side, at no cost. Aim at the face of a shaft or a machine to place it on the right axis; the dial turns towards you. One gauge is enough for a whole line, since every block on the same axis spins at the same speed.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "Reading the Speedometer",
+        "html": "<p>The <strong>Speedometer</strong> needle rises with speed across three zones: from 0 to 30 RPM it covers less than half the dial; from 30 to 100 RPM it reaches three quarters; from 100 to 256 RPM it goes all the way. The colour follows the same split: slow, medium, fast. In the animation, the speed is multiplied by four and the needle jumps from one zone to the next.</p><p>It is the easiest way to check a <a href=\"/en/wiki/cogwheel\">cogwheel</a> stage: ×2 or ÷2, the needle shows it straight away.</p>"
+      },
+      {
+        "id": "stress",
+        "title": "Reading the Stressometer",
+        "alt": "A Stressometer on a shaft line, with two Crushing Wheels added at the end",
+        "html": "<p>The <strong>Stressometer</strong> measures load: its needle shows how much of the network's capacity the machines are already using. Green, all is well; yellow, you are getting close to the limit; red, it is nearly full. In the animation, each Crushing Wheel added pushes the needle up, first to half, then to nine tenths. If the machines ask for more than the sources supply, the network is <strong>overstressed</strong>: everything stops and the needle stays maxed out.</p>"
+      },
+      {
+        "id": "lunettes",
+        "title": "More detail with Goggles",
+        "alt": "A Stressometer in the middle of a shaft line, dial facing up",
+        "html": "<p>Wearing <strong>Engineer's Goggles</strong>, look at a dial: the game shows the exact figures, the speed in RPM for the Speedometer, the stress used and the total capacity in SU for the Stressometer. It is the essential diagnostic tool before adding a machine: if the remaining margin is smaller than what the machine needs, add a source first.</p>"
+      },
+      {
+        "id": "comparateur",
+        "title": "A redstone signal from the reading",
+        "alt": "A comparator against the Speedometer, wired to redstone dust",
+        "html": "<p>A <strong>comparator</strong> against a dial outputs a signal from 0 to 15, proportional to the needle. With a Stressometer you can, for example, cut off a group of machines when the network goes past 90% load, or light a warning lamp. With a Speedometer you can detect that a source has stopped: no more wind, no more water, no more fuel.</p>"
+      },
+      {
+        "id": "conversion",
+        "title": "Switching between the two",
+        "html": "<p>Only the Speedometer has a real recipe: a compass on top of Andesite Casing. To get a Stressometer, put a Speedometer on its own in the crafting grid; do it again to go back. So there is no reason to hold back: craft several and put them at the key spots of your factory.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<ul><li><strong>The needle does not move</strong>: the dial is not on the line's axis, so rotation does not pass through it.</li><li><strong>The Stressometer reads zero</strong> while everything runs: the network's capacity is huge compared to the machines, as with a Creative Motor.</li><li><strong>The network stalls without warning</strong>: one Stressometer is enough for the whole network, so put it where you will see it.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Stress: AllBlocks.java, SPEEDOMETER and STRESSOMETER, CStress.setNoImpact()",
+      "Speedometer: SpeedGaugeBlockEntity.getDialTarget (0 to 0.45 up to mediumSpeed = 30, 0.75 at fastSpeed = 100, 1.125 at maxRotationSpeed = 256)",
+      "Stressometer: StressGaugeBlockEntity (stress / capacity, 1.125 when overstressed; colour green -> yellow -> red)",
+      "Comparator: GaugeBlock.getAnalogOutputSignal = ⌈clamp(dial × 14, 0, 15)⌉",
+      "Recipes: crafting/kinetics/speedometer.json (Compass + Andesite Casing), stressometer_from_conversion.json, speedometer_from_conversion.json",
+      "Scenes: KineticsScenes.speedometer and stressometer (structure ponder/gauges.nbt)"
+    ]
+  }
+}
