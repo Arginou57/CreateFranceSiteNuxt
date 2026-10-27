@@ -18,17 +18,17 @@
 const features = [
   {
     title: 'Construisez',
-    icon: '/images/icon-construisez.png',
+    icon: '/images/icon-construisez.webp',
     description: 'Machines complexes, systèmes automatisés et structures spectaculaires.',
   },
   {
     title: 'Explorez',
-    icon: '/images/icon-explorez.png',
+    icon: '/images/icon-explorez.webp',
     description: 'Découvrez de nouveaux mondes et trouvez des ressources rares.',
   },
   {
     title: 'Communauté',
-    icon: '/images/icon-communaute.png',
+    icon: '/images/icon-communaute.webp',
     description: 'Participez aux events et collaborez sur des projets ambitieux.',
   },
 ]
@@ -53,7 +53,7 @@ onMounted(() => {
 
 .serveur-section::before {
     content: ''; position: absolute; top: -2rem; left: -50vw; right: -50vw; bottom: -2rem;
-    background: url('/images/serveur-bg.png') center center / cover no-repeat;
+    background: url('/images/serveur-bg.webp') center center / cover no-repeat;
     opacity: 0.12; z-index: -1;
 }
 

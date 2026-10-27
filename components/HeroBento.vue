@@ -168,7 +168,7 @@ onMounted(() => {
     position: relative; z-index: 2;
     min-height: 100vh; display: flex; align-items: center; justify-content: center;
     padding: 6rem 1.5rem 3rem;
-    background: url('/images/fond.png') center center / cover no-repeat fixed;
+    background: url('/images/fond.webp') center center / cover no-repeat fixed;
 }
 
 .hero::before {

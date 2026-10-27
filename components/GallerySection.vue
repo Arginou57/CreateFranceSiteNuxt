@@ -1,6 +1,6 @@
 <template>
   <section id="galerie" class="gallery-section" v-if="images.length > 0">
-    <h2 class="section-title">Galerie</h2>
+    <h2 class="section-title">Galerie du serveur Create</h2>
     <p class="section-subtitle">
       Les images du modpack, détectées automatiquement depuis CurseForge
     </p>

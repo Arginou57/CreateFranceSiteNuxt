@@ -33,18 +33,21 @@ const props = defineProps<{
 }>()
 
 onMounted(() => {
-  const renderPayPal = () => {
-    if (typeof window !== 'undefined' && (window as any).paypal) {
-      (window as any).paypal.Buttons({
-        style: { shape: 'rect', color: 'gold', layout: 'vertical', label: 'subscribe' },
-        createSubscription: (_d: any, actions: any) => actions.subscription.create({ plan_id: props.planId }),
-        onApprove: (data: any) => { alert('Merci pour votre soutien ! ID: ' + data.subscriptionID) },
-      }).render(`#paypal-button-container-${props.planId}`)
-    } else {
-      setTimeout(renderPayPal, 500)
-    }
-  }
-  renderPayPal()
+  const selector = `#paypal-button-container-${props.planId}`
+  const renderPayPal = () => loadPayPal().then((paypal) => {
+    paypal.Buttons({
+      style: { shape: 'rect', color: 'gold', layout: 'vertical', label: 'subscribe' },
+      createSubscription: (_d: any, actions: any) => actions.subscription.create({ plan_id: props.planId }),
+      onApprove: (data: any) => { alert('Merci pour votre soutien ! ID: ' + data.subscriptionID) },
+    }).render(selector)
+  }).catch(() => { /* PayPal blocked or offline: the card stays without its button */ })
+  // the SDK is only fetched when the card gets close to the screen (composables/usePayPal.ts)
+  const el = document.querySelector(selector)
+  if (!el || !('IntersectionObserver' in window)) return renderPayPal()
+  const io = new IntersectionObserver((entries) => {
+    if (entries.some((e) => e.isIntersecting)) { io.disconnect(); renderPayPal() }
+  }, { rootMargin: '600px 0px' })
+  io.observe(el)
 })
 </script>
 

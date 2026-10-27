@@ -1,6 +1,6 @@
 <template>
   <section id="grades" class="grades-section">
-    <h2 class="section-title">Soutenir le Serveur</h2>
+    <h2 class="section-title">Grades et soutien du serveur</h2>
     <p class="section-subtitle">Choisissez votre grade et aidez-nous à faire tourner les engrenages !</p>
     <div class="donate-notice">
       <span class="notice-icon">&#9888;</span>
@@ -24,7 +24,7 @@ const grades = [
     name: 'Mecene',
     slug: 'mecene',
     price: '2.99',
-    image: '/images/mecene.png',
+    image: '/images/mecene.webp',
     planId: 'P-0MC85129CX493101DNHDRBOA',
     perks: [
       'Grade en jeu [Mecene]',
@@ -40,7 +40,7 @@ const grades = [
     name: 'Bienfaiteur',
     slug: 'bienfaiteur',
     price: '5.99',
-    image: '/images/bienfaiteur.png',
+    image: '/images/bienfaiteur.webp',
     planId: 'P-48M95932LE9502235NHDRDCY',
     featured: true,
     perks: [
@@ -58,7 +58,7 @@ const grades = [
     name: 'Patron',
     slug: 'patron',
     price: '9.99',
-    image: '/images/patron.png',
+    image: '/images/patron.webp',
     planId: 'P-3DT928258J300445TNHDRFMA',
     perks: [
       'Tous les avantages Bienfaiteur',
