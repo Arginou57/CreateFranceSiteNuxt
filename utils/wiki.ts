@@ -166,9 +166,16 @@ export function getWikiCategory(id: string, locale: WikiLocale = 'fr'): WikiCate
   return { ...c, name: c.en.name || c.name, description: c.en.description || c.description }
 }
 
-/** Public path of a page medium: /wiki-media/<slug-fr>/<file> (shared by both languages). */
+// Cloudflare keeps /wiki-media/ 30 days under the same URL: every medium gets ?v=<dateModified of its page>, plus the
+// counter of _media_versions.json ({ "<slug-fr>": n }) to bump when a page's media are re-rendered without a page edit.
+const mediaVersions = (files['../content/wiki/_media_versions.json'] as Record<string, number | string>) || {}
+
+/** Public path of a page medium: /wiki-media/<slug-fr>/<file>?v=… (shared by both languages). */
 export function wikiMedia(slug: string, file: string): string {
-  return `/wiki-media/${slug}/${file}`
+  const date = getWikiPage(slug)?.dateModified
+  const n = mediaVersions[slug]
+  const v = [date, n].filter((x) => x !== undefined && x !== '').join('.')
+  return `/wiki-media/${slug}/${file}${v ? `?v=${v}` : ''}`
 }
 
 export function wikiVideoFiles(slug: string, id: string) {
