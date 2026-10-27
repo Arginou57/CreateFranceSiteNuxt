@@ -1,0 +1,92 @@
+{
+  "slug": "perceuse-mecanique",
+  "name": "Perceuse mécanique",
+  "blockId": "create:mechanical_drill",
+  "category": "contraptions",
+  "title": "Perceuse mécanique — Create : guide en français",
+  "description": "La perceuse mécanique de Create : casser des blocs en automatique, vitesse de minage, stress, foreuses sur pistons et coffres. Guide en français.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>perceuse mécanique</strong> casse le bloc placé devant sa pointe dès qu'elle tourne. Fixe, elle sert de générateur de pierre ou de récolteuse. Montée sur une <strong>contraption</strong> (piston, roulement, wagonnet ou train), elle creuse des tunnels et des carrières entières. Voici comment elle fonctionne, à quelle vitesse elle mine et comment récupérer ce qu'elle casse.",
+  "facts": [
+    { "label": "Catégorie", "value": "Contraptions" },
+    { "label": "Stress", "value": "4 SU par tr/min (128 SU à 32 tr/min)" },
+    { "label": "Pierre à 32 tr/min", "value": "≈ 2,4 s par bloc (≈ 0,55 s à 256 tr/min)" },
+    { "label": "Dégâts", "value": "3,5 à 32 tr/min, jusqu'à 10 à 256 tr/min" },
+    { "label": "Rotation", "value": "Par l'arrière, à l'opposé de la pointe" },
+    { "label": "Version", "value": "Create 6.0.8 · Minecraft 1.21.1" }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [[null, "Alliage d'andésite", null], ["Alliage d'andésite", "Lingot de fer", "Alliage d'andésite"], [null, "Boîtier d'andésite", null]],
+    "result": "1 perceuse mécanique"
+  },
+  "videos": [
+    {
+      "id": "mechanical_drill",
+      "name": "Perceuse mécanique : casser un bloc de planches",
+      "description": "Une perceuse fixe casse des planches devant elle, puis recommence quatre fois plus vite quand on accélère la rotation.",
+      "duration": "PT15S"
+    },
+    {
+      "id": "mechanical_drill_contraption",
+      "name": "Perceuse mécanique sur un piston : la foreuse",
+      "description": "Quatre perceuses fixées par un châssis avancent avec un piston mécanique, cassent un mur de planches puis rangent les blocs dans un coffre embarqué.",
+      "duration": "PT17S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "casser",
+      "title": "Casser le bloc devant la pointe",
+      "image": "mechanical_drill_casser.webp",
+      "alt": "Perceuse mécanique entraînée par un arbre, en train de fissurer un bloc de planches",
+      "html": "<p>Oriente la pointe vers le bloc à casser et donne de la rotation par l'arrière, avec un arbre ou une roue dentée. La perceuse fissure le bloc étape par étape, puis le casse : l'objet tombe au sol juste devant elle, sans être projeté. Si un nouveau bloc apparaît au même endroit (générateur de pierre, arbre qui pousse, bloc poussé par un piston), elle recommence toute seule.</p><p>Elle ne casse ni les liquides, ni la bedrock, ni les blocs incassables. Attention aussi aux joueurs et aux mobs qui s'approchent de la pointe : elle blesse, de 3,5 points de dégâts à 32 tr/min jusqu'à 10 au maximum.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "Plus elle tourne vite, plus elle mine vite",
+      "image": "mechanical_drill_vitesse.webp",
+      "alt": "La même perceuse accélérée casse les planches beaucoup plus vite",
+      "html": "<p>La force de la perceuse vaut sa vitesse divisée par 100, comparée à la dureté du bloc. Résultat, temps approximatif pour casser un bloc :</p><table><thead><tr><th>Bloc</th><th>16 tr/min</th><th>32 tr/min</th><th>64 tr/min</th><th>256 tr/min</th></tr></thead><tbody><tr><td>Terre</td><td>1,9 s</td><td>1 s</td><td>0,55 s</td><td>0,15 s</td></tr><tr><td>Pierre</td><td>4,6 s</td><td>2,4 s</td><td>1,45 s</td><td>0,55 s</td></tr><tr><td>Planches</td><td>6 s</td><td>3,3 s</td><td>1,9 s</td><td>0,55 s</td></tr><tr><td>Obsidienne</td><td>141 s</td><td>71 s</td><td>36 s</td><td>9 s</td></tr></tbody></table><p>Le stress monte avec la vitesse : <strong>4 SU par tr/min</strong>, donc 1 024 SU pour une perceuse à 256 tr/min. Pour un générateur de pierre, 32 à 64 tr/min suffisent largement.</p>"
+    },
+    {
+      "id": "contraption",
+      "title": "Monter des perceuses sur une contraption",
+      "image": "mechanical_drill_contraption_machine.webp",
+      "alt": "Quatre perceuses mécaniques collées à des châssis linéaires, au bout d'un piston mécanique",
+      "video": "mechanical_drill_contraption",
+      "html": "<p>Le vrai pouvoir de la perceuse, c'est le mouvement. Colle plusieurs perceuses à un châssis (ou avec de la super colle) et pousse l'ensemble avec un <strong>piston mécanique</strong>, un roulement, un portique, un wagonnet ou un train. Chaque perceuse casse alors les blocs dans lesquels la machine avance, comme une foreuse de tunnel.</p><p>Sur une contraption, la perceuse n'a plus besoin d'être entraînée par un arbre : c'est le mouvement de la machine qui la fait travailler. Sur un wagonnet ou un train, une vitesse minimale de cassage est garantie, plus élevée encore sur un train.</p>"
+    },
+    {
+      "id": "regles",
+      "title": "Ce que casse une perceuse en mouvement",
+      "image": "mechanical_drill_contraption_casse.webp",
+      "alt": "La foreuse avance dans un mur de planches et le casse en morceaux",
+      "html": "<p>Une perceuse embarquée ne travaille que si la machine avance <strong>dans le sens de sa pointe</strong> : en marche arrière, elle ne casse rien. Elle laisse en place les blocs sans collision (herbes hautes, fleurs, torches) et ne touche jamais aux rails de train, ce qui permet de creuser autour d'une voie sans l'abîmer. Si un bloc résiste trop longtemps, la machine reste bloquée devant jusqu'à ce qu'il cède.</p>"
+    },
+    {
+      "id": "stockage",
+      "title": "Récupérer les blocs dans un coffre embarqué",
+      "image": "mechanical_drill_contraption_stockage.webp",
+      "alt": "Un coffre collé sur la foreuse récupère les planches cassées",
+      "html": "<p>Sans rangement, les blocs cassés tombent au sol et se perdent vite. Colle un <strong>coffre, un tonneau ou un coffre à objet renforcé</strong> sur la contraption : tout ce que les perceuses cassent y entre directement. Une fois la machine revenue, vide-le avec un entonnoir ou avec une interface de stockage portable.</p>"
+    },
+    {
+      "id": "astuces",
+      "title": "Astuces et erreurs fréquentes",
+      "html": "<ul><li><strong>Elle ne tourne pas</strong> : la rotation arrive par la pointe au lieu de l'arrière, ou le réseau est surchargé.</li><li><strong>La foreuse s'arrête</strong> : le piston est en bout de course ou un bloc dur (obsidienne, minerai profond) la ralentit fortement.</li><li><strong>Des blocs restent derrière</strong> : il manque une perceuse dans la grille ; il en faut une par case de la face avant.</li><li>Associe-la à des <a href=\"/wiki/tapis-roulant\">tapis roulants</a> pour évacuer les blocs d'une perceuse fixe, ou à une <a href=\"/wiki/presse-mecanique\">presse mécanique</a> dans une chaîne de traitement.</li></ul>"
+    }
+  ],
+  "related": ["tapis-roulant", "presse-mecanique"],
+  "sources": [
+    "Stress : AllBlocks.java, MECHANICAL_DRILL, CStress.setImpact(4.0)",
+    "Cassage fixe : BlockBreakingKineticBlockEntity (force = |vitesse| / 100, progression clamp(force / dureté, 1, 10), attente dureté / force ticks) ; duretés vanilla (terre 0,5, pierre 1,5, planches 2, obsidienne 50)",
+    "Dégâts : DrillBlock.getDamage (min(v/16, 2) + min(v/32, 4) + min(v/64, 4), plafonné à 10)",
+    "Contraption : BlockBreakingMovementBehaviour.getBlockBreakingSpeed (minimum 1 sur wagonnet, 2 sur train), DrillMovementBehaviour.isActive (pas en marche arrière) et canBreak (ni blocs sans collision, ni rails)",
+    "Objets : BlockBreakingKineticBlockEntity.onBlockBroken (au centre, sans vitesse) ; BlockBreakingMovementBehaviour.collectOrDropItem (stockage embarqué)",
+    "Recette : data/create/recipe/crafting/kinetics/mechanical_drill.json"
+  ]
+}

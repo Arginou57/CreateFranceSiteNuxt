@@ -1,0 +1,100 @@
+{
+  "slug": "tapis-roulant",
+  "name": "Tapis roulant",
+  "blockId": "create:belt_connector",
+  "category": "logistique",
+  "title": "Tapis roulant — Create : guide en français",
+  "description": "Le tapis roulant de Create : relier deux arbres, longueur maximale, pentes et orientations, vitesse des objets, teinture. Guide illustré en français.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>tapis roulant</strong> fait deux choses à la fois : il <strong>transmet la rotation</strong> d'un arbre à un autre et il <strong>transporte les objets</strong> posés dessus. C'est la colonne vertébrale de presque toutes les usines Create. Voici comment le poser, dans quelles directions, et à quelle vitesse il fait avancer tes objets.",
+  "facts": [
+    { "label": "Catégorie", "value": "Logistique" },
+    { "label": "Stress", "value": "Aucun (seules les machines branchées consomment)" },
+    { "label": "Longueur", "value": "Jusqu'à 20 blocs (réglage serveur maxBeltLength)" },
+    { "label": "Vitesse des objets", "value": "tr/min ÷ 24 blocs par seconde (1,33 bloc/s à 32 tr/min)" },
+    { "label": "Espacement", "value": "1 bloc entre deux objets" },
+    { "label": "Version", "value": "Create 6.0.8 · Minecraft 1.21.1" }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [["Varech séché", "Varech séché", "Varech séché"], ["Varech séché", "Varech séché", "Varech séché"], [null, null, null]],
+    "result": "1 tapis roulant (un seul suffit pour toute la longueur)"
+  },
+  "videos": [
+    {
+      "id": "belt_connector",
+      "name": "Tapis roulant : relier deux arbres, ajouter un arbre, teindre",
+      "description": "On relie deux arbres avec un tapis, on annule une mauvaise sélection, on ajoute puis on retire un arbre intermédiaire et on teint le tapis en bleu.",
+      "duration": "PT20S"
+    },
+    {
+      "id": "belt_directions",
+      "name": "Tapis roulant : les orientations possibles",
+      "description": "Les quatre façons de poser un tapis : à l'horizontale, en diagonale, à la verticale, et entre deux arbres verticaux.",
+      "duration": "PT20S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "relier",
+      "title": "Relier deux arbres",
+      "image": "belt_connector_relier.webp",
+      "alt": "Deux arbres sélectionnés tour à tour avec un tapis roulant en main, entourés en vert",
+      "html": "<p>Pose deux <strong>arbres parallèles</strong>, puis fais un clic droit sur le premier avec un tapis roulant en main, et un clic droit sur le second. Le tapis apparaît entre les deux et entraîne tout ce qui est branché dessus. Un seul objet suffit, quelle que soit la longueur : six varechs séchés pour 20 blocs de tapis, c'est très rentable.</p><p>Le tapis lui-même ne consomme aucun stress. Il recopie la rotation : tous ses arbres tournent <strong>à la même vitesse et dans le même sens</strong>.</p>"
+    },
+    {
+      "id": "annuler",
+      "title": "Annuler une mauvaise sélection",
+      "image": "belt_connector_annuler.webp",
+      "alt": "Une sélection sur un mauvais arbre, entourée en rouge",
+      "html": "<p>Tu as cliqué sur le mauvais arbre ? Fais un <strong>clic droit en étant accroupi</strong> pour oublier la première sélection, puis recommence. La sélection s'efface aussi d'elle-même si le premier arbre disparaît ou devient trop éloigné.</p>"
+    },
+    {
+      "id": "arbres",
+      "title": "Ajouter ou retirer des arbres sur le tapis",
+      "image": "belt_connector_arbres.webp",
+      "alt": "Deux arbres supplémentaires branchés sur le côté du tapis tournent avec lui",
+      "html": "<p>Un clic droit avec un <strong>arbre</strong> sur un segment du tapis y ajoute une poulie. Tu peux ainsi prendre ou donner de la rotation au milieu du tapis, par exemple pour alimenter une presse ou un ventilateur au passage. Pour retirer une poulie ajoutée, utilise la <strong>clé</strong> sur ce segment.</p>"
+    },
+    {
+      "id": "teinture",
+      "title": "Teindre et habiller le tapis",
+      "image": "belt_connector_teinture.webp",
+      "alt": "Tapis roulant teint en bleu",
+      "html": "<p>Un clic droit avec un <strong>colorant</strong> teint tout le tapis, pour repérer tes lignes d'un coup d'œil (minerai, nourriture, déchets…). Un seau d'eau ou une fiole d'eau enlève la couleur. Tu peux aussi recouvrir le tapis d'un <strong>boîtier d'andésite ou de laiton</strong> pour un rendu plus propre ; il continue de transmettre la rotation.</p>"
+    },
+    {
+      "id": "orientations",
+      "title": "Les orientations possibles",
+      "image": "belt_directions_toutes.webp",
+      "alt": "Les quatre orientations de tapis : horizontale, diagonale, verticale et entre arbres verticaux",
+      "video": "belt_directions",
+      "html": "<p>Un tapis ne se pose pas dans n'importe quelle direction. Les deux arbres doivent avoir le <strong>même axe</strong>, et le tapis part à angle droit de cet axe :</p><ol><li><strong>à l'horizontale</strong>, en ligne droite ;</li><li><strong>en diagonale</strong>, avec une pente d'exactement 45° (autant de blocs en hauteur qu'en longueur) ;</li><li><strong>à la verticale</strong>, pour monter ou descendre des objets ;</li><li>entre deux <strong>arbres verticaux</strong>, à l'horizontale uniquement, le tapis étant alors posé sur la tranche.</li></ol><p>Il mesure au maximum <strong>20 blocs</strong> par défaut (moins en diagonale, la distance réelle comptant).</p>"
+    },
+    {
+      "id": "objets",
+      "title": "Vitesse et espacement des objets",
+      "image": "belt_connector_tapis.webp",
+      "alt": "Tapis roulant horizontal en mouvement entre deux arbres",
+      "html": "<p>Les objets avancent à la vitesse de rotation divisée par 24, en blocs par seconde : 0,67 bloc/s à 16 tr/min, <strong>1,33 bloc/s à 32</strong>, 2,67 à 64 et près de 11 blocs/s à 256 tr/min. Ils gardent toujours <strong>un bloc d'écart</strong> : un tapis plein transporte donc au mieux une pile par bloc. Pour plus de débit, pose des piles entières (avec un entonnoir ou un bras mécanique) plutôt que des objets un par un.</p><p>En bout de tapis, les objets s'arrêtent s'il n'y a rien pour les prendre : place un entonnoir, un dépôt, un coffre ou un autre tapis.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<ul><li><strong>Le tapis refuse de se poser</strong> : arbres d'axes différents, pas alignés, diagonale qui n'est pas à 45°, ou distance trop grande.</li><li><strong>Bloc sur le chemin</strong> : seuls l'air, les blocs remplaçables et les arbres de même axe sont acceptés entre les deux bouts.</li><li><strong>Sens de rotation opposés</strong> : si les deux arbres tournent déjà en sens contraire, la pose échoue.</li><li><strong>Objets qui ne passent pas sous une machine</strong> : une <a href=\"/wiki/presse-mecanique\">presse mécanique</a> les bloque volontairement le temps du traitement.</li></ul>"
+    }
+  ],
+  "related": ["presse-mecanique", "perceuse-mecanique"],
+  "sources": [
+    "Stress : AllBlocks.java, BELT, CStress.setNoImpact()",
+    "Pose : BeltConnectorItem.canConnect (même axe, déplacement nul le long de l'axe, une seule paire de composantes égales en valeur absolue, pas de diagonale entre arbres verticaux, sens de rotation compatibles, cases libres ou arbres de même axe) ; un objet consommé par tapis (shrink(1))",
+    "Longueur : CKinetics.maxBeltLength = 20 (minimum 5)",
+    "Vitesse : BeltBlockEntity.getBeltMovementSpeed = vitesse / 480 bloc par tick (× 20 ticks/s)",
+    "Espacement : BeltInventory (spacing = 1)",
+    "Teinture : BeltBlock.useItemOn (colorants, eau)",
+    "Recette : data/create/recipe/crafting/kinetics/belt_connector.json"
+  ]
+}

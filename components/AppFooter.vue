@@ -21,8 +21,9 @@
       </div>
       <div class="footer-col">
         <h4>Liens</h4>
-        <a href="#serveur">Le Serveur</a>
-        <a href="#grades">Boutique</a>
+        <a href="/#serveur">Le Serveur</a>
+        <NuxtLink to="/wiki">Wiki Create</NuxtLink>
+        <a href="/#grades">Boutique</a>
         <a href="https://www.curseforge.com/minecraft/modpacks/serveur-create-france-communauty-friends-coop" target="_blank">CurseForge</a>
       </div>
       <div class="footer-col">

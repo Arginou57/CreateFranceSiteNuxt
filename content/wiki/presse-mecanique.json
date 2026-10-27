@@ -1,0 +1,115 @@
+{
+  "slug": "presse-mecanique",
+  "name": "Presse mécanique",
+  "blockId": "create:mechanical_press",
+  "category": "traitement",
+  "title": "Presse mécanique — Create : guide en français",
+  "description": "La presse mécanique de Create : où la placer, quelle vitesse, plaques de fer et de cuivre, compactage en bassin. Guide illustré en français.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>presse mécanique</strong> est souvent la première machine de traitement que l'on construit avec Create. Elle écrase ce qui passe sous sa tête : un lingot devient une plaque, une canne à sucre devient du papier. Posée au-dessus d'un bassin, elle sert aussi à <strong>compacter</strong> plusieurs objets en un seul bloc. Voici comment l'installer, l'alimenter et l'automatiser.",
+  "facts": [
+    { "label": "Catégorie", "value": "Traitement" },
+    { "label": "Stress", "value": "8 SU par tr/min (256 SU à 32 tr/min)" },
+    { "label": "Cycle", "value": "≈ 3 s à 32 tr/min · ≈ 1,5 s à 64 · ≈ 0,45 s à 256" },
+    { "label": "Zone de travail", "value": "2 blocs sous la presse (tapis, dépôt, bassin) ou objet au sol juste dessous" },
+    { "label": "Rotation", "value": "Par l'axe horizontal, sur un côté" },
+    { "label": "Version", "value": "Create 6.0.8 · Minecraft 1.21.1" }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [[null, "Arbre", null], [null, "Boîtier d'andésite", null], [null, "Bloc de fer", null]],
+    "result": "1 presse mécanique"
+  },
+  "videos": [
+    {
+      "id": "mechanical_press",
+      "name": "Presse mécanique : presser sur un dépôt puis sur un tapis",
+      "description": "La presse aplatit un lingot de cuivre posé sur un dépôt, puis traite automatiquement les lingots qui arrivent sur un tapis roulant.",
+      "duration": "PT20S"
+    },
+    {
+      "id": "mechanical_press_compacting",
+      "name": "Presse mécanique : compactage dans un bassin",
+      "description": "Au-dessus d'un bassin, la presse transforme neuf lingots de cuivre en bloc et quatre bûches en bloc de bois de chêne ; un brûleur à blaze ajoute la chaleur.",
+      "duration": "PT20S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "installer",
+      "title": "Installer et alimenter la presse",
+      "image": "mechanical_press_alimenter.webp",
+      "alt": "Presse mécanique posée deux blocs au-dessus d'un dépôt, entraînée par des roues dentées sur le côté",
+      "html": "<p>La presse se pose en hauteur. Sa tête descend d'un peu plus d'un bloc : l'objet à traiter doit donc se trouver <strong>deux blocs plus bas</strong>, avec un bloc d'air entre les deux. Elle prend la rotation par son axe horizontal, sur un de ses côtés : un arbre ou une roue dentée suffit, comme dans l'animation.</p><p>Côté énergie, compte <strong>8 SU par tr/min</strong>. À 32 tr/min, une presse consomme 256 SU, soit exactement ce que fournit une petite roue à eau (32 SU par tr/min, à 8 tr/min). Un réseau surchargé s'arrête en entier : vérifie-le avec un stressomètre.</p>"
+    },
+    {
+      "id": "depot",
+      "title": "Presser un objet à la main sur un dépôt",
+      "image": "mechanical_press_depot.webp",
+      "alt": "La tête de la presse descend sur un lingot de cuivre posé sur un dépôt",
+      "html": "<p>Pour un usage manuel, le plus simple est un <strong>dépôt</strong> sous la presse. Clic droit avec un lingot pour le poser : la tête descend, et le lingot ressort en plaque. L'écrasement se fait à mi-course, environ 1,5 s après le début du cycle à 32 tr/min.</p><p>Sans dépôt, tu peux aussi jeter les objets <strong>au sol, juste sous la presse</strong> (un seul bloc d'écart dans ce cas). Par défaut, elle n'en traite qu'un à chaque coup, même si tu lances une pile entière : le réglage serveur <code>bulkPressing</code> est désactivé.</p>"
+    },
+    {
+      "id": "tapis",
+      "title": "Automatiser avec un tapis roulant",
+      "image": "mechanical_press_tapis.webp",
+      "alt": "Un entonnoir pose des lingots de cuivre sur un tapis roulant qui passe sous la presse mécanique",
+      "html": "<p>Fais passer un <a href=\"/wiki/tapis-roulant\">tapis roulant</a> deux blocs sous la presse. Chaque objet qui arrive sous la tête est <strong>bloqué automatiquement</strong> le temps du pressage, puis repart vers la suite du tapis. Les objets suivants attendent derrière, en gardant un bloc d'écart entre eux.</p><p>Un entonnoir sur un coffre remplit le tapis en début de ligne ; un autre range les plaques en bout de ligne.</p>"
+    },
+    {
+      "id": "cadence",
+      "title": "Régler la cadence de production",
+      "image": "mechanical_press_automatique.webp",
+      "alt": "Deux lingots attendent sur le tapis pendant que la presse aplatit le premier en plaque de cuivre",
+      "html": "<p>La vitesse de rotation fixe le rythme. Un cycle complet prend environ <strong>6 s à 16 tr/min, 3 s à 32, 1,5 s à 64 et moins d'une demi-seconde à 256 tr/min</strong>. À 32 tr/min, le tapis amène 1,33 bloc d'objets par seconde : c'est donc la presse qui fixe la cadence. Pour produire plus, accélère la presse (en surveillant le stress) ou monte des lignes en parallèle : deux presses à la suite sur un même tapis n'aident pas, la première traite tout.</p><p>Ce qu'on presse le plus : lingots de fer, de cuivre, d'or et de laiton en plaques, canne à sucre en papier, pulpe en carton, terre ou herbe en chemin.</p>"
+    },
+    {
+      "id": "compactage",
+      "title": "Compacter des objets dans un bassin",
+      "image": "mechanical_press_compacting_bassin.webp",
+      "alt": "Presse mécanique au-dessus d'un bassin, alimenté par un tapis vertical",
+      "video": "mechanical_press_compacting",
+      "html": "<p>Place un <strong>bassin</strong> deux blocs sous la presse : elle passe alors en mode compactage et presse ensemble le contenu du bassin. Dans l'animation, neuf lingots de cuivre deviennent un bloc de cuivre. Le résultat sort par le dessous du bassin, ou par le côté si tu as tourné sa sortie à la clé : un tapis, un dépôt ou un entonnoir placé à cet endroit le récupère.</p>"
+    },
+    {
+      "id": "recettes",
+      "title": "Quelles recettes de compactage ?",
+      "image": "mechanical_press_compacting_recettes.webp",
+      "alt": "Un bloc de cuivre et un bloc de bois de chêne sortis du bassin sur un tapis roulant",
+      "html": "<p>La presse accepte toutes les <strong>recettes d'établi carrées et pleines</strong>, en 2×2 ou en 3×3 : neuf lingots en bloc, quatre bûches en bloc de bois, neuf blocs de neige en glace… Le bassin doit contenir le compte exact : avec huit lingots, rien ne se passe.</p><p>Create ajoute ses propres recettes : andésite, granite ou diorite à partir de deux silex, d'un bloc de base (gravier, sable rouge ou calcite) et de 100 mB de lave, tablette de chocolat avec 250 mB de chocolat, bloc de miel avec 1 000 mB de miel, et base de gâteau de blaze.</p>"
+    },
+    {
+      "id": "chaleur",
+      "title": "La chaleur du brûleur à blaze",
+      "image": "mechanical_press_compacting_chaleur.webp",
+      "alt": "Brûleur à blaze allumé sous le bassin et la presse mécanique",
+      "html": "<p>Un <strong>brûleur à blaze</strong> sous le bassin chauffe la recette. Dans Create seul, aucune recette de compactage n'en a besoin (c'est surtout le mélangeur qui s'en sert), mais des addons en ajoutent : le brûleur reste alors indispensable, et il faut le nourrir pour qu'il ne s'éteigne pas.</p>"
+    },
+    {
+      "id": "filtre",
+      "title": "Choisir la recette avec le filtre du bassin",
+      "image": "mechanical_press_compacting_filtre.webp",
+      "alt": "Emplacement du filtre sur le côté du bassin",
+      "html": "<p>Quand deux recettes utilisent les mêmes ingrédients, la machine ne sait pas laquelle faire. Pose l'objet que tu veux obtenir dans l'<strong>emplacement de filtre</strong> du bassin : seule la recette correspondante sera faite.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<ul><li><strong>La presse ne bouge pas</strong> : réseau surchargé (8 SU par tr/min) ou rotation branchée sur le mauvais côté.</li><li><strong>Elle descend dans le vide</strong> : l'objet est trop haut ou trop bas. Tapis, dépôt et bassin se placent deux blocs sous la presse.</li><li><strong>Rien ne sort du bassin</strong> : recette incomplète, sortie du bassin bouchée, ou filtre réglé sur un autre objet.</li></ul>"
+    }
+  ],
+  "related": ["tapis-roulant", "perceuse-mecanique"],
+  "sources": [
+    "Stress : AllBlocks.java, MECHANICAL_PRESS, CStress.setImpact(8.0) ; roue à eau CStress.setCapacity(32)",
+    "Cycle : PressingBehaviour.java (CYCLE = 240, getRunningTickSpeed = lerp(|vitesse| / 512, 1, 60), écrasement à CYCLE / 2)",
+    "Modes et hauteurs : PressingBehaviour.Mode (WORLD, BELT, BASIN), applyInWorld (bloc juste sous la presse)",
+    "Un objet par coup : CRecipes.bulkPressing = false ; MechanicalPressBlockEntity.tryProcessInWorld",
+    "Compactage des recettes carrées : CRecipes.allowShapedSquareInPress = true",
+    "Recettes : data/create/recipe/pressing, data/create/recipe/compacting, crafting/kinetics/mechanical_press.json",
+    "Espacement sur tapis : BeltInventory (1 bloc) ; vitesse du tapis : BeltBlockEntity.getBeltMovementSpeed",
+    "Sortie du bassin : BasinBlock.FACING (dessous par défaut)"
+  ]
+}

@@ -1,17 +1,18 @@
 <template>
   <nav class="navbar" :class="{ scrolled }" ref="navbarRef">
     <div class="nav-content">
-      <a href="#" class="nav-logo">
+      <NuxtLink to="/" class="nav-logo">
         <span class="nav-gear">&#9881;</span>
         Create France
-      </a>
+      </NuxtLink>
       <button class="nav-toggle" :class="{ active: menuOpen }" aria-label="Menu" @click="menuOpen = !menuOpen">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" :class="{ open: menuOpen }">
-        <li><a href="#serveur" @click="menuOpen = false">Le Serveur</a></li>
-        <li><a href="#galerie" @click="menuOpen = false">Galerie</a></li>
-        <li><a href="#grades" @click="menuOpen = false">Boutique</a></li>
+        <li><a href="/#serveur" @click="menuOpen = false">Le Serveur</a></li>
+        <li><NuxtLink to="/wiki" @click="menuOpen = false">Wiki</NuxtLink></li>
+        <li><a href="/#galerie" @click="menuOpen = false">Galerie</a></li>
+        <li><a href="/#grades" @click="menuOpen = false">Boutique</a></li>
         <li><a href="https://www.curseforge.com/minecraft/modpacks/serveur-create-france-communauty-friends-coop" target="_blank">CurseForge</a></li>
         <li><a href="https://topmoddedservers.com/serveur/create-france/vote" target="_blank" title="Voter pour Create France sur TopModdedServers">Voter</a></li>
         <li><a href="https://discord.gg/JW7XQKPpVC" target="_blank" class="nav-discord">Discord</a></li>

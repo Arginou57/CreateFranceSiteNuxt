@@ -1,0 +1,37 @@
+[
+  {
+    "id": "cinetique",
+    "name": "Cinétique",
+    "description": "Produire et transmettre la rotation : arbres, roues dentées, moteurs, moulins, boîtes de vitesses, et la gestion du stress."
+  },
+  {
+    "id": "traitement",
+    "name": "Traitement",
+    "description": "Transformer les objets : presse, mélangeur, broyeur, meule, ventilateur, bassin et brûleur à blaze."
+  },
+  {
+    "id": "logistique",
+    "name": "Logistique",
+    "description": "Déplacer et trier les objets : tapis roulants, entonnoirs, tunnels, bras mécaniques, dépôts et coffres-forts."
+  },
+  {
+    "id": "fluides",
+    "name": "Fluides",
+    "description": "Pomper, stocker et utiliser les liquides : tuyaux, pompes, réservoirs, becs verseurs et égouttoirs."
+  },
+  {
+    "id": "trains",
+    "name": "Trains",
+    "description": "Construire un réseau ferré : rails, gares, signaux, assemblage des trains et horaires automatiques."
+  },
+  {
+    "id": "contraptions",
+    "name": "Contraptions",
+    "description": "Faire bouger des blocs : pistons mécaniques, roulements, portiques, perceuses, scies et colle."
+  },
+  {
+    "id": "redstone",
+    "name": "Redstone",
+    "description": "Commander les machines : liens redstone, compteurs, détecteurs, horloges et contrôleurs de vitesse."
+  }
+]
