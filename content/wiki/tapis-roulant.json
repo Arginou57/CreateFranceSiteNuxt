@@ -87,7 +87,7 @@
       "html": "<ul><li><strong>Le tapis refuse de se poser</strong> : arbres d'axes différents, pas alignés, diagonale qui n'est pas à 45°, ou distance trop grande.</li><li><strong>Bloc sur le chemin</strong> : seuls l'air, les blocs remplaçables et les arbres de même axe sont acceptés entre les deux bouts.</li><li><strong>Sens de rotation opposés</strong> : si les deux arbres tournent déjà en sens contraire, la pose échoue.</li><li><strong>Objets qui ne passent pas sous une machine</strong> : une <a href=\"/wiki/presse-mecanique\">presse mécanique</a> les bloque volontairement le temps du traitement.</li></ul>"
     }
   ],
-  "related": ["presse-mecanique", "perceuse-mecanique", "bec-verseur", "egouttoir-a-objets"],
+  "related": ["presse-mecanique", "perceuse-mecanique", "bec-verseur", "egouttoir-a-objets", "scie-mecanique"],
   "sources": [
     "Stress : AllBlocks.java, BELT, CStress.setNoImpact()",
     "Pose : BeltConnectorItem.canConnect (même axe, déplacement nul le long de l'axe, une seule paire de composantes égales en valeur absolue, pas de diagonale entre arbres verticaux, sens de rotation compatibles, cases libres ou arbres de même axe) ; un objet consommé par tapis (shrink(1))",

@@ -130,7 +130,8 @@
     "roue-dentee",
     "rotor",
     "roue-a-eau",
-    "stressometre-compteur-de-vitesse"
+    "stressometre-compteur-de-vitesse",
+    "poulie-a-corde"
   ],
   "sources": [
     "Vitesse : HandCrankBlock.getRotationSpeed() = 32 ; HandCrankBlockEntity.turn (inUse = 10 ticks), getGeneratedSpeed (sens selon accroupi)",

@@ -1,0 +1,366 @@
+{
+  "slug": "scie-mecanique",
+  "name": "Scie mécanique",
+  "blockId": "create:mechanical_saw",
+  "category": "contraptions",
+  "title": "Scie mécanique — Create : guide en français",
+  "description": "La scie mécanique de Create : découper bûches et pierre, sens de sortie, en ligne sur tapis roulant, filtre de recette, abattre les arbres et contraptions.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>scie mécanique</strong> a deux métiers. Tournée vers le haut, elle <strong>découpe des objets</strong> : bûches en planches, pierre en briques. Tournée sur le côté, elle <strong>abat les arbres</strong> d'un coup. Montée sur une contraption, elle devient une machine à défricher qui ramasse le bois toute seule.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Contraptions"
+    },
+    {
+      "label": "Stress",
+      "value": "4 SU par tr/min"
+    },
+    {
+      "label": "Découpe",
+      "value": "Scie tournée vers le haut ; recettes de découpe et de tailleur de pierre"
+    },
+    {
+      "label": "Vitesse",
+      "value": "|tr/min| ÷ 24 unité de travail par tick (1 à 128) : 2,5 s à 24 tr/min pour une recette de 50"
+    },
+    {
+      "label": "Sortie",
+      "value": "À l’opposé du sens de rotation, sur un tapis ou au sol"
+    },
+    {
+      "label": "Arbres",
+      "value": "Scie de côté : en cassant la base, tout l’arbre tombe"
+    },
+    {
+      "label": "Contraption",
+      "value": "Coupe les arbres sur son passage, le bois va dans les coffres embarqués"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Plaque de fer",
+        null
+      ],
+      [
+        "Plaque de fer",
+        "Lingot de fer",
+        "Plaque de fer"
+      ],
+      [
+        null,
+        "Boitier d'andésite",
+        null
+      ]
+    ],
+    "result": "1 scie mécanique"
+  },
+  "videos": [
+    {
+      "id": "saw_processing",
+      "name": "Scie mécanique : découper des objets",
+      "description": "Une bûche jetée sur la scie devient bûche écorcée puis planches ; la rotation inversée change le sens de sortie ; sur tapis, la pierre devient briques de pierre avec un filtre.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "saw_breaker",
+      "name": "Scie mécanique : abattre un arbre",
+      "description": "La scie casse le chêne devant elle, puis la base d'un grand tronc d'acajou : tout le tronc tombe en bûches.",
+      "duration": "PT20S"
+    },
+    {
+      "id": "saw_contraption",
+      "name": "Scie mécanique : sur une contraption",
+      "description": "Des scies montées sur un piston avancent et abattent les arbres qu'elles rencontrent.",
+      "duration": "PT18S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "traiter",
+      "title": "Découper des objets",
+      "image": "saw_processing_traiter.webp",
+      "alt": "Bûche posée sur une scie tournée vers le haut",
+      "video": "saw_processing",
+      "html": "<p>Pose la scie <strong>lame vers le haut</strong> et jette un objet dessus, ou fais-le passer par un <a href=\"/wiki/tapis-roulant\">tapis roulant</a>. Une bûche devient bûche écorcée, puis planches ; la pierre suit les recettes du tailleur de pierre.</p>"
+    },
+    {
+      "id": "sens",
+      "title": "Le sens de sortie",
+      "image": "saw_processing_sens.webp",
+      "alt": "Rotation inversée : l’objet sort de l’autre côté",
+      "html": "<p>L'objet découpé sort toujours <strong>à l'opposé du sens de rotation</strong> de la lame. Inverse la rotation et il part de l'autre côté : c'est ce qui permet de chaîner deux étapes.</p>"
+    },
+    {
+      "id": "tapis",
+      "title": "En ligne sur un tapis",
+      "image": "saw_processing_tapis.webp",
+      "alt": "Scie placée entre deux tapis roulants",
+      "html": "<p>Intercalée entre deux tapis, la scie traite chaque objet <strong>au passage</strong>, sans entonnoir. Dans la boucle, la pierre entre d'un côté et ressort découpée de l'autre.</p>"
+    },
+    {
+      "id": "filtre",
+      "title": "Choisir le résultat",
+      "image": "saw_processing_filtre.webp",
+      "alt": "Filtre de la scie réglé sur les briques de pierre",
+      "html": "<p>Quand un objet a <strong>plusieurs découpes possibles</strong>, comme la pierre, place l'objet voulu dans le <strong>filtre</strong> de la scie. Sans filtre, elle passe d'une recette à l'autre à chaque objet.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "Vitesse de découpe",
+      "html": "<p>Chaque tick, la scie avance son travail de <strong>|tr/min| ÷ 24</strong>, au moins 1 et au plus 128. Une découpe de 50 prend donc 2,5 s jusqu'à 24 tr/min, 0,6 s à 96 tr/min. Une pile de plus de cinq objets est traitée en une fois, mais plus longtemps.</p>"
+    },
+    {
+      "id": "alimenter",
+      "title": "Brancher la scie",
+      "html": "<p>L'arbre entre par l'arrière de la scie couchée, ou par le côté de la scie tournée vers le haut. Elle coûte 4 SU par tr/min. Pour la découpe, une vitesse moyenne suffit ; pour les arbres, plus elle tourne vite, plus le tronc tombe vite.</p>"
+    },
+    {
+      "id": "arbre",
+      "title": "Abattre un arbre",
+      "image": "saw_breaker_arbre.webp",
+      "alt": "La scie coupe un chêne",
+      "video": "saw_breaker",
+      "html": "<p>Tournée sur le côté et alimentée, la scie <strong>casse le bloc devant elle</strong>, comme une <a href=\"/wiki/perceuse-mecanique\">perceuse</a>. Si ce bloc est un tronc, c'est tout l'arbre qui tombe.</p>"
+    },
+    {
+      "id": "base",
+      "title": "Couper la base",
+      "image": "saw_breaker_base.webp",
+      "alt": "La base du tronc est coupée",
+      "html": "<p>Pour abattre l'arbre entier, il faut que la scie tranche le <strong>dernier bloc qui le relie au sol</strong>. Les grands arbres de 2 × 2 tombent aussi, en une pluie de bûches.</p>"
+    },
+    {
+      "id": "contraption",
+      "title": "Sur une contraption",
+      "image": "saw_contraption_contraption.webp",
+      "alt": "Scies montées sur un piston",
+      "video": "saw_contraption",
+      "html": "<p>Montées sur un <a href=\"/wiki/piston-mecanique\">piston</a>, un <a href=\"/wiki/chariot-de-portique\">portique</a> ou un train, les scies <strong>travaillent en roulant</strong> : pas besoin de les faire tourner séparément.</p>"
+    },
+    {
+      "id": "coupe",
+      "title": "Défricher en avançant",
+      "image": "saw_contraption_coupe.webp",
+      "alt": "Les scies abattent les arbres au passage",
+      "html": "<p>Chaque arbre rencontré est abattu, et le bois part dans les <strong>coffres ou tonneaux de la contraption</strong> s'il y en a, sinon il tombe au sol. Si un tronc résiste, la contraption marque une pause le temps de le couper.</p>"
+    },
+    {
+      "id": "montages",
+      "title": "Idées de montages",
+      "html": "<p>Une <strong>scierie</strong> : un tapis qui porte les bûches vers deux scies à la suite, l'une pour écorcer, l'autre pour faire les planches. Une <strong>ferme à arbres</strong> : des scies sur un <a href=\"/wiki/piston-mecanique\">piston</a> qui avancent devant une rangée de pousses, puis un <a href=\"/wiki/deployeur\">déployeur</a> qui replante.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Rien ne sort ? La scie de découpe doit regarder <strong>vers le haut</strong> ; tournée sur le côté, elle casse au lieu de découper. Le mauvais résultat sort ? Mets un filtre. Un arbre reste debout ? La scie n'a pas coupé le bloc le plus bas du tronc.</p>"
+    },
+    {
+      "id": "limites",
+      "title": "Ce que les boucles ne montrent pas",
+      "html": "<p>La lame est dessinée sans son animation de rotation, et les copeaux ne sont pas montrés. Les objets jetés sur la scie suivent la physique des objets du jeu ; ceux du tapis suivent sa vitesse.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur notre serveur",
+      "html": "<p>Sur Create France, une petite scierie en début de partie fournit vite toutes les planches et les rotors dont on a besoin.</p>"
+    }
+  ],
+  "related": [
+    "perceuse-mecanique",
+    "tapis-roulant",
+    "piston-mecanique",
+    "recolteur-mecanique",
+    "deployeur",
+    "chariot-de-portique"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/mechanical_saw.json",
+    "Stress : AllBlocks.MECHANICAL_SAW (CStress.setImpact(4.0))",
+    "Découpe : SawBlockEntity.start / tick (durée de la recette, 50 par défaut, × objets / 5 ; vitesse clamp(|tr/min| / 24, 1, 128) par tick ; recipeIndex sans filtre), CRecipes.allowStonecuttingOnSaw",
+    "Recettes : recipe/cutting/*.json (ex. alliage d’andésite → 6 rotors, 200)",
+    "Arbres : SawBlockEntity (BlockBreakingKineticBlockEntity), TreeCutter",
+    "Contraption : SawMovementBehaviour, CKinetics.moveItemsToStorage",
+    "Simulation : WIKI/contraption_sim.py (blocs embarqués, durées des mouvements, cordes et acteurs recalculés d'après le code de Create)",
+    "Scènes : MechanicalSawScenes.processing, treeCutting, contraption"
+  ],
+  "en": {
+    "slugEn": "mechanical-saw",
+    "name": "Mechanical Saw",
+    "title": "Mechanical Saw — Create mod guide",
+    "description": "The Create Mechanical Saw: cutting logs and stone, output direction, in line on a belt, the recipe filter, felling trees and saws on contraptions.",
+    "intro": "The <strong>Mechanical Saw</strong> has two jobs. Facing up, it <strong>cuts items</strong>: logs into planks, stone into bricks. Facing sideways, it <strong>fells trees</strong> in one go. Mounted on a contraption, it becomes a land-clearing machine that collects the wood by itself.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Contraptions"
+      },
+      {
+        "label": "Stress",
+        "value": "4 SU per RPM"
+      },
+      {
+        "label": "Cutting",
+        "value": "Saw facing up; cutting and stonecutter recipes"
+      },
+      {
+        "label": "Speed",
+        "value": "|RPM| ÷ 24 work units per tick (1 to 128): 2.5 s at 24 RPM for a 50-unit recipe"
+      },
+      {
+        "label": "Output",
+        "value": "Opposite to the direction of rotation, onto a belt or the ground"
+      },
+      {
+        "label": "Trees",
+        "value": "Saw facing sideways: break the base and the whole tree falls"
+      },
+      {
+        "label": "Contraption",
+        "value": "Fells the trees in its way, wood goes into on-board chests"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Iron Sheet",
+          null
+        ],
+        [
+          "Iron Sheet",
+          "Iron Ingot",
+          "Iron Sheet"
+        ],
+        [
+          null,
+          "Andesite Casing",
+          null
+        ]
+      ],
+      "result": "1 Mechanical Saw"
+    },
+    "videos": [
+      {
+        "id": "saw_processing",
+        "name": "Mechanical Saw: cutting items",
+        "description": "A log thrown on the saw becomes a stripped log, then planks; reversed rotation changes the output side; on a belt, stone becomes stone bricks with a filter."
+      },
+      {
+        "id": "saw_breaker",
+        "name": "Mechanical Saw: felling a tree",
+        "description": "The saw breaks the oak in front of it, then the base of a tall jungle trunk: the whole trunk falls as logs."
+      },
+      {
+        "id": "saw_contraption",
+        "name": "Mechanical Saw: on a contraption",
+        "description": "Saws mounted on a piston move forward and fell the trees they meet."
+      }
+    ],
+    "sections": [
+      {
+        "id": "traiter",
+        "title": "Cutting items",
+        "alt": "Log on an upward-facing saw",
+        "html": "<p>Place the saw <strong>blade up</strong> and throw an item on it, or run it along a <a href=\"/en/wiki/conveyor-belt\">belt</a>. A log becomes a stripped log, then planks; stone follows the stonecutter's recipes.</p>"
+      },
+      {
+        "id": "sens",
+        "title": "Output direction",
+        "alt": "Rotation reversed: the item leaves on the other side",
+        "html": "<p>The cut item always comes out <strong>opposite to the direction of rotation</strong> of the blade. Reverse the rotation and it leaves on the other side: that is what lets you chain two steps.</p>"
+      },
+      {
+        "id": "tapis",
+        "title": "In line on a belt",
+        "alt": "Saw placed between two belts",
+        "html": "<p>Placed between two belts, the saw processes each item <strong>as it passes</strong>, no funnel needed. In the loop, stone goes in on one side and comes out cut on the other.</p>"
+      },
+      {
+        "id": "filtre",
+        "title": "Picking the result",
+        "alt": "Saw filter set to stone bricks",
+        "html": "<p>When an item has <strong>several possible cuts</strong>, like stone, put the wanted item in the saw's <strong>filter</strong>. With no filter, it cycles from one recipe to the next with every item.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "Cutting speed",
+        "html": "<p>Every tick, the saw advances its work by <strong>|RPM| ÷ 24</strong>, at least 1 and at most 128. A 50-unit cut therefore takes 2.5 s up to 24 RPM, 0.6 s at 96 RPM. A stack of more than five items is processed at once, but takes longer.</p>"
+      },
+      {
+        "id": "alimenter",
+        "title": "Powering the saw",
+        "html": "<p>The shaft enters the back of a sideways saw, or the side of an upward-facing one. It costs 4 SU per RPM. For cutting, a medium speed is enough; for trees, the faster it spins, the sooner the trunk falls. A saw on a contraption needs no shaft at all.</p>"
+      },
+      {
+        "id": "arbre",
+        "title": "Felling a tree",
+        "alt": "The saw cuts an oak",
+        "html": "<p>Facing sideways and powered, the saw <strong>breaks the block it faces</strong>, like a <a href=\"/en/wiki/mechanical-drill\">drill</a>. If that block is a trunk, the whole tree comes down.</p>"
+      },
+      {
+        "id": "base",
+        "title": "Cutting the base",
+        "alt": "The base of the trunk is cut",
+        "html": "<p>To fell the entire tree, the saw has to cut the <strong>last block linking it to the ground</strong>. Big 2 × 2 trees fall too, in a shower of logs.</p>"
+      },
+      {
+        "id": "contraption",
+        "title": "On a contraption",
+        "alt": "Saws mounted on a piston",
+        "html": "<p>Mounted on a <a href=\"/en/wiki/mechanical-piston\">piston</a>, a <a href=\"/en/wiki/gantry-carriage\">gantry</a> or a train, saws <strong>work as they move</strong>: no need to spin them separately.</p>"
+      },
+      {
+        "id": "coupe",
+        "title": "Clearing as it goes",
+        "alt": "The saws fell the trees on their way",
+        "html": "<p>Every tree it meets is felled, and the wood goes into the <strong>contraption's chests or barrels</strong> if there are any, otherwise it drops on the ground. If a trunk holds out, the contraption pauses while it is being cut.</p>"
+      },
+      {
+        "id": "montages",
+        "title": "Build ideas",
+        "html": "<p>A <strong>sawmill</strong>: a belt carrying logs to two saws in a row, one to strip, the other to make planks. A <strong>tree farm</strong>: saws on a <a href=\"/en/wiki/mechanical-piston\">piston</a> moving past a row of saplings, then a <a href=\"/en/wiki/deployer\">deployer</a> that replants.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>Nothing comes out? The cutting saw must face <strong>up</strong>; facing sideways, it breaks instead of cutting. The wrong result comes out? Set a filter. A tree still standing? The saw did not cut the lowest block of the trunk.</p>"
+      },
+      {
+        "id": "limites",
+        "title": "What the loops do not show",
+        "html": "<p>The blade is drawn without its spinning animation, and the sawdust particles are not shown. Items thrown on the saw follow the game's item physics; those on the belt follow its speed. The falling logs keep their real trajectory.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On our server",
+        "html": "<p>On Create France, a small sawmill early on quickly supplies all the planks and shafts you need.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/mechanical_saw.json",
+      "Stress: AllBlocks.MECHANICAL_SAW (CStress.setImpact(4.0))",
+      "Cutting: SawBlockEntity.start / tick (recipe duration, 50 by default, × items / 5; speed clamp(|RPM| / 24, 1, 128) per tick; recipeIndex without filter), CRecipes.allowStonecuttingOnSaw",
+      "Recipes: recipe/cutting/*.json (e.g. andesite alloy → 6 shafts, 200)",
+      "Trees: SawBlockEntity (BlockBreakingKineticBlockEntity), TreeCutter",
+      "Contraption: SawMovementBehaviour, CKinetics.moveItemsToStorage",
+      "Simulation: WIKI/contraption_sim.py (carried blocks, movement times, ropes and actors recomputed from Create's code)",
+      "Scenes: MechanicalSawScenes.processing, treeCutting, contraption"
+    ]
+  }
+}

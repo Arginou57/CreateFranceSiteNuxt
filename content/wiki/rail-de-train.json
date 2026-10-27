@@ -181,7 +181,9 @@
     "assembler-un-train",
     "observateur-de-train",
     "deployeur",
-    "presse-mecanique"
+    "presse-mecanique",
+    "assembleur-de-wagonnet",
+    "rouleau-mecanique"
   ],
   "sources": [
     "Recette : sequenced_assembly/track.json (tag create:sleepers : dalles de pierre, de pierre lisse, d’andésite)",

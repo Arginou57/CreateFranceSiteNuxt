@@ -178,7 +178,8 @@
     "tapis-roulant",
     "depot",
     "bras-mecanique",
-    "meule"
+    "meule",
+    "interface-de-stockage-portable"
   ],
   "sources": [
     "Quantité : FunnelBlockEntity.getAmountToExtract (filtre inactif : 1 objet ; entonnoir de laiton : quantité du filtre, jusqu'à 64)",

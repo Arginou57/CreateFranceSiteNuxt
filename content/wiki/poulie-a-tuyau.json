@@ -160,7 +160,8 @@
     "pompe-mecanique",
     "tuyau-a-fluide",
     "reservoir-a-fluide",
-    "roue-a-eau"
+    "roue-a-eau",
+    "poulie-a-corde"
   ],
   "sources": [
     "Recette : crafting/kinetics/hose_pulley.json",

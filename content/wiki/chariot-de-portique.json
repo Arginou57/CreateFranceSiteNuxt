@@ -1,0 +1,381 @@
+{
+  "slug": "chariot-de-portique",
+  "name": "Chariot et rotor de portique",
+  "blockId": "create:gantry_carriage",
+  "category": "contraptions",
+  "title": "Chariot de portique — Create : guide en français",
+  "description": "Le portique de Create : rotor de portique, chariot qui glisse, vitesse, sens de déplacement, redstone et portiques en cascade sur plusieurs axes.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Un <strong>portique</strong> se compose de deux blocs : le <strong>rotor de portique</strong>, un axe qui tourne, et le <strong>chariot de portique</strong>, qui glisse le long de cet axe en emportant sa structure. C'est l'outil des grues, des ponts roulants et des machines qui balaient une zone, sur un, deux ou trois axes.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Contraptions"
+    },
+    {
+      "label": "Stress",
+      "value": "Rotor de portique sans coût propre ; le chariot suit la vitesse du rotor"
+    },
+    {
+      "label": "Vitesse",
+      "value": "tr/min ÷ 512 bloc par tick : 2,5 blocs/s à 64 tr/min, 9,8 au plus"
+    },
+    {
+      "label": "Course",
+      "value": "Jusqu'au bout du rotor de portique, sans barre ni corde"
+    },
+    {
+      "label": "Sens",
+      "value": "Selon l'orientation du rotor et le sens de sa rotation"
+    },
+    {
+      "label": "Redstone",
+      "value": "Rotor alimenté : les chariots s’arrêtent et transmettent la rotation"
+    },
+    {
+      "label": "Cascade",
+      "value": "Un rotor posé sur un chariot (ou l’inverse) suit sans colle"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (rotor : 8 par recette)",
+    "grid": [
+      [
+        null,
+        "Alliage d'andésite",
+        null
+      ],
+      [
+        null,
+        "Poudre de redstone",
+        null
+      ],
+      [
+        null,
+        "Alliage d'andésite",
+        null
+      ]
+    ],
+    "result": "8 rotors de portique"
+  },
+  "videos": [
+    {
+      "id": "gantry_intro",
+      "name": "Portique : rotor et chariot",
+      "description": "Un chariot parcourt un rotor de portique, puis emporte une structure de planches collée sur lui.",
+      "duration": "PT12S"
+    },
+    {
+      "id": "gantry_redstone",
+      "name": "Portique : la redstone",
+      "description": "Un levier alimente le rotor : le chariot s'arrête et fait tourner l'arbre posé sur lui.",
+      "duration": "PT10S"
+    },
+    {
+      "id": "gantry_direction",
+      "name": "Portique : le sens de déplacement",
+      "description": "Deux rotors orientés à l'inverse font partir leurs chariots dans des sens opposés, puis dans l'autre sens quand la rotation s'inverse.",
+      "duration": "PT21S"
+    },
+    {
+      "id": "gantry_subgantry",
+      "name": "Portique : en cascade",
+      "description": "Un rotor de portique est porté par un chariot, et un second chariot glisse sur lui : la machine se déplace sur deux axes.",
+      "duration": "PT11S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "rotor",
+      "title": "Le rotor, un rail qui tourne",
+      "image": "gantry_intro_rotor.webp",
+      "alt": "Chariot de portique sur son rotor",
+      "video": "gantry_intro",
+      "html": "<p>Le <strong>rotor de portique</strong> se pose en ligne comme un <a href=\"/wiki/rotor\">rotor</a>, et ses deux bouts prennent une forme d'embout. Un <strong>chariot de portique</strong> posé contre lui glisse dès qu'il tourne, et s'arrête au bout de la ligne.</p>"
+    },
+    {
+      "id": "structure",
+      "title": "Une structure sur le chariot",
+      "image": "gantry_intro_structure.webp",
+      "alt": "Planches collées emportées par le chariot",
+      "html": "<p>Le chariot emporte ce qui est posé sur sa face libre, avec la <a href=\"/wiki/colle-extra-forte\">colle</a> et les <a href=\"/wiki/chassis-lineaire\">châssis</a> habituels. Dans la boucle, les planches collées voyagent avec lui : notre simulation retrouve les mêmes sept blocs que la scène.</p>"
+    },
+    {
+      "id": "arret",
+      "title": "La redstone arrête les chariots",
+      "image": "gantry_redstone_arret.webp",
+      "alt": "Rotor alimenté : le chariot ne bouge plus",
+      "video": "gantry_redstone",
+      "html": "<p>Un <strong>signal de redstone</strong> sur le rotor de portique fige tous les chariots qui s'y trouvent. Le rotor continue pourtant de tourner : sa rotation passe ailleurs.</p>"
+    },
+    {
+      "id": "relais",
+      "title": "La rotation passe au chariot",
+      "image": "gantry_redstone_relais.webp",
+      "alt": "Le chariot transmet la rotation à l'arbre posé sur lui",
+      "html": "<p>Tant que le rotor est alimenté, le chariot fait tourner l'<strong>arbre de sortie</strong> placé contre lui. On s'en sert pour actionner une machine embarquée une fois arrivé, par exemple une <a href=\"/wiki/perceuse-mecanique\">perceuse</a> ou un <a href=\"/wiki/deployeur\">déployeur</a>.</p>"
+    },
+    {
+      "id": "orientation",
+      "title": "Deux orientations",
+      "image": "gantry_direction_orientation.webp",
+      "alt": "Deux rotors de portique posés en sens contraires",
+      "video": "gantry_direction",
+      "html": "<p>Un rotor de portique a un <strong>sens de pose</strong>, visible à ses embouts. Deux rotors posés tête-bêche, entraînés par la même rotation, envoient leurs chariots dans des directions opposées.</p>"
+    },
+    {
+      "id": "sens",
+      "title": "Inverser la marche",
+      "image": "gantry_direction_sens.webp",
+      "alt": "Rotation inversée : les chariots changent de sens",
+      "html": "<p>Le sens d'un chariot dépend de l'orientation de son rotor <strong>et</strong> du sens de rotation. Inverse la rotation avec un inverseur et les chariots repartent dans l'autre sens : c'est ainsi qu'on fait un aller-retour.</p>"
+    },
+    {
+      "id": "transmis",
+      "title": "Même règle pour la rotation transmise",
+      "image": "gantry_direction_transmis.webp",
+      "alt": "Arbres de sortie des chariots",
+      "html": "<p>Quand un chariot transmet la rotation à son arbre, le sens de cette sortie suit les mêmes règles. Pense-y avant de brancher une machine qui ne marche que dans un sens.</p>"
+    },
+    {
+      "id": "sans-colle",
+      "title": "Sans colle entre eux",
+      "image": "gantry_subgantry_sans-colle.webp",
+      "alt": "Rotor porté par un chariot",
+      "video": "gantry_subgantry",
+      "html": "<p>Un rotor de portique posé sur un chariot s'y attache <strong>tout seul</strong>, sans colle, et les chariots posés sur un rotor qui bouge le suivent aussi.</p>"
+    },
+    {
+      "id": "cascade",
+      "title": "Des portiques en cascade",
+      "image": "gantry_subgantry_cascade.webp",
+      "alt": "Deux chariots en cascade sur deux axes",
+      "html": "<p>En empilant ainsi rotors et chariots, on couvre <strong>deux ou trois axes</strong> : un pont roulant qui va et vient, avec un chariot qui le parcourt, et un troisième qui monte et descend. Chaque étage a sa propre rotation.</p>"
+    },
+    {
+      "id": "chariot",
+      "title": "Fabriquer le chariot",
+      "html": "<p>Le <strong>chariot de portique</strong> se fabrique comme un roulement, avec une <a href=\"/wiki/roue-dentee\">roue dentée</a> à la place du rotor : dalle en bois, boitier d'andésite, roue dentée, de haut en bas. Il glisse à <strong>tr/min ÷ 512</strong> bloc par tick, comme un piston.</p>"
+    },
+    {
+      "id": "montages",
+      "title": "Idées de montages",
+      "html": "<p>Une <strong>grue</strong> : un rotor de portique en hauteur, un chariot qui porte une <a href=\"/wiki/poulie-a-corde\">poulie à corde</a>. Une <strong>machine à miner en surface</strong> : deux portiques en cascade qui balaient un carré avec des perceuses. Un <strong>ascenseur latéral</strong> le long d'une façade, commandé par un levier.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Le chariot ne bouge pas ? Il doit être collé contre le rotor de portique, roues de son côté, et le rotor doit tourner. Il refuse de démarrer si sa structure touche un bloc fixe. Au bout de la ligne, il s'arrête : rallonge le rotor ou inverse la rotation.</p>"
+    },
+    {
+      "id": "alimenter",
+      "title": "Brancher un portique",
+      "html": "<p>La rotation entre par un bout du rotor de portique, comme dans un rotor ordinaire, et se propage à toute la ligne. Un renvoi par boîte à roues dentées et un levier sur un inverseur suffisent pour un aller-retour commandé à la main.</p>"
+    },
+    {
+      "id": "limites",
+      "title": "Ce que les boucles ne montrent pas",
+      "html": "<p>Le rotor de portique et les roues du chariot sont dessinés par nous d'après le code du jeu.</p>"
+    }
+  ],
+  "related": [
+    "rotor",
+    "piston-mecanique",
+    "colle-extra-forte",
+    "chassis-lineaire",
+    "perceuse-mecanique",
+    "deployeur"
+  ],
+  "sources": [
+    "Recettes : crafting/kinetics/gantry_shaft.json (8 rotors), gantry_carriage.json (dalle en bois, boitier d’andésite, roue dentée)",
+    "Stress : AllBlocks.GANTRY_SHAFT (CStress.setNoImpact())",
+    "Vitesse : GantryShaftBlockEntity.getPinionMovementSpeed (clamp(-vitesse / 512, -0,49, 0,49)), GantryContraptionEntity.tickContraption",
+    "Redstone : GantryShaftBlock.POWERED (chariots arrêtés, rotation relayée), GantryCarriageBlockEntity.getGantryPinionModifier",
+    "Cascade : Contraption.moveGantryPinion / moveGantryShaft",
+    "Rendu : OrientedRotatingVisual.gantryShaft, GantryCarriageRenderer (ajoutés par nous, voir engine_create/REQUESTS.md)",
+    "Simulation : WIKI/contraption_sim.py (blocs embarqués, durées des mouvements, cordes et acteurs recalculés d'après le code de Create)",
+    "Scènes : GantryScenes.introForShaft (= introForPinion), redstone, direction, subgantry"
+  ],
+  "en": {
+    "slugEn": "gantry-carriage",
+    "name": "Gantry Carriage and Gantry Shaft",
+    "title": "Gantry Carriage — Create mod guide",
+    "description": "The Create gantry: the Gantry Shaft, the sliding Gantry Carriage, speed, direction of travel, redstone and cascaded gantries on several axes.",
+    "intro": "A <strong>gantry</strong> is made of two blocks: the <strong>Gantry Shaft</strong>, a spinning axis, and the <strong>Gantry Carriage</strong>, which slides along it carrying its structure. It is the tool for cranes, overhead travelling cranes and machines that sweep an area, on one, two or three axes.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Contraptions"
+      },
+      {
+        "label": "Stress",
+        "value": "Gantry Shaft has no cost of its own; the carriage follows the shaft speed"
+      },
+      {
+        "label": "Speed",
+        "value": "RPM ÷ 512 block per tick: 2.5 blocks/s at 64 RPM, 9.8 at most"
+      },
+      {
+        "label": "Travel",
+        "value": "Up to the end of the Gantry Shaft, no poles or rope"
+      },
+      {
+        "label": "Direction",
+        "value": "From the shaft's orientation and the sense of its rotation"
+      },
+      {
+        "label": "Redstone",
+        "value": "Powered shaft: carriages stop and pass the rotation on"
+      },
+      {
+        "label": "Cascade",
+        "value": "A shaft on a carriage (or the reverse) follows without glue"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (shaft: 8 per craft)",
+      "grid": [
+        [
+          null,
+          "Andesite Alloy",
+          null
+        ],
+        [
+          null,
+          "Redstone Dust",
+          null
+        ],
+        [
+          null,
+          "Andesite Alloy",
+          null
+        ]
+      ],
+      "result": "8 Gantry Shafts"
+    },
+    "videos": [
+      {
+        "id": "gantry_intro",
+        "name": "Gantry: shaft and carriage",
+        "description": "A carriage slides along a Gantry Shaft, then carries a structure of planks glued onto it."
+      },
+      {
+        "id": "gantry_redstone",
+        "name": "Gantry: redstone",
+        "description": "A lever powers the shaft: the carriage stops and turns the shaft mounted on it."
+      },
+      {
+        "id": "gantry_direction",
+        "name": "Gantry: direction of travel",
+        "description": "Two shafts facing opposite ways send their carriages in opposite directions, then back when the rotation is reversed."
+      },
+      {
+        "id": "gantry_subgantry",
+        "name": "Gantry: cascaded",
+        "description": "A Gantry Shaft is carried by a carriage and a second carriage slides along it: the machine moves on two axes."
+      }
+    ],
+    "sections": [
+      {
+        "id": "rotor",
+        "title": "The shaft, a spinning rail",
+        "alt": "Gantry Carriage on its shaft",
+        "html": "<p>The <strong>Gantry Shaft</strong> is placed in a line like a <a href=\"/en/wiki/shaft\">shaft</a>, and both ends take an end-cap shape. A <strong>Gantry Carriage</strong> placed against it slides as soon as it turns, and stops at the end of the line.</p>"
+      },
+      {
+        "id": "structure",
+        "title": "A structure on the carriage",
+        "alt": "Glued planks carried by the carriage",
+        "html": "<p>The carriage takes along whatever sits on its free face, with the usual <a href=\"/en/wiki/super-glue\">glue</a> and <a href=\"/en/wiki/linear-chassis\">chassis</a>. In the loop, the glued planks travel with it: our simulation finds the same seven blocks as the scene.</p>"
+      },
+      {
+        "id": "arret",
+        "title": "Redstone stops the carriages",
+        "alt": "Powered shaft: the carriage stays still",
+        "html": "<p>A <strong>redstone signal</strong> on the Gantry Shaft freezes every carriage on it. The shaft keeps spinning though: its rotation goes elsewhere.</p>"
+      },
+      {
+        "id": "relais",
+        "title": "Rotation passes to the carriage",
+        "alt": "The carriage passes rotation to the shaft on it",
+        "html": "<p>While the shaft is powered, the carriage turns the <strong>output shaft</strong> placed against it. Use it to run an on-board machine once it has arrived, such as a <a href=\"/en/wiki/mechanical-drill\">drill</a> or a <a href=\"/en/wiki/deployer\">deployer</a>.</p>"
+      },
+      {
+        "id": "orientation",
+        "title": "Two orientations",
+        "alt": "Two Gantry Shafts placed facing opposite ways",
+        "html": "<p>A Gantry Shaft has a <strong>placement direction</strong>, visible on its end caps. Two shafts placed head to tail and driven by the same rotation send their carriages in opposite directions.</p>"
+      },
+      {
+        "id": "sens",
+        "title": "Reversing the travel",
+        "alt": "Rotation reversed: the carriages change direction",
+        "html": "<p>A carriage's direction depends on the shaft's orientation <strong>and</strong> on the sense of rotation. Reverse the rotation with a gearshift and the carriages head back the other way: that is how you make a back-and-forth run.</p>"
+      },
+      {
+        "id": "transmis",
+        "title": "Same rule for the passed-on rotation",
+        "alt": "The carriages' output shafts",
+        "html": "<p>When a carriage passes rotation to its shaft, the sense of that output follows the same rules. Keep it in mind before hooking up a machine that only works one way.</p>"
+      },
+      {
+        "id": "sans-colle",
+        "title": "No glue between them",
+        "alt": "Shaft carried by a carriage",
+        "html": "<p>A Gantry Shaft placed on a carriage attaches <strong>by itself</strong>, without glue, and carriages sitting on a moving shaft follow it too.</p>"
+      },
+      {
+        "id": "cascade",
+        "title": "Cascaded gantries",
+        "alt": "Two cascaded carriages on two axes",
+        "html": "<p>Stacking shafts and carriages this way covers <strong>two or three axes</strong>: a travelling bridge going back and forth, a carriage running along it, and a third one going up and down. Each level has its own rotation.</p>"
+      },
+      {
+        "id": "chariot",
+        "title": "Crafting the carriage",
+        "html": "<p>The <strong>Gantry Carriage</strong> is crafted like a bearing, with a <a href=\"/en/wiki/cogwheel\">cogwheel</a> instead of the shaft: wooden slab, andesite casing, cogwheel, top to bottom. It slides at <strong>RPM ÷ 512</strong> block per tick, like a piston.</p>"
+      },
+      {
+        "id": "montages",
+        "title": "Build ideas",
+        "html": "<p>A <strong>crane</strong>: a Gantry Shaft up high, a carriage carrying a <a href=\"/en/wiki/rope-pulley\">Rope Pulley</a>. A <strong>quarry</strong>: two cascaded gantries sweeping a square with drills. A <strong>side lift</strong> running along a building front, driven by a lever.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>Carriage not moving? It must sit right against the Gantry Shaft, wheels on its side, and the shaft must be turning. It will not start if its structure touches a fixed block. At the end of the line it stops: extend the shaft or reverse the rotation.</p>"
+      },
+      {
+        "id": "alimenter",
+        "title": "Powering a gantry",
+        "html": "<p>Rotation enters at one end of the Gantry Shaft, as in a regular shaft, and spreads along the whole line. A gearbox and a lever on a gearshift are enough for a back-and-forth run controlled by hand.</p>"
+      },
+      {
+        "id": "limites",
+        "title": "What the loops do not show",
+        "html": "<p>The Gantry Shaft and the carriage wheels are drawn by us from the game's code, since our engine did not have them. The indicator particles of the scene are left out.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: crafting/kinetics/gantry_shaft.json (8 shafts), gantry_carriage.json (wooden slab, andesite casing, cogwheel)",
+      "Stress: AllBlocks.GANTRY_SHAFT (CStress.setNoImpact())",
+      "Speed: GantryShaftBlockEntity.getPinionMovementSpeed (clamp(-speed / 512, -0.49, 0.49)), GantryContraptionEntity.tickContraption",
+      "Redstone: GantryShaftBlock.POWERED (carriages stopped, rotation relayed), GantryCarriageBlockEntity.getGantryPinionModifier",
+      "Cascade: Contraption.moveGantryPinion / moveGantryShaft",
+      "Rendering: OrientedRotatingVisual.gantryShaft, GantryCarriageRenderer (added by us, see engine_create/REQUESTS.md)",
+      "Simulation: WIKI/contraption_sim.py (carried blocks, movement times, ropes and actors recomputed from Create's code)",
+      "Scenes: GantryScenes.introForShaft (= introForPinion), redstone, direction, subgantry"
+    ]
+  }
+}

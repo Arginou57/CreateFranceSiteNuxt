@@ -1,0 +1,410 @@
+{
+  "slug": "chassis-lineaire",
+  "name": "Châssis linéaire et radial",
+  "blockId": "create:linear_chassis",
+  "category": "contraptions",
+  "title": "Châssis linéaire et radial — Create : guide en français",
+  "description": "Les châssis de Create : châssis linéaire, secondaire et radial, faces collantes, portée à la clé et groupes de châssis pour déplacer de grandes structures.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Les <strong>châssis</strong> sont l'ossature des grandes contraptions. Un <strong>châssis linéaire</strong> entraîne les blocs alignés face à ses côtés collants, un <strong>châssis radial</strong> tout un disque autour de lui. Posés en groupe, ils déplacent des murs entiers sans mettre de colle partout, et leur portée se règle à la clé.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Contraptions"
+    },
+    {
+      "label": "Fabrication",
+      "value": "3 châssis par recette ; le secondaire se fait à partir du linéaire (sans forme)"
+    },
+    {
+      "label": "Coller une face",
+      "value": "Boule de slime ou colle extra-forte, clic droit"
+    },
+    {
+      "label": "Portée",
+      "value": "8 blocs par défaut, de 1 à 16 à la clé"
+    },
+    {
+      "label": "Groupe",
+      "value": "Les châssis identiques et de même axe voisins bougent ensemble"
+    },
+    {
+      "label": "Radial",
+      "value": "Rayon sur la couche autour du châssis, faces latérales collantes"
+    },
+    {
+      "label": "Arrêt",
+      "value": "Ligne coupée par l’air, un bloc remplaçable ou fragile"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (châssis linéaire)",
+    "grid": [
+      [
+        null,
+        "Alliage d'andésite",
+        null
+      ],
+      [
+        "Bûche",
+        "Bûche",
+        "Bûche"
+      ],
+      [
+        null,
+        "Alliage d'andésite",
+        null
+      ]
+    ],
+    "result": "3 châssis linéaires"
+  },
+  "videos": [
+    {
+      "id": "chassis_group",
+      "name": "Châssis : les groupes",
+      "description": "Des châssis linéaires voisins tournent ensemble sur un roulement ; un châssis d'un autre type reste en place.",
+      "duration": "PT14S"
+    },
+    {
+      "id": "chassis_sticky",
+      "name": "Châssis linéaire : les faces collantes",
+      "description": "Les faces d'un châssis deviennent collantes, l'une puis l'autre, puis la colle est retirée ; une ligne de planches part avec le châssis.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "chassis_range",
+      "name": "Châssis linéaire : la portée",
+      "description": "La portée du châssis est réglée à la clé ; de la colle accroche les blocs sur les autres faces ; une grande structure tourne.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "radial_group",
+      "name": "Châssis radial : groupe et faces",
+      "description": "Des châssis radiaux en colonne bougent ensemble ; leurs faces latérales sont rendues collantes.",
+      "duration": "PT20S"
+    },
+    {
+      "id": "radial_radius",
+      "name": "Châssis radial : le rayon",
+      "description": "Un plateau de planches entraîné autour du châssis radial, dans le rayon réglé à la clé ; les blocs hors d'atteinte restent sur place.",
+      "duration": "PT19S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "groupe",
+      "title": "Des châssis qui se tiennent",
+      "image": "chassis_group_groupe.webp",
+      "alt": "Groupe de châssis linéaires sur un roulement",
+      "video": "chassis_group",
+      "html": "<p>Des <strong>châssis linéaires</strong> posés côte à côte, avec le même axe, forment un <strong>groupe</strong> : quand une contraption en emporte un, tous suivent. Ici, un roulement fait tourner tout le groupe d'un coup.</p>"
+    },
+    {
+      "id": "differents",
+      "title": "Sauf ceux d’un autre type",
+      "image": "chassis_group_differents.webp",
+      "alt": "Un châssis différent reste sur place",
+      "html": "<p>Un châssis d'un <strong>autre type</strong> ou tourné sur un autre axe ne se joint pas au groupe. C'est tout l'intérêt du <strong>châssis linéaire secondaire</strong> : posé contre un linéaire, il reste séparé, pour faire deux contraptions côte à côte.</p>"
+    },
+    {
+      "id": "collant",
+      "title": "Rendre une face collante",
+      "image": "chassis_sticky_collant.webp",
+      "alt": "Face collante sur un châssis linéaire",
+      "video": "chassis_sticky",
+      "html": "<p>Les deux bouts d'un châssis linéaire peuvent devenir <strong>collants</strong> : clic droit avec une boule de slime (ou de la colle) sur une face, qui devient verte. Un second clic colle aussi la face opposée.</p>"
+    },
+    {
+      "id": "retirer",
+      "title": "Retirer le slime",
+      "image": "chassis_sticky_retirer.webp",
+      "alt": "Le slime est retiré de la face",
+      "html": "<p>Pour enlever le slime, fais un clic droit <strong>accroupi, main vide</strong> sur la face. Pratique quand une contraption emporte un bloc de trop.</p>"
+    },
+    {
+      "id": "ligne",
+      "title": "Une ligne de blocs",
+      "image": "chassis_sticky_ligne.webp",
+      "alt": "Une ligne de planches part avec le châssis",
+      "html": "<p>Une face collante entraîne la <strong>ligne de blocs</strong> qui se trouve devant elle, jusqu'à sa portée. La ligne s'arrête au premier vide, bloc remplaçable (herbe, eau) ou bloc fragile comme une torche.</p>"
+    },
+    {
+      "id": "portee",
+      "title": "Régler la portée",
+      "image": "chassis_range_portee.webp",
+      "alt": "Réglage de la portée à la clé",
+      "video": "chassis_range",
+      "html": "<p>À la <strong>clé</strong>, on choisit la portée exacte d'un châssis : <strong>8 blocs</strong> par défaut, de 1 à 16. Garde la touche Ctrl enfoncée pour régler d'un coup tous les châssis du groupe.</p>"
+    },
+    {
+      "id": "colle",
+      "title": "Les autres faces : la colle",
+      "image": "chassis_range_colle.webp",
+      "alt": "Blocs collés sur le côté du châssis",
+      "html": "<p>Les côtés d'un châssis linéaire ne sont pas collants. Pour y accrocher des blocs, utilise la <a href=\"/wiki/colle-extra-forte\">colle extra-forte</a>. En mêlant châssis et colle, toutes les formes deviennent possibles.</p>"
+    },
+    {
+      "id": "formes",
+      "title": "Des structures de toutes formes",
+      "image": "chassis_range_formes.webp",
+      "alt": "Grande structure en rotation tenue par des châssis",
+      "html": "<p>Quelques châssis au cœur d'un bâtiment suffisent souvent à l'emporter en entier, avec un <a href=\"/wiki/roulement-mecanique\">roulement</a>, un <a href=\"/wiki/piston-mecanique\">piston</a> ou un <a href=\"/wiki/chariot-de-portique\">portique</a>.</p>"
+    },
+    {
+      "id": "radial",
+      "title": "Le châssis radial",
+      "image": "radial_group_radial.webp",
+      "alt": "Colonne de châssis radiaux",
+      "video": "radial_group",
+      "html": "<p>Les <strong>châssis radiaux</strong> se joignent quand ils sont empilés sur le même axe, en colonne. Comme les linéaires, toute la colonne part dès qu'un seul est emporté.</p>"
+    },
+    {
+      "id": "faces",
+      "title": "Ses faces latérales",
+      "image": "radial_group_faces.webp",
+      "alt": "Faces latérales collantes du châssis radial",
+      "html": "<p>Sur un radial, ce sont les <strong>quatre faces latérales</strong> qui se collent. Un premier clic au slime colle une face, un second colle toutes les autres ; accroupi main vide pour retirer.</p>"
+    },
+    {
+      "id": "rayon",
+      "title": "Tout un disque",
+      "image": "radial_radius_rayon.webp",
+      "alt": "Plateau de planches entraîné dans le rayon",
+      "video": "radial_radius",
+      "html": "<p>Un bloc posé contre une face collante entraîne <strong>tous les blocs qu'il touche</strong> sur la même couche, dans un rayon réglable à la clé (8 par défaut). Idéal pour un plateau tournant ou une roue.</p>"
+    },
+    {
+      "id": "hors-portee",
+      "title": "Hors de portée",
+      "image": "radial_radius_hors-portee.webp",
+      "alt": "Les blocs hors d’atteinte restent sur place",
+      "html": "<p>Un bloc que <strong>rien ne relie</strong> à une face collante reste sur place, même dans le rayon. Les blocs isolés par un vide ne partent pas.</p>"
+    },
+    {
+      "id": "choisir",
+      "title": "Châssis ou colle ?",
+      "html": "<p>La <a href=\"/wiki/colle-extra-forte\">colle</a> suffit pour une petite structure. Les châssis valent mieux pour une grande : on règle la portée au lieu de tout recoller, et une structure en bois ou en pierre peut garder son aspect, les châssis restant cachés au centre.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Un mur reste en place ? Sa ligne est coupée par un vide ou un bloc fragile, ou la portée est trop courte. Deux contraptions partent ensemble ? Leurs châssis identiques se touchent : remplace l'un d'eux par un châssis secondaire.</p>"
+    },
+    {
+      "id": "portee-groupe",
+      "title": "Portée et groupes ensemble",
+      "html": "<p>Chaque châssis d'un groupe garde sa propre portée : un mur irrégulier se règle châssis par châssis.</p>"
+    }
+  ],
+  "related": [
+    "colle-extra-forte",
+    "piston-mecanique",
+    "roulement-mecanique",
+    "chariot-de-portique",
+    "poulie-a-corde",
+    "support-de-moulin-a-vent"
+  ],
+  "sources": [
+    "Recettes : crafting/kinetics/linear_chassis.json, radial_chassis.json (3 par recette), secondary_linear_chassis_from_conversion.json",
+    "Portée : ChassisBlockEntity (range entre 1 et maxChassisRange = 16, valeur initiale max / 2 = 8), ChassisScrollValueBehaviour (Ctrl : tout le groupe)",
+    "Groupes : ChassisBlockEntity.collectChassisGroup / addAttachedChasses (même bloc, même axe ; radiaux en colonne)",
+    "Blocs pris : getIncludedBlockPositionsLinear / Radial (arrêt sur isMovementNecessary, isBrittle, isNotSupportive)",
+    "Faces collantes : AbstractChassisBlock.useItemOn (boule de slime ou colle extra-forte ; accroupi main vide pour retirer)",
+    "Simulation : WIKI/contraption_sim.py (blocs embarqués, durées des mouvements, cordes et acteurs recalculés d'après le code de Create)",
+    "Scènes : ChassisScenes.linearGroup, linearAttachement, radial (contour qui grandit non dessiné)"
+  ],
+  "en": {
+    "slugEn": "linear-chassis",
+    "name": "Linear and Radial Chassis",
+    "title": "Linear and Radial Chassis — Create mod guide",
+    "description": "The Create chassis: Linear, Secondary and Radial Chassis, sticky faces, range set with a wrench and chassis groups to move large structures.",
+    "intro": "<strong>Chassis</strong> are the frame of big contraptions. A <strong>Linear Chassis</strong> drags the blocks lined up against its sticky faces, a <strong>Radial Chassis</strong> a whole disc around it. Placed in groups, they move entire walls without glue everywhere, and their range is set with a wrench.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Contraptions"
+      },
+      {
+        "label": "Crafting",
+        "value": "3 chassis per craft; the secondary one is made from the linear one (shapeless)"
+      },
+      {
+        "label": "Making a face sticky",
+        "value": "Slimeball or Super Glue, right-click"
+      },
+      {
+        "label": "Range",
+        "value": "8 blocks by default, 1 to 16 with a wrench"
+      },
+      {
+        "label": "Group",
+        "value": "Neighbouring identical chassis on the same axis move together"
+      },
+      {
+        "label": "Radial",
+        "value": "Radius on the layer around the chassis, sticky side faces"
+      },
+      {
+        "label": "Stops at",
+        "value": "Air, a replaceable block or a brittle block"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (Linear Chassis)",
+      "grid": [
+        [
+          null,
+          "Andesite Alloy",
+          null
+        ],
+        [
+          "Log",
+          "Log",
+          "Log"
+        ],
+        [
+          null,
+          "Andesite Alloy",
+          null
+        ]
+      ],
+      "result": "3 Linear Chassis"
+    },
+    "videos": [
+      {
+        "id": "chassis_group",
+        "name": "Chassis: groups",
+        "description": "Neighbouring Linear Chassis spin together on a bearing; a chassis of another type stays behind."
+      },
+      {
+        "id": "chassis_sticky",
+        "name": "Linear Chassis: sticky faces",
+        "description": "A chassis' faces become sticky one after the other, then the slime is removed; a line of planks travels with the chassis."
+      },
+      {
+        "id": "chassis_range",
+        "name": "Linear Chassis: range",
+        "description": "The chassis' range is set with a wrench; glue holds blocks on the other faces; a big structure spins."
+      },
+      {
+        "id": "radial_group",
+        "name": "Radial Chassis: group and faces",
+        "description": "Radial Chassis in a column move together; their side faces are made sticky."
+      },
+      {
+        "id": "radial_radius",
+        "name": "Radial Chassis: radius",
+        "description": "A deck of planks is dragged around the Radial Chassis within the range set with a wrench; blocks out of reach stay put."
+      }
+    ],
+    "sections": [
+      {
+        "id": "groupe",
+        "title": "Chassis that stick together",
+        "alt": "Group of Linear Chassis on a bearing",
+        "html": "<p><strong>Linear Chassis</strong> placed side by side, on the same axis, form a <strong>group</strong>: when a contraption takes one of them, all of them follow. Here a bearing spins the whole group at once.</p>"
+      },
+      {
+        "id": "differents",
+        "title": "Except those of another type",
+        "alt": "A different chassis stays put",
+        "html": "<p>A chassis of <strong>another type</strong>, or turned to another axis, does not join the group. That is the whole point of the <strong>Secondary Linear Chassis</strong>: placed against a linear one, it stays apart, for two contraptions side by side.</p>"
+      },
+      {
+        "id": "collant",
+        "title": "Making a face sticky",
+        "alt": "Sticky face on a Linear Chassis",
+        "html": "<p>A Linear Chassis has two ends that can become <strong>sticky</strong>: right-click a face with a slimeball (or glue) and it turns green. A second click glues the opposite face too.</p>"
+      },
+      {
+        "id": "retirer",
+        "title": "Removing the slime",
+        "alt": "The slime is removed from the face",
+        "html": "<p>To remove the slime, right-click the face <strong>while sneaking, with an empty hand</strong>. Handy when a contraption grabs one block too many.</p>"
+      },
+      {
+        "id": "ligne",
+        "title": "A line of blocks",
+        "alt": "A line of planks travels with the chassis",
+        "html": "<p>A sticky face drags the <strong>blocks lined up</strong> ahead of it, up to its range. The line ends at the first gap, replaceable block (grass, water) or brittle block such as a torch.</p>"
+      },
+      {
+        "id": "portee",
+        "title": "Setting the range",
+        "alt": "Setting the range with a wrench",
+        "html": "<p>With a <strong>Wrench</strong> you pick a chassis' exact range: <strong>8 blocks</strong> by default, 1 to 16. Hold Ctrl to set every chassis of the group at once.</p>"
+      },
+      {
+        "id": "colle",
+        "title": "Other faces: glue",
+        "alt": "Blocks glued on the side of the chassis",
+        "html": "<p>The sides of a Linear Chassis are not sticky. To hang blocks there, use <a href=\"/en/wiki/super-glue\">Super Glue</a>. Mixing chassis and glue, any shape becomes possible.</p>"
+      },
+      {
+        "id": "formes",
+        "title": "Structures of any shape",
+        "alt": "Big spinning structure held by chassis",
+        "html": "<p>A few chassis in the heart of a building are often enough to carry all of it, with a <a href=\"/en/wiki/mechanical-bearing\">bearing</a>, a <a href=\"/en/wiki/mechanical-piston\">piston</a> or a <a href=\"/en/wiki/gantry-carriage\">gantry</a>.</p>"
+      },
+      {
+        "id": "radial",
+        "title": "The Radial Chassis",
+        "alt": "Column of Radial Chassis",
+        "html": "<p><strong>Radial Chassis</strong> join up when stacked on the same axis, in a column. Like linear ones, the whole column goes as soon as one of them is taken.</p>"
+      },
+      {
+        "id": "faces",
+        "title": "Its side faces",
+        "alt": "Sticky side faces of the Radial Chassis",
+        "html": "<p>On a radial chassis, the <strong>four side faces</strong> are the ones that get sticky. A first click with slime glues one face, a second one glues all the others; sneak and use a bare hand to take it off.</p>"
+      },
+      {
+        "id": "rayon",
+        "title": "A whole disc",
+        "alt": "Deck of planks dragged within the radius",
+        "html": "<p>A block against a sticky face drags <strong>every block it touches</strong> on the same layer, within a radius set with a wrench (8 by default). Ideal for a turntable deck or a wheel.</p>"
+      },
+      {
+        "id": "hors-portee",
+        "title": "Out of reach",
+        "alt": "Blocks out of reach stay put",
+        "html": "<p>A block that <strong>nothing connects</strong> to a sticky face stays put, even inside the radius. Blocks cut off by a gap do not go.</p>"
+      },
+      {
+        "id": "choisir",
+        "title": "Chassis or glue?",
+        "html": "<p><a href=\"/en/wiki/super-glue\">Glue</a> is enough for a small structure. Chassis are better for a big one: you set the range instead of re-gluing everything, and a wooden or stone build keeps its look, with the chassis hidden in the middle.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>A wall stays behind? Its line is cut by a gap or a brittle block, or the range is too short. Two contraptions leave together? Their identical chassis touch: swap one of them for a secondary chassis.</p>"
+      },
+      {
+        "id": "portee-groupe",
+        "title": "Range and groups together",
+        "html": "<p>Each chassis of a group keeps its own range: an uneven wall is set chassis by chassis. Setting them all at once with Ctrl saves time on big builds.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: crafting/kinetics/linear_chassis.json, radial_chassis.json (3 per craft), secondary_linear_chassis_from_conversion.json",
+      "Range: ChassisBlockEntity (range between 1 and maxChassisRange = 16, starting value max / 2 = 8), ChassisScrollValueBehaviour (Ctrl: whole group)",
+      "Groups: ChassisBlockEntity.collectChassisGroup / addAttachedChasses (same block, same axis; radials in a column)",
+      "Blocks taken: getIncludedBlockPositionsLinear / Radial (stops on isMovementNecessary, isBrittle, isNotSupportive)",
+      "Sticky faces: AbstractChassisBlock.useItemOn (slimeball or Super Glue; sneak with an empty hand to remove)",
+      "Simulation: WIKI/contraption_sim.py (carried blocks, movement times, ropes and actors recomputed from Create's code)",
+      "Scenes: ChassisScenes.linearGroup, linearAttachement, radial (growing outline not drawn)"
+    ]
+  }
+}

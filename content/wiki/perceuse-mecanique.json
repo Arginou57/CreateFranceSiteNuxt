@@ -80,7 +80,7 @@
       "html": "<ul><li><strong>Elle ne tourne pas</strong> : la rotation arrive par la pointe au lieu de l'arrière, ou le réseau est surchargé.</li><li><strong>La foreuse s'arrête</strong> : le piston est en bout de course ou un bloc dur (obsidienne, minerai profond) la ralentit fortement.</li><li><strong>Des blocs restent derrière</strong> : il manque une perceuse dans la grille ; il en faut une par case de la face avant.</li><li>Associe-la à des <a href=\"/wiki/tapis-roulant\">tapis roulants</a> pour évacuer les blocs d'une perceuse fixe, ou à une <a href=\"/wiki/presse-mecanique\">presse mécanique</a> dans une chaîne de traitement.</li></ul>"
     }
   ],
-  "related": ["tapis-roulant", "presse-mecanique"],
+  "related": ["tapis-roulant", "presse-mecanique", "roulement-mecanique", "colle-extra-forte", "controles-de-machine", "piston-mecanique", "chassis-lineaire", "rouleau-mecanique"],
   "sources": [
     "Stress : AllBlocks.java, MECHANICAL_DRILL, CStress.setImpact(4.0)",
     "Cassage fixe : BlockBreakingKineticBlockEntity (force = |vitesse| / 100, progression clamp(force / dureté, 1, 10), attente dureté / force ticks) ; duretés vanilla (terre 0,5, pierre 1,5, planches 2, obsidienne 50)",

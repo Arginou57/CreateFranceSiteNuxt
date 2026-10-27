@@ -1,0 +1,410 @@
+{
+  "slug": "assembleur-de-wagonnet",
+  "name": "Assembleur de wagonnet",
+  "blockId": "create:cart_assembler",
+  "category": "contraptions",
+  "title": "Assembleur de wagonnet — Create : guide en français",
+  "description": "L'assembleur de wagonnet de Create : monter une structure sur un wagonnet, la démonter, orientation, attelages à deux wagonnets et types de rails.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Avant les trains, Create permettait déjà de faire rouler des machines sur des rails vanilla. L'<strong>assembleur de wagonnet</strong> se pose comme un rail : alimenté, il <strong>monte la structure</strong> posée sur lui sur le wagonnet qui passe ; sans signal, il la remet en blocs. Parfait pour une petite foreuse, un manège ou un convoi léger.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Contraptions"
+    },
+    {
+      "label": "Pose",
+      "value": "Sur la voie, comme un rail"
+    },
+    {
+      "label": "Alimenté",
+      "value": "Monte la structure attachée sur le wagonnet qui passe"
+    },
+    {
+      "label": "Sans signal",
+      "value": "Démonte les machines sur wagonnet qui passent"
+    },
+    {
+      "label": "Orientation",
+      "value": "Suit le wagonnet, ou rotation verrouillée"
+    },
+    {
+      "label": "Attelage",
+      "value": "Deux assembleurs sous une même structure : convoi de deux wagonnets"
+    },
+    {
+      "label": "Clé",
+      "value": "Sur le wagonnet : récupérer la machine comme un objet"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Alliage d'andésite",
+        "Poudre de redstone",
+        "Alliage d'andésite"
+      ],
+      [
+        "Bûche",
+        null,
+        "Bûche"
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 assembleur de wagonnet"
+  },
+  "videos": [
+    {
+      "id": "cart_anchor",
+      "name": "Assembleur de wagonnet : monter et démonter",
+      "description": "Un assembleur alimenté monte une structure de planches sur un wagonnet qui part ; sans signal, l'assembleur la remet en blocs à son retour.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "cart_modes",
+      "name": "Assembleur de wagonnet : l'orientation",
+      "description": "La structure tourne avec le wagonnet dans le virage ; rotation verrouillée, elle garde son orientation.",
+      "duration": "PT21S"
+    },
+    {
+      "id": "cart_dual",
+      "name": "Assembleur de wagonnet : deux wagonnets",
+      "description": "Deux assembleurs sous une même structure en font un convoi de deux wagonnets, qui prend le virage ensemble.",
+      "duration": "PT13S"
+    },
+    {
+      "id": "cart_rails",
+      "name": "Assembleur de wagonnet : les rails",
+      "description": "Sur rail normal, le wagonnet passe sans s'arrêter ; sur rail de propulsion, il attend le signal ; un wagonnet à coffre et un wagonnet à fourneau servent aussi d'ancre.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "monter",
+      "title": "Monter une machine sur un wagonnet",
+      "image": "cart_anchor_monter.webp",
+      "alt": "Structure montée sur le wagonnet",
+      "video": "cart_anchor",
+      "html": "<p>Pose l'assembleur sur la voie et la structure par-dessus, reliée avec de la <a href=\"/wiki/colle-extra-forte\">colle</a>. Alimente-le à la redstone : le premier wagonnet qui passe <strong>emporte toute la structure</strong>. Nos boucles dessinent le wagonnet d'après le modèle du jeu.</p>"
+    },
+    {
+      "id": "desassembler",
+      "title": "La démonter au retour",
+      "image": "cart_anchor_desassembler.webp",
+      "alt": "La machine redevient des blocs sur l’assembleur",
+      "html": "<p>Un assembleur <strong>sans signal</strong> fait l'inverse : il remet en blocs la machine sur wagonnet qui passe dessus. Une seule pièce de voie sert donc de dépôt et de départ.</p>"
+    },
+    {
+      "id": "cle",
+      "title": "L’emporter dans l’inventaire",
+      "image": "cart_anchor_cle.webp",
+      "alt": "La clé sur le wagonnet",
+      "html": "<p>Un clic à la <strong>clé</strong> sur le wagonnet ramasse toute la machine : elle devient un objet <strong>machine sur wagonnet</strong>, que l'on repose plus loin sur des rails.</p>"
+    },
+    {
+      "id": "orientation",
+      "title": "Elle suit le wagonnet",
+      "image": "cart_modes_orientation.webp",
+      "alt": "La structure pivote dans le virage",
+      "video": "cart_modes",
+      "html": "<p>Par défaut, la structure <strong>tourne avec son wagonnet</strong> : dans un virage, elle pivote pour rester dans le sens de la marche.</p>"
+    },
+    {
+      "id": "fleche",
+      "title": "L’avant de la structure",
+      "image": "cart_modes_fleche.webp",
+      "alt": "Flèche de l’assembleur indiquant l’avant",
+      "html": "<p>Une <strong>flèche</strong> sur l'assembleur montre où sera l'avant de la future machine. Tourne-la avant d'assembler, pour qu'une foreuse parte perceuse devant.</p>"
+    },
+    {
+      "id": "verrou",
+      "title": "Rotation verrouillée",
+      "image": "cart_modes_verrou.webp",
+      "alt": "Structure à rotation verrouillée",
+      "html": "<p>Le <strong>panneau de réglage</strong> propose aussi de mettre les acteurs en pause pendant les virages, ou de <strong>verrouiller la rotation</strong> : la structure garde alors la même orientation quoi qu'il arrive.</p>"
+    },
+    {
+      "id": "deux",
+      "title": "Deux wagonnets, une structure",
+      "image": "cart_dual_deux.webp",
+      "alt": "Deux assembleurs sous la même structure",
+      "video": "cart_dual",
+      "html": "<p>Pose <strong>deux assembleurs</strong> sous une même structure, et alimente l'un des deux : elle s'installe à cheval sur deux wagonnets, un convoi plus long et plus stable.</p>"
+    },
+    {
+      "id": "attelage",
+      "title": "Comme un attelage",
+      "image": "cart_dual_attelage.webp",
+      "alt": "Le convoi prend le virage",
+      "html": "<p>Les deux wagonnets roulent alors comme s'ils étaient reliés par un <strong>lien pour wagonnet</strong>, et la structure pivote entre eux dans les virages.</p>"
+    },
+    {
+      "id": "normaux",
+      "title": "Sur un rail normal",
+      "image": "cart_rails_normaux.webp",
+      "alt": "Le wagonnet passe sans s’arrêter",
+      "video": "cart_rails",
+      "html": "<p>Posé sur une voie ordinaire, l'assembleur <strong>ne freine pas</strong> les wagonnets : ils passent à leur vitesse et l'assemblage se fait au vol.</p>"
+    },
+    {
+      "id": "alimentes",
+      "title": "Sur un rail de propulsion",
+      "image": "cart_rails_alimentes.webp",
+      "alt": "Le wagonnet attend sur l’assembleur",
+      "html": "<p>Sur un rail de propulsion ou des <strong>rails contrôleurs</strong>, l'assembleur <strong>retient le wagonnet</strong> tant qu'il ne reçoit pas de signal : idéal pour une gare de départ.</p>"
+    },
+    {
+      "id": "autres",
+      "title": "D’autres wagonnets",
+      "image": "cart_rails_autres.webp",
+      "alt": "Wagonnet à coffre sous la structure",
+      "html": "<p>Un <strong>wagonnet à coffre</strong> ou à fourneau peut aussi servir d'ancre. Le coffre du wagonnet à coffre n'est pas dessiné dans nos boucles.</p>"
+    },
+    {
+      "id": "fourneau",
+      "title": "Un wagonnet qui avance seul",
+      "image": "cart_rails_fourneau.webp",
+      "alt": "Wagonnet à fourneau sous la structure",
+      "html": "<p>Le <strong>wagonnet à fourneau</strong> se ravitaille seul en combustible dans les coffres de la structure : la machine avance sans être poussée, tant qu'il reste du charbon.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Le wagonnet passe sans rien prendre ? L'assembleur n'est pas alimenté, ou la structure n'est pas collée à lui. La machine se démonte trop tôt ? Un autre assembleur sans signal est sur le trajet. Pour les longs trajets, préfère un vrai <a href=\"/wiki/assembler-un-train\">train</a>.</p>"
+    },
+    {
+      "id": "alimenter",
+      "title": "Alimenter l’assembleur",
+      "html": "<p>Un simple levier ou une horloge de redstone suffit : alimenté, l'assembleur monte la structure au passage suivant ; éteint, il la démonte. Deux assembleurs aux deux bouts d'une ligne font une navette.</p>"
+    },
+    {
+      "id": "limites",
+      "title": "Ce que les boucles ne montrent pas",
+      "html": "<p>Les wagonnets sont dessinés par nous d'après le modèle du jeu, avec leur trajet et leurs rotations ; le coffre du wagonnet à coffre et la fumée du wagonnet à fourneau ne le sont pas. La clé et le joueur non plus.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur notre serveur",
+      "html": "<p>Sur Create France, l'assembleur de wagonnet reste pratique pour les petits trajets dans une base, une mine ou un parc d'attractions, là où un train complet serait trop encombrant.</p>"
+    }
+  ],
+  "related": [
+    "colle-extra-forte",
+    "piston-mecanique",
+    "perceuse-mecanique",
+    "assembler-un-train",
+    "rail-de-train",
+    "controles-de-machine"
+  ],
+  "sources": [
+    "Recettes : crafting/kinetics/cart_assembler.json, controller_rail.json",
+    "Assemblage : CartAssemblerBlock / CartAssemblerBlockEntity (alimenté : assemble ; sans signal : désassemble), MountedContraption",
+    "Orientation : CartAssemblerBlockEntity.CartMovementMode (ROTATE, ROTATE_PAUSED, ROTATION_LOCKED)",
+    "Attelage : CKinetics.maxCartCouplingLength (32), MinecartCouplingHandler",
+    "Récupération : CKinetics.survivalContraptionPickup (vrai), minecartContraptionInContainers (faux)",
+    "Wagonnet dessiné : MinecartModel.createBodyLayer (5 pavés, texture 64 × 32), MinecartRenderer (porté par nous dans contraption_sim, voir engine_create/REQUESTS.md)",
+    "Simulation : WIKI/contraption_sim.py (blocs embarqués, durées des mouvements, cordes et acteurs recalculés d'après le code de Create)",
+    "Scènes : CartAssemblerScenes.anchor, modes, dual, rails (coffre du wagonnet non dessiné)"
+  ],
+  "en": {
+    "slugEn": "cart-assembler",
+    "name": "Cart Assembler",
+    "title": "Cart Assembler — Create mod guide",
+    "description": "The Create Cart Assembler: mounting a structure on a minecart, taking it apart, orientation, two-cart contraptions and the kinds of rails.",
+    "intro": "Long before trains, Create already let you run machines on vanilla rails. The <strong>Cart Assembler</strong> is placed like a rail: when powered, it <strong>mounts the structure</strong> on top of it onto the passing minecart; without a signal, it turns it back into blocks. Perfect for a small drill, a ride or a light convoy.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Contraptions"
+      },
+      {
+        "label": "Placement",
+        "value": "On the track, like a rail"
+      },
+      {
+        "label": "Powered",
+        "value": "Mounts the attached structure on the passing minecart"
+      },
+      {
+        "label": "No signal",
+        "value": "Takes apart minecart contraptions passing over it"
+      },
+      {
+        "label": "Orientation",
+        "value": "Follows the minecart, or rotation locked"
+      },
+      {
+        "label": "Coupling",
+        "value": "Two assemblers under one structure: a two-cart convoy"
+      },
+      {
+        "label": "Wrench",
+        "value": "On the minecart: pick the machine up as an item"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Andesite Alloy",
+          "Redstone Dust",
+          "Andesite Alloy"
+        ],
+        [
+          "Log",
+          null,
+          "Log"
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Cart Assembler"
+    },
+    "videos": [
+      {
+        "id": "cart_anchor",
+        "name": "Cart Assembler: mounting and taking apart",
+        "description": "A powered assembler mounts a structure of planks on a minecart that drives off; without a signal, the assembler turns it back into blocks on its return."
+      },
+      {
+        "id": "cart_modes",
+        "name": "Cart Assembler: orientation",
+        "description": "The structure turns with the minecart in the bend; with rotation locked, it keeps its orientation."
+      },
+      {
+        "id": "cart_dual",
+        "name": "Cart Assembler: two minecarts",
+        "description": "Two assemblers under one structure turn it into a convoy of two minecarts that takes the bend together."
+      },
+      {
+        "id": "cart_rails",
+        "name": "Cart Assembler: rails",
+        "description": "On a regular rail the minecart passes without stopping; on a powered rail it waits for the signal; a chest minecart and a furnace minecart can be anchors too."
+      }
+    ],
+    "sections": [
+      {
+        "id": "monter",
+        "title": "Mounting a machine on a minecart",
+        "alt": "Structure mounted on the minecart",
+        "html": "<p>Place the assembler on the track and the structure on top of it, tied together with <a href=\"/en/wiki/super-glue\">glue</a>. Power it with redstone: the first minecart passing by <strong>takes the whole structure</strong>. Our loops draw the minecart from the game's model.</p>"
+      },
+      {
+        "id": "desassembler",
+        "title": "Taking it apart on return",
+        "alt": "The machine turns back into blocks on the assembler",
+        "html": "<p>An assembler <strong>with no signal</strong> does the opposite: it turns the minecart contraption passing over it back into blocks. A single piece of track serves as both depot and departure.</p>"
+      },
+      {
+        "id": "cle",
+        "title": "Taking it into your inventory",
+        "alt": "The Wrench on the minecart",
+        "html": "<p>A click with the <strong>Wrench</strong> on the minecart picks up the whole machine: it becomes a <strong>Minecart Contraption</strong> item that you place again further along some rails.</p>"
+      },
+      {
+        "id": "orientation",
+        "title": "It follows the minecart",
+        "alt": "The structure pivots in the bend",
+        "html": "<p>By default the structure <strong>turns with its minecart</strong>: in a bend, it pivots to keep facing the direction of travel.</p>"
+      },
+      {
+        "id": "fleche",
+        "title": "The front of the structure",
+        "alt": "The assembler's arrow showing the front",
+        "html": "<p>An <strong>arrow</strong> on the assembler shows where the front of the machine will be. Turn it before assembling so that a drill rig sets off drill first.</p>"
+      },
+      {
+        "id": "verrou",
+        "title": "Locked rotation",
+        "alt": "Structure with locked rotation",
+        "html": "<p>The <strong>value panel</strong> also lets you pause the actors while turning, or <strong>lock the rotation</strong>: the structure then keeps the same orientation whatever happens.</p>"
+      },
+      {
+        "id": "deux",
+        "title": "Two minecarts, one structure",
+        "alt": "Two assemblers under the same structure",
+        "html": "<p>Place <strong>two assemblers</strong> under one structure and power either of them: it settles across two minecarts, a longer and steadier convoy.</p>"
+      },
+      {
+        "id": "attelage",
+        "title": "Like a coupling",
+        "alt": "The convoy takes the bend",
+        "html": "<p>The two minecarts then run as if joined by a <strong>Minecart Coupling</strong>, and the structure pivots between them in bends.</p>"
+      },
+      {
+        "id": "normaux",
+        "title": "On a regular rail",
+        "alt": "The minecart passes without stopping",
+        "html": "<p>On an ordinary track, the assembler <strong>does not brake</strong> the minecarts: they pass at their own speed and assembly happens on the fly.</p>"
+      },
+      {
+        "id": "alimentes",
+        "title": "On a powered rail",
+        "alt": "The minecart waits on the assembler",
+        "html": "<p>On a powered rail or a <strong>Controller Rail</strong>, the assembler <strong>holds the minecart</strong> until it is powered: ideal for a departure station.</p>"
+      },
+      {
+        "id": "autres",
+        "title": "Other minecarts",
+        "alt": "Chest minecart under the structure",
+        "html": "<p>A <strong>chest minecart</strong> or a furnace minecart can serve as the anchor too. The chest of the chest minecart is not drawn in our loops.</p>"
+      },
+      {
+        "id": "fourneau",
+        "title": "A self-driving minecart",
+        "alt": "Furnace minecart under the structure",
+        "html": "<p>The <strong>furnace minecart</strong> refuels itself from the structure's chests: the machine moves without being pushed, as long as there is coal left.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>Minecart passing without taking anything? The assembler is not powered, or the structure is not glued to it. Machine falling apart too early? Another unpowered assembler is on the way. For long trips, build a proper <a href=\"/en/wiki/train-assembly\">train</a> instead.</p>"
+      },
+      {
+        "id": "alimenter",
+        "title": "Powering the assembler",
+        "html": "<p>A plain lever or a redstone clock is enough: powered, the assembler mounts the structure on the next pass; switched off, it takes it apart. Two assemblers at both ends of a line make a shuttle. The assembler itself needs no rotation.</p>"
+      },
+      {
+        "id": "limites",
+        "title": "What the loops do not show",
+        "html": "<p>The minecarts are drawn by us from the game's model, with their path and rotations; the chest of the chest minecart and the smoke of the furnace minecart are not. Neither are the wrench and the player.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On our server",
+        "html": "<p>On Create France, the Cart Assembler is still handy for short trips inside a base, a mine or a theme park, where a full train would take too much room and cost far more to build.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: crafting/kinetics/cart_assembler.json, controller_rail.json",
+      "Assembly: CartAssemblerBlock / CartAssemblerBlockEntity (powered: assembles; no signal: disassembles), MountedContraption",
+      "Orientation: CartAssemblerBlockEntity.CartMovementMode (ROTATE, ROTATE_PAUSED, ROTATION_LOCKED)",
+      "Coupling: CKinetics.maxCartCouplingLength (32), MinecartCouplingHandler",
+      "Pick-up: CKinetics.survivalContraptionPickup (true), minecartContraptionInContainers (false)",
+      "Drawn minecart: MinecartModel.createBodyLayer (5 boxes, 64 × 32 texture), MinecartRenderer (ported by us in contraption_sim, see engine_create/REQUESTS.md)",
+      "Simulation: WIKI/contraption_sim.py (carried blocks, movement times, ropes and actors recomputed from Create's code)",
+      "Scenes: CartAssemblerScenes.anchor, modes, dual, rails (minecart chest not drawn)"
+    ]
+  }
+}

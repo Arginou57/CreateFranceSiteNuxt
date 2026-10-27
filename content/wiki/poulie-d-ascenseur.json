@@ -1,0 +1,412 @@
+{
+  "slug": "poulie-d-ascenseur",
+  "name": "Poulie d'ascenseur",
+  "blockId": "create:elevator_pulley",
+  "category": "contraptions",
+  "title": "Poulie d'ascenseur — Create : guide en français",
+  "description": "La poulie d'ascenseur de Create : construire une cabine, contacts d'étage, appeler l'ascenseur, choisir l'étage à bord, portes automatiques et affichage.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>poulie d'ascenseur</strong> fait un vrai ascenseur : une cabine qui s'arrête à des <strong>étages</strong>, appelée par un bouton et pilotée depuis l'intérieur. Elle descend une courroie comme la <a href=\"/wiki/poulie-a-corde\">poulie à corde</a>, mais deux fois plus vite, et elle sait où s'arrêter grâce à des contacts posés à chaque étage.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Contraptions"
+    },
+    {
+      "label": "Stress",
+      "value": "4 SU par tr/min"
+    },
+    {
+      "label": "Vitesse",
+      "value": "2 × tr/min ÷ 512 bloc par tick : 5 blocs/s à 64 tr/min"
+    },
+    {
+      "label": "Course",
+      "value": "384 blocs de courroie au plus"
+    },
+    {
+      "label": "Étages",
+      "value": "Un contact de redstone par étage, changé en contact d'ascenseur"
+    },
+    {
+      "label": "Appel",
+      "value": "Une impulsion de redstone sur un contact d'ascenseur"
+    },
+    {
+      "label": "À bord",
+      "value": "Des contrôles de machine pour choisir l’étage"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Boitier de laiton",
+        null
+      ],
+      [
+        null,
+        "Bloc d'algues séchées",
+        null
+      ],
+      [
+        null,
+        "Plaque de fer",
+        null
+      ]
+    ],
+    "result": "1 poulie d'ascenseur"
+  },
+  "videos": [
+    {
+      "id": "elevator_build",
+      "name": "Poulie d'ascenseur : construire la cabine",
+      "description": "Une cabine est bâtie sous la poulie, deux contacts de redstone sont posés, l'un collé à la cabine, puis des contrôles de machine sont ajoutés.",
+      "duration": "PT19S"
+    },
+    {
+      "id": "elevator_floors",
+      "name": "Poulie d'ascenseur : les étages",
+      "description": "La poulie est assemblée, le contact fixe devient un contact d'ascenseur, et la cabine rejoint les étages appelés.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "elevator_doors",
+      "name": "Poulie d'ascenseur : portes et signaux",
+      "description": "La cabine est désassemblée puis reprend du service avec une porte coulissante, qui s'ouvre à chaque arrivée.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "elevator_multi",
+      "name": "Poulie d'ascenseur : poulies synchronisées",
+      "description": "D'autres poulies d'ascenseur de la même rangée descendent leur courroie avec la cabine.",
+      "duration": "PT14S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "cabine",
+      "title": "Une cabine sous la poulie",
+      "image": "elevator_build_cabine.webp",
+      "alt": "Cabine construite sous la poulie",
+      "video": "elevator_build",
+      "html": "<p>Pose la poulie en hauteur et construis la <strong>cabine</strong> juste en dessous : plancher, piliers, toit, tout ce qui doit voyager. Relie ses blocs avec un peu de <a href=\"/wiki/colle-extra-forte\">colle extra-forte</a>, comme pour toute contraption.</p>"
+    },
+    {
+      "id": "contacts",
+      "title": "Une paire de contacts",
+      "image": "elevator_build_contacts.webp",
+      "alt": "Deux contacts de redstone face à face",
+      "html": "<p>Il faut deux <strong>contacts de redstone</strong> face à face : un sur le mur de la cage, un sur la cabine. Celui de la cabine doit être <strong>collé</strong> à elle, pour qu'il voyage avec. Le contact fixe marque le premier étage.</p>"
+    },
+    {
+      "id": "controles",
+      "title": "Des commandes à bord",
+      "image": "elevator_build_controles.webp",
+      "alt": "Contrôles de machine dans la cabine",
+      "html": "<p>Des <a href=\"/wiki/controles-de-machine\">contrôles de machine</a> fixés dans la cabine servent de tableau de bord : on y fait défiler les étages et on clique pour partir. Ils sont facultatifs mais pratiques.</p>"
+    },
+    {
+      "id": "assembler",
+      "title": "De la rotation, puis un clic",
+      "image": "elevator_build_assembler.webp",
+      "alt": "La poulie reçoit sa rotation",
+      "html": "<p>Branche la poulie sur une source de rotation, puis fais un <strong>clic droit</strong> dessus : la cabine devient une contraption suspendue à sa courroie. Sans rotation, rien ne s'assemble.</p>"
+    },
+    {
+      "id": "etage",
+      "title": "Des contacts d’ascenseur",
+      "image": "elevator_floors_etage.webp",
+      "alt": "Le contact fixe devient un contact d'ascenseur",
+      "video": "elevator_floors",
+      "html": "<p>À l'assemblage, le contact fixe se change en <strong>contact d'ascenseur</strong>. C'est lui qui représente un étage : clic droit pour lui donner un nom court et une description, affichés à bord.</p>"
+    },
+    {
+      "id": "colonne",
+      "title": "Toute la colonne",
+      "image": "elevator_floors_colonne.webp",
+      "alt": "Deux étages sur la même colonne",
+      "html": "<p>Pour ajouter des étages, pose d'autres contacts de redstone <strong>dans la même colonne</strong>, à la hauteur voulue : ils sont convertis à leur tour. Une seule cage peut desservir des dizaines d'étages.</p>"
+    },
+    {
+      "id": "appel",
+      "title": "Appeler l’ascenseur",
+      "image": "elevator_floors_appel.webp",
+      "alt": "La cabine rejoint l’étage appelé",
+      "html": "<p>Une <strong>impulsion de redstone</strong> sur un contact d'ascenseur appelle la cabine à cet étage : un bouton à côté de la porte suffit. La cabine s'arrête pile au niveau du contact.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "Une vitesse doublée",
+      "image": "elevator_floors_vitesse.webp",
+      "alt": "La cabine monte de plusieurs étages",
+      "html": "<p>La vitesse dépend de la rotation donnée à la poulie : <strong>2 × tr/min ÷ 512</strong> bloc par tick. À 64 tr/min, notre simulation compte 24 ticks (1,2 s) pour six blocs ; la scène prend 3 s, pour qu'on suive la cabine des yeux.</p>"
+    },
+    {
+      "id": "desassembler",
+      "title": "Revenir aux blocs",
+      "image": "elevator_doors_desassembler.webp",
+      "alt": "La cabine redevient des blocs",
+      "video": "elevator_doors",
+      "html": "<p>Un second <strong>clic droit</strong>, toujours sur la poulie, rend la cabine à l'état de blocs, pour la modifier. Il suffira de recliquer pour la remettre en service.</p>"
+    },
+    {
+      "id": "portes",
+      "title": "Des portes automatiques",
+      "image": "elevator_doors_portes.webp",
+      "alt": "Porte coulissante sur la cabine",
+      "html": "<p>Les <strong>portes coulissantes</strong> de Create (andésite, laiton, cuivre, train, verre encadré) fixées à la cabine s'ouvrent seules à l'arrivée et se ferment au départ.</p>"
+    },
+    {
+      "id": "signal",
+      "title": "Un signal à l’arrivée",
+      "image": "elevator_doors_signal.webp",
+      "alt": "Le contact s'allume avec la cabine à son étage",
+      "html": "<p>Un contact d'ascenseur <strong>émet un signal de redstone</strong> tant que la cabine est à son étage. Branche-y les portes palières, une lampe ou une cloche.</p>"
+    },
+    {
+      "id": "affichage",
+      "title": "Afficher l’étage",
+      "image": "elevator_doors_affichage.webp",
+      "alt": "Affichage de l’étage en cours",
+      "html": "<p>Une <a href=\"/wiki/liaison-d-affichage\">liaison d'affichage</a> posée sur n'importe quel contact montre l'étage où se trouve la cabine, sur un tube Nixie ou un panneau.</p>"
+    },
+    {
+      "id": "synchro",
+      "title": "Plusieurs courroies",
+      "image": "elevator_multi_synchro.webp",
+      "alt": "Plusieurs courroies descendent avec la cabine",
+      "video": "elevator_multi",
+      "html": "<p>Comme les poulies à corde, d'autres poulies d'ascenseur posées <strong>à la même hauteur</strong> suivent la cabine sans rotation : un effet visuel, pour une grande plateforme tenue aux coins.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>L'ascenseur ne s'assemble pas ? Vérifie la rotation et la paire de contacts face à face, celui de la cabine bien collé. Il ignore un étage ? Le contact n'est pas dans la même colonne que les autres. Les boucles ne montrent ni le joueur, ni le nom des étages.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils de construction",
+      "html": "<p>Garde la cage d'ascenseur libre sur toute sa hauteur et pose les contacts du même côté. Une rotation de 64 tr/min donne déjà 5 blocs/s, largement assez pour une tour.</p>"
+    },
+    {
+      "id": "limites",
+      "title": "Ce que les boucles ne montrent pas",
+      "html": "<p>Le joueur, son interface et les noms d'étage ne sont pas dessinés.</p>"
+    }
+  ],
+  "related": [
+    "poulie-a-corde",
+    "controles-de-machine",
+    "colle-extra-forte",
+    "liaison-d-affichage",
+    "piston-mecanique"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/elevator_pulley.json",
+    "Stress : AllBlocks.ELEVATOR_PULLEY (CStress.setImpact(4.0))",
+    "Vitesse : ElevatorPulleyBlockEntity.getMovementSpeed (clamp(vitesse × 2 / 512, -1,99, 1,99) bloc par tick)",
+    "Course : CKinetics.maxRopeLength (384)",
+    "Étages : ElevatorContactBlock, ElevatorColumn, ElevatorContactBlockEntity (nom court, description), ElevatorContraption",
+    "Rendu de la courroie : ElevatorPulleyRenderer (ajouté par nous, voir engine_create/REQUESTS.md)",
+    "Simulation : WIKI/contraption_sim.py (blocs embarqués, durées des mouvements, cordes et acteurs recalculés d'après le code de Create)",
+    "Scènes : ElevatorScenes.elevator (67 s, coupé en trois boucles), multiRope (texte des tubes Nixie non dessiné)"
+  ],
+  "en": {
+    "slugEn": "elevator-pulley",
+    "name": "Elevator Pulley",
+    "title": "Elevator Pulley — Create mod guide",
+    "description": "The Create Elevator Pulley: building a cabin, floor contacts, calling the elevator, picking a floor on board, automatic doors and floor display.",
+    "intro": "The <strong>Elevator Pulley</strong> makes a real lift: a cabin that stops at <strong>floors</strong>, called with a button and driven from inside. It lets out a belt like the <a href=\"/en/wiki/rope-pulley\">Rope Pulley</a>, but twice as fast, and it knows where to stop thanks to contacts placed on every floor.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Contraptions"
+      },
+      {
+        "label": "Stress",
+        "value": "4 SU per RPM"
+      },
+      {
+        "label": "Speed",
+        "value": "2 × RPM ÷ 512 block per tick: 5 blocks/s at 64 RPM"
+      },
+      {
+        "label": "Travel",
+        "value": "384 blocks of belt at most"
+      },
+      {
+        "label": "Floors",
+        "value": "One Redstone Contact per floor, turned into an Elevator Contact"
+      },
+      {
+        "label": "Calling",
+        "value": "A redstone pulse on an Elevator Contact"
+      },
+      {
+        "label": "On board",
+        "value": "Contraption Controls to pick the floor"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Brass Casing",
+          null
+        ],
+        [
+          null,
+          "Dried Kelp Block",
+          null
+        ],
+        [
+          null,
+          "Iron Sheet",
+          null
+        ]
+      ],
+      "result": "1 Elevator Pulley"
+    },
+    "videos": [
+      {
+        "id": "elevator_build",
+        "name": "Elevator Pulley: building the cabin",
+        "description": "A cabin is built under the pulley, two Redstone Contacts are placed, one glued to the cabin, then Contraption Controls are added."
+      },
+      {
+        "id": "elevator_floors",
+        "name": "Elevator Pulley: floors",
+        "description": "The pulley is assembled, the fixed contact becomes an Elevator Contact, and the cabin travels to the called floors."
+      },
+      {
+        "id": "elevator_doors",
+        "name": "Elevator Pulley: doors and signals",
+        "description": "The cabin is disassembled, then goes back into service with a sliding door that opens on every arrival."
+      },
+      {
+        "id": "elevator_multi",
+        "name": "Elevator Pulley: synchronised pulleys",
+        "description": "Other Elevator Pulleys in the same row lower their belt along with the cabin."
+      }
+    ],
+    "sections": [
+      {
+        "id": "cabine",
+        "title": "A cabin under the pulley",
+        "alt": "Cabin built under the pulley",
+        "html": "<p>Place the pulley up high and build the <strong>cabin</strong> right below it: floor, pillars, roof, everything that should travel. Tie its blocks together with <a href=\"/en/wiki/super-glue\">Super Glue</a>, as for any contraption.</p>"
+      },
+      {
+        "id": "contacts",
+        "title": "A pair of contacts",
+        "alt": "Two Redstone Contacts, one opposite the other",
+        "html": "<p>You need two <strong>Redstone Contacts</strong>, one opposite the other: one on the shaft wall, one on the cabin. The cabin one must be <strong>glued</strong> to it so that it travels along. The fixed contact marks the first floor.</p>"
+      },
+      {
+        "id": "controles",
+        "title": "Controls on board",
+        "alt": "Contraption Controls in the cabin",
+        "html": "<p><a href=\"/en/wiki/contraption-controls\">Contraption Controls</a> fixed inside the cabin act as a dashboard: scroll through the floors and click to go. They are optional but handy.</p>"
+      },
+      {
+        "id": "assembler",
+        "title": "Rotation, then a click",
+        "alt": "The pulley gets its rotation",
+        "html": "<p>Hook the pulley up to a rotation source, then <strong>right-click</strong> it: the cabin becomes a contraption hanging from its belt. Without rotation, nothing assembles.</p>"
+      },
+      {
+        "id": "etage",
+        "title": "Elevator Contacts",
+        "alt": "The fixed contact is now an Elevator Contact",
+        "html": "<p>On assembly, the fixed contact becomes an <strong>Elevator Contact</strong>. That is what stands for a floor: right-click it to give it a short name and a description, shown on board.</p>"
+      },
+      {
+        "id": "colonne",
+        "title": "The whole column",
+        "alt": "Two floors on the same column",
+        "html": "<p>To add floors, place more Redstone Contacts <strong>in the same column</strong> at the heights you want: they get converted in turn. A single shaft can serve dozens of floors.</p>"
+      },
+      {
+        "id": "appel",
+        "title": "Calling the lift",
+        "alt": "The cabin reaches the called floor",
+        "html": "<p>A <strong>redstone pulse</strong> on an Elevator Contact calls the cabin to that floor: a button next to the door does it. The cabin stops level with the contact.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "Double speed",
+        "alt": "The cabin climbs several floors",
+        "html": "<p>How fast it goes comes from the rotation fed to the pulley: <strong>2 × RPM ÷ 512</strong> block per tick. At 64 RPM our simulation counts 24 ticks (1.2 s) for six blocks; the scene takes 3 s so you can follow the cabin.</p>"
+      },
+      {
+        "id": "desassembler",
+        "title": "Back to blocks",
+        "alt": "The cabin turns back into blocks",
+        "html": "<p>Another <strong>right-click</strong> on the assembled pulley turns the cabin into plain blocks again so you can change it. Click again to put it back into service.</p>"
+      },
+      {
+        "id": "portes",
+        "title": "Automatic doors",
+        "alt": "Sliding door on the cabin",
+        "html": "<p>Create's <strong>sliding doors</strong> (andesite, brass, copper, train, framed glass) fixed to the cabin open by themselves on arrival and close on departure.</p>"
+      },
+      {
+        "id": "signal",
+        "title": "A signal on arrival",
+        "alt": "The contact is powered with the cabin at its floor",
+        "html": "<p>An Elevator Contact <strong>powers redstone</strong> for as long as the cabin sits at its floor. Wire landing doors, a lamp or a bell to it.</p>"
+      },
+      {
+        "id": "affichage",
+        "title": "Showing the floor",
+        "alt": "Display of the current floor",
+        "html": "<p>A <a href=\"/en/wiki/display-link\">Display Link</a> placed on one of the contacts shows which floor the cabin is at, on a Nixie Tube or a board.</p>"
+      },
+      {
+        "id": "synchro",
+        "title": "Several belts",
+        "alt": "Several belts coming down with the cabin",
+        "html": "<p>Like Rope Pulleys, other Elevator Pulleys placed <strong>at the same height</strong> follow the cabin with no rotation: a visual effect, for a big platform held at the corners.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>Lift won't assemble? Check the rotation and the two opposite contacts, the cabin one properly glued. It skips a floor? That contact is not in the same column as the others. The loops show neither the player nor the floor names.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Building tips",
+        "html": "<p>Keep the shaft clear over its whole height and place the contacts on the same side. A rotation of 64 RPM already gives 5 blocks/s, plenty for a tower. One pulley per shaft: two cabins cannot share a column.</p>"
+      },
+      {
+        "id": "limites",
+        "title": "What the loops do not show",
+        "html": "<p>The player, the screens and the floor names are not drawn; the belt and its magnet are drawn by us.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/elevator_pulley.json",
+      "Stress: AllBlocks.ELEVATOR_PULLEY (CStress.setImpact(4.0))",
+      "Speed: ElevatorPulleyBlockEntity.getMovementSpeed (clamp(speed × 2 / 512, -1.99, 1.99) block per tick)",
+      "Travel: CKinetics.maxRopeLength (384)",
+      "Floors: ElevatorContactBlock, ElevatorColumn, ElevatorContactBlockEntity (short name, description), ElevatorContraption",
+      "Belt rendering: ElevatorPulleyRenderer (added by us, see engine_create/REQUESTS.md)",
+      "Simulation: WIKI/contraption_sim.py (carried blocks, movement times, ropes and actors recomputed from Create's code)",
+      "Scenes: ElevatorScenes.elevator (67 s, cut into three loops), multiRope (Nixie Tube text not drawn)"
+    ]
+  }
+}

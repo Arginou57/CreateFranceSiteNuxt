@@ -146,7 +146,8 @@
     "tapis-roulant",
     "telescripteur-de-stock",
     "detecteur-de-seuil",
-    "assembler-un-train"
+    "assembler-un-train",
+    "interface-de-stockage-portable"
   ],
   "sources": [
     "Capacité : CLogistics.vaultCapacity = 20 piles par bloc (de 1 à 2048)",

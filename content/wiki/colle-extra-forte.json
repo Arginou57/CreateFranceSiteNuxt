@@ -1,0 +1,364 @@
+{
+  "slug": "colle-extra-forte",
+  "name": "Colle extra-forte",
+  "blockId": "create:super_glue",
+  "category": "contraptions",
+  "title": "Colle extra-forte — Create : guide en français",
+  "description": "La colle extra-forte de Create : coller une zone, retirer une boîte, zones qui se touchent, blocs suspendus et le colleur piloté par la redstone.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>colle extra-forte</strong> dit au jeu quels blocs voyagent ensemble. On ne colle pas bloc par bloc : on trace une <strong>zone</strong>, et tous les blocs qu'elle contient deviennent une seule pièce pour les pistons, roulements, poulies et trains. Le <strong>colleur</strong>, en fin de page, fait la même chose à la demande, avec de la redstone.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Contraptions"
+    },
+    {
+      "label": "Usage",
+      "value": "Clic droit sur deux coins : une zone collée"
+    },
+    {
+      "label": "Taille",
+      "value": "Coins à moins de 24 blocs l’un de l’autre"
+    },
+    {
+      "label": "Durée",
+      "value": "99 utilisations"
+    },
+    {
+      "label": "Retirer",
+      "value": "Frapper la zone, colle en main"
+    },
+    {
+      "label": "Sans colle",
+      "value": "Blocs suspendus (torches, leviers, récolteurs…) et châssis"
+    },
+    {
+      "label": "Colleur",
+      "value": "Chaque impulsion de redstone l'attache au bloc visé ou l'en détache"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Colle extra-forte à l'établi",
+    "grid": [
+      [
+        "Boule de slime",
+        "Plaque de fer",
+        null
+      ],
+      [
+        "Pépite de fer",
+        "Boule de slime",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 colle extra-forte"
+  },
+  "videos": [
+    {
+      "id": "super_glue",
+      "name": "Colle extra-forte : zones collées",
+      "description": "Des zones de colle sont tracées entre deux coins puis retirées ; une poulie soulève les blocs collés, puis des zones qui se chevauchent et des blocs suspendus.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "sticker",
+      "name": "Colleur : attacher à la demande",
+      "description": "Un colleur sur un roulement s'allume au signal de redstone, emporte le bloc devant lui pendant un tour, puis le lâche.",
+      "duration": "PT14S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "zone",
+      "title": "Tracer une zone",
+      "image": "super_glue_zone.webp",
+      "alt": "Zone de colle tracée entre deux coins",
+      "video": "super_glue",
+      "html": "<p>Colle en main, fais un clic droit sur un <strong>premier coin</strong>, puis sur le coin opposé : une boîte apparaît. Tous les blocs à l'intérieur sont collés entre eux. Les deux coins doivent être à <strong>moins de 24 blocs</strong> l'un de l'autre.</p>"
+    },
+    {
+      "id": "retirer",
+      "title": "Retirer une zone",
+      "image": "super_glue_retirer.webp",
+      "alt": "Une zone de colle est retirée",
+      "html": "<p>Pour supprimer une boîte, <strong>frappe-la</strong> (clic gauche), colle à la main. Les blocs ne bougent pas : seule la colle disparaît.</p>"
+    },
+    {
+      "id": "voisins",
+      "title": "Des voisins qui s’entraînent",
+      "image": "super_glue_voisins.webp",
+      "alt": "La poulie soulève les blocs collés ensemble",
+      "html": "<p>Deux blocs voisins <strong>dans la même zone</strong> s'entraînent l'un l'autre. Dans la boucle, la poulie soulève le cube et ses voisins collés ; notre simulation, qui refait l'assemblage avec les zones de la scène, retrouve les mêmes blocs.</p>"
+    },
+    {
+      "id": "chevauchement",
+      "title": "Des zones qui se touchent",
+      "image": "super_glue_chevauchement.webp",
+      "alt": "Deux zones de colle qui se chevauchent",
+      "html": "<p>Deux zones qui <strong>se chevauchent</strong> partent ensemble : on peut donc coller une forme compliquée en plusieurs boîtes simples plutôt qu'en une seule énorme.</p>"
+    },
+    {
+      "id": "suspendus",
+      "title": "Les blocs suspendus",
+      "image": "super_glue_suspendus.webp",
+      "alt": "Torche, levier et récolteur suivent sans colle",
+      "html": "<p>Les blocs <strong>accrochés à un autre</strong>, comme une torche, un levier ou un <a href=\"/wiki/recolteur-mecanique\">récolteur</a>, suivent leur support sans colle. Inutile d'en gaspiller pour eux.</p>"
+    },
+    {
+      "id": "voir",
+      "title": "Voir la colle",
+      "html": "<p>Les zones de colle sont invisibles en temps normal : prends la colle en main pour les voir apparaître en contour. Pense à vérifier avant d'assembler, une zone oubliée peut emporter un bout de décor.</p>"
+    },
+    {
+      "id": "astuces",
+      "title": "Astuces",
+      "html": "<p>Colle d'abord une grande boîte qui couvre toute la structure, puis retire ce qui dépasse. Les blocs voisins d'une contraption qui ne sont pas dans la zone restent en place : c'est voulu, pour qu'une porte ne parte pas avec son encadrement. La colle se pose aussi à travers les blocs, sans viser chaque face.</p>"
+    },
+    {
+      "id": "trains",
+      "title": "Sur un train",
+      "html": "<p>Pour un train, colle le wagon à ses bogies avant de l'assembler, comme l'explique la page <a href=\"/wiki/assembler-un-train\">assembler un train</a>. La recette y figure aussi.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Un bloc reste en arrière ? Il est hors de la zone ou ne touche aucun bloc collé. Le décor part avec la machine ? Une zone déborde : prends la colle en main pour la voir et frappe la boîte en trop. La colle s'use : 99 zones par tube.</p>"
+    },
+    {
+      "id": "signal",
+      "title": "Le colleur",
+      "image": "sticker_signal.webp",
+      "alt": "Le colleur sort au signal de redstone",
+      "video": "sticker",
+      "html": "<p>Le <strong>colleur</strong> est un petit bloc collant qui obéit à la redstone : chaque <strong>impulsion</strong> le fait sortir ou rentrer. Sorti, il s'agrippe au bloc posé devant lui.</p>"
+    },
+    {
+      "id": "embarque",
+      "title": "Emporter un bloc",
+      "image": "sticker_embarque.webp",
+      "alt": "Le bloc tenu par le colleur tourne avec lui",
+      "html": "<p>Si le colleur fait partie d'une contraption, le bloc qu'il tient <strong>voyage avec elle</strong>. Dans la boucle, un roulement l'emporte pendant un tour complet.</p>"
+    },
+    {
+      "id": "lache",
+      "title": "Lâcher le bloc",
+      "image": "sticker_lache.webp",
+      "alt": "Le colleur lâche le bloc",
+      "html": "<p>Une nouvelle impulsion fait rentrer la tête : le bloc est <strong>libéré</strong> et reste là où il est. Avec un train ou un portique, cela donne une grue qui prend et dépose des blocs.</p>"
+    },
+    {
+      "id": "colleur-recette",
+      "title": "Fabriquer le colleur",
+      "html": "<p>Le colleur se fabrique avec deux alliages d'andésite, une boule de slime, deux pavés et une poudre de redstone. Il suffit de l'orienter vers le bloc à saisir.</p>"
+    },
+    {
+      "id": "limites",
+      "title": "Ce que les boucles ne montrent pas",
+      "html": "<p>Dans nos boucles, les zones de colle sont les contours verts tracés par la scène ; l'objet colle et le joueur ne sont pas dessinés. La tête du colleur, elle, sort et rentre comme dans le jeu, en deux à trois ticks.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur notre serveur",
+      "html": "<p>Sur Create France, la colle se partage : une seule boîte suffit souvent pour une porte ou un pont.</p>"
+    }
+  ],
+  "related": [
+    "assembler-un-train",
+    "chassis-lineaire",
+    "piston-mecanique",
+    "roulement-mecanique",
+    "poulie-a-corde",
+    "chariot-de-portique"
+  ],
+  "sources": [
+    "Recettes : crafting/kinetics/super_glue.json, sticker.json",
+    "Durée : AllItems.SUPER_GLUE (durability(99))",
+    "Taille : SuperGlueSelectionHandler (second coin à moins de 24 blocs du premier)",
+    "Collage : SuperGlueEntity.isGlued, Contraption.moveBlock (blocs voisins dans une même zone)",
+    "Suspendus : BlockMovementChecksImpl.isBlockAttachedTowardsFallback",
+    "Colleur : StickerBlock (EXTENDED basculé par la redstone), StickerBlockEntity (tête : chase 0,4 par tick), Contraption.moveBlock",
+    "Simulation : WIKI/contraption_sim.py (blocs embarqués, durées des mouvements, cordes et acteurs recalculés d'après le code de Create)",
+    "Scènes : ChassisScenes.superGlue, RedstoneScenes.sticker"
+  ],
+  "en": {
+    "slugEn": "super-glue",
+    "name": "Super Glue",
+    "title": "Super Glue — Create mod guide",
+    "description": "Create Super Glue: gluing an area, removing a box, overlapping glue areas, hanging blocks and the redstone-driven Sticker.",
+    "intro": "<strong>Super Glue</strong> tells the game which blocks travel together. You do not glue block by block: you draw an <strong>area</strong>, and every block inside it becomes a single piece for pistons, bearings, pulleys and trains. The <strong>Sticker</strong>, at the end of the page, does the same on demand with redstone.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Contraptions"
+      },
+      {
+        "label": "Use",
+        "value": "Right-click two corners: a glued area"
+      },
+      {
+        "label": "Size",
+        "value": "Corners less than 24 blocks apart"
+      },
+      {
+        "label": "Durability",
+        "value": "99 uses"
+      },
+      {
+        "label": "Removing",
+        "value": "Punch the area with glue in hand"
+      },
+      {
+        "label": "No glue needed",
+        "value": "Hanging blocks (torches, levers, harvesters…) and chassis"
+      },
+      {
+        "label": "Sticker",
+        "value": "Every redstone pulse makes it grab or release the block it faces"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Super Glue crafting recipe",
+      "grid": [
+        [
+          "Slimeball",
+          "Iron Sheet",
+          null
+        ],
+        [
+          "Iron Nugget",
+          "Slimeball",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Super Glue"
+    },
+    "videos": [
+      {
+        "id": "super_glue",
+        "name": "Super Glue: glued areas",
+        "description": "Glue areas are drawn between two corners and removed; a pulley lifts the glued blocks, then overlapping areas and hanging blocks."
+      },
+      {
+        "id": "sticker",
+        "name": "Sticker: attaching on demand",
+        "description": "A Sticker on a bearing switches on with a redstone signal, carries the block it holds for one turn, then lets go."
+      }
+    ],
+    "sections": [
+      {
+        "id": "zone",
+        "title": "Drawing an area",
+        "alt": "Glue area drawn between two corners",
+        "html": "<p>Glue in hand, right-click a <strong>first corner</strong>, then the opposite one: a box appears. Every block inside is glued to its neighbours. The two corners must be <strong>less than 24 blocks</strong> apart.</p>"
+      },
+      {
+        "id": "retirer",
+        "title": "Removing an area",
+        "alt": "A glue area is removed",
+        "html": "<p>To delete a box, <strong>punch it</strong> (left-click) with the glue in hand. The blocks do not move: only the glue goes away.</p>"
+      },
+      {
+        "id": "voisins",
+        "title": "Neighbours dragging each other",
+        "alt": "The pulley lifts the blocks glued together",
+        "html": "<p>Two neighbouring blocks <strong>inside the same area</strong> drag each other along. In the loop, the pulley lifts the cube and its glued neighbours; our simulation, which redoes the assembly with the scene's areas, finds the same blocks.</p>"
+      },
+      {
+        "id": "chevauchement",
+        "title": "Touching areas",
+        "alt": "Two overlapping glue areas",
+        "html": "<p>Two areas that <strong>overlap</strong> travel together: you can glue a complicated shape with several simple boxes rather than one huge one.</p>"
+      },
+      {
+        "id": "suspendus",
+        "title": "Hanging blocks",
+        "alt": "Torch, lever and harvester follow without glue",
+        "html": "<p>Blocks <strong>hanging on another one</strong>, such as a torch, a lever or a <a href=\"/en/wiki/mechanical-harvester\">harvester</a>, follow their support without glue. No need to waste any on them.</p>"
+      },
+      {
+        "id": "voir",
+        "title": "Seeing the glue",
+        "html": "<p>Glue areas are invisible most of the time: hold the glue to see their outlines appear. Check before assembling, a forgotten area can carry off a piece of scenery.</p>"
+      },
+      {
+        "id": "astuces",
+        "title": "Tips",
+        "html": "<p>First glue one big box covering the whole structure, then remove what sticks out. Blocks next to a contraption that are outside the area stay in place: that is on purpose, so a door does not leave with its frame. Glue also goes through blocks, without aiming at each face. The Sticker, for its part, needs no glue to hold its block.</p>"
+      },
+      {
+        "id": "trains",
+        "title": "On a train",
+        "html": "<p>For a train, glue the carriage to its bogeys before assembling it, as explained on the <a href=\"/en/wiki/train-assembly\">train assembly</a> page. The recipe is there too.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>A block left behind? It is outside the area or touches no glued block. The scenery leaves with the machine? An area overflows: hold the glue to see it and punch the extra box. Glue wears out: 99 areas per tube.</p>"
+      },
+      {
+        "id": "signal",
+        "title": "The Sticker",
+        "alt": "The Sticker comes out on a redstone signal",
+        "html": "<p>The <strong>Sticker</strong> is a small sticky block that obeys redstone: every <strong>pulse</strong> pushes it out or pulls it back. Once out, it grips the block it faces.</p>"
+      },
+      {
+        "id": "embarque",
+        "title": "Carrying a block",
+        "alt": "The block held by the Sticker spins with it",
+        "html": "<p>When the Sticker is part of a contraption, the block it holds <strong>travels with it</strong>. In the loop a bearing carries it for a full turn.</p>"
+      },
+      {
+        "id": "lache",
+        "title": "Letting go",
+        "alt": "The Sticker lets go of the block",
+        "html": "<p>Another pulse pulls the head back in: the block is <strong>released</strong> and stays where it is. On a train or a gantry, that makes a crane that picks up and drops blocks.</p>"
+      },
+      {
+        "id": "colleur-recette",
+        "title": "Crafting the Sticker",
+        "html": "<p>The Sticker is crafted from two andesite alloys, a slimeball, two cobblestones and a redstone dust. Just point it at the block it should grab.</p>"
+      },
+      {
+        "id": "limites",
+        "title": "What the loops do not show",
+        "html": "<p>In our loops, the glue areas are the green outlines drawn by the scene; the glue item and the player are not drawn. The Sticker head, however, slides out and back in as in the game, within two to three ticks.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On our server",
+        "html": "<p>On Create France, glue goes a long way: one box is often enough for a door or a bridge.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: crafting/kinetics/super_glue.json, sticker.json",
+      "Durability: AllItems.SUPER_GLUE (durability(99))",
+      "Size: SuperGlueSelectionHandler (second corner within 24 blocks of the first one)",
+      "Gluing: SuperGlueEntity.isGlued, Contraption.moveBlock (neighbouring blocks inside one area)",
+      "Hanging blocks: BlockMovementChecksImpl.isBlockAttachedTowardsFallback",
+      "Sticker: StickerBlock (EXTENDED toggled by redstone), StickerBlockEntity (head: chase 0.4 per tick), Contraption.moveBlock",
+      "Simulation: WIKI/contraption_sim.py (carried blocks, movement times, ropes and actors recomputed from Create's code)",
+      "Scenes: ChassisScenes.superGlue, RedstoneScenes.sticker"
+    ]
+  }
+}

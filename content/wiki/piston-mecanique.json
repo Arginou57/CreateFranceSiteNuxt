@@ -1,0 +1,346 @@
+{
+  "slug": "piston-mecanique",
+  "name": "Piston mécanique",
+  "blockId": "create:mechanical_piston",
+  "category": "contraptions",
+  "title": "Piston mécanique — Create : guide en français",
+  "description": "Le piston mécanique de Create : barres d'extension, vitesse selon les tr/min, piston collant, colle et châssis, modes d'arrêt et erreurs fréquentes.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>piston mécanique</strong> est la première contraption de Create : il fait avancer et reculer des blocs en ligne droite, aussi loin que ses <strong>barres d'extension</strong> le permettent. Sa version <strong>collante</strong> ramène ce qu'elle a poussé. C'est la base des portes cachées, des ponts levants et des foreuses sur rail, comme la <a href=\"/wiki/perceuse-mecanique\">perceuse mécanique</a>.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Contraptions"
+    },
+    {
+      "label": "Stress",
+      "value": "4 SU par tr/min"
+    },
+    {
+      "label": "Vitesse",
+      "value": "tr/min ÷ 512 bloc par tick : 1,25 bloc/s à 32 tr/min, 9,8 au plus"
+    },
+    {
+      "label": "Course",
+      "value": "1 bloc par barre d'extension, 64 barres au plus"
+    },
+    {
+      "label": "Poussée",
+      "value": "La rangée de blocs devant la tête, plus tout ce qui y est collé ou fixé"
+    },
+    {
+      "label": "Collant",
+      "value": "Boule de slime sur le piston : il ramène les blocs en reculant"
+    },
+    {
+      "label": "Limite",
+      "value": "2 048 blocs déplacés par contraption"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Dalle en bois",
+        null
+      ],
+      [
+        null,
+        "Boitier d'andésite",
+        null
+      ],
+      [
+        null,
+        "Barre d'extension de piston",
+        null
+      ]
+    ],
+    "result": "1 piston mécanique"
+  },
+  "videos": [
+    {
+      "id": "piston_anchor",
+      "name": "Piston mécanique : pousser, reculer, coller",
+      "description": "Un piston pousse un bloc de planches puis recule ; collant, il le ramène ; avec de la colle, il déplace une structure entière.",
+      "duration": "PT19S"
+    },
+    {
+      "id": "piston_poles",
+      "name": "Piston mécanique : les barres d'extension",
+      "description": "Sans barre derrière lui, le piston ne bouge pas ; avec deux barres, il avance de deux blocs.",
+      "duration": "PT10S"
+    },
+    {
+      "id": "piston_modes",
+      "name": "Piston mécanique : les modes d'arrêt",
+      "description": "Le piston recule avec du verre collé et des rosiers sont cassés au passage ; le panneau de réglage change ce qui se passe à l'arrêt.",
+      "duration": "PT17S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "pousser",
+      "title": "Pousser des blocs",
+      "image": "piston_anchor_pousser.webp",
+      "alt": "Piston mécanique qui pousse un bloc de planches",
+      "video": "piston_anchor",
+      "html": "<p>Le piston agit sur le bloc posé <strong>devant sa tête</strong>. Dès qu'il tourne, il assemble ce bloc en contraption et le fait glisser. Une rangée de blocs alignés est poussée d'un coup, avec tout ce qui y tient : colle, châssis, torches ou leviers fixés dessus.</p>"
+    },
+    {
+      "id": "sens",
+      "title": "Le sens vient de la rotation",
+      "image": "piston_anchor_sens.webp",
+      "alt": "Le levier inverse la rotation : le piston recule",
+      "html": "<p>Le piston ne reçoit pas d'ordre : il suit son arbre. Une rotation dans un sens le fait sortir, l'autre le fait rentrer. Dans la boucle, un <strong>levier</strong> sur un inverseur de rotation suffit à changer de sens. Plus les tr/min sont élevés, plus il va vite.</p>"
+    },
+    {
+      "id": "alimenter",
+      "title": "Brancher le piston",
+      "html": "<p>L'arbre se branche sur un côté du piston, perpendiculaire à sa course. Une <a href=\"/wiki/manivelle\">manivelle</a> suffit pour une petite porte.</p>"
+    },
+    {
+      "id": "collant",
+      "title": "Le piston collant",
+      "image": "piston_anchor_collant.webp",
+      "alt": "Tête de piston collante qui ramène le bloc",
+      "html": "<p>Un piston normal ne tire rien : en reculant, il laisse les blocs là où il les a poussés. Clic droit avec une <strong>boule de slime</strong> sur le piston, ou version fabriquée à l'établi : la tête devient verte et ramène ce qu'elle touche.</p>"
+    },
+    {
+      "id": "structure",
+      "title": "Toute une structure",
+      "image": "piston_anchor_structure.webp",
+      "alt": "Structure de planches collées déplacée par le piston",
+      "html": "<p>Pour bouger plus qu'une ligne, ajoute des <a href=\"/wiki/chassis-lineaire\">châssis</a> ou un peu de <a href=\"/wiki/colle-extra-forte\">colle extra-forte</a>. Ici, une forme de planches collée au bloc poussé part en entier. Notre simulation a refait l'assemblage avec les règles de Create : les mêmes blocs bougent que dans la scène.</p>"
+    },
+    {
+      "id": "sans-barre",
+      "title": "Pas de barre, pas de mouvement",
+      "image": "piston_poles_sans-barre.webp",
+      "alt": "Piston sans barre d'extension : il ne bouge pas",
+      "video": "piston_poles",
+      "html": "<p>Sans <strong>barre d'extension</strong> derrière lui, le piston reste bloqué : il n'a aucune course. Les barres se posent à l'arrière, dans l'axe, et la tête apparaît toute seule à l'avant quand il s'assemble.</p>"
+    },
+    {
+      "id": "portee",
+      "title": "Une barre, un bloc",
+      "image": "piston_poles_portee.webp",
+      "alt": "Deux barres derrière le piston : deux blocs de course",
+      "html": "<p>Chaque barre ajoute <strong>un bloc de course</strong>. Deux barres : deux blocs. Le code de Create en accepte 64 au plus. Huit barres sortent d'une seule recette, assez pour la plupart des portes.</p>"
+    },
+    {
+      "id": "retour",
+      "title": "À l'arrêt, des blocs normaux",
+      "image": "piston_modes_retour.webp",
+      "alt": "Les rosiers sur le passage sont cassés",
+      "video": "piston_modes",
+      "html": "<p>Quand le piston s'arrête, la contraption redevient de vrais blocs à sa nouvelle place. Les plantes et blocs sans collision sur le passage sont <strong>cassés</strong>, comme les rosiers de la boucle. Mieux vaut garder la course libre.</p>"
+    },
+    {
+      "id": "modes",
+      "title": "Choisir le mode d'arrêt",
+      "image": "piston_modes_modes.webp",
+      "alt": "Réglage du mode d'arrêt du piston",
+      "html": "<p>Le <strong>panneau de réglage</strong> du piston propose trois modes : toujours reposer les blocs à l'arrêt, ne les reposer qu'à la position de départ, ou ne jamais les reposer tant que le piston existe. Le deuxième garde la structure en mouvement à l'aller.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "Vitesse et stress",
+      "html": "<p>Le piston avance de <strong>tr/min ÷ 512</strong> bloc par tick : 0,63 bloc/s à 16 tr/min, 1,25 à 32, 2,5 à 64, 5 à 128. Au-delà de 251 tr/min, il plafonne à 9,8 blocs/s. Il coûte <strong>4 SU par tr/min</strong>, quelle que soit la taille de la structure.</p>"
+    },
+    {
+      "id": "montages",
+      "title": "Idées de montages",
+      "html": "<p>Une <strong>porte secrète</strong> : deux pistons collants derrière un mur, un levier caché. Un <strong>pont-levis</strong> : un piston couché sous le tablier. Une <strong>foreuse</strong> : des <a href=\"/wiki/perceuse-mecanique\">perceuses</a> collées à la tête, qui avancent d'un bloc à chaque cycle.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Le piston refuse de bouger ? Vérifie les barres derrière lui, un bloc immobile devant (obsidienne, roche-mère) ou une structure de plus de 2 048 blocs. Si la structure bute sur un bloc solide, le piston s'arrête juste avant et la repose. Un piston en mouvement ne peut pas être emporté par une autre contraption.</p>"
+    }
+  ],
+  "related": [
+    "perceuse-mecanique",
+    "colle-extra-forte",
+    "chassis-lineaire",
+    "poulie-a-corde",
+    "roulement-mecanique",
+    "deployeur"
+  ],
+  "sources": [
+    "Recettes : crafting/kinetics/mechanical_piston.json, sticky_mechanical_piston.json, piston_extension_pole.json (8 barres)",
+    "Stress : BuilderTransformers.mechanicalPiston (CStress.setImpact(4.0))",
+    "Vitesse : LinearActuatorBlockEntity.getMovementSpeed (clamp(vitesse / 512, -0,49, 0,49) bloc par tick)",
+    "Course et poussée : MechanicalPistonBlockEntity.getExtensionRange, PistonContraption.collectExtensions / addToInitialFrontier, CKinetics.maxPistonPoles (64), maxBlocksMoved (2048)",
+    "Collant : MechanicalPistonBlock.useItemOn (boule de slime)",
+    "Modes : LinearActuatorBlockEntity.MovementMode (MOVE_PLACE, MOVE_PLACE_RETURNED, MOVE_NEVER_PLACE), disassemble / tryDisassemble",
+    "Simulation : WIKI/contraption_sim.py (blocs embarqués, durées des mouvements, cordes et acteurs recalculés d'après le code de Create)",
+    "Scènes : PistonScenes.movement, poles, movementModes (perroquet non dessiné)"
+  ],
+  "en": {
+    "slugEn": "mechanical-piston",
+    "name": "Mechanical Piston",
+    "title": "Mechanical Piston — Create mod guide",
+    "description": "The Create Mechanical Piston: extension poles, speed from RPM, the sticky piston, glue and chassis, stop modes and common mistakes.",
+    "intro": "The <strong>Mechanical Piston</strong> is Create's first contraption: it slides blocks forward and back in a straight line, as far as its <strong>extension poles</strong> allow. The <strong>sticky</strong> version brings back what it pushed. It is the base of hidden doors, drawbridges and rail-mounted mining rigs such as the <a href=\"/en/wiki/mechanical-drill\">Mechanical Drill</a>.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Contraptions"
+      },
+      {
+        "label": "Stress",
+        "value": "4 SU per RPM"
+      },
+      {
+        "label": "Speed",
+        "value": "RPM ÷ 512 block per tick: 1.25 blocks/s at 32 RPM, 9.8 at most"
+      },
+      {
+        "label": "Stroke",
+        "value": "1 block per extension pole, 64 poles at most"
+      },
+      {
+        "label": "Push",
+        "value": "The row of blocks ahead of the head, plus everything glued or fixed to it"
+      },
+      {
+        "label": "Sticky",
+        "value": "A slimeball on the piston: it pulls the blocks back when retracting"
+      },
+      {
+        "label": "Limit",
+        "value": "2,048 blocks moved per contraption"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Wooden Slab",
+          null
+        ],
+        [
+          null,
+          "Andesite Casing",
+          null
+        ],
+        [
+          null,
+          "Piston Extension Pole",
+          null
+        ]
+      ],
+      "result": "1 Mechanical Piston"
+    },
+    "videos": [
+      {
+        "id": "piston_anchor",
+        "name": "Mechanical Piston: push, retract, stick",
+        "description": "A piston pushes a block of planks and retracts; once sticky it pulls it back; with glue it moves a whole structure."
+      },
+      {
+        "id": "piston_poles",
+        "name": "Mechanical Piston: extension poles",
+        "description": "With no pole behind it the piston does not move; with two poles it extends by two blocks."
+      },
+      {
+        "id": "piston_modes",
+        "name": "Mechanical Piston: stop modes",
+        "description": "The piston retracts with glued glass and rose bushes get broken on the way; the value panel changes what happens when it stops."
+      }
+    ],
+    "sections": [
+      {
+        "id": "pousser",
+        "title": "Pushing blocks",
+        "alt": "Mechanical Piston pushing a block of planks",
+        "html": "<p>The piston acts on the block standing <strong>in front of its head</strong>. As soon as it turns, it assembles that block into a contraption and slides it. A row of aligned blocks is pushed in one go, along with everything holding on to it: glue, chassis, torches or levers fixed on it.</p>"
+      },
+      {
+        "id": "sens",
+        "title": "Direction comes from rotation",
+        "alt": "The lever flips the rotation: the piston retracts",
+        "html": "<p>The piston takes no orders: it follows its shaft. Rotation one way extends it, the other way retracts it. In the loop a <strong>lever</strong> on a gearshift is all it takes to flip the direction. The higher the RPM, the faster it goes.</p>"
+      },
+      {
+        "id": "alimenter",
+        "title": "Powering the piston",
+        "html": "<p>The shaft goes into one side of the piston, at a right angle to its stroke. A <a href=\"/en/wiki/hand-crank\">Hand Crank</a> is enough for a small door; a real engine is better for a heavy structure moved often.</p>"
+      },
+      {
+        "id": "collant",
+        "title": "The sticky piston",
+        "alt": "Sticky piston head pulling the block back",
+        "html": "<p>A regular piston pulls nothing: when it retracts, the blocks stay where it pushed them. Right-click the piston with a <strong>slimeball</strong>, or craft the sticky version: the head turns green and drags back whatever it touches.</p>"
+      },
+      {
+        "id": "structure",
+        "title": "A whole structure",
+        "alt": "Structure of glued planks moved by the piston",
+        "html": "<p>To move more than a line, add <a href=\"/en/wiki/super-glue\">Super Glue</a> or <a href=\"/en/wiki/linear-chassis\">chassis</a>. Here, a shape of planks glued to the pushed block travels as one. Our simulation rebuilt the assembly with Create's rules: the same blocks move as in the scene.</p>"
+      },
+      {
+        "id": "sans-barre",
+        "title": "No pole, no movement",
+        "alt": "Piston without extension poles: it does not move",
+        "html": "<p>Without an <strong>extension pole</strong> behind it, the piston is stuck: it has no stroke at all. Poles go at the back, in line, and the head appears on its own at the front when it assembles.</p>"
+      },
+      {
+        "id": "portee",
+        "title": "One pole, one block",
+        "alt": "Two poles behind the piston: two blocks of stroke",
+        "html": "<p>Each pole adds <strong>one block of stroke</strong>. Two poles: two blocks. Create's code accepts 64 at most. One recipe yields eight poles, enough for most doors.</p>"
+      },
+      {
+        "id": "retour",
+        "title": "Back to plain blocks when stopped",
+        "alt": "The rose bushes in the way are broken",
+        "html": "<p>When the piston stops, the contraption turns back into real blocks at its new place. Plants and blocks without collision in the way get <strong>broken</strong>, like the rose bushes in the loop. Keep the path clear.</p>"
+      },
+      {
+        "id": "modes",
+        "title": "Picking the stop mode",
+        "alt": "Setting the piston's stop mode",
+        "html": "<p>The piston's <strong>value panel</strong> offers three modes: always place the blocks when stopped, only place them at the starting position, or never place them while the piston exists. The second keeps the structure moving on the way out.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "Speed and stress",
+        "html": "<p>The piston moves <strong>RPM ÷ 512</strong> block per tick: 0.63 blocks/s at 16 RPM, 1.25 at 32, 2.5 at 64, 5 at 128. Above 251 RPM it caps at 9.8 blocks/s. It costs <strong>4 SU per RPM</strong>, whatever the size of the structure.</p>"
+      },
+      {
+        "id": "montages",
+        "title": "Build ideas",
+        "html": "<p>A <strong>secret door</strong>: two sticky pistons behind a wall, a hidden lever. A <strong>drawbridge</strong>: a piston lying under the deck. A <strong>tunnel bore</strong>: <a href=\"/en/wiki/mechanical-drill\">drills</a> glued to the head, moving one block forward every cycle.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>Piston won't move? Check the poles behind it, an immovable block in front (obsidian, bedrock) or a structure above 2,048 blocks. If the structure runs into a solid block, the piston stops just short of it and places it. A moving piston cannot be carried by another contraption.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: crafting/kinetics/mechanical_piston.json, sticky_mechanical_piston.json, piston_extension_pole.json (8 poles)",
+      "Stress: BuilderTransformers.mechanicalPiston (CStress.setImpact(4.0))",
+      "Speed: LinearActuatorBlockEntity.getMovementSpeed (clamp(speed / 512, -0.49, 0.49) block per tick)",
+      "Stroke and push: MechanicalPistonBlockEntity.getExtensionRange, PistonContraption.collectExtensions / addToInitialFrontier, CKinetics.maxPistonPoles (64), maxBlocksMoved (2048)",
+      "Sticky: MechanicalPistonBlock.useItemOn (slimeball)",
+      "Modes: LinearActuatorBlockEntity.MovementMode (MOVE_PLACE, MOVE_PLACE_RETURNED, MOVE_NEVER_PLACE)",
+      "Simulation: WIKI/contraption_sim.py (carried blocks, movement times, ropes and actors recomputed from Create's code)",
+      "Scenes: PistonScenes.movement, poles, movementModes (parrot not drawn)"
+    ]
+  }
+}

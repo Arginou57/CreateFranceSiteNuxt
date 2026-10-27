@@ -1,0 +1,346 @@
+{
+  "slug": "interface-de-stockage-portable",
+  "name": "Interface de stockage portable",
+  "blockId": "create:portable_storage_interface",
+  "category": "contraptions",
+  "title": "Interface de stockage portable — Create : guide",
+  "description": "L'interface de stockage portable de Create : vider et remplir les coffres d'une contraption en marche, écart entre les interfaces, délai et redstone.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Une contraption qui roule emporte ses coffres : impossible d'y brancher un entonnoir. L'<strong>interface de stockage portable</strong> règle ce problème. Une interface sur la contraption, une autre fixe sur son trajet : à leur rencontre, elles se connectent et la machine s'arrête le temps de <strong>vider ou remplir</strong> tous ses coffres.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Contraptions"
+    },
+    {
+      "label": "Fabrication",
+      "value": "1 boitier d'andésite + 1 chute (sans forme)"
+    },
+    {
+      "label": "Écart",
+      "value": "1 ou 2 blocs vides entre les deux interfaces"
+    },
+    {
+      "label": "Connexion",
+      "value": "Quand elles passent face à face, la contraption s’arrête"
+    },
+    {
+      "label": "Accès",
+      "value": "L’interface fixe donne accès à tous les coffres embarqués"
+    },
+    {
+      "label": "Départ",
+      "value": "3 s (60 ticks) après le dernier échange"
+    },
+    {
+      "label": "Redstone",
+      "value": "Interface fixe alimentée : pas de connexion"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (sans forme)",
+    "grid": [
+      [
+        "Boitier d'andésite",
+        "Chute",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 interface de stockage portable"
+  },
+  "videos": [
+    {
+      "id": "psi_transfer",
+      "name": "Interface de stockage portable : échanger en marche",
+      "description": "Une structure tourne sur un roulement avec une interface ; une seconde interface fixe se connecte à son passage, reçoit des lingots d'un entonnoir puis les rend sur un tapis.",
+      "duration": "PT21S"
+    },
+    {
+      "id": "psi_redstone",
+      "name": "Interface de stockage portable : la redstone",
+      "description": "Un levier alimente l'interface fixe : la structure passe devant sans s'arrêter.",
+      "duration": "PT6S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "en-marche",
+      "title": "Sans arrêter la machine",
+      "image": "psi_transfer_en-marche.webp",
+      "alt": "Interface fixée sur la structure qui tourne",
+      "video": "psi_transfer",
+      "html": "<p>Une interface fixée sur une contraption <strong>donne accès à ses coffres</strong> pendant qu'elle bouge. Rien à démonter : la ferme, le train ou le bras de grue continue son cycle.</p>"
+    },
+    {
+      "id": "ecart",
+      "title": "Une seconde interface en face",
+      "image": "psi_transfer_ecart.webp",
+      "alt": "Écart d’un bloc entre les deux interfaces",
+      "html": "<p>Pose une seconde interface sur le trajet, tournée vers la première, avec <strong>un ou deux blocs vides</strong> entre elles, pas davantage : chaque interface ne s'allonge que d'un bloc au plus.</p>"
+    },
+    {
+      "id": "connexion",
+      "title": "La connexion",
+      "image": "psi_transfer_connexion.webp",
+      "alt": "Les deux interfaces se connectent",
+      "html": "<p>Quand les deux interfaces passent face à face, elles <strong>s'allongent l'une vers l'autre</strong> et se connectent ; la contraption s'immobilise. Notre boucle anime cette extension comme le jeu.</p>"
+    },
+    {
+      "id": "inserer",
+      "title": "Remplir et vider",
+      "image": "psi_transfer_inserer.webp",
+      "alt": "Un entonnoir remplit la contraption",
+      "html": "<p>Pendant la connexion, l'interface fixe se comporte comme <strong>l'ensemble des coffres</strong> de la contraption : un entonnoir ou un tapis y entre des objets, un autre entonnoir les en sort.</p>"
+    },
+    {
+      "id": "repart",
+      "title": "Le départ",
+      "image": "psi_transfer_repart.webp",
+      "alt": "La contraption repart",
+      "html": "<p>Quand plus rien ne passe depuis <strong>3 secondes</strong>, les interfaces se séparent et la contraption repart. Un flux régulier d'objets la retient donc jusqu'à la fin du chargement.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "Couper à la redstone",
+      "image": "psi_redstone_redstone.webp",
+      "alt": "Levier qui coupe l’interface fixe",
+      "video": "psi_redstone",
+      "html": "<p>Un <strong>signal de redstone</strong> sur l'interface fixe l'empêche de se connecter : la contraption passe sans s'arrêter. Pratique avec un <a href=\"/wiki/detecteur-de-seuil\">détecteur de seuil</a> qui coupe quand l'entrepôt est plein.</p>"
+    },
+    {
+      "id": "usages",
+      "title": "Quelques usages",
+      "html": "<p>Une gare de marchandises où chaque train se vide seul, une ferme sur roulement qui livre sa récolte à chaque tour, une foreuse sur piston qui décharge son minerai au retour. Pour les liquides, la même idée existe avec l'<a href=\"/wiki/interface-de-fluide-portable\">interface de fluide portable</a>.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils",
+      "html": "<p>Pose l'interface fixe là où la contraption passe lentement, et vérifie l'alignement : elles doivent être exactement face à face. Une seule interface embarquée suffit pour tous les coffres et <a href=\"/wiki/coffre-a-objet-renforce\">coffres-forts</a> de la structure.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Pas de connexion ? Les deux interfaces ne passent pas exactement face à face, l'écart dépasse deux blocs, ou l'interface fixe reçoit un signal de redstone. La contraption ne repart pas ? Des objets passent encore : coupe l'entonnoir quand le chargement est fini.</p>"
+    },
+    {
+      "id": "pose",
+      "title": "Bien poser les interfaces",
+      "html": "<p>L'interface embarquée se colle à la contraption comme n'importe quel bloc, face tournée vers l'extérieur. L'interface fixe se pose sur un mur ou au sol, face tournée vers le passage. Dans un train, mets l'interface embarquée sur le côté d'un wagon et l'interface fixe sur le quai.</p>"
+    },
+    {
+      "id": "automatiser",
+      "title": "Automatiser autour",
+      "html": "<p>L'interface fixe se branche comme un coffre : <a href=\"/wiki/entonnoir\">entonnoirs</a>, tapis roulants, chutes. Un entonnoir filtré peut ne prendre qu'un type d'objet, et un détecteur de seuil peut couper l'échange quand l'entrepôt est plein.</p>"
+    },
+    {
+      "id": "limites",
+      "title": "Ce que les boucles ne montrent pas",
+      "html": "<p>L'allongement des deux interfaces est dessiné par nous d'après le code : elles sortent d'un demi-bloc chacune pour un écart d'un bloc, et restent sorties tant que l'échange dure. Les lingots qui passent par l'entonnoir et le tapis suivent la physique du jeu.</p>"
+    },
+    {
+      "id": "fluides",
+      "title": "Et pour les fluides ?",
+      "html": "<p>La même mécanique existe pour les réservoirs : l'<a href=\"/wiki/interface-de-fluide-portable\">interface de fluide portable</a> se pose et se connecte de la même façon, mais échange des liquides avec des tuyaux et des pompes. Les deux peuvent coexister sur une même contraption.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur notre serveur",
+      "html": "<p>Sur Create France, les gares de marchandises des joueurs reposent souvent sur ces interfaces.</p>"
+    }
+  ],
+  "related": [
+    "interface-de-fluide-portable",
+    "roulement-mecanique",
+    "recolteur-mecanique",
+    "entonnoir",
+    "coffre-a-objet-renforce",
+    "assembler-un-train"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/portable_storage_interface.json",
+    "Écart : PortableStorageInterfaceMovement (distance d’engagement), PortableStorageInterfaceBlockEntity.startTransferringTo (min(2, distance))",
+    "Délai : CLogistics.psiTimeout (60 ticks), PortableStorageInterfaceBlockEntity.tick (ANIMATION 4, transferTimer), isConnected",
+    "Extension : getExtensionDistance (progrès² × distance / 2), PortableStorageInterfaceRenderer (ajouté par nous, voir engine_create/REQUESTS.md)",
+    "Redstone : PortableStorageInterfaceBlockEntity (powered)",
+    "Simulation : WIKI/contraption_sim.py (blocs embarqués, durées des mouvements, cordes et acteurs recalculés d'après le code de Create)",
+    "Scènes : MovementActorScenes.psiTransfer, psiRedstone"
+  ],
+  "en": {
+    "slugEn": "portable-storage-interface",
+    "name": "Portable Storage Interface",
+    "title": "Portable Storage Interface — Create mod guide",
+    "description": "The Create Portable Storage Interface: emptying and filling a moving contraption's chests, the gap between interfaces, the delay and redstone.",
+    "intro": "A moving contraption takes its chests with it: no way to hook a funnel onto them. The <strong>Portable Storage Interface</strong> solves that. One interface on the contraption, another fixed along its path: when they meet, they connect and the machine pauses while it <strong>empties or fills</strong> all its chests.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Contraptions"
+      },
+      {
+        "label": "Crafting",
+        "value": "1 Andesite Casing + 1 Chute (shapeless)"
+      },
+      {
+        "label": "Gap",
+        "value": "1 or 2 empty blocks between the two interfaces"
+      },
+      {
+        "label": "Connection",
+        "value": "When they pass face to face, the contraption stops"
+      },
+      {
+        "label": "Access",
+        "value": "The fixed interface reaches every on-board chest"
+      },
+      {
+        "label": "Departure",
+        "value": "3 s (60 ticks) after the last exchange"
+      },
+      {
+        "label": "Redstone",
+        "value": "Powered fixed interface: no connection"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (shapeless)",
+      "grid": [
+        [
+          "Andesite Casing",
+          "Chute",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Portable Storage Interface"
+    },
+    "videos": [
+      {
+        "id": "psi_transfer",
+        "name": "Portable Storage Interface: exchanging on the move",
+        "description": "A structure spins on a bearing with an interface; a second, fixed interface connects as it passes, receives ingots from a funnel and hands them back on a belt."
+      },
+      {
+        "id": "psi_redstone",
+        "name": "Portable Storage Interface: redstone",
+        "description": "A lever powers the fixed interface: the structure passes by without stopping."
+      }
+    ],
+    "sections": [
+      {
+        "id": "en-marche",
+        "title": "Without stopping the machine",
+        "alt": "Interface fixed on the spinning structure",
+        "html": "<p>An interface fixed on a contraption <strong>gives access to its chests</strong> while it moves. Nothing to take apart: the farm, the train or the crane arm keeps going.</p>"
+      },
+      {
+        "id": "ecart",
+        "title": "A second interface opposite",
+        "alt": "One-block gap between the two interfaces",
+        "html": "<p>Place a second interface along the path, facing the first one, with <strong>one or two empty blocks</strong> between them, no more: each interface only extends by one block at most.</p>"
+      },
+      {
+        "id": "connexion",
+        "title": "Connecting",
+        "alt": "The two interfaces connect",
+        "html": "<p>When the two interfaces pass face to face, they <strong>extend towards each other</strong> and connect; the contraption comes to a halt. Our loop animates this extension the way the game does.</p>"
+      },
+      {
+        "id": "inserer",
+        "title": "Filling and emptying",
+        "alt": "A funnel fills the contraption",
+        "html": "<p>While connected, the fixed interface acts as <strong>all of the contraption's chests</strong> at once: a funnel or a belt puts items in, another funnel takes them out.</p>"
+      },
+      {
+        "id": "repart",
+        "title": "Departure",
+        "alt": "The contraption moves on",
+        "html": "<p>Once nothing has gone through for <strong>3 seconds</strong>, the interfaces part and the contraption moves on. A steady flow of items therefore holds it until loading is done.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "Cutting it with redstone",
+        "alt": "Lever cutting off the fixed interface",
+        "html": "<p>A <strong>redstone signal</strong> on the fixed interface stops it from connecting: the contraption passes without stopping. Handy with a <a href=\"/en/wiki/threshold-switch\">Threshold Switch</a> that cuts it off when storage is full.</p>"
+      },
+      {
+        "id": "usages",
+        "title": "A few uses",
+        "html": "<p>A freight station where every train unloads itself, a farm on a bearing that delivers its crop every turn, a piston drill that unloads its ore on the way back. For liquids, the same idea exists with the <a href=\"/en/wiki/portable-fluid-interface\">Portable Fluid Interface</a>.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<p>Put the fixed interface where the contraption moves slowly, and check the alignment: they must be exactly face to face. One on-board interface is enough for every chest and <a href=\"/en/wiki/item-vault\">vault</a> of the structure.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>No connection? The two interfaces do not pass exactly face to face, the gap is more than two blocks, or the fixed interface gets a redstone signal. Contraption not leaving? Items are still flowing: cut the funnel off once loading is done.</p>"
+      },
+      {
+        "id": "pose",
+        "title": "Placing the interfaces",
+        "html": "<p>The on-board interface is glued to the contraption like any other block, its face turned outwards. The fixed interface goes on a wall or the floor, facing the path. On a train, put the on-board interface on the side of a car and the fixed one on the platform.</p>"
+      },
+      {
+        "id": "automatiser",
+        "title": "Automating around it",
+        "html": "<p>The fixed interface hooks up like a chest: <a href=\"/en/wiki/funnel\">funnels</a>, belts, chutes. A filtered funnel can take a single kind of item, and a threshold switch can stop the exchange once storage is full.</p>"
+      },
+      {
+        "id": "limites",
+        "title": "What the loops do not show",
+        "html": "<p>The extension of both interfaces is drawn by us from the code: each comes out by half a block for a one-block gap, and stays out while the exchange lasts. The ingots going through the funnel and the belt follow the game's physics.</p>"
+      },
+      {
+        "id": "fluides",
+        "title": "What about fluids?",
+        "html": "<p>The same mechanism exists for tanks: the <a href=\"/en/wiki/portable-fluid-interface\">Portable Fluid Interface</a> is placed and connects the same way, but exchanges liquids through pipes and pumps. Both can live on the same contraption.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On our server",
+        "html": "<p>On Create France, players' freight stations often rely on these interfaces to load whole trains.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/portable_storage_interface.json",
+      "Gap: PortableStorageInterfaceMovement (engagement distance), PortableStorageInterfaceBlockEntity.startTransferringTo (min(2, distance))",
+      "Delay: CLogistics.psiTimeout (60 ticks), PortableStorageInterfaceBlockEntity.tick (ANIMATION 4, transferTimer), isConnected",
+      "Extension: getExtensionDistance (progress² × distance / 2), PortableStorageInterfaceRenderer (added by us, see engine_create/REQUESTS.md)",
+      "Redstone: PortableStorageInterfaceBlockEntity (powered)",
+      "Simulation: WIKI/contraption_sim.py (carried blocks, movement times, ropes and actors recomputed from Create's code)",
+      "Scenes: MovementActorScenes.psiTransfer, psiRedstone"
+    ]
+  }
+}

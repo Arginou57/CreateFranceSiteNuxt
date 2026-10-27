@@ -133,7 +133,8 @@
     "stressometre-compteur-de-vitesse",
     "tunnel",
     "coffre-a-objet-renforce",
-    "station-de-train"
+    "station-de-train",
+    "poulie-d-ascenseur"
   ],
   "sources": [
     "Portée : CLogistics.displayLinkRange = 64",

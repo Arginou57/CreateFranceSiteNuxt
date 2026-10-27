@@ -1,0 +1,373 @@
+{
+  "slug": "poulie-a-corde",
+  "name": "Poulie à corde",
+  "blockId": "create:rope_pulley",
+  "category": "contraptions",
+  "title": "Poulie à corde — Create : guide en français",
+  "description": "La poulie à corde de Create : lever et descendre une structure, vitesse, longueur de corde, modes d'arrêt, poulies synchronisées et poulies embarquées.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>poulie à corde</strong> déplace une structure à la verticale : elle déroule une corde terminée par un aimant, attrape ce qui se trouve dessous et le monte ou le descend. Monte-charge, plateforme, pont-levis, trappe géante : c'est le piston vertical de Create, sans barres à poser.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Contraptions"
+    },
+    {
+      "label": "Stress",
+      "value": "4 SU par tr/min"
+    },
+    {
+      "label": "Vitesse",
+      "value": "tr/min ÷ 512 bloc par tick : 1,25 bloc/s à 32 tr/min, 9,8 au plus"
+    },
+    {
+      "label": "Corde",
+      "value": "384 blocs au plus, sans rien à ajouter"
+    },
+    {
+      "label": "Accroche",
+      "value": "Le bloc sous l'aimant, plus ce qui y est collé ou fixé"
+    },
+    {
+      "label": "Synchronisées",
+      "value": "Les poulies voisines à la même hauteur suivent, sans rotation"
+    },
+    {
+      "label": "Embarquée",
+      "value": "Une poulie arrêtée peut être déplacée avec sa structure"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Boitier d'andésite",
+        null
+      ],
+      [
+        null,
+        "Laine",
+        null
+      ],
+      [
+        null,
+        "Plaque de fer",
+        null
+      ]
+    ],
+    "result": "1 poulie à corde"
+  },
+  "videos": [
+    {
+      "id": "pulley_anchor",
+      "name": "Poulie à corde : monter et descendre",
+      "description": "La corde descend jusqu'à un bloc de planches et le soulève ; un levier inverse la rotation ; puis une structure collée monte et descend.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "pulley_modes",
+      "name": "Poulie à corde : les modes d'arrêt",
+      "description": "Une structure montée par la poulie redevient des blocs à l'arrêt ; le panneau de réglage change ce comportement.",
+      "duration": "PT17S"
+    },
+    {
+      "id": "pulley_multi",
+      "name": "Poulie à corde : poulies synchronisées",
+      "description": "Une poulie entraînée soulève une plateforme ; les autres poulies de la même rangée descendent leur corde avec elle.",
+      "duration": "PT14S"
+    },
+    {
+      "id": "pulley_attachment",
+      "name": "Poulie à corde : une poulie embarquée",
+      "description": "Un piston déplace une poulie arrêtée, et la structure suspendue à sa corde part avec elle.",
+      "duration": "PT10S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "vertical",
+      "title": "Monter et descendre",
+      "image": "pulley_anchor_vertical.webp",
+      "alt": "La corde de la poulie soulève un bloc de planches",
+      "video": "pulley_anchor",
+      "html": "<p>Quand elle tourne, la poulie <strong>déroule sa corde</strong> jusqu'au premier bloc rencontré, l'assemble en contraption et le soulève. Notre boucle dessine la corde et l'aimant comme le jeu : un aimant au bout, des segments au-dessus.</p>"
+    },
+    {
+      "id": "sens",
+      "title": "Le sens et la vitesse",
+      "image": "pulley_anchor_sens.webp",
+      "alt": "Rotation inversée : la plateforme remonte",
+      "html": "<p>Comme pour le <a href=\"/wiki/piston-mecanique\">piston</a>, c'est la rotation qui commande : un sens fait descendre, l'autre fait monter, et la vitesse suit les tr/min. Un levier sur un inverseur de rotation suffit pour un monte-charge.</p>"
+    },
+    {
+      "id": "structure",
+      "title": "Une plateforme entière",
+      "image": "pulley_anchor_structure.webp",
+      "alt": "Structure de planches collées soulevée par la poulie",
+      "html": "<p>La poulie emporte le bloc accroché <strong>et tout ce qui y tient</strong> : avec de la <a href=\"/wiki/colle-extra-forte\">colle</a>, une plateforme entière monte. Notre simulation retrouve les mêmes blocs que la scène à chaque montée.</p>"
+    },
+    {
+      "id": "retour",
+      "title": "À l'arrêt, des blocs normaux",
+      "image": "pulley_modes_retour.webp",
+      "alt": "La structure posée redevient des blocs",
+      "video": "pulley_modes",
+      "html": "<p>Quand la poulie s'arrête, la structure redevient de vrais blocs, et la corde reste en place. Si la structure bute sur un bloc solide en chemin, la poulie s'arrête juste avant.</p>"
+    },
+    {
+      "id": "modes",
+      "title": "Trois modes",
+      "image": "pulley_modes_modes.webp",
+      "alt": "Réglage du mode d'arrêt de la poulie",
+      "html": "<p>Le <strong>panneau de réglage</strong> propose les mêmes choix que le piston : reposer à chaque arrêt, seulement au point de départ, ou jamais. Pour un ascenseur entre plusieurs étages, préfère la <a href=\"/wiki/poulie-d-ascenseur\">poulie d'ascenseur</a>.</p>"
+    },
+    {
+      "id": "synchro",
+      "title": "Plusieurs poulies ensemble",
+      "image": "pulley_multi_synchro.webp",
+      "alt": "Plusieurs cordes descendent ensemble",
+      "video": "pulley_multi",
+      "html": "<p>Au moment où une poulie forme sa contraption, les <strong>autres poulies posées à la même hauteur</strong> au-dessus d'elle s'y accrochent et déroulent leur corde en même temps. Elles n'ont pas besoin de rotation.</p>"
+    },
+    {
+      "id": "decor",
+      "title": "Pour le décor",
+      "image": "pulley_multi_decor.webp",
+      "alt": "Plateforme tenue par quatre cordes",
+      "html": "<p>Ces poulies sans moteur ne portent rien : elles ne font que montrer leur corde. C'est purement visuel, mais une plateforme tenue aux quatre coins est bien plus crédible.</p>"
+    },
+    {
+      "id": "deplacee",
+      "title": "Une poulie qui voyage",
+      "image": "pulley_attachment_deplacee.webp",
+      "alt": "Un piston déplace la poulie et sa charge",
+      "video": "pulley_attachment",
+      "html": "<p>Une poulie peut elle-même être déplacée par une autre contraption. Sa corde et la structure suspendue <strong>suivent</strong> le mouvement, ce qui permet par exemple une grue montée sur un piston ou un <a href=\"/wiki/chariot-de-portique\">portique</a>.</p>"
+    },
+    {
+      "id": "arretee",
+      "title": "Seulement à l’arrêt",
+      "image": "pulley_attachment_arretee.webp",
+      "alt": "Poulie arrêtée avant d’être déplacée",
+      "html": "<p>Une poulie ne peut être emportée <strong>que lorsqu'elle est arrêtée</strong>. Si elle est en train de monter ou descendre, l'autre contraption refuse de s'assembler.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "Vitesse et longueur",
+      "html": "<p>La poulie va à <strong>tr/min ÷ 512</strong> bloc par tick : 0,63 bloc/s à 16 tr/min, 2,5 à 64, 9,8 au plus. Sa corde peut descendre de 384 blocs, de quoi atteindre le fond d'une mine depuis la surface. Elle coûte 4 SU par tr/min.</p>"
+    },
+    {
+      "id": "montages",
+      "title": "Idées de montages",
+      "html": "<p>Un <strong>monte-charge</strong> de mine : une poulie en surface, une plateforme collée, un inverseur de rotation sur un levier à chaque niveau. Une <strong>trappe géante</strong> qui descend dans le sol. Pour un vrai ascenseur avec des étages et des boutons d'appel, la <a href=\"/wiki/poulie-d-ascenseur\">poulie d'ascenseur</a> est bien plus simple.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>La corde descend sans rien prendre ? Il n'y a pas de bloc juste sous l'aimant, ou c'est un bloc sans collision. La plateforme bute ? Un bloc solide gêne sur le trajet. Et une poulie ne peut pas être emportée tant que sa corde bouge.</p>"
+    },
+    {
+      "id": "alimenter",
+      "title": "Brancher la poulie",
+      "html": "<p>L'arbre entre par un côté de la poulie. Une manivelle suffit pour un petit monte-charge, mais elle épuise vite le joueur : branche plutôt la poulie sur un moteur et commande le sens avec un inverseur de rotation et un levier.</p>"
+    }
+  ],
+  "related": [
+    "poulie-d-ascenseur",
+    "piston-mecanique",
+    "colle-extra-forte",
+    "poulie-a-tuyau",
+    "chariot-de-portique",
+    "manivelle"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/rope_pulley.json",
+    "Stress : AllBlocks.ROPE_PULLEY (CStress.setImpact(4.0))",
+    "Vitesse : LinearActuatorBlockEntity.getMovementSpeed (clamp(vitesse / 512, -0,49, 0,49) bloc par tick), PulleyBlockEntity",
+    "Corde : CKinetics.maxRopeLength (384), Contraption.movePulley, PulleyContraption",
+    "Synchronisées : PulleyBlockEntity (mirrorParent), PulleyRenderer.isPulleyRunning",
+    "Embarquée : BlockMovementChecksImpl.isMovementAllowedFallback (poulie seulement si elle ne tourne pas)",
+    "Rendu de la corde : AbstractPulleyRenderer / PulleyRenderer (ajouté par nous, voir engine_create/REQUESTS.md)",
+    "Simulation : WIKI/contraption_sim.py (blocs embarqués, durées des mouvements, cordes et acteurs recalculés d'après le code de Create)",
+    "Scènes : PulleyScenes.movement, movementModes, multiRope, attachment"
+  ],
+  "en": {
+    "slugEn": "rope-pulley",
+    "name": "Rope Pulley",
+    "title": "Rope Pulley — Create mod guide",
+    "description": "The Create Rope Pulley: lifting and lowering a structure, speed, rope length, stop modes, synchronised pulleys and pulleys moved by contraptions.",
+    "intro": "The <strong>Rope Pulley</strong> moves a structure vertically: it lets out a rope ending in a magnet, grabs whatever is below and lifts or lowers it. Goods lift, platform, drawbridge, giant trapdoor: it is Create's vertical piston, with no poles to place.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Contraptions"
+      },
+      {
+        "label": "Stress",
+        "value": "4 SU per RPM"
+      },
+      {
+        "label": "Speed",
+        "value": "RPM ÷ 512 block per tick: 1.25 blocks/s at 32 RPM, 9.8 at most"
+      },
+      {
+        "label": "Rope",
+        "value": "384 blocks at most, nothing to add"
+      },
+      {
+        "label": "Attachment",
+        "value": "The block under the magnet, plus whatever is glued or fixed to it"
+      },
+      {
+        "label": "Synchronised",
+        "value": "Neighbouring pulleys at the same height follow, with no rotation"
+      },
+      {
+        "label": "Carried",
+        "value": "A stopped pulley can be moved with its structure"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Andesite Casing",
+          null
+        ],
+        [
+          null,
+          "Wool",
+          null
+        ],
+        [
+          null,
+          "Iron Sheet",
+          null
+        ]
+      ],
+      "result": "1 Rope Pulley"
+    },
+    "videos": [
+      {
+        "id": "pulley_anchor",
+        "name": "Rope Pulley: up and down",
+        "description": "The rope goes down to a block of planks and lifts it; a lever reverses the rotation; then a glued structure goes up and down."
+      },
+      {
+        "id": "pulley_modes",
+        "name": "Rope Pulley: stop modes",
+        "description": "A structure lifted by the pulley turns back into blocks when stopped; the value panel changes that behaviour."
+      },
+      {
+        "id": "pulley_multi",
+        "name": "Rope Pulley: synchronised pulleys",
+        "description": "A powered pulley lifts a platform; the other pulleys of the same row lower their rope along with it."
+      },
+      {
+        "id": "pulley_attachment",
+        "name": "Rope Pulley: a carried pulley",
+        "description": "A piston moves a stopped pulley, and the structure hanging from its rope goes with it."
+      }
+    ],
+    "sections": [
+      {
+        "id": "vertical",
+        "title": "Up and down",
+        "alt": "The pulley rope lifts a block of planks",
+        "html": "<p>When it turns, the pulley <strong>lets out its rope</strong> down to the first block it meets, assembles it into a contraption and lifts it. Our loop draws the rope and magnet the way the game does: a magnet at the end, segments above it.</p>"
+      },
+      {
+        "id": "sens",
+        "title": "Direction and speed",
+        "alt": "Rotation reversed: the platform comes back up",
+        "html": "<p>As with the <a href=\"/en/wiki/mechanical-piston\">piston</a>, rotation is in charge: one way lowers, the other lifts, and the speed follows the RPM. A lever on a gearshift is all you need for a goods lift.</p>"
+      },
+      {
+        "id": "structure",
+        "title": "A whole platform",
+        "alt": "Structure of glued planks lifted by the pulley",
+        "html": "<p>The pulley takes the hooked block <strong>and everything holding on to it</strong>: with <a href=\"/en/wiki/super-glue\">glue</a>, a whole platform goes up. Our simulation finds the same blocks as the scene on every lift.</p>"
+      },
+      {
+        "id": "retour",
+        "title": "Back to plain blocks when stopped",
+        "alt": "The structure turns back into blocks",
+        "html": "<p>When the pulley stops, the structure turns back into real blocks, and the rope stays in place. If the structure runs into a solid block on the way, the pulley stops just short of it.</p>"
+      },
+      {
+        "id": "modes",
+        "title": "Three modes",
+        "alt": "Setting the pulley's stop mode",
+        "html": "<p>The <strong>value panel</strong> offers the same choices as the piston: place at every stop, only at the starting point, or never. For a lift serving several floors, use the <a href=\"/en/wiki/elevator-pulley\">Elevator Pulley</a> instead.</p>"
+      },
+      {
+        "id": "synchro",
+        "title": "Several pulleys together",
+        "alt": "Several ropes coming down together",
+        "html": "<p>When a pulley assembles a structure, the <strong>other pulleys placed at the same height</strong> above it hook onto it and let out their rope at the same time. They need no rotation.</p>"
+      },
+      {
+        "id": "decor",
+        "title": "For looks",
+        "alt": "Platform held by four ropes",
+        "html": "<p>These unpowered pulleys carry nothing: they only show their rope. It is purely visual, but a platform held at all four corners looks far more convincing.</p>"
+      },
+      {
+        "id": "deplacee",
+        "title": "A travelling pulley",
+        "alt": "A piston moves the pulley and its load",
+        "html": "<p>A pulley can itself be moved by another contraption. Its rope and the hanging structure <strong>follow</strong> the movement, which gives you, for instance, a crane mounted on a piston or a <a href=\"/en/wiki/gantry-carriage\">gantry</a>.</p>"
+      },
+      {
+        "id": "arretee",
+        "title": "Only when stopped",
+        "alt": "Stopped pulley before being moved",
+        "html": "<p>A pulley can be carried <strong>only when it is stopped</strong>. If it is busy going up or down, the other contraption refuses to assemble.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "Speed and length",
+        "html": "<p>The pulley moves at <strong>RPM ÷ 512</strong> block per tick: 0.63 blocks/s at 16 RPM, 2.5 at 64, 9.8 at most. Its rope can go down 384 blocks, enough to reach the bottom of a mine from the surface. It costs 4 SU per RPM.</p>"
+      },
+      {
+        "id": "montages",
+        "title": "Build ideas",
+        "html": "<p>A mine <strong>goods lift</strong>: a pulley at the surface, a glued platform, a gearshift on a lever at each level. A <strong>giant trapdoor</strong> sinking into the ground. For a real lift with floors and call buttons, the <a href=\"/en/wiki/elevator-pulley\">Elevator Pulley</a> is much simpler.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>Rope going down without grabbing anything? There is no block right under the magnet, or it has no collision. Platform getting stuck? A solid block is in the way. And a pulley cannot be carried while its rope is moving.</p>"
+      },
+      {
+        "id": "alimenter",
+        "title": "Powering the pulley",
+        "html": "<p>The shaft enters one side of the pulley. A hand crank is enough for a small goods lift, but it tires the player out quickly: hook the pulley up to an engine instead and control the direction with a gearshift and a lever.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/rope_pulley.json",
+      "Stress: AllBlocks.ROPE_PULLEY (CStress.setImpact(4.0))",
+      "Speed: LinearActuatorBlockEntity.getMovementSpeed (clamp(speed / 512, -0.49, 0.49) block per tick), PulleyBlockEntity",
+      "Rope: CKinetics.maxRopeLength (384), Contraption.movePulley, PulleyContraption",
+      "Synchronised: PulleyBlockEntity (mirrorParent), PulleyRenderer.isPulleyRunning",
+      "Carried: BlockMovementChecksImpl.isMovementAllowedFallback (pulley only while not running)",
+      "Rope rendering: AbstractPulleyRenderer / PulleyRenderer (added by us, see engine_create/REQUESTS.md)",
+      "Simulation: WIKI/contraption_sim.py (carried blocks, movement times, ropes and actors recomputed from Create's code)",
+      "Scenes: PulleyScenes.movement, movementModes, multiRope, attachment"
+    ]
+  }
+}

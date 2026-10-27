@@ -192,7 +192,8 @@
     "rail-de-train",
     "signal-de-train",
     "controles-de-train",
-    "liaison-d-affichage"
+    "liaison-d-affichage",
+    "rouleau-mecanique"
   ],
   "sources": [
     "Recette : crafting/kinetics/track_station.json",

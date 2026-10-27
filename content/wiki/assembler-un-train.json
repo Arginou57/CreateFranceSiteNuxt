@@ -156,7 +156,9 @@
     "rail-de-train",
     "planning-de-train",
     "coffre-a-objet-renforce",
-    "interface-de-fluide-portable"
+    "interface-de-fluide-portable",
+    "colle-extra-forte",
+    "rouleau-mecanique"
   ],
   "sources": [
     "Recettes : item_application/railway_casing.json, crafting/kinetics/super_glue.json",

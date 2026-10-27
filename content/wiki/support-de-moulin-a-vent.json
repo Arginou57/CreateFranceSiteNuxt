@@ -130,7 +130,10 @@
     "roue-dentee",
     "roue-a-eau",
     "rotor",
-    "stressometre-compteur-de-vitesse"
+    "stressometre-compteur-de-vitesse",
+    "roulement-mecanique",
+    "colle-extra-forte",
+    "chassis-lineaire"
   ],
   "sources": [
     "Vitesse : WindmillBearingBlockEntity.getGeneratedSpeed = clamp(voiles / windmillSailsPerRPM, 1, 16) ; CKinetics.windmillSailsPerRPM = 8",

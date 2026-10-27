@@ -1,0 +1,396 @@
+{
+  "slug": "roulement-mecanique",
+  "name": "Roulement mécanique",
+  "blockId": "create:mechanical_bearing",
+  "category": "contraptions",
+  "title": "Roulement mécanique — Create : guide en français",
+  "description": "Le roulement mécanique de Create : faire tourner une structure, vitesse en degrés, angle à l'arrêt, roulements stabilisés et roulement horloger.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>roulement mécanique</strong> fait tourner ce qui est posé sur sa face : une porte pivotante, une grande roue, un radar, des pales décoratives. Il transforme la rotation d'un arbre en rotation d'une structure entière. Le <strong>roulement mécanique horloger</strong>, en encart plus bas, fait de même en suivant l'heure du jeu.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Contraptions"
+    },
+    {
+      "label": "Stress",
+      "value": "4 SU par tr/min (horloger aussi)"
+    },
+    {
+      "label": "Vitesse",
+      "value": "6° par seconde et par tr/min : un tour en 3,75 s à 16 tr/min"
+    },
+    {
+      "label": "Accroche",
+      "value": "Le bloc contre sa face tournante, plus ce qui y est collé ou fixé"
+    },
+    {
+      "label": "Arrêt",
+      "value": "La structure se repose à l'angle droit le plus proche"
+    },
+    {
+      "label": "Embarqué",
+      "value": "Un roulement porté par une contraption garde sa structure à niveau"
+    },
+    {
+      "label": "Horloger",
+      "value": "Aiguille des heures, puis des minutes, réglées sur l'heure du jeu"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Dalle en bois",
+        null
+      ],
+      [
+        null,
+        "Boitier d'andésite",
+        null
+      ],
+      [
+        null,
+        "Rotor",
+        null
+      ]
+    ],
+    "result": "1 roulement mécanique"
+  },
+  "videos": [
+    {
+      "id": "bearing_anchor",
+      "name": "Roulement mécanique : faire tourner une structure",
+      "description": "Une planche puis une structure de planches collées tournent sur le roulement, entraîné par des roues dentées.",
+      "duration": "PT19S"
+    },
+    {
+      "id": "bearing_modes",
+      "name": "Roulement mécanique : l'angle à l'arrêt",
+      "description": "La structure s'arrête en biais puis se repose bien droite ; le panneau de réglage change ce comportement.",
+      "duration": "PT18S"
+    },
+    {
+      "id": "bearing_stabilized",
+      "name": "Roulement mécanique : les roulements stabilisés",
+      "description": "Un roulement monté sur une structure qui tourne garde ce qu'il porte toujours à l'endroit.",
+      "duration": "PT21S"
+    },
+    {
+      "id": "clockwork_hour",
+      "name": "Roulement horloger : l'aiguille des heures",
+      "description": "Une aiguille en terre cuite émaillée tourne pour indiquer l'heure du jeu ; un clic sur le roulement la lance ou l'arrête.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "clockwork_minute",
+      "name": "Roulement horloger : l'aiguille des minutes",
+      "description": "Une seconde structure, non collée à la première, tourne comme l'aiguille des minutes.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "accroche",
+      "title": "Ce qui tourne",
+      "image": "bearing_anchor_accroche.webp",
+      "alt": "Le bloc posé sur le roulement est mis en évidence",
+      "video": "bearing_anchor",
+      "html": "<p>Le roulement prend le bloc posé <strong>contre sa face supérieure</strong> (ou sa face avant, s'il est couché) et tout ce qui y est relié par de la <a href=\"/wiki/colle-extra-forte\">colle</a> ou des <a href=\"/wiki/chassis-lineaire\">châssis</a>. Sans bloc dessus, il tourne à vide.</p>"
+    },
+    {
+      "id": "rotation",
+      "title": "Assemblé dès qu’il tourne",
+      "image": "bearing_anchor_rotation.webp",
+      "alt": "La planche tourne avec le roulement",
+      "html": "<p>Dès que l'arbre du roulement tourne, la structure est assemblée et pivote autour de l'axe. À 16 tr/min, elle fait un tour en <strong>3,75 s</strong>. Notre simulation compte la même durée que la scène, à un tick près.</p>"
+    },
+    {
+      "id": "alimenter",
+      "title": "Brancher le roulement",
+      "html": "<p>La rotation entre par la face opposée à la structure.</p>"
+    },
+    {
+      "id": "structure",
+      "title": "Une grande structure",
+      "image": "bearing_anchor_structure.webp",
+      "alt": "Structure de planches collées en rotation",
+      "html": "<p>Avec des châssis et de la colle, une forme quelconque tourne d'un bloc : pales, bras, plateau. Garde la zone dégagée : une structure qui tourne passe au travers du décor, mais elle bouscule les joueurs et les mobs.</p>"
+    },
+    {
+      "id": "arret",
+      "title": "L'arrêt bien droit",
+      "image": "bearing_modes_arret.webp",
+      "alt": "La structure se repose à l'angle droit",
+      "video": "bearing_modes",
+      "html": "<p>Quand la rotation s'arrête, la structure redevient des blocs. Un bloc ne se pose jamais de biais : elle se replace donc à <strong>l'angle droit le plus proche</strong> : un quart de tour au plus de différence.</p>"
+    },
+    {
+      "id": "modes",
+      "title": "Trois réglages",
+      "image": "bearing_modes_modes.webp",
+      "alt": "Réglage du mode du roulement",
+      "html": "<p>Le <strong>panneau de réglage</strong> offre trois choix : reposer à chaque arrêt, ne reposer que près de l'angle de départ, ou garder la structure en mouvement tant que le roulement existe. Le dernier sert aux éoliennes décoratives et aux radars.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "Vitesse et stress",
+      "html": "<p>Un roulement tourne de <strong>6 degrés par seconde et par tr/min</strong> : un tour en 7,5 s à 8 tr/min, 3,75 s à 16, moins d'une seconde à 64. Il coûte 4 SU par tr/min. Pour une porte, une vitesse basse suffit et évite les à-coups.</p>"
+    },
+    {
+      "id": "montages",
+      "title": "Idées de montages",
+      "html": "<p>Une <strong>porte pivotante</strong> sur un roulement couché, un <strong>manège</strong> sur un roulement lent, des pales décoratives tournées par un moteur. Pour produire de l'énergie avec le vent, ce n'est pas ce bloc qu'il faut : utilise un <a href=\"/wiki/support-de-moulin-a-vent\">support de moulin à vent</a>, qui fonctionne sur le même principe.</p>"
+    },
+    {
+      "id": "embarque",
+      "title": "Un roulement sur une contraption",
+      "image": "bearing_stabilized_embarque.webp",
+      "alt": "Un roulement fait partie de la structure qui tourne",
+      "video": "bearing_stabilized",
+      "html": "<p>Un roulement peut lui-même faire partie d'une structure qui bouge ou tourne. Il prend alors un rôle de <strong>stabilisateur</strong> : ce qui est posé sur lui forme une sous-structure séparée.</p>"
+    },
+    {
+      "id": "debout",
+      "title": "Toujours à l’endroit",
+      "image": "bearing_stabilized_debout.webp",
+      "alt": "La sous-structure reste droite pendant la rotation",
+      "html": "<p>Cette sous-structure <strong>reste à niveau</strong> pendant que tout le reste pivote, comme les nacelles d'une grande roue. Le roulement embarqué n'a pas besoin d'être alimenté pour cela.</p>"
+    },
+    {
+      "id": "horloger",
+      "title": "Le roulement horloger",
+      "image": "clockwork_hour_accroche.webp",
+      "alt": "Roulement horloger avec son aiguille",
+      "video": "clockwork_hour",
+      "html": "<p>Le <strong>roulement mécanique horloger</strong> (laiton et tube électronique) fait tourner sa structure selon <strong>l'heure du jeu</strong> : une heure de jeu dure 50 s. Il faut toujours une rotation pour l'animer ; plus elle est rapide, plus l'aiguille rattrape vite l'heure.</p>"
+    },
+    {
+      "id": "heure",
+      "title": "L’aiguille des heures",
+      "image": "clockwork_hour_heure.webp",
+      "alt": "L'aiguille indique l'heure du jeu",
+      "html": "<p>La première structure sert d'<strong>aiguille des heures</strong> : elle se tourne vers l'heure en cours puis la suit. Pour lancer ou arrêter l'animation, fais un clic droit sur ce roulement.</p>"
+    },
+    {
+      "id": "deuxieme",
+      "title": "Ajouter les minutes",
+      "image": "clockwork_minute_deuxieme.webp",
+      "alt": "Seconde structure devant la première",
+      "video": "clockwork_minute",
+      "html": "<p>Une <strong>autre structure</strong>, posée en avant de la première, devient l'aiguille des minutes. Les deux ne doivent <strong>pas être collées</strong> entre elles, sinon elles tournent ensemble. Le réglage du roulement permet aussi d'inverser les rôles ou d'utiliser un cadran de 24 heures.</p>"
+    },
+    {
+      "id": "limites",
+      "title": "Ce que les boucles ne montrent pas",
+      "html": "<p>Les particules et le joueur qui clique ne sont pas dessinés.</p>"
+    }
+  ],
+  "related": [
+    "support-de-moulin-a-vent",
+    "colle-extra-forte",
+    "chassis-lineaire",
+    "piston-mecanique",
+    "roue-dentee",
+    "interface-de-stockage-portable"
+  ],
+  "sources": [
+    "Recettes : crafting/kinetics/mechanical_bearing.json, clockwork_bearing.json",
+    "Stress : AllBlocks.MECHANICAL_BEARING / CLOCKWORK_BEARING (CStress.setImpact(4.0))",
+    "Vitesse : MechanicalBearingBlockEntity (convertToAngular : vitesse × 3/10 degré par tick)",
+    "Arrêt : MechanicalBearingBlockEntity.disassemble (angle arrondi au quart de tour), RotationMode (ROTATE_PLACE, ROTATE_PLACE_RETURNED, ROTATE_NEVER_PLACE)",
+    "Stabilisé : StabilizedBearingMovementBehaviour, StabilizedContraption",
+    "Horloger : ClockworkBearingBlockEntity.getHourTarget / getMinuteTarget (heure = temps du jour / 1000 + 6), getHourArmSpeed (vitesse angulaire / 2), ClockHands (HOUR_FIRST, MINUTE_FIRST, HOUR_FIRST_24)",
+    "Simulation : WIKI/contraption_sim.py (blocs embarqués, durées des mouvements, cordes et acteurs recalculés d'après le code de Create)",
+    "Scènes : BearingScenes.mechanicalBearing, bearingModes, stabilizedBearings, clockwork"
+  ],
+  "en": {
+    "slugEn": "mechanical-bearing",
+    "name": "Mechanical Bearing",
+    "title": "Mechanical Bearing — Create mod guide",
+    "description": "The Create Mechanical Bearing: rotating a structure, speed in degrees, the angle when it stops, stabilized bearings and the Clockwork Bearing.",
+    "intro": "The <strong>Mechanical Bearing</strong> spins whatever sits on its face: a swinging door, a Ferris wheel, a radar dish, decorative blades. It turns the rotation of a shaft into the rotation of a whole structure. The <strong>Clockwork Bearing</strong>, covered further down, does the same while following the in-game time.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Contraptions"
+      },
+      {
+        "label": "Stress",
+        "value": "4 SU per RPM (Clockwork too)"
+      },
+      {
+        "label": "Speed",
+        "value": "6° per second per RPM: one turn in 3.75 s at 16 RPM"
+      },
+      {
+        "label": "Attachment",
+        "value": "The block against its spinning face, plus whatever is glued or fixed to it"
+      },
+      {
+        "label": "Stopping",
+        "value": "The structure settles at the nearest right angle"
+      },
+      {
+        "label": "Carried",
+        "value": "A bearing carried by a contraption keeps its structure level"
+      },
+      {
+        "label": "Clockwork",
+        "value": "Hour hand, then minute hand, set to the in-game time"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Wooden Slab",
+          null
+        ],
+        [
+          null,
+          "Andesite Casing",
+          null
+        ],
+        [
+          null,
+          "Shaft",
+          null
+        ]
+      ],
+      "result": "1 Mechanical Bearing"
+    },
+    "videos": [
+      {
+        "id": "bearing_anchor",
+        "name": "Mechanical Bearing: spinning a structure",
+        "description": "A plank, then a structure of glued planks, spin on the bearing, driven by cogwheels."
+      },
+      {
+        "id": "bearing_modes",
+        "name": "Mechanical Bearing: the angle when stopping",
+        "description": "The structure stops at a slant and then settles straight; the value panel changes that behaviour."
+      },
+      {
+        "id": "bearing_stabilized",
+        "name": "Mechanical Bearing: stabilized bearings",
+        "description": "A bearing mounted on a spinning structure keeps what it carries the right way up."
+      },
+      {
+        "id": "clockwork_hour",
+        "name": "Clockwork Bearing: the hour hand",
+        "description": "A glazed terracotta hand turns to show the in-game hour; a click on the bearing starts or stops it."
+      },
+      {
+        "id": "clockwork_minute",
+        "name": "Clockwork Bearing: the minute hand",
+        "description": "A second structure, not glued to the first one, turns as the minute hand."
+      }
+    ],
+    "sections": [
+      {
+        "id": "accroche",
+        "title": "What spins",
+        "alt": "The block on the bearing is highlighted",
+        "html": "<p>The bearing takes the block standing <strong>against its top face</strong> (or front face when lying on its side) and everything tied to it with <a href=\"/en/wiki/super-glue\">glue</a> or <a href=\"/en/wiki/linear-chassis\">chassis</a>. With nothing on it, it just spins empty.</p>"
+      },
+      {
+        "id": "rotation",
+        "title": "Assembled as soon as it turns",
+        "alt": "The plank spins with the bearing",
+        "html": "<p>As soon as the bearing's shaft turns, the structure is assembled and pivots around the axis. At 16 RPM it completes a turn in <strong>3.75 s</strong>. Our simulation counts the same duration as the scene, within one tick.</p>"
+      },
+      {
+        "id": "alimenter",
+        "title": "Powering the bearing",
+        "html": "<p>Rotation comes in through the face opposite the structure, from a shaft or a cogwheel. Flip the direction of rotation to make the structure spin the other way round.</p>"
+      },
+      {
+        "id": "structure",
+        "title": "A big structure",
+        "alt": "Structure of glued planks spinning",
+        "html": "<p>With chassis and glue, any shape spins as one piece: blades, arms, a platform. Keep the area clear: a spinning structure passes through the scenery, but it shoves players and mobs around.</p>"
+      },
+      {
+        "id": "arret",
+        "title": "Stopping straight",
+        "alt": "The structure settles at a right angle",
+        "html": "<p>When rotation stops, the structure turns back into blocks. Since blocks cannot sit at a slant, it settles at the <strong>nearest right angle</strong>: a quarter turn of difference at most.</p>"
+      },
+      {
+        "id": "modes",
+        "title": "Three settings",
+        "alt": "Setting the bearing's mode",
+        "html": "<p>The <strong>value panel</strong> offers three choices: place the blocks at every stop, only place them near the starting angle, or keep the structure moving as long as the bearing exists. The last one suits decorative windmills and radars.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "Speed and stress",
+        "html": "<p>A bearing turns <strong>6 degrees per second per RPM</strong>: one turn in 7.5 s at 8 RPM, 3.75 s at 16, under a second at 64. It costs 4 SU per RPM. For a door, a low speed is enough and avoids jerky motion.</p>"
+      },
+      {
+        "id": "montages",
+        "title": "Build ideas",
+        "html": "<p>A <strong>swinging door</strong> on a bearing lying on its side, a <strong>merry-go-round</strong> on a slow bearing, decorative blades spun by a motor. To make power from wind, this is not the block you want: use the <a href=\"/en/wiki/windmill-bearing\">Windmill Bearing</a>, which works on the same principle.</p>"
+      },
+      {
+        "id": "embarque",
+        "title": "A bearing on a contraption",
+        "alt": "A bearing is part of the spinning structure",
+        "html": "<p>A bearing can itself be part of a structure that moves or spins. It then becomes a <strong>stabilizer</strong>: whatever sits on it forms a separate sub-structure.</p>"
+      },
+      {
+        "id": "debout",
+        "title": "Always upright",
+        "alt": "The sub-structure stays straight during the rotation",
+        "html": "<p>That sub-structure <strong>stays level</strong> while everything else pivots, like the gondolas of a Ferris wheel. The carried bearing needs no power for this.</p>"
+      },
+      {
+        "id": "horloger",
+        "title": "The Clockwork Bearing",
+        "alt": "Clockwork Bearing with its hand",
+        "html": "<p>The <strong>Clockwork Bearing</strong> (brass and electron tube) turns its structure according to <strong>the in-game time</strong>: an in-game hour lasts 50 s. It still needs rotation to animate; the faster it is, the sooner the hand catches up with the time.</p>"
+      },
+      {
+        "id": "heure",
+        "title": "The hour hand",
+        "alt": "The hand shows the in-game hour",
+        "html": "<p>The first structure acts as the <strong>hour hand</strong>: it turns to the current hour and then follows it. Right-clicking the bearing starts or stops the animation.</p>"
+      },
+      {
+        "id": "deuxieme",
+        "title": "Adding minutes",
+        "alt": "Second structure in front of the first one",
+        "html": "<p>Another <strong>structure</strong>, placed ahead of the first one, becomes the minute hand. The two must <strong>not be glued</strong> together, or they turn as one. The bearing's setting can also swap their roles or use a 24-hour dial.</p>"
+      },
+      {
+        "id": "limites",
+        "title": "What the loops do not show",
+        "html": "<p>Particles and the clicking player are not drawn. The hour shown by the Clockwork Bearing follows the storyboard, not a real day.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: crafting/kinetics/mechanical_bearing.json, clockwork_bearing.json",
+      "Stress: AllBlocks.MECHANICAL_BEARING / CLOCKWORK_BEARING (CStress.setImpact(4.0))",
+      "Speed: MechanicalBearingBlockEntity (convertToAngular: speed × 3/10 degree per tick)",
+      "Stopping: MechanicalBearingBlockEntity.disassemble (angle rounded to a quarter turn), RotationMode (ROTATE_PLACE, ROTATE_PLACE_RETURNED, ROTATE_NEVER_PLACE)",
+      "Stabilized: StabilizedBearingMovementBehaviour, StabilizedContraption",
+      "Clockwork: ClockworkBearingBlockEntity.getHourTarget / getMinuteTarget (hour = day time / 1000 + 6), getHourArmSpeed (angular speed / 2), ClockHands (HOUR_FIRST, MINUTE_FIRST, HOUR_FIRST_24)",
+      "Simulation: WIKI/contraption_sim.py (carried blocks, movement times, ropes and actors recomputed from Create's code)",
+      "Scenes: BearingScenes.mechanicalBearing, bearingModes, stabilizedBearings, clockwork"
+    ]
+  }
+}

@@ -1,0 +1,336 @@
+{
+  "slug": "recolteur-mecanique",
+  "name": "Récolteur mécanique et charrue mécanique",
+  "blockId": "create:mechanical_harvester",
+  "category": "contraptions",
+  "title": "Récolteur mécanique — Create : guide en français",
+  "description": "Le récolteur et la charrue mécaniques de Create : récolter et replanter en roulant, ranger la récolte, labourer, dégager l'herbe et projeter les mobs.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>récolteur mécanique</strong> et la <strong>charrue mécanique</strong> sont des acteurs : ils ne font rien posés seuls, mais travaillent dès qu'une contraption les déplace. Fixés sur un <a href=\"/wiki/piston-mecanique\">piston</a>, un <a href=\"/wiki/roulement-mecanique\">roulement</a> ou un train, ils font une ferme entièrement automatique : la charrue prépare le sol, le récolteur cueille et replante.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Contraptions"
+    },
+    {
+      "label": "Stress",
+      "value": "Aucun : ils travaillent quand une contraption les déplace"
+    },
+    {
+      "label": "Récolteur",
+      "value": "Cultures mûres seulement, puis replante (réglages du serveur)"
+    },
+    {
+      "label": "Cultures",
+      "value": "Blé, carottes, pommes de terre, betteraves, baies, canne à sucre, cacao…"
+    },
+    {
+      "label": "Charrue",
+      "value": "Casse les blocs sans collision et laboure la terre en dessous"
+    },
+    {
+      "label": "Épargne",
+      "value": "Rien n’est cassé au-dessus d’une terre labourée"
+    },
+    {
+      "label": "Récolte",
+      "value": "Dans les coffres et tonneaux de la contraption, sinon au sol"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Récolteur à l'établi",
+    "grid": [
+      [
+        "Alliage d'andésite",
+        "Plaque de fer",
+        "Alliage d'andésite"
+      ],
+      [
+        "Alliage d'andésite",
+        "Plaque de fer",
+        "Alliage d'andésite"
+      ],
+      [
+        null,
+        "Boitier d'andésite",
+        null
+      ]
+    ],
+    "result": "1 récolteur mécanique"
+  },
+  "videos": [
+    {
+      "id": "harvester",
+      "name": "Récolteur mécanique : une ferme qui tourne",
+      "description": "Des récolteurs fixés à une structure tournent au-dessus d'un champ de blé : le blé mûr est récolté et replanté, puis rangé dans un coffre embarqué.",
+      "duration": "PT19S"
+    },
+    {
+      "id": "plough",
+      "name": "Charrue mécanique : dégager et labourer",
+      "description": "Une charrue avance, casse l'herbe et une torche, puis laboure l'herbe en terre cultivable ; enfin elle projette ce qui se trouve devant elle.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "embarque",
+      "title": "Un acteur de contraption",
+      "image": "harvester_embarque.webp",
+      "alt": "Récolteurs fixés sur une structure",
+      "video": "harvester",
+      "html": "<p>Le récolteur se fixe sur une face d'un bloc de la structure, lame vers l'extérieur. Il <strong>tient tout seul</strong>, sans colle. Dès que la contraption bouge, sa lame tourne et il travaille dans la direction où il avance.</p>"
+    },
+    {
+      "id": "pose",
+      "title": "Bien poser les acteurs",
+      "html": "<p>Le récolteur et la charrue se posent tournés vers l'extérieur de la structure, dans le sens du mouvement : un acteur qui recule ne travaille pas. Sur un <a href=\"/wiki/roulement-mecanique\">roulement</a>, oriente-les vers l'avant de la rotation. Ils peuvent se poser au sol, au plafond ou sur les côtés d'un bloc.</p>"
+    },
+    {
+      "id": "recolte",
+      "title": "Récolter et replanter",
+      "image": "harvester_recolte.webp",
+      "alt": "Le blé mûr est récolté au passage",
+      "html": "<p>Il ne cueille que les <strong>cultures mûres</strong> et les replante aussitôt : le champ repousse sans qu'on y touche. Les pousses encore vertes sont épargnées. Les deux réglages sont dans la configuration du serveur.</p>"
+    },
+    {
+      "id": "cultures",
+      "title": "Quelles cultures ?",
+      "html": "<p>Le récolteur prend le blé, les carottes, les pommes de terre, les betteraves, les baies sucrées, la canne à sucre (au-dessus du pied), le cacao et les autres cultures qui ont un âge. Les plantes sans âge, comme les fleurs, sont simplement cassées.</p>"
+    },
+    {
+      "id": "stockage",
+      "title": "Ranger la récolte",
+      "image": "harvester_stockage.webp",
+      "alt": "Coffre embarqué qui reçoit la récolte",
+      "html": "<p>Si la contraption porte des <strong>coffres ou tonneaux</strong>, la récolte y entre directement ; sinon elle tombe au sol. Une <a href=\"/wiki/interface-de-stockage-portable\">interface de stockage portable</a> permet ensuite de vider ces coffres sans arrêter la ferme.</p>"
+    },
+    {
+      "id": "casse",
+      "title": "La charrue dégage le passage",
+      "image": "plough_casse.webp",
+      "alt": "La charrue casse une torche et de l’herbe",
+      "video": "plough",
+      "html": "<p>La charrue casse tout ce qui n'a <strong>pas de collision</strong> : herbe, fleurs, torches, rails, neige. Les blocs solides l'arrêtent, comme une contraption ordinaire. Elle ne touche pas aux plantes qui poussent sur de la terre labourée.</p>"
+    },
+    {
+      "id": "labour",
+      "title": "Labourer en avançant",
+      "image": "plough_labour.webp",
+      "alt": "La charrue passe sur la bande à labourer",
+      "html": "<p>Au passage, elle fait sur le bloc en dessous d'elle <strong>le même effet qu'une houe</strong> : herbe et terre deviennent de la terre labourée, prête pour les graines. Une charrue devant, un déployeur avec des graines derrière : le semis est automatique.</p>"
+    },
+    {
+      "id": "projette",
+      "title": "Projeter sans blesser",
+      "image": "plough_projette.webp",
+      "alt": "La charrue projette ce qui est devant elle",
+      "html": "<p>Joueurs, mobs et objets devant la charrue sont <strong>projetés</strong> sans dégâts. Une petite charrue en tête de train dégage ainsi la voie des animaux égarés.</p>"
+    },
+    {
+      "id": "charrue-recette",
+      "title": "Fabriquer la charrue",
+      "html": "<p>La charrue se fabrique avec trois plaques de fer en haut, trois alliages d'andésite au milieu et un boitier d'andésite en bas. Comme le récolteur, elle tient sur sa face arrière.</p>"
+    },
+    {
+      "id": "ferme",
+      "title": "Une ferme complète",
+      "html": "<p>Un <a href=\"/wiki/roulement-mecanique\">roulement</a> lent au centre d'un champ rond, une rangée de récolteurs sur un bras, un coffre au milieu : la ferme tourne seule. Ajoute des <a href=\"/wiki/controles-de-machine\">contrôles de machine</a> pour couper les récolteurs quand le coffre est plein. Les mobs ne sont pas dessinés dans nos boucles.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Le récolteur ne fait rien ? Il doit être <strong>en mouvement</strong> sur une contraption, lame vers l'avant. Il casse les pousses ? Le serveur autorise peut-être la récolte des plantes pas mûres. La charrue laboure trop ? Elle laboure tout ce qu'elle survole : règle sa hauteur.</p>"
+    },
+    {
+      "id": "limites",
+      "title": "Ce que les boucles ne montrent pas",
+      "html": "<p>La lame du récolteur tourne comme dans le jeu, dessinée par nous. Le perroquet projeté par la charrue n'est pas dessiné, et les blocs cassés lâchent leurs objets avec une petite chute.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur notre serveur",
+      "html": "<p>Sur Create France, une ferme à récolteurs sur roulement est souvent la première contraption d'un joueur : simple, utile et jolie à regarder.</p>"
+    }
+  ],
+  "related": [
+    "piston-mecanique",
+    "roulement-mecanique",
+    "controles-de-machine",
+    "interface-de-stockage-portable",
+    "scie-mecanique",
+    "deployeur"
+  ],
+  "sources": [
+    "Recettes : crafting/kinetics/mechanical_harvester.json, mechanical_plough.json",
+    "Récolte : HarvesterMovementBehaviour.isValidCrop (mûres seulement), CKinetics.harvestPartiallyGrown (false), harvesterReplants (true), moveItemsToStorage (true)",
+    "Charrue : PloughMovementBehaviour.canBreak (sans collision, rien au-dessus d’une terre labourée), visitNewPosition (houe en diamant sur le bloc du dessous), throwsEntities, onBlockBroken (neige)",
+    "Fixation : BlockMovementChecksImpl (AttachedActorBlock accroché à sa face arrière)",
+    "Rendu de la lame : HarvesterRenderer.transform (ajouté par nous, voir engine_create/REQUESTS.md)",
+    "Simulation : WIKI/contraption_sim.py (blocs embarqués, durées des mouvements, cordes et acteurs recalculés d'après le code de Create)",
+    "Scènes : MovementActorScenes.harvester, plough (perroquet projeté non dessiné)"
+  ],
+  "en": {
+    "slugEn": "mechanical-harvester",
+    "name": "Mechanical Harvester and Mechanical Plough",
+    "title": "Mechanical Harvester & Plough — Create mod guide",
+    "description": "The Create Mechanical Harvester and Plough: harvesting and replanting on the move, storing the crop, tilling, clearing grass and tossing mobs aside.",
+    "intro": "The <strong>Mechanical Harvester</strong> and the <strong>Mechanical Plough</strong> are actors: they do nothing on their own, but get to work as soon as a contraption moves them. Fixed to a <a href=\"/en/wiki/mechanical-piston\">piston</a>, a <a href=\"/en/wiki/mechanical-bearing\">bearing</a> or a train, they make a fully automated farm: the plough prepares the soil, the harvester picks and replants.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Contraptions"
+      },
+      {
+        "label": "Stress",
+        "value": "None: they work while a contraption moves them"
+      },
+      {
+        "label": "Harvester",
+        "value": "Ripe crops only, then replants (server settings)"
+      },
+      {
+        "label": "Crops",
+        "value": "Wheat, carrots, potatoes, beetroots, berries, sugar cane, cocoa…"
+      },
+      {
+        "label": "Plough",
+        "value": "Breaks blocks without collision and tills the soil below"
+      },
+      {
+        "label": "Spared",
+        "value": "Nothing is broken above farmland"
+      },
+      {
+        "label": "Crop goes to",
+        "value": "The contraption's chests and barrels, else the ground"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Harvester crafting recipe",
+      "grid": [
+        [
+          "Andesite Alloy",
+          "Iron Sheet",
+          "Andesite Alloy"
+        ],
+        [
+          "Andesite Alloy",
+          "Iron Sheet",
+          "Andesite Alloy"
+        ],
+        [
+          null,
+          "Andesite Casing",
+          null
+        ]
+      ],
+      "result": "1 Mechanical Harvester"
+    },
+    "videos": [
+      {
+        "id": "harvester",
+        "name": "Mechanical Harvester: a spinning farm",
+        "description": "Harvesters fixed to a structure spin over a wheat field: ripe wheat is harvested and replanted, then stored in an on-board chest."
+      },
+      {
+        "id": "plough",
+        "name": "Mechanical Plough: clearing and tilling",
+        "description": "A plough moves forward, breaks grass and a torch, then tills grass into farmland; finally it tosses aside what is in front of it."
+      }
+    ],
+    "sections": [
+      {
+        "id": "embarque",
+        "title": "A contraption actor",
+        "alt": "Harvesters fixed on a structure",
+        "html": "<p>The harvester fixes onto a face of a block of the structure, blade facing out. It <strong>holds on by itself</strong>, no glue needed. As soon as the contraption moves, its blade spins and it works in the direction it travels.</p>"
+      },
+      {
+        "id": "pose",
+        "title": "Placing the actors well",
+        "html": "<p>The harvester and the plough are placed facing out of the structure, in the direction of travel: an actor moving backwards does nothing. On a <a href=\"/en/wiki/mechanical-bearing\">bearing</a>, point them towards the front of the rotation. They can sit on the floor, the ceiling or the sides of a block.</p>"
+      },
+      {
+        "id": "recolte",
+        "title": "Harvesting and replanting",
+        "alt": "Ripe wheat harvested on the way",
+        "html": "<p>It only picks <strong>ripe crops</strong> and replants them at once: the field grows back with no one touching it. Green shoots are spared. Both behaviours are server config settings.</p>"
+      },
+      {
+        "id": "cultures",
+        "title": "Which crops?",
+        "html": "<p>The harvester takes wheat, carrots, potatoes, beetroots, sweet berries, sugar cane (above the base), cocoa and other crops that have an age. Plants without an age, such as flowers, are simply broken.</p>"
+      },
+      {
+        "id": "stockage",
+        "title": "Storing the crop",
+        "alt": "On-board chest receiving the crop",
+        "html": "<p>If the contraption carries <strong>chests or barrels</strong>, the crop goes straight into them; otherwise it drops on the ground. A <a href=\"/en/wiki/portable-storage-interface\">Portable Storage Interface</a> can then empty those chests without stopping the farm.</p>"
+      },
+      {
+        "id": "casse",
+        "title": "The plough clears the way",
+        "alt": "The plough breaks a torch and grass",
+        "html": "<p>The plough breaks anything with <strong>no collision</strong>: grass, flowers, torches, rails, snow. Solid blocks stop it, like any contraption. It leaves alone the plants growing on farmland.</p>"
+      },
+      {
+        "id": "labour",
+        "title": "Tilling on the move",
+        "alt": "The plough passes over the strip to till",
+        "html": "<p>On its way, it does to the block below it <strong>what a hoe would do</strong>: grass and dirt become farmland, ready for seeds. A plough in front, a deployer with seeds behind: sowing is automatic.</p>"
+      },
+      {
+        "id": "projette",
+        "title": "Tossing without harm",
+        "alt": "The plough tosses aside what is in front of it",
+        "html": "<p>Players, mobs and items in front of the plough are <strong>tossed aside</strong> without damage. A small plough at the head of a train clears stray animals off the track.</p>"
+      },
+      {
+        "id": "charrue-recette",
+        "title": "Crafting the plough",
+        "html": "<p>The plough is crafted with three iron sheets on top, three andesite alloys in the middle and an andesite casing at the bottom. Like the harvester, it hangs on its back face.</p>"
+      },
+      {
+        "id": "ferme",
+        "title": "A complete farm",
+        "html": "<p>A slow <a href=\"/en/wiki/mechanical-bearing\">bearing</a> in the middle of a round field, a row of harvesters on an arm, a chest in the centre: the farm runs by itself. Add <a href=\"/en/wiki/contraption-controls\">Contraption Controls</a> to switch the harvesters off when the chest is full. Mobs are not drawn in our loops.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>Harvester doing nothing? It must be <strong>moving</strong> on a contraption, blade forward. It breaks young plants? The server may allow harvesting unripe crops. The plough tills too much? It tills everything it passes over: adjust its height.</p>"
+      },
+      {
+        "id": "limites",
+        "title": "What the loops do not show",
+        "html": "<p>The harvester blade spins as in the game, drawn by us. The parrot tossed by the plough is not drawn, and broken blocks drop their items with a small fall. Crops grow back instantly in the scene, as the storyboard asks.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On our server",
+        "html": "<p>On Create France, a harvester farm on a bearing is often a player's first contraption: simple, useful and nice to watch turning.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: crafting/kinetics/mechanical_harvester.json, mechanical_plough.json",
+      "Harvesting: HarvesterMovementBehaviour.isValidCrop (ripe only), CKinetics.harvestPartiallyGrown (false), harvesterReplants (true), moveItemsToStorage (true)",
+      "Plough: PloughMovementBehaviour.canBreak (no collision, nothing above farmland), visitNewPosition (diamond hoe on the block below), throwsEntities, onBlockBroken (snow)",
+      "Attachment: BlockMovementChecksImpl (AttachedActorBlock hangs on its back face)",
+      "Blade rendering: HarvesterRenderer.transform (added by us, see engine_create/REQUESTS.md)",
+      "Simulation: WIKI/contraption_sim.py (carried blocks, movement times, ropes and actors recomputed from Create's code)",
+      "Scenes: MovementActorScenes.harvester, plough (tossed parrot not drawn)"
+    ]
+  }
+}

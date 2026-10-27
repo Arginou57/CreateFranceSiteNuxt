@@ -1,0 +1,367 @@
+{
+  "slug": "rouleau-mecanique",
+  "name": "Rouleau mécanique",
+  "blockId": "create:mechanical_roller",
+  "category": "contraptions",
+  "title": "Rouleau mécanique — Create : guide en français",
+  "description": "Le rouleau mécanique de Create : dégager le terrain, paver avec un matériau, remplir en ligne ou en pente sous les voies, ravitaillement et pertes.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>rouleau mécanique</strong> aménage le terrain au passage d'une contraption. Sans réglage, il dégage le passage à la manière d'une <a href=\"/wiki/perceuse-mecanique\">perceuse</a> ; avec un matériau, il <strong>pave</strong> la couche du dessous ; en mode remplissage, il comble le vide jusqu'au sol. Fixé sur un train, il trace une voie propre derrière lui.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Contraptions"
+    },
+    {
+      "label": "Stress",
+      "value": "Aucun : il travaille quand une contraption le déplace"
+    },
+    {
+      "label": "Modes",
+      "value": "Dégager et paver, remplir en ligne droite, remplir en pente"
+    },
+    {
+      "label": "Matériau",
+      "value": "Réglé dans son filtre, contraption arrêtée"
+    },
+    {
+      "label": "Ravitaillement",
+      "value": "Coffres et tonneaux de la contraption"
+    },
+    {
+      "label": "Remplissage",
+      "value": "12 blocs de profondeur au plus"
+    },
+    {
+      "label": "Pertes",
+      "value": "Un bloc cassé sur deux ne rend rien ; minerais durs jamais"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Tube électronique",
+        null
+      ],
+      [
+        null,
+        "Boitier d'andésite",
+        null
+      ],
+      [
+        null,
+        "Roue de concassage",
+        null
+      ]
+    ],
+    "result": "1 rouleau mécanique"
+  },
+  "videos": [
+    {
+      "id": "roller_pave",
+      "name": "Rouleau mécanique : dégager et choisir un matériau",
+      "description": "Un train équipé de rouleaux dégage les blocs sur la voie, puis reçoit un matériau et des coffres pour paver.",
+      "duration": "PT21S"
+    },
+    {
+      "id": "roller_paving",
+      "name": "Rouleau mécanique : paver",
+      "description": "Les rouleaux cassent ce qui gêne et remplacent la couche du dessous par le matériau choisi, puis travaillent sur un portique.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "roller_fill",
+      "name": "Rouleau mécanique : les remplissages",
+      "description": "En mode remplissage, les rouleaux comblent un ravin sous la voie : colonnes droites, puis remblai en pente.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "degager",
+      "title": "Dégager le terrain",
+      "image": "roller_pave_degager.webp",
+      "alt": "Rouleaux à l’avant d’un train",
+      "video": "roller_pave",
+      "html": "<p>Le rouleau se fixe à l'avant ou à l'arrière d'une contraption, roue vers le sol. Réglé comme à la sortie de l'établi et <strong>sans matériau</strong>, il casse ce qu'il rencontre, une fois et demie plus vite qu'une perceuse sur contraption.</p>"
+    },
+    {
+      "id": "materiau",
+      "title": "Choisir un matériau",
+      "image": "roller_pave_materiau.webp",
+      "alt": "Réglage du matériau dans le filtre du rouleau",
+      "html": "<p>Contraption <strong>arrêtée</strong>, place le bloc voulu dans le <strong>filtre</strong> du rouleau, par exemple du gravier ou de la pierre. Il servira à paver. Le réglage du mode se fait au même moment.</p>"
+    },
+    {
+      "id": "coffre",
+      "title": "Le ravitaillement",
+      "image": "roller_pave_coffre.webp",
+      "alt": "Coffres embarqués avec le matériau",
+      "html": "<p>Le matériau est puisé dans les <strong>coffres et tonneaux</strong> de la contraption. Garde-les bien remplis : sans matériau, il n'y a plus rien à poser.</p>"
+    },
+    {
+      "id": "paver",
+      "title": "Paver la couche du dessous",
+      "image": "roller_paving_paver.webp",
+      "alt": "Couche du dessous pavée par les rouleaux",
+      "video": "roller_paving",
+      "html": "<p>Avec un matériau, le rouleau casse toujours ce qui gêne, puis <strong>remplace la couche sous lui</strong> par ce bloc. Une seule passe donne une route ou un ballast bien plat.</p>"
+    },
+    {
+      "id": "pertes",
+      "title": "Des pertes à prévoir",
+      "image": "roller_paving_pertes.webp",
+      "alt": "Bande pavée mise en évidence",
+      "html": "<p>Un bloc cassé par un rouleau <strong>ne rend rien une fois sur deux</strong>, et jamais s'il demande une pioche en pierre ou mieux, comme les minerais. Ne l'utilise pas pour miner.</p>"
+    },
+    {
+      "id": "trains",
+      "title": "Sur un train ou ailleurs",
+      "image": "roller_paving_trains.webp",
+      "alt": "Rouleaux montés sur un portique",
+      "html": "<p>Le rouleau est pensé pour les trains, mais il marche sur toutes les contraptions mobiles : <a href=\"/wiki/piston-mecanique\">piston</a>, <a href=\"/wiki/chariot-de-portique\">portique</a> ou wagonnet. La boucle le montre sur un portique.</p>"
+    },
+    {
+      "id": "combler",
+      "title": "Les modes de remplissage",
+      "image": "roller_fill_combler.webp",
+      "alt": "Rouleaux en mode remplissage",
+      "video": "roller_fill",
+      "html": "<p>Deux autres modes servent à <strong>combler le vide</strong> entre la voie et le terrain, au-dessus d'un ravin ou d'une rivière. Ils ne cassent jamais rien : ils ne font qu'ajouter des blocs.</p>"
+    },
+    {
+      "id": "droit",
+      "title": "En ligne droite",
+      "image": "roller_fill_droit.webp",
+      "alt": "Colonnes de matériau sous la voie",
+      "html": "<p>En <strong>remplissage droit</strong>, chaque rouleau pose une colonne verticale de matériau jusqu'au sol, sur 12 blocs de profondeur au plus. On obtient des piliers sous la voie.</p>"
+    },
+    {
+      "id": "pente",
+      "title": "En pente",
+      "image": "roller_fill_pente.webp",
+      "alt": "Remblai en pente sous la voie",
+      "html": "<p>En <strong>remplissage en pente</strong>, chaque couche plus basse s'élargit : le résultat est un remblai aux bords inclinés, plus naturel qu'une rangée de piliers.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Bien placer les rouleaux",
+      "html": "<p>Pose une rangée de rouleaux sur toute la largeur voulue, collés au train. Pour une voie neuve, mets un train de travaux devant : rouleaux en remplissage en pente à l'avant, puis un second wagon qui pave. Le rouleau ne coûte aucun stress, mais il ralentit la contraption quand il casse.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Le rouleau ne pave pas ? Le matériau manque dans les coffres, ou le filtre est vide. Il casse des blocs à garder ? En mode remplissage il ne casse rien : choisis ce mode au-dessus d'un relief à conserver. Le réglage ne se fait qu'à l'arrêt.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "Vitesse et stress",
+      "html": "<p>Le rouleau ne coûte aucun stress : c'est la contraption qui fait le travail. Il casse plus vite qu'une perceuse embarquée, mais la contraption marque quand même une pause devant chaque bloc dur. Un train de travaux lent donne un résultat plus propre qu'un train lancé à pleine vitesse.</p>"
+    },
+    {
+      "id": "limites",
+      "title": "Ce que les boucles ne montrent pas",
+      "html": "<p>La roue et le cadre du rouleau sont dessinés par nous ; la roue tourne avec la vitesse que la scène lui donne. Les objets lâchés par les blocs cassés ne sont pas montrés, ni l'interface de réglage du filtre.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur notre serveur",
+      "html": "<p>Sur Create France, les lignes de train longues gagnent à être tracées par un train de travaux à rouleaux.</p>"
+    }
+  ],
+  "related": [
+    "rail-de-train",
+    "station-de-train",
+    "assembler-un-train",
+    "perceuse-mecanique",
+    "controles-de-machine",
+    "chariot-de-portique"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/mechanical_roller.json",
+    "Modes : RollerBlockEntity.RollingMode (TUNNEL_PAVE, STRAIGHT_FILL, WIDE_FILL), filtre du matériau",
+    "Cassage : RollerMovementBehaviour.getBlockBreakingSpeed (× 1,5, entre 1/128 et 16), destroyBlock (rien si pioche en pierre ou mieux, sinon une chance sur deux)",
+    "Remplissage : CKinetics.rollerFillDepth (12)",
+    "Rendu de la roue : RollerRenderer (ajouté par nous ; boîtes « Bounding » de l’OBJ ignorées, voir engine_create/REQUESTS.md)",
+    "Simulation : WIKI/contraption_sim.py (blocs embarqués, durées des mouvements, cordes et acteurs recalculés d'après le code de Create)",
+    "Scènes : RollerScenes.clearAndPave (coupé en deux boucles), fill"
+  ],
+  "en": {
+    "slugEn": "mechanical-roller",
+    "name": "Mechanical Roller",
+    "title": "Mechanical Roller — Create mod guide",
+    "description": "The Create Mechanical Roller: clearing terrain, paving with a material, straight or sloped fill under tracks, resupply and lost drops.",
+    "intro": "The <strong>Mechanical Roller</strong> reshapes the ground as a contraption passes. Left alone, it clears blocks like a <a href=\"/en/wiki/mechanical-drill\">drill</a>; given a material, it <strong>paves</strong> the layer below; in fill mode, it fills the gap down to the ground. Fixed to a train, it leaves a neat track bed behind it.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Contraptions"
+      },
+      {
+        "label": "Stress",
+        "value": "None: it works while a contraption moves it"
+      },
+      {
+        "label": "Modes",
+        "value": "Clear and pave, straight fill, sloped fill"
+      },
+      {
+        "label": "Material",
+        "value": "Set in its filter while the contraption is stopped"
+      },
+      {
+        "label": "Resupply",
+        "value": "The contraption's chests and barrels"
+      },
+      {
+        "label": "Fill",
+        "value": "12 blocks deep at most"
+      },
+      {
+        "label": "Losses",
+        "value": "One broken block in two drops nothing; hard ores never"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Electron Tube",
+          null
+        ],
+        [
+          null,
+          "Andesite Casing",
+          null
+        ],
+        [
+          null,
+          "Crushing Wheel",
+          null
+        ]
+      ],
+      "result": "1 Mechanical Roller"
+    },
+    "videos": [
+      {
+        "id": "roller_pave",
+        "name": "Mechanical Roller: clearing and picking a material",
+        "description": "A train fitted with rollers clears the blocks on the track, then gets a material and chests for paving."
+      },
+      {
+        "id": "roller_paving",
+        "name": "Mechanical Roller: paving",
+        "description": "The rollers break what is in the way and replace the layer below with the chosen material, then work on a gantry."
+      },
+      {
+        "id": "roller_fill",
+        "name": "Mechanical Roller: fill modes",
+        "description": "In fill mode the rollers fill a ravine under the track: straight columns, then a sloped embankment."
+      }
+    ],
+    "sections": [
+      {
+        "id": "degager",
+        "title": "Clearing the terrain",
+        "alt": "Rollers at the front of a train",
+        "html": "<p>The roller fixes to the front or back of a contraption, wheel facing the ground. In its default mode and <strong>with no material</strong>, it breaks whatever it meets, one and a half times faster than a drill on a contraption.</p>"
+      },
+      {
+        "id": "materiau",
+        "title": "Picking a material",
+        "alt": "Setting the material in the roller's filter",
+        "html": "<p>With the contraption <strong>stopped</strong>, put the wanted block in the roller's <strong>filter</strong>, for instance gravel or stone. It will be used for paving. The mode is set at the same time.</p>"
+      },
+      {
+        "id": "coffre",
+        "title": "Resupply",
+        "alt": "On-board chests holding the material",
+        "html": "<p>The material is taken from the contraption's <strong>chests and barrels</strong>. Keep them well stocked: with no material left, there is nothing to lay.</p>"
+      },
+      {
+        "id": "paver",
+        "title": "Paving the layer below",
+        "alt": "Layer below paved by the rollers",
+        "html": "<p>With a material, the roller still breaks what is in the way, then <strong>replaces the layer beneath it</strong> with that block. One pass gives a flat road or track bed.</p>"
+      },
+      {
+        "id": "pertes",
+        "title": "Expect losses",
+        "alt": "Paved strip highlighted",
+        "html": "<p>A block broken by a roller <strong>drops nothing one time in two</strong>, and never if it needs a stone pickaxe or better, like ores. Do not use it for mining.</p>"
+      },
+      {
+        "id": "trains",
+        "title": "On a train or elsewhere",
+        "alt": "Rollers mounted on a gantry",
+        "html": "<p>The roller is designed for trains, but it works on any moving contraption: <a href=\"/en/wiki/mechanical-piston\">piston</a>, <a href=\"/en/wiki/gantry-carriage\">gantry</a> or minecart. The loop shows it on a gantry.</p>"
+      },
+      {
+        "id": "combler",
+        "title": "Fill modes",
+        "alt": "Rollers in fill mode",
+        "html": "<p>Two other modes <strong>fill the gap</strong> between the track and the terrain, over a ravine or a river. They never break anything: they only add blocks.</p>"
+      },
+      {
+        "id": "droit",
+        "title": "Straight",
+        "alt": "Columns of material under the track",
+        "html": "<p>In <strong>straight fill</strong>, each roller places a vertical column of material down to the ground, 12 blocks deep at most. You get pillars under the track.</p>"
+      },
+      {
+        "id": "pente",
+        "title": "Sloped",
+        "alt": "Sloped embankment under the track",
+        "html": "<p>In <strong>sloped fill</strong>, every lower layer gets wider: the result is an embankment with sloping sides, more natural than a row of pillars.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Placing the rollers well",
+        "html": "<p>Place a row of rollers across the whole width you want, glued to the train. For a new line, run a works train first: rollers in sloped fill at the front, then a second car that paves. The roller costs no stress, but it slows the contraption down while it breaks blocks.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>Roller not paving? The chests are out of material, or the filter is empty. It breaks blocks you want to keep? In fill mode it breaks nothing: pick that mode over terrain you want to preserve. Settings can only be changed while stopped.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "Speed and stress",
+        "html": "<p>The roller costs no stress: the contraption does the work. It breaks faster than an on-board drill, but the contraption still pauses in front of every hard block. A slow works train gives a cleaner result than one running at full speed.</p>"
+      },
+      {
+        "id": "limites",
+        "title": "What the loops do not show",
+        "html": "<p>The roller's wheel and frame are drawn by us; the wheel turns at the speed the scene gives it. Items dropped by broken blocks are not shown, nor the filter's settings screen. The train itself is carried by the scene, without a schedule.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On our server",
+        "html": "<p>On Create France, long railway lines are best laid out by a works train fitted with rollers, which saves hours of terraforming by hand.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/mechanical_roller.json",
+      "Modes: RollerBlockEntity.RollingMode (TUNNEL_PAVE, STRAIGHT_FILL, WIDE_FILL), material filter",
+      "Breaking: RollerMovementBehaviour.getBlockBreakingSpeed (× 1.5, between 1/128 and 16), destroyBlock (nothing if stone pickaxe or better, else one chance in two)",
+      "Fill: CKinetics.rollerFillDepth (12)",
+      "Wheel rendering: RollerRenderer (added by us; the OBJ \"Bounding\" boxes skipped, see engine_create/REQUESTS.md)",
+      "Simulation: WIKI/contraption_sim.py (carried blocks, movement times, ropes and actors recomputed from Create's code)",
+      "Scenes: RollerScenes.clearAndPave (cut into two loops), fill"
+    ]
+  }
+}

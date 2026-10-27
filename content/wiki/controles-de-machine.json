@@ -1,0 +1,344 @@
+{
+  "slug": "controles-de-machine",
+  "name": "Contrôles de machine",
+  "blockId": "create:contraption_controls",
+  "category": "contraptions",
+  "title": "Contrôles de machine — Create : guide en français",
+  "description": "Les contrôles de machine de Create : couper les acteurs d'une contraption en marche, filtre par type d'acteur, démarrage éteint à la redstone, ascenseurs.",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Sur une contraption, les acteurs — <a href=\"/wiki/perceuse-mecanique\">perceuses</a>, <a href=\"/wiki/recolteur-mecanique\">récolteurs</a>, <a href=\"/wiki/scie-mecanique\">scies</a>, <a href=\"/wiki/rouleau-mecanique\">rouleaux</a> — travaillent sans arrêt. Les <strong>contrôles de machine</strong> sont l'interrupteur qui leur manquait : on les éteint et on les rallume en route, tous ou seulement un type. Dans une cabine d'<a href=\"/wiki/poulie-d-ascenseur\">ascenseur</a>, ils servent aussi à choisir l'étage.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Contraptions"
+    },
+    {
+      "label": "Par défaut",
+      "value": "Tous les acteurs embarqués sont actifs"
+    },
+    {
+      "label": "Usage",
+      "value": "Clic sur les contrôles pendant que la contraption bouge"
+    },
+    {
+      "label": "Pose",
+      "value": "N’importe où sur la contraption"
+    },
+    {
+      "label": "Filtre",
+      "value": "Un type d’acteur précis, réglé contraption arrêtée"
+    },
+    {
+      "label": "Redstone",
+      "value": "Alimentés à l’assemblage : les acteurs visés partent éteints"
+    },
+    {
+      "label": "Ascenseur",
+      "value": "Faire défiler et cliquer pour choisir l’étage"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Bouton",
+        null
+      ],
+      [
+        null,
+        "Boitier d'andésite",
+        null
+      ],
+      [
+        null,
+        "Tube électronique",
+        null
+      ]
+    ],
+    "result": "1 contrôles de machine"
+  },
+  "videos": [
+    {
+      "id": "controls_toggle",
+      "name": "Contrôles de machine : couper les acteurs",
+      "description": "Une structure à perceuses et récolteurs tourne au-dessus d'une culture ; des contrôles de machine embarqués coupent les acteurs en route.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "controls_filter",
+      "name": "Contrôles de machine : filtre et redstone",
+      "description": "Le filtre des contrôles vise un seul type d'acteur ; s'ils reçoivent un signal de redstone au moment de l'assemblage, les acteurs visés restent éteints dès le départ.",
+      "duration": "PT18S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "actifs",
+      "title": "Des acteurs toujours actifs",
+      "image": "controls_toggle_actifs.webp",
+      "alt": "Perceuses et récolteurs sur une structure",
+      "video": "controls_toggle",
+      "html": "<p>Sans rien de plus, un acteur embarqué <strong>travaille dès que la contraption bouge</strong>. Dans la boucle, la perceuse casse et le récolteur récolte à chaque passage, que tu le veuilles ou non.</p>"
+    },
+    {
+      "id": "couper",
+      "title": "Couper en route",
+      "image": "controls_toggle_couper.webp",
+      "alt": "Les contrôles coupent les acteurs",
+      "html": "<p>Les contrôles de machine se fixent sur la structure. Un <strong>clic</strong> dessus pendant le trajet éteint ou rallume les acteurs, sans démonter quoi que ce soit. Leur voyant montre l'état choisi.</p>"
+    },
+    {
+      "id": "partout",
+      "title": "Où les poser",
+      "image": "controls_toggle_partout.webp",
+      "alt": "Contrôles posés sur la contraption",
+      "html": "<p>Ils fonctionnent <strong>n'importe où</strong> sur la contraption, pas forcément près des acteurs : mets-les là où tu peux les atteindre depuis un siège ou une plateforme.</p>"
+    },
+    {
+      "id": "filtre",
+      "title": "Viser un type d’acteur",
+      "image": "controls_filter_filtre.webp",
+      "alt": "Filtre des contrôles réglé sur un type d’acteur",
+      "video": "controls_filter",
+      "html": "<p>Contraption <strong>arrêtée</strong>, place un acteur dans leur <strong>filtre</strong> : une perceuse, par exemple. Les contrôles ne commandent plus que ce type, les autres restent actifs. Plusieurs contrôles peuvent viser des types différents.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "Démarrer éteint",
+      "image": "controls_filter_redstone.webp",
+      "alt": "Les contrôles alimentés à l’assemblage",
+      "html": "<p>Si les contrôles reçoivent un <strong>signal de redstone au moment de l'assemblage</strong>, les acteurs qu'ils visent partent éteints. Pratique pour un train qui ne doit pas tout raser en quittant la gare.</p>"
+    },
+    {
+      "id": "eteints",
+      "title": "Rallumer plus tard",
+      "image": "controls_filter_eteints.webp",
+      "alt": "Les acteurs visés restent éteints",
+      "html": "<p>Les acteurs restent alors au repos jusqu'à ce qu'un joueur clique sur les contrôles. La boucle montre la contraption qui tourne sans rien casser.</p>"
+    },
+    {
+      "id": "usages",
+      "title": "Quelques usages",
+      "html": "<p>Un train de travaux qui ne pave qu'aux endroits voulus, une ferme qu'on met en pause pendant la nuit, une foreuse qu'on ramène sans abîmer le tunnel. Dans un ascenseur, les contrôles font défiler les étages : on vise, on clique, la cabine part.</p>"
+    },
+    {
+      "id": "limites",
+      "title": "Ce que la boucle ne montre pas",
+      "html": "<p>Le joueur qui clique n'est pas dessiné, ni le voyant qui change de couleur : la boucle montre seulement les acteurs qui travaillent ou non. Les contrôles ne coûtent aucun stress.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Les contrôles n'agissent pas ? Ils doivent faire partie de la contraption, collés comme le reste. Un seul type d'acteur s'éteint ? Leur filtre vise ce type : vide-le pour tous les commander. Le filtre et la redstone de départ ne se règlent qu'à l'arrêt.</p>"
+    },
+    {
+      "id": "acteurs",
+      "title": "Les acteurs concernés",
+      "html": "<p>Les contrôles commandent tout ce qui agit pendant le trajet : <a href=\"/wiki/perceuse-mecanique\">perceuses</a>, <a href=\"/wiki/scie-mecanique\">scies</a>, <a href=\"/wiki/recolteur-mecanique\">récolteurs et charrues</a>, <a href=\"/wiki/deployeur\">déployeurs</a>, <a href=\"/wiki/rouleau-mecanique\">rouleaux</a>. Les blocs inertes, coffres et sièges ne sont pas concernés.</p>"
+    },
+    {
+      "id": "fabriquer",
+      "title": "Fabrication et pose",
+      "html": "<p>Les contrôles se fabriquent avec un bouton, un boitier d'andésite et un tube électronique. Pose-les comme un bloc ordinaire sur la structure, puis colle-les avec le reste. Ils se règlent à l'arrêt, avant l'assemblage.</p>"
+    },
+    {
+      "id": "ascenseur",
+      "title": "Dans un ascenseur",
+      "html": "<p>Fixés dans la cabine d'une <a href=\"/wiki/poulie-d-ascenseur\">poulie d'ascenseur</a>, les contrôles changent de rôle : ils affichent la liste des étages. On la fait défiler à la molette en les visant, puis un clic envoie la cabine à l'étage choisi, sans quitter la cabine.</p>"
+    },
+    {
+      "id": "train",
+      "title": "Sur un train",
+      "html": "<p>Un train de travaux équipé de <a href=\"/wiki/rouleau-mecanique\">rouleaux</a> et de perceuses gagne beaucoup à avoir des contrôles près du conducteur : on coupe les acteurs dans les gares et on les rallume en pleine voie. Ne les confonds pas avec les <a href=\"/wiki/controles-de-train\">contrôles de train</a>, qui servent à conduire.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur notre serveur",
+      "html": "<p>Sur Create France, pense à couper les perceuses et les rouleaux de ton train avant d'entrer dans une gare partagée : les blocs des autres joueurs te remercieront.</p>"
+    }
+  ],
+  "related": [
+    "poulie-d-ascenseur",
+    "recolteur-mecanique",
+    "perceuse-mecanique",
+    "rouleau-mecanique",
+    "scie-mecanique",
+    "deployeur"
+  ],
+  "sources": [
+    "Recette : crafting/kinetics/contraption_controls.json",
+    "Comportement : ContraptionControlsMovement (filtre, disabled à l’assemblage si alimenté), ContraptionControlsMovingInteraction, ContraptionDisableActorPacket",
+    "Ascenseur : ElevatorControlsHandler (défilement et clic pour l’étage)",
+    "Rendu du bouton : ContraptionControlsRenderer (ajouté par nous, voir engine_create/REQUESTS.md)",
+    "Simulation : WIKI/contraption_sim.py (blocs embarqués, durées des mouvements, cordes et acteurs recalculés d'après le code de Create)",
+    "Scènes : MovementActorScenes.contraptionControls (coupé en deux boucles)"
+  ],
+  "en": {
+    "slugEn": "contraption-controls",
+    "name": "Contraption Controls",
+    "title": "Contraption Controls — Create mod guide",
+    "description": "Create's Contraption Controls: switching a moving contraption's actors off, filtering by actor type, starting switched off with redstone, lifts.",
+    "intro": "On a contraption, actors — <a href=\"/en/wiki/mechanical-drill\">drills</a>, <a href=\"/en/wiki/mechanical-harvester\">harvesters</a>, <a href=\"/en/wiki/mechanical-saw\">saws</a>, <a href=\"/en/wiki/mechanical-roller\">rollers</a> — work non-stop. <strong>Contraption Controls</strong> are the switch they were missing: turn them off and on along the way, all of them or a single type. In an <a href=\"/en/wiki/elevator-pulley\">elevator</a> cabin they also pick the floor.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Contraptions"
+      },
+      {
+        "label": "By default",
+        "value": "Every on-board actor is active"
+      },
+      {
+        "label": "Use",
+        "value": "Click the controls while the contraption moves"
+      },
+      {
+        "label": "Placement",
+        "value": "Anywhere on the contraption"
+      },
+      {
+        "label": "Filter",
+        "value": "One specific actor type, set while stopped"
+      },
+      {
+        "label": "Redstone",
+        "value": "Powered on assembly: targeted actors start switched off"
+      },
+      {
+        "label": "Elevator",
+        "value": "Scroll and click to pick the floor"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Button",
+          null
+        ],
+        [
+          null,
+          "Andesite Casing",
+          null
+        ],
+        [
+          null,
+          "Electron Tube",
+          null
+        ]
+      ],
+      "result": "1 Contraption Controls"
+    },
+    "videos": [
+      {
+        "id": "controls_toggle",
+        "name": "Contraption Controls: switching actors off",
+        "description": "A structure with drills and harvesters spins over a crop; on-board Contraption Controls switch the actors off along the way."
+      },
+      {
+        "id": "controls_filter",
+        "name": "Contraption Controls: filter and redstone",
+        "description": "The controls filter targets one actor type; powered by redstone on assembly, the targeted actors stay off from the start."
+      }
+    ],
+    "sections": [
+      {
+        "id": "actifs",
+        "title": "Actors always on",
+        "alt": "Drills and harvesters on a structure",
+        "html": "<p>With nothing more, an on-board actor <strong>works as soon as the contraption moves</strong>. In the loop the drill breaks and the harvester harvests on every pass, whether you want it or not.</p>"
+      },
+      {
+        "id": "couper",
+        "title": "Switching off on the way",
+        "alt": "The controls switch the actors off",
+        "html": "<p>Contraption Controls fix onto the structure. A <strong>click</strong> on them during the trip switches the actors off or on, without taking anything apart. Their indicator shows the chosen state.</p>"
+      },
+      {
+        "id": "partout",
+        "title": "Where to put them",
+        "alt": "Controls placed on the contraption",
+        "html": "<p>They work <strong>anywhere</strong> on the contraption, not necessarily next to the actors: put them where you can reach them from a seat or a platform.</p>"
+      },
+      {
+        "id": "filtre",
+        "title": "Targeting one actor type",
+        "alt": "Controls filter set to one actor type",
+        "html": "<p>With the contraption <strong>stopped</strong>, put an actor in their <strong>filter</strong>: a drill, for instance. The controls then only command that type; the others stay active. Several controls can target different types.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "Starting switched off",
+        "alt": "The controls powered on assembly",
+        "html": "<p>If the controls get a <strong>redstone signal at the moment of assembly</strong>, the actors they target start switched off. Handy for a train that should not flatten everything as it leaves the station.</p>"
+      },
+      {
+        "id": "eteints",
+        "title": "Turning them on later",
+        "alt": "The targeted actors stay off",
+        "html": "<p>The actors then stay idle until a player clicks the controls. The loop shows the contraption spinning without breaking anything.</p>"
+      },
+      {
+        "id": "usages",
+        "title": "A few uses",
+        "html": "<p>A works train that only paves where you want, a farm you pause during the night, a drill you bring back without damaging the tunnel. In an elevator, the controls scroll through the floors: aim, click, and the cabin leaves.</p>"
+      },
+      {
+        "id": "limites",
+        "title": "What the loop does not show",
+        "html": "<p>The player clicking is not drawn, nor the indicator changing colour: the loop only shows the actors working or not. The controls cost no stress.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>Controls doing nothing? They must be part of the contraption, glued like the rest. Only one actor type switches off? Their filter targets that type: empty it to command them all. The filter and the starting redstone are only set while stopped.</p>"
+      },
+      {
+        "id": "acteurs",
+        "title": "Which actors",
+        "html": "<p>The controls command everything that acts during the trip: <a href=\"/en/wiki/mechanical-drill\">drills</a>, <a href=\"/en/wiki/mechanical-saw\">saws</a>, <a href=\"/en/wiki/mechanical-harvester\">harvesters and ploughs</a>, <a href=\"/en/wiki/deployer\">deployers</a>, <a href=\"/en/wiki/mechanical-roller\">rollers</a>. Inert blocks, chests and seats are not affected.</p>"
+      },
+      {
+        "id": "fabriquer",
+        "title": "Crafting and placing",
+        "html": "<p>The controls are crafted from a button, an andesite casing and an electron tube. Place them like any block on the structure, then glue them with the rest. They are set while stopped, before assembly.</p>"
+      },
+      {
+        "id": "ascenseur",
+        "title": "In an elevator",
+        "html": "<p>Fixed inside the cabin of an <a href=\"/en/wiki/elevator-pulley\">Elevator Pulley</a>, the controls change role: they show the list of floors. Scroll through it with the mouse wheel while looking at them, then a click sends the cabin to the chosen floor.</p>"
+      },
+      {
+        "id": "train",
+        "title": "On a train",
+        "html": "<p>A works train fitted with <a href=\"/en/wiki/mechanical-roller\">rollers</a> and drills benefits a lot from controls near the driver: switch the actors off in stations and back on out on the line. Do not mix them up with <a href=\"/en/wiki/train-controls\">Train Controls</a>, which are used to drive.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On our server",
+        "html": "<p>On Create France, remember to switch off your train's drills and rollers before entering a shared station: the other players' builds will thank you. A single set of controls near the seat is enough for the whole train, and it costs very little to craft.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/kinetics/contraption_controls.json",
+      "Behaviour: ContraptionControlsMovement (filter, disabled on assembly when powered), ContraptionControlsMovingInteraction, ContraptionDisableActorPacket",
+      "Elevator: ElevatorControlsHandler (scroll and click for the floor)",
+      "Button rendering: ContraptionControlsRenderer (added by us, see engine_create/REQUESTS.md)",
+      "Simulation: WIKI/contraption_sim.py (carried blocks, movement times, ropes and actors recomputed from Create's code)",
+      "Scenes: MovementActorScenes.contraptionControls (cut into two loops)"
+    ]
+  }
+}
