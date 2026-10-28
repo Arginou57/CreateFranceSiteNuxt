@@ -1,0 +1,241 @@
+{
+  "slug": "mortiers",
+  "name": "Mortiers",
+  "blockId": "createbigcannons:wrought_iron_drop_mortar_end",
+  "category": "cbc",
+  "title": "Mortiers — Create Big Cannons, guide",
+  "description": "Le mortier à chute et le canon en bois de Create Big Cannons : obus de mortier, pierres de mortier, tir courbe, portées et hauteurs réelles.",
+  "datePublished": "2026-10-28",
+  "dateModified": "2026-10-28",
+  "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
+  "mcVersion": "1.21.1",
+  "intro": "<strong>Create Big Cannons</strong> a deux armes à tir courbe. Le <strong>mortier à chute</strong>, en fer forgé, tire un obus qu'on laisse simplement tomber dans le tube. Le <strong>canon en bois</strong>, fait de rondins, lance des <strong>pierres de mortier</strong> : c'est l'artillerie du tout début de partie.",
+  "facts": [
+    {
+      "label": "Mortier à chute",
+      "value": "Embout de mortier à chute (fer forgé) + chambres en fer forgé, sur un support"
+    },
+    {
+      "label": "Vitesse",
+      "value": "Obus de mortier : 6 blocs/tick (120 blocs/s), sans poudre à charger"
+    },
+    {
+      "label": "Délai",
+      "value": "Le coup part 5 ticks après que l’obus tombe ; 2 s d’attente entre deux obus à la main"
+    },
+    {
+      "label": "Hausse",
+      "value": "De +15° à +85° sur un support"
+    },
+    {
+      "label": "Obus de mortier",
+      "value": "Explosion 6 sur les créatures, 2 sur les blocs"
+    },
+    {
+      "label": "Pierre de mortier",
+      "value": "Canon en bois ; explosion 4 ; se brise au-delà de 6 charges"
+    },
+    {
+      "label": "Version",
+      "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Obus de mortier (établi)",
+    "grid": [
+      [
+        null,
+        "Matière explosive",
+        null
+      ],
+      [
+        "Plaque de fer",
+        "Rotor",
+        "Plaque de fer"
+      ],
+      [
+        null,
+        "Charge de poudre",
+        null
+      ]
+    ],
+    "result": "1 obus de mortier"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "chute",
+      "title": "Le mortier à chute",
+      "image": "cbc_mortars_mortier-a-chute.webp",
+      "alt": "Un mortier à chute en fer forgé et son obus",
+      "html": "<p>On le construit comme un petit canon vertical : l'<strong>embout de mortier à chute</strong> (Wrought Iron Drop Mortar End) au fond, une ou deux chambres en fer forgé au-dessus, le tout sur un <a href=\"/wiki/support-de-canon\">support de canon</a> pointé vers le ciel. Pour tirer, on fait un clic droit avec un <strong>obus de mortier</strong> (Drop Mortar Shell) sur la bouche : il tombe dans le tube et le coup part 5 ticks plus tard.</p>"
+    },
+    {
+      "id": "portees",
+      "title": "Portées et hauteurs",
+      "image": "cbc_mortars_canon-en-bois.webp",
+      "alt": "Un canon en bois et sa pierre de mortier",
+      "html": "<table><thead><tr><th>Hausse</th><th>Portée (blocs)</th><th>Hauteur max (blocs)</th><th>Vol (s)</th></tr></thead><tbody><tr><td>45°</td><td>317,9</td><td>119,7</td><td>6,96</td></tr><tr><td>60°</td><td>241,6</td><td>165,9</td><td>8,24</td></tr><tr><td>70°</td><td>169,5</td><td>188,8</td><td>8,82</td></tr><tr><td>80°</td><td>87,3</td><td>203,3</td><td>9,17</td></tr><tr><td>85°</td><td>43,9</td><td>207,0</td><td>9,26</td></tr></tbody></table><p>Calcul tick par tick avec la balistique du mod, sol plat. L'obus monte à plus de 200 blocs : il retombe presque à la verticale, par-dessus les murs.</p>"
+    },
+    {
+      "id": "obus",
+      "title": "L’obus de mortier",
+      "html": "<p>Il porte sa propre poudre, d'où l'absence de charges à charger : il sort toujours à 6 blocs par tick. À l'arrivée, il fait deux explosions : une forte contre les créatures (6) et une faible contre les blocs (2). C'est une arme contre les troupes et les petites structures, pas contre les murs épais.</p>"
+    },
+    {
+      "id": "bois",
+      "title": "Le canon en bois",
+      "html": "<p>Une chambre et un bout en rondins, pleins de poudre à canon, suffisent. Il n'a aucune charge sûre : il peut toujours caler. On y met de la poudre et une <strong>pierre de mortier</strong> (Mortar Stone), qui explose avec une puissance de 4 en projetant des éclats. Au-delà de 6 charges, la pierre se brise dans le tube. Plus légère qu'un obus, elle subit moitié moins de gravité.</p>"
+    },
+    {
+      "id": "regler",
+      "title": "Régler un tir courbe",
+      "html": "<p>Sur un mortier, c'est la <strong>hausse</strong> qui règle la distance, pas la poudre. Plus le tube est droit, plus l'obus retombe près : à 85°, il tombe à 44 blocs. À 45°, il part à plus de 300 blocs. Un tir à 80° met plus de 9 s à retomber : prévois-le avant de tirer sur une cible qui bouge.</p>"
+    },
+    {
+      "id": "batterie",
+      "title": "Une batterie de mortiers",
+      "html": "<p>Place plusieurs mortiers à chute côte à côte, chacun sur son support, avec un arbre de hausse commun : ils prennent tous le même angle. Range les obus dans un coffre à portée de main, car chaque mortier impose 2 s entre deux obus. Avec une hausse de 80°, la salve retombe à 87 blocs, plus de 9 s après le départ : le temps de changer de cible.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Bien utiliser le canon en bois",
+      "html": "<p>Le canon en bois est fragile : il n'a aucune charge sûre et peut caler à chaque tir. Garde-le pour les premières heures de jeu, avant la fonte, et ne lui donne jamais plus de 6 charges : la pierre de mortier se briserait dans le tube.</p>"
+    },
+    {
+      "id": "pourquoi",
+      "title": "Pourquoi pas de vidéo",
+      "html": "<p>Le tir réel d'un mortier monte à plus de 200 blocs de haut et dure plus de 9 secondes : sur une boucle courte, l'obus n'est qu'un point. Nous montrons donc les pièces en images, et les vraies trajectoires dans le tableau.</p>"
+    }
+  ],
+  "related": [
+    "support-de-canon",
+    "materiaux-des-canons",
+    "obus-de-canon",
+    "poudre-et-cartouches",
+    "create-big-cannons"
+  ],
+  "sources": [
+    "Mortier : munition_properties/projectiles/drop_mortar_shell.json (mortar_power 6, mortar_spread 1, entity / block explosive power 6 / 2)",
+    "Délais : config CBCCfgCannons (dropMortarDelay 5, dropMortarItemCooldown 40)",
+    "Angles : cannon_mounts/drop_mortar.json",
+    "Pierre de mortier : munition_properties/projectiles/mortar_stone.json (explosive_power 4, max_charges 6, gravity -0,025)",
+    "Portées : simulation tick par tick du mod (AbstractCannonProjectile), sol plat, données 5.11.7",
+    "Recette : recipe/drop_mortar_shell.json",
+    "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT), identiques au jar du modpack Create France",
+    "Images : blocs de CBC posés sur la plaque et rendus par notre moteur"
+  ],
+  "en": {
+    "slugEn": "mortars",
+    "name": "Mortars",
+    "title": "Mortars — Create Big Cannons guide",
+    "description": "The Create Big Cannons drop mortar and log cannon: Drop Mortar Shells, Mortar Stones, high-arc fire, real ranges and heights. All numbers from the mod.",
+    "intro": "<strong>Create Big Cannons</strong> has two high-arc weapons. The <strong>drop mortar</strong>, made of wrought iron, fires a shell that you simply drop down the tube. The <strong>log cannon</strong>, made of logs, throws <strong>Mortar Stones</strong>: it is the very first artillery of the game.",
+    "facts": [
+      {
+        "label": "Drop mortar",
+        "value": "Wrought Iron Drop Mortar End + wrought iron chambers, on a mount"
+      },
+      {
+        "label": "Speed",
+        "value": "Drop Mortar Shell: 6 blocks/tick (120 blocks/s), no powder to load"
+      },
+      {
+        "label": "Delay",
+        "value": "The shot goes off 5 ticks after the shell drops; 2 s between two shells by hand"
+      },
+      {
+        "label": "Elevation",
+        "value": "From +15° to +85° on a mount"
+      },
+      {
+        "label": "Drop Mortar Shell",
+        "value": "Explosion 6 against mobs, 2 against blocks"
+      },
+      {
+        "label": "Mortar Stone",
+        "value": "Log cannon; explosion 4; shatters beyond 6 charges"
+      },
+      {
+        "label": "Version",
+        "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Drop Mortar Shell (crafting table)",
+      "grid": [
+        [
+          null,
+          "High explosive material",
+          null
+        ],
+        [
+          "Iron Sheet",
+          "Shaft",
+          "Iron Sheet"
+        ],
+        [
+          null,
+          "Powder Charge",
+          null
+        ]
+      ],
+      "result": "1 Drop Mortar Shell"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "chute",
+        "title": "The drop mortar",
+        "alt": "A wrought iron drop mortar and its shell",
+        "html": "<p>It is built like a small vertical cannon: the <strong>Wrought Iron Drop Mortar End</strong> at the bottom, one or two wrought iron chambers above it, all on a <a href=\"/en/wiki/cannon-mount\">Cannon Mount</a> pointed at the sky. To fire, right-click the muzzle with a <strong>Drop Mortar Shell</strong>: it drops down the tube and the shot goes off 5 ticks later.</p>"
+      },
+      {
+        "id": "portees",
+        "title": "Ranges and heights",
+        "alt": "A log cannon and its Mortar Stone",
+        "html": "<table><thead><tr><th>Elevation</th><th>Range (blocks)</th><th>Max height (blocks)</th><th>Flight (s)</th></tr></thead><tbody><tr><td>45°</td><td>317.9</td><td>119.7</td><td>6.96</td></tr><tr><td>60°</td><td>241.6</td><td>165.9</td><td>8.24</td></tr><tr><td>70°</td><td>169.5</td><td>188.8</td><td>8.82</td></tr><tr><td>80°</td><td>87.3</td><td>203.3</td><td>9.17</td></tr><tr><td>85°</td><td>43.9</td><td>207.0</td><td>9.26</td></tr></tbody></table><p>Computed tick by tick with the mod's ballistics, flat ground. The shell climbs over 200 blocks: it comes down almost vertically, over walls.</p>"
+      },
+      {
+        "id": "obus",
+        "title": "The Drop Mortar Shell",
+        "html": "<p>It carries its own powder, hence no charges to load: it always leaves at 6 blocks per tick. On arrival it makes two explosions: a strong one against mobs (6) and a weak one against blocks (2). It is a weapon against troops and small structures, not against thick walls.</p>"
+      },
+      {
+        "id": "bois",
+        "title": "The log cannon",
+        "html": "<p>A chamber and an end made of logs packed with gunpowder are enough. It has no safe charge at all: it can always jam. Load powder and a <strong>Mortar Stone</strong>, which explodes with a power of 4 and throws debris. Beyond 6 charges the stone shatters inside the tube. Lighter than a shell, it feels only half the gravity.</p>"
+      },
+      {
+        "id": "regler",
+        "title": "Setting a high-arc shot",
+        "html": "<p>On a mortar, <strong>elevation</strong> sets the distance, not powder. The more upright the tube, the closer the shell lands: at 85° it comes down 44 blocks away. At 45° it flies more than 300 blocks. A shot at 80° takes over 9 s to come down: allow for it before firing at a moving target.</p>"
+      },
+      {
+        "id": "batterie",
+        "title": "A mortar battery",
+        "html": "<p>Put several drop mortars side by side, each on its own mount, with one shared elevation shaft: they all take the same angle. Keep the shells in a chest within reach, since each mortar enforces 2 s between two shells. At 80° of elevation the salvo comes down 87 blocks away, more than 9 s after firing: plenty of time to pick the next target. Shift the shared shaft a few degrees between salvos to walk the impacts forward.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Using the log cannon well",
+        "html": "<p>The log cannon is fragile: it has no safe charge at all and may jam on any shot. Keep it for the first hours of play, before cast iron, and never give it more than 6 charges: the Mortar Stone would shatter inside the tube. Once you have cast iron, a proper cannon on a mount does the same job far better.</p>"
+      },
+      {
+        "id": "pourquoi",
+        "title": "Why there is no video",
+        "html": "<p>A real mortar shot climbs over 200 blocks high and lasts more than 9 seconds: in a short loop, the shell is just a dot. So we show the parts in pictures, and the real trajectories in the table.</p>"
+      }
+    ],
+    "sources": [
+      "Mortar: munition_properties/projectiles/drop_mortar_shell.json (mortar_power 6, mortar_spread 1, entity / block explosive power 6 / 2)",
+      "Delays: config CBCCfgCannons (dropMortarDelay 5, dropMortarItemCooldown 40)",
+      "Angles: cannon_mounts/drop_mortar.json",
+      "Mortar Stone: munition_properties/projectiles/mortar_stone.json (explosive_power 4, max_charges 6, gravity -0.025)",
+      "Ranges: the mod's tick-by-tick simulation (AbstractCannonProjectile), flat ground, 5.11.7 data",
+      "Recipe: recipe/drop_mortar_shell.json",
+      "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence), identical to the Create France modpack jar",
+      "Images: CBC blocks placed on the plate and rendered by our engine"
+    ]
+  }
+}

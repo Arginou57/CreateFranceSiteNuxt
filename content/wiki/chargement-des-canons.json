@@ -1,0 +1,292 @@
+{
+  "slug": "chargement-des-canons",
+  "name": "Charger un canon",
+  "blockId": "createbigcannons:cannon_loader",
+  "category": "cbc",
+  "title": "Charger un canon — Create Big Cannons, guide",
+  "description": "Charger un canon de Create Big Cannons : chargeur de canon, tête de bélier, perches, outils à main, pistons, portiques. L'ordre poudre puis obus.",
+  "datePublished": "2026-10-28",
+  "dateModified": "2026-10-28",
+  "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
+  "mcVersion": "1.21.1",
+  "intro": "Un canon de <strong>Create Big Cannons</strong> se charge par la bouche, désassemblé : la poudre d'abord, l'obus ensuite, poussés jusqu'au fond. Le <strong>chargeur de canon</strong> (Cannon Loader) fait ce travail comme un piston de Create. Pour quelques tirs, des outils à main suffisent ; pour une batterie, pistons, portiques et poulies s'en chargent.",
+  "facts": [
+    {
+      "label": "Chargeur de canon",
+      "value": "Piston à perches : poussé par la rotation, 64 blocs de portée maximale"
+    },
+    {
+      "label": "Têtes",
+      "value": "Tête de bélier (Ram Head) pour charger, tête de ver pour décoincer"
+    },
+    {
+      "label": "Ordre",
+      "value": "Poudre au fond (dans les chambres), obus devant ; une seule grande cartouche, derrière la poudre"
+    },
+    {
+      "label": "Outils à main",
+      "value": "Tige de culasse (Ram Rod) et ver : 5 blocs de portée"
+    },
+    {
+      "label": "Fatigue",
+      "value": "Chaque coup d’outil coûte 2,5 de fatigue ; 1 s d’attente entre deux"
+    },
+    {
+      "label": "Déployeur",
+      "value": "Ne peut pas utiliser les outils (option deployersCanUseLoadingTools : non)"
+    },
+    {
+      "label": "Stress du chargeur",
+      "value": "4 par tr/min"
+    },
+    {
+      "label": "Version",
+      "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Poudre à canon",
+        null
+      ],
+      [
+        null,
+        "Boîtier en andésite",
+        null
+      ],
+      [
+        null,
+        "Rallonge de piston",
+        null
+      ]
+    ],
+    "result": "1 chargeur de canon"
+  },
+  "videos": [
+    {
+      "id": "cbc_loader",
+      "name": "Le chargeur de canon",
+      "description": "Un chargeur, ses perches et sa tête enfoncent une charge de poudre puis un boulet dans un canon désassemblé posé sur son support, le tout sur une seule ligne.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "cbc_handload",
+      "name": "Les outils à main",
+      "description": "La tige de culasse pousse les munitions dans le canon depuis la bouche ; le ver les retire.",
+      "duration": "PT18S"
+    },
+    {
+      "id": "cbc_contraption_load",
+      "name": "Pistons, portiques et poulies",
+      "description": "Un piston mécanique, un portique et une poulie à corde chargent aussi des canons, en emportant les munitions collées à leur tête.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "chargeur",
+      "title": "Le chargeur de canon",
+      "image": "cbc_loader_chargeur.webp",
+      "alt": "Le chargeur de canon, ses perches et sa tête de bélier",
+      "video": "cbc_loader",
+      "html": "<p>Il fonctionne comme un <a href=\"/wiki/piston-mecanique\">piston mécanique</a> : des <strong>rallonges de piston</strong> derrière lui fixent sa course, la rotation le fait sortir ou rentrer. Sur sa face avant se pose une <strong>tête</strong> : la <strong>tête de bélier</strong> pour charger, la <strong>tête de ver</strong> pour retirer une munition coincée. Il ne colle pas les blocs voisins : seul ce qui est devant sa tête avance.</p>"
+    },
+    {
+      "id": "aligner",
+      "title": "Tout aligner",
+      "image": "cbc_loader_chargement.webp",
+      "alt": "La poudre et le boulet enfoncés dans le canon",
+      "html": "<p>Chargeur, munitions et canon : tout doit tenir sur une seule ligne. Pose la charge de poudre devant la tête, avance, recule, pose l'obus, avance encore. La poudre finit dans les chambres, l'obus juste devant elle. Le canon doit être <strong>désassemblé</strong> : on ne charge pas un canon assemblé par la bouche.</p>"
+    },
+    {
+      "id": "outils",
+      "title": "Les outils à main",
+      "image": "cbc_tools_hero_outils.webp",
+      "alt": "La tige de culasse et le ver",
+      "video": "cbc_handload",
+      "html": "<p>La <strong>tige de culasse</strong> (Ram Rod), un bâton prolongé d'une tête de bélier, pousse les munitions d'un clic, jusqu'à 5 blocs dans le canon. Le <strong>ver</strong> (Worm) les tire vers soi. Chaque coup coûte de la faim et une seconde d'attente : c'est fait pour quelques tirs. On peut aussi poser les munitions directement contre la bouche d'un canon assemblé, ou les reprendre avec l'outil.</p>"
+    },
+    {
+      "id": "contraptions",
+      "title": "Avec les contraptions de Create",
+      "image": "cbc_contraption_load_contraptions.webp",
+      "alt": "Piston, portique et poulie devant trois canons",
+      "video": "cbc_contraption_load",
+      "html": "<p>Un piston mécanique, un <a href=\"/wiki/chariot-de-portique\">portique</a> ou une <a href=\"/wiki/poulie-a-corde\">poulie à corde</a> chargent aussi : leur tête pousse les munitions alignées. Contrairement au chargeur, ils peuvent emporter d'autres blocs collés, et, selon les liaisons, ressortir une munition du canon. Seules les munitions dans l'axe entrent.</p>"
+    },
+    {
+      "id": "ordre",
+      "title": "L’ordre et la quantité",
+      "html": "<p>Dans le canon, du fond vers la bouche : la poudre, puis l'obus. Mets une charge par chambre : une charge restée dans un fût peut faire éclater le canon. Depuis la version 5.11, on peut combiner les poudres : une seule <a href=\"/wiki/poudre-et-cartouches\">grande cartouche</a> au fond, puis des charges de poudre devant elle. Ne dépasse pas les charges sûres du <a href=\"/wiki/materiaux-des-canons\">matériau</a>.</p>"
+    },
+    {
+      "id": "pas-a-pas",
+      "title": "Pas à pas avec le chargeur",
+      "html": "<p>Place le chargeur derrière la bouche du canon désassemblé, dans l'axe, avec assez de rallonges pour atteindre le fond. Pose une charge de poudre devant la tête de bélier, fais tourner le chargeur dans un sens : il pousse la charge jusqu'au fond. Inverse la rotation pour le faire revenir. Recommence pour chaque charge, puis pour l'obus. Une seule charge par passage, c'est le plus sûr : tu vois exactement où chaque bloc s'arrête.</p>"
+    },
+    {
+      "id": "decoincer",
+      "title": "Décoincer un canon",
+      "html": "<p>Si un obus s'est coincé dans le fût, ne tire pas une seconde fois. Mets une tête de ver sur le chargeur, ou prends le ver à la main, et retire les blocs par la bouche, un par un. Puis recharge avec plus de poudre, ou raccourcis le canon : en fonte, il faut une charge par fût traversé.</p>"
+    },
+    {
+      "id": "deployeur",
+      "title": "Et le déployeur ?",
+      "html": "<p>Avec la configuration par défaut, un <a href=\"/wiki/deployeur\">déployeur</a> ne peut pas se servir de la tige de culasse ni du ver. Il reste très utile en amont : il remplit les grandes cartouches et pose détonateurs et pointeurs. Pour charger, garde le chargeur de canon ou une contraption.</p>"
+    }
+  ],
+  "related": [
+    "support-de-canon",
+    "culasses",
+    "poudre-et-cartouches",
+    "piston-mecanique",
+    "chariot-de-portique",
+    "poulie-a-corde",
+    "deployeur",
+    "manivelle"
+  ],
+  "sources": [
+    "Chargeur : CannonLoaderBlock / CannonLoaderBlockEntity (perches, têtes RAM_HEAD / WORM_HEAD), config CBCCfgKinetics.maxLoaderLength 64",
+    "Outils : config CBCCfgCannons (ramRodReach 5, ramRodStrength 3, wormReach 5, loadingToolHungerConsumption 2,5, loadingToolCooldown 20, deployersCanUseLoadingTools false)",
+    "Ordre des poudres : data/createbigcannons/big_cannon_propellant_compatibility (maximum_amount_ahead, 5.11.0)",
+    "Recettes : recipe/cannon_loader.json, ram_head.json, ram_rod.json",
+    "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT), identiques au jar du modpack Create France",
+    "Vidéos : scènes Ponder de Create Big Cannons (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) rejouées par notre moteur ; modèles et textures de CBC (CC BY-NC-SA 4.0, Cannoneers of Create)"
+  ],
+  "en": {
+    "slugEn": "loading-big-cannons",
+    "name": "Loading a cannon",
+    "title": "Loading Big Cannons — Create Big Cannons guide",
+    "description": "Loading a Create Big Cannons cannon: Cannon Loader, Ram Head, poles, hand tools, pistons and gantries. The order of powder and shell explained.",
+    "intro": "A <strong>Create Big Cannons</strong> cannon is loaded through the muzzle, disassembled: powder first, then the shell, pushed all the way in. The <strong>Cannon Loader</strong> does this job like a Create piston. For a few shots, hand tools are enough; for a battery, pistons, gantries and pulleys take care of it.",
+    "facts": [
+      {
+        "label": "Cannon Loader",
+        "value": "A pole piston: driven by rotation, 64 blocks maximum reach"
+      },
+      {
+        "label": "Heads",
+        "value": "Ram Head to load, Worm Head to clear a jam"
+      },
+      {
+        "label": "Order",
+        "value": "Powder at the back (in the chambers), shell in front; a single Big Cartridge, behind the powder"
+      },
+      {
+        "label": "Hand tools",
+        "value": "Ram Rod and Worm: 5 blocks of reach"
+      },
+      {
+        "label": "Exhaustion",
+        "value": "Each tool use costs 2.5 exhaustion; 1 s between uses"
+      },
+      {
+        "label": "Deployer",
+        "value": "Cannot use the tools (option deployersCanUseLoadingTools: off)"
+      },
+      {
+        "label": "Loader stress",
+        "value": "4 per RPM"
+      },
+      {
+        "label": "Version",
+        "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Gunpowder",
+          null
+        ],
+        [
+          null,
+          "Andesite Casing",
+          null
+        ],
+        [
+          null,
+          "Piston Extension Pole",
+          null
+        ]
+      ],
+      "result": "1 Cannon Loader"
+    },
+    "videos": [
+      {
+        "id": "cbc_loader",
+        "name": "The Cannon Loader",
+        "description": "A loader, its poles and its head push a Powder Charge then a shot into a disassembled cannon on its mount, all lined up on the same axis."
+      },
+      {
+        "id": "cbc_handload",
+        "name": "Hand tools",
+        "description": "The Ram Rod pushes munitions into the cannon from the muzzle; the Worm pulls them out."
+      },
+      {
+        "id": "cbc_contraption_load",
+        "name": "Pistons, gantries and pulleys",
+        "description": "A Mechanical Piston, a gantry and a Rope Pulley load cannons too, carrying the munitions stuck to their head."
+      }
+    ],
+    "sections": [
+      {
+        "id": "chargeur",
+        "title": "The Cannon Loader",
+        "alt": "The Cannon Loader, its poles and its Ram Head",
+        "html": "<p>It works like a <a href=\"/en/wiki/mechanical-piston\">Mechanical Piston</a>: <strong>Piston Extension Poles</strong> behind it set its stroke, rotation pushes it out or pulls it back. A <strong>head</strong> goes on its front face: the <strong>Ram Head</strong> to load, the <strong>Worm Head</strong> to pull out a stuck munition. It does not stick to neighbouring blocks: only what is in front of its head moves.</p>"
+      },
+      {
+        "id": "aligner",
+        "title": "Line everything up",
+        "alt": "Powder and shot pushed into the cannon",
+        "html": "<p>The loader, the munitions and the cannon must be on the same axis. Put the Powder Charge in front of the head, extend, retract, put the shell, extend again. The powder ends up in the chambers, the shell right in front of it. The cannon must be <strong>disassembled</strong>: an assembled cannon cannot be loaded through the muzzle.</p>"
+      },
+      {
+        "id": "outils",
+        "title": "Hand tools",
+        "alt": "The Ram Rod and the Worm",
+        "html": "<p>The <strong>Ram Rod</strong>, a stick ending in a Ram Head, pushes munitions in with a click, up to 5 blocks into the cannon. The <strong>Worm</strong> pulls them towards you. Each use costs some hunger and a one-second wait: it is meant for a few shots. You can also place munitions straight against the muzzle of an assembled cannon, or take them back with the tool.</p>"
+      },
+      {
+        "id": "contraptions",
+        "title": "With Create contraptions",
+        "alt": "Piston, gantry and pulley in front of three cannons",
+        "html": "<p>A Mechanical Piston, a <a href=\"/en/wiki/gantry-carriage\">gantry</a> or a <a href=\"/en/wiki/rope-pulley\">Rope Pulley</a> can load too: their head pushes the lined-up munitions. Unlike the loader, they can carry other glued blocks and, depending on the connections, pull a munition back out of the cannon. Only munitions on the axis go in.</p>"
+      },
+      {
+        "id": "ordre",
+        "title": "Order and amount",
+        "html": "<p>Inside the cannon, from the back to the muzzle: powder, then the shell. Put one charge per chamber: a charge left in a barrel can make the cannon burst. Since version 5.11, powders can be combined: a single <a href=\"/en/wiki/powder-charges-and-cartridges\">Big Cartridge</a> at the back, then Powder Charges in front of it. Do not go beyond the safe charges of the <a href=\"/en/wiki/cannon-materials\">material</a>.</p>"
+      },
+      {
+        "id": "pas-a-pas",
+        "title": "Step by step with the loader",
+        "html": "<p>Put the loader behind the muzzle of the disassembled cannon, on its axis, with enough poles to reach the far end. Place a Powder Charge in front of the Ram Head and spin the loader one way: it pushes the charge all the way in. Reverse the rotation to bring it back. Do it again for each charge, then for the shell. One charge per trip is the safest: you see exactly where each block stops, and nothing ends up in a barrel by mistake.</p>"
+      },
+      {
+        "id": "decoincer",
+        "title": "Clearing a jammed cannon",
+        "html": "<p>If a shell got stuck in the barrel, do not fire a second time. Fit a Worm Head on the loader, or take the Worm in hand, and pull the blocks out through the muzzle one by one. Then reload with more powder, or make the cannon shorter: in cast iron you need one charge for each barrel the shell travels through. Bronze and steel are more forgiving.</p>"
+      },
+      {
+        "id": "deployeur",
+        "title": "What about the Deployer?",
+        "html": "<p>With the default configuration, a <a href=\"/en/wiki/deployer\">Deployer</a> cannot use the Ram Rod or the Worm. It is still very useful upstream: it fills Big Cartridges and applies fuzes and tracers. For loading, stick to the Cannon Loader or a contraption.</p>"
+      }
+    ],
+    "sources": [
+      "Loader: CannonLoaderBlock / CannonLoaderBlockEntity (poles, RAM_HEAD / WORM_HEAD heads), config CBCCfgKinetics.maxLoaderLength 64",
+      "Tools: config CBCCfgCannons (ramRodReach 5, ramRodStrength 3, wormReach 5, loadingToolHungerConsumption 2.5, loadingToolCooldown 20, deployersCanUseLoadingTools false)",
+      "Powder order: data/createbigcannons/big_cannon_propellant_compatibility (maximum_amount_ahead, 5.11.0)",
+      "Recipes: recipe/cannon_loader.json, ram_head.json, ram_rod.json",
+      "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence), identical to the Create France modpack jar",
+      "Videos: Create Big Cannons Ponder scenes (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) replayed by our engine; CBC models and textures (CC BY-NC-SA 4.0, Cannoneers of Create)"
+    ]
+  }
+}

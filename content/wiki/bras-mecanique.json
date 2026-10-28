@@ -158,7 +158,9 @@
     "entonnoir",
     "deployeur",
     "bruleur-a-blaze",
-    "filtres"
+    "filtres",
+    "culasses",
+    "autocanons"
   ],
   "sources": [
     "Stress : AllBlocks.java, MECHANICAL_ARM, CStress.setImpact(2.0)",

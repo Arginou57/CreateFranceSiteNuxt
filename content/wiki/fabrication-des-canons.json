@@ -1,0 +1,322 @@
+{
+  "slug": "fabrication-des-canons",
+  "name": "Fabriquer un canon",
+  "blockId": "createbigcannons:cannon_drill",
+  "category": "cbc",
+  "title": "Fabriquer un canon — Create Big Cannons, guide",
+  "description": "Fabriquer les canons de Create Big Cannons : fonderie, moules et coulée, forage à la perceuse de canon, canons assemblés, finitions et soudure des blocs.",
+  "datePublished": "2026-10-28",
+  "dateModified": "2026-10-28",
+  "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
+  "mcVersion": "1.21.1",
+  "intro": "Les blocs de canon de <strong>Create Big Cannons</strong> ne se fabriquent pas à l'établi. On les <strong>coule</strong> en métal fondu dans un moule, on les <strong>fore</strong> avec une perceuse, ou on les <strong>assemble</strong> couche par couche puis on les chauffe. C'est une petite chaîne d'usine Create, qui produit des canons d'un seul tenant.",
+  "facts": [
+    {
+      "label": "Fonderie",
+      "value": "Couvercle de bassin de fonderie sur un bassin chauffé : 1 lingot donne 90 mB de métal fondu"
+    },
+    {
+      "label": "Temps de prise",
+      "value": "Fonte et bronze 2 400 ticks (2 min), acier 3 600 (3 min), nethersteel 6 000 (5 min)"
+    },
+    {
+      "label": "Métal par bloc",
+      "value": "De 7 lingots (très petit moule) à 20 (très grand) ; 9 pour un bout ou une culasse"
+    },
+    {
+      "label": "Perceuse de canon",
+      "value": "Demande de l’eau ; vitesse égale à celle du tour ; 32 blocs de course ; stress 8"
+    },
+    {
+      "label": "Canon assemblé",
+      "value": "Couches posées par le constructeur, puis 6 000 ticks (5 min) de chauffe"
+    },
+    {
+      "label": "Soudure",
+      "value": "Relie deux blocs posés en survie ; la fonte perd 1 charge sûre, l’acier 2"
+    },
+    {
+      "label": "Version",
+      "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Perceuse de canon (établi)",
+    "grid": [
+      [
+        null,
+        "Lingot de fer",
+        null
+      ],
+      [
+        "Tuyau à fluide",
+        "Boîtier en andésite",
+        "Tuyau à fluide"
+      ],
+      [
+        null,
+        "Rallonge de piston",
+        null
+      ]
+    ],
+    "result": "1 perceuse de canon"
+  },
+  "videos": [
+    {
+      "id": "cbc_boring",
+      "name": "Forer un canon coulé",
+      "description": "Un roulement fait tourner le canon brut pendant que la perceuse, alimentée en eau et en rotation à la même vitesse, avance et creuse l'âme bloc par bloc.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "cbc_building",
+      "name": "Le constructeur de canon",
+      "description": "Le constructeur, mû par la rotation, prend et pose les couches d'acier d'un canon assemblé ; une impulsion de redstone change son mode d'accroche.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "cbc_builtup",
+      "name": "Finir un canon assemblé",
+      "description": "Un ventilateur souffle à travers un bloc de lave sur les couches d'acier, qui finissent par devenir des blocs de canon assemblé.",
+      "duration": "PT18S"
+    },
+    {
+      "id": "cbc_incomplete",
+      "name": "Compléter une culasse",
+      "description": "Une culasse coulissante forée attend son bloc de culasse : on le pose à la main, ou un déployeur s'en charge.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "cbc_moving",
+      "name": "Déplacer un canon",
+      "description": "Pistons, roulement et poulie déplacent un canon entier sans le casser.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "fonderie",
+      "title": "Fondre le métal",
+      "image": "cbc_foundry_chauffe.webp",
+      "alt": "Le couvercle de fonderie sur un bassin chauffé",
+      "html": "<p>Pose un <strong>couvercle de bassin de fonderie</strong> (Basin Foundry Lid) sur un <a href=\"/wiki/bassin\">bassin</a> chauffé par un <a href=\"/wiki/bruleur-a-blaze\">brûleur à blaze</a>. Les lingots jetés dedans fondent : 90 mB par lingot. La fonte s'obtient en compactant du fer avec du charbon, l'acier en mélangeant deux lingots de fer et du charbon.</p>"
+    },
+    {
+      "id": "couler",
+      "title": "Mouler et couler",
+      "image": "cbc_casting_coulee.webp",
+      "alt": "Le moule rempli de métal fondu par une pompe et des tuyaux",
+      "html": "<p>Un moule taillé (du très petit au très grand, plus les moules de bout et de culasse) entouré de <strong>sable de moulage</strong> forme une couche ; on empile les couches pour la longueur voulue, jusqu'à 32. On remplit ensuite par le haut avec des <a href=\"/wiki/tuyau-a-fluide\">tuyaux</a>. Une fois plein, le métal prend : 2 min pour la fonte, 5 pour le nethersteel. Un comparateur lit le remplissage. Il reste à casser le moule.</p>"
+    },
+    {
+      "id": "forer",
+      "title": "Forer",
+      "image": "cbc_boring_vitesse.webp",
+      "alt": "La perceuse avance dans le canon que le roulement fait tourner",
+      "video": "cbc_boring",
+      "html": "<p>Un bloc coulé est <strong>non alésé</strong> : il faut le creuser. Un <a href=\"/wiki/roulement-mecanique\">roulement</a> fait tourner le canon brut comme sur un tour, et la <strong>perceuse de canon</strong> (Cannon Drill), poussée comme un piston, entre dans l'âme. Elle consomme de l'eau, d'autant plus qu'elle tourne vite, et sa vitesse doit égaler celle du tour. Chaque bloc foré laisse de la ferraille.</p>"
+    },
+    {
+      "id": "assembles",
+      "title": "Les canons assemblés",
+      "image": "cbc_building_couches.webp",
+      "alt": "Le constructeur de canon et les couches d’acier",
+      "video": "cbc_building",
+      "html": "<p>Les plus gros canons en acier ou en nethersteel sont faits de <strong>couches</strong> emboîtées, du très petit au très grand calibre. Le <strong>constructeur de canon</strong> (Cannon Builder) les saisit et les pose ; une impulsion de redstone change son accroche. Les couches sont ensuite chauffées comme au <a href=\"/wiki/ventilateur-enchasse\">ventilateur</a> à travers de la lave : après 5 minutes, elles deviennent des blocs de canon assemblé.</p>"
+    },
+    {
+      "id": "finir",
+      "title": "Finitions",
+      "image": "cbc_incomplete_deployeur.webp",
+      "alt": "Un déployeur pose le bloc de culasse",
+      "video": "cbc_incomplete",
+      "html": "<p>Certaines pièces forées attendent encore un objet : la culasse coulissante son <strong>bloc de culasse</strong>, la culasse à vis son <strong>verrou à vis</strong>. Pose-le à la main ou au <a href=\"/wiki/deployeur\">déployeur</a>. Pour déplacer un canon fini, utilise des contraptions : casser un bloc coulé sans Toucher de soie le change en ferraille.</p>"
+    },
+    {
+      "id": "chaine",
+      "title": "Une chaîne complète",
+      "html": "<p>Une petite fonderie tient en quelques blocs : un <a href=\"/wiki/mixeur-mecanique\">mélangeur</a> ou une presse sur un bassin chauffé pour l'alliage, le couvercle de fonderie sur un second bassin, une <a href=\"/wiki/pompe-mecanique\">pompe</a> et des tuyaux vers les moules. Les moules se remplissent l'un après l'autre. Une fois pris, on casse le moule, on fore le bloc sur le tour, et on pose les pièces qui manquent. Compte 12 lingots pour un moule moyen.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Une perceuse plus rapide ou plus lente que le tour ne creuse pas : règle-les sur la même vitesse. Sans eau, elle s'arrête. Un bloc cassé à la pioche sans Toucher de soie devient de la ferraille : déplace tes canons avec des contraptions.</p>"
+    },
+    {
+      "id": "souder",
+      "title": "La soudeuse",
+      "image": "cbc_welder_soudure.webp",
+      "alt": "Deux blocs de canon que la soudeuse va relier",
+      "html": "<p>Les blocs de canon posés à la main en survie ne se relient pas. La <strong>soudeuse de canon</strong> (Cannon Welder) relie deux blocs voisins, alignés, de même matériau et de même type. Souder affaiblit : la fonte perd 1 charge sûre, l'acier 2, le bronze aucune, et le nethersteel ne se soude pas. Mieux vaut fabriquer et déplacer les canons d'une seule pièce.</p>"
+    }
+  ],
+  "related": [
+    "materiaux-des-canons",
+    "culasses",
+    "bassin",
+    "bruleur-a-blaze",
+    "roulement-mecanique",
+    "ventilateur-enchasse",
+    "deployeur",
+    "tuyau-a-fluide",
+    "pompe-mecanique",
+    "piston-mecanique"
+  ],
+  "sources": [
+    "Fonderie : BasinFoundryBlockEntity, recipe/melting/*.json (90 mB par lingot, chauffé, 180 ticks)",
+    "Moules : crafting/casting/CannonCastShape (7 à 20 lingots de 90 mB), config CBCCfgCrafting.maxCannonCastHeight 32",
+    "Prise : data/*/fluid_casting_time (2 400 / 3 600 / 6 000 ticks), AbstractCannonCastBlockEntity",
+    "Forage : crafting/boring (eau, vitesse du tour), config maxCannonDrillLength 32 ; stress CBCBlocks (perceuse 8)",
+    "Assemblés : crafting/builtup, config builtUpCannonHeatingTime 6000, maxCannonBuilderLength 32",
+    "Soudure : crafting/welding, BigCannonMaterialProperties (isWeldable, weldStressPenalty), MountedBigCannonContraption (hasWeldedPenalty)",
+    "Fonte et acier : recipe/compacting/iron_to_cast_iron_ingot.json, recipe/mixing/alloy_steel.json",
+    "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT), identiques au jar du modpack Create France",
+    "Vidéos : scènes Ponder de Create Big Cannons (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) rejouées par notre moteur ; modèles et textures de CBC (CC BY-NC-SA 4.0, Cannoneers of Create)",
+    "Images seules : coulée (métal fondu dans le moule non dessiné), fonderie et soudure (étincelles et marques de soudure non dessinées)"
+  ],
+  "en": {
+    "slugEn": "cannon-crafting",
+    "name": "Crafting a cannon",
+    "title": "Crafting Cannons — Create Big Cannons guide",
+    "description": "Making Create Big Cannons cannons: foundry, moulds and casting, boring with the Cannon Drill, built-up cannons, finishing touches and welding blocks.",
+    "intro": "<strong>Create Big Cannons</strong> cannon blocks are not made on a crafting table. They are <strong>cast</strong> from molten metal in a mould, <strong>bored</strong> with a drill, or <strong>built up</strong> layer by layer then heated. It is a small Create production line that turns out one-piece cannons.",
+    "facts": [
+      {
+        "label": "Foundry",
+        "value": "Basin Foundry Lid on a heated Basin: 1 ingot gives 90 mB of molten metal"
+      },
+      {
+        "label": "Setting time",
+        "value": "Cast iron and bronze 2,400 ticks (2 min), steel 3,600 (3 min), nethersteel 6,000 (5 min)"
+      },
+      {
+        "label": "Metal per block",
+        "value": "From 7 ingots (very small mould) to 20 (very large); 9 for an end or a breech"
+      },
+      {
+        "label": "Cannon Drill",
+        "value": "Needs water; same speed as the lathe; 32-block stroke; stress 8"
+      },
+      {
+        "label": "Built-up cannon",
+        "value": "Layers placed by the builder, then 6,000 ticks (5 min) of heating"
+      },
+      {
+        "label": "Welding",
+        "value": "Joins two blocks placed in survival; cast iron loses 1 safe charge, steel 2"
+      },
+      {
+        "label": "Version",
+        "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Cannon Drill (crafting table)",
+      "grid": [
+        [
+          null,
+          "Iron Ingot",
+          null
+        ],
+        [
+          "Fluid Pipe",
+          "Andesite Casing",
+          "Fluid Pipe"
+        ],
+        [
+          null,
+          "Piston Extension Pole",
+          null
+        ]
+      ],
+      "result": "1 Cannon Drill"
+    },
+    "videos": [
+      {
+        "id": "cbc_boring",
+        "name": "Boring a cast cannon",
+        "description": "A bearing spins the raw cannon while the drill, fed with water and turning at the same speed, moves forward and hollows out the bore block by block."
+      },
+      {
+        "id": "cbc_building",
+        "name": "The Cannon Builder",
+        "description": "The builder, driven by rotation, grabs and places the steel layers of a built-up cannon; a redstone pulse switches how it attaches."
+      },
+      {
+        "id": "cbc_builtup",
+        "name": "Finishing a built-up cannon",
+        "description": "An Encased Fan blows through a lava block onto the steel layers, which end up as built-up cannon blocks."
+      },
+      {
+        "id": "cbc_incomplete",
+        "name": "Completing a breech",
+        "description": "A bored Sliding Breech still needs its breechblock: put it in by hand, or let a Deployer do it."
+      },
+      {
+        "id": "cbc_moving",
+        "name": "Moving a cannon",
+        "description": "Pistons, a bearing and a pulley move a whole cannon without breaking it."
+      }
+    ],
+    "sections": [
+      {
+        "id": "fonderie",
+        "title": "Melting the metal",
+        "alt": "The foundry lid on a heated Basin",
+        "html": "<p>Put a <strong>Basin Foundry Lid</strong> on a <a href=\"/en/wiki/basin\">Basin</a> heated by a <a href=\"/en/wiki/blaze-burner\">Blaze Burner</a>. Ingots thrown in melt: 90 mB per ingot. Cast iron comes from compacting iron with coal, steel from mixing two iron ingots with coal.</p>"
+      },
+      {
+        "id": "couler",
+        "title": "Moulding and casting",
+        "alt": "The mould filled with molten metal by a pump and pipes",
+        "html": "<p>A cut mould (from very small to very large, plus end and breech moulds) surrounded by <strong>Casting Sand</strong> makes one layer; stack layers for the length you want, up to 32. Then fill from the top with <a href=\"/en/wiki/fluid-pipe\">pipes</a>. Once full, the metal sets: 2 min for cast iron, 5 for nethersteel. A comparator reads how full it is. Then break the mould.</p>"
+      },
+      {
+        "id": "forer",
+        "title": "Boring",
+        "alt": "The drill moving into the cannon spun by the bearing",
+        "html": "<p>A cast block is <strong>unbored</strong>: it has to be hollowed out. A <a href=\"/en/wiki/mechanical-bearing\">bearing</a> spins the raw cannon like a lathe, and the <strong>Cannon Drill</strong>, pushed like a piston, goes into the bore. It uses water, more as it spins faster, and its speed must match the lathe's. Each bored block leaves some scrap.</p>"
+      },
+      {
+        "id": "assembles",
+        "title": "Built-up cannons",
+        "alt": "The Cannon Builder and the steel layers",
+        "html": "<p>The biggest steel or nethersteel cannons are made of nested <strong>layers</strong>, from very small to very large calibre. The <strong>Cannon Builder</strong> grabs and places them; a redstone pulse switches how it attaches. The layers are then heated, like with a <a href=\"/en/wiki/encased-fan\">fan</a> blowing through lava: after 5 minutes they have become built-up cannon blocks.</p>"
+      },
+      {
+        "id": "finir",
+        "title": "Finishing touches",
+        "alt": "A Deployer putting in the breechblock",
+        "html": "<p>Some bored parts still need an item: the Sliding Breech its <strong>breechblock</strong>, the Screw Breech its <strong>screw lock</strong>. Put it in by hand or with a <a href=\"/en/wiki/deployer\">Deployer</a>. To move a finished cannon, use contraptions: breaking a cast block without Silk Touch turns it into scrap.</p>"
+      },
+      {
+        "id": "chaine",
+        "title": "A complete line",
+        "html": "<p>A small foundry fits in a few blocks: a <a href=\"/en/wiki/mechanical-mixer\">Mechanical Mixer</a> or a press over a heated basin for the alloy, the foundry lid on a second basin, a <a href=\"/en/wiki/mechanical-pump\">Mechanical Pump</a> and pipes leading to the moulds. The moulds fill one after the other. Once set, break the mould, bore the block on the lathe, and add the missing parts. Count 12 ingots for a medium mould, and 20 for the largest one.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>A drill faster or slower than the lathe does not bore anything: run both at the same speed. Without water it stops. A block broken with a pickaxe without Silk Touch turns into scrap: move your cannons with contraptions, and keep the welder for the rare cases where pieces must be joined after placing. Finally, check the mould size before pouring: the cast takes exactly its volume of metal, no more, and any extra stays in your tank.</p>"
+      },
+      {
+        "id": "souder",
+        "title": "The welder",
+        "alt": "Two cannon blocks about to be welded",
+        "html": "<p>Cannon blocks placed by hand in survival do not connect. The <strong>Cannon Welder</strong> joins two neighbouring blocks that line up and share the same material and type. Welding weakens the cannon: cast iron loses 1 safe charge, steel 2, bronze none, and nethersteel cannot be welded. It is better to make and move cannons in one piece.</p>"
+      }
+    ],
+    "sources": [
+      "Foundry: BasinFoundryBlockEntity, recipe/melting/*.json (90 mB per ingot, heated, 180 ticks)",
+      "Moulds: crafting/casting/CannonCastShape (7 to 20 ingots of 90 mB), config CBCCfgCrafting.maxCannonCastHeight 32",
+      "Setting: data/*/fluid_casting_time (2,400 / 3,600 / 6,000 ticks), AbstractCannonCastBlockEntity",
+      "Boring: crafting/boring (water, lathe speed), config maxCannonDrillLength 32; stress CBCBlocks (drill 8)",
+      "Built-up: crafting/builtup, config builtUpCannonHeatingTime 6000, maxCannonBuilderLength 32",
+      "Welding: crafting/welding, BigCannonMaterialProperties (isWeldable, weldStressPenalty), MountedBigCannonContraption (hasWeldedPenalty)",
+      "Cast iron and steel: recipe/compacting/iron_to_cast_iron_ingot.json, recipe/mixing/alloy_steel.json",
+      "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence), identical to the Create France modpack jar",
+      "Videos: Create Big Cannons Ponder scenes (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) replayed by our engine; CBC models and textures (CC BY-NC-SA 4.0, Cannoneers of Create)",
+      "Stills only: casting (molten metal inside the mould not drawn), foundry and welding (sparks and weld marks not drawn)"
+    ]
+  }
+}

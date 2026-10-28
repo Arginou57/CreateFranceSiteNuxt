@@ -131,7 +131,8 @@
     "moteur-a-vapeur",
     "deployeur",
     "sifflet-a-vapeur",
-    "planning-de-train"
+    "planning-de-train",
+    "fabrication-des-canons"
   ],
   "sources": [
     "Niveaux : BlazeBurnerBlock.HeatLevel (NONE, SMOULDERING, FADING, KINDLED, SEETHING) ; BlazeBurnerBlockEntity.getHeatLevel (FADING sous 1,25 % de MAX_HEAT_CAPACITY)",

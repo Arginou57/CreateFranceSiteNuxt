@@ -1,0 +1,279 @@
+{
+  "slug": "poudre-et-cartouches",
+  "name": "Poudre et portée",
+  "blockId": "createbigcannons:powder_charge",
+  "category": "cbc",
+  "title": "Poudre et portée — Create Big Cannons, guide",
+  "description": "Charges de poudre et grande cartouche de Create Big Cannons : vitesse, portée réelle selon la poudre et la hausse, poudre humide. Tableau des portées.",
+  "datePublished": "2026-10-28",
+  "dateModified": "2026-10-28",
+  "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
+  "mcVersion": "1.21.1",
+  "intro": "La poudre décide de la vitesse de l'obus, donc de sa portée. Dans <strong>Create Big Cannons</strong>, chaque <strong>charge de poudre</strong> (Powder Charge) donne <strong>2 blocs par tick</strong> à l'obus, soit 40 blocs par seconde. La <strong>grande cartouche</strong> (Big Cartridge) regroupe jusqu'à quatre charges en un seul bloc. Voici les portées réelles, calculées comme dans le jeu.",
+  "facts": [
+    {
+      "label": "Charge de poudre",
+      "value": "+2 blocs/tick de vitesse ; +1 de contrainte, +2 de dispersion"
+    },
+    {
+      "label": "Grande cartouche",
+      "value": "1 à 4 niveaux de poudre : +2 blocs/tick et +0,5 de contrainte par niveau"
+    },
+    {
+      "label": "Combinaison",
+      "value": "Une seule grande cartouche, au fond, puis des charges de poudre devant (5.11)"
+    },
+    {
+      "label": "Poudre humide",
+      "value": "Moitié moins forte ; ne s’allume pas si elle est la première du canon"
+    },
+    {
+      "label": "Explosion de la poudre",
+      "value": "Une charge qui prend feu explose (puissance 6)"
+    },
+    {
+      "label": "Portée max (obus)",
+      "value": "58 / 183 / 337 / 507 blocs avec 1 / 2 / 3 / 4 charges"
+    },
+    {
+      "label": "Version",
+      "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Charge de poudre (sans forme)",
+    "grid": [
+      [
+        "Poudre à canon compactée",
+        "Charge de poudre vide",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 charge de poudre"
+  },
+  "videos": [
+    {
+      "id": "range_charges",
+      "name": "Une, deux, trois charges",
+      "description": "Trois canons identiques tirent à l'horizontale avec 1, 2 et 3 charges : même temps de chute, impacts à 19, 38 et 58 blocs (ralenti ×4 pendant le vol).",
+      "duration": "PT9S"
+    },
+    {
+      "id": "cbc_loads",
+      "name": "Charges sûres et dangereuses",
+      "description": "Ce que chaque matériau supporte : vitesse minimale par fût, solidité, et les chargements qui font éclater un canon.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "cbc_wet",
+      "name": "Munitions mouillées",
+      "description": "Des munitions noyées dans l'eau ne prennent plus feu, mais la poudre devient humide ; dans le Nether, elle sèche aussitôt.",
+      "duration": "PT20S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "vitesse",
+      "title": "Plus de poudre, plus de vitesse",
+      "image": "range_charges_vol.webp",
+      "alt": "Trois obus en vol, partis de trois canons avec 1, 2 et 3 charges",
+      "video": "range_charges",
+      "html": "<p>Chaque charge ajoute 2 blocs par tick à la vitesse de sortie : 40 blocs/s avec une charge, 80 avec deux, 120 avec trois. Dans la vidéo, trois canons tirent à l'horizontale depuis la même hauteur : les obus mettent tous 0,51 s à toucher le sol, et la distance suit la vitesse, 19, 38 puis 58 blocs. Le vol est ralenti quatre fois.</p>"
+    },
+    {
+      "id": "portees",
+      "title": "Le tableau des portées",
+      "image": "range_charges_impacts.webp",
+      "alt": "Les trois impacts, de plus en plus loin",
+      "html": "<table><thead><tr><th>Charges</th><th>Vitesse (blocs/s)</th><th>Tir à 0°</th><th>Tir à 10°</th><th>Portée max (hausse)</th><th>Vol (s)</th></tr></thead><tbody><tr><td>1</td><td>40</td><td>19,3</td><td>35,4</td><td>58,4 (42°)</td><td>2,65</td></tr><tr><td>2</td><td>80</td><td>38,6</td><td>103,8</td><td>182,6 (37°)</td><td>4,32</td></tr><tr><td>3</td><td>120</td><td>57,9</td><td>202,6</td><td>336,6 (35°)</td><td>5,85</td></tr><tr><td>4</td><td>160</td><td>77,1</td><td>325,7</td><td>507,4 (33°)</td><td>7,13</td></tr><tr><td>6</td><td>240</td><td>115,7</td><td>626,4</td><td>874,9 (29°)</td><td>9,06</td></tr><tr><td>8</td><td>320</td><td>154,2</td><td>976,3</td><td>1259,2 (26°)</td><td>10,56</td></tr></tbody></table><p>Obus explosif, sol plat, canon 3 blocs au-dessus du sol. La traînée réduit beaucoup la portée des tirs puissants : la meilleure hausse descend de 42° à 26°.</p>"
+    },
+    {
+      "id": "surete",
+      "title": "Combien de charges ?",
+      "image": "cbc_loads_charges.webp",
+      "alt": "Un canon en fonte chargé de deux charges et d’un obus",
+      "video": "cbc_loads",
+      "html": "<p>Le nombre de charges est limité par le <a href=\"/wiki/materiaux-des-canons\">matériau</a> et la <a href=\"/wiki/culasses\">culasse</a> : 2 en fonte, 4 en bronze, 8 en acier avec une culasse à vis. Chaque charge compte 1 de contrainte. Au-delà, le canon peut éclater. Il faut aussi assez de poudre pour la longueur : en fonte, une charge par fût, sinon l'obus se coince.</p>"
+    },
+    {
+      "id": "cartouche",
+      "title": "La grande cartouche",
+      "html": "<p>Une douille en laiton qui se remplit niveau par niveau, jusqu'à 4, au <a href=\"/wiki/deployeur\">déployeur</a> ou à la main. Chaque niveau vaut une charge pour la vitesse mais seulement une demi-charge de contrainte. Comme c'est un seul bloc, elle se charge vite, surtout dans ta <a href=\"/wiki/culasses\">culasse à tir rapide</a> : la douille vide ressort au tir suivant.</p>"
+    },
+    {
+      "id": "humide",
+      "title": "L’eau et le feu",
+      "image": "cbc_wet_eau.webp",
+      "alt": "Des charges de poudre noyées pour les protéger",
+      "video": "cbc_wet",
+      "html": "<p>La poudre et les obus posés en blocs peuvent exploser dans un incendie ou une explosion voisine. Les noyer dans l'eau les protège, mais la poudre devient <strong>humide</strong> : moitié moins forte, et elle ne s'allume pas si elle est la première du canon. Elle sèche avec le temps, pas au four ; dans le Nether, elle sèche tout de suite.</p>"
+    },
+    {
+      "id": "exemple",
+      "title": "Exemple de chargement",
+      "html": "<p>Un canon en acier avec culasse à vis, quatre chambres et quatre fûts : charge quatre charges de poudre, une par chambre, puis l'obus. Il part à 160 blocs par seconde et peut toucher à plus de 500 blocs. Avec une grande cartouche pleine au fond et deux charges devant, tu obtiens six niveaux de vitesse pour seulement quatre de contrainte.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Bien régler un tir",
+      "html": "<p>Pour une cible proche, peu de poudre et une hausse modérée : la trajectoire est plus courbe et l'obus plonge sur la cible. Pour un mur lointain, plus de charges et une hausse faible. Garde une marge sous la limite de ton canon et range la poudre à l'abri : une charge qui prend feu explose avec une puissance de 6.</p>"
+    }
+  ],
+  "related": [
+    "materiaux-des-canons",
+    "culasses",
+    "chargement-des-canons",
+    "obus-de-canon",
+    "mortiers",
+    "deployeur",
+    "create-big-cannons"
+  ],
+  "sources": [
+    "Poudre : munition_properties/block_propellant/powder_charge.json et big_cartridge.json (strength 2, added_stress, maximum_power_levels 4, damp_ammo_strength_debuff 0,5, explosion_power)",
+    "Vitesse : MountedBigCannonContraption.fireShot, PropellantContext (chargesUsed)",
+    "Combinaison : big_cannon_propellant_compatibility (maximum_amount_ahead)",
+    "Portées : simulation tick par tick du mod (AbstractCannonProjectile), obus explosif, sol plat, données 5.11.7",
+    "Humidité : CBCCfgMunitions (dampPropellantWeakensPropellant, dampPropellantBlocksStartingIgnition)",
+    "Recette : recipe/powder_charge.json",
+    "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT), identiques au jar du modpack Create France",
+    "Tirs : scènes écrites pour ce wiki ; trajectoire calculée tick par tick avec les formules du mod (AbstractCannonProjectile.tick : traînée 0,01, gravité -0,05 bloc/tick², vitesse = charges utilisées, MountedBigCannonContraption.fireShot), explosions Explosion.explode + transformations de CBC",
+    "Vidéos : scènes Ponder de Create Big Cannons (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) rejouées par notre moteur ; modèles et textures de CBC (CC BY-NC-SA 4.0, Cannoneers of Create)"
+  ],
+  "en": {
+    "slugEn": "powder-charges-and-cartridges",
+    "name": "Powder and range",
+    "title": "Powder and Range — Create Big Cannons guide",
+    "description": "Create Big Cannons Powder Charges and Big Cartridge: muzzle speed, real range by powder and elevation, damp powder. Full range table included.",
+    "intro": "Powder decides the shell's speed, and therefore its range. In <strong>Create Big Cannons</strong>, each <strong>Powder Charge</strong> gives the shell <strong>2 blocks per tick</strong>, that is 40 blocks per second. The <strong>Big Cartridge</strong> packs up to four charges into a single block. Here are the real ranges, computed the way the game does it.",
+    "facts": [
+      {
+        "label": "Powder Charge",
+        "value": "+2 blocks/tick of speed; +1 stress, +2 spread"
+      },
+      {
+        "label": "Big Cartridge",
+        "value": "1 to 4 powder levels: +2 blocks/tick and +0.5 stress per level"
+      },
+      {
+        "label": "Combining",
+        "value": "A single Big Cartridge at the back, then Powder Charges in front of it (5.11)"
+      },
+      {
+        "label": "Damp powder",
+        "value": "Half as strong; does not ignite if it is the first one in the cannon"
+      },
+      {
+        "label": "Powder explosion",
+        "value": "A charge that catches fire explodes (power 6)"
+      },
+      {
+        "label": "Max range (shell)",
+        "value": "58 / 183 / 337 / 507 blocks with 1 / 2 / 3 / 4 charges"
+      },
+      {
+        "label": "Version",
+        "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Powder Charge (shapeless)",
+      "grid": [
+        [
+          "Packed Gunpowder",
+          "Empty Powder Charge",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Powder Charge"
+    },
+    "videos": [
+      {
+        "id": "range_charges",
+        "name": "One, two, three charges",
+        "description": "Three identical cannons fire level with 1, 2 and 3 charges: the same falling time, impacts at 19, 38 and 58 blocks (4× slow motion during the flight)."
+      },
+      {
+        "id": "cbc_loads",
+        "name": "Safe and unsafe loads",
+        "description": "What each material can take: minimum speed per barrel, strength, and the loads that make a cannon burst."
+      },
+      {
+        "id": "cbc_wet",
+        "name": "Wet munitions",
+        "description": "Munitions drowned in water no longer catch fire, but the powder turns damp; in the Nether it dries at once."
+      }
+    ],
+    "sections": [
+      {
+        "id": "vitesse",
+        "title": "More powder, more speed",
+        "alt": "Three shells in flight from cannons with 1, 2 and 3 charges",
+        "html": "<p>Each charge adds 2 blocks per tick to the muzzle speed: 40 blocks/s with one charge, 80 with two, 120 with three. In the video, three cannons fire level from the same height: every shell takes 0.51 s to hit the ground, and the distance follows the speed, 19, 38 then 58 blocks. The flight is slowed down four times.</p>"
+      },
+      {
+        "id": "portees",
+        "title": "The range table",
+        "alt": "The three impacts, further and further away",
+        "html": "<table><thead><tr><th>Charges</th><th>Speed (blocks/s)</th><th>Fired at 0°</th><th>Fired at 10°</th><th>Max range (elevation)</th><th>Flight (s)</th></tr></thead><tbody><tr><td>1</td><td>40</td><td>19.3</td><td>35.4</td><td>58.4 (42°)</td><td>2.65</td></tr><tr><td>2</td><td>80</td><td>38.6</td><td>103.8</td><td>182.6 (37°)</td><td>4.32</td></tr><tr><td>3</td><td>120</td><td>57.9</td><td>202.6</td><td>336.6 (35°)</td><td>5.85</td></tr><tr><td>4</td><td>160</td><td>77.1</td><td>325.7</td><td>507.4 (33°)</td><td>7.13</td></tr><tr><td>6</td><td>240</td><td>115.7</td><td>626.4</td><td>874.9 (29°)</td><td>9.06</td></tr><tr><td>8</td><td>320</td><td>154.2</td><td>976.3</td><td>1259.2 (26°)</td><td>10.56</td></tr></tbody></table><p>HE shell, flat ground, cannon 3 blocks above the ground. Drag cuts the range of powerful shots a lot: the best elevation drops from 42° to 26°.</p>"
+      },
+      {
+        "id": "surete",
+        "title": "How many charges?",
+        "alt": "A cast iron cannon loaded with two charges and a shell",
+        "html": "<p>The number of charges is limited by the <a href=\"/en/wiki/cannon-materials\">material</a> and the <a href=\"/en/wiki/cannon-breeches\">breech</a>: 2 in cast iron, 4 in bronze, 8 in steel with a Screw Breech. Each charge counts as 1 stress. Beyond that, the cannon may burst. You also need enough powder for the length: in cast iron, one charge per barrel, otherwise the shell gets stuck.</p>"
+      },
+      {
+        "id": "cartouche",
+        "title": "The Big Cartridge",
+        "html": "<p>A brass case filled level by level, up to 4, by a <a href=\"/en/wiki/deployer\">Deployer</a> or by hand. Each level counts as one charge for speed but only half a charge of stress. Being a single block, it loads fast, especially in a <a href=\"/en/wiki/cannon-breeches\">Quick-Firing Breech</a>: the empty case comes out on the next shot.</p>"
+      },
+      {
+        "id": "humide",
+        "title": "Water and fire",
+        "alt": "Powder Charges drowned to protect them",
+        "html": "<p>Powder and shells placed as blocks can explode in a fire or a nearby explosion. Drowning them in water protects them, but the powder becomes <strong>damp</strong>: half as strong, and it does not ignite if it is the first one in the cannon. It dries over time, not in a furnace; in the Nether it dries at once.</p>"
+      },
+      {
+        "id": "exemple",
+        "title": "A loading example",
+        "html": "<p>A steel cannon with a Screw Breech, four chambers and four barrels: load four Powder Charges, one per chamber, then the shell. It leaves at 160 blocks per second and can hit beyond 500 blocks. With a full Big Cartridge at the back and two charges in front of it, you get six levels of speed for only four of stress, which leaves a comfortable margin under steel's limit of eight.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Setting up a shot",
+        "html": "<p>For a close target, little powder and a moderate elevation: the path is more curved and the shell dives onto the target. For a distant wall, more charges and a low elevation. Keep a margin under your cannon's limit and store powder safely: a charge that catches fire explodes with a power of 6.</p>"
+      }
+    ],
+    "sources": [
+      "Powder: munition_properties/block_propellant/powder_charge.json and big_cartridge.json (strength 2, added_stress, maximum_power_levels 4, damp_ammo_strength_debuff 0.5, explosion_power)",
+      "Speed: MountedBigCannonContraption.fireShot, PropellantContext (chargesUsed)",
+      "Combining: big_cannon_propellant_compatibility (maximum_amount_ahead)",
+      "Ranges: the mod's tick-by-tick simulation (AbstractCannonProjectile), HE shell, flat ground, 5.11.7 data",
+      "Dampness: CBCCfgMunitions (dampPropellantWeakensPropellant, dampPropellantBlocksStartingIgnition)",
+      "Recipe: recipe/powder_charge.json",
+      "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence), identical to the Create France modpack jar",
+      "Shots: scenes written for this wiki; trajectory computed tick by tick with the mod's formulas (AbstractCannonProjectile.tick: drag 0.01, gravity -0.05 block/tick², speed = charges used, MountedBigCannonContraption.fireShot), explosions from Explosion.explode plus CBC's block transforms",
+      "Videos: Create Big Cannons Ponder scenes (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) replayed by our engine; CBC models and textures (CC BY-NC-SA 4.0, Cannoneers of Create)"
+    ]
+  }
+}

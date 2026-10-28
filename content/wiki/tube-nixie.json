@@ -161,7 +161,8 @@
     "inverseur-de-rotation-sequence",
     "chaine-de-transmission",
     "lampe-a-quartz-rose",
-    "signal-de-train"
+    "signal-de-train",
+    "autocanons"
   ],
   "sources": [
     "Recettes : crafting/kinetics/nixie_tube.json (4 tubes), analog_lever.json",

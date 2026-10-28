@@ -153,7 +153,8 @@
     "tapis-roulant",
     "coffre-a-objet-renforce",
     "tunnel",
-    "filtres"
+    "filtres",
+    "autocanons"
   ],
   "sources": [
     "Vitesse : ChuteBlockEntity.getItemMotion (gravité 4 chutes/s, (tirage + poussée) / 64, plafond 20), poussée d'un ventilateur : calculatePush (EncasedFanBlockEntity.getSpeed)",

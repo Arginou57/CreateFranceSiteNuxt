@@ -1,0 +1,299 @@
+{
+  "slug": "autocanons",
+  "name": "Autocanons",
+  "blockId": "createbigcannons:steel_autocannon_barrel",
+  "category": "cbc",
+  "title": "Autocanons — Create Big Cannons, guide",
+  "description": "Les autocanons de Create Big Cannons : culasse, ressort de recul, fûts, cadence selon la redstone, munitions et caisse de munitions. Chiffres du mod.",
+  "datePublished": "2026-10-28",
+  "dateModified": "2026-10-28",
+  "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
+  "mcVersion": "1.21.1",
+  "intro": "L'<strong>autocanon</strong> de <strong>Create Big Cannons</strong> est une arme à tir rapide : on lui donne des munitions en objets, il les tire à la chaîne tant que sa face de tir est alimentée. Il se construit comme un petit canon : une <strong>culasse d'autocanon</strong>, un <strong>ressort de recul</strong> en option et des <strong>fûts</strong>, sur un support de canon.",
+  "facts": [
+    {
+      "label": "Cadence",
+      "value": "Selon la puissance du signal reçu par la face de tir : de 10 à 300 coups par minute"
+    },
+    {
+      "label": "Vitesse",
+      "value": "Fonte 9 blocs/tick, bronze 7,5, acier 9 (avec assez de fûts)"
+    },
+    {
+      "label": "Fûts maximum",
+      "value": "Fonte 3, bronze 5, acier 7"
+    },
+    {
+      "label": "Munitions",
+      "value": "Balle perforante (14 dégâts), anti-aérienne (15 éclats), de mitrailleuse (8 dégâts)"
+    },
+    {
+      "label": "Caisse de munitions",
+      "value": "64 balles d’autocanon ou 128 de mitrailleuse"
+    },
+    {
+      "label": "Hausse",
+      "value": "De -45° à +90° sur un support"
+    },
+    {
+      "label": "Version",
+      "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Balle perforante (×4)",
+    "grid": [
+      [
+        null,
+        "Lingot de fonte",
+        null
+      ],
+      [
+        null,
+        "Lingot de fer",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "4 obus d'autocanon à perforation d'armure"
+  },
+  "videos": [
+    {
+      "id": "range_autocannon",
+      "name": "Une rafale réelle",
+      "description": "Un autocanon en acier à 5 fûts tire 6 balles perforantes traçantes à 120 coups/min sur un mur à 40 blocs, en balayant lentement ; le ressort et les fûts reculent à chaque coup (ralenti ×2).",
+      "duration": "PT10S"
+    },
+    {
+      "id": "cbc_auto_using",
+      "name": "Utiliser un autocanon",
+      "description": "Un autocanon en fonte sur son support : on l'assemble, puis un levier analogique branché à la face de tir règle la cadence, de quelques coups à une rafale.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "cbc_auto_custom",
+      "name": "Personnaliser un autocanon",
+      "description": "Un coup de clé change le bout du canon, le ressort de recul fait reculer le fût, et des poignées transforment l'arme en autocanon manuel.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "construire",
+      "title": "Construire un autocanon",
+      "image": "cbc_auto_using_autocanon.webp",
+      "alt": "Un autocanon en fonte sur son support",
+      "video": "cbc_auto_using",
+      "html": "<p>Sur un <a href=\"/wiki/support-de-canon\">support de canon</a>, pose la <strong>culasse d'autocanon</strong>, puis le <strong>ressort de recul</strong> si tu le veux, puis les <strong>fûts</strong>. Plus de fûts donnent plus de vitesse, jusqu'à une limite, et réduisent la dispersion. Au-delà du nombre maximum du matériau, les balles se coincent. Le dernier fût peut prendre une bouche évasée d'un coup de <a href=\"/wiki/cle\">clé</a>.</p>"
+    },
+    {
+      "id": "cadence",
+      "title": "La cadence",
+      "image": "cbc_auto_using_cadence.webp",
+      "alt": "L’autocanon en rafale, fumée à la bouche",
+      "html": "<p>La face de tir du support lit la <strong>puissance</strong> du signal de redstone : 1 donne 10 coups par minute, 11 donne 120, 15 donne 300. Un <a href=\"/wiki/tube-nixie\">levier analogique</a> est idéal pour la régler. À chaque coup, la douille vide est éjectée par la culasse, et le ressort fait reculer les fûts d'un demi-bloc.</p>"
+    },
+    {
+      "id": "rafale",
+      "title": "Une rafale réelle",
+      "image": "range_autocannon_rafale.webp",
+      "alt": "La rafale part vers le mur, traçantes visibles",
+      "video": "range_autocannon",
+      "html": "<p>Dans la vidéo, l'autocanon en acier tire à 120 coups par minute. Chaque balle part à 9 blocs par tick, 180 par seconde, et met 0,26 s pour atteindre le mur à 40 blocs. Comme la dispersion d'un acier à 5 fûts tombe à zéro, le tireur balaie lentement pour toucher plusieurs points. Les balles perforantes percent le mur et la butte derrière.</p>"
+    },
+    {
+      "id": "materiaux",
+      "title": "Les matériaux",
+      "image": "cbc_auto_ammo_hero_munitions.webp",
+      "alt": "Les munitions d’autocanon",
+      "html": "<table><thead><tr><th>Matériau</th><th>Fûts max.</th><th>Vitesse (blocs/tick)</th><th>Durée de vie de la balle</th></tr></thead><tbody><tr><td>Fonte</td><td>3</td><td>9 (180 blocs/s)</td><td>11 ticks, environ 95 blocs</td></tr><tr><td>Bronze</td><td>5</td><td>7,5 (150 blocs/s)</td><td>25 ticks, environ 165 blocs</td></tr><tr><td>Acier</td><td>7</td><td>9 (180 blocs/s)</td><td>60 ticks, environ 410 blocs</td></tr></tbody></table><p>Au bout de sa durée de vie, la balle disparaît : c'est la vraie portée d'un autocanon en fonte.</p>"
+    },
+    {
+      "id": "munitions",
+      "title": "Munitions et caisse",
+      "image": "cbc_ammo_use_caisse.webp",
+      "alt": "Une caisse de munitions posée sur la culasse",
+      "html": "<p>Les balles se donnent une à une à la culasse, par un <a href=\"/wiki/entonnoir\">entonnoir</a> ou une <a href=\"/wiki/chute\">glissière</a>. La <strong>caisse de munitions d'autocanon</strong> (Autocannon Ammo Container) en contient 64, ou 128 balles de mitrailleuse, avec un emplacement à part pour les traçantes et un espacement réglable. Elle se pose sur la culasse ; un <a href=\"/wiki/bras-mecanique\">bras mécanique</a> peut l'échanger quand elle est vide.</p>"
+    },
+    {
+      "id": "exemple",
+      "title": "Exemple : une défense anti-aérienne",
+      "html": "<p>Un autocanon en acier à 7 fûts sur un support, une caisse de munitions de balles anti-aériennes, un levier analogique sur 11 pour 120 coups par minute. Munie d'un détonateur minuté ou de proximité, la balle anti-aérienne éclate en 15 éclats : règle-le pour qu'elle éclate près de la cible. Une manivelle sur chaque arbre permet de suivre un dirigeable, à 24° par seconde.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Trop de fûts pour le matériau : les balles se coincent. Un signal trop faible : l'arme tire au compte-gouttes. En fonte, la balle disparaît au bout de 11 ticks : ne compte pas toucher au-delà de 95 blocs. Et pense à vider la culasse avant de démonter l'arme.</p>"
+    },
+    {
+      "id": "manuel",
+      "title": "L’autocanon manuel",
+      "image": "cbc_auto_custom_poignees.webp",
+      "alt": "La culasse à poignées",
+      "video": "cbc_auto_custom",
+      "html": "<p>Un coup de clé sur la culasse lui ajoute des <strong>poignées</strong> : l'autocanon se pilote alors à la main, assis derrière, sans rotation. Un siège posé sur la culasse est purement décoratif. Un second coup de clé retire les poignées.</p>"
+    }
+  ],
+  "related": [
+    "support-de-canon",
+    "detonateurs-et-traceurs",
+    "cle",
+    "tube-nixie",
+    "entonnoir",
+    "chute",
+    "bras-mecanique",
+    "deployeur",
+    "create-big-cannons"
+  ],
+  "sources": [
+    "Matériaux : index/CBCAutocannonMaterials.java (maxBarrelLength, baseSpeed, speedIncreasePerBarrel, maxSpeedIncreases, projectileLifetime, baseSpread, spreadReductionPerBarrel)",
+    "Cadence : AbstractAutocannonBreechBlockEntity.FIRE_RATES (120 à 4 ticks entre deux coups)",
+    "Munitions : munition_properties/projectiles/ap_autocannon.json, flak_autocannon.json, machine_gun_bullet.json",
+    "Caisse : config CBCCfgMunitions (64 / 128, 5.11.4)",
+    "Recul : AutocannonRecoilSpringBlockEntity / AbstractAutocannonBreechBlockEntity.getAnimateOffset",
+    "Angles : cannon_mounts/autocannon.json",
+    "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT), identiques au jar du modpack Create France",
+    "Vidéos : scènes Ponder de Create Big Cannons (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) rejouées par notre moteur ; modèles et textures de CBC (CC BY-NC-SA 4.0, Cannoneers of Create)",
+    "Tirs : scènes écrites pour ce wiki ; trajectoire calculée tick par tick avec les formules du mod (AbstractCannonProjectile.tick : traînée 0,01, gravité -0,05 bloc/tick², vitesse = charges utilisées, MountedBigCannonContraption.fireShot), explosions Explosion.explode + transformations de CBC",
+    "Images seules : caisse de munitions (son menu et son remplissage ne se voient pas en scène)"
+  ],
+  "en": {
+    "slugEn": "autocannons",
+    "name": "Autocannons",
+    "title": "Autocannons — Create Big Cannons guide",
+    "description": "Create Big Cannons autocannons: breech, recoil spring, barrels, fire rate set by redstone, rounds and the ammo container. All numbers from the mod.",
+    "intro": "The <strong>Create Big Cannons</strong> <strong>autocannon</strong> is a rapid-fire weapon: you feed it rounds as items, and it fires them one after another as long as its firing face is powered. It is built like a small cannon: an <strong>Autocannon Breech</strong>, an optional <strong>Recoil Spring</strong> and <strong>barrels</strong>, on a Cannon Mount.",
+    "facts": [
+      {
+        "label": "Fire rate",
+        "value": "Set by the signal strength on the firing face: from 10 to 300 rounds per minute"
+      },
+      {
+        "label": "Speed",
+        "value": "Cast iron 9 blocks/tick, bronze 7.5, steel 9 (with enough barrels)"
+      },
+      {
+        "label": "Maximum barrels",
+        "value": "Cast iron 3, bronze 5, steel 7"
+      },
+      {
+        "label": "Rounds",
+        "value": "AP round (14 damage), flak (15 fragments), machine gun round (8 damage)"
+      },
+      {
+        "label": "Ammo container",
+        "value": "64 autocannon rounds or 128 machine gun rounds"
+      },
+      {
+        "label": "Elevation",
+        "value": "From -45° to +90° on a mount"
+      },
+      {
+        "label": "Version",
+        "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "AP autocannon round (×4)",
+      "grid": [
+        [
+          null,
+          "Cast Iron Ingot",
+          null
+        ],
+        [
+          null,
+          "Iron Ingot",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "4 Armor Piercing (AP) Autocannon Rounds"
+    },
+    "videos": [
+      {
+        "id": "range_autocannon",
+        "name": "A real burst",
+        "description": "A 5-barrel steel autocannon fires 6 tracer AP rounds at 120 rounds per minute at a wall 40 blocks away, sweeping slowly; the spring and barrels recoil on every shot (2× slow motion)."
+      },
+      {
+        "id": "cbc_auto_using",
+        "name": "Using an autocannon",
+        "description": "A cast iron autocannon on its mount: it is assembled, then an Analog Lever on the firing face sets the rate, from a few shots to a burst."
+      },
+      {
+        "id": "cbc_auto_custom",
+        "name": "Customising an autocannon",
+        "description": "A wrench click changes the barrel end, the Recoil Spring makes the barrel kick back, and handles turn the gun into a manual autocannon."
+      }
+    ],
+    "sections": [
+      {
+        "id": "construire",
+        "title": "Building an autocannon",
+        "alt": "A cast iron autocannon on its mount",
+        "html": "<p>On a <a href=\"/en/wiki/cannon-mount\">Cannon Mount</a>, place the <strong>Autocannon Breech</strong>, then the <strong>Recoil Spring</strong> if you want one, then the <strong>barrels</strong>. More barrels give more speed, up to a limit, and less spread. Beyond the material's maximum the rounds get stuck. The last barrel can get a flared muzzle with a <a href=\"/en/wiki/wrench\">Wrench</a> click.</p>"
+      },
+      {
+        "id": "cadence",
+        "title": "Fire rate",
+        "alt": "The autocannon firing a burst, smoke at the muzzle",
+        "html": "<p>The mount's firing face reads the redstone signal <strong>strength</strong>: 1 gives 10 rounds per minute, 11 gives 120, 15 gives 300. An <a href=\"/en/wiki/nixie-tube\">Analog Lever</a> is ideal to set it. On every shot, the breech throws out the spent case, and the spring pushes the barrels back by half a block.</p>"
+      },
+      {
+        "id": "rafale",
+        "title": "A real burst",
+        "alt": "The burst heading for the wall, tracers visible",
+        "html": "<p>In the video, the steel autocannon fires at 120 rounds per minute. Each round leaves at 9 blocks per tick, 180 per second, and takes 0.26 s to reach the wall 40 blocks away. Since the spread of a 5-barrel steel gun drops to zero, the gunner sweeps slowly to hit several spots. The AP rounds pierce the wall and the mound behind it.</p>"
+      },
+      {
+        "id": "materiaux",
+        "title": "Materials",
+        "alt": "Autocannon rounds",
+        "html": "<table><thead><tr><th>Material</th><th>Max barrels</th><th>Speed (blocks/tick)</th><th>Round lifetime</th></tr></thead><tbody><tr><td>Cast iron</td><td>3</td><td>9 (180 blocks/s)</td><td>11 ticks, about 95 blocks</td></tr><tr><td>Bronze</td><td>5</td><td>7.5 (150 blocks/s)</td><td>25 ticks, about 165 blocks</td></tr><tr><td>Steel</td><td>7</td><td>9 (180 blocks/s)</td><td>60 ticks, about 410 blocks</td></tr></tbody></table><p>At the end of its lifetime the round vanishes: that is the real range of a cast iron autocannon.</p>"
+      },
+      {
+        "id": "munitions",
+        "title": "Rounds and the container",
+        "alt": "An ammo container on the breech",
+        "html": "<p>Rounds are fed one by one into the breech, through a <a href=\"/en/wiki/funnel\">Funnel</a> or a <a href=\"/en/wiki/chute\">Chute</a>. The <strong>Autocannon Ammo Container</strong> holds 64 of them, or 128 machine gun rounds, with a separate slot for tracers and an adjustable spacing. It sits on the breech; a <a href=\"/en/wiki/mechanical-arm\">Mechanical Arm</a> can swap it when it is empty.</p>"
+      },
+      {
+        "id": "exemple",
+        "title": "Example: an anti-air post",
+        "html": "<p>A 7-barrel steel autocannon on a mount, an ammo container of Flak rounds, an Analog Lever set to 11 for 120 rounds per minute. Fitted with a timed or proximity fuze, the Flak round bursts into 15 fragments: set it to go off near the target. A Hand Crank on each shaft lets you follow an airship at 24° per second. Keep a spare container nearby, since a long burst empties one in about thirty seconds.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>Too many barrels for the material: rounds get stuck. A weak signal: the gun only fires now and then. In cast iron the round vanishes after 11 ticks, so do not expect hits beyond about 95 blocks. And remember to empty the breech before taking the gun apart, so that no round is lost on the way.</p>"
+      },
+      {
+        "id": "manuel",
+        "title": "The manual autocannon",
+        "alt": "The breech with handles",
+        "html": "<p>A wrench click on the breech adds <strong>handles</strong>: the autocannon is then aimed by hand, sitting behind it, with no rotation. A seat placed on the breech is purely cosmetic. A second wrench click removes the handles.</p>"
+      }
+    ],
+    "sources": [
+      "Materials: index/CBCAutocannonMaterials.java (maxBarrelLength, baseSpeed, speedIncreasePerBarrel, maxSpeedIncreases, projectileLifetime, baseSpread, spreadReductionPerBarrel)",
+      "Fire rate: AbstractAutocannonBreechBlockEntity.FIRE_RATES (120 down to 4 ticks between shots)",
+      "Rounds: munition_properties/projectiles/ap_autocannon.json, flak_autocannon.json, machine_gun_bullet.json",
+      "Container: config CBCCfgMunitions (64 / 128, 5.11.4)",
+      "Recoil: AutocannonRecoilSpringBlockEntity / AbstractAutocannonBreechBlockEntity.getAnimateOffset",
+      "Angles: cannon_mounts/autocannon.json",
+      "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence), identical to the Create France modpack jar",
+      "Videos: Create Big Cannons Ponder scenes (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) replayed by our engine; CBC models and textures (CC BY-NC-SA 4.0, Cannoneers of Create)",
+      "Shots: scenes written for this wiki; trajectory computed tick by tick with the mod's formulas (AbstractCannonProjectile.tick: drag 0.01, gravity -0.05 block/tick², speed = charges used, MountedBigCannonContraption.fireShot), explosions from Explosion.explode plus CBC's block transforms",
+      "Stills only: ammo container (its menu and filling cannot be seen in a scene)"
+    ]
+  }
+}

@@ -1,0 +1,329 @@
+{
+  "slug": "support-de-canon",
+  "name": "Support de canon",
+  "blockId": "createbigcannons:cannon_mount",
+  "category": "cbc",
+  "title": "Support de canon — Create Big Cannons, guide",
+  "description": "Le support de canon de Create Big Cannons : assembler le canon, régler hausse et direction par la rotation, tirer, désassembler. Support fixe, extensions.",
+  "datePublished": "2026-10-28",
+  "dateModified": "2026-10-28",
+  "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>support de canon</strong> (Cannon Mount) est le cœur de toute batterie de Create Big Cannons. Posé sous les blocs du canon, il les <strong>assemble</strong> en une seule pièce mobile, transforme la rotation de Create en <strong>hausse</strong> et en <strong>direction</strong>, puis <strong>déclenche le tir</strong>. Tout se commande par la redstone et par deux arbres.",
+  "facts": [
+    {
+      "label": "Hausse (gros canon)",
+      "value": "De -30° à +60° ; support à l’envers : de -90° à +15°"
+    },
+    {
+      "label": "Hausse (autocanon / mortier)",
+      "value": "Autocanon -45° à +90° ; mortier à chute +15° à +85°"
+    },
+    {
+      "label": "Vitesse de visée",
+      "value": "vitesse × 0,3 × 0,125 degré par tick : 24°/s à 32 tr/min"
+    },
+    {
+      "label": "Stress",
+      "value": "Nombre de blocs du canon × poids du matériau (fonte 3, acier 5) par tr/min, sur chaque arbre"
+    },
+    {
+      "label": "Faces de commande",
+      "value": "Marteau : assembler (signal maintenu) ; face allumée : tirer"
+    },
+    {
+      "label": "Recul",
+      "value": "Aucun sur un support : le canon ne bouge pas au tir"
+    },
+    {
+      "label": "Support fixe",
+      "value": "Sans rotation : angles réglés à la main, de -90° à +90°"
+    },
+    {
+      "label": "Version",
+      "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Plaque de fer",
+        "Rotor",
+        "Plaque de fer"
+      ],
+      [
+        "Rotor",
+        "Boîtier en andésite",
+        "Rotor"
+      ],
+      [
+        "Poudre à canon",
+        "Rotor",
+        "Poudre à canon"
+      ]
+    ],
+    "result": "1 support de canon"
+  },
+  "videos": [
+    {
+      "id": "cbc_mount_assembly",
+      "name": "Assembler et viser",
+      "description": "Le canon est posé deux blocs au-dessus du support, un levier sur la face marteau l'assemble, puis un arbre règle la hausse et un autre le fait tourner sur lui-même.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "cbc_mount_firing",
+      "name": "Tirer et désassembler",
+      "description": "Une fois chargé et visé, le canon tire quand on alimente la face allumée du support ; couper le levier d'assemblage le ramène à sa position de départ.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "cbc_mount_upside",
+      "name": "Support à l’envers",
+      "description": "Un coup de clé sur le côté retourne le support : le canon pend alors sous le bloc.",
+      "duration": "PT9S"
+    },
+    {
+      "id": "cbc_mount_extension",
+      "name": "Extension de support",
+      "description": "Une extension posée contre le support offre une face de commande de plus, dans la direction de sa flèche.",
+      "duration": "PT11S"
+    },
+    {
+      "id": "cbc_mount_fixed",
+      "name": "Support de canon fixe",
+      "description": "Un autocanon sur un support fixe : les angles se règlent à la main, sans arbre, puis l'arme tire avec les mêmes faces de commande.",
+      "duration": "PT15S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "assembler",
+      "title": "Poser et assembler",
+      "image": "cbc_mount_assembly_assemblage.webp",
+      "alt": "Le canon en fonte assemblé sur son support",
+      "video": "cbc_mount_assembly",
+      "html": "<p>Pose le support, puis les blocs du canon dans l'axe voulu, le premier bloc <strong>deux blocs au-dessus</strong> du support : le bloc juste au-dessus est le plateau tournant. Envoie ensuite un signal de redstone maintenu sur la face <strong>marteau</strong> : le canon devient une contraption qui suit le support. Le marteau doit rester alimenté tant que tu veux viser et tirer. Charge le canon <em>avant</em> de l'assembler : un canon assemblé ne se recharge plus par la bouche.</p>"
+    },
+    {
+      "id": "viser",
+      "title": "Hausse et direction",
+      "image": "cbc_mount_assembly_hausse.webp",
+      "alt": "Le canon relevé de 30 degrés par l’arbre de hausse",
+      "html": "<p>Le support a deux entrées de rotation. L'arbre latéral règle la <strong>hausse</strong> : le canon lève ou baisse le nez. L'arbre du dessous le fait tourner en <strong>direction</strong>, sur 360°. La vitesse de visée vaut la vitesse de l'arbre × 0,3 × 0,125 degré par tick : avec une manivelle à 32 tr/min, 24° par seconde. Le sens de rotation choisit le sens du mouvement. Le stress demandé est le nombre de blocs du canon multiplié par le poids du matériau.</p>"
+    },
+    {
+      "id": "direction",
+      "title": "Faire le tour",
+      "image": "cbc_mount_assembly_lacet.webp",
+      "alt": "Le canon tourne sur son support tout en gardant sa hausse",
+      "html": "<p>Pendant le tour complet de la vidéo, l'arbre du dessous reste en rotation et le canon garde sa hausse. Le plateau et l'axe de l'affût suivent le canon. Pour viser loin, un <a href=\"/wiki/inverseur-de-rotation\">inverseur</a> sur chaque arbre permet de corriger dans les deux sens sans tout reconstruire. Un <a href=\"/wiki/controleur-de-vitesse-de-rotation\">contrôleur de vitesse</a> donne une visée lente et précise.</p>"
+    },
+    {
+      "id": "tirer",
+      "title": "Tirer",
+      "image": "cbc_mount_firing_tir.webp",
+      "alt": "Le canon fait feu, fumée de poudre à la bouche",
+      "video": "cbc_mount_firing",
+      "html": "<p>La face <strong>allumée</strong> (avec la mèche) est la détente : un signal de redstone dessus met le feu à la poudre. Sur un gros canon, une impulsion suffit pour un coup. Sur un support, le canon ne recule pas. Après le tir, il faut recharger : coupe le marteau, le canon se désassemble et reprend aussitôt l'angle qu'il avait au moment de l'assemblage.</p>"
+    },
+    {
+      "id": "desassembler",
+      "title": "Désassembler pour recharger",
+      "image": "cbc_mount_firing_desassemblage.webp",
+      "alt": "Le canon revenu à l’horizontale après le désassemblage",
+      "html": "<p>Désassemblé, le canon redevient une rangée de blocs : tu peux le recharger par la bouche avec un <a href=\"/wiki/chargement-des-canons\">chargeur de canon</a>, puis le réassembler. Si ton canon porte une <a href=\"/wiki/culasses\">culasse « tir rapide »</a>, tu recharges par l'arrière sans désassembler.</p>"
+    },
+    {
+      "id": "envers",
+      "title": "À l’envers, extensions",
+      "image": "cbc_mount_upside_a-l-envers.webp",
+      "alt": "Un support retourné sous des blocs, le canon en dessous",
+      "video": "cbc_mount_upside",
+      "html": "<p>Un clic de <a href=\"/wiki/cle\">clé</a> sur le côté retourne le support ; on peut aussi le poser sous un bloc. Le canon pend alors en dessous, pratique sous un plafond ou une aile de dirigeable. Une <strong>extension de support</strong> (Cannon Mount Extension), posée contre lui, ajoute des faces de commande là où les arbres manquent de place ; sa flèche indique le support qu'elle prolonge.</p>"
+    },
+    {
+      "id": "exemple",
+      "title": "Exemple : une batterie à la manivelle",
+      "html": "<p>Pour une petite batterie, place le support sur une dalle, une <a href=\"/wiki/manivelle\">manivelle</a> sur l'arbre de hausse, une autre sur l'arbre du dessous. Un levier sur la face marteau, un bouton sur la face allumée. Assemble, tourne la manivelle de hausse quelques secondes, puis la manivelle du dessous pour orienter, et tire. Pour plusieurs canons qui visent ensemble, relie leurs arbres par des rotors : ils bougent tous du même angle.</p>"
+    },
+    {
+      "id": "fixe",
+      "title": "Le support fixe",
+      "image": "cbc_mount_fixed_reglage.webp",
+      "alt": "Un autocanon sur un support fixe",
+      "video": "cbc_mount_fixed",
+      "html": "<p>Le <strong>support de canon fixe</strong> (Fixed Cannon Mount) n'a pas d'arbre : ses angles se règlent à la main sur ses côtés et ne changent plus. Il vise toujours au même endroit, pratique pour une défense pointée sur un passage ou sur un véhicule. Une clé le fait pivoter. Il ne prend pas d'extension.</p>"
+    }
+  ],
+  "related": [
+    "create-big-cannons",
+    "culasses",
+    "chargement-des-canons",
+    "autocanons",
+    "manivelle",
+    "inverseur-de-rotation",
+    "controleur-de-vitesse-de-rotation",
+    "cle",
+    "roulement-mecanique"
+  ],
+  "sources": [
+    "Angles : data/createbigcannons/cannon_mounts (big_cannon, autocannon, drop_mortar ; vertical_direction down / up)",
+    "Visée : CannonMountBlockEntity.getAngularSpeed, tick ; interfaces CannonMountInterfaceBlockEntity (hausse, lacet)",
+    "Stress : CannonMountBlockEntity.calculateCannonStressApplied, MountedBigCannonContraption.getWeightForStress (blocs × poids)",
+    "Recul : ControlPitchContraption.onRecoil vide sur un support (recul seulement sur un véhicule physique)",
+    "Recette : recipe/cannon_mount.json",
+    "Rendu : CannonMountBlockEntityRenderer (plateau tournant, axe de l’affût, arbres)",
+    "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT), identiques au jar du modpack Create France",
+    "Vidéos : scènes Ponder de Create Big Cannons (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) rejouées par notre moteur ; modèles et textures de CBC (CC BY-NC-SA 4.0, Cannoneers of Create)"
+  ],
+  "en": {
+    "slugEn": "cannon-mount",
+    "name": "Cannon Mount",
+    "title": "Cannon Mount — Create Big Cannons guide",
+    "description": "The Create Big Cannons Cannon Mount: assemble the cannon, set elevation and direction with rotation, fire, disassemble. Fixed mounts and extensions.",
+    "intro": "The <strong>Cannon Mount</strong> is the heart of every Create Big Cannons battery. Placed under the cannon blocks, it <strong>assembles</strong> them into one moving piece, turns Create rotation into <strong>elevation</strong> and <strong>direction</strong>, then <strong>fires</strong>. Everything is driven by redstone and two shafts.",
+    "facts": [
+      {
+        "label": "Elevation (big cannon)",
+        "value": "From -30° to +60°; upside-down mount: from -90° to +15°"
+      },
+      {
+        "label": "Elevation (autocannon / mortar)",
+        "value": "Autocannon -45° to +90°; drop mortar +15° to +85°"
+      },
+      {
+        "label": "Aiming speed",
+        "value": "speed × 0.3 × 0.125 degree per tick: 24°/s at 32 RPM"
+      },
+      {
+        "label": "Stress",
+        "value": "Number of cannon blocks × material weight (cast iron 3, steel 5) per RPM, on each shaft"
+      },
+      {
+        "label": "Control faces",
+        "value": "Hammer: assemble (held signal); lit face: fire"
+      },
+      {
+        "label": "Recoil",
+        "value": "None on a mount: the cannon does not move when it fires"
+      },
+      {
+        "label": "Fixed Cannon Mount",
+        "value": "No rotation: angles set by hand, from -90° to +90°"
+      },
+      {
+        "label": "Version",
+        "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Iron Sheet",
+          "Shaft",
+          "Iron Sheet"
+        ],
+        [
+          "Shaft",
+          "Andesite Casing",
+          "Shaft"
+        ],
+        [
+          "Gunpowder",
+          "Shaft",
+          "Gunpowder"
+        ]
+      ],
+      "result": "1 Cannon Mount"
+    },
+    "videos": [
+      {
+        "id": "cbc_mount_assembly",
+        "name": "Assembling and aiming",
+        "description": "The cannon is placed two blocks above the mount, a lever on the hammer face assembles it, then one shaft sets the elevation and another one swings it around."
+      },
+      {
+        "id": "cbc_mount_firing",
+        "name": "Firing and disassembling",
+        "description": "Once loaded and aimed, the cannon fires when the mount's lit face is powered; cutting the assembly lever returns it to its starting angle."
+      },
+      {
+        "id": "cbc_mount_upside",
+        "name": "Upside-down mount",
+        "description": "A wrench click on the side flips the mount: the cannon then hangs under the block."
+      },
+      {
+        "id": "cbc_mount_extension",
+        "name": "Cannon Mount Extension",
+        "description": "An extension placed against the mount adds one more control face, in the direction of its arrow."
+      },
+      {
+        "id": "cbc_mount_fixed",
+        "name": "Fixed Cannon Mount",
+        "description": "An autocannon on a fixed mount: the angles are set by hand, without any shaft, then the gun fires through the same control faces."
+      }
+    ],
+    "sections": [
+      {
+        "id": "assembler",
+        "title": "Placing and assembling",
+        "alt": "The cast iron cannon assembled on its mount",
+        "html": "<p>Place the mount, then the cannon blocks along the axis you want, the first block <strong>two blocks above</strong> the mount: the block right above it is the turntable. Then send a held redstone signal into the <strong>hammer</strong> face: the cannon becomes a contraption that follows the mount. Keep the hammer powered as long as you want to aim and fire. Load the cannon <em>before</em> assembling it: once assembled it cannot be reloaded through the muzzle.</p>"
+      },
+      {
+        "id": "viser",
+        "title": "Elevation and direction",
+        "alt": "The cannon raised by 30 degrees through the elevation shaft",
+        "html": "<p>The mount has two rotation inputs. The side shaft sets the <strong>elevation</strong>: the cannon raises or lowers its nose. The shaft underneath swings its <strong>direction</strong> through 360°. The aiming speed is the shaft speed × 0.3 × 0.125 degree per tick: with a Hand Crank at 32 RPM, 24° per second. The spinning direction picks the direction of the motion. The stress it asks for is the number of cannon blocks times the material weight.</p>"
+      },
+      {
+        "id": "direction",
+        "title": "Going all the way round",
+        "alt": "The cannon turning on its mount while keeping its elevation",
+        "html": "<p>During the full turn in the video, the lower shaft keeps spinning and the cannon keeps its elevation. The turntable and the carriage axle follow the cannon. To aim far, a <a href=\"/en/wiki/gearshift\">Gearshift</a> on each shaft lets you correct both ways without rebuilding anything. A <a href=\"/en/wiki/rotation-speed-controller\">Rotation Speed Controller</a> gives slow, precise aiming.</p>"
+      },
+      {
+        "id": "tirer",
+        "title": "Firing",
+        "alt": "The cannon firing, powder smoke at the muzzle",
+        "html": "<p>The <strong>lit</strong> face (the one with the fuse) is the trigger: a redstone signal on it ignites the powder. On a big cannon, one pulse fires one shot. On a mount, the cannon does not recoil. After the shot you have to reload: cut the hammer, the cannon disassembles and instantly returns to the angle it had when it was assembled.</p>"
+      },
+      {
+        "id": "desassembler",
+        "title": "Disassembling to reload",
+        "alt": "The cannon back to horizontal after disassembly",
+        "html": "<p>Disassembled, the cannon is a row of blocks again: you can reload it through the muzzle with a <a href=\"/en/wiki/loading-big-cannons\">Cannon Loader</a>, then assemble it again. With a <a href=\"/en/wiki/cannon-breeches\">Quick-Firing Breech</a>, you reload from the back without disassembling.</p>"
+      },
+      {
+        "id": "envers",
+        "title": "Upside down, extensions",
+        "alt": "A mount flipped under blocks, the cannon hanging below",
+        "html": "<p>A <a href=\"/en/wiki/wrench\">Wrench</a> click on the side flips the mount; you can also place it under a block. The cannon then hangs below, handy under a ceiling or an airship wing. A <strong>Cannon Mount Extension</strong>, placed against it, adds control faces where the shafts have no room; its arrow shows which mount it extends.</p>"
+      },
+      {
+        "id": "exemple",
+        "title": "Example: a hand-cranked battery",
+        "html": "<p>For a small battery, put the mount on a slab, a <a href=\"/en/wiki/hand-crank\">Hand Crank</a> on the elevation shaft and another one on the lower shaft. A lever on the hammer face, a button on the lit face. Assemble, turn the elevation crank for a few seconds, then the lower crank to swing it around, and fire. For several cannons that aim together, link their shafts with Shafts: they all move by the same angle. Keep in mind that each extra cannon adds its own stress to the network.</p>"
+      },
+      {
+        "id": "fixe",
+        "title": "The Fixed Cannon Mount",
+        "alt": "An autocannon on a Fixed Cannon Mount",
+        "html": "<p>The <strong>Fixed Cannon Mount</strong> has no shaft: its angles are set by hand on its sides and then stay put. It always aims at the same spot, handy for a defence pointed at a passage or for a vehicle. A wrench rotates it. It cannot take an extension.</p>"
+      }
+    ],
+    "sources": [
+      "Angles: data/createbigcannons/cannon_mounts (big_cannon, autocannon, drop_mortar; vertical_direction down / up)",
+      "Aiming: CannonMountBlockEntity.getAngularSpeed, tick; CannonMountInterfaceBlockEntity (pitch, yaw)",
+      "Stress: CannonMountBlockEntity.calculateCannonStressApplied, MountedBigCannonContraption.getWeightForStress (blocks × weight)",
+      "Recoil: ControlPitchContraption.onRecoil is empty on a mount (recoil only on a physics vehicle)",
+      "Recipe: recipe/cannon_mount.json",
+      "Rendering: CannonMountBlockEntityRenderer (turntable, carriage axle, shafts)",
+      "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence), identical to the Create France modpack jar",
+      "Videos: Create Big Cannons Ponder scenes (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) replayed by our engine; CBC models and textures (CC BY-NC-SA 4.0, Cannoneers of Create)"
+    ]
+  }
+}

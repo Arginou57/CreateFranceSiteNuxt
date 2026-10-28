@@ -1,0 +1,279 @@
+{
+  "slug": "culasses",
+  "name": "Culasses",
+  "blockId": "createbigcannons:steel_screw_breech",
+  "category": "cbc",
+  "title": "Culasses — Create Big Cannons, guide",
+  "description": "Les culasses de Create Big Cannons : coulissante, à vis et à tir rapide. Ouvrir par la rotation, charger par l'arrière, solidité et automatisation.",
+  "datePublished": "2026-10-28",
+  "dateModified": "2026-10-28",
+  "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>culasse</strong> ferme l'arrière d'un canon de <strong>Create Big Cannons</strong> et permet de le charger par derrière. Il en existe trois sortes : la <strong>culasse coulissante</strong>, rapide mais moins solide, la <strong>culasse à vis</strong>, la plus robuste, et celle « à tir rapide », qui recharge un canon sans le désassembler.",
+  "facts": [
+    {
+      "label": "Culasse coulissante",
+      "value": "Fonte, bronze, acier ; solidité 2, 4, 4 charges"
+    },
+    {
+      "label": "Culasse à vis",
+      "value": "Acier, nethersteel ; solidité 8 et 10 charges"
+    },
+    {
+      "label": "Culasse à tir rapide",
+      "value": "Fonte, bronze, acier ; solidité 2 charges ; s’ouvre à la main"
+    },
+    {
+      "label": "Ouverture (coulissante, à vis)",
+      "value": "vitesse / 512 par tick : 0,8 s à 32 tr/min, 1,6 s à 16 tr/min"
+    },
+    {
+      "label": "Stress",
+      "value": "Coulissante fonte 16, bronze 12, acier 32 ; à vis acier 16, nethersteel 40 (par tr/min)"
+    },
+    {
+      "label": "Tir rapide",
+      "value": "Délai de rechargement 40 ticks (2 s) ; ouverture en 5 ticks"
+    },
+    {
+      "label": "Version",
+      "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+    }
+  ],
+  "videos": [
+    {
+      "id": "cbc_sliding",
+      "name": "Culasse coulissante",
+      "description": "Une roue dentée fait tourner l'arbre de la culasse : le bloc de culasse glisse, l'obus entre par l'arrière, puis la rotation inverse referme le canon.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "cbc_screw",
+      "name": "Culasse à vis",
+      "description": "La rotation dévisse le verrou de la culasse en acier, un piston l'écarte pour charger, puis la remet en place et la revisse.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "cbc_qf",
+      "name": "Culasse à tir rapide",
+      "description": "Sur un canon en bronze assemblé : on ouvre la culasse, on glisse un obus puis une grande cartouche, on referme et le canon tire ; la douille vide est éjectée.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "cbc_qf_make",
+      "name": "Fabriquer sa culasse à tir rapide",
+      "description": "Un déployeur pose un mécanisme de tir rapide sur une culasse coulissante, qui change alors de type.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "cbc_qf_auto",
+      "name": "Automatiser le tir rapide",
+      "description": "Un bras mécanique recharge le canon par sa culasse rapide, obus puis cartouche, et range les douilles vides.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "coulissante",
+      "title": "La culasse coulissante",
+      "image": "cbc_sliding_ouverture.webp",
+      "alt": "Le bloc de culasse glisse sous l’effet de la rotation",
+      "video": "cbc_sliding",
+      "html": "<p>Elle a un arbre sur le côté. Fais-le tourner dans un sens : le bloc de culasse glisse et dégage le passage. Chaque tick, l'ouverture avance de la vitesse divisée par 512 : à 32 tr/min, 0,8 s suffit. Glisse alors la munition par l'arrière, puis tourne dans l'autre sens pour fermer. Elle ne se ferme que si rien ne reste coincé dedans : munition à moitié entrée, perche d'un chargeur.</p>"
+    },
+    {
+      "id": "charger-arriere",
+      "title": "Charger par l’arrière",
+      "image": "cbc_sliding_chargement.webp",
+      "alt": "Un obus glissé par la culasse ouverte",
+      "html": "<p>Avec la culasse ouverte, la munition entre directement dans la chambre, sans passer par la bouche. Pratique pour un canon très long. La culasse coulissante a un prix : en fonte, elle limite le canon à 2 charges, en bronze et en acier à 4. Un canon en acier plus puissant demande une culasse à vis.</p>"
+    },
+    {
+      "id": "vis",
+      "title": "La culasse à vis",
+      "image": "cbc_screw_ouvrir.webp",
+      "alt": "La culasse à vis déverrouillée, écartée par un piston",
+      "video": "cbc_screw",
+      "html": "<p>En acier ou en nethersteel, c'est la culasse la plus solide : elle laisse le canon aller jusqu'à 8 ou 10 charges. La rotation dévisse d'abord son verrou, qui recule d'un quart de bloc en faisant un tour complet. Ensuite, il faut l'écarter : un piston, un portique ou une poulie la déplace. Depuis la version 5.11.4, le sens antihoraire ouvre et le sens horaire ferme, quelle que soit l'orientation.</p>"
+    },
+    {
+      "id": "tir-rapide",
+      "title": "Tir rapide : recharger sans démonter",
+      "image": "cbc_qf_obus.webp",
+      "alt": "Un obus glissé dans la culasse ouverte du canon en bronze",
+      "video": "cbc_qf",
+      "html": "<p>Elle s'ouvre à la main, par un clic sur son côté, même canon assemblé. Glisse l'obus, puis la poudre, et referme : le canon est prêt. Au tir suivant, les restes, comme une douille de grande cartouche vide, sont éjectés. Elle est limitée à 2 charges. Préfère une <a href=\"/wiki/poudre-et-cartouches\">grande cartouche</a> : une seule pièce à glisser pour toute la poudre.</p>"
+    },
+    {
+      "id": "fabriquer-qf",
+      "title": "Fabriquer sa culasse à tir rapide",
+      "image": "cbc_qf_make_deployeur.webp",
+      "alt": "Le déployeur pose le mécanisme de tir rapide",
+      "video": "cbc_qf_make",
+      "html": "<p>Pose un <strong>mécanisme de tir rapide</strong> (Quick-Firing Mechanism, un levier, une roue dentée et une grande roue dentée) sur une culasse coulissante, à la main ou avec un <a href=\"/wiki/deployeur\">déployeur</a>. Un coup de <a href=\"/wiki/cle\">clé</a> la ramène à l'état de culasse coulissante.</p>"
+    },
+    {
+      "id": "automatiser",
+      "title": "Automatiser",
+      "image": "cbc_qf_auto_bras.webp",
+      "alt": "Un bras mécanique recharge le canon",
+      "video": "cbc_qf_auto",
+      "html": "<p>Un <a href=\"/wiki/bras-mecanique\">bras mécanique</a> sait recharger ce type de culasse : désigne le support du canon comme sortie du bras. Il n'agit que culasse fermée et attend la fin du délai de 2 s après chaque tir. Donne-lui aussi un dépôt filtré sur la grande cartouche vide : il y range les douilles éjectées.</p>"
+    },
+    {
+      "id": "choisir",
+      "title": "Quelle culasse choisir",
+      "html": "<p>Pour un canon tiré de temps en temps, un simple bout de canon suffit. Pour charger par l'arrière un canon en fonte ou en bronze, prends la culasse coulissante. Pour un canon en acier qui doit tirer fort, la culasse à vis est la seule qui laisse passer 8 charges. Pour une batterie qui tire souvent, la version à tir rapide recharge sans démonter, au prix d'une poudre limitée à 2 charges. Chaque culasse ajoute aussi du stress au réseau quand elle tourne.</p>"
+    },
+    {
+      "id": "bout",
+      "title": "Et sans culasse ?",
+      "html": "<p>Un <strong>bout de canon</strong> (Cannon End) ferme simplement l'arrière : le canon se charge alors par la bouche, désassemblé. C'est la solution la moins chère, et elle ne limite pas la poudre.</p>"
+    }
+  ],
+  "related": [
+    "materiaux-des-canons",
+    "chargement-des-canons",
+    "support-de-canon",
+    "poudre-et-cartouches",
+    "bras-mecanique",
+    "deployeur",
+    "piston-mecanique",
+    "cle",
+    "roue-dentee"
+  ],
+  "sources": [
+    "Solidité : data/createbigcannons/big_cannon_breech_strength (*_sliding_breech, *_screw_breech, *_quickfiring_breech)",
+    "Ouverture : SlidingBreechBlockEntity / ScrewBreechBlockEntity (getOpeningSpeed = vitesse / 512, convertToDirection)",
+    "Rendu : SlidingBreechBlockEntityRenderer (13/16 bloc), ScrewBreechBlockEntityRenderer (0,25 bloc, 360°)",
+    "Tir rapide : QuickfiringBreechBlockEntity, config quickfiringBreechLoadingCooldown 40, quickfiringBreechOpeningCooldown 5",
+    "Stress : CBCBlocks (CBCCfgStress.setImpact)",
+    "Sens d’ouverture : CHANGELOG 5.11.4 (« clockwise closes »)",
+    "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT), identiques au jar du modpack Create France",
+    "Vidéos : scènes Ponder de Create Big Cannons (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) rejouées par notre moteur ; modèles et textures de CBC (CC BY-NC-SA 4.0, Cannoneers of Create)",
+    "Vidéo de la culasse à vis : la scène Ponder date d'avant 5.11.4 ; nous montrons l'ouverture qu'elle décrit"
+  ],
+  "en": {
+    "slugEn": "cannon-breeches",
+    "name": "Cannon breeches",
+    "title": "Cannon Breeches — Create Big Cannons guide",
+    "description": "Create Big Cannons breeches: sliding, screw and quick-firing. Open them with rotation, load from the back, breech strength and automation.",
+    "intro": "The <strong>breech</strong> closes the back of a <strong>Create Big Cannons</strong> cannon and lets you load it from behind. There are three kinds: the <strong>Sliding Breech</strong>, fast but weaker, the <strong>Screw Breech</strong>, the toughest, and the <strong>Quick-Firing Breech</strong>, which reloads a cannon without disassembling it.",
+    "facts": [
+      {
+        "label": "Sliding Breech",
+        "value": "Cast iron, bronze, steel; strength 2, 4, 4 charges"
+      },
+      {
+        "label": "Screw Breech",
+        "value": "Steel, nethersteel; strength 8 and 10 charges"
+      },
+      {
+        "label": "Quick-Firing Breech",
+        "value": "Cast iron, bronze, steel; strength 2 charges; opened by hand"
+      },
+      {
+        "label": "Opening (sliding, screw)",
+        "value": "speed / 512 per tick: 0.8 s at 32 RPM, 1.6 s at 16 RPM"
+      },
+      {
+        "label": "Stress",
+        "value": "Sliding cast iron 16, bronze 12, steel 32; screw steel 16, nethersteel 40 (per RPM)"
+      },
+      {
+        "label": "Quick-firing",
+        "value": "Reload delay 40 ticks (2 s); opens in 5 ticks"
+      },
+      {
+        "label": "Version",
+        "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+      }
+    ],
+    "videos": [
+      {
+        "id": "cbc_sliding",
+        "name": "Sliding Breech",
+        "description": "A cogwheel spins the breech shaft: the breechblock slides, the shell goes in from the back, then turning the other way closes the cannon."
+      },
+      {
+        "id": "cbc_screw",
+        "name": "Screw Breech",
+        "description": "Rotation unscrews the lock of the steel breech, a piston moves it aside for loading, then puts it back and screws it shut."
+      },
+      {
+        "id": "cbc_qf",
+        "name": "Quick-Firing Breech",
+        "description": "On an assembled bronze cannon: the breech opens, a shell then a Big Cartridge slide in, it closes and the cannon fires; the spent case is ejected."
+      },
+      {
+        "id": "cbc_qf_make",
+        "name": "Making a Quick-Firing Breech",
+        "description": "A Deployer puts a Quick-Firing Mechanism onto a Sliding Breech, which becomes a Quick-Firing Breech."
+      },
+      {
+        "id": "cbc_qf_auto",
+        "name": "Automating quick-firing",
+        "description": "A Mechanical Arm reloads the Quick-Firing Breech of a mounted cannon, shell then cartridge, and stores the empty cases."
+      }
+    ],
+    "sections": [
+      {
+        "id": "coulissante",
+        "title": "The Sliding Breech",
+        "alt": "The breechblock sliding under rotation",
+        "html": "<p>It has a shaft on the side. Spin it one way: the breechblock slides and clears the way. Each tick the opening moves forward by the speed divided by 512: at 32 RPM, 0.8 s is enough. Slide the munition in from the back, then turn the other way to close. It only closes if nothing is stuck inside: a half-inserted munition, a loader pole.</p>"
+      },
+      {
+        "id": "charger-arriere",
+        "title": "Loading from the back",
+        "alt": "A shell slid in through the open breech",
+        "html": "<p>With the breech open, the munition goes straight into the chamber without passing through the muzzle. Handy for a very long cannon. The Sliding Breech has a price: in cast iron it limits the cannon to 2 charges, in bronze and steel to 4. A stronger steel cannon needs a Screw Breech.</p>"
+      },
+      {
+        "id": "vis",
+        "title": "The Screw Breech",
+        "alt": "The unlocked Screw Breech moved aside by a piston",
+        "html": "<p>Made of steel or nethersteel, it is the toughest breech: it lets the cannon go up to 8 or 10 charges. Rotation first unscrews its lock, which backs out a quarter of a block while turning a full turn. Then it has to be moved aside: a piston, a gantry or a pulley shifts it. Since version 5.11.4, counter-clockwise opens and clockwise closes, whatever the orientation.</p>"
+      },
+      {
+        "id": "tir-rapide",
+        "title": "The Quick-Firing Breech",
+        "alt": "A shell slid into the open Quick-Firing Breech",
+        "html": "<p>It opens by hand, with a click on its side, even on an assembled cannon. Slide in the shell, then the powder, and close it: the cannon is ready. On the next shot, the leftovers, such as an empty Big Cartridge case, are ejected. It is limited to 2 charges. Prefer a <a href=\"/en/wiki/powder-charges-and-cartridges\">Big Cartridge</a>: a single piece to slide in for all the powder.</p>"
+      },
+      {
+        "id": "fabriquer-qf",
+        "title": "Making the Quick-Firing Breech",
+        "alt": "The Deployer applying the Quick-Firing Mechanism",
+        "html": "<p>Apply a <strong>Quick-Firing Mechanism</strong> (a lever, a cogwheel and a large cogwheel) to a Sliding Breech, by hand or with a <a href=\"/en/wiki/deployer\">Deployer</a>. A <a href=\"/en/wiki/wrench\">Wrench</a> click turns it back into a Sliding Breech.</p>"
+      },
+      {
+        "id": "automatiser",
+        "title": "Automating",
+        "alt": "A Mechanical Arm reloading the cannon",
+        "html": "<p>A <a href=\"/en/wiki/mechanical-arm\">Mechanical Arm</a> can reload a Quick-Firing Breech: select the cannon's mount as the arm's output. It only works with the breech closed and waits for the 2 s delay after each shot. Also give it a depot filtered on the empty Big Cartridge: it puts the ejected cases there.</p>"
+      },
+      {
+        "id": "choisir",
+        "title": "Which breech to choose",
+        "html": "<p>For a cannon fired now and then, a plain Cannon End is enough. To load a cast iron or bronze cannon from the back, take the Sliding Breech. For a steel cannon that must hit hard, the Screw Breech is the only one that lets 8 charges through. For a battery that fires often, the quick-firing kind reloads without disassembling, at the price of powder limited to 2 charges. Every breech also adds stress to the network while it turns, so check your rotation source before building a whole row of them. A Stressometer on the line tells you at once.</p>"
+      },
+      {
+        "id": "bout",
+        "title": "And without a breech?",
+        "html": "<p>A <strong>Cannon End</strong> simply closes the back: the cannon is then loaded through the muzzle, disassembled. It is the cheapest solution, and it does not limit the powder.</p>"
+      }
+    ],
+    "sources": [
+      "Strength: data/createbigcannons/big_cannon_breech_strength (*_sliding_breech, *_screw_breech, *_quickfiring_breech)",
+      "Opening: SlidingBreechBlockEntity / ScrewBreechBlockEntity (getOpeningSpeed = speed / 512, convertToDirection)",
+      "Rendering: SlidingBreechBlockEntityRenderer (13/16 block), ScrewBreechBlockEntityRenderer (0.25 block, 360°)",
+      "Quick-firing: QuickfiringBreechBlockEntity, config quickfiringBreechLoadingCooldown 40, quickfiringBreechOpeningCooldown 5",
+      "Stress: CBCBlocks (CBCCfgStress.setImpact)",
+      "Opening direction: CHANGELOG 5.11.4 (“clockwise closes”)",
+      "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence), identical to the Create France modpack jar",
+      "Videos: Create Big Cannons Ponder scenes (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) replayed by our engine; CBC models and textures (CC BY-NC-SA 4.0, Cannoneers of Create)",
+      "Screw Breech video: the Ponder scene predates 5.11.4; we show the opening it describes"
+    ]
+  }
+}

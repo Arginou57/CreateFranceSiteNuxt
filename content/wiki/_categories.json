@@ -88,5 +88,14 @@
       "name": "Decoration",
       "description": "Create's stones and their variants, copper tiles, framed glass, scaffolding and sliding doors."
     }
+  },
+  {
+    "id": "cbc",
+    "name": "Create Big Cannons",
+    "description": "L'artillerie du modpack : supports de canon, culasses, chargement, poudre et portées, obus et fusées, fabrication des canons, autocanons et mortiers (Create Big Cannons 5.11.7).",
+    "en": {
+      "name": "Create Big Cannons",
+      "description": "The modpack's artillery: cannon mounts, breeches, loading, powder and ranges, shells and fuzes, cannon crafting, autocannons and mortars (Create Big Cannons 5.11.7)."
+    }
   }
 ]

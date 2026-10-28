@@ -135,7 +135,8 @@
     "reservoir-a-fluide",
     "pompe-mecanique",
     "egouttoir-a-objets",
-    "bras-mecanique"
+    "bras-mecanique",
+    "obus-de-canon"
   ],
   "sources": [
     "Recette : crafting/kinetics/spout.json",

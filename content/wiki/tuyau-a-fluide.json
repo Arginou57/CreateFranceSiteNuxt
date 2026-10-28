@@ -171,7 +171,8 @@
     "tuyau-a-fluide-intelligent",
     "bec-verseur",
     "egouttoir-a-objets",
-    "bassin"
+    "bassin",
+    "fabrication-des-canons"
   ],
   "sources": [
     "Recette : crafting/kinetics/fluid_pipe.json (4 tuyaux), fluid_valve.json",

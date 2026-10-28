@@ -1,0 +1,191 @@
+{
+  "slug": "materiaux-des-canons",
+  "name": "Matériaux des canons",
+  "blockId": "createbigcannons:steel_cannon_barrel",
+  "category": "cbc",
+  "title": "Matériaux des canons — Create Big Cannons, guide",
+  "description": "Bois, fer forgé, fonte, bronze, acier, nethersteel : combien de poudre chaque canon de Create Big Cannons supporte, longueur et poids. Tableau complet.",
+  "datePublished": "2026-10-28",
+  "dateModified": "2026-10-28",
+  "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
+  "mcVersion": "1.21.1",
+  "intro": "Un canon de <strong>Create Big Cannons</strong> se construit dans un seul <strong>matériau</strong>, et ce choix décide de presque tout : la quantité de poudre qu'il encaisse sans éclater, la longueur de fût qu'un obus peut traverser, son poids sur le support et la façon dont il casse. Voici l'anatomie d'un canon, puis les six matériaux comparés avec les chiffres du code.",
+  "facts": [
+    {
+      "label": "Matériaux",
+      "value": "Bois, fer forgé, fonte, bronze, acier, nethersteel"
+    },
+    {
+      "label": "Charges sûres",
+      "value": "Bois 0, fer forgé 1, fonte 2, bronze 4, acier 8, nethersteel 10"
+    },
+    {
+      "label": "Limite de la culasse",
+      "value": "La plus faible des deux limites compte (ex. : culasse coulissante en acier 4)"
+    },
+    {
+      "label": "Longueur maximale",
+      "value": "64 blocs (maxCannonLength)"
+    },
+    {
+      "label": "Poids",
+      "value": "Bois 1, fer forgé 2, bronze 2, fonte 3, acier 5, nethersteel 6 (stress sur le support)"
+    },
+    {
+      "label": "Éclatement",
+      "value": "Au-delà des charges sûres : 50 % de risque à chaque tir ; « éclats » : tout le canon, « rupture » : 5 blocs"
+    },
+    {
+      "label": "Version",
+      "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+    }
+  ],
+  "videos": [],
+  "sections": [
+    {
+      "id": "anatomie",
+      "title": "L’anatomie d’un canon",
+      "image": "cbc_materials_fonte-bronze.webp",
+      "alt": "Deux canons, en fonte et en bronze, culasse, chambres et fûts",
+      "html": "<p>De l'arrière vers l'avant : une <strong>culasse</strong> ou un <strong>bout de canon</strong> fermé (Cannon End), puis une ou plusieurs <strong>chambres</strong> (Cannon Chamber), qui reçoivent la poudre, puis des <strong>fûts</strong> (Cannon Barrel ; « Canon en fonte » dans la traduction officielle), que l'obus traverse. Chaque charge de poudre doit être dans une chambre : une charge posée dans un fût peut faire éclater le canon. Tous les blocs doivent être du même matériau et reliés entre eux.</p>"
+    },
+    {
+      "id": "tableau",
+      "title": "Les six matériaux",
+      "image": "cbc_materials_acier-nethersteel.webp",
+      "alt": "Canons en acier et en nethersteel avec leur culasse à vis",
+      "html": "<table><thead><tr><th>Matériau</th><th>Charges sûres</th><th>Vitesse minimale par fût (blocs/tick)</th><th>Poids</th><th>Rupture</th><th>Soudable</th></tr></thead><tbody><tr><td>Bois</td><td>0</td><td>peut toujours coincer</td><td>1</td><td>éclats</td><td>non</td></tr><tr><td>Fer forgé</td><td>1</td><td>2 (1 charge)</td><td>2</td><td>rupture</td><td>non</td></tr><tr><td>Fonte</td><td>2</td><td>2 (1 charge)</td><td>3</td><td>éclats</td><td>oui</td></tr><tr><td>Bronze</td><td>4</td><td>1,33 (2/3 de charge)</td><td>2</td><td>rupture</td><td>oui</td></tr><tr><td>Acier</td><td>8</td><td>1 (1/2 charge)</td><td>5</td><td>éclats</td><td>oui</td></tr><tr><td>Nethersteel</td><td>10</td><td>0,67 (1/3 de charge)</td><td>6</td><td>éclats</td><td>non</td></tr></tbody></table><p>Les « charges sûres » sont le nombre de charges de poudre au-delà duquel le canon risque d'éclater. La vitesse minimale par fût dit combien de puissance l'obus doit avoir pour ne pas se coincer.</p>"
+    },
+    {
+      "id": "primitifs",
+      "title": "Bois et fer forgé",
+      "image": "cbc_materials_bois-fer-forge.webp",
+      "alt": "Un canon en bois et un canon en fer forgé, sans fût",
+      "html": "<p>Le <strong>canon en bois</strong> (chambre et bout en rondins) ne supporte aucune charge sûre : il tire des <a href=\"/wiki/mortiers\">pierres de mortier</a> et peut toujours caler. Le <strong>fer forgé</strong> sert surtout au mortier à chute, avec une seule charge sûre. Ce sont des canons de début de partie, sans culasse.</p>"
+    },
+    {
+      "id": "culasse",
+      "title": "La culasse compte aussi",
+      "html": "<p>La limite réelle est la plus petite entre celle du matériau et celle de la culasse. Un canon en acier (8) avec une culasse coulissante en acier (4) n'encaisse que 4 charges ; avec une culasse à vis en acier, il monte à 8, et à 10 en nethersteel. Les culasses à tir rapide sont limitées à 2. Voir les <a href=\"/wiki/culasses\">culasses</a>.</p>"
+    },
+    {
+      "id": "coincer",
+      "title": "Pourquoi un obus se coince",
+      "html": "<p>À chaque fût traversé, le jeu compare la puissance de la charge à la vitesse minimale du matériau multipliée par le nombre de fûts parcourus. En dessous, l'obus peut se coincer : 25 % de risque par tir. En fonte, compte une charge par fût ; en acier, une demi-charge suffit. Un long canon en fonte avec peu de poudre est donc une mauvaise idée.</p>"
+    },
+    {
+      "id": "eclatement",
+      "title": "Quand un canon éclate",
+      "html": "<p>Au-delà des charges sûres, chaque tir a 50 % de risque de faire éclater le canon ; une charge posée dans un fût, 20 %. Tout dépend alors du matériau. Avec les matériaux « éclats » (bois, fonte, acier, nethersteel), le canon entier disparaît dans une explosion de puissance 2 par charge, qui casse les blocs autour. Avec les matériaux « rupture » (fer forgé, bronze), seuls les cinq blocs autour du point faible sont perdus, le reste se désassemble, et l'explosion ne casse rien.</p>"
+    },
+    {
+      "id": "choisir",
+      "title": "Quel matériau choisir",
+      "html": "<p>La <strong>fonte</strong> s'obtient tôt, en compactant du fer avec du charbon dans un bassin chauffé : idéale pour un premier canon à 2 charges. Le <strong>bronze</strong> double la poudre utile et pèse peu. L'<strong>acier</strong>, mélange de fer et de charbon, est le meilleur rapport puissance et prix : 8 charges avec une culasse à vis. Le <strong>nethersteel</strong>, avec de la netherite, est réservé aux pièces les plus lourdes. Le poids compte : un long canon en acier demande beaucoup de stress au support.</p>"
+    }
+  ],
+  "related": [
+    "create-big-cannons",
+    "culasses",
+    "poudre-et-cartouches",
+    "fabrication-des-canons",
+    "support-de-canon",
+    "mortiers"
+  ],
+  "sources": [
+    "Matériaux : index/CBCBigCannonMaterials.java (maxSafePropellantStress, minimumVelocityPerBarrel, weight, failureMode, isWeldable)",
+    "Culasses : data/createbigcannons/big_cannon_breech_strength",
+    "Longueur : config CBCCfgCannons.maxCannonLength (64)",
+    "Défaillance : CBCCfgFailure (overloadBurstChance 0,5, barrelChargeBurstChance 0,2, squibChance 0,25, failureExplosionPower 2), MountedBigCannonContraption.fail (RUPTURE / FRAGMENT)",
+    "Fonte et acier : recipe/compacting/iron_to_cast_iron_ingot.json, recipe/mixing/alloy_steel.json",
+    "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT), identiques au jar du modpack Create France",
+    "Images : blocs de CBC posés sur la plaque et rendus par notre moteur"
+  ],
+  "en": {
+    "slugEn": "cannon-materials",
+    "name": "Cannon materials",
+    "title": "Cannon materials — Create Big Cannons guide",
+    "description": "Log, wrought iron, cast iron, bronze, steel, nethersteel: how much powder each Create Big Cannons cannon can take, its length and weight. Full table.",
+    "intro": "A <strong>Create Big Cannons</strong> cannon is built from a single <strong>material</strong>, and that choice decides almost everything: how much powder it takes without bursting, how much barrel a shell can travel through, its weight on the mount and the way it breaks. Here is the anatomy of a cannon, then the six materials compared with the numbers from the code.",
+    "facts": [
+      {
+        "label": "Materials",
+        "value": "Log, wrought iron, cast iron, bronze, steel, nethersteel"
+      },
+      {
+        "label": "Safe charges",
+        "value": "Log 0, wrought iron 1, cast iron 2, bronze 4, steel 8, nethersteel 10"
+      },
+      {
+        "label": "Breech limit",
+        "value": "The lower of the two limits applies (e.g. Steel Sliding Breech 4)"
+      },
+      {
+        "label": "Maximum length",
+        "value": "64 blocks (maxCannonLength)"
+      },
+      {
+        "label": "Weight",
+        "value": "Log 1, wrought iron 2, bronze 2, cast iron 3, steel 5, nethersteel 6 (stress on the mount)"
+      },
+      {
+        "label": "Bursting",
+        "value": "Beyond the safe charges: a 50% chance on each shot; “fragment”: the whole cannon, “rupture”: 5 blocks"
+      },
+      {
+        "label": "Version",
+        "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+      }
+    ],
+    "videos": [],
+    "sections": [
+      {
+        "id": "anatomie",
+        "title": "Anatomy of a cannon",
+        "alt": "Two cannons, cast iron and bronze: breech, chambers and barrels",
+        "html": "<p>From back to front: a <strong>breech</strong> or a closed <strong>Cannon End</strong>, then one or more <strong>Cannon Chambers</strong>, which hold the powder, then <strong>Cannon Barrels</strong>, which the shell travels through. Every Powder Charge must sit in a chamber: a charge left in a barrel can make the cannon burst. All blocks must be of the same material and connected to each other.</p>"
+      },
+      {
+        "id": "tableau",
+        "title": "The six materials",
+        "alt": "Steel and nethersteel cannons with their screw breeches",
+        "html": "<table><thead><tr><th>Material</th><th>Safe charges</th><th>Minimum speed per barrel (blocks/tick)</th><th>Weight</th><th>Failure</th><th>Weldable</th></tr></thead><tbody><tr><td>Log (wood)</td><td>0</td><td>can always get stuck</td><td>1</td><td>fragments</td><td>no</td></tr><tr><td>Wrought iron</td><td>1</td><td>2 (1 charge)</td><td>2</td><td>rupture</td><td>no</td></tr><tr><td>Cast iron</td><td>2</td><td>2 (1 charge)</td><td>3</td><td>fragments</td><td>yes</td></tr><tr><td>Bronze</td><td>4</td><td>1.33 (2/3 of a charge)</td><td>2</td><td>rupture</td><td>yes</td></tr><tr><td>Steel</td><td>8</td><td>1 (1/2 charge)</td><td>5</td><td>fragments</td><td>yes</td></tr><tr><td>Nethersteel</td><td>10</td><td>0.67 (1/3 of a charge)</td><td>6</td><td>fragments</td><td>no</td></tr></tbody></table><p>“Safe charges” is the number of Powder Charges beyond which the cannon may burst. The minimum speed per barrel tells how much power the shell needs to avoid getting stuck.</p>"
+      },
+      {
+        "id": "primitifs",
+        "title": "Log and wrought iron",
+        "alt": "A log cannon and a wrought iron cannon, without barrels",
+        "html": "<p>The <strong>log cannon</strong> (chamber and end made of logs) has no safe charge at all: it fires <a href=\"/en/wiki/mortars\">Mortar Stones</a> and can always jam. <strong>Wrought iron</strong> is mostly used for the drop mortar, with a single safe charge. These are early-game cannons, without a breech.</p>"
+      },
+      {
+        "id": "culasse",
+        "title": "The breech matters too",
+        "html": "<p>The real limit is the smaller of the material's and the breech's. A steel cannon (8) with a Steel Sliding Breech (4) only takes 4 charges; with a Steel Screw Breech it goes up to 8, and to 10 in nethersteel. Quick-Firing Breeches are limited to 2. See <a href=\"/en/wiki/cannon-breeches\">breeches</a>.</p>"
+      },
+      {
+        "id": "coincer",
+        "title": "Why a shell gets stuck",
+        "html": "<p>For each barrel crossed, the game compares the charge's power with the material's minimum speed times the number of barrels travelled. Below that, the shell may get stuck: a 25% chance per shot. In cast iron, count one charge per barrel; in steel, half a charge is enough. A long cast iron cannon with little powder is therefore a bad idea.</p>"
+      },
+      {
+        "id": "eclatement",
+        "title": "When a cannon bursts",
+        "html": "<p>Beyond the safe charges, every shot has a 50% chance to burst the cannon; a charge sitting in a barrel, 20%. What happens then depends on the material. With “fragment” materials (log, cast iron, steel, nethersteel), the whole cannon is gone in an explosion of power 2 per charge that breaks the blocks around it. With “rupture” materials (wrought iron, bronze), only the five blocks around the weak point are lost, the rest disassembles, and the explosion breaks nothing.</p>"
+      },
+      {
+        "id": "choisir",
+        "title": "Which material to choose",
+        "html": "<p><strong>Cast iron</strong> comes early, by compacting iron with coal in a heated basin: ideal for a first 2-charge cannon. <strong>Bronze</strong> doubles the useful powder and weighs little. <strong>Steel</strong>, made from iron and coal, gives the best power for the price: 8 charges with a screw breech. <strong>Nethersteel</strong>, with netherite, is for the heaviest pieces. Weight matters: a long steel cannon puts a lot of stress on the mount.</p>"
+      }
+    ],
+    "sources": [
+      "Materials: index/CBCBigCannonMaterials.java (maxSafePropellantStress, minimumVelocityPerBarrel, weight, failureMode, isWeldable)",
+      "Breeches: data/createbigcannons/big_cannon_breech_strength",
+      "Length: config CBCCfgCannons.maxCannonLength (64)",
+      "Failure: CBCCfgFailure (overloadBurstChance 0.5, barrelChargeBurstChance 0.2, squibChance 0.25, failureExplosionPower 2), MountedBigCannonContraption.fail (RUPTURE / FRAGMENT)",
+      "Cast iron and steel: recipe/compacting/iron_to_cast_iron_ingot.json, recipe/mixing/alloy_steel.json",
+      "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence), identical to the Create France modpack jar",
+      "Images: CBC blocks placed on the plate and rendered by our engine"
+    ]
+  }
+}

@@ -181,7 +181,8 @@
     "meule",
     "interface-de-stockage-portable",
     "cle",
-    "filtres"
+    "filtres",
+    "autocanons"
   ],
   "sources": [
     "Quantité : FunnelBlockEntity.getAmountToExtract (filtre inactif : 1 objet ; entonnoir de laiton : quantité du filtre, jusqu'à 64)",

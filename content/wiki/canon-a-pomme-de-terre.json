@@ -94,7 +94,8 @@
     "main-extensible",
     "etabli-mecanique",
     "papier-de-verre",
-    "cle"
+    "cle",
+    "create-big-cannons"
   ],
   "sources": [
     "Recette : mechanical_crafting/potato_cannon.json (LRSSS / CC)",

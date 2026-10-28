@@ -202,7 +202,9 @@
     "roue-dentee",
     "interface-de-stockage-portable",
     "inverseur-de-rotation-sequence",
-    "contact-de-redstone"
+    "contact-de-redstone",
+    "support-de-canon",
+    "fabrication-des-canons"
   ],
   "sources": [
     "Recettes : crafting/kinetics/mechanical_bearing.json, clockwork_bearing.json",

@@ -132,7 +132,10 @@
     "entonnoir",
     "tunnel",
     "perceuse-mecanique",
-    "lunettes-d-ingenieur"
+    "lunettes-d-ingenieur",
+    "support-de-canon",
+    "culasses",
+    "autocanons"
   ],
   "sources": [
     "Recette : crafting/kinetics/wrench.json (plaques d’or, roue dentée, bâton)",

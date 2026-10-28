@@ -137,7 +137,8 @@
     "rotor",
     "inverseur-de-rotation",
     "roue-a-eau",
-    "roulement-mecanique"
+    "roulement-mecanique",
+    "support-de-canon"
   ],
   "sources": [
     "Recette : crafting/kinetics/rotation_speed_controller.json",

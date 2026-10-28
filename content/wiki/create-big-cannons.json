@@ -1,0 +1,232 @@
+{
+  "slug": "create-big-cannons",
+  "name": "Create Big Cannons",
+  "blockId": "createbigcannons:cannon_mount",
+  "category": "cbc",
+  "title": "Create Big Cannons — guide complet en français",
+  "description": "Create Big Cannons expliqué : construire son premier canon, le charger, viser et tirer, portées réelles, obus, autocanons et mortiers. Guide en français.",
+  "datePublished": "2026-10-28",
+  "dateModified": "2026-10-28",
+  "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
+  "mcVersion": "1.21.1",
+  "intro": "<strong>Create Big Cannons</strong> (CBC) ajoute à Create une vraie artillerie : des canons faits de blocs, posés sur un support qui les fait pivoter grâce à la rotation de Create, chargés de poudre et d'obus, et dont chaque tir suit une trajectoire calculée. C'est l'un des mods phares du modpack Create France. Ce guide en onze pages part du premier canon et va jusqu'aux autocanons.",
+  "facts": [
+    {
+      "label": "Mod",
+      "value": "Create Big Cannons, addon de Create (par Cannoneers of Create)"
+    },
+    {
+      "label": "Bibliothèque requise",
+      "value": "Ritchie's Projectile Library 2.1.2 (déjà dans le modpack)"
+    },
+    {
+      "label": "Un canon",
+      "value": "Un support de canon + une culasse ou un bout fermé + des chambres + des fûts, tous du même matériau"
+    },
+    {
+      "label": "Vitesse de l’obus",
+      "value": "2 blocs/tick par charge de poudre, soit 40 blocs/s (2 charges : 80 blocs/s)"
+    },
+    {
+      "label": "Portée maximale",
+      "value": "58 blocs avec 1 charge, 183 avec 2, 507 avec 4 (sol plat, obus explosif)"
+    },
+    {
+      "label": "Visée",
+      "value": "Manivelle à 32 tr/min : 24 degrés par seconde sur le support"
+    },
+    {
+      "label": "Pages du guide",
+      "value": "11 pages : support, matériaux, culasses, chargement, poudre, obus, détonateurs, fabrication, autocanons, mortiers"
+    },
+    {
+      "label": "Version",
+      "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+    }
+  ],
+  "videos": [
+    {
+      "id": "range_first_shot",
+      "name": "Premier tir : du support à l’impact",
+      "description": "Un canon en acier à culasse coulissante, deux charges de poudre et un obus explosif : visée à la manivelle, tir, vol réel jusqu'au mur à 48 blocs (ralenti ×4 pendant le vol), explosion et cratère.",
+      "duration": "PT10S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "premier-canon",
+      "title": "Ce qu’il faut pour un premier canon",
+      "image": "range_first_shot_visee.webp",
+      "alt": "Un canon en acier posé sur son support, prêt à viser",
+      "video": "range_first_shot",
+      "html": "<p>Un canon de CBC n'est pas un objet : c'est une rangée de blocs. Il te faut un <a href=\"/wiki/support-de-canon\">support de canon</a>, une <a href=\"/wiki/culasses\">culasse</a> (ou un bout fermé), une ou deux <strong>chambres</strong> et quelques <strong>fûts</strong>, tous dans le même <a href=\"/wiki/materiaux-des-canons\">matériau</a>. La fonte suffit pour débuter. Ajoute une source de rotation, une manivelle par exemple, des <a href=\"/wiki/poudre-et-cartouches\">charges de poudre</a> et un <a href=\"/wiki/obus-de-canon\">obus</a>.</p>"
+    },
+    {
+      "id": "etapes",
+      "title": "Les six étapes, dans l’ordre",
+      "image": "cbc_mount_assembly_assemblage.webp",
+      "alt": "Les blocs du canon posés sur le support et assemblés",
+      "html": "<p><strong>1.</strong> Pose le support, puis les blocs du canon deux blocs au-dessus, de la culasse vers la bouche. <strong>2.</strong> Charge par la bouche (ou par la culasse ouverte) : la poudre d'abord, l'obus ensuite, avec un <a href=\"/wiki/chargement-des-canons\">chargeur de canon</a> ou un refouloir. <strong>3.</strong> Envoie un signal de redstone sur la face « marteau » du support : le canon s'assemble. <strong>4.</strong> Fais tourner le support pour régler la hausse et la direction. <strong>5.</strong> Alimente la face allumée : il tire. <strong>6.</strong> Coupe le premier signal pour le désassembler et recharger.</p>"
+    },
+    {
+      "id": "vol",
+      "title": "Une vraie trajectoire",
+      "image": "range_first_shot_vol.webp",
+      "alt": "L’obus en vol au-dessus de la plaine, sa traînée derrière lui",
+      "html": "<p>À la sortie du fût, l'obus part à 2 blocs par tick et par charge de poudre. Ensuite, à chaque tick, la gravité lui retire 0,05 bloc/tick de vitesse verticale et la traînée 1 % de sa vitesse. Dans la vidéo, deux charges (80 blocs/s) et 4 degrés de hausse suffisent pour toucher un mur à 48 blocs en 0,59 s. Le vol est montré au ralenti ×4, la trajectoire est celle du calcul du mod, tick par tick.</p>"
+    },
+    {
+      "id": "impact",
+      "title": "L’impact",
+      "image": "range_first_shot_impact.webp",
+      "alt": "L’explosion de l’obus contre le mur en pierre taillée",
+      "html": "<p>L'obus explosif détone au contact avec une puissance de 8 sur les blocs, le double d'une TNT. Sur un mur en pierre taillée posé sur de la terre, il ouvre un cratère de plusieurs centaines de blocs. Les blocs touchés mais non détruits se fissurent ou deviennent du pavé. Pour percer un mur épais, préfère un boulet perforant.</p>"
+    },
+    {
+      "id": "pages",
+      "title": "Les pages du guide",
+      "html": "<p>Pour aller plus loin : <a href=\"/wiki/support-de-canon\">support de canon</a> (assembler, viser, tirer), <a href=\"/wiki/materiaux-des-canons\">matériaux</a> (combien de poudre chaque canon supporte), <a href=\"/wiki/culasses\">culasses</a>, <a href=\"/wiki/chargement-des-canons\">chargement</a>, <a href=\"/wiki/poudre-et-cartouches\">poudre et portées</a>, <a href=\"/wiki/obus-de-canon\">obus</a>, <a href=\"/wiki/detonateurs-et-traceurs\">détonateurs et traceurs</a>, <a href=\"/wiki/fabrication-des-canons\">fabrication</a>, <a href=\"/wiki/autocanons\">autocanons</a> et <a href=\"/wiki/mortiers\">mortiers</a>.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Les erreurs du débutant",
+      "html": "<p>Trop de poudre : au-delà de ce que le matériau ou la culasse supportent, le canon peut éclater. Une charge posée dans un fût au lieu d'une chambre peut aussi le faire sauter. Trop peu de poudre pour un long canon : l'obus se coince. Un canon déjà assemblé ne se recharge pas par la bouche : désassemble-le d'abord. Enfin, les blocs de canon posés à la main ne se relient pas entre eux en survie : il faut les fabriquer d'un seul tenant ou les souder.</p>"
+    },
+    {
+      "id": "exemple",
+      "title": "Un premier canon qui marche",
+      "html": "<p>Recette sûre pour débuter en fonte : un bout de canon, deux chambres et deux fûts, sur un support. Charge deux charges de poudre puis un boulet plein ou un obus explosif muni d'un détonateur à impact. Deux charges, c'est la limite de la fonte, et c'est assez de vitesse pour deux fûts. Avec une manivelle sur chaque arbre du support, tu vises à 24° par seconde, puis un bouton sur la face allumée fait feu.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur le serveur Create France",
+      "html": "<p>Create Big Cannons est installé sur le serveur, avec la configuration par défaut du mod : les chiffres de ce guide sont ceux que tu rencontreras en jeu. Les explosions cassent les blocs : teste tes canons loin des bases, sur un terrain qui t'appartient.</p>"
+    }
+  ],
+  "related": [
+    "support-de-canon",
+    "materiaux-des-canons",
+    "culasses",
+    "chargement-des-canons",
+    "poudre-et-cartouches",
+    "obus-de-canon",
+    "detonateurs-et-traceurs",
+    "fabrication-des-canons",
+    "autocanons",
+    "mortiers",
+    "manivelle",
+    "roulement-mecanique"
+  ],
+  "sources": [
+    "Vitesse : MountedBigCannonContraption.fireShot (projectile.shoot(dir, chargesUsed)), powder_charge.json (strength 2)",
+    "Vol : AbstractCannonProjectile.tick / getForces (traînée 0,01 × vitesse, gravité -0,05), he_shell.json",
+    "Portées : simulation tick par tick du mod sur sol plat (engine_create/cannons.py, données 5.11.7)",
+    "Visée : CannonMountBlockEntity.getAngularSpeed (convertToAngular × 0,125)",
+    "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT), identiques au jar du modpack Create France",
+    "Tirs : scènes écrites pour ce wiki ; trajectoire calculée tick par tick avec les formules du mod (AbstractCannonProjectile.tick : traînée 0,01, gravité -0,05 bloc/tick², vitesse = charges utilisées, MountedBigCannonContraption.fireShot), explosions Explosion.explode + transformations de CBC",
+    "Vidéos : scènes Ponder de Create Big Cannons (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) rejouées par notre moteur ; modèles et textures de CBC (CC BY-NC-SA 4.0, Cannoneers of Create)"
+  ],
+  "en": {
+    "slugEn": "create-big-cannons-guide",
+    "name": "Create Big Cannons",
+    "title": "Create Big Cannons — complete mod guide",
+    "description": "Create Big Cannons explained: build your first cannon, load it, aim and fire, real ranges, shells, autocannons and mortars. A complete guide.",
+    "intro": "<strong>Create Big Cannons</strong> (CBC) adds real artillery to Create: cannons built out of blocks, sitting on a mount that turns them with Create rotation, loaded with powder and shells, and every shot follows a computed trajectory. It is one of the flagship mods of the Create France modpack. This eleven-page guide starts with your first cannon and goes all the way to autocannons.",
+    "facts": [
+      {
+        "label": "Mod",
+        "value": "Create Big Cannons, a Create addon (by Cannoneers of Create)"
+      },
+      {
+        "label": "Required library",
+        "value": "Ritchie's Projectile Library 2.1.2 (already in the modpack)"
+      },
+      {
+        "label": "A cannon",
+        "value": "A Cannon Mount + a breech or a closed end + chambers + barrels, all of the same material"
+      },
+      {
+        "label": "Shell speed",
+        "value": "2 blocks/tick per Powder Charge, i.e. 40 blocks/s (2 charges: 80 blocks/s)"
+      },
+      {
+        "label": "Maximum range",
+        "value": "58 blocks with 1 charge, 183 with 2, 507 with 4 (flat ground, HE shell)"
+      },
+      {
+        "label": "Aiming",
+        "value": "Hand Crank at 32 RPM: 24 degrees per second on the mount"
+      },
+      {
+        "label": "Guide pages",
+        "value": "11 pages: mount, materials, breeches, loading, powder, shells, fuzes, crafting, autocannons, mortars"
+      },
+      {
+        "label": "Version",
+        "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+      }
+    ],
+    "videos": [
+      {
+        "id": "range_first_shot",
+        "name": "First shot: from the mount to the impact",
+        "description": "A steel cannon with a sliding breech, two Powder Charges and an HE shell: aiming with the crank, firing, the real flight to the wall 48 blocks away (4× slow motion during the flight), explosion and crater."
+      }
+    ],
+    "sections": [
+      {
+        "id": "premier-canon",
+        "title": "What a first cannon needs",
+        "alt": "A steel cannon on its mount, ready to aim",
+        "html": "<p>A CBC cannon is not an item: it is a row of blocks. You need a <a href=\"/en/wiki/cannon-mount\">Cannon Mount</a>, a <a href=\"/en/wiki/cannon-breeches\">breech</a> (or a closed end), one or two <strong>chambers</strong> and a few <strong>barrels</strong>, all made of the same <a href=\"/en/wiki/cannon-materials\">material</a>. Cast iron is fine to start with. Add a rotation source, a Hand Crank for instance, some <a href=\"/en/wiki/powder-charges-and-cartridges\">Powder Charges</a> and a <a href=\"/en/wiki/big-cannon-shells\">shell</a>.</p>"
+      },
+      {
+        "id": "etapes",
+        "title": "The six steps, in order",
+        "alt": "The cannon blocks placed on the mount and assembled",
+        "html": "<p><strong>1.</strong> Place the mount, then the cannon blocks two blocks above it, from the breech to the muzzle. <strong>2.</strong> Load through the muzzle (or through an open breech): powder first, then the shell, with a <a href=\"/en/wiki/loading-big-cannons\">Cannon Loader</a> or a Ram Rod. <strong>3.</strong> Send a redstone signal into the mount's “hammer” face: the cannon assembles. <strong>4.</strong> Turn the mount to set elevation and direction. <strong>5.</strong> Power the lit face: it fires. <strong>6.</strong> Cut the first signal to disassemble it and reload.</p>"
+      },
+      {
+        "id": "vol",
+        "title": "A real trajectory",
+        "alt": "The shell flying over the plain, its trail behind it",
+        "html": "<p>When it leaves the barrel, the shell travels at 2 blocks per tick for each Powder Charge. Then, every tick, gravity takes 0.05 block/tick off its vertical speed and drag removes 1% of its speed. In the video, two charges (80 blocks/s) and 4 degrees of elevation are enough to hit a wall 48 blocks away in 0.59 s. The flight is shown at 4× slow motion; the path is the mod's own calculation, tick by tick.</p>"
+      },
+      {
+        "id": "impact",
+        "title": "The impact",
+        "alt": "The shell exploding against the stone brick wall",
+        "html": "<p>The HE shell detonates on contact with a power of 8 against blocks, twice a TNT block. On a stone brick wall standing on dirt it opens a crater of several hundred blocks. Blocks that are hit but survive crack or turn into cobblestone. To punch through a thick wall, use an armor-piercing shot instead.</p>"
+      },
+      {
+        "id": "pages",
+        "title": "The guide pages",
+        "html": "<p>Going further: <a href=\"/en/wiki/cannon-mount\">Cannon Mount</a> (assembling, aiming, firing), <a href=\"/en/wiki/cannon-materials\">materials</a> (how much powder each cannon can take), <a href=\"/en/wiki/cannon-breeches\">breeches</a>, <a href=\"/en/wiki/loading-big-cannons\">loading</a>, <a href=\"/en/wiki/powder-charges-and-cartridges\">powder and ranges</a>, <a href=\"/en/wiki/big-cannon-shells\">shells</a>, <a href=\"/en/wiki/fuzes-and-tracers\">fuzes and tracers</a>, <a href=\"/en/wiki/cannon-crafting\">crafting</a>, <a href=\"/en/wiki/autocannons\">autocannons</a> and <a href=\"/en/wiki/mortars\">mortars</a>.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Beginner mistakes",
+        "html": "<p>Too much powder: beyond what the material or the breech can take, the cannon may burst. A charge sitting in a barrel instead of a chamber can blow it up too. Too little powder for a long cannon: the shell gets stuck. An assembled cannon cannot be reloaded through the muzzle: disassemble it first. And cannon blocks placed by hand do not connect to each other in survival: craft them in one piece or weld them.</p>"
+      },
+      {
+        "id": "exemple",
+        "title": "A first cannon that works",
+        "html": "<p>A safe recipe to start with cast iron: a Cannon End, two chambers and two barrels, on a mount. Load two Powder Charges then a Solid Shot, or an HE shell fitted with an Impact Fuze. Two charges is cast iron's limit, and it is enough speed for two barrels. With a Hand Crank on each of the mount's shafts you aim at 24° per second, then a button on the lit face fires. That is the whole loop, and every page of this guide builds on it.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On the Create France server",
+        "html": "<p>Create Big Cannons runs on the server with the mod's default configuration: the numbers in this guide are the ones you will meet in game. Explosions break blocks, so test your cannons away from bases, on land you own.</p>"
+      }
+    ],
+    "sources": [
+      "Speed: MountedBigCannonContraption.fireShot (projectile.shoot(dir, chargesUsed)), powder_charge.json (strength 2)",
+      "Flight: AbstractCannonProjectile.tick / getForces (drag 0.01 × speed, gravity -0.05), he_shell.json",
+      "Ranges: the mod's tick-by-tick simulation on flat ground (engine_create/cannons.py, 5.11.7 data)",
+      "Aiming: CannonMountBlockEntity.getAngularSpeed (convertToAngular × 0.125)",
+      "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence), identical to the Create France modpack jar",
+      "Shots: scenes written for this wiki; trajectory computed tick by tick with the mod's formulas (AbstractCannonProjectile.tick: drag 0.01, gravity -0.05 block/tick², speed = charges used, MountedBigCannonContraption.fireShot), explosions from Explosion.explode plus CBC's block transforms",
+      "Videos: Create Big Cannons Ponder scenes (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) replayed by our engine; CBC models and textures (CC BY-NC-SA 4.0, Cannoneers of Create)"
+    ]
+  }
+}

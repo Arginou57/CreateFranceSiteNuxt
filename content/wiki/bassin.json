@@ -132,7 +132,8 @@
     "bruleur-a-blaze",
     "depot",
     "tuyau-a-fluide",
-    "tuyau-a-fluide-intelligent"
+    "tuyau-a-fluide-intelligent",
+    "fabrication-des-canons"
   ],
   "sources": [
     "Capacité : BasinBlockEntity (inputInventory 9, outputInventory 9, inputTank / outputTank : 2 réservoirs de 1 000 mB chacun)",

@@ -174,7 +174,10 @@
     "roulement-mecanique",
     "deployeur",
     "inverseur-de-rotation",
-    "inverseur-de-rotation-sequence"
+    "inverseur-de-rotation-sequence",
+    "chargement-des-canons",
+    "culasses",
+    "fabrication-des-canons"
   ],
   "sources": [
     "Recettes : crafting/kinetics/mechanical_piston.json, sticky_mechanical_piston.json, piston_extension_pole.json (8 barres)",

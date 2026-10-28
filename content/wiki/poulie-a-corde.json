@@ -186,7 +186,8 @@
     "colle-extra-forte",
     "poulie-a-tuyau",
     "chariot-de-portique",
-    "manivelle"
+    "manivelle",
+    "chargement-des-canons"
   ],
   "sources": [
     "Recette : crafting/kinetics/rope_pulley.json",

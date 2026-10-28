@@ -160,7 +160,12 @@
     "recolteur-mecanique",
     "horloges-et-impulsions",
     "main-extensible",
-    "papier-de-verre"
+    "papier-de-verre",
+    "culasses",
+    "poudre-et-cartouches",
+    "chargement-des-canons",
+    "detonateurs-et-traceurs",
+    "fabrication-des-canons"
   ],
   "sources": [
     "Stress : AllBlocks.java, DEPLOYER, CStress.setImpact(4.0)",

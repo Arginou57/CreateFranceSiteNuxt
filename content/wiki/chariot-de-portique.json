@@ -210,7 +210,8 @@
     "chassis-lineaire",
     "perceuse-mecanique",
     "deployeur",
-    "inverseur-de-rotation-sequence"
+    "inverseur-de-rotation-sequence",
+    "chargement-des-canons"
   ],
   "sources": [
     "Recettes : crafting/kinetics/gantry_shaft.json (8 rotors), gantry_carriage.json (dalle en bois, boitier d’andésite, roue dentée)",

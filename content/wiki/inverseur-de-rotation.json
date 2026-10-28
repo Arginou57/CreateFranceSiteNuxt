@@ -152,7 +152,8 @@
     "piston-mecanique",
     "inverseur-de-rotation-sequence",
     "liaison-de-redstone",
-    "stressometre-compteur-de-vitesse"
+    "stressometre-compteur-de-vitesse",
+    "support-de-canon"
   ],
   "sources": [
     "Recettes : crafting/kinetics/gearshift.json, clutch.json (sans forme)",

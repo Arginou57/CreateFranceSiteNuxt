@@ -157,7 +157,8 @@
     "tuyau-a-fluide-intelligent",
     "poulie-a-tuyau",
     "moteur-a-vapeur",
-    "stressometre-compteur-de-vitesse"
+    "stressometre-compteur-de-vitesse",
+    "fabrication-des-canons"
   ],
   "sources": [
     "Recette : crafting/kinetics/mechanical_pump.json (sans forme)",

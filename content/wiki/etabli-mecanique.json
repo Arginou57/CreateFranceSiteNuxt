@@ -130,7 +130,8 @@
     "depot",
     "jauge-d-usine",
     "canon-a-pomme-de-terre",
-    "main-extensible"
+    "main-extensible",
+    "obus-de-canon"
   ],
   "sources": [
     "Stress : AllBlocks.java, MECHANICAL_CRAFTER, CStress.setImpact(2.0)",

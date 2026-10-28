@@ -1,0 +1,274 @@
+{
+  "slug": "detonateurs-et-traceurs",
+  "name": "Détonateurs et traceurs",
+  "blockId": "createbigcannons:impact_fuze",
+  "category": "cbc",
+  "title": "Détonateurs et traceurs — Create Big Cannons, guide",
+  "description": "Les détonateurs de Create Big Cannons : à impact, à inertie, minuté, de proximité, retardés et filaire. Les poser, les régler, ajouter un pointeur traçant.",
+  "datePublished": "2026-10-28",
+  "dateModified": "2026-10-28",
+  "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
+  "mcVersion": "1.21.1",
+  "intro": "Un obus de <strong>Create Big Cannons</strong> sans <strong>détonateur</strong> (Fuze) n'explose pas. Le détonateur se pose sur le nez de l'obus, ou sur son culot pour l'obus perce-armure, et décide du moment de l'explosion : au contact, après un temps, près d'une cible. Le <strong>pointeur</strong> (Tracer Tip), une pointe traçante, rend le tir visible.",
+  "facts": [
+    {
+      "label": "À impact",
+      "value": "67 % de chances par impact sur le nez ; inactif après 3 impacts ; pas sur un ricochet"
+    },
+    {
+      "label": "À inertie",
+      "value": "90 % de chances ; marche aussi au culot et sur n’importe quelle face"
+    },
+    {
+      "label": "Minuté",
+      "value": "Explose après le temps réglé (en secondes et ticks), ou en fin de vol"
+    },
+    {
+      "label": "De proximité",
+      "value": "Armé après 5 ticks ; explose dès qu’un bloc est détecté devant l’obus"
+    },
+    {
+      "label": "Retardés",
+      "value": "À impact ou à inertie, puis un délai réglé avant l’explosion"
+    },
+    {
+      "label": "Filaire",
+      "value": "Pour un obus posé en bloc : un signal de redstone le fait exploser sur place"
+    },
+    {
+      "label": "Pose",
+      "value": "Clic droit sur l’obus, ou déployeur ; retrait à main vide"
+    },
+    {
+      "label": "Version",
+      "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Détonateur minuté (×4)",
+    "grid": [
+      [
+        null,
+        "Lingot de fer",
+        null
+      ],
+      [
+        null,
+        "Horloge",
+        null
+      ],
+      [
+        null,
+        "Poudre de redstone",
+        null
+      ]
+    ],
+    "result": "4 détonateurs minutés"
+  },
+  "videos": [
+    {
+      "id": "cbc_fuzing",
+      "name": "Poser un détonateur",
+      "description": "Un détonateur à impact posé sur le nez d'un obus explosif, retiré à main vide, puis un déployeur pose un détonateur minuté.",
+      "duration": "PT20S"
+    },
+    {
+      "id": "cbc_tracers",
+      "name": "Ajouter un pointeur",
+      "description": "Un pointeur se pose sur n'importe quelle face d'un boulet, se retire à main vide, et un déployeur l'applique automatiquement.",
+      "duration": "PT18S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "poser",
+      "title": "Poser et retirer",
+      "image": "cbc_fuzing_fusee.webp",
+      "alt": "Un détonateur posé sur le nez d’un obus explosif",
+      "video": "cbc_fuzing",
+      "html": "<p>Fais un clic droit avec le détonateur sur la <strong>pointe</strong> de l'obus posé en bloc : un petit embout apparaît sur son nez. Pour l'obus perce-armure, il va sur le <strong>culot</strong>. Un clic à main vide le reprend. Un <a href=\"/wiki/deployeur\">déployeur</a> fait la même chose en chaîne, en tenant le détonateur face à l'obus.</p>"
+    },
+    {
+      "id": "impact",
+      "title": "Impact et inertie",
+      "image": "cbc_fuzes_hero_fusees.webp",
+      "alt": "Les détonateurs de CBC : impact, retardé, inertie, minuté, proximité, filaire, et le pointeur",
+      "html": "<p>Le détonateur <strong>à impact</strong> a 67 % de chances de partir à chaque choc sur le nez. Il ne réagit ni à un ricochet ni si l'obus est détruit, et devient inerte après trois impacts. Le détonateur <strong>à inertie</strong>, arrivé en 5.11, part à 90 %, quelle que soit la face touchée, et fonctionne aussi au culot : c'est le bon choix pour un obus perce-armure qui doit exploser derrière le mur.</p>"
+    },
+    {
+      "id": "temps",
+      "title": "Minuté, de proximité, retardés",
+      "html": "<p>Le détonateur <strong>minuté</strong> se règle dans son menu, en secondes et en ticks : l'obus explose en l'air après ce temps, utile pour un shrapnel au-dessus d'une tranchée. Le détonateur <strong>de proximité</strong> s'arme 5 ticks après le tir, puis regarde devant l'obus : dès qu'un bloc entre dans sa zone, il part. Les détonateurs <strong>retardés</strong> attendent un délai réglé après l'impact, ce qui laisse à l'obus le temps de percer avant d'exploser.</p>"
+    },
+    {
+      "id": "filaire",
+      "title": "Le détonateur filaire",
+      "html": "<p>Il ne sert pas en vol. Posé sur un obus resté en bloc, il le fait exploser quand celui-ci reçoit un signal de redstone, avec l'effet de son type : un piège, une charge de démolition. Il ne marche qu'avec les obus de gros canon du mod de base.</p>"
+    },
+    {
+      "id": "tracante",
+      "title": "Le pointeur",
+      "image": "cbc_tracers_deployeur.webp",
+      "alt": "Un déployeur applique un pointeur sur un boulet",
+      "video": "cbc_tracers",
+      "html": "<p>Le pointeur, une pointe traçante, se pose sur n'importe quelle face d'un projectile de gros canon, boulets compris, et le rend lumineux en vol. Il aide à corriger un tir à longue distance. Les munitions d'<a href=\"/wiki/autocanons\">autocanon</a> peuvent aussi en recevoir. Retrait à main vide, comme les détonateurs.</p>"
+    },
+    {
+      "id": "regler",
+      "title": "Régler un détonateur minuté",
+      "html": "<p>Ouvre le menu du détonateur en main, choisis le temps, puis pose-le sur l'obus. Pour qu'un shrapnel éclate juste avant la cible, prends son temps de vol dans le tableau des portées et retire quelques ticks : avec deux charges et 10° de hausse, l'obus vole 1,5 s pour 104 blocs. Le détonateur de proximité, lui, n'a pas besoin de calcul : il suffit qu'un bloc passe dans sa zone.</p>"
+    },
+    {
+      "id": "chaine",
+      "title": "Une chaîne de montage",
+      "html": "<p>Pour préparer beaucoup d'obus, mets-les sur un <a href=\"/wiki/tapis-roulant\">tapis roulant</a> qui s'arrête sous un déployeur chargé de détonateurs, la pointe vers lui. Un second déployeur peut poser le pointeur. Les obus finis repartent vers la batterie, prêts à être chargés, sans que personne n'ait à les toucher.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Bien choisir",
+      "html": "<p>Pour un tir direct, le détonateur à impact suffit. Contre un mur épais, un obus perce-armure avec un détonateur à inertie, ou un détonateur retardé. Contre des créatures, un shrapnel avec un détonateur de proximité. Garde le détonateur minuté pour les tirs calculés à l'avance : le temps de vol est dans le <a href=\"/wiki/poudre-et-cartouches\">tableau des portées</a>.</p>"
+    }
+  ],
+  "related": [
+    "obus-de-canon",
+    "poudre-et-cartouches",
+    "deployeur",
+    "autocanons",
+    "create-big-cannons"
+  ],
+  "sources": [
+    "Détonateurs : munitions/fuzes/ImpactFuzeItem, InertiaFuzeItem, TimedFuzeItem, ProximityFuzeItem, DelayedImpactFuzeItem, DelayedInertiaFuzeItem, WiredFuzeItem",
+    "Réglages : CBCCfgMunitions (impactFuzeDetonationChance 0,67, impactFuzeDurability 3, inertiaFuzeDetonationChance 0,9, proximityFuzeArmingTime 5)",
+    "Rendu : FuzedBlockEntityRenderer (embout sur le nez, ou le culot pour isBaseFuze)",
+    "Recettes : recipe/timed_fuze.json, impact_fuze.json, proximity_fuze.json, munition_fuzing_deployer.json",
+    "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT), identiques au jar du modpack Create France",
+    "Vidéos : scènes Ponder de Create Big Cannons (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) rejouées par notre moteur ; modèles et textures de CBC (CC BY-NC-SA 4.0, Cannoneers of Create)"
+  ],
+  "en": {
+    "slugEn": "fuzes-and-tracers",
+    "name": "Fuzes and tracers",
+    "title": "Fuzes and Tracers — Create Big Cannons guide",
+    "description": "Create Big Cannons fuzes: impact, inertia, timed, proximity, delayed and wired. How to apply and set them, and how to add a Tracer Tip to a shell.",
+    "intro": "A <strong>Create Big Cannons</strong> shell without a <strong>fuze</strong> does not explode. The fuze goes on the shell's nose, or on its base for the AP shell, and decides when the explosion happens: on contact, after a delay, near a target. The <strong>Tracer Tip</strong> makes the shot visible.",
+    "facts": [
+      {
+        "label": "Impact",
+        "value": "67% chance per impact on the nose; dud after 3 impacts; not on a ricochet"
+      },
+      {
+        "label": "Inertia",
+        "value": "90% chance; also works on the base and on any face"
+      },
+      {
+        "label": "Timed",
+        "value": "Explodes after the set time (seconds and ticks), or at the end of the flight"
+      },
+      {
+        "label": "Proximity",
+        "value": "Armed after 5 ticks; explodes as soon as a block is detected ahead of the shell"
+      },
+      {
+        "label": "Delayed",
+        "value": "Impact or inertia, then a set delay before exploding"
+      },
+      {
+        "label": "Wired",
+        "value": "For a shell placed as a block: a redstone signal blows it up on the spot"
+      },
+      {
+        "label": "Applying",
+        "value": "Right-click the shell, or a Deployer; remove with an empty hand"
+      },
+      {
+        "label": "Version",
+        "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Timed Fuze (×4)",
+      "grid": [
+        [
+          null,
+          "Iron Ingot",
+          null
+        ],
+        [
+          null,
+          "Clock",
+          null
+        ],
+        [
+          null,
+          "Redstone Dust",
+          null
+        ]
+      ],
+      "result": "4 Timed Fuzes"
+    },
+    "videos": [
+      {
+        "id": "cbc_fuzing",
+        "name": "Applying a fuze",
+        "description": "An Impact Fuze put on the nose of an HE shell, removed with an empty hand, then a Deployer applies a Timed Fuze."
+      },
+      {
+        "id": "cbc_tracers",
+        "name": "Adding a tracer",
+        "description": "A Tracer Tip goes on any face of a shot, comes off with an empty hand, and a Deployer applies it automatically."
+      }
+    ],
+    "sections": [
+      {
+        "id": "poser",
+        "title": "Applying and removing",
+        "alt": "A fuze on the nose of an HE shell",
+        "html": "<p>Right-click with the fuze on the <strong>tip</strong> of the shell placed as a block: a small cap appears on its nose. For the AP shell, the fuze goes on the <strong>base</strong>. An empty-hand click takes it back. A <a href=\"/en/wiki/deployer\">Deployer</a> does the same on a production line, holding the fuze towards the shell.</p>"
+      },
+      {
+        "id": "impact",
+        "title": "Impact and inertia",
+        "alt": "CBC fuzes: impact, delayed, inertia, timed, proximity, wired, tracer",
+        "html": "<p>The <strong>Impact Fuze</strong> has a 67% chance to go off at each hit on the nose. It ignores ricochets and destroyed shells, and becomes a dud after three impacts. The <strong>Inertia Fuze</strong>, added in 5.11, goes off 90% of the time, whatever face is hit, and also works on the base: it is the right fuze for an AP shell that must explode behind the wall.</p>"
+      },
+      {
+        "id": "temps",
+        "title": "Timed, proximity, delayed",
+        "html": "<p>The <strong>Timed Fuze</strong> is set in its menu, in seconds and ticks: the shell explodes in the air after that time, handy for shrapnel above a trench. The <strong>Proximity Fuze</strong> arms 5 ticks after firing, then looks ahead of the shell: as soon as a block enters its zone, it goes off. <strong>Delayed</strong> fuzes wait for a set delay after the impact, which gives the shell time to pierce before it explodes.</p>"
+      },
+      {
+        "id": "filaire",
+        "title": "The Wired Fuze",
+        "html": "<p>It is not for flight. Put on a shell left as a block, it makes it explode when it gets a redstone signal, with the effect of its type: a trap, a demolition charge. It only works with the base mod's big cannon shells.</p>"
+      },
+      {
+        "id": "tracante",
+        "title": "The Tracer Tip",
+        "alt": "A Deployer applying a Tracer Tip to a shot",
+        "html": "<p>The Tracer Tip goes on any face of a big cannon projectile, shots included, and makes it glow in flight. It helps you correct a long-range shot. <a href=\"/en/wiki/autocannons\">Autocannon</a> rounds can take one too. Remove it with an empty hand, like a fuze.</p>"
+      },
+      {
+        "id": "regler",
+        "title": "Setting a Timed Fuze",
+        "html": "<p>Open the fuze's menu with it in hand, pick the time, then put it on the shell. For a shrapnel shell to burst just before the target, take its flight time from the range table and remove a few ticks: with two charges and 10° of elevation, the shell flies 1.5 s for 104 blocks. The Proximity Fuze needs no maths at all: a block passing through its zone is enough, which makes it the easier choice against targets you cannot range in advance.</p>"
+      },
+      {
+        "id": "chaine",
+        "title": "An assembly line",
+        "html": "<p>To prepare many shells, put them on a <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a> that stops under a Deployer holding fuzes, tips facing it. A second Deployer can add the Tracer Tip. Finished shells then travel on towards the battery, ready to be loaded, without anyone having to touch them.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Choosing well",
+        "html": "<p>For a direct shot, the Impact Fuze is enough. Against a thick wall, an AP shell with an Inertia Fuze, or a delayed fuze. Against mobs, shrapnel with a Proximity Fuze. Keep the Timed Fuze for shots worked out in advance: the flight time is in the <a href=\"/en/wiki/powder-charges-and-cartridges\">range table</a>.</p>"
+      }
+    ],
+    "sources": [
+      "Fuzes: munitions/fuzes/ImpactFuzeItem, InertiaFuzeItem, TimedFuzeItem, ProximityFuzeItem, DelayedImpactFuzeItem, DelayedInertiaFuzeItem, WiredFuzeItem",
+      "Settings: CBCCfgMunitions (impactFuzeDetonationChance 0.67, impactFuzeDurability 3, inertiaFuzeDetonationChance 0.9, proximityFuzeArmingTime 5)",
+      "Rendering: FuzedBlockEntityRenderer (cap on the nose, or the base for isBaseFuze)",
+      "Recipes: recipe/timed_fuze.json, impact_fuze.json, proximity_fuze.json, munition_fuzing_deployer.json",
+      "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence), identical to the Create France modpack jar",
+      "Videos: Create Big Cannons Ponder scenes (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) replayed by our engine; CBC models and textures (CC BY-NC-SA 4.0, Cannoneers of Create)"
+    ]
+  }
+}

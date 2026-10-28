@@ -1,0 +1,270 @@
+{
+  "slug": "obus-de-canon",
+  "name": "Obus et boulets",
+  "blockId": "createbigcannons:he_shell",
+  "category": "cbc",
+  "title": "Obus et boulets — Create Big Cannons, guide",
+  "description": "Tous les obus de Create Big Cannons : explosif, perforant, boulets, shrapnel, mitraille, fumigène, à fluide. Effets, puissance, pénétration, détonateurs.",
+  "datePublished": "2026-10-28",
+  "dateModified": "2026-10-28",
+  "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
+  "mcVersion": "1.21.1",
+  "intro": "<strong>Create Big Cannons</strong> propose une dizaine de projectiles pour les gros canons. Les <strong>obus</strong> contiennent une charge et ont besoin d'un <a href=\"/wiki/detonateurs-et-traceurs\">détonateur</a> (Fuze) ; les <strong>boulets</strong> sont pleins et frappent par leur masse. Chacun se pose dans le canon devant la poudre, la pointe vers la bouche. Voici ce que fait chacun, avec les chiffres du mod.",
+  "facts": [
+    {
+      "label": "Obus explosif",
+      "value": "Puissance 8 sur les blocs (TNT : 4), 30 dégâts au contact"
+    },
+    {
+      "label": "Pénétration",
+      "value": "Un bloc casse si sa résistance aux explosions est sous l’élan de l’obus (masse × vitesse)"
+    },
+    {
+      "label": "Boulet perforant",
+      "value": "Masse 8, 50 dégâts : traverse un mur de pierre taillée"
+    },
+    {
+      "label": "Shrapnel",
+      "value": "50 éclats, dispersion 0,6"
+    },
+    {
+      "label": "Fumigène",
+      "value": "Nuage de 10 × 10 × 10 blocs, 300 ticks (15 s)"
+    },
+    {
+      "label": "Obus à fluide",
+      "value": "2 000 mB, 500 mB par gerbe"
+    },
+    {
+      "label": "Gravité / traînée",
+      "value": "-0,05 bloc/tick² et 1 % par tick pour tous les obus de gros canon"
+    },
+    {
+      "label": "Version",
+      "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Boulet plein (établi)",
+    "grid": [
+      [
+        "Pépite de fer",
+        "Lingot de fer",
+        "Pépite de fer"
+      ],
+      [
+        "Lingot de fer",
+        "Lingot de fer",
+        "Lingot de fer"
+      ],
+      [
+        null,
+        "Dalle en bois",
+        null
+      ]
+    ],
+    "result": "1 projectile solide"
+  },
+  "videos": [
+    {
+      "id": "range_shells",
+      "name": "Trois obus contre trois murs",
+      "description": "Trois canons en acier tirent sur trois murs épais à 40 blocs : l'obus explosif creuse un cratère, le boulet perforant traverse le mur et file au loin, l'obus fumigène couvre la zone (ralenti ×2 pendant les vols).",
+      "duration": "PT15S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "tableau",
+      "title": "Les projectiles",
+      "image": "cbc_munitions_obus.webp",
+      "alt": "Les obus de CBC posés en blocs : explosif, perforant, shrapnel, fumigène, à fluide",
+      "html": "<table><thead><tr><th>Projectile</th><th>Effet</th><th>Masse</th><th>Détonateur</th></tr></thead><tbody><tr><td>Obus hautement explosif (HE)</td><td>Explose : puissance 8 sur les blocs, 12 sur les créatures</td><td>2</td><td>impact (avant)</td></tr><tr><td>Obus perce-armure (AP)</td><td>Perce, puis explose : puissance 5 (7 sur les créatures)</td><td>6</td><td>au culot</td></tr><tr><td>Projectile perce-armure (AP shot)</td><td>Boulet inerte qui traverse les murs</td><td>8</td><td>—</td></tr><tr><td>Projectile solide (Solid Shot)</td><td>Boulet inerte, moins perçant</td><td>3</td><td>—</td></tr><tr><td>Obus à shrapnel</td><td>50 éclats en cône, explosion 2</td><td>2</td><td>minuté ou de proximité</td></tr><tr><td>Sac de mitraille</td><td>25 balles dès la bouche</td><td>—</td><td>—</td></tr><tr><td>Obus fumigène</td><td>Nuage de 10 blocs pendant 15 s, sans dégâts</td><td>2</td><td>impact</td></tr><tr><td>Obus à fluide</td><td>2 000 mB projetés en 4 gerbes ; explosion 2</td><td>2</td><td>impact</td></tr><tr><td>Cône de signalisation</td><td>Clin d’œil des auteurs : 30 de masse</td><td>30</td><td>—</td></tr></tbody></table><p>La masse sert à percer : plus elle est grande, plus le projectile traverse de blocs avant de s'arrêter.</p>"
+    },
+    {
+      "id": "he",
+      "title": "L’obus explosif",
+      "image": "range_shells_he.webp",
+      "alt": "L’obus explosif éclate contre le mur",
+      "video": "range_shells",
+      "html": "<p>C'est l'obus à tout faire. Avec un détonateur à impact, il éclate au premier contact avec une puissance de 8 sur les blocs : contre un mur posé sur de la terre, il ouvre un cratère profond et fissure la pierre autour. Sans détonateur, il se plante sans exploser.</p>"
+    },
+    {
+      "id": "perforant",
+      "title": "Percer : boulets et obus perforants",
+      "image": "range_shells_ap.webp",
+      "alt": "Le boulet perforant ressort du mur",
+      "html": "<p>À chaque bloc touché, le jeu compare l'élan du projectile (masse × vitesse, avec un bonus au-dessus d'un bloc par tick) à la résistance du bloc. S'il l'emporte, le bloc casse et le projectile perd de la masse. Le <strong>boulet perforant</strong> (masse 8) traverse ainsi un mur de trois blocs de pierre taillée et file au-delà. L'<strong>obus perforant</strong> fait pareil, puis explose grâce à son détonateur de culot.</p>"
+    },
+    {
+      "id": "fumigene",
+      "title": "Fumigène et obus à fluide",
+      "image": "range_shells_fumigene.webp",
+      "alt": "Le nuage de l’obus fumigène",
+      "html": "<p>L'<strong>obus fumigène</strong> ne casse rien : il déploie un nuage blanc de 10 blocs qui dure 15 s, de quoi masquer une avance. L'<strong>obus à fluide</strong> se remplit de 2 000 mB d'un fluide, au <a href=\"/wiki/bec-verseur\">bec verseur</a> par exemple, et le projette en gerbes à l'impact : de l'eau éteint un incendie, de la lave en allume un.</p>"
+    },
+    {
+      "id": "shrapnel",
+      "title": "Shrapnel et mitraille",
+      "image": "cbc_munitions_boulets.webp",
+      "alt": "Boulets, mitraille, pierre de mortier et cône de signalisation",
+      "html": "<p>L'<strong>obus à shrapnel</strong> éclate en 50 éclats projetés en cône, qui fissurent les blocs et touchent tout ce qui est devant. Donne-lui un détonateur minuté ou de proximité pour qu'il éclate au-dessus de la cible. Le <strong>sac de mitraille</strong> s'ouvre dès la bouche en 25 balles : une arme à courte portée.</p>"
+    },
+    {
+      "id": "fabriquer",
+      "title": "Fabrication",
+      "html": "<p>Boulets et sacs se font à l'établi. Les obus explosif, à shrapnel et à fluide demandent un <a href=\"/wiki/etabli-mecanique\">établi mécanique</a> : du fer, une dalle en bois pour le culot et la charge, poudre ou nitro. Les détonateurs s'ajoutent ensuite, à la main ou au <a href=\"/wiki/deployeur\">déployeur</a>.</p>"
+    },
+    {
+      "id": "blindage",
+      "title": "Les blocs qui résistent",
+      "html": "<p>Pour percer, chaque bloc oppose sa résistance aux explosions, sauf quelques blocs « blindés » qui ont leur propre valeur : le bloc de fer vaut 9, le coffre-fort de Create 6, l'obsidienne, le béton et la terre cuite 4, le grès 4,5. Ainsi l'obsidienne, intouchable par une explosion, se laisse percer par un boulet. La terre (0,5) n'arrête presque rien.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Quel obus pour quelle cible",
+      "html": "<p>Contre un bâtiment, l'obus explosif. Contre un mur épais ou un blindage, le boulet ou l'obus perforant. Contre des créatures à découvert, le shrapnel réglé pour éclater au-dessus d'elles. Pour couvrir une manœuvre, le fumigène. Garde en tête que tous partagent la même balistique : seul l'effet à l'arrivée change.</p>"
+    }
+  ],
+  "related": [
+    "detonateurs-et-traceurs",
+    "poudre-et-cartouches",
+    "chargement-des-canons",
+    "create-big-cannons",
+    "etabli-mecanique",
+    "bec-verseur",
+    "deployeur"
+  ],
+  "sources": [
+    "Projectiles : munition_properties/projectiles/*.json (durability_mass, penetration, toughness, block_damaging_explosive_power, entity_damaging_explosive_power, shrapnel_count, smoke_scale, smoke_duration, fluid_shell_capacity)",
+    "Pénétration : AbstractBigCannonProjectile.calculateBlockPenetration (résistance aux explosions, block_armor, bonus de vitesse 0,1)",
+    "Recettes : recipe/solid_shot.json, he_shell.json (établi mécanique), shrapnel_shell.json, fluid_shell.json",
+    "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT), identiques au jar du modpack Create France",
+    "Tirs : scènes écrites pour ce wiki ; trajectoire calculée tick par tick avec les formules du mod (AbstractCannonProjectile.tick : traînée 0,01, gravité -0,05 bloc/tick², vitesse = charges utilisées, MountedBigCannonContraption.fireShot), explosions Explosion.explode + transformations de CBC",
+    "Images : blocs de munitions de CBC posés sur la plaque et rendus par notre moteur"
+  ],
+  "en": {
+    "slugEn": "big-cannon-shells",
+    "name": "Shells and shots",
+    "title": "Shells and Shots — Create Big Cannons guide",
+    "description": "Every Create Big Cannons projectile: HE, armor-piercing, solid shot, shrapnel, grapeshot, smoke and fluid shells. Effects, power, penetration, fuzes.",
+    "intro": "<strong>Create Big Cannons</strong> offers about ten projectiles for big cannons. <strong>Shells</strong> carry a filling and need a <a href=\"/en/wiki/fuzes-and-tracers\">fuze</a>; <strong>shots</strong> are solid and hit through their mass. Each one goes into the cannon in front of the powder, tip towards the muzzle. Here is what each one does, with the mod's numbers.",
+    "facts": [
+      {
+        "label": "HE shell",
+        "value": "Power 8 against blocks (TNT: 4), 30 damage on contact"
+      },
+      {
+        "label": "Penetration",
+        "value": "A block breaks if its blast resistance is below the shell's momentum (mass × speed)"
+      },
+      {
+        "label": "AP Shot",
+        "value": "Mass 8, 50 damage: goes through a stone brick wall"
+      },
+      {
+        "label": "Shrapnel",
+        "value": "50 fragments, spread 0.6"
+      },
+      {
+        "label": "Smoke",
+        "value": "10 × 10 × 10 block cloud, 300 ticks (15 s)"
+      },
+      {
+        "label": "Fluid Shell",
+        "value": "2,000 mB, 500 mB per blob"
+      },
+      {
+        "label": "Gravity / drag",
+        "value": "-0.05 block/tick² and 1% per tick for every big cannon shell"
+      },
+      {
+        "label": "Version",
+        "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Solid Shot (crafting table)",
+      "grid": [
+        [
+          "Iron Nugget",
+          "Iron Ingot",
+          "Iron Nugget"
+        ],
+        [
+          "Iron Ingot",
+          "Iron Ingot",
+          "Iron Ingot"
+        ],
+        [
+          null,
+          "Wooden Slab",
+          null
+        ]
+      ],
+      "result": "1 Solid Shot"
+    },
+    "videos": [
+      {
+        "id": "range_shells",
+        "name": "Three shells against three walls",
+        "description": "Three steel cannons fire at three thick walls 40 blocks away: the HE shell digs a crater, the AP shot goes through the wall and flies on, the smoke shell blankets the area (2× slow motion during the flights)."
+      }
+    ],
+    "sections": [
+      {
+        "id": "tableau",
+        "title": "The projectiles",
+        "alt": "CBC shells placed as blocks: HE, AP, shrapnel, smoke, fluid",
+        "html": "<table><thead><tr><th>Projectile</th><th>Effect</th><th>Mass</th><th>Fuze</th></tr></thead><tbody><tr><td>High Explosive (HE) Shell</td><td>Explodes: power 8 against blocks, 12 against mobs</td><td>2</td><td>impact (nose)</td></tr><tr><td>Armor Piercing (AP) Shell</td><td>Pierces, then explodes: power 5 (7 against mobs)</td><td>6</td><td>base</td></tr><tr><td>Armor Piercing (AP) Shot</td><td>Inert shot that goes through walls</td><td>8</td><td>—</td></tr><tr><td>Solid Shot</td><td>Inert shot, less piercing</td><td>3</td><td>—</td></tr><tr><td>Shrapnel Shell</td><td>50 fragments in a cone, explosion 2</td><td>2</td><td>timed or proximity</td></tr><tr><td>Bag of Grapeshot</td><td>25 balls straight from the muzzle</td><td>—</td><td>—</td></tr><tr><td>Smoke Shell</td><td>10-block cloud for 15 s, no damage</td><td>2</td><td>impact</td></tr><tr><td>Fluid Shell</td><td>2,000 mB thrown in 4 blobs; explosion 2</td><td>2</td><td>impact</td></tr><tr><td>Traffic Cone</td><td>An authors’ joke: mass 30</td><td>30</td><td>—</td></tr></tbody></table><p>Mass is what pierces: the larger it is, the more blocks the projectile goes through before it stops.</p>"
+      },
+      {
+        "id": "he",
+        "title": "The HE shell",
+        "alt": "The HE shell bursting against the wall",
+        "html": "<p>The all-round shell. With an impact fuze it bursts on first contact with a power of 8 against blocks: against a wall standing on dirt it opens a deep crater and cracks the stone around it. Without a fuze it just buries itself without exploding.</p>"
+      },
+      {
+        "id": "perforant",
+        "title": "Piercing: AP shots and shells",
+        "alt": "The AP shot coming out of the wall",
+        "html": "<p>For each block it hits, the game compares the projectile's momentum (mass × speed, with a bonus above one block per tick) with the block's resistance. If it wins, the block breaks and the projectile loses some mass. The <strong>AP Shot</strong> (mass 8) thus goes through a three-block stone brick wall and flies on. The <strong>AP Shell</strong> does the same, then explodes thanks to its base fuze.</p>"
+      },
+      {
+        "id": "fumigene",
+        "title": "Smoke and fluid shells",
+        "alt": "The Smoke Shell cloud",
+        "html": "<p>The <strong>Smoke Shell</strong> breaks nothing: it spreads a white 10-block cloud that lasts 15 s, enough to hide an advance. The <strong>Fluid Shell</strong> is filled with 2,000 mB of a fluid, with a <a href=\"/en/wiki/spout\">Spout</a> for instance, and throws it in blobs on impact: water puts out a fire, lava starts one.</p>"
+      },
+      {
+        "id": "shrapnel",
+        "title": "Shrapnel and grapeshot",
+        "alt": "Shots, grapeshot, Mortar Stone and Traffic Cone",
+        "html": "<p>The <strong>Shrapnel Shell</strong> bursts into 50 fragments thrown in a cone, which crack blocks and hit everything in front. Give it a timed or proximity fuze so it bursts above the target. The <strong>Bag of Grapeshot</strong> opens right at the muzzle into 25 balls: a short-range weapon.</p>"
+      },
+      {
+        "id": "fabriquer",
+        "title": "Crafting",
+        "html": "<p>Shots and bags are made on a crafting table. HE, shrapnel and fluid shells need a <a href=\"/en/wiki/mechanical-crafter\">Mechanical Crafter</a>: iron, a wooden slab for the base and the filling, powder or nitro. Fuzes are added afterwards, by hand or with a <a href=\"/en/wiki/deployer\">Deployer</a>.</p>"
+      },
+      {
+        "id": "blindage",
+        "title": "Blocks that resist",
+        "html": "<p>To pierce, every block opposes its blast resistance, except a few “armoured” blocks that have their own value: a Block of Iron counts as 9, Create's Item Vault 6, obsidian, concrete and terracotta 4, sandstone 4.5. So obsidian, untouchable by an explosion, can be pierced by a shot. Dirt (0.5) stops almost nothing, which is why craters dig deep into the ground.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Which shell for which target",
+        "html": "<p>Against a building, the HE shell. Against a thick wall or armour, the AP shot or shell. Against mobs in the open, shrapnel set to burst above them. To cover a move, smoke. Keep in mind that they all share the same ballistics: only the effect on arrival changes.</p>"
+      }
+    ],
+    "sources": [
+      "Projectiles: munition_properties/projectiles/*.json (durability_mass, penetration, toughness, block_damaging_explosive_power, entity_damaging_explosive_power, shrapnel_count, smoke_scale, smoke_duration, fluid_shell_capacity)",
+      "Penetration: AbstractBigCannonProjectile.calculateBlockPenetration (blast resistance, block_armor, speed bonus 0.1)",
+      "Recipes: recipe/solid_shot.json, he_shell.json (mechanical crafting), shrapnel_shell.json, fluid_shell.json",
+      "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence), identical to the Create France modpack jar",
+      "Shots: scenes written for this wiki; trajectory computed tick by tick with the mod's formulas (AbstractCannonProjectile.tick: drag 0.01, gravity -0.05 block/tick², speed = charges used, MountedBigCannonContraption.fireShot), explosions from Explosion.explode plus CBC's block transforms",
+      "Images: CBC munition blocks placed on the plate and rendered by our engine"
+    ]
+  }
+}
