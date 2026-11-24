@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 brûleur à blaze vide (il faut ensuite y capturer un blaze)"
+    "items": [
+      [
+        null,
+        "create:iron_sheet",
+        null
+      ],
+      [
+        "create:iron_sheet",
+        "minecraft:netherrack",
+        "create:iron_sheet"
+      ],
+      [
+        null,
+        "create:iron_sheet",
+        null
+      ]
+    ],
+    "result": "1 brûleur à blaze vide (il faut ensuite y capturer un blaze)",
+    "resultItem": "create:empty_blaze_burner"
   },
   "videos": [
     {
@@ -132,7 +150,9 @@
     "deployeur",
     "sifflet-a-vapeur",
     "planning-de-train",
-    "fabrication-des-canons"
+    "fabrication-des-canons",
+    "bruleur",
+    "tour-de-distillation"
   ],
   "sources": [
     "Niveaux : BlazeBurnerBlock.HeatLevel (NONE, SMOULDERING, FADING, KINDLED, SEETHING) ; BlazeBurnerBlockEntity.getHeatLevel (FADING sous 1,25 % de MAX_HEAT_CAPACITY)",

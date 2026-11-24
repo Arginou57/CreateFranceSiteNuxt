@@ -21,7 +21,9 @@
   "recipe": {
     "label": "Fabrication à l'établi",
     "grid": [[null, "Alliage d'andésite", null], ["Alliage d'andésite", "Lingot de fer", "Alliage d'andésite"], [null, "Boîtier d'andésite", null]],
-    "result": "1 perceuse mécanique"
+    "items": [[null, "create:andesite_alloy", null], ["create:andesite_alloy", "minecraft:iron_ingot", "create:andesite_alloy"], [null, "create:andesite_casing", null]],
+    "result": "1 perceuse mécanique",
+    "resultItem": "create:mechanical_drill"
   },
   "videos": [
     {

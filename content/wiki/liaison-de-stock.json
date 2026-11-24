@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 liaison de stock"
+    "items": [
+      [
+        null,
+        "create:transmitter",
+        null
+      ],
+      [
+        null,
+        "create:item_vault",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 liaison de stock",
+    "resultItem": "create:stock_link"
   },
   "videos": [],
   "sections": [

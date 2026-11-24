@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 coffre à objet renforcé"
+    "items": [
+      [
+        null,
+        "create:iron_sheet",
+        null
+      ],
+      [
+        null,
+        "minecraft:barrel",
+        null
+      ],
+      [
+        null,
+        "create:iron_sheet",
+        null
+      ]
+    ],
+    "result": "1 coffre à objet renforcé",
+    "resultItem": "create:item_vault"
   },
   "videos": [
     {

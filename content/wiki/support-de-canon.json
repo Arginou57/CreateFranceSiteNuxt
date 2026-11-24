@@ -63,7 +63,25 @@
         "Poudre à canon"
       ]
     ],
-    "result": "1 support de canon"
+    "items": [
+      [
+        "create:iron_sheet",
+        "create:shaft",
+        "create:iron_sheet"
+      ],
+      [
+        "create:shaft",
+        "create:andesite_casing",
+        "create:shaft"
+      ],
+      [
+        "minecraft:gunpowder",
+        "create:shaft",
+        "minecraft:gunpowder"
+      ]
+    ],
+    "result": "1 support de canon",
+    "resultItem": "createbigcannons:cannon_mount"
   },
   "videos": [
     {

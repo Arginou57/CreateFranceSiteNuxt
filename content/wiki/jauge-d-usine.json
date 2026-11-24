@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "2 jauges d'usine"
+    "items": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        "create:stock_link",
+        "create:precision_mechanism",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "2 jauges d'usine",
+    "resultItem": "create:factory_gauge"
   },
   "videos": [],
   "sections": [

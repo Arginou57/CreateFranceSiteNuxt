@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "2 roues à chaîne roulante"
+    "items": [
+      [
+        null,
+        "create:andesite_casing",
+        null
+      ],
+      [
+        "create:andesite_casing",
+        "create:large_cogwheel",
+        "create:andesite_casing"
+      ],
+      [
+        null,
+        "create:andesite_casing",
+        null
+      ]
+    ],
+    "result": "2 roues à chaîne roulante",
+    "resultItem": "create:chain_conveyor"
   },
   "videos": [],
   "sections": [

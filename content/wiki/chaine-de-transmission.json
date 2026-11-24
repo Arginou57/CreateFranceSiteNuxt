@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 chaîne de transmission"
+    "items": [
+      [
+        "create:andesite_casing",
+        "minecraft:iron_nugget",
+        "minecraft:iron_nugget"
+      ],
+      [
+        "minecraft:iron_nugget",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 chaîne de transmission",
+    "resultItem": "create:encased_chain_drive"
   },
   "videos": [
     {

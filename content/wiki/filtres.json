@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 filtre de liste"
+    "items": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        "minecraft:iron_nugget",
+        "minecraft:white_wool",
+        "minecraft:iron_nugget"
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 filtre de liste",
+    "resultItem": "create:filter"
   },
   "videos": [],
   "sections": [

@@ -55,7 +55,25 @@
         null
       ]
     ],
-    "result": "1 réemballeur"
+    "items": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "create:packager",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 réemballeur",
+    "resultItem": "create:repackager"
   },
   "videos": [
     {

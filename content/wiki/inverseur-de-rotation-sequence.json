@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 inverseur de rotation séquencé"
+    "items": [
+      [
+        "create:brass_casing",
+        "create:cogwheel",
+        "create:electron_tube"
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 inverseur de rotation séquencé",
+    "resultItem": "create:sequenced_gearshift"
   },
   "videos": [
     {

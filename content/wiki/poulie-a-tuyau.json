@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 poulie à tuyau"
+    "items": [
+      [
+        null,
+        "create:copper_casing",
+        null
+      ],
+      [
+        null,
+        "minecraft:dried_kelp_block",
+        null
+      ],
+      [
+        null,
+        "create:copper_sheet",
+        null
+      ]
+    ],
+    "result": "1 poulie à tuyau",
+    "resultItem": "create:hose_pulley"
   },
   "videos": [
     {

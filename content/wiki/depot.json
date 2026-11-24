@@ -55,7 +55,25 @@
         null
       ]
     ],
-    "result": "1 dépôt"
+    "items": [
+      [
+        "create:andesite_alloy",
+        "create:andesite_casing",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 dépôt",
+    "resultItem": "create:depot"
   },
   "videos": [
     {

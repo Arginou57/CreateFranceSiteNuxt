@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 pompe mécanique"
+    "items": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        "create:cogwheel",
+        "create:fluid_pipe",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 pompe mécanique",
+    "resultItem": "create:mechanical_pump"
   },
   "videos": [
     {
@@ -158,7 +176,9 @@
     "poulie-a-tuyau",
     "moteur-a-vapeur",
     "stressometre-compteur-de-vitesse",
-    "fabrication-des-canons"
+    "fabrication-des-canons",
+    "pompe-a-balancier",
+    "moteur-diesel"
   ],
   "sources": [
     "Recette : crafting/kinetics/mechanical_pump.json (sans forme)",

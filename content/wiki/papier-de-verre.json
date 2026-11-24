@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 papier de verre"
+    "items": [
+      [
+        "minecraft:paper",
+        "minecraft:sand",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 papier de verre",
+    "resultItem": "create:sand_paper"
   },
   "videos": [
     {

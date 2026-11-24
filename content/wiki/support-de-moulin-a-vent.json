@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 support de moulin à vent"
+    "items": [
+      [
+        null,
+        "minecraft:oak_slab",
+        null
+      ],
+      [
+        null,
+        "minecraft:stone",
+        null
+      ],
+      [
+        null,
+        "create:shaft",
+        null
+      ]
+    ],
+    "result": "1 support de moulin à vent",
+    "resultItem": "create:windmill_bearing"
   },
   "videos": [
     {

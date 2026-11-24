@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 piston mécanique"
+    "items": [
+      [
+        null,
+        "minecraft:oak_slab",
+        null
+      ],
+      [
+        null,
+        "create:andesite_casing",
+        null
+      ],
+      [
+        null,
+        "create:piston_extension_pole",
+        null
+      ]
+    ],
+    "result": "1 piston mécanique",
+    "resultItem": "create:mechanical_piston"
   },
   "videos": [
     {

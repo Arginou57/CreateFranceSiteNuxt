@@ -16,13 +16,18 @@
 // Communs aux deux langues (pris dans le français) : slug, blockId, category, dates, versions, related (slugs FR),
 // images et vidéos (/wiki-media/<slug-fr>/…). Tout champ absent de "en" reprend le français. Sans slugEn, la page
 // n'existe qu'en français. Dans le HTML anglais, les liens /wiki/<slug-fr> sont réécrits en /en/wiki/<slug-en>.
-// _categories.json : chaque catégorie a { id, name, description, en: { name, description } }.
+// _categories.json : chaque catégorie a { id, mod, icon, name, description, en: { name, description } } ; "mod" renvoie à
+// _mods.json (Create, Create Big Cannons, Create Diesel Generators… : ordre d'affichage, version, icône, parcours débutant).
+// Recettes (23/11) : "recipe.items" = la grille en identifiants d'objets (même forme que "grid", communs aux deux langues)
+// et "recipe.resultItem" ; les icônes sont dans public/wiki-items/<ns>/<chemin>.png (WIKI/recipe_items.py remplit les
+// identifiants, WIKI/recipe_icons.py dessine les icônes : à relancer quand une page apporte un nouvel objet).
 // Le sitemap (server/routes/sitemap.xml.ts), les hreflang et le sélecteur de langue suivent ces fichiers tout seuls.
 
 export type WikiLocale = 'fr' | 'en'
 
 export interface WikiFact { label: string; value: string }
-export interface WikiRecipe { label: string; grid: (string | null)[][]; result: string }
+/** grid = names shown in each language; items = the same grid as item ids (icons, links), resultItem = the crafted item. */
+export interface WikiRecipe { label: string; grid: (string | null)[][]; items?: (string | null)[][]; result: string; resultItem?: string }
 export interface WikiVideo { id: string; name: string; description: string; duration: string }
 export interface WikiSection { id: string; title: string; image?: string; alt?: string; video?: string; html: string }
 
@@ -69,7 +74,27 @@ export interface WikiPageView extends Omit<WikiPage, 'en'> {
   paths: { fr: string; en: string | null }
 }
 
-export interface WikiCategory { id: string; name: string; description: string; en?: { name?: string; description?: string } }
+export interface WikiCategory {
+  id: string
+  /** id of the mod the category belongs to (_mods.json) */
+  mod: string
+  /** item id whose icon stands for the category */
+  icon?: string
+  name: string
+  description: string
+  en?: { name?: string; description?: string }
+}
+
+/** _mods.json: one entry per mod covered by the wiki, in display order, with its beginner path. */
+export interface WikiMod {
+  id: string
+  name: string
+  version: string
+  icon: string
+  description: string
+  start: { slug: string; label: string }[]
+  en?: { name?: string; description?: string; start?: string[] }
+}
 
 const files = import.meta.glob('../content/wiki/*.json', { eager: true, import: 'default' }) as Record<string, unknown>
 
@@ -78,6 +103,7 @@ export const WIKI_LAUNCHER = '/launcher/CreateFrance-Launcher-Setup.exe'
 export const WIKI_DISCORD = 'https://discord.gg/JW7XQKPpVC'
 
 export const wikiCategories: WikiCategory[] = (files['../content/wiki/_categories.json'] as WikiCategory[]) || []
+export const wikiMods: WikiMod[] = (files['../content/wiki/_mods.json'] as WikiMod[]) || []
 
 /** Raw pages (French data + optional "en" object), sorted by French name. */
 export const wikiPages: WikiPage[] = Object.entries(files)
@@ -136,6 +162,7 @@ export function localizeWikiPage(page: WikiPage, locale: WikiLocale): WikiPageVi
     intro: html(en.intro || fr.intro),
     facts: fr.facts.map((f, i) => ({ label: en.facts?.[i]?.label || f.label, value: en.facts?.[i]?.value || f.value })),
     recipe: fr.recipe && {
+      ...fr.recipe,
       label: en.recipe?.label || fr.recipe.label,
       grid: sameShape(en.recipe?.grid) ? en.recipe!.grid! : fr.recipe.grid,
       result: en.recipe?.result || fr.recipe.result,
@@ -164,6 +191,64 @@ export function getWikiCategory(id: string, locale: WikiLocale = 'fr'): WikiCate
   const c = wikiCategories.find((x) => x.id === id)
   if (!c || locale !== 'en' || !c.en) return c
   return { ...c, name: c.en.name || c.name, description: c.en.description || c.description }
+}
+
+/** A mod in one language (the beginner path keeps only the pages that exist in that language). */
+export function getWikiMod(id: string, locale: WikiLocale = 'fr'): WikiMod | undefined {
+  const m = wikiMods.find((x) => x.id === id)
+  if (!m) return undefined
+  const en = locale === 'en' ? m.en : undefined
+  return {
+    ...m,
+    name: en?.name || m.name,
+    description: en?.description || m.description,
+    start: m.start.map((s, i) => ({ slug: s.slug, label: en?.start?.[i] || s.label })),
+  }
+}
+
+export interface WikiTreeMod extends WikiMod {
+  count: number
+  cats: (WikiCategory & { pages: WikiPageView[] })[]
+}
+
+/** Mods > categories > pages of one language, without the mods and categories that have no page yet. */
+export function wikiTree(locale: WikiLocale): WikiTreeMod[] {
+  const pages = wikiPagesIn(locale)
+  return wikiMods
+    .map((m) => {
+      const cats = wikiCategories
+        .filter((c) => c.mod === m.id)
+        .map((c) => ({ ...getWikiCategory(c.id, locale)!, pages: pages.filter((p) => p.category === c.id) }))
+        .filter((c) => c.pages.length)
+      return { ...getWikiMod(m.id, locale)!, cats, count: cats.reduce((n, c) => n + c.pages.length, 0) }
+    })
+    .filter((m) => m.count > 0)
+}
+
+/** Mod of a page (through its category). */
+export function wikiModOf(page: Pick<WikiPage, 'category'>): string {
+  return wikiCategories.find((c) => c.id === page.category)?.mod || 'create'
+}
+
+// Item icons (public/wiki-items/<namespace>/<path>.png, 128 px, rendered by WIKI/recipe_icons.py from the mod models).
+// Bump ICON_VERSION when the icons are re-rendered (Cloudflare caches them under the same URL).
+const ICON_VERSION = '1'
+
+/** Icon of an item id ("create:shaft"), or null for an empty slot. */
+export function wikiItemIcon(id: string | null | undefined): string | null {
+  if (!id || !id.includes(':')) return null
+  const [ns, path] = id.split(':')
+  return `/wiki-items/${ns}/${path}.png?v=${ICON_VERSION}`
+}
+
+/** Page that documents an item: its blockId, else the page whose recipe crafts it. */
+export function wikiPageForItem(id: string): WikiPage | undefined {
+  return wikiPages.find((p) => p.blockId === id) || wikiPages.find((p) => p.recipe?.resultItem === id)
+}
+
+/** Pages whose recipe uses this item (« sert à fabriquer »), the page itself excluded. */
+export function wikiPagesUsing(id: string, exceptSlug?: string): WikiPage[] {
+  return wikiPages.filter((p) => p.slug !== exceptSlug && p.recipe?.items?.some((row) => row.includes(id)))
 }
 
 // Cloudflare keeps /wiki-media/ 30 days under the same URL: every medium gets ?v=<dateModified of its page>, plus the

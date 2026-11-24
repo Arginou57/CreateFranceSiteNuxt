@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 contrôles de machine"
+    "items": [
+      [
+        null,
+        "minecraft:oak_button",
+        null
+      ],
+      [
+        null,
+        "create:andesite_casing",
+        null
+      ],
+      [
+        null,
+        "create:electron_tube",
+        null
+      ]
+    ],
+    "result": "1 contrôles de machine",
+    "resultItem": "create:contraption_controls"
   },
   "videos": [
     {

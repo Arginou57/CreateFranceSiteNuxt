@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 mixeur mécanique"
+    "items": [
+      [
+        null,
+        "create:cogwheel",
+        null
+      ],
+      [
+        null,
+        "create:andesite_casing",
+        null
+      ],
+      [
+        null,
+        "create:whisk",
+        null
+      ]
+    ],
+    "result": "1 mixeur mécanique",
+    "resultItem": "create:mechanical_mixer"
   },
   "videos": [
     {
@@ -119,7 +137,9 @@
     "bruleur-a-blaze",
     "presse-mecanique",
     "meule",
-    "tuyau-a-fluide-intelligent"
+    "tuyau-a-fluide-intelligent",
+    "carburants",
+    "blocs-diesel-generators"
   ],
   "sources": [
     "Stress : AllBlocks.java, MECHANICAL_MIXER, CStress.setImpact(4.0)",

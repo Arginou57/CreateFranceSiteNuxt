@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 colle extra-forte"
+    "items": [
+      [
+        "minecraft:slime_ball",
+        "create:iron_sheet",
+        null
+      ],
+      [
+        "minecraft:iron_nugget",
+        "minecraft:slime_ball",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 colle extra-forte",
+    "resultItem": "create:super_glue"
   },
   "videos": [
     {
@@ -180,7 +198,8 @@
     "piston-mecanique",
     "roulement-mecanique",
     "poulie-a-corde",
-    "chariot-de-portique"
+    "chariot-de-portique",
+    "pompe-a-balancier"
   ],
   "sources": [
     "Recettes : crafting/kinetics/super_glue.json, sticker.json",

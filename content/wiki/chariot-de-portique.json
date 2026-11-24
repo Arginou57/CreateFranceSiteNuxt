@@ -67,7 +67,25 @@
         null
       ]
     ],
-    "result": "8 rotors de portique"
+    "items": [
+      [
+        null,
+        "create:andesite_alloy",
+        null
+      ],
+      [
+        null,
+        "minecraft:redstone",
+        null
+      ],
+      [
+        null,
+        "create:andesite_alloy",
+        null
+      ]
+    ],
+    "result": "8 rotors de portique",
+    "resultItem": "create:gantry_shaft"
   },
   "videos": [
     {

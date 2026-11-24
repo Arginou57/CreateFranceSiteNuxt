@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 roulement mécanique"
+    "items": [
+      [
+        null,
+        "minecraft:oak_slab",
+        null
+      ],
+      [
+        null,
+        "create:andesite_casing",
+        null
+      ],
+      [
+        null,
+        "create:shaft",
+        null
+      ]
+    ],
+    "result": "1 roulement mécanique",
+    "resultItem": "create:mechanical_bearing"
   },
   "videos": [
     {
@@ -204,7 +222,8 @@
     "inverseur-de-rotation-sequence",
     "contact-de-redstone",
     "support-de-canon",
-    "fabrication-des-canons"
+    "fabrication-des-canons",
+    "pompe-a-balancier"
   ],
   "sources": [
     "Recettes : crafting/kinetics/mechanical_bearing.json, clockwork_bearing.json",

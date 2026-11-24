@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 égouttoir à objets"
+    "items": [
+      [
+        null,
+        "minecraft:iron_bars",
+        null
+      ],
+      [
+        null,
+        "create:copper_casing",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 égouttoir à objets",
+    "resultItem": "create:item_drain"
   },
   "videos": [
     {

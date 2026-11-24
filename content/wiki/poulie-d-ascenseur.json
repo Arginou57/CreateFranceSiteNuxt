@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 poulie d'ascenseur"
+    "items": [
+      [
+        null,
+        "create:brass_casing",
+        null
+      ],
+      [
+        null,
+        "minecraft:dried_kelp_block",
+        null
+      ],
+      [
+        null,
+        "create:iron_sheet",
+        null
+      ]
+    ],
+    "result": "1 poulie d'ascenseur",
+    "resultItem": "create:elevator_pulley"
   },
   "videos": [
     {

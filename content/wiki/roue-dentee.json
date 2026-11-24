@@ -55,7 +55,25 @@
         null
       ]
     ],
-    "result": "1 roue dentée (+ 1 planche de plus : grande roue dentée)"
+    "items": [
+      [
+        "create:shaft",
+        "minecraft:oak_planks",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 roue dentée (+ 1 planche de plus : grande roue dentée)",
+    "resultItem": "create:cogwheel"
   },
   "videos": [
     {

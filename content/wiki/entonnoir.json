@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "2 entonnoirs d'andésite (laiton : tube électronique + lingot de laiton + algue séchée)"
+    "items": [
+      [
+        null,
+        "create:andesite_alloy",
+        null
+      ],
+      [
+        null,
+        "minecraft:dried_kelp",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "2 entonnoirs d'andésite (laiton : tube électronique + lingot de laiton + algue séchée)",
+    "resultItem": "create:andesite_funnel"
   },
   "videos": [
     {

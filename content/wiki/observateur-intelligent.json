@@ -55,7 +55,25 @@
         null
       ]
     ],
-    "result": "1 observateur intelligent"
+    "items": [
+      [
+        null,
+        "create:electron_tube",
+        null
+      ],
+      [
+        null,
+        "create:brass_casing",
+        null
+      ],
+      [
+        null,
+        "minecraft:observer",
+        null
+      ]
+    ],
+    "result": "1 observateur intelligent",
+    "resultItem": "create:content_observer"
   },
   "videos": [
     {

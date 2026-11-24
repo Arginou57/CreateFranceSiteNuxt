@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 détecteur de seuil"
+    "items": [
+      [
+        null,
+        "create:electron_tube",
+        null
+      ],
+      [
+        null,
+        "create:brass_casing",
+        null
+      ],
+      [
+        null,
+        "minecraft:comparator",
+        null
+      ]
+    ],
+    "result": "1 détecteur de seuil",
+    "resultItem": "create:stockpile_switch"
   },
   "videos": [
     {

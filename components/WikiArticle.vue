@@ -4,10 +4,27 @@
       <ol>
         <li><NuxtLink :to="localePath('/')">{{ t('wiki.home') }}</NuxtLink></li>
         <li><NuxtLink :to="wikiHome">{{ t('wiki.wiki') }}</NuxtLink></li>
-        <li v-if="category"><NuxtLink :to="`${wikiHome}#${category.id}`">{{ category.name }}</NuxtLink></li>
+        <li v-if="mod"><NuxtLink :to="{ path: wikiHome, query: { mod: mod.id } }">{{ mod.name }}</NuxtLink></li>
+        <li v-if="category && category.name !== mod?.name"><NuxtLink :to="{ path: wikiHome, query: { mod: mod?.id, cat: category.id } }">{{ category.name }}</NuxtLink></li>
         <li aria-current="page">{{ page.name }}</li>
       </ol>
     </nav>
+
+    <WikiModBar class="wiki-modbar" :lang="lang" :active="mod?.id" />
+
+    <div class="wiki-tools">
+      <WikiSearch class="wiki-tools-search" shortcut />
+      <details class="wiki-browse">
+        <summary>{{ t('wiki.nav.browse') }}</summary>
+        <WikiNav :lang="lang" :current-slug="page.slug" :current-category="page.category" />
+      </details>
+    </div>
+
+    <div class="wiki-layout">
+    <aside class="wiki-side">
+      <p class="wiki-side-title">{{ t('wiki.nav.title') }}</p>
+      <WikiNav :lang="lang" :current-slug="page.slug" :current-category="page.category" />
+    </aside>
 
     <article class="wiki-article">
       <header class="wiki-head">
@@ -30,14 +47,17 @@
               <dd>{{ f.value }}</dd>
             </template>
           </dl>
-          <div v-if="page.recipe" class="wiki-recipe">
-            <p class="wiki-recipe-label">{{ page.recipe.label }}</p>
-            <div class="wiki-recipe-grid" role="table" :aria-label="t('wiki.recipeAria', { result: page.recipe.result })">
-              <div v-for="(row, i) in page.recipe.grid" :key="i" class="wiki-recipe-row" role="row">
-                <span v-for="(cell, j) in row" :key="j" class="wiki-recipe-cell" :class="{ empty: !cell }" role="cell">{{ cell || '' }}</span>
-              </div>
-            </div>
-            <p class="wiki-recipe-result">→ {{ page.recipe.result }}</p>
+          <WikiRecipe v-if="page.recipe" :recipe="page.recipe" :lang="lang" :slug="page.slug" />
+          <div v-if="usedIn.length" class="wiki-usedin">
+            <p class="wiki-usedin-label">{{ t('wiki.usedIn', { name: page.name }) }}</p>
+            <ul>
+              <li v-for="u in usedIn" :key="u.slug">
+                <NuxtLink :to="u.path">
+                  <img :src="wikiItemIcon(u.recipe?.resultItem || u.blockId)!" alt="" width="28" height="28" loading="lazy">
+                  {{ u.name }}
+                </NuxtLink>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -61,6 +81,18 @@
           <div class="wiki-step-text" v-html="s.html" />
         </div>
       </section>
+
+      <nav v-if="prev || next" class="wiki-prevnext" :aria-label="t('wiki.nav.prevnext', { category: category?.name || '' })">
+        <NuxtLink v-if="prev" :to="prev.path" class="wiki-card prev" rel="prev">
+          <small>← {{ t('wiki.nav.prev') }}</small>
+          <span><img :src="wikiItemIcon(prev.blockId)!" alt="" width="32" height="32" loading="lazy">{{ prev.name }}</span>
+        </NuxtLink>
+        <span v-else />
+        <NuxtLink v-if="next" :to="next.path" class="wiki-card next" rel="next">
+          <small>{{ t('wiki.nav.next') }} →</small>
+          <span>{{ next.name }}<img :src="wikiItemIcon(next.blockId)!" alt="" width="32" height="32" loading="lazy"></span>
+        </NuxtLink>
+      </nav>
 
       <WikiCta :lead="t('wiki.ctaLead', { name: page.name.toLowerCase() })" />
 
@@ -86,6 +118,7 @@
         <p>{{ t('wiki.credits') }}</p>
       </details>
     </article>
+    </div>
   </main>
 </template>
 
@@ -100,6 +133,18 @@ const lang = computed(() => props.page.locale)
 const wikiHome = computed(() => wikiHomePath(lang.value))
 const catName = (id: string) => getWikiCategory(id, lang.value)?.name
 const category = computed(() => getWikiCategory(props.page.category, lang.value))
+const mod = computed(() => getWikiMod(category.value?.mod || 'create', lang.value))
+// « sert à fabriquer » : pages whose recipe uses this page's item
+const usedIn = computed(() =>
+  wikiPagesUsing(props.page.blockId, props.page.slug)
+    .filter((p) => wikiPagePath(p, lang.value))
+    .map((p) => localizeWikiPage(p, lang.value)),
+)
+// previous / next page of the same category, in the order of the wiki home
+const siblings = computed(() => wikiPagesIn(lang.value).filter((p) => p.category === props.page.category))
+const pos = computed(() => siblings.value.findIndex((p) => p.slug === props.page.slug))
+const prev = computed(() => (pos.value > 0 ? siblings.value[pos.value - 1] : null))
+const next = computed(() => (pos.value >= 0 && pos.value < siblings.value.length - 1 ? siblings.value[pos.value + 1] : null))
 // related pages that exist in this language (no link to a page that is not translated yet)
 const related = computed(() =>
   props.page.related
@@ -150,17 +195,40 @@ function formatDate(d: string) {
 .wiki-facts dt { color: var(--text-muted); }
 .wiki-facts dd { color: var(--text-primary); }
 
-.wiki-recipe { margin-top: 1.1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
-.wiki-recipe-label { color: var(--text-muted); font-size: 0.78rem; margin-bottom: 0.5rem; }
-.wiki-recipe-grid { display: grid; gap: 4px; max-width: 16rem; }
-.wiki-recipe-row { display: grid; grid-template-columns: repeat(3, minmax(0, 5.2rem)); gap: 4px; }
-.wiki-recipe-cell {
-  min-height: 3.1rem; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0.25rem;
-  font-size: 0.66rem; line-height: 1.25; color: var(--text-primary);
-  background: rgba(0, 0, 0, 0.28); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 6px;
+.wiki-usedin { margin-top: 1rem; padding-top: 0.9rem; border-top: 1px solid var(--border); }
+.wiki-usedin-label { color: var(--text-muted); font-size: 0.78rem; margin-bottom: 0.5rem; }
+.wiki-usedin ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.wiki-usedin a {
+  display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.2rem 0.6rem 0.2rem 0.25rem; border-radius: 8px;
+  font-size: 0.8rem; text-decoration: none; color: var(--text-primary); background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
-.wiki-recipe-cell.empty { background: rgba(0, 0, 0, 0.14); }
-.wiki-recipe-result { color: var(--mandarine); font-size: 0.82rem; margin-top: 0.5rem; }
+.wiki-usedin a:hover { border-color: rgba(212, 118, 78, 0.4); }
+.wiki-usedin img { width: 28px; height: 28px; }
+
+.wiki-modbar { margin-top: 0.8rem; }
+.wiki-tools { display: grid; gap: 0.6rem; margin-top: 0.9rem; }
+.wiki-browse { border: 1px solid var(--glass-border); border-radius: 12px; background: var(--glass); }
+.wiki-browse > summary {
+  cursor: pointer; list-style: none; padding: 0.65rem 0.9rem; font-size: 0.85rem; color: var(--text-secondary);
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.wiki-browse > summary::-webkit-details-marker { display: none; }
+.wiki-browse > summary::before { content: '☰'; color: var(--terre-cuite-light); }
+.wiki-browse[open] > summary { border-bottom: 1px solid var(--border); }
+.wiki-browse > .wnav { padding: 0.5rem; max-height: 60vh; overflow-y: auto; }
+.wiki-layout { display: block; }
+.wiki-article { min-width: 0; }
+.wiki-side { display: none; }
+
+.wiki-prevnext { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-top: 2rem; }
+.wiki-prevnext a { display: flex; flex-direction: column; gap: 0.3rem; padding: 0.7rem 0.9rem; text-decoration: none; transition: border-color 0.2s; }
+.wiki-prevnext a:hover { border-color: rgba(212, 118, 78, 0.4); }
+.wiki-prevnext small { color: var(--text-muted); font-size: 0.72rem; }
+.wiki-prevnext span { display: flex; align-items: center; gap: 0.5rem; color: var(--text-primary); font-size: 0.88rem; font-weight: 500; }
+.wiki-prevnext .next { align-items: flex-end; text-align: right; }
+.wiki-prevnext .next span { justify-content: flex-end; }
+.wiki-prevnext img { width: 32px; height: 32px; flex: none; }
 
 .wiki-toc { margin: 0.4rem 0 1.4rem; padding: 0.9rem 1.1rem; border-left: 3px solid var(--terre-cuite); background: rgba(255, 255, 255, 0.025); border-radius: 0 10px 10px 0; }
 .wiki-toc p { font-family: 'Orbitron', sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1.2px; color: var(--terre-cuite-light); margin-bottom: 0.4rem; }
@@ -168,7 +236,7 @@ function formatDate(d: string) {
 .wiki-toc a { color: var(--text-secondary); text-decoration: none; font-size: 0.86rem; }
 .wiki-toc a:hover { color: var(--terre-cuite); }
 
-.wiki-step { padding: 1.4rem 0; border-top: 1px solid var(--border); scroll-margin-top: 5rem; }
+.wiki-step { padding: 1.4rem 0; border-top: 1px solid var(--border); scroll-margin-top: 8.5rem; }
 .wiki-step h2 { font-family: 'Orbitron', sans-serif; color: var(--terre-cuite); font-size: clamp(1.05rem, 3.6vw, 1.3rem); line-height: 1.3; margin-bottom: 0.9rem; }
 .wiki-step-body { display: grid; gap: 1rem; grid-template-columns: minmax(0, 1fr); }
 .wiki-step-media figure { margin: 0; }
@@ -198,6 +266,20 @@ function formatDate(d: string) {
 .wiki-sources ul { padding-left: 1.1rem; margin: 0.6rem 0; }
 .wiki-sources p { margin-top: 0.4rem; }
 
+@media (min-width: 1100px) {
+  .wiki-page { max-width: 1280px; }
+  .wiki-layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 2.2rem; align-items: start; }
+  .wiki-side {
+    display: block; position: sticky; top: 8rem; max-height: calc(100vh - 9rem); overflow-y: auto; padding: 0.4rem 0.3rem 1rem 0;
+    scrollbar-width: thin; scrollbar-color: rgba(212, 118, 78, 0.3) transparent;
+  }
+  .wiki-side-title {
+    font-family: 'Orbitron', sans-serif; font-size: 0.68rem; letter-spacing: 1.2px; text-transform: uppercase;
+    color: var(--text-muted); margin: 0 0 0.5rem 0.55rem;
+  }
+  .wiki-browse { display: none; }
+  .wiki-tools { max-width: 560px; margin-left: calc(250px + 2.2rem); }
+}
 @media (min-width: 760px) {
   .wiki-page { padding: 6.5rem 2rem 2rem; }
   .wiki-top { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: start; }

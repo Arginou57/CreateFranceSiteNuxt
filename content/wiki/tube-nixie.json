@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "4 tubes Nixie"
+    "items": [
+      [
+        "create:electron_tube",
+        "create:electron_tube",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "4 tubes Nixie",
+    "resultItem": "create:nixie_tube"
   },
   "videos": [
     {

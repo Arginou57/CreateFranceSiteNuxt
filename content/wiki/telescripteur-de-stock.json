@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 téléscripteur de stock"
+    "items": [
+      [
+        null,
+        "minecraft:glass",
+        null
+      ],
+      [
+        null,
+        "create:stock_link",
+        null
+      ],
+      [
+        null,
+        "minecraft:gold_ingot",
+        null
+      ]
+    ],
+    "result": "1 téléscripteur de stock",
+    "resultItem": "create:stock_ticker"
   },
   "videos": [],
   "sections": [

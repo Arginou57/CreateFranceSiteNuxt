@@ -97,7 +97,8 @@
     "ventilateur-enchasse",
     "tapis-roulant",
     "roue-a-eau",
-    "pierres-et-blocs-de-deco"
+    "pierres-et-blocs-de-deco",
+    "blocs-diesel-generators"
   ],
   "sources": [
     "Stress : AllBlocks.java, CRUSHING_WHEEL, CStress.setImpact(8.0)",

@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 éjecteur"
+    "items": [
+      [
+        null,
+        "create:golden_sheet",
+        null
+      ],
+      [
+        null,
+        "create:depot",
+        null
+      ],
+      [
+        null,
+        "create:cogwheel",
+        null
+      ]
+    ],
+    "result": "1 éjecteur",
+    "resultItem": "create:weighted_ejector"
   },
   "videos": [
     {

@@ -55,7 +55,25 @@
         null
       ]
     ],
-    "result": "1 boîte à roues dentées"
+    "items": [
+      [
+        null,
+        "create:cogwheel",
+        null
+      ],
+      [
+        "create:cogwheel",
+        "create:andesite_casing",
+        "create:cogwheel"
+      ],
+      [
+        null,
+        "create:cogwheel",
+        null
+      ]
+    ],
+    "result": "1 boîte à roues dentées",
+    "resultItem": "create:gearbox"
   },
   "videos": [
     {

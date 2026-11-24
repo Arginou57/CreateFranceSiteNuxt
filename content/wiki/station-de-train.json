@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "2 stations de train"
+    "items": [
+      [
+        "create:railway_casing",
+        "minecraft:compass",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "2 stations de train",
+    "resultItem": "create:track_station"
   },
   "videos": [
     {

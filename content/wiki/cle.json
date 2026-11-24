@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 clé"
+    "items": [
+      [
+        "create:golden_sheet",
+        "create:golden_sheet",
+        null
+      ],
+      [
+        "create:golden_sheet",
+        "create:cogwheel",
+        null
+      ],
+      [
+        null,
+        "minecraft:stick",
+        null
+      ]
+    ],
+    "result": "1 clé",
+    "resultItem": "create:wrench"
   },
   "videos": [
     {
@@ -135,7 +153,8 @@
     "lunettes-d-ingenieur",
     "support-de-canon",
     "culasses",
-    "autocanons"
+    "autocanons",
+    "moteur-diesel-modulaire"
   ],
   "sources": [
     "Recette : crafting/kinetics/wrench.json (plaques d’or, roue dentée, bâton)",

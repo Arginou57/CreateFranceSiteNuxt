@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 interface de stockage portable"
+    "items": [
+      [
+        "create:andesite_casing",
+        "create:chute",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 interface de stockage portable",
+    "resultItem": "create:portable_storage_interface"
   },
   "videos": [
     {

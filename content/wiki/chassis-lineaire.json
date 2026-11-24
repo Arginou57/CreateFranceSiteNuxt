@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "3 châssis linéaires"
+    "items": [
+      [
+        null,
+        "create:andesite_alloy",
+        null
+      ],
+      [
+        "minecraft:oak_log",
+        "minecraft:oak_log",
+        "minecraft:oak_log"
+      ],
+      [
+        null,
+        "create:andesite_alloy",
+        null
+      ]
+    ],
+    "result": "3 châssis linéaires",
+    "resultItem": "create:linear_chassis"
   },
   "videos": [
     {

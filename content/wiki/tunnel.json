@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "2 tunnels de laiton"
+    "items": [
+      [
+        "create:electron_tube",
+        null,
+        null
+      ],
+      [
+        "create:brass_ingot",
+        "create:brass_ingot",
+        null
+      ],
+      [
+        "minecraft:dried_kelp",
+        "minecraft:dried_kelp",
+        null
+      ]
+    ],
+    "result": "2 tunnels de laiton",
+    "resultItem": "create:brass_tunnel"
   },
   "videos": [
     {

@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 paire de lunettes d'ingénieur"
+    "items": [
+      [
+        null,
+        "minecraft:string",
+        null
+      ],
+      [
+        "minecraft:glass",
+        "create:golden_sheet",
+        "minecraft:glass"
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 paire de lunettes d'ingénieur",
+    "resultItem": "create:goggles"
   },
   "videos": [],
   "sections": [

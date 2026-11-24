@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 assembleur de wagonnet"
+    "items": [
+      [
+        "create:andesite_alloy",
+        "minecraft:redstone",
+        "create:andesite_alloy"
+      ],
+      [
+        "minecraft:oak_log",
+        null,
+        "minecraft:oak_log"
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 assembleur de wagonnet",
+    "resultItem": "create:cart_assembler"
   },
   "videos": [
     {

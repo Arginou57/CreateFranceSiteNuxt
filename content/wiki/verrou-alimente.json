@@ -63,7 +63,25 @@
         "Pierre"
       ]
     ],
-    "result": "1 verrou alimenté"
+    "items": [
+      [
+        null,
+        "minecraft:redstone_torch",
+        null
+      ],
+      [
+        "minecraft:redstone",
+        "minecraft:lever",
+        "minecraft:redstone"
+      ],
+      [
+        "minecraft:stone",
+        "minecraft:stone",
+        "minecraft:stone"
+      ]
+    ],
+    "result": "1 verrou alimenté",
+    "resultItem": "create:powered_latch"
   },
   "videos": [
     {

@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "4 tuyaux à fluide"
+    "items": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        "create:copper_sheet",
+        "minecraft:copper_ingot",
+        "create:copper_sheet"
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "4 tuyaux à fluide",
+    "resultItem": "create:fluid_pipe"
   },
   "videos": [
     {
@@ -172,7 +190,9 @@
     "bec-verseur",
     "egouttoir-a-objets",
     "bassin",
-    "fabrication-des-canons"
+    "fabrication-des-canons",
+    "pompe-a-balancier",
+    "blocs-diesel-generators"
   ],
   "sources": [
     "Recette : crafting/kinetics/fluid_pipe.json (4 tuyaux), fluid_valve.json",

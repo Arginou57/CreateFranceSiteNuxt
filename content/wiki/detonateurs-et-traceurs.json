@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "4 détonateurs minutés"
+    "items": [
+      [
+        null,
+        "minecraft:iron_ingot",
+        null
+      ],
+      [
+        null,
+        "minecraft:clock",
+        null
+      ],
+      [
+        null,
+        "minecraft:redstone",
+        null
+      ]
+    ],
+    "result": "4 détonateurs minutés",
+    "resultItem": "createbigcannons:timed_fuze"
   },
   "videos": [
     {

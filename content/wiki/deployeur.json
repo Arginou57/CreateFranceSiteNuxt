@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 déployeur"
+    "items": [
+      [
+        null,
+        "create:electron_tube",
+        null
+      ],
+      [
+        null,
+        "create:andesite_casing",
+        null
+      ],
+      [
+        null,
+        "create:brass_hand",
+        null
+      ]
+    ],
+    "result": "1 déployeur",
+    "resultItem": "create:deployer"
   },
   "videos": [
     {

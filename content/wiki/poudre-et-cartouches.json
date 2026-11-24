@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 charge de poudre"
+    "items": [
+      [
+        "createbigcannons:packed_gunpowder",
+        "createbigcannons:empty_powder_charge",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 charge de poudre",
+    "resultItem": "createbigcannons:powder_charge"
   },
   "videos": [
     {

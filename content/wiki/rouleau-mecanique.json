@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 rouleau mécanique"
+    "items": [
+      [
+        null,
+        "create:electron_tube",
+        null
+      ],
+      [
+        null,
+        "create:andesite_casing",
+        null
+      ],
+      [
+        null,
+        "create:crushing_wheel",
+        null
+      ]
+    ],
+    "result": "1 rouleau mécanique",
+    "resultItem": "create:mechanical_roller"
   },
   "videos": [
     {

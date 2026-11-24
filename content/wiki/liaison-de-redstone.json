@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "2 liaisons de redstone"
+    "items": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "create:transmitter",
+        null
+      ],
+      [
+        null,
+        "create:andesite_casing",
+        null
+      ]
+    ],
+    "result": "2 liaisons de redstone",
+    "resultItem": "create:redstone_link"
   },
   "videos": [
     {

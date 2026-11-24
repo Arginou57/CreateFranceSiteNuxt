@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 interface de fluide portable"
+    "items": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        "create:copper_casing",
+        "create:chute",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 interface de fluide portable",
+    "resultItem": "create:portable_fluid_interface"
   },
   "videos": [
     {

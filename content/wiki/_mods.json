@@ -1,0 +1,88 @@
+[
+  {
+    "id": "create",
+    "name": "Create",
+    "version": "6.0.8",
+    "icon": "create:cogwheel",
+    "description": "Le mod de base : rotation, machines, logistique, fluides, trains et contraptions. Commence ici si tu découvres Create.",
+    "start": [
+      { "slug": "roue-a-eau", "label": "Produire de la rotation" },
+      { "slug": "rotor", "label": "La transmettre avec des rotors" },
+      { "slug": "roue-dentee", "label": "Changer de direction et de vitesse" },
+      { "slug": "stressometre-compteur-de-vitesse", "label": "Comprendre le stress" },
+      { "slug": "presse-mecanique", "label": "Construire sa première machine" },
+      { "slug": "tapis-roulant", "label": "Déplacer les objets" },
+      { "slug": "mixeur-mecanique", "label": "Mélanger dans un bassin" },
+      { "slug": "moteur-a-vapeur", "label": "Passer à la vapeur" }
+    ],
+    "en": {
+      "description": "The base mod: rotation, machines, logistics, fluids, trains and contraptions. Start here if you are new to Create.",
+      "start": [
+        "Generate rotation",
+        "Carry it with shafts",
+        "Change direction and speed",
+        "Understand stress",
+        "Build your first machine",
+        "Move items around",
+        "Mix in a basin",
+        "Go steam-powered"
+      ]
+    }
+  },
+  {
+    "id": "cbc",
+    "name": "Create Big Cannons",
+    "version": "5.11.7",
+    "icon": "createbigcannons:cannon_mount",
+    "description": "L'artillerie du modpack : monter un canon, le charger, choisir sa poudre et ses obus, fabriquer des fûts, autocanons et mortiers.",
+    "start": [
+      { "slug": "create-big-cannons", "label": "Vue d'ensemble et premier tir" },
+      { "slug": "support-de-canon", "label": "Monter et viser le canon" },
+      { "slug": "materiaux-des-canons", "label": "Choisir le matériau" },
+      { "slug": "chargement-des-canons", "label": "Charger le canon" },
+      { "slug": "poudre-et-cartouches", "label": "Doser la poudre" },
+      { "slug": "obus-de-canon", "label": "Choisir ses obus" }
+    ],
+    "en": {
+      "description": "The modpack's artillery: mount a cannon, load it, pick powder and shells, craft barrels, autocannons and mortars.",
+      "start": [
+        "Overview and first shot",
+        "Mount and aim the cannon",
+        "Pick the material",
+        "Load the cannon",
+        "Measure the powder",
+        "Pick your shells"
+      ]
+    }
+  },
+  {
+    "id": "diesel",
+    "name": "Create Diesel Generators",
+    "version": "1.3.15",
+    "icon": "createdieselgenerators:diesel_engine",
+    "description": "Pétrole, raffinage et moteurs diesel : une source de rotation puissante alimentée par des carburants.",
+    "start": [
+      { "slug": "create-diesel-generators", "label": "Vue d'ensemble du mod" },
+      { "slug": "gisements-de-petrole", "label": "Trouver du pétrole" },
+      { "slug": "pompe-a-balancier", "label": "Le pomper" },
+      { "slug": "tour-de-distillation", "label": "Le raffiner" },
+      { "slug": "carburants", "label": "Choisir son carburant" },
+      { "slug": "moteur-diesel", "label": "Premier moteur diesel" },
+      { "slug": "moteur-diesel-modulaire", "label": "Moteur plus puissant" },
+      { "slug": "moteur-diesel-enorme", "label": "Le plus gros moteur" }
+    ],
+    "en": {
+      "description": "Oil, refining and diesel engines: a powerful rotation source fed with fuels.",
+      "start": [
+        "Mod overview",
+        "Find oil",
+        "Pump it",
+        "Refine it",
+        "Pick your fuel",
+        "First diesel engine",
+        "A stronger engine",
+        "The biggest engine"
+      ]
+    }
+  }
+]

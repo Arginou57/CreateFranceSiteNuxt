@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "2 observateurs de train"
+    "items": [
+      [
+        "create:railway_casing",
+        "minecraft:oak_pressure_plate",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "2 observateurs de train",
+    "resultItem": "create:track_observer"
   },
   "videos": [
     {

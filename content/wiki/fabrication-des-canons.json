@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 perceuse de canon"
+    "items": [
+      [
+        null,
+        "minecraft:iron_ingot",
+        null
+      ],
+      [
+        "create:fluid_pipe",
+        "create:andesite_casing",
+        "create:fluid_pipe"
+      ],
+      [
+        null,
+        "create:piston_extension_pole",
+        null
+      ]
+    ],
+    "result": "1 perceuse de canon",
+    "resultItem": "createbigcannons:cannon_drill"
   },
   "videos": [
     {

@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 bec verseur"
+    "items": [
+      [
+        null,
+        "create:copper_casing",
+        null
+      ],
+      [
+        null,
+        "minecraft:dried_kelp",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 bec verseur",
+    "resultItem": "create:spout"
   },
   "videos": [
     {
@@ -136,7 +154,8 @@
     "pompe-mecanique",
     "egouttoir-a-objets",
     "bras-mecanique",
-    "obus-de-canon"
+    "obus-de-canon",
+    "outils-diesel-generators"
   ],
   "sources": [
     "Recette : crafting/kinetics/spout.json",

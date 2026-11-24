@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 contrôleur de vitesse de rotation"
+    "items": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "create:precision_mechanism",
+        null
+      ],
+      [
+        null,
+        "create:brass_casing",
+        null
+      ]
+    ],
+    "result": "1 contrôleur de vitesse de rotation",
+    "resultItem": "create:rotation_speed_controller"
   },
   "videos": [
     {

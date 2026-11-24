@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 chargeur de canon"
+    "items": [
+      [
+        null,
+        "minecraft:gunpowder",
+        null
+      ],
+      [
+        null,
+        "create:andesite_casing",
+        null
+      ],
+      [
+        null,
+        "create:piston_extension_pole",
+        null
+      ]
+    ],
+    "result": "1 chargeur de canon",
+    "resultItem": "createbigcannons:cannon_loader"
   },
   "videos": [
     {

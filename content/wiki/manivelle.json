@@ -55,7 +55,25 @@
         null
       ]
     ],
-    "result": "1 manivelle"
+    "items": [
+      [
+        "minecraft:oak_planks",
+        "minecraft:oak_planks",
+        "minecraft:oak_planks"
+      ],
+      [
+        null,
+        null,
+        "create:andesite_alloy"
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 manivelle",
+    "resultItem": "create:hand_crank"
   },
   "videos": [
     {

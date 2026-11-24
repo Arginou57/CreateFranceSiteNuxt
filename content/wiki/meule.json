@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 meule"
+    "items": [
+      [
+        null,
+        "create:cogwheel",
+        null
+      ],
+      [
+        null,
+        "create:andesite_casing",
+        null
+      ],
+      [
+        null,
+        "minecraft:stone",
+        null
+      ]
+    ],
+    "result": "1 meule",
+    "resultItem": "create:millstone"
   },
   "videos": [
     {

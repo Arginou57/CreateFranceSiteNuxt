@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "3 établis mécaniques"
+    "items": [
+      [
+        null,
+        "create:electron_tube",
+        null
+      ],
+      [
+        null,
+        "create:brass_casing",
+        null
+      ],
+      [
+        null,
+        "minecraft:crafting_table",
+        null
+      ]
+    ],
+    "result": "3 établis mécaniques",
+    "resultItem": "create:mechanical_crafter"
   },
   "videos": [],
   "sections": [

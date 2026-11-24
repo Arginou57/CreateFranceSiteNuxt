@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 bras mécanique"
+    "items": [
+      [
+        "create:brass_sheet",
+        "create:brass_sheet",
+        "create:andesite_alloy"
+      ],
+      [
+        "create:brass_sheet",
+        null,
+        null
+      ],
+      [
+        "create:precision_mechanism",
+        "create:brass_casing",
+        null
+      ]
+    ],
+    "result": "1 bras mécanique",
+    "resultItem": "create:mechanical_arm"
   },
   "videos": [
     {

@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 tapis roulant (un seul suffit pour toute la longueur)"
+    "items": [
+      [
+        "minecraft:dried_kelp",
+        "minecraft:dried_kelp",
+        "minecraft:dried_kelp"
+      ],
+      [
+        "minecraft:dried_kelp",
+        "minecraft:dried_kelp",
+        "minecraft:dried_kelp"
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 tapis roulant (un seul suffit pour toute la longueur)",
+    "resultItem": "create:belt_connector"
   },
   "videos": [
     {

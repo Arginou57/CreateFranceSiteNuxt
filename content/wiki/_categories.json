@@ -1,6 +1,8 @@
 [
   {
     "id": "cinetique",
+    "mod": "create",
+    "icon": "create:cogwheel",
     "name": "Cinétique",
     "description": "Produire et transmettre la rotation : arbres, roues dentées, moteurs, moulins, boîtes de vitesses, et la gestion du stress.",
     "en": {
@@ -10,6 +12,8 @@
   },
   {
     "id": "traitement",
+    "mod": "create",
+    "icon": "create:mechanical_press",
     "name": "Traitement",
     "description": "Transformer les objets : presse, mélangeur, broyeur, meule, ventilateur, bassin et brûleur à blaze.",
     "en": {
@@ -19,6 +23,8 @@
   },
   {
     "id": "logistique",
+    "mod": "create",
+    "icon": "create:andesite_funnel",
     "name": "Logistique",
     "description": "Déplacer et trier les objets : tapis roulants, entonnoirs, tunnels, bras mécaniques, dépôts et coffres-forts.",
     "en": {
@@ -28,6 +34,8 @@
   },
   {
     "id": "colis",
+    "mod": "create",
+    "icon": "create:packager",
     "name": "Réseau de colis",
     "description": "Create 6 : emballer, adresser et livrer des colis entre entrepôts, avec roues à chaîne, crapauports, boîtes aux lettres, téléscripteurs et jauges d'usine.",
     "en": {
@@ -37,6 +45,8 @@
   },
   {
     "id": "fluides",
+    "mod": "create",
+    "icon": "create:fluid_pipe",
     "name": "Fluides",
     "description": "Pomper, stocker et utiliser les liquides : tuyaux, pompes, réservoirs, becs verseurs et égouttoirs.",
     "en": {
@@ -46,6 +56,8 @@
   },
   {
     "id": "trains",
+    "mod": "create",
+    "icon": "create:track_station",
     "name": "Trains",
     "description": "Construire un réseau ferré : rails, gares, signaux, assemblage des trains et horaires automatiques.",
     "en": {
@@ -55,6 +67,8 @@
   },
   {
     "id": "contraptions",
+    "mod": "create",
+    "icon": "create:mechanical_bearing",
     "name": "Contraptions",
     "description": "Faire bouger des blocs : pistons mécaniques, roulements, portiques, perceuses, scies et colle.",
     "en": {
@@ -64,6 +78,8 @@
   },
   {
     "id": "redstone",
+    "mod": "create",
+    "icon": "create:redstone_link",
     "name": "Redstone",
     "description": "Commander les machines : liens redstone, compteurs, détecteurs, horloges et contrôleurs de vitesse.",
     "en": {
@@ -73,6 +89,8 @@
   },
   {
     "id": "outils",
+    "mod": "create",
+    "icon": "create:wrench",
     "name": "Outils et équipement",
     "description": "La clé, les lunettes d'ingénieur, la main extensible, le canon à pomme de terre, le réservoir dorsal et l'équipement de plongée, le papier de verre, les filtres et le presse-papiers.",
     "en": {
@@ -82,6 +100,8 @@
   },
   {
     "id": "deco",
+    "mod": "create",
+    "icon": "create:cut_asurine",
     "name": "Décoration",
     "description": "Les pierres de Create et leurs variantes, les tuiles de cuivre, les verres encadrés, les échafaudages et les portes coulissantes.",
     "en": {
@@ -91,11 +111,24 @@
   },
   {
     "id": "cbc",
+    "mod": "cbc",
+    "icon": "createbigcannons:cannon_mount",
     "name": "Create Big Cannons",
     "description": "L'artillerie du modpack : supports de canon, culasses, chargement, poudre et portées, obus et fusées, fabrication des canons, autocanons et mortiers (Create Big Cannons 5.11.7).",
     "en": {
       "name": "Create Big Cannons",
       "description": "The modpack's artillery: cannon mounts, breeches, loading, powder and ranges, shells and fuzes, cannon crafting, autocannons and mortars (Create Big Cannons 5.11.7)."
+    }
+  },
+  {
+    "id": "diesel",
+    "mod": "diesel",
+    "icon": "createdieselgenerators:diesel_engine",
+    "name": "Create Diesel Generators",
+    "description": "Moteurs diesel, carburants, pompe à balancier et gisements de pétrole, distillation et raffinage (Create Diesel Generators 1.3.15).",
+    "en": {
+      "name": "Create Diesel Generators",
+      "description": "Diesel engines, fuels, pumpjack and oil deposits, distillation and refining (Create Diesel Generators 1.3.15)."
     }
   }
 ]

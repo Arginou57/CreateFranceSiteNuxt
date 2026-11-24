@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 lampe à quartz rose"
+    "items": [
+      [
+        "create:polished_rose_quartz",
+        "minecraft:redstone",
+        "create:zinc_ingot"
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 lampe à quartz rose",
+    "resultItem": "create:rose_quartz_lamp"
   },
   "videos": [
     {

@@ -55,7 +55,25 @@
         null
       ]
     ],
-    "result": "1 compteur de vitesse (stressomètre : convertir un compteur de vitesse à l'établi)"
+    "items": [
+      [
+        null,
+        "minecraft:compass",
+        null
+      ],
+      [
+        null,
+        "create:andesite_casing",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 compteur de vitesse (stressomètre : convertir un compteur de vitesse à l'établi)",
+    "resultItem": "create:speedometer"
   },
   "videos": [
     {
@@ -125,7 +143,8 @@
     "moteur-a-vapeur",
     "controleur-de-vitesse-de-rotation",
     "lunettes-d-ingenieur",
-    "moteur-creatif"
+    "moteur-creatif",
+    "moteur-diesel"
   ],
   "sources": [
     "Stress : AllBlocks.java, SPEEDOMETER et STRESSOMETER, CStress.setNoImpact()",

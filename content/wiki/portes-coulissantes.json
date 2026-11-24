@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 porte de train"
+    "items": [
+      [
+        "minecraft:oak_door",
+        "create:railway_casing",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 porte de train",
+    "resultItem": "create:train_door"
   },
   "videos": [
     {

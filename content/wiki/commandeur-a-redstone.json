@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 commandeur à redstone"
+    "items": [
+      [
+        null,
+        "minecraft:redstone",
+        null
+      ],
+      [
+        null,
+        "create:stock_link",
+        null
+      ],
+      [
+        null,
+        "minecraft:iron_ingot",
+        null
+      ]
+    ],
+    "result": "1 commandeur à redstone",
+    "resultItem": "create:redstone_requester"
   },
   "videos": [],
   "sections": [

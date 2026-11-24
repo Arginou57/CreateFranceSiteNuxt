@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "4 signaux de train"
+    "items": [
+      [
+        "create:railway_casing",
+        "create:electron_tube",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "4 signaux de train",
+    "resultItem": "create:track_signal"
   },
   "videos": [
     {

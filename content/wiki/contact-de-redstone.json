@@ -63,7 +63,25 @@
         "Pierre"
       ]
     ],
-    "result": "2 contacts de redstone"
+    "items": [
+      [
+        null,
+        "create:iron_sheet",
+        null
+      ],
+      [
+        "minecraft:cobblestone",
+        "minecraft:redstone",
+        "minecraft:cobblestone"
+      ],
+      [
+        "minecraft:cobblestone",
+        "minecraft:cobblestone",
+        "minecraft:cobblestone"
+      ]
+    ],
+    "result": "2 contacts de redstone",
+    "resultItem": "create:redstone_contact"
   },
   "videos": [
     {

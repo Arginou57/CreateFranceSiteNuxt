@@ -55,7 +55,25 @@
         null
       ]
     ],
-    "result": "1 boîte aux lettres blanche"
+    "items": [
+      [
+        null,
+        "minecraft:white_dye",
+        null
+      ],
+      [
+        null,
+        "minecraft:barrel",
+        null
+      ],
+      [
+        null,
+        "create:andesite_alloy",
+        null
+      ]
+    ],
+    "result": "1 boîte aux lettres blanche",
+    "resultItem": "create:white_postbox"
   },
   "videos": [],
   "sections": [

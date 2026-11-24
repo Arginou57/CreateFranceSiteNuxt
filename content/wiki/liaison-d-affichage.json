@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 liaison d'affichage"
+    "items": [
+      [
+        null,
+        "create:transmitter",
+        null
+      ],
+      [
+        null,
+        "create:brass_casing",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 liaison d'affichage",
+    "resultItem": "create:display_link"
   },
   "videos": [],
   "sections": [
@@ -136,7 +154,8 @@
     "station-de-train",
     "poulie-d-ascenseur",
     "liaison-de-redstone",
-    "tube-nixie"
+    "tube-nixie",
+    "gisements-de-petrole"
   ],
   "sources": [
     "Portée : CLogistics.displayLinkRange = 64",

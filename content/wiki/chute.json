@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "4 chutes"
+    "items": [
+      [
+        null,
+        "create:iron_sheet",
+        null
+      ],
+      [
+        null,
+        "minecraft:iron_ingot",
+        null
+      ],
+      [
+        null,
+        "create:iron_sheet",
+        null
+      ]
+    ],
+    "result": "4 chutes",
+    "resultItem": "create:chute"
   },
   "videos": [
     {

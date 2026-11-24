@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 inverseur de rotation"
+    "items": [
+      [
+        "create:andesite_casing",
+        "create:cogwheel",
+        "minecraft:redstone"
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 inverseur de rotation",
+    "resultItem": "create:gearshift"
   },
   "videos": [
     {

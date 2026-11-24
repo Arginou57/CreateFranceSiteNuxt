@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 récolteur mécanique"
+    "items": [
+      [
+        "create:andesite_alloy",
+        "create:iron_sheet",
+        "create:andesite_alloy"
+      ],
+      [
+        "create:andesite_alloy",
+        "create:iron_sheet",
+        "create:andesite_alloy"
+      ],
+      [
+        null,
+        "create:andesite_casing",
+        null
+      ]
+    ],
+    "result": "1 récolteur mécanique",
+    "resultItem": "create:mechanical_harvester"
   },
   "videos": [
     {

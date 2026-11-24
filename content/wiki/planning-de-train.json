@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "4 plannings de train"
+    "items": [
+      [
+        "create:sturdy_sheet",
+        "minecraft:paper",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "4 plannings de train",
+    "resultItem": "create:schedule"
   },
   "videos": [
     {

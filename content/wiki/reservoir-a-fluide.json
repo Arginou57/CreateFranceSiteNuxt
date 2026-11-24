@@ -67,7 +67,25 @@
         null
       ]
     ],
-    "result": "1 réservoir à fluide"
+    "items": [
+      [
+        null,
+        "create:copper_sheet",
+        null
+      ],
+      [
+        null,
+        "minecraft:barrel",
+        null
+      ],
+      [
+        null,
+        "create:copper_sheet",
+        null
+      ]
+    ],
+    "result": "1 réservoir à fluide",
+    "resultItem": "create:fluid_tank"
   },
   "videos": [
     {
@@ -175,7 +193,9 @@
     "egouttoir-a-objets",
     "detecteur-de-seuil",
     "observateur-de-train",
-    "lunettes-d-ingenieur"
+    "lunettes-d-ingenieur",
+    "tour-de-distillation",
+    "carburants"
   ],
   "sources": [
     "Recette : crafting/kinetics/fluid_tank.json",

@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 minuteur à impulsions"
+    "items": [
+      [
+        "minecraft:amethyst_shard",
+        "create:brass_sheet",
+        "minecraft:redstone_torch"
+      ],
+      [
+        "minecraft:stone",
+        "minecraft:stone",
+        "minecraft:stone"
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 minuteur à impulsions",
+    "resultItem": "create:pulse_timer"
   },
   "videos": [
     {

@@ -55,7 +55,25 @@
         null
       ]
     ],
-    "result": "8 rotors"
+    "items": [
+      [
+        null,
+        "create:andesite_alloy",
+        null
+      ],
+      [
+        null,
+        "create:andesite_alloy",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "8 rotors",
+    "resultItem": "create:shaft"
   },
   "videos": [
     {
@@ -119,7 +137,8 @@
     "chaine-de-transmission",
     "cle",
     "reservoir-dorsal",
-    "moteur-creatif"
+    "moteur-creatif",
+    "moteur-diesel-enorme"
   ],
   "sources": [
     "Stress : AllBlocks.java, SHAFT, CStress.setNoImpact()",

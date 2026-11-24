@@ -55,7 +55,25 @@
         "Planches"
       ]
     ],
-    "result": "1 roue à eau (une roue à eau au centre : grande roue à eau)"
+    "items": [
+      [
+        "minecraft:oak_planks",
+        "minecraft:oak_planks",
+        "minecraft:oak_planks"
+      ],
+      [
+        "minecraft:oak_planks",
+        "create:shaft",
+        "minecraft:oak_planks"
+      ],
+      [
+        "minecraft:oak_planks",
+        "minecraft:oak_planks",
+        "minecraft:oak_planks"
+      ]
+    ],
+    "result": "1 roue à eau (une roue à eau au centre : grande roue à eau)",
+    "resultItem": "create:water_wheel"
   },
   "videos": [
     {

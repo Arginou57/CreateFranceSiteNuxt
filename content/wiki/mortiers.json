@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 obus de mortier"
+    "items": [
+      [
+        null,
+        "minecraft:tnt",
+        null
+      ],
+      [
+        "create:iron_sheet",
+        "create:shaft",
+        "create:iron_sheet"
+      ],
+      [
+        null,
+        "minecraft:oak_slab",
+        null
+      ]
+    ],
+    "result": "1 obus de mortier",
+    "resultItem": "createbigcannons:mortar_stone"
   },
   "videos": [],
   "sections": [

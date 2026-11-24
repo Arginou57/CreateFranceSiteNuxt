@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 sifflet à vapeur"
+    "items": [
+      [
+        null,
+        "create:golden_sheet",
+        null
+      ],
+      [
+        null,
+        "minecraft:copper_ingot",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 sifflet à vapeur",
+    "resultItem": "create:steam_whistle"
   },
   "videos": [
     {

@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 contrôle de train"
+    "items": [
+      [
+        null,
+        "minecraft:lever",
+        null
+      ],
+      [
+        null,
+        "create:railway_casing",
+        null
+      ],
+      [
+        null,
+        "create:precision_mechanism",
+        null
+      ]
+    ],
+    "result": "1 contrôle de train",
+    "resultItem": "create:controls"
   },
   "videos": [
     {

@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 ventilateur enchâssé"
+    "items": [
+      [
+        null,
+        "create:shaft",
+        null
+      ],
+      [
+        null,
+        "create:andesite_casing",
+        null
+      ],
+      [
+        null,
+        "create:propeller",
+        null
+      ]
+    ],
+    "result": "1 ventilateur enchâssé",
+    "resultItem": "create:encased_fan"
   },
   "videos": [
     {

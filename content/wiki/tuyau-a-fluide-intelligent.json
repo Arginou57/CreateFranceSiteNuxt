@@ -59,7 +59,25 @@
         null
       ]
     ],
-    "result": "1 tuyau à fluide intelligent"
+    "items": [
+      [
+        null,
+        "create:brass_sheet",
+        null
+      ],
+      [
+        null,
+        "create:fluid_pipe",
+        null
+      ],
+      [
+        null,
+        "create:electron_tube",
+        null
+      ]
+    ],
+    "result": "1 tuyau à fluide intelligent",
+    "resultItem": "create:smart_fluid_pipe"
   },
   "videos": [
     {

@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 poulie à corde"
+    "items": [
+      [
+        null,
+        "create:andesite_casing",
+        null
+      ],
+      [
+        null,
+        "minecraft:white_wool",
+        null
+      ],
+      [
+        null,
+        "create:iron_sheet",
+        null
+      ]
+    ],
+    "result": "1 poulie à corde",
+    "resultItem": "create:rope_pulley"
   },
   "videos": [
     {

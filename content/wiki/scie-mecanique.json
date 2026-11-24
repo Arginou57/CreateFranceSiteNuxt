@@ -63,7 +63,25 @@
         null
       ]
     ],
-    "result": "1 scie mécanique"
+    "items": [
+      [
+        null,
+        "create:iron_sheet",
+        null
+      ],
+      [
+        "create:iron_sheet",
+        "minecraft:iron_ingot",
+        "create:iron_sheet"
+      ],
+      [
+        null,
+        "create:andesite_casing",
+        null
+      ]
+    ],
+    "result": "1 scie mécanique",
+    "resultItem": "create:mechanical_saw"
   },
   "videos": [
     {

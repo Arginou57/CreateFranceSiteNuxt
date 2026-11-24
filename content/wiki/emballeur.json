@@ -59,7 +59,25 @@
         "Poudre de redstone"
       ]
     ],
-    "result": "1 emballeur"
+    "items": [
+      [
+        null,
+        "minecraft:iron_ingot",
+        null
+      ],
+      [
+        "minecraft:iron_ingot",
+        "create:cardboard_block",
+        "minecraft:iron_ingot"
+      ],
+      [
+        "minecraft:redstone",
+        "minecraft:iron_ingot",
+        "minecraft:redstone"
+      ]
+    ],
+    "result": "1 emballeur",
+    "resultItem": "create:packager"
   },
   "videos": [
     {
