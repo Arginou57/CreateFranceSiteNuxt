@@ -1,1 +1,2538 @@
-{}
+{
+ "aeronautics-ballons": {
+  "aero_burner": [
+   {
+    "t": 3.72,
+    "section": "bruleur"
+   },
+   {
+    "t": 10.65,
+    "section": "reglage"
+   },
+   {
+    "t": 15.56,
+    "section": "portance"
+   }
+  ],
+  "aero_vent": [
+   {
+    "t": 1.2,
+    "section": "event"
+   },
+   {
+    "t": 8.31,
+    "section": "reglage"
+   },
+   {
+    "t": 14.37,
+    "section": "portance"
+   }
+  ],
+  "aero_envelope": [
+   {
+    "t": 6.18,
+    "section": "enveloppe"
+   },
+   {
+    "t": 18.27,
+    "section": "arbre"
+   },
+   {
+    "t": 20.99,
+    "section": "couleurs"
+   }
+  ]
+ },
+ "aeronautics-helices": {
+  "aero_thrust": [
+   {
+    "t": 7.63,
+    "section": "dirigeable"
+   },
+   {
+    "t": 10.39,
+    "section": "inversion"
+   },
+   {
+    "t": 18.09,
+    "section": "air"
+   }
+  ],
+  "aero_thrust_small": [
+   {
+    "t": 2.27,
+    "section": "petites"
+   },
+   {
+    "t": 4.65,
+    "section": "dirigeable"
+   },
+   {
+    "t": 7.54,
+    "section": "inversion"
+   },
+   {
+    "t": 15.31,
+    "section": "air"
+   }
+  ],
+  "aero_prop_size": [
+   {
+    "t": 2.15,
+    "section": "roulement"
+   },
+   {
+    "t": 6.9,
+    "section": "voiles"
+   }
+  ]
+ },
+ "aeronautics-levitite": {
+  "aero_levitite_blend": [
+   {
+    "t": 1.99,
+    "section": "melange"
+   },
+   {
+    "t": 7.97,
+    "section": "chaleur"
+   },
+   {
+    "t": 13.04,
+    "section": "propagation"
+   }
+  ],
+  "aero_levitite": [
+   {
+    "t": 7.44,
+    "section": "flotter"
+   },
+   {
+    "t": 15.92,
+    "section": "freinage"
+   }
+  ]
+ },
+ "aeronautics-roulement-gyroscopique": {
+  "aero_gyro_heli": [
+   {
+    "t": 1.1,
+    "section": "probleme"
+   },
+   {
+    "t": 10.35,
+    "section": "solution"
+   },
+   {
+    "t": 16.75,
+    "section": "stable"
+   }
+  ]
+ },
+ "assembler-un-train": {
+  "train_bogeys": [
+   {
+    "t": 0.23,
+    "section": "bogies"
+   },
+   {
+    "t": 3.71,
+    "section": "modeles"
+   },
+   {
+    "t": 6.88,
+    "section": "colle"
+   },
+   {
+    "t": 12.68,
+    "section": "carburant"
+   },
+   {
+    "t": 16.66,
+    "section": "controles"
+   }
+  ]
+ },
+ "assembleur-de-wagonnet": {
+  "cart_anchor": [
+   {
+    "t": 3.42,
+    "section": "monter"
+   },
+   {
+    "t": 7.64,
+    "section": "desassembler"
+   },
+   {
+    "t": 18.37,
+    "section": "cle"
+   }
+  ],
+  "cart_modes": [
+   {
+    "t": 6.0,
+    "section": "orientation"
+   },
+   {
+    "t": 8.25,
+    "section": "fleche"
+   },
+   {
+    "t": 17.05,
+    "section": "verrou"
+   }
+  ],
+  "cart_dual": [
+   {
+    "t": 3.65,
+    "section": "deux"
+   },
+   {
+    "t": 9.6,
+    "section": "attelage"
+   }
+  ],
+  "cart_rails": [
+   {
+    "t": 0.94,
+    "section": "normaux"
+   },
+   {
+    "t": 7.65,
+    "section": "alimentes"
+   },
+   {
+    "t": 14.48,
+    "section": "autres"
+   }
+  ]
+ },
+ "assembleur-physique": {
+  "aero_assembler": [
+   {
+    "t": 3.75,
+    "section": "coller"
+   },
+   {
+    "t": 6.52,
+    "section": "levier"
+   },
+   {
+    "t": 14.61,
+    "section": "desassembler"
+   }
+  ]
+ },
+ "autocanons": {
+  "cbc_auto_using": [
+   {
+    "t": 3.01,
+    "section": "construire"
+   },
+   {
+    "t": 15.97,
+    "section": "cadence"
+   }
+  ],
+  "cbc_auto_custom": [
+   {
+    "t": 2.73,
+    "section": "construire"
+   },
+   {
+    "t": 6.91,
+    "section": "manuel"
+   }
+  ]
+ },
+ "bassin": {
+  "basin": [
+   {
+    "t": 1.01,
+    "section": "contenu"
+   },
+   {
+    "t": 5.28,
+    "section": "sortie"
+   },
+   {
+    "t": 7.9,
+    "section": "robinet"
+   }
+  ],
+  "basin_output": [
+   {
+    "t": 0.24,
+    "section": "dessous"
+   },
+   {
+    "t": 2.89,
+    "section": "retenir"
+   },
+   {
+    "t": 10.81,
+    "section": "filtre"
+   }
+  ]
+ },
+ "bec-verseur": {
+  "spout": [
+   {
+    "t": 1.13,
+    "section": "bec"
+   },
+   {
+    "t": 3.7,
+    "section": "acces"
+   },
+   {
+    "t": 7.08,
+    "section": "depot"
+   },
+   {
+    "t": 15.19,
+    "section": "tapis"
+   },
+   {
+    "t": 17.9,
+    "section": "auto"
+   }
+  ]
+ },
+ "bras-mecanique": {
+  "arm_setup": [
+   {
+    "t": 1.5,
+    "section": "avant"
+   },
+   {
+    "t": 4.85,
+    "section": "selection"
+   }
+  ],
+  "arm_setup_run": [
+   {
+    "t": 7.39,
+    "section": "portee"
+   },
+   {
+    "t": 11.93,
+    "section": "inventaires"
+   }
+  ]
+ },
+ "bruleur-a-blaze": {
+  "blaze_burner": [
+   {
+    "t": 1.5,
+    "section": "chaleur"
+   },
+   {
+    "t": 5.85,
+    "section": "nourrir"
+   },
+   {
+    "t": 10.2,
+    "section": "cake"
+   },
+   {
+    "t": 13.45,
+    "section": "automatiser"
+   }
+  ],
+  "empty_blaze_burner": [
+   {
+    "t": 5.68,
+    "section": "capturer"
+   },
+   {
+    "t": 12.69,
+    "section": "decoration"
+   }
+  ]
+ },
+ "chaine-de-transmission": {
+  "chain_relay": [
+   {
+    "t": 3.5,
+    "section": "rangee"
+   },
+   {
+    "t": 8.0,
+    "section": "meme-sens"
+   },
+   {
+    "t": 11.75,
+    "section": "tourner"
+   }
+  ],
+  "chain_double": [
+   {
+    "t": 1.12,
+    "section": "comme-chaine"
+   },
+   {
+    "t": 9.19,
+    "section": "double"
+   }
+  ],
+  "chain_half": [
+   {
+    "t": 0.3,
+    "section": "moitie"
+   },
+   {
+    "t": 9.05,
+    "section": "deux-fois"
+   },
+   {
+    "t": 16.55,
+    "section": "analogique"
+   }
+  ]
+ },
+ "chargement-des-canons": {
+  "cbc_loader": [
+   {
+    "t": 1.03,
+    "section": "chargeur"
+   },
+   {
+    "t": 14.07,
+    "section": "aligner"
+   }
+  ]
+ },
+ "chariot-de-portique": {
+  "gantry_intro": [
+   {
+    "t": 1.5,
+    "section": "rotor"
+   },
+   {
+    "t": 4.0,
+    "section": "structure"
+   }
+  ],
+  "gantry_direction": [
+   {
+    "t": 5.5,
+    "section": "sens"
+   },
+   {
+    "t": 13.5,
+    "section": "transmis"
+   }
+  ],
+  "gantry_subgantry": [
+   {
+    "t": 1.5,
+    "section": "sans-colle"
+   },
+   {
+    "t": 5.25,
+    "section": "cascade"
+   }
+  ],
+  "gantry_pinion": [
+   {
+    "t": 1.5,
+    "section": "pignon"
+   },
+   {
+    "t": 4.0,
+    "section": "structure"
+   }
+  ]
+ },
+ "chassis-lineaire": {
+  "chassis_group": [
+   {
+    "t": 2.45,
+    "section": "groupe"
+   },
+   {
+    "t": 7.95,
+    "section": "differents"
+   }
+  ],
+  "chassis_range": [
+   {
+    "t": 11.88,
+    "section": "colle"
+   },
+   {
+    "t": 17.54,
+    "section": "formes"
+   }
+  ],
+  "radial_group": [
+   {
+    "t": 1.5,
+    "section": "radial"
+   },
+   {
+    "t": 6.75,
+    "section": "faces"
+   }
+  ]
+ },
+ "chute": {
+  "chute_down": [
+   {
+    "t": 1.87,
+    "section": "descendre"
+   },
+   {
+    "t": 5.16,
+    "section": "remplir"
+   },
+   {
+    "t": 15.55,
+    "section": "diagonale"
+   }
+  ],
+  "chute_smart": [
+   {
+    "t": 0.64,
+    "section": "intelligente"
+   },
+   {
+    "t": 8.63,
+    "section": "inventaire"
+   },
+   {
+    "t": 12.48,
+    "section": "redstone"
+   }
+  ]
+ },
+ "coffre-a-objet-renforce": {
+  "vault_sizes": [
+   {
+    "t": 0.75,
+    "section": "blocs"
+   },
+   {
+    "t": 4.0,
+    "section": "fusion"
+   },
+   {
+    "t": 9.1,
+    "section": "tailles"
+   }
+  ],
+  "vault_storage": [
+   {
+    "t": 2.0,
+    "section": "capacite"
+   },
+   {
+    "t": 7.85,
+    "section": "entree"
+   }
+  ]
+ },
+ "colle-extra-forte": {
+  "super_glue": [
+   {
+    "t": 5.07,
+    "section": "zone"
+   },
+   {
+    "t": 7.42,
+    "section": "retirer"
+   },
+   {
+    "t": 9.19,
+    "section": "voisins"
+   },
+   {
+    "t": 14.89,
+    "section": "chevauchement"
+   },
+   {
+    "t": 18.23,
+    "section": "suspendus"
+   }
+  ],
+  "sticker": [
+   {
+    "t": 1.25,
+    "section": "signal"
+   },
+   {
+    "t": 9.0,
+    "section": "lache"
+   }
+  ]
+ },
+ "contact-de-redstone": {
+  "redstone_contact": [
+   {
+    "t": 2.5,
+    "section": "face-a-face"
+   },
+   {
+    "t": 7.6,
+    "section": "contraption"
+   }
+  ]
+ },
+ "controles-de-machine": {
+  "controls_toggle": [
+   {
+    "t": 8.35,
+    "section": "couper"
+   },
+   {
+    "t": 16.79,
+    "section": "partout"
+   }
+  ],
+  "controls_filter": [
+   {
+    "t": 0.3,
+    "section": "filtre"
+   },
+   {
+    "t": 8.9,
+    "section": "redstone"
+   }
+  ]
+ },
+ "controles-de-train": {
+  "train_controls": [
+   {
+    "t": 1.97,
+    "section": "obligatoires"
+   },
+   {
+    "t": 4.23,
+    "section": "conduire"
+   },
+   {
+    "t": 14.06,
+    "section": "approche"
+   },
+   {
+    "t": 18.26,
+    "section": "sifflet"
+   },
+   {
+    "t": 20.19,
+    "section": "quitter"
+   }
+  ]
+ },
+ "controleur-de-vitesse-de-rotation": {
+  "speed_controller": [
+   {
+    "t": 2.68,
+    "section": "grande-roue"
+   },
+   {
+    "t": 7.56,
+    "section": "reglage"
+   }
+  ]
+ },
+ "couvercle-de-bassin": {
+  "cdg_basin_lid": [
+   {
+    "t": 2.41,
+    "section": "poser"
+   },
+   {
+    "t": 4.22,
+    "section": "ingredients"
+   },
+   {
+    "t": 8.44,
+    "section": "fermenter"
+   }
+  ]
+ },
+ "create-deep-seas": {
+  "sub_dive": [
+   {
+    "t": 2.03,
+    "section": "principe"
+   },
+   {
+    "t": 6.78,
+    "section": "premier"
+   },
+   {
+    "t": 12.2,
+    "section": "plongee"
+   }
+  ]
+ },
+ "culasses": {
+  "cbc_sliding": [
+   {
+    "t": 6.27,
+    "section": "coulissante"
+   },
+   {
+    "t": 10.46,
+    "section": "charger-arriere"
+   }
+  ]
+ },
+ "deep-seas-ballast": {
+  "sub_ballast": [
+   {
+    "t": 2.0,
+    "section": "event"
+   },
+   {
+    "t": 8.0,
+    "section": "tuyaux"
+   },
+   {
+    "t": 10.5,
+    "section": "remplir"
+   },
+   {
+    "t": 13.0,
+    "section": "vider"
+   },
+   {
+    "t": 15.5,
+    "section": "auto"
+   }
+  ]
+ },
+ "deep-seas-cable-d-acier": {
+  "sub_pulley": [
+   {
+    "t": 2.25,
+    "section": "poulies"
+   },
+   {
+    "t": 8.75,
+    "section": "suivre"
+   }
+  ],
+  "sub_hook": [
+   {
+    "t": 2.75,
+    "section": "crochet"
+   },
+   {
+    "t": 9.5,
+    "section": "accroche"
+   }
+  ]
+ },
+ "deep-seas-ordinateur-de-bord": {
+  "sub_computer": [
+   {
+    "t": 2.47,
+    "section": "consigne"
+   },
+   {
+    "t": 6.79,
+    "section": "controleur"
+   },
+   {
+    "t": 10.26,
+    "section": "plongee"
+   },
+   {
+    "t": 17.18,
+    "section": "pompes"
+   }
+  ]
+ },
+ "deep-seas-oxygene": {
+  "sub_electrolyzer": [
+   {
+    "t": 0.9,
+    "section": "eau"
+   },
+   {
+    "t": 5.12,
+    "section": "energie"
+   },
+   {
+    "t": 13.42,
+    "section": "oxygene"
+   },
+   {
+    "t": 15.89,
+    "section": "alternateur"
+   },
+   {
+    "t": 18.59,
+    "section": "arbre"
+   }
+  ],
+  "sub_oxygen": [
+   {
+    "t": 1.5,
+    "section": "diffuseur"
+   },
+   {
+    "t": 8.5,
+    "section": "redstone"
+   }
+  ]
+ },
+ "deep-seas-propulseur": {
+  "sub_thruster": [
+   {
+    "t": 1.0,
+    "section": "propulseur"
+   },
+   {
+    "t": 5.0,
+    "section": "mise-en-route"
+   }
+  ]
+ },
+ "deep-seas-sas": {
+  "sub_airlock": [
+   {
+    "t": 1.28,
+    "section": "sas"
+   },
+   {
+    "t": 3.37,
+    "section": "chambre"
+   },
+   {
+    "t": 7.54,
+    "section": "pompe"
+   },
+   {
+    "t": 12.35,
+    "section": "porte"
+   },
+   {
+    "t": 14.27,
+    "section": "vidange"
+   },
+   {
+    "t": 19.24,
+    "section": "attention"
+   }
+  ]
+ },
+ "deep-seas-sonar-barometre": {
+  "sub_sonar": [
+   {
+    "t": 2.0,
+    "section": "sonar"
+   },
+   {
+    "t": 6.0,
+    "section": "poses"
+   },
+   {
+    "t": 11.5,
+    "section": "ordinateur"
+   }
+  ],
+  "sub_barometer": [
+   {
+    "t": 1.75,
+    "section": "barometre"
+   },
+   {
+    "t": 4.0,
+    "section": "coque"
+   }
+  ]
+ },
+ "deep-seas-voiles-et-gouvernail": {
+  "hs_sail": [
+   {
+    "t": 2.76,
+    "section": "voiles"
+   },
+   {
+    "t": 4.59,
+    "section": "proue"
+   },
+   {
+    "t": 6.62,
+    "section": "vent"
+   },
+   {
+    "t": 11.08,
+    "section": "reduire"
+   },
+   {
+    "t": 17.09,
+    "section": "teinture"
+   }
+  ],
+  "hs_lateen": [
+   {
+    "t": 3.6,
+    "section": "latine"
+   },
+   {
+    "t": 8.6,
+    "section": "vent"
+   },
+   {
+    "t": 11.1,
+    "section": "proue"
+   }
+  ],
+  "hs_rudder": [
+   {
+    "t": 2.75,
+    "section": "gouvernail"
+   },
+   {
+    "t": 7.75,
+    "section": "proue"
+   },
+   {
+    "t": 10.75,
+    "section": "gouvernail"
+   }
+  ]
+ },
+ "deployeur": {
+  "deployer_filter": [
+   {
+    "t": 3.05,
+    "section": "portee"
+   },
+   {
+    "t": 11.61,
+    "section": "donner"
+   },
+   {
+    "t": 17.51,
+    "section": "filtre"
+   }
+  ]
+ },
+ "depot": {
+  "depot": [
+   {
+    "t": 0.22,
+    "section": "depot"
+   },
+   {
+    "t": 2.52,
+    "section": "main"
+   },
+   {
+    "t": 7.26,
+    "section": "traitement"
+   },
+   {
+    "t": 16.33,
+    "section": "bras"
+   }
+  ]
+ },
+ "detecteur-de-seuil": {
+  "threshold_switch": [
+   {
+    "t": 6.54,
+    "section": "remplissage"
+   },
+   {
+    "t": 16.11,
+    "section": "seuils"
+   }
+  ],
+  "threshold_switch_more": [
+   {
+    "t": 3.38,
+    "section": "arret"
+   },
+   {
+    "t": 10.79,
+    "section": "reservoir"
+   },
+   {
+    "t": 14.3,
+    "section": "poulie"
+   }
+  ]
+ },
+ "detonateurs-et-traceurs": {
+  "cbc_fuzing": [
+   {
+    "t": 7.0,
+    "section": "poser"
+   },
+   {
+    "t": 13.0,
+    "section": "chaine"
+   }
+  ],
+  "cbc_tracers": [
+   {
+    "t": 7.5,
+    "section": "tracante"
+   },
+   {
+    "t": 11.0,
+    "section": "chaine"
+   }
+  ]
+ },
+ "egouttoir-a-objets": {
+  "drain": [
+   {
+    "t": 0.66,
+    "section": "egouttoir"
+   },
+   {
+    "t": 2.5,
+    "section": "verser"
+   },
+   {
+    "t": 4.56,
+    "section": "cote"
+   },
+   {
+    "t": 7.06,
+    "section": "vider"
+   },
+   {
+    "t": 9.9,
+    "section": "reseau"
+   }
+  ]
+ },
+ "ejecteur": {
+  "ejector": [
+   {
+    "t": 1.1,
+    "section": "cible"
+   },
+   {
+    "t": 6.7,
+    "section": "portee"
+   }
+  ],
+  "ejector_launch": [
+   {
+    "t": 0.19,
+    "section": "lancer"
+   },
+   {
+    "t": 5.37,
+    "section": "reception"
+   },
+   {
+    "t": 9.69,
+    "section": "pile"
+   }
+  ]
+ },
+ "emballeur": {
+  "packager": [
+   {
+    "t": 5.73,
+    "section": "principe"
+   },
+   {
+    "t": 12.2,
+    "section": "emballer"
+   }
+  ],
+  "packager_unpack": [
+   {
+    "t": 0.3,
+    "section": "deballer"
+   },
+   {
+    "t": 12.05,
+    "section": "plein"
+   }
+  ]
+ },
+ "entonnoir": {
+  "funnel_direction": [
+   {
+    "t": 0.63,
+    "section": "extraire"
+   },
+   {
+    "t": 3.37,
+    "section": "inserer"
+   },
+   {
+    "t": 6.43,
+    "section": "cle"
+   },
+   {
+    "t": 11.78,
+    "section": "tapis"
+   }
+  ]
+ },
+ "gisements-de-petrole": {
+  "cdg_oil_chunk": [
+   {
+    "t": 0.0,
+    "section": "reserve"
+   },
+   {
+    "t": 6.2,
+    "section": "detecteur"
+   },
+   {
+    "t": 9.8,
+    "section": "biomes"
+   },
+   {
+    "t": 17.4,
+    "section": "pomper"
+   }
+  ]
+ },
+ "horloges-et-impulsions": {
+  "pulse_repeater": [
+   {
+    "t": 3.9,
+    "section": "impulsion"
+   },
+   {
+    "t": 7.9,
+    "section": "delai"
+   }
+  ],
+  "pulse_extender": [
+   {
+    "t": 1.37,
+    "section": "allonger"
+   },
+   {
+    "t": 12.0,
+    "section": "duree"
+   }
+  ],
+  "timer_clock": [
+   {
+    "t": 2.4,
+    "section": "horloge"
+   },
+   {
+    "t": 8.05,
+    "section": "intervalle"
+   }
+  ],
+  "timer_modes": [
+   {
+    "t": 0.3,
+    "section": "pause"
+   },
+   {
+    "t": 5.05,
+    "section": "inverser"
+   }
+  ]
+ },
+ "interface-de-fluide-portable": {
+  "pfi_transfer": [
+   {
+    "t": 0.67,
+    "section": "contraption"
+   },
+   {
+    "t": 2.28,
+    "section": "interface"
+   },
+   {
+    "t": 3.8,
+    "section": "ecart"
+   },
+   {
+    "t": 9.0,
+    "section": "inserer"
+   },
+   {
+    "t": 17.26,
+    "section": "reprise"
+   }
+  ]
+ },
+ "interface-de-stockage-portable": {
+  "psi_transfer": [
+   {
+    "t": 3.4,
+    "section": "en-marche"
+   },
+   {
+    "t": 5.65,
+    "section": "ecart"
+   },
+   {
+    "t": 12.4,
+    "section": "inserer"
+   }
+  ]
+ },
+ "inverseur-de-rotation-sequence": {
+  "sequenced_gearshift": [
+   {
+    "t": 1.75,
+    "section": "instructions"
+   },
+   {
+    "t": 12.1,
+    "section": "signal"
+   },
+   {
+    "t": 24.1,
+    "section": "comparateur"
+   }
+  ]
+ },
+ "lampe-a-quartz-rose": {
+  "rose_quartz_lamp": [
+   {
+    "t": 1.74,
+    "section": "signal"
+   },
+   {
+    "t": 7.77,
+    "section": "groupe"
+   },
+   {
+    "t": 14.4,
+    "section": "comparateur"
+   },
+   {
+    "t": 19.35,
+    "section": "cle"
+   }
+  ]
+ },
+ "liaison-de-redstone": {
+  "link_freq": [
+   {
+    "t": 5.55,
+    "section": "frequence"
+   },
+   {
+    "t": 14.75,
+    "section": "correspondance"
+   }
+  ]
+ },
+ "manivelle": {
+  "hand_crank": [
+   {
+    "t": 4.6,
+    "section": "gauche"
+   },
+   {
+    "t": 7.2,
+    "section": "droite"
+   }
+  ],
+  "valve_handle": [
+   {
+    "t": 8.69,
+    "section": "activer"
+   },
+   {
+    "t": 16.64,
+    "section": "teinte"
+   }
+  ]
+ },
+ "meule": {
+  "millstone": [
+   {
+    "t": 1.25,
+    "section": "meule"
+   },
+   {
+    "t": 4.0,
+    "section": "cote"
+   },
+   {
+    "t": 7.5,
+    "section": "dessus"
+   },
+   {
+    "t": 11.75,
+    "section": "automatisation"
+   }
+  ]
+ },
+ "mixeur-mecanique": {
+  "mixer": [
+   {
+    "t": 1.78,
+    "section": "bassin"
+   },
+   {
+    "t": 7.88,
+    "section": "recettes"
+   },
+   {
+    "t": 15.8,
+    "section": "filtre"
+   }
+  ]
+ },
+ "moteur-a-vapeur": {
+  "steam_engine": [
+   {
+    "t": 2.62,
+    "section": "reservoir"
+   },
+   {
+    "t": 6.05,
+    "section": "rotor"
+   },
+   {
+    "t": 13.91,
+    "section": "minimal"
+   }
+  ],
+  "steam_engine_levels": [
+   {
+    "t": 0.24,
+    "section": "bruleurs"
+   },
+   {
+    "t": 9.12,
+    "section": "niveaux"
+   }
+  ]
+ },
+ "moteur-diesel-enorme": {
+  "cdg_huge": [
+   {
+    "t": 0.5,
+    "section": "monter"
+   },
+   {
+    "t": 4.5,
+    "section": "carburant"
+   }
+  ]
+ },
+ "moteur-diesel-modulaire": {
+  "cdg_modular": [
+   {
+    "t": 1.5,
+    "section": "moteur"
+   },
+   {
+    "t": 4.5,
+    "section": "carburant"
+   },
+   {
+    "t": 7.25,
+    "section": "empiler"
+   },
+   {
+    "t": 12.75,
+    "section": "puissance"
+   }
+  ]
+ },
+ "moteur-diesel": {
+  "cdg_engine": [
+   {
+    "t": 1.16,
+    "section": "poser"
+   },
+   {
+    "t": 5.59,
+    "section": "carburant"
+   },
+   {
+    "t": 10.98,
+    "section": "redstone"
+   },
+   {
+    "t": 17.53,
+    "section": "silencieux"
+   }
+  ]
+ },
+ "observateur-de-train": {
+  "track_observer": [
+   {
+    "t": 4.66,
+    "section": "detecter"
+   },
+   {
+    "t": 10.81,
+    "section": "filtre"
+   }
+  ]
+ },
+ "observateur-intelligent": {
+  "smart_observer": [
+   {
+    "t": 2.82,
+    "section": "principe"
+   },
+   {
+    "t": 7.44,
+    "section": "bloc"
+   },
+   {
+    "t": 10.05,
+    "section": "tapis"
+   },
+   {
+    "t": 13.94,
+    "section": "entonnoir"
+   }
+  ]
+ },
+ "ore-excavation-foreuse-d-echantillon": {
+  "exc_sample": [
+   {
+    "t": 1.89,
+    "section": "poser"
+   },
+   {
+    "t": 7.55,
+    "section": "activer"
+   },
+   {
+    "t": 13.69,
+    "section": "atlas"
+   },
+   {
+    "t": 17.94,
+    "section": "machine"
+   }
+  ]
+ },
+ "ore-excavation-foreuse": {
+  "exc_drilling": [
+   {
+    "t": 0.0,
+    "section": "foreuse"
+   },
+   {
+    "t": 5.5,
+    "section": "rotation"
+   },
+   {
+    "t": 9.5,
+    "section": "sortie"
+   },
+   {
+    "t": 15.5,
+    "section": "fluide"
+   }
+  ]
+ },
+ "perceuse-mecanique": {
+  "mechanical_drill": [
+   {
+    "t": 2.0,
+    "section": "casser"
+   },
+   {
+    "t": 8.75,
+    "section": "vitesse"
+   }
+  ],
+  "mechanical_drill_contraption": [
+   {
+    "t": 1.25,
+    "section": "contraption"
+   },
+   {
+    "t": 4.0,
+    "section": "regles"
+   },
+   {
+    "t": 9.5,
+    "section": "stockage"
+   }
+  ]
+ },
+ "piston-mecanique": {
+  "piston_anchor": [
+   {
+    "t": 2.75,
+    "section": "pousser"
+   },
+   {
+    "t": 10.6,
+    "section": "collant"
+   },
+   {
+    "t": 14.1,
+    "section": "structure"
+   }
+  ],
+  "piston_poles": [
+   {
+    "t": 2.25,
+    "section": "sans-barre"
+   },
+   {
+    "t": 4.75,
+    "section": "portee"
+   }
+  ],
+  "piston_modes": [
+   {
+    "t": 6.0,
+    "section": "retour"
+   },
+   {
+    "t": 10.5,
+    "section": "modes"
+   }
+  ]
+ },
+ "planning-de-train": {
+  "train_schedule": [
+   {
+    "t": 1.99,
+    "section": "conducteur"
+   },
+   {
+    "t": 3.72,
+    "section": "interface"
+   },
+   {
+    "t": 6.14,
+    "section": "confier"
+   },
+   {
+    "t": 10.24,
+    "section": "mob"
+   },
+   {
+    "t": 13.74,
+    "section": "laisse"
+   },
+   {
+    "t": 19.15,
+    "section": "recuperer"
+   }
+  ]
+ },
+ "pompe-a-balancier": {
+  "cdg_pumpjack": [
+   {
+    "t": 0.75,
+    "section": "roulement"
+   },
+   {
+    "t": 3.85,
+    "section": "balancier"
+   },
+   {
+    "t": 8.55,
+    "section": "tete"
+   }
+  ],
+  "cdg_pumpjack_run": [
+   {
+    "t": 0.28,
+    "section": "manivelle"
+   },
+   {
+    "t": 8.12,
+    "section": "puits"
+   },
+   {
+    "t": 17.92,
+    "section": "assembler"
+   }
+  ]
+ },
+ "pompe-mecanique": {
+  "pump_flow": [
+   {
+    "t": 2.22,
+    "section": "pompe"
+   },
+   {
+    "t": 5.43,
+    "section": "fleche"
+   },
+   {
+    "t": 7.6,
+    "section": "aspire"
+   },
+   {
+    "t": 14.57,
+    "section": "cle"
+   }
+  ],
+  "pump_speed": [
+   {
+    "t": 1.5,
+    "section": "portee"
+   },
+   {
+    "t": 7.58,
+    "section": "vitesse"
+   },
+   {
+    "t": 11.81,
+    "section": "combiner"
+   },
+   {
+    "t": 15.75,
+    "section": "meme-sens"
+   }
+  ]
+ },
+ "poulie-a-corde": {
+  "pulley_anchor": [
+   {
+    "t": 4.0,
+    "section": "vertical"
+   },
+   {
+    "t": 13.0,
+    "section": "structure"
+   }
+  ],
+  "pulley_modes": [
+   {
+    "t": 4.25,
+    "section": "retour"
+   },
+   {
+    "t": 8.25,
+    "section": "modes"
+   }
+  ],
+  "pulley_attachment": [
+   {
+    "t": 1.75,
+    "section": "deplacee"
+   },
+   {
+    "t": 5.25,
+    "section": "arretee"
+   }
+  ]
+ },
+ "poulie-a-tuyau": {
+  "hose_intro": [
+   {
+    "t": 0.59,
+    "section": "poulie"
+   },
+   {
+    "t": 2.16,
+    "section": "hauteur"
+   },
+   {
+    "t": 5.69,
+    "section": "remonter"
+   },
+   {
+    "t": 11.22,
+    "section": "fournir"
+   },
+   {
+    "t": 16.51,
+    "section": "vider"
+   }
+  ],
+  "hose_level": [
+   {
+    "t": 9.59,
+    "section": "surface"
+   },
+   {
+    "t": 13.51,
+    "section": "remplissage"
+   }
+  ]
+ },
+ "poulie-d-ascenseur": {
+  "elevator_build": [
+   {
+    "t": 4.05,
+    "section": "cabine"
+   },
+   {
+    "t": 11.45,
+    "section": "controles"
+   },
+   {
+    "t": 16.2,
+    "section": "assembler"
+   }
+  ],
+  "elevator_floors": [
+   {
+    "t": 4.01,
+    "section": "colonne"
+   },
+   {
+    "t": 13.98,
+    "section": "controles"
+   },
+   {
+    "t": 20.85,
+    "section": "desassembler"
+   }
+  ],
+  "elevator_doors": [
+   {
+    "t": 0.24,
+    "section": "desassembler"
+   },
+   {
+    "t": 3.15,
+    "section": "portes"
+   },
+   {
+    "t": 9.62,
+    "section": "signal"
+   },
+   {
+    "t": 15.69,
+    "section": "affichage"
+   }
+  ]
+ },
+ "presse-mecanique": {
+  "mechanical_press": [
+   {
+    "t": 1.77,
+    "section": "installer"
+   },
+   {
+    "t": 4.81,
+    "section": "depot"
+   },
+   {
+    "t": 10.65,
+    "section": "tapis"
+   },
+   {
+    "t": 12.6,
+    "section": "cadence"
+   }
+  ],
+  "mechanical_press_compacting": [
+   {
+    "t": 2.23,
+    "section": "compactage"
+   },
+   {
+    "t": 7.87,
+    "section": "recettes"
+   },
+   {
+    "t": 13.76,
+    "section": "chaleur"
+   },
+   {
+    "t": 16.73,
+    "section": "filtre"
+   }
+  ]
+ },
+ "rail-de-train": {
+  "track_placement": [
+   {
+    "t": 3.75,
+    "section": "rangee"
+   },
+   {
+    "t": 12.3,
+    "section": "virage"
+   }
+  ],
+  "track_bends": [
+   {
+    "t": 0.25,
+    "section": "egal"
+   },
+   {
+    "t": 5.65,
+    "section": "sprint"
+   },
+   {
+    "t": 14.78,
+    "section": "paver"
+   }
+  ],
+  "track_portal": [
+   {
+    "t": 1.75,
+    "section": "portail"
+   },
+   {
+    "t": 5.0,
+    "section": "paire"
+   }
+  ],
+  "track_chunks": [
+   {
+    "t": 2.75,
+    "section": "chunks"
+   },
+   {
+    "t": 7.5,
+    "section": "inactif"
+   }
+  ]
+ },
+ "recolteur-mecanique": {
+  "harvester": [
+   {
+    "t": 1.75,
+    "section": "embarque"
+   },
+   {
+    "t": 8.5,
+    "section": "stockage"
+   }
+  ],
+  "plough": [
+   {
+    "t": 1.39,
+    "section": "casse"
+   },
+   {
+    "t": 13.44,
+    "section": "labour"
+   },
+   {
+    "t": 19.0,
+    "section": "projette"
+   }
+  ]
+ },
+ "reemballeur": {
+  "repackager": [
+   {
+    "t": 5.1,
+    "section": "probleme"
+   },
+   {
+    "t": 10.42,
+    "section": "separes"
+   }
+  ],
+  "repackager_merge": [
+   {
+    "t": 0.23,
+    "section": "reemballeur"
+   },
+   {
+    "t": 11.84,
+    "section": "complet"
+   }
+  ]
+ },
+ "reservoir-a-fluide": {
+  "tank_sizes": [
+   {
+    "t": 0.75,
+    "section": "combiner"
+   },
+   {
+    "t": 4.0,
+    "section": "largeur"
+   },
+   {
+    "t": 8.85,
+    "section": "hauteur"
+   },
+   {
+    "t": 12.45,
+    "section": "fenetre"
+   }
+  ],
+  "tank_storage": [
+   {
+    "t": 1.66,
+    "section": "stocker"
+   },
+   {
+    "t": 6.85,
+    "section": "cotes"
+   },
+   {
+    "t": 11.21,
+    "section": "comparateur"
+   },
+   {
+    "t": 16.56,
+    "section": "objets"
+   }
+  ]
+ },
+ "roue-a-eau": {
+  "water_wheel": [
+   {
+    "t": 5.4,
+    "section": "cotes"
+   },
+   {
+    "t": 8.4,
+    "section": "bois"
+   }
+  ],
+  "large_water_wheel": [
+   {
+    "t": 9.21,
+    "section": "vitesse"
+   },
+   {
+    "t": 12.98,
+    "section": "bois"
+   }
+  ]
+ },
+ "roue-dentee": {
+  "cog_speedup": [
+   {
+    "t": 2.75,
+    "section": "vitesse"
+   },
+   {
+    "t": 7.6,
+    "section": "ralentir"
+   }
+  ],
+  "cog_encasing": [
+   {
+    "t": 5.05,
+    "section": "boitier"
+   },
+   {
+    "t": 10.55,
+    "section": "cle"
+   }
+  ]
+ },
+ "roues-de-concassage": {
+  "crushing_wheel": [
+   {
+    "t": 0.72,
+    "section": "paire"
+   },
+   {
+    "t": 2.86,
+    "section": "sens"
+   },
+   {
+    "t": 5.88,
+    "section": "dessus"
+   },
+   {
+    "t": 9.7,
+    "section": "automatisation"
+   }
+  ]
+ },
+ "rouleau-mecanique": {
+  "roller_pave": [
+   {
+    "t": 2.2,
+    "section": "degager"
+   },
+   {
+    "t": 13.2,
+    "section": "materiau"
+   }
+  ],
+  "roller_paving": [
+   {
+    "t": 0.3,
+    "section": "paver"
+   },
+   {
+    "t": 8.05,
+    "section": "pertes"
+   },
+   {
+    "t": 13.9,
+    "section": "trains"
+   }
+  ],
+  "roller_fill": [
+   {
+    "t": 2.38,
+    "section": "combler"
+   },
+   {
+    "t": 6.57,
+    "section": "droit"
+   },
+   {
+    "t": 13.65,
+    "section": "pente"
+   }
+  ]
+ },
+ "roulement-mecanique": {
+  "bearing_anchor": [
+   {
+    "t": 1.25,
+    "section": "accroche"
+   },
+   {
+    "t": 3.5,
+    "section": "rotation"
+   },
+   {
+    "t": 8.85,
+    "section": "structure"
+   }
+  ],
+  "bearing_modes": [
+   {
+    "t": 6.2,
+    "section": "arret"
+   },
+   {
+    "t": 9.45,
+    "section": "modes"
+   }
+  ],
+  "bearing_stabilized": [
+   {
+    "t": 2.5,
+    "section": "embarque"
+   },
+   {
+    "t": 9.7,
+    "section": "debout"
+   }
+  ],
+  "clockwork_hour": [
+   {
+    "t": 1.25,
+    "section": "horloger"
+   },
+   {
+    "t": 4.75,
+    "section": "heure"
+   }
+  ]
+ },
+ "scie-mecanique": {
+  "saw_processing": [
+   {
+    "t": 0.85,
+    "section": "traiter"
+   },
+   {
+    "t": 5.9,
+    "section": "sens"
+   },
+   {
+    "t": 10.4,
+    "section": "tapis"
+   },
+   {
+    "t": 13.54,
+    "section": "filtre"
+   }
+  ],
+  "saw_breaker": [
+   {
+    "t": 3.0,
+    "section": "arbre"
+   },
+   {
+    "t": 10.75,
+    "section": "base"
+   }
+  ],
+  "saw_contraption": [
+   {
+    "t": 1.25,
+    "section": "contraption"
+   },
+   {
+    "t": 9.5,
+    "section": "coupe"
+   }
+  ]
+ },
+ "sifflet-a-vapeur": {
+  "whistle": [
+   {
+    "t": 2.68,
+    "section": "reservoir"
+   },
+   {
+    "t": 4.94,
+    "section": "chaleur"
+   },
+   {
+    "t": 7.0,
+    "section": "note"
+   },
+   {
+    "t": 11.78,
+    "section": "grave"
+   },
+   {
+    "t": 16.15,
+    "section": "octave"
+   },
+   {
+    "t": 20.1,
+    "section": "lunettes"
+   }
+  ]
+ },
+ "signal-de-train": {
+  "signal_placement": [
+   {
+    "t": 4.17,
+    "section": "role"
+   },
+   {
+    "t": 6.26,
+    "section": "sens"
+   },
+   {
+    "t": 12.59,
+    "section": "double"
+   },
+   {
+    "t": 19.69,
+    "section": "nixie"
+   }
+  ],
+  "signal_segments": [
+   {
+    "t": 3.5,
+    "section": "cantons"
+   },
+   {
+    "t": 11.05,
+    "section": "occupe"
+   },
+   {
+    "t": 14.8,
+    "section": "un-train"
+   }
+  ],
+  "signal_cross": [
+   {
+    "t": 0.3,
+    "section": "cle"
+   },
+   {
+    "t": 5.26,
+    "section": "condition"
+   }
+  ],
+  "signal_redstone": [
+   {
+    "t": 2.45,
+    "section": "forcer"
+   },
+   {
+    "t": 8.95,
+    "section": "comparateur"
+   }
+  ]
+ },
+ "station-de-train": {
+  "station_assembly": [
+   {
+    "t": 5.5,
+    "section": "reseau"
+   },
+   {
+    "t": 8.55,
+    "section": "assemblage"
+   }
+  ],
+  "station_depart": [
+   {
+    "t": 0.3,
+    "section": "valider"
+   },
+   {
+    "t": 6.55,
+    "section": "desassembler"
+   },
+   {
+    "t": 9.4,
+    "section": "carte"
+   },
+   {
+    "t": 13.45,
+    "section": "cle"
+   }
+  ],
+  "auto_schedule": [
+   {
+    "t": 1.1,
+    "section": "planning"
+   },
+   {
+    "t": 5.02,
+    "section": "comparateur"
+   },
+   {
+    "t": 7.58,
+    "section": "sens"
+   },
+   {
+    "t": 12.02,
+    "section": "automatique"
+   },
+   {
+    "t": 15.92,
+    "section": "copie"
+   }
+  ]
+ },
+ "stressometre-compteur-de-vitesse": {
+  "speedometer": [
+   {
+    "t": 1.95,
+    "section": "pose"
+   },
+   {
+    "t": 10.3,
+    "section": "comparateur"
+   }
+  ],
+  "stressometer": [
+   {
+    "t": 1.95,
+    "section": "lunettes"
+   },
+   {
+    "t": 7.55,
+    "section": "stress"
+   }
+  ]
+ },
+ "support-de-canon": {
+  "cbc_mount_assembly": [
+   {
+    "t": 3.98,
+    "section": "assembler"
+   },
+   {
+    "t": 10.03,
+    "section": "viser"
+   },
+   {
+    "t": 14.2,
+    "section": "direction"
+   }
+  ],
+  "cbc_mount_firing": [
+   {
+    "t": 4.88,
+    "section": "tirer"
+   },
+   {
+    "t": 15.3,
+    "section": "desassembler"
+   }
+  ]
+ },
+ "support-de-moulin-a-vent": {
+  "windmill_source": [
+   {
+    "t": 0.92,
+    "section": "support"
+   },
+   {
+    "t": 4.23,
+    "section": "colle"
+   },
+   {
+    "t": 8.16,
+    "section": "activer"
+   },
+   {
+    "t": 14.04,
+    "section": "sens"
+   }
+  ],
+  "sails": [
+   {
+    "t": 1.82,
+    "section": "voiles-sans-colle"
+   },
+   {
+    "t": 12.85,
+    "section": "cadres-de-voile"
+   }
+  ]
+ },
+ "tapis-roulant": {
+  "belt_connector": [
+   {
+    "t": 1.03,
+    "section": "relier"
+   },
+   {
+    "t": 4.08,
+    "section": "objets"
+   },
+   {
+    "t": 6.23,
+    "section": "annuler"
+   },
+   {
+    "t": 10.1,
+    "section": "arbres"
+   },
+   {
+    "t": 15.84,
+    "section": "teinture"
+   }
+  ]
+ },
+ "tour-de-distillation": {
+  "cdg_distillation": [
+   {
+    "t": 1.52,
+    "section": "controleur"
+   },
+   {
+    "t": 8.26,
+    "section": "entree"
+   },
+   {
+    "t": 13.7,
+    "section": "chauffe"
+   },
+   {
+    "t": 15.87,
+    "section": "fenetres"
+   }
+  ]
+ },
+ "tourelle-chimique": {
+  "cdg_turret": [
+   {
+    "t": 0.0,
+    "section": "tourelle"
+   },
+   {
+    "t": 4.0,
+    "section": "alimentation"
+   },
+   {
+    "t": 8.0,
+    "section": "redstone"
+   },
+   {
+    "t": 13.0,
+    "section": "briquet"
+   }
+  ],
+  "cdg_turret_auto": [
+   {
+    "t": 1.0,
+    "section": "auto"
+   },
+   {
+    "t": 4.0,
+    "section": "filtre"
+   },
+   {
+    "t": 7.0,
+    "section": "auto"
+   }
+  ]
+ },
+ "tube-nixie": {
+  "nixie_tube": [
+   {
+    "t": 2.5,
+    "section": "puissance"
+   },
+   {
+    "t": 10.1,
+    "section": "texte"
+   },
+   {
+    "t": 15.45,
+    "section": "couleur"
+   }
+  ],
+  "analog_lever": [
+   {
+    "t": 1.75,
+    "section": "levier"
+   },
+   {
+    "t": 7.3,
+    "section": "augmenter"
+   },
+   {
+    "t": 12.85,
+    "section": "diminuer"
+   }
+  ]
+ },
+ "tunnel": {
+  "tunnel_andesite": [
+   {
+    "t": 2.15,
+    "section": "poser"
+   },
+   {
+    "t": 5.92,
+    "section": "jonction"
+   },
+   {
+    "t": 9.93,
+    "section": "division"
+   }
+  ],
+  "tunnel_brass": [
+   {
+    "t": 5.96,
+    "section": "laiton"
+   },
+   {
+    "t": 8.3,
+    "section": "filtre"
+   }
+  ],
+  "tunnel_modes": [
+   {
+    "t": 1.48,
+    "section": "partager"
+   },
+   {
+    "t": 20.87,
+    "section": "tourniquet"
+   }
+  ],
+  "tunnel_modes_robin": [
+   {
+    "t": 0.3,
+    "section": "tourniquet"
+   },
+   {
+    "t": 20.3,
+    "section": "proche"
+   }
+  ]
+ },
+ "tuyau-a-fluide-intelligent": {
+  "smart_pipe": [
+   {
+    "t": 2.62,
+    "section": "source"
+   },
+   {
+    "t": 5.34,
+    "section": "filtre"
+   },
+   {
+    "t": 13.91,
+    "section": "reseau"
+   }
+  ]
+ },
+ "tuyau-a-fluide": {
+  "pipe_flow": [
+   {
+    "t": 1.25,
+    "section": "relier"
+   },
+   {
+    "t": 4.11,
+    "section": "fenetre"
+   },
+   {
+    "t": 13.31,
+    "section": "transfert"
+   }
+  ],
+  "pipe_interaction": [
+   {
+    "t": 6.34,
+    "section": "extremites"
+   },
+   {
+    "t": 11.5,
+    "section": "aspirer"
+   },
+   {
+    "t": 17.37,
+    "section": "ruche"
+   }
+  ],
+  "valve": [
+   {
+    "t": 2.25,
+    "section": "vanne"
+   },
+   {
+    "t": 8.25,
+    "section": "ouverte"
+   }
+  ]
+ },
+ "ventilateur-enchasse": {
+  "fan_processing": [
+   {
+    "t": 5.75,
+    "section": "cuisson"
+   },
+   {
+    "t": 14.5,
+    "section": "fumage"
+   }
+  ],
+  "fan_washing": [
+   {
+    "t": 0.22,
+    "section": "lavage"
+   },
+   {
+    "t": 5.34,
+    "section": "vitesse"
+   },
+   {
+    "t": 11.55,
+    "section": "depot"
+   }
+  ]
+ },
+ "verrou-alimente": {
+  "powered_latch": [
+   {
+    "t": 1.5,
+    "section": "levier"
+   },
+   {
+    "t": 12.5,
+    "section": "manuel"
+   }
+  ],
+  "toggle_latch": [
+   {
+    "t": 1.5,
+    "section": "bascule"
+   },
+   {
+    "t": 12.5,
+    "section": "manuel"
+   }
+  ]
+ }
+}
