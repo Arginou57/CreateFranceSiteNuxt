@@ -1,3 +1,458 @@
 {
-  "bruleur": ["cdg_burner"]
+  "aeronautics-ballons": [
+    "aero_burner",
+    "aero_envelope",
+    "aero_vent"
+  ],
+  "aeronautics-helices": [
+    "aero_prop_size",
+    "aero_thrust",
+    "aero_thrust_small"
+  ],
+  "aeronautics-levitite": [
+    "aero_levitite",
+    "aero_levitite_blend"
+  ],
+  "aeronautics-roulement-gyroscopique": [
+    "aero_gyro_heli",
+    "aero_gyro_island",
+    "aero_gyro_redstone"
+  ],
+  "assembler-un-train": [
+    "train_bogeys"
+  ],
+  "assembleur-de-wagonnet": [
+    "cart_anchor",
+    "cart_dual",
+    "cart_modes",
+    "cart_rails"
+  ],
+  "assembleur-physique": [
+    "aero_assembler",
+    "aero_assembler_moving",
+    "aero_assembler_props",
+    "aero_assembler_split"
+  ],
+  "autocanons": [
+    "cbc_auto_custom",
+    "cbc_auto_using"
+  ],
+  "bassin": [
+    "basin",
+    "basin_output"
+  ],
+  "bec-verseur": [
+    "spout"
+  ],
+  "boite-a-roues-dentees": [
+    "gearbox"
+  ],
+  "bras-mecanique": [
+    "arm_modes",
+    "arm_modes_prefer",
+    "arm_redstone",
+    "arm_setup",
+    "arm_setup_run"
+  ],
+  "bruleur": [
+    "cdg_burner"
+  ],
+  "bruleur-a-blaze": [
+    "blaze_burner",
+    "empty_blaze_burner"
+  ],
+  "chaine-de-transmission": [
+    "chain_double",
+    "chain_half",
+    "chain_relay"
+  ],
+  "chargement-des-canons": [
+    "cbc_contraption_load",
+    "cbc_handload",
+    "cbc_loader"
+  ],
+  "chariot-de-portique": [
+    "gantry_direction",
+    "gantry_intro",
+    "gantry_pinion",
+    "gantry_redstone",
+    "gantry_subgantry"
+  ],
+  "chassis-lineaire": [
+    "chassis_group",
+    "chassis_range",
+    "chassis_sticky",
+    "radial_group",
+    "radial_radius"
+  ],
+  "chute": [
+    "chute_down",
+    "chute_smart",
+    "chute_up"
+  ],
+  "cle": [
+    "wrench_rotate"
+  ],
+  "coffre-a-objet-renforce": [
+    "vault_sizes",
+    "vault_storage"
+  ],
+  "colle-extra-forte": [
+    "sticker",
+    "super_glue"
+  ],
+  "contact-de-redstone": [
+    "redstone_contact"
+  ],
+  "controles-de-machine": [
+    "controls_filter",
+    "controls_toggle"
+  ],
+  "controles-de-train": [
+    "train_controls"
+  ],
+  "controleur-de-vitesse-de-rotation": [
+    "speed_controller"
+  ],
+  "couvercle-de-bassin": [
+    "cdg_basin_lid"
+  ],
+  "create-deep-seas": [
+    "sub_dive"
+  ],
+  "culasses": [
+    "cbc_qf",
+    "cbc_qf_auto",
+    "cbc_qf_make",
+    "cbc_screw",
+    "cbc_sliding"
+  ],
+  "deep-seas-ballast": [
+    "sub_ballast"
+  ],
+  "deep-seas-cable-d-acier": [
+    "sub_cable",
+    "sub_cable_spark",
+    "sub_hook",
+    "sub_pulley"
+  ],
+  "deep-seas-ordinateur-de-bord": [
+    "sub_computer"
+  ],
+  "deep-seas-oxygene": [
+    "sub_electrolyzer",
+    "sub_oxygen"
+  ],
+  "deep-seas-propulseur": [
+    "sub_thruster"
+  ],
+  "deep-seas-sas": [
+    "sub_airlock"
+  ],
+  "deep-seas-sonar-barometre": [
+    "sub_barometer",
+    "sub_barometer_link",
+    "sub_sonar"
+  ],
+  "deep-seas-voiles-et-gouvernail": [
+    "hs_lateen",
+    "hs_rudder",
+    "hs_sail"
+  ],
+  "deployeur": [
+    "deployer_contraption",
+    "deployer_filter",
+    "deployer_modes",
+    "deployer_processing",
+    "deployer_redstone"
+  ],
+  "depot": [
+    "depot"
+  ],
+  "detecteur-de-seuil": [
+    "threshold_switch",
+    "threshold_switch_more"
+  ],
+  "detonateurs-et-traceurs": [
+    "cbc_fuzing",
+    "cbc_tracers"
+  ],
+  "egouttoir-a-objets": [
+    "drain"
+  ],
+  "ejecteur": [
+    "ejector",
+    "ejector_launch",
+    "ejector_redstone",
+    "ejector_split"
+  ],
+  "emballeur": [
+    "packager",
+    "packager_unpack"
+  ],
+  "entonnoir": [
+    "funnel_brass",
+    "funnel_compat",
+    "funnel_direction",
+    "funnel_intro",
+    "funnel_redstone",
+    "funnel_transposer"
+  ],
+  "fabrication-des-canons": [
+    "cbc_boring",
+    "cbc_building",
+    "cbc_builtup",
+    "cbc_incomplete",
+    "cbc_moving"
+  ],
+  "gisements-de-petrole": [
+    "cdg_oil_chunk"
+  ],
+  "horloges-et-impulsions": [
+    "pulse_extender",
+    "pulse_repeater",
+    "timer_clock",
+    "timer_modes"
+  ],
+  "interface-de-fluide-portable": [
+    "pfi_transfer"
+  ],
+  "interface-de-stockage-portable": [
+    "psi_redstone",
+    "psi_transfer"
+  ],
+  "inverseur-de-rotation": [
+    "clutch",
+    "gearshift"
+  ],
+  "inverseur-de-rotation-sequence": [
+    "sequenced_gearshift"
+  ],
+  "lampe-a-quartz-rose": [
+    "rose_quartz_lamp"
+  ],
+  "liaison-de-redstone": [
+    "link_freq",
+    "link_modes"
+  ],
+  "manivelle": [
+    "hand_crank",
+    "valve_handle"
+  ],
+  "meule": [
+    "millstone"
+  ],
+  "mixeur-mecanique": [
+    "mixer"
+  ],
+  "moteur-a-vapeur": [
+    "steam_engine",
+    "steam_engine_levels"
+  ],
+  "moteur-creatif": [
+    "creative_motor",
+    "creative_motor_mojang"
+  ],
+  "moteur-diesel": [
+    "cdg_engine"
+  ],
+  "moteur-diesel-enorme": [
+    "cdg_huge"
+  ],
+  "moteur-diesel-modulaire": [
+    "cdg_modular"
+  ],
+  "observateur-de-train": [
+    "track_observer"
+  ],
+  "observateur-intelligent": [
+    "smart_observer"
+  ],
+  "ore-excavation-foreuse": [
+    "exc_drilling"
+  ],
+  "ore-excavation-foreuse-d-echantillon": [
+    "exc_sample"
+  ],
+  "papier-de-verre": [
+    "sandpaper_deployer"
+  ],
+  "perceuse-mecanique": [
+    "mechanical_drill",
+    "mechanical_drill_contraption"
+  ],
+  "piston-mecanique": [
+    "piston_anchor",
+    "piston_modes",
+    "piston_poles"
+  ],
+  "planning-de-train": [
+    "train_schedule"
+  ],
+  "pompe-a-balancier": [
+    "cdg_pumpjack",
+    "cdg_pumpjack_run"
+  ],
+  "pompe-mecanique": [
+    "pump_flow",
+    "pump_speed"
+  ],
+  "portes-coulissantes": [
+    "doors_double",
+    "doors_types"
+  ],
+  "poudre-et-cartouches": [
+    "cbc_loads",
+    "cbc_wet"
+  ],
+  "poulie-a-corde": [
+    "pulley_anchor",
+    "pulley_attachment",
+    "pulley_modes",
+    "pulley_multi"
+  ],
+  "poulie-a-tuyau": [
+    "hose_infinite",
+    "hose_intro",
+    "hose_level"
+  ],
+  "poulie-d-ascenseur": [
+    "elevator_build",
+    "elevator_doors",
+    "elevator_floors",
+    "elevator_multi"
+  ],
+  "presse-mecanique": [
+    "mechanical_press",
+    "mechanical_press_compacting"
+  ],
+  "rail-de-train": [
+    "track_bends",
+    "track_chunks",
+    "track_placement",
+    "track_portal"
+  ],
+  "recolteur-mecanique": [
+    "harvester",
+    "plough"
+  ],
+  "reemballeur": [
+    "repackager",
+    "repackager_merge"
+  ],
+  "reservoir-a-fluide": [
+    "tank_creative",
+    "tank_sizes",
+    "tank_storage"
+  ],
+  "reservoir-dorsal": [
+    "backtank_fill"
+  ],
+  "rotor": [
+    "shaft_encasing",
+    "shaft_relay"
+  ],
+  "roue-a-eau": [
+    "large_water_wheel",
+    "water_wheel"
+  ],
+  "roue-dentee": [
+    "cog_encasing",
+    "cog_large",
+    "cog_small",
+    "cog_speedup"
+  ],
+  "roues-de-concassage": [
+    "crushing_wheel"
+  ],
+  "rouleau-mecanique": [
+    "roller_fill",
+    "roller_pave",
+    "roller_paving"
+  ],
+  "roulement-mecanique": [
+    "bearing_anchor",
+    "bearing_modes",
+    "bearing_stabilized",
+    "clockwork_hour",
+    "clockwork_minute"
+  ],
+  "scie-mecanique": [
+    "saw_breaker",
+    "saw_contraption",
+    "saw_processing"
+  ],
+  "sifflet-a-vapeur": [
+    "whistle"
+  ],
+  "signal-de-train": [
+    "signal_cross",
+    "signal_placement",
+    "signal_redstone",
+    "signal_segments"
+  ],
+  "station-de-train": [
+    "auto_schedule",
+    "station_assembly",
+    "station_depart"
+  ],
+  "stressometre-compteur-de-vitesse": [
+    "speedometer",
+    "stressometer"
+  ],
+  "support-de-canon": [
+    "cbc_mount_assembly",
+    "cbc_mount_extension",
+    "cbc_mount_firing",
+    "cbc_mount_fixed",
+    "cbc_mount_upside"
+  ],
+  "support-de-moulin-a-vent": [
+    "sail_frames",
+    "sails",
+    "windmill_source",
+    "windmill_structure"
+  ],
+  "tapis-roulant": [
+    "belt_connector",
+    "belt_directions",
+    "belt_encasing",
+    "belt_transport"
+  ],
+  "tour-de-distillation": [
+    "cdg_distillation"
+  ],
+  "tourelle-chimique": [
+    "cdg_turret",
+    "cdg_turret_auto"
+  ],
+  "tube-nixie": [
+    "analog_lever",
+    "nixie_tube"
+  ],
+  "tunnel": [
+    "tunnel_andesite",
+    "tunnel_brass",
+    "tunnel_brass_group",
+    "tunnel_modes",
+    "tunnel_modes_robin",
+    "tunnel_modes_sync"
+  ],
+  "tuyau-a-fluide": [
+    "pipe_encasing",
+    "pipe_flow",
+    "pipe_interaction",
+    "valve"
+  ],
+  "tuyau-a-fluide-intelligent": [
+    "smart_pipe"
+  ],
+  "ventilateur-enchasse": [
+    "fan_processing",
+    "fan_washing"
+  ],
+  "verrou-alimente": [
+    "powered_latch",
+    "toggle_latch"
+  ]
 }
