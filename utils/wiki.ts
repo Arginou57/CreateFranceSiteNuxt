@@ -277,6 +277,18 @@ export function wikiVideoChapters(slug: string, v: WikiVideo): WikiChapter[] {
 // content/wiki/_loupe.json = { "<slug-fr>": ["<video id>", ...] }
 const loupeFile = (files['../content/wiki/_loupe.json'] as Record<string, string[]>) || {}
 
+// Ponder-like overlays of a video (content/wiki/_ponder.json, { "<slug-fr>": { "<video id>": { bubbles, controls } } }):
+// text bubbles written by us (never the mod's texts) and control hints (mouse clicks, keys), drawn over the video by the
+// player at video time t, anchored at « at » (0..1000 of the frame, from the loupe projection).
+export interface WikiPonderBubble { t: number; until?: number; at: [number, number]; fr: string; en?: string }
+export interface WikiPonderControl { t: number; d: number; at: [number, number]; actions?: string[]; keys?: string[] }
+export interface WikiPonder { bubbles?: WikiPonderBubble[]; controls?: WikiPonderControl[] }
+const ponderFile = (files['../content/wiki/_ponder.json'] as Record<string, Record<string, WikiPonder>>) || {}
+
+export function wikiVideoPonder(slug: string, videoId: string): WikiPonder | null {
+  return ponderFile[slug]?.[videoId] || null
+}
+
 // Bump when the *_loupe.json files are regenerated (names, outlines): Cloudflare keeps /wiki-media/ under the same URL.
 export const LOUPE_VERSION = '2'
 

@@ -38,7 +38,7 @@
       </header>
 
       <div class="wiki-top">
-        <WikiVideo v-if="page.videos[0]" class="wiki-top-video" :slug="page.slug" :video="page.videos[0]" :chapters="chaptersOf(page.videos[0])" />
+        <WikiVideo v-if="page.videos[0]" class="wiki-top-video" :slug="page.slug" :video="page.videos[0]" :chapters="chaptersOf(page.videos[0])" :ponder="wikiVideoPonder(page.slug, page.videos[0].id)" :lang="lang" />
         <div class="wiki-card wiki-facts">
           <h2 class="wiki-card-title">{{ t('wiki.facts') }}</h2>
           <dl>
@@ -73,7 +73,7 @@
         <h2>{{ s.title }}</h2>
         <div class="wiki-step-body">
           <div v-if="s.video || s.image" class="wiki-step-media">
-            <WikiVideo v-if="s.video && videoOf(s.video)" :slug="page.slug" :video="videoOf(s.video)!" :chapters="chaptersOf(videoOf(s.video)!)" />
+            <WikiVideo v-if="s.video && videoOf(s.video)" :slug="page.slug" :video="videoOf(s.video)!" :chapters="chaptersOf(videoOf(s.video)!)" :ponder="wikiVideoPonder(page.slug, s.video)" :lang="lang" />
             <figure v-else-if="s.image">
               <img :src="media(page.slug, s.image)" :alt="s.alt || s.title" width="600" height="600" loading="lazy" decoding="async">
             </figure>

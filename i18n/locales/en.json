@@ -194,6 +194,8 @@
       "loupeLoading": "Loading the magnifier…",
       "loupeOpen": "Open its page",
       "loupeHere": "The subject of this page",
+      "ctrl": { "rightClick": "Right-click", "leftClick": "Left-click", "scroll": "Scroll", "sneak": "Sneak" },
+      "key": { "forward": "W (forward)", "back": "S (back)", "left": "A", "right": "D", "sprint": "Ctrl (sprint)", "jump": "Space", "sneak": "Shift (sneak)" },
       "chapters": "Key moments of the animation"
     },
     "nav": {

@@ -44,7 +44,32 @@
         </div>
       </div>
 
-      <button v-if="paused && !loupeOn" type="button" class="wiki-video-play" :aria-label="t('wiki.play')" @click="toggle">
+      <!-- Ponder-like overlays: our own text bubbles and the control hints (click, keys), at the moments of the scene -->
+      <template v-if="!loupeOn">
+        <div v-for="c in activeControls" :key="`c${c.t}`" class="wv-ctrl" :style="anchorStyle(c.at, 'ctrl')">
+          <span v-for="a in c.actions || []" :key="a" class="wv-ctrl-chip">
+            <svg viewBox="0 0 24 32" width="18" height="24" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="28" rx="10" fill="none" stroke="currentColor" stroke-width="2" />
+              <path v-if="a === 'rightClick'" d="M12 2a10 10 0 0 1 10 10v2H12z" fill="var(--mandarine)" />
+              <path v-else-if="a === 'leftClick'" d="M12 2A10 10 0 0 0 2 12v2h10z" fill="var(--mandarine)" />
+              <rect v-else-if="a === 'scroll'" x="10.5" y="6" width="3" height="7" rx="1.5" fill="var(--mandarine)" />
+              <line x1="12" y1="2" x2="12" y2="14" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+            {{ t(`wiki.video.ctrl.${a}`) }}
+          </span>
+          <span v-for="k in c.keys || []" :key="k" class="wv-ctrl-chip">
+            <kbd>{{ t(`wiki.video.key.${k}`) }}</kbd>
+          </span>
+          <i class="wv-ctrl-arrow" aria-hidden="true" />
+        </div>
+        <transition name="wv-bubble">
+          <div v-if="activeBubble" :key="activeBubble.t" class="wv-bubble" :style="anchorStyle(activeBubble.at, 'bubble')">
+            <p>{{ bubbleText(activeBubble) }}</p>
+          </div>
+        </transition>
+      </template>
+
+      <button v-if="paused && !loupeOn" type="button" class="wiki-video-play" :class="{ corner: !!ponder }" :aria-label="t('wiki.play')" @click="toggle">
         <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor" /></svg>
       </button>
 
@@ -119,9 +144,15 @@
 </template>
 
 <script setup lang="ts">
-import type { WikiVideo } from '~/utils/wiki'
+import type { WikiPonder, WikiPonderBubble, WikiVideo } from '~/utils/wiki'
 
-const props = defineProps<{ slug: string; video: WikiVideo; chapters?: { t: number; label: string }[] }>()
+const props = defineProps<{
+  slug: string
+  video: WikiVideo
+  chapters?: { t: number; label: string }[]
+  ponder?: WikiPonder | null
+  lang?: WikiLocale
+}>()
 const { t } = useI18n()
 const files = computed(() => wikiVideoFiles(props.slug, props.video.id))
 const chapters = computed(() => [...(props.chapters || [])].sort((a, b) => a.t - b.t))
@@ -245,6 +276,39 @@ function onKey(e: KeyboardEvent) {
   else if (e.key === 'ArrowLeft') { e.preventDefault(); chapters.value.length ? prevChapter() : seek(current.value - 5) }
 }
 
+// ------------------------------------------------------------------ Ponder overlays
+const bubbles = computed(() => [...(props.ponder?.bubbles || [])].sort((a, b) => a.t - b.t))
+const activeBubble = computed(() => {
+  const list = bubbles.value
+  for (let i = list.length - 1; i >= 0; i--) {
+    const b = list[i]
+    const end = b.until ?? (list[i + 1]?.t ?? Infinity) - 0.15
+    if (current.value >= b.t && current.value < end) return b
+  }
+  return null
+})
+const activeControls = computed(() =>
+  (props.ponder?.controls || []).filter((c) => current.value >= c.t && current.value < c.t + c.d),
+)
+
+function bubbleText(b: WikiPonderBubble) {
+  return props.lang === 'en' ? b.en || b.fr : b.fr
+}
+
+/** control hint right above the anchor; text bubble beside it (right side, or left when the anchor is on the right),
+ *  higher than the hint so they never overlap, always inside the frame */
+function anchorStyle(at: [number, number], kind: 'bubble' | 'ctrl') {
+  const x = at[0] / 10
+  const y = at[1] / 10
+  if (kind === 'ctrl') return { left: `${Math.min(88, Math.max(12, x))}%`, top: `${Math.max(8, y - 3)}%` }
+  const gap = 11
+  const onRight = x + gap + 30 <= 97
+  const top = `${Math.max(3, Math.min(y - 22, 60))}%`
+  return onRight
+    ? { left: `${x + gap}%`, top, maxWidth: `${Math.min(46, 97 - x - gap)}%` }
+    : { right: `${100 - x + gap}%`, top, maxWidth: `${Math.min(46, x - gap - 3)}%` }
+}
+
 // ------------------------------------------------------------------ loupe (Ponder identify mode)
 interface LoupeData { dt: number; dur: number; ids: string[]; names: Record<string, { fr: string; en: string }>; frames: number[][][] }
 const { locale } = useI18n()
@@ -361,6 +425,8 @@ onUnmounted(() => observer?.disconnect())
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35); transition: transform 0.2s;
 }
 .wiki-video-play:hover { transform: translate(-50%, -50%) scale(1.08); }
+.wiki-video-play.corner { left: auto; top: auto; right: 12px; bottom: 58px; transform: none; width: 44px; height: 44px; }
+.wiki-video-play.corner:hover { transform: scale(1.08); }
 
 /* control bar, over the bottom of the video (always visible on touch screens, on hover / focus otherwise) */
 .wv-bar {
@@ -404,6 +470,28 @@ onUnmounted(() => observer?.disconnect())
 .wv-mark.done::after { background: var(--mandarine-light); }
 .wv-mark:hover::after, .wv-mark:focus-visible::after { transform: scaleY(1.2); background: var(--mandarine); }
 .wv-time { flex: none; font-size: 0.72rem; color: #fff; font-variant-numeric: tabular-nums; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
+
+/* Ponder overlays */
+.wv-bubble {
+  position: absolute; max-width: 46%; padding: 0.45rem 0.65rem; border-radius: 4px; pointer-events: none; z-index: 3;
+  background: rgba(16, 12, 24, 0.9); border: 2px solid #3a2f6a; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.6), 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+.wv-bubble p { margin: 0; color: #fff; font-size: clamp(0.66rem, 1.9vw, 0.82rem); line-height: 1.4; text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6); }
+.wv-bubble-enter-active, .wv-bubble-leave-active { transition: opacity 0.25s, transform 0.25s; }
+.wv-bubble-enter-from, .wv-bubble-leave-to { opacity: 0; transform: translateY(4px); }
+.wv-ctrl {
+  position: absolute; transform: translate(-50%, -100%); display: flex; gap: 0.3rem; align-items: center; padding: 0.25rem 0.4rem;
+  border-radius: 6px; background: rgba(16, 12, 24, 0.88); border: 1px solid rgba(255, 255, 255, 0.25); pointer-events: none; z-index: 3;
+}
+.wv-ctrl-chip { display: inline-flex; align-items: center; gap: 0.25rem; color: #fff; font-size: 0.7rem; white-space: nowrap; }
+.wv-ctrl-chip kbd {
+  font-family: inherit; font-size: 0.72rem; color: #1C1816; background: #f0e8e0; border-radius: 4px; padding: 0.05rem 0.4rem;
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.25);
+}
+.wv-ctrl-arrow {
+  position: absolute; left: 50%; bottom: -7px; width: 0; height: 0; margin-left: -6px;
+  border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 7px solid rgba(16, 12, 24, 0.88);
+}
 
 /* loupe */
 .wv-loupe { position: absolute; inset: 0; cursor: crosshair; }

@@ -1,0 +1,20 @@
+{
+  "loconautics-controleur-analogique": {
+    "loco_analog_intro": {
+      "bubbles": [
+        { "t": 0.62, "at": [500, 318], "fr": "Ce contrôleur pilote le train à distance : l'accélération et la direction partent sur des fréquences de liaison de redstone.", "en": "This controller drives the train remotely: throttle and steering go out on Redstone Link frequencies." },
+        { "t": 2.18, "at": [500, 318], "fr": "Clic droit pour t'installer aux commandes : tes touches de déplacement pilotent le train.", "en": "Right-click to sit at the controls: your movement keys now drive the train." },
+        { "t": 3.27, "at": [500, 318], "fr": "Garde « avancer » enfoncé : la sortie grimpe cran par cran, jusqu'à 15.", "en": "Keep forward pressed: the output climbs notch by notch, up to 15." },
+        { "t": 12.92, "at": [500, 318], "fr": "Lâche la touche : la sortie retombe d'elle-même, cran après cran.", "en": "Release the key: the output falls back on its own, notch after notch." },
+        { "t": 20.7, "at": [500, 318], "fr": "Le sprint fige la sortie au cran atteint, ici 8.", "en": "Sprint freezes the output at its current notch, here 8." },
+        { "t": 21.95, "at": [500, 318], "fr": "La molette fixe le cran le plus haut que la sortie pourra atteindre.", "en": "The mouse wheel caps how high the output may climb." }
+      ],
+      "controls": [
+        { "t": 1.87, "d": 1.6, "at": [500, 318], "actions": ["rightClick"] },
+        { "t": 3.4, "d": 9.3, "at": [500, 318], "keys": ["forward"] },
+        { "t": 20.7, "d": 1.2, "at": [500, 318], "keys": ["sprint"] },
+        { "t": 21.95, "d": 1.8, "at": [500, 318], "actions": ["scroll"] }
+      ]
+    }
+  }
+}

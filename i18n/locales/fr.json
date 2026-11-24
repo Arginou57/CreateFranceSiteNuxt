@@ -194,6 +194,8 @@
       "loupeLoading": "Chargement de la loupe…",
       "loupeOpen": "Voir la page",
       "loupeHere": "Le sujet de cette page",
+      "ctrl": { "rightClick": "Clic droit", "leftClick": "Clic gauche", "scroll": "Molette", "sneak": "Accroupi" },
+      "key": { "forward": "Z (avancer)", "back": "S (reculer)", "left": "Q", "right": "D", "sprint": "Ctrl (sprint)", "jump": "Espace", "sneak": "Maj (accroupi)" },
       "chapters": "Les moments clés de l'animation"
     },
     "nav": {
