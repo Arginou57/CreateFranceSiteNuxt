@@ -159,7 +159,7 @@ function videoOf(id: string) {
 
 // key moments of a video, labelled with the title of the page section they explain (so they follow the language)
 function chaptersOf(v: WikiVideo) {
-  return (v.chapters || []).map((c) => ({
+  return wikiVideoChapters(props.page.slug, v).map((c) => ({
     t: c.t,
     label: c.label || props.page.sections.find((s) => s.id === c.section)?.title || '',
   }))

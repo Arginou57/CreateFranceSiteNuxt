@@ -189,6 +189,11 @@
       "next": "Moment clé suivant",
       "timeline": "Avancer ou reculer dans l'animation",
       "goto": "Aller au moment clé",
+      "loupe": "Loupe : identifier les blocs",
+      "loupeHint": "Survole un bloc pour savoir ce que c'est",
+      "loupeLoading": "Chargement de la loupe…",
+      "loupeOpen": "Voir la page",
+      "loupeHere": "Le sujet de cette page",
       "chapters": "Les moments clés de l'animation"
     },
     "nav": {

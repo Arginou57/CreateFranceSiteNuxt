@@ -254,6 +254,22 @@ export function wikiPagesUsing(id: string, exceptSlug?: string): WikiPage[] {
   return wikiPages.filter((p) => p.slug !== exceptSlug && p.recipe?.items?.some((row) => row.includes(id)))
 }
 
+// Key moments of the videos kept apart from the pages (content/wiki/_chapters.json, { "<slug-fr>": { "<video id>": [{ t, section }] } }),
+// so they can be filled for every page without touching the page files; a "chapters" field in the page wins.
+const chapterFile = (files['../content/wiki/_chapters.json'] as Record<string, Record<string, WikiChapter[]>>) || {}
+
+export function wikiVideoChapters(slug: string, v: WikiVideo): WikiChapter[] {
+  return v.chapters?.length ? v.chapters : chapterFile[slug]?.[v.id] || []
+}
+
+// Videos that have loupe data (/wiki-media/<slug>/<video id>_loupe.json, written by WIKI/loupe_export.py):
+// content/wiki/_loupe.json = { "<slug-fr>": ["<video id>", ...] }
+const loupeFile = (files['../content/wiki/_loupe.json'] as Record<string, string[]>) || {}
+
+export function wikiVideoHasLoupe(slug: string, videoId: string): boolean {
+  return !!loupeFile[slug]?.includes(videoId)
+}
+
 // Cloudflare keeps /wiki-media/ 30 days under the same URL: every medium gets ?v=<dateModified of its page>, plus the
 // counter of _media_versions.json ({ "<slug-fr>": n }) to bump when a page's media are re-rendered without a page edit.
 const mediaVersions = (files['../content/wiki/_media_versions.json'] as Record<string, number | string>) || {}

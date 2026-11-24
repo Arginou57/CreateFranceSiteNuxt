@@ -21,7 +21,30 @@
         <source :src="files.webm" type="video/webm">
         <source :src="files.mp4" type="video/mp4">
       </video>
-      <button v-if="paused" type="button" class="wiki-video-play" :aria-label="t('wiki.play')" @click="toggle">
+      <!-- loupe (Ponder identify mode): the video is paused, hovering a block shows what it is -->
+      <div
+        v-if="loupeOn"
+        class="wv-loupe"
+        @pointermove="onLoupeMove"
+        @pointerdown="onLoupeMove"
+        @pointerleave="hover = null"
+        @click.stop="openHover"
+      >
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true">
+          <polygon v-if="hover" :points="hover.points" class="wv-loupe-poly" />
+        </svg>
+        <p v-if="!hover" class="wv-loupe-hint">{{ loupeData ? t('wiki.video.loupeHint') : t('wiki.video.loupeLoading') }}</p>
+        <div v-if="hover" class="wv-loupe-card" :style="cardStyle">
+          <img v-if="hover.icon" :src="hover.icon" alt="" width="40" height="40">
+          <span>
+            <strong>{{ hover.name }}</strong>
+            <NuxtLink v-if="hover.path" :to="hover.path" @click.stop>{{ t('wiki.video.loupeOpen') }} →</NuxtLink>
+            <small v-else-if="hover.here">{{ t('wiki.video.loupeHere') }}</small>
+          </span>
+        </div>
+      </div>
+
+      <button v-if="paused && !loupeOn" type="button" class="wiki-video-play" :aria-label="t('wiki.play')" @click="toggle">
         <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor" /></svg>
       </button>
 
@@ -65,6 +88,18 @@
           <div class="wv-knob" :style="{ left: `${pct(current)}%` }" />
         </div>
         <span class="wv-time">{{ fmt(current) }} / {{ fmt(duration) }}</span>
+        <button
+          v-if="hasLoupe"
+          type="button"
+          class="wv-btn wv-loupe-btn"
+          :class="{ on: loupeOn }"
+          :aria-pressed="loupeOn"
+          :aria-label="t('wiki.video.loupe')"
+          :title="t('wiki.video.loupe')"
+          @click="toggleLoupe"
+        >
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M10.5 3a7.5 7.5 0 0 1 5.96 12.05l4.25 4.24-1.42 1.42-4.24-4.25A7.5 7.5 0 1 1 10.5 3Zm0 2a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11Z" fill="currentColor" /></svg>
+        </button>
       </div>
     </div>
 
@@ -129,6 +164,7 @@ function play() {
 function toggle() {
   const v = videoRef.value
   if (!v) return
+  if (loupeOn.value) { loupeOn.value = false; hover.value = null }
   if (v.paused) {
     userPaused = false
     play()
@@ -155,7 +191,7 @@ function seek(s: number, andPlay = false) {
   current.value = to
   const apply = () => {
     v.currentTime = to
-    if (andPlay && !userPaused) play()
+    if (andPlay && !userPaused && !loupeOn.value) play()   // the loupe keeps the image still
   }
   if (v.readyState >= 1) apply()
   else {
@@ -203,10 +239,93 @@ function onTrackDown(e: PointerEvent) {
 // keyboard on the player: space = pause, ← → = previous / next key moment (or 5 s without key moments)
 function onKey(e: KeyboardEvent) {
   if ((e.target as HTMLElement)?.tagName === 'BUTTON' && e.key === ' ') return
+  if (e.key === 'Escape' && loupeOn.value) { toggleLoupe(); return }
   if (e.key === ' ' || e.key === 'k') { e.preventDefault(); toggle() }
   else if (e.key === 'ArrowRight') { e.preventDefault(); chapters.value.length ? nextChapter() : seek(current.value + 5) }
   else if (e.key === 'ArrowLeft') { e.preventDefault(); chapters.value.length ? prevChapter() : seek(current.value - 5) }
 }
+
+// ------------------------------------------------------------------ loupe (Ponder identify mode)
+interface LoupeData { dt: number; dur: number; ids: string[]; names: Record<string, { fr: string; en: string }>; frames: number[][][] }
+const { locale } = useI18n()
+const hasLoupe = computed(() => wikiVideoHasLoupe(props.slug, props.video.id))
+const loupeOn = ref(false)
+const loupeData = ref<LoupeData | null>(null)
+const hover = ref<{ id: string; name: string; icon: string | null; path: string | null; here: boolean; points: string; x: number; y: number } | null>(null)
+let resumeAfterLoupe = false
+
+async function toggleLoupe() {
+  const v = videoRef.value
+  if (!loupeOn.value) {
+    resumeAfterLoupe = !!v && !v.paused
+    v?.pause()
+    loupeOn.value = true
+    if (!loupeData.value) {
+      try {
+        loupeData.value = await $fetch<LoupeData>(wikiMedia(props.slug, `${props.video.id}_loupe.json`))
+      } catch {
+        loupeOn.value = false
+      }
+    }
+  } else {
+    loupeOn.value = false
+    hover.value = null
+    if (resumeAfterLoupe && !userPaused) play()
+  }
+}
+
+function inPoly(x: number, y: number, e: number[]) {
+  let inside = false
+  const n = (e.length - 2) / 2
+  for (let i = 0, j = n - 1; i < n; j = i++) {
+    const xi = e[2 + 2 * i], yi = e[3 + 2 * i], xj = e[2 + 2 * j], yj = e[3 + 2 * j]
+    if ((yi > y) !== (yj > y) && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) inside = !inside
+  }
+  return inside
+}
+
+function onLoupeMove(ev: PointerEvent) {
+  const d = loupeData.value
+  if (!d) return
+  const r = (ev.currentTarget as HTMLElement).getBoundingClientRect()
+  const x = ((ev.clientX - r.left) / r.width) * 1000
+  const y = ((ev.clientY - r.top) / r.height) * 1000
+  const fi = Math.max(0, Math.min(d.frames.length - 1, Math.round(current.value / d.dt)))
+  // the frames are sorted by depth: the first outline under the pointer is the visible block
+  const e = d.frames[fi].find((q) => inPoly(x, y, q))
+  if (!e) { hover.value = null; return }
+  const id = d.ids[e[0]]
+  const page = wikiPageForItem(id)
+  const lang: WikiLocale = locale.value === 'en' ? 'en' : 'fr'
+  const pts: string[] = []
+  for (let k = 2; k < e.length; k += 2) pts.push(`${e[k]},${e[k + 1]}`)
+  hover.value = {
+    id,
+    name: d.names[id]?.[lang] || id,
+    icon: wikiItemIcon(id),
+    path: page && page.slug !== props.slug ? wikiPagePath(page, lang) : null,
+    here: page?.slug === props.slug,
+    points: pts.join(' '),
+    x: x / 10,
+    y: y / 10,
+  }
+}
+
+function openHover() {
+  if (hover.value?.path) navigateTo(hover.value.path)
+}
+
+// the card follows the pointer, flipped to stay inside the video
+const cardStyle = computed(() => {
+  const h = hover.value
+  if (!h) return {}
+  return {
+    left: h.x < 55 ? `${h.x + 3}%` : undefined,
+    right: h.x >= 55 ? `${100 - h.x + 3}%` : undefined,
+    top: h.y < 70 ? `${h.y + 3}%` : undefined,
+    bottom: h.y >= 70 ? `${100 - h.y + 3}%` : undefined,
+  }
+})
 
 onMounted(() => {
   const v = videoRef.value
@@ -284,6 +403,25 @@ onUnmounted(() => observer?.disconnect())
 .wv-mark.done::after { background: var(--mandarine-light); }
 .wv-mark:hover::after, .wv-mark:focus-visible::after { transform: scaleY(1.2); background: var(--mandarine); }
 .wv-time { flex: none; font-size: 0.72rem; color: #fff; font-variant-numeric: tabular-nums; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
+
+/* loupe */
+.wv-loupe { position: absolute; inset: 0; cursor: crosshair; }
+.wv-loupe svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.wv-loupe-poly { fill: rgba(242, 166, 90, 0.22); stroke: var(--mandarine-light); stroke-width: 4; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.wv-loupe-hint {
+  position: absolute; left: 50%; top: 0.8rem; transform: translateX(-50%); padding: 0.3rem 0.8rem; border-radius: 999px;
+  font-size: 0.75rem; color: #fff; background: rgba(20, 16, 14, 0.75); white-space: nowrap; pointer-events: none;
+}
+.wv-loupe-card {
+  position: absolute; display: flex; gap: 0.55rem; align-items: center; padding: 0.45rem 0.7rem 0.45rem 0.45rem; border-radius: 10px;
+  background: rgba(28, 24, 22, 0.94); border: 1px solid var(--terre-cuite); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45); max-width: 70%;
+}
+.wv-loupe-card img { width: 40px; height: 40px; flex: none; }
+.wv-loupe-card span { display: flex; flex-direction: column; gap: 0.1rem; min-width: 0; }
+.wv-loupe-card strong { color: var(--text-primary); font-size: 0.85rem; }
+.wv-loupe-card a { color: var(--mandarine); font-size: 0.75rem; text-decoration: none; }
+.wv-loupe-card small { color: var(--text-muted); font-size: 0.68rem; }
+.wv-loupe-btn.on { background: var(--terre-cuite); color: #1C1816; }
 
 .wiki-video figcaption { color: var(--text-muted); font-size: 0.8rem; line-height: 1.5; margin-top: 0.6rem; text-align: center; }
 

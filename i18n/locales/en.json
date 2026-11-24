@@ -189,6 +189,11 @@
       "next": "Next key moment",
       "timeline": "Move through the animation",
       "goto": "Go to key moment",
+      "loupe": "Magnifier: identify the blocks",
+      "loupeHint": "Hover a block to see what it is",
+      "loupeLoading": "Loading the magnifier…",
+      "loupeOpen": "Open its page",
+      "loupeHere": "The subject of this page",
       "chapters": "Key moments of the animation"
     },
     "nav": {
