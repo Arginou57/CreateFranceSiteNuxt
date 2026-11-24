@@ -555,6 +555,35 @@
     "prop_transmission_direct",
     "prop_transmission_incremental"
   ],
+  "radars-armes-automatiques": [
+    "radar_auto_pitch",
+    "radar_auto_yaw",
+    "radar_swivel",
+    "radar_weapon"
+  ],
+  "radars-brouilleurs": [
+    "radar_jammer"
+  ],
+  "radars-construire-un-radar": [
+    "radar_contraption"
+  ],
+  "radars-detecteur-d-alerte-radar": [
+    "radar_rwr",
+    "radar_rwr_2",
+    "radar_rwr_contacts"
+  ],
+  "radars-radar-celeste-et-radar-aeroporte": [
+    "radar_plane",
+    "radar_sky"
+  ],
+  "radars-reseau-et-moniteur": [
+    "radar_data_link",
+    "radar_monitor",
+    "radar_network"
+  ],
+  "radars-sonar": [
+    "radar_sonar"
+  ],
   "rail-de-train": [
     "track_bends",
     "track_chunks",
