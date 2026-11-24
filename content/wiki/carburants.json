@@ -6,8 +6,8 @@
   "title": "Carburants — Create Diesel Generators, tableau",
   "description": "Les carburants de Create Diesel Generators : diesel, essence, biodiesel, éthanol, huile végétale. Vitesse, SU, brûleur et comment les produire.",
   "datePublished": "2026-11-23",
-  "dateModified": "2026-11-23",
-  "createVersion": "6.0.10 · Create Diesel Generators 1.3.15",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Diesel Generators 1.3.16",
   "mcVersion": "1.21.1",
   "intro": "Tous les moteurs de Create Diesel Generators acceptent cinq <strong>carburants</strong>. Ils ne changent pas la consommation, toujours 1 mB par seconde et par moteur, mais ils changent beaucoup la puissance : le diesel donne trois fois plus que l'éthanol. Voici d'où vient chacun, ce qu'il vaut dans chaque moteur et dans le brûleur, avec les chiffres des fichiers de données du mod.",
   "facts": [
@@ -37,7 +37,7 @@
     },
     {
       "label": "Version",
-      "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+      "value": "Create Diesel Generators 1.3.16 · Create 6.0.10"
     }
   ],
   "videos": [],
@@ -68,6 +68,11 @@
       "id": "petrole",
       "title": "Le pétrole brut",
       "html": "<p>Le pétrole se pompe sous certains chunks (voir <a href=\"/wiki/gisements-de-petrole\">gisements de pétrole</a>). Il n'est pas un carburant : un moteur rempli de pétrole reste à l'arrêt. On le distille, ou on le mélange à chaud avec deux sables et deux graviers pour faire quatre blocs d'asphalte.</p>"
+    },
+    {
+      "id": "seaux",
+      "title": "Les seaux et les flaques",
+      "html": "<p>Chaque fluide a son seau : <strong>seau de diesel</strong> (Diesel Bucket), <strong>d'essence</strong> (Gasoline Bucket), <strong>de biodiesel</strong> (Biodiesel Bucket), <strong>d'éthanol</strong> (Ethanol Bucket), <strong>d'huile végétale</strong> (Plant Oil Bucket) et <strong>de pétrole</strong> (Crude Oil Bucket). On les remplit sur un réservoir ou sous un <a href=\"/wiki/bec-verseur\">bec verseur</a>. Ils ne remplissent pas un moteur (réglage par défaut), mais se vident dans le monde. Attention : une flaque de carburant explose si une explosion la touche ou si un briquet allumé y tombe ; le pétrole brut, lui, ne brûle pas.</p>"
     },
     {
       "id": "duree",
@@ -103,7 +108,9 @@
     "Huile et biodiesel : recipe/compacting/plant_oil.json, recipe/mixing/biodiesel.json",
     "Asphalte : recipe/mixing/asphalt_block.json",
     "Code, données et storyboards : Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, licence MIT, auteur George VI), identiques au jar du modpack Create France",
-    "Images : blocs et objets du mod posés sur la plaque et rendus par notre moteur (modèles et textures MIT, George VI)"
+    "Images : blocs et objets du mod posés sur la plaque et rendus par notre moteur (modèles et textures MIT, George VI)",
+    "Version 1.3.16 (jar createdieselgenerators-1.21.1-1.3.16.jar du modpack de référence) comparée au 1.3.15 le 24/11 : recettes et données identiques (une recette renommée, un tag Steam 'n' Rails ajouté), classes changées : moteurs (SU × accélérateur, multiplicateur de consommation du turbo appliqué), brûleur (chaleur de chaudière plafonnée à 2), baril (longueur par largeur réglable), config",
+    "Seaux et flaques : CDGFluids (seaux, blocs fluides), config ENGINES_FILLED_WITH_ITEMS faux et COMBUSTIBLES_BLOW_UP vrai, GameEvents.onExplosion, LighterItem.onEntityItemUpdate"
   ],
   "en": {
     "slugEn": "diesel-generators-fuels",
@@ -138,7 +145,7 @@
       },
       {
         "label": "Version",
-        "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+        "value": "Create Diesel Generators 1.3.16 · Create 6.0.10"
       }
     ],
     "videos": [],
@@ -170,6 +177,11 @@
         "html": "<p>Crude oil is pumped under some chunks (see <a href=\"/en/wiki/oil-deposits\">oil deposits</a>). It is not a fuel: an engine filled with crude stays still. You distill it, or mix it hot with two sand and two gravel to make four asphalt blocks.</p>"
       },
       {
+        "id": "seaux",
+        "title": "Buckets and puddles",
+        "html": "<p>Every fluid has its bucket: the <strong>Diesel Bucket</strong>, <strong>Gasoline Bucket</strong>, <strong>Biodiesel Bucket</strong>, <strong>Ethanol Bucket</strong>, <strong>Plant Oil Bucket</strong> and <strong>Crude Oil Bucket</strong>. Fill them from a tank or under a <a href=\"/en/wiki/spout\">Spout</a>. They do not fill an engine (default setting), but they can be poured into the world. Careful: a fuel puddle blows up when an explosion reaches it or when a lit lighter falls in; crude oil does not burn.</p>"
+      },
+      {
         "id": "duree",
         "title": "How long does a tank last?",
         "html": "<p>At 1 mB per second, a bucket (1,000 mB) runs an engine for 16 min 40 s, and one <a href=\"/en/wiki/fluid-tank\">Fluid Tank</a> block (8,000 mB) for 2 h 13 min. A ten-block modular engine empties that same block in 13 min 20 s. When throttled with redstone, fuel use drops less than speed: it keeps a quarter of the full rate, plus the rest in proportion to the throttle.</p>"
@@ -193,7 +205,9 @@
       "Plant oil and biodiesel: recipe/compacting/plant_oil.json, recipe/mixing/biodiesel.json",
       "Asphalt: recipe/mixing/asphalt_block.json",
       "Code, data and storyboards: Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, MIT licence, author George VI), identical to the Create France modpack jar",
-      "Images: mod blocks and items placed on the plate and rendered by our engine (models and textures MIT, George VI)"
+      "Images: mod blocks and items placed on the plate and rendered by our engine (models and textures MIT, George VI)",
+      "Version 1.3.16 (createdieselgenerators-1.21.1-1.3.16.jar from the reference modpack) compared with 1.3.15 on 24/11: recipes and data identical (one recipe renamed, one Steam 'n' Rails tag added); changed classes: engines (SU × throttle, turbo fuel multiplier applied), burner (boiler heat capped at 2), oil barrel (length per width configurable), config",
+      "Buckets and puddles: CDGFluids (buckets, fluid blocks), config ENGINES_FILLED_WITH_ITEMS false and COMBUSTIBLES_BLOW_UP true, GameEvents.onExplosion, LighterItem.onEntityItemUpdate"
     ]
   }
 }

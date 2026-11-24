@@ -6,7 +6,7 @@
   "title": "Matériaux des canons — Create Big Cannons, guide",
   "description": "Bois, fer forgé, fonte, bronze, acier, nethersteel : combien de poudre chaque canon de Create Big Cannons supporte, longueur et poids. Tableau complet.",
   "datePublished": "2026-10-28",
-  "dateModified": "2026-10-28",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
   "mcVersion": "1.21.1",
   "intro": "Un canon de <strong>Create Big Cannons</strong> se construit dans un seul <strong>matériau</strong>, et ce choix décide de presque tout : la quantité de poudre qu'il encaisse sans éclater, la longueur de fût qu'un obus peut traverser, son poids sur le support et la façon dont il casse. Voici l'anatomie d'un canon, puis les six matériaux comparés avec les chiffres du code.",
@@ -90,7 +90,9 @@
     "poudre-et-cartouches",
     "fabrication-des-canons",
     "support-de-canon",
-    "mortiers"
+    "mortiers",
+    "canons-assembles",
+    "moules-et-coulee"
   ],
   "sources": [
     "Matériaux : index/CBCBigCannonMaterials.java (maxSafePropellantStress, minimumVelocityPerBarrel, weight, failureMode, isWeldable)",

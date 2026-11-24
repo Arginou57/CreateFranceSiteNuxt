@@ -6,8 +6,8 @@
   "title": "Blocs de construction — Create Diesel Generators",
   "description": "Les blocs de Create Diesel Generators : asphalte rapide, ciment coulé, copeaux de bois, tôle, poutre en andésite, baril à pétrole et fermenteur.",
   "datePublished": "2026-11-23",
-  "dateModified": "2026-11-23",
-  "createVersion": "6.0.10 · Create Diesel Generators 1.3.15",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Diesel Generators 1.3.16",
   "mcVersion": "1.21.1",
   "intro": "Create Diesel Generators ajoute aussi des <strong>blocs de construction</strong> tirés de son industrie : l'<strong>asphalte</strong> qui fait courir plus vite, le <strong>ciment</strong> qu'on coule et qui durcit en béton, les blocs de <strong>copeaux de bois</strong>, les <strong>panneaux de tôle</strong> et la <strong>poutre en andésite</strong>. On y ajoute les blocs de stockage : le <strong>baril à pétrole</strong>, le bidon et le fermenteur de masse.",
   "facts": [
@@ -37,7 +37,7 @@
     },
     {
       "label": "Version",
-      "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+      "value": "Create Diesel Generators 1.3.16 · Create 6.0.10"
     }
   ],
   "recipe": {
@@ -76,12 +76,14 @@
     {
       "id": "ciment",
       "title": "Le ciment",
-      "html": "<p>Le mixeur fait aussi du <strong>ciment</strong> : une poudre de béton et 100 mB d'eau donnent 1 000 mB de ciment de la même couleur (et une chance sur quatre de récupérer la poudre). Versé, le ciment coule vers le bas, puis durcit tout seul en béton. Un seau de ciment utilisé sur un <a href=\"/wiki/tuyau-a-fluide\">tuyau à fluide</a> l'enrobe de béton : le tuyau garde ses connexions, caché dans un bloc plein.</p>"
+      "html": "<p>Le mixeur fait aussi du <strong>ciment</strong> : une poudre de béton et 100 mB d'eau donnent 1 000 mB de ciment de la même couleur (et une chance sur quatre de récupérer la poudre). Versé, le ciment coule vers le bas, puis durcit tout seul en béton. Un seau de ciment utilisé sur un <a href=\"/wiki/tuyau-a-fluide\">tuyau à fluide</a> l'enrobe de béton de la même couleur, par exemple en <strong>tuyau à fluide enrobé de béton noir</strong> (Black Concrete Encased Fluid Pipe), une version par couleur : le tuyau garde ses connexions, caché dans un bloc plein.</p>"
     },
     {
       "id": "bois",
       "title": "Copeaux de bois, tôle et poutre",
-      "html": "<p>Les <a href=\"/wiki/roues-de-concassage\">roues de concassage</a> réduisent les objets en bois en <strong>copeaux</strong> : une planche en donne 7, plus une chance sur deux d'un huitième. Quatre copeaux font un bloc de copeaux, qui a ses poutres, dalles et escaliers. Les <strong>panneaux de tôle</strong> sortent d'une presse avec un moule à lignes. La <strong>poutre en andésite</strong>, version légère de la poutre métallique de Create, peut enrober un rotor.</p>"
+      "html": "<p>Les <a href=\"/wiki/roues-de-concassage\">roues de concassage</a> réduisent les objets en bois en <strong>copeaux</strong> : une planche en donne 7, plus une chance sur deux d'un huitième. Quatre copeaux font un bloc de copeaux, qui a ses dalles et escaliers ; un bloc entre deux copeaux, en colonne, donne la <strong>poutre de copeaux de bois</strong> (Chip Wood Beam ; « Pillier de copeaux de bois » dans le jeu). Les <strong>panneaux de tôle</strong> sortent d'une presse avec un moule à lignes. La <strong>poutre en andésite</strong>, version légère de la poutre métallique de Create, peut enrober un rotor.</p>",
+      "image": "c2a_cdg_blocks_poutre-tuyaux.webp",
+      "alt": "Poutre de copeaux de bois, tuyaux enrobés de béton noir, blanc et orange, et le pied d’une entretoise en andésite"
     },
     {
       "id": "stockage",
@@ -98,7 +100,7 @@
     {
       "id": "poutre",
       "title": "La poutre en andésite",
-      "html": "<p>Une recette donne six poutres pour deux alliages d'andésite et un rotor. Elles se raccordent entre elles comme les poutres métalliques de Create et peuvent enfermer un rotor qui continue de tourner à l'intérieur. Avec le mod Strut Your Stuff, elles ont aussi leurs entretoises.</p>"
+      "html": "<p>Une recette donne six poutres pour deux alliages d'andésite et un rotor. Elles se raccordent entre elles comme les poutres métalliques de Create et peuvent enfermer un rotor qui continue de tourner à l'intérieur. Avec le mod Strut Your Stuff, elles ont aussi leur <strong>entretoise en andésite</strong> (Andesite Girder Strut) : six pour trois poutres et deux alliages d'andésite.</p>"
     },
     {
       "id": "copeaux",
@@ -128,7 +130,9 @@
     "Poutre : recipe/crafting/andesite_girder.json, AndesiteGirderEncasedShaftBlock",
     "Baril : OilBarrelBlockEntity (capacité fluidTankCapacity × 1 000, largeur max 3)",
     "Code, données et storyboards : Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, licence MIT, auteur George VI), identiques au jar du modpack Create France",
-    "Images : blocs et objets du mod posés sur la plaque et rendus par notre moteur (modèles et textures MIT, George VI)"
+    "Images : blocs et objets du mod posés sur la plaque et rendus par notre moteur (modèles et textures MIT, George VI)",
+    "Version 1.3.16 (jar createdieselgenerators-1.21.1-1.3.16.jar du modpack de référence) comparée au 1.3.15 le 24/11 : recettes et données identiques (une recette renommée, un tag Steam 'n' Rails ajouté), classes changées : moteurs (SU × accélérateur, multiplicateur de consommation du turbo appliqué), brûleur (chaleur de chaudière plafonnée à 2), baril (longueur par largeur réglable), config",
+    "Poutre de copeaux : recipe/crafting/chip_wood_beam.json ; entretoise : recipe/crafting/andesite_girder_strut.json (condition : mod struts) ; tuyaux enrobés : CDGBlocks.CONCRETE_ENCASED_FLUID_PIPES (16 couleurs)"
   ],
   "en": {
     "slugEn": "diesel-generators-building-blocks",
@@ -163,7 +167,7 @@
       },
       {
         "label": "Version",
-        "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+        "value": "Create Diesel Generators 1.3.16 · Create 6.0.10"
       }
     ],
     "recipe": {
@@ -193,12 +197,13 @@
       {
         "id": "ciment",
         "title": "Cement",
-        "html": "<p>The mixer also makes <strong>cement</strong>: one concrete powder and 100 mB of water give 1,000 mB of cement of the same colour (with a one-in-four chance to get the powder back). Poured out, cement flows downwards, then sets into concrete on its own. A cement bucket used on a <a href=\"/en/wiki/fluid-pipe\">Fluid Pipe</a> encases it in concrete: the pipe keeps its connections, hidden inside a full block.</p>"
+        "html": "<p>The mixer also makes <strong>cement</strong>: one concrete powder and 100 mB of water give 1,000 mB of cement of the same colour (with a one-in-four chance to get the powder back). Poured out, cement flows downwards, then sets into concrete on its own. A cement bucket used on a <a href=\"/en/wiki/fluid-pipe\">Fluid Pipe</a> encases it in concrete of the same colour, for instance as a <strong>Black Concrete Encased Fluid Pipe</strong>, one version per colour: the pipe keeps its connections, hidden inside a full block.</p>"
       },
       {
         "id": "bois",
         "title": "Chip wood, sheet metal and girder",
-        "html": "<p><a href=\"/en/wiki/crushing-wheel\">Crushing Wheels</a> grind wooden items into <strong>wood chips</strong>: a plank gives 7, plus a one-in-two chance of an eighth. Four chips make a chip wood block, which has beams, slabs and stairs. <strong>Sheet metal panels</strong> come out of a press with a lines mold. The <strong>Andesite Girder</strong>, a light version of Create's metal girder, can encase a shaft.</p>"
+        "html": "<p><a href=\"/en/wiki/crushing-wheel\">Crushing Wheels</a> grind wooden items into <strong>wood chips</strong>: a plank gives 7, plus a one-in-two chance of an eighth. Four chips make a chip wood block, which has slabs and stairs; a block between two chips, in a column, gives the <strong>Chip Wood Beam</strong>. <strong>Sheet metal panels</strong> come out of a press with a lines mold. The <strong>Andesite Girder</strong>, a light version of Create's metal girder, can encase a shaft.</p>",
+        "alt": "Chip Wood Beam, black, white and orange Concrete Encased Fluid Pipes, and the foot of an Andesite Girder Strut"
       },
       {
         "id": "stockage",
@@ -214,7 +219,7 @@
       {
         "id": "poutre",
         "title": "The Andesite Girder",
-        "html": "<p>One recipe makes six girders from two andesite alloy and a shaft. They connect to each other like Create's metal girders and can enclose a shaft that keeps turning inside. With the Strut Your Stuff mod installed, they also get matching struts for diagonal supports.</p>"
+        "html": "<p>One recipe makes six girders from two andesite alloy and a shaft. They connect to each other like Create's metal girders and can enclose a shaft that keeps turning inside. With the Strut Your Stuff mod installed, they also get the <strong>Andesite Girder Strut</strong> for diagonal supports: six from three girders and two andesite alloy.</p>"
       },
       {
         "id": "copeaux",
@@ -235,7 +240,9 @@
       "Girder: recipe/crafting/andesite_girder.json, AndesiteGirderEncasedShaftBlock",
       "Barrel: OilBarrelBlockEntity (capacity fluidTankCapacity × 1,000, max width 3)",
       "Code, data and storyboards: Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, MIT licence, author George VI), identical to the Create France modpack jar",
-      "Images: mod blocks and items placed on the plate and rendered by our engine (models and textures MIT, George VI)"
+      "Images: mod blocks and items placed on the plate and rendered by our engine (models and textures MIT, George VI)",
+      "Version 1.3.16 (createdieselgenerators-1.21.1-1.3.16.jar from the reference modpack) compared with 1.3.15 on 24/11: recipes and data identical (one recipe renamed, one Steam 'n' Rails tag added); changed classes: engines (SU × throttle, turbo fuel multiplier applied), burner (boiler heat capped at 2), oil barrel (length per width configurable), config",
+      "Chip Wood Beam: recipe/crafting/chip_wood_beam.json; strut: recipe/crafting/andesite_girder_strut.json (condition: struts mod); encased pipes: CDGBlocks.CONCRETE_ENCASED_FLUID_PIPES (16 colours)"
     ]
   }
 }

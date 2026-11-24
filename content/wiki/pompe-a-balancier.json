@@ -6,8 +6,8 @@
   "title": "Pompe à balancier — Create Diesel Generators",
   "description": "Construire une pompe à balancier dans Create Diesel Generators : roulement, balancier, tête, manivelle, trou de pompe et débit de pétrole.",
   "datePublished": "2026-11-23",
-  "dateModified": "2026-11-23",
-  "createVersion": "6.0.10 · Create Diesel Generators 1.3.15",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Diesel Generators 1.3.16",
   "mcVersion": "1.21.1",
   "intro": "La <strong>pompe à balancier</strong> (pumpjack) est la seule façon de sortir le pétrole du sol dans Create Diesel Generators. C'est une petite contraption : un balancier collé qui bascule sur un <strong>roulement mécanique de pompe</strong>, poussé par une <strong>manivelle de pompe</strong>, avec une <strong>tête de pompe</strong> au-dessus d'un <strong>trou de pompe</strong> relié à la bedrock. Chaque coup de balancier remonte jusqu'à 1 000 mB de pétrole.",
   "facts": [
@@ -37,7 +37,7 @@
     },
     {
       "label": "Version",
-      "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+      "value": "Create Diesel Generators 1.3.16 · Create 6.0.10"
     }
   ],
   "recipe": {
@@ -114,7 +114,7 @@
       "title": "La tête et le second roulement",
       "image": "cdg_pumpjack_second-roulement.webp",
       "alt": "La tête de pompe au bout du balancier et le second roulement à l’autre bout",
-      "html": "<p>À un bout, pose la <strong>tête de pompe</strong> : c'est elle qui plonge au-dessus du puits. À l'autre bout, pose un second roulement de pompe et donne-lui un coup de <a href=\"/wiki/cle\">clé</a> : il devient le <strong>roulement B</strong>, le point d'attache de la bielle. Colle tout le balancier avec une <a href=\"/wiki/colle-extra-forte\">colle extra-forte</a>, de la tête au roulement B : sans colle, l'assemblage n'emporte que le premier bloc.</p>"
+      "html": "<p>À un bout, pose la <strong>tête de pompe</strong> : c'est elle qui plonge au-dessus du puits. À l'autre bout, pose un second roulement de pompe et donne-lui un coup de <a href=\"/wiki/cle\">clé</a> : il devient le <strong>roulement B</strong>, le point d'attache de la bielle. Colle tout le balancier avec une <a href=\"/wiki/colle-extra-forte\">colle extra-forte</a>, de la tête au roulement B : sans colle, l'assemblage n'emporte que le premier bloc. Le <strong>roulement de pompe B</strong> (Pumpjack Bearing B) n'existe que posé : cassé, il redonne un roulement de pompe ordinaire.</p>"
     },
     {
       "id": "manivelle",
@@ -166,7 +166,9 @@
     "Affichage : CDGDisplaySources.PUMPJACK_OIL_AMOUNT",
     "Recettes : recipe/crafting/pumpjack_*.json, recipe/mechanical_crafting/pumpjack_crank.json",
     "Code, données et storyboards : Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, licence MIT, auteur George VI), identiques au jar du modpack Create France",
-    "Vidéos : scènes Ponder de Create Diesel Generators (PumpjackScene.scene) rejouées par notre moteur ; modèles et textures du mod (licence MIT, George VI)"
+    "Vidéos : scènes Ponder de Create Diesel Generators (PumpjackScene.scene) rejouées par notre moteur ; modèles et textures du mod (licence MIT, George VI)",
+    "Version 1.3.16 (jar createdieselgenerators-1.21.1-1.3.16.jar du modpack de référence) comparée au 1.3.15 le 24/11 : recettes et données identiques (une recette renommée, un tag Steam 'n' Rails ajouté), classes changées : moteurs (SU × accélérateur, multiplicateur de consommation du turbo appliqué), brûleur (chaleur de chaudière plafonnée à 2), baril (longueur par largeur réglable), config",
+    "Roulement B : loot_table/blocks/pumpjack_bearing_b.json (rend un pumpjack_bearing)"
   ],
   "en": {
     "slugEn": "pumpjack",
@@ -201,7 +203,7 @@
       },
       {
         "label": "Version",
-        "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+        "value": "Create Diesel Generators 1.3.16 · Create 6.0.10"
       }
     ],
     "recipe": {
@@ -254,7 +256,7 @@
         "id": "tete",
         "title": "The head and the second bearing",
         "alt": "The pumpjack head at one end of the beam and the second bearing at the other",
-        "html": "<p>At one end, place the <strong>Pumpjack Head</strong>: it is the part that dips over the well. At the other end, place a second pumpjack bearing and hit it with the <a href=\"/en/wiki/wrench\">Wrench</a>: it becomes <strong>bearing B</strong>, where the connecting rod attaches. Glue the whole beam with <a href=\"/en/wiki/super-glue\">Super Glue</a>, from the head to bearing B: without glue, assembly only takes the first block.</p>"
+        "html": "<p>At one end, place the <strong>Pumpjack Head</strong>: it is the part that dips over the well. At the other end, place a second pumpjack bearing and hit it with the <a href=\"/en/wiki/wrench\">Wrench</a>: it becomes <strong>bearing B</strong>, where the connecting rod attaches. Glue the whole beam with <a href=\"/en/wiki/super-glue\">Super Glue</a>, from the head to bearing B: without glue, assembly only takes the first block. The <strong>Pumpjack Bearing B</strong> only exists in the world: broken, it gives back a plain Pumpjack Bearing.</p>"
       },
       {
         "id": "manivelle",
@@ -292,7 +294,9 @@
       "Display: CDGDisplaySources.PUMPJACK_OIL_AMOUNT",
       "Recipes: recipe/crafting/pumpjack_*.json, recipe/mechanical_crafting/pumpjack_crank.json",
       "Code, data and storyboards: Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, MIT licence, author George VI), identical to the Create France modpack jar",
-      "Videos: Create Diesel Generators Ponder scenes (PumpjackScene.scene) replayed by our engine; mod models and textures (MIT licence, George VI)"
+      "Videos: Create Diesel Generators Ponder scenes (PumpjackScene.scene) replayed by our engine; mod models and textures (MIT licence, George VI)",
+      "Version 1.3.16 (createdieselgenerators-1.21.1-1.3.16.jar from the reference modpack) compared with 1.3.15 on 24/11: recipes and data identical (one recipe renamed, one Steam 'n' Rails tag added); changed classes: engines (SU × throttle, turbo fuel multiplier applied), burner (boiler heat capped at 2), oil barrel (length per width configurable), config",
+      "Bearing B: loot_table/blocks/pumpjack_bearing_b.json (drops a pumpjack_bearing)"
     ]
   }
 }

@@ -1,0 +1,277 @@
+{
+  "slug": "nitropoudre-et-coton-poudre",
+  "name": "Nitropoudre et coton-poudre",
+  "blockId": "createbigcannons:nitropowder",
+  "category": "cbc",
+  "title": "Nitropoudre et coton-poudre — Create Big Cannons",
+  "description": "La chimie de Create Big Cannons : pincée de poudre, coton-poudre, nitro figée et durcie, poudre nitro, et la grande cartouche qui en dépend.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
+  "mcVersion": "1.21.1",
+  "intro": "La poudre à canon de Minecraft suffit pour les charges de poudre, mais <strong>Create Big Cannons</strong> a aussi sa chimie. Le <strong>coton-poudre</strong> (Guncotton) fait la charge explosive des obus ; la <strong>nitro</strong> devient, après cuisson et broyage, la <strong>poudre nitro</strong> (Nitropowder), seul carburant de la <a href=\"/wiki/poudre-et-cartouches\">grande cartouche</a>. Toute la chaîne se fait avec des machines de Create.",
+  "facts": [
+    {
+      "label": "Pincée de poudre",
+      "value": "1 poudre à canon = 9 pincées (Pinch of Gunpowder), et inversement"
+    },
+    {
+      "label": "Coton-poudre",
+      "value": "Mélange : papier, poudre à canon, poudre de redstone, 200 mB d’eau (15 s)"
+    },
+    {
+      "label": "Coton-poudre compacté",
+      "value": "3 coton-poudre pressés : charge des obus explosifs et perce-armure"
+    },
+    {
+      "label": "Nitro figée",
+      "value": "Poudre de blaze, crème de magma et 2 poudres à canon : 2 nitro figées (10 s)"
+    },
+    {
+      "label": "Nitro durcie",
+      "value": "Nitro figée cuite au four (10 s, 5 d’expérience)"
+    },
+    {
+      "label": "Poudre nitro",
+      "value": "Nitro durcie broyée à la meule : 2 poudres nitro"
+    },
+    {
+      "label": "Version",
+      "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Coton-poudre (mélange dans un bassin, 200 mB d’eau)",
+    "grid": [
+      [
+        "Papier",
+        "Poudre à canon",
+        "Poudre de redstone"
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "items": [
+      [
+        "minecraft:paper",
+        "minecraft:gunpowder",
+        "minecraft:redstone"
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 coton-poudre",
+    "resultItem": "createbigcannons:guncotton"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "pincee",
+      "title": "La pincée de poudre",
+      "image": "c2a_nitro_poudres.webp",
+      "alt": "Une poudre à canon, une pincée de poudre et une poudre à canon compactée",
+      "html": "<p>Une poudre à canon se défait à l'établi en neuf <strong>pincées de poudre</strong> (Pinch of Gunpowder) ; neuf pincées refont une poudre. La pincée ne sert qu'à une chose : la <a href=\"/wiki/munitions-d-autocanon\">balle de mitrailleuse</a> montée en assemblage séquencé, où un déployeur en pose une dans la douille. À l'opposé, la <strong>poudre à canon compactée</strong> (Packed Gunpowder), trois poudres pressées, remplit les <a href=\"/wiki/poudre-et-cartouches\">charges de poudre</a>.</p>"
+    },
+    {
+      "id": "coton",
+      "title": "Le coton-poudre",
+      "image": "c2a_guncotton_coton-poudre.webp",
+      "alt": "Un papier, un coton-poudre et un coton-poudre compacté",
+      "html": "<p>Le <strong>coton-poudre</strong> se fait dans un <a href=\"/wiki/bassin\">bassin</a> avec un <a href=\"/wiki/mixeur-mecanique\">mixeur</a> : un papier, une poudre à canon, une poudre de redstone et 200 mB d'eau, sans chaleur, en 15 secondes. Trois coton-poudre passés sous la <a href=\"/wiki/presse-mecanique\">presse</a> donnent un <strong>coton-poudre compacté</strong> (Packed Guncotton). C'est la <strong>matière explosive</strong> que réclament à l'établi mécanique l'obus hautement explosif et l'obus perce-armure, et à l'établi l'obus de mortier.</p>"
+    },
+    {
+      "id": "nitro",
+      "title": "La nitro, figée puis durcie",
+      "image": "c2a_nitro2_nitro.webp",
+      "alt": "Nitro figée, nitro durcie et poudre nitro",
+      "html": "<p>La <strong>nitro figée</strong> (Congealed Nitro) sort aussi du mixeur. La recette du Nether demande une poudre de blaze, une crème de magma et deux poudres à canon, pour deux nitros figées. Une recette sans le Nether existe : un coton-poudre, une boule de slime, une poudre de redstone et 150 mB d'eau, pour une seule nitro. Passée au four, elle devient de la <strong>nitro durcie</strong> (Hardened Nitro) en 10 secondes.</p>"
+    },
+    {
+      "id": "poudre",
+      "title": "La poudre nitro",
+      "html": "<p>Une nitro durcie broyée à la <a href=\"/wiki/meule\">meule</a> donne deux <strong>poudres nitro</strong>. Elle ne remplace pas la poudre à canon ailleurs : elle ne sert qu'à remplir la grande cartouche, un niveau par poudre, jusqu'à 4. Une cartouche pleine demande donc deux nitros durcies.</p>"
+    },
+    {
+      "id": "cartouche",
+      "title": "La grande cartouche",
+      "image": "c2a_bigcart_blocks_vide-pleine.webp",
+      "alt": "Deux grandes cartouches posées : une vide, une pleine de poudre nitro",
+      "html": "<p>La douille se forme à partir d'une <strong>grande feuille de cartouche</strong> (Big Cartridge Sheet) : quatre plaques de laiton à l'établi en donnent quatre, quatre plaques de cuivre ou d'or une seule. Cinq passages sous la presse, en assemblage séquencé, la changent en grande cartouche vide, après l'étape « grande cartouche partiellement formée ». On la remplit ensuite de poudre nitro, à l'établi ou au <a href=\"/wiki/deployeur\">déployeur</a>.</p>"
+    },
+    {
+      "id": "usages",
+      "title": "Qui sert à quoi",
+      "html": "<table><thead><tr><th>Objet</th><th>Sert à</th></tr></thead><tbody><tr><td>Pincée de poudre</td><td>balle de mitrailleuse (assemblage séquencé)</td></tr><tr><td>Poudre à canon compactée</td><td>charge de poudre</td></tr><tr><td>Coton-poudre</td><td>coton-poudre compacté, nitro figée sans Nether</td></tr><tr><td>Coton-poudre compacté</td><td>obus explosif, obus perce-armure, obus de mortier</td></tr><tr><td>Nitro figée, puis durcie</td><td>étapes vers la poudre nitro</td></tr><tr><td>Poudre nitro</td><td>remplir la grande cartouche</td></tr></tbody></table>"
+    },
+    {
+      "id": "cout",
+      "title": "Le prix d’une grande cartouche pleine",
+      "html": "<p>Il faut une grande feuille, soit une plaque de laiton, puis quatre poudres nitro. Elles viennent de deux nitros durcies, donc de deux nitros figées : un seul passage au mixeur avec la recette du Nether, soit une poudre de blaze, une crème de magma et deux poudres à canon. Pour la même poussée, quatre charges de poudre demandent douze poudres à canon, plus de la laine et de la ficelle, et prennent quatre blocs au lieu d'un.</p>"
+    },
+    {
+      "id": "chaine",
+      "title": "Automatiser la chaîne",
+      "html": "<p>Un mixeur sur un bassin alimenté en papier, poudre, redstone et eau sort le coton-poudre en continu ; une presse le compacte. Pour la nitro, un second mixeur, un four ou un <a href=\"/wiki/ventilateur-enchasse\">ventilateur</a> devant de la lave pour la cuisson, puis une meule. Les cartouches se forment sur un tapis sous une presse, et un déployeur chargé de poudre nitro les remplit.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils",
+      "html": "<ul><li>Sans accès au Nether, passe par la recette au coton-poudre et à la boule de slime.</li><li>Le coton-poudre compacté est indispensable pour les obus explosifs : prévois-en une réserve.</li><li>Une grande cartouche vide ne vaut rien au tir : remplis-la avant de charger.</li></ul>"
+    }
+  ],
+  "related": [
+    "poudre-et-cartouches",
+    "obus-de-canon",
+    "munitions-d-autocanon",
+    "mortiers",
+    "mixeur-mecanique",
+    "presse-mecanique",
+    "meule",
+    "bassin",
+    "deployeur",
+    "create-big-cannons"
+  ],
+  "sources": [
+    "Pincées : recipe/gunpowder_pinch.json, gunpowder_from_pinches.json ; poudre compactée : recipe/compacting/packed_gunpowder.json",
+    "Coton-poudre : recipe/mixing/guncotton.json (papier = tag can_be_nitrated, redstone = nitro_acidifiers, 200 mB, 300 ticks) ; recipe/compacting/packed_guncotton.json",
+    "Matière explosive : tag high_explosive_materials = packed_guncotton ; recipe/he_shell.json, ap_shell.json, drop_mortar_shell.json",
+    "Nitro : recipe/mixing/congealed_nitro.json (200 ticks, 2 sorties), congealed_nitro_no_nether.json (boule de slime = gelatinizers, 150 mB), recipe/hardened_nitro.json (four, 200 ticks, 5 xp), recipe/milling/nitropowder.json (2 sorties)",
+    "Grande cartouche : recipe/big_cartridge_sheet.json (4 laiton -> 4), minecraft/recipe/big_cannon_sheet_inexpensive.json (cuivre ou or -> 1), sequenced_assembly/pressing_big_cartridge.json (5 boucles), BigCartridgeFillingRecipe (tag nitropowder seulement)",
+    "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT ; textures et modèles CC BY-NC-SA, auteurs rbasamoyai et contributeurs), identiques au jar du modpack Create France",
+    "Images : blocs et objets de CBC posés sur la plaque et rendus par notre moteur (galerie, pas de scène Ponder du mod sur ce sujet)"
+  ],
+  "en": {
+    "slugEn": "nitropowder-and-guncotton",
+    "name": "Nitropowder and Guncotton",
+    "title": "Nitropowder and Guncotton — Create Big Cannons",
+    "description": "Create Big Cannons chemistry: Pinch of Gunpowder, Guncotton, Congealed and Hardened Nitro, Nitropowder, and the Big Cartridge that relies on it.",
+    "intro": "Plain Minecraft gunpowder is enough for Powder Charges, but <strong>Create Big Cannons</strong> also has its own chemistry. <strong>Guncotton</strong> is the explosive filling of shells; <strong>nitro</strong>, once baked and milled, becomes <strong>Nitropowder</strong>, the only propellant of the <a href=\"/en/wiki/powder-charges-and-cartridges\">Big Cartridge</a>. The whole chain runs on Create machines.",
+    "facts": [
+      {
+        "label": "Pinch of Gunpowder",
+        "value": "1 gunpowder = 9 pinches, and back"
+      },
+      {
+        "label": "Guncotton",
+        "value": "Mixing: paper, gunpowder, redstone dust, 200 mB of water (15 s)"
+      },
+      {
+        "label": "Packed Guncotton",
+        "value": "3 Guncotton pressed: the filling of HE and AP shells"
+      },
+      {
+        "label": "Congealed Nitro",
+        "value": "Blaze powder, magma cream and 2 gunpowder: 2 Congealed Nitro (10 s)"
+      },
+      {
+        "label": "Hardened Nitro",
+        "value": "Congealed Nitro smelted in a furnace (10 s, 5 experience)"
+      },
+      {
+        "label": "Nitropowder",
+        "value": "Hardened Nitro milled: 2 Nitropowder"
+      },
+      {
+        "label": "Version",
+        "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Guncotton (mixing in a basin, 200 mB of water)",
+      "grid": [
+        [
+          "Paper",
+          "Gunpowder",
+          "Redstone Dust"
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Guncotton"
+    },
+    "sections": [
+      {
+        "id": "pincee",
+        "title": "Pinch of Gunpowder",
+        "alt": "A gunpowder, a Pinch of Gunpowder and a Packed Gunpowder",
+        "html": "<p>One gunpowder splits at the crafting table into nine <strong>Pinches of Gunpowder</strong>; nine pinches make a gunpowder again. The pinch has a single use: the <a href=\"/en/wiki/autocannon-ammunition\">Machine Gun Round</a> built by sequenced assembly, where a Deployer drops one into the casing. At the other end, <strong>Packed Gunpowder</strong>, three gunpowder pressed together, fills <a href=\"/en/wiki/powder-charges-and-cartridges\">Powder Charges</a>.</p>"
+      },
+      {
+        "id": "coton",
+        "title": "Guncotton",
+        "alt": "A paper, a Guncotton and a Packed Guncotton",
+        "html": "<p><strong>Guncotton</strong> is made in a <a href=\"/en/wiki/basin\">Basin</a> under a <a href=\"/en/wiki/mechanical-mixer\">Mechanical Mixer</a>: one paper, one gunpowder, one redstone dust and 200 mB of water, no heat, in 15 seconds. Three Guncotton under a <a href=\"/en/wiki/mechanical-press\">Mechanical Press</a> give one <strong>Packed Guncotton</strong>. That is the <strong>explosive material</strong> the mechanical crafting recipes of the HE Shell and AP Shell ask for, and the crafting recipe of the Drop Mortar Shell.</p>"
+      },
+      {
+        "id": "nitro",
+        "title": "Nitro, congealed then hardened",
+        "alt": "Congealed Nitro, Hardened Nitro and Nitropowder",
+        "html": "<p><strong>Congealed Nitro</strong> also comes out of the mixer. The Nether recipe takes one blaze powder, one magma cream and two gunpowder, for two Congealed Nitro. There is a recipe without the Nether: one Guncotton, one slime ball, one redstone dust and 150 mB of water, for a single nitro. Put in a furnace, it turns into <strong>Hardened Nitro</strong> in 10 seconds.</p>"
+      },
+      {
+        "id": "poudre",
+        "title": "Nitropowder",
+        "html": "<p>One Hardened Nitro ground in a <a href=\"/en/wiki/millstone\">Millstone</a> gives two <strong>Nitropowder</strong>. It does not replace gunpowder anywhere else: its only job is filling the Big Cartridge, one level per powder, up to 4. A full cartridge therefore costs two Hardened Nitro.</p>"
+      },
+      {
+        "id": "cartouche",
+        "title": "The Big Cartridge",
+        "alt": "Two placed Big Cartridges: one empty, one full of Nitropowder",
+        "html": "<p>The casing starts as a <strong>Big Cartridge Sheet</strong>: four brass sheets at the crafting table make four, four copper or gold sheets make only one. Five passes under the press, in sequenced assembly, turn it into an empty Big Cartridge, through the Partially Formed Big Cartridge step. You then fill it with Nitropowder, at the crafting table or with a <a href=\"/en/wiki/deployer\">Deployer</a>.</p>"
+      },
+      {
+        "id": "usages",
+        "title": "What each one is for",
+        "html": "<table><thead><tr><th>Item</th><th>Used for</th></tr></thead><tbody><tr><td>Pinch of Gunpowder</td><td>Machine Gun Round (sequenced assembly)</td></tr><tr><td>Packed Gunpowder</td><td>Powder Charge</td></tr><tr><td>Guncotton</td><td>Packed Guncotton, Congealed Nitro without the Nether</td></tr><tr><td>Packed Guncotton</td><td>HE Shell, AP Shell, Drop Mortar Shell</td></tr><tr><td>Congealed then Hardened Nitro</td><td>steps towards Nitropowder</td></tr><tr><td>Nitropowder</td><td>filling the Big Cartridge</td></tr></tbody></table>"
+      },
+      {
+        "id": "cout",
+        "title": "The price of a full Big Cartridge",
+        "html": "<p>You need one Big Cartridge Sheet, that is one brass sheet, then four Nitropowder. They come from two Hardened Nitro, so from two Congealed Nitro: a single mixer run with the Nether recipe, meaning one blaze powder, one magma cream and two gunpowder. For the same push, four Powder Charges need twelve gunpowder, plus wool and string, and take four blocks instead of one.</p>"
+      },
+      {
+        "id": "chaine",
+        "title": "Automating the chain",
+        "html": "<p>A mixer over a basin fed with paper, gunpowder, redstone and water turns out Guncotton non-stop; a press packs it. For nitro, a second mixer, a furnace or an <a href=\"/en/wiki/encased-fan\">Encased Fan</a> blowing through lava for the baking step, then a millstone. Cartridges are formed on a belt under a press, and a Deployer holding Nitropowder fills them.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<ul><li>Without Nether access, use the recipe with Guncotton and a slime ball.</li><li>Packed Guncotton is required for HE shells: keep a stock of it.</li><li>An empty Big Cartridge is worthless when firing: fill it before loading.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Pinches: recipe/gunpowder_pinch.json, gunpowder_from_pinches.json; Packed Gunpowder: recipe/compacting/packed_gunpowder.json",
+      "Guncotton: recipe/mixing/guncotton.json (paper = can_be_nitrated tag, redstone = nitro_acidifiers, 200 mB, 300 ticks); recipe/compacting/packed_guncotton.json",
+      "Explosive material: high_explosive_materials tag = packed_guncotton; recipe/he_shell.json, ap_shell.json, drop_mortar_shell.json",
+      "Nitro: recipe/mixing/congealed_nitro.json (200 ticks, 2 outputs), congealed_nitro_no_nether.json (slime ball = gelatinizers, 150 mB), recipe/hardened_nitro.json (furnace, 200 ticks, 5 xp), recipe/milling/nitropowder.json (2 outputs)",
+      "Big Cartridge: recipe/big_cartridge_sheet.json (4 brass -> 4), minecraft/recipe/big_cannon_sheet_inexpensive.json (copper or gold -> 1), sequenced_assembly/pressing_big_cartridge.json (5 loops), BigCartridgeFillingRecipe (nitropowder tag only)",
+      "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence; textures and models CC BY-NC-SA, by rbasamoyai and contributors), identical to the jar of the Create France modpack",
+      "Images: CBC blocks and items placed on the plate and drawn by our engine (gallery; the mod has no Ponder scene on this topic)"
+    ]
+  }
+}

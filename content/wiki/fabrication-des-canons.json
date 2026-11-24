@@ -6,7 +6,7 @@
   "title": "Fabriquer un canon — Create Big Cannons, guide",
   "description": "Fabriquer les canons de Create Big Cannons : fonderie, moules et coulée, forage à la perceuse de canon, canons assemblés, finitions et soudure des blocs.",
   "datePublished": "2026-10-28",
-  "dateModified": "2026-10-28",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
   "mcVersion": "1.21.1",
   "intro": "Les blocs de canon de <strong>Create Big Cannons</strong> ne se fabriquent pas à l'établi. On les <strong>coule</strong> en métal fondu dans un moule, on les <strong>fore</strong> avec une perceuse, ou on les <strong>assemble</strong> couche par couche puis on les chauffe. C'est une petite chaîne d'usine Create, qui produit des canons d'un seul tenant.",
@@ -166,6 +166,11 @@
       "image": "cbc_welder_soudure.webp",
       "alt": "Deux blocs de canon que la soudeuse va relier",
       "html": "<p>Les blocs de canon posés à la main en survie ne se relient pas. La <strong>soudeuse de canon</strong> (Cannon Welder) relie deux blocs voisins, alignés, de même matériau et de même type. Souder affaiblit : la fonte perd 1 charge sûre, l'acier 2, le bronze aucune, et le nethersteel ne se soude pas. Mieux vaut fabriquer et déplacer les canons d'une seule pièce.</p>"
+    },
+    {
+      "id": "techniques",
+      "title": "Les blocs qu’on ne fabrique pas",
+      "html": "<p>Quelques blocs n'apparaissent qu'en cours de route. Le <strong>foret de perceuse de canon</strong> (Cannon Drill Bit) est la tête que la perceuse pousse devant elle ; la <strong>tête de constructeur de canon</strong> (Cannon Builder Head) est celle du constructeur. Le <strong>moule de canon</strong> (Cannon Cast) et le <strong>moule de canon terminé</strong> (Finished Cannon Cast) sont les blocs invisibles d'une coulée en cours puis prise. Le détail des moules est sur <a href=\"/wiki/moules-et-coulee\">Moules et coulée</a>, les couches sur <a href=\"/wiki/canons-assembles\">Canons assemblés</a>, les petites pièces sur <a href=\"/wiki/fabriquer-un-autocanon\">Fabriquer un autocanon</a>.</p>"
     }
   ],
   "related": [
@@ -178,7 +183,10 @@
     "deployeur",
     "tuyau-a-fluide",
     "pompe-mecanique",
-    "piston-mecanique"
+    "piston-mecanique",
+    "moules-et-coulee",
+    "canons-assembles",
+    "fabriquer-un-autocanon"
   ],
   "sources": [
     "Fonderie : BasinFoundryBlockEntity, recipe/melting/*.json (90 mB par lingot, chauffé, 180 ticks)",
@@ -322,6 +330,11 @@
         "title": "The welder",
         "alt": "Two cannon blocks about to be welded",
         "html": "<p>Cannon blocks placed by hand in survival do not connect. The <strong>Cannon Welder</strong> joins two neighbouring blocks that line up and share the same material and type. Welding weakens the cannon: cast iron loses 1 safe charge, steel 2, bronze none, and nethersteel cannot be welded. It is better to make and move cannons in one piece.</p>"
+      },
+      {
+        "id": "techniques",
+        "title": "Blocks you never craft",
+        "html": "<p>A few blocks only show up along the way. The <strong>Cannon Drill Bit</strong> is the head the drill pushes ahead of itself; the <strong>Cannon Builder Head</strong> is the builder's. The <strong>Cannon Cast</strong> and the <strong>Finished Cannon Cast</strong> are the invisible blocks of a cast in progress, then set. Moulds are detailed on <a href=\"/en/wiki/cbc-cast-moulds\">Cast Moulds</a>, layers on <a href=\"/en/wiki/built-up-cannons\">Built-Up Cannons</a>, small parts on <a href=\"/en/wiki/autocannon-crafting\">Autocannon Crafting</a>.</p>"
       }
     ],
     "sources": [

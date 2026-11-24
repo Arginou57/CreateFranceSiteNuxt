@@ -1,0 +1,275 @@
+{
+  "slug": "munitions-d-autocanon",
+  "name": "Munitions d'autocanon",
+  "blockId": "createbigcannons:autocannon_cartridge",
+  "category": "cbc",
+  "title": "Munitions d'autocanon — Create Big Cannons, guide",
+  "description": "Fabriquer les munitions d'autocanon de Create Big Cannons : feuilles, douilles, cartouches, balles perforantes et anti-aériennes, balles de mitrailleuse.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
+  "mcVersion": "1.21.1",
+  "intro": "Un <a href=\"/wiki/autocanons\">autocanon</a> de <strong>Create Big Cannons</strong> ne tire pas une balle nue : il lui faut une <strong>cartouche d'autocanon</strong> (Autocannon Cartridge), une douille de laiton pleine de poudre surmontée d'une balle, ou une <strong>balle de mitrailleuse</strong> (Machine Gun Round). Les deux se fabriquent à la chaîne avec une scie, une presse et des déployeurs. Cette page suit chaque étape, de la plaque de métal à la munition prête.",
+  "facts": [
+    {
+      "label": "Feuille de cartouche",
+      "value": "Scie : 1 plaque de laiton = 6 feuilles ; fer ou cuivre 3 ; or 3 (+2 une fois sur 4)"
+    },
+    {
+      "label": "Douille",
+      "value": "6 passages sous la presse : douille d’autocanon vide"
+    },
+    {
+      "label": "Remplissage",
+      "value": "1 poudre à canon posée au déployeur : cartouche remplie"
+    },
+    {
+      "label": "Cartouche complète",
+      "value": "Cartouche remplie + balle perforante ou anti-aérienne"
+    },
+    {
+      "label": "Balle perforante",
+      "value": "1 lingot de fonte sur 1 lingot de fer : 4 balles"
+    },
+    {
+      "label": "Balle de mitrailleuse",
+      "value": "Douille de mitrailleuse + poudre + pépite de cuivre"
+    },
+    {
+      "label": "Version",
+      "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Balle de mitrailleuse (établi)",
+    "grid": [
+      [
+        null,
+        "Pépite de cuivre",
+        null
+      ],
+      [
+        null,
+        "Poudre à canon",
+        null
+      ],
+      [
+        null,
+        "Douille de mitrailleuse vide",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "create:copper_nugget",
+        null
+      ],
+      [
+        null,
+        "minecraft:gunpowder",
+        null
+      ],
+      [
+        null,
+        "createbigcannons:empty_machine_gun_round",
+        null
+      ]
+    ],
+    "result": "1 balle de mitrailleuse",
+    "resultItem": "createbigcannons:machine_gun_round"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "feuilles",
+      "title": "Les feuilles de cartouche",
+      "image": "c2a_ac_cart_douille.webp",
+      "alt": "La feuille de cartouche, la douille en cours de formage et la douille vide",
+      "html": "<p>Tout part d'une <strong>feuille de cartouche d'autocanon</strong> (Autocannon Cartridge Sheet), découpée à la <a href=\"/wiki/scie-mecanique\">scie mécanique</a> dans une plaque de métal. Le laiton est le plus rentable : six feuilles par plaque. Le fer et le cuivre en donnent trois, l'or trois plus deux de temps en temps. Repassée à la scie, une feuille donne aussi quatre <strong>douilles de mitrailleuse vides</strong> (Empty Machine Gun Round).</p>"
+    },
+    {
+      "id": "douille",
+      "title": "Former et remplir la douille",
+      "html": "<p>La feuille passe <strong>six fois</strong> sous la <a href=\"/wiki/presse-mecanique\">presse</a>, en assemblage séquencé : entre deux coups, c'est une « cartouche d'autocanon partiellement formée » (Partially Formed Autocannon Cartridge). Il en sort une <strong>cartouche d'autocanon vide</strong> (Empty Autocannon Cartridge). Un <a href=\"/wiki/deployeur\">déployeur</a> y verse ensuite une poudre à canon : elle devient une <strong>cartouche d'autocanon remplie</strong> (Filled Autocannon Cartridge), après l'état « partiellement remplie ».</p>"
+    },
+    {
+      "id": "balles",
+      "title": "Les balles",
+      "image": "c2a_ac_cart2_cartouche.webp",
+      "alt": "La cartouche remplie, la balle perforante et la cartouche d’autocanon complète",
+      "html": "<p>La <strong>balle perforante</strong> (Armor Piercing Autocannon Round) se fait par quatre avec un lingot de fonte posé sur un lingot de fer. La <strong>balle anti-aérienne</strong> (Flak Autocannon Round) se fait par deux avec des <strong>boules de plomb</strong> (Shot Balls), une poudre et une plaque de fer, en colonne. Les boules de plomb, deux pour un lingot de fer entouré de huit pépites, servent aussi au sac de mitraille et à l'obus à shrapnel.</p>"
+    },
+    {
+      "id": "assembler",
+      "title": "Assembler la cartouche",
+      "html": "<p>À l'établi, pose la balle juste au-dessus de la cartouche remplie, dans la même colonne : tu obtiens une <strong>cartouche d'autocanon</strong> prête à tirer. Pour la balle anti-aérienne, un <a href=\"/wiki/detonateurs-et-traceurs\">détonateur</a> placé au-dessus d'elle s'ajoute en même temps. Un déployeur tenant une balle fait la même chose sur une cartouche remplie posée sur un dépôt ou un tapis.</p>"
+    },
+    {
+      "id": "mitrailleuse",
+      "title": "La balle de mitrailleuse",
+      "image": "c2a_ac_mg_mitrailleuse.webp",
+      "alt": "La balle anti-aérienne, les boules de plomb, la douille de mitrailleuse, la pincée de poudre et la balle de mitrailleuse",
+      "html": "<p>Plus simple : une pépite de cuivre, une poudre à canon et une douille de mitrailleuse vide, en colonne à l'établi. En usine, l'assemblage séquencé pose au déployeur une <a href=\"/wiki/nitropoudre-et-coton-poudre\">pincée de poudre</a> puis une pépite de cuivre, en passant par la « balle de mitrailleuse partiellement assemblée » (Partially Assembled Machine Gun Round). Neuf pincées font une poudre : c'est neuf fois plus économe.</p>"
+    },
+    {
+      "id": "chiffres",
+      "title": "Ce que valent les munitions",
+      "html": "<p>La balle perforante fait 14 dégâts et perce les blocs tendres. La balle anti-aérienne éclate en 15 éclats quand son détonateur part, de quoi toucher un dirigeable sans viser juste. La balle de mitrailleuse, plus légère, fait 8 dégâts. Toutes peuvent recevoir une <a href=\"/wiki/detonateurs-et-traceurs\">pointe traçante</a> pour suivre la rafale à l'œil.</p>"
+    },
+    {
+      "id": "recycler",
+      "title": "Récupérer les douilles",
+      "html": "<p>À chaque tir, l'autocanon éjecte la douille vide : une cartouche d'autocanon vide ou une douille de mitrailleuse vide. Ramasse-les avec un <a href=\"/wiki/entonnoir\">entonnoir</a> sous la culasse : il suffit de les remplir à nouveau, sans repasser par la presse. Une batterie qui tire beaucoup ne consomme donc presque que de la poudre et des balles.</p>"
+    },
+    {
+      "id": "rendement",
+      "title": "Ce que rapporte une plaque",
+      "html": "<p>Une plaque de laiton donne six feuilles, donc six cartouches d'autocanon, ou vingt-quatre douilles de mitrailleuse si on recoupe les feuilles. Une plaque de fer n'en donne que trois, ou douze douilles. Pour une mitrailleuse qui tire beaucoup, le laiton et la récupération des douilles éjectées font toute la différence.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils",
+      "html": "<ul><li>Achète ou produis du laiton : il rapporte deux fois plus de feuilles que le fer.</li><li>Une balle anti-aérienne sans détonateur ne fait que percuter : pense à l'équiper.</li><li>La caisse de munitions de la page <a href=\"/wiki/autocanons\">autocanons</a> prend 64 cartouches ou 128 balles de mitrailleuse.</li></ul>"
+    }
+  ],
+  "related": [
+    "autocanons",
+    "fabriquer-un-autocanon",
+    "nitropoudre-et-coton-poudre",
+    "detonateurs-et-traceurs",
+    "obus-de-canon",
+    "presse-mecanique",
+    "deployeur",
+    "scie-mecanique",
+    "create-big-cannons"
+  ],
+  "sources": [
+    "Feuilles : recipe/cutting/autocannon_cartridge_sheet_*.json (laiton 6, fer et cuivre 3, or 3 + 2 à 25 %), cutting/empty_machine_gun_round.json (4)",
+    "Douille : sequenced_assembly/pressing_autocannon_cartridge.json (6 boucles), filling_autocannon_cartridge.json (1 poudre)",
+    "Cartouche : CartridgeAssemblyRecipe (balle au-dessus de la cartouche remplie, détonateur au-dessus d’une balle à fusée), CBCCommonEvents.onAddDeployerRecipes",
+    "Balles : recipe/ap_autocannon_round.json (4), flak_autocannon_round.json (2), shot_balls.json (2), machine_gun_round.json, sequenced_assembly/assembling_machine_gun_round.json",
+    "Douilles éjectées : AutocannonCartridgeItem / MachineGunRoundItem.getSpentItem, MountedAutocannonContraption",
+    "Dégâts : munition_properties/projectiles/ap_autocannon.json, flak_autocannon.json, machine_gun_bullet.json",
+    "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT ; textures et modèles CC BY-NC-SA, auteurs rbasamoyai et contributeurs), identiques au jar du modpack Create France",
+    "Images : blocs et objets de CBC posés sur la plaque et rendus par notre moteur (galerie, pas de scène Ponder du mod sur ce sujet)"
+  ],
+  "en": {
+    "slugEn": "autocannon-ammunition",
+    "name": "Autocannon Ammunition",
+    "title": "Autocannon Ammunition — Create Big Cannons guide",
+    "description": "How to make Create Big Cannons autocannon ammunition: sheets, casings, cartridges, AP and flak rounds, and machine gun rounds, step by step.",
+    "intro": "A Create Big Cannons <a href=\"/en/wiki/autocannons\">autocannon</a> does not fire a bare bullet: it needs an <strong>Autocannon Cartridge</strong>, a brass casing full of powder topped with a round, or a <strong>Machine Gun Round</strong>. Both are mass-produced with a saw, a press and deployers. This page follows every step, from a metal sheet to a round ready to fire.",
+    "facts": [
+      {
+        "label": "Cartridge sheet",
+        "value": "Saw: 1 brass sheet = 6; iron or copper 3; gold 3 (+2 one time in 4)"
+      },
+      {
+        "label": "Casing",
+        "value": "6 passes under the press: Empty Autocannon Cartridge"
+      },
+      {
+        "label": "Filling",
+        "value": "1 gunpowder added by a Deployer: Filled Autocannon Cartridge"
+      },
+      {
+        "label": "Full cartridge",
+        "value": "Filled cartridge + AP or flak round"
+      },
+      {
+        "label": "AP round",
+        "value": "1 cast iron ingot on 1 iron ingot: 4 rounds"
+      },
+      {
+        "label": "Machine gun round",
+        "value": "Empty Machine Gun Round + gunpowder + copper nugget"
+      },
+      {
+        "label": "Version",
+        "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Machine Gun Round (crafting table)",
+      "grid": [
+        [
+          null,
+          "Copper Nugget",
+          null
+        ],
+        [
+          null,
+          "Gunpowder",
+          null
+        ],
+        [
+          null,
+          "Empty Machine Gun Round",
+          null
+        ]
+      ],
+      "result": "1 Machine Gun Round"
+    },
+    "sections": [
+      {
+        "id": "feuilles",
+        "title": "Cartridge sheets",
+        "alt": "The cartridge sheet, the casing being formed and the empty casing",
+        "html": "<p>It all starts with an <strong>Autocannon Cartridge Sheet</strong>, cut from a metal sheet with a <a href=\"/en/wiki/mechanical-saw\">Mechanical Saw</a>. Brass pays best: six sheets per plate. Iron and copper give three, gold three plus two now and then. Cut again, one sheet also gives four <strong>Empty Machine Gun Rounds</strong>.</p>"
+      },
+      {
+        "id": "douille",
+        "title": "Forming and filling the casing",
+        "html": "<p>The sheet goes <strong>six times</strong> under the <a href=\"/en/wiki/mechanical-press\">Mechanical Press</a> in sequenced assembly; in between it is a Partially Formed Autocannon Cartridge. Out comes an <strong>Empty Autocannon Cartridge</strong>. A <a href=\"/en/wiki/deployer\">Deployer</a> then pours one gunpowder into it, turning it into a <strong>Filled Autocannon Cartridge</strong>, after the partially filled stage.</p>"
+      },
+      {
+        "id": "balles",
+        "title": "The rounds",
+        "alt": "The filled cartridge, the AP round and the finished Autocannon Cartridge",
+        "html": "<p>The <strong>Armor Piercing (AP) Autocannon Round</strong> comes by four from a cast iron ingot placed on an iron ingot. The <strong>Flak Autocannon Round</strong> comes by two from <strong>Shot Balls</strong>, a gunpowder and an iron sheet in a column. Shot Balls, two for an iron ingot ringed with eight nuggets, are also used for the Bag of Grapeshot and the Shrapnel Shell.</p>"
+      },
+      {
+        "id": "assembler",
+        "title": "Assembling the cartridge",
+        "html": "<p>At the crafting table, put the round right above the filled cartridge, in the same column: you get an <strong>Autocannon Cartridge</strong> ready to fire. For the flak round, a <a href=\"/en/wiki/fuzes-and-tracers\">fuze</a> placed above it is added at the same time. A Deployer holding a round does the same to a filled cartridge sitting on a depot or a belt.</p>"
+      },
+      {
+        "id": "mitrailleuse",
+        "title": "The Machine Gun Round",
+        "alt": "The flak round, the shot balls, the empty machine gun round, the pinch of gunpowder and the machine gun round",
+        "html": "<p>Simpler: a copper nugget, a gunpowder and an Empty Machine Gun Round, in a column at the crafting table. In a factory, sequenced assembly has a Deployer add a <a href=\"/en/wiki/nitropowder-and-guncotton\">Pinch of Gunpowder</a> then a copper nugget, through the Partially Assembled Machine Gun Round stage. Nine pinches make one gunpowder: this is nine times cheaper.</p>"
+      },
+      {
+        "id": "chiffres",
+        "title": "What the rounds are worth",
+        "html": "<p>The AP round deals 14 damage and pierces soft blocks. The flak round bursts into 15 fragments when its fuze goes off, enough to hit an airship without perfect aim. The lighter Machine Gun Round deals 8 damage. All of them can take a <a href=\"/en/wiki/fuzes-and-tracers\">Tracer Tip</a> so you can follow the burst by eye.</p>"
+      },
+      {
+        "id": "recycler",
+        "title": "Getting casings back",
+        "html": "<p>On every shot, the autocannon throws out the empty casing: an Empty Autocannon Cartridge or an Empty Machine Gun Round. Collect them with a <a href=\"/en/wiki/funnel\">Funnel</a> under the breech: they only need refilling, no second trip under the press. A battery that fires a lot therefore burns little more than powder and rounds.</p>"
+      },
+      {
+        "id": "rendement",
+        "title": "What one sheet gives",
+        "html": "<p>One brass sheet gives six cartridge sheets, so six Autocannon Cartridges, or twenty-four Empty Machine Gun Rounds if you cut the sheets again. An iron sheet gives only three, or twelve casings. For a machine gun that fires a lot, brass and collecting the ejected casings make all the difference.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<ul><li>Get brass going: it yields twice as many sheets as iron.</li><li>A flak round without a fuze only hits like a slug: remember to fit one.</li><li>The ammo container on the <a href=\"/en/wiki/autocannons\">autocannons</a> page holds 64 cartridges or 128 machine gun rounds.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Sheets: recipe/cutting/autocannon_cartridge_sheet_*.json (brass 6, iron and copper 3, gold 3 + 2 at 25%), cutting/empty_machine_gun_round.json (4)",
+      "Casing: sequenced_assembly/pressing_autocannon_cartridge.json (6 loops), filling_autocannon_cartridge.json (1 gunpowder)",
+      "Cartridge: CartridgeAssemblyRecipe (round above the filled cartridge, fuze above a fuzed round), CBCCommonEvents.onAddDeployerRecipes",
+      "Rounds: recipe/ap_autocannon_round.json (4), flak_autocannon_round.json (2), shot_balls.json (2), machine_gun_round.json, sequenced_assembly/assembling_machine_gun_round.json",
+      "Ejected casings: AutocannonCartridgeItem / MachineGunRoundItem.getSpentItem, MountedAutocannonContraption",
+      "Damage: munition_properties/projectiles/ap_autocannon.json, flak_autocannon.json, machine_gun_bullet.json",
+      "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence; textures and models CC BY-NC-SA, by rbasamoyai and contributors), identical to the jar of the Create France modpack",
+      "Images: CBC blocks and items placed on the plate and drawn by our engine (gallery; the mod has no Ponder scene on this topic)"
+    ]
+  }
+}

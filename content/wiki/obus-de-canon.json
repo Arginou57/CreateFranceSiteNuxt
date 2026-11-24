@@ -6,7 +6,7 @@
   "title": "Obus et boulets — Create Big Cannons, guide",
   "description": "Tous les obus de Create Big Cannons : explosif, perforant, boulets, shrapnel, mitraille, fumigène, à fluide. Effets, puissance, pénétration, détonateurs.",
   "datePublished": "2026-10-28",
-  "dateModified": "2026-10-28",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
   "mcVersion": "1.21.1",
   "intro": "<strong>Create Big Cannons</strong> propose une dizaine de projectiles pour les gros canons. Les <strong>obus</strong> contiennent une charge et ont besoin d'un <a href=\"/wiki/detonateurs-et-traceurs\">détonateur</a> (Fuze) ; les <strong>boulets</strong> sont pleins et frappent par leur masse. Chacun se pose dans le canon devant la poudre, la pointe vers la bouche. Voici ce que fait chacun, avec les chiffres du mod.",
@@ -131,7 +131,7 @@
     {
       "id": "fabriquer",
       "title": "Fabrication",
-      "html": "<p>Boulets et sacs se font à l'établi. Les obus explosif, à shrapnel et à fluide demandent un <a href=\"/wiki/etabli-mecanique\">établi mécanique</a> : du fer, une dalle en bois pour le culot et la charge, poudre ou nitro. Les détonateurs s'ajoutent ensuite, à la main ou au <a href=\"/wiki/deployeur\">déployeur</a>.</p>"
+      "html": "<p>Boulets et sacs se font à l'établi. Les obus explosif, perce-armure, à shrapnel et à fluide demandent un <a href=\"/wiki/etabli-mecanique\">établi mécanique</a> : du fer, une dalle en bois pour le culot, et une charge : du <a href=\"/wiki/nitropoudre-et-coton-poudre\">coton-poudre compacté</a> (Packed Guncotton) pour l'explosif et le perce-armure, des <strong>boules de plomb</strong> (Shot Balls) et de la poudre pour le shrapnel, deux tuyaux pour l'obus à fluide. Les détonateurs s'ajoutent ensuite, à la main ou au <a href=\"/wiki/deployeur\">déployeur</a>.</p>"
     },
     {
       "id": "blindage",
@@ -151,7 +151,9 @@
     "create-big-cannons",
     "etabli-mecanique",
     "bec-verseur",
-    "deployeur"
+    "deployeur",
+    "nitropoudre-et-coton-poudre",
+    "equipement-big-cannons"
   ],
   "sources": [
     "Projectiles : munition_properties/projectiles/*.json (durability_mass, penetration, toughness, block_damaging_explosive_power, entity_damaging_explosive_power, shrapnel_count, smoke_scale, smoke_duration, fluid_shell_capacity)",
@@ -159,7 +161,8 @@
     "Recettes : recipe/solid_shot.json, he_shell.json (établi mécanique), shrapnel_shell.json, fluid_shell.json",
     "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT), identiques au jar du modpack Create France",
     "Tirs : scènes écrites pour ce wiki ; trajectoire calculée tick par tick avec les formules du mod (AbstractCannonProjectile.tick : traînée 0,01, gravité -0,05 bloc/tick², vitesse = charges utilisées, MountedBigCannonContraption.fireShot), explosions Explosion.explode + transformations de CBC",
-    "Images : blocs de munitions de CBC posés sur la plaque et rendus par notre moteur"
+    "Images : blocs de munitions de CBC posés sur la plaque et rendus par notre moteur",
+    "Recettes des obus : recipe/he_shell.json, ap_shell.json (tag high_explosive_materials = coton-poudre compacté), shrapnel_shell.json (boules de plomb, poudre), fluid_shell.json (tuyaux)"
   ],
   "en": {
     "slugEn": "big-cannon-shells",
@@ -263,7 +266,7 @@
       {
         "id": "fabriquer",
         "title": "Crafting",
-        "html": "<p>Shots and bags are made on a crafting table. HE, shrapnel and fluid shells need a <a href=\"/en/wiki/mechanical-crafter\">Mechanical Crafter</a>: iron, a wooden slab for the base and the filling, powder or nitro. Fuzes are added afterwards, by hand or with a <a href=\"/en/wiki/deployer\">Deployer</a>.</p>"
+        "html": "<p>Shots and bags are made on a crafting table. HE, AP, shrapnel and fluid shells need a <a href=\"/en/wiki/mechanical-crafter\">Mechanical Crafter</a>: iron, a wooden slab for the base, and a filling: <a href=\"/en/wiki/nitropowder-and-guncotton\">Packed Guncotton</a> for the HE and AP shells, <strong>Shot Balls</strong> and gunpowder for shrapnel, two pipes for the fluid shell. Fuzes are added afterwards, by hand or with a <a href=\"/en/wiki/deployer\">Deployer</a>.</p>"
       },
       {
         "id": "blindage",
@@ -282,7 +285,8 @@
       "Recipes: recipe/solid_shot.json, he_shell.json (mechanical crafting), shrapnel_shell.json, fluid_shell.json",
       "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence), identical to the Create France modpack jar",
       "Shots: scenes written for this wiki; trajectory computed tick by tick with the mod's formulas (AbstractCannonProjectile.tick: drag 0.01, gravity -0.05 block/tick², speed = charges used, MountedBigCannonContraption.fireShot), explosions from Explosion.explode plus CBC's block transforms",
-      "Images: CBC munition blocks placed on the plate and rendered by our engine"
+      "Images: CBC munition blocks placed on the plate and rendered by our engine",
+      "Shell recipes: recipe/he_shell.json, ap_shell.json (high_explosive_materials tag = Packed Guncotton), shrapnel_shell.json (Shot Balls, gunpowder), fluid_shell.json (pipes)"
     ]
   }
 }

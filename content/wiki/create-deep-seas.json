@@ -25,7 +25,7 @@
     },
     {
       "label": "Livré avec",
-      "value": "Create High Seas 0.1.2 (voiles, gouvernail) et The Abyss (dimension et faune)"
+      "value": "Create High Seas 0.1.2 (voiles, gouvernail) et The Abyss (dimension désactivée en 3.4.8)"
     },
     {
       "label": "Profondeur d’implosion",
@@ -65,7 +65,7 @@
       "title": "Ton premier sous-marin",
       "image": "sub_dive_remplissage.webp",
       "alt": "L’évent qui aspire l’eau sous la coque pendant que les ballasts se remplissent",
-      "html": "<p>Une coque étanche, quelques ballasts, un évent qui touche la mer, un contrôleur de pompe relié à une source de rotation et un ordinateur de bord : c'est le minimum. Ajoute ensuite un <a href=\"/wiki/deep-seas-propulseur\">propulseur à eau</a> ou une hélice sous-marine pour avancer, puis <a href=\"/wiki/deep-seas-oxygene\">de quoi respirer</a> et <a href=\"/wiki/deep-seas-sas\">un sas</a> pour sortir nager. Le <a href=\"/wiki/deep-seas-sonar-barometre\">sonar et le baromètre</a> te disent où tu vas et jusqu'où ta coque tient.</p>"
+      "html": "<p>Une coque étanche, quelques ballasts, un évent qui touche la mer, un contrôleur de pompe relié à une source de rotation et un ordinateur de bord : c'est le minimum. Ajoute ensuite un <a href=\"/wiki/deep-seas-propulseur\">propulseur à eau</a> ou une hélice sous-marine pour avancer, puis <a href=\"/wiki/deep-seas-oxygene\">de quoi respirer</a> et <a href=\"/wiki/deep-seas-sas\">un sas</a> pour sortir nager. Le <a href=\"/wiki/deep-seas-sonar-barometre\">sonar et le baromètre</a> te disent où tu vas et jusqu'où ta coque tient. Une <a href=\"/wiki/deep-seas-coque-et-alarme\">alarme industrielle</a> sonne quand tu dépasses la limite.</p>"
     },
     {
       "id": "pression",
@@ -77,7 +77,7 @@
       "title": "High Seas et The Abyss",
       "image": "hs_sail_vent.webp",
       "alt": "Un petit bateau à voiles carrées de Create High Seas",
-      "html": "<p>Le même fichier du mod contient <strong>Create High Seas</strong>, pour la surface : <a href=\"/wiki/deep-seas-voiles-et-gouvernail\">voiles de bateau et gouvernail</a>, girouette, ancre, bouée et moteur de bateau. <strong>The Abyss</strong> ajoute une dimension profonde, ses cheminées hydrothermales et sa faune : isopodes géants, seiches abyssales, anguilles pélicans, requins emporte-pièce. Les grandes profondeurs ont donc de quoi justifier un bon sous-marin.</p>"
+      "html": "<p>Le même fichier du mod contient <strong>Create High Seas</strong>, pour la surface : <a href=\"/wiki/deep-seas-voiles-et-gouvernail\">voiles de bateau et gouvernail</a>, girouette, ancre, bouée et moteur de bateau. <strong>The Abyss</strong>, une dimension des grands fonds avec ses cheminées hydrothermales et sa faune, est aussi dans le fichier, mais <a href=\"/wiki/deep-seas-abysse\">désactivée dans la version publiée</a> : elle n'existe pas encore en jeu. Les grands fonds de l'Overworld suffisent déjà à justifier un bon sous-marin.</p>"
     },
     {
       "id": "etapes",
@@ -99,13 +99,16 @@
     "deep-seas-sonar-barometre",
     "deep-seas-cable-d-acier",
     "deep-seas-voiles-et-gouvernail",
-    "pompe-mecanique"
+    "pompe-mecanique",
+    "deep-seas-coque-et-alarme",
+    "deep-seas-abysse"
   ],
   "sources": [
     "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar du modpack Create France) : code lu après décompilation (Vineflower) pour les chiffres (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recettes du dossier data du jar, scènes Ponder SubmarinePonderScenes / HighSeasPonderScenes rejouées par notre moteur.",
     "Mod de Maxenonyme (MaxCreateMC), Cogfly et Zinc Studios ; artistes Marume, RandomePigeon, Funado. Licence du mod : « All Rights Reserved » : modèles et textures appartiennent à leurs auteurs, rendus ici à partir du jar ; aucun texte du mod n'est recopié.",
     "Blocs de Simulated 1.3.2 (treuil, connecteur de corde, roulement pivotant) : Create Aeronautics, assets « All Rights Reserved », code MIT.",
-    "Scène « plongée » : mise en scène écrite par Create France d'après le code (BallastTankBlockEntity, CommandSubBlockEntity, SubmarineConfig), pas une scène Ponder du mod."
+    "Scène « plongée » : mise en scène écrite par Create France d'après le code (BallastTankBlockEntity, CommandSubBlockEntity, SubmarineConfig), pas une scène Ponder du mod.",
+    "The Abyss : theabyss/CreateAbyss.enabled() = !FMLEnvironment.production (aucun contenu enregistré dans le jeu publié)"
   ],
   "en": {
     "slugEn": "create-deep-seas-guide",
@@ -128,7 +131,7 @@
       },
       {
         "label": "Ships with",
-        "value": "Create High Seas 0.1.2 (sails, rudder) and The Abyss (dimension and wildlife)"
+        "value": "Create High Seas 0.1.2 (sails, rudder) and The Abyss (dimension switched off in 3.4.8)"
       },
       {
         "label": "Implosion depth",
@@ -163,7 +166,7 @@
         "id": "premier",
         "title": "Your first submarine",
         "alt": "The vent drawing water under the hull while the tanks fill up",
-        "html": "<p>A sealed hull, a few ballast tanks, a vent touching the sea, a Pump Controller connected to a rotation source and an Onboard Computer: that is the minimum. Then add a <a href=\"/en/wiki/deep-seas-water-thruster\">Water Thruster</a> or a Submarine Propeller to move forward, <a href=\"/en/wiki/deep-seas-oxygen\">something to breathe</a> and <a href=\"/en/wiki/deep-seas-airlock\">an airlock</a> to swim out. The <a href=\"/en/wiki/deep-seas-sonar-and-barometer\">sonar and barometer</a> tell you where you are heading and how deep your hull can go.</p>"
+        "html": "<p>A sealed hull, a few ballast tanks, a vent touching the sea, a Pump Controller connected to a rotation source and an Onboard Computer: that is the minimum. Then add a <a href=\"/en/wiki/deep-seas-water-thruster\">Water Thruster</a> or a Submarine Propeller to move forward, <a href=\"/en/wiki/deep-seas-oxygen\">something to breathe</a> and <a href=\"/en/wiki/deep-seas-airlock\">an airlock</a> to swim out. The <a href=\"/en/wiki/deep-seas-sonar-and-barometer\">sonar and barometer</a> tell you where you are heading and how deep your hull can go. An <a href=\"/en/wiki/deep-seas-hull-glass-and-alarm\">Industrial Alarm</a> goes off when you go past the limit.</p>"
       },
       {
         "id": "pression",
@@ -174,7 +177,7 @@
         "id": "high-seas",
         "title": "High Seas and The Abyss",
         "alt": "A small square-rigged boat from Create High Seas",
-        "html": "<p>The same mod file also contains <strong>Create High Seas</strong>, for the surface: <a href=\"/en/wiki/high-seas-sails-and-rudder\">ship sails and the rudder</a>, wind vane, anchor, buoy and boat engine. <strong>The Abyss</strong> adds a deep dimension with geothermal vents and its own wildlife: giant isopods, abyssal cuttlefish, pelican eels and cookiecutter sharks. The deep sea gives you good reasons to build a sturdy submarine.</p>"
+        "html": "<p>The same mod file also contains <strong>Create High Seas</strong>, for the surface: <a href=\"/en/wiki/high-seas-sails-and-rudder\">ship sails and the rudder</a>, wind vane, anchor, buoy and boat engine. <strong>The Abyss</strong>, a deep-sea dimension with geothermal vents and its own wildlife, is in the file too, but <a href=\"/en/wiki/deep-seas-the-abyss\">switched off in the released version</a>: it does not exist in play yet. The Overworld's deep ocean already gives you good reasons to build a sturdy submarine.</p>"
       },
       {
         "id": "etapes",
@@ -191,7 +194,8 @@
       "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar from the Create France modpack): code read after decompiling (Vineflower) for the figures (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recipes from the jar's data folder, Ponder scenes SubmarinePonderScenes / HighSeasPonderScenes replayed by our engine.",
       "Mod by Maxenonyme (MaxCreateMC), Cogfly and Zinc Studios; art by Marume, RandomePigeon, Funado. Mod licence: \"All Rights Reserved\": models and textures belong to their authors and are rendered here from the jar; no text from the mod is copied.",
       "Simulated 1.3.2 blocks (rope winch, rope connector, swivel bearing): Create Aeronautics, assets \"All Rights Reserved\", code under MIT.",
-      "Dive scene: staged by Create France from the code (BallastTankBlockEntity, CommandSubBlockEntity, SubmarineConfig), not one of the mod's Ponder scenes."
+      "Dive scene: staged by Create France from the code (BallastTankBlockEntity, CommandSubBlockEntity, SubmarineConfig), not one of the mod's Ponder scenes.",
+      "The Abyss: theabyss/CreateAbyss.enabled() = !FMLEnvironment.production (nothing registered in the released game)"
     ]
   }
 }

@@ -135,6 +135,11 @@
       "html": "<p>Le diffuseur reçoit l'oxygène par tuyau (réservoir de 1 000 mB) et remplit d'air respirable les pièces fermées de la coque. Il consomme 50 mB par seconde, quelle que soit la taille du navire tant qu'elle reste sous la limite du serveur (500 000 blocs scannés). Il doit être sur le sous-marin lui-même, et un seul diffuseur travaille par navire.</p>"
     },
     {
+      "id": "seau",
+      "title": "Le seau d’oxygène",
+      "html": "<p>L'oxygène a son <strong>seau d'oxygène</strong> (Oxygen Bucket), sans recette : on le remplit à la sortie d'un électrolyseur, comme tout seau de fluide, et les machines de Create le voient comme 1 000 mB d'oxygène. C'est un gaz : le vider par terre ne pose rien, il s'échappe en fumée avec un sifflement et rend le seau vide. Dans un diffuseur, un seau tient 20 secondes.</p>"
+    },
+    {
       "id": "chaine",
       "title": "La chaîne complète",
       "html": "<p>Sur un sous-marin, la chaîne type est : évent de ballast, pompe, électrolyseur avec un rotor branché sur le moteur du navire, pompe, petit <a href=\"/wiki/reservoir-a-fluide\">réservoir</a> d'oxygène, puis diffuseur relié à un levier. L'électrolyseur produit 200 mB par seconde quand il tourne assez vite, le diffuseur en consomme 50 : un seul électrolyseur suffit donc largement, et le surplus s'accumule dans le réservoir pour les moments où le moteur est coupé.</p>"
@@ -163,12 +168,14 @@
     "deep-seas-ballast",
     "pompe-mecanique",
     "reservoir-a-fluide",
-    "moteur-creatif"
+    "moteur-creatif",
+    "deep-seas-coque-et-alarme"
   ],
   "sources": [
     "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar du modpack Create France) : code lu après décompilation (Vineflower) pour les chiffres (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recettes du dossier data du jar, scènes Ponder SubmarinePonderScenes / HighSeasPonderScenes rejouées par notre moteur.",
     "Mod de Maxenonyme (MaxCreateMC), Cogfly et Zinc Studios ; artistes Marume, RandomePigeon, Funado. Licence du mod : « All Rights Reserved » : modèles et textures appartiennent à leurs auteurs, rendus ici à partir du jar ; aucun texte du mod n'est recopié.",
-    "Blocs de Simulated 1.3.2 (treuil, connecteur de corde, roulement pivotant) : Create Aeronautics, assets « All Rights Reserved », code MIT."
+    "Blocs de Simulated 1.3.2 (treuil, connecteur de corde, roulement pivotant) : Create Aeronautics, assets « All Rights Reserved », code MIT.",
+    "Seau : CreateSubmarine (OXYGEN_BUCKET, fluide sans bloc, densité −1000, FluidBucketWrapper), OxygenBucketItem.use ; diffuseur 50 mB toutes les 20 ticks"
   ],
   "en": {
     "slugEn": "deep-seas-oxygen",
@@ -273,6 +280,11 @@
         "html": "<p>The diffuser takes oxygen through a pipe (1,000 mB tank) and fills the hull's sealed rooms with breathable air. It uses 50 mB per second, whatever the size of the ship, as long as it stays under the server limit (500,000 blocks scanned). It must sit on the submarine itself, and only one diffuser works per ship.</p>"
       },
       {
+        "id": "seau",
+        "title": "The Oxygen Bucket",
+        "html": "<p>Oxygen has its <strong>Oxygen Bucket</strong>, with no recipe: fill it at an electrolyzer's output like any fluid bucket, and Create machines see it as 1,000 mB of oxygen. It is a gas: emptying it on the ground places nothing, it escapes as smoke with a hiss and leaves an empty bucket. In a diffuser, one bucket lasts 20 seconds.</p>"
+      },
+      {
         "id": "chaine",
         "title": "The full chain",
         "html": "<p>On a submarine the usual chain is: Ballast Vent, pump, Electrolyzer with a shaft from the ship's engine, pump, a small oxygen <a href=\"/en/wiki/fluid-tank\">tank</a>, then the diffuser wired to a lever. The Electrolyzer makes 200 mB per second when it spins fast enough and the diffuser uses 50: one Electrolyzer is plenty, and the surplus builds up in the tank for the times when the engine is off.</p>"
@@ -297,7 +309,8 @@
     "sources": [
       "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar from the Create France modpack): code read after decompiling (Vineflower) for the figures (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recipes from the jar's data folder, Ponder scenes SubmarinePonderScenes / HighSeasPonderScenes replayed by our engine.",
       "Mod by Maxenonyme (MaxCreateMC), Cogfly and Zinc Studios; art by Marume, RandomePigeon, Funado. Mod licence: \"All Rights Reserved\": models and textures belong to their authors and are rendered here from the jar; no text from the mod is copied.",
-      "Simulated 1.3.2 blocks (rope winch, rope connector, swivel bearing): Create Aeronautics, assets \"All Rights Reserved\", code under MIT."
+      "Simulated 1.3.2 blocks (rope winch, rope connector, swivel bearing): Create Aeronautics, assets \"All Rights Reserved\", code under MIT.",
+      "Bucket: CreateSubmarine (OXYGEN_BUCKET, fluid without a block, density −1000, FluidBucketWrapper), OxygenBucketItem.use; diffuser 50 mB every 20 ticks"
     ]
   }
 }

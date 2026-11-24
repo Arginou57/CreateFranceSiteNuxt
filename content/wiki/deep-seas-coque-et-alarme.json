@@ -1,0 +1,261 @@
+{
+  "slug": "deep-seas-coque-et-alarme",
+  "name": "Vitres pressurisées, alarme et flotteurs",
+  "blockId": "create_submarine:industrial_alarm",
+  "category": "deepseas",
+  "title": "Vitres pressurisées et alarme — Deep Seas, guide",
+  "description": "Create Deep Seas : vitres pressurisées en fer et en cuivre, alarme industrielle de profondeur, flotteurs et membrane phycologique, recherche des fuites.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Deep Seas 3.4.8 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Un sous-marin de <strong>Create Deep Seas</strong> tient tant que sa coque tient. Cette page réunit les blocs qui aident à survivre à la pression : les <strong>vitres pressurisées</strong>, pour voir dehors sans affaiblir la coque, l'<strong>alarme industrielle</strong> (Industrial Alarm), qui sonne quand on descend trop bas, et les <strong>flotteurs</strong> faits avec une <strong>membrane phycologique</strong>. La profondeur de chaque bloc est expliquée sur la page du <a href=\"/wiki/deep-seas-sonar-barometre\">baromètre</a>.",
+  "facts": [
+    {
+      "label": "Vitre pressurisée en fer",
+      "value": "8 verres autour d’un bloc de fer industriel ; tient 700 m"
+    },
+    {
+      "label": "Vitre pressurisée en cuivre",
+      "value": "8 verres autour d’un bloc de cuivre ; tient 700 m"
+    },
+    {
+      "label": "Alarme industrielle",
+      "value": "Sonne quand la profondeur dépasse celle du bloc le plus faible"
+    },
+    {
+      "label": "Cadence de l’alarme",
+      "value": "Un bip toutes les 2 s, qui s’accélère par tranche de 5 m de trop"
+    },
+    {
+      "label": "Membrane phycologique",
+      "value": "1 algue sous la presse mécanique"
+    },
+    {
+      "label": "Flotteur",
+      "value": "8 laines d’une couleur autour d’une membrane"
+    },
+    {
+      "label": "Version",
+      "value": "Create Deep Seas 3.4.8 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Alarme industrielle (établi)",
+    "grid": [
+      [
+        null,
+        "Tube électronique",
+        null
+      ],
+      [
+        "Vitre teintée en rouge",
+        "Lampe à redstone",
+        "Vitre teintée en rouge"
+      ],
+      [
+        "Plaque de fer",
+        "Bloc musical",
+        "Plaque de fer"
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "create:electron_tube",
+        null
+      ],
+      [
+        "minecraft:red_stained_glass_pane",
+        "minecraft:redstone_lamp",
+        "minecraft:red_stained_glass_pane"
+      ],
+      [
+        "create:iron_sheet",
+        "minecraft:note_block",
+        "create:iron_sheet"
+      ]
+    ],
+    "result": "1 alarme industrielle",
+    "resultItem": "create_submarine:industrial_alarm"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "vitres",
+      "title": "Les vitres pressurisées",
+      "image": "c2a_sub_hull_vitres-alarme.webp",
+      "alt": "Vitres pressurisées en fer et en cuivre, et deux alarmes industrielles, éteinte et allumée",
+      "html": "<p>Une vitre ordinaire cède à quelques dizaines de mètres. La <strong>vitre pressurisée en fer</strong> (Iron Pressurized Glass) et la <strong>vitre pressurisée en cuivre</strong> (Copper Pressurized Glass) tiennent 700 m, plus que l'obsidienne. Toutes deux se font avec huit verres autour d'un bloc : de fer industriel de Create pour la première, de cuivre pour la seconde. Elles se valent ; la version cuivre se récolte avec une pioche en pierre, celle en fer demande une pioche en fer. Elles laissent passer la lumière et la vue.</p>"
+    },
+    {
+      "id": "alarme",
+      "title": "L’alarme industrielle",
+      "html": "<p>L'<strong>alarme industrielle</strong> se pose sur n'importe quelle face d'un bloc du sous-marin assemblé. Elle ne lit pas de redstone : toutes les demi-secondes, elle compare la profondeur du navire à celle que supporte son bloc le plus faible. Au-delà, elle sonne et s'allume en rouge, d'abord toutes les 2 secondes, puis 1,5 s, 1 s, 0,5 s et 0,2 s à chaque tranche de 5 m de trop. Si le sous-marin coule, elle passe tout de suite au rythme le plus rapide. Posée hors d'un navire, elle reste muette.</p>"
+    },
+    {
+      "id": "reglages",
+      "title": "Régler l’alarme",
+      "html": "<p>Un clic droit ouvre son menu : durée du son et du silence, de 1 à 600 ticks, volume de 10 à 300 %, et une option qui suit le danger (active par défaut) pour accélérer avec la profondeur. Le son par défaut est un bip de bloc musical, audible à une vingtaine de blocs ; un serveur peut proposer ses propres sons en .ogg dans le dossier de configuration du mod. Un réglage serveur garde la lumière fixe au lieu de clignoter.</p>"
+    },
+    {
+      "id": "pression",
+      "title": "Quand la coque cède",
+      "html": "<p>Tout bloc de coque a sa propre profondeur limite. Au-delà, il risque de céder à chaque contrôle : tant que le navire est à moins de 120 blocs sous la surface, seul ce bloc éclate et l'eau entre ; plus bas, c'est tout le sous-marin qui implose. Un serveur peut multiplier toutes les limites, ou leurs risques, par un réglage commun : les chiffres de cette page sont ceux par défaut.</p>"
+    },
+    {
+      "id": "flotteurs",
+      "title": "Membrane et flotteurs",
+      "image": "c2a_sub_hull_flotteurs.webp",
+      "alt": "Trois flotteurs, blanc, jaune et rouge",
+      "html": "<p>La <strong>membrane phycologique</strong> (Phycological Membrane) sort d'une <a href=\"/wiki/presse-mecanique\">presse mécanique</a> : une algue suffit. Elle ne sert qu'à une recette, le <strong>flotteur</strong> (Floater) : huit laines d'une même couleur autour d'une membrane, pour un flotteur de cette couleur. Les flotteurs tirent le navire vers la surface ; leur rôle face aux ballasts est détaillé sur la page des <a href=\"/wiki/deep-seas-ballast\">ballasts</a>.</p>"
+    },
+    {
+      "id": "objets",
+      "title": "Seau d’oxygène et rame",
+      "image": "c2a_sub_items_objets.webp",
+      "alt": "La membrane phycologique, le seau d’oxygène et la rame de bateau",
+      "html": "<p>Deux autres objets du mod ont leur place ailleurs : le <strong>seau d'oxygène</strong> (Oxygen Bucket), décrit sur la page de l'<a href=\"/wiki/deep-seas-oxygene\">oxygène</a>, et la <strong>rame de bateau</strong> (Oar of Boat) de High Seas, sur celle des <a href=\"/wiki/deep-seas-voiles-et-gouvernail\">voiles</a>.</p>"
+    },
+    {
+      "id": "fuites",
+      "title": "Trouver une fuite",
+      "html": "<p>Quand un compartiment se remplit sans raison, un bloc manque quelque part. La commande <code>/submarine findhole</code>, réservée aux opérateurs, liste jusqu'à dix trous du sous-marin où l'on se trouve, avec leurs coordonnées. Le <strong>bâton de sous-marin</strong> (Submarine Staff) fait la même chose, mais c'est un outil de développement : il n'existe pas dans le mod publié. L'<strong>oxygénateur créatif</strong> (Creative Oxygenator), lui, garde tout un navire en air sans réserve, en mode créatif seulement.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils",
+      "html": "<ul><li>Fais tes hublots en vitre pressurisée : une vitre ordinaire devient le maillon faible de la coque.</li><li>Pose une alarme près du pilote : elle prévient avant que la coque ne lâche.</li><li>Teste ton navire en eau peu profonde avant de viser les grands fonds.</li></ul>"
+    }
+  ],
+  "related": [
+    "create-deep-seas",
+    "deep-seas-sonar-barometre",
+    "deep-seas-ballast",
+    "deep-seas-oxygene",
+    "deep-seas-sas",
+    "deep-seas-voiles-et-gouvernail",
+    "presse-mecanique"
+  ],
+  "sources": [
+    "Vitres : CreateSubmarine (COPPER_PRESSURIZER, IRON_PRESSURIZER : verre, résistance 1200), HullStrengthConfig.buildStaticDefaults (700, 0,06), recipe/copper_pressurizer.json, iron_pressurizer.json, tags needs_stone_tool / needs_iron_tool",
+    "Alarme : IndustrialAlarmBlock, IndustrialAlarmBlockEntity (contrôle tous les 10 ticks, bloc le plus faible tous les 40, STAGES 40 / 30 / 20 / 10 / 4 ticks, STAGE_DEPTH 5, SubmarineSinkingSystem.isCrashing), AlarmSettings (1–600 ticks, 10–300 %), AlarmSounds (config/create_submarine/alarms), SubmarineConfig.alarmSteadyLight, recipe/industrial_alarm.json",
+    "Membrane et flotteurs : recipe/phycological_membrane.json (pressing), floater_<couleur>.json (16)",
+    "Fuites : SubmarineInfoCommand (findhole, niveau 2), SubmarineStaffItem (SUBMARINE_STAFF_ENABLED = !production), creative_oxygenator",
+    "Code : décompilé du jar create_submarine-3.4.8.jar du modpack Create France",
+    "Mod de Maxenonyme (MaxCreateMC), Cogfly et Zinc Studios. Licence du mod : « All Rights Reserved » : modèles et textures appartiennent à leurs auteurs, rendus ici à partir du jar ; aucun texte du mod n'est recopié.",
+    "Images : blocs et objets du jar posés sur la plaque et rendus par notre moteur (galerie ; le mod n’a pas de scène Ponder sur ce sujet)"
+  ],
+  "en": {
+    "slugEn": "deep-seas-hull-glass-and-alarm",
+    "name": "Pressurized Glass, Alarm and Floaters",
+    "title": "Pressurized Glass and Alarm — Deep Seas guide",
+    "description": "Create Deep Seas Iron and Copper Pressurized Glass, the depth-triggered Industrial Alarm, Floaters, the Phycological Membrane and leak hunting.",
+    "intro": "A <strong>Create Deep Seas</strong> submarine holds as long as its hull holds. This page gathers the blocks that help you survive the pressure: <strong>Pressurized Glass</strong>, to see outside without weakening the hull, the <strong>Industrial Alarm</strong>, which goes off when you dive too deep, and <strong>Floaters</strong> made with a <strong>Phycological Membrane</strong>. The depth each block can take is explained on the <a href=\"/en/wiki/deep-seas-sonar-and-barometer\">barometer</a> page.",
+    "facts": [
+      {
+        "label": "Iron Pressurized Glass",
+        "value": "8 glass around a Block of Industrial Iron; holds 700 m"
+      },
+      {
+        "label": "Copper Pressurized Glass",
+        "value": "8 glass around a block of copper; holds 700 m"
+      },
+      {
+        "label": "Industrial Alarm",
+        "value": "Goes off when the depth exceeds that of the weakest block"
+      },
+      {
+        "label": "Alarm rhythm",
+        "value": "One beep every 2 s, then faster for every 5 m too deep"
+      },
+      {
+        "label": "Phycological Membrane",
+        "value": "1 kelp under the Mechanical Press"
+      },
+      {
+        "label": "Floater",
+        "value": "8 wool of one colour around a membrane"
+      },
+      {
+        "label": "Version",
+        "value": "Create Deep Seas 3.4.8 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Industrial Alarm (crafting table)",
+      "grid": [
+        [
+          null,
+          "Electron Tube",
+          null
+        ],
+        [
+          "Red Stained Glass Pane",
+          "Redstone Lamp",
+          "Red Stained Glass Pane"
+        ],
+        [
+          "Iron Sheet",
+          "Note Block",
+          "Iron Sheet"
+        ]
+      ],
+      "result": "1 Industrial Alarm"
+    },
+    "sections": [
+      {
+        "id": "vitres",
+        "title": "Pressurized glass",
+        "alt": "Iron and Copper Pressurized Glass, and two Industrial Alarms, off and lit",
+        "html": "<p>Ordinary glass gives way after a few dozen metres. <strong>Iron Pressurized Glass</strong> and <strong>Copper Pressurized Glass</strong> hold 700 m, more than obsidian. Both are made from eight glass blocks around one block: Create's industrial iron for the first, copper for the second. They are equal; the copper one can be mined with a stone pickaxe, the iron one needs an iron pickaxe. Both let light and sight through.</p>"
+      },
+      {
+        "id": "alarme",
+        "title": "The Industrial Alarm",
+        "html": "<p>The <strong>Industrial Alarm</strong> goes on any face of a block of an assembled submarine. It reads no redstone: every half second it compares the ship's depth with what its weakest block can bear. Past that, it sounds and lights up red, first every 2 seconds, then 1.5 s, 1 s, 0.5 s and 0.2 s for each 5 m band too deep. If the submarine is sinking, it jumps straight to the fastest rhythm. Placed outside a ship, it stays silent.</p>"
+      },
+      {
+        "id": "reglages",
+        "title": "Setting the alarm",
+        "html": "<p>Its menu opens with a right-click: sound and silence length from 1 to 600 ticks, volume from 10 to 300%, and an option that follows the danger (on by default) to speed up with depth. The default sound is a note-block beep, heard about twenty blocks away; a server can offer its own .ogg sounds in the mod's config folder. A server setting keeps the light steady instead of flashing.</p>"
+      },
+      {
+        "id": "pression",
+        "title": "When the hull gives way",
+        "html": "<p>Every hull block has its own depth limit. Past it, the block may fail at each check: while the ship is less than 120 blocks below the surface, only that block bursts and water comes in; deeper, the whole submarine implodes. A server can scale every limit, or the odds of failure, with one shared setting: the numbers on this page are the defaults.</p>"
+      },
+      {
+        "id": "flotteurs",
+        "title": "Membrane and floaters",
+        "alt": "Three Floaters, white, yellow and red",
+        "html": "<p>The <strong>Phycological Membrane</strong> comes out of a <a href=\"/en/wiki/mechanical-press\">Mechanical Press</a>: one kelp is enough. It has a single recipe, the <strong>Floater</strong>: eight wool of one colour around a membrane, for a Floater of that colour. Floaters pull the ship towards the surface; how they work against the ballast tanks is on the <a href=\"/en/wiki/deep-seas-ballast-tanks\">ballast</a> page.</p>"
+      },
+      {
+        "id": "objets",
+        "title": "Oxygen Bucket and oar",
+        "alt": "The Phycological Membrane, the Oxygen Bucket and the Oar of Boat",
+        "html": "<p>Two more items have their place elsewhere: the <strong>Oxygen Bucket</strong>, described on the <a href=\"/en/wiki/deep-seas-oxygen\">oxygen</a> page, and High Seas' <strong>Oar of Boat</strong>, on the <a href=\"/en/wiki/high-seas-sails-and-rudder\">sails</a> page.</p>"
+      },
+      {
+        "id": "fuites",
+        "title": "Finding a leak",
+        "html": "<p>When a compartment floods for no clear reason, a block is missing somewhere. The <code>/submarine findhole</code> command, for operators only, lists up to ten holes in the submarine you are in, with their coordinates. The <strong>Submarine Staff</strong> does the same, but it is a development tool that does not exist in the released mod. The <strong>Creative Oxygenator</strong> keeps a whole ship full of air with no supply, in creative mode only.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<ul><li>Use Pressurized Glass for portholes: ordinary glass becomes the weak link of the hull.</li><li>Put an alarm near the pilot: it warns you before the hull gives way.</li><li>Test your ship in shallow water before going for the deep.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Glass: CreateSubmarine (COPPER_PRESSURIZER, IRON_PRESSURIZER: glass, resistance 1200), HullStrengthConfig.buildStaticDefaults (700, 0.06), recipe/copper_pressurizer.json, iron_pressurizer.json, tags needs_stone_tool / needs_iron_tool",
+      "Alarm: IndustrialAlarmBlock, IndustrialAlarmBlockEntity (check every 10 ticks, weakest block every 40, STAGES 40 / 30 / 20 / 10 / 4 ticks, STAGE_DEPTH 5, SubmarineSinkingSystem.isCrashing), AlarmSettings (1–600 ticks, 10–300%), AlarmSounds (config/create_submarine/alarms), SubmarineConfig.alarmSteadyLight, recipe/industrial_alarm.json",
+      "Membrane and floaters: recipe/phycological_membrane.json (pressing), floater_<colour>.json (16)",
+      "Leaks: SubmarineInfoCommand (findhole, level 2), SubmarineStaffItem (SUBMARINE_STAFF_ENABLED = !production), creative_oxygenator",
+      "Code: decompiled from create_submarine-3.4.8.jar of the Create France modpack",
+      "Mod by Maxenonyme (MaxCreateMC), Cogfly and Zinc Studios. Licence: All Rights Reserved: models and textures belong to their authors and are drawn here from the jar; no text of the mod is copied.",
+      "Images: blocks and items from the jar placed on the plate and drawn by our engine (gallery; the mod has no Ponder scene on this topic)"
+    ]
+  }
+}

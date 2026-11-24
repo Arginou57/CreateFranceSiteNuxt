@@ -1,0 +1,253 @@
+{
+  "slug": "canons-assembles",
+  "name": "Canons assemblés",
+  "blockId": "createbigcannons:built_up_steel_cannon_chamber",
+  "category": "cbc",
+  "title": "Canons assemblés — Create Big Cannons, guide",
+  "description": "Les canons assemblés de Create Big Cannons : couches d'acier et de nethersteel, constructeur de canon et sa tête, combinaisons de couches et chauffe.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
+  "mcVersion": "1.21.1",
+  "intro": "Les canons les plus solides de <strong>Create Big Cannons</strong> ne sortent pas d'un seul moule. On coule des <strong>couches</strong> d'acier ou de nethersteel de cinq calibres, on les fore, puis on les emboîte l'une dans l'autre avec le <strong>constructeur de canon</strong>. Une chauffe finale les soude en un <strong>bloc de canon assemblé</strong>. C'est la seule façon de fabriquer les fûts et les chambres en acier ou en nethersteel : leurs moules ne donnent que des couches.",
+  "facts": [
+    {
+      "label": "Couches",
+      "value": "Acier ou nethersteel, du très petit au très grand calibre (Cannon Layer)"
+    },
+    {
+      "label": "Métal",
+      "value": "Très petite 7 lingots, petite 9, moyenne 12, grande 14, très grande 20"
+    },
+    {
+      "label": "Constructeur",
+      "value": "Stress 8 ; course jusqu’à 32 blocs ; une impulsion change l’accroche"
+    },
+    {
+      "label": "Chauffe",
+      "value": "Ventilateur à travers de la lave, 6 000 ticks (5 min)"
+    },
+    {
+      "label": "Fût assemblé",
+      "value": "Couches très petite + petite"
+    },
+    {
+      "label": "Chambre épaisse",
+      "value": "Les cinq couches, de la très petite à la très grande"
+    },
+    {
+      "label": "Version",
+      "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Constructeur de canon (établi)",
+    "grid": [
+      [
+        "Pépite de fer",
+        "Plaque de fer",
+        "Pépite de fer"
+      ],
+      [
+        null,
+        "Boîtier en andésite",
+        null
+      ],
+      [
+        null,
+        "Rallonge de piston",
+        null
+      ]
+    ],
+    "items": [
+      [
+        "minecraft:iron_nugget",
+        "create:iron_sheet",
+        "minecraft:iron_nugget"
+      ],
+      [
+        null,
+        "create:andesite_casing",
+        null
+      ],
+      [
+        null,
+        "create:piston_extension_pole",
+        null
+      ]
+    ],
+    "result": "1 constructeur de canon",
+    "resultItem": "createbigcannons:cannon_builder"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "couches",
+      "title": "Les couches",
+      "image": "c2a_builtup_couches-acier.webp",
+      "alt": "Les cinq couches d’acier, brutes devant et forées derrière, de la plus fine à la plus large",
+      "html": "<p>Une couche (Cannon Layer) est un anneau de métal. Il y en a cinq calibres : <strong>très petite</strong> (Very Small Steel Cannon Layer), <strong>petite</strong> (Small), <strong>moyenne</strong> (Medium), <strong>grande</strong> (Large) et <strong>très grande</strong> (Very Large), en acier ou en nethersteel. Chacune se coule dans le moule du même nom, en acier ou en nethersteel fondu, et sort <strong>non alésée</strong> (Unbored … Cannon Layer). La <a href=\"/wiki/fabrication-des-canons\">perceuse de canon</a> la creuse ensuite : elle devient une couche finie, prête à être emboîtée.</p>"
+    },
+    {
+      "id": "combinaisons",
+      "title": "Les combinaisons",
+      "html": "<table><thead><tr><th>Couches emboîtées</th><th>Bloc obtenu</th></tr></thead><tbody><tr><td>Très petite seule</td><td>fût en acier (Steel Cannon Barrel)</td></tr><tr><td>Très petite + petite</td><td>fût assemblé (Built-Up Steel Cannon Barrel)</td></tr><tr><td>Très petite + petite + moyenne</td><td>chambre en acier (Steel Cannon Chamber)</td></tr><tr><td>Les quatre premières</td><td>chambre assemblée (Built-Up Steel Cannon Chamber)</td></tr><tr><td>Les cinq</td><td>chambre épaisse (Thick Steel Cannon Chamber)</td></tr></tbody></table><p>C'est la même chose en nethersteel. Les blocs ordinaires en acier s'obtiennent donc aussi par cette voie, avec une seule couche ou trois.</p>"
+    },
+    {
+      "id": "constructeur",
+      "title": "Le constructeur de canon",
+      "image": "c2a_builtup_couches-nethersteel.webp",
+      "alt": "Les couches de nethersteel, brutes et forées",
+      "html": "<p>Le <strong>constructeur de canon</strong> (Cannon Builder) marche comme un piston mû par la rotation : il pousse sa <strong>tête</strong> (Cannon Builder Head) le long de son axe, jusqu'à 32 blocs, et la ramène. La tête saisit une couche, la transporte et la glisse dans la suivante. Une impulsion de redstone fait basculer son accroche : prendre ou lâcher. Quand il reprend des couches déjà emboîtées, il prend toujours celle du dehors. La tête n'est pas un objet à fabriquer : elle apparaît quand le constructeur s'étend.</p>"
+    },
+    {
+      "id": "chauffe",
+      "title": "La chauffe",
+      "image": "c2a_builtup_blocs-assembles.webp",
+      "alt": "Les blocs finis en acier et en nethersteel : fûts, chambres, chambres assemblées et épaisses",
+      "html": "<p>Une fois les couches réunies au bon endroit, il faut les chauffer comme pour la cuisson en masse : un <a href=\"/wiki/ventilateur-enchasse\">ventilateur enchâssé</a> souffle à travers un bloc de lave vers elles. Après 6 000 ticks, 5 minutes, elles deviennent un seul bloc de canon assemblé. Il faut que <strong>toutes</strong> les couches de la combinaison soient là : un emboîtement incomplet ne change pas.</p>"
+    },
+    {
+      "id": "pourquoi",
+      "title": "Pourquoi des couches",
+      "html": "<p>En acier et en nethersteel, il n'y a pas d'autre voie : même le fût ordinaire est une très petite couche chauffée, et la chambre ordinaire trois couches. Les versions assemblée et épaisse sont du même métal, donc avec les mêmes <a href=\"/wiki/materiaux-des-canons\">charges sûres</a> (8 en acier, 10 en nethersteel). Ce qui change, c'est le diamètre : 12/16 de bloc pour le fût, 14/16 pour le fût assemblé, un bloc pour la chambre, 18/16 et 20/16 pour les chambres assemblée et épaisse, qui débordent de leur case.</p>"
+    },
+    {
+      "id": "chaine",
+      "title": "Une petite chaîne",
+      "html": "<p>Coule les cinq calibres dans une même colonne de moules, fore la colonne en une passe, puis pose le constructeur au bout. Il emboîte les couches de la plus fine à la plus large, au-dessus d'un ventilateur réglé sur la lave. Compte 62 lingots d'acier pour une chambre épaisse : 7 + 9 + 12 + 14 + 20, et seulement 16 pour un fût assemblé.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<ul><li>Une couche non alésée ne s'emboîte pas : fore-la d'abord.</li><li>Couper la chauffe trop tôt ne garde rien : il faut les 5 minutes complètes.</li><li>Le constructeur demande 8 de stress par tr/min : un moteur trop faible le fait caler.</li></ul>"
+    }
+  ],
+  "related": [
+    "moules-et-coulee",
+    "fabrication-des-canons",
+    "materiaux-des-canons",
+    "culasses",
+    "ventilateur-enchasse",
+    "piston-mecanique",
+    "create-big-cannons"
+  ],
+  "sources": [
+    "Combinaisons : createbigcannons/block_recipes/*.json (built_up_heating : layers -> result ; 10 recettes acier / nethersteel)",
+    "Couches : block_recipes cannon_casting (moule -> unbored_*_cannon_layer) et drill_boring (unbored -> couche)",
+    "Diamètres : BigCannonTubeBlock.verySmall à veryLarge (12, 14, 16, 18, 20 px) ; même BigCannonMaterial, donc mêmes charges sûres",
+    "Constructeur : CannonBuilderBlock, CannonBuilderHeadBlock (tête posée en s’étendant), stress CBCCfgStress 8, config maxCannonBuilderLength 32",
+    "Chauffe : config builtUpCannonHeatingTime 6000 ; métal par couche : CannonCastShape (7, 9, 12, 14, 20 lingots)",
+    "Recette : recipe/cannon_builder.json",
+    "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT ; textures et modèles CC BY-NC-SA, auteurs rbasamoyai et contributeurs), identiques au jar du modpack Create France",
+    "Images : blocs et objets de CBC posés sur la plaque et rendus par notre moteur (galerie, pas de scène Ponder du mod sur ce sujet)"
+  ],
+  "en": {
+    "slugEn": "built-up-cannons",
+    "name": "Built-Up Cannons",
+    "title": "Built-Up Cannons — Create Big Cannons guide",
+    "description": "Create Big Cannons built-up cannons: steel and nethersteel layers, the Cannon Builder and its head, layer combinations and the heating step.",
+    "intro": "The toughest cannons in <strong>Create Big Cannons</strong> do not come out of a single mould. You cast steel or nethersteel <strong>layers</strong> in five calibres, bore them, then fit them inside each other with the <strong>Cannon Builder</strong>. A final heating fuses them into one <strong>built-up cannon block</strong>. It is the only way to make steel or nethersteel barrels and chambers: their moulds only give layers.",
+    "facts": [
+      {
+        "label": "Layers",
+        "value": "Steel or nethersteel, from very small to very large (Cannon Layer)"
+      },
+      {
+        "label": "Metal",
+        "value": "Very small 7 ingots, small 9, medium 12, large 14, very large 20"
+      },
+      {
+        "label": "Builder",
+        "value": "Stress 8; reach up to 32 blocks; a redstone pulse toggles its grip"
+      },
+      {
+        "label": "Heating",
+        "value": "Fan blowing through lava, 6,000 ticks (5 min)"
+      },
+      {
+        "label": "Built-up barrel",
+        "value": "Very small + small layers"
+      },
+      {
+        "label": "Thick chamber",
+        "value": "All five layers, very small to very large"
+      },
+      {
+        "label": "Version",
+        "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Cannon Builder (crafting table)",
+      "grid": [
+        [
+          "Iron Nugget",
+          "Iron Sheet",
+          "Iron Nugget"
+        ],
+        [
+          null,
+          "Andesite Casing",
+          null
+        ],
+        [
+          null,
+          "Piston Extension Pole",
+          null
+        ]
+      ],
+      "result": "1 Cannon Builder"
+    },
+    "sections": [
+      {
+        "id": "couches",
+        "title": "The layers",
+        "alt": "The five steel layers, unbored in front and bored behind, thinnest to widest",
+        "html": "<p>A Cannon Layer is a metal ring. It comes in five calibres: the <strong>Very Small Steel Cannon Layer</strong>, the <strong>Small</strong>, <strong>Medium</strong>, <strong>Large</strong> and <strong>Very Large</strong> ones, in steel or in nethersteel. Each is cast in the mould of the same size, from molten steel or nethersteel, and comes out <strong>unbored</strong> (Unbored … Cannon Layer). The <a href=\"/en/wiki/cannon-crafting\">Cannon Drill</a> then hollows it out and it becomes a finished layer, ready to be fitted.</p>"
+      },
+      {
+        "id": "combinaisons",
+        "title": "The combinations",
+        "html": "<table><thead><tr><th>Layers fitted together</th><th>Resulting block</th></tr></thead><tbody><tr><td>Very small only</td><td>Steel Cannon Barrel</td></tr><tr><td>Very small + small</td><td>Built-Up Steel Cannon Barrel</td></tr><tr><td>Very small + small + medium</td><td>Steel Cannon Chamber</td></tr><tr><td>The first four</td><td>Built-Up Steel Cannon Chamber</td></tr><tr><td>All five</td><td>Thick Steel Cannon Chamber</td></tr></tbody></table><p>Nethersteel works the same way. Plain steel blocks can therefore also be made this way, with one layer or three.</p>"
+      },
+      {
+        "id": "constructeur",
+        "title": "The Cannon Builder",
+        "alt": "The nethersteel layers, unbored and bored",
+        "html": "<p>The <strong>Cannon Builder</strong> works like a rotation-driven piston: it pushes its <strong>Cannon Builder Head</strong> along its axis, up to 32 blocks, and pulls it back. The head grabs a layer, carries it and slides it into the next one. A redstone pulse toggles its grip between taking and releasing. When it takes layers that are already fitted together, it always takes the outer one. The head is not an item you craft: it appears when the builder extends.</p>"
+      },
+      {
+        "id": "chauffe",
+        "title": "Heating",
+        "alt": "The finished steel and nethersteel blocks: barrels, chambers, built-up and thick chambers",
+        "html": "<p>Once the layers sit together in place, they need heating, just like bulk blasting: an <a href=\"/en/wiki/encased-fan\">Encased Fan</a> blows through a lava block towards them. After 6,000 ticks, 5 minutes, they become a single built-up cannon block. <strong>Every</strong> layer of the combination has to be there: an incomplete set does not change.</p>"
+      },
+      {
+        "id": "pourquoi",
+        "title": "Why layers",
+        "html": "<p>In steel and nethersteel there is no other route: even the plain barrel is one heated very small layer, and the plain chamber three layers. The built-up and thick versions are the same metal, so they have the same <a href=\"/en/wiki/cannon-materials\">safe charges</a> (8 for steel, 10 for nethersteel). What changes is the diameter: 12/16 of a block for the barrel, 14/16 for the built-up barrel, one block for the chamber, 18/16 and 20/16 for the built-up and thick chambers, which stick out of their block space.</p>"
+      },
+      {
+        "id": "chaine",
+        "title": "A small production line",
+        "html": "<p>Cast the five calibres in one column of moulds, bore the column in one pass, then place the builder at the end. It fits the layers from the thinnest to the widest, above a fan set to blow through lava. A thick chamber costs 62 steel ingots: 7 + 9 + 12 + 14 + 20, and a built-up barrel only 16.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<ul><li>An unbored layer does not fit: bore it first.</li><li>Stopping the heat too early keeps nothing: the full 5 minutes are needed.</li><li>The builder needs 8 stress per RPM: a weak motor makes it stall.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Combinations: createbigcannons/block_recipes/*.json (built_up_heating: layers -> result; 10 steel / nethersteel recipes)",
+      "Layers: block_recipes cannon_casting (mould -> unbored_*_cannon_layer) and drill_boring (unbored -> layer)",
+      "Diameters: BigCannonTubeBlock.verySmall to veryLarge (12, 14, 16, 18, 20 px); same BigCannonMaterial, so same safe charges",
+      "Builder: CannonBuilderBlock, CannonBuilderHeadBlock (head placed while extending), stress CBCCfgStress 8, config maxCannonBuilderLength 32",
+      "Heating: config builtUpCannonHeatingTime 6000; metal per layer: CannonCastShape (7, 9, 12, 14, 20 ingots)",
+      "Recipe: recipe/cannon_builder.json",
+      "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence; textures and models CC BY-NC-SA, by rbasamoyai and contributors), identical to the jar of the Create France modpack",
+      "Images: CBC blocks and items placed on the plate and drawn by our engine (gallery; the mod has no Ponder scene on this topic)"
+    ]
+  }
+}

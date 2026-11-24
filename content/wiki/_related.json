@@ -60,7 +60,8 @@
   ],
   "moteur-a-vapeur": [
     "loconautics-chaudiere",
-    "propulsion-moteur-stirling"
+    "propulsion-moteur-stirling",
+    "bruleur"
   ],
   "carburants": [
     "loconautics-moteur-a-combustion",
@@ -85,10 +86,14 @@
     "create-coasters-simulated"
   ],
   "presse-mecanique": [
-    "loconautics-blocs-et-objets"
+    "loconautics-blocs-et-objets",
+    "nitropoudre-et-coton-poudre",
+    "munitions-d-autocanon",
+    "deep-seas-coque-et-alarme"
   ],
   "bec-verseur": [
-    "loconautics-blocs-et-objets"
+    "loconautics-blocs-et-objets",
+    "moules-et-coulee"
   ],
   "assembleur-physique": [
     "aeronautics-outils",
@@ -162,7 +167,8 @@
     "bnb-nixie"
   ],
   "ventilateur-enchasse": [
-    "connected-catalyseurs"
+    "connected-catalyseurs",
+    "canons-assembles"
   ],
   "tube-nixie": [
     "bnb-nixie"
@@ -184,5 +190,26 @@
   ],
   "ore-excavation-filons": [
     "minerai-de-zinc"
+  ],
+  "scie-mecanique": [
+    "moules-et-coulee",
+    "fabriquer-un-autocanon",
+    "munitions-d-autocanon"
+  ],
+  "mixeur-mecanique": [
+    "nitropoudre-et-coton-poudre"
+  ],
+  "meule": [
+    "nitropoudre-et-coton-poudre"
+  ],
+  "bassin": [
+    "moules-et-coulee"
+  ],
+  "deployeur": [
+    "munitions-d-autocanon",
+    "fabriquer-un-autocanon"
+  ],
+  "cle": [
+    "chariot-de-canon"
   ]
 }

@@ -136,6 +136,11 @@
       "html": "<p>High Seas compte aussi une <strong>girouette</strong> qui montre le vent, une <strong>ancre</strong> qui retient un navire au fond, une <strong>bouée</strong> sur laquelle on peut s'asseoir et que l'on remorque, un <strong>moteur de bateau</strong> hors-bord avec manette et gouvernail intégré, une rame et un planeur des mers (Seaglide) pour nager plus vite. Ces blocs n'ont pas de scène Ponder dans la version 0.1.2.</p>"
     },
     {
+      "id": "rame",
+      "title": "La rame",
+      "html": "<p>La <strong>rame de bateau</strong> (Oar of Boat) se fait avec deux bâtons et une planche en diagonale. Sur le pont d'un navire assemblé, avec de l'eau sous toi, maintiens le clic droit : tu rames. Toutes les 1,2 s, un coup de rame pousse le navire dans la direction où tu regardes, jusqu'à 1,1 bloc par tick, et un faible élan continue entre deux coups. Elle ne marche ni dans une cabine fermée, ni sur un bateau de Minecraft.</p>"
+    },
+    {
       "id": "faq",
       "title": "Questions fréquentes",
       "html": "<p><strong>Faut-il un gouvernail pour naviguer ?</strong> Oui : sans lui, les voiles ne savent pas où est l'avant. <strong>Peut-on mettre des voiles sur un sous-marin ?</strong> Seulement en surface, sous l'eau elles ne prennent aucun vent.</p>"
@@ -153,12 +158,14 @@
     "create-deep-seas",
     "deep-seas-propulseur",
     "deep-seas-cable-d-acier",
-    "support-de-moulin-a-vent"
+    "support-de-moulin-a-vent",
+    "deep-seas-coque-et-alarme"
   ],
   "sources": [
     "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar du modpack Create France) : code lu après décompilation (Vineflower) pour les chiffres (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recettes du dossier data du jar, scènes Ponder SubmarinePonderScenes / HighSeasPonderScenes rejouées par notre moteur.",
     "Mod de Maxenonyme (MaxCreateMC), Cogfly et Zinc Studios ; artistes Marume, RandomePigeon, Funado. Licence du mod : « All Rights Reserved » : modèles et textures appartiennent à leurs auteurs, rendus ici à partir du jar ; aucun texte du mod n'est recopié.",
-    "Blocs de Simulated 1.3.2 (treuil, connecteur de corde, roulement pivotant) : Create Aeronautics, assets « All Rights Reserved », code MIT."
+    "Blocs de Simulated 1.3.2 (treuil, connecteur de corde, roulement pivotant) : Create Aeronautics, assets « All Rights Reserved », code MIT.",
+    "Rame : recipe/oar_of_boat.json ; OarClientHandler, OarPropulsionSystem (cycle 24 ticks, coup de 5 ticks), HighSeasConfig oarStrokePower 130, oarMaxSpeed 1,1"
   ],
   "en": {
     "slugEn": "high-seas-sails-and-rudder",
@@ -273,6 +280,11 @@
         "html": "<p>High Seas also has a <strong>Wind Vane</strong> showing the wind, an <strong>Anchor</strong> that holds a ship to the sea floor, a <strong>Buoy</strong> you can sit on and tow, an outboard <strong>Boat Engine</strong> with a throttle and built-in steering, an oar and a Seaglide to swim faster. These blocks have no Ponder scene in version 0.1.2.</p>"
       },
       {
+        "id": "rame",
+        "title": "The oar",
+        "html": "<p>The <strong>Oar of Boat</strong> is crafted from two sticks and a plank on a diagonal. On the deck of an assembled ship, with water under you, hold right-click to row. Every 1.2 s a stroke pushes the ship in the direction you are looking, up to 1.1 blocks per tick, with a gentle push between strokes. It works neither inside a closed cabin nor on a vanilla boat.</p>"
+      },
+      {
         "id": "faq",
         "title": "Common questions",
         "html": "<p><strong>Is a rudder required to sail?</strong> Yes: without one, the sails cannot tell which end is the front. <strong>Can a submarine carry sails?</strong> Only on the surface; underwater they catch no wind at all.</p>"
@@ -287,7 +299,8 @@
     "sources": [
       "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar from the Create France modpack): code read after decompiling (Vineflower) for the figures (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recipes from the jar's data folder, Ponder scenes SubmarinePonderScenes / HighSeasPonderScenes replayed by our engine.",
       "Mod by Maxenonyme (MaxCreateMC), Cogfly and Zinc Studios; art by Marume, RandomePigeon, Funado. Mod licence: \"All Rights Reserved\": models and textures belong to their authors and are rendered here from the jar; no text from the mod is copied.",
-      "Simulated 1.3.2 blocks (rope winch, rope connector, swivel bearing): Create Aeronautics, assets \"All Rights Reserved\", code under MIT."
+      "Simulated 1.3.2 blocks (rope winch, rope connector, swivel bearing): Create Aeronautics, assets \"All Rights Reserved\", code under MIT.",
+      "Oar: recipe/oar_of_boat.json; OarClientHandler, OarPropulsionSystem (24-tick cycle, 5-tick stroke), HighSeasConfig oarStrokePower 130, oarMaxSpeed 1.1"
     ]
   }
 }

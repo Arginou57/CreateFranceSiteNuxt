@@ -6,7 +6,7 @@
   "title": "Détonateurs et traceurs — Create Big Cannons, guide",
   "description": "Les détonateurs de Create Big Cannons : à impact, à inertie, minuté, de proximité, retardés et filaire. Les poser, les régler, ajouter un pointeur traçant.",
   "datePublished": "2026-10-28",
-  "dateModified": "2026-10-28",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
   "mcVersion": "1.21.1",
   "intro": "Un obus de <strong>Create Big Cannons</strong> sans <strong>détonateur</strong> (Fuze) n'explose pas. Le détonateur se pose sur le nez de l'obus, ou sur son culot pour l'obus perce-armure, et décide du moment de l'explosion : au contact, après un temps, près d'une cible. Le <strong>pointeur</strong> (Tracer Tip), une pointe traçante, rend le tir visible.",
@@ -116,7 +116,7 @@
     {
       "id": "temps",
       "title": "Minuté, de proximité, retardés",
-      "html": "<p>Le détonateur <strong>minuté</strong> se règle dans son menu, en secondes et en ticks : l'obus explose en l'air après ce temps, utile pour un shrapnel au-dessus d'une tranchée. Le détonateur <strong>de proximité</strong> s'arme 5 ticks après le tir, puis regarde devant l'obus : dès qu'un bloc entre dans sa zone, il part. Les détonateurs <strong>retardés</strong> attendent un délai réglé après l'impact, ce qui laisse à l'obus le temps de percer avant d'exploser.</p>"
+      "html": "<p>Le détonateur <strong>minuté</strong> se règle dans son menu, en secondes et en ticks : l'obus explose en l'air après ce temps, utile pour un shrapnel au-dessus d'une tranchée. Le détonateur <strong>de proximité</strong> s'arme 5 ticks après le tir, puis regarde devant l'obus : dès qu'un bloc entre dans sa zone, il part. Les détonateurs <strong>retardés</strong> attendent un délai réglé après l'impact, ce qui laisse à l'obus le temps de percer avant d'exploser. Ce sont le <strong>détonateur à impact retardé</strong> (Delayed Impact Fuze) et le <strong>détonateur à inertie retardé</strong> (Delayed Inertia Fuze) : un détonateur minuté plus un détonateur à impact, ou à inertie, assemblés sans forme à l'établi.</p>"
     },
     {
       "id": "filaire",
@@ -152,7 +152,8 @@
     "poudre-et-cartouches",
     "deployeur",
     "autocanons",
-    "create-big-cannons"
+    "create-big-cannons",
+    "munitions-d-autocanon"
   ],
   "sources": [
     "Détonateurs : munitions/fuzes/ImpactFuzeItem, InertiaFuzeItem, TimedFuzeItem, ProximityFuzeItem, DelayedImpactFuzeItem, DelayedInertiaFuzeItem, WiredFuzeItem",
@@ -160,7 +161,8 @@
     "Rendu : FuzedBlockEntityRenderer (embout sur le nez, ou le culot pour isBaseFuze)",
     "Recettes : recipe/timed_fuze.json, impact_fuze.json, proximity_fuze.json, munition_fuzing_deployer.json",
     "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT), identiques au jar du modpack Create France",
-    "Vidéos : scènes Ponder de Create Big Cannons (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) rejouées par notre moteur ; modèles et textures de CBC (CC BY-NC-SA 4.0, Cannoneers of Create)"
+    "Vidéos : scènes Ponder de Create Big Cannons (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) rejouées par notre moteur ; modèles et textures de CBC (CC BY-NC-SA 4.0, Cannoneers of Create)",
+    "Détonateurs retardés : recipe/delayed_impact_fuze.json, delayed_inertia_fuze.json (minuté + impact / inertie, sans forme)"
   ],
   "en": {
     "slugEn": "fuzes-and-tracers",
@@ -251,7 +253,7 @@
       {
         "id": "temps",
         "title": "Timed, proximity, delayed",
-        "html": "<p>The <strong>Timed Fuze</strong> is set in its menu, in seconds and ticks: the shell explodes in the air after that time, handy for shrapnel above a trench. The <strong>Proximity Fuze</strong> arms 5 ticks after firing, then looks ahead of the shell: as soon as a block enters its zone, it goes off. <strong>Delayed</strong> fuzes wait for a set delay after the impact, which gives the shell time to pierce before it explodes.</p>"
+        "html": "<p>The <strong>Timed Fuze</strong> is set in its menu, in seconds and ticks: the shell explodes in the air after that time, handy for shrapnel above a trench. The <strong>Proximity Fuze</strong> arms 5 ticks after firing, then looks ahead of the shell: as soon as a block enters its zone, it goes off. <strong>Delayed</strong> fuzes wait for a set delay after the impact, which gives the shell time to pierce before it explodes. Two items do this. For impacts there is the <strong>Delayed Impact Fuze</strong>; its inertia counterpart is the <strong>Delayed Inertia Fuze</strong>. Each is a Timed Fuze plus an Impact or an Inertia Fuze, shapeless at the crafting table.</p>"
       },
       {
         "id": "filaire",
@@ -286,7 +288,8 @@
       "Rendering: FuzedBlockEntityRenderer (cap on the nose, or the base for isBaseFuze)",
       "Recipes: recipe/timed_fuze.json, impact_fuze.json, proximity_fuze.json, munition_fuzing_deployer.json",
       "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence), identical to the Create France modpack jar",
-      "Videos: Create Big Cannons Ponder scenes (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) replayed by our engine; CBC models and textures (CC BY-NC-SA 4.0, Cannoneers of Create)"
+      "Videos: Create Big Cannons Ponder scenes (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) replayed by our engine; CBC models and textures (CC BY-NC-SA 4.0, Cannoneers of Create)",
+      "Delayed fuzes: recipe/delayed_impact_fuze.json, delayed_inertia_fuze.json (timed + impact / inertia, shapeless)"
     ]
   }
 }

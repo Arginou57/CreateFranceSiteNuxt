@@ -6,7 +6,7 @@
   "title": "Charger un canon — Create Big Cannons, guide",
   "description": "Charger un canon de Create Big Cannons : chargeur de canon, tête de bélier, perches, outils à main, pistons, portiques. L'ordre poudre puis obus.",
   "datePublished": "2026-10-28",
-  "dateModified": "2026-10-28",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
   "mcVersion": "1.21.1",
   "intro": "Un canon de <strong>Create Big Cannons</strong> se charge par la bouche, désassemblé : la poudre d'abord, l'obus ensuite, poussés jusqu'au fond. Le <strong>chargeur de canon</strong> (Cannon Loader) fait ce travail comme un piston de Create. Pour quelques tirs, des outils à main suffisent ; pour une batterie, pistons, portiques et poulies s'en chargent.",
@@ -164,7 +164,8 @@
     "chariot-de-portique",
     "poulie-a-corde",
     "deployeur",
-    "manivelle"
+    "manivelle",
+    "chariot-de-canon"
   ],
   "sources": [
     "Chargeur : CannonLoaderBlock / CannonLoaderBlockEntity (perches, têtes RAM_HEAD / WORM_HEAD), config CBCCfgKinetics.maxLoaderLength 64",

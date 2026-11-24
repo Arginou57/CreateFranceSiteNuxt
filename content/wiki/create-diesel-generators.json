@@ -6,14 +6,14 @@
   "title": "Create Diesel Generators — guide en français",
   "description": "Create Diesel Generators : moteurs diesel, pétrole, pompe à balancier, distillation et carburants. Par où commencer, chiffres du code et liens.",
   "datePublished": "2026-11-23",
-  "dateModified": "2026-11-23",
-  "createVersion": "6.0.10 · Create Diesel Generators 1.3.15",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Diesel Generators 1.3.16",
   "mcVersion": "1.21.1",
   "intro": "<strong>Create Diesel Generators</strong> (CDG) ajoute à Create une filière du pétrole complète : on trouve un gisement, on le pompe avec une <strong>pompe à balancier</strong>, on raffine le pétrole dans une <strong>tour de distillation</strong>, puis on brûle le diesel ou l'essence dans des <strong>moteurs</strong> qui donnent beaucoup de rotation sous un petit volume. Le mod ajoute aussi des carburants verts (éthanol, huile végétale, biodiesel), un brûleur à carburant, une tourelle et quelques outils.",
   "facts": [
     {
       "label": "Mod",
-      "value": "Create Diesel Generators 1.3.15 (Minecraft 1.21.1, NeoForge)"
+      "value": "Create Diesel Generators 1.3.16 (Minecraft 1.21.1, NeoForge)"
     },
     {
       "label": "Auteur",
@@ -79,7 +79,12 @@
     {
       "id": "serveur",
       "title": "Sur le serveur Create France",
-      "html": "<p>Create Diesel Generators fait partie du modpack Create France. Les chiffres de ce wiki viennent du code de la version 1.3.15 et de ses réglages par défaut : sur un serveur, la configuration peut changer le multiplicateur du turbo, la taille des gisements ou le contrôle par la redstone. Les vidéos montrent les scènes Ponder du mod, rejouées par notre moteur.</p>"
+      "html": "<p>Create Diesel Generators fait partie du modpack Create France. Les chiffres de ce wiki viennent du code de la version 1.3.15, vérifiés contre la 1.3.16 du modpack, et de leurs réglages par défaut : sur un serveur, la configuration peut changer le multiplicateur du turbo, la taille des gisements ou le contrôle par la redstone. Les vidéos montrent les scènes Ponder du mod, rejouées par notre moteur.</p>"
+    },
+    {
+      "id": "version-1316",
+      "title": "Ce qui change en 1.3.16",
+      "html": "<p>Le modpack est passé à la 1.3.16. Les recettes et les carburants ne bougent pas. Trois choses changent en jeu : les SU d'un <a href=\"/wiki/moteur-diesel\">moteur</a> simple ou modulaire suivent désormais l'accélérateur ; la chaleur qu'un <a href=\"/wiki/bruleur\">brûleur</a> donne à une chaudière est plafonnée à 2 ; un réglage serveur peut changer la consommation du turbo et la longueur des barils (1 et 4 par défaut, comme avant).</p>"
     }
   ],
   "related": [
@@ -97,7 +102,8 @@
     "Carburants : data/createdieselgenerators/createdieselgenerators/fuel_type/*.json (speed, strength, burn_rate, burner_multiplier)",
     "Moteurs : DieselEngineBlockEntity, ModularDieselEngineBlockEntity (longueur max 21), HugeDieselEngineBlockEntity, PoweredEngineShaftBlockEntity",
     "Huile végétale : recipe/compacting/plant_oil.json",
-    "Images : blocs et objets du mod posés sur la plaque et rendus par notre moteur (modèles et textures MIT, George VI)"
+    "Images : blocs et objets du mod posés sur la plaque et rendus par notre moteur (modèles et textures MIT, George VI)",
+    "Version 1.3.16 (jar createdieselgenerators-1.21.1-1.3.16.jar du modpack de référence) comparée au 1.3.15 le 24/11 : recettes et données identiques (une recette renommée, un tag Steam 'n' Rails ajouté), classes changées : moteurs (SU × accélérateur, multiplicateur de consommation du turbo appliqué), brûleur (chaleur de chaudière plafonnée à 2), baril (longueur par largeur réglable), config"
   ],
   "en": {
     "slugEn": "create-diesel-generators-guide",
@@ -108,7 +114,7 @@
     "facts": [
       {
         "label": "Mod",
-        "value": "Create Diesel Generators 1.3.15 (Minecraft 1.21.1, NeoForge)"
+        "value": "Create Diesel Generators 1.3.16 (Minecraft 1.21.1, NeoForge)"
       },
       {
         "label": "Author",
@@ -172,7 +178,12 @@
       {
         "id": "serveur",
         "title": "On the Create France server",
-        "html": "<p>Create Diesel Generators is part of the Create France modpack. The numbers on this wiki come from the 1.3.15 code and its default settings: on a server, the config can change the turbo multiplier, the size of oil deposits or redstone control. The videos show the mod's Ponder scenes, replayed by our engine.</p>"
+        "html": "<p>Create Diesel Generators is part of the Create France modpack. The numbers on this wiki come from the 1.3.15 code, checked against the modpack's 1.3.16, and their default settings: on a server, the config can change the turbo multiplier, the size of oil deposits or redstone control. The videos show the mod's Ponder scenes, replayed by our engine.</p>"
+      },
+      {
+        "id": "version-1316",
+        "title": "What changes in 1.3.16",
+        "html": "<p>The modpack moved to 1.3.16. Recipes and fuels stay the same. Three things change in play: the SU of a single or modular <a href=\"/en/wiki/diesel-engine\">engine</a> now follow the throttle; the heat a <a href=\"/en/wiki/burner\">Burner</a> gives a boiler is capped at 2; a server setting can change the turbo's fuel use and the barrel length (1 and 4 by default, as before).</p>"
       }
     ],
     "sources": [
@@ -180,7 +191,8 @@
       "Fuels: data/createdieselgenerators/createdieselgenerators/fuel_type/*.json (speed, strength, burn_rate, burner_multiplier)",
       "Engines: DieselEngineBlockEntity, ModularDieselEngineBlockEntity (max length 21), HugeDieselEngineBlockEntity, PoweredEngineShaftBlockEntity",
       "Plant oil: recipe/compacting/plant_oil.json",
-      "Images: mod blocks and items placed on the plate and rendered by our engine (models and textures MIT, George VI)"
+      "Images: mod blocks and items placed on the plate and rendered by our engine (models and textures MIT, George VI)",
+      "Version 1.3.16 (createdieselgenerators-1.21.1-1.3.16.jar from the reference modpack) compared with 1.3.15 on 24/11: recipes and data identical (one recipe renamed, one Steam 'n' Rails tag added); changed classes: engines (SU × throttle, turbo fuel multiplier applied), burner (boiler heat capped at 2), oil barrel (length per width configurable), config"
     ]
   }
 }

@@ -146,7 +146,8 @@
     "deep-seas-ordinateur-de-bord",
     "pompe-mecanique",
     "tuyau-a-fluide",
-    "reservoir-a-fluide"
+    "reservoir-a-fluide",
+    "deep-seas-coque-et-alarme"
   ],
   "sources": [
     "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar du modpack Create France) : code lu après décompilation (Vineflower) pour les chiffres (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recettes du dossier data du jar, scènes Ponder SubmarinePonderScenes / HighSeasPonderScenes rejouées par notre moteur.",

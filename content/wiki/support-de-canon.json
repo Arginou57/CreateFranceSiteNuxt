@@ -6,7 +6,7 @@
   "title": "Support de canon — Create Big Cannons, guide",
   "description": "Le support de canon de Create Big Cannons : assembler le canon, régler hausse et direction par la rotation, tirer, désassembler. Support fixe, extensions.",
   "datePublished": "2026-10-28",
-  "dateModified": "2026-10-28",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
   "mcVersion": "1.21.1",
   "intro": "Le <strong>support de canon</strong> (Cannon Mount) est le cœur de toute batterie de Create Big Cannons. Posé sous les blocs du canon, il les <strong>assemble</strong> en une seule pièce mobile, transforme la rotation de Create en <strong>hausse</strong> et en <strong>direction</strong>, puis <strong>déclenche le tir</strong>. Tout se commande par la redstone et par deux arbres.",
@@ -173,6 +173,13 @@
       "alt": "Un autocanon sur un support fixe",
       "video": "cbc_mount_fixed",
       "html": "<p>Le <strong>support de canon fixe</strong> (Fixed Cannon Mount) n'a pas d'arbre : ses angles se règlent à la main sur ses côtés et ne changent plus. Il vise toujours au même endroit, pratique pour une défense pointée sur un passage ou sur un véhicule. Une clé le fait pivoter. Il ne prend pas d'extension.</p>"
+    },
+    {
+      "id": "lacet",
+      "title": "Le contrôleur de lacet",
+      "image": "c2a_yaw_controleur-de-lacet.webp",
+      "alt": "Le contrôleur de lacet, ancien bloc du support de canon",
+      "html": "<p>Tu croiseras peut-être le <strong>contrôleur de lacet</strong> (Yaw Controller), un bloc des premières versions du mod, posé sous le support pour le faire tourner. En 5.11.7 il existe encore mais n'a plus de recette ni de place dans l'onglet créatif : c'est l'arbre du dessous du support qui commande la direction. Posé par commande sous un support, il ne sert plus qu'à relayer vers le canon les objets d'un <a href=\"/wiki/bras-mecanique\">bras mécanique</a> ou d'un entonnoir, et à afficher ses infos aux lunettes. Pour un canon mobile sans rotation, vois le <a href=\"/wiki/chariot-de-canon\">chariot de canon</a>.</p>"
     }
   ],
   "related": [
@@ -184,7 +191,8 @@
     "inverseur-de-rotation",
     "controleur-de-vitesse-de-rotation",
     "cle",
-    "roulement-mecanique"
+    "roulement-mecanique",
+    "chariot-de-canon"
   ],
   "sources": [
     "Angles : data/createbigcannons/cannon_mounts (big_cannon, autocannon, drop_mortar ; vertical_direction down / up)",
@@ -194,7 +202,8 @@
     "Recette : recipe/cannon_mount.json",
     "Rendu : CannonMountBlockEntityRenderer (plateau tournant, axe de l’affût, arbres)",
     "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT), identiques au jar du modpack Create France",
-    "Vidéos : scènes Ponder de Create Big Cannons (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) rejouées par notre moteur ; modèles et textures de CBC (CC BY-NC-SA 4.0, Cannoneers of Create)"
+    "Vidéos : scènes Ponder de Create Big Cannons (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) rejouées par notre moteur ; modèles et textures de CBC (CC BY-NC-SA 4.0, Cannoneers of Create)",
+    "Contrôleur de lacet : cannon_control/cannon_mount/YawControllerBlock(Entity) (ExtendsCannonMount, getItemHandler), CBCArmInteractionPointTypes ; absent de ModGroup et des recettes 5.11.7"
   ],
   "en": {
     "slugEn": "cannon-mount",
@@ -331,6 +340,12 @@
         "title": "The Fixed Cannon Mount",
         "alt": "An autocannon on a Fixed Cannon Mount",
         "html": "<p>The <strong>Fixed Cannon Mount</strong> has no shaft: its angles are set by hand on its sides and then stay put. It always aims at the same spot, handy for a defence pointed at a passage or for a vehicle. A wrench rotates it. It cannot take an extension.</p>"
+      },
+      {
+        "id": "lacet",
+        "title": "The Yaw Controller",
+        "alt": "The Yaw Controller, an old Cannon Mount block",
+        "html": "<p>You may come across the <strong>Yaw Controller</strong>, a block from the mod's early versions that sat under the mount to turn it. In 5.11.7 it still exists but has no recipe and no place in the creative tab: the shaft under the mount now drives the direction. Placed under a mount with a command, it only passes items from a <a href=\"/en/wiki/mechanical-arm\">Mechanical Arm</a> or a funnel on to the cannon and shows its details to goggles. For a mobile cannon without rotation, see the <a href=\"/en/wiki/cannon-carriage\">Cannon Carriage</a>.</p>"
       }
     ],
     "sources": [
@@ -341,7 +356,8 @@
       "Recipe: recipe/cannon_mount.json",
       "Rendering: CannonMountBlockEntityRenderer (turntable, carriage axle, shafts)",
       "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence), identical to the Create France modpack jar",
-      "Videos: Create Big Cannons Ponder scenes (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) replayed by our engine; CBC models and textures (CC BY-NC-SA 4.0, Cannoneers of Create)"
+      "Videos: Create Big Cannons Ponder scenes (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) replayed by our engine; CBC models and textures (CC BY-NC-SA 4.0, Cannoneers of Create)",
+      "Yaw Controller: cannon_control/cannon_mount/YawControllerBlock(Entity) (ExtendsCannonMount, getItemHandler), CBCArmInteractionPointTypes; missing from ModGroup and from the 5.11.7 recipes"
     ]
   }
 }

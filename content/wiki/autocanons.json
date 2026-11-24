@@ -6,7 +6,7 @@
   "title": "Autocanons — Create Big Cannons, guide",
   "description": "Les autocanons de Create Big Cannons : culasse, ressort de recul, fûts, cadence selon la redstone, munitions et caisse de munitions. Chiffres du mod.",
   "datePublished": "2026-10-28",
-  "dateModified": "2026-10-28",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
   "mcVersion": "1.21.1",
   "intro": "L'<strong>autocanon</strong> de <strong>Create Big Cannons</strong> est une arme à tir rapide : on lui donne des munitions en objets, il les tire à la chaîne tant que sa face de tir est alimentée. Il se construit comme un petit canon : une <strong>culasse d'autocanon</strong>, un <strong>ressort de recul</strong> en option et des <strong>fûts</strong>, sur un support de canon.",
@@ -109,6 +109,11 @@
       "html": "<p>Sur un <a href=\"/wiki/support-de-canon\">support de canon</a>, pose la <strong>culasse d'autocanon</strong>, puis le <strong>ressort de recul</strong> si tu le veux, puis les <strong>fûts</strong>. Plus de fûts donnent plus de vitesse, jusqu'à une limite, et réduisent la dispersion. Au-delà du nombre maximum du matériau, les balles se coincent. Le dernier fût peut prendre une bouche évasée d'un coup de <a href=\"/wiki/cle\">clé</a>.</p>"
     },
     {
+      "id": "pieces",
+      "title": "D’où viennent les pièces",
+      "html": "<p>Aucune pièce ne se fait à l'établi : le <strong>fût d'autocanon</strong> (Cast Iron, Bronze ou Steel Autocannon Barrel), la culasse et le <strong>ressort de recul d'autocanon</strong> (Autocannon Recoil Spring) se coulent, se forent puis reçoivent leur extracteur ou leur ressort. Tout est sur la page <a href=\"/wiki/fabriquer-un-autocanon\">Fabriquer un autocanon</a>. Un autocanon se monte aussi sur un <a href=\"/wiki/chariot-de-canon\">chariot de canon</a>.</p>"
+    },
+    {
       "id": "cadence",
       "title": "La cadence",
       "image": "cbc_auto_using_cadence.webp",
@@ -135,7 +140,7 @@
       "title": "Munitions et caisse",
       "image": "cbc_ammo_use_caisse.webp",
       "alt": "Une caisse de munitions posée sur la culasse",
-      "html": "<p>Les balles se donnent une à une à la culasse, par un <a href=\"/wiki/entonnoir\">entonnoir</a> ou une <a href=\"/wiki/chute\">glissière</a>. La <strong>caisse de munitions d'autocanon</strong> (Autocannon Ammo Container) en contient 64, ou 128 balles de mitrailleuse, avec un emplacement à part pour les traçantes et un espacement réglable. Elle se pose sur la culasse ; un <a href=\"/wiki/bras-mecanique\">bras mécanique</a> peut l'échanger quand elle est vide.</p>"
+      "html": "<p>Les cartouches (voir <a href=\"/wiki/munitions-d-autocanon\">munitions d'autocanon</a>) se donnent une à une à la culasse, par un <a href=\"/wiki/entonnoir\">entonnoir</a> ou une <a href=\"/wiki/chute\">glissière</a>. La <strong>caisse de munitions d'autocanon</strong> (Autocannon Ammo Container) en contient 64, ou 128 balles de mitrailleuse, avec un emplacement à part pour les traçantes et un espacement réglable. Elle se pose sur la culasse ; un <a href=\"/wiki/bras-mecanique\">bras mécanique</a> peut l'échanger quand elle est vide.</p>"
     },
     {
       "id": "exemple",
@@ -165,7 +170,10 @@
     "chute",
     "bras-mecanique",
     "deployeur",
-    "create-big-cannons"
+    "create-big-cannons",
+    "fabriquer-un-autocanon",
+    "munitions-d-autocanon",
+    "chariot-de-canon"
   ],
   "sources": [
     "Matériaux : index/CBCAutocannonMaterials.java (maxBarrelLength, baseSpeed, speedIncreasePerBarrel, maxSpeedIncreases, projectileLifetime, baseSpread, spreadReductionPerBarrel)",
@@ -261,6 +269,11 @@
         "html": "<p>On a <a href=\"/en/wiki/cannon-mount\">Cannon Mount</a>, place the <strong>Autocannon Breech</strong>, then the <strong>Recoil Spring</strong> if you want one, then the <strong>barrels</strong>. More barrels give more speed, up to a limit, and less spread. Beyond the material's maximum the rounds get stuck. The last barrel can get a flared muzzle with a <a href=\"/en/wiki/wrench\">Wrench</a> click.</p>"
       },
       {
+        "id": "pieces",
+        "title": "Where the parts come from",
+        "html": "<p>No part is made at a crafting table: the <strong>Cast Iron, Bronze or Steel Autocannon Barrel</strong>, the breech and the <strong>Autocannon Recoil Spring</strong> are cast, bored, then fitted with their extractor or spring. It is all on the <a href=\"/en/wiki/autocannon-crafting\">autocannon crafting</a> page. An autocannon can also sit on a <a href=\"/en/wiki/cannon-carriage\">Cannon Carriage</a>.</p>"
+      },
+      {
         "id": "cadence",
         "title": "Fire rate",
         "alt": "The autocannon firing a burst, smoke at the muzzle",
@@ -282,7 +295,7 @@
         "id": "munitions",
         "title": "Rounds and the container",
         "alt": "An ammo container on the breech",
-        "html": "<p>Rounds are fed one by one into the breech, through a <a href=\"/en/wiki/funnel\">Funnel</a> or a <a href=\"/en/wiki/chute\">Chute</a>. The <strong>Autocannon Ammo Container</strong> holds 64 of them, or 128 machine gun rounds, with a separate slot for tracers and an adjustable spacing. It sits on the breech; a <a href=\"/en/wiki/mechanical-arm\">Mechanical Arm</a> can swap it when it is empty.</p>"
+        "html": "<p>Cartridges (see <a href=\"/en/wiki/autocannon-ammunition\">autocannon ammunition</a>) are fed one by one into the breech, through a <a href=\"/en/wiki/funnel\">Funnel</a> or a <a href=\"/en/wiki/chute\">Chute</a>. The <strong>Autocannon Ammo Container</strong> holds 64 of them, or 128 machine gun rounds, with a separate slot for tracers and an adjustable spacing. It sits on the breech; a <a href=\"/en/wiki/mechanical-arm\">Mechanical Arm</a> can swap it when it is empty.</p>"
       },
       {
         "id": "exemple",

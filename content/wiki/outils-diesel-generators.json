@@ -6,8 +6,8 @@
   "title": "Outils — Create Diesel Generators, guide",
   "description": "Les outils de Create Diesel Generators : briquet, pulvérisateur chimique, marteau, pince coupante, bidon, sac de rails et moules.",
   "datePublished": "2026-11-23",
-  "dateModified": "2026-11-23",
-  "createVersion": "6.0.10 · Create Diesel Generators 1.3.15",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Diesel Generators 1.3.16",
   "mcVersion": "1.21.1",
   "intro": "En plus de ses machines, Create Diesel Generators ajoute une poignée d'<strong>outils</strong> qui utilisent ses carburants ou ses recettes : le <strong>briquet à essence</strong>, le <strong>pulvérisateur chimique</strong>, le <strong>marteau</strong> et la <strong>pince coupante</strong>, le <strong>bidon</strong>, le <strong>sac de rails</strong> et les <strong>moules</strong>. Le <a href=\"/wiki/gisements-de-petrole\">détecteur de pétrole</a> a sa propre page.",
   "facts": [
@@ -25,7 +25,7 @@
     },
     {
       "label": "Pince coupante",
-      "value": "128 utilisations ; aucune recette de base en 1.3.15"
+      "value": "128 utilisations ; aucune recette de base en 1.3.16"
     },
     {
       "label": "Bidon",
@@ -37,7 +37,7 @@
     },
     {
       "label": "Version",
-      "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+      "value": "Create Diesel Generators 1.3.16 · Create 6.0.10"
     }
   ],
   "recipe": {
@@ -91,17 +91,17 @@
     {
       "id": "briquet",
       "title": "Le briquet à essence",
-      "html": "<p>Le briquet s'ouvre et se ferme au clic droit, et tente d'allumer ce qu'il vise quand on l'ouvre ; accroupi, on l'ouvre sans l'allumer. Il brûle le carburant de son réservoir. Renommé à l'enclume, il change d'apparence : une douzaine de motifs existent (feu, âme, creeper, diamant, dragon…). Monté sur une <a href=\"/wiki/tourelle-chimique\">tourelle chimique</a> ou un pulvérisateur, il enflamme le jet.</p>"
+      "html": "<p>Le briquet s'ouvre et se ferme au clic droit, et tente d'allumer ce qu'il vise quand on l'ouvre ; accroupi, on l'ouvre sans l'allumer. Il brûle le carburant de son réservoir. Renommé à l'enclume, il change d'apparence : une douzaine de motifs existent (feu, âme, creeper, diamant, dragon…). Monté sur une <a href=\"/wiki/tourelle-chimique\">tourelle chimique</a> ou un pulvérisateur, il enflamme le jet. Un forgeron d'outils de niveau 2 en vend aussi, pour 5 émeraudes.</p>"
     },
     {
       "id": "pulverisateur",
       "title": "Le pulvérisateur chimique",
-      "html": "<p>Le pulvérisateur est la version portable de la tourelle : on le remplit de n'importe quel fluide et on maintient le clic droit pour arroser. Une potion applique ses effets, de l'eau éteint, un carburant brûle si le pulvérisateur porte un briquet. On l'assemble dans un <a href=\"/wiki/etabli-mecanique\">établi mécanique</a> avec des poignées en algue, un mécanisme de précision et un bloc de cuivre ; le briquet s'y fixe au <a href=\"/wiki/deployeur\">déployeur</a>.</p>"
+      "html": "<p>Le pulvérisateur est la version portable de la tourelle : on le remplit de n'importe quel fluide et on maintient le clic droit pour arroser. Une potion applique ses effets, de l'eau éteint, un carburant brûle si le pulvérisateur porte un briquet. On l'assemble dans un <a href=\"/wiki/etabli-mecanique\">établi mécanique</a> avec des poignées en algue, un mécanisme de précision et un bloc de cuivre ; le briquet s'y fixe au <a href=\"/wiki/deployeur\">déployeur</a>. L'objet obtenu s'appelle <strong>pulvérisateur chimique avec briquet</strong> (Chemical Sprayer With Lighter) ; il sert aussi à fabriquer une tourelle chimique déjà équipée.</p>"
     },
     {
       "id": "marteau",
       "title": "Le marteau et la pince coupante",
-      "html": "<p>Le <strong>marteau</strong> transforme ce que tu tiens dans l'autre main : un lingot de fer, de cuivre, d'or ou de laiton devient une plaque, sans <a href=\"/wiki/presse-mecanique\">presse</a>. Il tient 128 utilisations. La <strong>pince coupante</strong> marche de la même façon pour les recettes de découpe de fils, mais la version 1.3.15 n'en fournit aucune : elle ne sert qu'avec des recettes ajoutées par un autre mod ou un datapack.</p>"
+      "html": "<p>Le <strong>marteau</strong> transforme ce que tu tiens dans l'autre main : un lingot de fer, de cuivre, d'or ou de laiton devient une plaque, sans <a href=\"/wiki/presse-mecanique\">presse</a>. Il tient 128 utilisations. La <strong>pince coupante</strong> marche de la même façon pour les recettes de découpe de fils, mais la version 1.3.16 n'en fournit aucune : elle ne sert qu'avec des recettes ajoutées par un autre mod ou un datapack.</p>"
     },
     {
       "id": "bidon",
@@ -148,7 +148,9 @@
     "Sac : TrackLayersBagItem",
     "Recette : recipe/crafting/lighter.json",
     "Code, données et storyboards : Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, licence MIT, auteur George VI), identiques au jar du modpack Create France",
-    "Images : blocs et objets du mod posés sur la plaque et rendus par notre moteur (modèles et textures MIT, George VI)"
+    "Images : blocs et objets du mod posés sur la plaque et rendus par notre moteur (modèles et textures MIT, George VI)",
+    "Version 1.3.16 (jar createdieselgenerators-1.21.1-1.3.16.jar du modpack de référence) comparée au 1.3.15 le 24/11 : recettes et données identiques (une recette renommée, un tag Steam 'n' Rails ajouté), classes changées : moteurs (SU × accélérateur, multiplicateur de consommation du turbo appliqué), brûleur (chaleur de chaudière plafonnée à 2), baril (longueur par largeur réglable), config",
+    "Pulvérisateur à briquet : recipe/deploying/chemical_sprayer_lighter.json, crafting/chemical_turret_lighter.json ; marchand : GameEvents.addTrade (forgeron d’outils, niveau 2, 5 émeraudes)"
   ],
   "en": {
     "slugEn": "diesel-generators-tools",
@@ -171,7 +173,7 @@
       },
       {
         "label": "Wire Cutters",
-        "value": "128 uses; no default recipe in 1.3.15"
+        "value": "128 uses; no default recipe in 1.3.16"
       },
       {
         "label": "Canister",
@@ -183,7 +185,7 @@
       },
       {
         "label": "Version",
-        "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+        "value": "Create Diesel Generators 1.3.16 · Create 6.0.10"
       }
     ],
     "recipe": {
@@ -218,17 +220,17 @@
       {
         "id": "briquet",
         "title": "The Lighter",
-        "html": "<p>The lighter opens and closes with a right-click and tries to light what it points at when opened; sneaking opens it without lighting. It burns the fuel in its tank. Renamed on an anvil, it changes look: about a dozen designs exist (fire, soul, creeper, diamond, dragon…). Fitted on a <a href=\"/en/wiki/chemical-turret\">Chemical Turret</a> or a sprayer, it ignites the spray.</p>"
+        "html": "<p>The lighter opens and closes with a right-click and tries to light what it points at when opened; sneaking opens it without lighting. It burns the fuel in its tank. Renamed on an anvil, it changes look: about a dozen designs exist (fire, soul, creeper, diamond, dragon…). Fitted on a <a href=\"/en/wiki/chemical-turret\">Chemical Turret</a> or a sprayer, it ignites the spray. A level 2 toolsmith villager also sells one for 5 emeralds.</p>"
       },
       {
         "id": "pulverisateur",
         "title": "The Chemical Sprayer",
-        "html": "<p>The sprayer is the handheld version of the turret: fill it with any fluid and keep the use button pressed to spray. A potion applies its effects, water puts out fires, a fuel burns if the sprayer carries a lighter. It is assembled in a <a href=\"/en/wiki/mechanical-crafter\">Mechanical Crafter</a> with kelp handles, a precision mechanism and a block of copper; the lighter is added with a <a href=\"/en/wiki/deployer\">Deployer</a>.</p>"
+        "html": "<p>The sprayer is the handheld version of the turret: fill it with any fluid and keep the use button pressed to spray. A potion applies its effects, water puts out fires, a fuel burns if the sprayer carries a lighter. It is assembled in a <a href=\"/en/wiki/mechanical-crafter\">Mechanical Crafter</a> with kelp handles, a precision mechanism and a block of copper; the lighter is added with a <a href=\"/en/wiki/deployer\">Deployer</a>. The resulting item is the <strong>Chemical Sprayer With Lighter</strong>; it is also used to craft a Chemical Turret that comes with its lighter.</p>"
       },
       {
         "id": "marteau",
         "title": "The Hammer and the Wire Cutters",
-        "html": "<p>The <strong>Hammer</strong> works on what you hold in your other hand: an iron, copper, gold or brass ingot becomes a sheet, no <a href=\"/en/wiki/mechanical-press\">press</a> needed. It lasts 128 uses. The <strong>Wire Cutters</strong> work the same way for wire-cutting recipes, but version 1.3.15 ships none: they only help with recipes added by another mod or a datapack.</p>"
+        "html": "<p>The <strong>Hammer</strong> works on what you hold in your other hand: an iron, copper, gold or brass ingot becomes a sheet, no <a href=\"/en/wiki/mechanical-press\">press</a> needed. It lasts 128 uses. The <strong>Wire Cutters</strong> work the same way for wire-cutting recipes, but version 1.3.16 ships none: they only help with recipes added by another mod or a datapack.</p>"
       },
       {
         "id": "bidon",
@@ -265,7 +267,9 @@
       "Bag: TrackLayersBagItem",
       "Recipe: recipe/crafting/lighter.json",
       "Code, data and storyboards: Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, MIT licence, author George VI), identical to the Create France modpack jar",
-      "Images: mod blocks and items placed on the plate and rendered by our engine (models and textures MIT, George VI)"
+      "Images: mod blocks and items placed on the plate and rendered by our engine (models and textures MIT, George VI)",
+      "Version 1.3.16 (createdieselgenerators-1.21.1-1.3.16.jar from the reference modpack) compared with 1.3.15 on 24/11: recipes and data identical (one recipe renamed, one Steam 'n' Rails tag added); changed classes: engines (SU × throttle, turbo fuel multiplier applied), burner (boiler heat capped at 2), oil barrel (length per width configurable), config",
+      "Sprayer with lighter: recipe/deploying/chemical_sprayer_lighter.json, crafting/chemical_turret_lighter.json; trade: GameEvents.addTrade (toolsmith, level 2, 5 emeralds)"
     ]
   }
 }

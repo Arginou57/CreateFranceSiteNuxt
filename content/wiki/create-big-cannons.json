@@ -6,7 +6,7 @@
   "title": "Create Big Cannons — guide complet en français",
   "description": "Create Big Cannons expliqué : construire son premier canon, le charger, viser et tirer, portées réelles, obus, autocanons et mortiers. Guide en français.",
   "datePublished": "2026-10-28",
-  "dateModified": "2026-10-28",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
   "mcVersion": "1.21.1",
   "intro": "<strong>Create Big Cannons</strong> (CBC) ajoute à Create une vraie artillerie : des canons faits de blocs, posés sur un support qui les fait pivoter grâce à la rotation de Create, chargés de poudre et d'obus, et dont chaque tir suit une trajectoire calculée. C'est l'un des mods phares du modpack Create France. Ce guide en onze pages part du premier canon et va jusqu'aux autocanons.",
@@ -85,7 +85,7 @@
     {
       "id": "pages",
       "title": "Les pages du guide",
-      "html": "<p>Pour aller plus loin : <a href=\"/wiki/support-de-canon\">support de canon</a> (assembler, viser, tirer), <a href=\"/wiki/materiaux-des-canons\">matériaux</a> (combien de poudre chaque canon supporte), <a href=\"/wiki/culasses\">culasses</a>, <a href=\"/wiki/chargement-des-canons\">chargement</a>, <a href=\"/wiki/poudre-et-cartouches\">poudre et portées</a>, <a href=\"/wiki/obus-de-canon\">obus</a>, <a href=\"/wiki/detonateurs-et-traceurs\">détonateurs et traceurs</a>, <a href=\"/wiki/fabrication-des-canons\">fabrication</a>, <a href=\"/wiki/autocanons\">autocanons</a> et <a href=\"/wiki/mortiers\">mortiers</a>.</p>"
+      "html": "<p>Pour aller plus loin : <a href=\"/wiki/support-de-canon\">support de canon</a> (assembler, viser, tirer), <a href=\"/wiki/materiaux-des-canons\">matériaux</a> (combien de poudre chaque canon supporte), <a href=\"/wiki/culasses\">culasses</a>, <a href=\"/wiki/chargement-des-canons\">chargement</a>, <a href=\"/wiki/poudre-et-cartouches\">poudre et portées</a>, <a href=\"/wiki/obus-de-canon\">obus</a>, <a href=\"/wiki/detonateurs-et-traceurs\">détonateurs et traceurs</a>, <a href=\"/wiki/fabrication-des-canons\">fabrication</a>, <a href=\"/wiki/autocanons\">autocanons</a> et <a href=\"/wiki/mortiers\">mortiers</a>. Pour fabriquer : <a href=\"/wiki/moules-et-coulee\">moules et coulée</a>, <a href=\"/wiki/canons-assembles\">canons assemblés</a>, <a href=\"/wiki/nitropoudre-et-coton-poudre\">nitropoudre et coton-poudre</a>, <a href=\"/wiki/munitions-d-autocanon\">munitions d'autocanon</a>, <a href=\"/wiki/fabriquer-un-autocanon\">fabriquer un autocanon</a> ; et aussi le <a href=\"/wiki/chariot-de-canon\">chariot de canon</a> et le <a href=\"/wiki/equipement-big-cannons\">masque à gaz et les outils</a>.</p>"
     },
     {
       "id": "erreurs",
@@ -115,7 +115,14 @@
     "autocanons",
     "mortiers",
     "manivelle",
-    "roulement-mecanique"
+    "roulement-mecanique",
+    "moules-et-coulee",
+    "canons-assembles",
+    "nitropoudre-et-coton-poudre",
+    "munitions-d-autocanon",
+    "fabriquer-un-autocanon",
+    "chariot-de-canon",
+    "equipement-big-cannons"
   ],
   "sources": [
     "Vitesse : MountedBigCannonContraption.fireShot (projectile.shoot(dir, chargesUsed)), powder_charge.json (strength 2)",
@@ -201,7 +208,7 @@
       {
         "id": "pages",
         "title": "The guide pages",
-        "html": "<p>Going further: <a href=\"/en/wiki/cannon-mount\">Cannon Mount</a> (assembling, aiming, firing), <a href=\"/en/wiki/cannon-materials\">materials</a> (how much powder each cannon can take), <a href=\"/en/wiki/cannon-breeches\">breeches</a>, <a href=\"/en/wiki/loading-big-cannons\">loading</a>, <a href=\"/en/wiki/powder-charges-and-cartridges\">powder and ranges</a>, <a href=\"/en/wiki/big-cannon-shells\">shells</a>, <a href=\"/en/wiki/fuzes-and-tracers\">fuzes and tracers</a>, <a href=\"/en/wiki/cannon-crafting\">crafting</a>, <a href=\"/en/wiki/autocannons\">autocannons</a> and <a href=\"/en/wiki/mortars\">mortars</a>.</p>"
+        "html": "<p>Going further: <a href=\"/en/wiki/cannon-mount\">Cannon Mount</a> (assembling, aiming, firing), <a href=\"/en/wiki/cannon-materials\">materials</a> (how much powder each cannon can take), <a href=\"/en/wiki/cannon-breeches\">breeches</a>, <a href=\"/en/wiki/loading-big-cannons\">loading</a>, <a href=\"/en/wiki/powder-charges-and-cartridges\">powder and ranges</a>, <a href=\"/en/wiki/big-cannon-shells\">shells</a>, <a href=\"/en/wiki/fuzes-and-tracers\">fuzes and tracers</a>, <a href=\"/en/wiki/cannon-crafting\">crafting</a>, <a href=\"/en/wiki/autocannons\">autocannons</a> and <a href=\"/en/wiki/mortars\">mortars</a>. For crafting: <a href=\"/en/wiki/cbc-cast-moulds\">cast moulds</a>, <a href=\"/en/wiki/built-up-cannons\">built-up cannons</a>, <a href=\"/en/wiki/nitropowder-and-guncotton\">nitropowder and guncotton</a>, <a href=\"/en/wiki/autocannon-ammunition\">autocannon ammunition</a>, <a href=\"/en/wiki/autocannon-crafting\">autocannon crafting</a>; plus the <a href=\"/en/wiki/cannon-carriage\">Cannon Carriage</a> and the <a href=\"/en/wiki/big-cannons-equipment\">Gas Mask and tools</a>.</p>"
       },
       {
         "id": "erreurs",

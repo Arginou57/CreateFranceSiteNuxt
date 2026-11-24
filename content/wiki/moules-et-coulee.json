@@ -1,0 +1,257 @@
+{
+  "slug": "moules-et-coulee",
+  "name": "Moules et coulée",
+  "blockId": "createbigcannons:very_large_cast_mould",
+  "category": "cbc",
+  "title": "Moules et coulée — Create Big Cannons, guide",
+  "description": "Les onze moules de Create Big Cannons, le sable de moulage, le métal fondu et ses seaux : lingots par moule, blocs obtenus selon le métal, temps de prise.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
+  "mcVersion": "1.21.1",
+  "intro": "Avant de forer ou d'assembler un canon de <strong>Create Big Cannons</strong>, il faut le <strong>couler</strong>. Chaque bloc naît dans un <strong>moule</strong> (Cast Mould) taillé dans une bûche, entouré de <strong>sable de moulage</strong> et rempli de <strong>métal fondu</strong>. Cette page passe en revue les onze moules, ce que chacun demande en métal et ce qu'il donne selon l'alliage. La suite de la chaîne, le forage et la soudure, est sur la page <a href=\"/wiki/fabrication-des-canons\">Fabriquer un canon</a>.",
+  "facts": [
+    {
+      "label": "Moules",
+      "value": "11 formes taillées dans une bûche à la scie mécanique ; le moule est rendu après usage"
+    },
+    {
+      "label": "Sable de moulage",
+      "value": "2 sable, 1 terre, 1 boule d’argile ; 8 blocs autour de chaque grand moule"
+    },
+    {
+      "label": "Métal",
+      "value": "De 3 lingots (fût d’autocanon) à 20 (très grand moule), 90 mB par lingot"
+    },
+    {
+      "label": "Prise",
+      "value": "Fonte et bronze 2 400 ticks (2 min), acier 3 600 (3 min), nethersteel 6 000 (5 min)"
+    },
+    {
+      "label": "Hauteur",
+      "value": "Jusqu’à 32 étages de moule dans une même colonne"
+    },
+    {
+      "label": "Comparateur",
+      "value": "0 à 14 selon le remplissage, 15 quand le bloc a pris"
+    },
+    {
+      "label": "Version",
+      "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Scie mécanique (un moule au choix par bûche)",
+    "grid": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "Bûche de chêne",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "minecraft:oak_log",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 moule (ici le très grand)",
+    "resultItem": "createbigcannons:very_large_cast_mould"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "tailler",
+      "title": "Les onze moules",
+      "image": "c2a_moulds_moules-de-calibre.webp",
+      "alt": "Les cinq moules de calibre, du très petit au très grand, sur la plaque",
+      "html": "<p>Tous se taillent à la <a href=\"/wiki/scie-mecanique\">scie mécanique</a>, une bûche par moule : on choisit la forme dans la liste de la scie. Il y a cinq moules de calibre, le <strong>très petit</strong> (Very Small Cast Mould), le <strong>petit</strong> (Small Cast Mould), le <strong>moyen</strong> (Medium Cast Mould), le <strong>grand</strong> (Large Cast Mould) et le <strong>très grand</strong> (Very Large Cast Mould) ; trois moules de pièces, le moule de <strong>bout de canon</strong> (Cannon End Cast Mould), de <strong>culasse coulissante</strong> (Sliding Breech Cast Mould) et de <strong>culasse à vis</strong> (Screw Breech Cast Mould) ; et trois moules d'autocanon. Un moule n'est pas consommé : il revient dans l'inventaire quand on prépare la coulée.</p>"
+    },
+    {
+      "id": "sable",
+      "title": "Préparer la coulée",
+      "image": "c2a_moulds_bouts-et-culasses.webp",
+      "alt": "Les moules de bout et de culasses, et un moule moyen garni de sable entre deux blocs de sable de moulage",
+      "html": "<p>Le <strong>sable de moulage</strong> (Casting Sand) se fait sans forme avec deux sables, une terre et une boule d'argile. Pose le moule, puis fais un clic droit dessus avec du sable de moulage : il se garnit. Les huit grands moules veulent aussi du sable de moulage sur les <strong>huit blocs</strong> qui les entourent au même niveau. Un clic à main vide transforme alors le tout en <strong>moule de canon</strong> (Cannon Cast), un bloc invisible qui garde la forme. Empile les étages pour la longueur voulue, jusqu'à 32, chacun avec sa propre forme. Un <a href=\"/wiki/deployeur\">déployeur</a> sait faire ces clics.</p>"
+    },
+    {
+      "id": "tableau",
+      "title": "Quel moule pour quel bloc",
+      "html": "<table><thead><tr><th>Moule</th><th>Lingots</th><th>Fonte</th><th>Bronze</th><th>Acier / nethersteel</th></tr></thead><tbody><tr><td>Très petit</td><td>7</td><td>fût brut</td><td>fût brut</td><td>couche très petite</td></tr><tr><td>Petit</td><td>9</td><td>—</td><td>—</td><td>couche petite</td></tr><tr><td>Moyen</td><td>12</td><td>chambre brute</td><td>chambre brute</td><td>couche moyenne</td></tr><tr><td>Grand</td><td>14</td><td>—</td><td>—</td><td>couche grande</td></tr><tr><td>Très grand</td><td>20</td><td>—</td><td>—</td><td>couche très grande</td></tr><tr><td>Bout de canon</td><td>9</td><td>bout fini</td><td>bout fini</td><td>—</td></tr><tr><td>Culasse coulissante</td><td>9</td><td>brute</td><td>brute</td><td>brute (acier)</td></tr><tr><td>Culasse à vis</td><td>9</td><td>—</td><td>—</td><td>brute</td></tr></tbody></table><p>« Brut » veut dire non alésé : il reste à forer. Le bout de canon sort fini. Les couches d'acier et de nethersteel servent aux <a href=\"/wiki/canons-assembles\">canons assemblés</a>.</p>"
+    },
+    {
+      "id": "remplir",
+      "title": "Remplir et laisser prendre",
+      "html": "<p>Le métal arrive par le haut, par un <a href=\"/wiki/tuyau-a-fluide\">tuyau à fluide</a> ou un <a href=\"/wiki/bec-verseur\">bec verseur</a>, et descend remplir la colonne. Un comparateur contre le moule suit le remplissage, de 0 à 14. Plein, le métal prend : 2 minutes pour la fonte et le bronze, 3 pour l'acier, 5 pour le nethersteel, quelle que soit la taille. Le comparateur passe alors à 15 et le bloc devient un <strong>moule de canon terminé</strong> (Finished Cannon Cast). Un clic droit, ou le casser, fait tomber le sable et laisse le bloc de canon. Les petites pièces d'autocanon se démoulent toutes seules.</p>"
+    },
+    {
+      "id": "metal",
+      "title": "Le métal fondu et ses seaux",
+      "image": "c2a_molten_metal-fondu.webp",
+      "alt": "Les quatre seaux de métal fondu, le sable de moulage et le couvercle de bassin de fonderie",
+      "html": "<p>Le <strong>couvercle de bassin de fonderie</strong> posé sur un <a href=\"/wiki/bassin\">bassin</a> chauffé fond les lingots : 90 mB par lingot en 9 s, 810 mB par bloc, 10 mB par pépite. On obtient de la fonte, du bronze, de l'acier ou du nethersteel en fusion. Chacun a son seau : <strong>seau de fonte en fusion</strong> (Molten Cast Iron Bucket), <strong>de bronze</strong> (Molten Bronze Bucket), <strong>d'acier</strong> (Molten Steel Bucket) et <strong>de nethersteel</strong> (Molten Nethersteel Bucket), 1 000 mB chacun, pris sur un réservoir. À l'inverse, une <a href=\"/wiki/presse-mecanique\">presse</a> sur un bassin de métal fondu le remet en lingots.</p>"
+    },
+    {
+      "id": "autocanon",
+      "title": "Les moules d’autocanon",
+      "image": "c2a_moulds_moules-d-autocanon.webp",
+      "alt": "Les trois moules d’autocanon : fût, culasse et ressort de recul",
+      "html": "<p>Trois moules sont réservés à l'<a href=\"/wiki/autocanons\">autocanon</a> : le moule de <strong>fût</strong> (Autocannon Barrel Cast Mould, 3 lingots), de <strong>culasse</strong> (Autocannon Breech Cast Mould, 4 lingots) et de <strong>ressort de recul</strong> (Autocannon Recoil Spring Cast Mould, 4 lingots). Ils acceptent la fonte, le bronze et l'acier, et n'ont pas besoin de sable autour : il suffit de les garnir. La suite est sur la page <a href=\"/wiki/fabriquer-un-autocanon\">Fabriquer un autocanon</a>.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils",
+      "html": "<ul><li>Un canon en fonte simple, un bout, deux chambres et deux fûts, demande 9 + 24 + 14 = 47 lingots.</li><li>Ne mélange pas les métaux dans une même colonne : un seul fluide par coulée.</li><li>Le nethersteel est long à prendre : lance ses coulées en premier.</li><li>En créatif, le <a href=\"/wiki/equipement-big-cannons\">bâton de fabrication</a> termine une coulée sur-le-champ.</li></ul>"
+    }
+  ],
+  "related": [
+    "fabrication-des-canons",
+    "canons-assembles",
+    "fabriquer-un-autocanon",
+    "materiaux-des-canons",
+    "culasses",
+    "bassin",
+    "scie-mecanique",
+    "bec-verseur",
+    "tuyau-a-fluide",
+    "create-big-cannons"
+  ],
+  "sources": [
+    "Moules : crafting/casting/CannonCastShape (lingots × 90 mB, isLarge = sable autour), CannonCastMouldBlock (sable, clic à main vide)",
+    "Recettes : recipe/cutting/*_cast_mould.json (scie, 1 bûche), recipe/casting_sand.json",
+    "Résultats : createbigcannons/block_recipes/*.json (cannon_casting : forme + fluide)",
+    "Prise : data/*/fluid_casting_time (2 400 / 3 600 / 6 000 ticks), AbstractCannonCastBlockEntity ; hauteur : config maxCannonCastHeight 32",
+    "Fonderie : recipe/melting/*.json (90 mB par lingot en 180 ticks, 810 mB par bloc, 10 mB par pépite), recipe/compacting/forge_*.json",
+    "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT ; textures et modèles CC BY-NC-SA, auteurs rbasamoyai et contributeurs), identiques au jar du modpack Create France",
+    "Images : blocs et objets de CBC posés sur la plaque et rendus par notre moteur (galerie, pas de scène Ponder du mod sur ce sujet)"
+  ],
+  "en": {
+    "slugEn": "cbc-cast-moulds",
+    "name": "Cast Moulds and Casting",
+    "title": "Cast Moulds — Create Big Cannons guide",
+    "description": "The eleven Create Big Cannons cast moulds, Casting Sand, molten metal and its buckets: ingots per mould, blocks made from each metal and setting times.",
+    "intro": "Before you can bore or assemble a <strong>Create Big Cannons</strong> cannon, you have to <strong>cast</strong> it. Every block starts in a <strong>Cast Mould</strong> cut from a log, surrounded by <strong>Casting Sand</strong> and filled with <strong>molten metal</strong>. This page goes through the eleven moulds, how much metal each one takes and what it yields for each alloy. The rest of the chain, boring and welding, is on the <a href=\"/en/wiki/cannon-crafting\">cannon crafting</a> page.",
+    "facts": [
+      {
+        "label": "Moulds",
+        "value": "11 shapes cut from a log with a Mechanical Saw; you get the mould back after use"
+      },
+      {
+        "label": "Casting Sand",
+        "value": "2 sand, 1 dirt, 1 clay ball; 8 blocks around every large mould"
+      },
+      {
+        "label": "Metal",
+        "value": "From 3 ingots (autocannon barrel) to 20 (Very Large Cast Mould), 90 mB per ingot"
+      },
+      {
+        "label": "Setting time",
+        "value": "Cast iron and bronze 2,400 ticks (2 min), steel 3,600 (3 min), nethersteel 6,000 (5 min)"
+      },
+      {
+        "label": "Height",
+        "value": "Up to 32 mould levels in one column"
+      },
+      {
+        "label": "Comparator",
+        "value": "0 to 14 while filling, 15 once the block has set"
+      },
+      {
+        "label": "Version",
+        "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Mechanical Saw (any mould, one per log)",
+      "grid": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "Oak Log",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 mould (here the Very Large one)"
+    },
+    "sections": [
+      {
+        "id": "tailler",
+        "title": "The eleven moulds",
+        "alt": "The five calibre moulds, from very small to very large, on the plate",
+        "html": "<p>They are all cut with a <a href=\"/en/wiki/mechanical-saw\">Mechanical Saw</a>, one log per mould: pick the shape from the saw's list. There are five calibre moulds, the <strong>Very Small</strong>, <strong>Small</strong>, <strong>Medium</strong>, <strong>Large</strong> and <strong>Very Large Cast Mould</strong>; three part moulds, the <strong>Cannon End Cast Mould</strong>, the <strong>Sliding Breech Cast Mould</strong> and the <strong>Screw Breech Cast Mould</strong>; and three autocannon moulds. A mould is not used up: it goes back to your inventory when you set up the cast.</p>"
+      },
+      {
+        "id": "sable",
+        "title": "Setting up a cast",
+        "alt": "The end and breech moulds, and a Medium mould packed with sand between two Casting Sand blocks",
+        "html": "<p><strong>Casting Sand</strong> is a shapeless recipe: two sand, one dirt and one clay ball. Place the mould, then right-click it with Casting Sand to pack it. The eight large moulds also need Casting Sand on the <strong>eight blocks</strong> around them on the same level. Then use the mould bare-handed: everything turns into a <strong>Cannon Cast</strong>, an invisible block that holds the shape. Stack levels for the length you want, up to 32, each with its own shape. A <a href=\"/en/wiki/deployer\">Deployer</a> can do these clicks for you.</p>"
+      },
+      {
+        "id": "tableau",
+        "title": "Which mould for which block",
+        "html": "<table><thead><tr><th>Mould</th><th>Ingots</th><th>Cast iron</th><th>Bronze</th><th>Steel / nethersteel</th></tr></thead><tbody><tr><td>Very Small</td><td>7</td><td>unbored barrel</td><td>unbored barrel</td><td>very small layer</td></tr><tr><td>Small</td><td>9</td><td>—</td><td>—</td><td>small layer</td></tr><tr><td>Medium</td><td>12</td><td>unbored chamber</td><td>unbored chamber</td><td>medium layer</td></tr><tr><td>Large</td><td>14</td><td>—</td><td>—</td><td>large layer</td></tr><tr><td>Very Large</td><td>20</td><td>—</td><td>—</td><td>very large layer</td></tr><tr><td>Cannon End</td><td>9</td><td>finished end</td><td>finished end</td><td>—</td></tr><tr><td>Sliding Breech</td><td>9</td><td>unbored</td><td>unbored</td><td>unbored (steel)</td></tr><tr><td>Screw Breech</td><td>9</td><td>—</td><td>—</td><td>unbored</td></tr></tbody></table><p>Unbored blocks still have to be drilled. The cannon end comes out finished. Steel and nethersteel layers are used for <a href=\"/en/wiki/built-up-cannons\">built-up cannons</a>.</p>"
+      },
+      {
+        "id": "remplir",
+        "title": "Filling and setting",
+        "html": "<p>Metal comes in from the top, through a <a href=\"/en/wiki/fluid-pipe\">Fluid Pipe</a> or a <a href=\"/en/wiki/spout\">Spout</a>, and fills the column downwards. A comparator against the mould tracks the fill level from 0 to 14. Once full, the metal sets: 2 minutes for cast iron and bronze, 3 for steel, 5 for nethersteel, whatever the size. The comparator then reads 15 and the block becomes a <strong>Finished Cannon Cast</strong>. Right-click it, or break it, to knock off the sand and keep the cannon block. Small autocannon parts drop their sand on their own.</p>"
+      },
+      {
+        "id": "metal",
+        "title": "Molten metal and its buckets",
+        "alt": "The four molten metal buckets, Casting Sand and the Basin Foundry Lid",
+        "html": "<p>A <strong>Basin Foundry Lid</strong> on a heated <a href=\"/en/wiki/basin\">Basin</a> melts ingots: 90 mB per ingot in 9 s, 810 mB per block, 10 mB per nugget. You get molten cast iron, bronze, steel or nethersteel. Each has a bucket: the <strong>Molten Cast Iron Bucket</strong>, <strong>Molten Bronze Bucket</strong>, <strong>Molten Steel Bucket</strong> and <strong>Molten Nethersteel Bucket</strong>, 1,000 mB each, filled from a tank. The other way round, a <a href=\"/en/wiki/mechanical-press\">Mechanical Press</a> over a basin of molten metal turns it back into ingots.</p>"
+      },
+      {
+        "id": "autocanon",
+        "title": "Autocannon moulds",
+        "alt": "The three autocannon moulds: barrel, breech and recoil spring",
+        "html": "<p>Three moulds are only for the <a href=\"/en/wiki/autocannons\">autocannon</a>: the <strong>Autocannon Barrel Cast Mould</strong> (3 ingots), the <strong>Autocannon Breech Cast Mould</strong> (4 ingots) and the <strong>Autocannon Recoil Spring Cast Mould</strong> (4 ingots). They take cast iron, bronze and steel, and need no sand around them: packing them is enough. What comes next is on the <a href=\"/en/wiki/autocannon-crafting\">autocannon crafting</a> page.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<ul><li>A plain cast iron cannon, one end, two chambers and two barrels, takes 9 + 24 + 14 = 47 ingots.</li><li>Never mix metals in one column: one fluid per cast.</li><li>Nethersteel sets slowly: start those casts first.</li><li>In creative mode, the <a href=\"/en/wiki/big-cannons-equipment\">Cannon Crafting Wand</a> finishes a cast at once.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Moulds: crafting/casting/CannonCastShape (ingots × 90 mB, isLarge = sand around), CannonCastMouldBlock (sand, empty-hand click)",
+      "Recipes: recipe/cutting/*_cast_mould.json (saw, 1 log), recipe/casting_sand.json",
+      "Results: createbigcannons/block_recipes/*.json (cannon_casting: shape + fluid)",
+      "Setting: data/*/fluid_casting_time (2,400 / 3,600 / 6,000 ticks), AbstractCannonCastBlockEntity; height: config maxCannonCastHeight 32",
+      "Foundry: recipe/melting/*.json (90 mB per ingot in 180 ticks, 810 mB per block, 10 mB per nugget), recipe/compacting/forge_*.json",
+      "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence; textures and models CC BY-NC-SA, by rbasamoyai and contributors), identical to the jar of the Create France modpack",
+      "Images: CBC blocks and items placed on the plate and drawn by our engine (gallery; the mod has no Ponder scene on this topic)"
+    ]
+  }
+}

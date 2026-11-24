@@ -113,7 +113,7 @@
       "title": "La rotation",
       "image": "exc_drilling_rotation.webp",
       "alt": "Le trépan qui tourne et descend, entraîné par la rotation",
-      "html": "<p>La foreuse prend sa rotation par son entrée cinétique, un demi-rotor sur le côté. Il lui faut au moins 30 tr/min : en dessous, rien ne se passe. Chaque tick, elle avance de vitesse / 30 (arrondi vers le bas) : à 32 tr/min un cycle de charbon prend 10 s, à 64 tr/min deux fois moins. Pendant le travail, le trépan descend de 0,2 bloc et tourne de 20° par tick.</p>"
+      "html": "<p>La foreuse prend sa rotation par son entrée cinétique, un demi-rotor sur le côté : c'est le bloc « entrée rotative du multibloc » (Multiblock Rotational Input), une case de la machine qui apparaît à la pose et ne se fabrique pas seule. Il lui faut au moins 30 tr/min : en dessous, rien ne se passe. Chaque tick, elle avance de vitesse / 30 (arrondi vers le bas) : à 32 tr/min un cycle de charbon prend 10 s, à 64 tr/min deux fois moins. Pendant le travail, le trépan descend de 0,2 bloc et tourne de 20° par tick.</p>"
     },
     {
       "id": "sortie",
@@ -160,7 +160,8 @@
   ],
   "sources": [
     "Create Ore Excavation 1.6.8 (createoreexcavation-1.21-1.6.8.jar), de tom5454, licence MIT : code lu après décompilation (ExcavatingBlockEntity, SampleDrillBlockEntity, Config), recettes et filons du dossier data du jar, scènes Ponder PonderScenes rejouées par notre moteur.",
-    "Modèles et textures des auteurs du mod, rendus à partir du jar ; aucun texte du mod n'est recopié."
+    "Modèles et textures des auteurs du mod, rendus à partir du jar ; aucun texte du mod n'est recopié.",
+    "Entrée rotative : Registration.KINETIC_INPUT, block/KineticInputBlock (MultiblockGhostPart, axe de l’arbre, survit seulement avec la machine)"
   ],
   "en": {
     "slugEn": "ore-excavation-drilling-machine",
@@ -248,7 +249,7 @@
         "id": "rotation",
         "title": "Rotation",
         "alt": "The drill spinning and lowered, driven by rotation",
-        "html": "<p>The machine takes rotation through its kinetic input, a half shaft on the side. It needs at least 30 RPM: below that, nothing happens. Every tick it progresses by speed / 30 (rounded down): at 32 RPM a coal cycle takes 10 s, at 64 RPM half as long. While working, the drill drops 0.2 blocks and turns 20° per tick.</p>"
+        "html": "<p>The machine takes rotation through its kinetic input, a half shaft on the side: that is the Multiblock Rotational Input block, one cell of the machine that appears when it is placed and is never crafted on its own. It needs at least 30 RPM: below that, nothing happens. Every tick it progresses by speed / 30 (rounded down): at 32 RPM a coal cycle takes 10 s, at 64 RPM half as long. While working, the drill drops 0.2 blocks and turns 20° per tick.</p>"
       },
       {
         "id": "sortie",
@@ -285,7 +286,8 @@
     ],
     "sources": [
       "Create Ore Excavation 1.6.8 (createoreexcavation-1.21-1.6.8.jar), by tom5454, MIT licence: code read after decompiling (ExcavatingBlockEntity, SampleDrillBlockEntity, Config), recipes and veins from the jar's data folder, Ponder scenes PonderScenes replayed by our engine.",
-      "Models and textures by the mod's authors, rendered from the jar; no text from the mod is copied."
+      "Models and textures by the mod's authors, rendered from the jar; no text from the mod is copied.",
+      "Rotational input: Registration.KINETIC_INPUT, block/KineticInputBlock (MultiblockGhostPart, shaft axis, only survives with its machine)"
     ]
   }
 }

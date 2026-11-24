@@ -6,7 +6,7 @@
   "title": "Culasses — Create Big Cannons, guide",
   "description": "Les culasses de Create Big Cannons : coulissante, à vis et à tir rapide. Ouvrir par la rotation, charger par l'arrière, solidité et automatisation.",
   "datePublished": "2026-10-28",
-  "dateModified": "2026-10-28",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
   "mcVersion": "1.21.1",
   "intro": "La <strong>culasse</strong> ferme l'arrière d'un canon de <strong>Create Big Cannons</strong> et permet de le charger par derrière. Il en existe trois sortes : la <strong>culasse coulissante</strong>, rapide mais moins solide, la <strong>culasse à vis</strong>, la plus robuste, et celle « à tir rapide », qui recharge un canon sans le désassembler.",
@@ -51,13 +51,33 @@
       "id": "cbc_screw",
       "name": "Culasse à vis",
       "description": "La rotation dévisse le verrou de la culasse en acier, un piston l'écarte pour charger, puis la remet en place et la revisse.",
-      "duration": "PT22S"
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 7.0,
+          "section": "vis"
+        },
+        {
+          "t": 10.35,
+          "section": "vis-ecarter"
+        }
+      ]
     },
     {
       "id": "cbc_qf",
       "name": "Culasse à tir rapide",
       "description": "Sur un canon en bronze assemblé : on ouvre la culasse, on glisse un obus puis une grande cartouche, on referme et le canon tire ; la douille vide est éjectée.",
-      "duration": "PT22S"
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 4.0,
+          "section": "tir-rapide"
+        },
+        {
+          "t": 18.2,
+          "section": "tir-rapide-ejection"
+        }
+      ]
     },
     {
       "id": "cbc_qf_make",
@@ -91,10 +111,17 @@
     {
       "id": "vis",
       "title": "La culasse à vis",
+      "image": "cbc_screw_deverrouiller.webp",
+      "alt": "Le verrou de la culasse à vis qui se dévisse",
+      "video": "cbc_screw",
+      "html": "<p>En acier ou en nethersteel, c'est la culasse la plus solide : elle laisse le canon aller jusqu'à 8 ou 10 charges. La rotation dévisse d'abord son verrou, qui recule d'un quart de bloc en faisant un tour complet.</p>"
+    },
+    {
+      "id": "vis-ecarter",
+      "title": "Écarter puis revisser",
       "image": "cbc_screw_ouvrir.webp",
       "alt": "La culasse à vis déverrouillée, écartée par un piston",
-      "video": "cbc_screw",
-      "html": "<p>En acier ou en nethersteel, c'est la culasse la plus solide : elle laisse le canon aller jusqu'à 8 ou 10 charges. La rotation dévisse d'abord son verrou, qui recule d'un quart de bloc en faisant un tour complet. Ensuite, il faut l'écarter : un piston, un portique ou une poulie la déplace. Depuis la version 5.11.4, le sens antihoraire ouvre et le sens horaire ferme, quelle que soit l'orientation.</p>"
+      "html": "<p>Ensuite, il faut l'écarter : un piston, un portique ou une poulie la déplace, et l'arrière du canon est libre pour charger. Pour refermer, on la ramène dans l'axe et la rotation la revisse. Depuis la version 5.11.4, le sens antihoraire ouvre et le sens horaire ferme, quelle que soit l'orientation.</p>"
     },
     {
       "id": "tir-rapide",
@@ -102,7 +129,14 @@
       "image": "cbc_qf_obus.webp",
       "alt": "Un obus glissé dans la culasse ouverte du canon en bronze",
       "video": "cbc_qf",
-      "html": "<p>Elle s'ouvre à la main, par un clic sur son côté, même canon assemblé. Glisse l'obus, puis la poudre, et referme : le canon est prêt. Au tir suivant, les restes, comme une douille de grande cartouche vide, sont éjectés. Elle est limitée à 2 charges. Préfère une <a href=\"/wiki/poudre-et-cartouches\">grande cartouche</a> : une seule pièce à glisser pour toute la poudre.</p>"
+      "html": "<p>Elle s'ouvre à la main, par un clic sur son côté, même canon assemblé. Glisse l'obus, puis la poudre, et referme : le canon est prêt.</p>"
+    },
+    {
+      "id": "tir-rapide-ejection",
+      "title": "Le tir et l’éjection",
+      "image": "cbc_qf_ejection.webp",
+      "alt": "La douille vide de la grande cartouche éjectée après le tir",
+      "html": "<p>Au tir suivant, les restes, comme une douille de grande cartouche vide, sont éjectés par l'arrière. Elle est limitée à 2 charges. Préfère une <a href=\"/wiki/poudre-et-cartouches\">grande cartouche</a> : une seule pièce à glisser pour toute la poudre.</p>"
     },
     {
       "id": "fabriquer-qf",
@@ -111,6 +145,11 @@
       "alt": "Le déployeur pose le mécanisme de tir rapide",
       "video": "cbc_qf_make",
       "html": "<p>Pose un <strong>mécanisme de tir rapide</strong> (Quick-Firing Mechanism, un levier, une roue dentée et une grande roue dentée) sur une culasse coulissante, à la main ou avec un <a href=\"/wiki/deployeur\">déployeur</a>. Un coup de <a href=\"/wiki/cle\">clé</a> la ramène à l'état de culasse coulissante.</p>"
+    },
+    {
+      "id": "pieces",
+      "title": "Bloc de culasse et verrou à vis",
+      "html": "<p>Une culasse forée reste incomplète tant qu'elle n'a pas sa pièce mobile. La culasse coulissante attend son <strong>bloc de culasse coulissante</strong> (Sliding Breechblock) : trois lingots du même métal et deux roues dentées à l'établi, en fonte (Cast Iron Sliding Breechblock), en bronze ou en acier. La culasse à vis attend son <strong>verrou à vis</strong> (Screw Lock) : trois lingots d'acier ou de nethersteel sous un rotor. Un clic droit avec la pièce, ou un <a href=\"/wiki/deployeur\">déployeur</a>, la termine. Les deux culasses se coulent dans leurs propres <a href=\"/wiki/moules-et-coulee\">moules</a>.</p>"
     },
     {
       "id": "automatiser",
@@ -140,7 +179,8 @@
     "deployeur",
     "piston-mecanique",
     "cle",
-    "roue-dentee"
+    "roue-dentee",
+    "moules-et-coulee"
   ],
   "sources": [
     "Solidité : data/createbigcannons/big_cannon_breech_strength (*_sliding_breech, *_screw_breech, *_quickfiring_breech)",
@@ -151,7 +191,8 @@
     "Sens d’ouverture : CHANGELOG 5.11.4 (« clockwise closes »)",
     "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT), identiques au jar du modpack Create France",
     "Vidéos : scènes Ponder de Create Big Cannons (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) rejouées par notre moteur ; modèles et textures de CBC (CC BY-NC-SA 4.0, Cannoneers of Create)",
-    "Vidéo de la culasse à vis : la scène Ponder date d'avant 5.11.4 ; nous montrons l'ouverture qu'elle décrit"
+    "Vidéo de la culasse à vis : la scène Ponder date d'avant 5.11.4 ; nous montrons l'ouverture qu'elle décrit",
+    "Pièces de culasse : recipe/*_sliding_breechblock.json (3 lingots, 2 roues dentées), *_screw_lock.json (3 lingots, 1 rotor)"
   ],
   "en": {
     "slugEn": "cannon-breeches",
@@ -232,20 +273,37 @@
       {
         "id": "vis",
         "title": "The Screw Breech",
+        "alt": "The Screw Breech lock unscrewing",
+        "html": "<p>Made of steel or nethersteel, it is the toughest breech: it lets the cannon go up to 8 or 10 charges. Rotation first unscrews its lock, which backs out a quarter of a block while turning a full turn.</p>"
+      },
+      {
+        "id": "vis-ecarter",
+        "title": "Moving it aside, then screwing back",
         "alt": "The unlocked Screw Breech moved aside by a piston",
-        "html": "<p>Made of steel or nethersteel, it is the toughest breech: it lets the cannon go up to 8 or 10 charges. Rotation first unscrews its lock, which backs out a quarter of a block while turning a full turn. Then it has to be moved aside: a piston, a gantry or a pulley shifts it. Since version 5.11.4, counter-clockwise opens and clockwise closes, whatever the orientation.</p>"
+        "html": "<p>Then it has to be moved aside: a piston, a gantry or a pulley shifts it, which frees the back of the cannon for loading. To close, bring it back in line and the rotation screws it in again. Since version 5.11.4, counter-clockwise opens and clockwise closes, whatever the orientation.</p>"
       },
       {
         "id": "tir-rapide",
         "title": "The Quick-Firing Breech",
         "alt": "A shell slid into the open Quick-Firing Breech",
-        "html": "<p>It opens by hand, with a click on its side, even on an assembled cannon. Slide in the shell, then the powder, and close it: the cannon is ready. On the next shot, the leftovers, such as an empty Big Cartridge case, are ejected. It is limited to 2 charges. Prefer a <a href=\"/en/wiki/powder-charges-and-cartridges\">Big Cartridge</a>: a single piece to slide in for all the powder.</p>"
+        "html": "<p>It opens by hand, with a click on its side, even on an assembled cannon. Slide in the shell, then the powder, and close it: the cannon is ready.</p>"
+      },
+      {
+        "id": "tir-rapide-ejection",
+        "title": "Firing and ejection",
+        "alt": "The empty Big Cartridge case thrown out after the shot",
+        "html": "<p>On the next shot, the leftovers, such as an empty Big Cartridge case, are thrown out of the back. It is limited to 2 charges. Prefer a <a href=\"/en/wiki/powder-charges-and-cartridges\">Big Cartridge</a>: a single piece to slide in for all the powder.</p>"
       },
       {
         "id": "fabriquer-qf",
         "title": "Making the Quick-Firing Breech",
         "alt": "The Deployer applying the Quick-Firing Mechanism",
         "html": "<p>Apply a <strong>Quick-Firing Mechanism</strong> (a lever, a cogwheel and a large cogwheel) to a Sliding Breech, by hand or with a <a href=\"/en/wiki/deployer\">Deployer</a>. A <a href=\"/en/wiki/wrench\">Wrench</a> click turns it back into a Sliding Breech.</p>"
+      },
+      {
+        "id": "pieces",
+        "title": "Breechblock and screw lock",
+        "html": "<p>A bored breech stays incomplete until it gets its moving part. The sliding breech waits for its <strong>Sliding Breechblock</strong>: three ingots of the same metal and two cogwheels at the crafting table, as the Cast Iron, Bronze or Steel Sliding Breechblock. The screw breech waits for its <strong>Screw Lock</strong>: three steel or nethersteel ingots under a shaft. Right-click with the part, or use a <a href=\"/en/wiki/deployer\">Deployer</a>, to finish it. Both breeches are cast in their own <a href=\"/en/wiki/cbc-cast-moulds\">moulds</a>.</p>"
       },
       {
         "id": "automatiser",
@@ -273,7 +331,8 @@
       "Opening direction: CHANGELOG 5.11.4 (“clockwise closes”)",
       "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence), identical to the Create France modpack jar",
       "Videos: Create Big Cannons Ponder scenes (CannonMountScenes, CannonLoadingScenes, CannonKineticsScenes, CannonCraftingScenes) replayed by our engine; CBC models and textures (CC BY-NC-SA 4.0, Cannoneers of Create)",
-      "Screw Breech video: the Ponder scene predates 5.11.4; we show the opening it describes"
+      "Screw Breech video: the Ponder scene predates 5.11.4; we show the opening it describes",
+      "Breech parts: recipe/*_sliding_breechblock.json (3 ingots, 2 cogwheels), *_screw_lock.json (3 ingots, 1 shaft)"
     ]
   }
 }

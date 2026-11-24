@@ -6,8 +6,8 @@
   "title": "Brûleur — Create Diesel Generators, guide",
   "description": "Le brûleur de Create Diesel Generators : chauffer un bassin au carburant liquide, vanne réglée par un arbre, niveaux de chaleur et consommation.",
   "datePublished": "2026-11-23",
-  "dateModified": "2026-11-23",
-  "createVersion": "6.0.10 · Create Diesel Generators 1.3.15",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Diesel Generators 1.3.16",
   "mcVersion": "1.21.1",
   "intro": "Le <strong>brûleur</strong> (Burner) remplace le <a href=\"/wiki/bruleur-a-blaze\">brûleur à blaze</a> sous un <a href=\"/wiki/bassin\">bassin</a> : au lieu d'un blaze nourri à la main, il brûle un <strong>carburant liquide</strong> arrivé par un tuyau. Sa flamme se règle avec une <strong>vanne</strong> qu'on ouvre en faisant tourner son arbre, et deux aiguilles sur ses côtés montrent l'ouverture. Avec de l'essence et la vanne ouverte, il surchauffe le bassin.",
   "facts": [
@@ -37,7 +37,7 @@
     },
     {
       "label": "Version",
-      "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+      "value": "Create Diesel Generators 1.3.16 · Create 6.0.10"
     }
   ],
   "recipe": {
@@ -145,6 +145,11 @@
       "html": "<p>Le brûleur à blaze mange des objets et devient surchauffé avec une bûche de blaze. Le brûleur du mod se nourrit seul par un tuyau, ce qui simplifie l'automatisation, et surchauffe à l'essence ou à l'éthanol. En revanche, au diesel ou au biodiesel, il ne dépasse pas la simple chaleur.</p>"
     },
     {
+      "id": "chaudiere",
+      "title": "Sous une chaudière",
+      "html": "<p>Le brûleur chauffe aussi une <a href=\"/wiki/moteur-a-vapeur\">chaudière</a> de Create, comme un brûleur à blaze. Chaque brûleur allumé apporte la partie entière de sa chaleur : 1 niveau au diesel, au biodiesel, à l'huile ou à l'éthanol, 2 à l'essence vanne ouverte. Depuis la version 1.3.16, cet apport est plafonné à 2, comme un brûleur à blaze surchauffé : le signal de redstone ne fait plus monter une chaudière entière avec un seul brûleur.</p>"
+    },
+    {
       "id": "redstone-sortie",
       "title": "La redstone en sortie",
       "html": "<p>Le brûleur donne aussi un signal à un comparateur, qui suit sa chaleur : six fois la chaleur, plafonné à 15. Un comparateur posé contre lui peut donc couper une machine quand la flamme s'éteint, faute de carburant.</p>"
@@ -162,7 +167,8 @@
     "tour-de-distillation",
     "carburants",
     "pompe-mecanique",
-    "create-diesel-generators"
+    "create-diesel-generators",
+    "moteur-a-vapeur"
   ],
   "sources": [
     "Brûleur : BurnerBlockEntity (valveState += vitesse / 5 000 par tick, borné 0–1 ; heat = (max(vanne, signal × 4) + 1) × burner_multiplier ; vidange de 1 mB tous les 10 / vanne ticks ; réservoir 100 mB ; niveaux calculateHeatLevel : 1,0 / 1,2 / 1,4 / 1,8)",
@@ -171,7 +177,9 @@
     "Aiguilles et flammes : BurnerRenderer, tickAudio",
     "Recette : recipe/crafting/burner.json",
     "Code, données et storyboards : Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, licence MIT, auteur George VI), identiques au jar du modpack Create France",
-    "Vidéos : scènes Ponder de Create Diesel Generators (BurnerScenes.scene) rejouées par notre moteur ; modèles et textures du mod (licence MIT, George VI)"
+    "Vidéos : scènes Ponder de Create Diesel Generators (BurnerScenes.scene) rejouées par notre moteur ; modèles et textures du mod (licence MIT, George VI)",
+    "Version 1.3.16 (jar createdieselgenerators-1.21.1-1.3.16.jar du modpack de référence) comparée au 1.3.15 le 24/11 : recettes et données identiques (une recette renommée, un tag Steam 'n' Rails ajouté), classes changées : moteurs (SU × accélérateur, multiplicateur de consommation du turbo appliqué), brûleur (chaleur de chaudière plafonnée à 2), baril (longueur par largeur réglable), config",
+    "Chaudière : CDGBlocks (BoilerHeater.REGISTRY, 1.3.16 : min(2, chaleur) ; 1.3.15 : chaleur brute), Create BoilerData.updateTemperature (somme entière)"
   ],
   "en": {
     "slugEn": "burner",
@@ -206,7 +214,7 @@
       },
       {
         "label": "Version",
-        "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+        "value": "Create Diesel Generators 1.3.16 · Create 6.0.10"
       }
     ],
     "recipe": {
@@ -277,6 +285,11 @@
         "html": "<p>The blaze burner eats items and superheats with blaze cake. The mod's burner feeds itself through a pipe, which makes automation simpler, and superheats on gasoline or ethanol. On diesel or biodiesel, however, it never goes beyond plain heat, so keep those fuels for the engines and save the gasoline for burners.</p>"
       },
       {
+        "id": "chaudiere",
+        "title": "Under a boiler",
+        "html": "<p>The burner also heats a Create <a href=\"/en/wiki/steam-engine\">boiler</a>, like a Blaze Burner. Each lit burner adds the whole-number part of its heat: 1 level on diesel, biodiesel, plant oil or ethanol, 2 on gasoline with the valve open. Since version 1.3.16 this is capped at 2, like a superheated Blaze Burner: a redstone signal no longer lets a single burner drive a whole boiler.</p>"
+      },
+      {
         "id": "redstone-sortie",
         "title": "Redstone output",
         "html": "<p>The burner also gives a comparator signal that follows its heat: six times the heat, capped at 15. A comparator placed against it can therefore switch a machine off when the flame dies for lack of fuel, or warn you that the fuel line needs a refill.</p>"
@@ -294,7 +307,9 @@
       "Needles and flames: BurnerRenderer, tickAudio",
       "Recipe: recipe/crafting/burner.json",
       "Code, data and storyboards: Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, MIT licence, author George VI), identical to the Create France modpack jar",
-      "Videos: Create Diesel Generators Ponder scenes (BurnerScenes.scene) replayed by our engine; mod models and textures (MIT licence, George VI)"
+      "Videos: Create Diesel Generators Ponder scenes (BurnerScenes.scene) replayed by our engine; mod models and textures (MIT licence, George VI)",
+      "Version 1.3.16 (createdieselgenerators-1.21.1-1.3.16.jar from the reference modpack) compared with 1.3.15 on 24/11: recipes and data identical (one recipe renamed, one Steam 'n' Rails tag added); changed classes: engines (SU × throttle, turbo fuel multiplier applied), burner (boiler heat capped at 2), oil barrel (length per width configurable), config",
+      "Boiler: CDGBlocks (BoilerHeater.REGISTRY, 1.3.16: min(2, heat); 1.3.15: raw heat), Create BoilerData.updateTemperature (integer sum)"
     ]
   }
 }

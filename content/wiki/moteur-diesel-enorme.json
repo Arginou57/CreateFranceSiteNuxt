@@ -6,8 +6,8 @@
   "title": "Moteur diesel énorme — Create Diesel Generators",
   "description": "Le moteur diesel énorme de Create Diesel Generators : arbre moteur, jusqu’à 4 moteurs par arbre, 224 tr/min et 16 384 SU chacun au diesel.",
   "datePublished": "2026-11-23",
-  "dateModified": "2026-11-23",
-  "createVersion": "6.0.10 · Create Diesel Generators 1.3.15",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Diesel Generators 1.3.16",
   "mcVersion": "1.21.1",
   "intro": "Le <strong>moteur diesel énorme</strong> reprend l'idée du <a href=\"/wiki/moteur-a-vapeur\">moteur à vapeur</a> de Create : il ne porte pas d'arbre, il pousse une bielle vers un <a href=\"/wiki/rotor\">rotor</a> placé deux blocs devant lui. Ce rotor devient un <strong>rotor alimenté</strong> (Powered Engine Shaft) qui peut recevoir jusqu'à quatre moteurs. Au diesel, chacun ajoute 16 384 SU, et l'arbre tourne à 224 tr/min : la source la plus rapide du mod.",
   "facts": [
@@ -37,7 +37,7 @@
     },
     {
       "label": "Version",
-      "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+      "value": "Create Diesel Generators 1.3.16 · Create 6.0.10"
     }
   ],
   "recipe": {
@@ -157,7 +157,8 @@
     "Rendu : HugeDieselEngineRenderer (piston, bielle ±23°, maneton)",
     "Recette : recipe/crafting/huge_diesel_engine.json",
     "Code, données et storyboards : Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, licence MIT, auteur George VI), identiques au jar du modpack Create France",
-    "Vidéos : scènes Ponder de Create Diesel Generators (DieselEngineScenes.huge) rejouées par notre moteur ; modèles et textures du mod (licence MIT, George VI)"
+    "Vidéos : scènes Ponder de Create Diesel Generators (DieselEngineScenes.huge) rejouées par notre moteur ; modèles et textures du mod (licence MIT, George VI)",
+    "Version 1.3.16 (jar createdieselgenerators-1.21.1-1.3.16.jar du modpack de référence) comparée au 1.3.15 le 24/11 : recettes et données identiques (une recette renommée, un tag Steam 'n' Rails ajouté), classes changées : moteurs (SU × accélérateur, multiplicateur de consommation du turbo appliqué), brûleur (chaleur de chaudière plafonnée à 2), baril (longueur par largeur réglable), config"
   ],
   "en": {
     "slugEn": "huge-diesel-engine",
@@ -192,7 +193,7 @@
       },
       {
         "label": "Version",
-        "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+        "value": "Create Diesel Generators 1.3.16 · Create 6.0.10"
       }
     ],
     "recipe": {
@@ -280,7 +281,8 @@
       "Rendering: HugeDieselEngineRenderer (piston, rod ±23°, crank)",
       "Recipe: recipe/crafting/huge_diesel_engine.json",
       "Code, data and storyboards: Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, MIT licence, author George VI), identical to the Create France modpack jar",
-      "Videos: Create Diesel Generators Ponder scenes (DieselEngineScenes.huge) replayed by our engine; mod models and textures (MIT licence, George VI)"
+      "Videos: Create Diesel Generators Ponder scenes (DieselEngineScenes.huge) replayed by our engine; mod models and textures (MIT licence, George VI)",
+      "Version 1.3.16 (createdieselgenerators-1.21.1-1.3.16.jar from the reference modpack) compared with 1.3.15 on 24/11: recipes and data identical (one recipe renamed, one Steam 'n' Rails tag added); changed classes: engines (SU × throttle, turbo fuel multiplier applied), burner (boiler heat capped at 2), oil barrel (length per width configurable), config"
     ]
   }
 }

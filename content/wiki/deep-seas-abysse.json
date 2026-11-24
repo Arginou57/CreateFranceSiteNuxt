@@ -1,0 +1,199 @@
+{
+  "slug": "deep-seas-abysse",
+  "name": "The Abyss (en préparation)",
+  "blockId": "create_abyss:geothermal_vent",
+  "category": "deepseas",
+  "title": "The Abyss, dimension en préparation — Deep Seas",
+  "description": "The Abyss, la dimension des grands fonds livrée dans le jar de Create Deep Seas 3.4.8 mais désactivée : blocs, cheminées, créatures, état réel.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Deep Seas 3.4.8 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Le fichier de <strong>Create Deep Seas</strong> 3.4.8 contient une troisième partie, <strong>The Abyss</strong> : une dimension entièrement sous-marine, avec ses blocs et sa faune. Elle est encore <strong>en développement</strong> : dans la version publiée, elle est désactivée par le code, et rien de ce qui suit n'est disponible en jeu, pas même par commande. Cette page décrit ce qui est prêt dans le jar, pour savoir à quoi s'attendre.",
+  "facts": [
+    {
+      "label": "État",
+      "value": "Désactivée dans la version publiée (activée seulement en environnement de développement)"
+    },
+    {
+      "label": "Accès prévu",
+      "value": "Aucun portail : seulement une commande de test des développeurs"
+    },
+    {
+      "label": "Hauteur",
+      "value": "De y −1200 à y −1, entièrement sous l’eau, sans ciel"
+    },
+    {
+      "label": "Fonds",
+      "value": "Trois paliers autour de −175, −475 et −950"
+    },
+    {
+      "label": "Cheminées",
+      "value": "Noyées, elles rendent de l’air au joueur juste au-dessus"
+    },
+    {
+      "label": "Créatures",
+      "value": "6 : escargot magmatique, isopode géant, seiche abyssale, anguille pélican, amphistium, requin emporte-pièce"
+    },
+    {
+      "label": "Version",
+      "value": "Create Deep Seas 3.4.8 · Create 6.0.10"
+    }
+  ],
+  "videos": [],
+  "sections": [
+    {
+      "id": "etat",
+      "title": "Pourquoi elle est absente",
+      "html": "<p>Au démarrage, la partie Abyss vérifie si le jeu tourne en environnement de développement. En jeu normal, elle s'arrête là : aucun bloc, objet, créature ni dimension n'est enregistré, et les fichiers de données de la dimension sont ignorés. Le serveur Create France tourne donc sans elle. Les noms de cette page apparaissent seulement dans les fichiers de langue du mod.</p>"
+    },
+    {
+      "id": "dimension",
+      "title": "La dimension prévue",
+      "html": "<p>Un monde de 1 200 blocs de haut, de y −1200 à y −1, rempli d'eau, sans ciel ni lumière du jour. Un <strong>plafond de l'Abyss</strong> (Abyss Ceiling), invisible et incassable, ferme le haut. Sous au moins 90 blocs d'eau libre, le fond s'étage en trois paliers, vers −175, −475 et −950, couverts de sable, puis de boue, puis de basalte lisse. Une faible lueur bleue s'éteint avec la profondeur sous −150.</p>"
+    },
+    {
+      "id": "cheminees",
+      "title": "Les cheminées hydrothermales",
+      "image": "c2a_abyss_cheminees.webp",
+      "alt": "Les trois cheminées hydrothermales : en pierre, en ardoise des abîmes et en roche moussue",
+      "html": "<p>Trois variantes du même bloc : la <strong>cheminée hydrothermale</strong> (Geothermal Vent), en ardoise des abîmes (Deepslate Geothermal Vent) et en roche moussue (Foam Rock Geothermal Vent). Noyées, elles crachent des bulles ; un joueur à court d'air, l'œil dans la colonne d'eau à moins de 4 blocs au-dessus, regagne un peu d'air toutes les demi-secondes. Hors de l'eau, elles fument et n'apportent rien.</p>"
+    },
+    {
+      "id": "blocs",
+      "title": "Les autres blocs",
+      "image": "c2a_abyss_blocs.webp",
+      "alt": "Sable ardent, bois calciné et graine de creepvine",
+      "html": "<p>Le <strong>sable ardent</strong> (Burning Sand) fume sans brûler ; le <strong>bois calciné</strong> (Burning Wood) est une bûche qui prend feu facilement. La <strong>coulée de magma</strong> (Magma Flow), animée, brûle qui marche dessus sans s'accroupir. La <strong>liane de sous-marin</strong> (Submarine Liana) est une plante faite de segments physiques qui ondulent et s'écartent au passage ; la <strong>graine de creepvine</strong> (Creepvine Seed), lumineuse, devait pendre à ces lianes.</p>"
+    },
+    {
+      "id": "faune",
+      "title": "La faune",
+      "html": "<p>Six créatures sont prêtes. L'<strong>amphistium</strong> nage en bancs et le <strong>requin emporte-pièce</strong> (Cookiecutter Shark) chasse le plongeur : il s'accroche à lui et mord toutes les secondes jusqu'à ce qu'on se débatte trois fois. L'<strong>isopode géant</strong> (Giant Isopod) charge les noyés et les gardiens, l'<strong>escargot magmatique</strong> (Magmatic Snail) se cache dans sa coquille, la <strong>seiche abyssale</strong> (Abyssal Cuttlefish) se camoufle et l'<strong>anguille pélican</strong> (Pelican Eel) ondule sur dix segments.</p>"
+    },
+    {
+      "id": "acces",
+      "title": "Le seul accès, pour les tests",
+      "html": "<p>Le code ne prévoit aucun portail. En développement, une commande d'opérateur envoie le joueur à un point au hasard de l'Abyss, à moins de 5 000 blocs du centre, posé sur le fond ; elle n'existe que si un réglage expérimental est activé, et il est coupé par défaut. Ce réglage remplace aussi le relief par des plaques tectoniques, avec fosses et dorsales : un terrain encore à l'essai.</p>"
+    },
+    {
+      "id": "disques",
+      "title": "Deux disques de musique",
+      "html": "<p>Deux disques (Music Disc) sont aussi prêts, deux morceaux de Caner Crebes : « Seafoam » (2 min 31) et « Snell's Window » (3 min 39). Comme le reste de l'Abyss, ils sont absents du jeu publié. À ne pas confondre avec le disque de High Seas, « Hidden Between Fluent Waters », lui bien disponible.</p>"
+    },
+    {
+      "id": "attendre",
+      "title": "En attendant",
+      "html": "<p>Les grands fonds de l'Overworld suffisent déjà à éprouver un sous-marin : sous 120 blocs, une coque qui cède fait imploser tout le navire. Prépare des <a href=\"/wiki/deep-seas-coque-et-alarme\">vitres pressurisées et une alarme</a>, et suis l'évolution du mod : cette page sera mise à jour quand l'Abyss ouvrira.</p>"
+    }
+  ],
+  "related": [
+    "create-deep-seas",
+    "deep-seas-coque-et-alarme",
+    "deep-seas-oxygene",
+    "deep-seas-sonar-barometre"
+  ],
+  "sources": [
+    "État : theabyss/CreateAbyss (DEV_ONLY, enabled() = !FMLEnvironment.production), createsubmarine/.../ConfigCondition (clé enableAbyssDimension = CreateAbyss.enabled)",
+    "Dimension : data/create_abyss/dimension_type/abyss.json (min_y −1200, hauteur 1200), worldgen/biome, noise_settings ; dimension/AbyssLayout, AbyssTerrain, AbyssSurface ; client AbyssSpecialEffects",
+    "Accès : experimental/worldgen/TectonicCommand (/submarine abyss, réglage experimentalAbyssWorldgen faux par défaut)",
+    "Blocs : theabyss/block/* (AbyssCeilingBlock, BurningSandBlock, BurningWoodBlock, MagmaFlowBlock, SubmarineLianaBlock(Entity), CreepvineSeedBlock, GeothermalVentBlock), GeothermalRegistry, system/GeothermalBreathing (+15 d’air tous les 10 ticks, 4 blocs)",
+    "Faune : theabyss/entities/* (CookiecutterSharkEntity : morsure toutes les 20 ticks, 3 coups pour se libérer ; IsopodEntity ; MagmaticSnailEntity ; AbyssalCuttlefishEntity ; PelicanEelEntity, 10 segments ; AmphistiumEntity)",
+    "Disques : data/create_abyss/jukebox_song/seafoam.json (150,86 s), snells_window.json (219,43 s)",
+    "Code : décompilé du jar create_submarine-3.4.8.jar du modpack Create France ; la coulée de magma n’est pas dessinée (modèle animé non porté)",
+    "Mod de Maxenonyme (MaxCreateMC), Cogfly et Zinc Studios. Licence du mod : « All Rights Reserved » : modèles et textures appartiennent à leurs auteurs, rendus ici à partir du jar ; aucun texte du mod n'est recopié.",
+    "Images : blocs et objets du jar posés sur la plaque et rendus par notre moteur (galerie ; le mod n’a pas de scène Ponder sur ce sujet)"
+  ],
+  "en": {
+    "slugEn": "deep-seas-the-abyss",
+    "name": "The Abyss (in development)",
+    "title": "The Abyss, upcoming dimension — Deep Seas guide",
+    "description": "The Abyss, the deep-sea dimension shipped inside the 3.4.8 jar of Create Deep Seas but switched off: its blocks, vents, creatures and real status.",
+    "intro": "The <strong>Create Deep Seas</strong> 3.4.8 file holds a third part, <strong>The Abyss</strong>: a fully underwater dimension with its own blocks and wildlife. It is still <strong>in development</strong>: in the released version the code switches it off, and nothing below is available in play, not even through commands. This page describes what is ready in the jar, so you know what to expect.",
+    "facts": [
+      {
+        "label": "Status",
+        "value": "Switched off in the released version (only active in a development environment)"
+      },
+      {
+        "label": "Planned access",
+        "value": "No portal: only a developer test command"
+      },
+      {
+        "label": "Height",
+        "value": "From y −1200 to y −1, entirely underwater, no sky"
+      },
+      {
+        "label": "Seafloor",
+        "value": "Three tiers around −175, −475 and −950"
+      },
+      {
+        "label": "Vents",
+        "value": "Underwater, they give air back to a player right above"
+      },
+      {
+        "label": "Creatures",
+        "value": "6: Magmatic Snail, Giant Isopod, Abyssal Cuttlefish, Pelican Eel, Amphistium, Cookiecutter Shark"
+      },
+      {
+        "label": "Version",
+        "value": "Create Deep Seas 3.4.8 · Create 6.0.10"
+      }
+    ],
+    "sections": [
+      {
+        "id": "etat",
+        "title": "Why it is missing",
+        "html": "<p>At start-up, the Abyss part checks whether the game runs in a development environment. In a normal game it stops there: no block, item, creature or dimension is registered, and the dimension's data files are skipped. The Create France server therefore runs without it. The names on this page only appear in the mod's language files.</p>"
+      },
+      {
+        "id": "dimension",
+        "title": "The planned dimension",
+        "html": "<p>A world 1,200 blocks tall, from y −1200 to y −1, filled with water, with no sky and no daylight. An invisible, unbreakable <strong>Abyss Ceiling</strong> closes the top. Below at least 90 blocks of open water, the seafloor steps down in three tiers, around −175, −475 and −950, covered with sand, then mud, then smooth basalt. A faint blue glow fades away with depth below −150.</p>"
+      },
+      {
+        "id": "cheminees",
+        "title": "Geothermal vents",
+        "alt": "The three geothermal vents: stone, deepslate and foam rock",
+        "html": "<p>Three versions of one block: the <strong>Geothermal Vent</strong>, the <strong>Deepslate Geothermal Vent</strong> and the <strong>Foam Rock Geothermal Vent</strong>. Underwater they blow bubbles; a player running out of air, with their eyes in the water column less than 4 blocks above, gets a little air back every half second. Out of the water they smoke and do nothing.</p>"
+      },
+      {
+        "id": "blocs",
+        "title": "The other blocks",
+        "alt": "Burning Sand, Burning Wood and Creepvine Seed",
+        "html": "<p><strong>Burning Sand</strong> smokes without burning; <strong>Burning Wood</strong> is a log that catches fire easily. The animated <strong>Magma Flow</strong> burns anyone who walks on it without sneaking. The <strong>Submarine Liana</strong> is a plant made of physical segments that sway and bend away as you pass; the glowing <strong>Creepvine Seed</strong> was meant to hang from those lianas.</p>"
+      },
+      {
+        "id": "faune",
+        "title": "The wildlife",
+        "html": "<p>Six creatures are ready. The <strong>Amphistium</strong> swims in schools and the <strong>Cookiecutter Shark</strong> hunts divers: it latches on and bites every second until you struggle three times. The <strong>Giant Isopod</strong> charges drowned and guardians, the <strong>Magmatic Snail</strong> hides in its shell, the <strong>Abyssal Cuttlefish</strong> blends into its surroundings and the <strong>Pelican Eel</strong> undulates over ten segments.</p>"
+      },
+      {
+        "id": "acces",
+        "title": "The only way in, for testing",
+        "html": "<p>The code plans no portal. In development, an operator command sends the player to a random spot of the Abyss, within 5,000 blocks of the centre, standing on the seafloor; it only exists when an experimental setting is on, and that setting is off by default. It also swaps the terrain for tectonic plates, with trenches and ridges: ground that is still being tried out.</p>"
+      },
+      {
+        "id": "disques",
+        "title": "Two music discs",
+        "html": "<p>Two discs (Music Disc) are ready too, two tracks by Caner Crebes: \"Seafoam\" (2:31) and \"Snell's Window\" (3:39). Like the rest of the Abyss, they are missing from the released game. Not to be confused with the High Seas disc, \"Hidden Between Fluent Waters\", which is available.</p>"
+      },
+      {
+        "id": "attendre",
+        "title": "In the meantime",
+        "html": "<p>The Overworld's deep ocean is already enough to test a submarine: below 120 blocks, a failing hull makes the whole ship implode. Get <a href=\"/en/wiki/deep-seas-hull-glass-and-alarm\">pressurized glass and an alarm</a> ready, and keep an eye on the mod: this page will be updated when the Abyss opens.</p>"
+      }
+    ],
+    "sources": [
+      "Status: theabyss/CreateAbyss (DEV_ONLY, enabled() = !FMLEnvironment.production), createsubmarine/.../ConfigCondition (enableAbyssDimension key = CreateAbyss.enabled)",
+      "Dimension: data/create_abyss/dimension_type/abyss.json (min_y −1200, height 1200), worldgen/biome, noise_settings; dimension/AbyssLayout, AbyssTerrain, AbyssSurface; client AbyssSpecialEffects",
+      "Access: experimental/worldgen/TectonicCommand (/submarine abyss, experimentalAbyssWorldgen setting false by default)",
+      "Blocks: theabyss/block/* (AbyssCeilingBlock, BurningSandBlock, BurningWoodBlock, MagmaFlowBlock, SubmarineLianaBlock(Entity), CreepvineSeedBlock, GeothermalVentBlock), GeothermalRegistry, system/GeothermalBreathing (+15 air every 10 ticks, 4 blocks)",
+      "Wildlife: theabyss/entities/* (CookiecutterSharkEntity: bite every 20 ticks, 3 struggles to break free; IsopodEntity; MagmaticSnailEntity; AbyssalCuttlefishEntity; PelicanEelEntity, 10 segments; AmphistiumEntity)",
+      "Discs: data/create_abyss/jukebox_song/seafoam.json (150.86 s), snells_window.json (219.43 s)",
+      "Code: decompiled from create_submarine-3.4.8.jar of the Create France modpack; Magma Flow is not drawn (animated model not ported)",
+      "Mod by Maxenonyme (MaxCreateMC), Cogfly and Zinc Studios. Licence: All Rights Reserved: models and textures belong to their authors and are drawn here from the jar; no text of the mod is copied.",
+      "Images: blocks and items from the jar placed on the plate and drawn by our engine (gallery; the mod has no Ponder scene on this topic)"
+    ]
+  }
+}

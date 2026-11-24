@@ -91,6 +91,11 @@
       "html": "<p>Les filons du Nether (quartz, glowstone, or du Nether, netherite) n'apparaissent que dans le Nether ; tous les autres dans le monde normal. Rien ne les signale en surface : le détecteur est le seul moyen.</p>"
     },
     {
+      "id": "pierres",
+      "title": "Diamant et émeraude bruts",
+      "html": "<p>Les filons de diamant et d'émeraude ne donnent pas directement la gemme : ils sortent du <strong>diamant brut</strong> (Raw Diamond) et de l'<strong>émeraude brute</strong> (Raw Emerald). Une <a href=\"/wiki/scie-mecanique\">scie mécanique</a> les taille, une pierre brute pour une gemme, en 12,5 secondes jusqu'à 24 tr/min, environ 9,4 s à 32 tr/min, et plus vite encore au-delà. Le filon d'émeraude est aussi rare que celui de diamant : un espacement de 256 blocs entre deux filons.</p>"
+    },
+    {
       "id": "rendement",
       "title": "Comparer deux filons",
       "html": "<p>Deux filons de même type ne se valent pas forcément : le multiplicateur tiré au hasard change la quantité totale quand les filons sont finis. Sur des filons infinis, seul compte le temps de cycle, identique pour un même type. Le choix se fait alors sur l'emplacement : près de ton usine, accessible par train, sur un sol plein pour la foreuse.</p>"
@@ -114,7 +119,8 @@
   ],
   "sources": [
     "Create Ore Excavation 1.6.8 (createoreexcavation-1.21-1.6.8.jar), de tom5454, licence MIT : code lu après décompilation (ExcavatingBlockEntity, SampleDrillBlockEntity, Config), recettes et filons du dossier data du jar, scènes Ponder PonderScenes rejouées par notre moteur.",
-    "Modèles et textures des auteurs du mod, rendus à partir du jar ; aucun texte du mod n'est recopié."
+    "Modèles et textures des auteurs du mod, rendus à partir du jar ; aucun texte du mod n'est recopié.",
+    "Pierres brutes : recipe/cutting/diamond_cutting.json, emerald_cutting.json (processing_time 250 ; Create SawBlockEntity : vitesse / 24 par tick, au moins 1), recipe/drilling/emerald.json, ore_vein_type/emerald.json (spacing 256)"
   ],
   "en": {
     "slugEn": "ore-excavation-ore-veins",
@@ -191,6 +197,11 @@
         "html": "<p>Nether veins (quartz, glowstone, Nether gold, netherite) only appear in the Nether; all the others in the Overworld. Nothing marks them on the surface, not even a stray ore block: the finder is the only way to locate them.</p>"
       },
       {
+        "id": "pierres",
+        "title": "Raw diamond and emerald",
+        "html": "<p>Diamond and emerald veins do not give the gem directly: they yield <strong>Raw Diamond</strong> and <strong>Raw Emerald</strong>. A <a href=\"/en/wiki/mechanical-saw\">Mechanical Saw</a> cuts them, one raw stone for one gem, in 12.5 seconds up to 24 RPM, about 9.4 s at 32 RPM, and faster still above that. The emerald vein is as rare as the diamond one: a spacing of 256 blocks between two veins.</p>"
+      },
+      {
         "id": "rendement",
         "title": "Comparing two veins",
         "html": "<p>Two veins of the same type are not always equal: the random multiplier changes the total amount when veins are finite. On infinite veins only the cycle time matters, and it is identical for every vein of a given type, so any of them will do. The choice then comes down to location: close to your factory, reachable by train, on solid ground for the machine.</p>"
@@ -208,7 +219,8 @@
     ],
     "sources": [
       "Create Ore Excavation 1.6.8 (createoreexcavation-1.21-1.6.8.jar), by tom5454, MIT licence: code read after decompiling (ExcavatingBlockEntity, SampleDrillBlockEntity, Config), recipes and veins from the jar's data folder, Ponder scenes PonderScenes replayed by our engine.",
-      "Models and textures by the mod's authors, rendered from the jar; no text from the mod is copied."
+      "Models and textures by the mod's authors, rendered from the jar; no text from the mod is copied.",
+      "Raw stones: recipe/cutting/diamond_cutting.json, emerald_cutting.json (processing_time 250), recipe/drilling/emerald.json, ore_vein_type/emerald.json (spacing 256)"
     ]
   }
 }

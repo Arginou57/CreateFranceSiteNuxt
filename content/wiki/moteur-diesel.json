@@ -6,8 +6,8 @@
   "title": "Moteur diesel — Create Diesel Generators",
   "description": "Le moteur diesel de Create Diesel Generators : vitesse et SU selon le carburant, remplissage, arrêt par redstone, silencieux et turbocompresseur.",
   "datePublished": "2026-11-23",
-  "dateModified": "2026-11-23",
-  "createVersion": "6.0.10 · Create Diesel Generators 1.3.15",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Diesel Generators 1.3.16",
   "mcVersion": "1.21.1",
   "intro": "Le <strong>moteur diesel</strong> est la source de rotation de base de Create Diesel Generators. Un seul bloc, un carburant liquide, et il fait tourner un <a href=\"/wiki/rotor\">rotor</a> à 96 tr/min avec jusqu'à 6 144 SU : bien plus que n'importe quelle roue à eau. Il se remplit par un tuyau, s'arrête sur un signal de redstone et reçoit deux améliorations, le silencieux et le turbocompresseur.",
   "facts": [
@@ -37,7 +37,7 @@
     },
     {
       "label": "Version",
-      "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+      "value": "Create Diesel Generators 1.3.16 · Create 6.0.10"
     }
   ],
   "recipe": {
@@ -113,14 +113,21 @@
       "title": "Couper ou régler avec la redstone",
       "image": "cdg_engine_redstone.webp",
       "alt": "Le levier activé à côté du moteur : l’arbre est à l’arrêt",
-      "html": "<p>Par défaut, le moteur lit la <strong>force</strong> du signal : à 15 il s'arrête, à 0 il tourne à fond, et entre les deux sa vitesse vaut (15 − signal) / 15 du régime. Un levier, qui donne 15, sert donc d'interrupteur, et un levier analogique de Create sert d'accélérateur. Au ralenti, la consommation baisse moins vite que la vitesse : elle garde un quart du débit plein, plus le reste au prorata.</p>"
+      "html": "<p>Par défaut, le moteur lit la <strong>force</strong> du signal : à 15 il s'arrête, à 0 il tourne à fond, et entre les deux sa vitesse vaut (15 − signal) / 15 du régime. Un levier, qui donne 15, sert donc d'interrupteur, et un levier analogique de Create sert d'accélérateur. Au ralenti, la consommation baisse moins vite que la vitesse : elle garde un quart du débit plein, plus le reste au prorata. Depuis la version 1.3.16, la puissance suit l'accélérateur comme la vitesse : à mi-course, le moteur fournit la moitié de ses SU (en 1.3.15, il gardait toute sa capacité au ralenti).</p>"
     },
     {
       "id": "silencieux",
       "title": "Silencieux et turbocompresseur",
       "image": "cdg_engine_silencieux.webp",
       "alt": "Le silencieux posé sur le moteur diesel",
-      "html": "<p>Un clic droit sur le moteur avec une amélioration la pose. Le <strong>silencieux</strong> divise le volume du bruit par 25, sans rien changer d'autre : pratique près d'une base. Le <strong>turbocompresseur</strong> double la vitesse et les SU (réglage serveur, 2 par défaut) et rend le moteur plus aigu ; le réglage prévu pour sa consommation n'est pas utilisé par le code, il brûle donc toujours 1 mB par seconde. Un moteur ne porte qu'une amélioration.</p>"
+      "html": "<p>Un clic droit sur le moteur avec une amélioration la pose. Le <strong>silencieux de moteur</strong> (Engine Silencer) divise le volume du bruit par 25, sans rien changer d'autre : pratique près d'une base. Le <strong>turbocompresseur de moteur</strong> (Engine Turbocharger) double la vitesse et les SU (réglage serveur, 2 par défaut) et rend le moteur plus aigu ; depuis la 1.3.16, un réglage serveur peut aussi multiplier sa consommation, mais il vaut 1 par défaut : il brûle donc toujours 1 mB par seconde. Un moteur ne porte qu'une amélioration.</p>"
+    },
+    {
+      "id": "ameliorations",
+      "title": "Fabriquer les améliorations",
+      "image": "c2a_cdg_upgrades_ameliorations.webp",
+      "alt": "Le silencieux de moteur, le turbocompresseur de moteur et le pulvérisateur chimique avec briquet",
+      "html": "<p>Le silencieux se fait à l'établi avec deux plaques de fer, quatre laines, un alliage d'andésite et un <a href=\"/wiki/tuyau-a-fluide\">tuyau à fluide</a> au centre. Le turbocompresseur demande une hélice au centre, deux plaques de fer, deux lingots de zinc, trois alliages d'andésite et un tuyau à fluide. Les deux se posent aussi sur le <a href=\"/wiki/moteur-diesel-modulaire\">moteur modulaire</a> ; le moteur énorme ne prend que le silencieux.</p>"
     },
     {
       "id": "comparaison",
@@ -151,7 +158,9 @@
     "Pistons : DieselEngineRenderer (pistons_0 à 4 selon l’angle de l’arbre × 3)",
     "Recette : recipe/crafting/diesel_engine.json",
     "Code, données et storyboards : Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, licence MIT, auteur George VI), identiques au jar du modpack Create France",
-    "Vidéos : scènes Ponder de Create Diesel Generators (DieselEngineScenes.small) rejouées par notre moteur ; modèles et textures du mod (licence MIT, George VI)"
+    "Vidéos : scènes Ponder de Create Diesel Generators (DieselEngineScenes.small) rejouées par notre moteur ; modèles et textures du mod (licence MIT, George VI)",
+    "Version 1.3.16 (jar createdieselgenerators-1.21.1-1.3.16.jar du modpack de référence) comparée au 1.3.15 le 24/11 : recettes et données identiques (une recette renommée, un tag Steam 'n' Rails ajouté), classes changées : moteurs (SU × accélérateur, multiplicateur de consommation du turbo appliqué), brûleur (chaleur de chaudière plafonnée à 2), baril (longueur par largeur réglable), config",
+    "Améliorations : recipe/crafting/engine_silencer.json, engine_turbocharger.json ; 1.3.16 : IEngine.calculateAddedStressCapacity (capacité × getThrottle), EngineUpgrades.TurbochargerUpgrade.getBurnRateMultiplier (config, 1 par défaut)"
   ],
   "en": {
     "slugEn": "diesel-engine",
@@ -186,7 +195,7 @@
       },
       {
         "label": "Version",
-        "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+        "value": "Create Diesel Generators 1.3.16 · Create 6.0.10"
       }
     ],
     "recipe": {
@@ -239,13 +248,19 @@
         "id": "redstone",
         "title": "Stopping or throttling with redstone",
         "alt": "The lever is on next to the engine: the shaft is still",
-        "html": "<p>By default the engine reads the signal <strong>strength</strong>: at 15 it stops, at 0 it runs flat out, and in between its speed is (15 − signal) / 15 of full speed. A lever, which gives 15, is therefore an on/off switch, and Create's analog lever works as a throttle. At part throttle, fuel use drops more slowly than speed: it keeps a quarter of the full rate plus the rest in proportion.</p>"
+        "html": "<p>By default the engine reads the signal <strong>strength</strong>: at 15 it stops, at 0 it runs flat out, and in between its speed is (15 − signal) / 15 of full speed. A lever, which gives 15, is therefore an on/off switch, and Create's analog lever works as a throttle. At part throttle, fuel use drops more slowly than speed: it keeps a quarter of the full rate plus the rest in proportion. Since version 1.3.16, power follows the throttle just like speed: at half throttle the engine supplies half its SU (in 1.3.15 it kept its full capacity when slowed down).</p>"
       },
       {
         "id": "silencieux",
         "title": "Silencer and turbocharger",
         "alt": "The silencer fitted on the diesel engine",
-        "html": "<p>Right-click the engine with an upgrade to fit it. The <strong>silencer</strong> cuts the sound volume by 25 times and changes nothing else: handy next to a base. The <strong>turbocharger</strong> doubles speed and SU (server setting, 2 by default) and makes the engine sound higher; its fuel multiplier setting is not used by the code, so it still burns 1 mB per second. An engine holds one upgrade at a time.</p>"
+        "html": "<p>Right-click the engine with an upgrade to fit it. The <strong>Engine Silencer</strong> cuts the sound volume by 25 times and changes nothing else: handy next to a base. The <strong>Engine Turbocharger</strong> doubles speed and SU (server setting, 2 by default) and makes the engine sound higher; since 1.3.16 a server setting can also scale its fuel use, but it defaults to 1, so it still burns 1 mB per second. An engine holds one upgrade at a time.</p>"
+      },
+      {
+        "id": "ameliorations",
+        "title": "Crafting the upgrades",
+        "alt": "The Engine Silencer, the Engine Turbocharger and the Chemical Sprayer With Lighter",
+        "html": "<p>The silencer is crafted with two iron sheets, four wool, one andesite alloy and a <a href=\"/en/wiki/fluid-pipe\">Fluid Pipe</a> in the middle. The turbocharger takes a Propeller in the middle, two iron sheets, two zinc ingots, three andesite alloys and a fluid pipe. Both also fit the <a href=\"/en/wiki/modular-diesel-engine\">Modular Diesel Engine</a>; the huge engine only takes the silencer.</p>"
       },
       {
         "id": "comparaison",
@@ -266,7 +281,9 @@
       "Pistons: DieselEngineRenderer (pistons_0 to 4 from the shaft angle × 3)",
       "Recipe: recipe/crafting/diesel_engine.json",
       "Code, data and storyboards: Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, MIT licence, author George VI), identical to the Create France modpack jar",
-      "Videos: Create Diesel Generators Ponder scenes (DieselEngineScenes.small) replayed by our engine; mod models and textures (MIT licence, George VI)"
+      "Videos: Create Diesel Generators Ponder scenes (DieselEngineScenes.small) replayed by our engine; mod models and textures (MIT licence, George VI)",
+      "Version 1.3.16 (createdieselgenerators-1.21.1-1.3.16.jar from the reference modpack) compared with 1.3.15 on 24/11: recipes and data identical (one recipe renamed, one Steam 'n' Rails tag added); changed classes: engines (SU × throttle, turbo fuel multiplier applied), burner (boiler heat capped at 2), oil barrel (length per width configurable), config",
+      "Upgrades: recipe/crafting/engine_silencer.json, engine_turbocharger.json; 1.3.16: calculateAddedStressCapacity (capacity × getThrottle), EngineUpgrades.TurbochargerUpgrade.getBurnRateMultiplier (config, 1 by default)"
     ]
   }
 }

@@ -1,0 +1,274 @@
+{
+  "slug": "fabriquer-un-autocanon",
+  "name": "Fabriquer un autocanon",
+  "blockId": "createbigcannons:steel_autocannon_breech",
+  "category": "cbc",
+  "title": "Fabriquer un autocanon — Create Big Cannons, guide",
+  "description": "Fabriquer un autocanon de Create Big Cannons : moules, forage, extracteur de culasse, fil à ressort et ressort de recul, en fonte, bronze ou acier.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
+  "mcVersion": "1.21.1",
+  "intro": "L'<a href=\"/wiki/autocanons\">autocanon</a> de <strong>Create Big Cannons</strong> a trois pièces : une <strong>culasse</strong>, un <strong>ressort de recul</strong> facultatif et des <strong>fûts</strong>. Aucune ne se fait à l'établi. On les coule en fonte, en bronze ou en acier dans les petits moules d'autocanon, on les fore, puis la culasse et le ressort reçoivent une dernière pièce fabriquée à part : l'<strong>extracteur de culasse</strong> et le <strong>ressort de recul</strong>.",
+  "facts": [
+    {
+      "label": "Matériaux",
+      "value": "Fonte, bronze, acier (pas de nethersteel)"
+    },
+    {
+      "label": "Métal",
+      "value": "Fût 3 lingots, culasse 4, ressort de recul 4"
+    },
+    {
+      "label": "Fûts maximum",
+      "value": "Fonte 3, bronze 5, acier 7"
+    },
+    {
+      "label": "Extracteur",
+      "value": "Lingot du matériau, 3 passages à la scie (assemblage séquencé)"
+    },
+    {
+      "label": "Fil à ressort",
+      "value": "Scie : 1 plaque de fer = 1 fil, 1 plaque d’acier = 3"
+    },
+    {
+      "label": "Ressort de recul",
+      "value": "Fil à ressort, 3 passages sous la presse"
+    },
+    {
+      "label": "Version",
+      "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Extracteur de culasse en acier (assemblage séquencé, 3 coupes à la scie)",
+    "grid": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "Lingot d'acier",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "createbigcannons:steel_ingot",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 extracteur de culasse d'autocanon en acier",
+    "resultItem": "createbigcannons:steel_autocannon_breech_extractor"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "couler",
+      "title": "Couler les pièces",
+      "image": "c2a_ac_blocks_pieces-brutes.webp",
+      "alt": "Devant, la culasse, le ressort et le fût d’autocanon en acier non alésés ; derrière, la culasse et le ressort incomplets et le fût foré",
+      "html": "<p>Taille les trois <a href=\"/wiki/moules-et-coulee\">moules d'autocanon</a> à la scie et remplis-les de métal fondu : 3 lingots pour un fût, 4 pour une culasse ou un ressort. Pas besoin de sable de moulage autour, et les pièces se démoulent seules. Elles sortent non alésées : <strong>fût d'autocanon non alésé</strong> (Unbored Autocannon Barrel), culasse et ressort non alésés, en fonte, bronze ou acier.</p>"
+    },
+    {
+      "id": "forer",
+      "title": "Les forer",
+      "html": "<p>La <a href=\"/wiki/fabrication-des-canons\">perceuse de canon</a> les creuse comme les gros blocs, sur un roulement, avec de l'eau. Le fût sort fini : <strong>fût d'autocanon</strong> en fonte, en bronze ou en acier (Cast Iron, Bronze, Steel Autocannon Barrel). La culasse et le ressort sortent <strong>incomplets</strong> : il leur manque une pièce mobile.</p>"
+    },
+    {
+      "id": "extracteur",
+      "title": "L'extracteur de culasse",
+      "image": "c2a_ac_parts_ressort-extracteur.webp",
+      "alt": "Fil à ressort, ressort partiel et ressort de recul ; extracteurs de culasse partiel, en fonte et en acier",
+      "html": "<p>L'<strong>extracteur de culasse d'autocanon</strong> (Autocannon Breech Extractor) se taille dans un lingot du même matériau : trois passages sous la <a href=\"/wiki/scie-mecanique\">scie</a>, en assemblage séquencé, avec l'étape « extracteur partiel » (Partial … Breech Extractor) entre deux. Il existe en fonte, en bronze et en acier. Utilise-le sur la culasse incomplète, ou laisse un déployeur le poser : la culasse est finie.</p>"
+    },
+    {
+      "id": "ressort",
+      "title": "Le ressort de recul",
+      "html": "<p>Le <strong>fil à ressort</strong> (Spring Wire) sort de la scie : un fil par plaque de fer, trois par plaque d'acier. Trois coups de <a href=\"/wiki/presse-mecanique\">presse</a> le transforment en <strong>ressort de recul</strong> (Recoil Spring), via le « ressort de recul partiel ». Posé sur le ressort d'autocanon incomplet, il donne le <strong>ressort de recul d'autocanon</strong> (Autocannon Recoil Spring). Le même objet entre dans le détonateur à inertie et l'outil d'inspection du blindage.</p>"
+    },
+    {
+      "id": "monter",
+      "title": "Monter l’arme",
+      "image": "c2a_ac_blocks_fonte-bronze.webp",
+      "alt": "Culasses, ressorts et fûts finis en fonte et en bronze",
+      "html": "<p>Sur un <a href=\"/wiki/support-de-canon\">support de canon</a>, pose la culasse, puis le ressort si tu en as un, puis les fûts, tous du même matériau. Le ressort fait reculer les fûts à chaque coup, purement visuel. Le nombre de fûts est limité : 3 en fonte, 5 en bronze, 7 en acier. Les réglages de tir sont sur la page <a href=\"/wiki/autocanons\">Autocanons</a>.</p>"
+    },
+    {
+      "id": "materiaux",
+      "title": "Quel métal choisir",
+      "html": "<table><thead><tr><th>Métal</th><th>Fûts max</th><th>Vitesse</th><th>Durée de vie de la balle</th></tr></thead><tbody><tr><td>Fonte</td><td>3</td><td>9 blocs/tick</td><td>11 ticks</td></tr><tr><td>Bronze</td><td>5</td><td>7,5 blocs/tick</td><td>25 ticks</td></tr><tr><td>Acier</td><td>7</td><td>9 blocs/tick</td><td>60 ticks</td></tr></tbody></table><p>La fonte suffit à courte distance ; l'acier porte six fois plus loin.</p>"
+    },
+    {
+      "id": "cout",
+      "title": "Ce que coûte un autocanon",
+      "html": "<p>Un autocanon en acier complet, culasse, ressort et sept fûts, demande 4 + 4 + 21 = 29 lingots coulés, plus un lingot pour l'extracteur et un tiers de plaque d'acier pour le ressort. En fonte, avec trois fûts, on tombe à 17 lingots : de quoi s'équiper très tôt.</p>"
+    },
+    {
+      "id": "automatiser",
+      "title": "Automatiser les petites pièces",
+      "html": "<p>Les extracteurs et les ressorts se prêtent bien à l'usine. Un <a href=\"/wiki/tapis-roulant\">tapis</a> passe trois fois sous une scie pour les lingots d'extracteur, un autre passe trois fois sous une presse pour le fil à ressort : il suffit de renvoyer les pièces partielles en début de tapis. Un déployeur posé devant les blocs incomplets, à la sortie de la perceuse, les termine au passage.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<ul><li>Un extracteur en fonte ne finit pas une culasse en acier : les matériaux doivent être les mêmes.</li><li>Une culasse incomplète ne tire pas : vérifie qu'elle a reçu son extracteur.</li><li>Au-delà du nombre de fûts permis, les balles se coincent.</li></ul>"
+    }
+  ],
+  "related": [
+    "autocanons",
+    "munitions-d-autocanon",
+    "moules-et-coulee",
+    "fabrication-des-canons",
+    "support-de-canon",
+    "scie-mecanique",
+    "presse-mecanique",
+    "create-big-cannons"
+  ],
+  "sources": [
+    "Moules : CannonCastShape AUTOCANNON_BARREL (3 lingots), AUTOCANNON_BREECH et AUTOCANNON_RECOIL_SPRING (4), non « large » (pas de sable autour)",
+    "Coulée et forage : block_recipes cannon_casting (unbored_*_autocannon_*) et drill_boring (fût fini, culasse et ressort incomplets)",
+    "Pièces : CBCBlocks IncompleteAutocannonBlock.breech (extracteur du matériau) et .recoilSpring (CBCItems.RECOIL_SPRING)",
+    "Recettes : sequenced_assembly/*_autocannon_breech_extractor.json (3 boucles, scie), recoil_spring.json (3 boucles, presse), cutting/spring_wire_iron.json (1), spring_wire_steel.json (3)",
+    "Fûts maximum : index/CBCAutocannonMaterials (maxBarrelLength 3 / 5 / 7)",
+    "Vitesses et durées : index/CBCAutocannonMaterials (baseSpeed, projectileLifetime)",
+    "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT ; textures et modèles CC BY-NC-SA, auteurs rbasamoyai et contributeurs), identiques au jar du modpack Create France",
+    "Images : blocs et objets de CBC posés sur la plaque et rendus par notre moteur (galerie, pas de scène Ponder du mod sur ce sujet)"
+  ],
+  "en": {
+    "slugEn": "autocannon-crafting",
+    "name": "Autocannon Crafting",
+    "title": "Autocannon Crafting — Create Big Cannons guide",
+    "description": "How to make a Create Big Cannons autocannon: moulds, boring, Breech Extractor, Spring Wire and Recoil Spring, in cast iron, bronze or steel.",
+    "intro": "The Create Big Cannons <a href=\"/en/wiki/autocannons\">autocannon</a> has three parts: a <strong>breech</strong>, an optional <strong>recoil spring</strong> and <strong>barrels</strong>. None of them is made at a crafting table. You cast them in cast iron, bronze or steel in the small autocannon moulds, bore them, then the breech and the spring take one last part made separately: the <strong>Breech Extractor</strong> and the <strong>Recoil Spring</strong>.",
+    "facts": [
+      {
+        "label": "Materials",
+        "value": "Cast iron, bronze, steel (no nethersteel)"
+      },
+      {
+        "label": "Metal",
+        "value": "Barrel 3 ingots, breech 4, recoil spring 4"
+      },
+      {
+        "label": "Max barrels",
+        "value": "Cast iron 3, bronze 5, steel 7"
+      },
+      {
+        "label": "Extractor",
+        "value": "Ingot of the material, 3 saw passes (sequenced assembly)"
+      },
+      {
+        "label": "Spring Wire",
+        "value": "Saw: 1 iron sheet = 1 wire, 1 steel sheet = 3"
+      },
+      {
+        "label": "Recoil Spring",
+        "value": "Spring Wire, 3 passes under the press"
+      },
+      {
+        "label": "Version",
+        "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Steel Autocannon Breech Extractor (sequenced assembly, 3 saw cuts)",
+      "grid": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "Steel Ingot",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Steel Autocannon Breech Extractor"
+    },
+    "sections": [
+      {
+        "id": "couler",
+        "title": "Casting the parts",
+        "alt": "In front, the unbored steel autocannon breech, spring and barrel; behind, the incomplete breech and spring and the bored barrel",
+        "html": "<p>Cut the three <a href=\"/en/wiki/cbc-cast-moulds\">autocannon moulds</a> with a saw and fill them with molten metal: 3 ingots for a barrel, 4 for a breech or a spring. No Casting Sand is needed around them, and the parts drop their sand by themselves. They come out unbored: <strong>Unbored Autocannon Barrel</strong>, unbored breech and unbored spring, in cast iron, bronze or steel.</p>"
+      },
+      {
+        "id": "forer",
+        "title": "Boring them",
+        "html": "<p>The <a href=\"/en/wiki/cannon-crafting\">Cannon Drill</a> hollows them out like the large blocks, on a bearing, with water. The barrel comes out finished: the <strong>Cast Iron</strong>, <strong>Bronze</strong> or <strong>Steel Autocannon Barrel</strong>. The breech and the spring come out <strong>incomplete</strong>: they still miss a moving part.</p>"
+      },
+      {
+        "id": "extracteur",
+        "title": "The Breech Extractor",
+        "alt": "Spring Wire, partial spring and Recoil Spring; partial, cast iron and steel breech extractors",
+        "html": "<p>The <strong>Autocannon Breech Extractor</strong> is cut from an ingot of the same material: three passes under the <a href=\"/en/wiki/mechanical-saw\">saw</a> in sequenced assembly, with the Partial … Breech Extractor stage in between. It comes in cast iron, bronze and steel. Right-click the incomplete breech with it, or let a Deployer fit it: the breech is done.</p>"
+      },
+      {
+        "id": "ressort",
+        "title": "The Recoil Spring",
+        "html": "<p><strong>Spring Wire</strong> comes from the saw: one wire per iron sheet, three per steel sheet. Three hits of the <a href=\"/en/wiki/mechanical-press\">press</a> turn it into a <strong>Recoil Spring</strong>, through the Partial Recoil Spring. Fitted to the incomplete autocannon spring, it gives the <strong>Autocannon Recoil Spring</strong>. The same item goes into the Inertia Fuze and the Block Armor Inspection Tool.</p>"
+      },
+      {
+        "id": "monter",
+        "title": "Putting the gun together",
+        "alt": "Finished cast iron and bronze breeches, springs and barrels",
+        "html": "<p>On a <a href=\"/en/wiki/cannon-mount\">Cannon Mount</a>, place the breech, then the spring if you have one, then the barrels, all of the same material. The spring makes the barrels kick back on every shot, which is only visual. The number of barrels is capped: 3 for cast iron, 5 for bronze, 7 for steel. Firing settings are on the <a href=\"/en/wiki/autocannons\">autocannons</a> page.</p>"
+      },
+      {
+        "id": "materiaux",
+        "title": "Which metal to pick",
+        "html": "<table><thead><tr><th>Metal</th><th>Max barrels</th><th>Speed</th><th>Round lifetime</th></tr></thead><tbody><tr><td>Cast iron</td><td>3</td><td>9 blocks/tick</td><td>11 ticks</td></tr><tr><td>Bronze</td><td>5</td><td>7.5 blocks/tick</td><td>25 ticks</td></tr><tr><td>Steel</td><td>7</td><td>9 blocks/tick</td><td>60 ticks</td></tr></tbody></table><p>Cast iron is fine at short range; steel reaches six times further.</p>"
+      },
+      {
+        "id": "cout",
+        "title": "What an autocannon costs",
+        "html": "<p>A full steel autocannon, breech, spring and seven barrels, takes 4 + 4 + 21 = 29 cast ingots, plus one ingot for the extractor and a third of a steel sheet for the spring. In cast iron with three barrels it drops to 17 ingots: enough to arm yourself very early.</p>"
+      },
+      {
+        "id": "automatiser",
+        "title": "Automating the small parts",
+        "html": "<p>Extractors and springs suit a factory well. One <a href=\"/en/wiki/conveyor-belt\">belt</a> runs three times under a saw for the extractor ingots, another three times under a press for the spring wire: just send the partial parts back to the start of the belt. A Deployer facing the incomplete blocks, at the drill's exit, finishes them on the way.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<ul><li>A cast iron extractor does not finish a steel breech: the materials must match.</li><li>An incomplete breech does not fire: check that it got its extractor.</li><li>Past the allowed number of barrels, rounds get stuck.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Moulds: CannonCastShape AUTOCANNON_BARREL (3 ingots), AUTOCANNON_BREECH and AUTOCANNON_RECOIL_SPRING (4), not \"large\" (no sand around)",
+      "Casting and boring: block_recipes cannon_casting (unbored_*_autocannon_*) and drill_boring (finished barrel, incomplete breech and spring)",
+      "Parts: CBCBlocks IncompleteAutocannonBlock.breech (extractor of the material) and .recoilSpring (CBCItems.RECOIL_SPRING)",
+      "Recipes: sequenced_assembly/*_autocannon_breech_extractor.json (3 loops, saw), recoil_spring.json (3 loops, press), cutting/spring_wire_iron.json (1), spring_wire_steel.json (3)",
+      "Max barrels: index/CBCAutocannonMaterials (maxBarrelLength 3 / 5 / 7)",
+      "Speeds and lifetimes: index/CBCAutocannonMaterials (baseSpeed, projectileLifetime)",
+      "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence; textures and models CC BY-NC-SA, by rbasamoyai and contributors), identical to the jar of the Create France modpack",
+      "Images: CBC blocks and items placed on the plate and drawn by our engine (gallery; the mod has no Ponder scene on this topic)"
+    ]
+  }
+}

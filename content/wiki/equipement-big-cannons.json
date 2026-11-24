@@ -1,0 +1,255 @@
+{
+  "slug": "equipement-big-cannons",
+  "name": "Masque à gaz et outils",
+  "blockId": "createbigcannons:gas_mask",
+  "category": "cbc",
+  "title": "Masque à gaz et outils — Create Big Cannons, guide",
+  "description": "Le masque à gaz, l'outil d'inspection du blindage et le bâton de fabrication de Create Big Cannons : recettes, usages et chiffres du mod.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
+  "mcVersion": "1.21.1",
+  "intro": "<strong>Create Big Cannons</strong> a trois objets qui ne tirent pas mais rendent service : le <strong>masque à gaz</strong> (Gas Mask), contre les nuages d'obus chimiques, l'<strong>outil d'inspection du blindage</strong> (Block Armor Inspection Tool), qui dit ce qu'un bloc vaut face aux projectiles, et le <strong>bâton de fabrication de canon</strong> (Cannon Crafting Wand), réservé au mode créatif.",
+  "facts": [
+    {
+      "label": "Masque à gaz",
+      "value": "Cuir ×4, verre, laine ; se porte sur la tête"
+    },
+    {
+      "label": "Protège de",
+      "value": "Nuages de gaz des obus à fluide remplis de potion"
+    },
+    {
+      "label": "Nuage",
+      "value": "Part après 10 ticks, dure 300 ticks (15 s)"
+    },
+    {
+      "label": "Outil d’inspection",
+      "value": "Mécanisme de précision, ressort de recul, barreaux de fer"
+    },
+    {
+      "label": "Valeurs",
+      "value": "Ténacité (arrête la pénétration) et dureté (fait ricocher)"
+    },
+    {
+      "label": "Bâton",
+      "value": "Créatif seulement : termine une coulée, une chauffe ou une pièce"
+    },
+    {
+      "label": "Version",
+      "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Masque à gaz (établi)",
+    "grid": [
+      [
+        null,
+        "Cuir",
+        null
+      ],
+      [
+        "Cuir",
+        "Verre",
+        "Cuir"
+      ],
+      [
+        null,
+        "Laine blanche",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "minecraft:leather",
+        null
+      ],
+      [
+        "minecraft:leather",
+        "minecraft:glass",
+        "minecraft:leather"
+      ],
+      [
+        null,
+        "minecraft:white_wool",
+        null
+      ]
+    ],
+    "result": "1 masque à gaz",
+    "resultItem": "createbigcannons:gas_mask"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "masque",
+      "title": "Le masque à gaz",
+      "image": "c2a_equip_equipement.webp",
+      "alt": "Le masque à gaz, l’outil d’inspection du blindage et le bâton de fabrication de canon",
+      "html": "<p>Il se fait avec quatre cuirs, un bloc de verre et une laine. Un clic droit l'enfile sur la tête, comme un casque ; un distributeur peut aussi en équiper un joueur. Avec Curios, il se porte aussi dans un emplacement d'accessoire. Une fois porté, une vue de masque cerne l'écran.</p>"
+    },
+    {
+      "id": "casque",
+      "title": "Masque ou casque ?",
+      "html": "<p>Le masque prend l'emplacement de la tête : impossible de le porter avec un casque d'armure ou un casque de plongée. Comme le modpack Create France contient Curios, la parade est simple : range le masque dans un emplacement Curios et garde ton casque sur la tête. Il protège pareil dans les deux cas.</p>"
+    },
+    {
+      "id": "gaz",
+      "title": "D’où vient le gaz",
+      "html": "<p>Le gaz naît d'un <a href=\"/wiki/obus-de-canon\">obus à fluide</a> rempli d'une potion fluide de Create : à l'impact, chaque gerbe de potion qui touche un bloc y laisse un nuage de la couleur de la potion. Il s'active après 10 ticks et dure 15 secondes, en donnant l'effet à ceux qui sont dedans : c'est ce nuage que le masque bloque. Une gerbe qui frappe directement quelqu'un lui donne l'effet malgré le masque, et il ne protège pas non plus des potions persistantes lancées ni du souffle du dragon.</p>"
+    },
+    {
+      "id": "inspection",
+      "title": "L’outil d’inspection du blindage",
+      "html": "<p>Il se fabrique en colonne : un mécanisme de précision, un ressort de recul et des barreaux de fer. Tenu dans une main, il affiche, sur le bloc visé, deux valeurs : la <strong>ténacité</strong> et la <strong>dureté</strong>. Par défaut, la ténacité vaut la résistance aux explosions du bloc et la dureté 1, mais le mod donne ses propres valeurs à certains blocs : bloc de fer 9 et 1, coffre-fort de Create 6 et 1, terre cuite 4 et 1,5, obsidienne 4 et 2.</p>"
+    },
+    {
+      "id": "lire",
+      "title": "Lire ces valeurs",
+      "html": "<p>Quand un projectile touche un bloc, le jeu compare son élan (masse × vitesse) à la <strong>ténacité</strong> : plus grand, le bloc casse. La <strong>dureté</strong>, elle, se compare à la capacité de pénétration du projectile : un bloc dur fait ricocher les tirs rasants et peut même briser un projectile fragile. Pour un blindage, cherche donc les deux. Le détail est sur la page des <a href=\"/wiki/obus-de-canon\">obus</a>.</p>"
+    },
+    {
+      "id": "copycats",
+      "title": "Et les blocs copieurs ?",
+      "html": "<p>Avec le mod Copycats+, les blocs copieurs prennent une part des valeurs du matériau qu'ils imitent : un quart pour une poutre ou une vitre, la moitié pour une dalle ou une trappe, les trois quarts pour un escalier, la totalité pour un bloc entier ; une porte en fer copiée monte à 1,25. Une dalle copiée en fer ne vaut donc que la moitié d'un bloc de fer face à un boulet : l'outil d'inspection le montre tout de suite.</p>"
+    },
+    {
+      "id": "baton",
+      "title": "Le bâton de fabrication de canon",
+      "html": "<p>Il n'a pas de recette : on le trouve dans l'onglet créatif du mod. Utilisé sur une coulée en cours, des couches en chauffe ou une pièce incomplète, il termine l'opération sur-le-champ. Il sert à tester un canon ou à préparer une démonstration sans attendre les minutes de prise.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils",
+      "html": "<ul><li>Avant un assaut contre des obus chimiques, équipe toute l'équipe de masques.</li><li>Passe l'outil d'inspection sur tes murs : l'obsidienne résiste aux explosions, pas forcément aux boulets.</li><li>Sur un serveur, le bâton n'est accessible qu'aux joueurs en créatif.</li></ul>"
+    }
+  ],
+  "related": [
+    "obus-de-canon",
+    "moules-et-coulee",
+    "canons-assembles",
+    "fabriquer-un-autocanon",
+    "create-big-cannons"
+  ],
+  "sources": [
+    "Masque : equipment/gas_mask/GasMaskItem (emplacement tête, distributeur), compat/curios/CBCCuriosIntegration, GasMaskOverlay ; recipe/gas_mask.json",
+    "Gaz : munitions/big_cannon/fluid_shell/DefaultFluidCompat.spawnGasCloud (attente 10 ticks, durée 300), GasCloudEntity.isBlockedBy",
+    "Outil : block_armor_properties/BlockArmorInspectionToolItem (main principale ou secondaire), recipe/block_armor_inspection_tool.json",
+    "Valeurs : data/*/block_armor/*.json (fer 9/1, coffre-fort 6/1, terre cuite 4/1,5, obsidienne 4/2), défaut BlockArmorPropertiesHandler (dureté 1, ténacité = résistance aux explosions), AbstractBigCannonProjectile.onImpact",
+    "Bâton : crafting/CannonCraftingWandItem, WandActionable (coulée, couches, pièces incomplètes, bout de canon), ModGroup (onglet créatif, sans recette)",
+    "Copieurs : data/copycats/block_armor/*.json (material_toughness_multiplier de 0,25 à 1,25)",
+    "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT ; textures et modèles CC BY-NC-SA, auteurs rbasamoyai et contributeurs), identiques au jar du modpack Create France",
+    "Images : blocs et objets de CBC posés sur la plaque et rendus par notre moteur (galerie, pas de scène Ponder du mod sur ce sujet)"
+  ],
+  "en": {
+    "slugEn": "big-cannons-equipment",
+    "name": "Gas Mask and Tools",
+    "title": "Gas Mask and Tools — Create Big Cannons guide",
+    "description": "The Create Big Cannons Gas Mask, Block Armor Inspection Tool and Cannon Crafting Wand: recipes, uses and the numbers behind them.",
+    "intro": "<strong>Create Big Cannons</strong> has three items that do not shoot but come in handy: the <strong>Gas Mask</strong>, against chemical shell clouds, the <strong>Block Armor Inspection Tool</strong>, which tells what a block is worth against projectiles, and the <strong>Cannon Crafting Wand</strong>, for creative mode only.",
+    "facts": [
+      {
+        "label": "Gas Mask",
+        "value": "Leather ×4, glass, wool; worn on the head"
+      },
+      {
+        "label": "Protects from",
+        "value": "Gas clouds from Fluid Shells filled with potion"
+      },
+      {
+        "label": "Cloud",
+        "value": "Starts after 10 ticks, lasts 300 ticks (15 s)"
+      },
+      {
+        "label": "Inspection Tool",
+        "value": "Precision Mechanism, Recoil Spring, iron bars"
+      },
+      {
+        "label": "Values",
+        "value": "Toughness (stops penetration) and hardness (makes shots bounce)"
+      },
+      {
+        "label": "Wand",
+        "value": "Creative only: finishes a cast, a heating or a part"
+      },
+      {
+        "label": "Version",
+        "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Gas Mask (crafting table)",
+      "grid": [
+        [
+          null,
+          "Leather",
+          null
+        ],
+        [
+          "Leather",
+          "Glass",
+          "Leather"
+        ],
+        [
+          null,
+          "White Wool",
+          null
+        ]
+      ],
+      "result": "1 Gas Mask"
+    },
+    "sections": [
+      {
+        "id": "masque",
+        "title": "The Gas Mask",
+        "alt": "The Gas Mask, the Block Armor Inspection Tool and the Cannon Crafting Wand",
+        "html": "<p>It takes four leather, a glass block and a wool. Right-click to put it on your head like a helmet; a dispenser can also equip a player with it. With Curios installed, it can also go in an accessory slot. While worn, a mask view frames the screen.</p>"
+      },
+      {
+        "id": "casque",
+        "title": "Mask or helmet?",
+        "html": "<p>The mask takes the head slot: you cannot wear it together with an armour helmet or a diving helmet. Since the Create France modpack includes Curios, the way around is simple: put the mask in a Curios slot and keep your helmet on your head. It protects just as well either way.</p>"
+      },
+      {
+        "id": "gaz",
+        "title": "Where the gas comes from",
+        "html": "<p>Gas comes from a <a href=\"/en/wiki/big-cannon-shells\">Fluid Shell</a> filled with a Create potion fluid: on impact, every potion splash that lands on a block leaves a cloud in the colour of the potion there. It becomes active after 10 ticks and lasts 15 seconds, giving its effect to anyone inside: that cloud is what the mask blocks. A splash that hits someone directly still applies its effect through the mask, and it gives no protection from thrown lingering potions or dragon's breath either.</p>"
+      },
+      {
+        "id": "inspection",
+        "title": "The Block Armor Inspection Tool",
+        "html": "<p>It is crafted in a column: a Precision Mechanism, a Recoil Spring and iron bars. Held in either hand, it shows two values for the block you look at: <strong>toughness</strong> and <strong>hardness</strong>. By default, toughness equals the block's blast resistance and hardness is 1, but the mod gives some blocks their own values: Block of Iron 9 and 1, Create's Item Vault 6 and 1, terracotta 4 and 1.5, obsidian 4 and 2.</p>"
+      },
+      {
+        "id": "lire",
+        "title": "Reading the values",
+        "html": "<p>When a projectile hits a block, the game compares its momentum (mass × speed) with the <strong>toughness</strong>: if it is larger, the block breaks. <strong>Hardness</strong> is compared with the projectile's penetration rating: a hard block deflects grazing shots and can even shatter a brittle projectile. For armour, look for both. Details are on the <a href=\"/en/wiki/big-cannon-shells\">shells</a> page.</p>"
+      },
+      {
+        "id": "copycats",
+        "title": "What about copycat blocks?",
+        "html": "<p>With the Copycats+ mod, copycat blocks take a share of the values of the material they copy: a quarter for a beam or a pane, half for a slab or a trapdoor, three quarters for stairs, all of it for a full block; a copied iron door goes up to 1.25. A copycat iron slab is therefore worth only half a Block of Iron against a cannonball: the inspection tool shows it right away.</p>"
+      },
+      {
+        "id": "baton",
+        "title": "The Cannon Crafting Wand",
+        "html": "<p>It has no recipe: you find it in the mod's creative tab. Right-click a cast in progress, heating layers or an incomplete part with it to finish the job at once. It is meant for testing a cannon or setting up a demonstration without waiting minutes for metal to set.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<ul><li>Before attacking positions that use chemical shells, give the whole team masks.</li><li>Check your walls with the inspection tool: obsidian shrugs off blasts, not necessarily cannonballs.</li><li>On a server, the wand is only available to players in creative mode.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Mask: equipment/gas_mask/GasMaskItem (head slot, dispenser), compat/curios/CBCCuriosIntegration, GasMaskOverlay; recipe/gas_mask.json",
+      "Gas: munitions/big_cannon/fluid_shell/DefaultFluidCompat.spawnGasCloud (wait 10 ticks, duration 300), GasCloudEntity.isBlockedBy",
+      "Tool: block_armor_properties/BlockArmorInspectionToolItem (main or off hand), recipe/block_armor_inspection_tool.json",
+      "Values: data/*/block_armor/*.json (iron 9/1, item vault 6/1, terracotta 4/1.5, obsidian 4/2), default BlockArmorPropertiesHandler (hardness 1, toughness = blast resistance), AbstractBigCannonProjectile.onImpact",
+      "Wand: crafting/CannonCraftingWandItem, WandActionable (cast, layers, incomplete parts, cannon end), ModGroup (creative tab, no recipe)",
+      "Copycats: data/copycats/block_armor/*.json (material_toughness_multiplier from 0.25 to 1.25)",
+      "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence; textures and models CC BY-NC-SA, by rbasamoyai and contributors), identical to the jar of the Create France modpack",
+      "Images: CBC blocks and items placed on the plate and drawn by our engine (gallery; the mod has no Ponder scene on this topic)"
+    ]
+  }
+}

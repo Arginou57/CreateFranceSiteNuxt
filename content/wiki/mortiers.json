@@ -6,7 +6,7 @@
   "title": "Mortiers — Create Big Cannons, guide",
   "description": "Le mortier à chute et le canon en bois de Create Big Cannons : obus de mortier, pierres de mortier, tir courbe, portées et hauteurs réelles.",
   "datePublished": "2026-10-28",
-  "dateModified": "2026-10-28",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
   "mcVersion": "1.21.1",
   "intro": "<strong>Create Big Cannons</strong> a deux armes à tir courbe. Le <strong>mortier à chute</strong>, en fer forgé, tire un obus qu'on laisse simplement tomber dans le tube. Le <strong>canon en bois</strong>, fait de rondins, lance des <strong>pierres de mortier</strong> : c'est l'artillerie du tout début de partie.",
@@ -45,7 +45,7 @@
     "grid": [
       [
         null,
-        "Matière explosive",
+        "Coton-poudre compacté",
         null
       ],
       [
@@ -62,7 +62,7 @@
     "items": [
       [
         null,
-        "minecraft:tnt",
+        "createbigcannons:packed_guncotton",
         null
       ],
       [
@@ -72,12 +72,12 @@
       ],
       [
         null,
-        "minecraft:oak_slab",
+        "createbigcannons:powder_charge",
         null
       ]
     ],
     "result": "1 obus de mortier",
-    "resultItem": "createbigcannons:mortar_stone"
+    "resultItem": "createbigcannons:drop_mortar_shell"
   },
   "videos": [],
   "sections": [
@@ -103,7 +103,7 @@
     {
       "id": "bois",
       "title": "Le canon en bois",
-      "html": "<p>Une chambre et un bout en rondins, pleins de poudre à canon, suffisent. Il n'a aucune charge sûre : il peut toujours caler. On y met de la poudre et une <strong>pierre de mortier</strong> (Mortar Stone), qui explose avec une puissance de 4 en projetant des éclats. Au-delà de 6 charges, la pierre se brise dans le tube. Plus légère qu'un obus, elle subit moitié moins de gravité.</p>"
+      "html": "<p>Une chambre et un bout en rondins, pleins de poudre à canon, suffisent. Il n'a aucune charge sûre : il peut toujours caler. On y met de la poudre et une <strong>pierre de mortier</strong> (Mortar Stone), qui explose avec une puissance de 4 en projetant des éclats. Au-delà de 6 charges, la pierre se brise dans le tube. Plus légère qu'un obus, elle subit moitié moins de gravité. Le bloc « projectile de pierre de mortier » (Mortar Stone Projectile) des listes d'objets n'est que la forme affichée de la pierre en vol : il n'a ni recette ni usage en jeu.</p>"
     },
     {
       "id": "regler",
@@ -131,7 +131,9 @@
     "materiaux-des-canons",
     "obus-de-canon",
     "poudre-et-cartouches",
-    "create-big-cannons"
+    "create-big-cannons",
+    "nitropoudre-et-coton-poudre",
+    "chariot-de-canon"
   ],
   "sources": [
     "Mortier : munition_properties/projectiles/drop_mortar_shell.json (mortar_power 6, mortar_spread 1, entity / block explosive power 6 / 2)",
@@ -141,7 +143,8 @@
     "Portées : simulation tick par tick du mod (AbstractCannonProjectile), sol plat, données 5.11.7",
     "Recette : recipe/drop_mortar_shell.json",
     "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT), identiques au jar du modpack Create France",
-    "Images : blocs de CBC posés sur la plaque et rendus par notre moteur"
+    "Images : blocs de CBC posés sur la plaque et rendus par notre moteur",
+    "Correction de la recette : X = tag high_explosive_materials (coton-poudre compacté), C = charge de poudre ; projectile affiché : MortarStoneProjectile (CBCBlocks.MORTAR_STONE_PROJECTILE)"
   ],
   "en": {
     "slugEn": "mortars",
@@ -184,7 +187,7 @@
       "grid": [
         [
           null,
-          "High explosive material",
+          "Packed Guncotton",
           null
         ],
         [
@@ -222,7 +225,7 @@
       {
         "id": "bois",
         "title": "The log cannon",
-        "html": "<p>A chamber and an end made of logs packed with gunpowder are enough. It has no safe charge at all: it can always jam. Load powder and a <strong>Mortar Stone</strong>, which explodes with a power of 4 and throws debris. Beyond 6 charges the stone shatters inside the tube. Lighter than a shell, it feels only half the gravity.</p>"
+        "html": "<p>A chamber and an end made of logs packed with gunpowder are enough. It has no safe charge at all: it can always jam. Load powder and a <strong>Mortar Stone</strong>, which explodes with a power of 4 and throws debris. Beyond 6 charges the stone shatters inside the tube. Lighter than a shell, it feels only half the gravity. The Mortar Stone Projectile block found in item lists is only the shape drawn for the stone in flight: it has no recipe and no use in play.</p>"
       },
       {
         "id": "regler",
@@ -253,7 +256,8 @@
       "Ranges: the mod's tick-by-tick simulation (AbstractCannonProjectile), flat ground, 5.11.7 data",
       "Recipe: recipe/drop_mortar_shell.json",
       "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence), identical to the Create France modpack jar",
-      "Images: CBC blocks placed on the plate and rendered by our engine"
+      "Images: CBC blocks placed on the plate and rendered by our engine",
+      "Recipe fix: X = high_explosive_materials tag (Packed Guncotton), C = Powder Charge; drawn projectile: MortarStoneProjectile (CBCBlocks.MORTAR_STONE_PROJECTILE)"
     ]
   }
 }

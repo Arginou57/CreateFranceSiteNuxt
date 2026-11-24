@@ -1,0 +1,261 @@
+{
+  "slug": "chariot-de-canon",
+  "name": "Chariot de canon",
+  "blockId": "createbigcannons:cannon_carriage",
+  "category": "cbc",
+  "title": "Chariot de canon — Create Big Cannons, guide",
+  "description": "Le chariot de canon de Create Big Cannons : fabrication, roues, selle, conduite, visée, tir à la souris et angles selon le canon embarqué.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Big Cannons 5.11.7",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>chariot de canon</strong> (Cannon Carriage) est l'affût mobile de <strong>Create Big Cannons</strong>. Contrairement au <a href=\"/wiki/support-de-canon\">support de canon</a>, il n'a besoin ni de rotation ni de redstone : on monte dessus, on le roule sur le terrain, on vise à la souris et on tire avec un bouton. En échange, il ne s'automatise pas et ses angles sont plus réduits.",
+  "facts": [
+    {
+      "label": "Fabrication",
+      "value": "2 paires de roues, 4 planches, 1 rotor"
+    },
+    {
+      "label": "Paire de roues",
+      "value": "4 plaques de fer autour d’une bûche : 2 paires"
+    },
+    {
+      "label": "Vitesse",
+      "value": "0,04 bloc/tick de poussée (≈ 0,8 bloc/s) pour un canon en fonte de 5 blocs ; recul à demi-vitesse"
+    },
+    {
+      "label": "Virage",
+      "value": "1° par tick (20°/s), ajusté au poids du canon"
+    },
+    {
+      "label": "Angles",
+      "value": "Gros canon −15° à +30° ; autocanon −15° à +90° ; mortier +15° à +85°"
+    },
+    {
+      "label": "Commandes",
+      "value": "Clic gauche : tirer ; touche C : mode hausse ; molette : cadence de l’autocanon"
+    },
+    {
+      "label": "Version",
+      "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Chariot de canon (établi)",
+    "grid": [
+      [
+        null,
+        "Rotor",
+        "Planches"
+      ],
+      [
+        "Planches",
+        "Planches",
+        "Planches"
+      ],
+      [
+        "Paire de roues de canon",
+        null,
+        "Paire de roues de canon"
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "create:shaft",
+        "minecraft:oak_planks"
+      ],
+      [
+        "minecraft:oak_planks",
+        "minecraft:oak_planks",
+        "minecraft:oak_planks"
+      ],
+      [
+        "createbigcannons:pair_of_cannon_wheels",
+        null,
+        "createbigcannons:pair_of_cannon_wheels"
+      ]
+    ],
+    "result": "1 chariot de canon",
+    "resultItem": "createbigcannons:cannon_carriage"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "fabriquer",
+      "title": "Le fabriquer",
+      "image": "c2a_wheels_roues.webp",
+      "alt": "La paire de roues de canon et une selle",
+      "html": "<p>Commence par les <strong>paires de roues de canon</strong> (Pair of Cannon Wheels) : quatre plaques de fer autour d'une bûche en donnent deux. Le chariot demande ensuite deux paires de roues, quatre planches et un <a href=\"/wiki/rotor\">rotor</a> pour l'essieu. Il se pose comme un bloc, orienté dans ton regard, ou à l'envers en s'accroupissant.</p>"
+    },
+    {
+      "id": "assembler",
+      "title": "Poser le canon et assembler",
+      "image": "c2a_carriage_avec-canon.webp",
+      "alt": "Un canon en fonte posé sur un chariot de canon, prêt à être assemblé",
+      "html": "<p>Construis le canon sur le bloc juste au-dessus du chariot, dans le même axe que lui, et charge-le avant : comme sur un support, un canon assemblé ne se recharge plus par la bouche. Un coup de <a href=\"/wiki/cle\">clé</a> sur le chariot l'assemble : le bloc devient une entité qui porte le canon. Un chariot vide s'assemble aussi. Un nouveau coup de clé sur le chariot assemblé le repose en bloc.</p>"
+    },
+    {
+      "id": "conduire",
+      "title": "Conduire",
+      "html": "<p>Un clic droit à main vide te met aux commandes. Les touches avancer et reculer le font rouler, gauche et droite le font pivoter. Il avance d'environ 0,8 bloc par seconde et recule deux fois moins vite, à condition de toucher le sol. Le poids compte : la référence est un canon en fonte de cinq blocs ; un canon plus lourd ralentit la marche et le virage, un plus léger les accélère. Il ne monte pas dans l'eau et coule dedans.</p>"
+    },
+    {
+      "id": "exemple",
+      "title": "Exemple : le poids en pratique",
+      "html": "<p>Le chariot compare le poids du canon à celui d'un canon en fonte de cinq blocs (5 × 3 = 15). Un petit canon en fonte de quatre blocs pèse 12 : il roule et tourne 25 % plus vite, environ 1 bloc par seconde. Un canon en acier de six blocs pèse 30 : il va deux fois moins vite, environ 0,4 bloc par seconde, et tourne de 10° par seconde. Le réglage serveur « cannonWeightAffectsCarriageSpeed » peut couper cet effet.</p>"
+    },
+    {
+      "id": "viser",
+      "title": "Viser et tirer",
+      "html": "<p>Maintiens la touche <strong>C</strong> (« mode du chariot ») : avancer et reculer règlent alors la hausse au lieu de rouler. Le <strong>clic gauche</strong> tire. Avec un autocanon, il tire en rafale tant que le bouton est enfoncé, en prenant les cartouches dans ton inventaire, main secondaire comprise, et la molette règle la cadence. Les angles dépendent de l'arme : de −15° à +30° pour un gros canon, de −15° à +90° pour un autocanon, de +15° à +85° pour un mortier à chute.</p>"
+    },
+    {
+      "id": "selle",
+      "title": "La selle",
+      "image": "c2a_carriage_chariot.webp",
+      "alt": "Deux chariots de canon, l’un nu et l’autre sellé",
+      "html": "<p>Un clic droit avec une selle l'installe sur le chariot : le tireur est alors assis dessus, au lieu de marcher à côté de l'affût. Accroupi, un clic à main vide reprend la selle. Elle reste en place quand on remet le chariot en bloc.</p>"
+    },
+    {
+      "id": "limites",
+      "title": "Ses limites",
+      "html": "<p>Le chariot ne lit aucun signal de redstone et ne prend pas d'arbre : impossible de le piloter à distance ou de l'intégrer à une batterie automatique. Quelques coups suffisent à le briser. Pour une défense fixe ou un navire, préfère le support de canon ; le chariot sert à déplacer une petite pièce d'artillerie d'un point à l'autre du terrain.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils",
+      "html": "<ul><li>Un autocanon en fonte sur chariot fait une mitrailleuse mobile légère et rapide.</li><li>Charge plusieurs charges et l'obus avant l'assemblage : sur le terrain, il faudra tout reposer en bloc.</li><li>Un canon long en acier pèse lourd : le chariot devient lent.</li></ul>"
+    }
+  ],
+  "related": [
+    "support-de-canon",
+    "autocanons",
+    "munitions-d-autocanon",
+    "chargement-des-canons",
+    "mortiers",
+    "cle",
+    "create-big-cannons"
+  ],
+  "sources": [
+    "Chariot : cannon_control/carriage/CannonCarriageBlock (pose, selle, clé), CannonCarriageBlockEntity.tryAssemble, CannonCarriageEntity (commandes, frottement 0,05, recul × 0,5, poids = fonte 3 × 5 / poids du canon)",
+    "Réglages : config CBCCfgCannons carriageSpeed 0,04, carriageTurnRate 1, cannonWeightAffectsCarriageSpeed vrai",
+    "Touches : CBCClientCommon PITCH_MODE (C), FIRE_CONTROLLED_CANNON (clic gauche)",
+    "Angles : data/createbigcannons/cannon_mounts/entities/cannon_carriage/*.json",
+    "Recettes : recipe/cannon_carriage.json, pair_of_cannon_wheels.json (2)",
+    "Code et données : Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, licence MIT ; textures et modèles CC BY-NC-SA, auteurs rbasamoyai et contributeurs), identiques au jar du modpack Create France",
+    "Images : blocs et objets de CBC posés sur la plaque et rendus par notre moteur (galerie, pas de scène Ponder du mod sur ce sujet)"
+  ],
+  "en": {
+    "slugEn": "cannon-carriage",
+    "name": "Cannon Carriage",
+    "title": "Cannon Carriage — Create Big Cannons guide",
+    "description": "The Create Big Cannons Cannon Carriage: recipe, wheels, saddle, driving, aiming, mouse firing and angles for each type of mounted cannon.",
+    "intro": "The <strong>Cannon Carriage</strong> is the mobile gun mount of <strong>Create Big Cannons</strong>. Unlike the <a href=\"/en/wiki/cannon-mount\">Cannon Mount</a>, it needs neither rotation nor redstone: you climb on, roll it over the ground, aim with the mouse and fire with a button. In return it cannot be automated and its angles are narrower.",
+    "facts": [
+      {
+        "label": "Recipe",
+        "value": "2 pairs of wheels, 4 planks, 1 shaft"
+      },
+      {
+        "label": "Pair of wheels",
+        "value": "4 iron sheets around a log: 2 pairs"
+      },
+      {
+        "label": "Speed",
+        "value": "0.04 block/tick of thrust (≈ 0.8 block/s) with a 5-block cast iron cannon; reverse at half speed"
+      },
+      {
+        "label": "Turning",
+        "value": "1° per tick (20°/s), scaled by the cannon weight"
+      },
+      {
+        "label": "Angles",
+        "value": "Big cannon −15° to +30°; autocannon −15° to +90°; mortar +15° to +85°"
+      },
+      {
+        "label": "Controls",
+        "value": "Left click: fire; C key: pitch mode; mouse wheel: autocannon fire rate"
+      },
+      {
+        "label": "Version",
+        "value": "Create Big Cannons 5.11.7 · Create 6.0.10 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Cannon Carriage (crafting table)",
+      "grid": [
+        [
+          null,
+          "Shaft",
+          "Planks"
+        ],
+        [
+          "Planks",
+          "Planks",
+          "Planks"
+        ],
+        [
+          "Pair of Cannon Wheels",
+          null,
+          "Pair of Cannon Wheels"
+        ]
+      ],
+      "result": "1 Cannon Carriage"
+    },
+    "sections": [
+      {
+        "id": "fabriquer",
+        "title": "Making it",
+        "alt": "The Pair of Cannon Wheels and a saddle",
+        "html": "<p>Start with the <strong>Pairs of Cannon Wheels</strong>: four iron sheets around a log give two. The carriage then takes two pairs of wheels, four planks and a <a href=\"/en/wiki/shaft\">Shaft</a> for the axle. It is placed like a block, facing where you look, or backwards while sneaking.</p>"
+      },
+      {
+        "id": "assembler",
+        "title": "Mounting the cannon and assembling",
+        "alt": "A cast iron cannon sitting on a Cannon Carriage, ready to be assembled",
+        "html": "<p>Build the cannon on the block right above the carriage, along the same axis, and load it first: as on a mount, an assembled cannon can no longer be loaded through the muzzle. A hit with the <a href=\"/en/wiki/wrench\">Wrench</a> on the carriage assembles it: the block becomes an entity carrying the cannon. An empty carriage can be assembled too. Another Wrench hit on the assembled carriage turns it back into a block.</p>"
+      },
+      {
+        "id": "conduire",
+        "title": "Driving",
+        "html": "<p>Use it bare-handed to take the controls. Forward and back keys roll it, left and right turn it. It moves at about 0.8 block per second and reverses at half that, as long as it touches the ground. Weight matters: the reference is a five-block cast iron cannon; a heavier cannon slows both driving and turning, a lighter one speeds them up. It does not float and sinks in water.</p>"
+      },
+      {
+        "id": "exemple",
+        "title": "Example: weight in practice",
+        "html": "<p>The carriage compares the cannon's weight with that of a five-block cast iron cannon (5 × 3 = 15). A small four-block cast iron cannon weighs 12: it rolls and turns 25% faster, about 1 block per second. A six-block steel cannon weighs 30: it goes half as fast, about 0.4 block per second, and turns at 10° per second. The server setting \"cannonWeightAffectsCarriageSpeed\" can switch this off.</p>"
+      },
+      {
+        "id": "viser",
+        "title": "Aiming and firing",
+        "html": "<p>Hold the <strong>C</strong> key (Change Carriage Mode): forward and back then set the elevation instead of rolling. <strong>Left click</strong> fires. With an autocannon it keeps firing while the button is held, taking cartridges from your inventory, off hand included, and the mouse wheel sets the fire rate. Angles depend on the weapon: −15° to +30° for a big cannon, −15° to +90° for an autocannon, +15° to +85° for a drop mortar.</p>"
+      },
+      {
+        "id": "selle",
+        "title": "The saddle",
+        "alt": "Two Cannon Carriages, one bare and one with a saddle",
+        "html": "<p>Right-click with a saddle to fit it on the carriage: the gunner then sits on top, instead of walking beside the trail. To take the saddle back, sneak and use the carriage bare-handed. It stays on when the carriage is turned back into a block.</p>"
+      },
+      {
+        "id": "limites",
+        "title": "Its limits",
+        "html": "<p>The carriage reads no redstone signal and takes no shaft: you cannot steer it remotely or wire it into an automatic battery. A few hits are enough to break it. For a fixed defence or a ship, use the Cannon Mount; the carriage is for moving a small artillery piece around a battlefield.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<ul><li>A cast iron autocannon on a carriage makes a light, fast mobile machine gun.</li><li>Load several charges and the shell before assembling: in the field you would have to put it all back as blocks.</li><li>A long steel cannon is heavy: the carriage gets slow.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Carriage: cannon_control/carriage/CannonCarriageBlock (placement, saddle, wrench), CannonCarriageBlockEntity.tryAssemble, CannonCarriageEntity (controls, friction 0.05, reverse × 0.5, weight = cast iron 3 × 5 / cannon weight)",
+      "Settings: config CBCCfgCannons carriageSpeed 0.04, carriageTurnRate 1, cannonWeightAffectsCarriageSpeed true",
+      "Keys: CBCClientCommon PITCH_MODE (C), FIRE_CONTROLLED_CANNON (left click)",
+      "Angles: data/createbigcannons/cannon_mounts/entities/cannon_carriage/*.json",
+      "Recipes: recipe/cannon_carriage.json, pair_of_cannon_wheels.json (2)",
+      "Code and data: Create Big Cannons 5.11.7 (github.com/Cannoneers-of-Create/CreateBigCannons, tag v5.11.7+mc.1.21.1, MIT licence; textures and models CC BY-NC-SA, by rbasamoyai and contributors), identical to the jar of the Create France modpack",
+      "Images: CBC blocks and items placed on the plate and drawn by our engine (gallery; the mod has no Ponder scene on this topic)"
+    ]
+  }
+}
