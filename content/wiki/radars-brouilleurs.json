@@ -1,0 +1,328 @@
+{
+  "slug": "radars-brouilleurs",
+  "name": "Brouilleur directionnel",
+  "blockId": "create_radar:directional_jammer",
+  "category": "radars",
+  "title": "Brouilleur directionnel — Create: Radars, guide",
+  "description": "Brouilleur directionnel de Create: Radars : se charger 45 secondes, viser un radar repéré par le détecteur d'alerte et le brouiller 15 secondes.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create: Radars 5.1.2 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>brouilleur directionnel</strong> (Directional Jammer) est l'arme de la guerre électronique : sa tête orientable vise un radar ennemi repéré par ton détecteur d'alerte et noie son écran de faux échos. Il se charge avec un arbre pendant 45 secondes, puis un signal de redstone le décharge pendant 15 secondes.",
+  "facts": [
+    {
+      "label": "Charge",
+      "value": "45 s de rotation"
+    },
+    {
+      "label": "Décharge",
+      "value": "15 s, déclenchée par la redstone"
+    },
+    {
+      "label": "Puissance",
+      "value": "maximale à 256 tr/min ; brouillage directionnel dès 20 %, sévère dès 50 %"
+    },
+    {
+      "label": "Visée",
+      "value": "pleine force à moins de 3° d’erreur, nulle à 15°"
+    },
+    {
+      "label": "Effets",
+      "value": "contacts qui tremblent, contacts perdus, faux échos, erreurs de visée des canons adverses"
+    },
+    {
+      "label": "Version",
+      "value": "Create: Radars 5.1.2 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l’établi",
+    "grid": [
+      [
+        "Bloc de quartz",
+        "Bloc de quartz",
+        "Bloc de quartz"
+      ],
+      [
+        "Bloc de quartz",
+        "Transmetteur",
+        "Bloc de quartz"
+      ],
+      [
+        "Tube électronique",
+        "Rotor",
+        "Tube électronique"
+      ]
+    ],
+    "items": [
+      [
+        "minecraft:quartz_block",
+        "minecraft:quartz_block",
+        "minecraft:quartz_block"
+      ],
+      [
+        "minecraft:quartz_block",
+        "create:transmitter",
+        "minecraft:quartz_block"
+      ],
+      [
+        "create:electron_tube",
+        "create:shaft",
+        "create:electron_tube"
+      ]
+    ],
+    "result": "1 brouilleur directionnel",
+    "resultItem": "create_radar:directional_jammer"
+  },
+  "videos": [
+    {
+      "id": "radar_jammer",
+      "name": "Charger et déclencher le brouilleur",
+      "description": "Un détecteur d'alerte collé au moniteur repère un radar aéroporté ; le brouilleur, posé sur un arbre et relié au détecteur, pivote vers sa cible, se charge, puis un bloc de redstone le décharge et l'écran du radar visé se brouille.",
+      "duration": "PT28S",
+      "chapters": [
+        {
+          "t": 1.4,
+          "section": "reperer"
+        },
+        {
+          "t": 3.6,
+          "section": "contact"
+        },
+        {
+          "t": 6.0,
+          "section": "poser"
+        },
+        {
+          "t": 8.2,
+          "section": "liaison"
+        },
+        {
+          "t": 12.4,
+          "section": "charge"
+        },
+        {
+          "t": 17.2,
+          "section": "declencher"
+        },
+        {
+          "t": 19.5,
+          "section": "effets"
+        },
+        {
+          "t": 21.8,
+          "section": "declencher"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "reperer",
+      "title": "D'abord, repérer le radar",
+      "image": "radar_jammer_rwr.webp",
+      "alt": "Un détecteur d'alerte radar contre un moniteur",
+      "video": "radar_jammer",
+      "html": "<p>Le brouilleur ne choisit pas sa cible seul : il lui faut un <a href=\"/wiki/radars-detecteur-d-alerte-radar\">détecteur d'alerte radar</a> branché à un moniteur. Quand un radar ennemi balaie la zone, son symbole apparaît sur l'écran du détecteur.</p>"
+    },
+    {
+      "id": "contact",
+      "title": "Le radar ennemi à l’écran",
+      "image": "radar_jammer_contact.webp",
+      "alt": "Le moniteur affiche en grand le symbole du radar repéré",
+      "html": "<p>Dans la vidéo, un radar aéroporté posé au coin de la plaque joue l'ennemi : le moniteur affiche son symbole. C'est ce contact qu'on va désigner au brouilleur.</p>"
+    },
+    {
+      "id": "poser",
+      "title": "Poser le brouilleur",
+      "image": "radar_jammer_brouilleur.webp",
+      "alt": "Le brouilleur directionnel posé sur un arbre vertical",
+      "html": "<p>Le <strong>brouilleur directionnel</strong> se fabrique avec cinq blocs de quartz, un transmetteur, deux tubes électroniques et un arbre (recette ci-contre). Il se pose sur un arbre, qui l'entraîne par dessous ; sa tête orientable, posée un bloc plus haut, s'oriente seule vers la cible. Il n'existe dans l'onglet créatif qu'avec Sable : il est pensé pour les navires, mais fonctionne aussi au sol.</p>"
+    },
+    {
+      "id": "liaison",
+      "title": "Le relier au détecteur",
+      "image": "radar_jammer_liaison.webp",
+      "alt": "Le détecteur et la liaison posée sur le brouilleur encadrés",
+      "html": "<p>Avec une liaison de données, clique le détecteur d'alerte, puis pose la liaison sur le brouilleur. Ensuite, choisis sur le moniteur le radar à brouiller : c'est lui que la tête suivra.</p>"
+    },
+    {
+      "id": "charge",
+      "title": "Charger : 45 secondes",
+      "image": "radar_jammer_charge.webp",
+      "alt": "La tête du brouilleur a pivoté vers la cible, l’arbre tourne",
+      "html": "<p>La rotation de l'arbre charge le brouilleur pendant 45 secondes. Sa puissance dépend de la vitesse : elle est pleine à 256 tr/min, et le brouillage directionnel ne commence qu'à 20 % de puissance, le brouillage sévère à 50 %. La tête doit aussi viser juste : pleine force à moins de 3° d'erreur, plus rien au-delà de 15°. Une fois chargé, il attend.</p>"
+    },
+    {
+      "id": "declencher",
+      "title": "Déclencher : 15 secondes",
+      "image": "radar_jammer_redstone.webp",
+      "alt": "Un bloc de redstone posé contre le brouilleur",
+      "html": "<p>Un signal de redstone le décharge pendant 15 secondes, puis il doit se recharger 45 secondes. Laisse le signal allumé et il repart tout seul dès qu'il est plein : un levier suffit pour brouiller en continu, une impulsion pour une seule salve. Dans la vidéo, la tête pivote vers le radar visé quand le brouilleur reçoit sa cible.</p>"
+    },
+    {
+      "id": "effets",
+      "title": "Ce que voit l'ennemi",
+      "image": "radar_jammer_brouillage.webp",
+      "alt": "Le moniteur du radar brouillé : avertissement rouge, contacts qui sautent",
+      "html": "<p>Dans la scène du mod, l'écran du radar visé affiche en plus un avertissement rouge. En brouillage directionnel, les contacts situés dans un cône de 30° autour de la direction du brouilleur tremblent de quelques degrés. En brouillage sévère, tous les contacts sautent jusqu'à 20°, certains disparaissent, l'identification des amis tombe en panne par moments et 2 à 6 faux échos apparaissent, parfois sous forme de faux navires. Les canons guidés par ce radar visent aussi un peu à côté.</p>"
+    },
+    {
+      "id": "portee",
+      "title": "Brouiller à plusieurs",
+      "html": "<p>Les radars à moins de 25 blocs du radar brouillé subissent les mêmes effets. À l'inverse, plusieurs brouilleurs actifs à moins de 50 blocs les uns des autres forment un groupe et leurs effets ne s'additionnent pas pleinement : mieux vaut les répartir sur plusieurs navires. Le serveur peut désactiver le brouillage ou changer toutes ces valeurs.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "Atteindre 256 tr/min",
+      "html": "<p>À 32 tr/min, comme dans la scène, le brouilleur n'a qu'un huitième de sa puissance : pas assez pour le brouillage directionnel, qui demande 20 %. Monte la vitesse avec des engrenages ou un contrôleur de vitesse de rotation de Create pour approcher 256 tr/min. Sur un navire, prévois aussi la tête : elle doit pouvoir pivoter librement et viser à moins de 3° près.</p>"
+    },
+    {
+      "id": "anciens",
+      "title": "Et le Radar Jammer ?",
+      "html": "<p>Le fichier de langue du mod nomme encore un <strong>Radar Jammer</strong> (brouilleur radar) et une <strong>Anti-Radar Guidance Unit</strong> (unité de guidage antiradar). Aucun des deux n'est enregistré en 5.1.2 : le brouilleur directionnel est le seul brouilleur du jeu.</p>"
+    }
+  ],
+  "related": [
+    "create-radars",
+    "radars-detecteur-d-alerte-radar",
+    "radars-reseau-et-moniteur",
+    "create-aeronautics",
+    "moteur-creatif"
+  ],
+  "sources": [
+    "Create: Radars 5.1.2 (create_radar-5.1.2-1.21.1.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/Arsenalists-of-Create/Create-Radar (branche NeoForge 1.21.1, commit 8a7766a, version 5.1.2), recettes du dossier data du jar, scènes Ponder (PonderScenes.java) rejouées par notre moteur.",
+    "Mod d'Aycer, HappySG, CeoOfGoogle, Kipti, OndatraCZE, Ray (furuochen) et KrimZik (Arsenalists of Create), sous licence « Arsenalists-of-Create Source-Available License » : modèles et textures de ses auteurs, rendus à partir du jar officiel non modifié ; aucun texte du mod n'est recopié. Téléchargement officiel : modrinth.com/mod/create-radars.",
+    "Brouilleur : block/arad/jammer (JammerBlockEntity : pivot de la tête 1 bloc devant, setYaw ; JammerRenderer, JammerOrientation) ; réglages config/server : dischargeDurationSeconds 15, rechargeDurationSeconds 45, fullPowerRpm 256, directionalOnsetFraction 0,20, severeOnsetFraction 0,50, fullAlignmentDegrees 3, zeroAlignmentDegrees 15, directionalConeHalfAngleDegrees 30, severeJitterDegrees 20, minSyntheticContacts 2, maxSyntheticContacts 6, syntheticShipContactChance 0,10, nearbyRadarSpilloverRadiusBlocks 25, jammerClusterRadiusBlocks 50, outerGuidanceErrorDegrees 1,5.",
+    "Écran brouillé : block/monitor/PonderJammingVisual.java, MonitorRenderer.renderPonderJammingWarning ; recette : data/create_radar/recipe/crafting/radar_jammer.json ; présence avec Sable : registry/ModCreativeTabs.java.",
+    "Scène : PonderScenes.jammerSetup (jammer_ponder.nbt) ; la tête qui pivote vers sa cible et le balayage continu de l'écran brouillé suivent le code du mod (setYaw, PonderJammingVisual)."
+  ],
+  "en": {
+    "slugEn": "radars-jammers",
+    "name": "Directional Jammer",
+    "title": "Directional Jammer — Create: Radars guide",
+    "description": "Create: Radars Directional Jammer: charge it for 45 seconds, aim it at a radar spotted by the warning receiver and jam it for 15 seconds.",
+    "intro": "The <strong>Directional Jammer</strong> is the electronic warfare weapon: its turning head points at an enemy radar spotted by your warning receiver and drowns its screen in false echoes. A shaft charges it for 45 seconds, then a redstone signal discharges it for 15 seconds.",
+    "facts": [
+      {
+        "label": "Charge",
+        "value": "45 s of rotation"
+      },
+      {
+        "label": "Discharge",
+        "value": "15 s, triggered by redstone"
+      },
+      {
+        "label": "Power",
+        "value": "full at 256 RPM; directional jamming from 20%, severe from 50%"
+      },
+      {
+        "label": "Aim",
+        "value": "full strength within 3° of error, none at 15°"
+      },
+      {
+        "label": "Effects",
+        "value": "shaking contacts, lost contacts, false echoes, enemy guns aiming off"
+      },
+      {
+        "label": "Version",
+        "value": "Create: Radars 5.1.2 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Block of Quartz",
+          "Block of Quartz",
+          "Block of Quartz"
+        ],
+        [
+          "Block of Quartz",
+          "Transmitter",
+          "Block of Quartz"
+        ],
+        [
+          "Electron Tube",
+          "Shaft",
+          "Electron Tube"
+        ]
+      ],
+      "result": "1 Directional Jammer"
+    },
+    "videos": [
+      {
+        "id": "radar_jammer",
+        "name": "Charging and firing the jammer",
+        "description": "A warning receiver against a Monitor spots a Plane Radar; the jammer, on a shaft and linked to the receiver, turns toward its target, charges, then a Block of Redstone discharges it and the targeted radar's screen is scrambled."
+      }
+    ],
+    "sections": [
+      {
+        "id": "reperer",
+        "title": "First, spot the radar",
+        "alt": "A Radar Warning Receiver against a Monitor",
+        "html": "<p>The jammer does not pick its target alone: it needs a <a href=\"/en/wiki/radars-radar-warning-receiver\">Radar Warning Receiver</a> wired to a Monitor. When an enemy radar sweeps the area, its symbol shows on the receiver's screen.</p>"
+      },
+      {
+        "id": "contact",
+        "title": "The enemy radar on screen",
+        "alt": "The Monitor showing the spotted radar’s symbol in large",
+        "html": "<p>In the video a Plane Radar in the corner of the plate plays the enemy: the Monitor shows its symbol. That is the contact we will hand to the jammer.</p>"
+      },
+      {
+        "id": "poser",
+        "title": "Placing the jammer",
+        "alt": "The Directional Jammer on a vertical shaft",
+        "html": "<p>The <strong>Directional Jammer</strong> is crafted from five Blocks of Quartz, a Transmitter, two Electron Tubes and a Shaft (recipe shown here). It sits on a shaft, which drives it from below; its turning head, one block higher, points itself at the target. It only shows in the creative tab with Sable: it is designed for ships, but works on land too.</p>"
+      },
+      {
+        "id": "liaison",
+        "title": "Linking it to the receiver",
+        "alt": "The receiver and the link placed on the jammer, outlined",
+        "html": "<p>With a Data Link, click the warning receiver, then place the link on the jammer. Then pick the radar to jam on the Monitor: that is the one the head will follow.</p>"
+      },
+      {
+        "id": "charge",
+        "title": "Charging: 45 seconds",
+        "alt": "The jammer head has turned toward the target, the shaft spinning",
+        "html": "<p>The shaft's rotation charges the jammer over 45 seconds. Its power depends on speed: it is full at 256 RPM, and directional jamming only starts at 20% power, severe jamming at 50%. The head also has to be on target: full strength within 3° of error, nothing past 15°. Once charged, it waits.</p>"
+      },
+      {
+        "id": "declencher",
+        "title": "Firing: 15 seconds",
+        "alt": "A Block of Redstone placed against the jammer",
+        "html": "<p>A redstone signal discharges it for 15 seconds, then it needs another 45 seconds to recharge. Leave the signal on and it fires again by itself as soon as it is full: a lever keeps it jamming, a pulse gives a single burst. In the video the head swings toward the targeted radar when the jammer receives its target.</p>"
+      },
+      {
+        "id": "effets",
+        "title": "What the enemy sees",
+        "alt": "The jammed radar’s Monitor: red warning, contacts jumping about",
+        "html": "<p>In the mod's scene the targeted radar's screen also shows a red warning. Under directional jamming, contacts inside a 30° cone around the jammer's direction shake by a few degrees. Under severe jamming, every contact jumps by up to 20°, some vanish, friend identification drops out now and then, and 2 to 6 false echoes appear, sometimes as fake ships. Guns guided by that radar also aim slightly off.</p>"
+      },
+      {
+        "id": "portee",
+        "title": "Jamming in numbers",
+        "html": "<p>Radars within 25 blocks of the jammed radar suffer the same effects. On the other hand, several active jammers within 50 blocks of each other form a group and their effects do not fully add up: spread them over several ships. The server can turn jamming off or change every one of these values.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "Reaching 256 RPM",
+        "html": "<p>At 32 RPM, as in the scene, the jammer only has an eighth of its power: not enough for directional jamming, which needs 20%. Raise the speed with gears or a Create Rotation Speed Controller to get close to 256 RPM. On a ship, mind the head as well: it has to swing freely and aim within 3°.</p>"
+      },
+      {
+        "id": "anciens",
+        "title": "What about the Radar Jammer?",
+        "html": "<p>The mod's language file still names a <strong>Radar Jammer</strong> and an <strong>Anti-Radar Guidance Unit</strong>. Neither is registered in 5.1.2: the Directional Jammer is the only jammer in the game.</p>"
+      }
+    ],
+    "sources": [
+      "Create: Radars 5.1.2 (create_radar-5.1.2-1.21.1.jar from the next Create France modpack release): code from the public repository github.com/Arsenalists-of-Create/Create-Radar (NeoForge 1.21.1 branch, commit 8a7766a, version 5.1.2), recipes from the jar's data folder, Ponder scenes (PonderScenes.java) replayed by our engine.",
+      "Mod by Aycer, HappySG, CeoOfGoogle, Kipti, OndatraCZE, Ray (furuochen) and KrimZik (Arsenalists of Create), under the Arsenalists-of-Create Source-Available License: models and textures by its authors, rendered from the official, unmodified jar; no text from the mod is copied. Official download: modrinth.com/mod/create-radars.",
+      "Jammer: block/arad/jammer (JammerBlockEntity: head pivot one block out, setYaw; JammerRenderer, JammerOrientation); config/server settings: dischargeDurationSeconds 15, rechargeDurationSeconds 45, fullPowerRpm 256, directionalOnsetFraction 0.20, severeOnsetFraction 0.50, fullAlignmentDegrees 3, zeroAlignmentDegrees 15, directionalConeHalfAngleDegrees 30, severeJitterDegrees 20, minSyntheticContacts 2, maxSyntheticContacts 6, syntheticShipContactChance 0.10, nearbyRadarSpilloverRadiusBlocks 25, jammerClusterRadiusBlocks 50, outerGuidanceErrorDegrees 1.5.",
+      "Jammed screen: block/monitor/PonderJammingVisual.java, MonitorRenderer.renderPonderJammingWarning; recipe: data/create_radar/recipe/crafting/radar_jammer.json; Sable only: registry/ModCreativeTabs.java.",
+      "Scene: PonderScenes.jammerSetup (jammer_ponder.nbt); the head turning to its target and the continuous sweep of the jammed screen follow the mod's code (setYaw, PonderJammingVisual)."
+    ]
+  }
+}

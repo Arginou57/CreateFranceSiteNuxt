@@ -1,0 +1,287 @@
+{
+  "slug": "radars-sonar",
+  "name": "Sonar",
+  "blockId": "create_radar:sonar_bearing",
+  "category": "radars",
+  "title": "Sonar — Create: Radars, guide",
+  "description": "Roulement de sonar et capteurs de sonar de Create: Radars : un réseau de capteurs fixe qui détecte à travers la roche et l'eau, mais pas l'air.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create: Radars 5.1.2 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Le sonar de Create: Radars ne tourne pas : c'est un mur de <strong>capteurs de sonar</strong> (Sonar Sensor) piloté par un <strong>roulement de sonar</strong> (Sonar Bearing), qui balaie électroniquement devant lui. Son signal passe dans la pierre et dans l'eau mais s'épuise dans l'air : c'est l'outil des sous-marins et des bases souterraines.",
+  "facts": [
+    {
+      "label": "Portée",
+      "value": "16 blocs par capteur, 32 capteurs utiles, 512 blocs au plus"
+    },
+    {
+      "label": "Balayage",
+      "value": "électronique, faisceau de 20,2° de large"
+    },
+    {
+      "label": "Air",
+      "value": "16 blocs de portée perdus par bloc d’air traversé"
+    },
+    {
+      "label": "Énergie",
+      "value": "rotation dans le roulement, le réseau de capteurs reste fixe"
+    },
+    {
+      "label": "Version",
+      "value": "Create: Radars 5.1.2 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l’établi",
+    "grid": [
+      [
+        null,
+        "Plaque de fer",
+        null
+      ],
+      [
+        null,
+        "Éclat d'améthyste",
+        null
+      ],
+      [
+        null,
+        "Transmetteur",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "create:iron_sheet",
+        null
+      ],
+      [
+        null,
+        "minecraft:amethyst_shard",
+        null
+      ],
+      [
+        null,
+        "create:transmitter",
+        null
+      ]
+    ],
+    "result": "1 capteur de sonar",
+    "resultItem": "create_radar:sonar_sensor"
+  },
+  "videos": [
+    {
+      "id": "radar_sonar",
+      "name": "Monter un sonar",
+      "description": "Le roulement de sonar, le premier capteur, puis cinq autres qui forment un mur ; le réseau s'assemble, reste immobile, et l'arbre se met à tourner pour l'alimenter.",
+      "duration": "PT27S",
+      "chapters": [
+        {
+          "t": 1.0,
+          "section": "roulement"
+        },
+        {
+          "t": 3.0,
+          "section": "capteur"
+        },
+        {
+          "t": 5.2,
+          "section": "reseau"
+        },
+        {
+          "t": 10.0,
+          "section": "assembler"
+        },
+        {
+          "t": 20.5,
+          "section": "milieu"
+        },
+        {
+          "t": 23.2,
+          "section": "rotation"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "roulement",
+      "title": "Le roulement de sonar",
+      "image": "radar_sonar_roulement.webp",
+      "alt": "Le roulement de sonar sur sa boîte de vitesses",
+      "video": "radar_sonar",
+      "html": "<p>Le <strong>roulement de sonar</strong> se fabrique comme le roulement de radar, avec un alliage d'andésite à la place d'une plaque : un roulement mécanique, deux plaques de fer, un tube électronique et un alliage d'andésite. Il se pose sur une source de rotation et commande le réseau de capteurs construit sur sa face.</p>"
+    },
+    {
+      "id": "capteur",
+      "title": "Le premier capteur",
+      "image": "radar_sonar_capteur.webp",
+      "alt": "Un capteur de sonar posé juste au-dessus du roulement",
+      "html": "<p>Le premier <strong>capteur de sonar</strong> doit toucher la face du roulement : sans lui, rien ne fonctionne. Un capteur se fabrique avec une plaque de fer, un éclat d'améthyste et un transmetteur (recette ci-contre).</p>"
+    },
+    {
+      "id": "reseau",
+      "title": "Un mur de capteurs",
+      "image": "radar_sonar_portee.webp",
+      "alt": "Six capteurs de sonar en mur de trois sur deux au-dessus du roulement",
+      "html": "<p>Les capteurs qui se touchent rejoignent le réseau. Chacun ajoute 16 blocs de portée ; au-delà de 32 capteurs, les suivants ne comptent plus, d'où une portée maximale de 512 blocs. Les six capteurs de la vidéo donnent 96 blocs.</p>"
+    },
+    {
+      "id": "assembler",
+      "title": "Assembler, et rien ne tourne",
+      "image": "radar_sonar_fixe.webp",
+      "alt": "Le réseau de capteurs assemblé, immobile au-dessus du roulement",
+      "html": "<p>Un clic droit donné au roulement assemble le réseau. Contrairement à un radar, il ne tourne pas : le sonar balaie électroniquement, avec un faisceau de 20,2° de large qui fait le tour sans que rien ne bouge. C'est pratique dans une coque de sous-marin, où une antenne tournante ne trouverait pas sa place.</p>"
+    },
+    {
+      "id": "milieu",
+      "title": "La roche et l'eau, pas l'air",
+      "html": "<p>Le signal du sonar voyage dans les blocs pleins et les fluides. Chaque bloc d'air traversé lui retire 16 blocs de portée : quelques blocs de vide suffisent à l'aveugler. Il repère donc ce qui nage, creuse ou rampe sous terre, là où un radar ne voit rien. Ne le confonds pas avec le sonar de Create Deep Seas, un autre bloc d'un autre mod, présenté dans <a href=\"/wiki/deep-seas-sonar-barometre\">sonar et baromètre</a>.</p>"
+    },
+    {
+      "id": "mur",
+      "title": "Dimensionner le mur",
+      "html": "<p>Seul compte le nombre de capteurs reliés, jusqu'à 32 : un mur de quatre sur huit atteint déjà le maximum, 512 blocs. Au-delà, chaque capteur de plus ne sert qu'au décor. Comme pour un radar, un capteur isolé, qui ne touche ni le premier capteur ni un autre capteur du mur, n'est pas compté. Le sonar porte deux fois moins loin par capteur qu'un radar par antenne, mais là où il travaille, un radar ne voit de toute façon presque rien : son signal s'arrête après 16 blocs pleins.</p>"
+    },
+    {
+      "id": "usages",
+      "title": "À quoi il sert",
+      "html": "<p>Dans une base creusée dans la montagne, un sonar tourné vers les galeries repère les créatures qui approchent à travers la roche. Sous l'eau, il remplace le radar d'un sous-marin, puisque l'eau porte son signal. Ses contacts s'affichent sur les mêmes moniteurs que ceux des radars et obéissent aux mêmes filtres : un réseau peut mélanger radars de surface et sonars de fond, et en tirer des cibles pour ses canons.</p>"
+    },
+    {
+      "id": "rotation",
+      "title": "L'alimenter",
+      "image": "radar_sonar_rotation.webp",
+      "alt": "L'arbre et la boîte de vitesses tournent sous le roulement de sonar",
+      "html": "<p>Le sonar a besoin de rotation pour fonctionner, comme le montre la fin de la vidéo : l'arbre et la boîte de vitesses tournent, le demi-arbre du roulement aussi, mais les capteurs restent immobiles. Relie ensuite le roulement au <a href=\"/wiki/radars-reseau-et-moniteur\">contrôleur de réseau</a> avec une liaison de données pour voir ses contacts sur un moniteur, où il s'affiche en impulsions.</p>"
+    }
+  ],
+  "related": [
+    "create-radars",
+    "radars-construire-un-radar",
+    "radars-reseau-et-moniteur",
+    "create-deep-seas",
+    "deep-seas-sonar-barometre",
+    "roulement-mecanique"
+  ],
+  "sources": [
+    "Create: Radars 5.1.2 (create_radar-5.1.2-1.21.1.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/Arsenalists-of-Create/Create-Radar (branche NeoForge 1.21.1, commit 8a7766a, version 5.1.2), recettes du dossier data du jar, scènes Ponder (PonderScenes.java) rejouées par notre moteur.",
+    "Mod d'Aycer, HappySG, CeoOfGoogle, Kipti, OndatraCZE, Ray (furuochen) et KrimZik (Arsenalists of Create), sous licence « Arsenalists-of-Create Source-Available License » : modèles et textures de ses auteurs, rendus à partir du jar officiel non modifié ; aucun texte du mod n'est recopié. Téléchargement officiel : modrinth.com/mod/create-radars.",
+    "Sonar : block/radar/sonar (SonarBearingBlockEntity : portée = sonarBaseRange 0 + capteurs utiles x sonarRangeIncrease 16, au plus maxSonarRange 512 ; sonarMaxEffectivePanels 32 ; sonarFOV 20,2 ; sonarAirRangePenalty 16) ; rendu : SonarBearingShaftRenderer (demi-arbre) ; écran : RadarSweepStyle.PULSE.",
+    "Recettes : data/create_radar/recipe/crafting/sonar_bearing.json, sonar_sensor.json.",
+    "Scène : PonderScenes.sonarSetup (sonar_ponder.nbt), arbre à 32 tr/min à la fin, comme dans le storyboard."
+  ],
+  "en": {
+    "slugEn": "radars-sonar-arrays",
+    "name": "Sonar",
+    "title": "Sonar — Create: Radars guide",
+    "description": "Create: Radars Sonar Bearing and Sonar Sensors: a fixed sensor array that detects through rock and water, but not through air.",
+    "intro": "The Create: Radars sonar does not spin: it is a wall of <strong>Sonar Sensors</strong> run by a <strong>Sonar Bearing</strong>, sweeping electronically in front of it. Its signal travels through stone and water but dies out in air: it is the tool for submarines and underground bases.",
+    "facts": [
+      {
+        "label": "Range",
+        "value": "16 blocks per sensor, 32 useful sensors, 512 blocks at most"
+      },
+      {
+        "label": "Sweep",
+        "value": "electronic, a 20.2° wide beam"
+      },
+      {
+        "label": "Air",
+        "value": "16 blocks of range lost per air block crossed"
+      },
+      {
+        "label": "Power",
+        "value": "rotation into the bearing; the sensor array stays still"
+      },
+      {
+        "label": "Version",
+        "value": "Create: Radars 5.1.2 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Iron Sheet",
+          null
+        ],
+        [
+          null,
+          "Amethyst Shard",
+          null
+        ],
+        [
+          null,
+          "Transmitter",
+          null
+        ]
+      ],
+      "result": "1 Sonar Sensor"
+    },
+    "videos": [
+      {
+        "id": "radar_sonar",
+        "name": "Building a sonar",
+        "description": "The Sonar Bearing, the first sensor, then five more forming a wall; the array assembles, stays still, and the shaft starts turning to power it."
+      }
+    ],
+    "sections": [
+      {
+        "id": "roulement",
+        "title": "The Sonar Bearing",
+        "alt": "The Sonar Bearing on its Gearbox",
+        "html": "<p>The <strong>Sonar Bearing</strong> is crafted like the Radar Bearing, with Andesite Alloy in place of a plate: a Mechanical Bearing, two Iron Sheets, an Electron Tube and Andesite Alloy. It sits on a rotation source and runs the sensor array built on its face.</p>"
+      },
+      {
+        "id": "capteur",
+        "title": "The first sensor",
+        "alt": "A Sonar Sensor placed right above the bearing",
+        "html": "<p>The first <strong>Sonar Sensor</strong> has to touch the bearing's face: without it nothing works. A sensor is crafted from an Iron Sheet, an Amethyst Shard and a Transmitter (recipe shown here).</p>"
+      },
+      {
+        "id": "reseau",
+        "title": "A wall of sensors",
+        "alt": "Six Sonar Sensors in a three-by-two wall above the bearing",
+        "html": "<p>Sensors that touch join the array. Each one adds 16 blocks of range; past 32 sensors the extra ones no longer count, hence a 512-block maximum. The six sensors in the video give 96 blocks. A three-by-two wall like that one is a sensible start; grow it later as your needs do.</p>"
+      },
+      {
+        "id": "assembler",
+        "title": "Assemble it, and nothing turns",
+        "alt": "The assembled sensor array, still above the bearing",
+        "html": "<p>Right-clicking the bearing assembles the array. Unlike a radar it does not spin: the sonar sweeps electronically, with a 20.2° wide beam going all the way round while nothing moves. Handy inside a submarine hull, where a spinning antenna would not fit.</p>"
+      },
+      {
+        "id": "milieu",
+        "title": "Rock and water, not air",
+        "html": "<p>The sonar signal travels through solid blocks and fluids. Every air block crossed takes 16 blocks off its range: a few blocks of empty space are enough to blind it. So it picks up what swims, digs or crawls underground, where a radar sees nothing. Do not mix it up with the Create Deep Seas sonar, a different block from another mod, covered in <a href=\"/en/wiki/deep-seas-sonar-and-barometer\">sonar and barometer</a>.</p>"
+      },
+      {
+        "id": "mur",
+        "title": "Sizing the wall",
+        "html": "<p>Only the number of connected sensors matters, up to 32: a four-by-eight wall already hits the maximum, 512 blocks. Past that, every extra sensor is just decoration. As with a radar, a lone sensor touching neither the first sensor nor another one in the wall is not counted. The sonar reaches half as far per sensor as a radar does per antenna, but where it works a radar sees next to nothing anyway: its signal stops after 16 solid blocks.</p>"
+      },
+      {
+        "id": "usages",
+        "title": "What it is for",
+        "html": "<p>In a base dug into a mountain, a sonar facing the tunnels picks up creatures closing in through the rock. Underwater it stands in for a submarine's radar, since water carries its signal. Its contacts show on the same Monitors as the radars' and obey the same filters: one network can mix surface radars and deep sonars, and draw targets for its guns from both.</p>"
+      },
+      {
+        "id": "rotation",
+        "title": "Powering it",
+        "alt": "The shaft and Gearbox turning under the Sonar Bearing",
+        "html": "<p>The sonar needs rotation to work, as the end of the video shows: the shaft and Gearbox turn, so does the bearing's half-shaft, but the sensors stay put. Any rotation source will do: a water wheel, a steam engine or, on a submarine, the vessel's own engine through a shaft. Then link the bearing to the <a href=\"/en/wiki/radars-network-and-monitor\">Network Controller</a> through a Data Link to see its contacts on a Monitor, where it shows as pulses.</p>"
+      }
+    ],
+    "sources": [
+      "Create: Radars 5.1.2 (create_radar-5.1.2-1.21.1.jar from the next Create France modpack release): code from the public repository github.com/Arsenalists-of-Create/Create-Radar (NeoForge 1.21.1 branch, commit 8a7766a, version 5.1.2), recipes from the jar's data folder, Ponder scenes (PonderScenes.java) replayed by our engine.",
+      "Mod by Aycer, HappySG, CeoOfGoogle, Kipti, OndatraCZE, Ray (furuochen) and KrimZik (Arsenalists of Create), under the Arsenalists-of-Create Source-Available License: models and textures by its authors, rendered from the official, unmodified jar; no text from the mod is copied. Official download: modrinth.com/mod/create-radars.",
+      "Sonar: block/radar/sonar (SonarBearingBlockEntity: range = sonarBaseRange 0 + useful sensors x sonarRangeIncrease 16, capped at maxSonarRange 512; sonarMaxEffectivePanels 32; sonarFOV 20.2; sonarAirRangePenalty 16); render: SonarBearingShaftRenderer (half-shaft); screen: RadarSweepStyle.PULSE.",
+      "Recipes: data/create_radar/recipe/crafting/sonar_bearing.json, sonar_sensor.json.",
+      "Scene: PonderScenes.sonarSetup (sonar_ponder.nbt), shaft at 32 RPM at the end, as in the storyboard."
+    ]
+  }
+}

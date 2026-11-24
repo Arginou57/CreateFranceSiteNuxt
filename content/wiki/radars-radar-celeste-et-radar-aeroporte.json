@@ -1,0 +1,341 @@
+{
+  "slug": "radars-radar-celeste-et-radar-aeroporte",
+  "name": "Radar céleste et radar aéroporté",
+  "blockId": "create_radar:sky_radar",
+  "category": "radars",
+  "title": "Radar céleste et aéroporté — Create: Radars, guide",
+  "description": "Support de radar céleste et radar aéroporté de Create: Radars : surveiller le ciel de loin, ou scanner devant un navire de Create Aeronautics.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create: Radars 5.1.2 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Deux radars spécialisés complètent le radar à roulement. Le <strong>support de radar céleste</strong> (Sky Radar Mount) porte le même radar mais ne regarde que vers le haut, avec deux fois plus de portée par antenne. Le <strong>radar aéroporté</strong> (Plane Radar) tient en un bloc, ne tourne pas, et scrute un cône devant le navire qui le porte.",
+  "facts": [
+    {
+      "label": "Radar céleste",
+      "value": "64 blocs de portée par antenne, 4 096 au plus"
+    },
+    {
+      "label": "Altitude minimale",
+      "value": "Y = 85 (réglable par le serveur)"
+    },
+    {
+      "label": "Champ du radar céleste",
+      "value": "tout ce qui est au-dessus de son horizon, sans plafond"
+    },
+    {
+      "label": "Radar aéroporté",
+      "value": "cône de 45°, 256 blocs, portée fixe"
+    },
+    {
+      "label": "Obstacles",
+      "value": "signal arrêté au-delà de 8 blocs pleins (les deux radars)"
+    },
+    {
+      "label": "Version",
+      "value": "Create: Radars 5.1.2 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l’établi",
+    "grid": [
+      [
+        "Plaque de fer",
+        "Rotor",
+        "Plaque de fer"
+      ],
+      [
+        "Rotor",
+        "Roulement mécanique",
+        "Rotor"
+      ],
+      [
+        "Tube électronique",
+        "Rotor",
+        "Tube électronique"
+      ]
+    ],
+    "items": [
+      [
+        "create:iron_sheet",
+        "create:shaft",
+        "create:iron_sheet"
+      ],
+      [
+        "create:shaft",
+        "create:mechanical_bearing",
+        "create:shaft"
+      ],
+      [
+        "create:electron_tube",
+        "create:shaft",
+        "create:electron_tube"
+      ]
+    ],
+    "result": "1 support de radar céleste",
+    "resultItem": "create_radar:sky_radar"
+  },
+  "videos": [
+    {
+      "id": "radar_sky",
+      "name": "Le radar céleste et ses limites",
+      "description": "Le support de radar céleste reçoit un radar complet, pivote par quarts de tour entraîné par son arbre, se relie au réseau, puis deux perroquets montrent ce qu'il voit et ce qu'il ne voit pas.",
+      "duration": "PT24S",
+      "chapters": [
+        {
+          "t": 1.5,
+          "section": "socle"
+        },
+        {
+          "t": 4.2,
+          "section": "radar"
+        },
+        {
+          "t": 10.0,
+          "section": "reseau"
+        },
+        {
+          "t": 15.9,
+          "section": "hauteur"
+        },
+        {
+          "t": 18.1,
+          "section": "horizon"
+        },
+        {
+          "t": 20.8,
+          "section": "au-dessus"
+        }
+      ]
+    },
+    {
+      "id": "radar_plane",
+      "name": "Le radar aéroporté",
+      "description": "Un radar aéroporté posé seul, puis un contrôleur de réseau et une liaison de données qui le branche.",
+      "duration": "PT19S",
+      "chapters": [
+        {
+          "t": 1.2,
+          "section": "aeroporte"
+        },
+        {
+          "t": 3.4,
+          "section": "cone"
+        },
+        {
+          "t": 8.1,
+          "section": "liaison"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "socle",
+      "title": "Le support de radar céleste",
+      "image": "radar_sky_socle.webp",
+      "alt": "Le support de radar céleste sur une boîte de vitesses, avec son plateau tournant au-dessus",
+      "video": "radar_sky",
+      "html": "<p>Le <strong>support de radar céleste</strong> remplace le roulement de radar. C'est un socle à arbre : la rotation entre par dessous, et un plateau tournant, un bloc plus haut, fait pivoter le radar. Sa recette (ci-contre) entoure un roulement mécanique de quatre arbres, deux plaques de fer et deux tubes électroniques. Il demande plus d'effort à fabriquer, mais le radar qu'il porte voit bien plus loin.</p>"
+    },
+    {
+      "id": "radar",
+      "title": "Le même radar dessus",
+      "image": "radar_sky_radar.webp",
+      "alt": "Un radar de huit plaques en pyramide autour du récepteur, qui pivote sur le support",
+      "html": "<p>On y construit exactement le même radar que sur un roulement : un récepteur et des plaques ou grilles qui se touchent. Le récepteur doit rester aligné avec le support. Chaque antenne vaut ici 64 blocs, deux fois plus qu'au sol, jusqu'à 4 096 blocs. La scène fait pivoter le radar par quarts de tour ; nous y avons ajouté l'arbre et la boîte de vitesses qui tournent pendant le mouvement.</p>"
+    },
+    {
+      "id": "reseau",
+      "title": "Branché comme un radar ordinaire",
+      "image": "radar_sky_reseau.webp",
+      "alt": "Une liaison de données posée contre le support, reliée au contrôleur de réseau voisin",
+      "html": "<p>Pour le réseau, rien ne change : clique le <a href=\"/wiki/radars-reseau-et-moniteur\">contrôleur de réseau</a> avec une liaison de données, puis pose la liaison contre le support. Les contacts du radar céleste arrivent sur les mêmes moniteurs que ceux des autres radars, avec leur propre symbole sur le détecteur d'alerte adverse.</p>"
+    },
+    {
+      "id": "hauteur",
+      "title": "Une altitude minimale",
+      "image": "radar_sky_hauteur.webp",
+      "alt": "Le radar céleste complet, prêt, au-dessus de la plaque",
+      "html": "<p>Le radar céleste ne fonctionne qu'en altitude : par défaut, son support doit se trouver à Y = 85 ou plus haut. En dessous, il reste muet, et un message rappelle l'altitude demandée. Monte-le au sommet d'une tour, sur une montagne, ou sur un dirigeable.</p>"
+    },
+    {
+      "id": "horizon",
+      "title": "Rien sous l'horizon",
+      "image": "radar_sky_horizon.webp",
+      "alt": "Un perroquet qui danse au sol, sous l’horizon du radar céleste",
+      "html": "<p>Son défaut : il ne voit rien sous son propre horizon. Une créature au sol, plus basse que le radar, lui échappe, même toute proche, comme le perroquet qui danse dans la scène. Pour la défense rapprochée, garde un radar à roulement, qui regarde 32 blocs au-dessus et au-dessous de lui.</p>"
+    },
+    {
+      "id": "au-dessus",
+      "title": "Pas de plafond",
+      "image": "radar_sky_au-dessus.webp",
+      "alt": "Un perroquet qui vole au-dessus du radar céleste",
+      "html": "<p>En revanche, vers le haut, il n'a pas de limite : tout ce qui vole au-dessus de lui et reste dans sa portée est détecté, à n'importe quelle altitude. C'est le radar des aérodromes et de la défense antiaérienne, face aux dirigeables et aux avions de Create Aeronautics.</p>"
+    },
+    {
+      "id": "aeroporte",
+      "title": "Le radar aéroporté",
+      "image": "radar_plane_radar-plan.webp",
+      "alt": "Un radar aéroporté posé seul au milieu de la plaque",
+      "video": "radar_plane",
+      "html": "<p>Le <strong>radar aéroporté</strong> (Plane Radar) est un radar compact d'un seul bloc, sans roulement ni rotation : il n'a besoin d'aucune énergie. Il se fabrique avec un récepteur radar entouré de trois grilles de radar et posé sur un boitier en laiton. Il n'apparaît dans l'inventaire créatif qu'avec Sable, la physique de Create Aeronautics, car il est fait pour les navires et les aéronefs.</p>"
+    },
+    {
+      "id": "cone",
+      "title": "Un cône fixe devant le navire",
+      "html": "<p>Il scrute un cône de 45° devant sa face, jusqu'à 256 blocs, et cette portée ne s'agrandit pas. Posé sur un navire, il regarde là où va le navire : tourne le bateau pour balayer. Il ne suit pas le tangage, seulement le cap. Comme le radar céleste, son signal ne passe pas plus de 8 blocs pleins.</p>"
+    },
+    {
+      "id": "liaison",
+      "title": "Le brancher au réseau",
+      "image": "radar_plane_liaison.webp",
+      "alt": "Une liaison de données posée contre le radar aéroporté, à côté du contrôleur de réseau",
+      "html": "<p>Le branchement suit la règle de toutes les liaisons : clic droit sur le contrôleur de réseau avec une liaison de données en main, puis pose la liaison contre le radar aéroporté. Ses contacts rejoignent alors les moniteurs et les armes du réseau. Sur un navire, place le contrôleur et le moniteur à bord.</p>"
+    }
+  ],
+  "related": [
+    "create-radars",
+    "radars-construire-un-radar",
+    "radars-reseau-et-moniteur",
+    "radars-detecteur-d-alerte-radar",
+    "create-aeronautics",
+    "roulement-mecanique",
+    "lunettes-d-ingenieur"
+  ],
+  "sources": [
+    "Create: Radars 5.1.2 (create_radar-5.1.2-1.21.1.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/Arsenalists-of-Create/Create-Radar (branche NeoForge 1.21.1, commit 8a7766a, version 5.1.2), recettes du dossier data du jar, scènes Ponder (PonderScenes.java) rejouées par notre moteur.",
+    "Mod d'Aycer, HappySG, CeoOfGoogle, Kipti, OndatraCZE, Ray (furuochen) et KrimZik (Arsenalists of Create), sous licence « Arsenalists-of-Create Source-Available License » : modèles et textures de ses auteurs, rendus à partir du jar officiel non modifié ; aucun texte du mod n'est recopié. Téléchargement officiel : modrinth.com/mod/create-radars.",
+    "Radar céleste : SkyRadarBlockEntity (portée = antennes x skyRadarDishRangeIncrease 64, au plus maxSkyRadarRange 4 096) ; config/server (skyRadarMinY 85, skyRadarFOV 90, skyPlaneRadarMaxSolidBlocks 8) ; rendu : SkyRadarRenderer (plateau tournant, arbre supérieur) ; recette : data/create_radar/recipe/crafting/sky_radar_mount.json.",
+    "Radar aéroporté : StationaryRadarBlock / StationaryRadarBlockEntity, config/server planeRadarRange 256 ; cône de 45° et cap du navire : infobulle du bloc et code ; recette : crafting/plane_radar.json ; présence avec Sable : registry/ModCreativeTabs.java.",
+    "Scènes : PonderScenes.skyRadarSetup (sky_radar_ponder.nbt, perroquets dessinés d'après le modèle vanilla) et planeRadarSetup (plane_radar_ponder.nbt) ; l'arbre entraîné pendant le pivotement est un ajout de notre rendu."
+  ],
+  "en": {
+    "slugEn": "radars-sky-radar-and-plane-radar",
+    "name": "Sky Radar Mount and Plane Radar",
+    "title": "Sky Radar and Plane Radar — Create: Radars guide",
+    "description": "Create: Radars Sky Radar Mount and Plane Radar: watching the sky from far away, or scanning ahead of a Create Aeronautics ship.",
+    "intro": "Two specialised radars round off the bearing radar. The <strong>Sky Radar Mount</strong> carries the same radar but only looks upward, with twice the range per antenna. The <strong>Plane Radar</strong> fits in one block, does not spin, and scans a cone ahead of the ship carrying it.",
+    "facts": [
+      {
+        "label": "Sky radar",
+        "value": "64 blocks of range per antenna, 4,096 at most"
+      },
+      {
+        "label": "Minimum altitude",
+        "value": "Y = 85 (server setting)"
+      },
+      {
+        "label": "Sky radar coverage",
+        "value": "everything above its horizon, no ceiling"
+      },
+      {
+        "label": "Plane Radar",
+        "value": "45° cone, 256 blocks, fixed range"
+      },
+      {
+        "label": "Obstacles",
+        "value": "signal stopped past 8 solid blocks (both radars)"
+      },
+      {
+        "label": "Version",
+        "value": "Create: Radars 5.1.2 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Iron Sheet",
+          "Shaft",
+          "Iron Sheet"
+        ],
+        [
+          "Shaft",
+          "Mechanical Bearing",
+          "Shaft"
+        ],
+        [
+          "Electron Tube",
+          "Shaft",
+          "Electron Tube"
+        ]
+      ],
+      "result": "1 Sky Radar Mount"
+    },
+    "videos": [
+      {
+        "id": "radar_sky",
+        "name": "The sky radar and its limits",
+        "description": "The Sky Radar Mount takes a full radar, turns a quarter at a time driven by its shaft, joins the network, then two parrots show what it sees and what it misses."
+      },
+      {
+        "id": "radar_plane",
+        "name": "The Plane Radar",
+        "description": "A Plane Radar on its own, then a Network Controller and a Data Link that connects it."
+      }
+    ],
+    "sections": [
+      {
+        "id": "socle",
+        "title": "The Sky Radar Mount",
+        "alt": "The Sky Radar Mount on a Gearbox, with its turning plate on top",
+        "html": "<p>The <strong>Sky Radar Mount</strong> replaces the Radar Bearing. It is a shaft-driven base: rotation comes in from below, and a turning plate one block up swings the radar. Its recipe (shown here) surrounds a Mechanical Bearing with four Shafts, two Iron Sheets and two Electron Tubes. It costs more to make, but the radar on top sees much further.</p>"
+      },
+      {
+        "id": "radar",
+        "title": "The same radar on top",
+        "alt": "An eight-plate pyramid radar around the receiver, turning on the mount",
+        "html": "<p>You build exactly the same radar as on a bearing: a receiver and plates or dishes that touch. The receiver has to stay lined up with the mount. Each antenna is worth 64 blocks here, twice as much as on the ground, up to 4,096 blocks. The scene turns the radar a quarter at a time; we added the shaft and Gearbox spinning during the motion.</p>"
+      },
+      {
+        "id": "reseau",
+        "title": "Connected like any radar",
+        "alt": "A Data Link placed against the mount, tied to the nearby Network Controller",
+        "html": "<p>Nothing changes for the network: click the <a href=\"/en/wiki/radars-network-and-monitor\">Network Controller</a> while holding a Data Link, then fix the link against the mount. Sky radar contacts reach the same Monitors as the other radars, and get their own symbol on an enemy warning receiver.</p>"
+      },
+      {
+        "id": "hauteur",
+        "title": "A minimum altitude",
+        "alt": "The finished sky radar, ready, above the plate",
+        "html": "<p>The sky radar only works high up: by default its mount has to sit at Y = 85 or above. Lower down it stays silent, and a message reminds you of the required height. Put it on top of a tower, on a mountain, or on an airship.</p>"
+      },
+      {
+        "id": "horizon",
+        "title": "Nothing below the horizon",
+        "alt": "A parrot dancing on the ground, below the sky radar’s horizon",
+        "html": "<p>Its weakness: it sees nothing below its own horizon. A creature on the ground, lower than the radar, slips past it however close it is, like the dancing parrot in the scene. For close defence, keep a bearing radar, which looks 32 blocks above and below itself.</p>"
+      },
+      {
+        "id": "au-dessus",
+        "title": "No ceiling",
+        "alt": "A parrot flying above the sky radar",
+        "html": "<p>Upward, on the other hand, it has no limit: anything flying above it and within range is detected, at any height. It is the radar for airfields and air defence, against Create Aeronautics airships and planes.</p>"
+      },
+      {
+        "id": "aeroporte",
+        "title": "The Plane Radar",
+        "alt": "A Plane Radar on its own in the middle of the plate",
+        "html": "<p>The <strong>Plane Radar</strong> packs a whole radar into one block, with no bearing and no rotation: it needs no power at all. It is crafted from a Radar Receiver Block with three Radar Dishes around it, on top of Brass Casing. It only shows in the creative tab with Sable, the Create Aeronautics physics, because it is made for ships and aircraft.</p>"
+      },
+      {
+        "id": "cone",
+        "title": "A fixed cone ahead of the ship",
+        "html": "<p>It scans a 45° cone in front of its face, out to 256 blocks, and that range cannot be raised. On a ship it looks where the ship is going: turn the vessel to sweep. It follows the heading but not the pitch. Like the sky radar, its signal gets through no more than 8 solid blocks.</p>"
+      },
+      {
+        "id": "liaison",
+        "title": "Connecting it to the network",
+        "alt": "A Data Link placed against the Plane Radar, next to the Network Controller",
+        "html": "<p>Connecting follows the rule of every link: holding a Data Link, right-click the Network Controller, then place the link against the Plane Radar. Its contacts then reach the network's Monitors and weapons. On a ship, keep the controller and the Monitor on board.</p>"
+      }
+    ],
+    "sources": [
+      "Create: Radars 5.1.2 (create_radar-5.1.2-1.21.1.jar from the next Create France modpack release): code from the public repository github.com/Arsenalists-of-Create/Create-Radar (NeoForge 1.21.1 branch, commit 8a7766a, version 5.1.2), recipes from the jar's data folder, Ponder scenes (PonderScenes.java) replayed by our engine.",
+      "Mod by Aycer, HappySG, CeoOfGoogle, Kipti, OndatraCZE, Ray (furuochen) and KrimZik (Arsenalists of Create), under the Arsenalists-of-Create Source-Available License: models and textures by its authors, rendered from the official, unmodified jar; no text from the mod is copied. Official download: modrinth.com/mod/create-radars.",
+      "Sky radar: SkyRadarBlockEntity (range = antennas x skyRadarDishRangeIncrease 64, capped at maxSkyRadarRange 4,096); config/server (skyRadarMinY 85, skyRadarFOV 90, skyPlaneRadarMaxSolidBlocks 8); render: SkyRadarRenderer (turning plate, top shaft); recipe: data/create_radar/recipe/crafting/sky_radar_mount.json.",
+      "Plane Radar: StationaryRadarBlock / StationaryRadarBlockEntity, config/server planeRadarRange 256; 45° cone and ship heading: the block's tooltip and code; recipe: crafting/plane_radar.json; Sable only: registry/ModCreativeTabs.java.",
+      "Scenes: PonderScenes.skyRadarSetup (sky_radar_ponder.nbt, parrots drawn from the vanilla model) and planeRadarSetup (plane_radar_ponder.nbt); the shaft spinning during the turn is an addition of our render."
+    ]
+  }
+}

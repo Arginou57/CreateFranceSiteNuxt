@@ -1,0 +1,363 @@
+{
+  "slug": "radars-reseau-et-moniteur",
+  "name": "Réseau, moniteur et liaisons",
+  "blockId": "create_radar:network_filterer",
+  "category": "radars",
+  "title": "Réseau et moniteur — Create: Radars, guide",
+  "description": "Contrôleur de réseau, moniteur, liaison de données, filtres, jumelles et zone sûre de Create: Radars : relier radars, écrans et canons.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create: Radars 5.1.2 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>contrôleur de réseau</strong> (Network Controller) est le cœur d'une installation : les radars lui envoient leurs contacts, il les passe aux <strong>moniteurs</strong> (Monitor) et aux armes, et il applique trois filtres. Les blocs se branchent avec des <strong>liaisons de données</strong> (Data Link), toujours dans le même ordre : on sélectionne la source, puis on pose la liaison sur le bloc à relier.",
+  "facts": [
+    {
+      "label": "Moniteur",
+      "value": "multibloc carré jusqu’à 9 × 9, 3 moniteurs par recette"
+    },
+    {
+      "label": "Filtres du contrôleur",
+      "value": "détection, identification, ciblage (3 emplacements sur sa face)"
+    },
+    {
+      "label": "Écran",
+      "value": "grille de 100 blocs, balayage du radar, contacts colorés"
+    },
+    {
+      "label": "Jumelles",
+      "value": "désignation jusqu’à 512 blocs"
+    },
+    {
+      "label": "Boussole",
+      "value": "liée au contrôleur, elle pointe le contact choisi"
+    },
+    {
+      "label": "Version",
+      "value": "Create: Radars 5.1.2 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l’établi",
+    "grid": [
+      [
+        "Filtre de détection",
+        "Filtre de ciblage",
+        "Filtre d'identification"
+      ],
+      [
+        null,
+        "Mécanisme de précision",
+        null
+      ],
+      [
+        null,
+        "Boitier de laiton",
+        null
+      ]
+    ],
+    "items": [
+      [
+        "create_radar:radar_filter_item",
+        "create_radar:target_filter_item",
+        "create_radar:ident_filter_item"
+      ],
+      [
+        null,
+        "create:precision_mechanism",
+        null
+      ],
+      [
+        null,
+        "create:brass_casing",
+        null
+      ]
+    ],
+    "result": "1 contrôleur de réseau",
+    "resultItem": "create_radar:network_filterer"
+  },
+  "videos": [
+    {
+      "id": "radar_network",
+      "name": "Un réseau complet",
+      "description": "Le contrôleur de réseau, un moniteur, un radar qui se met à tourner et un support de canon relié, qui pivote vers la cible pendant que l'écran balaie.",
+      "duration": "PT19S",
+      "chapters": [
+        {
+          "t": 2.0,
+          "section": "controleur"
+        },
+        {
+          "t": 4.0,
+          "section": "filtres"
+        },
+        {
+          "t": 6.3,
+          "section": "moniteur"
+        },
+        {
+          "t": 9.2,
+          "section": "reseau-complet"
+        }
+      ]
+    },
+    {
+      "id": "radar_monitor",
+      "name": "Le moniteur",
+      "description": "Un moniteur de trois blocs sur trois, sa liaison, un radar branché au même réseau, puis l'écran qui s'allume et le radar qui tourne au rythme du balayage.",
+      "duration": "PT13S",
+      "chapters": [
+        {
+          "t": 1.2,
+          "section": "moniteur"
+        },
+        {
+          "t": 3.9,
+          "section": "lier-moniteur"
+        },
+        {
+          "t": 8.6,
+          "section": "contacts"
+        }
+      ]
+    },
+    {
+      "id": "radar_data_link",
+      "name": "Les liaisons de données",
+      "description": "Le support de canon sélectionné, la liaison posée sur le contrôleur de lacet, l'ordre des clics pour rejoindre le réseau, puis le canon qui vise.",
+      "duration": "PT24S",
+      "chapters": [
+        {
+          "t": 3.2,
+          "section": "liaison"
+        },
+        {
+          "t": 7.9,
+          "section": "reseau-armes"
+        },
+        {
+          "t": 10.4,
+          "section": "liaison"
+        },
+        {
+          "t": 17.3,
+          "section": "reseau-armes"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "controleur",
+      "title": "Le contrôleur de réseau",
+      "image": "radar_network_controleur.webp",
+      "alt": "Un contrôleur de réseau posé seul au centre d’une grande plaque",
+      "video": "radar_network",
+      "html": "<p>Le <strong>contrôleur de réseau</strong> se fabrique en réunissant les trois filtres du mod au-dessus d'un mécanisme de précision et d'un boitier en laiton (recette ci-contre) : il naît donc équipé. Un réseau = un contrôleur. Il ne détecte rien lui-même ; il centralise ce que voient les radars, le distribue et décide de ce qui est affiché et visé. Pose-le à l'abri, il n'a pas besoin d'énergie.</p>"
+    },
+    {
+      "id": "filtres",
+      "title": "Ses trois filtres",
+      "html": "<p>Sa face porte trois emplacements, un par filtre ; un clic sur l'emplacement retire le filtre, un clic avec un filtre en main le remet. Le <strong>filtre de détection</strong> (Detection Filter : tube électronique, papier, redstone) choisit les catégories visibles : joueurs, monstres, animaux, objets au sol, projectiles, machines, navires. Le <strong>filtre d'identification</strong> (Identification Filter) liste les joueurs amis ou ennemis et les codes des navires alliés. Le <strong>filtre de ciblage</strong> (Targeting Filter, avec un mécanisme de précision) active le ciblage automatique, le tir automatique, la vérification de ligne de vue et le tir en cloche.</p>"
+    },
+    {
+      "id": "moniteur",
+      "title": "Le moniteur",
+      "image": "radar_monitor_moniteur.webp",
+      "alt": "Un moniteur de trois blocs sur trois, cadre doré, écran noir",
+      "video": "radar_monitor",
+      "html": "<p>Le <strong>moniteur</strong> est un écran multibloc : pose plusieurs moniteurs en carré, face vers toi, et ils fusionnent en un seul grand écran (jusqu'à 9 × 9 par défaut). La recette donne trois blocs : trois tubes électroniques, un boitier en laiton et un mécanisme de précision. Éteint tant qu'aucun radar ne l'alimente, il montre ensuite une grille, le cercle de portée et le faisceau qui tourne.</p>"
+    },
+    {
+      "id": "lier-moniteur",
+      "title": "Brancher le moniteur",
+      "image": "radar_monitor_liaison.webp",
+      "alt": "Une liaison de données plaquée contre le moniteur, un contrôleur de réseau posé devant",
+      "html": "<p>Prends une liaison de données, fais un clic droit sur le contrôleur de réseau (il est sélectionné), puis pose la liaison contre le moniteur. Fais de même pour chaque radar, en posant la liaison contre son roulement ou son support. Les liaisons ont une portée limitée : si les blocs sont trop loin, un message te prévient. Un même contrôleur peut alimenter plusieurs moniteurs.</p>"
+    },
+    {
+      "id": "contacts",
+      "title": "Lire l'écran",
+      "image": "radar_monitor_contacts.webp",
+      "alt": "Le moniteur allumé : cercle vert, faisceau, un point bleu et un point rouge",
+      "html": "<p>Chaque contact est un point coloré : bleu pour un joueur, rouge pour une créature hostile, blanc pour une machine, jaune pour un projectile ou un navire, orange pour un objet au sol. Il brille quand le faisceau passe dessus puis pâlit en cinq secondes, jusqu'au tour suivant. Un clic droit sur le moniteur ouvre son interface (zoom, recentrage, vues enregistrées, verrouillage sur un navire) ; on y clique un contact pour en faire la cible, entourée de rouge. Accroupi, le clic droit choisit le contact directement sur l'écran du bloc (une option du client inverse les deux). Dans le Ponder du mod, le faisceau se fige au bout d'un instant ; nous le laissons tourner, comme en jeu, avec le radar synchronisé.</p>"
+    },
+    {
+      "id": "reseau-complet",
+      "title": "Radars, écrans et armes ensemble",
+      "image": "radar_network_partage.webp",
+      "alt": "Le réseau complet : contrôleur, moniteur, radar et support de canon",
+      "html": "<p>Une fois branchés, tous les radars du réseau partagent leurs contacts, tous les moniteurs les affichent, et les armes reliées reçoivent la cible choisie (ou en trouvent une seules si le ciblage automatique est actif). Dans la vidéo, nous avons ajouté l'arbre qui entraîne le radar et le support de canon qui pivote vers la cible ; la scène du mod garde tout immobile.</p>"
+    },
+    {
+      "id": "liaison",
+      "title": "La liaison de données en détail",
+      "image": "radar_data_link_selection.webp",
+      "alt": "Support de canon, contrôleur de lacet et liaison de données",
+      "video": "radar_data_link",
+      "html": "<p>La <strong>liaison de données</strong> (une torche de redstone, un boitier en laiton et un transmetteur empilés) existe en deux finitions selon le bloc qu'elle touche, mais c'est le même objet. Elle relie radars, moniteurs, détecteurs d'alerte et brouilleurs au réseau, et les supports de canon à leurs contrôleurs. Pour une arme, l'ordre compte : contrôleur de réseau, puis support de canon, puis contrôleur d'assiette ou de lacet. Sans réseau, sélectionner seulement le support puis poser la liaison sur le contrôleur de lacet suffit à les associer.</p>"
+    },
+    {
+      "id": "reseau-armes",
+      "title": "Rejoindre le réseau",
+      "image": "radar_data_link_reseau.webp",
+      "alt": "La liaison posée sur le contrôleur d’assiette, le canon prêt à recevoir ses cibles",
+      "html": "<p>Si un clic est fait dans le mauvais ordre, la liaison refuse et un message indique l'étape manquante. Un support n'accepte qu'un contrôleur de chaque sorte : un second contrôleur de lacet est refusé. Les supports reliés reçoivent les cibles en continu : dans la vidéo, le canon pivote vers sa cible dès que la chaîne est complète, un ajout de notre rendu pour montrer l'effet.</p>"
+    },
+    {
+      "id": "jumelles",
+      "title": "Jumelles, zone sûre et boussole",
+      "html": "<p>Les <strong>jumelles</strong> (Binoculars : deux vitres, deux lingots de cuivre, une ficelle) s'appairent au contrôleur d'un clic droit accroupi. En visée, elles désignent le point regardé jusqu'à 512 blocs et les canons du réseau s'y tournent ; deux touches réglables servent à désigner et à tirer. Le <strong>désignateur de zone sûre</strong> (Safe Zone Designator : boussole, papier, redstone) se lie à un moniteur d'un clic droit, puis deux clics sur deux blocs posent les coins d'une zone où les canons ne tirent jamais, affichée en gris sur l'écran. Enfin, une boussole cliquée sur le contrôleur pointe ensuite vers le contact choisi.</p>"
+    }
+  ],
+  "related": [
+    "create-radars",
+    "radars-construire-un-radar",
+    "radars-armes-automatiques",
+    "radars-radar-celeste-et-radar-aeroporte",
+    "radars-detecteur-d-alerte-radar",
+    "filtres",
+    "liaison-de-redstone",
+    "support-de-canon"
+  ],
+  "sources": [
+    "Create: Radars 5.1.2 (create_radar-5.1.2-1.21.1.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/Arsenalists-of-Create/Create-Radar (branche NeoForge 1.21.1, commit 8a7766a, version 5.1.2), recettes du dossier data du jar, scènes Ponder (PonderScenes.java) rejouées par notre moteur.",
+    "Mod d'Aycer, HappySG, CeoOfGoogle, Kipti, OndatraCZE, Ray (furuochen) et KrimZik (Arsenalists of Create), sous licence « Arsenalists-of-Create Source-Available License » : modèles et textures de ses auteurs, rendus à partir du jar officiel non modifié ; aucun texte du mod n'est recopié. Téléchargement officiel : modrinth.com/mod/create-radars.",
+    "Contrôleur : block/controller/networkcontroller (NetworkFiltererBlock : trois emplacements cliqués sur la face, boussole liée au contact choisi ; NetworkFiltererRenderer) ; filtres : DetectionConfig, item/*Filter*, boutons de l'interface (catégories, ciblage auto, tir auto, ligne de vue, mode artillerie).",
+    "Moniteur : block/monitor (MonitorBlock : clic = sélection, accroupi = interface selon useGuiByDefault ; MonitorMultiBlockHelper, monitorMaxSize 9 ; MonitorRenderer : grille gridBoxScale 100, alpha des contacts = 1 - âge / 100 ticks ; couleurs config/client : joueur 0000FF, hostile FF0000, machine FFFFFF, projectile et navire FFFF00, objet FFA500).",
+    "Liaisons : block/datalink (ordres de sélection, portée, styles radar / contrôleur) ; jumelles : item/binos/Binoculars.java (512 blocs) ; zone sûre : SafeZoneDesignatorItem (moniteur puis deux coins). Recettes : data/create_radar/recipe/crafting/network_filterer.json, monitor.json (x3), data_link.json, radar_filter_item.json, ident_filter_item.json, target_filter_item.json, binoculars.json, radar_safe_zone_designator.json.",
+    "Scènes : PonderScenes.networkSetup (radar_network.nbt), monitorSetup (monitor_ponder.nbt), dataLinkSetup (data_link_ponder.nbt) ; radar entraîné, balayage continu et canon qui pivote : ajouts de notre rendu."
+  ],
+  "en": {
+    "slugEn": "radars-network-and-monitor",
+    "name": "Network, Monitor and Data Links",
+    "title": "Network and Monitor — Create: Radars guide",
+    "description": "Create: Radars Network Controller, Monitor, Data Link, filters, Binoculars and Safe Zone Designator: wiring radars, screens and cannons together.",
+    "intro": "The <strong>Network Controller</strong> is the heart of any setup: radars send it their contacts, it hands them to <strong>Monitors</strong> and weapons, and it applies three filters. Blocks are wired with <strong>Data Links</strong>, always in the same order: select the source, then place the link on the block to connect.",
+    "facts": [
+      {
+        "label": "Monitor",
+        "value": "square multiblock up to 9 × 9, 3 Monitors per craft"
+      },
+      {
+        "label": "Controller filters",
+        "value": "detection, identification, targeting (3 slots on its face)"
+      },
+      {
+        "label": "Screen",
+        "value": "100-block grid, radar sweep, coloured contacts"
+      },
+      {
+        "label": "Binoculars",
+        "value": "designation out to 512 blocks"
+      },
+      {
+        "label": "Compass",
+        "value": "bound to the controller, it points at the chosen contact"
+      },
+      {
+        "label": "Version",
+        "value": "Create: Radars 5.1.2 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Detection Filter",
+          "Targeting Filter",
+          "Identification Filter"
+        ],
+        [
+          null,
+          "Precision Mechanism",
+          null
+        ],
+        [
+          null,
+          "Brass Casing",
+          null
+        ]
+      ],
+      "result": "1 Network Controller"
+    },
+    "videos": [
+      {
+        "id": "radar_network",
+        "name": "A complete network",
+        "description": "The Network Controller, a Monitor, a radar that starts spinning and a linked cannon mount turning toward its target while the screen sweeps."
+      },
+      {
+        "id": "radar_monitor",
+        "name": "The Monitor",
+        "description": "A three-by-three Monitor, its link, a radar on the same network, then the screen lighting up and the radar turning in step with the sweep."
+      },
+      {
+        "id": "radar_data_link",
+        "name": "Data Links",
+        "description": "The cannon mount selected, the link placed on the yaw controller, the click order for joining the network, then the gun taking aim."
+      }
+    ],
+    "sections": [
+      {
+        "id": "controleur",
+        "title": "The Network Controller",
+        "alt": "A Network Controller on its own in the middle of a large plate",
+        "html": "<p>The <strong>Network Controller</strong> is crafted by putting the mod's three filters above a Precision Mechanism and Brass Casing (recipe shown here), so it comes fully equipped. One network, one controller. It detects nothing itself; it gathers what the radars see, shares it out and decides what is shown and what is shot at. Keep it somewhere safe; it needs no power.</p>"
+      },
+      {
+        "id": "filtres",
+        "title": "Its three filters",
+        "html": "<p>Its face has three slots, one per filter; clicking a slot takes the filter out, clicking with a filter in hand puts it back. The <strong>Detection Filter</strong> (Electron Tubes, Paper, redstone) picks the visible categories: players, hostiles, animals, dropped items, projectiles, contraptions, ships. The <strong>Identification Filter</strong> lists friendly or hostile players and the codes of allied ships. The <strong>Targeting Filter</strong> (with a Precision Mechanism) turns on auto-targeting, auto-fire, the line of sight check and artillery arcs.</p>"
+      },
+      {
+        "id": "moniteur",
+        "title": "The Monitor",
+        "alt": "A three-by-three Monitor, gold frame, black screen",
+        "html": "<p>The <strong>Monitor</strong> is a multiblock screen: place several Monitors in a square, facing you, and they merge into one big display (up to 9 × 9 by default). The recipe gives three blocks: three Electron Tubes, Brass Casing and a Precision Mechanism. It stays dark until a radar feeds it, then shows a grid, the range circle and the rotating beam.</p>"
+      },
+      {
+        "id": "lier-moniteur",
+        "title": "Connecting the Monitor",
+        "alt": "A Data Link pressed against the Monitor, a Network Controller in front",
+        "html": "<p>Take a Data Link, right-click the Network Controller (it is now selected), then place the link against the Monitor. Do the same for each radar, placing the link against its bearing or mount. Links have a limited reach: if the blocks are too far apart, a message tells you. One controller can feed several Monitors.</p>"
+      },
+      {
+        "id": "contacts",
+        "title": "Reading the screen",
+        "alt": "The lit Monitor: green circle, beam, one blue and one red dot",
+        "html": "<p>Each contact is a coloured dot: blue for a player, red for a hostile mob, white for a contraption, yellow for a projectile or a ship, orange for a dropped item. It flares as the beam passes over it, then fades over five seconds until the next turn. Right-clicking the Monitor opens its interface (zoom, re-centring, saved views, locking onto a ship), where you click a contact to make it the target, framed in red. Sneak-right-click picks the contact straight on the block's screen (a client option swaps the two). In the mod's Ponder the beam freezes after a moment; we let it turn, as in game, with the radar in step.</p>"
+      },
+      {
+        "id": "reseau-complet",
+        "title": "Radars, screens and weapons together",
+        "alt": "The full network: controller, Monitor, radar and cannon mount",
+        "html": "<p>Once wired, every radar on the network shares its contacts, every Monitor shows them, and linked weapons receive the chosen target (or find one on their own if auto-targeting is on). In the video we added the shaft driving the radar and the cannon mount turning toward the target; the mod's scene keeps everything still.</p>"
+      },
+      {
+        "id": "liaison",
+        "title": "The Data Link in detail",
+        "alt": "A cannon mount with its yaw controller and link",
+        "html": "<p>The <strong>Data Link</strong> (a Redstone Torch, Brass Casing and a Transmitter stacked) comes in two finishes depending on the block it touches, but it is the same item. It ties radars, Monitors, warning receivers and jammers to the network, and cannon mounts to their controllers. For a weapon the order matters: first the Network Controller, next the Cannon Mount, last the pitch or yaw controller. Without a network, selecting just the mount and placing the link on the yaw controller is enough to pair them.</p>"
+      },
+      {
+        "id": "reseau-armes",
+        "title": "Joining the network",
+        "alt": "The link placed on the Auto Pitch Controller, the gun ready for targets",
+        "html": "<p>Click in the wrong order and the link refuses, with a message naming the missing step. A mount accepts one controller of each kind: a second yaw controller is turned down. Linked mounts receive targets continuously: in the video the gun swings toward its target as soon as the chain is complete, an addition of our render to show the effect.</p>"
+      },
+      {
+        "id": "jumelles",
+        "title": "Binoculars, safe zones and the compass",
+        "html": "<p>The <strong>Binoculars</strong> (two Glass Panes, two Copper Ingots, String) pair with the controller by sneak-right-clicking it. While zoomed in they designate the spot you look at out to 512 blocks and the network's guns turn to it; two rebindable keys designate and fire. The <strong>Safe Zone Designator</strong> (Compass, Paper, redstone) binds to a Monitor with a right-click, then two clicks on two blocks set the corners of an area the guns never fire into, drawn in grey on the screen. Finally, a Compass clicked on the controller then points at the chosen contact.</p>"
+      }
+    ],
+    "sources": [
+      "Create: Radars 5.1.2 (create_radar-5.1.2-1.21.1.jar from the next Create France modpack release): code from the public repository github.com/Arsenalists-of-Create/Create-Radar (NeoForge 1.21.1 branch, commit 8a7766a, version 5.1.2), recipes from the jar's data folder, Ponder scenes (PonderScenes.java) replayed by our engine.",
+      "Mod by Aycer, HappySG, CeoOfGoogle, Kipti, OndatraCZE, Ray (furuochen) and KrimZik (Arsenalists of Create), under the Arsenalists-of-Create Source-Available License: models and textures by its authors, rendered from the official, unmodified jar; no text from the mod is copied. Official download: modrinth.com/mod/create-radars.",
+      "Controller: block/controller/networkcontroller (NetworkFiltererBlock: three slots clicked on the face, compass bound to the chosen contact; NetworkFiltererRenderer); filters: DetectionConfig, item/*Filter*, interface buttons (categories, auto target, auto fire, line of sight, artillery mode).",
+      "Monitor: block/monitor (MonitorBlock: click = select, sneak = interface depending on useGuiByDefault; MonitorMultiBlockHelper, monitorMaxSize 9; MonitorRenderer: gridBoxScale 100 grid, contact alpha = 1 - age / 100 ticks; config/client colours: player 0000FF, hostile FF0000, contraption FFFFFF, projectile and ship FFFF00, item FFA500).",
+      "Links: block/datalink (selection orders, reach, radar / controller styles); Binoculars: item/binos/Binoculars.java (512 blocks); safe zone: SafeZoneDesignatorItem (Monitor, then two corners). Recipes: data/create_radar/recipe/crafting/network_filterer.json, monitor.json (x3), data_link.json, radar_filter_item.json, ident_filter_item.json, target_filter_item.json, binoculars.json, radar_safe_zone_designator.json.",
+      "Scenes: PonderScenes.networkSetup (radar_network.nbt), monitorSetup (monitor_ponder.nbt), dataLinkSetup (data_link_ponder.nbt); the driven radar, continuous sweep and turning gun are additions of our render."
+    ]
+  }
+}

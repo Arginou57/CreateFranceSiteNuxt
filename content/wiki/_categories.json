@@ -229,5 +229,16 @@
       "name": "Create: Lightworks",
       "description": "Lighting addon for Create (planned for the next Create France modpack)."
     }
+  },
+  {
+    "id": "radars",
+    "mod": "radars",
+    "icon": "create_radar:radar_bearing",
+    "name": "Create: Radars",
+    "description": "Radars, moniteurs, canons automatiques, détecteur d'alerte, brouilleur et sonar (Create: Radars 5.1.2, prévu pour le prochain modpack Create France).",
+    "en": {
+      "name": "Create: Radars",
+      "description": "Radars, monitors, automatic guns, warning receiver, jammer and sonar (Create: Radars 5.1.2, planned for the next Create France modpack)."
+    }
   }
 ]

@@ -1,0 +1,378 @@
+{
+  "slug": "radars-detecteur-d-alerte-radar",
+  "name": "Détecteur d'alerte radar et transpondeur",
+  "blockId": "create_radar:radar_warning_receiver",
+  "category": "radars",
+  "title": "Détecteur d'alerte radar — Create: Radars, guide",
+  "description": "Détecteur d'alerte radar et transpondeur d'identification de Create: Radars : savoir quels radars observent ton navire, et s'en protéger.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create: Radars 5.1.2 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>détecteur d'alerte radar</strong> (Radar Warning Receiver, RWR) est l'oreille d'un navire : posé à bord, il capte les radars qui balaient la zone, sans rien émettre lui-même. Branché à un moniteur, il montre le type de chaque radar, sa direction et la menace qu'il représente. Le <strong>transpondeur d'identification</strong> (Identification Transponder) fait l'inverse : il annonce le navire comme ami.",
+  "facts": [
+    {
+      "label": "Où",
+      "value": "sur un navire ou un aéronef (sous-niveau Sable de Create Aeronautics)"
+    },
+    {
+      "label": "Affichage",
+      "value": "3 anneaux de menace sur le moniteur, pas de distance"
+    },
+    {
+      "label": "Redstone",
+      "value": "1 à 14 selon la proximité, 15 quand un radar verrouille"
+    },
+    {
+      "label": "Sons",
+      "value": "à la première détection et au verrouillage"
+    },
+    {
+      "label": "Leurres",
+      "value": "une fusée d’artifice près de la cible peut rompre un verrouillage"
+    },
+    {
+      "label": "Version",
+      "value": "Create: Radars 5.1.2 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l’établi",
+    "grid": [
+      [
+        "Plaque de fer",
+        "Tube électronique",
+        "Plaque de fer"
+      ],
+      [
+        "Plaque de cuivre",
+        "Plaque de cuivre",
+        "Plaque de cuivre"
+      ],
+      [
+        "Plaque de fer",
+        "Bloc musical",
+        "Plaque de fer"
+      ]
+    ],
+    "items": [
+      [
+        "create:iron_sheet",
+        "create:electron_tube",
+        "create:iron_sheet"
+      ],
+      [
+        "create:copper_sheet",
+        "create:copper_sheet",
+        "create:copper_sheet"
+      ],
+      [
+        "create:iron_sheet",
+        "minecraft:note_block",
+        "create:iron_sheet"
+      ]
+    ],
+    "result": "1 détecteur d'alerte radar",
+    "resultItem": "create_radar:radar_warning_receiver"
+  },
+  "videos": [
+    {
+      "id": "radar_rwr",
+      "name": "Brancher le détecteur d'alerte",
+      "description": "Un détecteur d'alerte relié à un moniteur par une liaison de données, puis un second posé directement contre le moniteur, qui affiche ses trois anneaux.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 2.0,
+          "section": "detecteur"
+        },
+        {
+          "t": 7.0,
+          "section": "liaison"
+        },
+        {
+          "t": 13.0,
+          "section": "contact-direct"
+        },
+        {
+          "t": 17.8,
+          "section": "anneaux"
+        }
+      ]
+    },
+    {
+      "id": "radar_rwr_2",
+      "name": "Lire les anneaux",
+      "description": "Un radar ami apparaît sur l'anneau extérieur, deux radars passent sur l'anneau central, puis un radar verrouille le navire : son symbole rougit au centre.",
+      "duration": "PT18S",
+      "chapters": [
+        {
+          "t": 0.3,
+          "section": "portee"
+        },
+        {
+          "t": 2.9,
+          "section": "anneaux"
+        },
+        {
+          "t": 5.9,
+          "section": "central"
+        },
+        {
+          "t": 8.7,
+          "section": "portee"
+        },
+        {
+          "t": 11.4,
+          "section": "central"
+        },
+        {
+          "t": 14.4,
+          "section": "portee"
+        }
+      ]
+    },
+    {
+      "id": "radar_rwr_contacts",
+      "name": "Les symboles des radars",
+      "description": "Un radar à roulement, un radar aéroporté puis un radar céleste se succèdent ; le moniteur affiche leur symbole, en bleu pour un ami, entouré pour la menace principale, en rouge au verrouillage.",
+      "duration": "PT19S",
+      "chapters": [
+        {
+          "t": 3.0,
+          "section": "symboles"
+        },
+        {
+          "t": 9.8,
+          "section": "ami"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "detecteur",
+      "title": "Un récepteur passif",
+      "image": "radar_rwr_detecteur.webp",
+      "alt": "Un détecteur d'alerte radar posé seul, loin du moniteur",
+      "video": "radar_rwr",
+      "html": "<p>Le <strong>détecteur d'alerte radar</strong> se fabrique avec quatre plaques de fer, trois plaques de cuivre, un tube électronique et un bloc musical (recette ci-contre). Il ne sert que sur un navire ou un aéronef de Create Aeronautics : il n'apparaît dans l'onglet créatif qu'avec Sable, et son modèle s'allume une fois à bord. Il ne trahit pas ta position : il écoute seulement les radars des autres.</p>"
+    },
+    {
+      "id": "liaison",
+      "title": "Le relier à un moniteur",
+      "image": "radar_rwr_liaison.webp",
+      "alt": "Le détecteur et le moniteur encadrés, une liaison de données posée sur le moniteur",
+      "html": "<p>Deux façons de lire ce qu'il capte. La première : une liaison de données, en cliquant le détecteur puis en posant la liaison sur le moniteur. Le moniteur passe alors en mode alerte et dessine trois anneaux concentriques. Retire la liaison et l'écran s'éteint.</p>"
+    },
+    {
+      "id": "contact-direct",
+      "title": "Ou le coller au moniteur",
+      "image": "radar_rwr_contact-direct.webp",
+      "alt": "Un second détecteur posé directement contre le moniteur, qui affiche ses anneaux",
+      "html": "<p>La seconde : poser le détecteur directement contre le moniteur, sans liaison. C'est le montage le plus simple pour un poste de pilotage. Dans les deux cas, le moniteur montre la nature de chaque radar, sa direction par rapport au navire et le danger qu'il représente.</p>"
+    },
+    {
+      "id": "anneaux",
+      "title": "Des anneaux de menace, pas de distance",
+      "image": "radar_rwr_anneaux.webp",
+      "alt": "Les trois anneaux verts sur l’écran du moniteur",
+      "html": "<p>Attention, les anneaux ne mesurent pas la distance. L'anneau extérieur signale un radar qui balaie ton navire de trop loin pour le voir : tu es entre 100 et 150 % de sa portée. L'anneau du milieu dit que tu es dans sa portée et donc visible sur ses écrans. Le centre, en rouge, signifie qu'il t'a verrouillé pour tirer. La position autour du cercle donne la direction du radar.</p>"
+    },
+    {
+      "id": "portee",
+      "title": "Signaux et redstone",
+      "image": "radar_rwr_2_portee.webp",
+      "alt": "Un symbole bleu de radar céleste sur l'anneau extérieur",
+      "video": "radar_rwr_2",
+      "html": "<p>Un son retentit quand un radar entre dans la zone d'écoute. Dès que tu es visible (anneau central), le détecteur émet aussi un signal de redstone de 1 à 14, d'autant plus fort que le navire est proche du radar. Au verrouillage, un second son se déclenche et le signal passe à 15 : de quoi allumer une alarme, ou lancer une contre-mesure automatique.</p>"
+    },
+    {
+      "id": "central",
+      "title": "Visible, puis verrouillé",
+      "image": "radar_rwr_2_anneau-central.webp",
+      "alt": "Deux symboles de radar au sol sur l'anneau central, l'un marqué comme menace principale",
+      "html": "<p>Sur l'anneau central, plusieurs radars peuvent te voir en même temps ; le plus menaçant est entouré d'un losange. Quand l'un d'eux verrouille, son symbole rejoint le petit anneau intérieur et vire au rouge. Il est temps de changer de cap, de passer derrière un relief (le signal radar ne traverse pas plus de 16 blocs pleins, 8 pour les radars célestes et aéroportés) ou de lancer des leurres.</p>"
+    },
+    {
+      "id": "symboles",
+      "title": "Reconnaître les radars",
+      "image": "radar_rwr_contacts_radar-celeste.webp",
+      "alt": "Le moniteur affiche en grand le symbole d’un radar céleste",
+      "video": "radar_rwr_contacts",
+      "html": "<p>Chaque type de radar a son propre symbole, une petite antenne dessinée différemment : radar à roulement, radar aéroporté et radar céleste se distinguent d'un coup d'œil. Dans la vidéo, chaque radar qui apparaît à côté du navire change le symbole affiché ; nous les faisons tourner pendant qu'ils émettent.</p>"
+    },
+    {
+      "id": "ami",
+      "title": "Amis et menace principale",
+      "image": "radar_rwr_contacts_ami.webp",
+      "alt": "Le symbole du radar céleste en bleu : un radar ami",
+      "html": "<p>Un radar dont le filtre d'identification contient le même code que ton navire s'affiche en bleu : c'est un allié. La menace principale reçoit un losange, et un radar qui te verrouille s'affiche en rouge.</p>"
+    },
+    {
+      "id": "transpondeur",
+      "title": "Le transpondeur d'identification",
+      "html": "<p>Le <strong>transpondeur d'identification</strong> (deux tubes électroniques, deux liaisons de redstone, un boitier en laiton) se pose sur un navire. Son interface donne un nom et un code d'identification au navire. Si ce code figure dans le filtre d'identification d'un contrôleur de réseau, les canons automatiques de ce réseau épargnent le navire, et ses radars apparaissent en bleu sur ton détecteur. Partage ton code avec tes alliés, pas avec les autres.</p>"
+    },
+    {
+      "id": "leurres",
+      "title": "Les fusées comme leurres",
+      "html": "<p>Une fusée d'artifice qui éclate à moins de 8 blocs d'une cible verrouillée peut rompre le verrouillage, avec 20 à 60 % de chances selon sa charge (75 % au plus pour une salve). La rupture dure jusqu'à 3,5 secondes, puis la cible est moins sensible aux leurres pendant 5 secondes ; chaque réussite ajoute 2 % de chances de perdre le verrouillage pour de bon. Combine le détecteur, un signal de redstone 15 et un lanceur de fusées : tu as une contre-mesure automatique.</p>"
+    }
+  ],
+  "related": [
+    "create-radars",
+    "radars-brouilleurs",
+    "radars-reseau-et-moniteur",
+    "radars-radar-celeste-et-radar-aeroporte",
+    "create-aeronautics",
+    "liaison-de-redstone"
+  ],
+  "sources": [
+    "Create: Radars 5.1.2 (create_radar-5.1.2-1.21.1.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/Arsenalists-of-Create/Create-Radar (branche NeoForge 1.21.1, commit 8a7766a, version 5.1.2), recettes du dossier data du jar, scènes Ponder (PonderScenes.java) rejouées par notre moteur.",
+    "Mod d'Aycer, HappySG, CeoOfGoogle, Kipti, OndatraCZE, Ray (furuochen) et KrimZik (Arsenalists of Create), sous licence « Arsenalists-of-Create Source-Available License » : modèles et textures de ses auteurs, rendus à partir du jar officiel non modifié ; aucun texte du mod n'est recopié. Téléchargement officiel : modrinth.com/mod/create-radars.",
+    "Détecteur : block/arad/rwr (RadarWarningReceiverBlock, propriété on_ship) ; anneaux et couleurs : MonitorRenderer.renderAradDisplay, AradMonitorGeometry (rayons 0,406 / 0,271 / 0,102), aradContactColor (rouge verrouillé, bleu ami) ; signal de redstone et sons : RadarWarningReceiverBlockEntity, ModSounds (RWR_IN_RANGE, RWR_LOCK).",
+    "Transpondeur : block/controller/id (IdentificationTransponder, IDManager, IDBlockScreen : nom et code) ; leurres : config/common (chaffEnabled, radius 8, minChance 0,20, maxSingleChance 0,60, maxVolleyChance 0,75, maxDurationTicks 70, resistanceTicks 100, resistanceChanceMultiplier 0,5, permanentBreakChancePerSuccess 0,02) ; obstacles : groundRadarMaxSolidBlocks 16, skyPlaneRadarMaxSolidBlocks 8.",
+    "Recettes : data/create_radar/recipe/crafting/radar_warning_reciever.json, identification_transponder.json ; présence avec Sable : registry/ModCreativeTabs.java.",
+    "Scènes : PonderScenes.rwrPonder (rwr_ponder.nbt, coupée en deux vidéos) et rwrContactsPonder ; les radars qui tournent en émettant sont un ajout de notre rendu."
+  ],
+  "en": {
+    "slugEn": "radars-radar-warning-receiver",
+    "name": "Radar Warning Receiver and Identification Transponder",
+    "title": "Radar Warning Receiver — Create: Radars guide",
+    "description": "Create: Radars Radar Warning Receiver and Identification Transponder: learn which radars are watching your ship, and how to protect it.",
+    "intro": "The <strong>Radar Warning Receiver</strong> (RWR) is a ship's ear: fitted on board, it picks up the radars sweeping the area without sending anything out itself. Wired to a Monitor, it shows each radar's type, its direction and the threat it poses. The <strong>Identification Transponder</strong> does the opposite: it announces the ship as a friend.",
+    "facts": [
+      {
+        "label": "Where",
+        "value": "on a ship or aircraft (Create Aeronautics Sable sublevel)"
+      },
+      {
+        "label": "Display",
+        "value": "3 threat rings on the Monitor, no distance"
+      },
+      {
+        "label": "Redstone",
+        "value": "1 to 14 depending on how close, 15 once a radar has locked"
+      },
+      {
+        "label": "Sounds",
+        "value": "on first detection and on lock"
+      },
+      {
+        "label": "Decoys",
+        "value": "a firework near the target can break a lock"
+      },
+      {
+        "label": "Version",
+        "value": "Create: Radars 5.1.2 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Iron Sheet",
+          "Electron Tube",
+          "Iron Sheet"
+        ],
+        [
+          "Copper Sheet",
+          "Copper Sheet",
+          "Copper Sheet"
+        ],
+        [
+          "Iron Sheet",
+          "Note Block",
+          "Iron Sheet"
+        ]
+      ],
+      "result": "1 Radar Warning Receiver"
+    },
+    "videos": [
+      {
+        "id": "radar_rwr",
+        "name": "Wiring the warning receiver",
+        "description": "A warning receiver tied to a Monitor through a Data Link, then a second one placed straight against the Monitor, which shows its three rings."
+      },
+      {
+        "id": "radar_rwr_2",
+        "name": "Reading the rings",
+        "description": "A friendly radar shows on the outer ring, two radars move to the middle ring, then one radar locks onto the ship: its symbol turns red in the centre."
+      },
+      {
+        "id": "radar_rwr_contacts",
+        "name": "Radar symbols",
+        "description": "A bearing radar, a Plane Radar and a sky radar come and go; the Monitor shows their symbol, blue for a friend, ringed for the main threat, red on lock."
+      }
+    ],
+    "sections": [
+      {
+        "id": "detecteur",
+        "title": "A passive receiver",
+        "alt": "A Radar Warning Receiver on its own, away from the Monitor",
+        "html": "<p>The <strong>Radar Warning Receiver</strong> is crafted from four Iron Sheets, three Copper Sheets, an Electron Tube and a Note Block (recipe shown here). It is only useful on a Create Aeronautics ship or aircraft: it only shows in the creative tab with Sable, and its model lights up once on board. It does not give your position away: it only listens to other people's radars.</p>"
+      },
+      {
+        "id": "liaison",
+        "title": "Linking it to a Monitor",
+        "alt": "The receiver and the Monitor outlined, a Data Link placed on the Monitor",
+        "html": "<p>Two ways to read what it picks up. The first: a Data Link, clicking the receiver and then placing the link on the Monitor. The Monitor switches to warning mode and draws three concentric rings. Remove the link and the screen goes dark.</p>"
+      },
+      {
+        "id": "contact-direct",
+        "title": "Or touching the Monitor",
+        "alt": "A second receiver placed right against the Monitor, which shows its rings",
+        "html": "<p>The second: place the receiver directly against the Monitor, no link needed. It is the simplest build for a cockpit. Either way, the Monitor shows what kind of radar each one is, its bearing relative to the ship and the danger it represents.</p>"
+      },
+      {
+        "id": "anneaux",
+        "title": "Threat rings, not distance",
+        "alt": "The three green rings on the Monitor screen",
+        "html": "<p>Careful, the rings do not measure distance. The outer ring flags a radar sweeping your ship from too far to see it: you sit between 100 and 150% of its range. The middle ring means you are inside its range and therefore on its screens. The centre, in red, means it has locked on to fire. The position around the circle gives the radar's direction.</p>"
+      },
+      {
+        "id": "portee",
+        "title": "Sounds and redstone",
+        "alt": "A blue sky radar symbol on the outer ring",
+        "html": "<p>A sound plays when a radar enters listening range. Once you are visible (middle ring), the receiver also gives a redstone signal from 1 to 14, stronger as the ship gets closer to the radar. On lock a second sound plays and the signal jumps to 15: enough to sound an alarm or trigger an automatic countermeasure.</p>"
+      },
+      {
+        "id": "central",
+        "title": "Seen, then locked",
+        "alt": "Two ground radar symbols on the middle ring, one marked as the main threat",
+        "html": "<p>On the middle ring several radars can see you at once; the most threatening one is framed by a diamond. Once one of them has locked, its symbol drops to the small inner ring and turns red. Time to change course, duck behind terrain (a radar signal gets through no more than 16 solid blocks, 8 for sky radars and Plane Radars) or launch decoys.</p>"
+      },
+      {
+        "id": "symboles",
+        "title": "Telling radars apart",
+        "alt": "The Monitor showing a large sky radar symbol",
+        "html": "<p>Each radar type has its own symbol, a small antenna drawn differently: bearing radar, Plane Radar and sky radar can be told apart at a glance. In the video each radar appearing next to the ship changes the symbol shown; we make them spin while they transmit.</p>"
+      },
+      {
+        "id": "ami",
+        "title": "Friends and the main threat",
+        "alt": "The sky radar symbol in blue: a friendly radar",
+        "html": "<p>A radar whose Identification Filter holds the same code as your ship shows in blue: it is an ally. The main threat gets a diamond, and a radar locking onto you shows in red.</p>"
+      },
+      {
+        "id": "transpondeur",
+        "title": "The Identification Transponder",
+        "html": "<p>The <strong>Identification Transponder</strong> (two Electron Tubes, two Redstone Links, Brass Casing) is placed on a ship. Its interface gives the ship a name and an identification code. If that code is in the Identification Filter of a Network Controller, that network's automatic guns spare the ship, and its radars show in blue on your receiver. Share your code with your allies, not with anyone else.</p>"
+      },
+      {
+        "id": "leurres",
+        "title": "Fireworks as decoys",
+        "html": "<p>A Firework Rocket bursting within 8 blocks of a locked target can break the lock, with a 20 to 60% chance depending on its charge (75% at most for a volley). The break lasts up to 3.5 seconds, then the target is less sensitive to decoys for 5 seconds; each success adds a 2% chance of losing the lock for good. Combine the receiver, a level 15 redstone signal and a firework launcher and you have an automatic countermeasure.</p>"
+      }
+    ],
+    "sources": [
+      "Create: Radars 5.1.2 (create_radar-5.1.2-1.21.1.jar from the next Create France modpack release): code from the public repository github.com/Arsenalists-of-Create/Create-Radar (NeoForge 1.21.1 branch, commit 8a7766a, version 5.1.2), recipes from the jar's data folder, Ponder scenes (PonderScenes.java) replayed by our engine.",
+      "Mod by Aycer, HappySG, CeoOfGoogle, Kipti, OndatraCZE, Ray (furuochen) and KrimZik (Arsenalists of Create), under the Arsenalists-of-Create Source-Available License: models and textures by its authors, rendered from the official, unmodified jar; no text from the mod is copied. Official download: modrinth.com/mod/create-radars.",
+      "Receiver: block/arad/rwr (RadarWarningReceiverBlock, on_ship property); rings and colours: MonitorRenderer.renderAradDisplay, AradMonitorGeometry (radii 0.406 / 0.271 / 0.102), aradContactColor (red locked, blue friendly); redstone and sounds: RadarWarningReceiverBlockEntity, ModSounds (RWR_IN_RANGE, RWR_LOCK).",
+      "Transponder: block/controller/id (IdentificationTransponder, IDManager, IDBlockScreen: name and code); decoys: config/common (chaffEnabled, radius 8, minChance 0.20, maxSingleChance 0.60, maxVolleyChance 0.75, maxDurationTicks 70, resistanceTicks 100, resistanceChanceMultiplier 0.5, permanentBreakChancePerSuccess 0.02); obstacles: groundRadarMaxSolidBlocks 16, skyPlaneRadarMaxSolidBlocks 8.",
+      "Recipes: data/create_radar/recipe/crafting/radar_warning_reciever.json, identification_transponder.json; Sable only: registry/ModCreativeTabs.java.",
+      "Scenes: PonderScenes.rwrPonder (rwr_ponder.nbt, split into two videos) and rwrContactsPonder; radars spinning while they transmit are an addition of our render."
+    ]
+  }
+}

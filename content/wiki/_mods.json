@@ -531,5 +531,59 @@
         "Headlights and tail lights"
       ]
     }
+  },
+  {
+    "id": "radars",
+    "name": "Create: Radars",
+    "version": "5.1.2",
+    "icon": "create_radar:radar_bearing",
+    "description": "Radars, moniteurs, canons qui visent seuls, détecteur d'alerte, brouilleur et sonar (prévu pour le prochain modpack Create France).",
+    "start": [
+      {
+        "slug": "create-radars",
+        "label": "Vue d'ensemble"
+      },
+      {
+        "slug": "radars-construire-un-radar",
+        "label": "Construire un radar"
+      },
+      {
+        "slug": "radars-reseau-et-moniteur",
+        "label": "Réseau et moniteur"
+      },
+      {
+        "slug": "radars-armes-automatiques",
+        "label": "Canons automatiques"
+      },
+      {
+        "slug": "radars-radar-celeste-et-radar-aeroporte",
+        "label": "Radar céleste et aéroporté"
+      },
+      {
+        "slug": "radars-detecteur-d-alerte-radar",
+        "label": "Détecteur d'alerte"
+      },
+      {
+        "slug": "radars-brouilleurs",
+        "label": "Brouilleur"
+      },
+      {
+        "slug": "radars-sonar",
+        "label": "Sonar"
+      }
+    ],
+    "en": {
+      "description": "Radars, monitors, self-aiming guns, warning receiver, jammer and sonar (planned for the next Create France modpack).",
+      "start": [
+        "Overview",
+        "Building a radar",
+        "Network and Monitor",
+        "Automatic guns",
+        "Sky and Plane Radar",
+        "Warning receiver",
+        "Jammer",
+        "Sonar"
+      ]
+    }
   }
 ]

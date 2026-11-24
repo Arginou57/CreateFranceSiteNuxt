@@ -1,0 +1,299 @@
+{
+  "slug": "radars-construire-un-radar",
+  "name": "Construire un radar",
+  "blockId": "create_radar:radar_bearing",
+  "category": "radars",
+  "title": "Construire un radar — Create: Radars, guide",
+  "description": "Roulement de radar, récepteur, plaques et grilles de Create: Radars : construire un radar tournant, sa portée selon les antennes et sa vitesse.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create: Radars 5.1.2 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Un radar de Create: Radars est une petite machine : un <strong>roulement de radar</strong> (Radar Bearing) qui fait tourner un <strong>récepteur radar</strong> (Radar Receiver Block) entouré d'antennes, les <strong>plaques de radar</strong> (Radar Plate) ou les <strong>grilles de radar</strong> (Radar Dish). Chaque antenne ajoute 32 blocs de portée. Alimenté par un arbre, l'ensemble tourne et balaie tout l'horizon.",
+  "facts": [
+    {
+      "label": "Portée",
+      "value": "1 bloc + 32 par plaque ou grille, 2 048 au plus"
+    },
+    {
+      "label": "Angle de vue",
+      "value": "90° de large, 32 blocs de haut et de bas"
+    },
+    {
+      "label": "Vitesse",
+      "value": "4 fois plus lent qu’un roulement mécanique (davantage au-delà de 10 antennes)"
+    },
+    {
+      "label": "Obstacles",
+      "value": "le signal traverse au plus 16 blocs pleins"
+    },
+    {
+      "label": "Plaque créative",
+      "value": "portée maximale d’office (créatif)"
+    },
+    {
+      "label": "Version",
+      "value": "Create: Radars 5.1.2 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l’établi",
+    "grid": [
+      [
+        null,
+        "Paratonnerre",
+        null
+      ],
+      [
+        null,
+        "Bloc de fer industriel",
+        null
+      ],
+      [
+        null,
+        "Tube électronique",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "minecraft:lightning_rod",
+        null
+      ],
+      [
+        null,
+        "create:industrial_iron_block",
+        null
+      ],
+      [
+        null,
+        "create:electron_tube",
+        null
+      ]
+    ],
+    "result": "1 récepteur radar",
+    "resultItem": "create_radar:radar_receiver_block"
+  },
+  "videos": [
+    {
+      "id": "radar_contraption",
+      "name": "Monter un radar et le faire tourner",
+      "description": "Le roulement de radar, puis le récepteur, deux plaques changées en grilles, une rangée de plaques pour la portée, et le radar qui fait un tour complet entraîné par son arbre.",
+      "duration": "PT20S",
+      "chapters": [
+        {
+          "t": 2.0,
+          "section": "roulement"
+        },
+        {
+          "t": 3.5,
+          "section": "recepteur"
+        },
+        {
+          "t": 4.5,
+          "section": "plaques"
+        },
+        {
+          "t": 5.8,
+          "section": "grilles"
+        },
+        {
+          "t": 7.0,
+          "section": "portee"
+        },
+        {
+          "t": 8.0,
+          "section": "rotation"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "roulement",
+      "title": "Le roulement de radar",
+      "image": "radar_contraption_roulement.webp",
+      "alt": "Un roulement de radar posé au-dessus d’une boîte de vitesses reliée à un arbre",
+      "video": "radar_contraption",
+      "html": "<p>Tout commence par le <strong>roulement de radar</strong> : un roulement mécanique de Create amélioré d'un tube électronique et de trois plaques de fer. Il se pose face vers le haut, sur un arbre ou une boîte de vitesses qui l'entraîne par dessous, et il assemble tout ce qui est construit sur son plateau, comme un roulement ordinaire. La différence : il n'emporte que des pièces de radar, et il garde la trace de ce qu'il voit.</p>"
+    },
+    {
+      "id": "recepteur",
+      "title": "Le récepteur au centre",
+      "image": "radar_contraption_recepteur.webp",
+      "alt": "Le récepteur radar, un bloc à grand œil sombre, posé sur le roulement",
+      "html": "<p>Le <strong>récepteur radar</strong> se pose juste au-dessus du roulement. C'est lui qui « regarde » : le côté vers lequel il est tourné donne la direction du faisceau, et sans lui le roulement refuse de fonctionner. Sa recette (ci-contre) superpose un paratonnerre, un bloc de fer industriel et un tube électronique. Un seul récepteur par radar.</p>"
+    },
+    {
+      "id": "plaques",
+      "title": "Plaques et grilles",
+      "image": "radar_contraption_plaques.webp",
+      "alt": "Deux plaques de radar de part et d’autre du récepteur",
+      "html": "<p>Autour du récepteur viennent les antennes. La <strong>plaque de radar</strong> est un panneau plein fait de neuf plaques de fer ; la <strong>grille de radar</strong> est un treillis ajouré (deux barreaux de fer et trois plaques de fer). Les deux comptent exactement pareil : choisis selon le look. Elles se collent les unes aux autres comme des voiles de moulin, il suffit qu'elles se touchent pour faire partie du radar.</p>"
+    },
+    {
+      "id": "grilles",
+      "title": "Changer de forme",
+      "image": "radar_contraption_grilles.webp",
+      "alt": "Les deux plaques remplacées par des grilles de radar, à plat",
+      "html": "<p>Dans la scène, les deux plaques cèdent la place à deux grilles, posées dans leur orientation par défaut, à plat. Le récepteur ne fait pas la différence. En jeu, une grille se pose comme un bloc orientable : elle regarde la face sur laquelle tu cliques, et la clé la fait pivoter. Une plaque ou une grille isolée, qui ne touche ni le récepteur ni une autre antenne, n'est pas comptée.</p>"
+    },
+    {
+      "id": "portee",
+      "title": "Portée : 32 blocs par antenne",
+      "image": "radar_contraption_portee.webp",
+      "alt": "Une rangée de trois plaques ajoutée au-dessus des grilles",
+      "html": "<p>Le calcul est simple : 1 bloc de base, plus 32 par plaque ou grille, jusqu'à 2 048 blocs. Les cinq antennes de la scène donnent donc 161 blocs. Le faisceau couvre 90° de large et 32 blocs au-dessus comme au-dessous du radar ; il traverse au plus 16 blocs pleins avant d'être arrêté. Les lunettes d'ingénieur affichent sur le roulement le nombre d'antennes et la portée obtenue.</p>"
+    },
+    {
+      "id": "rotation",
+      "title": "Alimenter et faire tourner",
+      "image": "radar_contraption_rotation.webp",
+      "alt": "Le radar entier a pivoté d’un quart de tour sur son roulement",
+      "html": "<p>Alimente le roulement et le radar s'assemble puis tourne, balayant les 360°. Il tourne quatre fois moins vite qu'un roulement mécanique à la même vitesse d'arbre : à 24 tr/min, le tour prend dix secondes, comme dans la vidéo. Au-delà de dix antennes, il ralentit encore (cinq fois moins vite de 10 à 19 antennes, six fois de 20 à 29...). Dans la scène du mod, les sections tournent sans que l'arbre bouge ; nous avons entraîné l'arbre, la boîte de vitesses et le plateau du roulement pour montrer le vrai montage.</p>"
+    },
+    {
+      "id": "creative",
+      "title": "La plaque de radar créative",
+      "html": "<p>La <strong>plaque de radar créative</strong> (Creative Radar Plate), réservée au mode créatif, se pose comme une plaque. Un radar qui en contient une ignore le calcul des antennes et prend directement la portée maximale du serveur, 2 048 blocs par défaut. Pratique pour tester un réseau ou bâtir une carte d'aventure.</p>"
+    },
+    {
+      "id": "suite",
+      "title": "Et ensuite",
+      "html": "<p>Un radar seul ne montre rien. Relie-le à un <a href=\"/wiki/radars-reseau-et-moniteur\">contrôleur de réseau</a> avec une liaison de données posée sur le roulement, branche un moniteur, et les contacts apparaissent. Pour surveiller le ciel de très loin, regarde le <a href=\"/wiki/radars-radar-celeste-et-radar-aeroporte\">support de radar céleste</a>, qui porte le même radar.</p>"
+    }
+  ],
+  "related": [
+    "create-radars",
+    "radars-reseau-et-moniteur",
+    "radars-radar-celeste-et-radar-aeroporte",
+    "roulement-mecanique",
+    "boite-a-roues-dentees",
+    "lunettes-d-ingenieur",
+    "radars-armes-automatiques"
+  ],
+  "sources": [
+    "Create: Radars 5.1.2 (create_radar-5.1.2-1.21.1.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/Arsenalists-of-Create/Create-Radar (branche NeoForge 1.21.1, commit 8a7766a, version 5.1.2), recettes du dossier data du jar, scènes Ponder (PonderScenes.java) rejouées par notre moteur.",
+    "Mod d'Aycer, HappySG, CeoOfGoogle, Kipti, OndatraCZE, Ray (furuochen) et KrimZik (Arsenalists of Create), sous licence « Arsenalists-of-Create Source-Available License » : modèles et textures de ses auteurs, rendus à partir du jar officiel non modifié ; aucun texte du mod n'est recopié. Téléchargement officiel : modrinth.com/mod/create-radars.",
+    "Portée : RadarBearingBlockEntity.getRange (radarBaseRange 1 + dishCount x dishRangeIncrease 32, au plus maxRadarRange 2 048 ; plaque créative = maximum) ; angle de vue et hauteur : config/server (radarFOV 90, radarYScanRange 32) ; obstacles : groundRadarMaxSolidBlocks 16.",
+    "Vitesse : RadarBearingBlockEntity.getAngularSpeed (vitesse d'un roulement mécanique / (4 + antennes / 10), option gearRadarBearingSpeed) ; recettes : data/create_radar/recipe/crafting/radar_bearing.json, radar_receiver.json, cutting/radar_plate.json, cutting/radar_dish.json ; grilles posées dans la scène : defaultBlockState (facing = down).",
+    "Scène : PonderScenes.radarContraption (radar_contraption.nbt), rotation de 360° en 200 ticks ; l'entraînement de l'arbre est un ajout de notre rendu."
+  ],
+  "en": {
+    "slugEn": "radars-building-a-radar",
+    "name": "Building a radar",
+    "title": "Building a radar — Create: Radars guide",
+    "description": "Create: Radars Radar Bearing, Radar Receiver Block, Radar Plate and Radar Dish: building a spinning radar, its range per antenna and its speed.",
+    "intro": "A Create: Radars radar is a small contraption: a <strong>Radar Bearing</strong> turning a <strong>Radar Receiver Block</strong> surrounded by antennas, either <strong>Radar Plates</strong> or <strong>Radar Dishes</strong>. Each antenna adds 32 blocks of range. Driven by a shaft, the whole thing spins and sweeps the full horizon.",
+    "facts": [
+      {
+        "label": "Range",
+        "value": "1 block + 32 per plate or dish, 2,048 at most"
+      },
+      {
+        "label": "Field of view",
+        "value": "90° wide, 32 blocks above and below"
+      },
+      {
+        "label": "Speed",
+        "value": "4 times slower than a Mechanical Bearing (more past 10 antennas)"
+      },
+      {
+        "label": "Obstacles",
+        "value": "the signal passes through 16 solid blocks at most"
+      },
+      {
+        "label": "Creative plate",
+        "value": "maximum range straight away (creative)"
+      },
+      {
+        "label": "Version",
+        "value": "Create: Radars 5.1.2 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Lightning Rod",
+          null
+        ],
+        [
+          null,
+          "Block of Industrial Iron",
+          null
+        ],
+        [
+          null,
+          "Electron Tube",
+          null
+        ]
+      ],
+      "result": "1 Radar Receiver Block"
+    },
+    "videos": [
+      {
+        "id": "radar_contraption",
+        "name": "Building a radar and spinning it",
+        "description": "The Radar Bearing, then the receiver, two plates swapped for dishes, a row of plates for range, and the radar making a full turn driven by its shaft."
+      }
+    ],
+    "sections": [
+      {
+        "id": "roulement",
+        "title": "The Radar Bearing",
+        "alt": "A Radar Bearing placed on top of a Gearbox fed by a shaft",
+        "html": "<p>It all starts with the <strong>Radar Bearing</strong>: a Create Mechanical Bearing upgraded with an Electron Tube and three Iron Sheets. It is placed facing up, on a shaft or Gearbox driving it from below, and it assembles whatever is built on its plate, just like an ordinary bearing. The difference: it only carries radar parts, and it keeps track of what it sees.</p>"
+      },
+      {
+        "id": "recepteur",
+        "title": "The receiver in the middle",
+        "alt": "The Radar Receiver Block, a block with a big dark eye, on the bearing",
+        "html": "<p>The <strong>Radar Receiver Block</strong> goes right above the bearing. It does the looking: the side it faces sets the direction of the beam, and without it the bearing will not run. Its recipe (shown here) stacks a Lightning Rod, a Block of Industrial Iron and an Electron Tube. One receiver per radar.</p>"
+      },
+      {
+        "id": "plaques",
+        "title": "Plates and dishes",
+        "alt": "Two Radar Plates on either side of the receiver",
+        "html": "<p>The antennas go around the receiver. The <strong>Radar Plate</strong> is a solid panel made of nine Iron Sheets; the <strong>Radar Dish</strong> is an open lattice (two Iron Bars and three Iron Sheets). They count exactly the same, so pick by looks. They chain together like windmill sails: as long as they touch, they belong to the radar.</p>"
+      },
+      {
+        "id": "grilles",
+        "title": "Changing the shape",
+        "alt": "The two plates replaced by Radar Dishes lying flat",
+        "html": "<p>In the scene the two plates make way for two dishes, placed in their default orientation, lying flat. The receiver does not care. In game a dish is placed like any directional block: it faces the side you click, and the Wrench turns it. A lone plate or dish touching neither the receiver nor another antenna is not counted.</p>"
+      },
+      {
+        "id": "portee",
+        "title": "Range: 32 blocks per antenna",
+        "alt": "A row of three plates added above the dishes",
+        "html": "<p>The maths is simple: 1 base block, plus 32 per plate or dish, up to 2,048 blocks. The five antennas in the scene therefore give 161 blocks. The beam covers 90° in width and 32 blocks above and below the radar; it goes through 16 solid blocks at most before it is stopped. Engineer's Goggles show the antenna count and the resulting range on the bearing.</p>"
+      },
+      {
+        "id": "rotation",
+        "title": "Power it and let it spin",
+        "alt": "The whole radar has turned a quarter on its bearing",
+        "html": "<p>Power the bearing and the radar assembles, then spins through 360°. It turns four times slower than a Mechanical Bearing at the same shaft speed: at 24 RPM a turn takes ten seconds, as in the video. Past ten antennas it slows further (five times slower from 10 to 19 antennas, six times from 20 to 29...). In the mod's scene the sections turn while the shaft stands still; we drive the shaft, the Gearbox and the bearing plate to show the real build.</p>"
+      },
+      {
+        "id": "creative",
+        "title": "The Creative Radar Plate",
+        "html": "<p>The <strong>Creative Radar Plate</strong>, creative mode only, is placed like a plate. A radar holding one skips the antenna count and takes the server's maximum range straight away, 2,048 blocks by default. Handy for testing a network or building an adventure map.</p>"
+      },
+      {
+        "id": "suite",
+        "title": "What next",
+        "html": "<p>A radar on its own shows nothing. Connect it to a <a href=\"/en/wiki/radars-network-and-monitor\">Network Controller</a> through a Data Link placed on the bearing, add a Monitor, and contacts appear. To watch the sky from very far away, see the <a href=\"/en/wiki/radars-sky-radar-and-plane-radar\">Sky Radar Mount</a>, which carries the same radar.</p>"
+      }
+    ],
+    "sources": [
+      "Create: Radars 5.1.2 (create_radar-5.1.2-1.21.1.jar from the next Create France modpack release): code from the public repository github.com/Arsenalists-of-Create/Create-Radar (NeoForge 1.21.1 branch, commit 8a7766a, version 5.1.2), recipes from the jar's data folder, Ponder scenes (PonderScenes.java) replayed by our engine.",
+      "Mod by Aycer, HappySG, CeoOfGoogle, Kipti, OndatraCZE, Ray (furuochen) and KrimZik (Arsenalists of Create), under the Arsenalists-of-Create Source-Available License: models and textures by its authors, rendered from the official, unmodified jar; no text from the mod is copied. Official download: modrinth.com/mod/create-radars.",
+      "Range: RadarBearingBlockEntity.getRange (radarBaseRange 1 + dishCount x dishRangeIncrease 32, capped at maxRadarRange 2,048; creative plate = maximum); field of view and height: config/server (radarFOV 90, radarYScanRange 32); obstacles: groundRadarMaxSolidBlocks 16.",
+      "Speed: RadarBearingBlockEntity.getAngularSpeed (Mechanical Bearing speed / (4 + antennas / 10), gearRadarBearingSpeed option); recipes: data/create_radar/recipe/crafting/radar_bearing.json, radar_receiver.json, cutting/radar_plate.json, cutting/radar_dish.json; dishes in the scene: defaultBlockState (facing = down).",
+      "Scene: PonderScenes.radarContraption (radar_contraption.nbt), a 360° turn over 200 ticks; driving the shaft is an addition of our render."
+    ]
+  }
+}

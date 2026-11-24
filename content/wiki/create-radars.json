@@ -1,0 +1,268 @@
+{
+  "slug": "create-radars",
+  "name": "Create: Radars",
+  "blockId": "create_radar:radar_bearing",
+  "category": "radars",
+  "title": "Create: Radars — guide en français",
+  "description": "Create: Radars, addon de Create : radars tournants, moniteurs, canons qui visent seuls, détecteur d'alerte, brouilleur et sonar, avec leurs scènes.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create: Radars 5.1.2 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "<strong>Create: Radars</strong> est un addon de Create qui ajoute la surveillance et la conduite de tir. Un radar monté sur un roulement balaie les alentours, un <strong>moniteur</strong> affiche ce qu'il voit, et un réseau relie le tout aux supports de canon de Create Big Cannons, qui pivotent et tirent sans personne aux commandes. Pour les navires et les aéronefs de Create Aeronautics, l'addon ajoute un radar fixe, un détecteur d'alerte, un transpondeur et un brouilleur. Il est prévu pour le prochain modpack Create France.",
+  "facts": [
+    {
+      "label": "Mod",
+      "value": "Create: Radars 5.1.2 (id create_radar)"
+    },
+    {
+      "label": "Auteurs",
+      "value": "Aycer, HappySG, CeoOfGoogle, Kipti, OndatraCZE, Ray, KrimZik (Arsenalists of Create)"
+    },
+    {
+      "label": "Requiert",
+      "value": "Create 6.0.10 à 6.0.x, Create Big Cannons 5.11.2 ou plus, NeoForge, Minecraft 1.21.1"
+    },
+    {
+      "label": "Contenu",
+      "value": "18 blocs et 7 objets ; 14 scènes Ponder"
+    },
+    {
+      "label": "Navires",
+      "value": "radar aéroporté, détecteur d’alerte, transpondeur et brouilleur : avec Sable (Create Aeronautics)"
+    },
+    {
+      "label": "Licence",
+      "value": "Arsenalists-of-Create Source-Available License (code source consultable, usage en modpack permis)"
+    },
+    {
+      "label": "Version",
+      "value": "Create: Radars 5.1.2 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l’établi",
+    "grid": [
+      [
+        null,
+        "Tube électronique",
+        null
+      ],
+      [
+        "Plaque de fer",
+        "Roulement mécanique",
+        "Plaque de fer"
+      ],
+      [
+        null,
+        "Plaque de fer",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "create:electron_tube",
+        null
+      ],
+      [
+        "create:iron_sheet",
+        "create:mechanical_bearing",
+        "create:iron_sheet"
+      ],
+      [
+        null,
+        "create:iron_sheet",
+        null
+      ]
+    ],
+    "result": "1 roulement de radar",
+    "resultItem": "create_radar:radar_bearing"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "role",
+      "title": "Ce que l'addon apporte",
+      "image": "radar_monitor_contacts.webp",
+      "alt": "Un moniteur de trois blocs sur trois affiche le balayage vert d'un radar qui tourne à côté",
+      "html": "<p>Create: Radars répond à une question simple : qui approche de ta base ? Un <strong>radar</strong> se construit comme une petite machine de Create, un plateau tournant chargé d'antennes. Ce qu'il repère (joueurs, monstres, projectiles, machines en mouvement, navires) apparaît sur un <strong>moniteur</strong>, un écran que tu agrandis en posant plusieurs blocs côte à côte. Le même réseau peut ensuite viser et tirer avec les canons de Create Big Cannons, ou se contenter de surveiller. La recette ci-contre donne le <strong>roulement de radar</strong> (Radar Bearing) : un roulement mécanique, trois plaques de fer et un tube électronique.</p>"
+    },
+    {
+      "id": "premier",
+      "title": "Premier projet conseillé",
+      "image": "radar_contraption_rotation.webp",
+      "alt": "Un radar complet tourne sur son roulement, entraîné par un arbre",
+      "html": "<p>Commence par une station d'écoute. Construis un radar sur un roulement alimenté par un arbre (récepteur au centre, cinq plaques autour), pose un <strong>contrôleur de réseau</strong> (Network Controller) et un moniteur de trois blocs sur trois, puis relie les trois avec des <strong>liaisons de données</strong> (Data Link). Tu verras chaque créature passer sur l'écran. Quand ça marche, ajoute un canon automatique : la page des armes montre le montage complet. Garde le brouilleur et le sonar pour plus tard.</p>"
+    },
+    {
+      "id": "radars",
+      "title": "Les capteurs",
+      "image": "radar_sky_radar.webp",
+      "alt": "Un radar posé sur un support de radar céleste pivote par quarts de tour",
+      "html": "<p>Trois façons de détecter, chacune avec sa page. Le radar à <a href=\"/wiki/radars-construire-un-radar\">roulement</a> tourne et couvre tout l'horizon. Le <a href=\"/wiki/radars-radar-celeste-et-radar-aeroporte\">support de radar céleste</a> (Sky Radar Mount) porte le même radar mais ne regarde que le ciel, avec une portée bien plus grande ; le <strong>radar aéroporté</strong> (Plane Radar), d'un seul bloc, se pose sur un navire et regarde droit devant. Enfin le <a href=\"/wiki/radars-sonar\">sonar</a> écoute à travers la roche et l'eau.</p>"
+    },
+    {
+      "id": "reseau",
+      "title": "Le réseau et le moniteur",
+      "image": "radar_network_radar.webp",
+      "alt": "Un contrôleur de réseau relié à un moniteur, à un radar et à un support de canon",
+      "html": "<p>Tout passe par le <a href=\"/wiki/radars-reseau-et-moniteur\">contrôleur de réseau</a>. Il reçoit les contacts des radars, les transmet aux moniteurs et aux armes, et garde trois filtres : ce qu'on affiche, qui est ami, et comment on cible. La liaison de données sert de câble : on clique d'abord la source, puis on pose la liaison sur le bloc à brancher. Les jumelles (Binoculars) et le désignateur de zone sûre (Safe Zone Designator) s'appairent eux aussi au contrôleur.</p>"
+    },
+    {
+      "id": "armes",
+      "title": "Les canons automatiques",
+      "image": "radar_weapon_extension.webp",
+      "alt": "Deux supports de canon de Create Big Cannons avec leurs contrôleurs de lacet et de hausse",
+      "html": "<p>La page <a href=\"/wiki/radars-armes-automatiques\">armes automatiques</a> explique comment un <strong>support de canon</strong> de Create Big Cannons devient une tourelle. Le <strong>contrôleur automatique de lacet</strong> (Auto Yaw Controller) le fait pivoter, le <strong>contrôleur automatique d'assiette</strong> (Auto Pitch Controller) règle la hausse, et le <strong>contrôleur de tir</strong> (Fire Controller) envoie le signal de redstone quand le canon est aligné. Les roulements pivots de Simulated remplacent le support pour les grosses tourelles.</p>"
+    },
+    {
+      "id": "guerre",
+      "title": "Guerre électronique",
+      "image": "radar_jammer_brouillage.webp",
+      "alt": "Un brouilleur directionnel sur son arbre, à côté d’un moniteur aux contacts brouillés",
+      "html": "<p>Sur un navire, on veut aussi savoir qui nous regarde. Le <a href=\"/wiki/radars-detecteur-d-alerte-radar\">détecteur d'alerte radar</a> (Radar Warning Receiver) signale les radars ennemis et leur verrouillage, le <strong>transpondeur d'identification</strong> (Identification Transponder) donne un code ami au navire, et le <a href=\"/wiki/radars-brouilleurs\">brouilleur directionnel</a> (Directional Jammer) fait danser les contacts sur l'écran adverse pendant quinze secondes.</p>"
+    },
+    {
+      "id": "anciens",
+      "title": "Noms sans bloc dans la 5.1.2",
+      "html": "<p>Le fichier de langue du jar contient encore trois noms que la 5.1.2 n'enregistre pas : l'<strong>Anti-Radar Guidance Unit</strong> (unité de guidage antiradar, pour un projectile qui suit un émetteur radar), le <strong>Radar Jammer</strong> (ancien brouilleur, remplacé par le brouilleur directionnel) et le <strong>Track Controller</strong> (ancien bloc de compatibilité avec Trackwork). Ils n'existent ni dans l'inventaire créatif ni dans les recettes : inutile de les chercher. La <strong>plaque de radar créative</strong> (Creative Radar Plate) existe en créatif seulement : posée dans un radar, elle lui donne la portée maximale, 2 048 blocs.</p>"
+    },
+    {
+      "id": "modpack",
+      "title": "Dans le prochain modpack Create France",
+      "html": "<p>Create: Radars ne fait pas partie du modpack Create France actuel : il est prévu pour la prochaine version, en préparation. Ces pages décrivent la 5.1.2, celle qui y entrera, avec les réglages par défaut du mod ; un serveur peut changer les portées, les angles de vue ou la durée du brouillage. Les blocs pour navires demandent Create Aeronautics, présent dans la même version du modpack.</p>"
+    }
+  ],
+  "related": [
+    "radars-construire-un-radar",
+    "radars-reseau-et-moniteur",
+    "radars-armes-automatiques",
+    "radars-radar-celeste-et-radar-aeroporte",
+    "radars-detecteur-d-alerte-radar",
+    "radars-brouilleurs",
+    "radars-sonar",
+    "create-big-cannons",
+    "create-aeronautics",
+    "support-de-canon"
+  ],
+  "sources": [
+    "Create: Radars 5.1.2 (create_radar-5.1.2-1.21.1.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/Arsenalists-of-Create/Create-Radar (branche NeoForge 1.21.1, commit 8a7766a, version 5.1.2), recettes du dossier data du jar, scènes Ponder (PonderScenes.java) rejouées par notre moteur.",
+    "Mod d'Aycer, HappySG, CeoOfGoogle, Kipti, OndatraCZE, Ray (furuochen) et KrimZik (Arsenalists of Create), sous licence « Arsenalists-of-Create Source-Available License » : modèles et textures de ses auteurs, rendus à partir du jar officiel non modifié ; aucun texte du mod n'est recopié. Téléchargement officiel : modrinth.com/mod/create-radars.",
+    "Blocs et objets : registry/ModBlocks.java, registry/ModItems.java, registry/ModCreativeTabs.java (radar aéroporté, détecteur d'alerte, transpondeur et brouilleur seulement avec Sable) ; dépendances : META-INF/neoforge.mods.toml du jar ; scènes Ponder : registry/ModPonderIndex.java.",
+    "Plaque créative : RadarBearingBlockEntity.getRange (maxRadarRange, 2 048 blocs par défaut, config/server). Noms sans bloc : clés block.create_radar.arad_guidance, jammer et track_controller du fichier en_us.json, absentes de ModBlocks.java en 5.1.2."
+  ],
+  "en": {
+    "slugEn": "create-radars-guide",
+    "name": "Create: Radars",
+    "title": "Create: Radars — mod guide",
+    "description": "Create: Radars guide: a Create addon with spinning radars, monitors, self-aiming cannons, a warning receiver, a jammer and sonar, with Ponder scenes.",
+    "intro": "<strong>Create: Radars</strong> is a Create addon about surveillance and fire control. A radar riding a bearing sweeps the area, a <strong>Monitor</strong> shows what it sees, and a network ties it all to Create Big Cannons mounts, which turn and fire with nobody at the controls. For Create Aeronautics ships and aircraft it adds a fixed radar, a warning receiver, a transponder and a jammer. It is planned for the next Create France modpack.",
+    "facts": [
+      {
+        "label": "Mod",
+        "value": "Create: Radars 5.1.2 (id create_radar)"
+      },
+      {
+        "label": "Authors",
+        "value": "Aycer, HappySG, CeoOfGoogle, Kipti, OndatraCZE, Ray, KrimZik (Arsenalists of Create)"
+      },
+      {
+        "label": "Requires",
+        "value": "Create 6.0.10 to 6.0.x, Create Big Cannons 5.11.2 or newer, NeoForge, Minecraft 1.21.1"
+      },
+      {
+        "label": "Content",
+        "value": "18 blocks and 7 items; 14 Ponder scenes"
+      },
+      {
+        "label": "Ships",
+        "value": "Plane Radar, warning receiver, transponder and jammer: with Sable (Create Aeronautics)"
+      },
+      {
+        "label": "Licence",
+        "value": "Arsenalists-of-Create Source-Available License (source readable, modpack use allowed)"
+      },
+      {
+        "label": "Version",
+        "value": "Create: Radars 5.1.2 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Electron Tube",
+          null
+        ],
+        [
+          "Iron Sheet",
+          "Mechanical Bearing",
+          "Iron Sheet"
+        ],
+        [
+          null,
+          "Iron Sheet",
+          null
+        ]
+      ],
+      "result": "1 Radar Bearing"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "role",
+        "title": "What the addon adds",
+        "alt": "A three-by-three Monitor showing the green sweep of a radar spinning next to it",
+        "html": "<p>Create: Radars answers a simple question: who is coming near your base? A <strong>radar</strong> is built like a small Create contraption, a turning platform loaded with antennas. What it picks up (players, mobs, projectiles, moving contraptions, ships) shows on a <strong>Monitor</strong>, a screen you enlarge by placing several blocks side by side. The same network can then aim and fire Create Big Cannons, or simply keep watch. The recipe shown makes the <strong>Radar Bearing</strong>: a Mechanical Bearing, three Iron Sheets and an Electron Tube.</p>"
+      },
+      {
+        "id": "premier",
+        "title": "A good first project",
+        "alt": "A complete radar turning on its bearing, driven by a shaft",
+        "html": "<p>Start with a listening post. Build a radar on a bearing powered by a shaft (receiver in the middle, five plates around it), place a <strong>Network Controller</strong> and a three-by-three Monitor, then join all three with <strong>Data Links</strong>. Every creature that walks by will show on the screen. Once that works, add an automatic gun: the weapons page shows the full build. Keep the jammer and the sonar for later.</p>"
+      },
+      {
+        "id": "radars",
+        "title": "The sensors",
+        "alt": "A radar on a Sky Radar Mount turning a quarter at a time",
+        "html": "<p>Three ways to detect, each with its own page. The <a href=\"/en/wiki/radars-building-a-radar\">bearing radar</a> spins and covers the whole horizon. The <a href=\"/en/wiki/radars-sky-radar-and-plane-radar\">Sky Radar Mount</a> carries the same radar but only watches the sky, over a much longer range; the single-block <strong>Plane Radar</strong> sits on a ship and looks straight ahead. Last, the <a href=\"/en/wiki/radars-sonar-arrays\">sonar</a> listens through rock and water.</p>"
+      },
+      {
+        "id": "reseau",
+        "title": "The network and the Monitor",
+        "alt": "A Network Controller tied to a Monitor, a radar and a cannon mount",
+        "html": "<p>Everything goes through the <a href=\"/en/wiki/radars-network-and-monitor\">Network Controller</a>. It receives the radars' contacts, passes them on to Monitors and weapons, and holds three filters: what is shown, who counts as a friend, and how targets are picked. The Data Link is the cable: click the source first, then place the link on the block to connect. The Binoculars and the Safe Zone Designator are paired with the controller too.</p>"
+      },
+      {
+        "id": "armes",
+        "title": "Automatic guns",
+        "alt": "Two Create Big Cannons mounts with their yaw and pitch controllers",
+        "html": "<p>The <a href=\"/en/wiki/radars-automatic-weapons\">automatic weapons</a> page explains how a Create Big Cannons <strong>Cannon Mount</strong> becomes a turret. The <strong>Auto Yaw Controller</strong> turns it, the <strong>Auto Pitch Controller</strong> sets the elevation, and the <strong>Fire Controller</strong> sends the redstone signal once the gun is on target. Simulated swivel bearings stand in for the mount on bigger turrets.</p>"
+      },
+      {
+        "id": "guerre",
+        "title": "Electronic warfare",
+        "alt": "A Directional Jammer on its shaft, next to a Monitor showing scrambled contacts",
+        "html": "<p>On a ship you also want to know who is watching you. The <a href=\"/en/wiki/radars-radar-warning-receiver\">Radar Warning Receiver</a> reports enemy radars and their lock, the <strong>Identification Transponder</strong> gives the ship a friendly code, and the <a href=\"/en/wiki/radars-jammers\">Directional Jammer</a> makes the contacts dance on the enemy's screen for fifteen seconds.</p>"
+      },
+      {
+        "id": "anciens",
+        "title": "Names with no block in 5.1.2",
+        "html": "<p>The jar's language file still holds three names that 5.1.2 does not register: the <strong>Anti-Radar Guidance Unit</strong> (meant for a projectile homing on a radar emitter), the <strong>Radar Jammer</strong> (the old jammer, replaced by the Directional Jammer) and the <strong>Track Controller</strong> (an old Trackwork compatibility block). They are neither in the creative tab nor in any recipe, so there is no point looking for them. The <strong>Creative Radar Plate</strong> exists in creative mode only: placed in a radar, it gives it the maximum range, 2,048 blocks.</p>"
+      },
+      {
+        "id": "modpack",
+        "title": "In the next Create France modpack",
+        "html": "<p>Create: Radars is not part of the current Create France modpack: it is planned for the next release, still in preparation. These pages describe 5.1.2, the version going into it, with the mod's default settings; a server can change ranges, fields of view or jamming times. The ship blocks need Create Aeronautics, which is in the same modpack release.</p>"
+      }
+    ],
+    "sources": [
+      "Create: Radars 5.1.2 (create_radar-5.1.2-1.21.1.jar from the next Create France modpack release): code from the public repository github.com/Arsenalists-of-Create/Create-Radar (NeoForge 1.21.1 branch, commit 8a7766a, version 5.1.2), recipes from the jar's data folder, Ponder scenes (PonderScenes.java) replayed by our engine.",
+      "Mod by Aycer, HappySG, CeoOfGoogle, Kipti, OndatraCZE, Ray (furuochen) and KrimZik (Arsenalists of Create), under the Arsenalists-of-Create Source-Available License: models and textures by its authors, rendered from the official, unmodified jar; no text from the mod is copied. Official download: modrinth.com/mod/create-radars.",
+      "Blocks and items: registry/ModBlocks.java, registry/ModItems.java, registry/ModCreativeTabs.java (Plane Radar, warning receiver, transponder and jammer only with Sable); dependencies: the jar's META-INF/neoforge.mods.toml; Ponder scenes: registry/ModPonderIndex.java.",
+      "Creative plate: RadarBearingBlockEntity.getRange (maxRadarRange, 2,048 blocks by default, config/server). Names with no block: keys block.create_radar.arad_guidance, jammer and track_controller of en_us.json, missing from ModBlocks.java in 5.1.2."
+    ]
+  }
+}

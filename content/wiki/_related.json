@@ -83,7 +83,8 @@
     "offroad-vehicules-a-roues",
     "lightworks-feux-de-vehicule",
     "create-propulsion",
-    "create-coasters-simulated"
+    "create-coasters-simulated",
+    "create-radars"
   ],
   "presse-mecanique": [
     "loconautics-blocs-et-objets",
@@ -123,7 +124,8 @@
     "aeronautics-outils"
   ],
   "roulement-mecanique": [
-    "aeronautics-roulement-pivot"
+    "aeronautics-roulement-pivot",
+    "radars-construire-un-radar"
   ],
   "poulie-a-corde": [
     "aeronautics-cordes-et-amarrage",
@@ -211,5 +213,26 @@
   ],
   "cle": [
     "chariot-de-canon"
+  ],
+  "support-de-canon": [
+    "radars-armes-automatiques"
+  ],
+  "autocanons": [
+    "radars-armes-automatiques"
+  ],
+  "detonateurs-et-traceurs": [
+    "radars-armes-automatiques"
+  ],
+  "create-big-cannons": [
+    "create-radars"
+  ],
+  "aeronautics-roulement-pivot": [
+    "radars-armes-automatiques"
+  ],
+  "deep-seas-sonar-barometre": [
+    "radars-sonar"
+  ],
+  "filtres": [
+    "radars-reseau-et-moniteur"
   ]
 }

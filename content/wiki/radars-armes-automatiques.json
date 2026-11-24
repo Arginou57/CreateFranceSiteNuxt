@@ -1,0 +1,404 @@
+{
+  "slug": "radars-armes-automatiques",
+  "name": "Canons automatiques",
+  "blockId": "create_radar:auto_yaw_controller",
+  "category": "radars",
+  "title": "Canons automatiques — Create: Radars, guide",
+  "description": "Contrôleurs automatiques de lacet et d'assiette, contrôleur de tir et détonateurs de Create: Radars : des canons de Create Big Cannons qui visent seuls.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create: Radars 5.1.2 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Avec Create: Radars, un <a href=\"/wiki/support-de-canon\">support de canon</a> de Create Big Cannons devient une tourelle. Le <strong>contrôleur automatique de lacet</strong> (Auto Yaw Controller) le fait pivoter, le <strong>contrôleur automatique d'assiette</strong> (Auto Pitch Controller) règle sa hausse, et le <strong>contrôleur de tir</strong> (Fire Controller) déclenche le tir quand le canon est aligné. Les cibles viennent du réseau, des jumelles ou du moniteur.",
+  "facts": [
+    {
+      "label": "Contrôleurs",
+      "value": "besoin d’une rotation en entrée ; ils entraînent le support à leur sortie"
+    },
+    {
+      "label": "Lacet",
+      "value": "sous le support ; limites mini / maxi réglables"
+    },
+    {
+      "label": "Assiette",
+      "value": "à côté du support (ou via une extension de support)"
+    },
+    {
+      "label": "Contrôleur de tir",
+      "value": "redstone quand le canon est aligné ; en rafale avec un répéteur dessus"
+    },
+    {
+      "label": "Précision",
+      "value": "tir permis à moins de 2 blocs d’écart latéral (réglage)"
+    },
+    {
+      "label": "Version",
+      "value": "Create: Radars 5.1.2 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l’établi",
+    "grid": [
+      [
+        null,
+        "Mécanisme de précision",
+        null
+      ],
+      [
+        null,
+        "Boîte à roues dentées",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "create:precision_mechanism",
+        null
+      ],
+      [
+        null,
+        "create:gearbox",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 contrôleur automatique de lacet",
+    "resultItem": "create_radar:auto_yaw_controller"
+  },
+  "videos": [
+    {
+      "id": "radar_weapon",
+      "name": "Deux canons automatiques",
+      "description": "Un autocanon sur son support avec ses deux contrôleurs, relié au réseau, qui suit une cible ; puis un second canon monté plus haut grâce aux extensions de support, qui vise avec le premier.",
+      "duration": "PT20S",
+      "chapters": [
+        {
+          "t": 3.2,
+          "section": "support"
+        },
+        {
+          "t": 5.7,
+          "section": "cible"
+        },
+        {
+          "t": 12.4,
+          "section": "extension"
+        }
+      ]
+    },
+    {
+      "id": "radar_auto_yaw",
+      "name": "Le contrôleur de lacet",
+      "description": "Le contrôleur de lacet sous le support, ses deux façons d'être relié, puis le canon qui balaie entre ses angles limites.",
+      "duration": "PT14S",
+      "chapters": [
+        {
+          "t": 3.2,
+          "section": "lacet"
+        },
+        {
+          "t": 7.6,
+          "section": "limites"
+        }
+      ]
+    },
+    {
+      "id": "radar_auto_pitch",
+      "name": "Le contrôleur d'assiette",
+      "description": "Le contrôleur d'assiette à côté du support, le canon qui monte à sa hausse maximale puis descend, et la liaison qui le rattache au réseau.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 3.2,
+          "section": "assiette"
+        },
+        {
+          "t": 5.3,
+          "section": "hausse"
+        },
+        {
+          "t": 10.1,
+          "section": "assiette"
+        },
+        {
+          "t": 14.5,
+          "section": "extension"
+        }
+      ]
+    },
+    {
+      "id": "radar_swivel",
+      "name": "Avec les roulements pivots",
+      "description": "Deux tourelles sur les roulements pivots de Simulated, l'une à pivot simple, l'autre à pivots séparés pour le lacet et l'assiette, qui tournent une fois assemblées.",
+      "duration": "PT24S",
+      "chapters": [
+        {
+          "t": 2.0,
+          "section": "pivots"
+        },
+        {
+          "t": 17.1,
+          "section": "verrouiller"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "support",
+      "title": "Le montage de base",
+      "image": "radar_weapon_support.webp",
+      "alt": "Un autocanon sur son support, contrôleur de lacet dessous, contrôleur d’assiette à côté",
+      "video": "radar_weapon",
+      "html": "<p>Pose le <strong>contrôleur de lacet</strong> sous le support de canon, le <strong>contrôleur d'assiette</strong> contre un de ses flancs, puis le canon sur le support comme d'habitude. Les deux contrôleurs se fabriquent de la même façon, avec deux pièces de Create (mécanisme de précision, boîte à roues dentées) placées l'une au-dessus de l'autre pour le lacet (recette ci-contre), côte à côte pour l'assiette. Important : un contrôleur a besoin d'une rotation en entrée. Il ne la transmet pas telle quelle ; il s'en sert pour faire tourner lui-même le support, à la vitesse voulue.</p>"
+    },
+    {
+      "id": "cible",
+      "title": "Relier au réseau, et le canon vise",
+      "image": "radar_weapon_liaison.webp",
+      "alt": "Le canon a pivoté vers sa cible, la liaison posée sur le contrôleur d’assiette",
+      "html": "<p>Avec une liaison de données : clic sur le contrôleur de réseau, clic sur le support de canon, puis pose de la liaison sur le contrôleur d'assiette. Le canon reçoit alors la cible choisie sur le moniteur, désignée aux jumelles, ou trouvée seule si le filtre de ciblage est en automatique. Le mod calcule l'avance sur une cible mobile et la retombée de l'obus. Dans la scène du mod les canons restent immobiles ; la vidéo les montre en train de viser, contrôleurs entraînés.</p>"
+    },
+    {
+      "id": "extension",
+      "title": "Les extensions de support",
+      "image": "radar_weapon_extension.webp",
+      "alt": "Un second canon plus haut, relié à son contrôleur d’assiette par des extensions de support",
+      "html": "<p>Quand la place manque, les <strong>extensions de support</strong> de Create Big Cannons font le lien : une extension sous le support et une autre sur le côté portent la rotation jusqu'aux contrôleurs, même décalés d'un bloc. Le second canon de la vidéo est monté ainsi, et les deux suivent la même cible.</p>"
+    },
+    {
+      "id": "lacet",
+      "title": "Le contrôleur de lacet",
+      "image": "radar_auto_yaw_lacet.webp",
+      "alt": "Le contrôleur de lacet sous le support, encadré",
+      "video": "radar_auto_yaw",
+      "html": "<p>Le <strong>contrôleur de lacet</strong> fait tourner le support autour de l'axe vertical. Deux façons de le relier : comme l'assiette (contrôleur de réseau, support, puis lui), ou, sans réseau, en cliquant seulement le support avec la liaison avant de la poser sur le contrôleur. À la place du support, il sait aussi faire tourner un roulement physique de Create Aeronautics.</p>"
+    },
+    {
+      "id": "limites",
+      "title": "Les angles limites",
+      "image": "radar_auto_yaw_limites.webp",
+      "alt": "Le canon balaie de gauche à droite entre ses deux limites",
+      "html": "<p>Clic droit sur un contrôleur : une interface montre le support et les blocs qui l'entourent, avec deux cadrans pour l'angle minimal et l'angle maximal. Le canon ne sortira jamais de cet arc, ce qui évite de tirer dans ta propre base. Dans la vidéo, le canon va d'une limite à l'autre.</p>"
+    },
+    {
+      "id": "assiette",
+      "title": "Le contrôleur d'assiette",
+      "image": "radar_auto_pitch_hausse.webp",
+      "alt": "Le contrôleur d'assiette contre le flanc du support",
+      "video": "radar_auto_pitch",
+      "html": "<p>Le <strong>contrôleur d'assiette</strong> se pose à côté du support, l'axe dans le même sens que celui de la hausse. Son interface règle la dépression la plus basse et l'élévation la plus haute. C'est lui qui termine la chaîne de liaisons : contrôleur de réseau, support, puis contrôleur d'assiette. Il sait aussi commander un roulement mécanique ou un roulement physique.</p>"
+    },
+    {
+      "id": "hausse",
+      "title": "Monter et descendre",
+      "image": "radar_auto_pitch_limites.webp",
+      "alt": "Le canon relevé à sa hausse maximale",
+      "html": "<p>La vidéo fait monter le canon à sa hausse maximale, puis le baisse à sa dépression minimale avant de le remettre à mi-hauteur. En jeu, ces mouvements suivent la cible ; le mode artillerie du filtre de ciblage fait tirer en cloche, par-dessus les obstacles, au lieu du tir tendu.</p>"
+    },
+    {
+      "id": "pivots",
+      "title": "Avec les roulements pivots de Simulated",
+      "image": "radar_swivel_double.webp",
+      "alt": "Deux supports de canon posés sur des roulements pivots, contrôleurs à côté",
+      "video": "radar_swivel",
+      "html": "<p>Les <a href=\"/wiki/aeronautics-roulement-pivot\">roulements pivots</a> de Simulated (Create Aeronautics) remplacent la rotation du support pour les grosses tourelles. Un roulement pivot sous le support donne le lacet ; un second, couché, peut donner l'assiette séparément. Le contrôleur passe alors en mode pivot (son modèle change) et se place contre le roulement, l'axe dans le même sens.</p>"
+    },
+    {
+      "id": "verrouiller",
+      "title": "Assembler et verrouiller",
+      "image": "radar_swivel_verrouiller.webp",
+      "alt": "Les deux tourelles ont pivoté sur leurs roulements",
+      "html": "<p>Comme toute tourelle sur roulement pivot, il faut l'assembler et la garder verrouillée pour que la visée automatique la commande. Dans la vidéo, les deux tourelles pivotent une fois assemblées, un ajout de notre rendu (la scène du mod s'arrête avant).</p>"
+    },
+    {
+      "id": "tir",
+      "title": "Le contrôleur de tir",
+      "html": "<p>Le <strong>contrôleur de tir</strong> (redstone, deux comparateurs, mécanisme de précision, boitier en laiton) se pose contre le support et émet un signal de redstone quand le canon pointe sur sa cible, à moins de 2 blocs d'écart. Avec un répéteur posé dessus, il tire en rafale au rythme du répéteur. Les <a href=\"/wiki/autocanons\">autocanons</a> et les grands canons tirent ainsi seuls, sans cibler une zone sûre.</p>"
+    },
+    {
+      "id": "detonateurs",
+      "title": "Détonateurs du mod",
+      "html": "<p>Le <strong>détonateur de proximité avancé</strong> (Advanced Proximity Fuze), visible dans l'onglet créatif du mod et sans recette en 5.1.2, explose près de toute créature ou de tout navire, après 5 ticks d'armement ; tiré par un canon guidé par radar, il n'éclate qu'à la distance réglée de la cible désignée, sans délai. Le <strong>Guided Fuze [DEPRECATED]</strong> (détonateur à tête chercheuse, obsolète) corrigeait la trajectoire de 3° par tick vers la cible du contrôleur ; il n'est plus fabricable. Voir aussi les <a href=\"/wiki/detonateurs-et-traceurs\">détonateurs de Create Big Cannons</a>.</p>"
+    }
+  ],
+  "related": [
+    "create-radars",
+    "radars-reseau-et-moniteur",
+    "support-de-canon",
+    "autocanons",
+    "create-big-cannons",
+    "aeronautics-roulement-pivot",
+    "detonateurs-et-traceurs",
+    "chariot-de-canon",
+    "munitions-d-autocanon"
+  ],
+  "sources": [
+    "Create: Radars 5.1.2 (create_radar-5.1.2-1.21.1.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/Arsenalists-of-Create/Create-Radar (branche NeoForge 1.21.1, commit 8a7766a, version 5.1.2), recettes du dossier data du jar, scènes Ponder (PonderScenes.java) rejouées par notre moteur.",
+    "Mod d'Aycer, HappySG, CeoOfGoogle, Kipti, OndatraCZE, Ray (furuochen) et KrimZik (Arsenalists of Create), sous licence « Arsenalists-of-Create Source-Available License » : modèles et textures de ses auteurs, rendus à partir du jar officiel non modifié ; aucun texte du mod n'est recopié. Téléchargement officiel : modrinth.com/mod/create-radars.",
+    "Contrôleurs : block/controller/yaw/AutoYawControllerBlockEntity.java, pitch/AutoPitchControllerBlockEntity.java (rotation d'entrée obligatoire : controller_has_no_kinetic_speed ; CbcShaftDrive ; supports, roulements mécaniques, roulements physiques et roulements pivots : CannonMountYaw, MechBearingPitch, PhysBearingYaw / Pitch, mode pivot SWIVEL_MODE) ; limites : block/controller/limits (ControllerLimitsScreen, vue des collisions).",
+    "Tir : block/controller/firing/FireControllerBlockEntity.java (redstone quand aligné, rafale avec un répéteur au-dessus) ; config/common autoFireMaxLateralErrorBlocks 2,0 ; avance et calcul balistique : useNewTargetingComputer, targetTrackingLeadTicks 3.",
+    "Détonateurs : item/radarproxfuze/AdvancedProximityFuze.java (infobulle : 5 ticks d'armement), item/GuidedFuzeItem.java (guidedFuzeMaxDegreesPerTick 3) ; onglet créatif : registry/ModCreativeTabs.java. Recettes : data/create_radar/recipe/crafting/auto_yaw_controller.json, auto_pitch_controller.json, fire_controller.json.",
+    "Scènes : PonderScenes.weaponSimpleWeaponSetup (weapon_setup.nbt), autoYawSetup (auto_yaw_ponder.nbt), autoPitchFollowup (auto_pitch_ponder.nbt), swivelSetup (swivel_ponder.nbt) ; canons qui visent, contrôleurs entraînés et tourelles qui pivotent : ajouts de notre rendu."
+  ],
+  "en": {
+    "slugEn": "radars-automatic-weapons",
+    "name": "Automatic cannons",
+    "title": "Automatic cannons — Create: Radars guide",
+    "description": "Create: Radars yaw and pitch controllers, Fire Controller and fuzes: how to make Create Big Cannons guns aim by themselves.",
+    "intro": "With Create: Radars, a Create Big Cannons <a href=\"/en/wiki/cannon-mount\">Cannon Mount</a> becomes a turret. The <strong>Auto Yaw Controller</strong> turns it, the <strong>Auto Pitch Controller</strong> sets its elevation, and the <strong>Fire Controller</strong> pulls the trigger once the gun is lined up. Targets come from the network, the Binoculars or the Monitor.",
+    "facts": [
+      {
+        "label": "Controllers",
+        "value": "need rotation coming in; they drive the mount on their output"
+      },
+      {
+        "label": "Yaw",
+        "value": "under the mount; adjustable minimum / maximum limits"
+      },
+      {
+        "label": "Pitch",
+        "value": "beside the mount (or through a mount extension)"
+      },
+      {
+        "label": "Fire Controller",
+        "value": "redstone when the gun is lined up; bursts with a repeater on top"
+      },
+      {
+        "label": "Accuracy",
+        "value": "fires within 2 blocks of lateral error (setting)"
+      },
+      {
+        "label": "Version",
+        "value": "Create: Radars 5.1.2 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Precision Mechanism",
+          null
+        ],
+        [
+          null,
+          "Gearbox",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Auto Yaw Controller"
+    },
+    "videos": [
+      {
+        "id": "radar_weapon",
+        "name": "Two automatic guns",
+        "description": "An autocannon on its mount with both controllers, linked to the network, tracking a target; then a second gun mounted higher through mount extensions, aiming alongside the first."
+      },
+      {
+        "id": "radar_auto_yaw",
+        "name": "The Auto Yaw Controller",
+        "description": "The yaw controller under the mount, its two ways of being linked, then the gun sweeping between its limit angles."
+      },
+      {
+        "id": "radar_auto_pitch",
+        "name": "The Auto Pitch Controller",
+        "description": "The pitch controller beside the mount, the gun rising to its highest elevation then dipping, and the link that ties it to the network."
+      },
+      {
+        "id": "radar_swivel",
+        "name": "With swivel bearings",
+        "description": "Two turrets on Simulated swivel bearings, one on a single swivel, the other with separate swivels for yaw and pitch, turning once assembled."
+      }
+    ],
+    "sections": [
+      {
+        "id": "support",
+        "title": "The basic build",
+        "alt": "An autocannon on its mount, yaw controller below, pitch controller beside it",
+        "html": "<p>Put the <strong>Auto Yaw Controller</strong> under the Cannon Mount, the <strong>Auto Pitch Controller</strong> against one of its sides, then the gun on the mount as usual. Both controllers are crafted the same way: a Precision Mechanism and a Gearbox, stacked for yaw (recipe shown here), side by side for pitch. Important: a controller needs rotation coming in. It does not pass it straight through; it uses it to turn the mount itself, at the speed it wants.</p>"
+      },
+      {
+        "id": "cible",
+        "title": "Link it to the network and the gun takes aim",
+        "alt": "The gun has swung toward its target, the link on the pitch controller",
+        "html": "<p>With a Data Link: click the Network Controller, click the Cannon Mount, then place the link on the pitch controller. The gun now receives the target chosen on the Monitor, designated with the Binoculars, or found on its own if the Targeting Filter is set to automatic. The mod works out the lead on a moving target and the shell's drop. In the mod's scene the guns stay still; the video shows them aiming, controllers turning.</p>"
+      },
+      {
+        "id": "extension",
+        "title": "Mount extensions",
+        "alt": "A second gun higher up, tied to its pitch controller through mount extensions",
+        "html": "<p>When space runs short, Create Big Cannons <strong>Cannon Mount Extensions</strong> bridge the gap: one extension under the mount and another on its side carry the rotation to the controllers, even a block away. The second gun in the video is built that way, and both follow the same target.</p>"
+      },
+      {
+        "id": "lacet",
+        "title": "The Auto Yaw Controller",
+        "alt": "The yaw controller under the mount, outlined",
+        "html": "<p>The <strong>Auto Yaw Controller</strong> turns the mount around the vertical axis. Two ways to link it: like pitch (Network Controller, mount, then the yaw controller), or, with no network, by clicking only the mount with the link before placing it on the controller. Instead of a mount, it can also turn a Create Aeronautics physics bearing.</p>"
+      },
+      {
+        "id": "limites",
+        "title": "Limit angles",
+        "alt": "The gun sweeping left and right between its two limits",
+        "html": "<p>Right-click a controller: an interface shows the mount and the blocks around it, with two dials for the minimum and maximum angle. The gun will never leave that arc, which keeps it from firing into your own base. In the video the gun travels from one limit to the other.</p>"
+      },
+      {
+        "id": "assiette",
+        "title": "The Auto Pitch Controller",
+        "alt": "The pitch controller against the side of the mount",
+        "html": "<p>The <strong>Auto Pitch Controller</strong> goes beside the mount, its axis running the same way as the elevation axis. Its interface sets the lowest depression and the highest elevation. It closes the link chain: Network Controller, mount, then pitch controller. It can also drive a Mechanical Bearing or a physics bearing.</p>"
+      },
+      {
+        "id": "hausse",
+        "title": "Up and down",
+        "alt": "The gun raised to its highest elevation",
+        "html": "<p>The video raises the gun to its highest elevation, then lowers it to its deepest depression before bringing it back halfway. In game these moves follow the target; the Targeting Filter's artillery mode lobs the shells over obstacles instead of firing flat.</p>"
+      },
+      {
+        "id": "pivots",
+        "title": "With Simulated swivel bearings",
+        "alt": "Two cannon mounts on swivel bearings, controllers beside them",
+        "html": "<p>Simulated's <a href=\"/en/wiki/aeronautics-swivel-bearing\">swivel bearings</a> (Create Aeronautics) take over the mount's rotation for big turrets. One swivel under the mount gives yaw; a second one lying on its side can give pitch separately. The controller then switches to swivel mode (its model changes) and goes against the bearing, its axis the same way.</p>"
+      },
+      {
+        "id": "verrouiller",
+        "title": "Assemble and lock",
+        "alt": "Both turrets have turned on their bearings",
+        "html": "<p>Like any swivel turret, it has to be assembled and kept locked for automatic aiming to drive it. In the video both turrets turn once assembled, an addition of our render (the mod's scene stops just before).</p>"
+      },
+      {
+        "id": "tir",
+        "title": "The Fire Controller",
+        "html": "<p>The <strong>Fire Controller</strong> (redstone, two Redstone Comparators, a Precision Mechanism, Brass Casing) goes against the mount and gives off a redstone signal when the gun points at its target, within 2 blocks. With a Redstone Repeater on top it fires in bursts at the repeater's pace. <a href=\"/en/wiki/autocannons\">Autocannons</a> and big cannons fire on their own this way, never into a safe zone.</p>"
+      },
+      {
+        "id": "detonateurs",
+        "title": "The mod's fuzes",
+        "html": "<p>The <strong>Advanced Proximity Fuze</strong>, found in the mod's creative tab and with no recipe in 5.1.2, goes off near any creature or ship after 5 ticks of arming; fired by a radar-guided gun, it bursts only at the set distance from the designated target, with no delay. The <strong>Guided Fuze [DEPRECATED]</strong> used to steer the shell by 3° per tick toward the controller's target; it can no longer be made. See also <a href=\"/en/wiki/fuzes-and-tracers\">Create Big Cannons fuzes</a>.</p>"
+      }
+    ],
+    "sources": [
+      "Create: Radars 5.1.2 (create_radar-5.1.2-1.21.1.jar from the next Create France modpack release): code from the public repository github.com/Arsenalists-of-Create/Create-Radar (NeoForge 1.21.1 branch, commit 8a7766a, version 5.1.2), recipes from the jar's data folder, Ponder scenes (PonderScenes.java) replayed by our engine.",
+      "Mod by Aycer, HappySG, CeoOfGoogle, Kipti, OndatraCZE, Ray (furuochen) and KrimZik (Arsenalists of Create), under the Arsenalists-of-Create Source-Available License: models and textures by its authors, rendered from the official, unmodified jar; no text from the mod is copied. Official download: modrinth.com/mod/create-radars.",
+      "Controllers: block/controller/yaw/AutoYawControllerBlockEntity.java, pitch/AutoPitchControllerBlockEntity.java (input rotation required: controller_has_no_kinetic_speed; CbcShaftDrive; mounts, Mechanical Bearings, physics bearings and swivel bearings: CannonMountYaw, MechBearingPitch, PhysBearingYaw / Pitch, SWIVEL_MODE); limits: block/controller/limits (ControllerLimitsScreen, collision view).",
+      "Firing: block/controller/firing/FireControllerBlockEntity.java (redstone when lined up, bursts with a repeater on top); config/common autoFireMaxLateralErrorBlocks 2.0; lead and ballistics: useNewTargetingComputer, targetTrackingLeadTicks 3.",
+      "Fuzes: item/radarproxfuze/AdvancedProximityFuze.java (tooltip: 5 ticks of arming), item/GuidedFuzeItem.java (guidedFuzeMaxDegreesPerTick 3); creative tab: registry/ModCreativeTabs.java. Recipes: data/create_radar/recipe/crafting/auto_yaw_controller.json, auto_pitch_controller.json, fire_controller.json.",
+      "Scenes: PonderScenes.weaponSimpleWeaponSetup (weapon_setup.nbt), autoYawSetup (auto_yaw_ponder.nbt), autoPitchFollowup (auto_pitch_ponder.nbt), swivelSetup (swivel_ponder.nbt); aiming guns, driven controllers and turning turrets are additions of our render."
+    ]
+  }
+}
