@@ -10,20 +10,20 @@
       </ol>
     </nav>
 
-    <WikiModBar class="wiki-modbar" :lang="lang" :active="mod?.id" />
+    <WikiModBar class="wiki-modbar" :lang="lang" :mods="view.nav" :active="mod?.id" />
 
     <div class="wiki-tools">
       <WikiSearch class="wiki-tools-search" shortcut />
       <details class="wiki-browse">
         <summary>{{ t('wiki.nav.browse') }}</summary>
-        <WikiNav :lang="lang" :current-slug="page.slug" :current-category="page.category" />
+        <WikiNav :lang="lang" :mods="view.nav" :current-slug="page.slug" :current-category="category?.id" :current-mod="mod?.id" />
       </details>
     </div>
 
     <div class="wiki-layout">
     <aside class="wiki-side">
       <p class="wiki-side-title">{{ t('wiki.nav.title') }}</p>
-      <WikiNav :lang="lang" :current-slug="page.slug" :current-category="page.category" />
+      <WikiNav :lang="lang" :mods="view.nav" :current-slug="page.slug" :current-category="category?.id" :current-mod="mod?.id" />
     </aside>
 
     <article class="wiki-article">
@@ -38,7 +38,7 @@
       </header>
 
       <div class="wiki-top">
-        <WikiVideo v-if="page.videos[0]" class="wiki-top-video" :slug="page.slug" :video="page.videos[0]" :chapters="chaptersOf(page.videos[0])" :ponder="wikiVideoPonder(page.slug, page.videos[0].id)" :lang="lang" />
+        <WikiVideo v-if="page.videos[0]" class="wiki-top-video" :slug="page.slug" :video="page.videos[0]" :lang="lang" />
         <div class="wiki-card wiki-facts">
           <h2 class="wiki-card-title">{{ t('wiki.facts') }}</h2>
           <dl>
@@ -47,13 +47,13 @@
               <dd>{{ f.value }}</dd>
             </template>
           </dl>
-          <WikiRecipe v-if="page.recipe" :recipe="page.recipe" :lang="lang" :slug="page.slug" />
+          <WikiRecipe v-if="view.recipe" :recipe="view.recipe" />
           <div v-if="usedIn.length" class="wiki-usedin">
             <p class="wiki-usedin-label">{{ t('wiki.usedIn', { name: page.name }) }}</p>
             <ul>
               <li v-for="u in usedIn" :key="u.slug">
                 <NuxtLink :to="u.path">
-                  <img :src="wikiItemIcon(u.recipe?.resultItem || u.blockId)!" alt="" width="28" height="28" loading="lazy">
+                  <img v-if="u.icon" :src="u.icon" alt="" width="28" height="28" loading="lazy">
                   {{ u.name }}
                 </NuxtLink>
               </li>
@@ -73,9 +73,9 @@
         <h2>{{ s.title }}</h2>
         <div class="wiki-step-body">
           <div v-if="s.video || s.image" class="wiki-step-media">
-            <WikiVideo v-if="s.video && videoOf(s.video)" :slug="page.slug" :video="videoOf(s.video)!" :chapters="chaptersOf(videoOf(s.video)!)" :ponder="wikiVideoPonder(page.slug, s.video)" :lang="lang" />
+            <WikiVideo v-if="s.video && videoOf(s.video)" :slug="page.slug" :video="videoOf(s.video)!" :lang="lang" />
             <figure v-else-if="s.image">
-              <img :src="media(page.slug, s.image)" :alt="s.alt || s.title" width="600" height="600" loading="lazy" decoding="async">
+              <img :src="s.imageUrl" :alt="s.alt || s.title" width="600" height="600" loading="lazy" decoding="async">
             </figure>
           </div>
           <div class="wiki-step-text" v-html="s.html" />
@@ -85,12 +85,12 @@
       <nav v-if="prev || next" class="wiki-prevnext" :aria-label="t('wiki.nav.prevnext', { category: category?.name || '' })">
         <NuxtLink v-if="prev" :to="prev.path" class="wiki-card prev" rel="prev">
           <small>← {{ t('wiki.nav.prev') }}</small>
-          <span><img :src="wikiItemIcon(prev.blockId)!" alt="" width="32" height="32" loading="lazy">{{ prev.name }}</span>
+          <span><img v-if="prev.icon" :src="prev.icon" alt="" width="32" height="32" loading="lazy">{{ prev.name }}</span>
         </NuxtLink>
         <span v-else />
         <NuxtLink v-if="next" :to="next.path" class="wiki-card next" rel="next">
           <small>{{ t('wiki.nav.next') }} →</small>
-          <span>{{ next.name }}<img :src="wikiItemIcon(next.blockId)!" alt="" width="32" height="32" loading="lazy"></span>
+          <span>{{ next.name }}<img v-if="next.icon" :src="next.icon" alt="" width="32" height="32" loading="lazy"></span>
         </NuxtLink>
       </nav>
 
@@ -100,10 +100,10 @@
         <h2 id="wiki-related-title">{{ t('wiki.related') }}</h2>
         <div class="wiki-related-grid">
           <NuxtLink v-for="r in related" :key="r.slug" :to="r.path" class="wiki-card wiki-related-card">
-            <img :src="wikiCover(r)" :alt="r.name" width="96" height="96" loading="lazy" decoding="async">
+            <img :src="r.cover" :alt="r.name" width="96" height="96" loading="lazy" decoding="async">
             <span>
               <strong>{{ r.name }}</strong>
-              <small>{{ catName(r.category) }}</small>
+              <small>{{ r.category }}</small>
             </span>
           </NuxtLink>
         </div>
@@ -123,49 +123,23 @@
 </template>
 
 <script setup lang="ts">
-import type { WikiPage, WikiPageView, WikiVideo } from '~/utils/wiki'
+import type { WikiArticleView, WikiLocale } from '~/utils/wiki'
 
-const props = defineProps<{ page: WikiPageView }>()
+// everything comes ready from the server (/api/wiki/page, server/lib/wikiViews.ts → buildArticle)
+const props = defineProps<{ view: WikiArticleView; lang: WikiLocale }>()
 const { t, tm, rt } = useI18n()
 const localePath = useLocalePath()
-const media = wikiMedia
-const lang = computed(() => props.page.locale)
-const wikiHome = computed(() => wikiHomePath(lang.value))
-const catName = (id: string) => getWikiCategory(id, lang.value)?.name
-const category = computed(() => getWikiCategory(props.page.category, lang.value))
-const mod = computed(() => getWikiMod(category.value?.mod || 'create', lang.value))
-// « sert à fabriquer » : pages whose recipe uses this page's item
-const usedIn = computed(() =>
-  wikiPagesUsing(props.page.blockId, props.page.slug)
-    .filter((p) => wikiPagePath(p, lang.value))
-    .map((p) => localizeWikiPage(p, lang.value)),
-)
-// previous / next page of the same category, in the order of the wiki home
-const siblings = computed(() => wikiPagesIn(lang.value).filter((p) => p.category === props.page.category))
-const pos = computed(() => siblings.value.findIndex((p) => p.slug === props.page.slug))
-const prev = computed(() => (pos.value > 0 ? siblings.value[pos.value - 1] : null))
-const next = computed(() => (pos.value >= 0 && pos.value < siblings.value.length - 1 ? siblings.value[pos.value + 1] : null))
-// related pages that exist in this language (no link to a page that is not translated yet)
-const related = computed(() =>
-  wikiRelated(props.page)
-    .map((s) => getWikiPage(s))
-    .filter((p): p is WikiPage => !!p && !!wikiPagePath(p, lang.value))
-    .map((p) => localizeWikiPage(p, lang.value)),
-)
+const page = computed(() => props.view.page)
+const wikiHome = computed(() => wikiHomePath(props.lang))
+const category = computed(() => props.view.category)
+const mod = computed(() => props.view.mod)
+const usedIn = computed(() => props.view.usedIn)
+const prev = computed(() => props.view.prev)
+const next = computed(() => props.view.next)
+const related = computed(() => props.view.related)
 
 function videoOf(id: string) {
-  return props.page.videos.find((v) => v.id === id)
-}
-
-// key moments of a video, labelled with the title of the page section they explain (so they follow the language)
-function chaptersOf(v: WikiVideo) {
-  // consecutive moments explained by the same section are one chapter; a single chapter is not worth a list
-  const out: { t: number; label: string; section?: string }[] = []
-  for (const c of [...wikiVideoChapters(props.page.slug, v)].sort((a, b) => a.t - b.t)) {
-    if (out.length && c.section && out[out.length - 1].section === c.section) continue
-    out.push({ t: c.t, section: c.section, label: c.label || props.page.sections.find((s) => s.id === c.section)?.title || '' })
-  }
-  return out.length >= 2 ? out : []
+  return page.value.videos.find((v) => v.id === id)
 }
 
 function formatDate(d: string) {

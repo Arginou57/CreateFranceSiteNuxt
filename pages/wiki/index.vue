@@ -10,11 +10,11 @@
     <header class="wiki-home-head">
       <p class="wiki-kicker">{{ t('wiki.kicker') }}</p>
       <h1>{{ t('wiki.h1') }}</h1>
-      <p class="wiki-lead" v-html="t('wiki.lead', { count: pages.length })" />
+      <p class="wiki-lead" v-html="t('wiki.lead', { count: home.count })" />
     </header>
 
     <!-- one tab per mod (sticky): only the chosen mod is shown, every link stays in the HTML for search engines -->
-    <WikiModBar :lang="lang" :active="activeMod" />
+    <WikiModBar :lang="lang" :mods="tree" :active="activeMod" />
     <WikiSearch class="wiki-home-search" size="lg" :initial="initialQ" shortcut />
 
     <section
@@ -117,10 +117,10 @@
     <section class="wiki-latest" aria-labelledby="wiki-latest-title">
       <h2 id="wiki-latest-title">{{ t('wiki.latest') }}</h2>
       <div class="wiki-latest-grid">
-        <NuxtLink v-for="p in latest" :key="p.slug" :to="p.path" class="wiki-card wiki-feature">
-          <img :src="poster(p)" :alt="t('wiki.posterAlt', { name: p.name })" width="720" height="720" loading="lazy" decoding="async">
+        <NuxtLink v-for="p in latest" :key="p.path" :to="p.path" class="wiki-card wiki-feature">
+          <img :src="p.cover" :alt="t('wiki.posterAlt', { name: p.name })" width="720" height="720" loading="lazy" decoding="async">
           <span class="wiki-feature-body">
-            <small>{{ catName(p.category) }}</small>
+            <small>{{ p.category }}</small>
             <strong>{{ p.name }}</strong>
           </span>
         </NuxtLink>
@@ -132,27 +132,27 @@
 </template>
 
 <script setup lang="ts">
-import type { WikiPageView, WikiTreeMod } from '~/utils/wiki'
+import type { WikiHomeView, WikiLocale, WikiNavMod } from '~/utils/wiki'
 
 const { t, tm, rt, locale } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
 const lang: WikiLocale = locale.value === 'en' ? 'en' : 'fr'
 
-// only the pages that exist in this language (a page without "en.slugEn" stays French-only)
-const pages = wikiPagesIn(lang)
-const tree = wikiTree(lang)
-const catName = (id: string) => getWikiCategory(id, lang)?.name
-const poster = (p: WikiPageView) => wikiCover(p)
+// built on the server (/api/wiki/home): mods > categories > pages of this language, latest updates
+const { data } = await useFetch<WikiHomeView>('/api/wiki/home', { query: { lang }, key: `wiki-home-${lang}` })
+const home = computed(() => data.value || { count: 0, mods: [], latest: [], parts: [], ogImage: '/images/fond.png' })
+const tree = computed(() => home.value.mods)
+const latest = computed(() => home.value.latest)
 
 // chosen mod / category, from the URL (?mod=cbc&cat=...), so a tab can be linked and survives a reload
 const activeMod = computed(() => {
   const q = route.query.mod
-  return typeof q === 'string' && tree.some((m) => m.id === q) ? q : tree[0]?.id
+  return typeof q === 'string' && tree.value.some((m) => m.id === q) ? q : tree.value[0]?.id
 })
 const activeCat = computed(() => {
   const q = route.query.cat
-  const m = tree.find((x) => x.id === activeMod.value)
+  const m = tree.value.find((x) => x.id === activeMod.value)
   return typeof q === 'string' && m?.cats.some((c) => c.id === q) ? q : null
 })
 
@@ -160,8 +160,8 @@ const activeCat = computed(() => {
 onMounted(() => {
   const h = decodeURIComponent(location.hash.slice(1))
   if (!h || route.query.mod) return
-  const modId = h.startsWith('mod-') ? h.slice(4) : wikiCategories.find((c) => c.id === h)?.mod
-  if (!modId || !tree.some((m) => m.id === modId)) return
+  const modId = h.startsWith('mod-') ? h.slice(4) : tree.value.find((m) => m.cats.some((c) => c.id === h))?.id
+  if (!modId || !tree.value.some((m) => m.id === modId)) return
   const cat = h.startsWith('mod-') ? undefined : h
   navigateTo({ query: { mod: modId, ...(cat && cat !== modId ? { cat } : {}) }, hash: location.hash }, { replace: true })
 })
@@ -172,22 +172,15 @@ const howto = (tm('wiki.howto.steps') as unknown as { title: unknown; text: unkn
   text: rt(s.text as any),
 }))
 
-/** beginner path of a mod, with the pages that exist in this language */
-function startOf(m: WikiTreeMod) {
+/** beginner path of a mod (already limited by the server to the pages that exist in this language) */
+function startOf(m: WikiNavMod) {
   return m.start
-    .map((s) => ({ label: s.label, page: pages.find((p) => p.slug === s.slug) }))
-    .filter((s): s is { label: string; page: WikiPageView } => !!s.page)
 }
-
-// the 6 most recently updated pages (newest first, then by name)
-const latest = [...pages]
-  .sort((a, b) => b.dateModified.localeCompare(a.dateModified) || b.datePublished.localeCompare(a.datePublished))
-  .slice(0, 6)
 
 const title = t('wiki.seoTitle')
 const description = t('wiki.seoDescription')
 const site = lang === 'en' ? 'https://create-france.com/en' : 'https://create-france.com/'
-const ogImage = wikiAbs(pages[0] ? poster(pages[0]) : '/images/fond.png')
+const ogImage = wikiAbs(home.value.ogImage)
 
 const { url } = useI18nSeo({
   paths: { fr: '/wiki', en: '/en/wiki' },
@@ -221,7 +214,7 @@ useHead({
           url,
           inLanguage: t('lang.inLanguage'),
           isPartOf: { '@id': `${site}#site` },
-          hasPart: pages.map((p) => ({ '@type': 'Article', headline: p.title, url: wikiAbs(p.path) })),
+          hasPart: home.value.parts.map((p) => ({ '@type': 'Article', headline: p.headline, url: wikiAbs(p.path) })),
         },
       ],
     }),

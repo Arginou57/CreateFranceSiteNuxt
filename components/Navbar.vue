@@ -39,10 +39,21 @@ const switchLocalePath = useSwitchLocalePath()
 const route = useRoute()
 
 const other = computed<'fr' | 'en'>(() => (locale.value === 'en' ? 'fr' : 'en'))
-// same page in the other language (a wiki page not translated yet leads to the wiki home of that language)
+// same page in the other language: for the wiki the server knows both paths (/api/wiki/alt), fetched during SSR so the
+// link is right in the HTML; a wiki page not translated yet leads to the wiki home of that language.
+const isWiki = computed(() => /^(\/en)?\/wiki(\/|$)/.test(route.path))
+const { data: wikiAlt } = await useFetch<{ fr: string; en: string | null } | null>('/api/wiki/alt', {
+  query: { path: computed(() => (isWiki.value ? route.path : '')) },
+  key: 'wiki-alt-nav',
+  watch: [() => route.path],
+  default: () => null,
+})
 const switchHref = computed(() => {
-  const alt = alternatesFor(route.path)
-  if (alt) return alt[other.value] ?? (other.value === 'en' ? '/en/wiki' : '/wiki')
+  if (isWiki.value) {
+    const alt = wikiAlt.value
+    if (alt) return alt[other.value] ?? (other.value === 'en' ? '/en/wiki' : '/wiki')
+    return other.value === 'en' ? '/en/wiki' : '/wiki'
+  }
   return switchLocalePath(other.value) || localePath('/', other.value)
 })
 // label written in the target language (only the current locale's messages are loaded)

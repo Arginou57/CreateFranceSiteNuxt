@@ -21,10 +21,12 @@
 
 <script setup lang="ts">
 // Tabs of the mods covered by the wiki, at the top of the wiki home and of every wiki page (sticky under the navbar).
-const props = defineProps<{ lang: WikiLocale; active?: string }>()
+import type { WikiLocale, WikiNavMod } from '~/utils/wiki'
+
+const props = defineProps<{ lang: WikiLocale; mods: WikiNavMod[]; active?: string }>()
 const { t } = useI18n()
 const home = computed(() => wikiHomePath(props.lang))
-const tree = computed(() => wikiTree(props.lang))
+const tree = computed(() => props.mods)
 </script>
 
 <style scoped>

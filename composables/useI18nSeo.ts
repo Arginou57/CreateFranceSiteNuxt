@@ -1,6 +1,6 @@
 // Multilingual SEO of a page: title/description, canonical of the current language, hreflang fr / en / x-default (= fr),
 // og:url, og:locale (+ alternate). `paths` are the URL paths of the same page in each language (null = not translated).
-// The language switcher computes the same paths with alternatesFor() (utils/alternates.ts).
+// The language switcher reads the same paths from the « wiki-alt » state set by the wiki pages.
 const SITE = 'https://create-france.com'
 const DEFAULT_IMAGE = SITE + '/images/og-image.jpg'
 

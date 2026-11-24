@@ -48,18 +48,18 @@
           @mousemove="active = i"
           @mousedown.prevent="go(i)"
         >
-          <img v-if="h.doc.icon" :src="h.doc.icon" alt="" width="40" height="40" loading="lazy">
+          <img v-if="h.icon" :src="h.icon" alt="" width="40" height="40" loading="lazy">
           <span class="wsearch-body">
             <strong>
-              {{ h.doc.page.name }}<template v-if="h.section"> <span class="wsearch-sep">›</span> {{ h.section.title }}</template>
+              {{ h.name }}<template v-if="h.section"> <span class="wsearch-sep">›</span> {{ h.section }}</template>
             </strong>
-            <small>{{ h.doc.mod }} · {{ h.doc.category }}</small>
+            <small>{{ h.mod }} · {{ h.category }}</small>
             <span class="wsearch-snip"><template v-for="(part, k) in parts(h)" :key="k"><mark v-if="part.m">{{ part.s }}</mark><template v-else>{{ part.s }}</template></template></span>
           </span>
         </li>
       </ul>
 
-      <div v-else class="wsearch-none">
+      <div v-else-if="!searching" class="wsearch-none">
         <p>{{ t('wiki.search.none', { q: q.trim() }) }}</p>
         <p class="wsearch-none-tip">{{ t('wiki.search.noneTip') }}</p>
       </div>
@@ -70,7 +70,7 @@
 </template>
 
 <script setup lang="ts">
-import type { WikiSearchHit } from '~/utils/wikiSearch'
+import type { WikiLocale, WikiSearchResult } from '~/utils/wiki'
 
 const props = withDefaults(defineProps<{ size?: 'lg' | 'sm'; initial?: string; shortcut?: boolean }>(), {
   size: 'sm',
@@ -90,7 +90,28 @@ const focused = ref(false)
 const active = ref(0)
 
 const examples = computed(() => (tm('wiki.search.examples') as unknown as unknown[]).map((x) => rt(x as any)))
-const rows = computed<WikiSearchHit[]>(() => (q.value.trim() ? wikiSearch(lang.value, q.value, 8) : []))
+// the search runs on the server (/api/wiki/search): 120 ms after the last key, the latest answer wins
+const rows = ref<WikiSearchResult[]>([])
+const searching = ref(false)
+let timer: ReturnType<typeof setTimeout> | null = null
+let seq = 0
+watch(q, (v) => {
+  if (timer) clearTimeout(timer)
+  const query = v.trim()
+  if (!query) { rows.value = []; searching.value = false; return }
+  searching.value = true
+  timer = setTimeout(async () => {
+    const my = ++seq
+    try {
+      const res = await $fetch<WikiSearchResult[]>('/api/wiki/search', { query: { q: query, lang: lang.value } })
+      if (my === seq) rows.value = res
+    } catch {
+      if (my === seq) rows.value = []
+    } finally {
+      if (my === seq) searching.value = false
+    }
+  }, 120)
+}, { immediate: true })
 const open = computed(() => focused.value)
 
 watch(q, () => { active.value = 0 })
@@ -117,7 +138,7 @@ function close() {
   focused.value = false
 }
 
-function parts(h: WikiSearchHit) {
+function parts(h: WikiSearchResult) {
   const out: { s: string; m: boolean }[] = []
   let at = 0
   for (const [a, b] of h.marks) {

@@ -62,11 +62,11 @@
           </span>
           <i class="wv-ctrl-arrow" aria-hidden="true" />
         </div>
-        <transition name="wv-bubble">
-          <div v-if="activeBubble" :key="activeBubble.t" class="wv-bubble" :style="anchorStyle(activeBubble.at, 'bubble')">
-            <p>{{ bubbleText(activeBubble) }}</p>
+        <transition-group name="wv-bubble">
+          <div v-for="b in activeBubbles" :key="b.t" class="wv-bubble" :style="anchorStyle(b.at, 'bubble')">
+            <p>{{ bubbleText(b) }}</p>
           </div>
-        </transition>
+        </transition-group>
       </template>
 
       <button v-if="paused && !loupeOn" type="button" class="wiki-video-play" :class="{ corner: !!ponder }" :aria-label="t('wiki.play')" @click="toggle">
@@ -144,18 +144,14 @@
 </template>
 
 <script setup lang="ts">
-import type { WikiPonder, WikiPonderBubble, WikiVideo } from '~/utils/wiki'
+import type { WikiLocale, WikiPonderBubble, WikiVideoView } from '~/utils/wiki'
 
-const props = defineProps<{
-  slug: string
-  video: WikiVideo
-  chapters?: { t: number; label: string }[]
-  ponder?: WikiPonder | null
-  lang?: WikiLocale
-}>()
+// the video comes ready from the server (files, key moments, Ponder overlays, loupe URL): server/lib/wikiViews.ts
+const props = defineProps<{ slug: string; video: WikiVideoView; lang?: WikiLocale }>()
 const { t } = useI18n()
-const files = computed(() => wikiVideoFiles(props.slug, props.video.id))
-const chapters = computed(() => [...(props.chapters || [])].sort((a, b) => a.t - b.t))
+const files = computed(() => props.video.files)
+const ponder = computed(() => props.video.ponder)
+const chapters = computed(() => [...(props.video.chapters || [])].sort((a, b) => a.t - b.t))
 const videoRef = ref<HTMLVideoElement | null>(null)
 const trackRef = ref<HTMLElement | null>(null)
 const paused = ref(true)
@@ -277,18 +273,23 @@ function onKey(e: KeyboardEvent) {
 }
 
 // ------------------------------------------------------------------ Ponder overlays
-const bubbles = computed(() => [...(props.ponder?.bubbles || [])].sort((a, b) => a.t - b.t))
-const activeBubble = computed(() => {
+const bubbles = computed(() => [...(ponder.value?.bubbles || [])].sort((a, b) => a.t - b.t))
+// A bubble stays on screen at least the time needed to read it (~14 characters / s, 1.8 s minimum), but never past the
+// start of the next bubble, unless its own « until » says the Ponder shows them together (number labels, several
+// pointers): then several bubbles are on screen at once, each at its own anchor.
+function readEnd(b: WikiPonderBubble, next: WikiPonderBubble | undefined) {
+  const read = b.t + Math.max(1.8, bubbleText(b).length / 14)
+  const nextT = next?.t ?? Infinity
+  const until = b.until ?? nextT
+  if (until > nextT + 0.05) return until                 // deliberately overlaps the next one (labels)
+  return Math.min(Math.max(until, read), nextT - 0.1)
+}
+const activeBubbles = computed(() => {
   const list = bubbles.value
-  for (let i = list.length - 1; i >= 0; i--) {
-    const b = list[i]
-    const end = b.until ?? (list[i + 1]?.t ?? Infinity) - 0.15
-    if (current.value >= b.t && current.value < end) return b
-  }
-  return null
+  return list.filter((b, i) => current.value >= b.t && current.value < readEnd(b, list[i + 1]))
 })
 const activeControls = computed(() =>
-  (props.ponder?.controls || []).filter((c) => current.value >= c.t && current.value < c.t + c.d),
+  (ponder.value?.controls || []).filter((c) => current.value >= c.t && current.value < c.t + c.d),
 )
 
 function bubbleText(b: WikiPonderBubble) {
@@ -312,11 +313,22 @@ function anchorStyle(at: [number, number], kind: 'bubble' | 'ctrl') {
 // ------------------------------------------------------------------ loupe (Ponder identify mode)
 interface LoupeData { dt: number; dur: number; ids: string[]; names: Record<string, { fr: string; en: string }>; frames: number[][][] }
 const { locale } = useI18n()
-const hasLoupe = computed(() => wikiVideoHasLoupe(props.slug, props.video.id))
+const hasLoupe = computed(() => !!props.video.files.loupe)
 const loupeOn = ref(false)
 const loupeData = ref<LoupeData | null>(null)
 const hover = ref<{ id: string; name: string; icon: string | null; path: string | null; here: boolean; points: string; x: number; y: number } | null>(null)
 let resumeAfterLoupe = false
+
+// item id → page that documents it, fetched once (shared by every video of the page) when a loupe opens
+const itemPages = useState<Record<string, { path: string; slug: string }> | null>(`wiki-items-${props.lang || 'fr'}`, () => null)
+async function loadItemPages() {
+  if (itemPages.value) return
+  try {
+    itemPages.value = await $fetch<Record<string, { path: string; slug: string }>>('/api/wiki/items', { query: { lang: props.lang || 'fr' } })
+  } catch {
+    itemPages.value = {}
+  }
+}
 
 async function toggleLoupe() {
   const v = videoRef.value
@@ -326,8 +338,8 @@ async function toggleLoupe() {
     loupeOn.value = true
     if (!loupeData.value) {
       try {
-        const u = wikiMedia(props.slug, `${props.video.id}_loupe.json`)
-        loupeData.value = await $fetch<LoupeData>(`${u}${u.includes('?') ? '&' : '?'}lv=${LOUPE_VERSION}`)
+        const [d] = await Promise.all([$fetch<LoupeData>(props.video.files.loupe!), loadItemPages()])
+        loupeData.value = d
       } catch {
         loupeOn.value = false
       }
@@ -360,15 +372,15 @@ function onLoupeMove(ev: PointerEvent) {
   const e = d.frames[fi].find((q) => inPoly(x, y, q))
   if (!e) { hover.value = null; return }
   const id = d.ids[e[0]]
-  const page = wikiPageForItem(id)
   const lang: WikiLocale = locale.value === 'en' ? 'en' : 'fr'
+  const page = itemPages.value?.[id]
   const pts: string[] = []
   for (let k = 2; k < e.length; k += 2) pts.push(`${e[k]},${e[k + 1]}`)
   hover.value = {
     id,
     name: d.names[id]?.[lang] || id,
     icon: wikiItemIcon(id),
-    path: page && page.slug !== props.slug ? wikiPagePath(page, lang) : null,
+    path: page && page.slug !== props.slug ? page.path : null,
     here: page?.slug === props.slug,
     points: pts.join(' '),
     x: x / 10,

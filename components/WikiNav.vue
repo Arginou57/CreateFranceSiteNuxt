@@ -29,11 +29,13 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{ lang: WikiLocale; currentSlug?: string; currentCategory?: string }>()
+import type { WikiLocale, WikiNavMod } from '~/utils/wiki'
+
+// mods > categories > pages, from the server (the categories are listed for the current mod only)
+const props = defineProps<{ lang: WikiLocale; mods: WikiNavMod[]; currentSlug?: string; currentCategory?: string; currentMod?: string }>()
 const { t } = useI18n()
 const home = computed(() => wikiHomePath(props.lang))
-const currentMod = computed(() => wikiCategories.find((c) => c.id === props.currentCategory)?.mod)
-const tree = computed(() => wikiTree(props.lang))
+const tree = computed(() => props.mods)
 </script>
 
 <style scoped>

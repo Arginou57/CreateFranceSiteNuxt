@@ -32,33 +32,15 @@
 </template>
 
 <script setup lang="ts">
-import type { WikiLocale, WikiRecipe } from '~/utils/wiki'
+import type { WikiRecipeView } from '~/utils/wiki'
 
-const props = defineProps<{ recipe: WikiRecipe; lang: WikiLocale; slug: string }>()
+// built on the server (server/lib/wikiViews.ts → recipeView): icons, ingredient counts and links are ready
+const props = defineProps<{ recipe: WikiRecipeView }>()
 const { t } = useI18n()
-
-const cells = computed(() =>
-  props.recipe.grid.map((row, i) =>
-    row.map((name, j) => ({ name, icon: name ? wikiItemIcon(props.recipe.items?.[i]?.[j]) : null })),
-  ),
-)
-const resultIcon = computed(() => wikiItemIcon(props.recipe.resultItem))
-const count = computed(() => Number.parseInt(props.recipe.result, 10) || 1)
-
-const ingredients = computed(() => {
-  const by = new Map<string, { name: string; icon: string | null; count: number; path: string | null }>()
-  props.recipe.grid.forEach((row, i) => row.forEach((name, j) => {
-    if (!name) return
-    const id = props.recipe.items?.[i]?.[j] || null
-    const key = id || name
-    const cur = by.get(key)
-    if (cur) { cur.count++; return }
-    const page = id ? wikiPageForItem(id) : undefined
-    const path = page && page.slug !== props.slug ? wikiPagePath(page, props.lang) : null
-    by.set(key, { name, icon: wikiItemIcon(id), count: 1, path })
-  }))
-  return [...by.values()]
-})
+const cells = computed(() => props.recipe.cells)
+const resultIcon = computed(() => props.recipe.resultIcon)
+const count = computed(() => props.recipe.count)
+const ingredients = computed(() => props.recipe.ingredients)
 </script>
 
 <style scoped>

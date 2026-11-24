@@ -1,11 +1,12 @@
-// Wiki search, entirely in the browser: the pages are already bundled (utils/wiki.ts), so the index costs no request.
+// Wiki search, on the server (GET /api/wiki/search?q=&lang=): the browser no longer holds the pages, it sends the query.
 // What is searched, from most to least weight: page name, its name in the other language and its item id
 // (« press », « mechanical_press » find the Presse mécanique), category and mod, description and recipe
 // ingredients, section titles, then the text of the sections. Accents, case and apostrophes are ignored, every
 // word of the query must match somewhere (prefix of a word, or one typo on words of 5+ letters).
 // A hit found in a section (and not in the page name) links to that section: /wiki/<slug>#<section>.
 
-import type { WikiLocale, WikiPageView } from './wiki'
+import type { WikiLocale, WikiPageView, WikiSearchResult } from '../../utils/wiki'
+import type { Wiki } from './wikiCore'
 
 export interface WikiSearchDoc {
   page: WikiPageView
@@ -56,21 +57,26 @@ export function queryTokens(q: string): string[] {
   return kept.length ? kept : all
 }
 
-const cache = new Map<WikiLocale, WikiSearchDoc[]>()
+const cache = new WeakMap<Wiki, Map<WikiLocale, WikiSearchDoc[]>>()
 
-export function wikiSearchIndex(lang: WikiLocale): WikiSearchDoc[] {
-  const hit = cache.get(lang)
+export function wikiSearchIndex(w: Wiki, lang: WikiLocale): WikiSearchDoc[] {
+  let byLang = cache.get(w)
+  if (!byLang) {
+    byLang = new Map()
+    cache.set(w, byLang)
+  }
+  const hit = byLang.get(lang)
   if (hit) return hit
   const other: WikiLocale = lang === 'en' ? 'fr' : 'en'
-  const docs = wikiPagesIn(lang).map((page) => {
-    const raw = getWikiPage(page.slug)!
-    const otherName = localizeWikiPage(raw, other).name
-    const cat = getWikiCategory(page.category, lang)
-    const mod = getWikiMod(cat?.mod || 'create', lang)
+  const docs = w.pagesIn(lang).map((page) => {
+    const raw = w.get(page.slug)!
+    const otherName = w.localize(raw, other).name
+    const cat = w.category(page.category, lang)
+    const mod = w.mod(cat?.mod || 'create', lang)
     const items = (page.recipe?.grid || []).flat().filter(Boolean).join(' ')
     return {
       page,
-      icon: wikiItemIcon(page.blockId),
+      icon: w.icon(page.blockId),
       category: cat?.name || '',
       mod: mod?.name || '',
       fields: {
@@ -85,7 +91,7 @@ export function wikiSearchIndex(lang: WikiLocale): WikiSearchDoc[] {
       }),
     }
   })
-  cache.set(lang, docs)
+  byLang.set(lang, docs)
   return docs
 }
 
@@ -136,12 +142,12 @@ function lev1(a: string, b: string): boolean {
   return edits + (a.length - i) + (b.length - j) <= 1
 }
 
-export function wikiSearch(lang: WikiLocale, q: string, limit = 8): WikiSearchHit[] {
+export function wikiSearch(w: Wiki, lang: WikiLocale, q: string, limit = 8): WikiSearchHit[] {
   const toks = queryTokens(q)
   if (!toks.length) return []
   const phrase = normalize(q)
   const hits: WikiSearchHit[] = []
-  for (const doc of wikiSearchIndex(lang)) {
+  for (const doc of wikiSearchIndex(w, lang)) {
     const f = doc.fields
     let score = 0
     let ok = true
@@ -232,4 +238,18 @@ function excerpt(text: string, toks: string[], width = 140): { snippet: string; 
     else merged.push([...m] as [number, number])
   }
   return { snippet, marks: merged }
+}
+
+/** what the browser receives: no page data, only what the result list shows */
+export function toResult(h: WikiSearchHit): WikiSearchResult {
+  return {
+    name: h.doc.page.name,
+    icon: h.doc.icon,
+    mod: h.doc.mod,
+    category: h.doc.category,
+    section: h.section?.title,
+    href: h.href,
+    snippet: h.snippet,
+    marks: h.marks,
+  }
 }
