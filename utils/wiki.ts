@@ -277,6 +277,9 @@ export function wikiVideoChapters(slug: string, v: WikiVideo): WikiChapter[] {
 // content/wiki/_loupe.json = { "<slug-fr>": ["<video id>", ...] }
 const loupeFile = (files['../content/wiki/_loupe.json'] as Record<string, string[]>) || {}
 
+// Bump when the *_loupe.json files are regenerated (names, outlines): Cloudflare keeps /wiki-media/ under the same URL.
+export const LOUPE_VERSION = '2'
+
 export function wikiVideoHasLoupe(slug: string, videoId: string): boolean {
   return !!loupeFile[slug]?.includes(videoId)
 }

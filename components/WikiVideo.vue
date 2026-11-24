@@ -262,7 +262,8 @@ async function toggleLoupe() {
     loupeOn.value = true
     if (!loupeData.value) {
       try {
-        loupeData.value = await $fetch<LoupeData>(wikiMedia(props.slug, `${props.video.id}_loupe.json`))
+        const u = wikiMedia(props.slug, `${props.video.id}_loupe.json`)
+        loupeData.value = await $fetch<LoupeData>(`${u}${u.includes('?') ? '&' : '?'}lv=${LOUPE_VERSION}`)
       } catch {
         loupeOn.value = false
       }
