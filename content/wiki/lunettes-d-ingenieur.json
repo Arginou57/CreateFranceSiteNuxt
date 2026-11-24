@@ -139,7 +139,8 @@
     "reservoir-a-fluide",
     "bassin",
     "moteur-a-vapeur",
-    "roue-dentee"
+    "roue-dentee",
+    "aeronautics-helices"
   ],
   "sources": [
     "Recette : crafting/kinetics/goggles.json (ficelle, 2 verres, plaque d'or)",

@@ -1,0 +1,276 @@
+{
+  "slug": "deep-seas-ordinateur-de-bord",
+  "name": "Ordinateur de bord et contrôleur de pompe",
+  "blockId": "create_submarine:command_sub",
+  "category": "deepseas",
+  "title": "Ordinateur de bord — Create Deep Seas, guide",
+  "description": "Ordinateur de bord de Create Deep Seas : régler une profondeur, piloter les contrôleurs de pompe, pilote automatique avec le sonar.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Deep Seas 3.4.8 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "L'<strong>ordinateur de bord</strong> (Onboard Computer) pilote la plongée à ta place. Sur son écran incliné, tu règles une profondeur et une vitesse ; il commande alors tous les <strong>contrôleurs de pompe</strong> (Pump Controller) du sous-marin pour remplir ou vider les ballasts, freine à l'approche et tient la cote.",
+  "facts": [
+    {
+      "label": "Réglages",
+      "value": "profondeur cible en mètres, vitesse lente / croisière / rapide"
+    },
+    {
+      "label": "Vitesses",
+      "value": "0,33 · 0,66 · 1 × la vitesse maximale"
+    },
+    {
+      "label": "Écran",
+      "value": "bande de profondeur, remplissage des ballasts, état des pompes"
+    },
+    {
+      "label": "Contrôleurs",
+      "value": "détectés automatiquement à bord, sans câble ni lien"
+    },
+    {
+      "label": "Pilote automatique",
+      "value": "avec un sonar : garde 4 m sous la coque, anticipe 5 s"
+    },
+    {
+      "label": "Version",
+      "value": "Create Deep Seas 3.4.8 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Couvercle d'emplacement d'établi",
+        "Planches de chêne",
+        "Couvercle d'emplacement d'établi"
+      ],
+      [
+        "Planches de chêne",
+        "Transmetteur",
+        "Planches de chêne"
+      ],
+      [
+        "Couvercle d'emplacement d'établi",
+        "Planches de chêne",
+        "Couvercle d'emplacement d'établi"
+      ]
+    ],
+    "items": [
+      [
+        "create:crafter_slot_cover",
+        "minecraft:oak_planks",
+        "create:crafter_slot_cover"
+      ],
+      [
+        "minecraft:oak_planks",
+        "create:transmitter",
+        "minecraft:oak_planks"
+      ],
+      [
+        "create:crafter_slot_cover",
+        "minecraft:oak_planks",
+        "create:crafter_slot_cover"
+      ]
+    ],
+    "result": "1 ordinateur de bord",
+    "resultItem": "create_submarine:command_sub"
+  },
+  "videos": [
+    {
+      "id": "sub_computer",
+      "name": "Une plongée réglée à l'ordinateur",
+      "description": "Une profondeur réglée sur l'écran, des ballasts, un contrôleur de pompe entre l'évent et les réservoirs : la rotation arrive, l'ordinateur remplit, la bande de profondeur défile, puis il ralentit et tient la cote.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "consigne",
+      "title": "Régler la profondeur",
+      "image": "sub_computer_consigne.webp",
+      "alt": "L'ordinateur de bord posé sur le pont, profondeur cible affichée à l'écran",
+      "video": "sub_computer",
+      "html": "<p>Pose l'ordinateur sur le sous-marin, vise son écran et clique : tu tapes la profondeur voulue en mètres, puis tu choisis une vitesse parmi trois (lente, croisière, rapide, soit un tiers, deux tiers ou toute la vitesse maximale). L'écran affiche à gauche la consigne et la vitesse, à droite une bande graduée avec la surface, la cible et ta profondeur actuelle.</p>"
+    },
+    {
+      "id": "ballasts",
+      "title": "Il surveille les ballasts",
+      "image": "sub_computer_ballasts.webp",
+      "alt": "Huit ballasts posés derrière la pompe, surveillés par l’ordinateur",
+      "html": "<p>Le niveau cumulé des <a href=\"/wiki/deep-seas-ballast\">ballasts</a> s'affiche en pour cent dans le coin supérieur de l'écran. Il sait ainsi combien de marge il lui reste avant d'être plein ou vide.</p>"
+    },
+    {
+      "id": "controleur",
+      "title": "Le contrôleur de pompe",
+      "image": "sub_computer_controleur.webp",
+      "alt": "Le contrôleur de pompe raccordé entre l'évent et les ballasts",
+      "html": "<p>Le contrôleur de pompe est une pompe aux ordres de l'ordinateur. Intercale-le sur la conduite qui va de l'évent aux ballasts, orienté comme tu veux : il repère de lui-même de quel côté se trouvent les réservoirs. Aucun câblage : l'ordinateur recense automatiquement chaque contrôleur présent à bord. Il lui faut seulement de la rotation, comme une <a href=\"/wiki/pompe-mecanique\">pompe mécanique</a>.</p>"
+    },
+    {
+      "id": "plongee",
+      "title": "La plongée pilotée",
+      "image": "sub_computer_plongee.webp",
+      "alt": "L'écran pendant la descente : la bande de profondeur défile et les ballasts se remplissent",
+      "html": "<p>Une fois les contrôleurs entraînés, la régulation démarre : charge des ballasts à la descente, décharge à la montée. Dans la scène, l'état affiché passe successivement par trois modes pendant que la bande se déplace. Le débit effectif des pompes est estimé en continu, ce qui permet de ralentir assez tôt pour s'arrêter pile sur la consigne.</p>"
+    },
+    {
+      "id": "pompes",
+      "title": "Plus de pompes, plongée plus rapide",
+      "image": "sub_computer_pompes.webp",
+      "alt": "Le contrôleur de pompe qui tourne, entraîné par un moteur",
+      "html": "<p>Le débit fait la vitesse de plongée : en multipliant les contrôleurs ou en les faisant tourner plus vite, on raccourcit la manœuvre. Le code compte un contrôleur pour dix ballasts environ. Si l'écran affiche qu'aucune pompe n'est trouvée, vérifie la rotation et les tuyaux.</p>"
+    },
+    {
+      "id": "ecran",
+      "title": "Lire l'écran",
+      "html": "<p>Sur la bande graduée de droite, les traits longs marquent les dizaines de mètres, les moyens les cinq mètres. La ligne en tirets larges est la surface, celle en tirets fins la profondeur visée ; le cadre au milieu donne ta profondeur actuelle, en mètres entiers. Sous la vitesse verticale, le chiffre en mètres par seconde indique si tu montes ou descends. En haut à droite, deux lignes résument l'état : remplissage des ballasts et ce que font les pompes.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "Choisir la vitesse",
+      "html": "<p>Le réglage lent limite la vitesse verticale au tiers du maximum, la croisière aux deux tiers, le rapide au maximum. Le mode lent est le plus sûr près du fond ou dans un port ; le rapide sert pour descendre loin d'un coup. Quel que soit le réglage, la vraie vitesse reste bornée par le débit de tes contrôleurs et par le réglage ballastVerticalSpeed du serveur.</p>"
+    },
+    {
+      "id": "panne",
+      "title": "Si rien ne se passe",
+      "html": "<p>L'ordinateur et les contrôleurs doivent être sur le même navire assemblé. Si l'écran annonce qu'aucune pompe n'est trouvée, vérifie que chaque contrôleur reçoit bien de la rotation et qu'un tuyau continu relie l'évent, le contrôleur et les ballasts. Un contrôleur grippé (teinté de rouge) signale une plongée bien trop profonde : passé la profondeur d'implosion, s'aventurer à plus de trente blocs au-delà de ce que supporte la coque fige les contrôleurs.</p>"
+    },
+    {
+      "id": "pilote-auto",
+      "title": "Le pilote automatique",
+      "image": "sub_computer_pilote-auto.webp",
+      "alt": "L'ordinateur de bord et ses deux flèches de navigation entre les pages",
+      "html": "<p>Si un <a href=\"/wiki/deep-seas-sonar-barometre\">sonar</a> est installé, une page de navigation automatique épouse le relief du fond : elle anticipe sur 5 secondes de route et corrige la profondeur à l'avance pour conserver 4 mètres d'eau sous la quille, sans jamais dépasser la limite de ta coque. On change de page avec les deux flèches du coin inférieur.</p>"
+    }
+  ],
+  "related": [
+    "create-deep-seas",
+    "deep-seas-ballast",
+    "deep-seas-sonar-barometre",
+    "pompe-mecanique"
+  ],
+  "sources": [
+    "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar du modpack Create France) : code lu après décompilation (Vineflower) pour les chiffres (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recettes du dossier data du jar, scènes Ponder SubmarinePonderScenes / HighSeasPonderScenes rejouées par notre moteur.",
+    "Mod de Maxenonyme (MaxCreateMC), Cogfly et Zinc Studios ; artistes Marume, RandomePigeon, Funado. Licence du mod : « All Rights Reserved » : modèles et textures appartiennent à leurs auteurs, rendus ici à partir du jar ; aucun texte du mod n'est recopié.",
+    "Blocs de Simulated 1.3.2 (treuil, connecteur de corde, roulement pivotant) : Create Aeronautics, assets « All Rights Reserved », code MIT."
+  ],
+  "en": {
+    "slugEn": "deep-seas-onboard-computer",
+    "name": "Onboard Computer and Pump Controller",
+    "title": "Onboard Computer — Create Deep Seas guide",
+    "description": "Create Deep Seas Onboard Computer: set a target depth, let it drive the Pump Controllers, and let the sonar autopilot hug the terrain.",
+    "intro": "The <strong>Onboard Computer</strong> runs the dive for you. On its tilted screen you set a depth and a speed; it then drives every <strong>Pump Controller</strong> on the submarine to fill or drain the ballast tanks, slows down on approach and holds the depth.",
+    "facts": [
+      {
+        "label": "Settings",
+        "value": "target depth in metres, slow / cruise / fast speed"
+      },
+      {
+        "label": "Speeds",
+        "value": "0.33 · 0.66 · 1 × the maximum speed"
+      },
+      {
+        "label": "Screen",
+        "value": "depth tape, ballast fill, pump status"
+      },
+      {
+        "label": "Controllers",
+        "value": "found on the same submarine automatically, no wiring or link"
+      },
+      {
+        "label": "Autopilot",
+        "value": "with a sonar: keeps 4 m under the keel, looks 5 s ahead"
+      },
+      {
+        "label": "Version",
+        "value": "Create Deep Seas 3.4.8 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Crafter Slot Cover",
+          "Oak Planks",
+          "Crafter Slot Cover"
+        ],
+        [
+          "Oak Planks",
+          "Transmitter",
+          "Oak Planks"
+        ],
+        [
+          "Crafter Slot Cover",
+          "Oak Planks",
+          "Crafter Slot Cover"
+        ]
+      ],
+      "result": "1 Onboard Computer"
+    },
+    "videos": [
+      {
+        "id": "sub_computer",
+        "name": "The Onboard Computer runs the dive",
+        "description": "A depth set on the screen, ballast tanks and a Pump Controller between the vent and the tanks: rotation arrives, the computer fills, the depth tape scrolls, then it slows down and holds the depth."
+      }
+    ],
+    "sections": [
+      {
+        "id": "consigne",
+        "title": "Setting the depth",
+        "alt": "The Onboard Computer on the deck, target depth shown on its screen",
+        "html": "<p>Put the computer on board and click its screen: enter the wanted depth in metres, then pick one of three speeds (slow, cruise, fast: a third, two thirds or the full maximum speed). The screen shows the target and speed on the left, and on the right a graduated tape with the surface, the target and your current depth.</p>"
+      },
+      {
+        "id": "ballasts",
+        "title": "It watches the tanks",
+        "alt": "Eight ballast tanks behind the pump, monitored by the computer",
+        "html": "<p>The combined level of the ship's <a href=\"/en/wiki/deep-seas-ballast-tanks\">ballast tanks</a> appears as a percentage in the upper corner of the screen. That is how it knows how much room it has left before the tanks are full or empty.</p>"
+      },
+      {
+        "id": "controleur",
+        "title": "The Pump Controller",
+        "alt": "The Pump Controller piped between the vent and the tanks",
+        "html": "<p>The Pump Controller is a pump that takes orders from the computer. Put it on the line running from the vent to the tanks, in any orientation: it figures out on its own where the tanks are. No wiring either: the computer automatically lists every controller aboard. It only needs rotation, like a <a href=\"/en/wiki/mechanical-pump\">Mechanical Pump</a>.</p>"
+      },
+      {
+        "id": "plongee",
+        "title": "A computer-driven dive",
+        "alt": "The screen during the descent: the depth tape scrolls and the tanks fill",
+        "html": "<p>Once the controllers spin, regulation begins: loading ballast on the way down, unloading on the way up. In the scene the displayed status cycles through three modes while the tape moves. Actual pump throughput is estimated continuously, so the computer slows early enough to stop right on target.</p>"
+      },
+      {
+        "id": "pompes",
+        "title": "More pumps, faster dives",
+        "alt": "The Pump Controller spinning, driven by a motor",
+        "html": "<p>Flow sets the dive rate: add controllers or spin them faster and the manoeuvre gets shorter. The code counts about one controller per ten tanks. If the screen says no pump was found, check the rotation and the pipes.</p>"
+      },
+      {
+        "id": "ecran",
+        "title": "Reading the screen",
+        "html": "<p>On the graduated tape on the right, long ticks mark tens of metres and medium ones every five metres. The wide dashed line is the surface and the fine dashed line is the target depth; the box in the middle gives your current depth in whole metres. Under the vertical speed label, the figure in metres per second tells you whether you are climbing or sinking. At the top right, two lines sum up the state: ballast fill and what the pumps are doing.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "Picking a speed",
+        "html": "<p>Slow limits vertical speed to a third of the maximum, cruise to two thirds, fast to the full maximum. Slow is the safest near the sea floor or in a harbour; fast is for long descents in one go. Whatever the setting, the real speed is still capped by the flow of your controllers and by the server's ballastVerticalSpeed setting.</p>"
+      },
+      {
+        "id": "panne",
+        "title": "If nothing happens",
+        "html": "<p>The computer and the controllers must be on the same assembled ship. If the screen says no pump was found, check that every controller actually receives rotation and that one continuous pipe links the vent, the controller and the tanks. A seized controller (tinted red) means the dive went far too deep: past the implosion depth, going over thirty blocks past what the hull supports freezes the controllers.</p>"
+      },
+      {
+        "id": "pilote-auto",
+        "title": "The autopilot",
+        "alt": "The Onboard Computer with the page arrows at the bottom right of the screen",
+        "html": "<p>When a <a href=\"/en/wiki/deep-seas-sonar-and-barometer\">sonar</a> is installed, an automatic navigation page hugs the terrain: it anticipates 5 seconds of travel and corrects the depth in advance to keep 4 metres of water under the keel, while staying within your hull's limit. Two arrows in the lower corner change pages.</p>"
+      }
+    ],
+    "sources": [
+      "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar from the Create France modpack): code read after decompiling (Vineflower) for the figures (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recipes from the jar's data folder, Ponder scenes SubmarinePonderScenes / HighSeasPonderScenes replayed by our engine.",
+      "Mod by Maxenonyme (MaxCreateMC), Cogfly and Zinc Studios; art by Marume, RandomePigeon, Funado. Mod licence: \"All Rights Reserved\": models and textures belong to their authors and are rendered here from the jar; no text from the mod is copied.",
+      "Simulated 1.3.2 blocks (rope winch, rope connector, swivel bearing): Create Aeronautics, assets \"All Rights Reserved\", code under MIT."
+    ]
+  }
+}

@@ -149,7 +149,8 @@
     "jauge-d-usine",
     "canon-a-pomme-de-terre",
     "main-extensible",
-    "obus-de-canon"
+    "obus-de-canon",
+    "ore-excavation-foreuse"
   ],
   "sources": [
     "Stress : AllBlocks.java, MECHANICAL_CRAFTER, CStress.setImpact(2.0)",

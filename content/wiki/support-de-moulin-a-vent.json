@@ -183,7 +183,9 @@
     "stressometre-compteur-de-vitesse",
     "roulement-mecanique",
     "colle-extra-forte",
-    "chassis-lineaire"
+    "chassis-lineaire",
+    "aeronautics-helices",
+    "deep-seas-voiles-et-gouvernail"
   ],
   "sources": [
     "Vitesse : WindmillBearingBlockEntity.getGeneratedSpeed = clamp(voiles / windmillSailsPerRPM, 1, 16) ; CKinetics.windmillSailsPerRPM = 8",

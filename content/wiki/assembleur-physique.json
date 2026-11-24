@@ -1,0 +1,342 @@
+{
+  "slug": "assembleur-physique",
+  "name": "Assembleur de physique",
+  "blockId": "simulated:physics_assembler",
+  "category": "aeronautics",
+  "title": "Assembleur de physique — Create Aeronautics, guide",
+  "description": "L'assembleur de physique (Simulated) transforme une construction en véhicule : colle, levier, masses des blocs, séparation et fusion. Vidéos et chiffres.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Aeronautics 1.3.3",
+  "mcVersion": "1.21.1",
+  "intro": "L'<strong>assembleur de physique</strong> (Physics Assembler) est le point de départ de tout véhicule de Create Aeronautics. Il vient de <strong>Simulated</strong>, livré avec le mod : il prend les blocs que tu as collés et en fait une <strong>contraption simulée</strong>, un objet qui obéit à la gravité, aux chocs et aux forces, tout en gardant ses machines actives.",
+  "facts": [
+    {
+      "label": "Mod",
+      "value": "Simulated 1.3.3 (livré avec Create Aeronautics)"
+    },
+    {
+      "label": "Sélection",
+      "value": "Une boîte de colle (au miel ou extra-forte) autour des blocs"
+    },
+    {
+      "label": "Commande",
+      "value": "Maintenir clic droit et tirer le levier (45°)"
+    },
+    {
+      "label": "Désassemblage",
+      "value": "Par n'importe quel assembleur posé sur la contraption"
+    },
+    {
+      "label": "Masses",
+      "value": "Laine 0,25 · planches 0,5 · normal 1 · pierre 2 · bloc de métal 4"
+    },
+    {
+      "label": "Propriétés",
+      "value": "Glace glissante et fragile, blocs sans poids, rebond"
+    },
+    {
+      "label": "Fusion",
+      "value": "Boule de slime entre deux contraptions"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "Levier",
+        null
+      ],
+      [
+        "Alliage d'andésite",
+        "Boitier d'andésite",
+        "Alliage d'andésite"
+      ]
+    ],
+    "items": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "minecraft:lever",
+        null
+      ],
+      [
+        "create:andesite_alloy",
+        "create:andesite_casing",
+        "create:andesite_alloy"
+      ]
+    ],
+    "result": "1 assembleur de physique",
+    "resultItem": "simulated:physics_assembler"
+  },
+  "videos": [
+    {
+      "id": "aero_assembler",
+      "name": "Assembler et désassembler une construction",
+      "description": "La construction collée bascule quand on tire le levier, puis un second assembleur la remet en place.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "aero_assembler_moving",
+      "name": "Quatre véhicules simulés",
+      "description": "Une voiture sur glace, une voiture à roues, une presse mobile et un planeur, assemblés et en mouvement.",
+      "duration": "PT21S"
+    },
+    {
+      "id": "aero_assembler_props",
+      "name": "Masse et propriétés des blocs",
+      "description": "Une balance assemblée penche selon la masse des blocs posés à ses extrémités ; la glace glisse et casse.",
+      "duration": "PT17S"
+    },
+    {
+      "id": "aero_assembler_split",
+      "name": "Séparer et fusionner",
+      "description": "Un radeau coupé en deux devient deux objets ; une boule de slime les réunit.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "coller",
+      "title": "Choisir les blocs avec de la colle",
+      "image": "aero_assembler_colle.webp",
+      "alt": "La construction et l'assembleur, entourés du cadre de la colle",
+      "video": "aero_assembler",
+      "html": "<p>Pose l'assembleur contre la construction, puis délimite les blocs à emporter : <strong>colle au miel</strong> (Honey Glue) ou <a href=\"/wiki/colle-extra-forte\">colle extra-forte</a> de Create. On utilise l'objet sur un premier coin, puis sur le coin opposé, et une boîte apparaît. Tout ce qui touche la sélection, y compris par une arête en diagonale, est emporté avec elle.</p>"
+    },
+    {
+      "id": "levier",
+      "title": "Tirer le levier",
+      "image": "aero_assembler_levier.webp",
+      "alt": "La construction assemblée bascule sur le côté, l'assembleur levier tiré",
+      "html": "<p>Garde le clic droit enfoncé sur l'assembleur et tire son levier jusqu'au bout (45°). La construction quitte la grille : dans la vidéo, mal équilibrée, elle bascule et se pose sur son arête. L'assembleur d'origine ne sert plus ensuite ; tu peux même le casser.</p>"
+    },
+    {
+      "id": "desassembler",
+      "title": "Remettre la construction en place",
+      "image": "aero_assembler_desassemblage.webp",
+      "alt": "La construction revenue droite, posée de nouveau sur la plaque",
+      "html": "<p>Pour figer une contraption, n'importe quel assembleur posé dessus fait l'affaire : tire son levier dans l'autre sens et les blocs retrouvent la grille, alignés au plus près. C'est utile pour réparer, agrandir ou simplement garer un navire sans qu'il dérive.</p>"
+    },
+    {
+      "id": "vehicules",
+      "title": "Ce que deviennent les machines",
+      "image": "aero_assembler_moving_voiture.webp",
+      "alt": "Une petite voiture à quatre roues, avec moteur portatif et assembleur",
+      "video": "aero_assembler_moving",
+      "html": "<p>Une contraption simulée reste vivante. Les moteurs tournent, les roulements font tourner les roues, la redstone fonctionne. Les quatre appareils de la vidéo le montrent : une voiture qui glisse sur la glace et vire en freinant une roue, une voiture à roues, une presse ambulante, et un planeur qui se pose sur la plaque.</p>"
+    },
+    {
+      "id": "masses",
+      "title": "Le poids de chaque bloc",
+      "image": "aero_assembler_props_tres-lourd.webp",
+      "alt": "Une balance qui penche du côté du bloc le plus lourd",
+      "video": "aero_assembler_props",
+      "html": "<p>Sable, le moteur physique, donne une masse à chaque bloc. Par défaut : <strong>0,25</strong> pour la laine, les dalles et escaliers en bois, les clôtures et les portes ; <strong>0,5</strong> pour les planches, les bûches, les dalles et les coffres ; <strong>1</strong> pour un bloc ordinaire ; <strong>2</strong> pour la pierre, la pierre taillée et l'obsidienne ; <strong>4</strong> pour les blocs de stockage en métal. Une double dalle compte double. Dans la vidéo, la balance penche nettement du côté du bloc le plus lourd.</p>"
+    },
+    {
+      "id": "proprietes",
+      "title": "Glace, rebonds et blocs fragiles",
+      "image": "aero_assembler_props_glissant.webp",
+      "alt": "Un bloc qui glisse le long de la poutre en glace inclinée",
+      "html": "<p>Certains blocs ont des propriétés en plus du poids. La glace n'a aucune friction : ce qui s'y pose glisse. Elle est aussi fragile, comme les feuilles, les citrouilles ou les cactus, et se brise au choc. Le slime rebondit (coefficient 0,5). Ces valeurs viennent des fichiers de données de Sable : un serveur peut les modifier.</p>"
+    },
+    {
+      "id": "separation",
+      "title": "Séparer et fusionner",
+      "image": "aero_assembler_split_separation.webp",
+      "alt": "Le radeau coupé en deux morceaux qui flottent séparément",
+      "video": "aero_assembler_split",
+      "html": "<p>Si tu casses les blocs qui relient deux parties, la contraption se coupe en deux objets indépendants ; deux blocs qui ne se touchent que par une arête restent attachés. À l'inverse, une <strong>boule de slime</strong> utilisée sur deux contraptions qui se touchent les fusionne en une seule.</p>"
+    },
+    {
+      "id": "moteur",
+      "title": "Le moteur portatif",
+      "image": "aero_assembler_moving_voiture-glace.webp",
+      "alt": "La voiture sur glace avec son moteur portatif rouge",
+      "html": "<p>Les véhicules de la vidéo tournent grâce au <strong>moteur portatif</strong> (Portable Engine) de Simulated. Il brûle les combustibles du four et fournit 32 tr/min, le double s'il est surchauffé, avec une capacité de 64 SU par tr/min : 2 048 SU en marche normale. Compact et autonome, c'est la source de rotation la plus simple à embarquer.</p>"
+    },
+    {
+      "id": "faq",
+      "title": "Questions fréquentes",
+      "html": "<p><strong>Rien ne bouge après l'assemblage ?</strong> Vérifie que le levier a bien été tiré jusqu'au bout et que la boîte de colle touche les blocs. <strong>La construction se renverse ?</strong> Son centre de masse est mal placé : allège le haut ou élargis la base.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils",
+      "html": "<ul><li>Place l'assembleur au centre de la construction : c'est plus facile à retrouver.</li><li>Évite la pierre pour un appareil volant ; préfère la laine et le bois.</li><li>Garde une sélection de colle un peu plus large que ta construction pour ne rien oublier.</li></ul>"
+    }
+  ],
+  "related": [
+    "create-aeronautics",
+    "colle-extra-forte",
+    "aeronautics-helices",
+    "aeronautics-ballons",
+    "aeronautics-levitite",
+    "roulement-mecanique"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Aeronautics 1.3.3 (dépôt Creators-of-Aeronautics/Simulated-Project, commit 900122e, code sous licence MIT, ressources « tous droits réservés », The Simulated Team / The Creators of Aeronautics), identiques au jar du modpack (instance de test 1.3.3)",
+    "Assembleur : PhysicsAssemblerBlockEntity (levier 45°, poursuite 0,75 par tick)",
+    "Masses et propriétés des blocs : Sable 2.0.6 (moteur physique requis par le mod), data/sable/physics_block_properties et data/sable/tags/block",
+    "Recette : data/simulated/recipe/physics_assembler.json",
+    "Vidéos : scènes Ponder de Create Aeronautics / Simulated (physics_assembler/intro, simulated_contraptions, block_properties, sub_level_splitting) rejouées par notre moteur ; modèles et textures du mod (© The Simulated Team / The Creators of Aeronautics)"
+  ],
+  "en": {
+    "slugEn": "physics-assembler",
+    "name": "Physics Assembler",
+    "title": "Physics Assembler — Create Aeronautics guide",
+    "description": "The Physics Assembler (Simulated) turns a build into a vehicle: glue, lever, block masses, splitting and merging, with videos and numbers.",
+    "intro": "The <strong>Physics Assembler</strong> is where every Create Aeronautics vehicle begins. It comes from <strong>Simulated</strong>, shipped with the mod: it takes the blocks you glued and makes a <strong>simulated contraption</strong> out of them, an object that obeys gravity, impacts and forces while its machines keep running.",
+    "facts": [
+      {
+        "label": "Mod",
+        "value": "Simulated 1.3.3 (shipped with Create Aeronautics)"
+      },
+      {
+        "label": "Selection",
+        "value": "Honey Glue or Super Glue around the blocks"
+      },
+      {
+        "label": "Control",
+        "value": "Keep the use button held while pulling the lever (45°)"
+      },
+      {
+        "label": "Disassembly",
+        "value": "With any assembler placed on the contraption"
+      },
+      {
+        "label": "Masses",
+        "value": "Wool 0.25 · planks 0.5 · normal 1 · stone 2 · metal block 4"
+      },
+      {
+        "label": "Properties",
+        "value": "Slippery and fragile ice, weightless blocks, bounce"
+      },
+      {
+        "label": "Merging",
+        "value": "Slime ball between two contraptions"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "Lever",
+          null
+        ],
+        [
+          "Andesite Alloy",
+          "Andesite Casing",
+          "Andesite Alloy"
+        ]
+      ],
+      "result": "1 Physics Assembler"
+    },
+    "videos": [
+      {
+        "id": "aero_assembler",
+        "name": "Assembling and disassembling a build",
+        "description": "The glued build tips over when the lever is pulled, then a second assembler puts it back."
+      },
+      {
+        "id": "aero_assembler_moving",
+        "name": "Four simulated vehicles",
+        "description": "An ice car, a wheeled car, a mobile press and a glider, assembled and on the move."
+      },
+      {
+        "id": "aero_assembler_props",
+        "name": "Block mass and properties",
+        "description": "An assembled balance tilts with the mass of the blocks at its ends; the ice slips and breaks."
+      },
+      {
+        "id": "aero_assembler_split",
+        "name": "Splitting and merging",
+        "description": "A raft cut in two becomes two objects; a slime ball joins them again."
+      }
+    ],
+    "sections": [
+      {
+        "id": "coller",
+        "title": "Pick the blocks with glue",
+        "alt": "The build and the assembler inside the glue box",
+        "html": "<p>Put the assembler against the build, then mark the blocks to take with <strong>Honey Glue</strong> or Create's <a href=\"/en/wiki/super-glue\">Super Glue</a>: right-click a first corner, then the opposite one, and a box appears. Anything touching the selection, even through a diagonal edge, comes along.</p>"
+      },
+      {
+        "id": "levier",
+        "title": "Pull the lever",
+        "alt": "The assembled build tipping onto its side, lever pulled",
+        "html": "<p>Keep the use button pressed on the assembler while dragging its lever all the way (45°). The build leaves the grid: in the video, badly balanced, it tips over and rests on an edge. Afterwards the original assembler has done its job; you may even break it.</p>"
+      },
+      {
+        "id": "desassembler",
+        "title": "Putting the build back",
+        "alt": "The build standing straight again on the plate",
+        "html": "<p>To freeze a contraption, any assembler placed on it does the job: pull its lever the other way and the blocks snap back onto the grid, aligned as closely as possible. Handy to repair, extend or simply park a ship so it stops drifting.</p>"
+      },
+      {
+        "id": "vehicules",
+        "title": "What happens to the machines",
+        "alt": "A small four-wheeled car with a Portable Engine and an assembler",
+        "html": "<p>A simulated contraption stays alive. Engines spin, bearings turn the wheels, redstone works. The four craft in the video show it: an ice-skid car that turns when one side is reversed, a wheeled car, a walking press, and a glider landing on the plate.</p>"
+      },
+      {
+        "id": "masses",
+        "title": "The weight of each block",
+        "alt": "A balance leaning towards the heavier block",
+        "html": "<p>Sable, the physics engine, gives every block a mass. By default: <strong>0.25</strong> for wool, wooden slabs and stairs, fences and doors; <strong>0.5</strong> for planks, logs, slabs and chests; <strong>1</strong> for a regular block; <strong>2</strong> for stone, cobblestone and obsidian; <strong>4</strong> for metal storage blocks. A double slab counts twice. In the video, the balance clearly leans towards the heavier block.</p>"
+      },
+      {
+        "id": "proprietes",
+        "title": "Ice, bounces and fragile blocks",
+        "alt": "A block sliding down the tilted ice beam",
+        "html": "<p>Some blocks have properties on top of their weight. Ice has no friction: whatever rests on it slides. It is also fragile, like leaves, pumpkins or cacti, and shatters on impact. Slime bounces (restitution 0.5). These values come from Sable's data files: a server may change them.</p>"
+      },
+      {
+        "id": "separation",
+        "title": "Splitting and merging",
+        "alt": "The raft cut into two pieces floating apart",
+        "html": "<p>Break the blocks linking two parts and the contraption splits into two independent objects; two blocks that only meet at an edge stay attached. The other way round, a <strong>slime ball</strong> used on two touching contraptions merges them into one.</p>"
+      },
+      {
+        "id": "moteur",
+        "title": "The Portable Engine",
+        "alt": "The ice car with its red Portable Engine",
+        "html": "<p>The vehicles in the video run on Simulated's <strong>Portable Engine</strong>. It burns furnace fuels and gives 32 RPM, twice as much when superheated, with a capacity of 64 SU per RPM: 2,048 SU in normal running. Compact and self-contained, it is the easiest rotation source to carry on board.</p>"
+      },
+      {
+        "id": "faq",
+        "title": "Frequently asked questions",
+        "html": "<p><strong>Nothing moves after assembling?</strong> Check that the lever went all the way and that the glue box touches the blocks. <strong>The build keeps tipping over?</strong> Its centre of mass is badly placed: lighten the top or widen the base, for instance with wool instead of stone up high.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<ul><li>Put the assembler in the middle of the build: it is easier to find.</li><li>Avoid stone for a flying craft; prefer wool and wood.</li><li>Make the glue box a bit larger than the build so nothing is left behind.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Aeronautics 1.3.3 (Creators-of-Aeronautics/Simulated-Project repository, commit 900122e, code under the MIT licence, assets « all rights reserved », The Simulated Team / The Creators of Aeronautics), identical to the modpack jar (1.3.3 test instance)",
+      "Assembler: PhysicsAssemblerBlockEntity (lever 45°, chase 0.75 per tick)",
+      "Block masses and properties: Sable 2.0.6 (the physics engine the mod requires), data/sable/physics_block_properties and data/sable/tags/block",
+      "Recipe: data/simulated/recipe/physics_assembler.json",
+      "Videos: Create Aeronautics / Simulated Ponder scenes (physics_assembler/intro, simulated_contraptions, block_properties, sub_level_splitting) replayed by our engine; mod models and textures (© The Simulated Team / The Creators of Aeronautics)"
+    ]
+  }
+}

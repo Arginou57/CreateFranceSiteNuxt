@@ -118,7 +118,8 @@
     "roue-a-eau",
     "moteur-a-vapeur",
     "support-de-moulin-a-vent",
-    "reservoir-dorsal"
+    "reservoir-dorsal",
+    "deep-seas-oxygene"
   ],
   "sources": [
     "Vitesse : CreativeMotorBlockEntity (DEFAULT_SPEED 16, MAX_SPEED 256, deux rangées de sens)",

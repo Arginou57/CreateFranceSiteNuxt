@@ -159,7 +159,8 @@
     "tapis-roulant",
     "bruleur-a-blaze",
     "pierres-et-blocs-de-deco",
-    "fabrication-des-canons"
+    "fabrication-des-canons",
+    "aeronautics-ballons"
   ],
   "sources": [
     "Stress : AllBlocks.java, ENCASED_FAN, CStress.setImpact(2.0)",

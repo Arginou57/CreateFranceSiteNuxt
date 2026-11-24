@@ -152,7 +152,8 @@
     "planning-de-train",
     "fabrication-des-canons",
     "bruleur",
-    "tour-de-distillation"
+    "tour-de-distillation",
+    "aeronautics-ballons"
   ],
   "sources": [
     "Niveaux : BlazeBurnerBlock.HeatLevel (NONE, SMOULDERING, FADING, KINDLED, SEETHING) ; BlazeBurnerBlockEntity.getHeatLevel (FADING sous 1,25 % de MAX_HEAT_CAPACITY)",

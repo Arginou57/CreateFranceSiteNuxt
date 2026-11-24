@@ -1,0 +1,291 @@
+{
+  "slug": "ore-excavation-foreuse",
+  "name": "Foreuse (Drilling Machine) et extracteur de puits",
+  "blockId": "createoreexcavation:drilling_machine",
+  "category": "excavation",
+  "title": "Foreuse — Create Ore Excavation, guide",
+  "description": "La foreuse de Create Ore Excavation : construire le multibloc, poser un trépan, l'entraîner à 30 tr/min et sortir le minerai d'un filon.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Ore Excavation 1.6.8 · Create 6.0",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>foreuse</strong> (Drilling Machine) exploite un filon sans creuser : posée au-dessus, elle fait descendre un trépan qui tourne et en sort du minerai à chaque cycle. Sa cousine, l'<strong>extracteur de puits de fluide</strong> (Fluid Well Extractor), pompe de l'eau d'un filon d'eau.",
+  "facts": [
+    {
+      "label": "Taille",
+      "value": "multibloc 3 × 2 × 3, posé d’un bloc"
+    },
+    {
+      "label": "Rotation",
+      "value": "au moins 30 tr/min (vitesse moyenne de Create)"
+    },
+    {
+      "label": "Cycle",
+      "value": "progrès de vitesse / 30 par tick : 10 s pour le charbon à 30 tr/min"
+    },
+    {
+      "label": "Contrainte",
+      "value": "selon le filon : 192 à 2 048 par tr/min"
+    },
+    {
+      "label": "Trépans",
+      "value": "fer, diamant, netherite (netherite pour diamant durci et netherite)"
+    },
+    {
+      "label": "Fabrication",
+      "value": "établi mécanique 5 × 5"
+    },
+    {
+      "label": "Version",
+      "value": "Create Ore Excavation 1.6.8 · Create 6.0"
+    }
+  ],
+  "recipe": {
+    "label": "Trépan en fer, fabrication à l'établi",
+    "grid": [
+      [
+        "Bloc de fer",
+        "Lingot de fer",
+        null
+      ],
+      [
+        "Lingot de fer",
+        "Bloc de fer",
+        "Lingot de fer"
+      ],
+      [
+        null,
+        "Lingot de fer",
+        "Lingot de fer"
+      ]
+    ],
+    "items": [
+      [
+        "minecraft:iron_block",
+        "minecraft:iron_ingot",
+        null
+      ],
+      [
+        "minecraft:iron_ingot",
+        "minecraft:iron_block",
+        "minecraft:iron_ingot"
+      ],
+      [
+        null,
+        "minecraft:iron_ingot",
+        "minecraft:iron_ingot"
+      ]
+    ],
+    "result": "1 trépan en fer",
+    "resultItem": "createoreexcavation:drill"
+  },
+  "videos": [
+    {
+      "id": "exc_drilling",
+      "name": "Mettre une foreuse en marche",
+      "description": "La foreuse posée sur le filon, un trépan inséré, la rotation qui arrive par un rotor : le trépan descend et tourne, le minerai sort sur un tapis ; à côté, une pompe et un réservoir de lave pour les filons qui en demandent. Le corps de la foreuse est dessiné translucide pour laisser voir le trépan qui tourne à l'intérieur.",
+      "duration": "PT21S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "serveur",
+      "title": "Pas sur Create France",
+      "html": "<p><strong>Ce mod n'est pas installé sur le serveur Create France</strong> : cette page présente un addon de Create pour les joueurs qui l'utilisent ailleurs, en solo ou sur un autre serveur.</p>"
+    },
+    {
+      "id": "foreuse",
+      "title": "La foreuse",
+      "image": "exc_drilling_foreuse.webp",
+      "alt": "La foreuse, un grand multibloc de laiton, posée sur le filon",
+      "video": "exc_drilling",
+      "html": "<p>La foreuse se fabrique à l'<a href=\"/wiki/etabli-mecanique\">établi mécanique</a> (grille 5 × 5 : laiton, boîtiers, une <a href=\"/wiki/perceuse-mecanique\">perceuse mécanique</a>, un bec verseur, des tubes électroniques). Posée, elle occupe 3 × 2 × 3 blocs. Le bloc deux crans sous son centre doit être un bloc plein : c'est là qu'elle fore.</p>"
+    },
+    {
+      "id": "trepan",
+      "title": "Poser un trépan",
+      "image": "exc_drilling_trepan.webp",
+      "alt": "Le trépan inséré au centre de la foreuse",
+      "html": "<p>Clique sur la foreuse avec un trépan pour l'insérer. Le trépan en fer suffit pour la plupart des filons ; le diamant durci et la netherite exigent un trépan en netherite.</p>"
+    },
+    {
+      "id": "rotation",
+      "title": "La rotation",
+      "image": "exc_drilling_rotation.webp",
+      "alt": "Le trépan qui tourne et descend, entraîné par la rotation",
+      "html": "<p>La foreuse prend sa rotation par son entrée cinétique, un demi-rotor sur le côté. Il lui faut au moins 30 tr/min : en dessous, rien ne se passe. Chaque tick, elle avance de vitesse / 30 (arrondi vers le bas) : à 32 tr/min un cycle de charbon prend 10 s, à 64 tr/min deux fois moins. Pendant le travail, le trépan descend de 0,2 bloc et tourne de 20° par tick.</p>"
+    },
+    {
+      "id": "sortie",
+      "title": "Sortir le minerai",
+      "image": "exc_drilling_sortie.webp",
+      "alt": "Le minerai brut qui sort sur le tapis par l’entonnoir",
+      "html": "<p>Le bloc de sortie (Multiblock IO) rend les objets : un <a href=\"/wiki/entonnoir\">entonnoir</a> sur un <a href=\"/wiki/tapis-roulant\">tapis</a> les emporte. Prévois une bonne source : la contrainte de la recette est de 256 par tr/min pour un filon courant.</p>"
+    },
+    {
+      "id": "energie",
+      "title": "Quelle source de rotation ?",
+      "html": "<p>La contrainte d'une foreuse se compte comme pour une machine de Create : la valeur de la recette multipliée par la vitesse. À 32 tr/min, un filon de fer demande 8 192 SU ; à 64 tr/min, deux fois plus, mais le cycle est deux fois plus court. Un <a href=\"/wiki/moteur-a-vapeur\">moteur à vapeur</a> bien alimenté ou plusieurs <a href=\"/wiki/roue-a-eau\">roues à eau</a> géantes sont nécessaires ; vérifie au <a href=\"/wiki/stressometre-compteur-de-vitesse\">stressomètre</a>. Une foreuse surchargée s'arrête net.</p>"
+    },
+    {
+      "id": "extracteur",
+      "title": "L'extracteur de puits",
+      "html": "<p>L'extracteur de puits de fluide se construit comme la foreuse (même taille, établi mécanique 5 × 5 avec une poulie à tuyau et une pompe mécanique). Posé sur un filon d'eau, il sort 500 mB par cycle d'une seconde, par sa sortie de fluide.</p>"
+    },
+    {
+      "id": "montage",
+      "title": "Un montage type",
+      "html": "<p>Dans la scène, un rotor arrive par le côté nord jusqu'à l'entrée cinétique ; le minerai sort par le bloc de sortie à l'ouest, tombe par un <a href=\"/wiki/entonnoir\">entonnoir</a> sur un <a href=\"/wiki/tapis-roulant\">tapis</a> qui l'emporte ; à l'est, une pompe tire la lave d'un réservoir vers l'entrée de fluide. Ce schéma se recopie tel quel : une ligne de rotation, une ligne d'objets, une ligne de fluide, chacune sur sa face. Ajoute un <a href=\"/wiki/coffre-a-objet-renforce\">coffre-fort</a> en bout de tapis pour stocker la production.</p>"
+    },
+    {
+      "id": "faq",
+      "title": "Questions fréquentes",
+      "html": "<p><strong>Pourquoi rien ne sort ?</strong> Vérifie dans l'ordre : un filon sous la machine, un bloc plein deux crans sous son centre, un trépan adapté, au moins 30 tr/min sans surcharge, et de la place dans la sortie.</p>"
+    },
+    {
+      "id": "fluide",
+      "title": "Les filons qui demandent un fluide",
+      "image": "exc_drilling_fluide.webp",
+      "alt": "La pompe et le réservoir de lave raccordés à l’entrée de fluide",
+      "html": "<p>Certains filons ne se forent qu'avec un fluide de forage : le diamant durci prend 500 mB de lave par cycle, la netherite 1 000 mB. Une <a href=\"/wiki/pompe-mecanique\">pompe</a> l'envoie dans l'entrée de fluide. L'extracteur de puits, construit de la même manière, sort 500 mB d'eau par seconde d'un filon d'eau.</p>"
+    }
+  ],
+  "related": [
+    "create-ore-excavation",
+    "ore-excavation-filons",
+    "ore-excavation-foreuse-d-echantillon",
+    "perceuse-mecanique",
+    "etabli-mecanique",
+    "tapis-roulant"
+  ],
+  "sources": [
+    "Create Ore Excavation 1.6.8 (createoreexcavation-1.21-1.6.8.jar), de tom5454, licence MIT : code lu après décompilation (ExcavatingBlockEntity, SampleDrillBlockEntity, Config), recettes et filons du dossier data du jar, scènes Ponder PonderScenes rejouées par notre moteur.",
+    "Modèles et textures des auteurs du mod, rendus à partir du jar ; aucun texte du mod n'est recopié."
+  ],
+  "en": {
+    "slugEn": "ore-excavation-drilling-machine",
+    "name": "Drilling Machine and Fluid Well Extractor",
+    "title": "Drilling Machine — Create Ore Excavation guide",
+    "description": "Create Ore Excavation Drilling Machine: build the multiblock, insert a drill, spin it at 30 RPM or more and pull endless ore from a vein.",
+    "intro": "The <strong>Drilling Machine</strong> mines a vein without digging: placed on top of it, it lowers a spinning drill and brings ore up every cycle. Its sibling, the <strong>Fluid Well Extractor</strong>, pumps water from a water vein.",
+    "facts": [
+      {
+        "label": "Size",
+        "value": "3 × 2 × 3 multiblock, placed as one block"
+      },
+      {
+        "label": "Rotation",
+        "value": "at least 30 RPM (Create's medium speed)"
+      },
+      {
+        "label": "Cycle",
+        "value": "progress of speed / 30 per tick: 10 s for coal at 30 RPM"
+      },
+      {
+        "label": "Stress",
+        "value": "depends on the vein: 192 to 2,048 per RPM"
+      },
+      {
+        "label": "Drills",
+        "value": "iron, diamond, netherite (netherite for hardened diamond and netherite)"
+      },
+      {
+        "label": "Crafting",
+        "value": "5 × 5 Mechanical Crafter"
+      },
+      {
+        "label": "Version",
+        "value": "Create Ore Excavation 1.6.8 · Create 6.0"
+      }
+    ],
+    "recipe": {
+      "label": "Iron Drill, crafting table recipe",
+      "grid": [
+        [
+          "Block of Iron",
+          "Iron Ingot",
+          null
+        ],
+        [
+          "Iron Ingot",
+          "Block of Iron",
+          "Iron Ingot"
+        ],
+        [
+          null,
+          "Iron Ingot",
+          "Iron Ingot"
+        ]
+      ],
+      "result": "1 Iron Drill"
+    },
+    "videos": [
+      {
+        "id": "exc_drilling",
+        "name": "Starting a Drilling Machine",
+        "description": "The machine placed on the vein, a drill inserted, rotation arriving through a shaft: the drill lowers and spins, ore comes out onto a belt; next to it, a pump and a lava tank for veins that need it. The machine's body is drawn see-through so the spinning drill inside shows."
+      }
+    ],
+    "sections": [
+      {
+        "id": "serveur",
+        "title": "Not on Create France",
+        "html": "<p><strong>This mod is not installed on the Create France server</strong>: this page covers a Create addon for players who use it elsewhere, in single player or on another server.</p>"
+      },
+      {
+        "id": "foreuse",
+        "title": "The Drilling Machine",
+        "alt": "The Drilling Machine, a large brass multiblock, placed on the vein",
+        "html": "<p>The Drilling Machine is made in a <a href=\"/en/wiki/mechanical-crafter\">Mechanical Crafter</a> (5 × 5 grid: brass, casings, a <a href=\"/en/wiki/mechanical-drill\">Mechanical Drill</a>, a spout, electron tubes). Once placed it takes 3 × 2 × 3 blocks. The block two steps below its centre must be a full block: that is where it drills.</p>"
+      },
+      {
+        "id": "trepan",
+        "title": "Inserting a drill",
+        "alt": "The drill inserted in the middle of the machine",
+        "html": "<p>Click the machine with a drill to insert it. The iron drill is enough for most veins; hardened diamond and netherite need a netherite drill.</p>"
+      },
+      {
+        "id": "rotation",
+        "title": "Rotation",
+        "alt": "The drill spinning and lowered, driven by rotation",
+        "html": "<p>The machine takes rotation through its kinetic input, a half shaft on the side. It needs at least 30 RPM: below that, nothing happens. Every tick it progresses by speed / 30 (rounded down): at 32 RPM a coal cycle takes 10 s, at 64 RPM half as long. While working, the drill drops 0.2 blocks and turns 20° per tick.</p>"
+      },
+      {
+        "id": "sortie",
+        "title": "Getting the ore out",
+        "alt": "Raw ore coming out onto the belt through the funnel",
+        "html": "<p>The output block (Multiblock IO) hands out the items: a <a href=\"/en/wiki/funnel\">funnel</a> on a <a href=\"/en/wiki/conveyor-belt\">belt</a> carries them away. Bring a strong source: the recipe's stress is 256 per RPM for a common vein.</p>"
+      },
+      {
+        "id": "energie",
+        "title": "Which rotation source?",
+        "html": "<p>A Drilling Machine's stress is counted like a Create machine's: the recipe value times the speed. At 32 RPM an iron vein needs 8,192 SU; at 64 RPM twice as much, but the cycle is twice as short. A well-fed <a href=\"/en/wiki/steam-engine\">steam engine</a> or several large <a href=\"/en/wiki/water-wheel\">water wheels</a> are needed; check with a <a href=\"/en/wiki/stressometer-speedometer\">Stressometer</a>. An overstressed machine stops dead.</p>"
+      },
+      {
+        "id": "extracteur",
+        "title": "The Fluid Well Extractor",
+        "html": "<p>The Fluid Well Extractor is built like the Drilling Machine (same size, 5 × 5 Mechanical Crafter recipe with a hose pulley and a mechanical pump). Placed on a water vein it outputs 500 mB per one-second cycle through its fluid output.</p>"
+      },
+      {
+        "id": "montage",
+        "title": "A typical setup",
+        "html": "<p>In the scene a shaft comes in from the north side to the kinetic input; ore leaves through the output block on the west, drops through a <a href=\"/en/wiki/funnel\">funnel</a> onto a <a href=\"/en/wiki/conveyor-belt\">belt</a> that carries it away; on the east, a pump draws lava from a tank into the fluid input. The pattern copies over as is: one rotation line, one item line, one fluid line, each on its own side. Add an <a href=\"/en/wiki/item-vault\">Item Vault</a> at the end of the belt to store the output.</p>"
+      },
+      {
+        "id": "faq",
+        "title": "Common questions",
+        "html": "<p><strong>Why does nothing come out?</strong> Check in this order: a vein under the machine, a full block two steps below its centre, a suitable drill, at least 30 RPM without overstress, and free room at the output. A lava-hungry vein also needs its drilling fluid.</p>"
+      },
+      {
+        "id": "fluide",
+        "title": "Veins that need a fluid",
+        "alt": "The pump and lava tank connected to the fluid input",
+        "html": "<p>Some veins only yield with a drilling fluid: hardened diamond takes 500 mB of lava per cycle, netherite 1,000 mB. A <a href=\"/en/wiki/mechanical-pump\">pump</a> feeds it into the fluid input. The Fluid Well Extractor, built the same way, draws 500 mB of water per second from a water vein.</p>"
+      }
+    ],
+    "sources": [
+      "Create Ore Excavation 1.6.8 (createoreexcavation-1.21-1.6.8.jar), by tom5454, MIT licence: code read after decompiling (ExcavatingBlockEntity, SampleDrillBlockEntity, Config), recipes and veins from the jar's data folder, Ponder scenes PonderScenes replayed by our engine.",
+      "Models and textures by the mod's authors, rendered from the jar; no text from the mod is copied."
+    ]
+  }
+}

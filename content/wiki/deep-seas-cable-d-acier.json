@@ -1,0 +1,323 @@
+{
+  "slug": "deep-seas-cable-d-acier",
+  "name": "Câble d'acier, poulie et crochet d'appontage",
+  "blockId": "create_submarine:steel_cable",
+  "category": "deepseas",
+  "title": "Câble d'acier et poulie — Create Deep Seas, guide",
+  "description": "Câble d'acier de Create Deep Seas : marcher dessus, l'électrifier, y accrocher un navire avec des poulies, le freiner au crochet d'appontage.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Deep Seas 3.4.8 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>câble d'acier</strong> (Steel Cable) est une corde de Simulated en version lourde. Tendu entre un treuil et un connecteur, il porte des marcheurs, guide des navires accrochés à des <strong>poulies</strong> (Pulley) et sert de brin d'arrêt au <strong>crochet d'appontage</strong> (Arresting Hook), comme sur un porte-avions.",
+  "facts": [
+    {
+      "label": "Longueur max",
+      "value": "1 000 blocs (réglage serveur steelCableMaxLength)"
+    },
+    {
+      "label": "Poulie",
+      "value": "glisse jusqu'à 24 blocs/s, chauffe au-delà"
+    },
+    {
+      "label": "Crochet",
+      "value": "bras sorti à −22,5°, rentré à −180,5° ; attrape un câble à 2 blocs"
+    },
+    {
+      "label": "Freinage",
+      "value": "ressort : raideur 100, amortissement 16, étirement max 3 blocs"
+    },
+    {
+      "label": "Électrification",
+      "value": "énergie FE sur le treuil (mod électrique nécessaire)"
+    },
+    {
+      "label": "Version",
+      "value": "Create Deep Seas 3.4.8 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Câble d'acier, fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        "Plaque de fer",
+        "Corde de liaison",
+        "Plaque de fer"
+      ],
+      [
+        "Plaque de fer",
+        "Ressort",
+        "Plaque de fer"
+      ]
+    ],
+    "items": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        "create:iron_sheet",
+        "simulated:rope_coupling",
+        "create:iron_sheet"
+      ],
+      [
+        "create:iron_sheet",
+        "simulated:spring",
+        "create:iron_sheet"
+      ]
+    ],
+    "result": "1 câble d'acier",
+    "resultItem": "create_submarine:steel_cable"
+  },
+  "videos": [
+    {
+      "id": "sub_cable",
+      "name": "Marcher sur un câble tendu",
+      "description": "Un câble d'acier tendu entre un treuil et un connecteur de corde : un villageois le traverse en marchant.",
+      "duration": "PT7S"
+    },
+    {
+      "id": "sub_cable_spark",
+      "name": "Un câble électrifié",
+      "description": "Des étincelles parcourent le câble d'un bout à l'autre.",
+      "duration": "PT8S"
+    },
+    {
+      "id": "sub_pulley",
+      "name": "Deux poulies sur le câble",
+      "description": "Deux poulies pincent le câble ; l'ensemble glisse le long du câble et leurs roues tournent.",
+      "duration": "PT13S"
+    },
+    {
+      "id": "sub_hook",
+      "name": "Le crochet d'appontage",
+      "description": "Un navire équipé d'un crochet passe au-dessus d'un câble tendu entre deux poteaux : le bras s'abaisse, accroche le câble et le navire s'arrête.",
+      "duration": "PT18S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "marcher",
+      "title": "Un câble tendu",
+      "image": "sub_cable_marcher.webp",
+      "alt": "Le villageois qui marche sur le câble d'acier tendu",
+      "video": "sub_cable",
+      "html": "<p>Le câble d'acier se pose comme la corde de Simulated, entre un <strong>treuil</strong> et un <strong>connecteur de corde</strong>, jusqu'à 1 000 blocs de long. Une fois tendu, les créatures marchent dessus : joueurs et villageois peuvent traverser un ravin ou passer d'un navire à l'autre. Dans notre vidéo, le villageois est dessiné avec le modèle et la tenue du jeu.</p>"
+    },
+    {
+      "id": "electrifie",
+      "title": "Électrifier le câble",
+      "image": "sub_cable_spark_electrifie.webp",
+      "alt": "Des étincelles électriques qui parcourent le câble",
+      "video": "sub_cable_spark",
+      "html": "<p>Avec un mod électrique comme Create Crafts &amp; Additions, on envoie de l'énergie (FE) directement dans le treuil qui tient le câble : il s'électrifie et crépite. Aucun mod électrique n'est installé sur Create France, cette fonction n'y est donc pas utilisable.</p>"
+    },
+    {
+      "id": "poulies",
+      "title": "Les poulies",
+      "image": "sub_pulley_poulies.webp",
+      "alt": "La paire de poulies qui serre le câble entre ses roues",
+      "video": "sub_pulley",
+      "html": "<p>Installe une paire de poulies en vis-à-vis, le câble entre les deux : elles le pincent et y attachent le navire (un assemblage Sable) qui les porte. Celui-ci suit alors le câble partout où il va, à la façon d'un téléphérique. Les roues tournent avec le glissement.</p>"
+    },
+    {
+      "id": "suivre",
+      "title": "Glisser le long du câble",
+      "image": "sub_pulley_suivre.webp",
+      "alt": "Les poulies arrivées à l'autre bout du câble",
+      "html": "<p>La poulie glisse jusqu'à 24 blocs par seconde ; au-delà, elle chauffe et rougit. Garde une pente douce ou un navire léger pour rester sous la limite.</p>"
+    },
+    {
+      "id": "crochet",
+      "title": "Le crochet d'appontage",
+      "image": "sub_hook_crochet.webp",
+      "alt": "Le navire avec son crochet, au-dessus du câble tendu",
+      "video": "sub_hook",
+      "html": "<p>Le crochet se pose sous un navire, comme la crosse d'un avion qui apponte. Un signal de redstone abaisse son bras : il passe de −180,5° (rentré) à −22,5° (sorti) en une demi-seconde.</p>"
+    },
+    {
+      "id": "usages",
+      "title": "À quoi ça sert",
+      "html": "<p>Le câble d'acier relie deux points sans pont : une passerelle entre deux navires amarrés, un téléphérique au-dessus d'une vallée avec des poulies, une ligne de guidage pour un sous-marin qui descend toujours au même endroit, ou un brin d'arrêt pour faire atterrir un aéronef sur un pont de navire avec le crochet. Il se pose avec le treuil de corde et le connecteur de corde de Simulated, comme une corde normale.</p>"
+    },
+    {
+      "id": "recettes",
+      "title": "Fabriquer poulie et crochet",
+      "html": "<p>La poulie demande une plaque de fer, cinq lingots de fer et un mécanisme gyroscopique de Simulated. Le crochet d'appontage se fait avec deux plaques de fer, un boîtier en andésite, une chaîne et un crochet de fil. Le câble lui-même prend quatre plaques de fer, une corde de liaison et un ressort.</p>"
+    },
+    {
+      "id": "securite",
+      "title": "Les limites",
+      "html": "<p>Plus un câble est long, plus il coûte au serveur : la longueur maximale (1 000 blocs par défaut) peut être réduite par les administrateurs. Une poulie qui glisse trop vite chauffe et rougit ; ralentis la descente ou allège le navire accroché. Le crochet d'appontage ne saisit qu'un câble d'acier : une corde ordinaire de Simulated ne l'arrêtera pas.</p>"
+    },
+    {
+      "id": "faq",
+      "title": "Questions fréquentes",
+      "html": "<p><strong>Le câble casse-t-il ?</strong> Le crochet l'étire au plus de 3 blocs en freinant. <strong>Peut-on l'utiliser comme une corde normale ?</strong> Oui, il se pose et se retire comme la corde de Simulated.</p>"
+    },
+    {
+      "id": "accroche",
+      "title": "Accrocher et lâcher",
+      "image": "sub_hook_accroche.webp",
+      "alt": "Le bras abaissé a accroché le câble, le navire s'arrête",
+      "html": "<p>Si un câble d'acier se trouve dans un rayon de 2 blocs autour de la griffe, elle s'y accroche ; le câble se comporte alors comme un élastique (raideur 100, amortissement 16, allongement maximal de 3 blocs) qui ralentit le navire jusqu'à l'immobiliser. Coupe le signal : le bras remonte et lâche le câble. Les cordes ordinaires sont ignorées, de même que tout câble fixé au navire qui porte le crochet.</p>"
+    }
+  ],
+  "related": [
+    "create-deep-seas",
+    "deep-seas-voiles-et-gouvernail",
+    "poulie-a-corde"
+  ],
+  "sources": [
+    "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar du modpack Create France) : code lu après décompilation (Vineflower) pour les chiffres (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recettes du dossier data du jar, scènes Ponder SubmarinePonderScenes / HighSeasPonderScenes rejouées par notre moteur.",
+    "Mod de Maxenonyme (MaxCreateMC), Cogfly et Zinc Studios ; artistes Marume, RandomePigeon, Funado. Licence du mod : « All Rights Reserved » : modèles et textures appartiennent à leurs auteurs, rendus ici à partir du jar ; aucun texte du mod n'est recopié.",
+    "Blocs de Simulated 1.3.2 (treuil, connecteur de corde, roulement pivotant) : Create Aeronautics, assets « All Rights Reserved », code MIT.",
+    "Vidéo du câble : le villageois (une entité) est dessiné par notre moteur avec le modèle de villageois du jeu (bras croisés, tenue des plaines)."
+  ],
+  "en": {
+    "slugEn": "deep-seas-steel-cable",
+    "name": "Steel Cable, Pulley and Arresting Hook",
+    "title": "Steel Cable and Pulley — Create Deep Seas guide",
+    "description": "Create Deep Seas Steel Cable: walk on it, electrify it, hang a ship from it with Pulleys and stop a ship with the Arresting Hook.",
+    "intro": "The <strong>Steel Cable</strong> is a heavy-duty version of Simulated's rope. Stretched between a winch and a connector, it carries walkers, guides ships hanging from <strong>Pulleys</strong> and acts as the arresting wire for the <strong>Arresting Hook</strong>, just like on an aircraft carrier.",
+    "facts": [
+      {
+        "label": "Max length",
+        "value": "1,000 blocks (server setting steelCableMaxLength)"
+      },
+      {
+        "label": "Pulley",
+        "value": "slides up to 24 blocks/s, overheats beyond"
+      },
+      {
+        "label": "Hook",
+        "value": "arm out at −22.5°, stowed at −180.5°; grabs a cable within 2 blocks"
+      },
+      {
+        "label": "Braking",
+        "value": "spring: stiffness 100, damping 16, max stretch 3 blocks"
+      },
+      {
+        "label": "Electrification",
+        "value": "FE power on the winch (needs an electricity mod)"
+      },
+      {
+        "label": "Version",
+        "value": "Create Deep Seas 3.4.8 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Steel Cable, crafting table recipe",
+      "grid": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          "Iron Sheet",
+          "Rope Coupling",
+          "Iron Sheet"
+        ],
+        [
+          "Iron Sheet",
+          "Spring",
+          "Iron Sheet"
+        ]
+      ],
+      "result": "1 Steel Cable"
+    },
+    "videos": [
+      {
+        "id": "sub_cable",
+        "name": "Walking on a taut cable",
+        "description": "A Steel Cable stretched between a Rope Winch and a Rope Connector: a villager walks across it."
+      },
+      {
+        "id": "sub_cable_spark",
+        "name": "An electrified cable",
+        "description": "Sparks run along the cable from one end to the other."
+      },
+      {
+        "id": "sub_pulley",
+        "name": "Two pulleys on the cable",
+        "description": "Two Pulleys pinch the cable; the pair slides along it and their wheels turn."
+      },
+      {
+        "id": "sub_hook",
+        "name": "The Arresting Hook",
+        "description": "A ship fitted with a hook passes over a cable stretched between two posts: the arm drops, catches the cable and the ship stops."
+      }
+    ],
+    "sections": [
+      {
+        "id": "marcher",
+        "title": "A taut cable",
+        "alt": "The villager walking on the taut Steel Cable",
+        "html": "<p>The Steel Cable is placed like Simulated's rope, between a <strong>Rope Winch</strong> and a <strong>Rope Connector</strong>, up to 1,000 blocks long. Once taut, creatures can walk on it: players and villagers can cross a ravine or move from one ship to another. In our video the villager is drawn with the game's model and outfit.</p>"
+      },
+      {
+        "id": "electrifie",
+        "title": "Electrifying the cable",
+        "alt": "Electric sparks running along the cable",
+        "html": "<p>Given an electricity mod (Create Crafts &amp; Additions, for instance), you feed energy (FE) straight into the winch holding the cable: it becomes electrified and crackles. No electricity mod is installed on Create France, so this feature cannot be used there.</p>"
+      },
+      {
+        "id": "poulies",
+        "title": "Pulleys",
+        "alt": "The pair of Pulleys squeezing the cable between their wheels",
+        "html": "<p>Install a pair of Pulleys opposite each other with the cable in between: they pinch it and attach the ship (a Sable contraption) carrying them. From then on the vessel rides the line like a cable car. The wheels turn as they slide.</p>"
+      },
+      {
+        "id": "suivre",
+        "title": "Sliding along the cable",
+        "alt": "The Pulleys at the far end of the cable",
+        "html": "<p>A Pulley slides at up to 24 blocks per second; beyond that it heats up and glows red. Keep a gentle slope or a light ship to stay under the limit.</p>"
+      },
+      {
+        "id": "crochet",
+        "title": "The Arresting Hook",
+        "alt": "The ship and its hook, above the taut cable",
+        "html": "<p>The hook is mounted beneath a vessel, the same idea as a naval jet's tailhook. A redstone signal lowers its arm: it swings from −180.5° (stowed) to −22.5° (deployed) in half a second.</p>"
+      },
+      {
+        "id": "usages",
+        "title": "What it is for",
+        "html": "<p>The Steel Cable links two points without a bridge: a gangway between two moored ships, a cable car over a valley with pulleys, a guide line for a submarine that always dives at the same spot, or an arresting wire to land an aircraft on a ship's deck with the hook. It is placed with Simulated's Rope Winch and Rope Connector, like a normal rope.</p>"
+      },
+      {
+        "id": "recettes",
+        "title": "Crafting the pulley and hook",
+        "html": "<p>The Pulley takes an iron sheet, five iron ingots and a Simulated gyroscopic mechanism. The Arresting Hook is made from two iron sheets, an andesite casing, a chain and a tripwire hook. The cable itself takes four iron sheets, a rope coupling and a spring.</p>"
+      },
+      {
+        "id": "securite",
+        "title": "Limits",
+        "html": "<p>The longer a cable, the more it costs the server: the maximum length (1,000 blocks by default) can be lowered by admins. A Pulley sliding too fast heats up and glows red; slow the descent or lighten the hanging ship. The Arresting Hook only catches Steel Cables: an ordinary Simulated rope will not stop it.</p>"
+      },
+      {
+        "id": "faq",
+        "title": "Common questions",
+        "html": "<p><strong>Can the cable snap?</strong> When braking a ship, the hook stretches it by 3 blocks at most. <strong>Can it be used like a normal rope?</strong> Yes, it is placed and removed just like Simulated's rope.</p>"
+      },
+      {
+        "id": "accroche",
+        "title": "Catching and letting go",
+        "alt": "The lowered arm has caught the cable, the ship stops",
+        "html": "<p>If a Steel Cable lies within 2 blocks of the claw, it latches on; the cable then acts like an elastic band (stiffness 100, damping 16, 3 blocks of stretch at most) that slows the vessel to a halt. Cut the signal: the arm rises and lets go. Ordinary ropes are ignored, and so is any cable fastened to the vessel carrying the hook.</p>"
+      }
+    ],
+    "sources": [
+      "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar from the Create France modpack): code read after decompiling (Vineflower) for the figures (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recipes from the jar's data folder, Ponder scenes SubmarinePonderScenes / HighSeasPonderScenes replayed by our engine.",
+      "Mod by Maxenonyme (MaxCreateMC), Cogfly and Zinc Studios; art by Marume, RandomePigeon, Funado. Mod licence: \"All Rights Reserved\": models and textures belong to their authors and are rendered here from the jar; no text from the mod is copied.",
+      "Simulated 1.3.2 blocks (rope winch, rope connector, swivel bearing): Create Aeronautics, assets \"All Rights Reserved\", code under MIT.",
+      "Cable video: the villager (an entity) is drawn by our engine with the game's villager model (folded arms, plains outfit)."
+    ]
+  }
+}

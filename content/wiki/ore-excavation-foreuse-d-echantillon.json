@@ -1,0 +1,295 @@
+{
+  "slug": "ore-excavation-foreuse-d-echantillon",
+  "name": "Foreuse d'échantillon et atlas des filons",
+  "blockId": "createoreexcavation:sample_drill",
+  "category": "excavation",
+  "title": "Foreuse d'échantillon — Create Ore Excavation, guide",
+  "description": "Foreuse d'échantillon de Create Ore Excavation : confirmer un filon avec l'air d'un réservoir dorsal et l'inscrire dans l'atlas des filons.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Ore Excavation 1.6.8 · Create 6.0",
+  "mcVersion": "1.21.1",
+  "intro": "Avant de bâtir une grosse foreuse, mieux vaut être sûr du filon. La <strong>foreuse d'échantillon</strong> (Sample Drill) creuse un carottage avec l'air comprimé d'un <a href=\"/wiki/reservoir-dorsal\">réservoir dorsal</a>, puis l'<strong>atlas des filons</strong> (Ore Vein Atlas) en garde la fiche complète.",
+  "facts": [
+    {
+      "label": "Énergie",
+      "value": "air du réservoir dorsal posé dessus (au-dessus de 20 % de remplissage)"
+    },
+    {
+      "label": "Durée",
+      "value": "200 points de progrès, 1 à 4 par tick selon l’air restant"
+    },
+    {
+      "label": "Bloc dessous",
+      "value": "un bloc plein"
+    },
+    {
+      "label": "Résultat",
+      "value": "fiche du filon dans l’atlas (clic avec l’atlas)"
+    },
+    {
+      "label": "Fabrication",
+      "value": "établi mécanique 3 × 3"
+    },
+    {
+      "label": "Version",
+      "value": "Create Ore Excavation 1.6.8 · Create 6.0"
+    }
+  ],
+  "recipe": {
+    "label": "Établi mécanique",
+    "grid": [
+      [
+        "Plaque de laiton",
+        "Tube électronique",
+        "Plaque de laiton"
+      ],
+      [
+        "Mécanisme de précision",
+        "Boîtier en laiton",
+        "Plaque de laiton"
+      ],
+      [
+        "Plaque renforcée",
+        "Perceuse mécanique",
+        "Plaque renforcée"
+      ]
+    ],
+    "items": [
+      [
+        "create:brass_sheet",
+        "create:electron_tube",
+        "create:brass_sheet"
+      ],
+      [
+        "create:precision_mechanism",
+        "create:brass_casing",
+        "create:brass_sheet"
+      ],
+      [
+        "create:sturdy_sheet",
+        "create:mechanical_drill",
+        "create:sturdy_sheet"
+      ]
+    ],
+    "result": "1 foreuse d'échantillon",
+    "resultItem": "createoreexcavation:sample_drill"
+  },
+  "videos": [
+    {
+      "id": "exc_sample",
+      "name": "Prélever un échantillon",
+      "description": "Le détecteur trouve du cuivre, la foreuse d'échantillon est posée avec un réservoir dorsal dessus : le trépan tourne et s'enfonce, puis l'atlas récupère la fiche ; une foreuse déjà en marche donne aussi un échantillon.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "serveur",
+      "title": "Pas sur Create France",
+      "html": "<p><strong>Ce mod n'est pas installé sur le serveur Create France</strong> : cette page présente un addon de Create pour les joueurs qui l'utilisent ailleurs, en solo ou sur un autre serveur.</p>"
+    },
+    {
+      "id": "poser",
+      "title": "Poser la foreuse",
+      "image": "exc_sample_poser.webp",
+      "alt": "La foreuse d'échantillon posée sur le sol où le cuivre a été détecté",
+      "video": "exc_sample",
+      "html": "<p>Une fois le filon repéré avec le <a href=\"/wiki/create-ore-excavation\">détecteur</a>, pose la foreuse d'échantillon dessus, sur un bloc plein. Elle se fabrique à l'<a href=\"/wiki/etabli-mecanique\">établi mécanique</a> avec une <a href=\"/wiki/perceuse-mecanique\">perceuse mécanique</a>.</p>"
+    },
+    {
+      "id": "reservoir",
+      "title": "L'air comprimé",
+      "image": "exc_sample_reservoir.webp",
+      "alt": "Un réservoir dorsal en cuivre posé sur la foreuse d'échantillon",
+      "html": "<p>Elle ne prend pas de rotation : son énergie, c'est l'air d'un <a href=\"/wiki/reservoir-dorsal\">réservoir dorsal</a> posé juste au-dessus. Il doit être rempli à plus de 20 %. Remplis-le d'abord avec un compresseur de Create (un réservoir dorsal posé sur un arbre qui tourne).</p>"
+    },
+    {
+      "id": "activer",
+      "title": "Lancer le forage",
+      "image": "exc_sample_activer.webp",
+      "alt": "La foreuse d'échantillon activée d'un clic",
+      "html": "<p>Un clic droit lance le forage. À chaque tick, la foreuse avance de 1 à 4 points selon l'air restant (air / 80) et prend autant d'air au réservoir. Il faut 200 points.</p>"
+    },
+    {
+      "id": "forage",
+      "title": "Le trépan descend",
+      "image": "exc_sample_forage.webp",
+      "alt": "Le trépan qui tourne et s'enfonce sous la foreuse",
+      "html": "<p>Le trépan tourne de 20° par tick et s'enfonce d'un demi-bloc au fil du forage ; passé la moitié, sa tige apparaît. À 200 points, il s'arrête : l'échantillon est prêt.</p>"
+    },
+    {
+      "id": "atlas",
+      "title": "L'atlas des filons",
+      "image": "exc_sample_atlas.webp",
+      "alt": "La foreuse arrêtée, prête pour l'atlas",
+      "html": "<p>Clique alors la foreuse avec l'<strong>atlas des filons</strong> : il enregistre le filon et tout son détail (type, rendement, emplacement). L'atlas sert ensuite de filtre pour trier tes découvertes. Il se fabrique avec un coffre, une améthyste, une carte et un livre.</p>"
+    },
+    {
+      "id": "air",
+      "title": "Combien d'air ?",
+      "html": "<p>Le réservoir dorsal en cuivre de la scène contient 900 unités d'air. La foreuse prend un point d'air par point de progrès, de 1 à 4 par tick selon ce qu'il reste : un carottage complet coûte donc environ 200 unités, et elle s'arrête si le réservoir descend sous 20 %. Garde un compresseur à portée pour recharger le réservoir entre deux échantillons.</p>"
+    },
+    {
+      "id": "pourquoi",
+      "title": "Pourquoi un échantillon ?",
+      "html": "<p>Le détecteur dit seulement qu'un filon est là. L'échantillon révèle son multiplicateur de rendement et l'inscrit dans l'atlas : de quoi comparer deux filons de fer avant de choisir où bâtir. Sur un serveur aux filons finis, c'est ce qui permet de savoir combien de minerai reste à prendre.</p>"
+    },
+    {
+      "id": "recette",
+      "title": "Fabriquer la foreuse d’échantillon",
+      "html": "<p>Sa recette d'établi mécanique tient en 3 × 3 : plaques de laiton, tube électronique, mécanisme de précision, boîtier en laiton, deux plaques renforcées et une <a href=\"/wiki/perceuse-mecanique\">perceuse mécanique</a> en bas au centre. Elle se ramasse et se repose : un seul exemplaire suffit pour prospecter toute une région.</p>"
+    },
+    {
+      "id": "faq",
+      "title": "Questions fréquentes",
+      "html": "<p><strong>Le forage ne démarre pas ?</strong> Le réservoir dorsal doit être juste au-dessus, rempli à plus de 20 %, et le bloc juste en dessous doit être plein. <strong>Faut-il de la rotation ?</strong> Non, uniquement de l'air comprimé. <strong>Combien de temps ?</strong> Avec un réservoir bien rempli, la foreuse avance de 4 points par tick : les 200 points sont atteints en un peu plus de deux secondes ; quand l'air baisse, elle ralentit. <strong>Que montre l'atlas ?</strong> Le nom du filon, son multiplicateur et l'endroit où il a été trouvé ; il peut aussi servir de filtre pour un type de filon.</p>"
+    },
+    {
+      "id": "machine",
+      "title": "Ou depuis une foreuse",
+      "image": "exc_sample_machine.webp",
+      "alt": "Une grande foreuse en marche sur le même filon",
+      "html": "<p>Une <a href=\"/wiki/ore-excavation-foreuse\">foreuse</a> déjà en marche donne aussi son échantillon : clique-la avec l'atlas après au moins un cycle complet.</p>"
+    }
+  ],
+  "related": [
+    "create-ore-excavation",
+    "ore-excavation-foreuse",
+    "ore-excavation-filons",
+    "reservoir-dorsal",
+    "etabli-mecanique"
+  ],
+  "sources": [
+    "Create Ore Excavation 1.6.8 (createoreexcavation-1.21-1.6.8.jar), de tom5454, licence MIT : code lu après décompilation (ExcavatingBlockEntity, SampleDrillBlockEntity, Config), recettes et filons du dossier data du jar, scènes Ponder PonderScenes rejouées par notre moteur.",
+    "Modèles et textures des auteurs du mod, rendus à partir du jar ; aucun texte du mod n'est recopié."
+  ],
+  "en": {
+    "slugEn": "ore-excavation-sample-drill",
+    "name": "Sample Drill and Ore Vein Atlas",
+    "title": "Sample Drill — Create Ore Excavation guide",
+    "description": "Create Ore Excavation Sample Drill: confirm a vein using the air from a backtank, then record its details in the Ore Vein Atlas.",
+    "intro": "Before building a big Drilling Machine, make sure of the vein. The <strong>Sample Drill</strong> takes a core sample using compressed air from a <a href=\"/en/wiki/backtank\">backtank</a>, and the <strong>Ore Vein Atlas</strong> keeps the full record.",
+    "facts": [
+      {
+        "label": "Power",
+        "value": "air from the backtank placed on top (above 20% full)"
+      },
+      {
+        "label": "Duration",
+        "value": "200 progress points, 1 to 4 per tick depending on the air left"
+      },
+      {
+        "label": "Block below",
+        "value": "a full block"
+      },
+      {
+        "label": "Result",
+        "value": "vein record in the atlas (click with the atlas)"
+      },
+      {
+        "label": "Crafting",
+        "value": "3 × 3 Mechanical Crafter"
+      },
+      {
+        "label": "Version",
+        "value": "Create Ore Excavation 1.6.8 · Create 6.0"
+      }
+    ],
+    "recipe": {
+      "label": "Mechanical Crafter recipe",
+      "grid": [
+        [
+          "Brass Sheet",
+          "Electron Tube",
+          "Brass Sheet"
+        ],
+        [
+          "Precision Mechanism",
+          "Brass Casing",
+          "Brass Sheet"
+        ],
+        [
+          "Sturdy Sheet",
+          "Mechanical Drill",
+          "Sturdy Sheet"
+        ]
+      ],
+      "result": "1 Sample Drill"
+    },
+    "videos": [
+      {
+        "id": "exc_sample",
+        "name": "Taking a sample",
+        "description": "The finder detects copper, the Sample Drill goes down with a backtank on top: the drill spins and sinks, then the atlas collects the record; a running Drilling Machine also gives a sample."
+      }
+    ],
+    "sections": [
+      {
+        "id": "serveur",
+        "title": "Not on Create France",
+        "html": "<p><strong>This mod is not installed on the Create France server</strong>: this page covers a Create addon for players who use it elsewhere, in single player or on another server.</p>"
+      },
+      {
+        "id": "poser",
+        "title": "Placing the drill",
+        "alt": "The Sample Drill on the ground where copper was detected",
+        "html": "<p>Once the vein is located with the <a href=\"/en/wiki/create-ore-excavation-guide\">finder</a>, place the Sample Drill on it, on a full block. It is made in a <a href=\"/en/wiki/mechanical-crafter\">Mechanical Crafter</a> with a <a href=\"/en/wiki/mechanical-drill\">Mechanical Drill</a>.</p>"
+      },
+      {
+        "id": "reservoir",
+        "title": "Compressed air",
+        "alt": "A copper backtank placed on the Sample Drill",
+        "html": "<p>It takes no rotation: its power is the air of a <a href=\"/en/wiki/backtank\">backtank</a> placed right on top. It must be more than 20% full. Fill it first with a Create compressor setup (a backtank placed on a spinning shaft).</p>"
+      },
+      {
+        "id": "activer",
+        "title": "Starting the drilling",
+        "alt": "The Sample Drill switched on with a click",
+        "html": "<p>A right-click starts drilling. Every tick the drill progresses by 1 to 4 points depending on the air left (air / 80) and takes as much air from the tank. It needs 200 points.</p>"
+      },
+      {
+        "id": "forage",
+        "title": "The drill goes down",
+        "alt": "The drill spinning and sinking under the Sample Drill",
+        "html": "<p>The drill turns 20° per tick and sinks half a block as it works; past halfway, its rod shows. At 200 points it stops: the sample is ready.</p>"
+      },
+      {
+        "id": "atlas",
+        "title": "The Ore Vein Atlas",
+        "alt": "The stopped drill, ready for the atlas",
+        "html": "<p>Now click the drill with the <strong>Ore Vein Atlas</strong>: it records the vein with all its details (type, yield, location). The atlas can then filter your finds. It is crafted from a chest, an amethyst, a map and a book.</p>"
+      },
+      {
+        "id": "air",
+        "title": "How much air?",
+        "html": "<p>The copper backtank in the scene holds 900 units of air. The drill takes one unit of air per progress point, 1 to 4 per tick depending on what is left: a full sample therefore costs about 200 units, and it stops if the tank drops below 20%. Keep a compressor nearby to top the tank up between two samples.</p>"
+      },
+      {
+        "id": "pourquoi",
+        "title": "Why take a sample?",
+        "html": "<p>The finder only says a vein is there. The sample reveals its yield multiplier and writes it into the atlas: enough to compare two iron veins before choosing where to build. On a server with finite veins, it tells you how much ore is left to take.</p>"
+      },
+      {
+        "id": "recette",
+        "title": "Crafting the Sample Drill",
+        "html": "<p>Its Mechanical Crafter recipe fits in 3 × 3: brass sheets, an electron tube, a precision mechanism, a brass casing, two sturdy sheets and a <a href=\"/en/wiki/mechanical-drill\">Mechanical Drill</a> in the bottom middle. You can pick it up and set it down elsewhere as often as you like: a single one is enough to prospect a whole region.</p>"
+      },
+      {
+        "id": "faq",
+        "title": "Common questions",
+        "html": "<p><strong>Drilling does not start?</strong> The backtank must sit right on top, more than 20% full, and the block right below must be full. <strong>Does it need rotation?</strong> No, only compressed air. <strong>How long does it take?</strong> With a well-filled tank the drill progresses 4 points per tick, so the 200 points are reached in a little over two seconds; as the air drops, it slows down. <strong>What does the atlas show?</strong> The vein's name, its multiplier and where it was found; it can also serve as a filter for one vein type.</p>"
+      },
+      {
+        "id": "machine",
+        "title": "Or from a Drilling Machine",
+        "alt": "A big Drilling Machine running on the same vein",
+        "html": "<p>A <a href=\"/en/wiki/ore-excavation-drilling-machine\">Drilling Machine</a> that is already running also gives its sample: click it with the atlas after at least one full cycle.</p>"
+      }
+    ],
+    "sources": [
+      "Create Ore Excavation 1.6.8 (createoreexcavation-1.21-1.6.8.jar), by tom5454, MIT licence: code read after decompiling (ExcavatingBlockEntity, SampleDrillBlockEntity, Config), recipes and veins from the jar's data folder, Ponder scenes PonderScenes replayed by our engine.",
+      "Models and textures by the mod's authors, rendered from the jar; no text from the mod is copied."
+    ]
+  }
+}

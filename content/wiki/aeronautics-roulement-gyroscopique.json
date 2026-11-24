@@ -1,0 +1,301 @@
+{
+  "slug": "aeronautics-roulement-gyroscopique",
+  "name": "Roulement d'hélice gyroscopique",
+  "blockId": "aeronautics:gyroscopic_propeller_bearing",
+  "category": "aeronautics",
+  "title": "Roulement gyroscopique — Create Aeronautics, guide",
+  "description": "Le roulement d'hélice gyroscopique de Create Aeronautics : hélicoptères stables, îles volantes, inclinaison de 12° et remise à zéro par redstone. Vidéos.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Aeronautics 1.3.3",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>roulement d'hélice gyroscopique</strong> (Gyroscopic Propeller Bearing) est un roulement d'hélice dont le plateau peut pencher. Quand l'appareil s'incline, le plateau se redresse vers le haut, jusqu'à <strong>12°</strong>, et la poussée reste verticale. C'est la pièce qui rend possibles les hélicoptères et les îles volantes de Create Aeronautics.",
+  "facts": [
+    {
+      "label": "Poussée",
+      "value": "Comme le roulement d'hélice : voiles^1,5 × tr/min × 0,2"
+    },
+    {
+      "label": "Inclinaison maximale",
+      "value": "12° autour de son axe"
+    },
+    {
+      "label": "Stress",
+      "value": "2 SU par tr/min et par voile"
+    },
+    {
+      "label": "Redstone",
+      "value": "Un signal remet l'inclinaison à zéro"
+    },
+    {
+      "label": "Pièce clé",
+      "value": "Mécanisme gyroscopique (assemblage séquencé, 5 passes)"
+    },
+    {
+      "label": "Orientation",
+      "value": "Vers le haut (hélicoptère) ou vers le bas (structure suspendue)"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Dalle en chêne",
+        null
+      ],
+      [
+        null,
+        "Mécanisme gyroscopique",
+        null
+      ],
+      [
+        null,
+        "Boitier de laiton",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "minecraft:oak_slab",
+        null
+      ],
+      [
+        null,
+        "simulated:gyroscopic_mechanism",
+        null
+      ],
+      [
+        null,
+        "create:brass_casing",
+        null
+      ]
+    ],
+    "result": "1 roulement d'hélice gyroscopique",
+    "resultItem": "aeronautics:gyroscopic_propeller_bearing"
+  },
+  "videos": [
+    {
+      "id": "aero_gyro_heli",
+      "name": "Du roulement simple au roulement gyroscopique",
+      "description": "Avec un roulement d'hélice simple, l'hélicoptère bascule et part de travers ; avec le gyroscopique, il reste droit.",
+      "duration": "PT21S"
+    },
+    {
+      "id": "aero_gyro_island",
+      "name": "Une île volante sous son hélice",
+      "description": "Un roulement tourné vers le bas porte une île chargée au-dessus d'elle et la garde à plat.",
+      "duration": "PT14S"
+    },
+    {
+      "id": "aero_gyro_redstone",
+      "name": "Couper l'inclinaison avec la redstone",
+      "description": "L'hélice d'un appareil penche, puis un signal de redstone la ramène dans l'axe.",
+      "duration": "PT16S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "probleme",
+      "title": "Pourquoi un roulement simple ne suffit pas",
+      "image": "aero_gyro_heli_basculement.webp",
+      "alt": "L'hélicoptère à roulement simple qui bascule sur le côté en décollant",
+      "video": "aero_gyro_heli",
+      "html": "<p>Un <a href=\"/wiki/aeronautics-helices\">roulement d'hélice</a> pousse toujours dans l'axe de l'appareil. Si l'hélicoptère penche un peu, la poussée penche avec lui, le tire de côté et le fait pencher davantage. La vidéo commence ainsi : l'appareil décolle, se couche et file en travers.</p>"
+    },
+    {
+      "id": "solution",
+      "title": "Un plateau qui reste droit",
+      "image": "aero_gyro_heli_gyroscopique.webp",
+      "alt": "Le même hélicoptère avec un roulement gyroscopique, l'hélice bien à plat",
+      "html": "<p>Le roulement gyroscopique remplace le premier. Ses quatre petits vérins inclinent le plateau pour qu'il vise le haut, même quand la coque penche, dans un cône de 12° autour de son axe. L'appareil reste stable et peut monter tout droit. Le reste est identique : même poussée, même stress, mêmes voiles qu'un roulement d'hélice.</p>"
+    },
+    {
+      "id": "stable",
+      "title": "Une poussée qui ramène à plat",
+      "image": "aero_gyro_heli_stabilise.webp",
+      "alt": "L'hélicoptère stabilisé en vol, plateau incliné par rapport à la coque",
+      "html": "<p>Comme la poussée reste orientée vers le haut, elle a tendance à redresser l'appareil au lieu de l'éloigner de la verticale. Le plateau, lui, garde sa direction : on le voit pencher par rapport à la coque.</p>"
+    },
+    {
+      "id": "ile",
+      "title": "Tourné vers le bas : les îles volantes",
+      "image": "aero_gyro_island_ile.webp",
+      "alt": "Une île avec une maison, suspendue sous un roulement gyroscopique tourné vers le bas",
+      "video": "aero_gyro_island",
+      "html": "<p>Posé à l'envers, sous une structure, le roulement tient une charge placée au-dessus de lui, même si elle est lourde en haut. L'île de la vidéo, avec sa maison et son toit de briques, reste à plat au lieu de se retourner : le plateau compense les petits déséquilibres.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "La redstone pour bloquer l'inclinaison",
+      "image": "aero_gyro_redstone_redstone.webp",
+      "alt": "Un appareil dont l'hélice latérale revient dans l'axe après un signal de redstone",
+      "video": "aero_gyro_redstone",
+      "html": "<p>Parfois, on ne veut pas que l'hélice se redresse : une hélice de propulsion placée sur le côté, par exemple. Un signal de redstone sur le roulement remet l'inclinaison à zéro, et il se comporte alors comme un roulement simple. Coupe le signal et il reprend son rôle de stabilisateur.</p>"
+    },
+    {
+      "id": "construire",
+      "title": "Construire un hélicoptère",
+      "html": "<p>Pose le roulement gyroscopique tourné vers le haut, au-dessus du centre de masse de l'appareil, et colle-lui une hélice de voiles. Un <a href=\"/wiki/assembleur-physique\">assembleur de physique</a> et une source de rotation complètent le tout : un moteur portatif fournit 32 tr/min. La poussée suit la même formule que le roulement simple : huit voiles à 32 tr/min donnent 145 unités pour 512 SU. Pour avancer, ajoute une petite hélice horizontale à l'arrière, ou fais pencher légèrement l'appareil : le plateau ne compense que jusqu'à 12°.</p>"
+    },
+    {
+      "id": "limites",
+      "title": "Ce que le roulement ne fait pas",
+      "html": "<p>Le roulement gyroscopique ne crée pas de poussée en plus et ne corrige pas un appareil mal équilibré au-delà de son cône de 12° : place toujours l'hélice au-dessus du centre de masse. Il consomme le même stress qu'un roulement d'hélice et démarre aussi progressivement, d'autant plus lentement que l'hélice a de voiles.</p>"
+    },
+    {
+      "id": "faq",
+      "title": "Questions fréquentes",
+      "html": "<p><strong>Peut-on le poser à l'horizontale ?</strong> Oui, il s'oriente dans les six directions comme un roulement d'hélice ; le cône de 12° se règle alors autour de cet axe. <strong>Les voiles symétriques comptent-elles ?</strong> Oui, comme les voiles de moulin.</p>"
+    },
+    {
+      "id": "mecanisme",
+      "title": "Le mécanisme gyroscopique",
+      "html": "<p>La recette demande un <strong>mécanisme gyroscopique</strong>. Il se fabrique par assemblage séquencé à partir d'une plaque de fer : à chaque passe, un <a href=\"/wiki/deployeur\">déployeur</a> ajoute une roue dentée, un rotor puis une pépite de laiton, et il faut cinq passes. Le reste de la recette est celui du roulement d'hélice, avec une dalle de bois et un boitier de laiton.</p>"
+    }
+  ],
+  "related": [
+    "aeronautics-helices",
+    "create-aeronautics",
+    "assembleur-physique",
+    "aeronautics-levitite",
+    "deployeur",
+    "roulement-mecanique"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Aeronautics 1.3.3 (dépôt Creators-of-Aeronautics/Simulated-Project, commit 900122e, code sous licence MIT, ressources « tous droits réservés », The Simulated Team / The Creators of Aeronautics), identiques au jar du modpack (instance de test 1.3.3)",
+    "GyroscopicPropellerBearingBlockEntity (setStrictTilt, cône de 12°, signal de redstone), GyroscopicPropellerBearingRenderer (plateau et vérins)",
+    "Recettes : data/aeronautics/recipe/gyroscopic_propeller_bearing.json, data/simulated/recipe/sequenced_assembly/gyroscopic_mechanism.json",
+    "Vidéos : scènes Ponder de Create Aeronautics / Simulated (gyroscopic_propeller_bearing/helicopter, island, redstone) rejouées par notre moteur ; modèles et textures du mod (© The Simulated Team / The Creators of Aeronautics)"
+  ],
+  "en": {
+    "slugEn": "gyroscopic-propeller-bearing",
+    "name": "Gyroscopic Propeller Bearing",
+    "title": "Gyroscopic Propeller Bearing — Create Aeronautics guide",
+    "description": "The Create Aeronautics Gyroscopic Propeller Bearing: stable helicopters, floating islands, 12° tilt and redstone reset, with videos.",
+    "intro": "The <strong>Gyroscopic Propeller Bearing</strong> is a Propeller Bearing whose plate can tilt. When the craft leans, the plate turns back upwards, up to <strong>12°</strong>, and the thrust stays vertical. It is the part that makes Create Aeronautics helicopters and floating islands possible.",
+    "facts": [
+      {
+        "label": "Thrust",
+        "value": "Same as the Propeller Bearing: sails^1.5 × RPM × 0.2"
+      },
+      {
+        "label": "Maximum tilt",
+        "value": "12° around its axis"
+      },
+      {
+        "label": "Stress",
+        "value": "2 SU per RPM per sail"
+      },
+      {
+        "label": "Redstone",
+        "value": "A signal resets the tilt to zero"
+      },
+      {
+        "label": "Key part",
+        "value": "Gyroscopic Mechanism (sequenced assembly, 5 loops)"
+      },
+      {
+        "label": "Orientation",
+        "value": "Facing up (helicopter) or down (hanging structure)"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Oak Slab",
+          null
+        ],
+        [
+          null,
+          "Gyroscopic Mechanism",
+          null
+        ],
+        [
+          null,
+          "Brass Casing",
+          null
+        ]
+      ],
+      "result": "1 Gyroscopic Propeller Bearing"
+    },
+    "videos": [
+      {
+        "id": "aero_gyro_heli",
+        "name": "From a plain bearing to a gyroscopic one",
+        "description": "With a plain Propeller Bearing the helicopter tips and flies off sideways; with the gyroscopic one it stays upright."
+      },
+      {
+        "id": "aero_gyro_island",
+        "name": "A floating island under its propeller",
+        "description": "A bearing facing down carries an island loaded above it and keeps it level."
+      },
+      {
+        "id": "aero_gyro_redstone",
+        "name": "Cancelling the tilt with redstone",
+        "description": "A craft's propeller leans, then a redstone signal brings it back in line."
+      }
+    ],
+    "sections": [
+      {
+        "id": "probleme",
+        "title": "Why a plain bearing is not enough",
+        "alt": "The plain-bearing helicopter tipping over as it takes off",
+        "html": "<p>A <a href=\"/en/wiki/aeronautics-propellers\">Propeller Bearing</a> always pushes along the craft's axis. If the helicopter leans a little, the thrust leans with it, drags it sideways and makes it lean further. The video starts like this: the craft lifts off, lies down and flies off askew.</p>"
+      },
+      {
+        "id": "solution",
+        "title": "A plate that stays upright",
+        "alt": "The same helicopter with a gyroscopic bearing, propeller level",
+        "html": "<p>The gyroscopic bearing replaces the first one. Its four small pistons tilt the plate so it aims upwards even when the hull leans, within a 12° cone around its axis. The craft stays stable and can climb straight up. Everything else is the same: same thrust, same stress, same sails as a Propeller Bearing.</p>"
+      },
+      {
+        "id": "stable",
+        "title": "Thrust that levels the craft",
+        "alt": "The stabilised helicopter in flight, plate tilted against the hull",
+        "html": "<p>Since the thrust keeps pointing up, it tends to right the craft instead of pushing it further from vertical. The plate itself keeps its direction: you can see it tilt against the hull.</p>"
+      },
+      {
+        "id": "ile",
+        "title": "Facing down: floating islands",
+        "alt": "An island with a house hanging under a downward-facing gyroscopic bearing",
+        "html": "<p>Placed upside down under a structure, the bearing holds a load sitting above it, even a top-heavy one. The island in the video, with its house and brick roof, stays level instead of flipping over: the plate makes up for small imbalances.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "Redstone to lock the tilt",
+        "alt": "A craft whose side propeller returns in line after a redstone signal",
+        "html": "<p>Sometimes you do not want the propeller to right itself: a propulsion propeller mounted on the side, for instance. A redstone signal on the bearing resets the tilt to zero, and it then behaves like a plain bearing. Cut the signal and it goes back to stabilising.</p>"
+      },
+      {
+        "id": "construire",
+        "title": "Building a helicopter",
+        "html": "<p>Place the gyroscopic bearing facing up, above the craft's centre of mass, and glue a sail propeller to it. A <a href=\"/en/wiki/physics-assembler\">Physics Assembler</a> and a rotation source complete the build: a Portable Engine gives 32 RPM. Thrust follows the same formula as the plain bearing: eight sails at 32 RPM give 145 units for 512 SU. To move forward, add a small horizontal propeller at the back, or let the craft lean slightly: the plate only compensates up to 12°, so a steeper lean turns part of the thrust sideways.</p>"
+      },
+      {
+        "id": "limites",
+        "title": "What the bearing does not do",
+        "html": "<p>The gyroscopic bearing adds no extra thrust and cannot save a badly balanced craft beyond its 12° cone: always put the propeller above the centre of mass. It draws the same stress as a Propeller Bearing and also spins up gradually, the more slowly the more sails the propeller has. Keep the hull light so a modest rotor can lift it.</p>"
+      },
+      {
+        "id": "faq",
+        "title": "Frequently asked questions",
+        "html": "<p><strong>Can it face sideways?</strong> Yes, it faces any of the six directions like a Propeller Bearing; the 12° cone then sits around that axis. <strong>Do symmetric sails count?</strong> Yes, just like windmill sails, since both belong to the same sail tag.</p>"
+      },
+      {
+        "id": "mecanisme",
+        "title": "The Gyroscopic Mechanism",
+        "html": "<p>The recipe needs a <strong>Gyroscopic Mechanism</strong>. It is made by sequenced assembly from an iron sheet: on each loop a <a href=\"/en/wiki/deployer\">Deployer</a> adds a cogwheel, a shaft and a brass nugget, and it takes five loops. The rest of the recipe is the Propeller Bearing's, with a wooden slab and a brass casing.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Aeronautics 1.3.3 (Creators-of-Aeronautics/Simulated-Project repository, commit 900122e, code under the MIT licence, assets « all rights reserved », The Simulated Team / The Creators of Aeronautics), identical to the modpack jar (1.3.3 test instance)",
+      "GyroscopicPropellerBearingBlockEntity (setStrictTilt, 12° cone, redstone signal), GyroscopicPropellerBearingRenderer (plate and pistons)",
+      "Recipes: data/aeronautics/recipe/gyroscopic_propeller_bearing.json, data/simulated/recipe/sequenced_assembly/gyroscopic_mechanism.json",
+      "Videos: Create Aeronautics / Simulated Ponder scenes (gyroscopic_propeller_bearing/helicopter, island, redstone) replayed by our engine; mod models and textures (© The Simulated Team / The Creators of Aeronautics)"
+    ]
+  }
+}

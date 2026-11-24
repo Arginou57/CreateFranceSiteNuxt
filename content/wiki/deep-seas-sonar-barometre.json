@@ -1,0 +1,311 @@
+{
+  "slug": "deep-seas-sonar-barometre",
+  "name": "Sonar et baromètre de pression",
+  "blockId": "create_submarine:sonar",
+  "category": "deepseas",
+  "title": "Sonar et baromètre — Create Deep Seas, guide",
+  "description": "Sonar et baromètre de pression de Create Deep Seas : relevé du fond marin, navigation près du relief, tenue de la coque en profondeur.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Deep Seas 3.4.8 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Deux instruments pour savoir où l'on est sous l'eau. Le <strong>sonar</strong> écoute autour du sous-marin et dessine le fond, les rochers et les autres navires sur l'<a href=\"/wiki/deep-seas-ordinateur-de-bord\">ordinateur de bord</a>. Le <strong>baromètre de pression</strong> (Pressure Barometer), un petit aquarium, compare la pression à ce que ta coque peut supporter.",
+  "facts": [
+    {
+      "label": "Sonar",
+      "value": "pose au sol, au plafond ou au mur ; plateaux qui font un tour par seconde"
+    },
+    {
+      "label": "Avec l’ordinateur",
+      "value": "pages Sonar et Pilote automatique"
+    },
+    {
+      "label": "Pilote automatique",
+      "value": "garde 4 m sous la coque, regarde 5 s devant"
+    },
+    {
+      "label": "Baromètre",
+      "value": "profondeur comparée au bloc le plus faible de la coque"
+    },
+    {
+      "label": "Liaison d’affichage",
+      "value": "profondeur et état de la coque sur un tableau"
+    },
+    {
+      "label": "Version",
+      "value": "Create Deep Seas 3.4.8 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Sonar, fabrication à l'établi",
+    "grid": [
+      [
+        "Éclat d'améthyste",
+        "Transmetteur",
+        "Éclat d'améthyste"
+      ],
+      [
+        "Plaque de laiton",
+        "Mécanisme de précision",
+        "Plaque de laiton"
+      ],
+      [
+        "Plaque de cuivre",
+        "Plaque de cuivre",
+        "Plaque de cuivre"
+      ]
+    ],
+    "items": [
+      [
+        "minecraft:amethyst_shard",
+        "create:transmitter",
+        "minecraft:amethyst_shard"
+      ],
+      [
+        "create:brass_sheet",
+        "create:precision_mechanism",
+        "create:brass_sheet"
+      ],
+      [
+        "create:copper_sheet",
+        "create:copper_sheet",
+        "create:copper_sheet"
+      ]
+    ],
+    "result": "1 sonar",
+    "resultItem": "create_submarine:sonar"
+  },
+  "videos": [
+    {
+      "id": "sub_sonar",
+      "name": "Le sonar et l’ordinateur de bord",
+      "description": "Un sonar fixé sous la coque, puis posé au sol, et un ordinateur de bord : ses plateaux tournent sans arrêt.",
+      "duration": "PT21S"
+    },
+    {
+      "id": "sub_barometer",
+      "name": "Le baromètre de pression",
+      "description": "L'aquarium du baromètre posé sur une poutre : sable, algues et un poisson-globe qui flotte.",
+      "duration": "PT10S"
+    },
+    {
+      "id": "sub_barometer_link",
+      "name": "Le baromètre sur un tableau d’affichage",
+      "description": "Une liaison d'affichage posée contre le baromètre envoie la profondeur au tableau d'affichage.",
+      "duration": "PT9S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "sonar",
+      "title": "Le sonar",
+      "image": "sub_sonar_sonar.webp",
+      "alt": "Le sonar fixé sous le plancher en bois du navire",
+      "video": "sub_sonar",
+      "html": "<p>Le sonar sonde les alentours du navire et repère fond marin, rochers, autres vaisseaux et mines sous-marines. Ses plateaux tournent en permanence, un tour par seconde, pendant qu'il écoute. Il émet de temps en temps un « ping » sonore, toutes les 30 à 60 secondes.</p>"
+    },
+    {
+      "id": "poses",
+      "title": "Où le poser",
+      "image": "sub_sonar_poses.webp",
+      "alt": "Un second sonar posé à plat sur le plancher",
+      "html": "<p>On le fixe où l'on veut à bord : par terre, sous un plafond ou sur une paroi verticale. Sous la coque, il a une vue dégagée ; à l'intérieur, il fonctionne aussi.</p>"
+    },
+    {
+      "id": "ordinateur",
+      "title": "Sur l'ordinateur de bord",
+      "image": "sub_sonar_ordinateur.webp",
+      "alt": "L'ordinateur de bord posé sur le même navire que le sonar",
+      "html": "<p>Si un ordinateur de bord partage le navire, son écran gagne deux pages supplémentaires, accessibles par ses flèches de navigation. La première, <strong>Sonar</strong>, trace une carte du relief proche avec l'espace libre sous la quille ; un bouton loupe l'agrandit en plein écran, avec glisser, rotation et zoom. La page <strong>Pilote automatique</strong> suit le fond en gardant 4 m de marge.</p>"
+    },
+    {
+      "id": "barometre",
+      "title": "Le baromètre de pression",
+      "image": "sub_barometer_barometre.webp",
+      "alt": "Le baromètre : un aquarium avec du sable, des algues et un poisson-globe",
+      "video": "sub_barometer",
+      "html": "<p>Le baromètre est un petit aquarium : sable, caillou, algues et un poisson-globe. Il lit la pression subie par le sous-marin et la compare à la profondeur maximale de son <strong>bloc le plus faible</strong>. Quand on dépasse cette limite, le poisson gonfle. Une étiquette permet même de baptiser le poisson. Dans notre vidéo, le poisson est dessiné par son objet, pas par le modèle de l'entité.</p>"
+    },
+    {
+      "id": "coque",
+      "title": "Jusqu'où descendre",
+      "image": "sub_barometer_coque.webp",
+      "alt": "Le baromètre vu de près",
+      "html": "<p>Chaque bloc a sa profondeur maximale, calculée depuis sa dureté et sa résistance : métal favorisé, verre pénalisé. Ordres de grandeur avec les réglages par défaut : planches de chêne environ 23 m, pierre 55 m, bloc de fer 160 m, obsidienne 500 m, vitre pressurisée en fer 700 m. Les blocs hors du mod sont plafonnés à 300 m.</p>"
+    },
+    {
+      "id": "profondeur",
+      "title": "Planifier une plongée",
+      "html": "<p>Avant de descendre, regarde le baromètre en surface : il sait déjà quel bloc de ta coque est le plus faible. Si c'est une vitre ordinaire ou des planches, remplace-les par du fer, de l'obsidienne ou des vitres pressurisées. Garde ensuite une marge : la mer ne prévient pas, le bloc faible cède d'un coup et la pièce se remplit. Passé 120 blocs sous la surface, une rupture fait imploser tout le navire.</p>"
+    },
+    {
+      "id": "sonar-conseils",
+      "title": "Bien utiliser le sonar",
+      "html": "<p>Un seul sonar suffit par navire. Place-le loin des grosses masses de blocs si tu veux une carte dégagée, et consulte-le avant toute descente rapide dans une zone inconnue : falaises et rochers apparaissent bien avant d'être visibles par le hublot.</p>"
+    },
+    {
+      "id": "fabriquer",
+      "title": "Fabriquer le baromètre",
+      "html": "<p>Le baromètre de pression se fabrique avec cinq vitres pressurisées en fer, un seau d'eau au centre et trois blocs de fer industriel en dessous. Il tient lui-même jusqu'à 350 m. Le sonar demande deux éclats d'améthyste, un transmetteur, deux plaques de laiton, un mécanisme de précision et trois plaques de cuivre.</p>"
+    },
+    {
+      "id": "faq",
+      "title": "Questions fréquentes",
+      "html": "<p><strong>Le baromètre doit-il être sur le sous-marin ?</strong> Oui, il mesure la pression du navire qui le porte. <strong>Combien de sonars ?</strong> Un seul suffit pour les deux pages de l'ordinateur.</p>"
+    },
+    {
+      "id": "tableau",
+      "title": "Sur un tableau d’affichage",
+      "image": "sub_barometer_link_tableau.webp",
+      "alt": "Le tableau d'affichage qui montre la profondeur envoyée par le baromètre",
+      "video": "sub_barometer_link",
+      "html": "<p>Pose une <a href=\"/wiki/liaison-d-affichage\">liaison d'affichage</a> contre le baromètre et relie-la à un tableau d'affichage : la cote actuelle et la santé de la coque sont alors visibles de toute la cabine. Notre vidéo écrit « 42 m » sur le tableau, comme le Ponder.</p>"
+    }
+  ],
+  "related": [
+    "create-deep-seas",
+    "deep-seas-ordinateur-de-bord",
+    "liaison-d-affichage"
+  ],
+  "sources": [
+    "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar du modpack Create France) : code lu après décompilation (Vineflower) pour les chiffres (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recettes du dossier data du jar, scènes Ponder SubmarinePonderScenes / HighSeasPonderScenes rejouées par notre moteur.",
+    "Mod de Maxenonyme (MaxCreateMC), Cogfly et Zinc Studios ; artistes Marume, RandomePigeon, Funado. Licence du mod : « All Rights Reserved » : modèles et textures appartiennent à leurs auteurs, rendus ici à partir du jar ; aucun texte du mod n'est recopié.",
+    "Blocs de Simulated 1.3.2 (treuil, connecteur de corde, roulement pivotant) : Create Aeronautics, assets « All Rights Reserved », code MIT.",
+    "Vidéo du baromètre : le poisson-globe (une entité dans le jeu) est représenté par l'objet poisson-globe qui suit le même mouvement que le renderer."
+  ],
+  "en": {
+    "slugEn": "deep-seas-sonar-and-barometer",
+    "name": "Sonar and Pressure Barometer",
+    "title": "Sonar and Barometer — Create Deep Seas guide",
+    "description": "Create Deep Seas Sonar and Pressure Barometer: map the sea floor, follow the terrain, know your hull's depth limit and show it on a board.",
+    "intro": "Two instruments to know where you are underwater. The <strong>Sonar</strong> listens around the submarine and draws the sea floor, rocks and other ships on the <a href=\"/en/wiki/deep-seas-onboard-computer\">Onboard Computer</a>. The <strong>Pressure Barometer</strong>, a small aquarium, compares the pressure with what your hull can take.",
+    "facts": [
+      {
+        "label": "Sonar",
+        "value": "floor, ceiling or wall mount; plates turning once a second"
+      },
+      {
+        "label": "With the computer",
+        "value": "Sonar and Autopilot pages"
+      },
+      {
+        "label": "Autopilot",
+        "value": "keeps 4 m under the keel, looks 5 s ahead"
+      },
+      {
+        "label": "Barometer",
+        "value": "depth compared with the weakest hull block"
+      },
+      {
+        "label": "Display Link",
+        "value": "depth and hull status on a board"
+      },
+      {
+        "label": "Version",
+        "value": "Create Deep Seas 3.4.8 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Sonar, crafting table recipe",
+      "grid": [
+        [
+          "Amethyst Shard",
+          "Transmitter",
+          "Amethyst Shard"
+        ],
+        [
+          "Brass Sheet",
+          "Precision Mechanism",
+          "Brass Sheet"
+        ],
+        [
+          "Copper Sheet",
+          "Copper Sheet",
+          "Copper Sheet"
+        ]
+      ],
+      "result": "1 Sonar"
+    },
+    "videos": [
+      {
+        "id": "sub_sonar",
+        "name": "The Sonar and the Onboard Computer",
+        "description": "A Sonar under the hull, then on the floor, and an Onboard Computer: its plates never stop turning."
+      },
+      {
+        "id": "sub_barometer",
+        "name": "The Pressure Barometer",
+        "description": "The barometer's aquarium on a girder: sand, seagrass and a floating pufferfish."
+      },
+      {
+        "id": "sub_barometer_link",
+        "name": "The barometer on a display board",
+        "description": "A Display Link against the barometer sends the depth to a display board."
+      }
+    ],
+    "sections": [
+      {
+        "id": "sonar",
+        "title": "The Sonar",
+        "alt": "The Sonar fixed under the ship's wooden floor",
+        "html": "<p>The Sonar sounds out the surroundings and picks up sea floor, rocks, other vessels and underwater mines. Its plates keep turning, one turn per second, while it listens. Every 30 to 60 seconds it plays a sonar ping.</p>"
+      },
+      {
+        "id": "poses",
+        "title": "Where to place it",
+        "alt": "A second Sonar placed flat on the floor",
+        "html": "<p>It goes on a floor, a ceiling or a wall, anywhere on the submarine. Under the hull it has a clear view; inside it works too.</p>"
+      },
+      {
+        "id": "ordinateur",
+        "title": "On the Onboard Computer",
+        "alt": "The Onboard Computer installed next to the Sonar",
+        "html": "<p>When an Onboard Computer shares the ship, its screen gains two extra pages, reached with its navigation arrows. The first, <strong>Sonar</strong>, charts the nearby relief and the free space below the keel; a magnifier button blows it up to full screen, with panning, rotation and zoom. The second, <strong>Autopilot</strong>, hugs the terrain while keeping 4 m of clearance.</p>"
+      },
+      {
+        "id": "barometre",
+        "title": "The Pressure Barometer",
+        "alt": "The barometer: an aquarium with sand, seagrass and a pufferfish",
+        "html": "<p>The barometer is a small aquarium: sand, a pebble, seagrass and a pufferfish. It reads the pressure on the submarine and compares it with the maximum depth of its <strong>weakest block</strong>. Past that limit, the fish puffs up. You can even rename the fish with a name tag. In our video the fish is drawn with its item rather than the entity model.</p>"
+      },
+      {
+        "id": "coque",
+        "title": "Your hull's limit",
+        "alt": "A close look at the barometer",
+        "html": "<p>Every block has its own maximum depth, worked out from its hardness and blast resistance: metal gets a bonus, glass a penalty. Rough figures with default settings: oak planks about 23 m, stone 55 m, a block of iron 160 m, obsidian 500 m, iron pressurized glass 700 m. Blocks from other mods are capped at 300 m.</p>"
+      },
+      {
+        "id": "profondeur",
+        "title": "Planning a dive",
+        "html": "<p>Before going down, check the barometer on the surface: it already knows which block of your hull is the weakest. If it is plain glass or planks, swap them for iron, obsidian or pressurized glass. Then keep a margin: the sea gives no warning, the weak block gives way at once and the room floods. Deeper than 120 blocks, a breach makes the whole ship implode.</p>"
+      },
+      {
+        "id": "sonar-conseils",
+        "title": "Making the most of the sonar",
+        "html": "<p>One sonar per ship is enough. Mount it away from big masses of blocks for a clearer map, and check it before any fast descent into unknown water: cliffs and rocks show up long before you could see them through a window.</p>"
+      },
+      {
+        "id": "fabriquer",
+        "title": "Crafting the barometer",
+        "html": "<p>The Pressure Barometer is made from five iron pressurized glass panes, a water bucket in the centre and three blocks of industrial iron underneath. It holds up to 350 m itself. The Sonar takes two amethyst shards, a transmitter, two brass sheets, a precision mechanism and three copper sheets.</p>"
+      },
+      {
+        "id": "faq",
+        "title": "Common questions",
+        "html": "<p><strong>Does the barometer have to be on the submarine?</strong> Yes, it measures the pressure on the ship it is mounted on. <strong>How many sonars?</strong> A single one is enough to unlock both computer pages.</p>"
+      },
+      {
+        "id": "tableau",
+        "title": "On a display board",
+        "alt": "The display board showing the depth sent by the barometer",
+        "html": "<p>Put a <a href=\"/en/wiki/display-link\">Display Link</a> against the barometer and point it at a display board: depth and hull status show up for the whole crew. Our video writes \"42 m\" on the board, as the Ponder does.</p>"
+      }
+    ],
+    "sources": [
+      "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar from the Create France modpack): code read after decompiling (Vineflower) for the figures (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recipes from the jar's data folder, Ponder scenes SubmarinePonderScenes / HighSeasPonderScenes replayed by our engine.",
+      "Mod by Maxenonyme (MaxCreateMC), Cogfly and Zinc Studios; art by Marume, RandomePigeon, Funado. Mod licence: \"All Rights Reserved\": models and textures belong to their authors and are rendered here from the jar; no text from the mod is copied.",
+      "Simulated 1.3.2 blocks (rope winch, rope connector, swivel bearing): Create Aeronautics, assets \"All Rights Reserved\", code under MIT.",
+      "Barometer video: the pufferfish (an entity in the game) is shown as the pufferfish item, moving like the renderer moves it."
+    ]
+  }
+}

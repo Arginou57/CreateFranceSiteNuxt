@@ -183,7 +183,8 @@
     "poudre-et-cartouches",
     "chargement-des-canons",
     "detonateurs-et-traceurs",
-    "fabrication-des-canons"
+    "fabrication-des-canons",
+    "aeronautics-roulement-gyroscopique"
   ],
   "sources": [
     "Stress : AllBlocks.java, DEPLOYER, CStress.setImpact(4.0)",

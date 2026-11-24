@@ -1,0 +1,303 @@
+{
+  "slug": "deep-seas-oxygene",
+  "name": "Électrolyseur et diffuseur d’oxygène",
+  "blockId": "create_submarine:electrolyzer",
+  "category": "deepseas",
+  "title": "Oxygène : électrolyseur et diffuseur — Deep Seas, guide",
+  "description": "Respirer dans un sous-marin Create Deep Seas : l'électrolyseur fait de l'oxygène avec de l'eau, le diffuseur le répand dans la coque.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Deep Seas 3.4.8 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Sous l'eau, l'air d'un sous-marin finit par manquer. Deep Seas règle ça en deux blocs : l'<strong>électrolyseur</strong> (Electrolyzer) transforme l'eau en <strong>oxygène</strong>, et le <strong>diffuseur d'oxygène</strong> (Oxygen Diffuser) le répand dans les pièces fermées du navire.",
+  "facts": [
+    {
+      "label": "Électrolyseur",
+      "value": "10 mB d’eau → 10 mB d’oxygène par tick (200 mB/s), 250 FE par tick"
+    },
+    {
+      "label": "Réservoirs",
+      "value": "4 000 mB d’eau, 4 000 mB d’oxygène, 10 000 FE"
+    },
+    {
+      "label": "Alternateur",
+      "value": "un rotor dans son emplacement : 4 FE par tr/min, 1 000 FE/t au plus"
+    },
+    {
+      "label": "Diffuseur",
+      "value": "50 mB d’oxygène par seconde, réservoir de 1 000 mB"
+    },
+    {
+      "label": "Activation",
+      "value": "signal de redstone, démarrage en 5 s"
+    },
+    {
+      "label": "Version",
+      "value": "Create Deep Seas 3.4.8 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Électrolyseur, fabrication à l'établi",
+    "grid": [
+      [
+        "Verre",
+        "Ressort",
+        "Verre"
+      ],
+      [
+        "Bloc de cuivre",
+        "Tube électronique",
+        "Bloc de cuivre"
+      ],
+      [
+        "Bloc de cuivre",
+        "Bloc de cuivre",
+        "Bloc de cuivre"
+      ]
+    ],
+    "items": [
+      [
+        "minecraft:glass",
+        "simulated:spring",
+        "minecraft:glass"
+      ],
+      [
+        "minecraft:copper_block",
+        "create:electron_tube",
+        "minecraft:copper_block"
+      ],
+      [
+        "minecraft:copper_block",
+        "minecraft:copper_block",
+        "minecraft:copper_block"
+      ]
+    ],
+    "result": "1 électrolyseur",
+    "resultItem": "create_submarine:electrolyzer"
+  },
+  "videos": [
+    {
+      "id": "sub_electrolyzer",
+      "name": "L'électrolyseur : de l'eau à l'oxygène",
+      "description": "Un réservoir d'eau, deux pompes et un électrolyseur : l'oxygène produit s'accumule dans le second réservoir ; puis un rotor dans l'électrolyseur le fait tourner sur sa propre énergie.",
+      "duration": "PT22S"
+    },
+    {
+      "id": "sub_oxygen",
+      "name": "Le diffuseur d'oxygène",
+      "description": "Un réservoir d'oxygène, une pompe et le diffuseur : alimenté et activé par la redstone, il souffle l'oxygène dans la pièce.",
+      "duration": "PT16S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "eau",
+      "title": "L'électrolyseur et son eau",
+      "image": "sub_electrolyzer_eau.webp",
+      "alt": "Un réservoir d'eau à gauche de la ligne de l'électrolyseur",
+      "video": "sub_electrolyzer",
+      "html": "<p>L'électrolyseur accepte n'importe quelle eau par tuyau et la stocke (4 000 mB). Sur un sous-marin, branche-le sur un <a href=\"/wiki/reservoir-a-fluide\">réservoir</a> ou sur l'<a href=\"/wiki/deep-seas-ballast\">évent de ballast</a> : l'eau de mer ne manque pas.</p>"
+    },
+    {
+      "id": "energie",
+      "title": "Il lui faut de l'énergie",
+      "image": "sub_electrolyzer_energie.webp",
+      "alt": "L'électrolyseur entre deux pompes, au centre de la ligne",
+      "html": "<p>Chaque tick de travail coûte 250 FE et convertit 10 mB d'eau en 10 mB d'oxygène, soit 200 mB par seconde. L'énergie peut venir d'un mod électrique (Create Crafts &amp; Additions, Create New Age, Create Power Grid), mais aucun n'est dans le modpack Create France : sur le serveur, on passe par l'alternateur, juste en dessous.</p>"
+    },
+    {
+      "id": "oxygene",
+      "title": "L'oxygène sort",
+      "image": "sub_electrolyzer_oxygene.webp",
+      "alt": "Le réservoir de droite se remplit d'oxygène, la pompe en aval tourne",
+      "html": "<p>L'oxygène s'accumule dans l'électrolyseur (4 000 mB) ; une <a href=\"/wiki/pompe-mecanique\">pompe</a> l'envoie vers un réservoir. L'oxygène se dessine comme une eau très pâle. Le réservoir de gauche se vide pendant que celui de droite se remplit.</p>"
+    },
+    {
+      "id": "alternateur",
+      "title": "L'alternateur : un rotor dedans",
+      "image": "sub_electrolyzer_alternateur.webp",
+      "alt": "L'électrolyseur avec un rotor qui le traverse de part en part",
+      "html": "<p>Mets un <a href=\"/wiki/rotor\">rotor</a> dans la case « module » de son menu : l'axe dépasse ensuite des deux côtés du bloc. Fais-le tourner et l'électrolyseur fabrique sa propre énergie, 4 FE par tr/min (1 000 FE par tick au plus). Il faut donc au moins 63 tr/min pour couvrir ses 250 FE par tick.</p>"
+    },
+    {
+      "id": "arbre",
+      "title": "Avec un moteur",
+      "image": "sub_electrolyzer_arbre.webp",
+      "alt": "Un moteur créatif et un rotor branchés à l'arrière de l'électrolyseur",
+      "html": "<p>Dans la scène, un <a href=\"/wiki/moteur-creatif\">moteur créatif</a> à 64 tr/min suffit. Sur un sous-marin, n'importe quelle source de rotation fait l'affaire, à condition de tenir la vitesse.</p>"
+    },
+    {
+      "id": "diffuseur",
+      "title": "Le diffuseur d'oxygène",
+      "image": "sub_oxygen_reservoir.webp",
+      "alt": "Un réservoir d'oxygène et le diffuseur, reliés par une pompe",
+      "video": "sub_oxygen",
+      "html": "<p>Le diffuseur reçoit l'oxygène par tuyau (réservoir de 1 000 mB) et remplit d'air respirable les pièces fermées de la coque. Il consomme 50 mB par seconde, quelle que soit la taille du navire tant qu'elle reste sous la limite du serveur (500 000 blocs scannés). Il doit être sur le sous-marin lui-même, et un seul diffuseur travaille par navire.</p>"
+    },
+    {
+      "id": "chaine",
+      "title": "La chaîne complète",
+      "html": "<p>Sur un sous-marin, la chaîne type est : évent de ballast, pompe, électrolyseur avec un rotor branché sur le moteur du navire, pompe, petit <a href=\"/wiki/reservoir-a-fluide\">réservoir</a> d'oxygène, puis diffuseur relié à un levier. L'électrolyseur produit 200 mB par seconde quand il tourne assez vite, le diffuseur en consomme 50 : un seul électrolyseur suffit donc largement, et le surplus s'accumule dans le réservoir pour les moments où le moteur est coupé.</p>"
+    },
+    {
+      "id": "etanche",
+      "title": "Une coque étanche",
+      "html": "<p>Le diffuseur remplit les pièces fermées : une ouverture vers l'eau ou une porte laissée ouverte, et l'air s'échappe. Le mod repère les volumes clos de la coque. Les vitres pressurisées gardent l'étanchéité tout en laissant voir dehors. Une seule fuite suffit à vider une pièce : vérifie les coins et les blocs non pleins.</p>"
+    },
+    {
+      "id": "recettes",
+      "title": "Fabriquer le diffuseur",
+      "html": "<p>Le diffuseur d'oxygène se fabrique à l'établi avec une hélice de Create en haut, deux liaisons de redstone et une buse au milieu, puis deux tubes électroniques et un égouttoir à objets en bas. L'électrolyseur demande du verre, un ressort de Simulated, un tube électronique et cinq blocs de cuivre. Les deux tiennent jusqu'à 350 m de fond.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "Allumé par la redstone",
+      "image": "sub_oxygen_redstone.webp",
+      "alt": "Le diffuseur qui souffle des bulles, alimenté",
+      "html": "<p>Il ne marche qu'avec un signal de redstone et de l'oxygène en réserve, et met 5 secondes à démarrer. Un levier près de l'entrée suffit ; coupe-le en surface pour économiser l'oxygène.</p>"
+    }
+  ],
+  "related": [
+    "create-deep-seas",
+    "deep-seas-sas",
+    "deep-seas-ballast",
+    "pompe-mecanique",
+    "reservoir-a-fluide",
+    "moteur-creatif"
+  ],
+  "sources": [
+    "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar du modpack Create France) : code lu après décompilation (Vineflower) pour les chiffres (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recettes du dossier data du jar, scènes Ponder SubmarinePonderScenes / HighSeasPonderScenes rejouées par notre moteur.",
+    "Mod de Maxenonyme (MaxCreateMC), Cogfly et Zinc Studios ; artistes Marume, RandomePigeon, Funado. Licence du mod : « All Rights Reserved » : modèles et textures appartiennent à leurs auteurs, rendus ici à partir du jar ; aucun texte du mod n'est recopié.",
+    "Blocs de Simulated 1.3.2 (treuil, connecteur de corde, roulement pivotant) : Create Aeronautics, assets « All Rights Reserved », code MIT."
+  ],
+  "en": {
+    "slugEn": "deep-seas-oxygen",
+    "name": "Electrolyzer and Oxygen Diffuser",
+    "title": "Oxygen: Electrolyzer and Diffuser — Deep Seas guide",
+    "description": "Breathing in a Create Deep Seas submarine: the Electrolyzer turns water into oxygen and the Oxygen Diffuser spreads it through the hull.",
+    "intro": "Underwater, a submarine eventually runs out of air. Deep Seas solves it with two blocks: the <strong>Electrolyzer</strong> turns water into <strong>oxygen</strong>, and the <strong>Oxygen Diffuser</strong> spreads it through the ship's sealed rooms.",
+    "facts": [
+      {
+        "label": "Electrolyzer",
+        "value": "10 mB water → 10 mB oxygen per tick (200 mB/s), 250 FE per tick"
+      },
+      {
+        "label": "Tanks",
+        "value": "4,000 mB water, 4,000 mB oxygen, 10,000 FE"
+      },
+      {
+        "label": "Alternator",
+        "value": "a shaft in its slot: 4 FE per RPM, 1,000 FE/t at most"
+      },
+      {
+        "label": "Diffuser",
+        "value": "50 mB of oxygen per second, 1,000 mB tank"
+      },
+      {
+        "label": "Activation",
+        "value": "redstone signal, 5 s start-up"
+      },
+      {
+        "label": "Version",
+        "value": "Create Deep Seas 3.4.8 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Electrolyzer, crafting table recipe",
+      "grid": [
+        [
+          "Glass",
+          "Spring",
+          "Glass"
+        ],
+        [
+          "Block of Copper",
+          "Electron Tube",
+          "Block of Copper"
+        ],
+        [
+          "Block of Copper",
+          "Block of Copper",
+          "Block of Copper"
+        ]
+      ],
+      "result": "1 Electrolyzer"
+    },
+    "videos": [
+      {
+        "id": "sub_electrolyzer",
+        "name": "The Electrolyzer: from water to oxygen",
+        "description": "A water tank, two pumps and an Electrolyzer: the water becomes oxygen, which fills the second tank; then a shaft inside the Electrolyzer lets it run on its own power."
+      },
+      {
+        "id": "sub_oxygen",
+        "name": "The Oxygen Diffuser",
+        "description": "An oxygen tank, a pump and the diffuser: fed and switched on by redstone, it blows oxygen into the room."
+      }
+    ],
+    "sections": [
+      {
+        "id": "eau",
+        "title": "The Electrolyzer and its water",
+        "alt": "A water tank on the left of the Electrolyzer line",
+        "html": "<p>The Electrolyzer takes any water through a pipe and stores it (4,000 mB). On a submarine, connect it to a <a href=\"/en/wiki/fluid-tank\">tank</a> or to the <a href=\"/en/wiki/deep-seas-ballast-tanks\">Ballast Vent</a>: sea water is never in short supply.</p>"
+      },
+      {
+        "id": "energie",
+        "title": "It needs power",
+        "alt": "The Electrolyzer between two pumps, in the middle of the line",
+        "html": "<p>Each working tick costs 250 FE and turns 10 mB of water into 10 mB of oxygen, that is 200 mB per second. Power can come from an electricity mod (Create Crafts &amp; Additions, Create New Age, Create Power Grid), but none of them is in the Create France modpack: on the server, use the alternator just below.</p>"
+      },
+      {
+        "id": "oxygene",
+        "title": "Oxygen comes out",
+        "alt": "The right-hand tank filling with oxygen, the downstream pump spinning",
+        "html": "<p>Oxygen builds up inside the Electrolyzer (4,000 mB); a <a href=\"/en/wiki/mechanical-pump\">pump</a> sends it to a tank. Oxygen is drawn like very pale water. The left tank empties while the right one fills.</p>"
+      },
+      {
+        "id": "alternateur",
+        "title": "The alternator: a shaft inside",
+        "alt": "The Electrolyzer with a shaft running through it",
+        "html": "<p>Give it a <a href=\"/en/wiki/shaft\">Shaft</a> through the module slot in its menu: it then runs through the Electrolyzer from front to back. Spin it and the Electrolyzer makes its own power, 4 FE per RPM (1,000 FE per tick at most). So you need at least 63 RPM to cover its 250 FE per tick.</p>"
+      },
+      {
+        "id": "arbre",
+        "title": "With a motor",
+        "alt": "A Creative Motor and a shaft connected to the back of the Electrolyzer",
+        "html": "<p>In the scene a <a href=\"/en/wiki/creative-motor\">Creative Motor</a> at 64 RPM is enough. On a submarine any rotation source works, as long as it keeps the speed up.</p>"
+      },
+      {
+        "id": "diffuseur",
+        "title": "The Oxygen Diffuser",
+        "alt": "An oxygen tank and the diffuser, linked by a pump",
+        "html": "<p>The diffuser takes oxygen through a pipe (1,000 mB tank) and fills the hull's sealed rooms with breathable air. It uses 50 mB per second, whatever the size of the ship, as long as it stays under the server limit (500,000 blocks scanned). It must sit on the submarine itself, and only one diffuser works per ship.</p>"
+      },
+      {
+        "id": "chaine",
+        "title": "The full chain",
+        "html": "<p>On a submarine the usual chain is: Ballast Vent, pump, Electrolyzer with a shaft from the ship's engine, pump, a small oxygen <a href=\"/en/wiki/fluid-tank\">tank</a>, then the diffuser wired to a lever. The Electrolyzer makes 200 mB per second when it spins fast enough and the diffuser uses 50: one Electrolyzer is plenty, and the surplus builds up in the tank for the times when the engine is off.</p>"
+      },
+      {
+        "id": "etanche",
+        "title": "A sealed hull",
+        "html": "<p>The diffuser fills closed rooms: one opening to the water or a door left open and the air escapes. The mod tracks the sealed volumes of the hull. Pressurized glass keeps a room sealed while letting you look outside. A single leak is enough to empty a room: check corners and non-full blocks.</p>"
+      },
+      {
+        "id": "recettes",
+        "title": "Crafting the diffuser",
+        "html": "<p>The Oxygen Diffuser is crafted with a Create propeller on top, two redstone links and a nozzle in the middle, then two electron tubes and an item drain at the bottom. The Electrolyzer takes glass, a Simulated spring, an electron tube and five blocks of copper. Both hold up to 350 m deep.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "Switched on by redstone",
+        "alt": "The powered diffuser blowing bubbles",
+        "html": "<p>It only works with a redstone signal and oxygen in stock, and takes 5 seconds to start. A lever near the entrance is enough; switch it off on the surface to save oxygen.</p>"
+      }
+    ],
+    "sources": [
+      "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar from the Create France modpack): code read after decompiling (Vineflower) for the figures (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recipes from the jar's data folder, Ponder scenes SubmarinePonderScenes / HighSeasPonderScenes replayed by our engine.",
+      "Mod by Maxenonyme (MaxCreateMC), Cogfly and Zinc Studios; art by Marume, RandomePigeon, Funado. Mod licence: \"All Rights Reserved\": models and textures belong to their authors and are rendered here from the jar; no text from the mod is copied.",
+      "Simulated 1.3.2 blocks (rope winch, rope connector, swivel bearing): Create Aeronautics, assets \"All Rights Reserved\", code under MIT."
+    ]
+  }
+}

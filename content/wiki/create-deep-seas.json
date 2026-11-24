@@ -1,0 +1,197 @@
+{
+  "slug": "create-deep-seas",
+  "name": "Create Deep Seas",
+  "blockId": "create_submarine:command_sub",
+  "category": "deepseas",
+  "title": "Create Deep Seas — sous-marins, guide en français",
+  "description": "Create Deep Seas : construire un sous-marin avec Create, ballasts, ordinateur de bord, propulsion, oxygène, sas et sonar. Guide du mod.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Deep Seas 3.4.8 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "<strong>Create Deep Seas</strong> est un addon de Create qui fait plonger tes constructions. Il s'appuie sur les vaisseaux physiques de Sable et de Create Aeronautics : un assemblage devient un véritable sous-marin qui flotte, s'alourdit en avalant de l'eau de mer, descend, tient une profondeur et remonte. Le mod ajoute ce qu'il faut pour vivre dessous : ballasts, ordinateur de bord, propulseurs, oxygène, sas, sonar, baromètre et câbles d'acier. Il est installé sur le serveur Create France.",
+  "facts": [
+    {
+      "label": "Mod",
+      "value": "Create Deep Seas 3.4.8 (id create_submarine)"
+    },
+    {
+      "label": "Auteurs",
+      "value": "Maxenonyme (MaxCreateMC), Cogfly, Zinc Studios"
+    },
+    {
+      "label": "Requiert",
+      "value": "Create, Sable, Create Aeronautics et Simulated"
+    },
+    {
+      "label": "Livré avec",
+      "value": "Create High Seas 0.1.2 (voiles, gouvernail) et The Abyss (dimension et faune)"
+    },
+    {
+      "label": "Profondeur d’implosion",
+      "value": "120 blocs sous la surface (réglage serveur implosionDepth)"
+    },
+    {
+      "label": "Version",
+      "value": "Create Deep Seas 3.4.8 · Create 6.0.10"
+    }
+  ],
+  "videos": [
+    {
+      "id": "sub_dive",
+      "name": "Un petit sous-marin plonge puis remonte",
+      "description": "Mise en scène : le contrôleur de pompe remplit les ballasts par l'évent, le sous-marin s'enfonce jusqu'à la profondeur demandée à l'ordinateur de bord, la tient, puis vide ses ballasts et revient en surface.",
+      "duration": "PT24S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "principe",
+      "title": "Le principe : du poids en plus, du poids en moins",
+      "image": "sub_dive_flotte.webp",
+      "alt": "Le petit sous-marin de démonstration qui flotte, ballasts vides",
+      "video": "sub_dive",
+      "html": "<p>Un sous-marin de Deep Seas n'est pas un bloc magique : c'est un assemblage Sable qui flotte comme un bateau. Pour descendre, il embarque de l'eau de mer dans ses <a href=\"/wiki/deep-seas-ballast\">ballasts</a> ; pour remonter, il la rejette. Chaque ballast déplace jusqu'à 75 unités de masse de Sable, soit à peu près 75 blocs : un gros navire en demande plusieurs. La vidéo de cette page est notre mise en scène du mécanisme, les autres pages rejouent les scènes Ponder du mod.</p>"
+    },
+    {
+      "id": "plongee",
+      "title": "Plonger et remonter",
+      "image": "sub_dive_profondeur.webp",
+      "alt": "Le sous-marin tenu à quatre mètres sous la surface, vu à travers l’eau",
+      "html": "<p>On ne remplit pas les ballasts à la main : un <strong>contrôleur de pompe</strong> placé entre l'<strong>évent de ballast</strong> et les réservoirs s'en charge, sur ordre de l'<a href=\"/wiki/deep-seas-ordinateur-de-bord\">ordinateur de bord</a>. Tu tapes une profondeur sur l'écran, le sous-marin s'alourdit, descend, freine à l'approche et se stabilise. La vitesse verticale plafonne à 2 blocs par tick avec les réglages par défaut.</p>"
+    },
+    {
+      "id": "premier",
+      "title": "Ton premier sous-marin",
+      "image": "sub_dive_remplissage.webp",
+      "alt": "L’évent qui aspire l’eau sous la coque pendant que les ballasts se remplissent",
+      "html": "<p>Une coque étanche, quelques ballasts, un évent qui touche la mer, un contrôleur de pompe relié à une source de rotation et un ordinateur de bord : c'est le minimum. Ajoute ensuite un <a href=\"/wiki/deep-seas-propulseur\">propulseur à eau</a> ou une hélice sous-marine pour avancer, puis <a href=\"/wiki/deep-seas-oxygene\">de quoi respirer</a> et <a href=\"/wiki/deep-seas-sas\">un sas</a> pour sortir nager. Le <a href=\"/wiki/deep-seas-sonar-barometre\">sonar et le baromètre</a> te disent où tu vas et jusqu'où ta coque tient.</p>"
+    },
+    {
+      "id": "pression",
+      "title": "La pression et la coque",
+      "html": "<p>Tous les blocs d'une coque ont leur propre limite de profondeur, que le mod déduit de leur dureté et de leur résistance aux explosions : un bloc de fer tient environ 160 m, la pierre une cinquantaine, les planches une vingtaine, le verre presque rien. L'obsidienne monte à 500 m et les vitres pressurisées du mod à 700 m. Au-delà, le maillon faible lâche et la mer s'engouffre ; passé 120 blocs sous la surface, c'est tout le sous-marin qui implose.</p>"
+    },
+    {
+      "id": "high-seas",
+      "title": "High Seas et The Abyss",
+      "image": "hs_sail_vent.webp",
+      "alt": "Un petit bateau à voiles carrées de Create High Seas",
+      "html": "<p>Le même fichier du mod contient <strong>Create High Seas</strong>, pour la surface : <a href=\"/wiki/deep-seas-voiles-et-gouvernail\">voiles de bateau et gouvernail</a>, girouette, ancre, bouée et moteur de bateau. <strong>The Abyss</strong> ajoute une dimension profonde, ses cheminées hydrothermales et sa faune : isopodes géants, seiches abyssales, anguilles pélicans, requins emporte-pièce. Les grandes profondeurs ont donc de quoi justifier un bon sous-marin.</p>"
+    },
+    {
+      "id": "etapes",
+      "title": "Par où commencer",
+      "html": "<p>Lis les pages dans cet ordre : les <a href=\"/wiki/deep-seas-ballast\">ballasts</a> pour comprendre comment on descend, l'<a href=\"/wiki/deep-seas-ordinateur-de-bord\">ordinateur de bord</a> pour piloter sans effort, le <a href=\"/wiki/deep-seas-propulseur\">propulseur</a> pour se déplacer, puis l'oxygène et le sas pour rester sous l'eau longtemps. Garde le sonar et le baromètre pour les plongées profondes, quand la coque devient le facteur limitant.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur le serveur Create France",
+      "html": "<p>Deep Seas fait partie du modpack Create France, avec Sable et Create Aeronautics dont il dépend. Les réglages de cette page sont ceux par défaut du mod ; un serveur peut les modifier (profondeur d'implosion, force des ballasts, vitesse verticale). Commence petit : quatre blocs de coque en fer, deux ballasts, et teste en eau peu profonde.</p>"
+    }
+  ],
+  "related": [
+    "deep-seas-ballast",
+    "deep-seas-ordinateur-de-bord",
+    "deep-seas-propulseur",
+    "deep-seas-oxygene",
+    "deep-seas-sas",
+    "deep-seas-sonar-barometre",
+    "deep-seas-cable-d-acier",
+    "deep-seas-voiles-et-gouvernail",
+    "pompe-mecanique"
+  ],
+  "sources": [
+    "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar du modpack Create France) : code lu après décompilation (Vineflower) pour les chiffres (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recettes du dossier data du jar, scènes Ponder SubmarinePonderScenes / HighSeasPonderScenes rejouées par notre moteur.",
+    "Mod de Maxenonyme (MaxCreateMC), Cogfly et Zinc Studios ; artistes Marume, RandomePigeon, Funado. Licence du mod : « All Rights Reserved » : modèles et textures appartiennent à leurs auteurs, rendus ici à partir du jar ; aucun texte du mod n'est recopié.",
+    "Blocs de Simulated 1.3.2 (treuil, connecteur de corde, roulement pivotant) : Create Aeronautics, assets « All Rights Reserved », code MIT.",
+    "Scène « plongée » : mise en scène écrite par Create France d'après le code (BallastTankBlockEntity, CommandSubBlockEntity, SubmarineConfig), pas une scène Ponder du mod."
+  ],
+  "en": {
+    "slugEn": "create-deep-seas-guide",
+    "name": "Create Deep Seas",
+    "title": "Create Deep Seas — submarines, Create addon guide",
+    "description": "Create Deep Seas guide: build a working submarine with Create, ballast tanks, onboard computer, thrusters, oxygen, airlocks and sonar.",
+    "intro": "<strong>Create Deep Seas</strong> is a Create addon that takes your builds underwater. It relies on the physical ships of Sable and Create Aeronautics: an assembled contraption becomes a real submarine that floats, gets heavier by taking in sea water, sinks, holds a depth and comes back up. The mod adds everything needed to live down there: ballast tanks, an onboard computer, thrusters, oxygen, airlocks, sonar, a barometer and steel cables. It is installed on the Create France server.",
+    "facts": [
+      {
+        "label": "Mod",
+        "value": "Create Deep Seas 3.4.8 (id create_submarine)"
+      },
+      {
+        "label": "Authors",
+        "value": "Maxenonyme (MaxCreateMC), Cogfly, Zinc Studios"
+      },
+      {
+        "label": "Requires",
+        "value": "Create, Sable, Create Aeronautics and Simulated"
+      },
+      {
+        "label": "Ships with",
+        "value": "Create High Seas 0.1.2 (sails, rudder) and The Abyss (dimension and wildlife)"
+      },
+      {
+        "label": "Implosion depth",
+        "value": "120 blocks below the surface (server setting implosionDepth)"
+      },
+      {
+        "label": "Version",
+        "value": "Create Deep Seas 3.4.8 · Create 6.0.10"
+      }
+    ],
+    "videos": [
+      {
+        "id": "sub_dive",
+        "name": "A small submarine dives and resurfaces",
+        "description": "Staged scene: the Pump Controller fills the ballast tanks through the vent, the submarine sinks to the depth set on the Onboard Computer, holds it, then empties its tanks and returns to the surface."
+      }
+    ],
+    "sections": [
+      {
+        "id": "principe",
+        "title": "The idea: add weight, remove weight",
+        "alt": "The small demo submarine floating with empty ballast tanks",
+        "html": "<p>A Deep Seas submarine is not a magic block: it is a Sable contraption that floats like a boat. To go down it takes sea water into its <a href=\"/en/wiki/deep-seas-ballast-tanks\">ballast tanks</a>; to go up it expels that water again. Each tank can move up to 75 Sable mass units, roughly 75 blocks, so a large vessel needs several. The video on this page is our own staging of the mechanism; the other pages replay the mod's Ponder scenes.</p>"
+      },
+      {
+        "id": "plongee",
+        "title": "Diving and surfacing",
+        "alt": "The submarine holding four metres below the surface, seen through the water",
+        "html": "<p>You never fill the tanks by hand: a <strong>Pump Controller</strong> sitting on the pipe from the <strong>Ballast Vent</strong> to the tanks does it, on orders from the <a href=\"/en/wiki/deep-seas-onboard-computer\">Onboard Computer</a>. Enter a depth on its screen and the submarine takes on weight, sinks, slows down near the target and settles. With default settings the vertical speed is capped at 2 blocks per tick.</p>"
+      },
+      {
+        "id": "premier",
+        "title": "Your first submarine",
+        "alt": "The vent drawing water under the hull while the tanks fill up",
+        "html": "<p>A sealed hull, a few ballast tanks, a vent touching the sea, a Pump Controller connected to a rotation source and an Onboard Computer: that is the minimum. Then add a <a href=\"/en/wiki/deep-seas-water-thruster\">Water Thruster</a> or a Submarine Propeller to move forward, <a href=\"/en/wiki/deep-seas-oxygen\">something to breathe</a> and <a href=\"/en/wiki/deep-seas-airlock\">an airlock</a> to swim out. The <a href=\"/en/wiki/deep-seas-sonar-and-barometer\">sonar and barometer</a> tell you where you are heading and how deep your hull can go.</p>"
+      },
+      {
+        "id": "pression",
+        "title": "Pressure and the hull",
+        "html": "<p>Every hull block has a maximum depth. The mod works it out from the block's hardness and blast resistance: a block of iron holds about 160 m, stone around fifty, planks around twenty, glass almost nothing. Obsidian reaches 500 m and the mod's pressurized glass 700 m. Past that, the weakest block gives way and water floods in; deeper than 120 blocks below the surface, the whole submarine implodes.</p>"
+      },
+      {
+        "id": "high-seas",
+        "title": "High Seas and The Abyss",
+        "alt": "A small square-rigged boat from Create High Seas",
+        "html": "<p>The same mod file also contains <strong>Create High Seas</strong>, for the surface: <a href=\"/en/wiki/high-seas-sails-and-rudder\">ship sails and the rudder</a>, wind vane, anchor, buoy and boat engine. <strong>The Abyss</strong> adds a deep dimension with geothermal vents and its own wildlife: giant isopods, abyssal cuttlefish, pelican eels and cookiecutter sharks. The deep sea gives you good reasons to build a sturdy submarine.</p>"
+      },
+      {
+        "id": "etapes",
+        "title": "Where to start",
+        "html": "<p>Read the pages in this order: <a href=\"/en/wiki/deep-seas-ballast-tanks\">ballast tanks</a> to understand how you go down, the <a href=\"/en/wiki/deep-seas-onboard-computer\">Onboard Computer</a> to drive without effort, the <a href=\"/en/wiki/deep-seas-water-thruster\">thruster</a> to move around, then oxygen and the airlock to stay under for long. Keep the sonar and the barometer for deep dives, when the hull becomes the limiting factor.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On the Create France server",
+        "html": "<p>Deep Seas is part of the Create France modpack, together with Sable and Create Aeronautics which it depends on. The values on this page are the mod's defaults; a server can change them (implosion depth, ballast force, vertical speed). Start small: four iron hull blocks, two ballast tanks, and test in shallow water.</p>"
+      }
+    ],
+    "sources": [
+      "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar from the Create France modpack): code read after decompiling (Vineflower) for the figures (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recipes from the jar's data folder, Ponder scenes SubmarinePonderScenes / HighSeasPonderScenes replayed by our engine.",
+      "Mod by Maxenonyme (MaxCreateMC), Cogfly and Zinc Studios; art by Marume, RandomePigeon, Funado. Mod licence: \"All Rights Reserved\": models and textures belong to their authors and are rendered here from the jar; no text from the mod is copied.",
+      "Simulated 1.3.2 blocks (rope winch, rope connector, swivel bearing): Create Aeronautics, assets \"All Rights Reserved\", code under MIT.",
+      "Dive scene: staged by Create France from the code (BallastTankBlockEntity, CommandSubBlockEntity, SubmarineConfig), not one of the mod's Ponder scenes."
+    ]
+  }
+}

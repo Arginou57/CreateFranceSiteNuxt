@@ -50,4 +50,10 @@ const tree = computed(() => wikiTree(props.lang))
 .wmodbar-tab.active strong { color: var(--terre-cuite-light); }
 .wmodbar-txt small { font-size: 0.7rem; color: var(--text-muted); }
 @media (min-width: 760px) { .wmodbar { margin: 0 -2rem; padding: 0.55rem 2rem; } }
+/* many mods: on wide screens the tabs wrap on two lines instead of scrolling sideways */
+@media (min-width: 960px) {
+  .wmodbar-inner { flex-wrap: wrap; overflow: visible; }
+  .wmodbar-tab { flex: 1 1 0; min-width: 170px; }
+  .wmodbar-txt { white-space: normal; }
+}
 </style>

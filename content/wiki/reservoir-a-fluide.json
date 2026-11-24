@@ -195,7 +195,9 @@
     "observateur-de-train",
     "lunettes-d-ingenieur",
     "tour-de-distillation",
-    "carburants"
+    "carburants",
+    "deep-seas-propulseur",
+    "deep-seas-oxygene"
   ],
   "sources": [
     "Recette : crafting/kinetics/fluid_tank.json",

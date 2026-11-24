@@ -1,0 +1,184 @@
+{
+  "slug": "create-aeronautics",
+  "name": "Create Aeronautics",
+  "blockId": "aeronautics:propeller_bearing",
+  "category": "aeronautics",
+  "title": "Create Aeronautics — guide en français",
+  "description": "Create Aeronautics : dirigeables, hélices, ballons à air chaud, lévitite et assembleur de physique. Par où commencer, chiffres du code et vidéos.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Aeronautics 1.3.3",
+  "mcVersion": "1.21.1",
+  "intro": "<strong>Create Aeronautics</strong> fait voler les machines de Create. Le mod arrive en un seul fichier avec deux compagnons : <strong>Simulated</strong>, qui transforme un groupe de blocs en objet physique (il tombe, roule, flotte, se cogne), et <strong>Offroad</strong>, pour les foreuses et les roues des véhicules terrestres. Aeronautics y ajoute ce qu'il faut pour quitter le sol : <strong>hélices</strong>, <strong>ballons à air chaud</strong> et <strong>lévitite</strong>, un cristal qui annule le poids.",
+  "facts": [
+    {
+      "label": "Mod",
+      "value": "Create Aeronautics 1.3.3, avec Simulated et Offroad (Minecraft 1.21.1, NeoForge)"
+    },
+    {
+      "label": "Moteur physique",
+      "value": "Sable 2.0.6 (mod séparé, requis)"
+    },
+    {
+      "label": "Licence",
+      "value": "Code MIT ; textures et modèles tous droits réservés (The Simulated Team)"
+    },
+    {
+      "label": "Pour assembler",
+      "value": "Assembleur de physique + colle (au miel ou extra-forte)"
+    },
+    {
+      "label": "Pour pousser",
+      "value": "Roulement d'hélice, hélice d'andésite, hélice en bois"
+    },
+    {
+      "label": "Pour monter",
+      "value": "Brûleur à air chaud, évent de vapeur, enveloppes, lévitite"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.10 · Minecraft 1.21.1"
+    }
+  ],
+  "videos": [],
+  "sections": [
+    {
+      "id": "principe",
+      "title": "Le principe : des blocs qui deviennent un véhicule",
+      "image": "aero_overview_propulsion.webp",
+      "alt": "L'assembleur de physique, le roulement d'hélice, le roulement gyroscopique et les deux petites hélices",
+      "html": "<p>Tout commence par l'<a href=\"/wiki/assembleur-physique\">assembleur de physique</a>. Tu le poses contre ta construction, tu entoures les blocs voulus avec de la colle, puis tu tires son levier : la construction quitte la grille du monde et devient un corps physique, avec une masse, un centre de gravité et des collisions. Elle garde pourtant ses machines en état de marche : moteurs, roulements, leviers, coffres. On peut marcher dessus pendant qu'elle bouge.</p>"
+    },
+    {
+      "id": "pousser",
+      "title": "Avancer avec des hélices",
+      "html": "<p>Une construction assemblée ne bouge que si une force la pousse. Les <a href=\"/wiki/aeronautics-helices\">hélices</a> transforment la rotation de Create en poussée : un <strong>roulement d'hélice</strong> fait tourner des voiles comme un moulin à l'envers, tandis que les <strong>hélices d'andésite et en bois</strong> tiennent dans un seul bloc. Pour un hélicoptère, le <a href=\"/wiki/aeronautics-roulement-gyroscopique\">roulement d'hélice gyroscopique</a> garde le rotor droit quand l'appareil penche.</p>"
+    },
+    {
+      "id": "monter",
+      "title": "Tenir en l'air : air chaud et lévitite",
+      "image": "aero_overview_portance.webp",
+      "alt": "Brûleur à air chaud, évent de vapeur, moteur portatif, la lévitite et des enveloppes à air chaud",
+      "html": "<p>Pour porter un navire, deux solutions. Les <a href=\"/wiki/aeronautics-ballons\">ballons</a> : des <strong>enveloppes à air chaud</strong> fermées au-dessus d'un <strong>brûleur à air chaud</strong> ou d'un <strong>évent de vapeur</strong>, dont la redstone règle la puissance, donc l'altitude. Ou la <a href=\"/wiki/aeronautics-levitite\">lévitite</a>, coulée sous forme liquide puis cristallisée par la chaleur : elle maintient une construction à la même hauteur sans rien consommer.</p>"
+    },
+    {
+      "id": "premier",
+      "title": "Ton premier appareil volant",
+      "html": "<ol><li>Construis une petite plateforme en planches, légère, avec un <a href=\"/wiki/roue-a-eau\">moteur</a> ou un moteur portatif.</li><li>Pose dessus un brûleur à air chaud et un plafond d'enveloppes fermé sur les côtés.</li><li>Ajoute un levier analogique contre le brûleur, et une hélice d'andésite à l'arrière.</li><li>Pose un assembleur de physique, colle tout l'ensemble, tire le levier.</li><li>Monte le signal de redstone : le ballon décolle. Baisse-le pour redescendre.</li></ol>"
+    },
+    {
+      "id": "poids",
+      "title": "Penser au poids",
+      "html": "<p>Chaque bloc a une masse : 1 pour la plupart, 0,5 pour les planches et les bûches, 0,25 pour la laine et les dalles de bois, 2 pour la pierre, 4 pour les blocs de métal. Un dirigeable en laine et en bois demande quatre fois moins d'air chaud qu'un modèle en pierre. Les <a href=\"/wiki/lunettes-d-ingenieur\">lunettes d'ingénieur</a> indiquent ce que chaque hélice pousse et à quelle vitesse elle brasse l'air.</p>"
+    },
+    {
+      "id": "contenu",
+      "title": "Ce que contient le paquet",
+      "html": "<p>Le fichier du mod réunit trois mods. <strong>Simulated</strong> apporte l'assembleur de physique, la colle au miel, le moteur portatif (32 tr/min, 64 en surchauffe), le gouvernail, le roulement pivot, les cordes et treuils, le connecteur d'amarrage, des capteurs (altitude, vitesse, gyroscope, laser) et des blocs de redstone. <strong>Aeronautics</strong> ajoute les hélices, l'air chaud, la lévitite et un lanceur de pommes de terre à fixer sur un navire. <strong>Offroad</strong> ajoute le roulement de forage et la roue de découpe de roche, pour creuser avec un véhicule. Ce guide commence par l'essentiel du vol ; les autres blocs auront leurs pages.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur le serveur Create France",
+      "html": "<p>Create Aeronautics fait partie du modpack Create France ; ce guide suit la version 1.3.3. Les chiffres viennent du code et des réglages par défaut : la configuration d'un serveur peut changer la poussée des hélices ou la portance de l'air chaud. Les vidéos rejouent les scènes Ponder du mod avec notre moteur.</p>"
+    }
+  ],
+  "related": [
+    "assembleur-physique",
+    "aeronautics-helices",
+    "aeronautics-ballons",
+    "aeronautics-levitite",
+    "aeronautics-roulement-gyroscopique",
+    "roulement-mecanique",
+    "colle-extra-forte",
+    "lunettes-d-ingenieur"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Aeronautics 1.3.3 (dépôt Creators-of-Aeronautics/Simulated-Project, commit 900122e, code sous licence MIT, ressources « tous droits réservés », The Simulated Team / The Creators of Aeronautics), identiques au jar du modpack (instance de test 1.3.3)",
+    "Masses et propriétés des blocs : Sable 2.0.6 (moteur physique requis par le mod), data/sable/physics_block_properties et data/sable/tags/block",
+    "Poussée et portance : AeroPhysics (config serveur, valeurs par défaut)",
+    "Images : blocs du mod posés sur la plaque et rendus par notre moteur (© The Simulated Team / The Creators of Aeronautics)"
+  ],
+  "en": {
+    "slugEn": "create-aeronautics-guide",
+    "name": "Create Aeronautics",
+    "title": "Create Aeronautics — mod guide",
+    "description": "Create Aeronautics guide: airships, propellers, hot air balloons, levitite and the Physics Assembler. Where to start, numbers from the code and videos.",
+    "intro": "<strong>Create Aeronautics</strong> makes Create machines fly. It ships as a single file with two companions: <strong>Simulated</strong>, which turns a group of blocks into a physical object (it falls, rolls, floats and collides), and <strong>Offroad</strong>, for drills and the wheels of land vehicles. Aeronautics adds everything needed to leave the ground: <strong>propellers</strong>, <strong>hot air balloons</strong> and <strong>levitite</strong>, a crystal that cancels weight.",
+    "facts": [
+      {
+        "label": "Mod",
+        "value": "Create Aeronautics 1.3.3, with Simulated and Offroad (Minecraft 1.21.1, NeoForge)"
+      },
+      {
+        "label": "Physics engine",
+        "value": "Sable 2.0.6 (separate mod, required)"
+      },
+      {
+        "label": "Licence",
+        "value": "MIT code; textures and models all rights reserved (The Simulated Team)"
+      },
+      {
+        "label": "To assemble",
+        "value": "Physics Assembler + Honey Glue or Super Glue"
+      },
+      {
+        "label": "To push",
+        "value": "Propeller Bearing, Andesite Propeller, Wooden Propeller"
+      },
+      {
+        "label": "To climb",
+        "value": "Hot Air Burner, Steam Vent, envelopes, levitite"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.10 · Minecraft 1.21.1"
+      }
+    ],
+    "videos": [],
+    "sections": [
+      {
+        "id": "principe",
+        "title": "The idea: blocks that become a vehicle",
+        "alt": "The Physics Assembler, the Propeller Bearing, the gyroscopic bearing and both small propellers",
+        "html": "<p>Everything starts with the <a href=\"/en/wiki/physics-assembler\">Physics Assembler</a>. Place it against your build, wrap the blocks you want with glue, then pull its lever: the build leaves the world grid and becomes a physical body, with a mass, a centre of gravity and collisions. Its machines keep working all the same: engines, bearings, levers, chests. You can walk on it while it moves.</p>"
+      },
+      {
+        "id": "pousser",
+        "title": "Moving forward with propellers",
+        "html": "<p>An assembled build only moves when a force pushes it. <a href=\"/en/wiki/aeronautics-propellers\">Propellers</a> turn Create rotation into thrust: a <strong>Propeller Bearing</strong> spins sails like a windmill in reverse, while the <strong>Andesite and Wooden Propellers</strong> fit in one block. For a helicopter, the <a href=\"/en/wiki/gyroscopic-propeller-bearing\">Gyroscopic Propeller Bearing</a> keeps the rotor upright when the craft leans.</p>"
+      },
+      {
+        "id": "monter",
+        "title": "Staying up: hot air and levitite",
+        "alt": "The Hot Air Burner, the Steam Vent, the Portable Engine, levitite and hot air envelopes",
+        "html": "<p>Two ways carry a ship. <a href=\"/en/wiki/aeronautics-hot-air-balloons\">Balloons</a>: closed <strong>hot air envelopes</strong> above a <strong>Hot Air Burner</strong> or a <strong>Steam Vent</strong>, whose redstone level sets the power and therefore the altitude. Or <a href=\"/en/wiki/levitite\">levitite</a>, poured as a liquid then crystallised by heat: it holds a build at the same height without consuming anything.</p>"
+      },
+      {
+        "id": "premier",
+        "title": "Your first flying machine",
+        "html": "<ol><li>Build a small, light plank platform with an engine or a Portable Engine.</li><li>Put a Hot Air Burner on it, under a roof of envelopes closed on the sides.</li><li>Add an analog lever against the burner and an Andesite Propeller at the back.</li><li>Place a Physics Assembler, glue the whole thing, pull the lever.</li><li>Raise the redstone signal: the balloon takes off. Lower it to come back down.</li></ol>"
+      },
+      {
+        "id": "poids",
+        "title": "Mind the weight",
+        "html": "<p>Every block has a mass: 1 for most, 0.5 for planks and logs, 0.25 for wool and wooden slabs, 2 for stone, 4 for metal blocks. A wool and wood airship needs four times less hot air than a stone one. <a href=\"/en/wiki/engineers-goggles\">Engineer's Goggles</a> show the thrust and airflow of propellers.</p>"
+      },
+      {
+        "id": "contenu",
+        "title": "What the bundle contains",
+        "html": "<p>The mod file brings three mods together. <strong>Simulated</strong> provides the Physics Assembler, Honey Glue, the Portable Engine (32 RPM, 64 when superheated), the Steering Wheel, the Swivel Bearing, ropes and winches, the Docking Connector, sensors (altitude, velocity, gimbal, laser) and redstone blocks. <strong>Aeronautics</strong> adds propellers, hot air, levitite and the Mounted Potato Cannon. <strong>Offroad</strong> adds the Borehead Bearing and the Rock Cutting Wheel, to dig with a vehicle. This guide starts with the flying essentials; the other blocks will get their own pages. Sable, a separate mod that the bundle depends on, runs the physics behind every assembled build and decides how heavy each block is. Install it alongside the bundle, in the matching version.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On the Create France server",
+        "html": "<p>Create Aeronautics is part of the Create France modpack; this guide follows version 1.3.3. Numbers come from the code and its default settings: a server config can change propeller thrust or hot air lift. The videos replay the mod's Ponder scenes with our engine.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Aeronautics 1.3.3 (Creators-of-Aeronautics/Simulated-Project repository, commit 900122e, code under the MIT licence, assets « all rights reserved », The Simulated Team / The Creators of Aeronautics), identical to the modpack jar (1.3.3 test instance)",
+      "Block masses and properties: Sable 2.0.6 (the physics engine the mod requires), data/sable/physics_block_properties and data/sable/tags/block",
+      "Thrust and lift: AeroPhysics (server config, default values)",
+      "Images: mod blocks placed on the plate and rendered by our engine (© The Simulated Team / The Creators of Aeronautics)"
+    ]
+  }
+}

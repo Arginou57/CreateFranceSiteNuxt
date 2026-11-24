@@ -223,7 +223,8 @@
     "contact-de-redstone",
     "support-de-canon",
     "fabrication-des-canons",
-    "pompe-a-balancier"
+    "pompe-a-balancier",
+    "aeronautics-helices"
   ],
   "sources": [
     "Recettes : crafting/kinetics/mechanical_bearing.json, clockwork_bearing.json",

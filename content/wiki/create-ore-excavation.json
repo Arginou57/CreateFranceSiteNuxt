@@ -1,0 +1,279 @@
+{
+  "slug": "create-ore-excavation",
+  "name": "Create Ore Excavation",
+  "blockId": "createoreexcavation:drilling_machine",
+  "category": "excavation",
+  "title": "Create Ore Excavation — filons et foreuses, guide",
+  "description": "Create Ore Excavation, addon de Create : trouver des filons de minerai invisibles et les forer sans fin avec une grande foreuse.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Ore Excavation 1.6.8 · Create 6.0",
+  "mcVersion": "1.21.1",
+  "intro": "<strong>Create Ore Excavation</strong> est un addon de Create écrit par tom5454. Il ajoute sous le monde des <strong>filons de minerai</strong> invisibles, qu'on repère avec un détecteur, puis qu'on exploite avec une grande <strong>foreuse</strong> à rotation, sans creuser de galerie. Par défaut, un filon ne s'épuise jamais.",
+  "facts": [
+    {
+      "label": "Mod",
+      "value": "Create Ore Excavation 1.6.8 (id createoreexcavation)"
+    },
+    {
+      "label": "Auteur",
+      "value": "tom5454, licence MIT"
+    },
+    {
+      "label": "Sur Create France",
+      "value": "non : addon présenté pour information"
+    },
+    {
+      "label": "Filons",
+      "value": "15 types (charbon, fer, cuivre, zinc, or, diamant, netherite, eau…)"
+    },
+    {
+      "label": "Épuisement",
+      "value": "infinis par défaut (réglage defaultInfinite)"
+    },
+    {
+      "label": "Version",
+      "value": "Create Ore Excavation 1.6.8 · Create 6.0"
+    }
+  ],
+  "recipe": {
+    "label": "Détecteur de filons, fabrication à l'établi",
+    "grid": [
+      [
+        "Œil de l'Ender",
+        "Éclat d'améthyste",
+        null
+      ],
+      [
+        "Minerai de redstone",
+        "Bâton",
+        null
+      ],
+      [
+        null,
+        null,
+        "Bâton"
+      ]
+    ],
+    "items": [
+      [
+        "minecraft:ender_eye",
+        "minecraft:amethyst_shard",
+        null
+      ],
+      [
+        "minecraft:redstone_ore",
+        "minecraft:stick",
+        null
+      ],
+      [
+        null,
+        null,
+        "minecraft:stick"
+      ]
+    ],
+    "result": "1 détecteur de filons",
+    "resultItem": "createoreexcavation:vein_finder"
+  },
+  "videos": [
+    {
+      "id": "exc_finder",
+      "name": "Chercher un filon avec le détecteur",
+      "description": "Le détecteur de filons utilisé au sol : rien ici ; on se déplace (le terrain défile) et on recommence : un filon de cuivre est trouvé.",
+      "duration": "PT10S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "serveur",
+      "title": "Pas sur Create France",
+      "html": "<p><strong>Ce mod n'est pas installé sur le serveur Create France</strong> : cette page présente un addon de Create pour les joueurs qui l'utilisent ailleurs, en solo ou sur un autre serveur.</p>"
+    },
+    {
+      "id": "detecteur",
+      "title": "Le détecteur de filons",
+      "image": "exc_finder_detecteur.webp",
+      "alt": "Le terrain de la scène, où l’on utilise le détecteur de filons",
+      "video": "exc_finder",
+      "html": "<p>Les filons ne se voient pas : ils sont attachés à des tronçons (chunks) entiers. Le <strong>détecteur de filons</strong> (Ore Vein Finder) se tient en main ; un clic droit sur le sol dit s'il y a un filon dans le tronçon, ou des traces d'un filon plus loin. Il se recharge en 5 secondes.</p>"
+    },
+    {
+      "id": "rien",
+      "title": "Rien ici ? On bouge",
+      "image": "exc_finder_rien.webp",
+      "alt": "Le sol vide, aucun filon trouvé",
+      "html": "<p>Si le détecteur ne trouve rien, déplace-toi de quelques tronçons et recommence. Les filons sont rares : chaque type est réparti sur une grande grille (128 tronçons pour le charbon ou le fer, 512 pour la netherite).</p>"
+    },
+    {
+      "id": "filon",
+      "title": "Un filon trouvé",
+      "image": "exc_finder_filon.webp",
+      "alt": "Le terrain où un filon de cuivre a été trouvé",
+      "html": "<p>Une fois le filon trouvé, deux machines : la <a href=\"/wiki/ore-excavation-foreuse\">foreuse</a> pour les minerais et l'extracteur de puits pour les fluides. Avant de construire, une <a href=\"/wiki/ore-excavation-foreuse-d-echantillon\">foreuse d'échantillon</a> confirme le filon et l'inscrit dans un atlas.</p>"
+    },
+    {
+      "id": "mod",
+      "title": "Ce que le mod ajoute",
+      "image": "exc_items_objets.webp",
+      "alt": "Les objets du mod : détecteur, atlas et trois trépans",
+      "html": "<p>La foreuse (Drilling Machine) et l'extracteur de puits de fluide (Fluid Well Extractor) sont de grands multiblocs de 3 × 2 × 3, entraînés par la rotation de Create. Ils prennent un trépan en fer, en diamant ou en netherite. La foreuse d'échantillon, le détecteur et l'atlas servent à prospecter. Le détail des <a href=\"/wiki/ore-excavation-filons\">filons</a> est sur sa propre page.</p>"
+    },
+    {
+      "id": "prospecter",
+      "title": "Prospecter efficacement",
+      "html": "<p>Teste le sol tous les quelques tronçons en ligne droite : le message de traces indique qu'un filon se trouve dans les environs, tandis que le message de filon trouvé désigne le tronçon où tu te tiens. Note les coordonnées, puis confirme avec la foreuse d'échantillon avant d'investir dans la grande machine.</p>"
+    },
+    {
+      "id": "config",
+      "title": "Pour les serveurs",
+      "html": "<p>Les réglages serveur du mod permettent de rendre les filons finis, de limiter le nombre d'extracteurs par filon et de régler la portée et la recharge du détecteur. Les filons et leurs recettes se modifient par fichiers de données ou avec KubeJS.</p>"
+    },
+    {
+      "id": "recettes",
+      "title": "Ce qu’il faut fabriquer",
+      "html": "<p>Le détecteur de filons se fabrique à l'établi avec un œil de l'Ender, une améthyste, un minerai de redstone et deux bâtons. L'atlas des filons demande un coffre, une améthyste, une carte et un livre. La foreuse et l'extracteur sont des recettes d'<a href=\"/wiki/etabli-mecanique\">établi mécanique</a> en 5 × 5 : laiton, boîtiers en laiton et en cuivre, une perceuse mécanique, des mécanismes de précision et des plaques renforcées. La foreuse d'échantillon est une version 3 × 3 plus légère. Les trépans en fer, puis en diamant, se font à l'établi classique ; le trépan en netherite n'a pas de recette dans les données du mod 1.6.8 : il dépend du pack ou du serveur.</p>"
+    },
+    {
+      "id": "faq",
+      "title": "Questions fréquentes",
+      "html": "<p><strong>Le mod remplace-t-il le minage ?</strong> Non, les minerais restent dans le monde ; les filons s'y ajoutent. <strong>Peut-on forer partout ?</strong> Seulement sur un tronçon qui a un filon, avec un bloc plein sous la machine.</p>"
+    },
+    {
+      "id": "pourquoi",
+      "title": "Pourquoi l’utiliser",
+      "html": "<p>Une foreuse sur un bon filon produit du minerai sans fin et sans dégâts au paysage : de quoi alimenter des <a href=\"/wiki/roues-de-concassage\">roues de concassage</a> et toute une usine. En échange, elle demande beaucoup de contrainte : 256 par tr/min pour un filon courant, soit plus de 8 000 SU à 32 tr/min.</p>"
+    }
+  ],
+  "related": [
+    "ore-excavation-foreuse",
+    "ore-excavation-foreuse-d-echantillon",
+    "ore-excavation-filons",
+    "perceuse-mecanique",
+    "roues-de-concassage"
+  ],
+  "sources": [
+    "Create Ore Excavation 1.6.8 (createoreexcavation-1.21-1.6.8.jar), de tom5454, licence MIT : code lu après décompilation (ExcavatingBlockEntity, SampleDrillBlockEntity, Config), recettes et filons du dossier data du jar, scènes Ponder PonderScenes rejouées par notre moteur.",
+    "Modèles et textures des auteurs du mod, rendus à partir du jar ; aucun texte du mod n'est recopié."
+  ],
+  "en": {
+    "slugEn": "create-ore-excavation-guide",
+    "name": "Create Ore Excavation",
+    "title": "Create Ore Excavation — ore veins and drills, guide",
+    "description": "Create Ore Excavation, a Create addon: find hidden ore veins with the Vein Finder and mine them endlessly with a big Drilling Machine.",
+    "intro": "<strong>Create Ore Excavation</strong> is a Create addon by tom5454. It adds hidden <strong>ore veins</strong> under the world, which you locate with a finder and then mine with a big rotation-powered <strong>Drilling Machine</strong>, without digging a single tunnel. By default a vein never runs out.",
+    "facts": [
+      {
+        "label": "Mod",
+        "value": "Create Ore Excavation 1.6.8 (id createoreexcavation)"
+      },
+      {
+        "label": "Author",
+        "value": "tom5454, MIT licence"
+      },
+      {
+        "label": "On Create France",
+        "value": "no: addon covered for reference"
+      },
+      {
+        "label": "Veins",
+        "value": "15 types (coal, iron, copper, zinc, gold, diamond, netherite, water…)"
+      },
+      {
+        "label": "Depletion",
+        "value": "infinite by default (setting defaultInfinite)"
+      },
+      {
+        "label": "Version",
+        "value": "Create Ore Excavation 1.6.8 · Create 6.0"
+      }
+    ],
+    "recipe": {
+      "label": "Ore Vein Finder, crafting table recipe",
+      "grid": [
+        [
+          "Eye of Ender",
+          "Amethyst Shard",
+          null
+        ],
+        [
+          "Redstone Ore",
+          "Stick",
+          null
+        ],
+        [
+          null,
+          null,
+          "Stick"
+        ]
+      ],
+      "result": "1 Ore Vein Finder"
+    },
+    "videos": [
+      {
+        "id": "exc_finder",
+        "name": "Looking for a vein with the finder",
+        "description": "The Ore Vein Finder used on the ground: nothing here; move on (the ground scrolls) and try again: a copper vein is found."
+      }
+    ],
+    "sections": [
+      {
+        "id": "serveur",
+        "title": "Not on Create France",
+        "html": "<p><strong>This mod is not installed on the Create France server</strong>: this page covers a Create addon for players who use it elsewhere, in single player or on another server.</p>"
+      },
+      {
+        "id": "detecteur",
+        "title": "The Ore Vein Finder",
+        "alt": "The scene's ground, where the Ore Vein Finder is used",
+        "html": "<p>Veins are invisible: they belong to whole chunks. The <strong>Ore Vein Finder</strong> is held in hand; right-click the ground and it tells you whether the chunk has a vein, or traces of one further away. It recharges in 5 seconds.</p>"
+      },
+      {
+        "id": "rien",
+        "title": "Nothing here? Move on",
+        "alt": "Empty ground, no vein found",
+        "html": "<p>If the finder finds nothing, move a few chunks and try again. Veins are rare: each type is spread over a large grid (128 chunks for coal or iron, 512 for netherite).</p>"
+      },
+      {
+        "id": "filon",
+        "title": "A vein found",
+        "alt": "The ground where a copper vein was found",
+        "html": "<p>Once you have a vein, two machines can use it: the <a href=\"/en/wiki/ore-excavation-drilling-machine\">Drilling Machine</a> for ores and the Fluid Well Extractor for fluids. Before building, a <a href=\"/en/wiki/ore-excavation-sample-drill\">Sample Drill</a> confirms the vein and records it in an atlas.</p>"
+      },
+      {
+        "id": "mod",
+        "title": "What the mod adds",
+        "alt": "The mod's items: finder, atlas and three drills",
+        "html": "<p>The Drilling Machine and the Fluid Well Extractor are large 3 × 2 × 3 multiblocks driven by Create rotation. They take an iron, diamond or netherite drill. The Sample Drill, the finder and the atlas are for prospecting. The <a href=\"/en/wiki/ore-excavation-ore-veins\">veins</a> are detailed on their own page.</p>"
+      },
+      {
+        "id": "prospecter",
+        "title": "Prospecting efficiently",
+        "html": "<p>Test the ground every few chunks in a straight line: the traces message tells you a vein is somewhere nearby, while the vein-found message points at the chunk you are standing in. Write down the coordinates, then confirm with the Sample Drill before investing in the big machine.</p>"
+      },
+      {
+        "id": "config",
+        "title": "For server owners",
+        "html": "<p>The mod's server settings can make veins finite, limit the number of extractors per vein and tune the finder's range and cooldown. Veins and their recipes are edited through data files or with KubeJS.</p>"
+      },
+      {
+        "id": "recettes",
+        "title": "What to craft",
+        "html": "<p>The Ore Vein Finder is crafted with an Eye of Ender, an amethyst, a redstone ore and two sticks. The Ore Vein Atlas takes a chest, an amethyst, a map and a book. The Drilling Machine and the extractor are 5 × 5 <a href=\"/en/wiki/mechanical-crafter\">Mechanical Crafter</a> recipes: brass, brass and copper casings, a Mechanical Drill, precision mechanisms and sturdy sheets. The Sample Drill is a lighter 3 × 3 version. Iron and then diamond drills are made at a normal crafting table; the netherite drill has no recipe in the mod's 1.6.8 data: it depends on the pack or server.</p>"
+      },
+      {
+        "id": "faq",
+        "title": "Common questions",
+        "html": "<p><strong>Does the mod replace mining?</strong> No, ores stay in the world as usual; veins come on top of them. <strong>Can you drill anywhere?</strong> Only on a chunk that has a vein, with a full block under the machine. <strong>Which Create version?</strong> This page covers 1.6.8 for Minecraft 1.21.1.</p>"
+      },
+      {
+        "id": "pourquoi",
+        "title": "Why use it",
+        "html": "<p>A Drilling Machine on a good vein produces ore forever without scarring the landscape: enough to feed <a href=\"/en/wiki/crushing-wheel\">crushing wheels</a> and a whole factory. In return it needs a lot of stress: 256 per RPM for a common vein, over 8,000 SU at 32 RPM.</p>"
+      }
+    ],
+    "sources": [
+      "Create Ore Excavation 1.6.8 (createoreexcavation-1.21-1.6.8.jar), by tom5454, MIT licence: code read after decompiling (ExcavatingBlockEntity, SampleDrillBlockEntity, Config), recipes and veins from the jar's data folder, Ponder scenes PonderScenes replayed by our engine.",
+      "Models and textures by the mod's authors, rendered from the jar; no text from the mod is copied."
+    ]
+  }
+}

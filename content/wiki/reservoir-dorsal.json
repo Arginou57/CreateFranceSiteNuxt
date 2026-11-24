@@ -155,7 +155,9 @@
     "rotor",
     "roue-a-eau",
     "moteur-creatif",
-    "lunettes-d-ingenieur"
+    "lunettes-d-ingenieur",
+    "deep-seas-sas",
+    "ore-excavation-foreuse-d-echantillon"
   ],
   "sources": [
     "Recettes : crafting/appliances/copper_backtank.json, copper_diving_helmet.json (PPP / PGP), copper_diving_boots.json (P P / P P / G G), versions en Netherite à la table de forgeron",

@@ -1,0 +1,271 @@
+{
+  "slug": "deep-seas-propulseur",
+  "name": "Propulseur à eau",
+  "blockId": "create_submarine:water_thruster",
+  "category": "deepseas",
+  "title": "Propulseur à eau — Create Deep Seas, guide",
+  "description": "Propulseur à eau de Create Deep Seas : pousser un navire ou un sous-marin avec de l'eau sous pression, réservoir, pompe et poussée.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Deep Seas 3.4.8 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>propulseur à eau</strong> (Water Thruster) fait avancer un navire en crachant de l'eau sous pression par sa buse. Il ne tourne pas tout seul : une <a href=\"/wiki/pompe-mecanique\">pompe</a> l'alimente depuis un réservoir, et plus elle débite, plus il pousse.",
+  "facts": [
+    {
+      "label": "Réservoir interne",
+      "value": "1 000 mB"
+    },
+    {
+      "label": "Consommation",
+      "value": "jusqu'à 50 mB par tick (1 000 mB/s)"
+    },
+    {
+      "label": "Poussée",
+      "value": "eau consommée par tick × 8 × 6 (réglage serveur waterThrusterPowerMultiplier)"
+    },
+    {
+      "label": "Effets",
+      "value": "bulles et éclaboussures toutes les 4 ticks quand il pousse"
+    },
+    {
+      "label": "Profondeur max",
+      "value": "400 m"
+    },
+    {
+      "label": "Version",
+      "value": "Create Deep Seas 3.4.8 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Pompe mécanique",
+        null
+      ],
+      [
+        "Bloc de cuivre",
+        "Hélice",
+        "Bloc de cuivre"
+      ],
+      [
+        "Bloc de cuivre",
+        "Bloc de cuivre",
+        "Bloc de cuivre"
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "create:mechanical_pump",
+        null
+      ],
+      [
+        "minecraft:copper_block",
+        "create:propeller",
+        "minecraft:copper_block"
+      ],
+      [
+        "minecraft:copper_block",
+        "minecraft:copper_block",
+        "minecraft:copper_block"
+      ]
+    ],
+    "result": "1 propulseur à eau",
+    "resultItem": "create_submarine:water_thruster"
+  },
+  "videos": [
+    {
+      "id": "sub_thruster",
+      "name": "Un radeau poussé par un propulseur à eau",
+      "description": "Un réservoir, une pompe et un propulseur sur un radeau : la rotation arrive, l'eau sort par la buse et la banquise défile sous le radeau, qui avance.",
+      "duration": "PT18S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "propulseur",
+      "title": "Le propulseur",
+      "image": "sub_thruster_propulseur.webp",
+      "alt": "Le propulseur à eau monté à l’arrière d’un petit radeau",
+      "video": "sub_thruster",
+      "html": "<p>Pose le propulseur à l'arrière du navire, la buse vers l'extérieur : il pousse dans le sens opposé, comme un moteur à réaction. Il fonctionne sur tout assemblage Sable, à la surface comme sous l'eau, et résiste à 400 m de fond.</p>"
+    },
+    {
+      "id": "reservoir",
+      "title": "L'eau à pousser",
+      "image": "sub_thruster_reservoir.webp",
+      "alt": "Le réservoir à fluide qui alimente le propulseur",
+      "html": "<p>Le propulseur ne pompe pas lui-même : il garde un petit réservoir de 1 000 mB qu'il vide à chaque tick. Il lui faut donc une réserve d'eau à bord, un <a href=\"/wiki/reservoir-a-fluide\">réservoir à fluide</a> par exemple, ou mieux, un <a href=\"/wiki/deep-seas-ballast\">évent de ballast</a> qui puise directement dans la mer.</p>"
+    },
+    {
+      "id": "mise-en-route",
+      "title": "La mise en route",
+      "image": "sub_thruster_mise-en-route.webp",
+      "alt": "La pompe tourne, la banquise défile sous le radeau",
+      "html": "<p>Une <a href=\"/wiki/pompe-mecanique\">pompe mécanique</a> entre la réserve et le propulseur, de la rotation, et c'est parti : l'eau sort en bulles et en éclaboussures. Dans la scène, le radeau reste au centre et c'est la banquise qui défile dessous, la manière du Ponder de montrer qu'il avance.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "Plus de pression, plus de vitesse",
+      "image": "sub_thruster_vitesse.webp",
+      "alt": "Le radeau lancé, la pompe à pleine vitesse",
+      "html": "<p>La poussée suit l'eau consommée : jusqu'à 50 mB par tick, multipliés par 8 puis par le réglage du serveur (6 par défaut). Une pompe plus rapide débite plus, donc pousse plus fort ; pour un gros navire, mets plusieurs propulseurs. Il en existe une variante, l'<strong>hélice sous-marine</strong>, qui pousse avec de la rotation seule (réglage submarinePropellerPowerMultiplier, 3 par défaut).</p>"
+    },
+    {
+      "id": "alimenter",
+      "title": "Alimenter en eau sur un sous-marin",
+      "html": "<p>En plongée, le plus simple est de brancher le propulseur sur un évent de ballast : l'eau de mer arrive sans limite et la réserve ne s'épuise jamais. Une seule <a href=\"/wiki/pompe-mecanique\">pompe</a> peut servir plusieurs propulseurs si son débit suffit ; sinon, donne-leur chacun la sienne. En surface, le même montage marche tant que l'évent reste immergé. Un <a href=\"/wiki/tuyau-a-fluide-intelligent\">tuyau intelligent</a> permet de couper un propulseur sans arrêter la pompe.</p>"
+    },
+    {
+      "id": "comparer",
+      "title": "Propulseur à eau ou hélice ?",
+      "html": "<p>Le propulseur à eau convertit un débit d'eau en poussée : il demande une pompe, des tuyaux et une réserve, mais il est compact et sa poussée suit directement la vitesse de la pompe. L'hélice sous-marine se fabrique avec une hélice de Create, un bloc de fer industriel et un rotor ; elle se contente de rotation. Beaucoup de joueurs combinent les deux : hélices pour la croisière, propulseurs pour les manœuvres fines.</p>"
+    },
+    {
+      "id": "direction",
+      "title": "Diriger un navire à propulseurs",
+      "html": "<p>Un navire équipé de deux propulseurs, un de chaque côté de l'arrière, se dirige en jouant sur leur débit : couper ou ralentir celui de droite fait tourner à droite, et inversement. Pour piloter chaque côté depuis le poste de commande, il suffit d'associer à chaque pompe <a href=\"/wiki/boite-a-roues-dentees\">boîte à roues dentées</a> et <a href=\"/wiki/inverseur-de-rotation\">embrayage</a>. Pour reculer, pose un propulseur tourné vers l'avant et active-le seul. Sur un sous-marin, ces propulseurs ne s'occupent que de l'avance : la profondeur reste l'affaire des ballasts et de l'ordinateur.</p>"
+    },
+    {
+      "id": "faq",
+      "title": "Questions fréquentes",
+      "html": "<p><strong>Le propulseur marche-t-il hors de l'eau ?</strong> Oui : il pousse tant qu'il reçoit de l'eau, même sur un aéronef. <strong>Faut-il le faire tourner ?</strong> Non, seule la pompe qui l'alimente tourne.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils",
+      "html": "<p>Place les propulseurs bien alignés avec le centre de masse, sinon le navire tourne en rond. Pour diriger, coupe un côté ou ajoute un <a href=\"/wiki/deep-seas-voiles-et-gouvernail\">gouvernail</a> de High Seas. Un propulseur à sec ne pousse plus : surveille la réserve, ou branche-le sur l'évent pour une eau illimitée.</p>"
+    }
+  ],
+  "related": [
+    "create-deep-seas",
+    "deep-seas-ballast",
+    "pompe-mecanique",
+    "reservoir-a-fluide",
+    "deep-seas-voiles-et-gouvernail"
+  ],
+  "sources": [
+    "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar du modpack Create France) : code lu après décompilation (Vineflower) pour les chiffres (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recettes du dossier data du jar, scènes Ponder SubmarinePonderScenes / HighSeasPonderScenes rejouées par notre moteur.",
+    "Mod de Maxenonyme (MaxCreateMC), Cogfly et Zinc Studios ; artistes Marume, RandomePigeon, Funado. Licence du mod : « All Rights Reserved » : modèles et textures appartiennent à leurs auteurs, rendus ici à partir du jar ; aucun texte du mod n'est recopié.",
+    "Blocs de Simulated 1.3.2 (treuil, connecteur de corde, roulement pivotant) : Create Aeronautics, assets « All Rights Reserved », code MIT."
+  ],
+  "en": {
+    "slugEn": "deep-seas-water-thruster",
+    "name": "Water Thruster",
+    "title": "Water Thruster — Create Deep Seas guide",
+    "description": "Create Deep Seas Water Thruster: push a ship or submarine with pressurized water from a tank and a pump; thrust, flow and setup explained.",
+    "intro": "The <strong>Water Thruster</strong> moves a ship forward by blasting pressurized water out of its nozzle. It does not work on its own: a <a href=\"/en/wiki/mechanical-pump\">pump</a> feeds it from a tank, and the more water it delivers, the harder it pushes.",
+    "facts": [
+      {
+        "label": "Internal tank",
+        "value": "1,000 mB"
+      },
+      {
+        "label": "Consumption",
+        "value": "up to 50 mB per tick (1,000 mB/s)"
+      },
+      {
+        "label": "Thrust",
+        "value": "water used per tick × 8 × 6 (server setting waterThrusterPowerMultiplier)"
+      },
+      {
+        "label": "Effects",
+        "value": "bubbles and splashes every 4 ticks while pushing"
+      },
+      {
+        "label": "Max depth",
+        "value": "400 m"
+      },
+      {
+        "label": "Version",
+        "value": "Create Deep Seas 3.4.8 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Mechanical Pump",
+          null
+        ],
+        [
+          "Block of Copper",
+          "Propeller",
+          "Block of Copper"
+        ],
+        [
+          "Block of Copper",
+          "Block of Copper",
+          "Block of Copper"
+        ]
+      ],
+      "result": "1 Water Thruster"
+    },
+    "videos": [
+      {
+        "id": "sub_thruster",
+        "name": "A raft pushed by a Water Thruster",
+        "description": "A tank, a pump and a thruster on a raft: rotation arrives, water shoots out of the nozzle and the ice slides under the raft, which moves forward."
+      }
+    ],
+    "sections": [
+      {
+        "id": "propulseur",
+        "title": "The thruster",
+        "alt": "The Water Thruster mounted at the back of a small raft",
+        "html": "<p>Put the thruster at the back of the ship with the nozzle facing out: it pushes the opposite way, like a jet engine. It works on any Sable contraption, on the surface or underwater, and holds up to 400 m deep.</p>"
+      },
+      {
+        "id": "reservoir",
+        "title": "Water to push",
+        "alt": "The Fluid Tank feeding the thruster",
+        "html": "<p>The thruster does not pump by itself: it keeps a small 1,000 mB tank that it empties every tick. So it needs a water supply on board, a <a href=\"/en/wiki/fluid-tank\">Fluid Tank</a> for instance, or better, a <a href=\"/en/wiki/deep-seas-ballast-tanks\">Ballast Vent</a> that draws straight from the sea.</p>"
+      },
+      {
+        "id": "mise-en-route",
+        "title": "Starting it",
+        "alt": "The pump spinning, the ice sliding under the raft",
+        "html": "<p>A <a href=\"/en/wiki/mechanical-pump\">Mechanical Pump</a> between the supply and the thruster, some rotation, and off you go: the water comes out as bubbles and splashes. In the scene the raft stays in the middle and the ice slides underneath it, which is how the Ponder shows that it moves.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "More pressure, more speed",
+        "alt": "The raft under way, the pump at full speed",
+        "html": "<p>Thrust follows the water used: up to 50 mB per tick, times 8, times the server setting (6 by default). A faster pump delivers more, so it pushes harder; for a big ship, use several thrusters. There is also a variant, the <strong>Submarine Propeller</strong>, which pushes with rotation alone (setting submarinePropellerPowerMultiplier, 3 by default).</p>"
+      },
+      {
+        "id": "alimenter",
+        "title": "Feeding it water on a submarine",
+        "html": "<p>When submerged, the easiest option is to feed the thruster from a Ballast Vent: sea water comes in without limit and the supply never runs dry. A single <a href=\"/en/wiki/mechanical-pump\">pump</a> can serve several thrusters if its flow is high enough; otherwise give each one its own. On the surface the same setup works as long as the vent stays below the waterline. A <a href=\"/en/wiki/smart-fluid-pipe\">Smart Fluid Pipe</a> lets you shut one thruster off without stopping the pump.</p>"
+      },
+      {
+        "id": "comparer",
+        "title": "Water Thruster or propeller?",
+        "html": "<p>The Water Thruster turns a water flow into thrust: it needs a pump, pipes and a supply, but it is compact and its thrust follows the pump speed directly. The Submarine Propeller is crafted from a Create propeller, a block of industrial iron and a shaft; rotation alone is enough for it. Many players mix both: propellers for cruising, thrusters for fine manoeuvres.</p>"
+      },
+      {
+        "id": "direction",
+        "title": "Steering a thruster ship",
+        "html": "<p>A ship with two thrusters, one on each side of the stern, steers by playing with their flow: cutting or slowing the right one turns it right, and the other way round. A <a href=\"/en/wiki/gearbox\">Gearbox</a> and a <a href=\"/en/wiki/gearshift\">Gearshift</a> or clutch on each pump are enough to drive each side from the helm. To go backwards, add a thruster facing forwards and run it alone. On a submarine these thrusters only handle forward motion: depth is still the job of the ballast tanks and the computer.</p>"
+      },
+      {
+        "id": "faq",
+        "title": "Common questions",
+        "html": "<p><strong>Does the thruster work out of the water?</strong> Yes: it pushes as long as it is fed water, even on an airship. <strong>Does it need rotation?</strong> No, only the pump feeding it spins.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<p>Line thrusters up with the centre of mass, or the ship will spin in circles. To steer, cut one side or add a High Seas <a href=\"/en/wiki/high-seas-sails-and-rudder\">rudder</a>. A dry thruster stops pushing: keep an eye on the supply, or feed it from the vent for endless water.</p>"
+      }
+    ],
+    "sources": [
+      "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar from the Create France modpack): code read after decompiling (Vineflower) for the figures (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recipes from the jar's data folder, Ponder scenes SubmarinePonderScenes / HighSeasPonderScenes replayed by our engine.",
+      "Mod by Maxenonyme (MaxCreateMC), Cogfly and Zinc Studios; art by Marume, RandomePigeon, Funado. Mod licence: \"All Rights Reserved\": models and textures belong to their authors and are rendered here from the jar; no text from the mod is copied.",
+      "Simulated 1.3.2 blocks (rope winch, rope connector, swivel bearing): Create Aeronautics, assets \"All Rights Reserved\", code under MIT."
+    ]
+  }
+}

@@ -1,0 +1,301 @@
+{
+  "slug": "aeronautics-levitite",
+  "name": "Lévitite",
+  "blockId": "aeronautics:levitite",
+  "category": "aeronautics",
+  "title": "Lévitite — Create Aeronautics, guide",
+  "description": "La lévitite de Create Aeronautics : mélange liquide, cristallisation par la chaleur, flottaison et freinage des contraptions. Recette, chiffres et vidéos.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Aeronautics 1.3.3",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>lévitite</strong> (Levitite) est le cristal qui fait flotter. Attachée à une contraption simulée, elle compense son poids et la garde à la même altitude, sans carburant ni rotation. On ne la fabrique pas à l'établi : on coule du <strong>mélange de lévitite</strong> liquide dans un moule, puis on le chauffe pour qu'il cristallise.",
+  "facts": [
+    {
+      "label": "Mélange",
+      "value": "4 poudres de roche de l’End + 2 pépites de zinc + 500 mB d’eau, mixeur chauffé"
+    },
+    {
+      "label": "Poudre",
+      "value": "Pierre de l'End passée au broyeur"
+    },
+    {
+      "label": "Cristallisation",
+      "value": "Une source de chaleur au contact, puis tout le liquide"
+    },
+    {
+      "label": "Portance",
+      "value": "10 (matériau flottant « levitite »), sans pouvoir faire monter"
+    },
+    {
+      "label": "Freinage",
+      "value": "Fort à faible vitesse (2 vertical, 1,5 horizontal), presque nul vite"
+    },
+    {
+      "label": "Blocs détruits",
+      "value": "Certains blocs du moule cassent à la cristallisation (réglage serveur)"
+    },
+    {
+      "label": "Variante",
+      "value": "Lévitite nacrée, si le mélange touche du sable ou de la terre des âmes"
+    }
+  ],
+  "recipe": {
+    "label": "Mélange dans un bassin chauffé (+ 500 mB d’eau)",
+    "grid": [
+      [
+        "Poudre de roche de l'End",
+        "Poudre de roche de l'End",
+        "Poudre de roche de l'End"
+      ],
+      [
+        "Poudre de roche de l'End",
+        "Pépite de zinc",
+        "Pépite de zinc"
+      ],
+      [
+        null,
+        "Seau d'eau",
+        null
+      ]
+    ],
+    "items": [
+      [
+        "aeronautics:end_stone_powder",
+        "aeronautics:end_stone_powder",
+        "aeronautics:end_stone_powder"
+      ],
+      [
+        "aeronautics:end_stone_powder",
+        "create:zinc_nugget",
+        "create:zinc_nugget"
+      ],
+      [
+        null,
+        "minecraft:water_bucket",
+        null
+      ]
+    ],
+    "result": "500 mB de mélange de lévitite",
+    "resultItem": "aeronautics:levitite_blend_bucket"
+  },
+  "videos": [
+    {
+      "id": "aero_levitite_blend",
+      "name": "Couler et cristalliser la lévitite",
+      "description": "Le mélange liquide est posé, chauffé, puis le cristal se propage dans tout le bassin de mélange.",
+      "duration": "PT24S"
+    },
+    {
+      "id": "aero_levitite",
+      "name": "Un navire qui flotte grâce à la lévitite",
+      "description": "Des barres de lévitite gardent un navire en l’air ; il faut une hélice pour le faire avancer ou monter.",
+      "duration": "PT26S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "melange",
+      "title": "Préparer le mélange",
+      "image": "aero_levitite_blend_melange.webp",
+      "alt": "Un bloc de mélange de lévitite liquide posé sur la plaque",
+      "video": "aero_levitite_blend",
+      "html": "<p>Passe de la pierre de l'End entre deux <a href=\"/wiki/roues-de-concassage\">roues</a> de concassage : chaque bloc donne une <strong>poudre de roche de l'End</strong>, et une fois sur deux la pierre revient en plus. Dans un <a href=\"/wiki/mixeur-mecanique\">mixeur</a> au-dessus d'un <a href=\"/wiki/bassin\">bassin</a> chauffé, quatre poudres, deux pépites de zinc et 500 mB d'eau donnent 500 mB de mélange, que l'on récupère au seau.</p>"
+    },
+    {
+      "id": "chaleur",
+      "title": "La chaleur déclenche le cristal",
+      "image": "aero_levitite_blend_chaleur.webp",
+      "alt": "Du mélange posé à côté de sources de chaleur, un feu de camp et du magma",
+      "html": "<p>Posé dans le monde, le mélange reste liquide jusqu'à ce qu'il chauffe : un briquet, ou une source de chaleur voisine comme un feu ou du magma, suffit. Attention, la réaction est définitive : un bloc de lévitite cassé ne rend rien (il n'a pas de butin), et le mélange cristallisé est perdu pour le seau.</p>"
+    },
+    {
+      "id": "propagation",
+      "title": "Le cristal gagne tout le liquide",
+      "image": "aero_levitite_blend_cristal.webp",
+      "alt": "Un grand moule rempli de lévitite cristallisée",
+      "html": "<p>Une fois commencée, la cristallisation se propage de bloc en bloc dans tout le mélange qui se touche. On peut donc couler une grande plaque ou une barre dans un moule, puis l'allumer d'un seul point. Certains blocs du moule sont détruits pendant la réaction (réglage serveur activé par défaut) : c'est pratique pour démouler, mais teste ton moule avant.</p>"
+    },
+    {
+      "id": "flotter",
+      "title": "Ce que fait la lévitite",
+      "image": "aero_levitite_flotte.webp",
+      "alt": "Un navire en bois maintenu en l’air par deux longues barres de lévitite",
+      "video": "aero_levitite",
+      "html": "<p>Assez de lévitite sur une <a href=\"/wiki/assembleur-physique\">contraption simulée</a> et elle cesse de tomber : elle reste à la hauteur où on l'a assemblée. Mais la lévitite ne fait pas <strong>monter</strong> la contraption à elle seule : pour gagner de l'altitude, il faut une autre force, une hélice ou un ballon.</p>"
+    },
+    {
+      "id": "freinage",
+      "title": "Un frein naturel",
+      "image": "aero_levitite_vol.webp",
+      "alt": "Le navire à lévitite qui avance au-dessus de la prairie",
+      "html": "<p>La lévitite résiste aux mouvements lents : son frottement vaut 2 à la verticale et 1,5 à l'horizontale à faible vitesse, ce qui stabilise un navire à l'arrêt. À grande vitesse, ce freinage tombe presque à zéro (0,1 et 0,05) : une fois lancé par ses <a href=\"/wiki/aeronautics-helices\">hélices</a>, le navire file librement.</p>"
+    },
+    {
+      "id": "moule",
+      "title": "Préparer un moule",
+      "html": "<p>Le mélange se verse comme de l'eau : à la main avec un seau, ou avec un <a href=\"/wiki/bec-verseur\">bec verseur</a> et des tuyaux. Construis un bac dont l'intérieur a la forme voulue, remplis-le entièrement, puis allume un seul bloc. Chaque bloc de mélange devient un bloc de lévitite, que l'on colle ensuite à la contraption comme n'importe quel bloc.</p>"
+    },
+    {
+      "id": "combiner",
+      "title": "Combiner avec un ballon ou une hélice",
+      "html": "<p>La lévitite tient l'altitude sans rien consommer, alors qu'un <a href=\"/wiki/aeronautics-ballons\">ballon</a> permet de la changer. Les deux se marient bien : la lévitite porte l'essentiel du poids, un petit brûleur règle la hauteur. Côté propulsion, ses frottements à faible vitesse rendent les manœuvres lentes plus précises, puis s'effacent quand l'appareil prend de la vitesse.</p>"
+    },
+    {
+      "id": "faq",
+      "title": "Questions fréquentes",
+      "html": "<p><strong>La lévitite nacrée flotte-t-elle aussi ?</strong> Oui : les deux lévitites partagent le même tag et donc le même comportement ; seule la couleur change. <strong>Faut-il beaucoup de lévitite ?</strong> Assez pour équilibrer le poids : allège la coque avant d'en couler davantage.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils",
+      "html": "<ul><li>Coule la lévitite en barres le long de la coque : la portance est mieux répartie.</li><li>Ajoute un ballon ou une hélice orientée vers le haut si l'appareil doit changer d'altitude.</li><li>Garde le mélange en réservoir loin des sources de chaleur.</li></ul>"
+    }
+  ],
+  "related": [
+    "create-aeronautics",
+    "aeronautics-ballons",
+    "aeronautics-helices",
+    "assembleur-physique",
+    "mixeur-mecanique",
+    "roues-de-concassage",
+    "bassin",
+    "bruleur-a-blaze"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Aeronautics 1.3.3 (dépôt Creators-of-Aeronautics/Simulated-Project, commit 900122e, code sous licence MIT, ressources « tous droits réservés », The Simulated Team / The Creators of Aeronautics), identiques au jar du modpack (instance de test 1.3.3)",
+    "Matériau flottant : data/aeronautics/floating_materials/levitite.json (lift_strength 10, prevent_self_lift, frottements lents / rapides)",
+    "Réglage : AeroBlockConfigs (break_blocks_on_levitite_crystallize, vrai par défaut)",
+    "Recettes : data/aeronautics/recipe/mixing/levitite_blend.json, crushing/end_stone_powder.json",
+    "Vidéos : scènes Ponder de Create Aeronautics / Simulated (levitite/blend, levitite/levitite) rejouées par notre moteur ; modèles et textures du mod (© The Simulated Team / The Creators of Aeronautics)"
+  ],
+  "en": {
+    "slugEn": "levitite",
+    "name": "Levitite",
+    "title": "Levitite — Create Aeronautics guide",
+    "description": "Create Aeronautics levitite: liquid blend, crystallisation by heat, floating and braking simulated contraptions. Recipe, numbers and videos.",
+    "intro": "<strong>Levitite</strong> is the crystal that floats. Fixed onto a simulated contraption, it offsets the weight and keeps it at the same altitude, with no fuel and no rotation. It is not crafted on a table: you pour liquid <strong>Levitite Blend</strong> into a mould, then heat it so it crystallises.",
+    "facts": [
+      {
+        "label": "Blend",
+        "value": "4 End Stone Powder + 2 Zinc Nuggets + 500 mB of water, heated mixer"
+      },
+      {
+        "label": "Powder",
+        "value": "Crushing End Stone (Crushing Wheels)"
+      },
+      {
+        "label": "Crystallisation",
+        "value": "A heat source in contact, then the whole liquid"
+      },
+      {
+        "label": "Lift",
+        "value": "10 (\"levitite\" floating material), unable to make it climb"
+      },
+      {
+        "label": "Braking",
+        "value": "Strong at low speed (2 vertical, 1.5 horizontal), almost none when fast"
+      },
+      {
+        "label": "Destroyed blocks",
+        "value": "Some mould blocks break on crystallisation (server setting)"
+      },
+      {
+        "label": "Variant",
+        "value": "Pearlescent Levitite, when the blend touches soul sand or soul soil"
+      }
+    ],
+    "recipe": {
+      "label": "Mixing in a heated basin (+ 500 mB of water)",
+      "grid": [
+        [
+          "End Stone Powder",
+          "End Stone Powder",
+          "End Stone Powder"
+        ],
+        [
+          "End Stone Powder",
+          "Zinc Nugget",
+          "Zinc Nugget"
+        ],
+        [
+          null,
+          "Water Bucket",
+          null
+        ]
+      ],
+      "result": "500 mB of Levitite Blend"
+    },
+    "videos": [
+      {
+        "id": "aero_levitite_blend",
+        "name": "Casting and crystallising levitite",
+        "description": "The liquid blend is placed and heated, then the crystal spreads through the whole pool of blend."
+      },
+      {
+        "id": "aero_levitite",
+        "name": "A ship floating on levitite",
+        "description": "Levitite bars keep a ship in the air; a propeller is needed to move it forward or up."
+      }
+    ],
+    "sections": [
+      {
+        "id": "melange",
+        "title": "Making the blend",
+        "alt": "A block of liquid Levitite Blend on the plate",
+        "html": "<p>Crush End Stone with <a href=\"/en/wiki/crushing-wheel\">Crushing Wheels</a>: each block gives one <strong>End Stone Powder</strong>, and half the time the stone comes back too. In a <a href=\"/en/wiki/mechanical-mixer\">Mechanical Mixer</a> over a heated <a href=\"/en/wiki/basin\">Basin</a>, four powders, two zinc nuggets and 500 mB of water make 500 mB of blend, which you pick up with a bucket.</p>"
+      },
+      {
+        "id": "chaleur",
+        "title": "Heat triggers the crystal",
+        "alt": "Blend placed next to heat sources, a campfire and magma",
+        "html": "<p>Placed in the world, the blend stays liquid until it heats up: flint and steel, or a nearby heat source such as fire or magma, is enough. Careful, the reaction is final: a broken levitite block gives nothing back (it has no loot), and crystallised blend can no longer be bucketed.</p>"
+      },
+      {
+        "id": "propagation",
+        "title": "The crystal takes the whole liquid",
+        "alt": "A large mould filled with crystallised levitite",
+        "html": "<p>Once started, crystallisation spreads block by block through all the blend that touches. You can therefore pour a large slab or a bar into a mould, then light it from a single point. Some mould blocks are destroyed during the reaction (server setting, on by default): handy for demoulding, but test your mould first.</p>"
+      },
+      {
+        "id": "flotter",
+        "title": "What levitite does",
+        "alt": "A wooden ship held up by two long levitite bars",
+        "html": "<p>Enough levitite on a <a href=\"/en/wiki/physics-assembler\">simulated contraption</a> and it stops falling: it stays at the height where it was assembled. But levitite does not make the contraption <strong>climb</strong> on its own: gaining altitude takes another force, a propeller or a balloon.</p>"
+      },
+      {
+        "id": "freinage",
+        "title": "A natural brake",
+        "alt": "The levitite ship moving over the meadow",
+        "html": "<p>Levitite resists slow motion: its friction is 2 vertically and 1.5 horizontally at low speed, which steadies a ship at rest. At high speed that braking drops almost to zero (0.1 and 0.05): once launched by its <a href=\"/en/wiki/aeronautics-propellers\">propellers</a>, the ship moves freely.</p>"
+      },
+      {
+        "id": "moule",
+        "title": "Preparing a mould",
+        "html": "<p>The blend pours like water: by hand with a bucket, or with a <a href=\"/en/wiki/spout\">Spout</a> and pipes. Build a tray whose inside has the shape you want, fill it completely, then light a single block. Every block of blend becomes a block of levitite, which you then glue to the contraption like any other block. Plan the shape before lighting it, because the crystal cannot be reshaped or recovered afterwards.</p>"
+      },
+      {
+        "id": "combiner",
+        "title": "Combining with a balloon or a propeller",
+        "html": "<p>Levitite holds altitude without consuming anything, while a <a href=\"/en/wiki/aeronautics-hot-air-balloons\">balloon</a> lets you change it. The two work well together: levitite carries most of the weight, a small burner sets the height. For propulsion, its friction at low speed makes slow manoeuvres more precise, then fades away as the craft picks up speed. It suits slow cargo ships that must stop precisely.</p>"
+      },
+      {
+        "id": "faq",
+        "title": "Frequently asked questions",
+        "html": "<p><strong>Does Pearlescent Levitite float too?</strong> Yes: both levitites share the same tag and therefore the same behaviour; only the colour differs. <strong>How much levitite do I need?</strong> Enough to balance the weight: lighten the hull before pouring more crystal, it is cheaper than adding blend. Wool and wooden slabs are the lightest building blocks.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<ul><li>Cast levitite in bars along the hull: lift is better spread.</li><li>Add a balloon or an upward propeller if the craft must change altitude.</li><li>Keep blend tanks away from heat sources.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Aeronautics 1.3.3 (Creators-of-Aeronautics/Simulated-Project repository, commit 900122e, code under the MIT licence, assets « all rights reserved », The Simulated Team / The Creators of Aeronautics), identical to the modpack jar (1.3.3 test instance)",
+      "Floating material: data/aeronautics/floating_materials/levitite.json (lift_strength 10, prevent_self_lift, slow / fast friction)",
+      "Setting: AeroBlockConfigs (break_blocks_on_levitite_crystallize, true by default)",
+      "Recipes: data/aeronautics/recipe/mixing/levitite_blend.json, crushing/end_stone_powder.json",
+      "Videos: Create Aeronautics / Simulated Ponder scenes (levitite/blend, levitite/levitite) replayed by our engine; mod models and textures (© The Simulated Team / The Creators of Aeronautics)"
+    ]
+  }
+}

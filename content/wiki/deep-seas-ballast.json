@@ -1,0 +1,274 @@
+{
+  "slug": "deep-seas-ballast",
+  "name": "Ballast de sous-marin et évent de ballast",
+  "blockId": "create_submarine:ballast_tank",
+  "category": "deepseas",
+  "title": "Ballasts et évent — Create Deep Seas, guide",
+  "description": "Ballast de sous-marin et évent de ballast de Create Deep Seas : faire entrer l'eau de mer pour plonger, la rejeter pour remonter.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Deep Seas 3.4.8 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>ballast de sous-marin</strong> (Submarine Ballast Tank) est le réservoir qui fait plonger. Rempli d'eau de mer, il alourdit le navire ; vidé, il le fait remonter. L'eau arrive par l'<strong>évent de ballast</strong> (Ballast Vent), la prise d'eau de la coque, et une <a href=\"/wiki/pompe-mecanique\">pompe</a> la pousse dans un sens ou dans l'autre.",
+  "facts": [
+    {
+      "label": "Capacité d’un ballast",
+      "value": "8 000 mB (8 seaux)"
+    },
+    {
+      "label": "Force d’un ballast",
+      "value": "75 unités de masse Sable (≈ 75 blocs)"
+    },
+    {
+      "label": "Évent",
+      "value": "eau de mer illimitée sur toute face qui touche la mer"
+    },
+    {
+      "label": "Débit de l’évent",
+      "value": "× 2 (réglage serveur ballastTransferRateMultiplier)"
+    },
+    {
+      "label": "Profondeur max",
+      "value": "ballast et évent : 400 m"
+    },
+    {
+      "label": "Version",
+      "value": "Create Deep Seas 3.4.8 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Alliage d'andésite",
+        "Plaque de fer",
+        "Alliage d'andésite"
+      ],
+      [
+        "Plaque de fer",
+        "Réservoir à fluide",
+        "Plaque de fer"
+      ],
+      [
+        "Alliage d'andésite",
+        "Plaque de fer",
+        "Alliage d'andésite"
+      ]
+    ],
+    "items": [
+      [
+        "create:andesite_alloy",
+        "create:iron_sheet",
+        "create:andesite_alloy"
+      ],
+      [
+        "create:iron_sheet",
+        "create:fluid_tank",
+        "create:iron_sheet"
+      ],
+      [
+        "create:andesite_alloy",
+        "create:iron_sheet",
+        "create:andesite_alloy"
+      ]
+    ],
+    "result": "1 ballast de sous-marin",
+    "resultItem": "create_submarine:ballast_tank"
+  },
+  "videos": [
+    {
+      "id": "sub_ballast",
+      "name": "L'évent de ballast : remplir puis vider",
+      "description": "Un évent posé contre la mer, une pompe et deux ballasts : la pompe charge les ballasts d'eau salée, puis, inversée, les décharge vers l'extérieur.",
+      "duration": "PT20S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "event",
+      "title": "L'évent, contre la mer",
+      "image": "sub_ballast_vanne.webp",
+      "alt": "L'évent de ballast posé contre une colonne d'eau de mer",
+      "video": "sub_ballast",
+      "html": "<p>L'évent de ballast s'intègre à la coque, une face au contact direct de l'océan. Toute l'eau des ballasts transite par lui : côté mer, il offre un volume sans fin et absorbe sans broncher ce qu'on lui rend. Enfermé entre des blocs secs, il ne sert à rien.</p>"
+    },
+    {
+      "id": "tuyaux",
+      "title": "Pompe et tuyaux",
+      "image": "sub_ballast_tuyaux.webp",
+      "alt": "La pompe mécanique et le tuyau entre l'évent et les deux ballasts",
+      "html": "<p>Les six faces de l'évent se raccordent à un <a href=\"/wiki/tuyau-a-fluide\">tuyau</a>. Tire une conduite jusqu'aux ballasts avec une <a href=\"/wiki/pompe-mecanique\">pompe mécanique</a> sur le trajet ; l'évent, lui, fonctionne sans arbre ni signal. Les ballasts empilés forment un seul grand réservoir, comme les <a href=\"/wiki/reservoir-a-fluide\">réservoirs à fluide</a> de Create, et chacun garde 8 000 mB.</p>"
+    },
+    {
+      "id": "remplir",
+      "title": "Remplir pour plonger",
+      "image": "sub_ballast_remplir.webp",
+      "alt": "La pompe tourne et remplit les ballasts encadrés en bleu",
+      "html": "<p>Pompe orientée pour tirer depuis l'évent : les réservoirs se chargent d'eau salée, le navire prend du poids et coule doucement. Chaque réservoir plein entraîne vers le fond 75 unités de masse avec les réglages d'origine ; il en faut donc d'autant plus que la coque est lourde.</p>"
+    },
+    {
+      "id": "vider",
+      "title": "Vider pour remonter",
+      "image": "sub_ballast_vider.webp",
+      "alt": "La pompe retournée renvoie l'eau vers la mer encadrée en bleu",
+      "html": "<p>Inverse la pompe d'un coup de <a href=\"/wiki/cle\">clé</a> : les réservoirs se vident par l'évent vers l'extérieur, le navire perd du poids et regagne la surface. Arrête la pompe pour garder le niveau. Le débit de l'évent est doublé par défaut sur le serveur (réglage ballastTransferRateMultiplier).</p>"
+    },
+    {
+      "id": "auto",
+      "title": "Laisser faire l’ordinateur",
+      "image": "sub_ballast_ordinateur.webp",
+      "alt": "La pompe arrêtée, prête à être pilotée par un ordinateur de bord",
+      "html": "<p>Manœuvrer une pompe à la main en plongée est vite pénible. Remplace-la par un <strong>contrôleur de pompe</strong> et pose un <a href=\"/wiki/deep-seas-ordinateur-de-bord\">ordinateur de bord</a> : il règle lui-même chaque contrôleur, dans un sens ou dans l'autre, jusqu'à la cote voulue.</p>"
+    },
+    {
+      "id": "dimensionner",
+      "title": "Combien de ballasts ?",
+      "html": "<p>Compte la masse de ton navire : avec Sable, un bloc ordinaire pèse environ 1, la pierre 2, les blocs de stockage 4, les planches et la laine bien moins. Divise par 75 pour savoir combien de ballasts il faut au minimum, puis ajoute une marge : un réservoir à moitié plein ne donne que la moitié de sa force. Pour un petit sous-marin en fer d'une quarantaine de blocs, deux ou trois ballasts suffisent largement ; un croiseur de plusieurs centaines de blocs en demande une dizaine. Le serveur peut changer la force d'un ballast avec le réglage ballastLiftPerTank.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Ça ne descend pas ?",
+      "html": "<p>Les causes habituelles : l'évent ne touche pas l'eau (il est entouré de coque ou au-dessus de la ligne de flottaison), la pompe tourne dans le mauvais sens, ou il y a trop peu de ballasts pour la masse du navire. Vérifie aussi que les tuyaux arrivent bien aux réservoirs : regarde-les avec les <a href=\"/wiki/lunettes-d-ingenieur\">lunettes d'ingénieur</a> pour lire leur contenu. Enfin, un ballast posé hors du navire assemblé ne compte pas.</p>"
+    },
+    {
+      "id": "equilibre",
+      "title": "Garder le navire droit",
+      "html": "<p>Les ballasts ne font pas que monter et descendre : quand le sous-marin penche, ils tirent la coque pour la redresser, avec une force réglée par le serveur (ballastRighting, 1 par défaut). Plus ils sont écartés du centre, mieux ils redressent. À l'inverse, des ballasts tous groupés à l'avant donnent un navire qui pique du nez dès qu'ils se remplissent. Place-les donc par paires symétriques, de part et d'autre de l'axe, et répartis-les entre l'avant et l'arrière.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils",
+      "html": "<p>Répartis les ballasts sur toute la longueur : ils aident aussi à redresser une coque qui penche. Les ballasts et l'évent résistent à 400 m, plus que la plupart des blocs de coque. Les flotteurs (Floater) font l'inverse : ils tirent vers la surface, 25 unités chacun.</p>"
+    }
+  ],
+  "related": [
+    "create-deep-seas",
+    "deep-seas-ordinateur-de-bord",
+    "pompe-mecanique",
+    "tuyau-a-fluide",
+    "reservoir-a-fluide"
+  ],
+  "sources": [
+    "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar du modpack Create France) : code lu après décompilation (Vineflower) pour les chiffres (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recettes du dossier data du jar, scènes Ponder SubmarinePonderScenes / HighSeasPonderScenes rejouées par notre moteur.",
+    "Mod de Maxenonyme (MaxCreateMC), Cogfly et Zinc Studios ; artistes Marume, RandomePigeon, Funado. Licence du mod : « All Rights Reserved » : modèles et textures appartiennent à leurs auteurs, rendus ici à partir du jar ; aucun texte du mod n'est recopié.",
+    "Blocs de Simulated 1.3.2 (treuil, connecteur de corde, roulement pivotant) : Create Aeronautics, assets « All Rights Reserved », code MIT."
+  ],
+  "en": {
+    "slugEn": "deep-seas-ballast-tanks",
+    "name": "Submarine Ballast Tank and Ballast Vent",
+    "title": "Ballast Tanks and Vent — Create Deep Seas guide",
+    "description": "Create Deep Seas Submarine Ballast Tank and Ballast Vent: let sea water in to dive, push it back out to surface, with a pump or a Pump Controller.",
+    "intro": "The <strong>Submarine Ballast Tank</strong> is the tank that makes you dive. Filled with sea water it weighs the ship down; emptied, it lets it rise. Water comes in through the <strong>Ballast Vent</strong>, the hull's sea intake, and a <a href=\"/en/wiki/mechanical-pump\">pump</a> moves it one way or the other.",
+    "facts": [
+      {
+        "label": "Tank capacity",
+        "value": "8,000 mB (8 buckets)"
+      },
+      {
+        "label": "Force per tank",
+        "value": "75 Sable mass units (≈ 75 blocks)"
+      },
+      {
+        "label": "Vent",
+        "value": "endless sea water on any face touching the sea"
+      },
+      {
+        "label": "Vent flow",
+        "value": "× 2 (server setting ballastTransferRateMultiplier)"
+      },
+      {
+        "label": "Max depth",
+        "value": "tank and vent: 400 m"
+      },
+      {
+        "label": "Version",
+        "value": "Create Deep Seas 3.4.8 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Andesite Alloy",
+          "Iron Sheet",
+          "Andesite Alloy"
+        ],
+        [
+          "Iron Sheet",
+          "Fluid Tank",
+          "Iron Sheet"
+        ],
+        [
+          "Andesite Alloy",
+          "Iron Sheet",
+          "Andesite Alloy"
+        ]
+      ],
+      "result": "1 Submarine Ballast Tank"
+    },
+    "videos": [
+      {
+        "id": "sub_ballast",
+        "name": "The Ballast Vent: filling then draining",
+        "description": "A vent against the sea, a pump and two tanks: the pump loads the tanks with salt water, then, flipped, unloads them outside."
+      }
+    ],
+    "sections": [
+      {
+        "id": "event",
+        "title": "The vent, against the sea",
+        "alt": "The Ballast Vent placed against a column of sea water",
+        "html": "<p>Build the Ballast Vent into the hull so that it touches open water. All ballast water travels through it: on the sea side it offers an endless supply and soaks up anything you return. Walled in by dry blocks, it is useless.</p>"
+      },
+      {
+        "id": "tuyaux",
+        "title": "Pump and pipes",
+        "alt": "The Mechanical Pump and the pipe between the vent and the two tanks",
+        "html": "<p>All six sides of the vent accept a <a href=\"/en/wiki/fluid-pipe\">pipe</a>. Lay a line to the tanks with a <a href=\"/en/wiki/mechanical-pump\">Mechanical Pump</a> along the way; the vent works without any shaft or signal. Stacked tanks behave as one large tank, like Create's <a href=\"/en/wiki/fluid-tank\">fluid tanks</a>, and each one holds 8,000 mB.</p>"
+      },
+      {
+        "id": "remplir",
+        "title": "Fill to dive",
+        "alt": "The pump spinning and filling the tanks outlined in blue",
+        "html": "<p>With the pump drawing from the vent, salt water loads the tanks, the vessel gains weight and slowly goes under. Each full tank drags 75 mass units down with stock settings, so a heavier hull calls for more of them.</p>"
+      },
+      {
+        "id": "vider",
+        "title": "Drain to surface",
+        "alt": "The reversed pump sending water back to the sea outlined in blue",
+        "html": "<p>Flip the pump with a <a href=\"/en/wiki/wrench\">wrench</a>: the tanks empty outwards through the vent, the vessel loses weight and heads back up. Stop the pump to hold the level. The vent's flow is doubled by default (setting ballastTransferRateMultiplier).</p>"
+      },
+      {
+        "id": "auto",
+        "title": "Let the computer do it",
+        "alt": "The stopped pump, ready to be driven by an Onboard Computer",
+        "html": "<p>Working a pump by hand during a dive quickly gets tiring. Swap it for a <strong>Pump Controller</strong> and place an <a href=\"/en/wiki/deep-seas-onboard-computer\">Onboard Computer</a>: it picks the direction and speed of every controller on its own to reach the depth you asked for.</p>"
+      },
+      {
+        "id": "dimensionner",
+        "title": "How many tanks?",
+        "html": "<p>Work out your ship's mass: with Sable an ordinary block weighs about 1, stone 2, storage blocks 4, planks and wool much less. Divide by 75 to get the minimum number of tanks, then add some margin: a half-full tank only gives half its force. For a small iron submarine of forty-odd blocks, two or three tanks are plenty; a cruiser of several hundred blocks needs around ten. The server can change a tank's force with the ballastLiftPerTank setting.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Not sinking?",
+        "html": "<p>The usual culprits: the vent does not touch the water (it is boxed in by hull blocks or sits above the waterline), the pump spins the wrong way, or there are too few tanks for the ship's mass. Also check that the pipes really reach the tanks: look at them through <a href=\"/en/wiki/engineers-goggles\">Engineer's Goggles</a> to read what they hold. Finally, a tank placed outside the assembled ship does not count.</p>"
+      },
+      {
+        "id": "equilibre",
+        "title": "Keeping the ship level",
+        "html": "<p>Ballast tanks do more than move you up and down: when the submarine leans, they pull the hull back upright, with a force set by the server (ballastRighting, 1 by default). The further they sit from the centre, the better they right the ship. On the other hand, tanks all bunched at the front give a boat that noses down as soon as they fill. So place them in symmetrical pairs on both sides of the centre line, and spread them between bow and stern.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<p>Spread the tanks along the whole length: they also help a leaning hull right itself. Tanks and vents hold up to 400 m, more than most hull blocks. Floaters do the opposite: they pull towards the surface, 25 units each.</p>"
+      }
+    ],
+    "sources": [
+      "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar from the Create France modpack): code read after decompiling (Vineflower) for the figures (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recipes from the jar's data folder, Ponder scenes SubmarinePonderScenes / HighSeasPonderScenes replayed by our engine.",
+      "Mod by Maxenonyme (MaxCreateMC), Cogfly and Zinc Studios; art by Marume, RandomePigeon, Funado. Mod licence: \"All Rights Reserved\": models and textures belong to their authors and are rendered here from the jar; no text from the mod is copied.",
+      "Simulated 1.3.2 blocks (rope winch, rope connector, swivel bearing): Create Aeronautics, assets \"All Rights Reserved\", code under MIT."
+    ]
+  }
+}

@@ -98,7 +98,9 @@
     "tapis-roulant",
     "roue-a-eau",
     "pierres-et-blocs-de-deco",
-    "blocs-diesel-generators"
+    "blocs-diesel-generators",
+    "aeronautics-levitite",
+    "ore-excavation-filons"
   ],
   "sources": [
     "Stress : AllBlocks.java, CRUSHING_WHEEL, CStress.setImpact(8.0)",

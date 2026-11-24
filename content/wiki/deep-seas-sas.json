@@ -1,0 +1,302 @@
+{
+  "slug": "deep-seas-sas",
+  "name": "Sas et chambre de décompression",
+  "blockId": "create_submarine:decompression_chamber",
+  "category": "deepseas",
+  "title": "Sas et chambre de décompression — Deep Seas, guide",
+  "description": "Construire un sas avec Create Deep Seas : chambres de décompression, pompe, remplir puis vider le sas pour sortir nager en plongée.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Deep Seas 3.4.8 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Un <strong>sas</strong> permet de sortir nager depuis un sous-marin en plongée, et d'y revenir. Il s'agit d'un compartiment clos muni de deux portes : l'une s'ouvre sur l'océan, l'autre sur les coursives. Deux <strong>chambres de décompression</strong> (Decompression Chamber) et une <a href=\"/wiki/pompe-mecanique\">pompe</a> la remplissent et la vident.",
+  "facts": [
+    {
+      "label": "Chambre côté mer",
+      "value": "eau illimitée quand une de ses faces touche la mer"
+    },
+    {
+      "label": "Chambre côté sas",
+      "value": "inonde ou assèche le sas, en partant du plancher"
+    },
+    {
+      "label": "Raccord",
+      "value": "face arrière de chaque chambre (port de tuyau)"
+    },
+    {
+      "label": "Pompe",
+      "value": "mécanique ; son sens choisit remplir ou vider"
+    },
+    {
+      "label": "Danger",
+      "value": "porte extérieure ouverte en profondeur avec de l’air dedans : la mer écrase le sas"
+    },
+    {
+      "label": "Version",
+      "value": "Create Deep Seas 3.4.8 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Plaque de cuivre",
+        "Verre",
+        "Plaque de cuivre"
+      ],
+      [
+        "Verre",
+        "Pompe mécanique",
+        "Verre"
+      ],
+      [
+        "Plaque de cuivre",
+        "Verre",
+        "Plaque de cuivre"
+      ]
+    ],
+    "items": [
+      [
+        "create:copper_sheet",
+        "minecraft:glass",
+        "create:copper_sheet"
+      ],
+      [
+        "minecraft:glass",
+        "create:mechanical_pump",
+        "minecraft:glass"
+      ],
+      [
+        "create:copper_sheet",
+        "minecraft:glass",
+        "create:copper_sheet"
+      ]
+    ],
+    "result": "1 chambre de décompression",
+    "resultItem": "create_submarine:decompression_chamber"
+  },
+  "videos": [
+    {
+      "id": "sub_airlock",
+      "name": "Remplir et vider un sas",
+      "description": "Un sas en fer contre la mer, deux chambres de décompression et une pompe : le sas se remplit d'eau, la porte extérieure s'ouvre, puis la pompe inversée le vide avant d'ouvrir la porte intérieure. La paroi avant est dessinée translucide pour voir l'eau monter.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "sas",
+      "title": "Le sas",
+      "image": "sub_airlock_sas.webp",
+      "alt": "Une coque en fer contre la mer, avec une petite pièce et deux portes",
+      "video": "sub_airlock",
+      "html": "<p>Le sas est une pièce fermée de la coque : une <strong>porte extérieure</strong> donne sur la mer, une <strong>porte intérieure</strong> sur le reste du navire. Les deux restent fermées pendant qu'on remplit ou qu'on vide. Dans notre vidéo, la paroi avant du sas est rendue translucide : dans le jeu comme dans le Ponder, elle est pleine.</p>"
+    },
+    {
+      "id": "chambre",
+      "title": "La chambre côté sas",
+      "image": "sub_airlock_chambre.webp",
+      "alt": "La première chambre de décompression posée au plafond du sas",
+      "html": "<p>Pose une chambre de décompression de façon qu'une de ses faces ouvre dans le sas, ici au plafond. Le raccord de tuyau se trouve au dos du bloc : elle doit rester accessible de l'intérieur de la coque.</p>"
+    },
+    {
+      "id": "pompe",
+      "title": "La chambre côté mer et la pompe",
+      "image": "sub_airlock_pompe.webp",
+      "alt": "La seconde chambre contre la mer, raccordée à la première par une conduite et sa pompe",
+      "html": "<p>Une seconde chambre est posée avec une face contre la mer : de ce côté-là, son réservoir est inépuisable dans les deux sens. Une conduite de <a href=\"/wiki/tuyau-a-fluide\">tuyaux</a> relie les deux raccords, avec une <a href=\"/wiki/pompe-mecanique\">pompe mécanique</a> au milieu.</p>"
+    },
+    {
+      "id": "remplissage",
+      "title": "Remplir le sas",
+      "image": "sub_airlock_remplissage.webp",
+      "alt": "L'eau qui monte dans le sas, vue à travers la paroi translucide",
+      "html": "<p>La pompe tirant depuis la mer, le sas se remplit couche par couche, du sol au plafond. Quand il est plein, l'eau est au même niveau des deux côtés de la porte extérieure.</p>"
+    },
+    {
+      "id": "porte",
+      "title": "Sortir",
+      "image": "sub_airlock_porte.webp",
+      "alt": "La porte extérieure ouverte sur la mer, sas plein",
+      "html": "<p>Ouvre alors la porte extérieure et nage dehors : rien ne s'engouffre, puisque la pression est déjà égale. Prévois de quoi respirer, les <a href=\"/wiki/reservoir-dorsal\">réservoirs dorsaux</a> de Create avec un casque de plongée, ou le plastron et les jambières de plongée du mod.</p>"
+    },
+    {
+      "id": "vidange",
+      "title": "Rentrer",
+      "image": "sub_airlock_vidange.webp",
+      "alt": "Le sas qui se vide, pompe inversée",
+      "html": "<p>Revenu dans le sas, ferme la porte extérieure et inverse la pompe : l'eau repart à la mer, du plafond au sol. Quand c'est sec, ouvre la porte intérieure.</p>"
+    },
+    {
+      "id": "construire",
+      "title": "Construire le sien",
+      "html": "<p>Un sas d'une case de large et de deux de haut suffit pour un joueur ; il se remplit vite. Place la chambre côté sas au plafond ou dans un mur, la chambre côté mer à l'extérieur de la coque, et fais courir la tuyauterie à l'intérieur, là où la pression ne l'atteint pas. Une <a href=\"/wiki/pompe-mecanique\">pompe</a> réglée sur une petite vitesse laisse le temps de voir l'eau monter ; une grande vitesse vide le sas en quelques secondes.</p>"
+    },
+    {
+      "id": "automatiser",
+      "title": "Automatiser",
+      "html": "<p>Avec un peu de redstone, tout peut se faire d'un bouton : un <a href=\"/wiki/inverseur-de-rotation\">inverseur de rotation</a> change le sens de la pompe, et une simple temporisation suffit à régler la durée du cycle, puisque le volume du sas ne change jamais. N'ouvre les portes qu'une fois le cycle terminé.</p>"
+    },
+    {
+      "id": "plongeur",
+      "title": "Respirer dehors",
+      "html": "<p>Une fois dehors, tu respires avec ton propre équipement. Le casque de plongée de Create puise dans un <a href=\"/wiki/reservoir-dorsal\">réservoir dorsal</a> ; Deep Seas ajoute un plastron et des jambières de plongée, et des lunettes de pression qui affichent la pression. Le serveur peut appliquer la pression aux plongeurs eux-mêmes (réglage diverPressure) : ne descends pas trop loin du sous-marin sans surveiller ta profondeur.</p>"
+    },
+    {
+      "id": "faq",
+      "title": "Questions fréquentes",
+      "html": "<p><strong>Faut-il des portes en fer ?</strong> N'importe quelle porte étanche convient, mais les portes en fer ne s'ouvrent pas à la main : pratique pour éviter une fausse manœuvre. <strong>Le sas peut-il être plus grand ?</strong> Oui, il se remplit simplement plus longtemps ; prévois une pompe plus rapide.</p>"
+    },
+    {
+      "id": "attention",
+      "title": "Attention à la pression",
+      "image": "sub_airlock_attention.webp",
+      "alt": "Le sas vide, porte extérieure fermée",
+      "html": "<p>Ouvrir le battant côté mer en profondeur alors que la pièce contient encore de l'air, c'est la catastrophe : la mer l'écrase. Remplis toujours avant d'ouvrir. Une porte en fer s'ouvre à la redstone : un bouton de chaque côté rend la manœuvre plus sûre.</p>"
+    }
+  ],
+  "related": [
+    "create-deep-seas",
+    "deep-seas-oxygene",
+    "pompe-mecanique",
+    "tuyau-a-fluide",
+    "reservoir-dorsal"
+  ],
+  "sources": [
+    "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar du modpack Create France) : code lu après décompilation (Vineflower) pour les chiffres (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recettes du dossier data du jar, scènes Ponder SubmarinePonderScenes / HighSeasPonderScenes rejouées par notre moteur.",
+    "Mod de Maxenonyme (MaxCreateMC), Cogfly et Zinc Studios ; artistes Marume, RandomePigeon, Funado. Licence du mod : « All Rights Reserved » : modèles et textures appartiennent à leurs auteurs, rendus ici à partir du jar ; aucun texte du mod n'est recopié.",
+    "Blocs de Simulated 1.3.2 (treuil, connecteur de corde, roulement pivotant) : Create Aeronautics, assets « All Rights Reserved », code MIT.",
+    "Vidéo : la paroi avant du sas (4 blocs) est dessinée translucide par notre moteur pour montrer l'eau ; tous les autres blocs sont ceux de la structure Ponder."
+  ],
+  "en": {
+    "slugEn": "deep-seas-airlock",
+    "name": "Airlock and Decompression Chamber",
+    "title": "Airlock and Decompression Chamber — Deep Seas guide",
+    "description": "Build an airlock with Create Deep Seas: Decompression Chambers and a pump flood and empty it so you can swim out of a submerged submarine.",
+    "intro": "An <strong>airlock</strong> lets you swim out of a submerged submarine and get back in. It is a closed compartment with two doors: one leading out to the ocean, the other into the corridors. Two <strong>Decompression Chambers</strong> and a <a href=\"/en/wiki/mechanical-pump\">pump</a> flood it and empty it.",
+    "facts": [
+      {
+        "label": "Sea-side chamber",
+        "value": "endless water when one of its faces touches the sea"
+      },
+      {
+        "label": "Airlock-side chamber",
+        "value": "fills or empties the airlock, starting at floor level"
+      },
+      {
+        "label": "Connection",
+        "value": "back face of each chamber (pipe port)"
+      },
+      {
+        "label": "Pump",
+        "value": "mechanical; its direction picks fill or drain"
+      },
+      {
+        "label": "Danger",
+        "value": "outer door opened deep down with air inside: the sea crushes the airlock"
+      },
+      {
+        "label": "Version",
+        "value": "Create Deep Seas 3.4.8 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Copper Sheet",
+          "Glass",
+          "Copper Sheet"
+        ],
+        [
+          "Glass",
+          "Mechanical Pump",
+          "Glass"
+        ],
+        [
+          "Copper Sheet",
+          "Glass",
+          "Copper Sheet"
+        ]
+      ],
+      "result": "1 Decompression Chamber"
+    },
+    "videos": [
+      {
+        "id": "sub_airlock",
+        "name": "Flooding and emptying an airlock",
+        "description": "An iron airlock against the sea, two Decompression Chambers and a pump: the airlock floods, the outer door opens, then the reversed pump empties it before the inner door opens. The front wall is drawn see-through so the water level shows."
+      }
+    ],
+    "sections": [
+      {
+        "id": "sas",
+        "title": "The airlock",
+        "alt": "An iron hull against the sea, with a small room and two doors",
+        "html": "<p>The airlock is a sealed room in the hull: one hatch (the <strong>outer door</strong>) is the way out, the other (the <strong>inner door</strong>) the way back aboard. Both stay shut while you flood or drain it. In our video the front wall of the airlock is rendered see-through; in the game, as in the Ponder, it is solid.</p>"
+      },
+      {
+        "id": "chambre",
+        "title": "The airlock-side chamber",
+        "alt": "The first Decompression Chamber placed in the airlock ceiling",
+        "html": "<p>Fit a Decompression Chamber with one side exposed to the airlock, here set into the ceiling. The pipe connector sits on the back of the block: it must stay reachable from inside the hull.</p>"
+      },
+      {
+        "id": "pompe",
+        "title": "The sea-side chamber and the pump",
+        "alt": "The second chamber against the sea, piped to the first through a pump",
+        "html": "<p>A second chamber goes with one face against the sea: on that side its supply is bottomless in both directions. A run of <a href=\"/en/wiki/fluid-pipe\">pipes</a> connects both connectors, with a <a href=\"/en/wiki/mechanical-pump\">Mechanical Pump</a> in the middle.</p>"
+      },
+      {
+        "id": "remplissage",
+        "title": "Flooding the airlock",
+        "alt": "Water rising in the airlock, seen through the see-through wall",
+        "html": "<p>With the pump pulling from the sea, the airlock floods layer by layer, floor to ceiling. When it is full, pressure inside matches the ocean outside.</p>"
+      },
+      {
+        "id": "porte",
+        "title": "Going out",
+        "alt": "The outer door open to the sea, airlock full",
+        "html": "<p>You can now step through the seaward door and swim off: nothing rushes in, since the pressure is already equal. Bring something to breathe, Create's <a href=\"/en/wiki/backtank\">backtanks</a> with a diving helmet, or the mod's diving chestplate and leggings.</p>"
+      },
+      {
+        "id": "vidange",
+        "title": "Coming back",
+        "alt": "The airlock draining, pump reversed",
+        "html": "<p>On your return, shut the seaward door behind you and flip the pump: the water goes back to the sea, ceiling to floor. When the floor is dry, the inboard door can open.</p>"
+      },
+      {
+        "id": "construire",
+        "title": "Building your own",
+        "html": "<p>An airlock one block wide and two high is enough for one player and floods quickly. Put the airlock-side chamber in the ceiling or a wall, the sea-side chamber on the outside of the hull, and run the pipework inside, where the pressure cannot reach it. A <a href=\"/en/wiki/mechanical-pump\">pump</a> at low speed lets you watch the water rise; at high speed the airlock empties in a few seconds.</p>"
+      },
+      {
+        "id": "automatiser",
+        "title": "Automating it",
+        "html": "<p>With a little redstone everything can run from one button: a <a href=\"/en/wiki/gearshift\">Gearshift</a> flips the pump, and a simple delay is enough to time the cycle since the airlock's volume never changes. Only open the doors at the end of the cycle.</p>"
+      },
+      {
+        "id": "plongeur",
+        "title": "Breathing outside",
+        "html": "<p>Once outside you breathe with your own gear. Create's diving helmet draws from a <a href=\"/en/wiki/backtank\">backtank</a>; Deep Seas adds a diving chestplate and leggings, and pressure goggles that show the pressure. The server can apply pressure to divers themselves (setting diverPressure): do not swim too far below the submarine without watching your depth.</p>"
+      },
+      {
+        "id": "faq",
+        "title": "Common questions",
+        "html": "<p><strong>Do the doors have to be iron?</strong> Any watertight door works, but iron doors cannot be opened by hand, which prevents accidents. <strong>Can the airlock be bigger?</strong> Yes, it just takes longer to fill and drain; use a faster pump so the wait stays short.</p>"
+      },
+      {
+        "id": "attention",
+        "title": "Mind the pressure",
+        "alt": "The empty airlock, outer door closed",
+        "html": "<p>Opening the seaward door at depth while the room still holds air is a disaster: the sea crushes it. Always flood first. An iron door opens with redstone: a button on each side makes the routine safer.</p>"
+      }
+    ],
+    "sources": [
+      "Create Deep Seas 3.4.8 (create_submarine-3.4.8.jar from the Create France modpack): code read after decompiling (Vineflower) for the figures (SubmarineConfig, HullStrengthConfig, BallastTankBlockEntity, CommandSubBlockEntity…), recipes from the jar's data folder, Ponder scenes SubmarinePonderScenes / HighSeasPonderScenes replayed by our engine.",
+      "Mod by Maxenonyme (MaxCreateMC), Cogfly and Zinc Studios; art by Marume, RandomePigeon, Funado. Mod licence: \"All Rights Reserved\": models and textures belong to their authors and are rendered here from the jar; no text from the mod is copied.",
+      "Simulated 1.3.2 blocks (rope winch, rope connector, swivel bearing): Create Aeronautics, assets \"All Rights Reserved\", code under MIT.",
+      "Video: the airlock's front wall (4 blocks) is drawn see-through by our engine to show the water; every other block is the Ponder structure's."
+    ]
+  }
+}

@@ -205,7 +205,8 @@
     "poulie-a-tuyau",
     "chariot-de-portique",
     "manivelle",
-    "chargement-des-canons"
+    "chargement-des-canons",
+    "deep-seas-cable-d-acier"
   ],
   "sources": [
     "Recette : crafting/kinetics/rope_pulley.json",

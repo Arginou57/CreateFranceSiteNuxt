@@ -155,7 +155,8 @@
     "poulie-d-ascenseur",
     "liaison-de-redstone",
     "tube-nixie",
-    "gisements-de-petrole"
+    "gisements-de-petrole",
+    "deep-seas-sonar-barometre"
   ],
   "sources": [
     "Portée : CLogistics.displayLinkRange = 64",

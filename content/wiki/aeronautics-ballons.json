@@ -1,0 +1,311 @@
+{
+  "slug": "aeronautics-ballons",
+  "name": "Ballons à air chaud",
+  "blockId": "aeronautics:adjustable_burner",
+  "category": "aeronautics",
+  "title": "Ballons à air chaud — Create Aeronautics, guide",
+  "description": "Ballons de Create Aeronautics : brûleur à air chaud, évent de vapeur, enveloppes étanches, réglage par redstone et portance. Chiffres du code et vidéos.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Aeronautics 1.3.3",
+  "mcVersion": "1.21.1",
+  "intro": "Un <strong>ballon</strong> porte une contraption simulée sans hélice. On le construit en <strong>enveloppes à air chaud</strong> (Hot Air Envelope) et on le remplit par le bas avec un <strong>brûleur à air chaud</strong> (Hot Air Burner) ou un <strong>évent de vapeur</strong> (Steam Vent). Le signal de redstone règle le débit, donc la portance, donc l'altitude : c'est la manière la plus simple de faire monter et descendre un dirigeable.",
+  "facts": [
+    {
+      "label": "Portance",
+      "value": "1,5 unité de masse par m³ d'air chaud ou de vapeur"
+    },
+    {
+      "label": "Brûleur à air chaud",
+      "value": "Débit réglable de 5 à 500, multiplié par signal / 15"
+    },
+    {
+      "label": "Évent de vapeur",
+      "value": "Débit réglable de 50 à 5 000, × rendement de la chaudière × signal / 15"
+    },
+    {
+      "label": "Portée",
+      "value": "Le ballon est cherché jusqu'à 80 blocs au-dessus"
+    },
+    {
+      "label": "Enveloppes",
+      "value": "2 laines + 2 bâtons → 4 enveloppes, 16 couleurs"
+    },
+    {
+      "label": "Étanchéité",
+      "value": "Enveloppes et laine (tag airtight) ; rotors gainés d’enveloppe"
+    },
+    {
+      "label": "Limite",
+      "value": "La portance ne dépasse pas ce que contient le ballon"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Plaque de fer",
+        null,
+        "Plaque de fer"
+      ],
+      [
+        "Plaque de fer",
+        "Bloc de charbon",
+        "Plaque de fer"
+      ],
+      [
+        "Alliage d'andésite",
+        "Poudre de redstone",
+        "Alliage d'andésite"
+      ]
+    ],
+    "items": [
+      [
+        "create:iron_sheet",
+        null,
+        "create:iron_sheet"
+      ],
+      [
+        "create:iron_sheet",
+        "minecraft:coal_block",
+        "create:iron_sheet"
+      ],
+      [
+        "create:andesite_alloy",
+        "minecraft:redstone",
+        "create:andesite_alloy"
+      ]
+    ],
+    "result": "1 brûleur à air chaud",
+    "resultItem": "aeronautics:adjustable_burner"
+  },
+  "videos": [
+    {
+      "id": "aero_burner",
+      "name": "Brûleur à air chaud et redstone",
+      "description": "Le brûleur s'allume, le ballon se remplit et la nacelle monte ; le signal règle l'altitude, puis un second brûleur s'ajoute.",
+      "duration": "PT26S"
+    },
+    {
+      "id": "aero_vent",
+      "name": "L'évent de vapeur",
+      "description": "Une chaudière de Create alimente un évent : la vapeur remplit le même ballon, avec un débit bien plus grand.",
+      "duration": "PT26S"
+    },
+    {
+      "id": "aero_envelope",
+      "name": "Construire un ballon",
+      "description": "Les enveloppes ferment un volume, se remplissent en commençant par le toit, laissent passer un rotor gainé et se teignent.",
+      "duration": "PT24S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "bruleur",
+      "title": "Brûleur à air chaud : l'essentiel",
+      "image": "aero_burner_bruleur.webp",
+      "alt": "Une nacelle avec un brûleur à air chaud allumé sous un ballon blanc ouvert sur le devant",
+      "video": "aero_burner",
+      "html": "<p>Le brûleur se pose sous le ballon, n'importe où en dessous : il cherche l'enveloppe jusqu'à 80 blocs plus haut. Il ne s'allume qu'avec un signal de <strong>redstone</strong>, et la force du signal décide du débit : à 15, il souffle tout ce que son réglage permet, à 8 un peu plus de la moitié. Dans la vidéo, la flamme grandit et la nacelle décolle.</p>"
+    },
+    {
+      "id": "reglage",
+      "title": "Régler la hauteur",
+      "image": "aero_burner_reglage.webp",
+      "alt": "La nacelle redescendue d'un cran après une baisse du signal",
+      "html": "<p>Sur le côté du brûleur, un panneau fixe le débit maximal, de 5 à 500 m³ d'air chaud. Le signal de redstone en prend ensuite une fraction (signal / 15). Un <strong>levier analogique</strong> posé contre le brûleur devient alors une manette d'altitude : on monte d'un cran, le ballon monte ; on baisse, il redescend et se stabilise là où la portance égale le poids.</p>"
+    },
+    {
+      "id": "portance",
+      "title": "Combien un ballon peut porter",
+      "image": "aero_burner_limite.webp",
+      "alt": "Le cadre rouge du volume du ballon, déjà plein",
+      "html": "<p>Chaque m³ d'air chaud soulève <strong>1,5</strong> unité de masse : un bloc ordinaire pèse 1, une planche 0,5, un bloc de laine 0,25. Mais un ballon ne contient pas plus que son propre volume : au-delà, l'air en trop ne sert à rien. Pour porter plus lourd, agrandis le ballon ou ajoute un second brûleur, comme à la fin de la vidéo.</p>"
+    },
+    {
+      "id": "event",
+      "title": "L'évent de vapeur",
+      "image": "aero_vent_vapeur.webp",
+      "alt": "Un évent de vapeur posé sur une chaudière de Create, la vapeur montant dans le ballon",
+      "video": "aero_vent",
+      "html": "<p>L'évent de vapeur se branche sur une <a href=\"/wiki/moteur-a-vapeur\">chaudière de Create</a>, comme un moteur à vapeur : il lui faut de l'eau, de la chaleur (<a href=\"/wiki/bruleur-a-blaze\">brûleurs à blaze</a>) et assez de réservoirs. Son débit monte jusqu'à 5 000, multiplié par le rendement de la chaudière et par le signal de redstone. Plusieurs évents sur une même chaudière se la partagent : prévois une chaudière assez puissante.</p>"
+    },
+    {
+      "id": "enveloppe",
+      "title": "Construire le ballon",
+      "image": "aero_envelope_remplissage.webp",
+      "alt": "Un grand ballon d'enveloppes ouvert, avec le cadre de l'air chaud qui se remplit sous son toit",
+      "video": "aero_envelope",
+      "html": "<p>Le ballon est une coque d'<strong>enveloppes à air chaud</strong> fermée de tous côtés sauf par le bas. L'air chaud s'accumule sous le toit et descend à mesure qu'il arrive. Seules les enveloppes et la laine retiennent l'air : un trou dans la coque et le ballon fuit. Tout bloc posé dans le volume lui retire de la place, donc de la portance.</p>"
+    },
+    {
+      "id": "arbre",
+      "title": "Faire passer un rotor",
+      "image": "aero_envelope_arbre.webp",
+      "alt": "Un rotor qui traverse la paroi du ballon, gainé d'enveloppe",
+      "html": "<p>Pour amener la rotation de l'autre côté, utilise un rotor sur l'enveloppe : il devient un <strong>rotor dans une enveloppe</strong>, aussi étanche qu'une enveloppe normale. C'est ainsi que la vidéo fait passer l'entraînement d'une hélice à travers la coque.</p>"
+    },
+    {
+      "id": "exemple",
+      "title": "Un exemple chiffré",
+      "html": "<p>Un ballon intérieur de 6 × 4 × 3 blocs contient 72 m³. Plein d'air chaud, il soulève 108 unités de masse : de quoi porter une nacelle de 100 planches (50) et une quarantaine de blocs de laine (10), avec de la marge pour la machinerie. Pour le remplir, réglage du brûleur à 72 au moins et signal de 15.</p>"
+    },
+    {
+      "id": "couleurs",
+      "title": "Teinter les enveloppes",
+      "image": "aero_envelope_teinture.webp",
+      "alt": "Le ballon blanc décoré d'une croix bleue et de bandes orange",
+      "html": "<p>Utiliser une teinture sur une enveloppe la colore ; le <a href=\"/wiki/deployeur\">déployeur</a> sait le faire aussi. Les seize couleurs se lavent en blanc avec un <a href=\"/wiki/ventilateur-enchasse\">ventilateur</a> devant de l'eau. Le brûleur accepte un objet d'âme pour une flamme bleue, l'évent une plaque de fer pour changer de métal : c'est purement décoratif.</p>"
+    }
+  ],
+  "related": [
+    "create-aeronautics",
+    "aeronautics-levitite",
+    "assembleur-physique",
+    "aeronautics-helices",
+    "moteur-a-vapeur",
+    "bruleur-a-blaze",
+    "deployeur",
+    "ventilateur-enchasse"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Aeronautics 1.3.3 (dépôt Creators-of-Aeronautics/Simulated-Project, commit 900122e, code sous licence MIT, ressources « tous droits réservés », The Simulated Team / The Creators of Aeronautics), identiques au jar du modpack (instance de test 1.3.3)",
+    "Brûleur : HotAirBurnerBlockEntity (signal / 15, réglage 5 à 500, portée 80)",
+    "Évent : SteamVentBlockEntity (réglage 50 à 5 000, rendement de la chaudière)",
+    "Réglages par défaut : AeroBlockConfigs, AeroPhysics (hotAirStrength et steamStrength 1,5)",
+    "Recettes : data/aeronautics/recipe/adjustable_burner.json, steam_vent.json, white_envelope.json, splashing/envelope_washing.json",
+    "Vidéos : scènes Ponder de Create Aeronautics / Simulated (hot_air/adjustable_burner, steam_vent, envelope) rejouées par notre moteur ; modèles et textures du mod (© The Simulated Team / The Creators of Aeronautics)"
+  ],
+  "en": {
+    "slugEn": "aeronautics-hot-air-balloons",
+    "name": "Hot Air Balloons",
+    "title": "Hot Air Balloons — Create Aeronautics guide",
+    "description": "Create Aeronautics balloons: Hot Air Burner, Steam Vent, airtight envelopes, redstone control and lift, with numbers from the code and videos.",
+    "intro": "A <strong>balloon</strong> carries a simulated contraption without any propeller. You build it from <strong>Hot Air Envelopes</strong> and fill it from below with a <strong>Hot Air Burner</strong> or a <strong>Steam Vent</strong>. The redstone signal sets the flow, hence the lift, hence the altitude: the simplest way to make an airship climb and descend.",
+    "facts": [
+      {
+        "label": "Lift",
+        "value": "1.5 mass units per m³ of hot air or steam"
+      },
+      {
+        "label": "Hot Air Burner",
+        "value": "Flow adjustable from 5 to 500, times signal / 15"
+      },
+      {
+        "label": "Steam Vent",
+        "value": "Flow adjustable from 50 to 5,000, × boiler efficiency × signal / 15"
+      },
+      {
+        "label": "Range",
+        "value": "The balloon is searched up to 80 blocks above"
+      },
+      {
+        "label": "Envelopes",
+        "value": "2 wool + 2 sticks → 4 envelopes, 16 colours"
+      },
+      {
+        "label": "Airtightness",
+        "value": "Envelopes and wool (airtight tag); envelope-encased shafts"
+      },
+      {
+        "label": "Limit",
+        "value": "Lift cannot exceed what the balloon holds"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Iron Sheet",
+          null,
+          "Iron Sheet"
+        ],
+        [
+          "Iron Sheet",
+          "Block of Coal",
+          "Iron Sheet"
+        ],
+        [
+          "Andesite Alloy",
+          "Redstone Dust",
+          "Andesite Alloy"
+        ]
+      ],
+      "result": "1 Hot Air Burner"
+    },
+    "videos": [
+      {
+        "id": "aero_burner",
+        "name": "The Hot Air Burner and its redstone",
+        "description": "The burner lights up, the balloon fills and the gondola rises; the signal sets the altitude, then a second burner joins."
+      },
+      {
+        "id": "aero_vent",
+        "name": "The Steam Vent",
+        "description": "A Create boiler feeds a vent: steam fills the same balloon, with a much larger flow."
+      },
+      {
+        "id": "aero_envelope",
+        "name": "Building a balloon",
+        "description": "Envelopes enclose a volume, fill from the top down, let an encased shaft through and can be dyed."
+      }
+    ],
+    "sections": [
+      {
+        "id": "bruleur",
+        "title": "The Hot Air Burner",
+        "alt": "A gondola with a lit Hot Air Burner under a white balloon open at the front",
+        "html": "<p>The burner goes under the balloon, anywhere beneath it: it looks for the envelope up to 80 blocks higher. It only lights with a <strong>redstone</strong> signal, and the signal strength sets the flow: at 15 it blows all its setting allows, at 8 a little over half. In the video the flame grows and the gondola lifts off.</p>"
+      },
+      {
+        "id": "reglage",
+        "title": "Setting the height",
+        "alt": "The gondola one step lower after the signal went down",
+        "html": "<p>A panel on the side of the burner sets the maximum flow, from 5 to 500 m³ of hot air. The redstone signal then takes a fraction of it (signal / 15). An <strong>analog lever</strong> against the burner becomes an altitude control: one notch up, the balloon climbs; down, it sinks and settles where lift equals weight.</p>"
+      },
+      {
+        "id": "portance",
+        "title": "How much a balloon can carry",
+        "alt": "The red frame of the balloon's volume, already full",
+        "html": "<p>Each m³ of hot air lifts <strong>1.5</strong> mass units: a regular block weighs 1, a plank 0.5, a wool block 0.25. Yet a balloon holds no more than its own volume: beyond that, extra air is wasted. To carry more, enlarge the balloon or add a second burner, as the video does in its last part.</p>"
+      },
+      {
+        "id": "event",
+        "title": "The Steam Vent",
+        "alt": "A Steam Vent on a Create boiler, steam rising into the balloon",
+        "html": "<p>The Steam Vent plugs into a <a href=\"/en/wiki/steam-engine\">Create boiler</a>, like a steam engine: it needs water, heat (<a href=\"/en/wiki/blaze-burner\">Blaze Burners</a>) and enough tanks. Its flow reaches 5,000, multiplied by the boiler efficiency and by the redstone signal. Several vents on one boiler share it: plan a boiler strong enough.</p>"
+      },
+      {
+        "id": "enveloppe",
+        "title": "Building the balloon",
+        "alt": "A large open envelope balloon, with the hot air frame filling under its roof",
+        "html": "<p>The balloon is a shell of <strong>Hot Air Envelopes</strong> closed on every side except the bottom. Hot air gathers under the roof and goes down as more arrives. Only envelopes and wool hold the air: a hole in the shell and the balloon leaks. Any block placed inside the volume takes room, hence lift, away.</p>"
+      },
+      {
+        "id": "arbre",
+        "title": "Running a shaft through",
+        "alt": "A shaft crossing the balloon wall, encased in envelope",
+        "html": "<p>To bring rotation to the other side, use a shaft on the envelope: it becomes an <strong>envelope-encased shaft</strong>, as airtight as a plain envelope. That is how the video runs a propeller drive through the shell.</p>"
+      },
+      {
+        "id": "exemple",
+        "title": "A worked example",
+        "html": "<p>A balloon with an inner volume of 6 × 4 × 3 blocks holds 72 m³. Full of hot air, it lifts 108 mass units: enough for a gondola of 100 planks (50) and about forty wool blocks (10), with room left for machinery. To fill it, set the burner to at least 72 and give it a signal of 15. Keep the shell fully closed: a single missing wall block lets the hot air escape and the craft slowly sinks back down. Patch holes with envelopes or wool, the only airtight blocks.</p>"
+      },
+      {
+        "id": "couleurs",
+        "title": "Dyeing envelopes",
+        "alt": "The white balloon decorated with a blue cross and orange stripes",
+        "html": "<p>Right-click with a dye to colour the envelope; the <a href=\"/en/wiki/deployer\">Deployer</a> can do it too. All sixteen colours wash back to white with an <a href=\"/en/wiki/encased-fan\">Encased Fan</a> blowing through water. The burner takes a soul item for a blue flame, the vent an iron sheet to change metal: purely cosmetic.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Aeronautics 1.3.3 (Creators-of-Aeronautics/Simulated-Project repository, commit 900122e, code under the MIT licence, assets « all rights reserved », The Simulated Team / The Creators of Aeronautics), identical to the modpack jar (1.3.3 test instance)",
+      "Burner: HotAirBurnerBlockEntity (signal / 15, setting 5 to 500, range 80)",
+      "Vent: SteamVentBlockEntity (setting 50 to 5,000, boiler efficiency)",
+      "Default settings: AeroBlockConfigs, AeroPhysics (hotAirStrength and steamStrength 1.5)",
+      "Recipes: data/aeronautics/recipe/adjustable_burner.json, steam_vent.json, white_envelope.json, splashing/envelope_washing.json",
+      "Videos: Create Aeronautics / Simulated Ponder scenes (hot_air/adjustable_burner, steam_vent, envelope) replayed by our engine; mod models and textures (© The Simulated Team / The Creators of Aeronautics)"
+    ]
+  }
+}

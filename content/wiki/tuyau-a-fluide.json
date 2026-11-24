@@ -192,7 +192,9 @@
     "bassin",
     "fabrication-des-canons",
     "pompe-a-balancier",
-    "blocs-diesel-generators"
+    "blocs-diesel-generators",
+    "deep-seas-ballast",
+    "deep-seas-sas"
   ],
   "sources": [
     "Recette : crafting/kinetics/fluid_pipe.json (4 tuyaux), fluid_valve.json",

@@ -199,7 +199,8 @@
     "roulement-mecanique",
     "poulie-a-corde",
     "chariot-de-portique",
-    "pompe-a-balancier"
+    "pompe-a-balancier",
+    "assembleur-physique"
   ],
   "sources": [
     "Recettes : crafting/kinetics/super_glue.json, sticker.json",

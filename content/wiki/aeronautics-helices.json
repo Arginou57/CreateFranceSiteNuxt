@@ -1,0 +1,308 @@
+{
+  "slug": "aeronautics-helices",
+  "name": "Hélices et roulement d'hélice",
+  "blockId": "aeronautics:propeller_bearing",
+  "category": "aeronautics",
+  "title": "Hélices — Create Aeronautics, guide",
+  "description": "Hélices de Create Aeronautics : roulement d'hélice à voiles, hélices d'andésite et en bois, poussée, débit d'air, inversion. Formules et vidéos.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Aeronautics 1.3.3",
+  "mcVersion": "1.21.1",
+  "intro": "Les <strong>hélices</strong> transforment la rotation de Create en <strong>poussée</strong>, la force qui fait avancer, reculer ou monter une contraption simulée. Create Aeronautics en propose deux familles : le <strong>roulement d'hélice</strong> (Propeller Bearing), sur lequel on construit une grande hélice en voiles, et les petites <strong>hélices d'andésite</strong> et <strong>en bois</strong>, prêtes à l'emploi dans un seul bloc.",
+  "facts": [
+    {
+      "label": "Poussée du roulement",
+      "value": "voiles^1,5 × tr/min × 0,2"
+    },
+    {
+      "label": "Débit d'air du roulement",
+      "value": "√voiles × tr/min × 0,05 (m/s)"
+    },
+    {
+      "label": "Voiles comptées",
+      "value": "Voiles de moulin, voiles symétriques (tag windmill_sails), 2 minimum"
+    },
+    {
+      "label": "Stress du roulement",
+      "value": "2 SU par tr/min et par voile"
+    },
+    {
+      "label": "Petites hélices",
+      "value": "Poussée 1 × tr/min, débit 0,1 × tr/min, stress 4 SU par tr/min"
+    },
+    {
+      "label": "Rayon",
+      "value": "Hélice d'andésite 1 bloc, hélice en bois 1,5 bloc"
+    },
+    {
+      "label": "Inversion",
+      "value": "Sens de rotation, clé ou réglage du roulement"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Dalle en chêne",
+        null
+      ],
+      [
+        null,
+        "Plaque de fer",
+        null
+      ],
+      [
+        null,
+        "Boitier de laiton",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "minecraft:oak_slab",
+        null
+      ],
+      [
+        null,
+        "create:iron_sheet",
+        null
+      ],
+      [
+        null,
+        "create:brass_casing",
+        null
+      ]
+    ],
+    "result": "1 roulement d'hélice",
+    "resultItem": "aeronautics:propeller_bearing"
+  },
+  "videos": [
+    {
+      "id": "aero_thrust",
+      "name": "Un dirigeable poussé par un roulement d'hélice",
+      "description": "Le dirigeable s'assemble, son hélice latérale le pousse d'avant en arrière, puis il file au-dessus du sol.",
+      "duration": "PT26S"
+    },
+    {
+      "id": "aero_thrust_small",
+      "name": "Un petit navire à hélices d'andésite",
+      "description": "Deux petites hélices font avancer et reculer un navire léger, puis le font voyager.",
+      "duration": "PT26S"
+    },
+    {
+      "id": "aero_prop_size",
+      "name": "Construire l'hélice sur le roulement",
+      "description": "Quatre voiles, puis huit voiles plus longues, puis une forme libre : le roulement les fait tourner.",
+      "duration": "PT15S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "roulement",
+      "title": "Le roulement d'hélice",
+      "image": "aero_prop_size_roulement.webp",
+      "alt": "Un roulement d'hélice alimenté par un rotor, avec quatre voiles autour de son plateau",
+      "video": "aero_prop_size",
+      "html": "<p>Le roulement d'hélice ressemble à un <a href=\"/wiki/roulement-mecanique\">roulement mécanique</a> : il s'attache au bloc posé devant son plateau et fait tourner toute la structure collée à ce bloc. Au lieu de produire de la rotation comme un <a href=\"/wiki/support-de-moulin-a-vent\">support de moulin à vent</a>, il en consomme et pousse l'air. Une hélice valable doit contenir au moins deux blocs de voile ; peu importe la forme.</p>"
+    },
+    {
+      "id": "voiles",
+      "title": "Plus de voiles, beaucoup plus de poussée",
+      "image": "aero_prop_size_grande-helice.webp",
+      "alt": "Une hélice de huit voiles longues qui tourne au-dessus du roulement",
+      "html": "<p>La poussée croît plus vite que le nombre de voiles : elle suit la puissance 1,5. Quatre voiles à 32 tr/min donnent 51 unités de poussée, huit voiles en donnent 145, presque trois fois plus. Le stress, lui, augmente simplement avec les voiles : 2 SU par tr/min pour chacune, soit 512 SU pour huit voiles à 32 tr/min. Une grande hélice démarre aussi plus doucement : sa vitesse rejoint la cible en 0,4 / √voiles par tick.</p>"
+    },
+    {
+      "id": "dirigeable",
+      "title": "Pousser une contraption",
+      "image": "aero_thrust_poussee.webp",
+      "alt": "Le dirigeable et son hélice de voiles sur le côté, en train d'avancer",
+      "video": "aero_thrust",
+      "html": "<p>Monté sur une contraption simulée, le roulement pousse l'ensemble dans l'axe de l'hélice. Dans la vidéo, il est fixé sur le flanc d'un dirigeable porté par un ballon : la rotation de Create devient un déplacement. La poussée agit au point où se trouve l'hélice ; placée loin du centre, elle fait aussi tourner l'appareil.</p>"
+    },
+    {
+      "id": "inversion",
+      "title": "Changer de sens",
+      "image": "aero_thrust_inversion.webp",
+      "alt": "Le dirigeable qui recule après l’inversion de la rotation",
+      "html": "<p>Trois façons d'inverser la poussée : inverser la rotation qui arrive (avec un <a href=\"/wiki/inverseur-de-rotation\">inverseur de rotation</a>), utiliser la <a href=\"/wiki/cle\">clé</a> sur une petite hélice, ou changer le réglage affiché sur le côté du roulement. Le dirigeable de la vidéo recule dès que le sens change.</p>"
+    },
+    {
+      "id": "petites",
+      "title": "Les hélices d'andésite et en bois",
+      "image": "aero_thrust_small_petites-helices.webp",
+      "alt": "Un petit navire avec deux hélices d'andésite à l'arrière",
+      "video": "aero_thrust_small",
+      "html": "<p>Les petites hélices tiennent dans un bloc : on leur donne de la rotation par l'arrière et elles poussent tout de suite. Leur poussée vaut 1 × tr/min, leur débit d'air 0,1 × tr/min, pour 4 SU par tr/min. L'hélice d'andésite souffle sur un rayon d'un bloc, l'hélice en bois sur un bloc et demi. Une hélice en bois se fabrique en passant une hélice d'andésite seule dans l'établi.</p>"
+    },
+    {
+      "id": "air",
+      "title": "Le débit d'air",
+      "image": "aero_thrust_vol.webp",
+      "alt": "Le dirigeable lancé au-dessus de la prairie qui défile",
+      "html": "<p>Chaque hélice brasse l'air à une certaine vitesse, son <strong>débit d'air</strong>. Quand l'appareil va déjà presque aussi vite que cet air, l'hélice pousse de moins en moins : la vitesse plafonne. Pour aller plus vite, augmente la vitesse de rotation ou le nombre de voiles. Les <a href=\"/wiki/lunettes-d-ingenieur\">lunettes d'ingénieur</a> affichent poussée et débit en visant l'hélice.</p>"
+    },
+    {
+      "id": "calcul",
+      "title": "Comparer les hélices",
+      "html": "<p>À 32 tr/min, une hélice d'andésite pousse de 32 et coûte 128 SU. Un roulement à quatre voiles pousse de 51 pour 256 SU, et à huit voiles de 145 pour 512 SU. Les petites hélices sont donc rentables pour de petits appareils ; dès qu'il faut beaucoup de poussée, le roulement à grandes voiles l'emporte, puisque doubler les voiles multiplie la poussée par 2,8 pour seulement deux fois plus de stress.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils",
+      "html": "<ul><li>Place les hélices de part et d'autre du centre de masse pour que l'appareil file droit.</li><li>Garde de la marge de stress : huit voiles à grande vitesse vident vite un réseau.</li><li>Pour monter à la verticale, regarde le <a href=\"/wiki/aeronautics-roulement-gyroscopique\">roulement gyroscopique</a>.</li></ul>"
+    }
+  ],
+  "related": [
+    "create-aeronautics",
+    "aeronautics-roulement-gyroscopique",
+    "assembleur-physique",
+    "aeronautics-ballons",
+    "roulement-mecanique",
+    "support-de-moulin-a-vent",
+    "lunettes-d-ingenieur",
+    "cle"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Aeronautics 1.3.3 (dépôt Creators-of-Aeronautics/Simulated-Project, commit 900122e, code sous licence MIT, ressources « tous droits réservés », The Simulated Team / The Creators of Aeronautics), identiques au jar du modpack (instance de test 1.3.3)",
+    "Roulement : PropellerBearingBlockEntity (getThrust, getAirflow, calculateStressApplied, findSails)",
+    "Petites hélices : BasePropellerBlockEntity, AndesitePropellerBlockEntity, WoodenPropellerBlockEntity (rayons)",
+    "Réglages par défaut : AeroPhysics (propellerBearingThrust 0,2, propellerBearingAirflow 0,05, hélices 1,0 / 0,1), AeroBlocks (stress 2 et 4)",
+    "Recettes : data/aeronautics/recipe/propeller_bearing.json, andesite_propeller.json, wooden_propeller_from_andesite.json",
+    "Vidéos : scènes Ponder de Create Aeronautics / Simulated (propeller_bearing/thrust, propeller_bearing/size) rejouées par notre moteur ; modèles et textures du mod (© The Simulated Team / The Creators of Aeronautics)"
+  ],
+  "en": {
+    "slugEn": "aeronautics-propellers",
+    "name": "Propellers and Propeller Bearing",
+    "title": "Propellers — Create Aeronautics guide",
+    "description": "Create Aeronautics propellers: sail Propeller Bearing, Andesite and Wooden Propellers, thrust, airflow and reversing, with formulas from the code and videos.",
+    "intro": "<strong>Propellers</strong> turn Create rotation into <strong>thrust</strong>, the force that pushes a simulated contraption forward, backward or up. Create Aeronautics offers two families: the <strong>Propeller Bearing</strong>, on which you build a large sail propeller, and the small <strong>Andesite</strong> and <strong>Wooden Propellers</strong>, ready to use in a single block.",
+    "facts": [
+      {
+        "label": "Bearing thrust",
+        "value": "sails^1.5 × RPM × 0.2"
+      },
+      {
+        "label": "Bearing airflow",
+        "value": "√sails × RPM × 0.05 (m/s)"
+      },
+      {
+        "label": "Counted sails",
+        "value": "Windmill sails, symmetric sails (windmill_sails tag), at least 2"
+      },
+      {
+        "label": "Bearing stress",
+        "value": "2 SU per RPM per sail"
+      },
+      {
+        "label": "Small propellers",
+        "value": "Thrust 1 × RPM, airflow 0.1 × RPM, stress 4 SU per RPM"
+      },
+      {
+        "label": "Radius",
+        "value": "Andesite Propeller 1 block, Wooden Propeller 1.5 blocks"
+      },
+      {
+        "label": "Reversing",
+        "value": "Rotation direction, wrench or bearing setting"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Oak Slab",
+          null
+        ],
+        [
+          null,
+          "Iron Sheet",
+          null
+        ],
+        [
+          null,
+          "Brass Casing",
+          null
+        ]
+      ],
+      "result": "1 Propeller Bearing"
+    },
+    "videos": [
+      {
+        "id": "aero_thrust",
+        "name": "An airship pushed by a Propeller Bearing",
+        "description": "The airship assembles, its side propeller pushes it back and forth, then it flies off above the ground."
+      },
+      {
+        "id": "aero_thrust_small",
+        "name": "A small ship with Andesite Propellers",
+        "description": "Two small propellers drive a light ship forward and backward, then send it on its way."
+      },
+      {
+        "id": "aero_prop_size",
+        "name": "Building the propeller on the bearing",
+        "description": "Four sails, then eight longer sails, then a free shape: the bearing spins them all."
+      }
+    ],
+    "sections": [
+      {
+        "id": "roulement",
+        "title": "The Propeller Bearing",
+        "alt": "A Propeller Bearing driven by a shaft, with four sails around its plate",
+        "html": "<p>The Propeller Bearing looks like a <a href=\"/en/wiki/mechanical-bearing\">Mechanical Bearing</a>: it attaches to the block facing its plate and spins the whole structure glued to that block. Instead of producing rotation like a <a href=\"/en/wiki/windmill-bearing\">Windmill Bearing</a>, it consumes some and pushes air. A valid propeller must hold at least two sail blocks; the shape does not matter.</p>"
+      },
+      {
+        "id": "voiles",
+        "title": "More sails, much more thrust",
+        "alt": "An eight long-sail propeller spinning above the bearing",
+        "html": "<p>Thrust grows faster than the number of sails: it follows the power 1.5. Four sails at 32 RPM give 51 thrust units, eight sails give 145, almost three times as much. Stress simply follows the sails: 2 SU per RPM for each, so 512 SU for eight sails at 32 RPM. A large propeller also spins up more gently: its speed closes in on the target by 0.4 / √sails per tick.</p>"
+      },
+      {
+        "id": "dirigeable",
+        "title": "Pushing a contraption",
+        "alt": "The airship with its sail propeller on the side, moving forward",
+        "html": "<p>Mounted on a simulated contraption, the bearing pushes the whole thing along the propeller axis. In the video it sits on the flank of an airship carried by a balloon: Create rotation becomes motion. The thrust acts where the propeller is; far from the centre, it also turns the craft.</p>"
+      },
+      {
+        "id": "inversion",
+        "title": "Changing direction",
+        "alt": "The airship backing up after the rotation was reversed",
+        "html": "<p>Three ways to reverse the thrust: reverse the incoming rotation (with a <a href=\"/en/wiki/gearshift\">Gearshift</a>), use the <a href=\"/en/wiki/wrench\">Wrench</a> on a small propeller, or change the setting shown on the side of the bearing. The airship in the video backs up as soon as the direction flips.</p>"
+      },
+      {
+        "id": "petites",
+        "title": "Andesite and Wooden Propellers",
+        "alt": "A small ship with two Andesite Propellers at the back",
+        "html": "<p>Small propellers fit in one block: feed rotation from the back and they push right away. Their thrust is 1 × RPM, their airflow 0.1 × RPM, for 4 SU per RPM. The Andesite Propeller blows over a one-block radius, the Wooden Propeller over one and a half. A Wooden Propeller is made by putting an Andesite Propeller alone in the crafting grid.</p>"
+      },
+      {
+        "id": "air",
+        "title": "Airflow",
+        "alt": "The airship racing above the scrolling meadow",
+        "html": "<p>Every propeller moves air at a certain speed, its <strong>airflow</strong>. When the craft already goes almost as fast as that air, the propeller pushes less and less: speed tops out. To go faster, raise the rotation speed or the sail count. <a href=\"/en/wiki/engineers-goggles\">Engineer's Goggles</a> show thrust and airflow when you look at the propeller.</p>"
+      },
+      {
+        "id": "calcul",
+        "title": "Comparing propellers",
+        "html": "<p>At 32 RPM an Andesite Propeller pushes 32 and costs 128 SU. A four-sail bearing pushes 51 for 256 SU, and with eight sails 145 for 512 SU. Small propellers are therefore good value for small craft; as soon as you need a lot of thrust, the large-sail bearing wins, since doubling the sails multiplies thrust by 2.8 for only twice the stress. The same reasoning applies to rotation speed: thrust and stress both grow in proportion to RPM, so a faster network is often cheaper than more propellers.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<ul><li>Spread propellers evenly around the centre of mass so the craft flies straight.</li><li>Keep a stress margin: eight sails at high speed drain a network fast.</li><li>To climb vertically, see the <a href=\"/en/wiki/gyroscopic-propeller-bearing\">gyroscopic bearing</a>.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Aeronautics 1.3.3 (Creators-of-Aeronautics/Simulated-Project repository, commit 900122e, code under the MIT licence, assets « all rights reserved », The Simulated Team / The Creators of Aeronautics), identical to the modpack jar (1.3.3 test instance)",
+      "Bearing: PropellerBearingBlockEntity (getThrust, getAirflow, calculateStressApplied, findSails)",
+      "Small propellers: BasePropellerBlockEntity, AndesitePropellerBlockEntity, WoodenPropellerBlockEntity (radii)",
+      "Default settings: AeroPhysics (propellerBearingThrust 0.2, propellerBearingAirflow 0.05, propellers 1.0 / 0.1), AeroBlocks (stress 2 and 4)",
+      "Recipes: data/aeronautics/recipe/propeller_bearing.json, andesite_propeller.json, wooden_propeller_from_andesite.json",
+      "Videos: Create Aeronautics / Simulated Ponder scenes (propeller_bearing/thrust, propeller_bearing/size) replayed by our engine; mod models and textures (© The Simulated Team / The Creators of Aeronautics)"
+    ]
+  }
+}

@@ -130,5 +130,38 @@
       "name": "Create Diesel Generators",
       "description": "Diesel engines, fuels, pumpjack and oil deposits, distillation and refining (Create Diesel Generators 1.3.15)."
     }
+  },
+  {
+    "id": "aeronautics",
+    "mod": "aeronautics",
+    "icon": "aeronautics:propeller_bearing",
+    "name": "Create Aeronautics",
+    "description": "Dirigeables et engins volants : assembleur de physique, hélices, roulement gyroscopique, ballons à air chaud et lévitite (Create Aeronautics 1.3.3).",
+    "en": {
+      "name": "Create Aeronautics",
+      "description": "Airships and flying machines: Physics Assembler, propellers, gyroscopic bearing, hot air balloons and levitite (Create Aeronautics 1.3.3)."
+    }
+  },
+  {
+    "id": "deepseas",
+    "mod": "deepseas",
+    "icon": "create_submarine:command_sub",
+    "name": "Create Deep Seas",
+    "description": "Sous-marins avec Create : ballasts, ordinateur de bord, propulsion, oxygène, sas, sonar, câbles d'acier, voiles et gouvernail (Create Deep Seas 3.4.8).",
+    "en": {
+      "name": "Create Deep Seas",
+      "description": "Submarines with Create: ballast tanks, onboard computer, propulsion, oxygen, airlocks, sonar, steel cables, sails and rudder (Create Deep Seas 3.4.8)."
+    }
+  },
+  {
+    "id": "excavation",
+    "mod": "excavation",
+    "icon": "createoreexcavation:drilling_machine",
+    "name": "Create Ore Excavation",
+    "description": "Filons de minerai invisibles, détecteur, foreuse et foreuse d'échantillon (Create Ore Excavation 1.6.8, hors modpack).",
+    "en": {
+      "name": "Create Ore Excavation",
+      "description": "Hidden ore veins, vein finder, drilling machine and sample drill (Create Ore Excavation 1.6.8, not in the modpack)."
+    }
   }
 ]

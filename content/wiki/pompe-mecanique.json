@@ -178,7 +178,9 @@
     "stressometre-compteur-de-vitesse",
     "fabrication-des-canons",
     "pompe-a-balancier",
-    "moteur-diesel"
+    "moteur-diesel",
+    "deep-seas-ballast",
+    "create-deep-seas"
   ],
   "sources": [
     "Recette : crafting/kinetics/mechanical_pump.json (sans forme)",

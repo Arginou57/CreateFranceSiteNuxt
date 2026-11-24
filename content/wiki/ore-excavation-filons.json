@@ -1,0 +1,214 @@
+{
+  "slug": "ore-excavation-filons",
+  "name": "Filons de minerai",
+  "blockId": "createoreexcavation:vein_finder",
+  "category": "excavation",
+  "title": "Filons de minerai — Create Ore Excavation, guide",
+  "description": "Les 15 filons de Create Ore Excavation : où ils sont, ce qu'ils produisent, durée d'un cycle, contrainte et trépan nécessaire.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Ore Excavation 1.6.8 · Create 6.0",
+  "mcVersion": "1.21.1",
+  "intro": "Create Ore Excavation définit quinze <strong>filons</strong> (ore veins), décrits dans les fichiers de données du mod : où ils apparaissent, ce qu'ils donnent, combien de temps dure un cycle de foreuse et quelle contrainte il faut fournir. Un serveur ou un pack peut en ajouter ou les modifier.",
+  "facts": [
+    {
+      "label": "Nombre",
+      "value": "15 filons (11 du monde normal, 4 du Nether)"
+    },
+    {
+      "label": "Épuisement",
+      "value": "infinis par défaut"
+    },
+    {
+      "label": "Filon fini",
+      "value": "1 000 × multiplicateur du filon (réglage finiteAmountBase)"
+    },
+    {
+      "label": "Détection",
+      "value": "filon du tronçon, ou traces plus loin ; recharge 5 s"
+    },
+    {
+      "label": "Personnalisation",
+      "value": "fichiers de données ou KubeJS"
+    },
+    {
+      "label": "Version",
+      "value": "Create Ore Excavation 1.6.8 · Create 6.0"
+    }
+  ],
+  "recipe": {
+    "label": "Atlas des filons, fabrication à l'établi",
+    "grid": [
+      [
+        "Coffre",
+        "Éclat d'améthyste"
+      ],
+      [
+        "Carte vierge",
+        "Livre et plume"
+      ]
+    ],
+    "items": [
+      [
+        "minecraft:chest",
+        "minecraft:amethyst_shard"
+      ],
+      [
+        "minecraft:map",
+        "minecraft:writable_book"
+      ]
+    ],
+    "result": "1 atlas des filons",
+    "resultItem": "createoreexcavation:vein_atlas"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "serveur",
+      "title": "Pas sur Create France",
+      "html": "<p><strong>Ce mod n'est pas installé sur le serveur Create France</strong> : cette page présente un addon de Create pour les joueurs qui l'utilisent ailleurs, en solo ou sur un autre serveur.</p>"
+    },
+    {
+      "id": "tableau",
+      "title": "Les filons du mod",
+      "image": "exc_items_objets.webp",
+      "alt": "Le détecteur de filons, l’atlas et les trois trépans du mod",
+      "html": "<p>Valeurs des recettes de forage du mod. Le cycle est donné à 30 tr/min (vitesse minimale) ; il raccourcit avec la vitesse. La contrainte s'entend par tr/min, comme pour les machines de Create. L'espacement règle la rareté : plus il est grand, plus le filon est rare.</p><table><thead><tr><th>Filon</th><th>Où</th><th>Produit</th><th>Cycle à 30 tr/min</th><th>Contrainte</th><th>Espacement</th></tr></thead><tbody><tr><td>Charbon</td><td>Surface</td><td>charbon</td><td>10 s</td><td>256</td><td>128</td></tr><tr><td>Fer, cuivre, zinc</td><td>Surface</td><td>minerai brut</td><td>30 s</td><td>256</td><td>128</td></tr><tr><td>Redstone</td><td>Surface</td><td>redstone brute</td><td>30 s</td><td>256</td><td>128</td></tr><tr><td>Lapis-lazuli</td><td>Surface</td><td>lapis</td><td>20 s</td><td>256</td><td>128</td></tr><tr><td>Or</td><td>Surface</td><td>or brut</td><td>30 s</td><td>192</td><td>128</td></tr><tr><td>Diamant, émeraude</td><td>Surface</td><td>diamant / émeraude brut</td><td>60 s</td><td>512</td><td>256</td></tr><tr><td>Diamant durci</td><td>Surface</td><td>diamant brut (+ 10 % diamant)</td><td>20 s, trépan en netherite, 500 mB de lave</td><td>1 024</td><td>512</td></tr><tr><td>Quartz, glowstone</td><td>Nether</td><td>quartz / poudre</td><td>60 s</td><td>512 / 256</td><td>128</td></tr><tr><td>Or du Nether</td><td>Nether</td><td>pépites d'or</td><td>20 s</td><td>192</td><td>256</td></tr><tr><td>Netherite</td><td>Nether</td><td>débris antiques (20 %), or, netherrack, magma</td><td>200 s, trépan en netherite, 1 000 mB de lave</td><td>2 048</td><td>512</td></tr><tr><td>Eau</td><td>Surface</td><td>500 mB d'eau (extracteur)</td><td>1 s</td><td>256</td><td>64</td></tr></tbody></table>"
+    },
+    {
+      "id": "quantite",
+      "title": "Combien de minerai ?",
+      "html": "<p>Par défaut, les filons sont <strong>infinis</strong> : une foreuse posée dessus produit tant qu'elle tourne. Si le serveur les rend finis, chaque filon contient 1 000 fois un multiplicateur tiré au hasard dans une fourchette propre au filon : 15 à 40 pour le charbon, 10 à 30 pour le fer et le cuivre, 0,5 à 2 pour le diamant, 0,5 à 0,8 pour la netherite. L'atlas affiche ce multiplicateur.</p>"
+    },
+    {
+      "id": "trepans",
+      "title": "Quel trépan ?",
+      "html": "<p>Le trépan en fer ouvre presque tout. Le <strong>diamant durci</strong> et la <strong>netherite</strong> exigent un trépan en netherite et de la lave comme fluide de forage, envoyée par une <a href=\"/wiki/pompe-mecanique\">pompe</a>. Ce sont aussi les filons les plus gourmands : 1 024 et 2 048 de contrainte par tr/min.</p>"
+    },
+    {
+      "id": "chercher",
+      "title": "Où chercher",
+      "html": "<p>Les filons du Nether (quartz, glowstone, or du Nether, netherite) n'apparaissent que dans le Nether ; tous les autres dans le monde normal. Rien ne les signale en surface : le détecteur est le seul moyen.</p>"
+    },
+    {
+      "id": "rendement",
+      "title": "Comparer deux filons",
+      "html": "<p>Deux filons de même type ne se valent pas forcément : le multiplicateur tiré au hasard change la quantité totale quand les filons sont finis. Sur des filons infinis, seul compte le temps de cycle, identique pour un même type. Le choix se fait alors sur l'emplacement : près de ton usine, accessible par train, sur un sol plein pour la foreuse.</p>"
+    },
+    {
+      "id": "faq",
+      "title": "Questions fréquentes",
+      "html": "<p><strong>Un filon peut-il changer ?</strong> Non, il est fixé par la graine du monde. <strong>Peut-on en ajouter ?</strong> Oui, par un pack de données ou KubeJS côté serveur.</p>"
+    },
+    {
+      "id": "conseil",
+      "title": "Conseils",
+      "html": "<p>Une foreuse sur un filon de fer, suivie de <a href=\"/wiki/roues-de-concassage\">roues de concassage</a>, double le rendement en minerai concassé. Les filons d'eau, avec l'extracteur de puits, donnent une eau illimitée pour une usine entière.</p>"
+    }
+  ],
+  "related": [
+    "create-ore-excavation",
+    "ore-excavation-foreuse",
+    "ore-excavation-foreuse-d-echantillon",
+    "roues-de-concassage"
+  ],
+  "sources": [
+    "Create Ore Excavation 1.6.8 (createoreexcavation-1.21-1.6.8.jar), de tom5454, licence MIT : code lu après décompilation (ExcavatingBlockEntity, SampleDrillBlockEntity, Config), recettes et filons du dossier data du jar, scènes Ponder PonderScenes rejouées par notre moteur.",
+    "Modèles et textures des auteurs du mod, rendus à partir du jar ; aucun texte du mod n'est recopié."
+  ],
+  "en": {
+    "slugEn": "ore-excavation-ore-veins",
+    "name": "Ore Veins",
+    "title": "Ore Veins — Create Ore Excavation guide",
+    "description": "The 15 ore veins of Create Ore Excavation: where they spawn, what they yield, cycle time, stress needed and which drill they require.",
+    "intro": "Create Ore Excavation defines fifteen <strong>ore veins</strong>, described in the mod's data files: where they appear, what they give, how long a Drilling Machine cycle takes and how much stress it needs. A server or a pack can add more or change them.",
+    "facts": [
+      {
+        "label": "Count",
+        "value": "15 veins (11 Overworld, 4 Nether)"
+      },
+      {
+        "label": "Depletion",
+        "value": "infinite by default"
+      },
+      {
+        "label": "Finite vein",
+        "value": "1,000 × the vein multiplier (setting finiteAmountBase)"
+      },
+      {
+        "label": "Detection",
+        "value": "vein in the chunk, or traces further away; 5 s cooldown"
+      },
+      {
+        "label": "Customisation",
+        "value": "data files or KubeJS"
+      },
+      {
+        "label": "Version",
+        "value": "Create Ore Excavation 1.6.8 · Create 6.0"
+      }
+    ],
+    "recipe": {
+      "label": "Ore Vein Atlas, crafting table recipe",
+      "grid": [
+        [
+          "Chest",
+          "Amethyst Shard"
+        ],
+        [
+          "Empty Map",
+          "Book and Quill"
+        ]
+      ],
+      "result": "1 Ore Vein Atlas"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "serveur",
+        "title": "Not on Create France",
+        "html": "<p><strong>This mod is not installed on the Create France server</strong>: this page covers a Create addon for players who use it elsewhere, in single player or on another server.</p>"
+      },
+      {
+        "id": "tableau",
+        "title": "The mod's veins",
+        "alt": "The Ore Vein Finder, the atlas and the mod's three drills",
+        "html": "<p>Values from the mod's drilling recipes. The cycle is given at 30 RPM (the minimum speed); it gets shorter with more speed. Stress is per RPM, as for Create machines. Spacing sets rarity: the larger it is, the rarer the vein.</p><table><thead><tr><th>Vein</th><th>Where</th><th>Output</th><th>Cycle at 30 RPM</th><th>Stress</th><th>Spacing</th></tr></thead><tbody><tr><td>Coal</td><td>Overworld</td><td>coal</td><td>10 s</td><td>256</td><td>128</td></tr><tr><td>Iron, copper, zinc</td><td>Overworld</td><td>raw ore</td><td>30 s</td><td>256</td><td>128</td></tr><tr><td>Redstone</td><td>Overworld</td><td>raw redstone</td><td>30 s</td><td>256</td><td>128</td></tr><tr><td>Lapis lazuli</td><td>Overworld</td><td>lapis</td><td>20 s</td><td>256</td><td>128</td></tr><tr><td>Gold</td><td>Overworld</td><td>raw gold</td><td>30 s</td><td>192</td><td>128</td></tr><tr><td>Diamond, emerald</td><td>Overworld</td><td>raw diamond / emerald</td><td>60 s</td><td>512</td><td>256</td></tr><tr><td>Hardened diamond</td><td>Overworld</td><td>raw diamond (+ 10% diamond)</td><td>20 s, netherite drill, 500 mB lava</td><td>1,024</td><td>512</td></tr><tr><td>Quartz, glowstone</td><td>Nether</td><td>quartz / dust</td><td>60 s</td><td>512 / 256</td><td>128</td></tr><tr><td>Nether gold</td><td>Nether</td><td>gold nuggets</td><td>20 s</td><td>192</td><td>256</td></tr><tr><td>Netherite</td><td>Nether</td><td>ancient debris (20%), gold, netherrack, magma</td><td>200 s, netherite drill, 1,000 mB lava</td><td>2,048</td><td>512</td></tr><tr><td>Water</td><td>Overworld</td><td>500 mB water (extractor)</td><td>1 s</td><td>256</td><td>64</td></tr></tbody></table>"
+      },
+      {
+        "id": "quantite",
+        "title": "How much ore?",
+        "html": "<p>By default veins are <strong>infinite</strong>: a machine on top produces as long as it spins. If the server makes them finite, each vein holds 1,000 times a multiplier rolled within a range of its own: 15 to 40 for coal, 10 to 30 for iron and copper, 0.5 to 2 for diamond, 0.5 to 0.8 for netherite. The atlas shows that multiplier.</p>"
+      },
+      {
+        "id": "trepans",
+        "title": "Which drill?",
+        "html": "<p>The iron drill opens almost everything. <strong>Hardened diamond</strong> and <strong>netherite</strong> need a netherite drill and lava as a drilling fluid, fed by a <a href=\"/en/wiki/mechanical-pump\">pump</a>. They are also the hungriest veins: 1,024 and 2,048 stress per RPM.</p>"
+      },
+      {
+        "id": "chercher",
+        "title": "Where to look",
+        "html": "<p>Nether veins (quartz, glowstone, Nether gold, netherite) only appear in the Nether; all the others in the Overworld. Nothing marks them on the surface, not even a stray ore block: the finder is the only way to locate them.</p>"
+      },
+      {
+        "id": "rendement",
+        "title": "Comparing two veins",
+        "html": "<p>Two veins of the same type are not always equal: the random multiplier changes the total amount when veins are finite. On infinite veins only the cycle time matters, and it is identical for every vein of a given type, so any of them will do. The choice then comes down to location: close to your factory, reachable by train, on solid ground for the machine.</p>"
+      },
+      {
+        "id": "faq",
+        "title": "Common questions",
+        "html": "<p><strong>Can a vein change?</strong> No, it is fixed by the world seed. <strong>Can new ones be added?</strong> Yes, through a data pack or KubeJS on the server side.</p>"
+      },
+      {
+        "id": "conseil",
+        "title": "Tips",
+        "html": "<p>A Drilling Machine on an iron vein followed by <a href=\"/en/wiki/crushing-wheel\">crushing wheels</a> doubles the yield as crushed ore. Water veins with the Fluid Well Extractor give endless water for a whole factory.</p>"
+      }
+    ],
+    "sources": [
+      "Create Ore Excavation 1.6.8 (createoreexcavation-1.21-1.6.8.jar), by tom5454, MIT licence: code read after decompiling (ExcavatingBlockEntity, SampleDrillBlockEntity, Config), recipes and veins from the jar's data folder, Ponder scenes PonderScenes replayed by our engine.",
+      "Models and textures by the mod's authors, rendered from the jar; no text from the mod is copied."
+    ]
+  }
+}

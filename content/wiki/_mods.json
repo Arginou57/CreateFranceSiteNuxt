@@ -6,14 +6,38 @@
     "icon": "create:cogwheel",
     "description": "Le mod de base : rotation, machines, logistique, fluides, trains et contraptions. Commence ici si tu découvres Create.",
     "start": [
-      { "slug": "roue-a-eau", "label": "Produire de la rotation" },
-      { "slug": "rotor", "label": "La transmettre avec des rotors" },
-      { "slug": "roue-dentee", "label": "Changer de direction et de vitesse" },
-      { "slug": "stressometre-compteur-de-vitesse", "label": "Comprendre le stress" },
-      { "slug": "presse-mecanique", "label": "Construire sa première machine" },
-      { "slug": "tapis-roulant", "label": "Déplacer les objets" },
-      { "slug": "mixeur-mecanique", "label": "Mélanger dans un bassin" },
-      { "slug": "moteur-a-vapeur", "label": "Passer à la vapeur" }
+      {
+        "slug": "roue-a-eau",
+        "label": "Produire de la rotation"
+      },
+      {
+        "slug": "rotor",
+        "label": "La transmettre avec des rotors"
+      },
+      {
+        "slug": "roue-dentee",
+        "label": "Changer de direction et de vitesse"
+      },
+      {
+        "slug": "stressometre-compteur-de-vitesse",
+        "label": "Comprendre le stress"
+      },
+      {
+        "slug": "presse-mecanique",
+        "label": "Construire sa première machine"
+      },
+      {
+        "slug": "tapis-roulant",
+        "label": "Déplacer les objets"
+      },
+      {
+        "slug": "mixeur-mecanique",
+        "label": "Mélanger dans un bassin"
+      },
+      {
+        "slug": "moteur-a-vapeur",
+        "label": "Passer à la vapeur"
+      }
     ],
     "en": {
       "description": "The base mod: rotation, machines, logistics, fluids, trains and contraptions. Start here if you are new to Create.",
@@ -36,12 +60,30 @@
     "icon": "createbigcannons:cannon_mount",
     "description": "L'artillerie du modpack : monter un canon, le charger, choisir sa poudre et ses obus, fabriquer des fûts, autocanons et mortiers.",
     "start": [
-      { "slug": "create-big-cannons", "label": "Vue d'ensemble et premier tir" },
-      { "slug": "support-de-canon", "label": "Monter et viser le canon" },
-      { "slug": "materiaux-des-canons", "label": "Choisir le matériau" },
-      { "slug": "chargement-des-canons", "label": "Charger le canon" },
-      { "slug": "poudre-et-cartouches", "label": "Doser la poudre" },
-      { "slug": "obus-de-canon", "label": "Choisir ses obus" }
+      {
+        "slug": "create-big-cannons",
+        "label": "Vue d'ensemble et premier tir"
+      },
+      {
+        "slug": "support-de-canon",
+        "label": "Monter et viser le canon"
+      },
+      {
+        "slug": "materiaux-des-canons",
+        "label": "Choisir le matériau"
+      },
+      {
+        "slug": "chargement-des-canons",
+        "label": "Charger le canon"
+      },
+      {
+        "slug": "poudre-et-cartouches",
+        "label": "Doser la poudre"
+      },
+      {
+        "slug": "obus-de-canon",
+        "label": "Choisir ses obus"
+      }
     ],
     "en": {
       "description": "The modpack's artillery: mount a cannon, load it, pick powder and shells, craft barrels, autocannons and mortars.",
@@ -62,14 +104,38 @@
     "icon": "createdieselgenerators:diesel_engine",
     "description": "Pétrole, raffinage et moteurs diesel : une source de rotation puissante alimentée par des carburants.",
     "start": [
-      { "slug": "create-diesel-generators", "label": "Vue d'ensemble du mod" },
-      { "slug": "gisements-de-petrole", "label": "Trouver du pétrole" },
-      { "slug": "pompe-a-balancier", "label": "Le pomper" },
-      { "slug": "tour-de-distillation", "label": "Le raffiner" },
-      { "slug": "carburants", "label": "Choisir son carburant" },
-      { "slug": "moteur-diesel", "label": "Premier moteur diesel" },
-      { "slug": "moteur-diesel-modulaire", "label": "Moteur plus puissant" },
-      { "slug": "moteur-diesel-enorme", "label": "Le plus gros moteur" }
+      {
+        "slug": "create-diesel-generators",
+        "label": "Vue d'ensemble du mod"
+      },
+      {
+        "slug": "gisements-de-petrole",
+        "label": "Trouver du pétrole"
+      },
+      {
+        "slug": "pompe-a-balancier",
+        "label": "Le pomper"
+      },
+      {
+        "slug": "tour-de-distillation",
+        "label": "Le raffiner"
+      },
+      {
+        "slug": "carburants",
+        "label": "Choisir son carburant"
+      },
+      {
+        "slug": "moteur-diesel",
+        "label": "Premier moteur diesel"
+      },
+      {
+        "slug": "moteur-diesel-modulaire",
+        "label": "Moteur plus puissant"
+      },
+      {
+        "slug": "moteur-diesel-enorme",
+        "label": "Le plus gros moteur"
+      }
     ],
     "en": {
       "description": "Oil, refining and diesel engines: a powerful rotation source fed with fuels.",
@@ -82,6 +148,128 @@
         "First diesel engine",
         "A stronger engine",
         "The biggest engine"
+      ]
+    }
+  },
+  {
+    "id": "aeronautics",
+    "name": "Create Aeronautics",
+    "version": "1.3.3",
+    "icon": "aeronautics:propeller_bearing",
+    "description": "Faire voler les machines de Create : assembleur de physique, hélices, ballons à air chaud et lévitite.",
+    "start": [
+      {
+        "slug": "create-aeronautics",
+        "label": "Vue d'ensemble"
+      },
+      {
+        "slug": "assembleur-physique",
+        "label": "Assembler un véhicule"
+      },
+      {
+        "slug": "aeronautics-helices",
+        "label": "Le faire avancer"
+      },
+      {
+        "slug": "aeronautics-ballons",
+        "label": "Le faire voler"
+      },
+      {
+        "slug": "aeronautics-levitite",
+        "label": "Le faire flotter"
+      },
+      {
+        "slug": "aeronautics-roulement-gyroscopique",
+        "label": "Construire un hélicoptère"
+      }
+    ],
+    "en": {
+      "description": "Make Create machines fly: physics assembler, propellers, hot air balloons and levitite.",
+      "start": [
+        "Overview",
+        "Assemble a vehicle",
+        "Make it move",
+        "Make it fly",
+        "Make it float",
+        "Build a helicopter"
+      ]
+    }
+  },
+  {
+    "id": "deepseas",
+    "name": "Create Deep Seas",
+    "version": "3.4.8",
+    "icon": "create_submarine:command_sub",
+    "description": "Des sous-marins avec Create : plonger avec des ballasts, piloter à l'ordinateur de bord, respirer, sortir par un sas.",
+    "start": [
+      {
+        "slug": "create-deep-seas",
+        "label": "Comprendre le principe"
+      },
+      {
+        "slug": "deep-seas-ballast",
+        "label": "Plonger avec les ballasts"
+      },
+      {
+        "slug": "deep-seas-ordinateur-de-bord",
+        "label": "Piloter à l'ordinateur"
+      },
+      {
+        "slug": "deep-seas-propulseur",
+        "label": "Avancer"
+      },
+      {
+        "slug": "deep-seas-oxygene",
+        "label": "Respirer"
+      },
+      {
+        "slug": "deep-seas-sas",
+        "label": "Sortir nager"
+      }
+    ],
+    "en": {
+      "description": "Submarines with Create: dive with ballast tanks, steer with the onboard computer, breathe and swim out through an airlock.",
+      "start": [
+        "Understand the idea",
+        "Dive with ballast tanks",
+        "Drive with the computer",
+        "Move forward",
+        "Breathe",
+        "Swim out"
+      ]
+    }
+  },
+  {
+    "id": "excavation",
+    "name": "Create Ore Excavation",
+    "version": "1.6.8",
+    "icon": "createoreexcavation:drilling_machine",
+    "description": "Trouver des filons de minerai invisibles et les forer sans fin avec une grande foreuse (addon de Create, hors modpack).",
+    "start": [
+      {
+        "slug": "create-ore-excavation",
+        "label": "Trouver un filon"
+      },
+      {
+        "slug": "ore-excavation-foreuse-d-echantillon",
+        "label": "Confirmer avec un échantillon"
+      },
+      {
+        "slug": "ore-excavation-foreuse",
+        "label": "Forer sans fin"
+      },
+      {
+        "slug": "ore-excavation-filons",
+        "label": "Connaître les filons"
+      }
+    ],
+    "en": {
+      "description": "Find hidden ore veins and drill them endlessly with a big Drilling Machine (Create addon, not in the modpack).",
+      "start": [
+        "Find a vein",
+        "Confirm with a sample",
+        "Drill forever",
+        "Know the veins"
       ]
     }
   }
