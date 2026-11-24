@@ -1,0 +1,277 @@
+{
+  "slug": "moteur-diesel-modulaire",
+  "name": "Moteur diesel modulaire",
+  "blockId": "createdieselgenerators:large_diesel_engine",
+  "category": "diesel",
+  "title": "Moteur diesel modulaire — Create Diesel Generators",
+  "description": "Le moteur diesel modulaire de Create Diesel Generators : empiler jusqu’à 21 blocs, une seule arrivée de carburant, SU par bloc et consommation.",
+  "datePublished": "2026-11-23",
+  "dateModified": "2026-11-23",
+  "createVersion": "6.0.10 · Create Diesel Generators 1.3.15",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>moteur diesel modulaire</strong> fonctionne comme le <a href=\"/wiki/moteur-diesel\">moteur diesel</a>, mais il s'allonge : on aligne jusqu'à 21 blocs qui forment un seul moteur, autour d'un seul arbre. Chaque bloc ajouté augmente la puissance sans changer la vitesse, et tout le moteur se nourrit par un seul réservoir. C'est la bonne solution quand un moteur simple ne suffit plus mais qu'on ne veut pas encore bâtir des moteurs énormes.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Source de rotation (Create Diesel Generators)"
+    },
+    {
+      "label": "Longueur",
+      "value": "1 à 21 blocs alignés dans le même sens"
+    },
+    {
+      "label": "Vitesse",
+      "value": "96 tr/min (74 à l’huile végétale), quelle que soit la longueur"
+    },
+    {
+      "label": "Puissance par bloc",
+      "value": "8 192 SU diesel · 6 144 essence ou biodiesel · 3 072 éthanol · 2 560 huile"
+    },
+    {
+      "label": "Consommation",
+      "value": "1 mB par seconde et par bloc à plein régime"
+    },
+    {
+      "label": "Réservoir",
+      "value": "1 000 mB, rempli par le dessus d’un bloc ouvert à la clé"
+    },
+    {
+      "label": "Version",
+      "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Alliage d'andésite",
+        null
+      ],
+      [
+        "Plaque de laiton",
+        "Moteur diesel",
+        "Plaque de laiton"
+      ],
+      [
+        null,
+        "Dalle de pierre noire polie",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "create:andesite_alloy",
+        null
+      ],
+      [
+        "create:brass_sheet",
+        "createdieselgenerators:diesel_engine",
+        "create:brass_sheet"
+      ],
+      [
+        null,
+        "minecraft:polished_blackstone_slab",
+        null
+      ]
+    ],
+    "result": "1 moteur diesel modulaire",
+    "resultItem": "createdieselgenerators:large_diesel_engine"
+  },
+  "videos": [
+    {
+      "id": "cdg_modular",
+      "name": "Moteur modulaire : alimenter puis empiler",
+      "description": "Un moteur modulaire reçoit du diesel par le haut et entraîne le réseau ; deux blocs sont ajoutés derrière lui, puis leurs ouvertures sont refermées à la clé.",
+      "duration": "PT16S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "moteur",
+      "title": "Un premier bloc",
+      "image": "cdg_modular_moteur.webp",
+      "alt": "Un bloc de moteur modulaire posé seul, l’ouverture de carburant sur le dessus",
+      "video": "cdg_modular",
+      "html": "<p>Seul, un bloc de moteur modulaire se comporte comme un moteur diesel couché, en un peu plus fort : 8 192 SU au diesel au lieu de 6 144. Il ne se pose qu'à l'horizontale et son arbre sort par l'avant et l'arrière. Il ne prend pas d'amélioration de silencieux ou de turbo bloc par bloc : l'amélioration se pose sur le moteur entier et compte pour tous ses blocs.</p>"
+    },
+    {
+      "id": "carburant",
+      "title": "Le carburant arrive par le haut",
+      "image": "cdg_modular_carburant.webp",
+      "alt": "Le tuyau de carburant branché sur le dessus du moteur modulaire",
+      "html": "<p>Contrairement au moteur simple, le moteur modulaire se remplit par le <strong>dessus</strong>, et seulement là où l'ouverture est visible. Un coup de <a href=\"/wiki/cle\">clé</a> sur un bloc ouvre ou ferme cette ouverture. Le moteur entier partage un réservoir de 1 000 mB : une seule arrivée suffit, les autres ouvertures peuvent être fermées pour un rendu plus propre. Le carburant y arrive par une <a href=\"/wiki/pompe-mecanique\">pompe mécanique</a>.</p>"
+    },
+    {
+      "id": "empiler",
+      "title": "Empiler les blocs",
+      "image": "cdg_modular_empiler.webp",
+      "alt": "Trois blocs de moteur modulaire alignés, reliés en un seul moteur",
+      "html": "<p>Pose les blocs suivants dans le prolongement du premier, tournés du même côté : ils se soudent en un seul moteur, jusqu'à 21 blocs. Les textures se raccordent et l'arbre traverse tout l'ensemble. Le moteur ne tourne pas plus vite, mais sa capacité devient la somme de celle de ses blocs : trois blocs au diesel donnent 24 576 SU à 96 tr/min.</p>"
+    },
+    {
+      "id": "puissance",
+      "title": "Combien de blocs ?",
+      "image": "cdg_modular_puissance.webp",
+      "alt": "Le moteur modulaire de trois blocs en marche, le réseau entraîné",
+      "html": "<table><thead><tr><th>Carburant</th><th>SU par bloc</th><th>21 blocs</th></tr></thead><tbody><tr><td>Diesel</td><td>8 192</td><td>172 032</td></tr><tr><td>Essence, biodiesel</td><td>6 144</td><td>129 024</td></tr><tr><td>Éthanol</td><td>3 072</td><td>64 512</td></tr><tr><td>Huile végétale</td><td>2 560</td><td>53 760</td></tr></tbody></table><p>Chaque bloc brûle 1 mB par seconde : 21 blocs vident le réservoir de 1 000 mB en moins d'une minute. Prévois un débit de pompe suffisant.</p>"
+    },
+    {
+      "id": "reglages",
+      "title": "Redstone et améliorations",
+      "html": "<p>Comme le moteur simple, il lit la force d'un signal de redstone : 15 l'arrête, une valeur plus faible le ralentit. Le turbocompresseur double vitesse et SU du moteur entier, ce qui en fait la source la plus dense du mod : 21 blocs turbo au diesel atteignent 344 064 SU à 192 tr/min. Le silencieux n'agit que sur le son.</p>"
+    },
+    {
+      "id": "exemple",
+      "title": "Un exemple chiffré",
+      "html": "<p>Un moteur de cinq blocs au diesel fournit 40 960 SU à 96 tr/min et brûle 5 mB par seconde, soit 18 seaux par heure. Avec un turbo, il passe à 81 920 SU à 192 tr/min pour la même consommation. Un seul réservoir de Create de 8 000 mB le fait tourner près de 27 minutes : relie-le plutôt à la sortie de ta raffinerie.</p>"
+    },
+    {
+      "id": "choix",
+      "title": "Modulaire ou plusieurs moteurs simples ?",
+      "html": "<p>Bloc pour bloc, le moteur modulaire donne un tiers de plus qu'un moteur simple avec le même carburant (8 192 SU contre 6 144 au diesel) et une seule arrivée de carburant suffit. En revanche, il ne se pose qu'à l'horizontale et tous ses blocs partagent le même arbre. Plusieurs moteurs simples restent utiles pour alimenter des lignes séparées.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils",
+      "html": "<ul><li>Garde une ouverture accessible : c'est la seule entrée de carburant.</li><li>Un <a href=\"/wiki/stressometre-compteur-de-vitesse\">stressomètre</a> sur l'arbre montre vite s'il faut un bloc de plus.</li><li>Pour encore plus, passe au <a href=\"/wiki/moteur-diesel-enorme\">moteur diesel énorme</a>.</li></ul>"
+    }
+  ],
+  "related": [
+    "moteur-diesel",
+    "moteur-diesel-enorme",
+    "carburants",
+    "cle",
+    "pompe-mecanique",
+    "stressometre-compteur-de-vitesse",
+    "create-diesel-generators"
+  ],
+  "sources": [
+    "SU et vitesse : data/createdieselgenerators/createdieselgenerators/fuel_type/*.json (speed, strength, burn_rate, burner_multiplier) (bloc « modular »)",
+    "Moteur : ModularDieselEngineBlockEntity (capacité = strength × longueur, getMaxLength 21, fuelDebt += longueur × burn_rate, réservoir 1 000 mB) ; ModularDieselEngineBlock (PIPE basculé à la clé, carburant par le dessus)",
+    "Textures connectées : ModularDieselEngineCTBehavior",
+    "Recette : recipe/crafting/large_diesel_engine.json",
+    "Code, données et storyboards : Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, licence MIT, auteur George VI), identiques au jar du modpack Create France",
+    "Vidéos : scènes Ponder de Create Diesel Generators (DieselEngineScenes.modular) rejouées par notre moteur ; modèles et textures du mod (licence MIT, George VI)"
+  ],
+  "en": {
+    "slugEn": "modular-diesel-engine",
+    "name": "Modular Diesel Engine",
+    "title": "Modular Diesel Engine — Create Diesel Generators",
+    "description": "The Modular Diesel Engine from Create Diesel Generators: stack up to 21 blocks, one fuel inlet, stress capacity per block and fuel consumption.",
+    "intro": "The <strong>Modular Diesel Engine</strong> works like the <a href=\"/en/wiki/diesel-engine\">Diesel Engine</a>, but it grows: you line up to 21 blocks that form a single engine around a single shaft. Each extra block adds capacity without changing the speed, and the whole engine is fed from one tank. It is the right step when a single engine is no longer enough but huge engines still feel like too much.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Rotation source (Create Diesel Generators)"
+      },
+      {
+        "label": "Length",
+        "value": "1 to 21 blocks lined up the same way"
+      },
+      {
+        "label": "Speed",
+        "value": "96 RPM (74 on plant oil), whatever the length"
+      },
+      {
+        "label": "Output per block",
+        "value": "8,192 SU diesel · 6,144 gasoline or biodiesel · 3,072 ethanol · 2,560 plant oil"
+      },
+      {
+        "label": "Fuel use",
+        "value": "1 mB per second per block at full throttle"
+      },
+      {
+        "label": "Tank",
+        "value": "1,000 mB, filled from the top of a block opened with the wrench"
+      },
+      {
+        "label": "Version",
+        "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Andesite Alloy",
+          null
+        ],
+        [
+          "Brass Sheet",
+          "Diesel Engine",
+          "Brass Sheet"
+        ],
+        [
+          null,
+          "Polished Blackstone Slab",
+          null
+        ]
+      ],
+      "result": "1 Modular Diesel Engine"
+    },
+    "videos": [
+      {
+        "id": "cdg_modular",
+        "name": "Modular engine: fuel it, then stack it",
+        "description": "A modular engine gets diesel from above and drives the network; two blocks are added behind it, then their openings are closed with the wrench."
+      }
+    ],
+    "sections": [
+      {
+        "id": "moteur",
+        "title": "A first block",
+        "alt": "A single modular engine block, fuel opening on top",
+        "html": "<p>On its own, a modular engine block behaves like a diesel engine lying down, only slightly stronger: 8,192 SU on diesel instead of 6,144. It can only be placed horizontally and its shaft comes out of the front and the back. Upgrades are not fitted block by block: the silencer or turbo goes on the whole engine and counts for every block.</p>"
+      },
+      {
+        "id": "carburant",
+        "title": "Fuel comes in from the top",
+        "alt": "The fuel pipe attached to the top of the modular engine",
+        "html": "<p>Unlike the single engine, the modular engine is filled from the <strong>top</strong>, and only where the opening is visible. A click with the <a href=\"/en/wiki/wrench\">Wrench</a> opens or closes that opening on a block. The whole engine shares one 1,000 mB tank: a single inlet is enough, and the other openings can be closed for a cleaner look. Feed it with a <a href=\"/en/wiki/mechanical-pump\">Mechanical Pump</a>.</p>"
+      },
+      {
+        "id": "empiler",
+        "title": "Stacking blocks",
+        "alt": "Three modular engine blocks in a row, joined into one engine",
+        "html": "<p>Place the next blocks in line with the first one, facing the same way: they merge into one engine, up to 21 blocks. The textures connect and the shaft runs through the whole thing. The engine does not spin faster, but its capacity becomes the sum of its blocks: three blocks on diesel give 24,576 SU at 96 RPM.</p>"
+      },
+      {
+        "id": "puissance",
+        "title": "How many blocks?",
+        "alt": "The three-block modular engine running, the network driven",
+        "html": "<table><thead><tr><th>Fuel</th><th>SU per block</th><th>21 blocks</th></tr></thead><tbody><tr><td>Diesel</td><td>8,192</td><td>172,032</td></tr><tr><td>Gasoline, biodiesel</td><td>6,144</td><td>129,024</td></tr><tr><td>Ethanol</td><td>3,072</td><td>64,512</td></tr><tr><td>Plant oil</td><td>2,560</td><td>53,760</td></tr></tbody></table><p>Each block burns 1 mB per second: 21 blocks empty the 1,000 mB tank in under a minute. Plan for enough pump throughput.</p>"
+      },
+      {
+        "id": "reglages",
+        "title": "Redstone and upgrades",
+        "html": "<p>Like the single engine, it reads the strength of a redstone signal: 15 stops it, a lower value slows it down. The turbocharger doubles speed and SU for the whole engine, which makes it the densest power source of the mod: 21 turbo blocks on diesel reach 344,064 SU at 192 RPM. The silencer only affects the sound.</p>"
+      },
+      {
+        "id": "exemple",
+        "title": "A worked example",
+        "html": "<p>A five-block engine on diesel provides 40,960 SU at 96 RPM and burns 5 mB per second, which is 18 buckets an hour. With a turbocharger it reaches 81,920 SU at 192 RPM for the same fuel use. A single 8,000 mB Create tank keeps it running for about 27 minutes, so it is better to connect it straight to the output of your refinery.</p>"
+      },
+      {
+        "id": "choix",
+        "title": "Modular or several single engines?",
+        "html": "<p>Block for block, the modular engine gives a third more than a single engine on the same fuel (8,192 SU against 6,144 on diesel) and one fuel inlet is enough for all of it. On the other hand it can only be placed horizontally and all its blocks share the same shaft. Several single engines are still useful to power separate lines in different parts of a factory.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<ul><li>Keep one opening reachable: it is the only fuel inlet.</li><li>A <a href=\"/en/wiki/stressometer-speedometer\">Stressometer</a> on the shaft quickly shows whether you need another block.</li><li>For even more, move on to the <a href=\"/en/wiki/huge-diesel-engine\">Huge Diesel Engine</a>.</li></ul>"
+      }
+    ],
+    "sources": [
+      "SU and speed: data/createdieselgenerators/createdieselgenerators/fuel_type/*.json (speed, strength, burn_rate, burner_multiplier) (\"modular\" block)",
+      "Engine: ModularDieselEngineBlockEntity (capacity = strength × length, getMaxLength 21, fuelDebt += length × burn_rate, 1,000 mB tank); ModularDieselEngineBlock (PIPE toggled with the wrench, fuel through the top)",
+      "Connected textures: ModularDieselEngineCTBehavior",
+      "Recipe: recipe/crafting/large_diesel_engine.json",
+      "Code, data and storyboards: Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, MIT licence, author George VI), identical to the Create France modpack jar",
+      "Videos: Create Diesel Generators Ponder scenes (DieselEngineScenes.modular) replayed by our engine; mod models and textures (MIT licence, George VI)"
+    ]
+  }
+}

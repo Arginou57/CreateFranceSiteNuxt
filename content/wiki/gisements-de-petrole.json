@@ -1,0 +1,285 @@
+{
+  "slug": "gisements-de-petrole",
+  "name": "Gisements de pétrole",
+  "blockId": "createdieselgenerators:oil_scanner",
+  "category": "diesel",
+  "title": "Gisements de pétrole — Create Diesel Generators",
+  "description": "Trouver du pétrole dans Create Diesel Generators : détecteur de pétrole, chunks à pétrole, biomes riches, gisements inépuisables.",
+  "datePublished": "2026-11-23",
+  "dateModified": "2026-11-23",
+  "createVersion": "6.0.10 · Create Diesel Generators 1.3.15",
+  "mcVersion": "1.21.1",
+  "intro": "Le pétrole de Create Diesel Generators ne se voit pas : aucun bloc de pétrole n'est caché sous terre. Chaque <strong>chunk</strong> reçoit une réserve chiffrée en mB, nulle dans la plupart des cas, calculée à partir de la graine du monde. Pour la trouver, il faut un <strong>détecteur de pétrole</strong> (Oil Scanner), puis une <a href=\"/wiki/pompe-a-balancier\">pompe à balancier</a> pour l'exploiter.",
+  "facts": [
+    {
+      "label": "Réserve",
+      "value": "Par chunk, de 0 à 9,1 millions de mB (14 millions dans les biomes riches)"
+    },
+    {
+      "label": "Seuil",
+      "value": "Moins de 4 millions de mB : le chunk n’a rien"
+    },
+    {
+      "label": "Inépuisable",
+      "value": "Au-delà de 10 millions de mB (seulement dans les biomes riches)"
+    },
+    {
+      "label": "Biomes riches",
+      "value": "Savane, désert, badlands, plaines, océans"
+    },
+    {
+      "label": "Détecteur",
+      "value": "Clic droit : aucun, faible, élevé ; résultat au bout d’une seconde"
+    },
+    {
+      "label": "Épuisement",
+      "value": "Chaque coup de pompe retire sa dose de la réserve du chunk"
+    },
+    {
+      "label": "Version",
+      "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Alliage d'andésite",
+        "Horloge",
+        "Alliage d'andésite"
+      ],
+      [
+        "Plaque de fer",
+        "Lingot de fer",
+        "Plaque de fer"
+      ],
+      [
+        null,
+        "Lingot de fer",
+        null
+      ]
+    ],
+    "items": [
+      [
+        "create:andesite_alloy",
+        "minecraft:clock",
+        "create:andesite_alloy"
+      ],
+      [
+        "create:iron_sheet",
+        "minecraft:iron_ingot",
+        "create:iron_sheet"
+      ],
+      [
+        null,
+        "minecraft:iron_ingot",
+        null
+      ]
+    ],
+    "result": "1 détecteur de pétrole",
+    "resultItem": "createdieselgenerators:oil_scanner"
+  },
+  "videos": [
+    {
+      "id": "cdg_oil_chunk",
+      "name": "Sonder un chunk avec le détecteur",
+      "description": "Le détecteur posé au sol cherche, puis indique une réserve moyenne ; sur du sable de désert, il indique une réserve élevée.",
+      "duration": "PT21S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "reserve",
+      "title": "Une réserve par chunk",
+      "image": "cdg_oil_chunk_gisement.webp",
+      "alt": "Un carré de terrain : un chunk, sous lequel se cache peut-être une réserve",
+      "video": "cdg_oil_chunk",
+      "html": "<p>Le mod tire un bruit de Perlin à partir de la graine du monde et des coordonnées du chunk, le met au carré et le multiplie par 9,1 millions de mB (7 millions × 1,3). Si le résultat est sous 4 millions, le chunk est vide. C'est pourquoi les gisements forment des taches : des zones de chunks voisins riches, puis de grands vides.</p>"
+    },
+    {
+      "id": "detecteur",
+      "title": "Le détecteur de pétrole",
+      "image": "cdg_oil_chunk_scanner.webp",
+      "alt": "Le détecteur de pétrole posé au sol, son écran indiquant une réserve",
+      "html": "<p>Tiens le détecteur et fais un clic droit : il cherche pendant une seconde, puis son écran change. L'écran a trois réponses : rien ici, une réserve <strong>faible</strong> (de 4 à 7 millions de mB) ou une réserve <strong>élevée</strong> (plus de 7 millions). La barre d'action le dit aussi, et signale un gisement sans fond. Le détecteur vise le chunk où tu te tiens : déplace-toi d'un chunk à l'autre pour cartographier une zone.</p>"
+    },
+    {
+      "id": "biomes",
+      "title": "Les biomes riches",
+      "image": "cdg_oil_chunk_biome.webp",
+      "alt": "Le même terrain changé en désert : sable, cactus et buisson mort",
+      "html": "<p>Si l'un des biomes présents dans le chunk est une savane, un désert, des badlands, des plaines ou un océan, le plafond passe à 14 millions de mB (7 millions × 2). Seuls ces chunks peuvent dépasser 10 millions : ils deviennent alors <strong>inépuisables</strong>. Ailleurs, une réserve finit toujours par se vider.</p>"
+    },
+    {
+      "id": "epuiser",
+      "title": "Une réserve qui s’épuise",
+      "html": "<p>Chaque coup de la pompe à balancier retire de la réserve du chunk ce qu'il remonte : 1 000 mB avec un balancier symétrique. Une réserve de 5 millions de mB tient donc 5 000 coups, soit près de 4 heures à pleine cadence. Une <a href=\"/wiki/liaison-d-affichage\">liaison d'affichage</a> sur le trou de pompe indique ce qui reste.</p>"
+    },
+    {
+      "id": "pomper",
+      "title": "Passer au pompage",
+      "image": "cdg_oil_chunk_pompe.webp",
+      "alt": "Le détecteur sur un chunk riche, prêt pour une pompe à balancier",
+      "html": "<p>Une fois le bon chunk trouvé, bâtis la <a href=\"/wiki/pompe-a-balancier\">pompe à balancier</a> de façon que le trou de pompe soit dans ce chunk : c'est sa position qui compte, pas celle du balancier. Le pétrole part ensuite vers la <a href=\"/wiki/tour-de-distillation\">tour de distillation</a>.</p>"
+    },
+    {
+      "id": "carte",
+      "title": "Cartographier une zone",
+      "html": "<p>Un chunk fait 16 × 16 blocs ; l'écran de débogage (F3, et F3 + G pour voir les bordures) indique où tu es. Marche en ligne droite, un sondage par chunk, et note les résultats sur une carte : les réserves élevées forment des taches de plusieurs chunks. Un chunk riche entouré de chunks faibles est souvent le cœur d'un gisement.</p>"
+    },
+    {
+      "id": "reglages",
+      "title": "Les réglages du serveur",
+      "html": "<p>Plusieurs valeurs sont réglables : le seuil sous lequel un chunk est vide (4 millions), celui au-delà duquel il devient inépuisable (10 millions), les deux multiplicateurs (1,3 et 2), l'échelle des taches et la désactivation des gisements normaux ou riches. Les chiffres de cette page sont ceux par défaut.</p>"
+    },
+    {
+      "id": "voisins",
+      "title": "Un chunk, une réserve",
+      "html": "<p>Deux pompes à balancier dans le même chunk puisent dans la même réserve : elles la vident deux fois plus vite. Pour exploiter une grande tache, place plutôt une pompe par chunk riche et relie leurs sorties à une même conduite vers la raffinerie.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils",
+      "html": "<ul><li>Cherche d'abord dans les déserts, les savanes et près des océans.</li><li>Note les chunks « élevés » : un gisement sans fond est une ressource pour toute la partie.</li><li>Sur un serveur, la configuration peut changer les seuils, l'échelle des taches ou désactiver un type de gisement.</li></ul>"
+    }
+  ],
+  "related": [
+    "pompe-a-balancier",
+    "tour-de-distillation",
+    "carburants",
+    "liaison-d-affichage",
+    "create-diesel-generators"
+  ],
+  "sources": [
+    "Réserves : OilChunksSavedData.getBaseOilAmount (PerlinNoise, carré × 7 000 000 × OIL_MULTIPLIER 1,3 ou HIGH_OIL_MULTIPLIER 2 ; OIL_CHUNK_THRESHOLD 4 000 000 ; OIL_CHUNK_INFINITE_THRESHOLD 10 000 000)",
+    "Biomes : data/createdieselgenerators/tags/worldgen/biome/oil_biomes.json",
+    "Détecteur : OilScannerItem (20 ticks de recherche, état 1 aucun, 2 faible, 3 élevé au-dessus de (4 + 10) / 2 = 7 millions)",
+    "Recette : recipe/crafting/oil_scanner.json",
+    "Code, données et storyboards : Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, licence MIT, auteur George VI), identiques au jar du modpack Create France",
+    "Vidéos : scènes Ponder de Create Diesel Generators (OilChunkScene.scene) rejouées par notre moteur ; modèles et textures du mod (licence MIT, George VI)"
+  ],
+  "en": {
+    "slugEn": "oil-deposits",
+    "name": "Oil deposits",
+    "title": "Oil Deposits — Create Diesel Generators guide",
+    "description": "Finding crude oil in Create Diesel Generators: the Oil Scanner, oil chunks, rich biomes and bottomless deposits, with the numbers from the code.",
+    "intro": "Oil in Create Diesel Generators is invisible: there is no hidden oil block underground. Each <strong>chunk</strong> gets a reserve counted in mB, zero most of the time, computed from the world seed. To find it you need an <strong>Oil Scanner</strong>, then a <a href=\"/en/wiki/pumpjack\">pumpjack</a> to exploit it.",
+    "facts": [
+      {
+        "label": "Reserve",
+        "value": "Per chunk, from 0 to 9.1 million mB (14 million in rich biomes)"
+      },
+      {
+        "label": "Threshold",
+        "value": "Below 4 million mB the chunk has nothing"
+      },
+      {
+        "label": "Bottomless",
+        "value": "Above 10 million mB (only possible in rich biomes)"
+      },
+      {
+        "label": "Rich biomes",
+        "value": "Savanna, desert, badlands, plains, oceans"
+      },
+      {
+        "label": "Scanner",
+        "value": "Right-click: none, low, high; result after one second"
+      },
+      {
+        "label": "Depletion",
+        "value": "Each pump stroke takes its dose from the chunk reserve"
+      },
+      {
+        "label": "Version",
+        "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Andesite Alloy",
+          "Clock",
+          "Andesite Alloy"
+        ],
+        [
+          "Iron Sheet",
+          "Iron Ingot",
+          "Iron Sheet"
+        ],
+        [
+          null,
+          "Iron Ingot",
+          null
+        ]
+      ],
+      "result": "1 Oil Scanner"
+    },
+    "videos": [
+      {
+        "id": "cdg_oil_chunk",
+        "name": "Scanning a chunk with the Oil Scanner",
+        "description": "The scanner lying on the ground searches, then shows a medium reserve; on desert sand it shows a high one."
+      }
+    ],
+    "sections": [
+      {
+        "id": "reserve",
+        "title": "One reserve per chunk",
+        "alt": "A square of ground: one chunk, maybe hiding a reserve",
+        "html": "<p>The mod samples Perlin noise from the world seed and the chunk coordinates, squares it and multiplies it by 9.1 million mB (7 million × 1.3). If the result is below 4 million, the chunk is empty. That is why deposits form patches: areas of rich neighbouring chunks, then large empty stretches.</p>"
+      },
+      {
+        "id": "detecteur",
+        "title": "The Oil Scanner",
+        "alt": "The oil scanner lying on the ground, its screen showing a reserve",
+        "html": "<p>Hold the scanner and right-click: it searches for a second, then its screen changes. The screen has three answers: nothing here, a <strong>low</strong> reserve (4 to 7 million mB) or a <strong>high</strong> reserve (above 7 million). The action bar says it too, and flags a bottomless deposit. The scanner reads the chunk you are standing in: walk from chunk to chunk to map an area.</p>"
+      },
+      {
+        "id": "biomes",
+        "title": "Rich biomes",
+        "alt": "The same ground turned into desert: sand, cactus and a dead bush",
+        "html": "<p>If any biome in the chunk is a savanna, desert, badlands, plains or ocean, the ceiling rises to 14 million mB (7 million × 2). Only those chunks can go over 10 million: they then become <strong>bottomless</strong>. Anywhere else, a reserve always runs out eventually.</p>"
+      },
+      {
+        "id": "epuiser",
+        "title": "A reserve that runs dry",
+        "html": "<p>Each stroke of the pumpjack takes what it lifts from the chunk reserve: 1,000 mB with a symmetric beam. A 5 million mB reserve therefore lasts 5,000 strokes, close to 4 hours at full rate. A <a href=\"/en/wiki/display-link\">Display Link</a> on the pumpjack hole shows what is left.</p>"
+      },
+      {
+        "id": "pomper",
+        "title": "Moving on to pumping",
+        "alt": "The scanner on a rich chunk, ready for a pumpjack",
+        "html": "<p>Once you have found the right chunk, build the <a href=\"/en/wiki/pumpjack\">pumpjack</a> so that the pumpjack hole sits in that chunk: its position is what counts, not the beam's. The oil then heads for the <a href=\"/en/wiki/distillation-tower\">distillation tower</a>.</p>"
+      },
+      {
+        "id": "carte",
+        "title": "Mapping an area",
+        "html": "<p>A chunk is 16 × 16 blocks; the debug screen (F3, and F3 + G to show chunk borders) tells you where you are. Walk in a straight line, one scan per chunk, and write the results down on a map: high reserves form patches several chunks wide. A rich chunk surrounded by low ones is often the heart of a deposit, and the best place for your first pumpjack.</p>"
+      },
+      {
+        "id": "reglages",
+        "title": "Server settings",
+        "html": "<p>Several values can be configured: the threshold below which a chunk is empty (4 million), the one above which it becomes bottomless (10 million), both multipliers (1.3 and 2), the scale of the patches, and switching normal or rich deposits off entirely. The numbers on this page are the defaults; a modpack with KubeJS can even replace the whole calculation.</p>"
+      },
+      {
+        "id": "voisins",
+        "title": "One chunk, one reserve",
+        "html": "<p>Two pumpjacks in the same chunk draw from the same reserve: they empty it twice as fast. To work a large patch, place one pumpjack per rich chunk instead and connect all their outputs to a single pipe line that runs to the refinery. A bottomless chunk, on the other hand, can feed as many pumps as you like.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<ul><li>Look in deserts, savannas and near oceans first.</li><li>Write down the \"high\" chunks: a bottomless deposit lasts the whole game.</li><li>On a server, the config can change the thresholds, the patch scale or disable one kind of deposit.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Reserves: OilChunksSavedData.getBaseOilAmount (PerlinNoise, squared × 7,000,000 × OIL_MULTIPLIER 1.3 or HIGH_OIL_MULTIPLIER 2; OIL_CHUNK_THRESHOLD 4,000,000; OIL_CHUNK_INFINITE_THRESHOLD 10,000,000)",
+      "Biomes: data/createdieselgenerators/tags/worldgen/biome/oil_biomes.json",
+      "Scanner: OilScannerItem (20-tick search, state 1 none, 2 low, 3 high above (4 + 10) / 2 = 7 million)",
+      "Recipe: recipe/crafting/oil_scanner.json",
+      "Code, data and storyboards: Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, MIT licence, author George VI), identical to the Create France modpack jar",
+      "Videos: Create Diesel Generators Ponder scenes (OilChunkScene.scene) replayed by our engine; mod models and textures (MIT licence, George VI)"
+    ]
+  }
+}

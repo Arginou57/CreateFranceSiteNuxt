@@ -1,0 +1,301 @@
+{
+  "slug": "tourelle-chimique",
+  "name": "Tourelle chimique",
+  "blockId": "createdieselgenerators:chemical_turret",
+  "category": "diesel",
+  "title": "Tourelle chimique — Create Diesel Generators",
+  "description": "La tourelle chimique de Create Diesel Generators : remplissage, roue dentée, tir par redstone, briquet, visée automatique avec un filtre d’entité.",
+  "datePublished": "2026-11-23",
+  "dateModified": "2026-11-23",
+  "createVersion": "6.0.10 · Create Diesel Generators 1.3.15",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>tourelle chimique</strong> est la version fixe du <strong>pulvérisateur chimique</strong> : un bloc entraîné par une roue dentée, qui projette le fluide de son réservoir. Une potion empoisonne, un carburant brûle si la tourelle porte un briquet, l'eau éteint. On la déclenche à la redstone, on la pilote soi-même, ou on lui donne un opérateur et un <strong>filtre d'entité</strong> pour qu'elle vise seule.",
+  "facts": [
+    {
+      "label": "Rotation",
+      "value": "Par la roue dentée de sa base ; 4 SU par tr/min"
+    },
+    {
+      "label": "Réservoir",
+      "value": "1 000 mB, rempli par le dessous"
+    },
+    {
+      "label": "Portée",
+      "value": "22 blocs à l’horizontale ; force du jet = 0,3 × ln(vitesse) + 0,2"
+    },
+    {
+      "label": "Tir",
+      "value": "Signal de redstone, joueur aux commandes ou opérateur assis"
+    },
+    {
+      "label": "Effets",
+      "value": "Potions appliquées ; carburant enflammé avec le briquet ; lave : feu"
+    },
+    {
+      "label": "Visée auto",
+      "value": "Créature sur un siège voisin + filtre d’entité"
+    },
+    {
+      "label": "Version",
+      "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Mécanisme de précision",
+        "Plaque de cuivre",
+        "Pulvérisateur chimique"
+      ],
+      [
+        null,
+        "Roue dentée",
+        null
+      ],
+      [
+        "Plaque de cuivre",
+        "Boitier de cuivre",
+        "Plaque de cuivre"
+      ]
+    ],
+    "items": [
+      [
+        "create:precision_mechanism",
+        "create:copper_sheet",
+        "createdieselgenerators:chemical_sprayer"
+      ],
+      [
+        null,
+        "create:cogwheel",
+        null
+      ],
+      [
+        "create:copper_sheet",
+        "create:copper_casing",
+        "create:copper_sheet"
+      ]
+    ],
+    "result": "1 tourelle chimique",
+    "resultItem": "createdieselgenerators:chemical_turret"
+  },
+  "videos": [
+    {
+      "id": "cdg_turret",
+      "name": "Monter, alimenter et équiper la tourelle",
+      "description": "La tourelle reçoit une potion par une pompe et tourne grâce à une roue dentée ; un levier la déclenche, puis un briquet est posé dessus.",
+      "duration": "PT21S"
+    },
+    {
+      "id": "cdg_turret_auto",
+      "name": "La tourelle pilotée par un opérateur",
+      "description": "Un siège est posé à côté de la tourelle pour une créature, un filtre d'entité est glissé dans la tourelle, qui pivote vers ses cibles.",
+      "duration": "PT16S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "tourelle",
+      "title": "La tourelle",
+      "image": "cdg_turret_tourelle.webp",
+      "alt": "La tourelle chimique posée seule, canon vers l’avant",
+      "video": "cdg_turret",
+      "html": "<p>La tourelle se pose comme une <a href=\"/wiki/roue-dentee\">roue dentée</a> : sa base engrène avec une roue dentée voisine, sur un axe vertical. Elle consomme 4 SU par tr/min et sa vitesse règle la force du jet : à 32 tr/min la portée est courte, à 256 tr/min le jet part loin. La cible doit être à moins de 22 blocs à l'horizontale.</p>"
+    },
+    {
+      "id": "alimentation",
+      "title": "La remplir",
+      "image": "cdg_turret_alimentation.webp",
+      "alt": "La pompe, le réservoir de potion et la roue dentée qui fait tourner la tourelle",
+      "html": "<p>Elle garde 1 000 mB, remplis par le <strong>dessous</strong> avec une <a href=\"/wiki/pompe-mecanique\">pompe</a>. N'importe quel fluide convient : une potion de Create applique ses effets à la cible, de la lave met le feu, de l'eau éteint les flammes. Sans fluide ou sans rotation, elle ne tire pas.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "Tirer à la redstone",
+      "image": "cdg_turret_redstone.webp",
+      "alt": "Le levier activé à côté de la tourelle",
+      "html": "<p>Un signal de redstone la fait tirer en continu dans la direction où elle regarde. Un joueur peut aussi la contrôler : clic droit pour la prendre en main, et elle suit son regard, de −50° à +1° en hauteur. Accroupi, il la relâche. Le jet lui-même, une suite de gouttes, n'est pas dessiné dans nos vidéos.</p>"
+    },
+    {
+      "id": "briquet",
+      "title": "Le briquet",
+      "image": "cdg_turret_briquet.webp",
+      "alt": "Le briquet posé sur le canon de la tourelle",
+      "html": "<p>Avec un <strong>briquet à essence</strong> monté dessus, la tourelle enflamme les carburants qu'elle projette : la cible prend 5 secondes de feu et 2 points de dégâts à chaque goutte. On peut aussi fabriquer directement la tourelle avec un pulvérisateur à briquet.</p>"
+    },
+    {
+      "id": "auto",
+      "title": "Une tourelle automatique",
+      "image": "cdg_turret_auto_visee.webp",
+      "alt": "La tourelle tournée vers une cible, opérateur sur le siège voisin",
+      "video": "cdg_turret_auto",
+      "html": "<p>Place un siège de Create à côté de la tourelle et installe une créature dessus : elle devient l'opérateur, et la tourelle la coiffe d'un petit chapeau. Glisse un <strong>filtre d'entité</strong> dans la case de la tourelle : elle cherche toutes les deux secondes une créature qui correspond, pivote vers elle, calcule l'angle de tir et tire. Le perroquet de la scène n'est pas dessiné.</p>"
+    },
+    {
+      "id": "portee",
+      "title": "La force du jet",
+      "html": "<p>La force du jet vaut 0,3 × ln(vitesse) + 0,2 : environ 1,0 à 16 tr/min, 1,45 à 64 et 1,86 à 256. Plus elle est forte, plus le jet va loin avant de retomber. En visée automatique, la tourelle cherche entre −50° et +10° l'angle qui fait tomber le jet sur la cible, en tenant compte de cette force.</p>"
+    },
+    {
+      "id": "fluides",
+      "title": "Quels fluides ?",
+      "html": "<p>Toute potion de Create (poison, lenteur, dégâts instantanés…) applique ses effets à chaque goutte qui touche. La lave enflamme sans briquet. Un carburant ne brûle qu'avec le briquet ; sans lui, comme l'eau, il ne fait qu'un demi point de dégâts. L'eau éteint aussi les créatures en feu.</p>"
+    },
+    {
+      "id": "defense",
+      "title": "Une défense de base",
+      "html": "<p>Deux ou trois tourelles à la potion de dégâts, chacune avec son opérateur et un filtre réglé sur les monstres, protègent bien une entrée. Garde le réservoir de potion à l'abri : la tourelle tire tant qu'il reste du fluide.</p>"
+    },
+    {
+      "id": "filtre",
+      "title": "Le filtre d’entité",
+      "html": "<p>Le filtre d'entité s'ouvre comme un <a href=\"/wiki/filtres\">filtre</a> de Create : on y range des œufs d'apparition ou des catégories (monstres, animaux, joueurs…) pour choisir les cibles. Sans filtre, l'opérateur ne tire sur rien.</p>"
+    }
+  ],
+  "related": [
+    "roue-dentee",
+    "pompe-mecanique",
+    "filtres",
+    "outils-diesel-generators",
+    "carburants",
+    "create-diesel-generators"
+  ],
+  "sources": [
+    "Tourelle : ChemicalTurretBlockEntity (stress 4, réservoir 1 000 mB par le dessous, tir sur signal de redstone, briquet LighterUpgrade), TurretBlockEntity (portée 22 blocs, getShootingForce = ln(vitesse) × 0,3 + 0,2, hauteur −50 à +1, cible cherchée toutes les 40 ticks, suivi 0,2 / 0,7 par tick)",
+    "Projectile : ChemicalSprayerProjectileEntity (feu + 100 ticks et 2 dégâts si enflammé, potions, 0,5 dégât sinon)",
+    "Recettes : recipe/crafting/chemical_turret.json et chemical_turret_lighter.json",
+    "Rendu : ChemicalTurretRenderer",
+    "Code, données et storyboards : Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, licence MIT, auteur George VI), identiques au jar du modpack Create France",
+    "Vidéos : scènes Ponder de Create Diesel Generators (TurretScenes.chemical, TurretScenes.automatic) rejouées par notre moteur ; modèles et textures du mod (licence MIT, George VI)"
+  ],
+  "en": {
+    "slugEn": "chemical-turret",
+    "name": "Chemical Turret",
+    "title": "Chemical Turret — Create Diesel Generators guide",
+    "description": "The Chemical Turret from Create Diesel Generators: filling it, cogwheel drive, redstone firing, lighter upgrade and automatic aiming with an Entity Filter.",
+    "intro": "The <strong>Chemical Turret</strong> is the stationary version of the <strong>Chemical Sprayer</strong>: a block driven by a cogwheel that sprays whatever fluid it holds. A potion poisons, a fuel burns if the turret carries a lighter, water puts fires out. Fire it with redstone, steer it yourself, or give it an operator and an <strong>Entity Filter</strong> so it aims on its own.",
+    "facts": [
+      {
+        "label": "Rotation",
+        "value": "Through the cogwheel in its base; 4 SU per RPM"
+      },
+      {
+        "label": "Tank",
+        "value": "1,000 mB, filled from below"
+      },
+      {
+        "label": "Range",
+        "value": "22 blocks horizontally; spray force = 0.3 × ln(speed) + 0.2"
+      },
+      {
+        "label": "Firing",
+        "value": "Redstone signal, a player at the controls or a seated operator"
+      },
+      {
+        "label": "Effects",
+        "value": "Potion effects applied; fuel set alight with the lighter; lava: fire"
+      },
+      {
+        "label": "Auto aim",
+        "value": "Mob on a neighbouring seat + Entity Filter"
+      },
+      {
+        "label": "Version",
+        "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Precision Mechanism",
+          "Copper Sheet",
+          "Chemical Sprayer"
+        ],
+        [
+          null,
+          "Cogwheel",
+          null
+        ],
+        [
+          "Copper Sheet",
+          "Copper Casing",
+          "Copper Sheet"
+        ]
+      ],
+      "result": "1 Chemical Turret"
+    },
+    "videos": [
+      {
+        "id": "cdg_turret",
+        "name": "Building, feeding and upgrading the turret",
+        "description": "The turret gets a potion from a pump and turns thanks to a cogwheel; a lever fires it, then a lighter is fitted."
+      },
+      {
+        "id": "cdg_turret_auto",
+        "name": "The turret steered by an operator",
+        "description": "A seat is placed next to the turret for a mob, an entity filter is slotted into the turret, which swings towards its targets."
+      }
+    ],
+    "sections": [
+      {
+        "id": "tourelle",
+        "title": "The turret",
+        "alt": "The chemical turret on its own, barrel facing forward",
+        "html": "<p>The turret is placed like a <a href=\"/en/wiki/cogwheel\">Cogwheel</a>: its base meshes with a neighbouring cogwheel on a vertical axis. It uses 4 SU per RPM and its speed sets the spray force: at 32 RPM the reach is short, at 256 RPM the spray goes far. The target must be within 22 blocks horizontally.</p>"
+      },
+      {
+        "id": "alimentation",
+        "title": "Filling it",
+        "alt": "The pump, the potion tank and the cogwheel driving the turret",
+        "html": "<p>It holds 1,000 mB, filled from <strong>below</strong> by a <a href=\"/en/wiki/mechanical-pump\">pump</a>. Any fluid will do: a Create potion applies its effects to the target, lava sets it on fire, water puts flames out. Without fluid or rotation, it does not fire.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "Firing with redstone",
+        "alt": "The lever switched on next to the turret",
+        "html": "<p>A redstone signal makes it fire continuously where it is pointing. A player can also take control: right-click to grab it and it follows your view, from −50° to +1° vertically. Sneaking lets go. The spray itself, a stream of droplets, is not drawn in our videos.</p>"
+      },
+      {
+        "id": "briquet",
+        "title": "The lighter",
+        "alt": "The lighter fitted on the turret barrel",
+        "html": "<p>With a <strong>Lighter</strong> fitted, the turret ignites the fuels it sprays: the target catches fire for 5 seconds and takes 2 damage per droplet. You can also craft the turret directly with a sprayer that already has a lighter.</p>"
+      },
+      {
+        "id": "auto",
+        "title": "An automatic turret",
+        "alt": "The turret turned towards a target, operator on the nearby seat",
+        "html": "<p>Place a Create seat next to the turret and sit a mob on it: it becomes the operator, and the turret gives it a little hat. Give the turret an <strong>Entity Filter</strong>: every two seconds it looks for a matching creature, turns towards it, works out the firing angle and shoots. The parrot in the scene is not drawn.</p>"
+      },
+      {
+        "id": "portee",
+        "title": "Spray force",
+        "html": "<p>The spray force is 0.3 × ln(speed) + 0.2: about 1.0 at 16 RPM, 1.45 at 64 and 1.86 at 256. The stronger it is, the further the spray travels before falling. When aiming automatically, the turret searches between −50° and +10° for the angle that lands the spray on the target, taking that force into account, so a faster cogwheel also means flatter shots.</p>"
+      },
+      {
+        "id": "fluides",
+        "title": "Which fluids?",
+        "html": "<p>Any Create potion (poison, slowness, instant damage…) applies its effects with every droplet that hits. Lava sets targets on fire without a lighter. A fuel only burns with the lighter; without it, like water, it only deals half a point of damage. Water also puts out burning creatures, which makes a water turret a handy fire guard.</p>"
+      },
+      {
+        "id": "defense",
+        "title": "A base defence",
+        "html": "<p>Two or three turrets loaded with a harming potion, each with its operator and a filter set to monsters, guard an entrance well. Keep the potion tank out of reach: the turret keeps firing as long as fluid is left, so a large tank behind a wall gives it a long autonomy.</p>"
+      },
+      {
+        "id": "filtre",
+        "title": "The Entity Filter",
+        "html": "<p>The entity filter opens like a Create <a href=\"/en/wiki/filters\">Filter</a>: put spawn eggs or categories (monsters, animals, players…) in it to choose the targets. Without a filter, the operator fires at nothing.</p>"
+      }
+    ],
+    "sources": [
+      "Turret: ChemicalTurretBlockEntity (stress 4, 1,000 mB tank from below, fires on redstone signal, LighterUpgrade), TurretBlockEntity (22-block range, getShootingForce = ln(speed) × 0.3 + 0.2, pitch −50 to +1, target search every 40 ticks, tracking 0.2 / 0.7 per tick)",
+      "Projectile: ChemicalSprayerProjectileEntity (+100 fire ticks and 2 damage when lit, potions, 0.5 damage otherwise)",
+      "Recipes: recipe/crafting/chemical_turret.json and chemical_turret_lighter.json",
+      "Rendering: ChemicalTurretRenderer",
+      "Code, data and storyboards: Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, MIT licence, author George VI), identical to the Create France modpack jar",
+      "Videos: Create Diesel Generators Ponder scenes (TurretScenes.chemical, TurretScenes.automatic) replayed by our engine; mod models and textures (MIT licence, George VI)"
+    ]
+  }
+}

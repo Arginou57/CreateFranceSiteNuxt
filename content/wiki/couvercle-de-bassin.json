@@ -1,0 +1,271 @@
+{
+  "slug": "couvercle-de-bassin",
+  "name": "Couvercle de bassin",
+  "blockId": "createdieselgenerators:basin_lid",
+  "category": "diesel",
+  "title": "Couvercle de bassin — Create Diesel Generators",
+  "description": "Le couvercle de bassin de Create Diesel Generators : fermentation, éthanol, pâte, pommes dorées, et le fermenteur de masse.",
+  "datePublished": "2026-11-23",
+  "dateModified": "2026-11-23",
+  "createVersion": "6.0.10 · Create Diesel Generators 1.3.15",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>couvercle de bassin</strong> se pose sur un <a href=\"/wiki/bassin\">bassin</a> de Create et en fait une <strong>cuve de fermentation</strong>. On ouvre, on jette les ingrédients, on ferme : une jauge sur le côté compte le temps, puis le résultat apparaît dans le bassin. C'est la source de l'<strong>éthanol</strong> du mod, et il sait aussi faire de la pâte, un œil d'araignée fermenté ou des pommes dorées. Son grand frère, le <strong>fermenteur de masse</strong>, fait la même chose en grand.",
+  "facts": [
+    {
+      "label": "Pose",
+      "value": "Sur un bassin de Create ; s’ouvre au clic droit ou par la redstone"
+    },
+    {
+      "label": "Fonctionnement",
+      "value": "Fermé, sans rotation ; la durée vient de la recette"
+    },
+    {
+      "label": "Éthanol",
+      "value": "Sucre, pomme, pomme de terre ou canne + poudre d’os → 200 mB en 20 s"
+    },
+    {
+      "label": "Autres recettes",
+      "value": "Pâte, œil d’araignée fermenté, pomme dorée, carotte dorée, crème de magma"
+    },
+    {
+      "label": "Fermenteur de masse",
+      "value": "Multibloc : 400 mB d’éthanol par recette, lave, pulpe, crème de magma"
+    },
+    {
+      "label": "Sortie",
+      "value": "Dans le bassin ; une pompe ou un bec verseur la récupère"
+    },
+    {
+      "label": "Version",
+      "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Horloge",
+        null
+      ],
+      [
+        "Alliage d'andésite",
+        "Alliage d'andésite",
+        "Alliage d'andésite"
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "minecraft:clock",
+        null
+      ],
+      [
+        "create:andesite_alloy",
+        "create:andesite_alloy",
+        "create:andesite_alloy"
+      ]
+    ],
+    "result": "1 couvercle de bassin",
+    "resultItem": "createdieselgenerators:basin_lid"
+  },
+  "videos": [
+    {
+      "id": "cdg_basin_lid",
+      "name": "Fermenter de l’éthanol sous un couvercle",
+      "description": "Le couvercle s'ouvre, de la poudre d'os et du sucre tombent dans le bassin, il se referme ; la jauge tourne vingt secondes, puis l'éthanol est pompé vers un réservoir.",
+      "duration": "PT24S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "poser",
+      "title": "Le poser",
+      "image": "cdg_basin_lid_couvercle.webp",
+      "alt": "Le couvercle de bassin posé sur un bassin, jauge sur la face avant",
+      "video": "cdg_basin_lid",
+      "html": "<p>Pose le couvercle directement sur un bassin : il s'y emboîte et affiche une petite jauge sur sa face avant. Posé ailleurs, c'est un simple couvercle décoratif. Il ne demande ni rotation ni chaleur pour ses recettes de base : seul le temps compte.</p>"
+    },
+    {
+      "id": "ingredients",
+      "title": "Mettre les ingrédients",
+      "image": "cdg_basin_lid_ingredients.webp",
+      "alt": "Le couvercle ouvert, la poudre d’os et le sucre jetés dans le bassin",
+      "html": "<p>Un clic droit ouvre ou ferme le couvercle ; un signal de redstone le tient ouvert tant qu'il dure. Ouvert, on y jette les objets, ou on les fait arriver par un <a href=\"/wiki/entonnoir\">entonnoir</a> sur le côté du bassin, et les fluides par un tuyau. Pour l'éthanol : un ingrédient « fermentable » (sucre, pomme, pomme de terre, canne à sucre) et une poudre d'os.</p>"
+    },
+    {
+      "id": "fermenter",
+      "title": "La fermentation",
+      "image": "cdg_basin_lid_fermentation.webp",
+      "alt": "Le couvercle fermé, l’aiguille de la jauge en train de tourner",
+      "html": "<p>Une fois fermé, le couvercle lance la recette. L'aiguille part du haut et tourne d'un quart de tour jusqu'à la fin : 400 ticks, soit 20 secondes, pour l'éthanol. Les objets disparaissent et 200 mB d'éthanol apparaissent dans le bassin. Si tu rouvres trop tôt, la fermentation s'arrête et repart de zéro à la fermeture.</p>"
+    },
+    {
+      "id": "recettes",
+      "title": "Les recettes",
+      "html": "<ul><li>Fermentable + poudre d'os → 200 mB d'éthanol (400 ticks).</li><li>Farine de blé + 100 mB d'eau → pâte (200 ticks).</li><li>Œil d'araignée + sucre + 100 mB d'eau → œil d'araignée fermenté.</li><li>Pomme + 5 lingots d'or + 250 mB de potion étrange → pomme dorée (400 ticks).</li><li>Carotte dorée et crème de magma ont aussi leur recette.</li></ul>"
+    },
+    {
+      "id": "fermenteur",
+      "title": "Le fermenteur de masse",
+      "html": "<p>Le <strong>fermenteur de masse</strong> (Bulk Fermenter) est un multibloc qui se construit comme un réservoir. Il garde 1 000 mB par bloc dans chacun de ses réservoirs et peut être chauffé par en dessous. Sa recette d'éthanol donne 400 mB au lieu de 200 ; il fait aussi de la pulpe avec quatre objets réductibles en pulpe et de l'eau, de la lave avec de la pierre (chauffé, 50 mB en 45 s) et de la crème de magma.</p>"
+    },
+    {
+      "id": "automatiser",
+      "title": "Automatiser la fermentation",
+      "html": "<p>Un signal de redstone tient le couvercle ouvert : pendant qu'il dure, un <a href=\"/wiki/entonnoir\">entonnoir</a> ou un dépôt fait entrer les ingrédients ; coupe le signal et la fermentation commence. Une <a href=\"/wiki/pompe-mecanique\">pompe</a> sur le côté du bassin sort l'éthanol au fur et à mesure. Un simple répéteur d'impulsions de Create suffit à rythmer le cycle toutes les vingt secondes.</p>"
+    },
+    {
+      "id": "ingredients-choix",
+      "title": "Quels ingrédients ?",
+      "html": "<p>Le sucre est le plus simple à automatiser : une ferme de canne à sucre et un broyage suffisent. La poudre d'os vient des squelettes ou d'une meule à os. Chaque fermentation donne 200 mB d'éthanol pour un ingrédient et une poudre d'os ; le fermenteur de masse double cette quantité pour les mêmes ingrédients.</p>"
+    },
+    {
+      "id": "vapeur",
+      "title": "La vapeur au réveil",
+      "html": "<p>Quand une fermentation se termine couvercle fermé, de la vapeur reste emprisonnée : elle s'échappe en sifflant à la prochaine ouverture. C'est un simple effet, sans danger.</p>"
+    },
+    {
+      "id": "suite",
+      "title": "Et ensuite",
+      "html": "<p>L'éthanol fait tourner un <a href=\"/wiki/moteur-diesel\">moteur diesel</a>, mais il vaut mieux le mélanger à de l'huile végétale dans un <a href=\"/wiki/mixeur-mecanique\">mixeur mécanique</a> pour faire du biodiesel, deux fois plus puissant. Une <a href=\"/wiki/pompe-mecanique\">pompe</a> branchée sur le bassin le vide.</p>"
+    }
+  ],
+  "related": [
+    "bassin",
+    "carburants",
+    "mixeur-mecanique",
+    "pompe-mecanique",
+    "entonnoir",
+    "moteur-diesel",
+    "create-diesel-generators"
+  ],
+  "sources": [
+    "Couvercle : BasinLidBlock (ouverture au clic droit ou par signal de redstone), BasinLidBlockEntity (durée de la recette, progression)",
+    "Recettes : recipe/basin_fermenting/*.json ; tags/item/fermentable.json",
+    "Fermenteur : BulkFermenterBlockEntity (capacité 1 000 mB par bloc, 6 réservoirs) ; recipe/bulk_fermenting/*.json",
+    "Jauge : BasinLidRenderer",
+    "Recette : recipe/crafting/basin_lid.json",
+    "Code, données et storyboards : Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, licence MIT, auteur George VI), identiques au jar du modpack Create France",
+    "Vidéos : scènes Ponder de Create Diesel Generators (BasinScenes.basin_lid) rejouées par notre moteur ; modèles et textures du mod (licence MIT, George VI)"
+  ],
+  "en": {
+    "slugEn": "basin-lid",
+    "name": "Basin Lid",
+    "title": "Basin Lid — Create Diesel Generators guide",
+    "description": "The Basin Lid from Create Diesel Generators: fermenting ethanol, dough and golden apples in a basin, and the Bulk Fermenter multiblock.",
+    "intro": "The <strong>Basin Lid</strong> sits on a Create <a href=\"/en/wiki/basin\">Basin</a> and turns it into a <strong>fermenting vat</strong>. Open it, drop the ingredients in, close it: a gauge on the side counts down, then the result appears in the basin. It is where the mod's <strong>ethanol</strong> comes from, and it can also make dough, fermented spider eyes or golden apples. Its big brother, the <strong>Bulk Fermenter</strong>, does the same at scale.",
+    "facts": [
+      {
+        "label": "Placement",
+        "value": "On a Create basin; opens with a right-click or a redstone signal"
+      },
+      {
+        "label": "Operation",
+        "value": "Closed, no rotation needed; time comes from the recipe"
+      },
+      {
+        "label": "Ethanol",
+        "value": "Sugar, apple, potato or sugar cane + bone meal → 200 mB in 20 s"
+      },
+      {
+        "label": "Other recipes",
+        "value": "Dough, fermented spider eye, golden apple, golden carrot, magma cream"
+      },
+      {
+        "label": "Bulk Fermenter",
+        "value": "Multiblock: 400 mB of ethanol per recipe, lava, pulp, magma cream"
+      },
+      {
+        "label": "Output",
+        "value": "Into the basin; a pump or spout takes it out"
+      },
+      {
+        "label": "Version",
+        "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Clock",
+          null
+        ],
+        [
+          "Andesite Alloy",
+          "Andesite Alloy",
+          "Andesite Alloy"
+        ]
+      ],
+      "result": "1 Basin Lid"
+    },
+    "videos": [
+      {
+        "id": "cdg_basin_lid",
+        "name": "Fermenting ethanol under a lid",
+        "description": "The lid opens, bone meal and sugar drop into the basin, it closes; the gauge turns for twenty seconds, then the ethanol is pumped to a tank."
+      }
+    ],
+    "sections": [
+      {
+        "id": "poser",
+        "title": "Placing it",
+        "alt": "The basin lid on a basin, gauge on the front face",
+        "html": "<p>Place the lid straight onto a basin: it snaps on and shows a small gauge on its front face. Placed anywhere else it is just a decorative lid. Its basic recipes need neither rotation nor heat: only time matters.</p>"
+      },
+      {
+        "id": "ingredients",
+        "title": "Adding the ingredients",
+        "alt": "The lid open, bone meal and sugar thrown into the basin",
+        "html": "<p>A right-click opens or closes the lid; a redstone signal keeps it open for as long as it lasts. While open, throw the items in, or feed them through a <a href=\"/en/wiki/funnel\">Funnel</a> on the side of the basin, and fluids through a pipe. For ethanol: one \"fermentable\" ingredient (sugar, apple, potato, sugar cane) and one bone meal.</p>"
+      },
+      {
+        "id": "fermenter",
+        "title": "Fermentation",
+        "alt": "The lid closed, the gauge needle turning",
+        "html": "<p>Once closed, the lid starts the recipe. The needle starts at the top and turns a quarter turn until the end: 400 ticks, or 20 seconds, for ethanol. The items disappear and 200 mB of ethanol show up in the basin. If you open it too early, fermentation stops and starts again from zero when closed.</p>"
+      },
+      {
+        "id": "recettes",
+        "title": "Recipes",
+        "html": "<ul><li>Fermentable + bone meal → 200 mB of ethanol (400 ticks).</li><li>Wheat flour + 100 mB of water → dough (200 ticks).</li><li>Spider eye + sugar + 100 mB of water → fermented spider eye.</li><li>Apple + 5 gold ingots + 250 mB of awkward potion → golden apple (400 ticks).</li><li>Golden carrot and magma cream have recipes too.</li></ul>"
+      },
+      {
+        "id": "fermenteur",
+        "title": "The Bulk Fermenter",
+        "html": "<p>The <strong>Bulk Fermenter</strong> is a multiblock built like a tank. It holds 1,000 mB per block in each of its tanks and can be heated from below. Its ethanol recipe gives 400 mB instead of 200; it also makes pulp from four pulpifiable items and water, lava from cobblestone (heated, 50 mB in 45 s) and magma cream.</p>"
+      },
+      {
+        "id": "automatiser",
+        "title": "Automating fermentation",
+        "html": "<p>A redstone signal keeps the lid open: while it lasts, a <a href=\"/en/wiki/funnel\">Funnel</a> or a depot feeds the ingredients in; cut the signal and fermentation begins. A <a href=\"/en/wiki/mechanical-pump\">pump</a> on the side of the basin draws the ethanol out as it comes. A simple Create pulse repeater is enough to pace the cycle every twenty seconds, with no player involved.</p>"
+      },
+      {
+        "id": "ingredients-choix",
+        "title": "Which ingredients?",
+        "html": "<p>Sugar is the easiest to automate: a sugar cane farm and some processing are enough. Bone meal comes from skeletons or from milling bones. Each fermentation gives 200 mB of ethanol for one ingredient and one bone meal; the bulk fermenter doubles that amount for the same ingredients, which makes it the better choice once ethanol becomes a steady need.</p>"
+      },
+      {
+        "id": "vapeur",
+        "title": "Steam on opening",
+        "html": "<p>When a fermentation finishes with the lid closed, some steam stays trapped inside: it escapes with a hiss the next time the lid opens. It is purely an effect and does no harm, but it is a handy sign that a batch is ready to be collected.</p>"
+      },
+      {
+        "id": "suite",
+        "title": "What next",
+        "html": "<p>Ethanol can run a <a href=\"/en/wiki/diesel-engine\">Diesel Engine</a>, but it is better mixed with plant oil in a <a href=\"/en/wiki/mechanical-mixer\">Mechanical Mixer</a> to make biodiesel, twice as strong. A <a href=\"/en/wiki/mechanical-pump\">pump</a> attached to the basin empties it.</p>"
+      }
+    ],
+    "sources": [
+      "Lid: BasinLidBlock (opens on right-click or redstone signal), BasinLidBlockEntity (recipe duration, progress)",
+      "Recipes: recipe/basin_fermenting/*.json; tags/item/fermentable.json",
+      "Fermenter: BulkFermenterBlockEntity (1,000 mB per block, 6 tanks); recipe/bulk_fermenting/*.json",
+      "Gauge: BasinLidRenderer",
+      "Recipe: recipe/crafting/basin_lid.json",
+      "Code, data and storyboards: Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, MIT licence, author George VI), identical to the Create France modpack jar",
+      "Videos: Create Diesel Generators Ponder scenes (BasinScenes.basin_lid) replayed by our engine; mod models and textures (MIT licence, George VI)"
+    ]
+  }
+}

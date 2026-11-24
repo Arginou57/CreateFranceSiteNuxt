@@ -1,0 +1,286 @@
+{
+  "slug": "moteur-diesel-enorme",
+  "name": "Moteur diesel énorme",
+  "blockId": "createdieselgenerators:huge_diesel_engine",
+  "category": "diesel",
+  "title": "Moteur diesel énorme — Create Diesel Generators",
+  "description": "Le moteur diesel énorme de Create Diesel Generators : arbre moteur, jusqu’à 4 moteurs par arbre, 224 tr/min et 16 384 SU chacun au diesel.",
+  "datePublished": "2026-11-23",
+  "dateModified": "2026-11-23",
+  "createVersion": "6.0.10 · Create Diesel Generators 1.3.15",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>moteur diesel énorme</strong> reprend l'idée du <a href=\"/wiki/moteur-a-vapeur\">moteur à vapeur</a> de Create : il ne porte pas d'arbre, il pousse une bielle vers un <a href=\"/wiki/rotor\">rotor</a> placé deux blocs devant lui. Ce rotor devient un <strong>rotor alimenté</strong> (Powered Engine Shaft) qui peut recevoir jusqu'à quatre moteurs. Au diesel, chacun ajoute 16 384 SU, et l'arbre tourne à 224 tr/min : la source la plus rapide du mod.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Source de rotation (Create Diesel Generators)"
+    },
+    {
+      "label": "Montage",
+      "value": "Face avant vers un rotor à 2 blocs, perpendiculaire à l’arbre"
+    },
+    {
+      "label": "Vitesse",
+      "value": "224 tr/min (diesel, essence, biodiesel) · 192 (éthanol, huile)"
+    },
+    {
+      "label": "Puissance par moteur",
+      "value": "16 384 SU diesel · 12 288 essence ou biodiesel · 6 144 éthanol · 4 096 huile"
+    },
+    {
+      "label": "Moteurs par arbre",
+      "value": "Jusqu’à 4 (un par côté), leurs SU s’additionnent"
+    },
+    {
+      "label": "Réservoir",
+      "value": "100 mB par moteur, par toute face hors de son axe ; 1 mB/s"
+    },
+    {
+      "label": "Version",
+      "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Alliage d'andésite",
+        "Briquet",
+        "Alliage d'andésite"
+      ],
+      [
+        "Plaque de laiton",
+        "Moteur à vapeur",
+        "Plaque de laiton"
+      ],
+      [
+        "Tuyau à fluide",
+        "Bloc de laiton",
+        "Tuyau à fluide"
+      ]
+    ],
+    "items": [
+      [
+        "create:andesite_alloy",
+        "minecraft:flint_and_steel",
+        "create:andesite_alloy"
+      ],
+      [
+        "create:brass_sheet",
+        "create:steam_engine",
+        "create:brass_sheet"
+      ],
+      [
+        "create:fluid_pipe",
+        "create:brass_block",
+        "create:fluid_pipe"
+      ]
+    ],
+    "result": "1 moteur diesel énorme",
+    "resultItem": "createdieselgenerators:huge_diesel_engine"
+  },
+  "videos": [
+    {
+      "id": "cdg_huge",
+      "name": "Moteurs énormes sur trois arbres",
+      "description": "Six moteurs énormes, trois de chaque côté, entourent trois rotors alimentés ; le carburant arrive par une ligne de tuyaux et les pistons se mettent à battre.",
+      "duration": "PT9S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "monter",
+      "title": "Le montage",
+      "image": "cdg_huge_moteurs.webp",
+      "alt": "Six moteurs énormes en deux rangées, trois rotors alimentés au milieu",
+      "video": "cdg_huge",
+      "html": "<p>Pose d'abord un rotor. Place ensuite le moteur énorme deux blocs plus loin, sa face avant tournée vers le rotor et perpendiculaire à son axe : le rotor se change en rotor alimenté et une bielle relie le piston au maneton. Le bloc entre les deux reste libre : la bielle y passe. Un moteur dans l'axe du rotor ne s'y accroche pas.</p>"
+    },
+    {
+      "id": "quatre",
+      "title": "Jusqu’à quatre moteurs par arbre",
+      "html": "<p>Un rotor alimenté accepte un moteur sur chacun de ses quatre côtés libres : au-dessus, au-dessous et des deux côtés. Les capacités s'ajoutent et l'arbre prend la vitesse du moteur le plus rapide. Quatre moteurs au diesel donnent 65 536 SU à 224 tr/min sur un seul bloc d'arbre. On peut aussi aligner plusieurs rotors alimentés, comme dans la vidéo, pour répartir les moteurs sur la longueur.</p>"
+    },
+    {
+      "id": "carburant",
+      "title": "Les alimenter",
+      "image": "cdg_huge_carburant.webp",
+      "alt": "La ligne de tuyaux qui passe sur les moteurs et le réservoir de carburant",
+      "html": "<p>Chaque moteur a son propre petit réservoir de 100 mB, accessible par toutes les faces sauf l'avant et l'arrière. Une ligne de <a href=\"/wiki/tuyau-a-fluide\">tuyaux</a> posée dessus, comme dans la scène, les nourrit tous. Chacun brûle 1 mB par seconde : quatre moteurs consomment 4 mB par seconde, soit 14,4 seaux par heure.</p>"
+    },
+    {
+      "id": "chiffres",
+      "title": "Puissance selon le carburant",
+      "html": "<table><thead><tr><th>Carburant</th><th>tr/min</th><th>SU par moteur</th></tr></thead><tbody><tr><td>Diesel</td><td>224</td><td>16 384</td></tr><tr><td>Essence</td><td>224</td><td>12 288</td></tr><tr><td>Biodiesel</td><td>224</td><td>12 288</td></tr><tr><td>Éthanol</td><td>192</td><td>6 144</td></tr><tr><td>Huile végétale</td><td>192</td><td>4 096</td></tr></tbody></table><p>Le turbocompresseur ne se pose pas sur ce moteur ; le silencieux, oui.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "Régler et inverser",
+      "html": "<p>Le signal de redstone agit comme sur les autres moteurs : 15 arrête, moins ralentit. Le sens de rotation se règle sur un moteur, et tous ceux du même arbre le suivent. Un arbre aussi rapide use vite les machines lentes : place une <a href=\"/wiki/roue-dentee\">grande roue dentée</a> pour redescendre à 112 ou 56 tr/min.</p>"
+    },
+    {
+      "id": "arbre",
+      "title": "Le rotor alimenté",
+      "html": "<p>Le rotor alimenté transmet la rotation par ses deux bouts, comme un rotor ordinaire : branche la suite de ta ligne dessus. Il ne produit rien tant qu'aucun moteur alimenté n'y est accroché ; dès qu'un moteur reçoit du carburant, l'arbre démarre à sa vitesse. Le maneton dessiné au centre tourne avec lui, et la bielle de chaque moteur suit son mouvement.</p>"
+    },
+    {
+      "id": "vapeur",
+      "title": "Face au moteur à vapeur",
+      "html": "<p>Au diesel, un moteur énorme donne autant de SU qu'un <a href=\"/wiki/moteur-a-vapeur\">moteur à vapeur</a> à pleine chaudière, 16 384, mais à 224 tr/min au lieu de 64, sans eau ni chaudière. Il lui faut en échange 1 mB de carburant par seconde et une raffinerie pour le produire.</p>"
+    },
+    {
+      "id": "silencieux",
+      "title": "Le silencieux",
+      "html": "<p>Un moteur énorme est bruyant : son silencieux se pose d'un clic droit, comme sur les autres moteurs, et réduit fortement le volume sans changer la puissance. Sur une ligne de quatre moteurs, il suffit d'équiper ceux qui sont près d'une zone habitée.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils",
+      "html": "<ul><li>Laisse de la place : il faut trois blocs en ligne, le moteur, l'espace de la bielle et l'arbre.</li><li>Au diesel, quatre moteurs énormes valent huit moteurs simples turbo.</li><li>Le diesel vient de la <a href=\"/wiki/tour-de-distillation\">tour de distillation</a>.</li></ul>"
+    }
+  ],
+  "related": [
+    "moteur-diesel",
+    "moteur-diesel-modulaire",
+    "carburants",
+    "moteur-a-vapeur",
+    "rotor",
+    "roue-dentee",
+    "tuyau-a-fluide",
+    "create-diesel-generators"
+  ],
+  "sources": [
+    "SU et vitesse : data/createdieselgenerators/createdieselgenerators/fuel_type/*.json (speed, strength, burn_rate, burner_multiplier) (bloc « huge »)",
+    "Moteur : HugeDieselEngineBlockEntity (getShaft : rotor à facing × 2, réservoir 100 mB, faces hors de l’axe), HugeDieselEngineBlock.getStateForPlacement (rotor perpendiculaire changé en rotor alimenté)",
+    "Arbre : PoweredEngineShaftBlockEntity (somme des capacités, vitesse = la plus grande, 4 directions perpendiculaires)",
+    "Améliorations : EngineUpgrades.TurbochargerUpgrade.canAddOn (moteurs simple et modulaire seulement)",
+    "Rendu : HugeDieselEngineRenderer (piston, bielle ±23°, maneton)",
+    "Recette : recipe/crafting/huge_diesel_engine.json",
+    "Code, données et storyboards : Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, licence MIT, auteur George VI), identiques au jar du modpack Create France",
+    "Vidéos : scènes Ponder de Create Diesel Generators (DieselEngineScenes.huge) rejouées par notre moteur ; modèles et textures du mod (licence MIT, George VI)"
+  ],
+  "en": {
+    "slugEn": "huge-diesel-engine",
+    "name": "Huge Diesel Engine",
+    "title": "Huge Diesel Engine — Create Diesel Generators guide",
+    "description": "The Huge Diesel Engine from Create Diesel Generators: powered engine shaft, up to 4 engines per shaft, 224 RPM and 16,384 SU each on diesel.",
+    "intro": "The <strong>Huge Diesel Engine</strong> borrows the idea of Create's <a href=\"/en/wiki/steam-engine\">Steam Engine</a>: it has no shaft of its own, it drives a connecting rod into a <a href=\"/en/wiki/shaft\">Shaft</a> placed two blocks ahead. That shaft becomes a <strong>Powered Engine Shaft</strong> which can take up to four engines. On diesel each one adds 16,384 SU, and the shaft spins at 224 RPM: the fastest source in the mod.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Rotation source (Create Diesel Generators)"
+      },
+      {
+        "label": "Setup",
+        "value": "Front face towards a shaft 2 blocks away, at a right angle to its axis"
+      },
+      {
+        "label": "Speed",
+        "value": "224 RPM (diesel, gasoline, biodiesel) · 192 (ethanol, plant oil)"
+      },
+      {
+        "label": "Output per engine",
+        "value": "16,384 SU diesel · 12,288 gasoline or biodiesel · 6,144 ethanol · 4,096 plant oil"
+      },
+      {
+        "label": "Engines per shaft",
+        "value": "Up to 4 (one per side), their SU add up"
+      },
+      {
+        "label": "Tank",
+        "value": "100 mB per engine, through any face off its axis; 1 mB/s"
+      },
+      {
+        "label": "Version",
+        "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Andesite Alloy",
+          "Flint and Steel",
+          "Andesite Alloy"
+        ],
+        [
+          "Brass Sheet",
+          "Steam Engine",
+          "Brass Sheet"
+        ],
+        [
+          "Fluid Pipe",
+          "Block of Brass",
+          "Fluid Pipe"
+        ]
+      ],
+      "result": "1 Huge Diesel Engine"
+    },
+    "videos": [
+      {
+        "id": "cdg_huge",
+        "name": "Huge engines on three shafts",
+        "description": "Six huge engines, three on each side, surround three powered engine shafts; fuel arrives through a line of pipes and the pistons start pumping."
+      }
+    ],
+    "sections": [
+      {
+        "id": "monter",
+        "title": "Setting it up",
+        "alt": "Six huge engines in two rows, three powered engine shafts in between",
+        "html": "<p>Place a shaft first. Then place the huge engine two blocks away, front face towards the shaft and at a right angle to its axis: the shaft becomes a powered engine shaft and a connecting rod links the piston to the crank. The block in between stays free: the rod moves through it. An engine lined up with the shaft axis will not connect.</p>"
+      },
+      {
+        "id": "quatre",
+        "title": "Up to four engines per shaft",
+        "html": "<p>A powered engine shaft accepts one engine on each of its four free sides: above, below and on both flanks. Capacities add up and the shaft takes the speed of the fastest engine. Four engines on diesel give 65,536 SU at 224 RPM on a single shaft block. You can also line up several powered shafts, as in the video, to spread the engines along the length.</p>"
+      },
+      {
+        "id": "carburant",
+        "title": "Fuelling them",
+        "alt": "The pipe line running over the engines and the fuel tank",
+        "html": "<p>Each engine has its own small 100 mB tank, reachable from every face except the front and back. A line of <a href=\"/en/wiki/fluid-pipe\">Fluid Pipes</a> laid on top, as in the scene, feeds them all. Each one burns 1 mB per second: four engines use 4 mB per second, or 14.4 buckets an hour.</p>"
+      },
+      {
+        "id": "chiffres",
+        "title": "Output per fuel",
+        "html": "<table><thead><tr><th>Fuel</th><th>RPM</th><th>SU per engine</th></tr></thead><tbody><tr><td>Diesel</td><td>224</td><td>16,384</td></tr><tr><td>Gasoline</td><td>224</td><td>12,288</td></tr><tr><td>Biodiesel</td><td>224</td><td>12,288</td></tr><tr><td>Ethanol</td><td>192</td><td>6,144</td></tr><tr><td>Plant oil</td><td>192</td><td>4,096</td></tr></tbody></table><p>The turbocharger cannot be fitted on this engine; the silencer can.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "Throttling and reversing",
+        "html": "<p>Redstone works as on the other engines: 15 stops it, less slows it down. The direction is set on one engine and every engine on the same shaft follows. Such a fast shaft wears out slow machines quickly: add a <a href=\"/en/wiki/cogwheel\">Large Cogwheel</a> to step down to 112 or 56 RPM.</p>"
+      },
+      {
+        "id": "arbre",
+        "title": "The powered engine shaft",
+        "html": "<p>The powered engine shaft passes rotation on through both ends, like an ordinary shaft: connect the rest of your line to it. It produces nothing until a fuelled engine is attached; as soon as one engine receives fuel, the shaft starts at its speed. The crank drawn in the middle turns with it, and the connecting rod of each engine follows the motion while its piston slides in and out.</p>"
+      },
+      {
+        "id": "vapeur",
+        "title": "Compared with the steam engine",
+        "html": "<p>On diesel, a huge engine gives as many SU as a <a href=\"/en/wiki/steam-engine\">Steam Engine</a> on a full boiler, 16,384, but at 224 RPM instead of 64, with no water and no boiler. In exchange it needs 1 mB of fuel per second, and a refinery to produce that fuel. Four of them on one shaft replace a very large steam boiler.</p>"
+      },
+      {
+        "id": "silencieux",
+        "title": "The silencer",
+        "html": "<p>A huge engine is loud: its silencer is fitted with a right-click, as on the other engines, and cuts the volume a lot without changing the output. On a shaft with four engines, you only need to fit the ones close to where people live or work.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<ul><li>Leave room: you need three blocks in a row, the engine, the rod space and the shaft.</li><li>On diesel, four huge engines are worth eight turbocharged single engines.</li><li>Diesel comes from the <a href=\"/en/wiki/distillation-tower\">distillation tower</a>.</li></ul>"
+      }
+    ],
+    "sources": [
+      "SU and speed: data/createdieselgenerators/createdieselgenerators/fuel_type/*.json (speed, strength, burn_rate, burner_multiplier) (\"huge\" block)",
+      "Engine: HugeDieselEngineBlockEntity (getShaft: shaft at facing × 2, 100 mB tank, faces off the axis), HugeDieselEngineBlock.getStateForPlacement (perpendicular shaft turned into a powered engine shaft)",
+      "Shaft: PoweredEngineShaftBlockEntity (capacities summed, speed = the highest, 4 perpendicular directions)",
+      "Upgrades: EngineUpgrades.TurbochargerUpgrade.canAddOn (single and modular engines only)",
+      "Rendering: HugeDieselEngineRenderer (piston, rod ±23°, crank)",
+      "Recipe: recipe/crafting/huge_diesel_engine.json",
+      "Code, data and storyboards: Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, MIT licence, author George VI), identical to the Create France modpack jar",
+      "Videos: Create Diesel Generators Ponder scenes (DieselEngineScenes.huge) replayed by our engine; mod models and textures (MIT licence, George VI)"
+    ]
+  }
+}

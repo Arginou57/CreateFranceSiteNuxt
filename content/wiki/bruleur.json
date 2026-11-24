@@ -1,0 +1,286 @@
+{
+  "slug": "bruleur",
+  "name": "Brûleur",
+  "blockId": "createdieselgenerators:burner",
+  "category": "diesel",
+  "title": "Brûleur — Create Diesel Generators, guide",
+  "description": "Le brûleur de Create Diesel Generators : chauffer un bassin au carburant liquide, vanne réglée par un arbre, niveaux de chaleur et consommation.",
+  "datePublished": "2026-11-23",
+  "dateModified": "2026-11-23",
+  "createVersion": "6.0.10 · Create Diesel Generators 1.3.15",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>brûleur</strong> (Burner) remplace le <a href=\"/wiki/bruleur-a-blaze\">brûleur à blaze</a> sous un <a href=\"/wiki/bassin\">bassin</a> : au lieu d'un blaze nourri à la main, il brûle un <strong>carburant liquide</strong> arrivé par un tuyau. Sa flamme se règle avec une <strong>vanne</strong> qu'on ouvre en faisant tourner son arbre, et deux aiguilles sur ses côtés montrent l'ouverture. Avec de l'essence et la vanne ouverte, il surchauffe le bassin.",
+  "facts": [
+    {
+      "label": "Rôle",
+      "value": "Chauffer un bassin (mixeur, presse, distillation) au carburant"
+    },
+    {
+      "label": "Chaleur",
+      "value": "(ouverture de la vanne + 1) × multiplicateur du carburant"
+    },
+    {
+      "label": "Niveaux",
+      "value": "≥ 1,2 chauffé · ≥ 1,8 surchauffé (en dessous : tiède)"
+    },
+    {
+      "label": "Vanne",
+      "value": "Arbre qui tourne : + vitesse / 5 000 par tick, de 0 à 1"
+    },
+    {
+      "label": "Consommation",
+      "value": "1 mB toutes les 10 / ouverture ticks : 2 mB/s vanne ouverte"
+    },
+    {
+      "label": "Réservoir",
+      "value": "100 mB, rempli par toutes les faces sauf le dessus"
+    },
+    {
+      "label": "Version",
+      "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Briquet",
+        "Lingot de laiton",
+        "Briquet"
+      ],
+      [
+        null,
+        "Rotor",
+        null
+      ],
+      [
+        "Alliage d'andésite",
+        "Brûleur à blaze vide",
+        "Alliage d'andésite"
+      ]
+    ],
+    "items": [
+      [
+        "minecraft:flint_and_steel",
+        "create:brass_ingot",
+        "minecraft:flint_and_steel"
+      ],
+      [
+        null,
+        "create:shaft",
+        null
+      ],
+      [
+        "create:andesite_alloy",
+        "create:empty_blaze_burner",
+        "create:andesite_alloy"
+      ]
+    ],
+    "result": "1 brûleur",
+    "resultItem": "createdieselgenerators:burner"
+  },
+  "videos": [
+    {
+      "id": "cdg_burner",
+      "name": "Allumer le brûleur et ouvrir sa vanne",
+      "description": "Le brûleur reçoit de l'essence par une pompe ; une poignée de vanne fait tourner son arbre, la flamme s'allume, puis grandit et passe au bleu quand la vanne est grande ouverte.",
+      "duration": "PT18S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "bassin",
+      "title": "Sous un bassin",
+      "image": "cdg_burner_bassin.webp",
+      "alt": "Le brûleur posé sous un bassin, à la place d’un brûleur à blaze",
+      "video": "cdg_burner",
+      "html": "<p>Pose le brûleur à la place d'un brûleur à blaze, sous le bassin d'un <a href=\"/wiki/mixeur-mecanique\">mixeur</a> ou d'une <a href=\"/wiki/presse-mecanique\">presse</a>, ou sous une <a href=\"/wiki/tour-de-distillation\">tour de distillation</a>. Il donne à la machine au-dessus le même niveau de chaleur qu'un blaze. Son arbre le traverse d'un côté à l'autre : il ne sert pas à l'alimenter, mais à régler la vanne.</p>"
+    },
+    {
+      "id": "carburant",
+      "title": "Le carburant",
+      "image": "cdg_burner_carburant.webp",
+      "alt": "Le réservoir d’essence, la pompe et le tuyau qui arrive au brûleur",
+      "html": "<p>Le brûleur garde 100 mB et se remplit par toutes ses faces sauf le dessus, par une <a href=\"/wiki/pompe-mecanique\">pompe mécanique</a>. Tous les carburants du mod brûlent, avec un multiplicateur : essence 1,1, éthanol 0,9, diesel 0,6, biodiesel et huile végétale 0,5. Le pétrole brut, lui, ne s'allume pas.</p>"
+    },
+    {
+      "id": "vanne",
+      "title": "La vanne",
+      "image": "cdg_burner_vanne.webp",
+      "alt": "Les flammes bleues du brûleur, vanne grande ouverte",
+      "html": "<p>Faire tourner l'arbre du brûleur dans un sens ouvre la vanne, dans l'autre la ferme : chaque tick, l'ouverture gagne la vitesse divisée par 5 000. Une <strong>poignée de vanne</strong> de Create est idéale : un petit coup ouvre un peu, un tour rapide ouvre en grand. Les aiguilles des deux côtés montrent l'ouverture, de −45° (fermée) à +45° (ouverte). Vanne fermée, le brûleur s'éteint même plein.</p>"
+    },
+    {
+      "id": "chaleur",
+      "title": "Quelle chaleur ?",
+      "html": "<table><thead><tr><th>Carburant</th><th>Vanne ouverte</th><th>Chauffé dès</th><th>Surchauffé dès</th></tr></thead><tbody><tr><td>Essence</td><td>2,2</td><td>9 % d'ouverture</td><td>64 %</td></tr><tr><td>Éthanol</td><td>1,8</td><td>34 %</td><td>100 %</td></tr><tr><td>Diesel</td><td>1,2</td><td>100 %</td><td>jamais</td></tr><tr><td>Biodiesel, huile</td><td>1,0</td><td>jamais</td><td>jamais</td></tr></tbody></table><p>La flamme devient bleue en surchauffe.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "Avec la redstone",
+      "html": "<p>Un signal de redstone sur le brûleur compte comme une vanne ouverte bien au-delà de 1 : avec n'importe quel carburant d'au moins 0,4 de multiplicateur, il surchauffe, mais il consomme alors jusqu'à 1 mB par tick, dix fois plus. C'est un mode « coup de feu » à réserver aux recettes qui en ont besoin.</p>"
+    },
+    {
+      "id": "reglage",
+      "title": "Ouvrir la vanne avec une machine",
+      "html": "<p>L'ouverture monte de la vitesse divisée par 5 000 à chaque tick : à 16 tr/min, il faut 15,6 s pour ouvrir en grand ; à 256 tr/min, moins d'une seconde. Pour la régler sans y toucher, relie l'arbre à un <a href=\"/wiki/inverseur-de-rotation\">inverseur de rotation</a> et à un embrayage : un sens ouvre, l'autre ferme, et l'embrayage fige la position.</p>"
+    },
+    {
+      "id": "blaze",
+      "title": "Brûleur ou brûleur à blaze ?",
+      "html": "<p>Le brûleur à blaze mange des objets et devient surchauffé avec une bûche de blaze. Le brûleur du mod se nourrit seul par un tuyau, ce qui simplifie l'automatisation, et surchauffe à l'essence ou à l'éthanol. En revanche, au diesel ou au biodiesel, il ne dépasse pas la simple chaleur.</p>"
+    },
+    {
+      "id": "redstone-sortie",
+      "title": "La redstone en sortie",
+      "html": "<p>Le brûleur donne aussi un signal à un comparateur, qui suit sa chaleur : six fois la chaleur, plafonné à 15. Un comparateur posé contre lui peut donc couper une machine quand la flamme s'éteint, faute de carburant.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils",
+      "html": "<ul><li>Mets l'essence dans les brûleurs et le diesel dans les moteurs.</li><li>Vanne ouverte, un brûleur brûle 2 mB par seconde : un réservoir de 8 000 mB dure plus d'une heure.</li><li>Le brûleur à blaze reste utile pour les recettes « surchauffées » avec un carburant faible.</li></ul>"
+    }
+  ],
+  "related": [
+    "bruleur-a-blaze",
+    "bassin",
+    "mixeur-mecanique",
+    "tour-de-distillation",
+    "carburants",
+    "pompe-mecanique",
+    "create-diesel-generators"
+  ],
+  "sources": [
+    "Brûleur : BurnerBlockEntity (valveState += vitesse / 5 000 par tick, borné 0–1 ; heat = (max(vanne, signal × 4) + 1) × burner_multiplier ; vidange de 1 mB tous les 10 / vanne ticks ; réservoir 100 mB ; niveaux calculateHeatLevel : 1,0 / 1,2 / 1,4 / 1,8)",
+    "Multiplicateurs : data/createdieselgenerators/createdieselgenerators/fuel_type/*.json (speed, strength, burn_rate, burner_multiplier)",
+    "Chauffé / surchauffé : Create HeatCondition.testBlazeBurner",
+    "Aiguilles et flammes : BurnerRenderer, tickAudio",
+    "Recette : recipe/crafting/burner.json",
+    "Code, données et storyboards : Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, licence MIT, auteur George VI), identiques au jar du modpack Create France",
+    "Vidéos : scènes Ponder de Create Diesel Generators (BurnerScenes.scene) rejouées par notre moteur ; modèles et textures du mod (licence MIT, George VI)"
+  ],
+  "en": {
+    "slugEn": "burner",
+    "name": "Burner",
+    "title": "Burner — Create Diesel Generators guide",
+    "description": "The Burner from Create Diesel Generators: heating a basin with liquid fuel, a valve set by a shaft, heat levels per fuel and fuel consumption.",
+    "intro": "The <strong>Burner</strong> replaces the <a href=\"/en/wiki/blaze-burner\">Blaze Burner</a> under a <a href=\"/en/wiki/basin\">Basin</a>: instead of a hand-fed blaze, it burns <strong>liquid fuel</strong> brought in by a pipe. Its flame is set with a <strong>valve</strong> that opens when you turn its shaft, and two needles on its sides show how far it is open. With gasoline and the valve wide open, it superheats the basin.",
+    "facts": [
+      {
+        "label": "Role",
+        "value": "Heat a basin (mixer, press, distillation) with fuel"
+      },
+      {
+        "label": "Heat",
+        "value": "(valve opening + 1) × fuel multiplier"
+      },
+      {
+        "label": "Levels",
+        "value": "≥ 1.2 heated · ≥ 1.8 superheated (below: barely warm)"
+      },
+      {
+        "label": "Valve",
+        "value": "Turning shaft: + speed / 5,000 per tick, from 0 to 1"
+      },
+      {
+        "label": "Fuel use",
+        "value": "1 mB every 10 / opening ticks: 2 mB/s with the valve fully open"
+      },
+      {
+        "label": "Tank",
+        "value": "100 mB, filled from every face except the top"
+      },
+      {
+        "label": "Version",
+        "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Flint and Steel",
+          "Brass Ingot",
+          "Flint and Steel"
+        ],
+        [
+          null,
+          "Shaft",
+          null
+        ],
+        [
+          "Andesite Alloy",
+          "Empty Blaze Burner",
+          "Andesite Alloy"
+        ]
+      ],
+      "result": "1 Burner"
+    },
+    "videos": [
+      {
+        "id": "cdg_burner",
+        "name": "Lighting the burner and opening its valve",
+        "description": "The burner gets gasoline from a pump; a valve handle turns its shaft, the flame lights, then grows and turns blue when the valve is wide open."
+      }
+    ],
+    "sections": [
+      {
+        "id": "bassin",
+        "title": "Under a basin",
+        "alt": "The burner placed under a basin, instead of a blaze burner",
+        "html": "<p>Place the burner where a blaze burner would go, under the basin of a <a href=\"/en/wiki/mechanical-mixer\">Mechanical Mixer</a> or <a href=\"/en/wiki/mechanical-press\">Press</a>, or under a <a href=\"/en/wiki/distillation-tower\">distillation tower</a>. It gives the machine above the same heat level a blaze would. Its shaft runs through it from side to side: it does not power it, it sets the valve.</p>"
+      },
+      {
+        "id": "carburant",
+        "title": "Fuel",
+        "alt": "The gasoline tank, the pump and the pipe reaching the burner",
+        "html": "<p>The burner holds 100 mB and is filled from every face except the top, by a <a href=\"/en/wiki/mechanical-pump\">Mechanical Pump</a>. Every fuel of the mod burns, with a multiplier: gasoline 1.1, ethanol 0.9, diesel 0.6, biodiesel and plant oil 0.5. Crude oil does not light.</p>"
+      },
+      {
+        "id": "vanne",
+        "title": "The valve",
+        "alt": "The blue flames of the burner, valve wide open",
+        "html": "<p>Turning the burner's shaft one way opens the valve, the other way closes it: every tick the opening changes by the speed divided by 5,000. A Create <strong>valve handle</strong> is ideal: a short nudge opens it a little, a quick spin opens it fully. The needles on both sides show the opening, from −45° (closed) to +45° (open). With the valve closed, the burner goes out even when full.</p>"
+      },
+      {
+        "id": "chaleur",
+        "title": "How hot?",
+        "html": "<table><thead><tr><th>Fuel</th><th>Valve open</th><th>Heated from</th><th>Superheated from</th></tr></thead><tbody><tr><td>Gasoline</td><td>2.2</td><td>9% open</td><td>64%</td></tr><tr><td>Ethanol</td><td>1.8</td><td>34%</td><td>100%</td></tr><tr><td>Diesel</td><td>1.2</td><td>100%</td><td>never</td></tr><tr><td>Biodiesel, plant oil</td><td>1.0</td><td>never</td><td>never</td></tr></tbody></table><p>The flame turns blue when superheating.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "With redstone",
+        "html": "<p>A redstone signal on the burner counts as a valve opened far beyond 1: with any fuel whose multiplier is at least 0.4 it superheats, but it then burns up to 1 mB per tick, ten times more. It is a \"full blast\" mode best kept for the recipes that need it.</p>"
+      },
+      {
+        "id": "reglage",
+        "title": "Opening the valve with a machine",
+        "html": "<p>The opening rises by the speed divided by 5,000 every tick: at 16 RPM it takes 15.6 s to open fully; at 256 RPM, less than a second. To set it hands-free, connect the shaft to a <a href=\"/en/wiki/gearshift\">Gearshift</a> and a clutch: one direction opens, the other closes, and the clutch freezes the position wherever you want it to stay.</p>"
+      },
+      {
+        "id": "blaze",
+        "title": "Burner or blaze burner?",
+        "html": "<p>The blaze burner eats items and superheats with blaze cake. The mod's burner feeds itself through a pipe, which makes automation simpler, and superheats on gasoline or ethanol. On diesel or biodiesel, however, it never goes beyond plain heat, so keep those fuels for the engines and save the gasoline for burners.</p>"
+      },
+      {
+        "id": "redstone-sortie",
+        "title": "Redstone output",
+        "html": "<p>The burner also gives a comparator signal that follows its heat: six times the heat, capped at 15. A comparator placed against it can therefore switch a machine off when the flame dies for lack of fuel, or warn you that the fuel line needs a refill.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<ul><li>Put gasoline in the burners and diesel in the engines.</li><li>With the valve open, a burner uses 2 mB per second: an 8,000 mB tank lasts over an hour.</li><li>The blaze burner is still handy for superheated recipes with a weak fuel.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Burner: BurnerBlockEntity (valveState += speed / 5,000 per tick, clamped 0–1; heat = (max(valve, signal × 4) + 1) × burner_multiplier; 1 mB drained every 10 / valve ticks; 100 mB tank; calculateHeatLevel thresholds 1.0 / 1.2 / 1.4 / 1.8)",
+      "Multipliers: data/createdieselgenerators/createdieselgenerators/fuel_type/*.json (speed, strength, burn_rate, burner_multiplier)",
+      "Heated / superheated: Create HeatCondition.testBlazeBurner",
+      "Needles and flames: BurnerRenderer, tickAudio",
+      "Recipe: recipe/crafting/burner.json",
+      "Code, data and storyboards: Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, MIT licence, author George VI), identical to the Create France modpack jar",
+      "Videos: Create Diesel Generators Ponder scenes (BurnerScenes.scene) replayed by our engine; mod models and textures (MIT licence, George VI)"
+    ]
+  }
+}

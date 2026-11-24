@@ -1,0 +1,199 @@
+{
+  "slug": "carburants",
+  "name": "Carburants",
+  "blockId": "createdieselgenerators:diesel_bucket",
+  "category": "diesel",
+  "title": "Carburants — Create Diesel Generators, tableau",
+  "description": "Les carburants de Create Diesel Generators : diesel, essence, biodiesel, éthanol, huile végétale. Vitesse, SU, brûleur et comment les produire.",
+  "datePublished": "2026-11-23",
+  "dateModified": "2026-11-23",
+  "createVersion": "6.0.10 · Create Diesel Generators 1.3.15",
+  "mcVersion": "1.21.1",
+  "intro": "Tous les moteurs de Create Diesel Generators acceptent cinq <strong>carburants</strong>. Ils ne changent pas la consommation, toujours 1 mB par seconde et par moteur, mais ils changent beaucoup la puissance : le diesel donne trois fois plus que l'éthanol. Voici d'où vient chacun, ce qu'il vaut dans chaque moteur et dans le brûleur, avec les chiffres des fichiers de données du mod.",
+  "facts": [
+    {
+      "label": "Meilleur carburant",
+      "value": "Diesel (distillation du pétrole)"
+    },
+    {
+      "label": "Le plus simple",
+      "value": "Huile végétale : 100 mB par graine pressée"
+    },
+    {
+      "label": "Consommation",
+      "value": "0,05 mB par tick et par moteur, soit 1 mB/s, pour tous"
+    },
+    {
+      "label": "Pétrole brut",
+      "value": "Ne fait pas tourner les moteurs : il faut le distiller"
+    },
+    {
+      "label": "Brûleur",
+      "value": "Multiplicateur de chaleur : essence 1,1 · éthanol 0,9 · diesel 0,6"
+    },
+    {
+      "label": "Tags",
+      "value": "c:diesel, c:gasoline, c:biodiesel, c:ethanol, c:plantoil"
+    },
+    {
+      "label": "Version",
+      "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+    }
+  ],
+  "videos": [],
+  "sections": [
+    {
+      "id": "tableau",
+      "title": "Le tableau complet",
+      "image": "cdg_fuels_seaux.webp",
+      "alt": "Les seaux de diesel, essence, biodiesel, éthanol, huile végétale et pétrole",
+      "html": "<table><thead><tr><th>Carburant</th><th>Moteur simple</th><th>Modulaire (par bloc)</th><th>Énorme</th><th>Brûleur</th></tr></thead><tbody><tr><td>Diesel</td><td>96 tr/min · 6 144 SU</td><td>8 192 SU</td><td>224 tr/min · 16 384 SU</td><td>× 0,6</td></tr><tr><td>Essence</td><td>96 · 4 096</td><td>6 144</td><td>224 · 12 288</td><td>× 1,1</td></tr><tr><td>Biodiesel</td><td>96 · 4 096</td><td>6 144</td><td>224 · 12 288</td><td>× 0,5</td></tr><tr><td>Éthanol</td><td>96 · 2 048</td><td>3 072</td><td>192 · 6 144</td><td>× 0,9</td></tr><tr><td>Huile végétale</td><td>74 · 2 048</td><td>2 560</td><td>192 · 4 096</td><td>× 0,5</td></tr></tbody></table><p>Le moteur modulaire tourne à la même vitesse que le moteur simple. Le turbo double vitesse et SU des deux premiers.</p>"
+    },
+    {
+      "id": "diesel",
+      "title": "Diesel et essence",
+      "html": "<p>Ils sortent ensemble de la <a href=\"/wiki/tour-de-distillation\">tour de distillation</a> : 100 mB de pétrole donnent 50 mB de diesel et 50 mB d'essence avec des brûleurs chauffés, 75 et 75 avec des brûleurs surchauffés. Le diesel va aux moteurs. L'essence fait tourner les moteurs un peu moins fort, mais c'est le meilleur carburant du <a href=\"/wiki/bruleur\">brûleur</a> : avec elle, il peut surchauffer un bassin.</p>"
+    },
+    {
+      "id": "ethanol",
+      "title": "Éthanol",
+      "html": "<p>L'éthanol vient de la fermentation : un <a href=\"/wiki/couvercle-de-bassin\">couvercle de bassin</a> transforme un fruit ou du sucre (pomme, pomme de terre, sucre, canne à sucre) avec de la poudre d'os en 200 mB en 20 secondes. Le fermenteur de masse en donne 400 mB. Seul, c'est un carburant faible, mais il sert surtout à faire du biodiesel.</p>"
+    },
+    {
+      "id": "huile",
+      "title": "Huile végétale et biodiesel",
+      "html": "<p>Une <a href=\"/wiki/presse-mecanique\">presse mécanique</a> au-dessus d'un <a href=\"/wiki/bassin\">bassin</a> compacte n'importe quelles graines en 100 mB d'huile végétale. Mélangée à part égale avec de l'éthanol dans un <a href=\"/wiki/mixeur-mecanique\">mixeur mécanique</a>, elle donne du <strong>biodiesel</strong> : 100 + 100 mB pour 200 mB. Le biodiesel vaut l'essence dans les moteurs, sans forage : une bonne énergie de ferme.</p>"
+    },
+    {
+      "id": "petrole",
+      "title": "Le pétrole brut",
+      "html": "<p>Le pétrole se pompe sous certains chunks (voir <a href=\"/wiki/gisements-de-petrole\">gisements de pétrole</a>). Il n'est pas un carburant : un moteur rempli de pétrole reste à l'arrêt. On le distille, ou on le mélange à chaud avec deux sables et deux graviers pour faire quatre blocs d'asphalte.</p>"
+    },
+    {
+      "id": "duree",
+      "title": "Combien de temps dure un réservoir ?",
+      "html": "<p>À 1 mB par seconde, un seau (1 000 mB) fait tourner un moteur 16 min 40 s, et un bloc de <a href=\"/wiki/reservoir-a-fluide\">réservoir à fluide</a> (8 000 mB) 2 h 13 min. Un moteur modulaire de dix blocs vide ce même bloc en 13 min 20 s. Au ralenti par la redstone, la consommation baisse moins que la vitesse : elle garde un quart du débit plein.</p>"
+    },
+    {
+      "id": "compat",
+      "title": "Carburants d’autres mods",
+      "html": "<p>Les carburants sont définis dans les données du mod, par tag de fluide (c:diesel, c:gasoline…). Un diesel ou une essence d'un autre mod rangé dans le même tag est donc accepté tel quel, avec les mêmes chiffres. Un datapack peut aussi ajouter un carburant ou changer ses valeurs : sur un serveur, la table peut différer.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Que choisir ?",
+      "html": "<ul><li>Début de partie : huile végétale, puis biodiesel.</li><li>Avec un bon gisement : diesel dans les moteurs, essence dans les brûleurs.</li><li>Le carburant ne change pas la consommation : autant brûler le plus fort.</li></ul>"
+    }
+  ],
+  "related": [
+    "moteur-diesel",
+    "moteur-diesel-modulaire",
+    "moteur-diesel-enorme",
+    "tour-de-distillation",
+    "couvercle-de-bassin",
+    "bruleur",
+    "presse-mecanique",
+    "mixeur-mecanique"
+  ],
+  "sources": [
+    "Carburants : data/createdieselgenerators/createdieselgenerators/fuel_type/*.json (speed, strength, burn_rate, burner_multiplier)",
+    "Tags : data/c/tags/fluid/*.json",
+    "Distillation : recipe/distillation/crude_oil.json (chauffé, 60 ticks : 50 + 50 mB) et superheated_crude_oil.json (surchauffé, 40 ticks : 75 + 75 mB)",
+    "Éthanol : recipe/basin_fermenting/fermentable.json (400 ticks, 200 mB), bulk_fermenting/fermentable.json (400 mB), tags/item/fermentable.json",
+    "Huile et biodiesel : recipe/compacting/plant_oil.json, recipe/mixing/biodiesel.json",
+    "Asphalte : recipe/mixing/asphalt_block.json",
+    "Code, données et storyboards : Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, licence MIT, auteur George VI), identiques au jar du modpack Create France",
+    "Images : blocs et objets du mod posés sur la plaque et rendus par notre moteur (modèles et textures MIT, George VI)"
+  ],
+  "en": {
+    "slugEn": "diesel-generators-fuels",
+    "name": "Fuels",
+    "title": "Fuels — Create Diesel Generators table",
+    "description": "All Create Diesel Generators fuels: diesel, gasoline, biodiesel, ethanol and plant oil, with speed, stress capacity, burner heat and how to make them.",
+    "intro": "Every engine in Create Diesel Generators takes five <strong>fuels</strong>. They do not change fuel use, always 1 mB per second per engine, but they make a big difference in power: diesel gives three times as much as ethanol. Here is where each one comes from and what it is worth in each engine and in the burner, with the numbers from the mod's data files.",
+    "facts": [
+      {
+        "label": "Best fuel",
+        "value": "Diesel (crude oil distillation)"
+      },
+      {
+        "label": "Easiest",
+        "value": "Plant oil: 100 mB per pressed seed"
+      },
+      {
+        "label": "Fuel use",
+        "value": "0.05 mB per tick per engine, i.e. 1 mB/s, for all of them"
+      },
+      {
+        "label": "Crude oil",
+        "value": "Does not run engines: it has to be distilled"
+      },
+      {
+        "label": "Burner",
+        "value": "Heat multiplier: gasoline 1.1 · ethanol 0.9 · diesel 0.6"
+      },
+      {
+        "label": "Tags",
+        "value": "c:diesel, c:gasoline, c:biodiesel, c:ethanol, c:plantoil"
+      },
+      {
+        "label": "Version",
+        "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+      }
+    ],
+    "videos": [],
+    "sections": [
+      {
+        "id": "tableau",
+        "title": "The full table",
+        "alt": "Buckets of diesel, gasoline, biodiesel, ethanol, plant oil and crude oil",
+        "html": "<table><thead><tr><th>Fuel</th><th>Single engine</th><th>Modular (per block)</th><th>Huge</th><th>Burner</th></tr></thead><tbody><tr><td>Diesel</td><td>96 RPM · 6,144 SU</td><td>8,192 SU</td><td>224 RPM · 16,384 SU</td><td>× 0.6</td></tr><tr><td>Gasoline</td><td>96 · 4,096</td><td>6,144</td><td>224 · 12,288</td><td>× 1.1</td></tr><tr><td>Biodiesel</td><td>96 · 4,096</td><td>6,144</td><td>224 · 12,288</td><td>× 0.5</td></tr><tr><td>Ethanol</td><td>96 · 2,048</td><td>3,072</td><td>192 · 6,144</td><td>× 0.9</td></tr><tr><td>Plant oil</td><td>74 · 2,048</td><td>2,560</td><td>192 · 4,096</td><td>× 0.5</td></tr></tbody></table><p>The modular engine spins at the same speed as the single one. The turbo doubles speed and SU for both.</p>"
+      },
+      {
+        "id": "diesel",
+        "title": "Diesel and gasoline",
+        "html": "<p>They come out of the <a href=\"/en/wiki/distillation-tower\">distillation tower</a> together: 100 mB of crude give 50 mB of diesel and 50 mB of gasoline with heated burners, 75 and 75 with superheated ones. Diesel goes to the engines. Gasoline runs engines a little weaker, but it is the best fuel for the <a href=\"/en/wiki/burner\">Burner</a>: with it, the burner can superheat a basin.</p>"
+      },
+      {
+        "id": "ethanol",
+        "title": "Ethanol",
+        "html": "<p>Ethanol comes from fermentation: a <a href=\"/en/wiki/basin-lid\">Basin Lid</a> turns a fruit or sugar (apple, potato, sugar, sugar cane) plus bone meal into 200 mB in 20 seconds. The Bulk Fermenter makes 400 mB. On its own it is a weak fuel, but it is mostly used to make biodiesel.</p>"
+      },
+      {
+        "id": "huile",
+        "title": "Plant oil and biodiesel",
+        "html": "<p>A <a href=\"/en/wiki/mechanical-press\">Mechanical Press</a> above a <a href=\"/en/wiki/basin\">Basin</a> compacts any seeds into 100 mB of plant oil. Mixed half and half with ethanol in a <a href=\"/en/wiki/mechanical-mixer\">Mechanical Mixer</a>, it gives <strong>biodiesel</strong>: 100 + 100 mB for 200 mB. Biodiesel is as good as gasoline in engines, with no drilling: a fine farm-based energy.</p>"
+      },
+      {
+        "id": "petrole",
+        "title": "Crude oil",
+        "html": "<p>Crude oil is pumped under some chunks (see <a href=\"/en/wiki/oil-deposits\">oil deposits</a>). It is not a fuel: an engine filled with crude stays still. You distill it, or mix it hot with two sand and two gravel to make four asphalt blocks.</p>"
+      },
+      {
+        "id": "duree",
+        "title": "How long does a tank last?",
+        "html": "<p>At 1 mB per second, a bucket (1,000 mB) runs an engine for 16 min 40 s, and one <a href=\"/en/wiki/fluid-tank\">Fluid Tank</a> block (8,000 mB) for 2 h 13 min. A ten-block modular engine empties that same block in 13 min 20 s. When throttled with redstone, fuel use drops less than speed: it keeps a quarter of the full rate, plus the rest in proportion to the throttle.</p>"
+      },
+      {
+        "id": "compat",
+        "title": "Fuels from other mods",
+        "html": "<p>Fuels are defined in the mod's data, by fluid tag (c:diesel, c:gasoline…). A diesel or gasoline from another mod that is listed in the same tag is therefore accepted as it is, with the same numbers. A datapack can also add a new fuel or change the values: on a server, the table may be different from this one.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Which one to pick?",
+        "html": "<ul><li>Early game: plant oil, then biodiesel.</li><li>With a good deposit: diesel in the engines, gasoline in the burners.</li><li>The fuel does not change consumption, so you may as well burn the strongest.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Fuels: data/createdieselgenerators/createdieselgenerators/fuel_type/*.json (speed, strength, burn_rate, burner_multiplier)",
+      "Tags: data/c/tags/fluid/*.json",
+      "Distillation: recipe/distillation/crude_oil.json (heated, 60 ticks: 50 + 50 mB) and superheated_crude_oil.json (superheated, 40 ticks: 75 + 75 mB)",
+      "Ethanol: recipe/basin_fermenting/fermentable.json (400 ticks, 200 mB), bulk_fermenting/fermentable.json (400 mB), tags/item/fermentable.json",
+      "Plant oil and biodiesel: recipe/compacting/plant_oil.json, recipe/mixing/biodiesel.json",
+      "Asphalt: recipe/mixing/asphalt_block.json",
+      "Code, data and storyboards: Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, MIT licence, author George VI), identical to the Create France modpack jar",
+      "Images: mod blocks and items placed on the plate and rendered by our engine (models and textures MIT, George VI)"
+    ]
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "slug": "moteur-diesel",
+  "name": "Moteur diesel",
+  "blockId": "createdieselgenerators:diesel_engine",
+  "category": "diesel",
+  "title": "Moteur diesel — Create Diesel Generators",
+  "description": "Le moteur diesel de Create Diesel Generators : vitesse et SU selon le carburant, remplissage, arrêt par redstone, silencieux et turbocompresseur.",
+  "datePublished": "2026-11-23",
+  "dateModified": "2026-11-23",
+  "createVersion": "6.0.10 · Create Diesel Generators 1.3.15",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>moteur diesel</strong> est la source de rotation de base de Create Diesel Generators. Un seul bloc, un carburant liquide, et il fait tourner un <a href=\"/wiki/rotor\">rotor</a> à 96 tr/min avec jusqu'à 6 144 SU : bien plus que n'importe quelle roue à eau. Il se remplit par un tuyau, s'arrête sur un signal de redstone et reçoit deux améliorations, le silencieux et le turbocompresseur.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Source de rotation (Create Diesel Generators)"
+    },
+    {
+      "label": "Vitesse",
+      "value": "96 tr/min (diesel, essence, biodiesel, éthanol) · 74 tr/min (huile végétale)"
+    },
+    {
+      "label": "Puissance",
+      "value": "6 144 SU au diesel · 4 096 essence ou biodiesel · 2 048 éthanol ou huile"
+    },
+    {
+      "label": "Consommation",
+      "value": "1 mB par seconde à plein régime (0,05 mB par tick)"
+    },
+    {
+      "label": "Réservoir",
+      "value": "1 000 mB, rempli par la face du dessous (côtés si le moteur est vertical)"
+    },
+    {
+      "label": "Turbocompresseur",
+      "value": "Vitesse et SU × 2 (réglage serveur), même consommation"
+    },
+    {
+      "label": "Version",
+      "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Briquet",
+        null
+      ],
+      [
+        "Piston de moteur",
+        "Bloc de laiton",
+        "Piston de moteur"
+      ],
+      [
+        "Dalle de pierre noire polie",
+        "Réservoir à fluide",
+        "Dalle de pierre noire polie"
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "minecraft:flint_and_steel",
+        null
+      ],
+      [
+        "createdieselgenerators:engine_piston",
+        "create:brass_block",
+        "createdieselgenerators:engine_piston"
+      ],
+      [
+        "minecraft:polished_blackstone_slab",
+        "create:fluid_tank",
+        "minecraft:polished_blackstone_slab"
+      ]
+    ],
+    "result": "1 moteur diesel",
+    "resultItem": "createdieselgenerators:diesel_engine"
+  },
+  "videos": [
+    {
+      "id": "cdg_engine",
+      "name": "Moteur diesel : carburant, redstone et silencieux",
+      "description": "Un réservoir de diesel est relié au moteur par une pompe ; l'arbre tourne, un levier le coupe puis le relance, et un silencieux est posé sur le moteur.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "poser",
+      "title": "Poser le moteur",
+      "image": "cdg_engine_moteur.webp",
+      "alt": "Le moteur diesel posé seul sur la plaque, côté pistons",
+      "video": "cdg_engine",
+      "html": "<p>Le moteur s'oriente comme un piston : sa face avant et sa face arrière portent l'arbre de sortie. Pose-le en regardant dans l'axe de ta ligne de transmission, puis branche un <a href=\"/wiki/rotor\">rotor</a> d'un côté ou des deux. Le sens de rotation se choisit dans le petit panneau de réglage du moteur, comme pour un support de moulin à vent. Les pistons visibles sur le dessus montent et descendent trois fois par tour d'arbre.</p>"
+    },
+    {
+      "id": "carburant",
+      "title": "Le remplir",
+      "image": "cdg_engine_carburant.webp",
+      "alt": "Le réservoir de diesel, la pompe et le tuyau qui arrive sous le moteur",
+      "html": "<p>Le moteur garde 1 000 mB de carburant. Couché, il ne se remplit que par le <strong>dessous</strong> : fais arriver un <a href=\"/wiki/tuyau-a-fluide\">tuyau à fluide</a> sous lui, poussé par une <a href=\"/wiki/pompe-mecanique\">pompe mécanique</a> depuis un <a href=\"/wiki/reservoir-a-fluide\">réservoir</a>. Debout, il prend le carburant par deux faces latérales. Un seau ne marche pas : le réglage par défaut l'interdit. Dès qu'il contient un carburant reconnu, il démarre ; vide, il s'arrête net.</p>"
+    },
+    {
+      "id": "chiffres",
+      "title": "Vitesse et puissance",
+      "html": "<table><thead><tr><th>Carburant</th><th>tr/min</th><th>SU</th></tr></thead><tbody><tr><td>Diesel</td><td>96</td><td>6 144</td></tr><tr><td>Essence</td><td>96</td><td>4 096</td></tr><tr><td>Biodiesel</td><td>96</td><td>4 096</td></tr><tr><td>Éthanol</td><td>96</td><td>2 048</td></tr><tr><td>Huile végétale</td><td>74</td><td>2 048</td></tr></tbody></table><p>La capacité est donnée pour le régime plein : elle reste la même si le réseau ralentit ailleurs. Tous brûlent 1 mB par seconde, donc 1 000 mB durent un peu moins de 17 minutes. Le détail est sur la page des <a href=\"/wiki/carburants\">carburants</a>.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "Couper ou régler avec la redstone",
+      "image": "cdg_engine_redstone.webp",
+      "alt": "Le levier activé à côté du moteur : l’arbre est à l’arrêt",
+      "html": "<p>Par défaut, le moteur lit la <strong>force</strong> du signal : à 15 il s'arrête, à 0 il tourne à fond, et entre les deux sa vitesse vaut (15 − signal) / 15 du régime. Un levier, qui donne 15, sert donc d'interrupteur, et un levier analogique de Create sert d'accélérateur. Au ralenti, la consommation baisse moins vite que la vitesse : elle garde un quart du débit plein, plus le reste au prorata.</p>"
+    },
+    {
+      "id": "silencieux",
+      "title": "Silencieux et turbocompresseur",
+      "image": "cdg_engine_silencieux.webp",
+      "alt": "Le silencieux posé sur le moteur diesel",
+      "html": "<p>Un clic droit sur le moteur avec une amélioration la pose. Le <strong>silencieux</strong> divise le volume du bruit par 25, sans rien changer d'autre : pratique près d'une base. Le <strong>turbocompresseur</strong> double la vitesse et les SU (réglage serveur, 2 par défaut) et rend le moteur plus aigu ; le réglage prévu pour sa consommation n'est pas utilisé par le code, il brûle donc toujours 1 mB par seconde. Un moteur ne porte qu'une amélioration.</p>"
+    },
+    {
+      "id": "comparaison",
+      "title": "Face aux autres sources",
+      "html": "<p>Un <a href=\"/wiki/moteur-a-vapeur\">moteur à vapeur</a> de Create donne plus, 16 384 SU, mais il lui faut une chaudière de réservoirs, de l'eau et des brûleurs à blaze. Le moteur diesel tient dans un bloc, tourne plus vite (96 tr/min) et ne demande qu'un tuyau. Côté carburant, un réservoir à fluide de Create (8 000 mB) le fait tourner plus de deux heures, et un seau un peu plus d'un quart d'heure.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils",
+      "html": "<ul><li>Un turbo au diesel donne 192 tr/min et 12 288 SU dans un seul bloc : c'est souvent plus simple qu'un moteur à vapeur.</li><li>Plusieurs moteurs sur un même arbre doivent tourner dans le même sens.</li><li>Pour une usine plus grosse, regarde le <a href=\"/wiki/moteur-diesel-modulaire\">moteur modulaire</a>.</li></ul>"
+    }
+  ],
+  "related": [
+    "moteur-diesel-modulaire",
+    "moteur-diesel-enorme",
+    "carburants",
+    "pompe-mecanique",
+    "reservoir-a-fluide",
+    "rotor",
+    "stressometre-compteur-de-vitesse",
+    "create-diesel-generators"
+  ],
+  "sources": [
+    "Vitesse, SU, consommation : data/createdieselgenerators/createdieselgenerators/fuel_type/*.json (speed, strength, burn_rate, burner_multiplier) ; IEngine.getFuelCapacity = strength / speed",
+    "Moteur : DieselEngineBlockEntity (calculateAddedStressCapacity, tick : fuelDebt += burn_rate × getFuelThrottle, réservoir 1 000 mB, faces du réservoir dans registerCapabilities)",
+    "Redstone : IEngine.getThrottle = (15 − signal) / 15 et getFuelThrottle = 0,25 + 0,75 × throttle (config « Engines controlled by analog lever », vraie par défaut)",
+    "Améliorations : EngineUpgrades (silencieux volume 0,02 au lieu de 0,5 ; turbo × TURBOCHARGED_ENGINE_MULTIPLIER = 2)",
+    "Pistons : DieselEngineRenderer (pistons_0 à 4 selon l’angle de l’arbre × 3)",
+    "Recette : recipe/crafting/diesel_engine.json",
+    "Code, données et storyboards : Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, licence MIT, auteur George VI), identiques au jar du modpack Create France",
+    "Vidéos : scènes Ponder de Create Diesel Generators (DieselEngineScenes.small) rejouées par notre moteur ; modèles et textures du mod (licence MIT, George VI)"
+  ],
+  "en": {
+    "slugEn": "diesel-engine",
+    "name": "Diesel Engine",
+    "title": "Diesel Engine — Create Diesel Generators guide",
+    "description": "The Diesel Engine from Create Diesel Generators: speed and stress capacity per fuel, how to fill it, redstone control, silencer and turbocharger.",
+    "intro": "The <strong>Diesel Engine</strong> is the basic rotation source of Create Diesel Generators. One block, a liquid fuel, and it turns a <a href=\"/en/wiki/shaft\">Shaft</a> at 96 RPM with up to 6,144 SU: far more than any water wheel. It is filled through a pipe, stops with a redstone signal and takes two upgrades, the silencer and the turbocharger.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Rotation source (Create Diesel Generators)"
+      },
+      {
+        "label": "Speed",
+        "value": "96 RPM (diesel, gasoline, biodiesel, ethanol) · 74 RPM (plant oil)"
+      },
+      {
+        "label": "Output",
+        "value": "6,144 SU on diesel · 4,096 gasoline or biodiesel · 2,048 ethanol or plant oil"
+      },
+      {
+        "label": "Fuel use",
+        "value": "1 mB per second at full throttle (0.05 mB per tick)"
+      },
+      {
+        "label": "Tank",
+        "value": "1,000 mB, filled from the bottom face (the sides when the engine stands upright)"
+      },
+      {
+        "label": "Turbocharger",
+        "value": "Speed and SU × 2 (server setting), same fuel use"
+      },
+      {
+        "label": "Version",
+        "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Flint and Steel",
+          null
+        ],
+        [
+          "Engine Piston",
+          "Block of Brass",
+          "Engine Piston"
+        ],
+        [
+          "Polished Blackstone Slab",
+          "Fluid Tank",
+          "Polished Blackstone Slab"
+        ]
+      ],
+      "result": "1 Diesel Engine"
+    },
+    "videos": [
+      {
+        "id": "cdg_engine",
+        "name": "Diesel Engine: fuel, redstone and silencer",
+        "description": "A diesel tank feeds the engine through a pump; the shaft spins, a lever stops it and starts it again, and a silencer is fitted on the engine."
+      }
+    ],
+    "sections": [
+      {
+        "id": "poser",
+        "title": "Placing the engine",
+        "alt": "The diesel engine alone on the plate, piston side up",
+        "html": "<p>The engine is placed like a piston: its front and back faces carry the output shaft. Place it looking along your drive line, then attach a <a href=\"/en/wiki/shaft\">Shaft</a> on one side or both. The direction of rotation is set in the engine's small value panel, just like on a windmill bearing. The pistons you can see on top move up and down three times per turn of the shaft.</p>"
+      },
+      {
+        "id": "carburant",
+        "title": "Fuelling it",
+        "alt": "The diesel tank, the pump and the pipe reaching under the engine",
+        "html": "<p>The engine holds 1,000 mB of fuel. Lying down, it only accepts fluid from the <strong>bottom</strong>: run a <a href=\"/en/wiki/fluid-pipe\">Fluid Pipe</a> underneath, pushed by a <a href=\"/en/wiki/mechanical-pump\">Mechanical Pump</a> from a <a href=\"/en/wiki/fluid-tank\">Fluid Tank</a>. Standing upright, it takes fuel through two side faces. Buckets do not work: the default config forbids it. As soon as it holds a valid fuel it starts; once empty it stops dead.</p>"
+      },
+      {
+        "id": "chiffres",
+        "title": "Speed and output",
+        "html": "<table><thead><tr><th>Fuel</th><th>RPM</th><th>SU</th></tr></thead><tbody><tr><td>Diesel</td><td>96</td><td>6,144</td></tr><tr><td>Gasoline</td><td>96</td><td>4,096</td></tr><tr><td>Biodiesel</td><td>96</td><td>4,096</td></tr><tr><td>Ethanol</td><td>96</td><td>2,048</td></tr><tr><td>Plant oil</td><td>74</td><td>2,048</td></tr></tbody></table><p>The capacity is given at full throttle and does not change if the network is slowed elsewhere. Every fuel burns 1 mB per second, so 1,000 mB last a little under 17 minutes. Details are on the <a href=\"/en/wiki/diesel-generators-fuels\">fuels</a> page.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "Stopping or throttling with redstone",
+        "alt": "The lever is on next to the engine: the shaft is still",
+        "html": "<p>By default the engine reads the signal <strong>strength</strong>: at 15 it stops, at 0 it runs flat out, and in between its speed is (15 − signal) / 15 of full speed. A lever, which gives 15, is therefore an on/off switch, and Create's analog lever works as a throttle. At part throttle, fuel use drops more slowly than speed: it keeps a quarter of the full rate plus the rest in proportion.</p>"
+      },
+      {
+        "id": "silencieux",
+        "title": "Silencer and turbocharger",
+        "alt": "The silencer fitted on the diesel engine",
+        "html": "<p>Right-click the engine with an upgrade to fit it. The <strong>silencer</strong> cuts the sound volume by 25 times and changes nothing else: handy next to a base. The <strong>turbocharger</strong> doubles speed and SU (server setting, 2 by default) and makes the engine sound higher; its fuel multiplier setting is not used by the code, so it still burns 1 mB per second. An engine holds one upgrade at a time.</p>"
+      },
+      {
+        "id": "comparaison",
+        "title": "Compared with other sources",
+        "html": "<p>A Create <a href=\"/en/wiki/steam-engine\">Steam Engine</a> gives more, 16,384 SU, but it needs a boiler made of tanks, water and blaze burners. The diesel engine fits in one block, spins faster (96 RPM) and only needs a pipe. As for fuel, one Create fluid tank block (8,000 mB) keeps it running for over two hours, and a single bucket for a little more than a quarter of an hour. Several diesel engines on one shaft simply add their capacity.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<ul><li>A turbocharged engine on diesel gives 192 RPM and 12,288 SU in a single block: often simpler than a steam engine.</li><li>Several engines on one shaft must spin the same way.</li><li>For a bigger factory, look at the <a href=\"/en/wiki/modular-diesel-engine\">Modular Diesel Engine</a>.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Speed, SU, fuel use: data/createdieselgenerators/createdieselgenerators/fuel_type/*.json (speed, strength, burn_rate, burner_multiplier); IEngine.getFuelCapacity = strength / speed",
+      "Engine: DieselEngineBlockEntity (calculateAddedStressCapacity, tick: fuelDebt += burn_rate × getFuelThrottle, 1,000 mB tank, tank faces in registerCapabilities)",
+      "Redstone: IEngine.getThrottle = (15 − signal) / 15 and getFuelThrottle = 0.25 + 0.75 × throttle (config \"Engines controlled by analog lever\", true by default)",
+      "Upgrades: EngineUpgrades (silencer volume 0.02 instead of 0.5; turbo × TURBOCHARGED_ENGINE_MULTIPLIER = 2)",
+      "Pistons: DieselEngineRenderer (pistons_0 to 4 from the shaft angle × 3)",
+      "Recipe: recipe/crafting/diesel_engine.json",
+      "Code, data and storyboards: Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, MIT licence, author George VI), identical to the Create France modpack jar",
+      "Videos: Create Diesel Generators Ponder scenes (DieselEngineScenes.small) replayed by our engine; mod models and textures (MIT licence, George VI)"
+    ]
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "slug": "outils-diesel-generators",
+  "name": "Outils de Create Diesel Generators",
+  "blockId": "createdieselgenerators:lighter",
+  "category": "diesel",
+  "title": "Outils — Create Diesel Generators, guide",
+  "description": "Les outils de Create Diesel Generators : briquet, pulvérisateur chimique, marteau, pince coupante, bidon, sac de rails et moules.",
+  "datePublished": "2026-11-23",
+  "dateModified": "2026-11-23",
+  "createVersion": "6.0.10 · Create Diesel Generators 1.3.15",
+  "mcVersion": "1.21.1",
+  "intro": "En plus de ses machines, Create Diesel Generators ajoute une poignée d'<strong>outils</strong> qui utilisent ses carburants ou ses recettes : le <strong>briquet à essence</strong>, le <strong>pulvérisateur chimique</strong>, le <strong>marteau</strong> et la <strong>pince coupante</strong>, le <strong>bidon</strong>, le <strong>sac de rails</strong> et les <strong>moules</strong>. Le <a href=\"/wiki/gisements-de-petrole\">détecteur de pétrole</a> a sa propre page.",
+  "facts": [
+    {
+      "label": "Outils à carburant",
+      "value": "Briquet, pulvérisateur : 200 mB (+100 mB par niveau de Capacité)"
+    },
+    {
+      "label": "Remplissage",
+      "value": "Au bec verseur de Create"
+    },
+    {
+      "label": "Marteau",
+      "value": "128 utilisations ; lingots en plaques (fer, cuivre, or, laiton)"
+    },
+    {
+      "label": "Pince coupante",
+      "value": "128 utilisations ; aucune recette de base en 1.3.15"
+    },
+    {
+      "label": "Bidon",
+      "value": "4 000 mB (+1 000 mB par niveau de Capacité), garde son contenu"
+    },
+    {
+      "label": "Moules",
+      "value": "Barre, bol, chaîne, lignes : taillés dans une plaque de fer à la scie"
+    },
+    {
+      "label": "Version",
+      "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Briquet à essence (établi)",
+    "grid": [
+      [
+        null,
+        "Plaque de laiton",
+        "Briquet"
+      ],
+      [
+        "Plaque de laiton",
+        "Ficelle",
+        "Plaque de laiton"
+      ],
+      [
+        "Plaque de laiton",
+        "Alliage d'andésite",
+        "Plaque de laiton"
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "create:brass_sheet",
+        "minecraft:flint_and_steel"
+      ],
+      [
+        "create:brass_sheet",
+        "minecraft:string",
+        "create:brass_sheet"
+      ],
+      [
+        "create:brass_sheet",
+        "create:andesite_alloy",
+        "create:brass_sheet"
+      ]
+    ],
+    "result": "1 briquet à essence",
+    "resultItem": "createdieselgenerators:lighter"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "apercu",
+      "title": "Les outils",
+      "image": "cdg_tools_outils.webp",
+      "alt": "Le briquet, le marteau, la pince coupante, le détecteur de pétrole, le sac de rails et le pulvérisateur chimique",
+      "html": "<p>Les outils à carburant se remplissent comme une bouteille : on les pose sous un <a href=\"/wiki/bec-verseur\">bec verseur</a> de Create rempli du fluide voulu. Leur réservoir fait 200 mB, et l'enchantement Capacité de Create lui ajoute 100 mB par niveau. Les autres outils s'usent comme des outils ordinaires, ou ne s'usent pas.</p>"
+    },
+    {
+      "id": "briquet",
+      "title": "Le briquet à essence",
+      "html": "<p>Le briquet s'ouvre et se ferme au clic droit, et tente d'allumer ce qu'il vise quand on l'ouvre ; accroupi, on l'ouvre sans l'allumer. Il brûle le carburant de son réservoir. Renommé à l'enclume, il change d'apparence : une douzaine de motifs existent (feu, âme, creeper, diamant, dragon…). Monté sur une <a href=\"/wiki/tourelle-chimique\">tourelle chimique</a> ou un pulvérisateur, il enflamme le jet.</p>"
+    },
+    {
+      "id": "pulverisateur",
+      "title": "Le pulvérisateur chimique",
+      "html": "<p>Le pulvérisateur est la version portable de la tourelle : on le remplit de n'importe quel fluide et on maintient le clic droit pour arroser. Une potion applique ses effets, de l'eau éteint, un carburant brûle si le pulvérisateur porte un briquet. On l'assemble dans un <a href=\"/wiki/etabli-mecanique\">établi mécanique</a> avec des poignées en algue, un mécanisme de précision et un bloc de cuivre ; le briquet s'y fixe au <a href=\"/wiki/deployeur\">déployeur</a>.</p>"
+    },
+    {
+      "id": "marteau",
+      "title": "Le marteau et la pince coupante",
+      "html": "<p>Le <strong>marteau</strong> transforme ce que tu tiens dans l'autre main : un lingot de fer, de cuivre, d'or ou de laiton devient une plaque, sans <a href=\"/wiki/presse-mecanique\">presse</a>. Il tient 128 utilisations. La <strong>pince coupante</strong> marche de la même façon pour les recettes de découpe de fils, mais la version 1.3.15 n'en fournit aucune : elle ne sert qu'avec des recettes ajoutées par un autre mod ou un datapack.</p>"
+    },
+    {
+      "id": "bidon",
+      "title": "Le bidon",
+      "html": "<p>Le <strong>bidon</strong> (Canister) se pose comme un bloc et garde 4 000 mB d'un fluide, plus 1 000 mB par niveau de Capacité. Cassé, il garde son contenu : c'est la façon simple de transporter du carburant jusqu'à un moteur isolé. Les pompes et les becs verseurs le remplissent.</p>"
+    },
+    {
+      "id": "capacite",
+      "title": "Remplir et agrandir",
+      "html": "<p>L'enchantement Capacité de Create s'applique au briquet, au pulvérisateur et au bidon. Le bidon peut aussi se remplir sous un bec verseur (réglage serveur actif par défaut) ; posé, il se vide ou se remplit par un tuyau comme un petit réservoir.</p>"
+    },
+    {
+      "id": "moulages",
+      "title": "Ce que font les moules",
+      "html": "<p>Sous une presse, avec le bon moule dans le bassin : plaque de fer → seau (bol), plaque de fer → 4 panneaux de tôle (lignes), alliage d'andésite → attelage de wagonnet (chaîne). D'autres recettes de moulage donnent des chaînes, des bâtons et des bols à partir de pépites ou de copeaux de bois, et un bâton de blaze avec quatre poudres de blaze.</p>"
+    },
+    {
+      "id": "poignee",
+      "title": "La poignée en algue",
+      "html": "<p>La poignée en algue (Kelp Handle), faite de trois algues séchées et d'un alliage d'andésite, ne sert qu'à assembler le pulvérisateur chimique.</p>"
+    },
+    {
+      "id": "moules",
+      "title": "Le sac de rails et les moules",
+      "html": "<p>Le <strong>sac de rails</strong> (Track Layer's Bag) range une grande quantité de rails de train et pose des voies droites ; il ne fait ni pentes, ni virages, ni chicanes. Les <strong>moules</strong> se taillent dans une plaque de fer à la <a href=\"/wiki/scie-mecanique\">scie mécanique</a>. Posés dans un bassin sous une presse, ils moulent des plaques : bol → seau, lignes → 4 panneaux de tôle. Sous un bec verseur, le moule à barre coule une tablette de chocolat avec 250 mB de chocolat.</p>"
+    }
+  ],
+  "related": [
+    "tourelle-chimique",
+    "gisements-de-petrole",
+    "bec-verseur",
+    "presse-mecanique",
+    "scie-mecanique",
+    "carburants",
+    "blocs-diesel-generators",
+    "create-diesel-generators"
+  ],
+  "sources": [
+    "Outils à carburant : FueledToolItem (CDGConfig TOOL_CAPACITY 200, TOOL_CAPACITY_ENCHANTMENT 100)",
+    "Briquet : LighterItem, lighter_skins.json ; pulvérisateur : ChemicalSprayerItem, recipe/mechanical_crafting/chemcial_sprayer.json, recipe/deploying/chemical_sprayer_lighter.json",
+    "Marteau et pince : CDGItems (durability 128), recipe/hammering/*.json ; dossier recipe/wire_cutting vide en 1.3.15",
+    "Bidon : CDGConfig CANISTER_CAPACITY 4 000, CANISTER_CAPACITY_ENCHANTMENT 1 000 ; CanisterBlockEntity",
+    "Moules : MoldType (bar, bowl, chain, lines), recipe/cutting/*_mold.json, recipe/compression_molding/*.json, recipe/casting/chocolate_bar.json",
+    "Sac : TrackLayersBagItem",
+    "Recette : recipe/crafting/lighter.json",
+    "Code, données et storyboards : Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, licence MIT, auteur George VI), identiques au jar du modpack Create France",
+    "Images : blocs et objets du mod posés sur la plaque et rendus par notre moteur (modèles et textures MIT, George VI)"
+  ],
+  "en": {
+    "slugEn": "diesel-generators-tools",
+    "name": "Create Diesel Generators tools",
+    "title": "Tools — Create Diesel Generators guide",
+    "description": "The Create Diesel Generators tools: Lighter, Chemical Sprayer, Hammer, Wire Cutters, Canister, Track Layer's Bag and molds, with capacities.",
+    "intro": "Besides its machines, Create Diesel Generators adds a handful of <strong>tools</strong> that use its fuels or recipes: the <strong>Lighter</strong>, the <strong>Chemical Sprayer</strong>, the <strong>Hammer</strong> and the <strong>Wire Cutters</strong>, the <strong>Canister</strong>, the <strong>Track Layer's Bag</strong> and the <strong>molds</strong>. The <a href=\"/en/wiki/oil-deposits\">Oil Scanner</a> has its own page.",
+    "facts": [
+      {
+        "label": "Fuelled tools",
+        "value": "Lighter, sprayer: 200 mB (+100 mB per Capacity level)"
+      },
+      {
+        "label": "Refilling",
+        "value": "With a Create Spout"
+      },
+      {
+        "label": "Hammer",
+        "value": "128 uses; ingots into sheets (iron, copper, gold, brass)"
+      },
+      {
+        "label": "Wire Cutters",
+        "value": "128 uses; no default recipe in 1.3.15"
+      },
+      {
+        "label": "Canister",
+        "value": "4,000 mB (+1,000 mB per Capacity level), keeps its contents"
+      },
+      {
+        "label": "Molds",
+        "value": "Bar, bowl, chain, lines: cut from an iron sheet with a saw"
+      },
+      {
+        "label": "Version",
+        "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Lighter (crafting table)",
+      "grid": [
+        [
+          null,
+          "Brass Sheet",
+          "Flint and Steel"
+        ],
+        [
+          "Brass Sheet",
+          "String",
+          "Brass Sheet"
+        ],
+        [
+          "Brass Sheet",
+          "Andesite Alloy",
+          "Brass Sheet"
+        ]
+      ],
+      "result": "1 Lighter"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "apercu",
+        "title": "The tools",
+        "alt": "The lighter, hammer, wire cutters, oil scanner, track layer's bag and chemical sprayer",
+        "html": "<p>Fuelled tools are filled like a bottle: place them under a Create <a href=\"/en/wiki/spout\">Spout</a> holding the fluid you want. Their tank holds 200 mB, and Create's Capacity enchantment adds 100 mB per level. The other tools wear out like ordinary tools, or not at all.</p>"
+      },
+      {
+        "id": "briquet",
+        "title": "The Lighter",
+        "html": "<p>The lighter opens and closes with a right-click and tries to light what it points at when opened; sneaking opens it without lighting. It burns the fuel in its tank. Renamed on an anvil, it changes look: about a dozen designs exist (fire, soul, creeper, diamond, dragon…). Fitted on a <a href=\"/en/wiki/chemical-turret\">Chemical Turret</a> or a sprayer, it ignites the spray.</p>"
+      },
+      {
+        "id": "pulverisateur",
+        "title": "The Chemical Sprayer",
+        "html": "<p>The sprayer is the handheld version of the turret: fill it with any fluid and keep the use button pressed to spray. A potion applies its effects, water puts out fires, a fuel burns if the sprayer carries a lighter. It is assembled in a <a href=\"/en/wiki/mechanical-crafter\">Mechanical Crafter</a> with kelp handles, a precision mechanism and a block of copper; the lighter is added with a <a href=\"/en/wiki/deployer\">Deployer</a>.</p>"
+      },
+      {
+        "id": "marteau",
+        "title": "The Hammer and the Wire Cutters",
+        "html": "<p>The <strong>Hammer</strong> works on what you hold in your other hand: an iron, copper, gold or brass ingot becomes a sheet, no <a href=\"/en/wiki/mechanical-press\">press</a> needed. It lasts 128 uses. The <strong>Wire Cutters</strong> work the same way for wire-cutting recipes, but version 1.3.15 ships none: they only help with recipes added by another mod or a datapack.</p>"
+      },
+      {
+        "id": "bidon",
+        "title": "The Canister",
+        "html": "<p>The <strong>Canister</strong> is placed like a block and holds 4,000 mB of one fluid, plus 1,000 mB per Capacity level. When broken it keeps its contents: the easy way to carry fuel to a remote engine. Pumps and spouts can fill it.</p>"
+      },
+      {
+        "id": "capacite",
+        "title": "Filling and enlarging",
+        "html": "<p>Create's Capacity enchantment works on the lighter, the sprayer and the canister. The canister can also be filled under a spout (a server setting, on by default); once placed, it is emptied or filled through a pipe like a small tank, which makes it a convenient buffer next to an engine.</p>"
+      },
+      {
+        "id": "moulages",
+        "title": "What molds make",
+        "html": "<p>Under a press, with the right mold in the basin: iron sheet → bucket (bowl), iron sheet → 4 sheet metal panels (lines), andesite alloy → minecart coupling (chain). Other molding recipes turn nuggets or wood chips into chains, sticks and bowls, and four blaze powder into a blaze rod, a handy way to get rods without fighting blazes.</p>"
+      },
+      {
+        "id": "poignee",
+        "title": "The Kelp Handle",
+        "html": "<p>The Kelp Handle, made from three dried kelp and an andesite alloy, is only used to assemble the Chemical Sprayer. Two of them go on top of the mechanical crafting pattern.</p>"
+      },
+      {
+        "id": "moules",
+        "title": "The Track Layer's Bag and molds",
+        "html": "<p>The <strong>Track Layer's Bag</strong> stores a large amount of train track and lays straight lines; it cannot build slopes, curves or S-bends. <strong>Molds</strong> are cut from an iron sheet with a <a href=\"/en/wiki/mechanical-saw\">Mechanical Saw</a>. Placed in a basin under a press, they shape sheets: bowl → bucket, lines → 4 sheet metal panels. Under a spout, the bar mold casts a bar of chocolate from 250 mB of chocolate.</p>"
+      }
+    ],
+    "sources": [
+      "Fuelled tools: FueledToolItem (CDGConfig TOOL_CAPACITY 200, TOOL_CAPACITY_ENCHANTMENT 100)",
+      "Lighter: LighterItem, lighter_skins.json; sprayer: ChemicalSprayerItem, recipe/mechanical_crafting/chemcial_sprayer.json, recipe/deploying/chemical_sprayer_lighter.json",
+      "Hammer and cutters: CDGItems (durability 128), recipe/hammering/*.json; recipe/wire_cutting folder empty in 1.3.15",
+      "Canister: CDGConfig CANISTER_CAPACITY 4,000, CANISTER_CAPACITY_ENCHANTMENT 1,000; CanisterBlockEntity",
+      "Molds: MoldType (bar, bowl, chain, lines), recipe/cutting/*_mold.json, recipe/compression_molding/*.json, recipe/casting/chocolate_bar.json",
+      "Bag: TrackLayersBagItem",
+      "Recipe: recipe/crafting/lighter.json",
+      "Code, data and storyboards: Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, MIT licence, author George VI), identical to the Create France modpack jar",
+      "Images: mod blocks and items placed on the plate and rendered by our engine (models and textures MIT, George VI)"
+    ]
+  }
+}

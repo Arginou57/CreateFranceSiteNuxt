@@ -1,0 +1,298 @@
+{
+  "slug": "pompe-a-balancier",
+  "name": "Pompe à balancier",
+  "blockId": "createdieselgenerators:pumpjack_bearing",
+  "category": "diesel",
+  "title": "Pompe à balancier — Create Diesel Generators",
+  "description": "Construire une pompe à balancier dans Create Diesel Generators : roulement, balancier, tête, manivelle, trou de pompe et débit de pétrole.",
+  "datePublished": "2026-11-23",
+  "dateModified": "2026-11-23",
+  "createVersion": "6.0.10 · Create Diesel Generators 1.3.15",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>pompe à balancier</strong> (pumpjack) est la seule façon de sortir le pétrole du sol dans Create Diesel Generators. C'est une petite contraption : un balancier collé qui bascule sur un <strong>roulement mécanique de pompe</strong>, poussé par une <strong>manivelle de pompe</strong>, avec une <strong>tête de pompe</strong> au-dessus d'un <strong>trou de pompe</strong> relié à la bedrock. Chaque coup de balancier remonte jusqu'à 1 000 mB de pétrole.",
+  "facts": [
+    {
+      "label": "Pièces",
+      "value": "Roulement de pompe ×2, tête de pompe, manivelle de pompe, trou de pompe, colle"
+    },
+    {
+      "label": "Rotation",
+      "value": "Sur la manivelle ; 16 SU par tr/min ; au moins 8 tr/min pour pomper"
+    },
+    {
+      "label": "Cadence",
+      "value": "1 coup par tour de manivelle : 11,25 s à 16 tr/min, 2,8 s à partir de 64 tr/min"
+    },
+    {
+      "label": "Débit par coup",
+      "value": "1 000 mB × (distance de la tête / distance du roulement B), × 2 avec la grande manivelle"
+    },
+    {
+      "label": "Trou de pompe",
+      "value": "Réservoir 8 000 mB ; tuyau vertical continu jusqu’à la bedrock"
+    },
+    {
+      "label": "Sortie",
+      "value": "Pompe mécanique branchée sur un côté ouvert du trou de pompe"
+    },
+    {
+      "label": "Version",
+      "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Roulement mécanique de pompe (établi)",
+    "grid": [
+      [
+        "Alliage d'andésite",
+        "Lingot de zinc",
+        "Alliage d'andésite"
+      ],
+      [
+        "Lingot de zinc",
+        "Roulement mécanique",
+        "Lingot de zinc"
+      ],
+      [
+        "Alliage d'andésite",
+        "Lingot de zinc",
+        "Alliage d'andésite"
+      ]
+    ],
+    "items": [
+      [
+        "create:andesite_alloy",
+        "create:zinc_ingot",
+        "create:andesite_alloy"
+      ],
+      [
+        "create:zinc_ingot",
+        "create:mechanical_bearing",
+        "create:zinc_ingot"
+      ],
+      [
+        "create:andesite_alloy",
+        "create:zinc_ingot",
+        "create:andesite_alloy"
+      ]
+    ],
+    "result": "1 roulement mécanique de pompe",
+    "resultItem": "createdieselgenerators:pumpjack_bearing"
+  },
+  "videos": [
+    {
+      "id": "cdg_pumpjack",
+      "name": "Pompe à balancier : construire le balancier",
+      "description": "Deux piliers, le roulement de pompe, le corps du balancier, la tête puis un second roulement tourné à la clé ; le tout est collé.",
+      "duration": "PT21S"
+    },
+    {
+      "id": "cdg_pumpjack_run",
+      "name": "Pompe à balancier : manivelle et pompage",
+      "description": "La manivelle tourne, le trou de pompe est posé sur un tuyau qui descend à la bedrock, la contraption est assemblée et le balancier se met à basculer.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "roulement",
+      "title": "Le roulement et les piliers",
+      "image": "cdg_pumpjack_roulement.webp",
+      "alt": "Deux piliers d’échafaudage et le roulement de pompe posé au sommet",
+      "video": "cdg_pumpjack",
+      "html": "<p>Monte deux piliers de trois ou quatre blocs et pose le <strong>roulement mécanique de pompe</strong> (Pumpjack Bearing ; « Roulement méchanique de pompe » dans le jeu) au sommet de l'un d'eux, sa face tournée vers l'axe du futur balancier. Il sert de charnière : la contraption pivotera autour de lui. Il ne se fait pas tourner par un rotor, comme un roulement mécanique ordinaire : c'est la manivelle qui fera tout le travail.</p>"
+    },
+    {
+      "id": "balancier",
+      "title": "Le balancier",
+      "image": "cdg_pumpjack_balancier.webp",
+      "alt": "Le corps du balancier posé en travers sur le roulement",
+      "html": "<p>Pose ensuite le corps du balancier en travers, sur le roulement : une poutre de quelques blocs, ici des poutres métalliques et des blocs de fer industriel. Ses deux bouts doivent dépasser du roulement. La longueur de chaque côté compte : le débit dépend du rapport entre la distance de la tête et celle du second roulement.</p>"
+    },
+    {
+      "id": "tete",
+      "title": "La tête et le second roulement",
+      "image": "cdg_pumpjack_second-roulement.webp",
+      "alt": "La tête de pompe au bout du balancier et le second roulement à l’autre bout",
+      "html": "<p>À un bout, pose la <strong>tête de pompe</strong> : c'est elle qui plonge au-dessus du puits. À l'autre bout, pose un second roulement de pompe et donne-lui un coup de <a href=\"/wiki/cle\">clé</a> : il devient le <strong>roulement B</strong>, le point d'attache de la bielle. Colle tout le balancier avec une <a href=\"/wiki/colle-extra-forte\">colle extra-forte</a>, de la tête au roulement B : sans colle, l'assemblage n'emporte que le premier bloc.</p>"
+    },
+    {
+      "id": "manivelle",
+      "title": "La manivelle",
+      "image": "cdg_pumpjack_run_manivelle.webp",
+      "alt": "La manivelle de pompe sous le roulement B, entraînée par des roues dentées",
+      "video": "cdg_pumpjack_run",
+      "html": "<p>Sous le roulement B, quelques blocs plus bas (trois dans la scène), pose la <strong>manivelle de pompe</strong> (Pumpjack Crank) et fais-la tourner avec un rotor ou des roues dentées. Elle demande 16 SU par tr/min et avance d'un dixième de sa vitesse en degrés par tick, plafonnée à 64 tr/min : un tour complet, donc un coup de balancier, prend 11,25 s à 16 tr/min et 2,8 s au-delà de 64. Un réglage sur la manivelle choisit le grand contrepoids, qui double le débit. En dessous de 8 tr/min, elle tourne mais ne pompe rien.</p>"
+    },
+    {
+      "id": "puits",
+      "title": "Le puits",
+      "image": "cdg_pumpjack_run_tuyau.webp",
+      "alt": "Le tuyau vertical sous la tête de pompe et le trou de pompe posé dessus",
+      "html": "<p>Sous la tête, creuse jusqu'à la <strong>bedrock</strong> et remplis le trou d'un <a href=\"/wiki/tuyau-a-fluide\">tuyau à fluide</a> droit et vertical, sans branche. Pose le <strong>trou de pompe</strong> (Pumpjack Hole) au sommet : il garde 8 000 mB et vérifie le tuyau chaque seconde. Le pétrole ne sort que si le chunk contient un <a href=\"/wiki/gisements-de-petrole\">gisement</a>.</p>"
+    },
+    {
+      "id": "assembler",
+      "title": "Assembler et pomper",
+      "image": "cdg_pumpjack_run_pompage.webp",
+      "alt": "Le balancier qui bascule et la pompe qui sort le pétrole du trou de pompe",
+      "html": "<p>Un clic droit sur le premier roulement assemble la contraption : le balancier se met à basculer, entraîné par la bielle. À chaque tour de manivelle, le trou reçoit 1 000 mB × la distance de la tête divisée par celle du roulement B : avec un balancier symétrique, 1 000 mB. Branche une <a href=\"/wiki/pompe-mecanique\">pompe mécanique</a> sur un côté ouvert du trou pour vider le pétrole vers un <a href=\"/wiki/reservoir-a-fluide\">réservoir</a>.</p>"
+    },
+    {
+      "id": "panne",
+      "title": "Si rien ne sort",
+      "html": "<p>Vérifie dans l'ordre : le chunk du trou de pompe a-t-il une réserve ? le tuyau descend-il sans coupure jusqu'à la bedrock ? la manivelle tourne-t-elle à 8 tr/min au moins ? tout le balancier est-il collé ? et le trou de pompe n'est-il pas déjà plein ?</p>"
+    },
+    {
+      "id": "debit",
+      "title": "Quel débit ?",
+      "html": "<p>À 64 tr/min ou plus, un balancier symétrique sort environ 355 mB par seconde, le double avec le grand contrepoids. Un bras côté tête plus long que le bras côté manivelle augmente encore la dose. Une <a href=\"/wiki/liaison-d-affichage\">liaison d'affichage</a> sur le trou de pompe affiche ce qui reste dans le gisement.</p>"
+    }
+  ],
+  "related": [
+    "gisements-de-petrole",
+    "tour-de-distillation",
+    "colle-extra-forte",
+    "roulement-mecanique",
+    "cle",
+    "pompe-mecanique",
+    "tuyau-a-fluide",
+    "create-diesel-generators"
+  ],
+  "sources": [
+    "Manivelle : PumpjackCrankBlockEntity (stress 16, angle += min(|vitesse|, 64) / 10 par tick, CrankSize NORMAL / LARGE)",
+    "Pompage : PumpjackHeadMovementBehaviour (un coup par tour de manivelle, crankSpeed ≥ 8) ; PumpjackHoleBlockEntity.pumpjackRotation (1 000 × |tête / roulement B|, × 2 grande manivelle ; réservoir 8 000 mB ; tuyau vérifié toutes les 20 ticks jusqu’au tag oil_deposit = bedrock)",
+    "Roulement B : PumpjackBearingBlock (clé) ; animation : PumpjackScene.PumpjackAnimateInstruction",
+    "Affichage : CDGDisplaySources.PUMPJACK_OIL_AMOUNT",
+    "Recettes : recipe/crafting/pumpjack_*.json, recipe/mechanical_crafting/pumpjack_crank.json",
+    "Code, données et storyboards : Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, licence MIT, auteur George VI), identiques au jar du modpack Create France",
+    "Vidéos : scènes Ponder de Create Diesel Generators (PumpjackScene.scene) rejouées par notre moteur ; modèles et textures du mod (licence MIT, George VI)"
+  ],
+  "en": {
+    "slugEn": "pumpjack",
+    "name": "Pumpjack",
+    "title": "Pumpjack — Create Diesel Generators guide",
+    "description": "How to build a pumpjack in Create Diesel Generators: bearings, beam, head, crank, pumpjack hole and how much crude oil it pumps.",
+    "intro": "The <strong>pumpjack</strong> is the only way to get crude oil out of the ground in Create Diesel Generators. It is a small contraption: a glued beam rocking on a <strong>Pumpjack Bearing</strong>, pushed by a <strong>Pumpjack Crank</strong>, with a <strong>Pumpjack Head</strong> above a <strong>Pumpjack Hole</strong> connected down to bedrock. Each stroke of the beam lifts up to 1,000 mB of crude oil.",
+    "facts": [
+      {
+        "label": "Parts",
+        "value": "Pumpjack Bearing ×2, Pumpjack Head, Pumpjack Crank, Pumpjack Hole, glue"
+      },
+      {
+        "label": "Rotation",
+        "value": "On the crank; 16 SU per RPM; at least 8 RPM to pump"
+      },
+      {
+        "label": "Rate",
+        "value": "1 stroke per crank turn: 11.25 s at 16 RPM, 2.8 s from 64 RPM up"
+      },
+      {
+        "label": "Oil per stroke",
+        "value": "1,000 mB × (head distance / bearing B distance), × 2 with the large crank"
+      },
+      {
+        "label": "Pumpjack Hole",
+        "value": "8,000 mB tank; continuous vertical pipe down to bedrock"
+      },
+      {
+        "label": "Output",
+        "value": "Mechanical Pump on an open side of the Pumpjack Hole"
+      },
+      {
+        "label": "Version",
+        "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Pumpjack Bearing (crafting table)",
+      "grid": [
+        [
+          "Andesite Alloy",
+          "Zinc Ingot",
+          "Andesite Alloy"
+        ],
+        [
+          "Zinc Ingot",
+          "Mechanical Bearing",
+          "Zinc Ingot"
+        ],
+        [
+          "Andesite Alloy",
+          "Zinc Ingot",
+          "Andesite Alloy"
+        ]
+      ],
+      "result": "1 Pumpjack Bearing"
+    },
+    "videos": [
+      {
+        "id": "cdg_pumpjack",
+        "name": "Pumpjack: building the beam",
+        "description": "Two pillars, the pumpjack bearing, the body of the beam, the head, then a second bearing turned with the wrench; everything is glued."
+      },
+      {
+        "id": "cdg_pumpjack_run",
+        "name": "Pumpjack: crank and pumping",
+        "description": "The crank turns, the pumpjack hole is placed on a pipe going down to bedrock, the contraption is assembled and the beam starts rocking."
+      }
+    ],
+    "sections": [
+      {
+        "id": "roulement",
+        "title": "The bearing and the pillars",
+        "alt": "Two scaffolding pillars and the pumpjack bearing on top",
+        "html": "<p>Build two pillars three or four blocks high and place the <strong>Pumpjack Bearing</strong> on top of one of them, its face pointing along the future beam axis. It works as a hinge: the contraption will pivot around it. It is not driven by a shaft like an ordinary mechanical bearing: the crank will do all the work.</p>"
+      },
+      {
+        "id": "balancier",
+        "title": "The beam",
+        "alt": "The body of the beam laid across the bearing",
+        "html": "<p>Then lay the body of the beam across the bearing: a few blocks long, here metal girders and industrial iron blocks. Both ends must stick out past the bearing. The length on each side matters: the output depends on the ratio between the head distance and the second bearing distance.</p>"
+      },
+      {
+        "id": "tete",
+        "title": "The head and the second bearing",
+        "alt": "The pumpjack head at one end of the beam and the second bearing at the other",
+        "html": "<p>At one end, place the <strong>Pumpjack Head</strong>: it is the part that dips over the well. At the other end, place a second pumpjack bearing and hit it with the <a href=\"/en/wiki/wrench\">Wrench</a>: it becomes <strong>bearing B</strong>, where the connecting rod attaches. Glue the whole beam with <a href=\"/en/wiki/super-glue\">Super Glue</a>, from the head to bearing B: without glue, assembly only takes the first block.</p>"
+      },
+      {
+        "id": "manivelle",
+        "title": "The crank",
+        "alt": "The pumpjack crank under bearing B, driven by cogwheels",
+        "html": "<p>Below bearing B, a few blocks down (three in the scene), place the <strong>Pumpjack Crank</strong> and drive it with a shaft or cogwheels. It needs 16 SU per RPM and advances by a tenth of its speed in degrees per tick, capped at 64 RPM: one full turn, so one stroke, takes 11.25 s at 16 RPM and 2.8 s above 64. A setting on the crank selects the large counterweight, which doubles the output. Below 8 RPM it turns but pumps nothing.</p>"
+      },
+      {
+        "id": "puits",
+        "title": "The well",
+        "alt": "The vertical pipe under the head and the pumpjack hole on top of it",
+        "html": "<p>Under the head, dig down to <strong>bedrock</strong> and fill the shaft with a straight, vertical <a href=\"/en/wiki/fluid-pipe\">Fluid Pipe</a> with no branches. Put the <strong>Pumpjack Hole</strong> on top: it holds 8,000 mB and checks the pipe every second. Oil only comes out if the chunk holds a <a href=\"/en/wiki/oil-deposits\">deposit</a>.</p>"
+      },
+      {
+        "id": "assembler",
+        "title": "Assembling and pumping",
+        "alt": "The beam rocking and the pump drawing oil from the pumpjack hole",
+        "html": "<p>Right-click the first bearing to assemble the contraption: the beam starts rocking, driven by the rod. On each crank turn, the hole receives 1,000 mB × the head distance divided by the bearing B distance: with a symmetric beam, 1,000 mB. Attach a <a href=\"/en/wiki/mechanical-pump\">Mechanical Pump</a> to an open side of the hole to send the oil to a <a href=\"/en/wiki/fluid-tank\">Fluid Tank</a>.</p>"
+      },
+      {
+        "id": "panne",
+        "title": "If nothing comes out",
+        "html": "<p>Check in this order: does the chunk of the pumpjack hole hold a reserve? Does the pipe go down to bedrock without a gap or a branch? Does the crank turn at 8 RPM at least? Is the whole beam glued? And is the pumpjack hole not already full with its 8,000 mB? A full hole simply stops filling until a pump drains it.</p>"
+      },
+      {
+        "id": "debit",
+        "title": "How much oil?",
+        "html": "<p>At 64 RPM or more, a symmetric beam yields about 355 mB per second, twice that with the large counterweight. A longer arm on the head side than on the crank side increases the dose further. A <a href=\"/en/wiki/display-link\">Display Link</a> on the pumpjack hole shows how much is left in the deposit.</p>"
+      }
+    ],
+    "sources": [
+      "Crank: PumpjackCrankBlockEntity (stress 16, angle += min(|speed|, 64) / 10 per tick, CrankSize NORMAL / LARGE)",
+      "Pumping: PumpjackHeadMovementBehaviour (one stroke per crank turn, crankSpeed ≥ 8); PumpjackHoleBlockEntity.pumpjackRotation (1,000 × |head / bearing B|, × 2 large crank; 8,000 mB tank; pipe checked every 20 ticks down to the oil_deposit tag = bedrock)",
+      "Bearing B: PumpjackBearingBlock (wrench); animation: PumpjackScene.PumpjackAnimateInstruction",
+      "Display: CDGDisplaySources.PUMPJACK_OIL_AMOUNT",
+      "Recipes: recipe/crafting/pumpjack_*.json, recipe/mechanical_crafting/pumpjack_crank.json",
+      "Code, data and storyboards: Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, MIT licence, author George VI), identical to the Create France modpack jar",
+      "Videos: Create Diesel Generators Ponder scenes (PumpjackScene.scene) replayed by our engine; mod models and textures (MIT licence, George VI)"
+    ]
+  }
+}

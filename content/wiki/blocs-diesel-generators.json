@@ -1,0 +1,241 @@
+{
+  "slug": "blocs-diesel-generators",
+  "name": "Blocs de Create Diesel Generators",
+  "blockId": "createdieselgenerators:asphalt_block",
+  "category": "diesel",
+  "title": "Blocs de construction — Create Diesel Generators",
+  "description": "Les blocs de Create Diesel Generators : asphalte rapide, ciment coulé, copeaux de bois, tôle, poutre en andésite, baril à pétrole et fermenteur.",
+  "datePublished": "2026-11-23",
+  "dateModified": "2026-11-23",
+  "createVersion": "6.0.10 · Create Diesel Generators 1.3.15",
+  "mcVersion": "1.21.1",
+  "intro": "Create Diesel Generators ajoute aussi des <strong>blocs de construction</strong> tirés de son industrie : l'<strong>asphalte</strong> qui fait courir plus vite, le <strong>ciment</strong> qu'on coule et qui durcit en béton, les blocs de <strong>copeaux de bois</strong>, les <strong>panneaux de tôle</strong> et la <strong>poutre en andésite</strong>. On y ajoute les blocs de stockage : le <strong>baril à pétrole</strong>, le bidon et le fermenteur de masse.",
+  "facts": [
+    {
+      "label": "Asphalte",
+      "value": "Vitesse de marche × 1,25 ; 4 blocs par mélange chauffé"
+    },
+    {
+      "label": "Ciment",
+      "value": "1 000 mB par poudre de béton + 100 mB d’eau ; durcit en béton"
+    },
+    {
+      "label": "Tuyau enrobé",
+      "value": "Seau de ciment sur un tuyau à fluide"
+    },
+    {
+      "label": "Copeaux de bois",
+      "value": "7 à 8 copeaux par planche broyée ; 4 copeaux = 1 bloc"
+    },
+    {
+      "label": "Tôle",
+      "value": "4 panneaux par plaque de fer moulée (moule à lignes)"
+    },
+    {
+      "label": "Baril à pétrole",
+      "value": "8 000 mB par bloc, jusqu’à 3 de large, couché ou debout, teintable"
+    },
+    {
+      "label": "Version",
+      "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Poutre en andésite (établi)",
+    "grid": [
+      [
+        "Alliage d'andésite",
+        "Rotor",
+        "Alliage d'andésite"
+      ]
+    ],
+    "items": [
+      [
+        "create:andesite_alloy",
+        "create:shaft",
+        "create:andesite_alloy"
+      ]
+    ],
+    "result": "6 poutres en andésite",
+    "resultItem": "createdieselgenerators:andesite_girder"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "construction",
+      "title": "Les blocs de construction",
+      "image": "cdg_blocks_construction.webp",
+      "alt": "Asphalte, dalle d’asphalte, copeaux de bois, tuyau enrobé de béton, panneau de tôle et poutre en andésite",
+      "html": "<p>Chacun de ces blocs vient d'une étape de la chaîne du pétrole ou du bois. Ils ont tous leurs variantes de dalle et d'escalier quand ça a du sens, et se cassent à la pioche ou à la hache comme leurs équivalents vanilla.</p>"
+    },
+    {
+      "id": "asphalte",
+      "title": "L’asphalte",
+      "html": "<p>Dans un <a href=\"/wiki/mixeur-mecanique\">mixeur mécanique</a> au-dessus d'un bassin chauffé, deux sables, deux graviers et 100 mB de pétrole brut donnent quatre <strong>blocs d'asphalte</strong>. Marcher dessus va 25 % plus vite, comme sur ses dalles et ses escaliers : idéal pour les routes entre deux bases. L'asphalte existe aussi en textures usées.</p>"
+    },
+    {
+      "id": "ciment",
+      "title": "Le ciment",
+      "html": "<p>Le mixeur fait aussi du <strong>ciment</strong> : une poudre de béton et 100 mB d'eau donnent 1 000 mB de ciment de la même couleur (et une chance sur quatre de récupérer la poudre). Versé, le ciment coule vers le bas, puis durcit tout seul en béton. Un seau de ciment utilisé sur un <a href=\"/wiki/tuyau-a-fluide\">tuyau à fluide</a> l'enrobe de béton : le tuyau garde ses connexions, caché dans un bloc plein.</p>"
+    },
+    {
+      "id": "bois",
+      "title": "Copeaux de bois, tôle et poutre",
+      "html": "<p>Les <a href=\"/wiki/roues-de-concassage\">roues de concassage</a> réduisent les objets en bois en <strong>copeaux</strong> : une planche en donne 7, plus une chance sur deux d'un huitième. Quatre copeaux font un bloc de copeaux, qui a ses poutres, dalles et escaliers. Les <strong>panneaux de tôle</strong> sortent d'une presse avec un moule à lignes. La <strong>poutre en andésite</strong>, version légère de la poutre métallique de Create, peut enrober un rotor.</p>"
+    },
+    {
+      "id": "stockage",
+      "title": "Les blocs de stockage",
+      "image": "cdg_blocks_stockage.webp",
+      "alt": "Le baril à pétrole, le bidon, le fermenteur de masse, le trou de pompe et le roulement de pompe",
+      "html": "<p>Le <strong>baril à pétrole</strong> (Oil Barrel) est un réservoir trapu : 8 000 mB par bloc, jusqu'à trois blocs de côté, posé debout ou couché. Une teinture utilisée dessus le colore. Le <a href=\"/wiki/outils-diesel-generators\">bidon</a> garde 4 000 mB et son contenu quand on le casse. Le <a href=\"/wiki/couvercle-de-bassin\">fermenteur de masse</a> fait de l'éthanol en grand.</p>"
+    },
+    {
+      "id": "couleurs",
+      "title": "Seize couleurs de ciment",
+      "html": "<p>Il existe un ciment pour chacune des seize poudres de béton, de la même couleur. Versé dans un moule de blocs ou un coffrage, il remplit les creux en coulant vers le bas, puis durcit au hasard, comme une culture qui pousse. C'est pratique pour couler un sol ou des murs entiers sans poser les blocs un par un.</p>"
+    },
+    {
+      "id": "poutre",
+      "title": "La poutre en andésite",
+      "html": "<p>Une recette donne six poutres pour deux alliages d'andésite et un rotor. Elles se raccordent entre elles comme les poutres métalliques de Create et peuvent enfermer un rotor qui continue de tourner à l'intérieur. Avec le mod Strut Your Stuff, elles ont aussi leurs entretoises.</p>"
+    },
+    {
+      "id": "copeaux",
+      "title": "Que faire des copeaux ?",
+      "html": "<p>Les copeaux de bois brûlent dans un four comme du petit combustible et se moulent sous une presse en bâtons ou en bols. Une scierie qui broie ses chutes de bois n'a donc presque aucun déchet.</p>"
+    },
+    {
+      "id": "usages",
+      "title": "Où les utiliser",
+      "html": "<ul><li>Routes en asphalte entre la base, le champ de pétrole et la raffinerie.</li><li>Tuyaux enrobés de béton pour cacher les longues conduites de carburant dans les murs.</li><li>Barils à pétrole en rangées, teints selon le fluide, pour ranger diesel, essence et éthanol sans confusion.</li></ul>"
+    }
+  ],
+  "related": [
+    "mixeur-mecanique",
+    "tuyau-a-fluide",
+    "roues-de-concassage",
+    "reservoir-a-fluide",
+    "outils-diesel-generators",
+    "couvercle-de-bassin",
+    "create-diesel-generators"
+  ],
+  "sources": [
+    "Asphalte : CDGBlocks (speedFactor 1,25), recipe/mixing/asphalt_block.json (heated)",
+    "Ciment : recipe/mixing/*_concrete.json ; ConcreteFluid (coule vers le bas, durcit en béton au hasard) ; ConcreteBucketItem (tuyau enrobé)",
+    "Copeaux : recipe/crushing/wood_chip_*.json, recipe/crafting/chip_wood_block.json",
+    "Tôle : recipe/compression_molding/sheet_metal_panel.json",
+    "Poutre : recipe/crafting/andesite_girder.json, AndesiteGirderEncasedShaftBlock",
+    "Baril : OilBarrelBlockEntity (capacité fluidTankCapacity × 1 000, largeur max 3)",
+    "Code, données et storyboards : Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, licence MIT, auteur George VI), identiques au jar du modpack Create France",
+    "Images : blocs et objets du mod posés sur la plaque et rendus par notre moteur (modèles et textures MIT, George VI)"
+  ],
+  "en": {
+    "slugEn": "diesel-generators-building-blocks",
+    "name": "Create Diesel Generators blocks",
+    "title": "Building Blocks — Create Diesel Generators guide",
+    "description": "Create Diesel Generators building blocks: fast asphalt, pourable cement, chip wood, sheet metal, andesite girder, oil barrel and bulk fermenter.",
+    "intro": "Create Diesel Generators also adds <strong>building blocks</strong> drawn from its industry: <strong>asphalt</strong> that makes you walk faster, <strong>cement</strong> you pour and that sets into concrete, <strong>chip wood</strong> blocks, <strong>sheet metal panels</strong> and the <strong>Andesite Girder</strong>. Then come the storage blocks: the <strong>Oil Barrel</strong>, the canister and the bulk fermenter.",
+    "facts": [
+      {
+        "label": "Asphalt",
+        "value": "Walking speed × 1.25; 4 blocks per heated mix"
+      },
+      {
+        "label": "Cement",
+        "value": "1,000 mB per concrete powder + 100 mB of water; sets into concrete"
+      },
+      {
+        "label": "Encased pipe",
+        "value": "Cement bucket used on a fluid pipe"
+      },
+      {
+        "label": "Wood chips",
+        "value": "7 to 8 chips per crushed plank; 4 chips = 1 block"
+      },
+      {
+        "label": "Sheet metal",
+        "value": "4 panels per molded iron sheet (lines mold)"
+      },
+      {
+        "label": "Oil Barrel",
+        "value": "8,000 mB per block, up to 3 wide, lying or standing, dyeable"
+      },
+      {
+        "label": "Version",
+        "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Andesite Girder (crafting table)",
+      "grid": [
+        [
+          "Andesite Alloy",
+          "Shaft",
+          "Andesite Alloy"
+        ]
+      ],
+      "result": "6 Andesite Girders"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "construction",
+        "title": "Building blocks",
+        "alt": "Asphalt, asphalt slab, chip wood, concrete encased pipe, sheet metal panel and andesite girder",
+        "html": "<p>Each of these blocks comes from a step of the oil or wood chain. They all have slab and stair variants where it makes sense, and break with a pickaxe or an axe like their vanilla counterparts.</p>"
+      },
+      {
+        "id": "asphalte",
+        "title": "Asphalt",
+        "html": "<p>In a <a href=\"/en/wiki/mechanical-mixer\">Mechanical Mixer</a> over a heated basin, two sand, two gravel and 100 mB of crude oil make four <strong>asphalt blocks</strong>. Walking on it is 25% faster, on slabs and stairs too: perfect for roads between two bases. Asphalt also comes in worn textures.</p>"
+      },
+      {
+        "id": "ciment",
+        "title": "Cement",
+        "html": "<p>The mixer also makes <strong>cement</strong>: one concrete powder and 100 mB of water give 1,000 mB of cement of the same colour (with a one-in-four chance to get the powder back). Poured out, cement flows downwards, then sets into concrete on its own. A cement bucket used on a <a href=\"/en/wiki/fluid-pipe\">Fluid Pipe</a> encases it in concrete: the pipe keeps its connections, hidden inside a full block.</p>"
+      },
+      {
+        "id": "bois",
+        "title": "Chip wood, sheet metal and girder",
+        "html": "<p><a href=\"/en/wiki/crushing-wheel\">Crushing Wheels</a> grind wooden items into <strong>wood chips</strong>: a plank gives 7, plus a one-in-two chance of an eighth. Four chips make a chip wood block, which has beams, slabs and stairs. <strong>Sheet metal panels</strong> come out of a press with a lines mold. The <strong>Andesite Girder</strong>, a light version of Create's metal girder, can encase a shaft.</p>"
+      },
+      {
+        "id": "stockage",
+        "title": "Storage blocks",
+        "alt": "The oil barrel, canister, bulk fermenter, pumpjack hole and pumpjack bearing",
+        "html": "<p>The <strong>Oil Barrel</strong> is a squat tank: 8,000 mB per block, up to three blocks wide, standing or lying down. Right-click it with a dye to colour it. The <a href=\"/en/wiki/diesel-generators-tools\">canister</a> holds 4,000 mB and keeps its contents when broken. The <a href=\"/en/wiki/basin-lid\">Bulk Fermenter</a> makes ethanol at scale.</p>"
+      },
+      {
+        "id": "couleurs",
+        "title": "Sixteen colours of cement",
+        "html": "<p>There is a cement for each of the sixteen concrete powders, in the same colour. Poured into a frame or a mould of blocks, it fills the gaps by flowing downwards, then sets at random, a bit like a growing crop. It is handy for pouring a whole floor or wall without placing the blocks one by one.</p>"
+      },
+      {
+        "id": "poutre",
+        "title": "The Andesite Girder",
+        "html": "<p>One recipe makes six girders from two andesite alloy and a shaft. They connect to each other like Create's metal girders and can enclose a shaft that keeps turning inside. With the Strut Your Stuff mod installed, they also get matching struts for diagonal supports.</p>"
+      },
+      {
+        "id": "copeaux",
+        "title": "What to do with wood chips?",
+        "html": "<p>Wood chips burn in a furnace as small fuel and can be molded under a press into sticks or bowls. A sawmill that crushes its wooden scraps therefore wastes almost nothing, and the extra chips can be turned into chip wood blocks for building. One chip burns for 200 ticks, enough to smelt one item, so a hopper of chips keeps a furnace busy for a long time.</p>"
+      },
+      {
+        "id": "usages",
+        "title": "Where to use them",
+        "html": "<ul><li>Asphalt roads between the base, the oil field and the refinery.</li><li>Concrete encased pipes to hide long fuel lines inside walls.</li><li>Rows of oil barrels, dyed per fluid, to store diesel, gasoline and ethanol without mix-ups.</li></ul>"
+      }
+    ],
+    "sources": [
+      "Asphalt: CDGBlocks (speedFactor 1.25), recipe/mixing/asphalt_block.json (heated)",
+      "Cement: recipe/mixing/*_concrete.json; ConcreteFluid (flows down, randomly sets into concrete); ConcreteBucketItem (encased pipe)",
+      "Wood chips: recipe/crushing/wood_chip_*.json, recipe/crafting/chip_wood_block.json",
+      "Sheet metal: recipe/compression_molding/sheet_metal_panel.json",
+      "Girder: recipe/crafting/andesite_girder.json, AndesiteGirderEncasedShaftBlock",
+      "Barrel: OilBarrelBlockEntity (capacity fluidTankCapacity × 1,000, max width 3)",
+      "Code, data and storyboards: Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, MIT licence, author George VI), identical to the Create France modpack jar",
+      "Images: mod blocks and items placed on the plate and rendered by our engine (models and textures MIT, George VI)"
+    ]
+  }
+}

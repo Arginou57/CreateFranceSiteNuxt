@@ -1,0 +1,275 @@
+{
+  "slug": "tour-de-distillation",
+  "name": "Tour de distillation",
+  "blockId": "createdieselgenerators:distillation_controller",
+  "category": "diesel",
+  "title": "Tour de distillation — Create Diesel Generators",
+  "description": "La tour de distillation de Create Diesel Generators : contrôleurs, étages, chauffage par brûleurs à blaze, diesel et essence tirés du pétrole.",
+  "datePublished": "2026-11-23",
+  "dateModified": "2026-11-23",
+  "createVersion": "6.0.10 · Create Diesel Generators 1.3.15",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>tour de distillation</strong> raffine le pétrole brut. On la fabrique à partir d'un <a href=\"/wiki/reservoir-a-fluide\">réservoir à fluide</a> de Create d'au moins trois blocs de haut, en y appliquant des <strong>contrôleurs de distillation</strong>. Chauffée par des <a href=\"/wiki/bruleur-a-blaze\">brûleurs à blaze</a>, elle coupe chaque dose de 100 mB de pétrole en <strong>diesel</strong> et en <strong>essence</strong>, rangés à des étages différents.",
+  "facts": [
+    {
+      "label": "Base",
+      "value": "Réservoir à fluide de Create, 3 à 7 blocs de haut (réglage : 3), jusqu’à 3 × 3 de large"
+    },
+    {
+      "label": "Contrôleurs",
+      "value": "Un par bloc de réservoir (la recette en donne 4)"
+    },
+    {
+      "label": "Chauffé",
+      "value": "100 mB de pétrole → 50 mB de diesel + 50 mB d’essence en 3 s"
+    },
+    {
+      "label": "Surchauffé",
+      "value": "100 mB → 75 mB + 75 mB en 2 s"
+    },
+    {
+      "label": "Étages",
+      "value": "Pétrole en bas, diesel au 2ᵉ étage, essence au 3ᵉ"
+    },
+    {
+      "label": "Débit",
+      "value": "Une dose par brûleur au niveau de chaleur le plus haut, à chaque cycle"
+    },
+    {
+      "label": "Version",
+      "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Contrôleur de distillation (établi)",
+    "grid": [
+      [
+        "Tuyau à fluide",
+        "Horloge",
+        "Tuyau à fluide"
+      ],
+      [
+        "Alliage d'andésite",
+        "Plaque de fer",
+        "Alliage d'andésite"
+      ]
+    ],
+    "items": [
+      [
+        "create:fluid_pipe",
+        "minecraft:clock",
+        "create:fluid_pipe"
+      ],
+      [
+        "create:andesite_alloy",
+        "create:iron_sheet",
+        "create:andesite_alloy"
+      ]
+    ],
+    "result": "4 contrôleurs de distillation",
+    "resultItem": "createdieselgenerators:distillation_controller"
+  },
+  "videos": [
+    {
+      "id": "cdg_distillation",
+      "name": "Monter et chauffer une tour de distillation",
+      "description": "Un réservoir de 2 × 2 × 3 posé sur quatre brûleurs à blaze devient une tour de distillation ; une pompe envoie le fluide en bas, les brûleurs chauffent et la tour reçoit des fenêtres.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "controleur",
+      "title": "Du réservoir à la tour",
+      "image": "cdg_distillation_controleur.webp",
+      "alt": "La tour de distillation de 2 × 2 × 3 sur ses brûleurs à blaze",
+      "video": "cdg_distillation",
+      "html": "<p>Construis un réservoir à fluide d'au moins trois blocs de haut et jusqu'à trois blocs de côté. Prends autant de contrôleurs qu'il compte de blocs (12 pour un 2 × 2 × 3) et fais un clic droit sur le réservoir : il devient une tour, découpée en étages d'un bloc de haut. Chaque étage est un réservoir à part, de 8 000 mB par bloc de section : 32 000 mB pour une tour de 2 × 2. Trop basse, la tour refuse les contrôleurs.</p>"
+    },
+    {
+      "id": "entree",
+      "title": "Remplir l’étage du bas",
+      "image": "cdg_distillation_entree.webp",
+      "alt": "La pompe et le tuyau branchés sur l’étage du bas de la tour",
+      "html": "<p>Le pétrole entre par l'<strong>étage du bas</strong>, poussé par une <a href=\"/wiki/pompe-mecanique\">pompe mécanique</a>. Les produits remontent : le premier résultat de la recette, le diesel, va au deuxième étage ; le second, l'essence, au troisième. Pour les récupérer, branche un tuyau sur l'étage voulu : chaque étage accepte les tuyaux sur toutes ses faces.</p>"
+    },
+    {
+      "id": "chauffe",
+      "title": "Chauffer la tour",
+      "image": "cdg_distillation_chauffe.webp",
+      "alt": "Les brûleurs à blaze allumés sous la tour : la distillation démarre",
+      "html": "<p>Pose des brûleurs à blaze sous l'étage du bas et nourris-les. Il faut au moins la chaleur « chauffé » : la tour transforme alors 100 mB de pétrole en 50 + 50 mB en 60 ticks. En chaleur « surchauffée » (bûche de blaze ou <a href=\"/wiki/bruleur\">brûleur</a> à l'essence vanne ouverte), c'est 75 + 75 mB en 40 ticks. Chaque brûleur au plus haut niveau ajoute une dose par cycle : quatre brûleurs surchauffés font quatre doses.</p>"
+    },
+    {
+      "id": "jauges",
+      "title": "Les jauges",
+      "html": "<p>L'étage du bas porte une jauge sur chaque face. Son aiguille suit l'avancée du cycle en cours : elle part d'un côté, balaie le cadran pendant la distillation et revient au repos quand la tour attend du pétrole ou de la chaleur. Si un étage de sortie est plein, la tour s'arrête : pense à le vider.</p>"
+    },
+    {
+      "id": "fenetres",
+      "title": "Fenêtres",
+      "image": "cdg_distillation_fenetres.webp",
+      "alt": "La tour avec des fenêtres sur ses étages supérieurs",
+      "html": "<p>Comme un réservoir de Create, la tour se règle à la <a href=\"/wiki/cle\">clé</a> : un coup sur un étage ajoute ou retire des fenêtres, pour voir le niveau du diesel et de l'essence. C'est purement visuel.</p>"
+    },
+    {
+      "id": "taille",
+      "title": "Quelle taille choisir ?",
+      "html": "<p>La largeur fixe la capacité de chaque étage : 8 000 mB en 1 × 1, 32 000 en 2 × 2, 72 000 en 3 × 3. La hauteur minimale est de trois étages, car la recette du pétrole a deux produits. Des étages en plus restent vides avec les recettes de base, mais servent de réserve si un autre mod ajoute une recette à trois produits.</p>"
+    },
+    {
+      "id": "raffinerie",
+      "title": "Brancher la raffinerie",
+      "html": "<p>Une raffinerie simple : la pompe du trou de pompe envoie le pétrole à l'étage du bas ; un tuyau part du deuxième étage vers les moteurs (diesel), un autre du troisième vers les brûleurs ou un réservoir (essence). Un <a href=\"/wiki/tuyau-a-fluide-intelligent\">tuyau intelligent</a> évite tout mélange si une conduite passe près d'une autre.</p>"
+    },
+    {
+      "id": "pannes",
+      "title": "Quand la tour s’arrête",
+      "html": "<p>La tour attend tant qu'il manque 100 mB de pétrole à l'étage du bas, que les brûleurs ne chauffent pas assez ou qu'un étage de sortie est plein. Les aiguilles au repos le signalent tout de suite.</p>"
+    },
+    {
+      "id": "rendement",
+      "title": "Rendement",
+      "html": "<p>Avec quatre brûleurs surchauffés, une tour traite 400 mB de pétrole toutes les 2 s : 600 mB de carburant, soit 300 mB par seconde, de quoi nourrir des centaines de <a href=\"/wiki/moteur-diesel\">moteurs</a>. C'est la pompe à balancier qui limite la chaîne, rarement la tour.</p>"
+    }
+  ],
+  "related": [
+    "pompe-a-balancier",
+    "gisements-de-petrole",
+    "carburants",
+    "reservoir-a-fluide",
+    "bruleur-a-blaze",
+    "bruleur",
+    "pompe-mecanique",
+    "create-diesel-generators"
+  ],
+  "sources": [
+    "Recettes : recipe/distillation/crude_oil.json (heated, 60 ticks, 50 + 50 mB) et superheated_crude_oil.json (superheated, 40 ticks, 75 + 75 mB)",
+    "Tour : DistillationTankBlockEntity (étages d’un bloc : getMaxLength Y = 1 ; MAX_SIZE 3 ; résultat i vers l’étage i + 1 ; une dose par brûleur au plus haut niveau ; capacité 8 000 mB par bloc)",
+    "Contrôleur : DistillationControllerItem (un par bloc, hauteur minimale DISTILLATION_MIN_HEIGHT = 3, réglable de 2 à 7)",
+    "Jauges : DistillationTankRenderer.renderAsBoiler",
+    "Recette : recipe/crafting/distillation_controller.json",
+    "Code, données et storyboards : Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, licence MIT, auteur George VI), identiques au jar du modpack Create France",
+    "Vidéos : scènes Ponder de Create Diesel Generators (DistillationScene.scene) rejouées par notre moteur ; modèles et textures du mod (licence MIT, George VI)"
+  ],
+  "en": {
+    "slugEn": "distillation-tower",
+    "name": "Distillation Tower",
+    "title": "Distillation Tower — Create Diesel Generators guide",
+    "description": "The Create Diesel Generators distillation tower: controllers, layers, heating with blaze burners, and diesel and gasoline made from crude oil.",
+    "intro": "The <strong>distillation tower</strong> refines crude oil. You make it from a Create <a href=\"/en/wiki/fluid-tank\">Fluid Tank</a> at least three blocks tall by applying <strong>Distillation Controllers</strong>. Heated by <a href=\"/en/wiki/blaze-burner\">Blaze Burners</a>, it splits every 100 mB of crude oil into <strong>diesel</strong> and <strong>gasoline</strong>, stored on different layers.",
+    "facts": [
+      {
+        "label": "Base",
+        "value": "Create Fluid Tank, 3 to 7 blocks tall (setting: 3), up to 3 × 3 wide"
+      },
+      {
+        "label": "Controllers",
+        "value": "One per tank block (the recipe makes 4)"
+      },
+      {
+        "label": "Heated",
+        "value": "100 mB of crude → 50 mB diesel + 50 mB gasoline in 3 s"
+      },
+      {
+        "label": "Superheated",
+        "value": "100 mB → 75 mB + 75 mB in 2 s"
+      },
+      {
+        "label": "Layers",
+        "value": "Crude at the bottom, diesel on layer 2, gasoline on layer 3"
+      },
+      {
+        "label": "Throughput",
+        "value": "One batch per burner at the highest heat level, each cycle"
+      },
+      {
+        "label": "Version",
+        "value": "Create Diesel Generators 1.3.15 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Distillation Controller (crafting table)",
+      "grid": [
+        [
+          "Fluid Pipe",
+          "Clock",
+          "Fluid Pipe"
+        ],
+        [
+          "Andesite Alloy",
+          "Iron Sheet",
+          "Andesite Alloy"
+        ]
+      ],
+      "result": "4 Distillation Controllers"
+    },
+    "videos": [
+      {
+        "id": "cdg_distillation",
+        "name": "Building and heating a distillation tower",
+        "description": "A 2 × 2 × 3 tank on four blaze burners becomes a distillation tower; a pump feeds the bottom, the burners heat up and the tower gets windows."
+      }
+    ],
+    "sections": [
+      {
+        "id": "controleur",
+        "title": "From tank to tower",
+        "alt": "The 2 × 2 × 3 distillation tower on its blaze burners",
+        "html": "<p>Build a fluid tank at least three blocks tall and up to three blocks wide. Take as many controllers as it has blocks (12 for a 2 × 2 × 3) and right-click the tank: it turns into a tower split into one-block layers. Each layer is its own tank, 8,000 mB per block of cross-section: 32,000 mB for a 2 × 2 tower. If the tank is too short, it refuses the controllers.</p>"
+      },
+      {
+        "id": "entree",
+        "title": "Filling the bottom layer",
+        "alt": "The pump and pipe attached to the bottom layer of the tower",
+        "html": "<p>Crude oil goes into the <strong>bottom layer</strong>, pushed by a <a href=\"/en/wiki/mechanical-pump\">Mechanical Pump</a>. The products rise: the first recipe result, diesel, goes to layer two; the second, gasoline, to layer three. To collect them, attach a pipe to the layer you want: each layer takes pipes on any face.</p>"
+      },
+      {
+        "id": "chauffe",
+        "title": "Heating the tower",
+        "alt": "The blaze burners lit under the tower: distillation starts",
+        "html": "<p>Place blaze burners under the bottom layer and fuel them. You need at least \"heated\": the tower then turns 100 mB of crude into 50 + 50 mB in 60 ticks. At \"superheated\" (blaze cake, or a <a href=\"/en/wiki/burner\">Burner</a> on gasoline with the valve open), it is 75 + 75 mB in 40 ticks. Every burner at the top heat level adds one batch per cycle: four superheated burners make four batches.</p>"
+      },
+      {
+        "id": "jauges",
+        "title": "The gauges",
+        "html": "<p>The bottom layer has a gauge on each face. Its needle follows the current cycle: it starts on one side, sweeps the dial during distillation and rests when the tower is waiting for crude or heat. If an output layer is full, the tower stops: remember to empty it.</p>"
+      },
+      {
+        "id": "fenetres",
+        "title": "Windows",
+        "alt": "The tower with windows on its upper layers",
+        "html": "<p>Like a Create tank, the tower is adjusted with the <a href=\"/en/wiki/wrench\">Wrench</a>: a click on a layer adds or removes windows, so you can see the diesel and gasoline levels. It is purely cosmetic.</p>"
+      },
+      {
+        "id": "taille",
+        "title": "Which size?",
+        "html": "<p>The width sets the capacity of each layer: 8,000 mB at 1 × 1, 32,000 at 2 × 2, 72,000 at 3 × 3. The minimum height is three layers, because the crude oil recipe has two products. Extra layers stay empty with the base recipes, but they act as spare storage if another mod adds a recipe with three products. A wider tower also has room for more blaze burners underneath.</p>"
+      },
+      {
+        "id": "raffinerie",
+        "title": "Wiring up the refinery",
+        "html": "<p>A simple refinery: the pump on the pumpjack hole sends crude oil to the bottom layer; one pipe leaves layer two towards the engines (diesel), another leaves layer three towards the burners or a tank (gasoline). A <a href=\"/en/wiki/smart-fluid-pipe\">Smart Fluid Pipe</a> prevents any mix-up where one line runs next to another, and keeps diesel out of the gasoline storage.</p>"
+      },
+      {
+        "id": "pannes",
+        "title": "When the tower stops",
+        "html": "<p>The tower waits whenever the bottom layer holds less than 100 mB of crude, the burners are not hot enough or an output layer is full. Resting needles on the gauges show it straight away, so a quick look from the outside is enough to find which of the three is the problem.</p>"
+      },
+      {
+        "id": "rendement",
+        "title": "Throughput",
+        "html": "<p>With four superheated burners, a tower processes 400 mB of crude every 2 s: 600 mB of fuel, or 300 mB per second, enough for hundreds of <a href=\"/en/wiki/diesel-engine\">engines</a>. The pumpjack is what limits the chain, rarely the tower.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: recipe/distillation/crude_oil.json (heated, 60 ticks, 50 + 50 mB) and superheated_crude_oil.json (superheated, 40 ticks, 75 + 75 mB)",
+      "Tower: DistillationTankBlockEntity (one-block layers: getMaxLength Y = 1; MAX_SIZE 3; result i to layer i + 1; one batch per burner at the top level; 8,000 mB per block)",
+      "Controller: DistillationControllerItem (one per block, minimum height DISTILLATION_MIN_HEIGHT = 3, 2 to 7)",
+      "Gauges: DistillationTankRenderer.renderAsBoiler",
+      "Recipe: recipe/crafting/distillation_controller.json",
+      "Code, data and storyboards: Create Diesel Generators 1.3.15 (github.com/george8188625/Create-Diesel-Generators, commit d545fa4, MIT licence, author George VI), identical to the Create France modpack jar",
+      "Videos: Create Diesel Generators Ponder scenes (DistillationScene.scene) replayed by our engine; mod models and textures (MIT licence, George VI)"
+    ]
+  }
+}
