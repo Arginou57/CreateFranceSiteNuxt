@@ -183,6 +183,14 @@
     "latest": "Dernières mises à jour",
     "usedIn": "Sert à fabriquer",
     "ingredients": "Ingrédients",
+    "video": {
+      "pause": "Mettre en pause",
+      "prev": "Moment clé précédent",
+      "next": "Moment clé suivant",
+      "timeline": "Avancer ou reculer dans l'animation",
+      "goto": "Aller au moment clé",
+      "chapters": "Les moments clés de l'animation"
+    },
     "nav": {
       "title": "Parcourir le wiki",
       "browse": "Parcourir le wiki par mod et catégorie",

@@ -28,7 +28,10 @@ export type WikiLocale = 'fr' | 'en'
 export interface WikiFact { label: string; value: string }
 /** grid = names shown in each language; items = the same grid as item ids (icons, links), resultItem = the crafted item. */
 export interface WikiRecipe { label: string; grid: (string | null)[][]; items?: (string | null)[][]; result: string; resultItem?: string }
-export interface WikiVideo { id: string; name: string; description: string; duration: string }
+/** A key moment of a video (like the keyframes of the in-game Ponder timeline): time in seconds, and the page section
+ * it explains (its title is the chapter label, in each language) or an explicit label. */
+export interface WikiChapter { t: number; section?: string; label?: string }
+export interface WikiVideo { id: string; name: string; description: string; duration: string; chapters?: WikiChapter[] }
 export interface WikiSection { id: string; title: string; image?: string; alt?: string; video?: string; html: string }
 
 export interface WikiPageEn {

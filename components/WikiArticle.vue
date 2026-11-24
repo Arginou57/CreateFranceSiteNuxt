@@ -38,7 +38,7 @@
       </header>
 
       <div class="wiki-top">
-        <WikiVideo v-if="page.videos[0]" class="wiki-top-video" :slug="page.slug" :video="page.videos[0]" />
+        <WikiVideo v-if="page.videos[0]" class="wiki-top-video" :slug="page.slug" :video="page.videos[0]" :chapters="chaptersOf(page.videos[0])" />
         <div class="wiki-card wiki-facts">
           <h2 class="wiki-card-title">{{ t('wiki.facts') }}</h2>
           <dl>
@@ -73,7 +73,7 @@
         <h2>{{ s.title }}</h2>
         <div class="wiki-step-body">
           <div v-if="s.video || s.image" class="wiki-step-media">
-            <WikiVideo v-if="s.video && videoOf(s.video)" :slug="page.slug" :video="videoOf(s.video)!" />
+            <WikiVideo v-if="s.video && videoOf(s.video)" :slug="page.slug" :video="videoOf(s.video)!" :chapters="chaptersOf(videoOf(s.video)!)" />
             <figure v-else-if="s.image">
               <img :src="media(page.slug, s.image)" :alt="s.alt || s.title" width="600" height="600" loading="lazy" decoding="async">
             </figure>
@@ -123,7 +123,7 @@
 </template>
 
 <script setup lang="ts">
-import type { WikiPage, WikiPageView } from '~/utils/wiki'
+import type { WikiPage, WikiPageView, WikiVideo } from '~/utils/wiki'
 
 const props = defineProps<{ page: WikiPageView }>()
 const { t, tm, rt } = useI18n()
@@ -155,6 +155,14 @@ const related = computed(() =>
 
 function videoOf(id: string) {
   return props.page.videos.find((v) => v.id === id)
+}
+
+// key moments of a video, labelled with the title of the page section they explain (so they follow the language)
+function chaptersOf(v: WikiVideo) {
+  return (v.chapters || []).map((c) => ({
+    t: c.t,
+    label: c.label || props.page.sections.find((s) => s.id === c.section)?.title || '',
+  }))
 }
 
 function formatDate(d: string) {

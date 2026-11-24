@@ -183,6 +183,14 @@
     "latest": "Latest updates",
     "usedIn": "Used to craft",
     "ingredients": "Ingredients",
+    "video": {
+      "pause": "Pause",
+      "prev": "Previous key moment",
+      "next": "Next key moment",
+      "timeline": "Move through the animation",
+      "goto": "Go to key moment",
+      "chapters": "Key moments of the animation"
+    },
     "nav": {
       "title": "Browse the wiki",
       "browse": "Browse the wiki by mod and category",

@@ -84,7 +84,21 @@
       "id": "cdg_burner",
       "name": "Allumer le brûleur et ouvrir sa vanne",
       "description": "Le brûleur reçoit de l'essence par une pompe ; une poignée de vanne fait tourner son arbre, la flamme s'allume, puis grandit et passe au bleu quand la vanne est grande ouverte.",
-      "duration": "PT18S"
+      "duration": "PT18S",
+      "chapters": [
+        {
+          "t": 1.5,
+          "section": "bassin"
+        },
+        {
+          "t": 6.0,
+          "section": "carburant"
+        },
+        {
+          "t": 10.0,
+          "section": "vanne"
+        }
+      ]
     }
   ],
   "sections": [
