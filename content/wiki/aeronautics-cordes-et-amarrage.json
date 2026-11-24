@@ -1,0 +1,431 @@
+{
+  "slug": "aeronautics-cordes-et-amarrage",
+  "name": "Cordes et amarrage",
+  "blockId": "simulated:rope_winch",
+  "category": "aeronautics",
+  "title": "Cordes et amarrage — Create Aeronautics, guide",
+  "description": "Treuil de corde, connecteur, couplage, tyrolienne, connecteur d'amarrage et lance-ventouse de Simulated : relier, tracter et arrimer des navires. Vidéos.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Aeronautics 1.3.3",
+  "mcVersion": "1.21.1",
+  "intro": "Pour relier deux contraptions, ou une contraption au sol, Simulated propose des cordes physiques et des arrimages rigides. Le <strong>treuil de corde</strong> (Rope Winch) enroule et déroule une corde accrochée par un <strong>couplage de corde</strong> (Rope Coupling) à un <strong>connecteur de corde</strong> (Rope Connector). Le <strong>connecteur d'amarrage</strong> (Docking Connector) colle deux navires l'un à l'autre et laisse passer objets, fluides et énergie.",
+  "facts": [
+    {
+      "label": "Portée d’une corde",
+      "value": "40 blocs au plus (réglage serveur)"
+    },
+    {
+      "label": "Treuil",
+      "value": "Stress 4 SU par tr/min ; étirement toléré 25 blocs"
+    },
+    {
+      "label": "Tyrolienne",
+      "value": "Pente jusqu'à 85° ; on y glisse avec la clé"
+    },
+    {
+      "label": "Couper",
+      "value": "Cisailles"
+    },
+    {
+      "label": "Connecteur d'amarrage",
+      "value": "Par paires ; verrouillage à 0,5 bloc et 20° près"
+    },
+    {
+      "label": "Énergie transférée",
+      "value": "10 000 FE de capacité et de débit"
+    },
+    {
+      "label": "Lance-ventouse",
+      "value": "Portée 64 blocs, 100 tirs ; air comprimé du réservoir à dos"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Plaque de fer",
+        null
+      ],
+      [
+        null,
+        "Rotor",
+        null
+      ],
+      [
+        null,
+        "Bloc de fer industriel",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "create:iron_sheet",
+        null
+      ],
+      [
+        null,
+        "create:shaft",
+        null
+      ],
+      [
+        null,
+        "create:industrial_iron_block",
+        null
+      ]
+    ],
+    "result": "1 treuil de corde",
+    "resultItem": "simulated:rope_winch"
+  },
+  "videos": [
+    {
+      "id": "sim_rope",
+      "name": "Le treuil de corde",
+      "description": "Le couplage relie treuil et connecteur ; la rotation enroule puis déroule la corde.",
+      "duration": "PT21S",
+      "chapters": [
+        {
+          "t": 5.35,
+          "section": "treuil"
+        },
+        {
+          "t": 8.85,
+          "section": "enrouler"
+        },
+        {
+          "t": 15.85,
+          "section": "couper"
+        }
+      ]
+    },
+    {
+      "id": "sim_rope_zip",
+      "name": "La tyrolienne",
+      "description": "Une corde tendue entre deux poteaux suit leur mouvement.",
+      "duration": "PT11S",
+      "chapters": [
+        {
+          "t": 2.75,
+          "section": "tyrolienne"
+        }
+      ]
+    },
+    {
+      "id": "sim_rope_conn",
+      "name": "Quelles paires se relient",
+      "description": "Deux connecteurs se relient ; deux treuils, non.",
+      "duration": "PT8S",
+      "chapters": [
+        {
+          "t": 2.3,
+          "section": "paires"
+        }
+      ]
+    },
+    {
+      "id": "sim_docking",
+      "name": "Le connecteur d'amarrage",
+      "description": "Un chariot vient se verrouiller contre un quai, échange, puis repart.",
+      "duration": "PT26S",
+      "chapters": [
+        {
+          "t": 1.59,
+          "section": "amarrage"
+        },
+        {
+          "t": 4.69,
+          "section": "amarrage"
+        },
+        {
+          "t": 6.22,
+          "section": "verrouillage"
+        },
+        {
+          "t": 8.87,
+          "section": "verrouillage"
+        },
+        {
+          "t": 12.38,
+          "section": "transfert"
+        },
+        {
+          "t": 15.21,
+          "section": "transfert"
+        },
+        {
+          "t": 20.28,
+          "section": "desamarrer"
+        },
+        {
+          "t": 23.23,
+          "section": "desamarrer"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "treuil",
+      "title": "Accrocher une corde",
+      "image": "sim_rope_e1.webp",
+      "alt": "Une corde tendue entre un treuil en hauteur et un connecteur au sol",
+      "video": "sim_rope",
+      "html": "<p>On clique d'abord le treuil, puis le connecteur, <strong>couplage de corde</strong> en main : la corde apparaît entre les deux. Elle a une vraie longueur et pend sous son propre poids. Sa portée est de 40 blocs.</p>"
+    },
+    {
+      "id": "enrouler",
+      "title": "Enrouler et dérouler",
+      "image": "sim_rope_e2.webp",
+      "alt": "Le treuil qui tourne et la corde qui se détend",
+      "html": "<p>Le treuil est un bloc cinétique (4 SU par tr/min) : dans un sens il ramène la corde, dans l'autre il la relâche. C'est ainsi qu'on hisse une charge, qu'on tracte un radeau ou qu'on descend une nacelle. Le serveur tolère jusqu'à 25 blocs d'étirement avant de casser la liaison.</p>"
+    },
+    {
+      "id": "couper",
+      "title": "Couper la corde",
+      "image": "sim_rope_e3.webp",
+      "alt": "La corde coupée aux cisailles",
+      "html": "<p>Des cisailles tranchent la corde et rendent les deux blocs libres.</p>"
+    },
+    {
+      "id": "tyrolienne",
+      "title": "La tyrolienne",
+      "image": "sim_rope_zip_e1.webp",
+      "alt": "Une longue corde entre deux poteaux",
+      "video": "sim_rope_zip",
+      "html": "<p>Une corde entre deux connecteurs devient une tyrolienne : la clé en main, on clique la corde pour s'y suspendre et descendre, tant que la pente reste sous 85°. Si les poteaux bougent, la corde suit.</p>"
+    },
+    {
+      "id": "paires",
+      "title": "Les paires possibles",
+      "image": "sim_rope_conn_e1.webp",
+      "alt": "Deux treuils et deux connecteurs, une seule corde valide",
+      "video": "sim_rope_conn",
+      "html": "<p>Une corde relie un treuil à un connecteur, ou deux connecteurs entre eux. Deux treuils ne se relient pas : il faut un point fixe en face.</p>"
+    },
+    {
+      "id": "amarrage",
+      "title": "Le connecteur d'amarrage",
+      "image": "sim_docking_e1.webp",
+      "alt": "Un chariot qui approche d'un quai, connecteurs sortis",
+      "video": "sim_docking",
+      "html": "<p>Les connecteurs d'amarrage fonctionnent par deux. Alimentés, ils sortent leur piston et cherchent un connecteur en face ; ils tentent alors de s'aligner l'un sur l'autre.</p>"
+    },
+    {
+      "id": "verrouillage",
+      "title": "Le verrouillage",
+      "image": "sim_docking_e3.webp",
+      "alt": "Les deux connecteurs verrouillés",
+      "html": "<p>Une fois assez proches (0,5 bloc) et assez alignés (20°), les pieds pivotent et les deux connecteurs se verrouillent. La liaison est rigide, mais chaque côté reste une contraption distincte, qu'on pourra séparer. Un comparateur lit l'avancement de l'amarrage.</p>"
+    },
+    {
+      "id": "transfert",
+      "title": "Échanger à travers",
+      "image": "sim_docking_e5.webp",
+      "alt": "Des objets qui passent par le connecteur",
+      "html": "<p>Verrouillé, le couple de connecteurs laisse passer objets, fluides et énergie (10 000 FE de capacité et de débit), dans les deux sens. Il faut un entonnoir, un tuyau ou une pompe de chaque côté. Le bloc qui apparaît entre les deux est le <strong>connecteur d'amarrage couplé</strong> (Paired Docking Connector).</p>"
+    },
+    {
+      "id": "desamarrer",
+      "title": "Se séparer",
+      "image": "sim_docking_e7.webp",
+      "alt": "Un connecteur qui rentre son piston",
+      "html": "<p>Couper le signal d'un des deux connecteurs suffit : il rentre son piston et le navire est libre.</p>"
+    },
+    {
+      "id": "faq",
+      "title": "Questions fréquentes",
+      "html": "<p><strong>La corde casse-t-elle ?</strong> Seulement si on l'étire au-delà de ce que tolère le serveur (25 blocs) ou si on la coupe. <strong>Peut-on remorquer un navire volant ?</strong> Oui : un treuil sur le navire tracteur et un connecteur sur l'autre ; enroulez pour le rapprocher. <strong>L'amarrage consomme-t-il de l'énergie ?</strong> Non, il suffit de garder le signal de redstone. <strong>Faut-il deux connecteurs identiques ?</strong> Oui, deux connecteurs d'amarrage face à face.</p>"
+    },
+    {
+      "id": "usages",
+      "title": "Idées de montages",
+      "image": "gal_cordes_cordes-amarrage.webp",
+      "alt": "Un treuil, un connecteur de corde et deux connecteurs d'amarrage",
+      "html": "<p>Un treuil sous un dirigeable descend une nacelle de chargement jusqu'au sol, puis la remonte. Deux poteaux et une corde font une tyrolienne pour quitter une base en hauteur. Un connecteur d'amarrage sur le flanc d'un navire marchand et un autre sur le quai permettent de vider la cale automatiquement par des tapis, sans jamais désassembler le navire.</p>"
+    },
+    {
+      "id": "ventouse",
+      "title": "Le lance-ventouse",
+      "image": "hero_outils_objets.webp",
+      "alt": "Le lance-ventouse, le couplage de corde et les autres objets de Simulated",
+      "html": "<p>Le <strong>lance-ventouse</strong> (Plunger Launcher) tire une ventouse reliée par une corde ; deux ventouses se relient et rapprochent ce qu'elles touchent. Portée de 64 blocs, 100 tirs ; avec un réservoir à dos, il puise dans l'air comprimé au lieu de s'user. Maj + clic droit retire les ventouses.</p>"
+    }
+  ],
+  "related": [
+    "create-aeronautics",
+    "aeronautics-outils",
+    "aeronautics-roulement-pivot",
+    "assembleur-physique",
+    "poulie-a-corde",
+    "cle"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Aeronautics 1.3.3 (dépôt Creators-of-Aeronautics/Simulated-Project, commit 900122e, code sous licence MIT, ressources « tous droits réservés », The Simulated Team / The Creators of Aeronautics), identiques au jar du modpack (instance de test 1.3.3)",
+    "Réglages serveur par défaut de Simulated 1.3.3 (SimBlocks, SimPhysics, SimItems) et coûts en stress (SimStress, AeroStress, OffroadStress)",
+    "Recettes : data/simulated/recipe/rope_winch.json, rope_connector.json, rope_coupling.json, mechanical_crafting/docking_connector.json, mechanical_crafting/plunger_launcher.json",
+    "Vidéos : scènes Ponder de Create Aeronautics / Simulated (rope/intro, rope/connections, docking_connector) rejouées par notre moteur ; modèles et textures du mod (© The Simulated Team / The Creators of Aeronautics)",
+    "Images : blocs du mod posés sur la plaque et rendus par notre moteur (© The Simulated Team / The Creators of Aeronautics)"
+  ],
+  "en": {
+    "slugEn": "aeronautics-ropes-and-docking",
+    "name": "Ropes and docking",
+    "title": "Ropes and Docking — Create Aeronautics guide",
+    "description": "Simulated's Rope Winch, Rope Connector, Rope Coupling, zipline, Docking Connector and Plunger Launcher: tie, tow and moor ships. Videos.",
+    "intro": "To link two contraptions, or a contraption to the ground, Simulated offers physical ropes and rigid moorings. The <strong>Rope Winch</strong> reels a rope in and out, attached with a <strong>Rope Coupling</strong> to a <strong>Rope Connector</strong>. The <strong>Docking Connector</strong> locks two ships together and lets items, fluids and energy through.",
+    "facts": [
+      {
+        "label": "Rope reach",
+        "value": "40 blocks at most (server setting)"
+      },
+      {
+        "label": "Winch",
+        "value": "Stress 4 SU per RPM; 25 blocks of stretch tolerated"
+      },
+      {
+        "label": "Zipline",
+        "value": "Slope up to 85°; wrench to slide"
+      },
+      {
+        "label": "Cutting",
+        "value": "Shears"
+      },
+      {
+        "label": "Docking Connector",
+        "value": "In pairs; locks within 0.5 block and 20°"
+      },
+      {
+        "label": "Energy transfer",
+        "value": "10,000 FE capacity and throughput"
+      },
+      {
+        "label": "Plunger Launcher",
+        "value": "64-block range, 100 shots; compressed air from a Backtank"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Iron Sheet",
+          null
+        ],
+        [
+          null,
+          "Shaft",
+          null
+        ],
+        [
+          null,
+          "Block of Industrial Iron",
+          null
+        ]
+      ],
+      "result": "1 Rope Winch"
+    },
+    "videos": [
+      {
+        "id": "sim_rope",
+        "name": "The Rope Winch",
+        "description": "The coupling links winch and connector; rotation reels the rope in, then out."
+      },
+      {
+        "id": "sim_rope_zip",
+        "name": "The zipline",
+        "description": "A rope stretched between two posts follows their movement."
+      },
+      {
+        "id": "sim_rope_conn",
+        "name": "Which pairs connect",
+        "description": "Two connectors link up; two winches do not."
+      },
+      {
+        "id": "sim_docking",
+        "name": "The Docking Connector",
+        "description": "A cart locks against a quay, trades, then leaves."
+      }
+    ],
+    "sections": [
+      {
+        "id": "treuil",
+        "title": "Attaching a rope",
+        "alt": "A rope between a raised winch and a connector on the ground",
+        "html": "<p>Click the winch first, then the connector, holding a <strong>Rope Coupling</strong>: the rope appears between them. It has a real length and sags under its own weight. Its reach is 40 blocks.</p>"
+      },
+      {
+        "id": "enrouler",
+        "title": "Reeling in and out",
+        "alt": "The winch turning and the rope slackening",
+        "html": "<p>The winch is a kinetic block (4 SU per RPM): one way it pulls the rope in, the other it lets it out. That is how you hoist a load, tow a raft or lower a gondola. The server tolerates up to 25 blocks of stretch before the link breaks.</p>"
+      },
+      {
+        "id": "couper",
+        "title": "Cutting the rope",
+        "alt": "The rope cut with shears",
+        "html": "<p>Shears slice the rope and leave both blocks free.</p>"
+      },
+      {
+        "id": "tyrolienne",
+        "title": "The zipline",
+        "alt": "A long rope between two posts",
+        "html": "<p>A rope between two connectors becomes a zipline: holding a wrench, right-click the rope to hang on and slide down, as long as the slope stays under 85°. If the posts move, the rope follows.</p>"
+      },
+      {
+        "id": "paires",
+        "title": "Valid pairs",
+        "alt": "Two winches and two connectors, only one valid rope",
+        "html": "<p>A rope links a winch to a connector, or two connectors together. Two winches cannot be linked: one end needs to be a fixed point.</p>"
+      },
+      {
+        "id": "amarrage",
+        "title": "The Docking Connector",
+        "alt": "A cart approaching a quay, connectors extended",
+        "html": "<p>Docking Connectors work in pairs. Powered, they push out their piston and look for a connector opposite; they then try to line up with each other.</p>"
+      },
+      {
+        "id": "verrouillage",
+        "title": "Locking",
+        "alt": "The two connectors locked",
+        "html": "<p>Once close enough (0.5 block) and aligned enough (20°), the feet swing round and the two connectors lock. The joint is rigid, yet each side stays its own contraption that can be separated later. A comparator reads the docking progress.</p>"
+      },
+      {
+        "id": "transfert",
+        "title": "Trading through it",
+        "alt": "Items passing through the connector",
+        "html": "<p>Locked, the pair lets items, fluids and energy through (10,000 FE capacity and throughput), both ways. You need a funnel, pipe or pump on each side. The block that appears between them is the <strong>Paired Docking Connector</strong>.</p>"
+      },
+      {
+        "id": "desamarrer",
+        "title": "Parting ways",
+        "alt": "A connector pulling its piston back",
+        "html": "<p>Cutting the signal of either connector is enough: it retracts and the ship is free.</p>"
+      },
+      {
+        "id": "faq",
+        "title": "Frequently asked questions",
+        "html": "<p><strong>Does the rope snap?</strong> Only when stretched beyond what the server tolerates (25 blocks) or when cut. <strong>Can I tow a flying ship?</strong> Yes: a winch on the towing ship and a connector on the other; reel in to bring it closer. <strong>Does docking use power?</strong> No, just keep the redstone signal on. <strong>Do I need two identical connectors?</strong> Yes, two Docking Connectors facing each other.</p>"
+      },
+      {
+        "id": "usages",
+        "title": "Build ideas",
+        "alt": "A Rope Winch, a Rope Connector and two Docking Connectors",
+        "html": "<p>A winch under an airship lowers a cargo gondola to the ground, then pulls it back up. Two posts and a rope make a zipline to leave a base built high up. A Docking Connector on the side of a merchant ship and another on the quay let belts empty the hold automatically, without ever disassembling the ship. A rope between two small boats turns them into a simple tug and barge, and a winch on a crane arm lifts crates onto a deck while the ship stays assembled.</p>"
+      },
+      {
+        "id": "ventouse",
+        "title": "The Plunger Launcher",
+        "alt": "The Plunger Launcher, the Rope Coupling and the other Simulated items",
+        "html": "<p>The <strong>Plunger Launcher</strong> fires a plunger tied to a rope; two plungers link up and pull what they hit together. 64-block range, 100 shots; with a Backtank it draws on compressed air instead of wearing out. Sneak + right-click removes the plungers.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Aeronautics 1.3.3 (Creators-of-Aeronautics/Simulated-Project repository, commit 900122e, code under the MIT licence, assets « all rights reserved », The Simulated Team / The Creators of Aeronautics), identical to the modpack jar (1.3.3 test instance)",
+      "Simulated 1.3.3 default server settings (SimBlocks, SimPhysics, SimItems) and stress costs (SimStress, AeroStress, OffroadStress)",
+      "Recipes: data/simulated/recipe/rope_winch.json, rope_connector.json, rope_coupling.json, mechanical_crafting/docking_connector.json, mechanical_crafting/plunger_launcher.json",
+      "Videos: Create Aeronautics / Simulated Ponder scenes (rope/intro, rope/connections, docking_connector) replayed by our engine; mod models and textures (© The Simulated Team / The Creators of Aeronautics)",
+      "Images: mod blocks placed on the plate and rendered by our engine (© The Simulated Team / The Creators of Aeronautics)"
+    ]
+  }
+}

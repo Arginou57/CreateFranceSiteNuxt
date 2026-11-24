@@ -1,0 +1,436 @@
+{
+  "slug": "offroad-vehicules-a-roues",
+  "name": "Véhicules à roues et forage",
+  "blockId": "offroad:wheel_mount",
+  "category": "aeronautics",
+  "title": "Véhicules à roues et forage — Create Offroad, guide",
+  "description": "Create Offroad (Create Aeronautics 1.3.3) : support de roue, quatre pneus, roulement de forage et roue de découpe. Un véhicule qui roule.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Aeronautics 1.3.3",
+  "mcVersion": "1.21.1",
+  "intro": "<strong>Create Offroad</strong>, livré avec Create Aeronautics, apporte la route et la mine. Le <strong>support de roue</strong> (Wheel Mount) reçoit un pneu et une suspension : quatre supports sous une contraption simulée font une voiture. Le <strong>roulement de forage</strong> (Borehead Bearing) fait tourner une tête de forage garnie de <strong>roues de découpe</strong> (Rock Cutting Wheel) qui abattent la roche autour d'elles.",
+  "facts": [
+    {
+      "label": "Support de roue",
+      "value": "Stress 16 SU par tr/min ; suspension réglable"
+    },
+    {
+      "label": "Pneus",
+      "value": "Petit, normal, grand, monstrueux (rayon 0,75 à 2 blocs)"
+    },
+    {
+      "label": "Freiner / braquer",
+      "value": "Signal par le haut : frein ; par un côté : braque vers ce côté"
+    },
+    {
+      "label": "Roulement de forage",
+      "value": "Stress 8 SU par tr/min ; tourne en sens inverse, à 1/4 de la vitesse"
+    },
+    {
+      "label": "Roue de découpe",
+      "value": "Casse les blocs autour d’elle, sans colle"
+    },
+    {
+      "label": "Récolte",
+      "value": "Dans la réserve de l’engin ; extraction par le roulement"
+    },
+    {
+      "label": "Version",
+      "value": "Offroad, fourni dans Create Aeronautics 1.3.3"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Boitier d'andésite",
+        null
+      ],
+      [
+        null,
+        "Ressort",
+        null
+      ],
+      [
+        null,
+        "Plaque de fer",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "create:andesite_casing",
+        null
+      ],
+      [
+        null,
+        "simulated:spring",
+        null
+      ],
+      [
+        null,
+        "create:iron_sheet",
+        null
+      ]
+    ],
+    "result": "1 support de roue",
+    "resultItem": "offroad:wheel_mount"
+  },
+  "videos": [
+    {
+      "id": "off_vehicle",
+      "name": "Un véhicule à roues",
+      "description": "On pose les pneus, la voiture démarre, braque et prend un virage.",
+      "duration": "PT21S",
+      "chapters": [
+        {
+          "t": 1.5,
+          "section": "support"
+        },
+        {
+          "t": 3.0,
+          "section": "pneus"
+        },
+        {
+          "t": 6.0,
+          "section": "rouler"
+        },
+        {
+          "t": 11.0,
+          "section": "braquer"
+        }
+      ]
+    },
+    {
+      "id": "off_borehead",
+      "name": "Le roulement de forage",
+      "description": "La tête de forage se monte, tourne et creuse le minerai.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 2.22,
+          "section": "forage"
+        },
+        {
+          "t": 5.36,
+          "section": "roues-de-decoupe"
+        },
+        {
+          "t": 14.52,
+          "section": "vitesse-forage"
+        },
+        {
+          "t": 17.9,
+          "section": "vitesse-forage"
+        }
+      ]
+    },
+    {
+      "id": "off_borehead_dig",
+      "name": "Creuser une galerie",
+      "description": "Les roues de découpe abattent un front de taille autour d’elles.",
+      "duration": "PT10S",
+      "chapters": [
+        {
+          "t": 5.9,
+          "section": "excavation"
+        }
+      ]
+    },
+    {
+      "id": "off_borehead_eff",
+      "name": "Plusieurs têtes",
+      "description": "Trop de blocs ralentissent une tête ; deux têtes travaillent mieux.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 4.8,
+          "section": "efficacite"
+        },
+        {
+          "t": 18.85,
+          "section": "efficacite"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "support",
+      "title": "Le support de roue",
+      "image": "off_vehicle_e1.webp",
+      "alt": "Une petite voiture et ses quatre supports de roue encadrés",
+      "video": "off_vehicle",
+      "html": "<p>Le support de roue se pose sur le flanc d'une contraption simulée. Il porte un bras télescopique, un ressort de suspension et l'axe du pneu. C'est un bloc cinétique : la rotation reçue (16 SU par tr/min) entraîne la roue.</p>"
+    },
+    {
+      "id": "pneus",
+      "title": "Poser les pneus",
+      "image": "off_vehicle_e2.webp",
+      "alt": "Les pneus posés sur les supports",
+      "html": "<p>Un clic droit avec un pneu le monte sur le support ; la suspension s'étire alors jusqu'au sol. Le ressort règle la fermeté au panneau de valeur.</p>"
+    },
+    {
+      "id": "rouler",
+      "title": "Rouler",
+      "image": "off_vehicle_e3.webp",
+      "alt": "La voiture qui avance, ses pneus en rotation",
+      "html": "<p>Dès que l'axe tourne, les pneus mordent le sol et la voiture avance ; une fois en route, chaque pneu tourne selon la distance réellement parcourue. Un signal de redstone par le dessus freine la roue.</p>"
+    },
+    {
+      "id": "braquer",
+      "title": "Braquer",
+      "image": "off_vehicle_e4.webp",
+      "alt": "Les roues avant braquées dans un virage",
+      "html": "<p>Un signal reçu par un côté fait braquer la roue de ce côté. Braquez les roues avant et la voiture décrit un virage ; dans la vidéo, la roue intérieure tourne moins vite que l'extérieure, comme sur une vraie voiture.</p>"
+    },
+    {
+      "id": "tailles",
+      "title": "Les quatre pneus",
+      "image": "hero_pneus_pneus.webp",
+      "alt": "Petite roue, roue, grande roue et roue monstrueuse",
+      "html": "<p>Quatre tailles : le <strong>petit pneu</strong> (Small Tire, rayon 0,75 bloc), le <strong>pneu</strong> (Tire, 0,97), le <strong>grand pneu</strong> (Large Tire, 1,25) et le <strong>pneu monstrueux</strong> (Monstrous Tire, 2 blocs). Plus le pneu est grand, plus le véhicule passe d'obstacles. Ils se fabriquent avec un rotor et des algues séchées ; le grand pneu, avec des tapis.</p>"
+    },
+    {
+      "id": "forage",
+      "title": "Le roulement de forage",
+      "image": "off_borehead_e1.webp",
+      "alt": "Un roulement de forage et sa tête garnie de roues de découpe",
+      "video": "off_borehead",
+      "html": "<p>Le roulement de forage s'accroche au bloc devant lui. Une fois équipé d'un conteneur et de roues de découpe, il devient une foreuse. Il coûte 8 SU par tr/min.</p>"
+    },
+    {
+      "id": "roues-de-decoupe",
+      "title": "Les roues de découpe",
+      "image": "off_borehead_e2.webp",
+      "alt": "La tête de forage qui tourne",
+      "html": "<p>Les roues de découpe s'accrochent toutes seules aux blocs et entre elles, sans super colle.</p>"
+    },
+    {
+      "id": "vitesse-forage",
+      "title": "Vitesse et sens",
+      "image": "off_borehead_e3.webp",
+      "alt": "La tête de forage contre le minerai",
+      "html": "<p>Le roulement inverse le sens de rotation et tourne au quart de la vitesse reçue. Plus il reçoit de vitesse, plus il creuse vite, et ce qu'il abat tombe directement dans la réserve de l'engin.</p>"
+    },
+    {
+      "id": "stockage",
+      "title": "Quand le stockage est plein",
+      "image": "off_borehead_b_e2.webp",
+      "alt": "La foreuse arrêtée et un entonnoir qui vide le roulement",
+      "html": "<p>Stockage plein, la foreuse ne casse plus rien. On vide directement par le roulement de forage, avec un entonnoir ou un tapis.</p>"
+    },
+    {
+      "id": "excavation",
+      "title": "Creuser large",
+      "image": "off_borehead_dig_e1.webp",
+      "alt": "Une foreuse sur chenilles devant un front de taille",
+      "video": "off_borehead_dig",
+      "html": "<p>Contrairement à la <a href=\"/wiki/perceuse-mecanique\">perceuse</a> de Create, une roue de découpe abat tout ce qui l'entoure, sur un certain rayon : une seule tête ouvre une vraie galerie.</p>"
+    },
+    {
+      "id": "faq",
+      "title": "Questions fréquentes",
+      "html": "<p><strong>Combien de supports faut-il ?</strong> Trois au minimum pour tenir debout, quatre pour une voiture stable. <strong>Les roues avant doivent-elles être motrices ?</strong> Non : on peut n'entraîner que l'essieu arrière et réserver l'avant à la direction. <strong>Le roulement de forage marche-t-il sur un véhicule ?</strong> Oui, c'est fait pour : une foreuse qui avance d'elle-même dans la roche.</p>"
+    },
+    {
+      "id": "recettes",
+      "title": "Fabrication",
+      "image": "gal_offroad_blocs.webp",
+      "alt": "Un support de roue, un roulement de forage et une roue de découpe",
+      "html": "<p>Le support de roue se fabrique avec un boîtier en andésite, un ressort de Simulated et une plaque de fer. Le petit pneu vient d'un rotor et d'algues séchées, le pneu de quatre algues séchées autour d'un rotor, le grand pneu de quatre tapis roulants et le pneu monstrueux de quatre blocs d'algues séchées. Le roulement de forage demande une dalle de bois, une boîte de vitesses et un bloc de fer industriel ; la roue de découpe, une roue de concassage, du fer industriel et une plaque de fer.</p>"
+    },
+    {
+      "id": "efficacite",
+      "title": "Une tête ou plusieurs",
+      "image": "off_borehead_eff_e1.webp",
+      "alt": "Une grande tête de forage et deux têtes plus petites",
+      "video": "off_borehead_eff",
+      "html": "<p>Plus une tête doit casser de blocs, plus elle ralentit. Plusieurs roulements de forage côte à côte se partagent le travail et vont plus vite.</p>"
+    }
+  ],
+  "related": [
+    "create-aeronautics",
+    "aeronautics-moteurs-et-transmission",
+    "aeronautics-pilotage",
+    "assembleur-physique",
+    "perceuse-mecanique",
+    "tapis-roulant"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Offroad, fourni dans Create Aeronautics 1.3.3 (dépôt Creators-of-Aeronautics/Simulated-Project, commit 900122e, code sous licence MIT ; modèles et textures © The Simulated Team / The Creators of Aeronautics)",
+    "WheelMountBlockEntity, TireLike (rayons des pneus), BoreheadBearingBlockEntity, OffroadStress",
+    "Recettes : data/offroad/recipe/wheel_mount.json, small_tire.json, tire.json, large_tire.json, monstrous_tire.json, borehead_bearing.json, rockcutting_wheel.json",
+    "Vidéos : scènes Ponder d'Offroad (borehead_bearing) rejouées par notre moteur ; la scène du véhicule à roues est écrite par Create France (pas de Ponder pour le support de roue)",
+    "Images : blocs du mod posés sur la plaque et rendus par notre moteur (© The Simulated Team / The Creators of Aeronautics)"
+  ],
+  "en": {
+    "slugEn": "offroad-wheeled-vehicles",
+    "name": "Wheeled vehicles and drilling",
+    "title": "Wheeled Vehicles and Drilling — Create Offroad guide",
+    "description": "Create Offroad (bundled with Create Aeronautics 1.3.3): Wheel Mount, four tire sizes, Borehead Bearing and Rock Cutting Wheel. A vehicle that drives, videos.",
+    "intro": "<strong>Create Offroad</strong>, bundled with Create Aeronautics, brings roads and mining. The <strong>Wheel Mount</strong> takes a tire and a suspension: four mounts under a simulated contraption make a car. The <strong>Borehead Bearing</strong> spins a drill head fitted with <strong>Rock Cutting Wheels</strong> that break the rock around them.",
+    "facts": [
+      {
+        "label": "Wheel Mount",
+        "value": "Stress 16 SU per RPM; adjustable suspension"
+      },
+      {
+        "label": "Tires",
+        "value": "Small, normal, large, monstrous (radius 0.75 to 2 blocks)"
+      },
+      {
+        "label": "Braking / steering",
+        "value": "Signal from above: brake; from a side: steer towards that side"
+      },
+      {
+        "label": "Borehead Bearing",
+        "value": "Stress 8 SU per RPM; turns the other way, at 1/4 speed"
+      },
+      {
+        "label": "Rock Cutting Wheel",
+        "value": "Breaks blocks around itself, no glue needed"
+      },
+      {
+        "label": "Drops",
+        "value": "Into the drill's storage; extract through the bearing"
+      },
+      {
+        "label": "Version",
+        "value": "Offroad, shipped in Create Aeronautics 1.3.3"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Andesite Casing",
+          null
+        ],
+        [
+          null,
+          "Spring",
+          null
+        ],
+        [
+          null,
+          "Iron Sheet",
+          null
+        ]
+      ],
+      "result": "1 Wheel Mount"
+    },
+    "videos": [
+      {
+        "id": "off_vehicle",
+        "name": "A wheeled vehicle",
+        "description": "Tires go on, the car sets off, steers and takes a bend."
+      },
+      {
+        "id": "off_borehead",
+        "name": "The Borehead Bearing",
+        "description": "The drill head is built, spins and digs the ore."
+      },
+      {
+        "id": "off_borehead_dig",
+        "name": "Digging a tunnel",
+        "description": "The rock cutting wheels clear a rock face around them."
+      },
+      {
+        "id": "off_borehead_eff",
+        "name": "Several heads",
+        "description": "Too many blocks slow a head down; two heads work better."
+      }
+    ],
+    "sections": [
+      {
+        "id": "support",
+        "title": "The Wheel Mount",
+        "alt": "A small car with its four Wheel Mounts outlined",
+        "html": "<p>The Wheel Mount goes on the side of a simulated contraption. It carries a telescopic arm, a suspension spring and the tire's axle. It is a kinetic block: the rotation it gets (16 SU per RPM) drives the wheel.</p>"
+      },
+      {
+        "id": "pneus",
+        "title": "Fitting the tires",
+        "alt": "The tires fitted on the mounts",
+        "html": "<p>Right-click with a tire to fit it on the mount; the suspension then stretches down to the ground. The spring sets the stiffness on the value panel.</p>"
+      },
+      {
+        "id": "rouler",
+        "title": "Driving",
+        "alt": "The car moving forward, tires spinning",
+        "html": "<p>As soon as the axle turns, the tires grip and the car moves; once rolling, each tire turns by the distance it actually covers. A redstone signal from above brakes the wheel.</p>"
+      },
+      {
+        "id": "braquer",
+        "title": "Steering",
+        "alt": "The front wheels turned in a bend",
+        "html": "<p>A signal from one side steers the wheel towards that side. Steer the front wheels and the car takes a bend; in the video the inner wheel turns slower than the outer one, as on a real car.</p>"
+      },
+      {
+        "id": "tailles",
+        "title": "The four tires",
+        "alt": "Small Tire, Tire, Large Tire and Monstrous Tire",
+        "html": "<p>Four sizes: the <strong>Small Tire</strong> (radius 0.75 block), the <strong>Tire</strong> (0.97), the <strong>Large Tire</strong> (1.25) and the <strong>Monstrous Tire</strong> (2 blocks). The bigger the tire, the more obstacles the vehicle clears. They are made from a shaft and dried kelp; the Large Tire uses belts.</p>"
+      },
+      {
+        "id": "forage",
+        "title": "The Borehead Bearing",
+        "alt": "A Borehead Bearing and its head fitted with rock cutting wheels",
+        "html": "<p>The Borehead Bearing grabs the block it faces. With a storage and rock cutting wheels it becomes a drill. It costs 8 SU per RPM.</p>"
+      },
+      {
+        "id": "roues-de-decoupe",
+        "title": "Rock Cutting Wheels",
+        "alt": "The drill head spinning",
+        "html": "<p>Rock Cutting Wheels attach by themselves to blocks and to each other, without Super Glue.</p>"
+      },
+      {
+        "id": "vitesse-forage",
+        "title": "Speed and direction",
+        "alt": "The drill head against the ore",
+        "html": "<p>The bearing spins the opposite way to its input, at a quarter of the speed it gets. The more speed it gets, the faster it digs, and what it breaks drops straight into the drill's storage.</p>"
+      },
+      {
+        "id": "stockage",
+        "title": "When the storage is full",
+        "alt": "The drill stopped and a funnel emptying the bearing",
+        "html": "<p>With a full storage, the drill breaks nothing more. Empty it directly through the Borehead Bearing, with a funnel or a belt.</p>"
+      },
+      {
+        "id": "excavation",
+        "title": "Digging wide",
+        "alt": "A tracked drill in front of a rock face",
+        "html": "<p>Unlike Create's <a href=\"/en/wiki/mechanical-drill\">Mechanical Drill</a>, a rock cutting wheel breaks blocks within a radius around itself: a single head opens a real tunnel.</p>"
+      },
+      {
+        "id": "faq",
+        "title": "Frequently asked questions",
+        "html": "<p><strong>How many mounts do I need?</strong> Three at least to stand, four for a stable car. <strong>Must the front wheels be driven?</strong> No: you can drive only the rear axle and keep the front for steering. <strong>Does the Borehead Bearing work on a vehicle?</strong> Yes, that is the point: a drill that pushes itself into the rock.</p>"
+      },
+      {
+        "id": "recettes",
+        "title": "Crafting",
+        "alt": "A Wheel Mount, a Borehead Bearing and a Rock Cutting Wheel",
+        "html": "<p>The Wheel Mount is crafted from an andesite casing, a Simulated Spring and an iron sheet. The Small Tire comes from a shaft and dried kelp, the Tire from four dried kelp around a shaft, the Large Tire from four belts and the Monstrous Tire from four dried kelp blocks. The Borehead Bearing takes a wooden slab, a gearbox and a Block of Industrial Iron; the Rock Cutting Wheel a crushing wheel, Industrial Iron and an iron sheet.</p>"
+      },
+      {
+        "id": "efficacite",
+        "title": "One head or several",
+        "alt": "A large drill head and two smaller ones",
+        "html": "<p>A head slows down as the number of blocks it attacks grows. Several Borehead Bearings side by side share the work and go faster.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Offroad, shipped in Create Aeronautics 1.3.3 (Creators-of-Aeronautics/Simulated-Project repository, commit 900122e, MIT-licensed code; models and textures © The Simulated Team / The Creators of Aeronautics)",
+      "WheelMountBlockEntity, TireLike (tire radii), BoreheadBearingBlockEntity, OffroadStress",
+      "Recipes: data/offroad/recipe/wheel_mount.json, small_tire.json, tire.json, large_tire.json, monstrous_tire.json, borehead_bearing.json, rockcutting_wheel.json",
+      "Videos: Offroad Ponder scenes (borehead_bearing) replayed by our engine; the wheeled vehicle scene is written by Create France (the Wheel Mount has no Ponder)",
+      "Images: mod blocks placed on the plate and rendered by our engine (© The Simulated Team / The Creators of Aeronautics)"
+    ]
+  }
+}

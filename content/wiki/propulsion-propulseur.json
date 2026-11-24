@@ -1,0 +1,328 @@
+{
+  "slug": "propulsion-propulseur",
+  "name": "Propulseur",
+  "blockId": "createpropulsion:thruster",
+  "category": "propulsion",
+  "title": "Propulseur — Create Propulsion, guide",
+  "description": "Le propulseur de Create Propulsion : carburants, entrée par l'arrière, blocs 2x2x2 et 3x3x3, comburant, versions à charbon et créative.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Propulsion: Simulated 1.1.5",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>propulseur</strong> (Thruster) est le moteur à réaction de base du mod. Il brûle un carburant liquide et pousse son engin vers l'avant avec une force réglée par la redstone : 533 kN à pleine puissance pour un seul bloc. On peut en souder huit ou vingt-sept en un gros propulseur bien plus efficace.",
+  "facts": [
+    {
+      "label": "Poussée",
+      "value": "533,33 kN au signal 15 (1 bloc, sans obstacle)"
+    },
+    {
+      "label": "Réservoir",
+      "value": "1 000 mB par bloc"
+    },
+    {
+      "label": "Consommation",
+      "value": "1 mB par tick à fond × débit du carburant"
+    },
+    {
+      "label": "Commande",
+      "value": "redstone 0 à 15 (proportionnelle)"
+    },
+    {
+      "label": "Espace libre",
+      "value": "10 blocs derrière la tuyère"
+    },
+    {
+      "label": "Multibloc",
+      "value": "2×2×2 (×1,25) ou 3×3×3 (×1,5)"
+    },
+    {
+      "label": "Plus de modèles",
+      "value": "à combustible solide, créatif"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Plaque de fer",
+        "Tuyau à fluide",
+        "Plaque de fer"
+      ],
+      [
+        "Pompe mécanique",
+        "Boitier de laiton",
+        "Pompe mécanique"
+      ],
+      [
+        "Plaque de fer",
+        "Plaque de cuivre",
+        "Plaque de fer"
+      ]
+    ],
+    "items": [
+      [
+        "create:iron_sheet",
+        "create:fluid_pipe",
+        "create:iron_sheet"
+      ],
+      [
+        "create:mechanical_pump",
+        "create:brass_casing",
+        "create:mechanical_pump"
+      ],
+      [
+        "create:iron_sheet",
+        "create:copper_sheet",
+        "create:iron_sheet"
+      ]
+    ],
+    "result": "1 propulseur",
+    "resultItem": "createpropulsion:thruster"
+  },
+  "videos": [
+    {
+      "id": "prop_thruster",
+      "name": "Alimenter un propulseur",
+      "description": "Une pompe pousse un fluide vers l'arrière du propulseur : l'eau est refusée, la lave acceptée, puis le jet part.",
+      "duration": "PT12S",
+      "chapters": [
+        {
+          "t": 1.2,
+          "section": "carburant"
+        },
+        {
+          "t": 7.7,
+          "section": "poussee"
+        }
+      ]
+    },
+    {
+      "id": "prop_thruster_2x2",
+      "name": "Le propulseur 2×2×2",
+      "description": "Huit propulseurs forment un seul bloc : la conduite du dessus ne sert à rien, celle de la couche arrière l'alimente.",
+      "duration": "PT12S",
+      "chapters": [
+        {
+          "t": 2.2,
+          "section": "multibloc"
+        }
+      ]
+    },
+    {
+      "id": "prop_thruster_3x3",
+      "name": "Le propulseur 3×3×3",
+      "description": "Vingt-sept blocs assemblés, une seule entrée valable par l'arrière, et un jet beaucoup plus large.",
+      "duration": "PT17S",
+      "chapters": [
+        {
+          "t": 1.2,
+          "section": "multibloc"
+        },
+        {
+          "t": 4.9,
+          "section": "entrees"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "carburant",
+      "title": "Le remplir par l'arrière",
+      "image": "prop_thruster_lave.webp",
+      "alt": "Un propulseur gris relié par un tuyau à une pompe que fait tourner un moteur créatif",
+      "video": "prop_thruster",
+      "html": "<p>Le propulseur garde son carburant dans un réservoir interne de 1 000 mB. Il le reçoit par sa face <strong>arrière</strong>, celle qui fait face à la tuyère : un <a href=\"/wiki/tuyau-a-fluide\">tuyau</a> et une <a href=\"/wiki/pompe-mecanique\">pompe mécanique</a> suffisent. Il ne prend que des carburants reconnus : dans la vidéo, l'eau est refusée et la lave passe. La liste complète est sur la page des <a href=\"/wiki/propulsion-carburants\">carburants</a>.</p>"
+    },
+    {
+      "id": "poussee",
+      "title": "Régler la poussée",
+      "image": "prop_thruster_poussee.webp",
+      "alt": "Le jet blanc et jaune du propulseur qui s'élargit en fumée grise devant la tuyère",
+      "html": "<p>La puissance suit le signal de redstone : le signal divisé par 15 donne la part de la poussée maximale, et la consommation suit le même rapport. Un levier analogique ou une <a href=\"/wiki/propulsion-transmission-redstone\">commande à redstone</a> permet de doser finement. Le jet est fait de particules qui passent du blanc à l'orange puis à la fumée ; il brûle et blesse ce qui se trouve derrière, et une teinture appliquée sur le bloc change sa couleur.</p><p>Derrière la tuyère, le bloc compte les cases libres sur dix blocs : avec cinq cases libres seulement, il ne donne que la moitié de sa poussée. Gardez l'arrière dégagé.</p>"
+    },
+    {
+      "id": "multibloc",
+      "title": "Les gros propulseurs",
+      "image": "prop_thruster_2x2_cube.webp",
+      "alt": "Un gros propulseur gris de deux blocs de côté, relié à deux conduites de lave",
+      "video": "prop_thruster_2x2",
+      "html": "<p>Posez des propulseurs tous tournés du même côté en cube plein de 2×2×2 ou de 3×3×3 : ils fusionnent en un seul gros propulseur au modèle agrandi. Le réservoir s'additionne, et le rendement grimpe : un cube de huit pousse dix fois plus qu'un bloc seul en consommant 0,6 fois plus par bloc ; un cube de vingt-sept pousse 40,5 fois plus avec 0,4 fois la consommation par bloc.</p>"
+    },
+    {
+      "id": "entrees",
+      "title": "Par où le remplir",
+      "image": "prop_thruster_3x3_arriere.webp",
+      "alt": "Le gros propulseur de trois blocs alimenté par une conduite qui arrive sur sa couche arrière",
+      "video": "prop_thruster_3x3",
+      "html": "<p>Un gros propulseur n'accepte le fluide que par sa <strong>couche arrière</strong>, la tranche opposée à la tuyère, par n'importe quel côté sauf celui du jet. Les deux vidéos le montrent : une conduite branchée sur le dessus de la couche avant ne remplit rien ; il faut descendre et entrer par l'arrière. Le signal retenu est le plus fort reçu par l'un des blocs du cube.</p><p>Ces gros modèles acceptent en plus un <strong>comburant</strong> (Oxidizer) dans un second réservoir : la consommation de carburant baisse encore (×0,85 ou ×0,75) et la poussée augmente d'autant.</p>"
+    },
+    {
+      "id": "solide",
+      "title": "Le propulseur à combustible solide",
+      "image": "prop_gal_thrusters_combustible-solide.webp",
+      "alt": "Deux propulseurs à combustible solide côte à côte, tuyère orange vers l'avant",
+      "html": "<p>Le <strong>propulseur à combustible solide</strong> (Solid Fuel Thruster) brûle un objet au lieu d'un fluide. Il pousse moins fort (200 kN) et ne connaît que le tout ou rien : n'importe quel signal le met à fond. On le charge à la main, par l'arrière ou avec un entonnoir. La clé ouvre une trappe qui le recharge tout seul depuis le conteneur posé derrière. Charbon (4 000 ticks), bloc de charbon (16 000 ticks, poussée ×1,15), bûches et planches pour dépanner ; le gâteau de Blaze donne la plus forte poussée.</p>"
+    },
+    {
+      "id": "fabrication",
+      "title": "Le fabriquer",
+      "html": "<p>La recette réunit tout le circuit d'un moteur de Create : deux <a href=\"/wiki/pompe-mecanique\">pompes</a> pour aspirer, un tuyau, un boitier de laiton, des plaques de fer et une plaque de cuivre. Comptez donc une petite chaîne de laiton avant de voler : un propulseur coûte plus cher qu'une hélice, mais pousse bien plus fort.</p>"
+    },
+    {
+      "id": "creatif",
+      "title": "Le propulseur créatif",
+      "image": "prop_gal_thrusters_creatif.webp",
+      "alt": "Une tuyère vectorielle créative sur son boitier à gauche, un propulseur créatif violet à droite",
+      "html": "<p>Le <strong>propulseur créatif</strong> (Creative Thruster) n'a besoin de rien et ignore les obstacles. Sa poussée se règle à la molette, de 0 à 10 000 kN pour un bloc (bien plus en cube), puis la redstone la dose comme pour les autres. La clé change le type de particules du jet. Il sert à tester un engin avant de lui donner de vrais moteurs.</p>"
+    }
+  ],
+  "related": [
+    "create-propulsion",
+    "propulsion-carburants",
+    "propulsion-propulseur-vectoriel",
+    "propulsion-transmission-redstone",
+    "pompe-mecanique",
+    "tuyau-a-fluide",
+    "reservoir-a-fluide",
+    "assembleur-physique"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Propulsion: Simulated 1.1.5 (dépôt Propulsion-Team/create-propulsion-simulated, commit 36f83a1 du 23/07/2026, licence MIT, © Sergey Feduk, Tronco_78, Bunting_chj, SSnowly, KyivSec), identique au jar de l’instance de test du modpack",
+    "Propulseur : ThrusterBlockEntity.java, AbstractThrusterBlockEntity.java, ThrusterDamager.java",
+    "Propulseur à combustible solide : SolidFuelThrusterBlockEntity.java, data/createpropulsion/solid_thruster_fuels",
+    "Propulseur créatif : CreativeThrusterBlockEntity.java",
+    "Valeurs par défaut : PropulsionConfig.java (configuration commune et serveur du mod)",
+    "Recette : data/createpropulsion/recipe/crafting/thruster.json",
+    "Vidéos : scènes Ponder de Create Propulsion: Simulated (ponder_thruster_normal, ponder_thruster_2x2, ponder_thruster_3x3) rejouées par notre moteur ; modèles, textures et particules du mod (licence MIT, © Propulsion Team)",
+    "Images : blocs du mod posés sur la plaque et rendus par notre moteur (licence MIT, © Propulsion Team)"
+  ],
+  "en": {
+    "slugEn": "propulsion-thruster",
+    "name": "Thruster",
+    "title": "Thruster — Create Propulsion guide",
+    "description": "The Create Propulsion Thruster: valid fuels, back-face intake, 2x2x2 and 3x3x3 multiblocks, oxidizer, plus the solid fuel and creative versions.",
+    "intro": "The <strong>Thruster</strong> is the mod's basic jet engine. It burns a liquid fuel and pushes its machine forward with a force set by redstone: 533 kN at full power for a single block. Eight or twenty-seven of them can be fused into one big, far more efficient thruster.",
+    "facts": [
+      {
+        "label": "Thrust",
+        "value": "533.33 kN at signal 15 (1 block, unobstructed)"
+      },
+      {
+        "label": "Tank",
+        "value": "1,000 mB per block"
+      },
+      {
+        "label": "Fuel use",
+        "value": "1 mB per tick at full power × the fuel’s burn rate"
+      },
+      {
+        "label": "Control",
+        "value": "redstone 0 to 15 (proportional)"
+      },
+      {
+        "label": "Free space",
+        "value": "10 blocks behind the nozzle"
+      },
+      {
+        "label": "Multiblock",
+        "value": "2×2×2 (×1.25) or 3×3×3 (×1.5)"
+      },
+      {
+        "label": "Other models",
+        "value": "solid fuel, creative"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Iron Sheet",
+          "Fluid Pipe",
+          "Iron Sheet"
+        ],
+        [
+          "Mechanical Pump",
+          "Brass Casing",
+          "Mechanical Pump"
+        ],
+        [
+          "Iron Sheet",
+          "Copper Sheet",
+          "Iron Sheet"
+        ]
+      ],
+      "result": "1 Thruster"
+    },
+    "videos": [
+      {
+        "id": "prop_thruster",
+        "name": "Fuelling a thruster",
+        "description": "A pump pushes fluid into the back of the thruster: water is refused, lava accepted, then the jet fires."
+      },
+      {
+        "id": "prop_thruster_2x2",
+        "name": "The 2×2×2 thruster",
+        "description": "Eight thrusters make one block: the top line does nothing, the line on the back layer feeds it."
+      },
+      {
+        "id": "prop_thruster_3x3",
+        "name": "The 3×3×3 thruster",
+        "description": "Twenty-seven blocks assembled, a single valid intake at the back, and a much wider jet."
+      }
+    ],
+    "sections": [
+      {
+        "id": "carburant",
+        "title": "Feeding it from the back",
+        "alt": "A grey Thruster connected by a pipe to a pump driven by a Creative Motor",
+        "html": "<p>The Thruster keeps its fuel in a 1,000 mB internal tank. It takes it through its <strong>back</strong> face, the one opposite the nozzle: a <a href=\"/en/wiki/fluid-pipe\">pipe</a> and a <a href=\"/en/wiki/mechanical-pump\">Mechanical Pump</a> are enough. It only accepts known fuels: in the video, water is turned down and lava goes in. The full list is on the <a href=\"/en/wiki/propulsion-fuels\">fuels</a> page.</p>"
+      },
+      {
+        "id": "poussee",
+        "title": "Setting the thrust",
+        "alt": "The thruster's white and yellow jet widening into grey smoke in front of the nozzle",
+        "html": "<p>Power follows the redstone signal: the signal divided by 15 gives the share of maximum thrust, and fuel use follows the same ratio. An analog lever or a <a href=\"/en/wiki/propulsion-redstone-transmission\">redstone control</a> lets you fine-tune it. The jet is made of particles going from white to orange and then smoke; it burns and hurts whatever stands behind, and a dye used on the block changes its colour.</p><p>Behind the nozzle, the block counts free cells over ten blocks: with only five free cells it gives half its thrust. Keep the back clear.</p>"
+      },
+      {
+        "id": "multibloc",
+        "title": "Big thrusters",
+        "alt": "A big grey two-block-wide thruster connected to two lava lines",
+        "html": "<p>Place thrusters all facing the same way as a full 2×2×2 or 3×3×3 cube: they merge into one big thruster with an enlarged model. Tanks add up and efficiency climbs: a cube of eight pushes ten times harder than a single block while burning 0.6 times as much per block; a cube of twenty-seven pushes 40.5 times harder at 0.4 times the fuel per block.</p>"
+      },
+      {
+        "id": "entrees",
+        "title": "Where to feed it",
+        "alt": "The three-block thruster fed by a line reaching its back layer",
+        "html": "<p>A big thruster only accepts fluid through its <strong>back layer</strong>, the slice opposite the nozzle, from any side except the jet side. Both videos show it: a line plugged into the top of the front layer fills nothing; you have to come down and enter from the back. The signal used is the strongest one received by any block of the cube.</p><p>These big models also take an <strong>oxidizer</strong> in a second tank: fuel use drops further (×0.85 or ×0.75) and thrust rises by the same factor.</p>"
+      },
+      {
+        "id": "solide",
+        "title": "The Solid Fuel Thruster",
+        "alt": "Two Solid Fuel Thrusters side by side, orange nozzle facing forward",
+        "html": "<p>The <strong>Solid Fuel Thruster</strong> burns an item instead of a fluid. It pushes less (200 kN) and only knows on or off: any signal runs it at full power. Load it by hand, from the back or with a funnel. The wrench opens a hatch that refills it from the container placed behind. Coal (4,000 ticks), block of coal (16,000 ticks, thrust ×1.15), logs and planks in a pinch; the Blaze Cake gives the strongest thrust.</p>"
+      },
+      {
+        "id": "fabrication",
+        "title": "Crafting it",
+        "html": "<p>The recipe gathers a whole Create engine circuit: two <a href=\"/en/wiki/mechanical-pump\">pumps</a> to suck the fuel in, a pipe, a brass casing, iron sheets and a copper sheet. So plan a small brass line before flying: a Thruster costs more than a propeller, but pushes much harder.</p>"
+      },
+      {
+        "id": "creatif",
+        "title": "The Creative Thruster",
+        "alt": "A Creative Vector Thruster on its casing on the left, a purple Creative Thruster on the right",
+        "html": "<p>The <strong>Creative Thruster</strong> needs nothing and ignores obstacles. Its thrust is set with the scroll wheel, from 0 to 10,000 kN for one block (much more as a cube), then redstone throttles it like the others. The wrench changes the jet's particle type. It is used to test a machine before giving it real engines.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Propulsion: Simulated 1.1.5 (Propulsion-Team/create-propulsion-simulated repository, commit 36f83a1 of 2026-07-23, MIT licence, © Sergey Feduk, Tronco_78, Bunting_chj, SSnowly, KyivSec), identical to the modpack test instance jar",
+      "Thruster: ThrusterBlockEntity.java, AbstractThrusterBlockEntity.java, ThrusterDamager.java",
+      "Solid Fuel Thruster: SolidFuelThrusterBlockEntity.java, data/createpropulsion/solid_thruster_fuels",
+      "Creative Thruster: CreativeThrusterBlockEntity.java",
+      "Default values: PropulsionConfig.java (the mod’s common and server configuration)",
+      "Recipe: data/createpropulsion/recipe/crafting/thruster.json",
+      "Videos: Create Propulsion: Simulated Ponder scenes (ponder_thruster_normal, ponder_thruster_2x2, ponder_thruster_3x3) replayed by our engine; mod models, textures and particles (MIT licence, © Propulsion Team)",
+      "Images: mod blocks placed on the plate and rendered by our engine (MIT licence, © Propulsion Team)"
+    ]
+  }
+}

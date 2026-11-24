@@ -1,0 +1,325 @@
+{
+  "slug": "propulsion-bruleurs",
+  "name": "Brûleurs",
+  "blockId": "createpropulsion:solid_burner",
+  "category": "propulsion",
+  "title": "Brûleurs à combustible et à liquide — Create Propulsion",
+  "description": "Les brûleurs de Create Propulsion : charbon ou carburant liquide, thermostat, redstone, niveaux de chaleur et brûleurs en chaîne.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Propulsion: Simulated 1.1.5",
+  "mcVersion": "1.21.1",
+  "intro": "Les <strong>brûleurs</strong> du mod chauffent le bloc posé juste au-dessus, comme un <a href=\"/wiki/bruleur-a-blaze\">brûleur à Blaze</a>, mais avec un combustible ordinaire. Le <strong>brûleur à combustible solide</strong> (Solid Burner) mange des objets, le <strong>brûleur à liquide</strong> (Liquid Burner) du carburant liquide. Ils alimentent surtout le moteur Stirling, mais aussi les chaudières et les mixeurs de Create.",
+  "facts": [
+    {
+      "label": "Chauffe",
+      "value": "uniquement le bloc du dessus"
+    },
+    {
+      "label": "Combustible solide",
+      "value": "tout combustible de four sans reste ; réserve de 400 unités de chaleur"
+    },
+    {
+      "label": "À liquide",
+      "value": "carburants des propulseurs, 2 mB par cycle ; réservoir de 200 mB ; réserve de 600"
+    },
+    {
+      "label": "Niveaux",
+      "value": "tiède, chaud (plus de 30 %), brûlant (plus de 60 %)"
+    },
+    {
+      "label": "Thermostat",
+      "value": "ne brûle que si le bloc du dessus en a besoin"
+    },
+    {
+      "label": "Redstone",
+      "value": "force la combustion en continu"
+    },
+    {
+      "label": "Chaînage",
+      "value": "le brûleur à liquide laisse passer le surplus"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (brûleur à combustible solide)",
+    "grid": [
+      [
+        "Plaque de cuivre",
+        "Plaque de cuivre",
+        "Plaque de cuivre"
+      ],
+      [
+        "Plaque de fer",
+        "Haut fourneau",
+        "Plaque de fer"
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "items": [
+      [
+        "create:copper_sheet",
+        "create:copper_sheet",
+        "create:copper_sheet"
+      ],
+      [
+        "create:iron_sheet",
+        "minecraft:blast_furnace",
+        "create:iron_sheet"
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 brûleur à combustible solide",
+    "resultItem": "createpropulsion:solid_burner"
+  },
+  "videos": [
+    {
+      "id": "prop_solid_burner",
+      "name": "Le brûleur à combustible solide",
+      "description": "Un charbon allume le brûleur, le moteur Stirling au-dessus démarre ; un levier montre ensuite le rôle de la redstone.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 1.0,
+          "section": "allumer"
+        },
+        {
+          "t": 10.5,
+          "section": "thermostat"
+        }
+      ]
+    },
+    {
+      "id": "prop_liquid_burner",
+      "name": "Le brûleur à liquide",
+      "description": "Une pompe l'alimente, il chauffe un moteur Stirling, puis un second brûleur se branche à côté du premier.",
+      "duration": "PT26S",
+      "chapters": [
+        {
+          "t": 0.9,
+          "section": "liquide"
+        },
+        {
+          "t": 9.6,
+          "section": "thermostat"
+        },
+        {
+          "t": 18.2,
+          "section": "chaine"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "allumer",
+      "title": "Allumer le brûleur solide",
+      "image": "prop_solid_burner_allume.webp",
+      "alt": "Le brûleur à combustible solide allumé, braises visibles derrière sa grille, sous un moteur Stirling",
+      "video": "prop_solid_burner",
+      "html": "<p>Un clic droit avec un combustible le remplit : charbon, bûches, planches, tout ce qu'un four accepte, sauf ce qui laisse un reste (un seau de lave rend un seau vide, il est refusé). Le brûleur s'allume, sa grille rougeoie et de la fumée sort par devant. Il gagne une unité de chaleur par tick jusqu'à 400, et la donne au bloc posé sur lui.</p>"
+    },
+    {
+      "id": "thermostat",
+      "title": "Le thermostat et la redstone",
+      "image": "prop_solid_burner_thermostat.webp",
+      "alt": "Le brûleur seul avec un levier posé contre son flanc",
+      "html": "<p>Sans redstone, le brûleur joue le <strong>thermostat</strong> : il ne remet du combustible que quand le bloc du dessus réclame de la chaleur, ce qui évite de brûler pour rien. Une chaudière ou un bassin posé dessus le fait brûler en continu. Dès qu'il reçoit de la redstone, le thermostat se coupe : le brûleur consomme tout le temps, comme le montre la vidéo, et ses lunettes d'ingénieur affichent « thermostat éteint ».</p>"
+    },
+    {
+      "id": "niveaux",
+      "title": "Les niveaux de chaleur",
+      "image": "prop_solid_burner_rougeoyant.webp",
+      "alt": "Le brûleur à son niveau de chaleur le plus élevé",
+      "html": "<p>La chaleur stockée donne un niveau, comme pour le brûleur à Blaze : au-dessus de 30 % le brûleur est <strong>chaud</strong>, au-dessus de 60 % il est <strong>brûlant</strong>, au-delà de 90 % il compte comme surchauffé pour une chaudière de <a href=\"/wiki/moteur-a-vapeur\">moteur à vapeur</a>. Sans rien à chauffer, la réserve baisse lentement (0,05 par tick). Les deux brûleurs blessent ce qui se tient dessus.</p>"
+    },
+    {
+      "id": "liquide",
+      "title": "Le brûleur à liquide",
+      "image": "prop_liquid_burner_allume.webp",
+      "alt": "Un brûleur à liquide en cuivre relié par un tuyau à une pompe et à un réservoir, sous un moteur Stirling",
+      "video": "prop_liquid_burner",
+      "html": "<p>Le brûleur à liquide prend son carburant par tuyau dans un réservoir de 200 mB. Il accepte les mêmes fluides que le <a href=\"/wiki/propulsion-propulseur\">propulseur</a> et en brûle 2 mB par cycle ; un carburant puissant dure plus longtemps et chauffe plus vite (jusqu'à 600 unités de réserve). Son ventilateur tourne tant qu'il brûle, et deux tuyaux d'échappement fument sur le côté.</p>"
+    },
+    {
+      "id": "chaine",
+      "title": "Brûleurs en chaîne",
+      "image": "prop_liquid_burner_chaine.webp",
+      "alt": "Deux brûleurs à liquide côte à côte, chacun sous son moteur Stirling",
+      "html": "<p>Le brûleur à liquide fait aussi office de tuyau : le carburant qui ne rentre plus dans son réservoir passe au bloc situé de l'autre côté. Collez plusieurs brûleurs à la suite et une seule pompe les alimente tous, chacun sous son propre <a href=\"/wiki/propulsion-moteur-stirling\">moteur Stirling</a>.</p>"
+    },
+    {
+      "id": "comparatif",
+      "title": "Solide ou liquide ?",
+      "html": "<p>Le brûleur à combustible solide est le plus simple : un entonnoir ou un tapis qui lui apporte du charbon suffit, et un bloc de charbon dure longtemps. Le brûleur à liquide demande une pompe, mais il accepte les carburants des autres mods, chauffe plus vite avec un bon carburant et se branche en série. Sur un engin volant, le liquide gagne : un même réservoir nourrit à la fois les propulseurs et les brûleurs. La recette du brûleur solide demande un haut fourneau, trois plaques de cuivre et deux plaques de fer.</p>"
+    },
+    {
+      "id": "conso",
+      "title": "Consommation",
+      "html": "<p>Le brûleur à combustible solide divise la durée de combustion d'un objet au four par un réglage de consommation (1 par défaut) : un charbon tient 1 600 ticks. Le brûleur à liquide prend 2 mB par cycle ; avec la térébenthine un cycle dure environ 13 ticks. Comme les deux ne brûlent qu'à la demande sans redstone, un moteur à l'arrêt ne gaspille presque rien.</p>"
+    },
+    {
+      "id": "securite",
+      "title": "Sécurité",
+      "html": "<p>Un brûleur allumé blesse quiconque marche dessus : posez un moteur, un bassin ou une dalle par-dessus. Sur un engin en vol, gardez-le loin des sièges.</p>"
+    },
+    {
+      "id": "usages",
+      "title": "À quoi les brancher",
+      "html": "<p>Le <a href=\"/wiki/propulsion-moteur-stirling\">moteur Stirling</a> est leur partenaire naturel. Ils chauffent aussi un <a href=\"/wiki/bassin\">bassin</a> pour le <a href=\"/wiki/mixeur-mecanique\">mixeur</a> et les chaudières : brûlant compte comme un brûleur à Blaze actif, intense comme un brûleur surchauffé. Le brûleur à liquide se fabrique comme le solide, avec deux tuyaux à fluide à la place des plaques de fer.</p>"
+    }
+  ],
+  "related": [
+    "create-propulsion",
+    "propulsion-moteur-stirling",
+    "propulsion-carburants",
+    "bruleur-a-blaze",
+    "moteur-a-vapeur",
+    "mixeur-mecanique",
+    "bassin",
+    "pompe-mecanique"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Propulsion: Simulated 1.1.5 (dépôt Propulsion-Team/create-propulsion-simulated, commit 36f83a1 du 23/07/2026, licence MIT, © Sergey Feduk, Tronco_78, Bunting_chj, SSnowly, KyivSec), identique au jar de l’instance de test du modpack",
+    "Brûleurs : AbstractBurnerBlockEntity.java, SolidBurnerBlockEntity.java, LiquidBurnerBlockEntity.java, HeatMapper.java, PassthroughFluidHandler.java, BurnerDamager.java",
+    "Valeurs par défaut : PropulsionConfig.java (configuration commune et serveur du mod)",
+    "Recettes : data/createpropulsion/recipe/crafting/solid_burner.json, liquid_burner.json",
+    "Vidéos : scènes Ponder de Create Propulsion: Simulated (solid_burner, liquid_burner) rejouées par notre moteur ; modèles, textures et particules du mod (licence MIT, © Propulsion Team)"
+  ],
+  "en": {
+    "slugEn": "propulsion-burners",
+    "name": "Burners",
+    "title": "Solid and Liquid Burners — Create Propulsion guide",
+    "description": "Create Propulsion burners: coal or liquid fuel, built-in thermostat, redstone override, heat levels and Liquid Burners chained together.",
+    "intro": "The mod's <strong>burners</strong> heat the block placed right on top of them, like a <a href=\"/en/wiki/blaze-burner\">Blaze Burner</a>, but with ordinary fuel. The <strong>Solid Burner</strong> eats items, the <strong>Liquid Burner</strong> liquid fuel. They mostly feed the Stirling Engine, but Create's boilers and mixers too.",
+    "facts": [
+      {
+        "label": "Heats",
+        "value": "only the block above"
+      },
+      {
+        "label": "Solid Burner",
+        "value": "any furnace fuel with no leftover; 400 heat units of buffer"
+      },
+      {
+        "label": "Liquid Burner",
+        "value": "thruster fuels, 2 mB per cycle; 200 mB tank; 600 buffer"
+      },
+      {
+        "label": "Levels",
+        "value": "warm, hot (over 30%), searing (over 60%)"
+      },
+      {
+        "label": "Thermostat",
+        "value": "only burns when the block above needs it"
+      },
+      {
+        "label": "Redstone",
+        "value": "forces continuous burning"
+      },
+      {
+        "label": "Chaining",
+        "value": "the Liquid Burner passes the surplus on"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (Solid Burner)",
+      "grid": [
+        [
+          "Copper Sheet",
+          "Copper Sheet",
+          "Copper Sheet"
+        ],
+        [
+          "Iron Sheet",
+          "Blast Furnace",
+          "Iron Sheet"
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Solid Burner"
+    },
+    "videos": [
+      {
+        "id": "prop_solid_burner",
+        "name": "The Solid Burner",
+        "description": "A piece of coal lights the burner and the Stirling Engine above starts; a lever then shows what redstone does."
+      },
+      {
+        "id": "prop_liquid_burner",
+        "name": "The Liquid Burner",
+        "description": "A pump feeds it, it heats a Stirling Engine, then a second burner plugs in next to the first one."
+      }
+    ],
+    "sections": [
+      {
+        "id": "allumer",
+        "title": "Lighting the Solid Burner",
+        "alt": "The Solid Burner lit, embers glowing behind its grate, under a Stirling Engine",
+        "html": "<p>Right-click it with fuel to fill it: coal, logs, planks, anything a furnace takes, except items that leave something behind (a lava bucket gives back an empty bucket, so it is refused). The burner lights up, its grate glows and smoke comes out of the front. It gains one heat unit per tick up to 400 and passes it to the block sitting on it.</p>"
+      },
+      {
+        "id": "thermostat",
+        "title": "Thermostat and redstone",
+        "alt": "The burner alone with a lever placed against its side",
+        "html": "<p>Without redstone, the burner acts as a <strong>thermostat</strong>: it only takes new fuel when the block above asks for heat, so nothing burns for nothing. A boiler or a basin on top makes it burn continuously. With a redstone signal the thermostat switches off: the burner uses fuel all the time, as the video shows, and Engineer's Goggles read \"thermostat off\".</p>"
+      },
+      {
+        "id": "niveaux",
+        "title": "Heat levels",
+        "alt": "The burner at its highest heat level",
+        "html": "<p>The stored heat gives a level, as with the Blaze Burner: above 30% the burner is <strong>hot</strong>, above 60% it is <strong>searing</strong>, and past 90% it counts as superheated for a <a href=\"/en/wiki/steam-engine\">steam engine</a> boiler. With nothing to heat, the buffer slowly drains (0.05 per tick). Both burners hurt whatever stands on them.</p>"
+      },
+      {
+        "id": "liquide",
+        "title": "The Liquid Burner",
+        "alt": "A copper Liquid Burner piped to a pump and a fluid tank, under a Stirling Engine",
+        "html": "<p>The Liquid Burner takes its fuel by pipe into a 200 mB tank. It accepts the same fluids as the <a href=\"/en/wiki/propulsion-thruster\">Thruster</a> and burns 2 mB per cycle; a strong fuel lasts longer and heats faster (up to a 600 unit buffer). Its fan spins while it burns, and two exhaust pipes smoke on the side.</p>"
+      },
+      {
+        "id": "chaine",
+        "title": "Chained burners",
+        "alt": "Two Liquid Burners side by side, each under its Stirling Engine",
+        "html": "<p>The Liquid Burner also works as a pipe: fuel that no longer fits in its tank moves on to the block on the opposite side. Line several burners up and a single pump feeds them all, each under its own <a href=\"/en/wiki/propulsion-stirling-engine\">Stirling Engine</a>.</p>"
+      },
+      {
+        "id": "comparatif",
+        "title": "Solid or liquid?",
+        "html": "<p>The Solid Burner is the simplest: a funnel or a belt bringing it coal is enough, and a block of coal lasts a long time. The Liquid Burner needs a pump, but it accepts other mods' fuels, heats faster with a good fuel and chains in series. On a flying machine liquid wins: one tank feeds both the thrusters and the burners. The Solid Burner recipe takes a blast furnace, three copper sheets and two iron sheets.</p>"
+      },
+      {
+        "id": "conso",
+        "title": "Fuel use",
+        "html": "<p>The Solid Burner divides an item's furnace burn time by a consumption setting (1 by default): one coal lasts 1,600 ticks. The Liquid Burner takes 2 mB per cycle; with turpentine a cycle lasts about 13 ticks. Since both only burn on demand without redstone, an idle engine wastes almost nothing.</p>"
+      },
+      {
+        "id": "securite",
+        "title": "Safety",
+        "html": "<p>A lit burner hurts anyone walking on it: put an engine, a basin or a slab on top. On a flying machine, keep it away from the seats, and remember that a Liquid Burner keeps burning as long as its tank holds fuel.</p>"
+      },
+      {
+        "id": "usages",
+        "title": "What to hook them to",
+        "html": "<p>The <a href=\"/en/wiki/propulsion-stirling-engine\">Stirling Engine</a> is their natural partner. They also heat a <a href=\"/en/wiki/basin\">Basin</a> for the <a href=\"/en/wiki/mechanical-mixer\">Mechanical Mixer</a> and boilers: searing counts as an active Blaze Burner, the top level as a superheated one. The Liquid Burner is crafted like the solid one, with two Fluid Pipes instead of the Iron Sheets.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Propulsion: Simulated 1.1.5 (Propulsion-Team/create-propulsion-simulated repository, commit 36f83a1 of 2026-07-23, MIT licence, © Sergey Feduk, Tronco_78, Bunting_chj, SSnowly, KyivSec), identical to the modpack test instance jar",
+      "Burners: AbstractBurnerBlockEntity.java, SolidBurnerBlockEntity.java, LiquidBurnerBlockEntity.java, HeatMapper.java, PassthroughFluidHandler.java, BurnerDamager.java",
+      "Default values: PropulsionConfig.java (the mod’s common and server configuration)",
+      "Recipes: data/createpropulsion/recipe/crafting/solid_burner.json, liquid_burner.json",
+      "Videos: Create Propulsion: Simulated Ponder scenes (solid_burner, liquid_burner) replayed by our engine; mod models, textures and particles (MIT licence, © Propulsion Team)"
+    ]
+  }
+}

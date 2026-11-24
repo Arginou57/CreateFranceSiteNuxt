@@ -1,0 +1,310 @@
+{
+  "slug": "bnb-chaines-de-roues-dentees",
+  "name": "Chaînes de roues dentées et roues à flasque",
+  "blockId": "bits_n_bobs:small_flanged_cogwheel",
+  "category": "bitsnbobs",
+  "title": "Chaînes de roues dentées — Bits 'n' Bobs, guide",
+  "description": "Chaînes, courroies et cordes entre roues dentées, roues dentées à flasque, versions enchâssées et chariot de chaîne : le guide de Create Bits 'n' Bobs.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Bits 'n' Bobs 2.3.5 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Dans Create, deux roues dentées doivent se toucher pour s'entraîner. Bits 'n' Bobs permet de les relier à distance avec une <strong>chaîne</strong> qui fait le tour de plusieurs roues, comme sur un vélo. Les <strong>roues dentées à flasque</strong> ajoutent deux autres liens, la courroie et la corde, et un <strong>chariot</strong> peut rouler sur la chaîne en emportant une petite machine.",
+  "facts": [
+    {
+      "label": "Coût",
+      "value": "1 chaîne par 5 blocs de longueur, minimum 1 (facteur serveur cogwheelChainDriveCostFactor = 1)"
+    },
+    {
+      "label": "Limites",
+      "value": "64 roues par chaîne et 64 blocs d’étendue (cogwheelMaxNodeCount, cogwheelMaxBounds)"
+    },
+    {
+      "label": "Liens",
+      "value": "chaîne sur toute roue dentée ; courroie et corde sur roue à flasque seulement"
+    },
+    {
+      "label": "Rapports",
+      "value": "conservés : une petite roue tourne 2 fois plus vite qu’une grande sur la même chaîne"
+    },
+    {
+      "label": "Habillage",
+      "value": "clic droit avec des planches : la roue prend l’aspect de ce bois"
+    },
+    {
+      "label": "Version",
+      "value": "Create Bits 'n' Bobs 2.3.5 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (sans disposition)",
+    "grid": [
+      [
+        "Roue dentée",
+        "Pépite de fer",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "items": [
+      [
+        "create:cogwheel",
+        "minecraft:iron_nugget",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 petite roue dentée à flasque",
+    "resultItem": "bits_n_bobs:small_flanged_cogwheel"
+  },
+  "videos": [
+    {
+      "id": "bnb_chain_flat",
+      "name": "Une chaîne à plat entre plusieurs roues",
+      "description": "Des roues dentées et grandes roues posées sur un même plan, reliées par une seule chaîne : la petite roue tourne deux fois plus vite que la grande.",
+      "duration": "PT15S",
+      "chapters": [
+        {
+          "t": 3.2,
+          "section": "chaine"
+        },
+        {
+          "t": 9.5,
+          "section": "rapports"
+        }
+      ]
+    },
+    {
+      "id": "bnb_chain_axis",
+      "name": "Changer d'axe avec une chaîne",
+      "description": "Deux grandes roues dentées sur des axes différents, placées pour partager une tangente : la chaîne passe de l'une à l'autre.",
+      "duration": "PT17S",
+      "chapters": [
+        {
+          "t": 1.8,
+          "section": "changement-axe"
+        },
+        {
+          "t": 4.8,
+          "section": "tangente"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "chaine",
+      "title": "Poser une chaîne",
+      "image": "bnb_chain_flat_chaine.webp",
+      "alt": "Une chaîne posée à plat autour de cinq roues dentées",
+      "video": "bnb_chain_flat",
+      "html": "<p>Prends des chaînes de Minecraft en main et vise une <a href=\"/wiki/roue-dentee\">roue dentée</a> : un clic droit lance la pose. Clique ensuite chaque roue que la chaîne doit contourner, dans l'ordre, puis reviens sur la première pour fermer la boucle. Un clic sur la dernière roue choisie l'enlève du tracé ; accroupi, un clic droit annule tout. La chaîne coûte 1 objet pour 5 blocs de longueur, au moins 1, prélevé à la fermeture.</p>"
+    },
+    {
+      "id": "rapports",
+      "title": "Les rapports restent ceux des roues",
+      "image": "bnb_chain_flat_rapports.webp",
+      "alt": "Une petite et une grande roue sur la même chaîne, avec leurs vitesses",
+      "html": "<p>La chaîne se comporte comme si les roues s'engrenaient : une petite roue tourne deux fois plus vite qu'une grande qu'elle partage avec elle, exactement comme deux roues de Create posées en contact. Toutes les roues d'une même boucle tournent dans le même sens. Attention, les roues d'une même chaîne ne peuvent pas être collées l'une à l'autre, et le tracé n'a pas le droit de repasser sur lui-même.</p>"
+    },
+    {
+      "id": "changement-axe",
+      "title": "Changer d'axe",
+      "image": "bnb_chain_axis_changement-d-axe.webp",
+      "alt": "Une chaîne qui relie des grandes roues dentées tournées sur deux axes différents",
+      "video": "bnb_chain_axis",
+      "html": "<p>Une chaîne peut passer d'une roue horizontale à une roue verticale, mais seulement entre deux <strong>grandes</strong> roues dentées. Entre roues du même axe, tout le tracé doit rester dans un seul plan. C'est pratique pour remonter une rotation le long d'un mur sans chaîne de transmission ni boîte à roues dentées.</p>"
+    },
+    {
+      "id": "tangente",
+      "title": "La tangente commune",
+      "image": "bnb_chain_axis_tangente.webp",
+      "alt": "Deux grandes roues dentées alignées sur une même tangente",
+      "html": "<p>Pour changer d'axe, les deux grandes roues doivent être placées de façon qu'une même droite effleure le bord de chacune : la chaîne suit cette droite pour passer de l'une à l'autre. Si le mod refuse le lien, décale la seconde roue d'un bloc et réessaie. Une boucle compte au plus 64 roues et tient dans 64 blocs de côté.</p>"
+    },
+    {
+      "id": "flasques",
+      "title": "Roues dentées à flasque",
+      "image": "bnb_gal_roues_flasques.webp",
+      "alt": "La petite et la grande roue dentée à flasque à côté d'une roue dentée de Create",
+      "html": "<p>La <strong>petite roue dentée à flasque</strong> (Flanged Cogwheel, recette ci-contre) et la <strong>grande roue dentée à flasque</strong> (Large Flanged Cogwheel, grande roue dentée et pépite de fer) engrènent comme les roues de Create, mais leurs rebords guident deux autres liens. La <strong>courroie</strong> se pose avec un <a href=\"/wiki/tapis-roulant\">tapis roulant</a> en main et ne peut pas changer d'axe. La <strong>corde</strong> prend tout objet du tag commun c:ropes ; Bits 'n' Bobs seul n'y met qu'un objet technique, il faut donc un mod qui ajoute une corde. Clique une roue avec des planches pour lui donner l'aspect de ce bois.</p>"
+    },
+    {
+      "id": "boitiers",
+      "title": "Les versions enchâssées",
+      "image": "bnb_gal_roues_boitiers-flasques.webp",
+      "alt": "Les roues dentées à flasque dans des boitiers d'andésite, de laiton, de fer industriel et de fer érodé",
+      "html": "<p>Clique une roue à flasque avec un boitier d'andésite, un boitier de laiton, un bloc de fer industriel ou un bloc de fer érodé pour l'enfermer : tu obtiens la <strong>roue dentée à flasque dans un boitier d'andésite</strong> (Andesite Encased Flanged Cogwheel), <strong>de laiton</strong> (Brass Encased), <strong>de fer industriel</strong> (Industrial Iron Encased) ou <strong>de fer érodé</strong> (Weathered Iron Encased), et les quatre grandes versions (Andesite, Brass, Industrial Iron et Weathered Iron Encased Large Flanged Cogwheel). Elles gardent la courroie et la corde.</p>"
+    },
+    {
+      "id": "chariot",
+      "title": "Le chariot de chaîne",
+      "image": "bnb_gal_roues_chariot.webp",
+      "alt": "Le chariot de chaîne de roues dentées accroché sous une chaîne",
+      "html": "<p>Le <strong>chariot de chaîne de roues dentées</strong> (Cogwheel Chain Carriage) se fabrique avec une plaque de fer, une pépite de fer, une laine et un boitier d'andésite. Pose-le juste sous une portion de chaîne à peu près horizontale, colle-lui des blocs, puis clic droit main vide : il s'accroche et emporte le tout le long de la boucle. Un second clic le démonte. Avec une <a href=\"/wiki/cle\">clé</a> en main, tu peux aussi te suspendre à la chaîne, comme à une <a href=\"/wiki/roue-a-chaine-roulante\">roue à chaîne roulante</a>.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Retirer et modifier",
+      "html": "<p>Accroupi avec une clé, vise la chaîne pour la casser : les chaînes te sont rendues. Une roue tenue en main peut aussi s'ajouter en cours de route à une chaîne déjà posée. Un serveur peut interdire les chaînes sur les roues ordinaires (option de comportement « undedicatedCogwheelChainDrives ») ; il ne reste alors que les roues à flasque.</p>"
+    }
+  ],
+  "related": [
+    "create-bits-n-bobs",
+    "bnb-mecanismes",
+    "roue-dentee",
+    "chaine-de-transmission",
+    "roue-a-chaine-roulante",
+    "tapis-roulant",
+    "cle"
+  ],
+  "sources": [
+    "Create Bits 'n' Bobs 2.3.5 (bits_n_bobs-2.3.5.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/Aztech-Modding/Create-Bits-n-Bobs au commit 3794a38 « 2.3.5 », recettes du dossier data du jar, scènes Ponder rejouées par notre moteur.",
+    "Mod de Cake, Kipti, NormalGuy, Astral et Spydnel, sous licence MIT : modèles et textures de ses auteurs, rendus à partir du jar ; aucun texte du mod n'est recopié.",
+    "Types de liens : content/kinetics/cogwheel_chain/types/BnbCogwheelChainTypes.java (chain, belt : objet tapis roulant, permitsAxisChange false ; rope : tag c:ropes ; belt et rope réservés au tag bits_n_bobs:flanged_cogwheel).",
+    "Pose et coût : placement/CogwheelChainPlacementInteraction.java, graph/PlacingCogwheelChain.java (max(round(facteur × longueur / 5), 1)), placement/ChainInteractionFailedException.java (règles du tracé) ; limites : foundation/config/BnbServerConfig.java (cogwheelMaxNodeCount 64, cogwheelMaxBounds 64).",
+    "Chariot : content/kinetics/cogwheel_carriage/block/CogwheelChainCarriageBlock(Entity).java ; suspension : riding/CogwheelChainRidingHelper.java (tag create:chain_rideable) ; habillage en bois : content/decoration/cogwheel_material/CogwheelMaterialBehaviour.java (tag minecraft:planks).",
+    "Recettes : data/bits_n_bobs/recipe/crafting/small_bevel_cogwheel.json, large_bevel_cogwheel.json, cogwheel_chain_carriage.json ; boitiers : registry/content/blocks/encased/BnbEncasedBlockLists.java."
+  ],
+  "en": {
+    "slugEn": "bnb-cogwheel-chains",
+    "name": "Cogwheel Chains and Flanged Cogwheels",
+    "title": "Cogwheel Chains — Create Bits 'n' Bobs guide",
+    "description": "Chains, belts and ropes between cogwheels, Flanged Cogwheels, their encased versions and the Cogwheel Chain Carriage: a Create Bits 'n' Bobs guide.",
+    "intro": "In Create, two cogwheels have to touch to drive each other. Bits 'n' Bobs lets you link them at a distance with a <strong>chain</strong> that runs around several wheels, like on a bicycle. <strong>Flanged Cogwheels</strong> add two more kinds of link, the belt and the rope, and a <strong>carriage</strong> can ride along the chain carrying a small machine.",
+    "facts": [
+      {
+        "label": "Cost",
+        "value": "1 chain per 5 blocks of length, at least 1 (server factor cogwheelChainDriveCostFactor = 1)"
+      },
+      {
+        "label": "Limits",
+        "value": "64 wheels per chain and 64 blocks of span (cogwheelMaxNodeCount, cogwheelMaxBounds)"
+      },
+      {
+        "label": "Links",
+        "value": "chain on any cogwheel; belt and rope on flanged wheels only"
+      },
+      {
+        "label": "Ratios",
+        "value": "kept: a small wheel spins twice as fast as a large one on the same chain"
+      },
+      {
+        "label": "Skins",
+        "value": "right-click with planks: the wheel takes on that wood"
+      },
+      {
+        "label": "Version",
+        "value": "Create Bits 'n' Bobs 2.3.5 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Shapeless crafting recipe",
+      "grid": [
+        [
+          "Cogwheel",
+          "Iron Nugget",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Flanged Cogwheel"
+    },
+    "videos": [
+      {
+        "id": "bnb_chain_flat",
+        "name": "A flat chain between several wheels",
+        "description": "Cogwheels and large cogwheels set on one plane and joined by a single chain: the small wheel turns twice as fast as the large one."
+      },
+      {
+        "id": "bnb_chain_axis",
+        "name": "Changing axis with a chain",
+        "description": "Two large cogwheels on different axes, placed so they share a tangent: the chain runs from one to the other."
+      }
+    ],
+    "sections": [
+      {
+        "id": "chaine",
+        "title": "Laying a chain",
+        "alt": "A chain laid flat around five cogwheels",
+        "html": "<p>Hold some vanilla Chains and right-click a <a href=\"/en/wiki/cogwheel\">Cogwheel</a>: placement starts. Then click every wheel the chain should go around, in order, and come back to the first one to close the loop. Clicking the last wheel you picked removes it from the path; sneaking and right-clicking cancels everything. The chain costs 1 item per 5 blocks of length, at least 1, taken when the loop closes.</p>"
+      },
+      {
+        "id": "rapports",
+        "title": "Ratios follow the wheels",
+        "alt": "A small and a large wheel on the same chain, with their speeds",
+        "html": "<p>The chain behaves as if the wheels were meshed: a small wheel spins twice as fast as a large one on the same loop, exactly like two Create cogwheels placed in contact. Every wheel on one loop turns the same way. Keep in mind that wheels on one chain cannot sit right against each other, and the path is not allowed to run over itself.</p>"
+      },
+      {
+        "id": "changement-axe",
+        "title": "Changing axis",
+        "alt": "A chain linking large cogwheels turned on two different axes",
+        "html": "<p>A chain can go from a horizontal wheel to a vertical one, but only between two <strong>large</strong> cogwheels. Between wheels on the same axis, the whole path has to stay in one plane. It is handy for carrying rotation up a wall without an Encased Chain Drive or a Gearbox.</p>"
+      },
+      {
+        "id": "tangente",
+        "title": "The shared tangent",
+        "alt": "Two large cogwheels lined up on one tangent",
+        "html": "<p>To change axis, the two large wheels must sit so that one straight line grazes the rim of each: the chain follows that line from one to the other. If the mod refuses the link, move the second wheel by one block and try again. A loop holds at most 64 wheels and fits inside a 64-block span.</p>"
+      },
+      {
+        "id": "flasques",
+        "title": "Flanged Cogwheels",
+        "alt": "The Flanged Cogwheel and Large Flanged Cogwheel next to a Create Cogwheel",
+        "html": "<p>The <strong>Flanged Cogwheel</strong> (recipe shown here) and the <strong>Large Flanged Cogwheel</strong> (Large Cogwheel plus Iron Nugget) mesh like Create's wheels, but their rims guide two more links. The <strong>belt</strong> is laid with a <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a> in hand and cannot change axis. The <strong>rope</strong> takes any item in the common c:ropes tag; Bits 'n' Bobs alone only puts a technical item there, so you need a mod that adds a rope. Click a wheel with planks to give it that wood.</p>"
+      },
+      {
+        "id": "boitiers",
+        "title": "Encased versions",
+        "alt": "The flanged cogwheels in andesite, brass, industrial iron and weathered iron casings",
+        "html": "<p>Click a flanged wheel with Andesite Casing, Brass Casing, a Block of Industrial Iron or a Block of Weathered Iron to enclose it: you get the <strong>Andesite Encased Flanged Cogwheel</strong>, the <strong>Brass Encased Flanged Cogwheel</strong>, the <strong>Industrial Iron Encased Flanged Cogwheel</strong> or the <strong>Weathered Iron Encased Flanged Cogwheel</strong>, plus the four large versions (Andesite, Brass, Industrial Iron and Weathered Iron Encased Large Flanged Cogwheel). They still take belts and ropes.</p>"
+      },
+      {
+        "id": "chariot",
+        "title": "The chain carriage",
+        "alt": "The Cogwheel Chain Carriage hanging under a chain",
+        "html": "<p>The <strong>Cogwheel Chain Carriage</strong> is made from an Iron Sheet, an Iron Nugget, a wool block and Andesite Casing. Place it just under a roughly horizontal stretch of chain, glue some blocks to it, then right-click it bare-handed: it hooks on and carries the lot around the loop. A second click takes it apart. With a <a href=\"/en/wiki/wrench\">Wrench</a> in hand you can also hang from the chain, just as on a <a href=\"/en/wiki/chain-conveyor\">Chain Conveyor</a>.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Removing and editing",
+        "html": "<p>Sneak with a Wrench and aim at the chain to break it: you get the chains back. You can also insert a cogwheel into a chain that is already in place by holding it in hand. A server can forbid chains on ordinary cogwheels (the 'undedicatedCogwheelChainDrives' behaviour option); only flanged wheels are left then.</p>"
+      }
+    ],
+    "sources": [
+      "Create Bits 'n' Bobs 2.3.5 (bits_n_bobs-2.3.5.jar from the next Create France modpack release): code from the public repository github.com/Aztech-Modding/Create-Bits-n-Bobs at commit 3794a38 \"2.3.5\", recipes from the jar's data folder, Ponder scenes replayed by our engine.",
+      "Mod by Cake, Kipti, NormalGuy, Astral and Spydnel, MIT licence: models and textures by its authors, rendered from the jar; no text from the mod is copied.",
+      "Link types: content/kinetics/cogwheel_chain/types/BnbCogwheelChainTypes.java (chain; belt: Mechanical Belt item, permitsAxisChange false; rope: c:ropes tag; belt and rope limited to the bits_n_bobs:flanged_cogwheel tag).",
+      "Placement and cost: placement/CogwheelChainPlacementInteraction.java, graph/PlacingCogwheelChain.java (max(round(factor × length / 5), 1)), placement/ChainInteractionFailedException.java (path rules); limits: foundation/config/BnbServerConfig.java (cogwheelMaxNodeCount 64, cogwheelMaxBounds 64).",
+      "Carriage: content/kinetics/cogwheel_carriage/block/CogwheelChainCarriageBlock(Entity).java; hanging: riding/CogwheelChainRidingHelper.java (create:chain_rideable tag); wood skins: content/decoration/cogwheel_material/CogwheelMaterialBehaviour.java (minecraft:planks tag).",
+      "Recipes: data/bits_n_bobs/recipe/crafting/small_bevel_cogwheel.json, large_bevel_cogwheel.json, cogwheel_chain_carriage.json; casings: registry/content/blocks/encased/BnbEncasedBlockLists.java."
+    ]
+  }
+}

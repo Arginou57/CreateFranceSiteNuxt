@@ -1,0 +1,507 @@
+{
+  "slug": "aeronautics-moteurs-et-transmission",
+  "name": "Moteurs et transmission",
+  "blockId": "simulated:red_portable_engine",
+  "category": "aeronautics",
+  "title": "Moteurs et transmission — Create Aeronautics, guide",
+  "description": "Moteur portatif, transmission analogique, inverseur directionnel, ressorts et tarière de Simulated : rôle, chiffres du code et vidéos.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Aeronautics 1.3.3",
+  "mcVersion": "1.21.1",
+  "intro": "Un véhicule de Create Aeronautics a besoin de sa propre rotation. Simulated, livré avec le mod, apporte une source compacte, le <strong>moteur portatif</strong> (Portable Engine), et plusieurs pièces pour la répartir : la <strong>transmission analogique</strong> (Analog Transmission), l'<strong>inverseur directionnel</strong> (Directional Gearshift), le <strong>ressort de torsion</strong> (Torsion Spring), le <strong>ressort</strong> (Spring) et la <strong>tarière</strong> (Auger Shaft, Auger Cogwheel), qui ramasse ce que les outils du véhicule arrachent.",
+  "facts": [
+    {
+      "label": "Moteur portatif",
+      "value": "32 tr/min, 64 en surchauffe ; capacité 64 SU par tr/min (2 048 SU)"
+    },
+    {
+      "label": "Carburant",
+      "value": "Combustibles du four ; gâteau de blaze pour la surchauffe"
+    },
+    {
+      "label": "Transmission analogique",
+      "value": "Rapport choisi au moyen d’un signal analogique"
+    },
+    {
+      "label": "Inverseur directionnel",
+      "value": "Transmet, inverse ou coupe selon le côté alimenté"
+    },
+    {
+      "label": "Ressort de torsion",
+      "value": "Tourne dans une plage d’angles et revient ; stress 16, capacité 8"
+    },
+    {
+      "label": "Tarière",
+      "value": "Transporte les objets et vide les outils de forage ; stress 0,5"
+    },
+    {
+      "label": "Pièce de fabrication",
+      "value": "Pièces de moteur (Engine Assembly), assemblage séquencé de 8 passes"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Plaque de fer",
+        null
+      ],
+      [
+        null,
+        "Pièces de moteur",
+        null
+      ],
+      [
+        null,
+        "Haut fourneau",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "create:iron_sheet",
+        null
+      ],
+      [
+        null,
+        "simulated:engine_assembly",
+        null
+      ],
+      [
+        null,
+        "minecraft:blast_furnace",
+        null
+      ]
+    ],
+    "result": "1 moteur portatif rouge",
+    "resultItem": "simulated:red_portable_engine"
+  },
+  "videos": [
+    {
+      "id": "sim_engine",
+      "name": "Le moteur portatif",
+      "description": "Le moteur brûle du charbon, change de sens, est alimenté par un entonnoir puis surchauffé.",
+      "duration": "PT19S",
+      "chapters": [
+        {
+          "t": 1.0,
+          "section": "moteur"
+        },
+        {
+          "t": 10.75,
+          "section": "carburant"
+        },
+        {
+          "t": 15.45,
+          "section": "surchauffe"
+        }
+      ]
+    },
+    {
+      "id": "sim_dir_gearshift",
+      "name": "L'inverseur directionnel",
+      "description": "Selon le côté alimenté par la redstone, la rotation passe, change de sens ou s’arrête.",
+      "duration": "PT19S",
+      "chapters": [
+        {
+          "t": 2.0,
+          "section": "inverseur"
+        },
+        {
+          "t": 5.25,
+          "section": "inverseur"
+        },
+        {
+          "t": 11.5,
+          "section": "inverseur"
+        },
+        {
+          "t": 15.25,
+          "section": "inverseur"
+        }
+      ]
+    },
+    {
+      "id": "sim_analog",
+      "name": "La transmission analogique",
+      "description": "Le signal de redstone change le rapport entre l’arbre et la roue dentée, jusqu’à les découpler.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 1.17,
+          "section": "transmission"
+        },
+        {
+          "t": 4.01,
+          "section": "transmission"
+        },
+        {
+          "t": 6.68,
+          "section": "transmission-inverse"
+        },
+        {
+          "t": 11.35,
+          "section": "transmission-inverse"
+        },
+        {
+          "t": 18.03,
+          "section": "transmission-inverse"
+        },
+        {
+          "t": 20.13,
+          "section": "transmission-inverse"
+        }
+      ]
+    },
+    {
+      "id": "sim_torsion",
+      "name": "Le ressort de torsion",
+      "description": "Le ressort fait pivoter une voile dans une plage d’angles puis revient, sauf sous redstone.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 0.87,
+          "section": "torsion"
+        },
+        {
+          "t": 5.33,
+          "section": "torsion"
+        },
+        {
+          "t": 7.09,
+          "section": "torsion"
+        },
+        {
+          "t": 13.68,
+          "section": "torsion-redstone"
+        },
+        {
+          "t": 18.18,
+          "section": "torsion-redstone"
+        }
+      ]
+    },
+    {
+      "id": "sim_auger",
+      "name": "La tarière",
+      "description": "Une tarière transporte des blocs, devient tarière à roue dentée, puis est enchâssée.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 1.69,
+          "section": "tariere"
+        },
+        {
+          "t": 11.87,
+          "section": "tariere-roue"
+        },
+        {
+          "t": 16.31,
+          "section": "tariere-roue"
+        }
+      ]
+    },
+    {
+      "id": "sim_auger_extract",
+      "name": "La tarière sur une foreuse",
+      "description": "Sur une machine de forage, la tarière ramasse ce que les outils abattent.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 0.59,
+          "section": "tariere-foreuse"
+        },
+        {
+          "t": 9.77,
+          "section": "tariere-foreuse"
+        },
+        {
+          "t": 14.07,
+          "section": "tariere-foreuse"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "moteur",
+      "title": "Le moteur portatif",
+      "image": "sim_engine_e1.webp",
+      "alt": "Un moteur portatif rouge relié à un rotor",
+      "video": "sim_engine",
+      "html": "<p>Le moteur portatif tourne en consumant tout ce qu'accepte un four : charbon, bois, seaux de lave. Il tourne à <strong>32 tr/min</strong> avec une capacité de 64 SU par tr/min, soit 2 048 SU, et son sens se choisit au panneau de valeur. Il existe en seize couleurs, toutes identiques ; on change la couleur par teinture.</p>"
+    },
+    {
+      "id": "carburant",
+      "title": "Le nourrir automatiquement",
+      "image": "sim_engine_e2.webp",
+      "alt": "Un entonnoir qui remplit le moteur portatif",
+      "html": "<p>Un entonnoir, un tapis ou un bras mécanique peuvent remplir le moteur : une réserve de charbon dans un coffre du véhicule suffit pour de longs trajets. Le moteur s'arrête quand il n'a plus rien à brûler.</p>"
+    },
+    {
+      "id": "surchauffe",
+      "title": "La surchauffe",
+      "image": "sim_engine_e3.webp",
+      "alt": "Le moteur portatif surchauffé, ses conduits incandescents",
+      "html": "<p>Un <strong>gâteau de blaze</strong> met le moteur en surchauffe : il passe à 64 tr/min, ce qui double la puissance disponible tant que dure ce combustible. Les conduits d'échappement rougeoient alors.</p>"
+    },
+    {
+      "id": "inverseur",
+      "title": "L'inverseur directionnel",
+      "image": "sim_dir_gearshift_e2.webp",
+      "alt": "Un inverseur directionnel entre deux rotors, une manette de chaque côté",
+      "video": "sim_dir_gearshift",
+      "html": "<p>L'inverseur directionnel a deux faces sensibles à la redstone. Sans signal, il ne transmet rien. Avec un signal sur la face « droite », la rotation passe ; sur la face « inverse », elle repart en sens contraire ; sur les deux, il coupe. C'est la commande idéale d'une marche avant / arrière sur un véhicule.</p>"
+    },
+    {
+      "id": "transmission",
+      "title": "La transmission analogique",
+      "image": "sim_analog_e2.webp",
+      "alt": "Une transmission analogique réglée par une manette, avec des compteurs de vitesse",
+      "video": "sim_analog",
+      "html": "<p>Sans signal, la transmission analogique se comporte comme une roue dentée enchâssée : l'arbre qui la traverse et sa roue dentée tournent à la même vitesse. Un signal analogique fait tourner la roue dentée moins vite que l'arbre : plus le signal est fort, plus le rapport est grand.</p>"
+    },
+    {
+      "id": "transmission-inverse",
+      "title": "Entrée par la roue dentée, découplage",
+      "image": "sim_analog_e5.webp",
+      "alt": "La transmission dont l'arbre et la roue dentée tournent indépendamment",
+      "html": "<p>Si la rotation arrive par la roue dentée, c'est l'arbre qui accélère. Au signal maximal, ou au-delà de la vitesse de rupture, les deux parties se découplent et tournent chacune de leur côté : pratique pour débrayer un rotor.</p>"
+    },
+    {
+      "id": "torsion",
+      "title": "Le ressort de torsion",
+      "image": "sim_torsion_e2.webp",
+      "alt": "Un ressort de torsion qui fait pivoter une voile",
+      "video": "sim_torsion",
+      "html": "<p>Le ressort de torsion transmet la rotation, mais seulement dans une plage d'angles réglable. Quand l'entrée s'arrête, il ramène sa sortie à l'angle de départ : un volet, une gouverne ou une porte revient seul en place. Il consomme 16 SU par tr/min et fournit 8 SU par tr/min côté sortie.</p>"
+    },
+    {
+      "id": "torsion-redstone",
+      "title": "Bloquer le ressort",
+      "image": "sim_torsion_e4.webp",
+      "alt": "Le ressort de torsion alimenté par la redstone et des comparateurs",
+      "html": "<p>Alimenté par la redstone, le ressort de torsion ne revient plus en arrière. Un comparateur lit l'angle actuel. Comme pour le gouvernail, les roulements entraînés doivent être réglés pour ne pas se désassembler.</p>"
+    },
+    {
+      "id": "tariere",
+      "title": "La tarière",
+      "image": "sim_auger_e1.webp",
+      "alt": "Une ligne de tarières entraînée par des roues dentées",
+      "video": "sim_auger",
+      "html": "<p>La <strong>tarière</strong> (Auger Shaft) est un tube à vis : entraînée, elle fait avancer les objets d'un bout à l'autre, comme un tapis enfermé. Elle coûte 0,5 SU par tr/min. On l'alimente par un entonnoir posé sur le côté, jamais par ses extrémités.</p>"
+    },
+    {
+      "id": "tariere-roue",
+      "title": "Tarière à roue dentée et voyant",
+      "image": "sim_auger_e3.webp",
+      "alt": "Une tarière à roue dentée et une tarière enchâssée",
+      "html": "<p>La clé change une section en <strong>tarière à roue dentée</strong> (Auger Cogwheel), qui reçoit la rotation par le côté ; son voyant rouge s'allume du côté où avancent les objets. Un bloc de fer industriel enchâsse une section. On ne peut ni insérer ni extraire par la roue dentée.</p>"
+    },
+    {
+      "id": "tariere-foreuse",
+      "title": "Ramasser ce que la foreuse abat",
+      "image": "sim_auger_extract_e1.webp",
+      "alt": "Une foreuse dont la tarière collecte les blocs cassés",
+      "video": "sim_auger_extract",
+      "html": "<p>Sur un véhicule, la tarière vide les outils qui cassent des blocs (perceuses, scies, roues de découpe) : tout ce qui est relié à elle à l'horizontale est ramassé et emmené vers un coffre.</p>"
+    },
+    {
+      "id": "pieces",
+      "title": "Ressorts et pièces de moteur",
+      "image": "gal_moteurs_ressorts-tariere.webp",
+      "alt": "Un ressort de torsion, deux ressorts, une tarière et une tarière à roue dentée",
+      "html": "<p>Le <strong>ressort</strong> (Spring) relie deux blocs par un ressort élastique ; la clé règle sa raideur et un second ressort change sa longueur au repos. Les <strong>pièces de moteur</strong> (Engine Assembly) sortent d'un assemblage séquencé de huit passes (scie puis presse) à partir d'une plaque de fer.</p>"
+    }
+  ],
+  "related": [
+    "create-aeronautics",
+    "aeronautics-pilotage",
+    "offroad-vehicules-a-roues",
+    "aeronautics-helices",
+    "inverseur-de-rotation",
+    "boite-a-roues-dentees",
+    "stressometre-compteur-de-vitesse"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Aeronautics 1.3.3 (dépôt Creators-of-Aeronautics/Simulated-Project, commit 900122e, code sous licence MIT, ressources « tous droits réservés », The Simulated Team / The Creators of Aeronautics), identiques au jar du modpack (instance de test 1.3.3)",
+    "Réglages par défaut : SimStress (stress : ressort de torsion 16 et capacité 8, tarière 0,5, moteur portatif capacité 64, gouvernail capacité 16), PortableEngineBlockEntity (32 tr/min, x2 en surchauffe)",
+    "Recettes : data/simulated/recipe/red_portable_engine.json, analog_transmission.json, directional_gearshift.json, torsion_spring.json, spring.json, auger_shaft.json, sequenced_assembly/engine_assembly.json",
+    "Vidéos : scènes Ponder de Create Aeronautics / Simulated (portable_engine, directional_gearshift, analog_transmission, torsion_spring, auger_shaft) rejouées par notre moteur ; modèles et textures du mod (© The Simulated Team / The Creators of Aeronautics)",
+    "Images : blocs du mod posés sur la plaque et rendus par notre moteur (© The Simulated Team / The Creators of Aeronautics)"
+  ],
+  "en": {
+    "slugEn": "aeronautics-engines-and-transmission",
+    "name": "Engines and transmission",
+    "title": "Engines and Transmission — Create Aeronautics guide",
+    "description": "Simulated Portable Engine, Analog Transmission, Directional Gearshift, springs and auger: what they do, numbers from the code and videos.",
+    "intro": "A Create Aeronautics vehicle needs its own rotation. Simulated, shipped with the mod, brings a compact source, the <strong>Portable Engine</strong>, and several parts to share it out: the <strong>Analog Transmission</strong>, the <strong>Directional Gearshift</strong>, the <strong>Torsion Spring</strong>, the <strong>Spring</strong> and the <strong>Auger Shaft</strong> with its <strong>Auger Cogwheel</strong>, which collects what the vehicle's tools break.",
+    "facts": [
+      {
+        "label": "Portable Engine",
+        "value": "32 RPM, 64 when superheated; capacity 64 SU per RPM (2,048 SU)"
+      },
+      {
+        "label": "Fuel",
+        "value": "Furnace fuels; Blaze Cake to superheat"
+      },
+      {
+        "label": "Analog Transmission",
+        "value": "Ratio set by an analog redstone signal"
+      },
+      {
+        "label": "Directional Gearshift",
+        "value": "Relays, reverses or stops depending on the powered side"
+      },
+      {
+        "label": "Torsion Spring",
+        "value": "Turns within an angle range and springs back; stress 16, capacity 8"
+      },
+      {
+        "label": "Auger Shaft",
+        "value": "Carries items and empties drilling tools; stress 0.5"
+      },
+      {
+        "label": "Crafting part",
+        "value": "Engine Assembly, 8-loop sequenced assembly"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Iron Sheet",
+          null
+        ],
+        [
+          null,
+          "Engine Assembly",
+          null
+        ],
+        [
+          null,
+          "Blast Furnace",
+          null
+        ]
+      ],
+      "result": "1 Red Portable Engine"
+    },
+    "videos": [
+      {
+        "id": "sim_engine",
+        "name": "The Portable Engine",
+        "description": "The engine burns coal, changes direction, gets fed by a funnel, then superheats."
+      },
+      {
+        "id": "sim_dir_gearshift",
+        "name": "The Directional Gearshift",
+        "description": "Depending on the powered side, rotation passes, reverses or stops."
+      },
+      {
+        "id": "sim_analog",
+        "name": "The Analog Transmission",
+        "description": "The redstone signal changes the ratio between shaft and cogwheel, up to decoupling them."
+      },
+      {
+        "id": "sim_torsion",
+        "name": "The Torsion Spring",
+        "description": "The spring swings a sail within an angle range and comes back, unless powered."
+      },
+      {
+        "id": "sim_auger",
+        "name": "The Auger Shaft",
+        "description": "An auger carries blocks, becomes an Auger Cogwheel, then gets encased."
+      },
+      {
+        "id": "sim_auger_extract",
+        "name": "The auger on a drill",
+        "description": "On a drilling machine, the auger collects what the tools break."
+      }
+    ],
+    "sections": [
+      {
+        "id": "moteur",
+        "title": "The Portable Engine",
+        "alt": "A red Portable Engine connected to a shaft",
+        "html": "<p>The Portable Engine makes rotation by burning anything a furnace burns: coal, wood, lava buckets. It runs at <strong>32 RPM</strong> with a capacity of 64 SU per RPM, that is 2,048 SU, and its direction is set on the value panel. It comes in sixteen colours, all identical; dye it to change the colour.</p>"
+      },
+      {
+        "id": "carburant",
+        "title": "Feeding it automatically",
+        "alt": "A funnel filling the Portable Engine",
+        "html": "<p>A funnel, a belt or a Mechanical Arm can refill the engine: a stock of coal in a chest on the vehicle is enough for long trips. The engine stops when it has nothing left to burn.</p>"
+      },
+      {
+        "id": "surchauffe",
+        "title": "Superheating",
+        "alt": "The superheated Portable Engine, its pipes glowing",
+        "html": "<p>A <strong>Blaze Cake</strong> superheats the engine: it climbs to 64 RPM, doubling the available power for as long as that fuel lasts. The exhaust pipes then glow red.</p>"
+      },
+      {
+        "id": "inverseur",
+        "title": "The Directional Gearshift",
+        "alt": "A Directional Gearshift between two shafts, a lever on each side",
+        "html": "<p>The Directional Gearshift has two redstone-sensitive faces. Without a signal it relays nothing. Power the « straight » face and rotation passes; power the « reverse » face and it comes out the other way; power both and it stops. It is the perfect forward / reverse control for a vehicle.</p>"
+      },
+      {
+        "id": "transmission",
+        "title": "The Analog Transmission",
+        "alt": "An Analog Transmission set by a lever, with speedometers",
+        "html": "<p>Without a signal the Analog Transmission acts like an encased cogwheel: the shaft running through it and its cogwheel turn at the same speed. An analog signal slows the cogwheel compared with the shaft: the stronger the signal, the larger the ratio.</p>"
+      },
+      {
+        "id": "transmission-inverse",
+        "title": "Input through the cogwheel, decoupling",
+        "alt": "The transmission with shaft and cogwheel turning independently",
+        "html": "<p>When the drive enters via the cogwheel, it is the shaft that turns faster. At full signal, or beyond the breaking speed, the two parts decouple and each turns on its own: handy to disengage a rotor.</p>"
+      },
+      {
+        "id": "torsion",
+        "title": "The Torsion Spring",
+        "alt": "A Torsion Spring swinging a sail",
+        "html": "<p>The Torsion Spring relays rotation, but only within an adjustable angle range. When the input stops, it brings its output back to the starting angle: a flap, a control surface or a door returns on its own. It draws 16 SU per RPM and provides 8 SU per RPM on its output side.</p>"
+      },
+      {
+        "id": "torsion-redstone",
+        "title": "Locking the spring",
+        "alt": "The Torsion Spring powered by redstone, with comparators",
+        "html": "<p>When powered by redstone, the Torsion Spring no longer springs back. A comparator reads its current angle. As with the Steering Wheel, driven bearings must be set not to disassemble.</p>"
+      },
+      {
+        "id": "tariere",
+        "title": "The Auger Shaft",
+        "alt": "A line of Auger Shafts driven by cogwheels",
+        "html": "<p>The <strong>Auger Shaft</strong> is a screw tube: when driven, it moves items from one end to the other, like an enclosed belt. It costs 0.5 SU per RPM. Feed it through a funnel on its side, never through its ends.</p>"
+      },
+      {
+        "id": "tariere-roue",
+        "title": "Auger Cogwheel and indicator",
+        "alt": "An Auger Cogwheel and an encased auger",
+        "html": "<p>The wrench turns a section into an <strong>Auger Cogwheel</strong>, which takes rotation from the side; its red indicator lights up on the side the items travel towards. An Industrial Iron Block encases a section. Items can neither go in nor come out through the cogwheel.</p>"
+      },
+      {
+        "id": "tariere-foreuse",
+        "title": "Collecting what the drill breaks",
+        "alt": "A drill whose auger collects the broken blocks",
+        "html": "<p>On a vehicle, the auger empties the tools that break blocks (drills, saws, rock cutting wheels): everything connected to it horizontally gets collected and carried to a chest.</p>"
+      },
+      {
+        "id": "pieces",
+        "title": "Springs and engine parts",
+        "alt": "A Torsion Spring, two Springs, an Auger Shaft and an Auger Cogwheel",
+        "html": "<p>The <strong>Spring</strong> links two blocks with an elastic spring; the wrench sets its stiffness and a second spring changes its resting length. <strong>Engine Assembly</strong> comes from an eight-loop sequenced assembly (saw then press) on an iron sheet.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Aeronautics 1.3.3 (Creators-of-Aeronautics/Simulated-Project repository, commit 900122e, code under the MIT licence, assets « all rights reserved », The Simulated Team / The Creators of Aeronautics), identical to the modpack jar (1.3.3 test instance)",
+      "Default settings: SimStress (stress: torsion spring 16 and capacity 8, auger 0.5, portable engine capacity 64, steering wheel capacity 16), PortableEngineBlockEntity (32 RPM, x2 when superheated)",
+      "Recipes: data/simulated/recipe/red_portable_engine.json, analog_transmission.json, directional_gearshift.json, torsion_spring.json, spring.json, auger_shaft.json, sequenced_assembly/engine_assembly.json",
+      "Videos: Create Aeronautics / Simulated Ponder scenes (portable_engine, directional_gearshift, analog_transmission, torsion_spring, auger_shaft) replayed by our engine; mod models and textures (© The Simulated Team / The Creators of Aeronautics)",
+      "Images: mod blocks placed on the plate and rendered by our engine (© The Simulated Team / The Creators of Aeronautics)"
+    ]
+  }
+}

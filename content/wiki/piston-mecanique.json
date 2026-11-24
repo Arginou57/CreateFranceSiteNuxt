@@ -6,7 +6,7 @@
   "title": "Piston mécanique — Create : guide en français",
   "description": "Le piston mécanique de Create : barres d'extension, vitesse selon les tr/min, piston collant, colle et châssis, modes d'arrêt et erreurs fréquentes.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "Le <strong>piston mécanique</strong> est la première contraption de Create : il fait avancer et reculer des blocs en ligne droite, aussi loin que ses <strong>barres d'extension</strong> le permettent. Sa version <strong>collante</strong> ramène ce qu'elle a poussé. C'est la base des portes cachées, des ponts levants et des foreuses sur rail, comme la <a href=\"/wiki/perceuse-mecanique\">perceuse mécanique</a>.",
@@ -129,7 +129,7 @@
       "title": "Le piston collant",
       "image": "piston_anchor_collant.webp",
       "alt": "Tête de piston collante qui ramène le bloc",
-      "html": "<p>Un piston normal ne tire rien : en reculant, il laisse les blocs là où il les a poussés. Clic droit avec une <strong>boule de slime</strong> sur le piston, ou version fabriquée à l'établi : la tête devient verte et ramène ce qu'elle touche.</p>"
+      "html": "<p>Un piston normal ne tire rien : en reculant, il laisse les blocs là où il les a poussés. Clic droit avec une <strong>boule de slime</strong> sur la face avant d'un piston rétracté, ou une boule de slime sur un piston à l'établi : on obtient le <strong>piston mécanique collant</strong>. Sa tête devient verte et ramène le bloc collé contre elle, sauf s'il est fragile ou immobile.</p><p>La <strong>tête de piston mécanique</strong> est le bloc posé au bout des barres ; la casser casse aussi les barres et rentre le piston, et elle rend une barre d'extension.</p>"
     },
     {
       "id": "structure",
@@ -307,7 +307,7 @@
         "id": "collant",
         "title": "The sticky piston",
         "alt": "Sticky piston head pulling the block back",
-        "html": "<p>A regular piston pulls nothing: when it retracts, the blocks stay where it pushed them. Right-click the piston with a <strong>slimeball</strong>, or craft the sticky version: the head turns green and drags back whatever it touches.</p>"
+        "html": "<p>A regular piston pulls nothing: when it retracts, the blocks stay where it pushed them. Right-click the front face of a retracted piston with a <strong>slimeball</strong>, or put a slimeball on a piston in a crafting table: you get the <strong>Sticky Mechanical Piston</strong>. Its head turns green and drags back the block stuck to it, unless that block is fragile or immovable.</p><p>The <strong>Mechanical Piston Head</strong> is the block at the end of the poles; breaking it also breaks the poles and pulls the piston in, and it drops a Piston Extension Pole.</p>"
       },
       {
         "id": "structure",

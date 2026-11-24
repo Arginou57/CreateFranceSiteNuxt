@@ -6,7 +6,7 @@
   "title": "Éjecteur — Create : guide en français",
   "description": "L'éjecteur de Create : choisir sa cible, portée de 32 blocs, trajectoire, taille de pile, prélèvement avec un tunnel de laiton et redstone.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "L'<strong>éjecteur</strong> est une catapulte à objets : posé au bout d'une ligne, il projette ce qu'il reçoit vers une cible choisie à l'avance, jusqu'à 32 blocs plus loin, en hauteur comme en contrebas. Il remplace des dizaines de blocs de tapis pour franchir un ravin, monter un étage ou relier deux îlots d'usine. Il sait aussi attendre une quantité précise avant de tirer, servir de répartiteur à côté d'un tunnel de laiton, et même lancer un joueur d'un bout à l'autre de la base.",
@@ -96,13 +96,37 @@
       "id": "ejector_split",
       "name": "Éjecteur et tunnel de laiton : prélever un lot",
       "description": "Un tunnel de laiton propose une pile de 64 lingots ; l'éjecteur réglé sur 10 en prend 10 et les lance sur un autre tapis.",
-      "duration": "PT20S"
+      "duration": "PT20S",
+      "chapters": [
+        {
+          "t": 1.38,
+          "section": "lot"
+        },
+        {
+          "t": 3.94,
+          "section": "lot-reglage"
+        },
+        {
+          "t": 11.89,
+          "section": "lot-reste"
+        }
+      ]
     },
     {
       "id": "ejector_redstone",
       "name": "Éjecteur et redstone",
       "description": "Un levier bloque l'éjecteur ; un observateur placé contre lui émet une impulsion à chaque lancer.",
-      "duration": "PT20S"
+      "duration": "PT20S",
+      "chapters": [
+        {
+          "t": 5.5,
+          "section": "redstone"
+        },
+        {
+          "t": 13.53,
+          "section": "observateur"
+        }
+      ]
     }
   ],
   "sections": [
@@ -149,7 +173,17 @@
       "image": "ejector_split_quantite.webp",
       "alt": "Éjecteur à côté d'un tunnel de laiton, qui prend une partie de la pile",
       "video": "ejector_split",
-      "html": "<p>Placé contre le flanc d'un <a href=\"/wiki/tunnel\">tunnel de laiton</a>, l'éjecteur devient une de ses sorties. Le tunnel lui propose une pile de 64 lingots : réglé sur 10, l'éjecteur n'en accepte que 10 et le reste continue sur le tapis. Il les lance ensuite vers une autre ligne. C'est la façon la plus simple de dériver une quantité précise.</p>"
+      "html": "<p>Placé contre le flanc d'un <a href=\"/wiki/tunnel\">tunnel de laiton</a>, l'éjecteur devient une de ses sorties, et sert à <strong>prélever une quantité exacte</strong> dans les piles qui passent, avant de la lancer vers une autre ligne. C'est la façon la plus simple de dériver un lot précis.</p>"
+    },
+    {
+      "id": "lot-reglage",
+      "title": "Régler le tunnel et la quantité",
+      "html": "<p>Le tunnel doit être réglé sur <strong>le plus proche d'abord</strong>, pour proposer les piles à l'éjecteur avant de les laisser continuer. La <strong>taille de pile</strong> réglée sur l'éjecteur fixe ensuite la quantité prélevée : réglé sur 10, il n'accepte que 10 lingots d'une pile de 64.</p>"
+    },
+    {
+      "id": "lot-reste",
+      "title": "Le reste continue",
+      "html": "<p>Pendant que le lot de 10 part par le côté, le <strong>reste</strong> de la pile poursuit sa route sur le tapis, sans attendre. Une seconde paire tunnel et éjecteur plus loin peut prélever un autre lot.</p>"
     },
     {
       "id": "redstone",
@@ -157,7 +191,12 @@
       "image": "ejector_redstone_redstone.webp",
       "alt": "Éjecteur relié à un levier, qui garde son objet",
       "video": "ejector_redstone",
-      "html": "<p>Un signal de redstone <strong>bloque</strong> l'éjecteur : il garde son objet sur le plateau tant que le levier est actif, et tire dès qu'on le coupe. Dans l'autre sens, un <strong>observateur</strong> posé contre l'éjecteur émet une impulsion à chaque lancer, de quoi compter les envois ou déclencher la machine suivante.</p>"
+      "html": "<p>Un signal de redstone <strong>bloque</strong> l'éjecteur : il garde son objet sur le plateau tant que le levier est actif, et tire dès qu'on le coupe.</p>"
+    },
+    {
+      "id": "observateur",
+      "title": "Compter les lancers",
+      "html": "<p>Dans l'autre sens, un <strong>observateur</strong> posé contre l'éjecteur émet une impulsion à chaque lancer, de quoi compter les envois ou déclencher la machine suivante.</p>"
     },
     {
       "id": "tremplin",
@@ -294,13 +333,28 @@
         "id": "lot",
         "title": "Taking an exact lot",
         "alt": "Weighted Ejector next to a Brass Tunnel, taking part of the stack",
-        "html": "<p>Placed against the side of a <a href=\"/en/wiki/tunnel\">Brass Tunnel</a>, the ejector becomes one of its outputs. The tunnel offers it a stack of 64 ingots: set to 10, the ejector only accepts 10 and the rest carries on along the belt. It then throws them towards another line. It is the simplest way to divert an exact amount.</p>"
+        "html": "<p>Placed against the side of a <a href=\"/en/wiki/tunnel\">Brass Tunnel</a>, the ejector becomes one of its outputs, and is used to <strong>take an exact amount</strong> out of the stacks going past, before throwing it towards another line. It is the simplest way to divert a precise lot.</p>"
+      },
+      {
+        "id": "lot-reglage",
+        "title": "Setting the tunnel and the amount",
+        "html": "<p>The tunnel must be set to <strong>Prefer Nearest</strong>, so it offers the stacks to the ejector before letting them go on. The ejector's <strong>stack size</strong> then decides how much is taken: set to 10, it only accepts 10 ingots out of a stack of 64.</p>"
+      },
+      {
+        "id": "lot-reste",
+        "title": "The rest carries on",
+        "html": "<p>While the lot of 10 leaves through the side, the <strong>rest</strong> of the stack carries on along the belt, without waiting. A second tunnel and ejector pair further on can take another lot.</p>"
       },
       {
         "id": "redstone",
         "title": "Redstone and observers",
         "alt": "Weighted Ejector wired to a lever, holding on to its item",
-        "html": "<p>A redstone signal <strong>blocks</strong> the ejector: it keeps its item on the plate while the lever is on, and fires as soon as it is turned off. The other way round, an <strong>observer</strong> placed against the ejector sends a pulse at every launch, enough to count shipments or trigger the next machine.</p>"
+        "html": "<p>A redstone signal <strong>blocks</strong> the ejector: it keeps its item on the plate while the lever is on, and fires as soon as it is turned off.</p>"
+      },
+      {
+        "id": "observateur",
+        "title": "Counting launches",
+        "html": "<p>The other way round, an <strong>observer</strong> placed against the ejector sends a pulse at every launch, enough to count shipments or trigger the next machine.</p>"
       },
       {
         "id": "tremplin",

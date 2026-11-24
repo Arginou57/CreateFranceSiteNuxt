@@ -6,10 +6,10 @@
   "title": "Sifflet à vapeur — Create : guide en français",
   "description": "Le sifflet à vapeur de Create : le poser sur une chaudière chauffée, le faire sonner à la redstone, baisser sa note avec des extensions, changer d'octave.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
-  "intro": "Le <strong>sifflet à vapeur</strong> transforme une chaudière en instrument. Posé sur un <a href=\"/wiki/reservoir-a-fluide\">réservoir à fluide</a> chauffé, il siffle tant qu'il reçoit un signal de redstone. Des extensions empilées baissent sa note, la clé change son octave, et plusieurs sifflets réglés différemment jouent des accords, des sirènes d'usine ou des klaxons de train.",
+  "intro": "Le <strong>sifflet à vapeur</strong> transforme une chaudière en instrument. Posé contre un <a href=\"/wiki/reservoir-a-fluide\">réservoir à fluide</a> chauffé, il siffle tant qu'il reçoit un signal de redstone. Des extensions empilées baissent sa note, la clé change son octave, et plusieurs sifflets réglés différemment jouent des accords, des sirènes d'usine ou des klaxons de train.",
   "facts": [
     {
       "label": "Catégorie",
@@ -98,14 +98,14 @@
       "image": "whistle_reservoir.webp",
       "alt": "Sifflet à vapeur posé sur le côté d’un réservoir",
       "video": "whistle",
-      "html": "<p>Le sifflet se pose sur une face d'un <a href=\"/wiki/reservoir-a-fluide\">réservoir à fluide</a>, sur le côté ou par-dessus. Ce réservoir devient une chaudière, comme pour le <a href=\"/wiki/moteur-a-vapeur\">moteur à vapeur</a> : on peut d'ailleurs mettre moteurs et sifflets sur la même cuve.</p>"
+      "html": "<p>Le sifflet se fixe sur une face d'un <a href=\"/wiki/reservoir-a-fluide\">réservoir à fluide</a>, sur le côté ou par-dessus. Ce réservoir devient une chaudière, comme pour le <a href=\"/wiki/moteur-a-vapeur\">moteur à vapeur</a> : on peut d'ailleurs mettre moteurs et sifflets sur la même cuve.</p>"
     },
     {
       "id": "chaleur",
       "title": "Il faut de la chaleur",
       "image": "whistle_chaleur.webp",
       "alt": "Un feu de camp chauffe le réservoir sous le sifflet",
-      "html": "<p>Le sifflet ne sonne que si la chaudière est <strong>chauffée</strong>. Un feu de camp ou un <a href=\"/wiki/bruleur-a-blaze\">brûleur à blaze</a> sous le réservoir suffit : même une chaleur passive, sans carburant, fait l'affaire. Une cuve froide reste muette, même avec un signal de redstone. La cuve n'a pas besoin d'être pleine d'eau.</p>"
+      "html": "<p>Le sifflet ne sonne que si la chaudière est <strong>chauffée</strong>. Un feu de camp ou un <a href=\"/wiki/bruleur-a-blaze\">brûleur à blaze</a> sous le réservoir suffit : même une chaleur passive, sans carburant, fait l'affaire. Une cuve froide reste muette, même alimentée en redstone. La cuve n'a pas besoin d'être pleine d'eau.</p>"
     },
     {
       "id": "note",
@@ -119,7 +119,7 @@
       "title": "Baisser la note",
       "image": "whistle_grave.webp",
       "alt": "Extensions empilées au-dessus du sifflet",
-      "html": "<p>Un clic droit avec un autre sifflet sur le sifflet posé ajoute une <strong>extension</strong> au-dessus et rend la note plus grave. Chaque demi-bloc baisse d'un demi-ton, chaque bloc entier de deux. On peut descendre de <strong>24 demi-tons</strong>, soit deux octaves, avec une colonne de douze blocs. La clé retire les extensions.</p>"
+      "html": "<p>Un clic droit avec un autre sifflet sur le sifflet posé, ou sur ce qui le prolonge, ajoute une <strong>extension de sifflet à vapeur</strong> au-dessus et rend la note plus grave ; le sifflet tenu n'est pas consommé. Chaque demi-bloc baisse la note d'un demi-ton. On peut empiler <strong>six blocs</strong> d'extension, soit douze demi-tons : une octave plus bas. Accroupi, un clic à la clé sur le haut d'une extension la raccourcit d'un demi-bloc.</p>"
     },
     {
       "id": "octave",
@@ -255,7 +255,7 @@
         "id": "grave",
         "title": "Lowering the note",
         "alt": "Extensions stacked above the whistle",
-        "html": "<p>Right-clicking a placed whistle with another whistle adds an <strong>extension</strong> on top and makes the note lower. Each half block lowers it by one semitone, each full block by two. You can go down <strong>24 semitones</strong>, two octaves, with a twelve-block column. A Wrench removes extensions.</p>"
+        "html": "<p>Right-clicking a placed whistle, or what extends it, with another whistle adds a <strong>Steam Whistle Extension</strong> on top and makes the note lower; the whistle in your hand is not used up. Each half block lowers the note by one semitone. You can stack <strong>six blocks</strong> of extension, twelve semitones: one octave lower. Sneaking, a Wrench click on the top of an extension shortens it by half a block.</p>"
       },
       {
         "id": "octave",

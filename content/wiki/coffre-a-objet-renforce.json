@@ -6,7 +6,7 @@
   "title": "Coffre à objet renforcé (item vault) — Create : guide",
   "description": "Le coffre à objet renforcé de Create : 20 piles par bloc, assemblage jusqu'à 3 × 3 × 9, accès par entonnoirs et chutes, sortie pour comparateur.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "Le <strong>coffre à objet renforcé</strong>, l'« item vault » des joueurs anglophones, est le grand entrepôt de Create. Chaque bloc contient 20 piles, et des blocs voisins s'assemblent en un seul coffre géant, jusqu'à 81 blocs. Il n'a pas d'interface : on ne l'ouvre pas à la main, on le remplit et on le vide avec des entonnoirs, des chutes ou des bras. C'est le cœur du stockage d'une usine automatisée et du réseau de colis.",
@@ -150,7 +150,7 @@
     {
       "id": "conseils",
       "title": "Bien le placer",
-      "html": "<p>Un coffre renforcé s'agrandit après coup : il suffit de poser de nouveaux blocs dans l'alignement pour que le pavé grandisse, jusqu'aux limites de taille. Garde une face libre pour les entonnoirs d'entrée et une autre pour la sortie, et pose un <a href=\"/wiki/detecteur-de-seuil\">détecteur de seuil</a> contre lui si une machine doit s'arrêter quand le stock est plein. Avec un <a href=\"/wiki/emballeur\">emballeur</a> relié au réseau de colis, son contenu devient consultable et commandable depuis un téléscripteur de stock à l'autre bout de la base.</p>"
+      "html": "<p>Un coffre renforcé s'agrandit après coup : il suffit de poser de nouveaux blocs dans l'alignement pour que le pavé grandisse, jusqu'aux limites de taille. Garde une face libre pour les entonnoirs d'entrée et une autre pour la sortie, et pose un <a href=\"/wiki/detecteur-de-seuil\">détecteur de seuil</a> contre lui si une machine doit s'arrêter quand le stock est plein. Avec un <a href=\"/wiki/emballeur\">emballeur</a> relié au réseau de colis, son contenu devient consultable et commandable depuis un téléscripteur de stock placé à l'autre bout de la base.</p>"
     },
     {
       "id": "reseau",
@@ -165,7 +165,9 @@
     "telescripteur-de-stock",
     "detecteur-de-seuil",
     "assembler-un-train",
-    "interface-de-stockage-portable"
+    "interface-de-stockage-portable",
+    "trappe-a-objets",
+    "schematiques"
   ],
   "sources": [
     "Capacité : CLogistics.vaultCapacity = 20 piles par bloc (de 1 à 2048)",

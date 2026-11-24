@@ -1,0 +1,258 @@
+{
+  "slug": "create-lightworks",
+  "name": "Create: Lightworks",
+  "blockId": "lightworks:searchlight",
+  "category": "lightworks",
+  "title": "Create: Lightworks — guide en français",
+  "description": "Create: Lightworks, addon de Create : projecteurs, gyrophares, feux d'alerte, balises, phares et feux arrière qui éclairent aussi trains et véhicules.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create: Lightworks 1.0.1 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "<strong>Create: Lightworks</strong> est un addon de Create consacré à l'éclairage. Ses lampes ne se contentent pas de briller sur place : elles lancent un faisceau qui éclaire vraiment le bloc visé, et elles continuent de le faire une fois montées sur une machine, un train ou un véhicule de Create Aeronautics. Projecteurs, gyrophares, feux d'alerte, balises de piste, phares et feux arrière : huit blocs, tous fabriqués avec des pièces de Create.",
+  "facts": [
+    {
+      "label": "Mod",
+      "value": "Create: Lightworks 1.0.1 (id lightworks)"
+    },
+    {
+      "label": "Auteur",
+      "value": "GoldskinMC, code sous licence MIT"
+    },
+    {
+      "label": "Requiert",
+      "value": "Create 6.0.x, NeoForge 21.1.125 ou plus, Minecraft 1.21.1"
+    },
+    {
+      "label": "Blocs",
+      "value": "8 lumières, plus la lumière de faisceau, un bloc technique invisible"
+    },
+    {
+      "label": "Optionnel",
+      "value": "LambDynamicLights ou Sodium Dynamic Lights (client) ; Sable 1.0.4 ou plus avec Create Aeronautics"
+    },
+    {
+      "label": "Version",
+      "value": "Create: Lightworks 1.0.1 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l’établi",
+    "grid": [
+      [
+        null,
+        "Verre",
+        null
+      ],
+      [
+        "Plaque de laiton",
+        "Tube électronique",
+        "Plaque de laiton"
+      ],
+      [
+        null,
+        "Boitier de laiton",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "minecraft:glass",
+        null
+      ],
+      [
+        "create:brass_sheet",
+        "create:electron_tube",
+        "create:brass_sheet"
+      ],
+      [
+        null,
+        "create:brass_casing",
+        null
+      ]
+    ],
+    "result": "1 projecteur",
+    "resultItem": "lightworks:searchlight"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "role",
+      "title": "Ce que l'addon apporte",
+      "image": "lw_searchlight_faisceau.webp",
+      "alt": "Un projecteur posé au sol éclaire un mur de briques de pierre à l'autre bout de la plaque",
+      "html": "<p>Dans Minecraft, une lampe éclaire autour d'elle, et c'est tout. Lightworks ajoute des lumières <strong>dirigées</strong> : le faisceau part de la lentille, suit l'angle choisi et dépose sa lumière sur le premier bloc rencontré, parfois à plusieurs dizaines de blocs. Les lampes se règlent comme les blocs de Create (boîtes de valeur, clé, presse-papiers, lunettes d'ingénieur). La recette ci-contre donne le <strong>projecteur</strong> (Searchlight) : verre, deux plaques de laiton, un tube électronique et un boitier de laiton.</p>"
+    },
+    {
+      "id": "premier",
+      "title": "Premier projet conseillé",
+      "image": "lw_floodlight_hauteur.webp",
+      "alt": "Un projecteur de zone accroché sous une potence de pierre éclaire largement le sol",
+      "html": "<p>Commence par la cour de ton usine : accroche un <strong>projecteur de zone</strong> (Floodlight) sous une potence, à quatre ou cinq blocs de haut, et braque-le vers le sol. Pose ensuite un <strong>feu d'alerte</strong> (Warning Light) en mode clignotant au-dessus de la porte du hangar, puis un <strong>gyrophare</strong> (Rotating Beacon) sur un rotor au sommet d'une tour : il tourne avec l'arbre, ta roue à eau fait donc aussi office de phare côtier. Ensuite, équipe ton train.</p>"
+    },
+    {
+      "id": "projecteurs",
+      "title": "Projecteurs et tête orientable",
+      "image": "lw_pan_tilt_balayage.webp",
+      "alt": "Une tête orientable fait aller et venir un projecteur",
+      "html": "<p>La page <a href=\"/wiki/lightworks-projecteurs\">projecteurs et tête orientable</a> détaille le <strong>projecteur</strong>, au faisceau étroit qui porte loin, le <strong>projecteur de zone</strong>, au cône large et court, et la <strong>tête orientable</strong> (Pan-Tilt Head), un support cinétique : l'arbre fait pivoter la lampe posée dessus et un signal de redstone la relève. Avec elle, un projecteur devient le phare d'un mirador qui balaie son secteur.</p>"
+    },
+    {
+      "id": "signalisation",
+      "title": "Signalisation",
+      "image": "lw_beacon_gyrophare.webp",
+      "alt": "Un gyrophare sur un moteur créatif projette deux faisceaux opposés",
+      "html": "<p>Trois blocs servent surtout à être vus ; ils sont présentés dans <a href=\"/wiki/lightworks-signalisation\">gyrophare, feu d'alerte et balise</a>. Le <strong>gyrophare</strong> fait tourner deux faisceaux dos à dos. Le <strong>feu d'alerte</strong> est une lampe orange qui suit l'un de six motifs, tout le temps ou la nuit seulement. La <strong>balise de bord</strong> (Edge Light) est un plot bas qui borde une piste d'atterrissage ou un quai, et qu'on franchit sans même le remarquer.</p>"
+    },
+    {
+      "id": "vehicules",
+      "title": "Feux de véhicule",
+      "image": "lw_headlight_marche-avant.webp",
+      "alt": "Un chariot en laiton avec un phare à chaque bout : seul celui de l'avant éclaire",
+      "html": "<p>La page <a href=\"/wiki/lightworks-feux-de-vehicule\">phares et feux arrière</a> traite des deux blocs faits pour rouler ou voler. Le <strong>phare</strong> (Headlight) ne brille que du côté où va le véhicule : places-en un à chaque bout d'un <a href=\"/wiki/assembler-un-train\">train</a> et ils se relaient seuls quand il change de sens. Le <strong>feu arrière et stop</strong> (Tail and Brake Light) luit d'un rouge discret et s'intensifie une seconde à chaque ralentissement.</p>"
+    },
+    {
+      "id": "lumiere",
+      "title": "Comment la lumière arrive au sol",
+      "image": "lw_searchlight_cible.webp",
+      "alt": "Le faisceau du projecteur dessine une tache lumineuse sur le mur",
+      "html": "<p>Une lampe fixe place, là où son faisceau se pose, une <strong>lumière de faisceau</strong> (Beam Light) : un bloc technique invisible, sans collision, impossible à casser ou à ramasser, qui émet la lumière. C'est le serveur qui la pose, donc tout le monde en profite sans rien installer. Pour une lampe qui bouge (sur une machine, un train, un véhicule Sable ou une tête qui tourne), chaque client éclaire lui-même : avec <strong>LambDynamicLights</strong> ou <strong>Sodium Dynamic Lights</strong> si l'un des deux est installé, sinon avec des blocs de lumière ajoutés à son propre monde uniquement.</p>"
+    },
+    {
+      "id": "reglages",
+      "title": "Réglages et shaders",
+      "html": "<p>Le serveur décide de trois choses : la pose des lumières de faisceau, la portée maximale (48 blocs par défaut, réglable de 8 à 64) et l'inversion de la redstone. Chaque joueur choisit de son côté si le faisceau visible est plein, atténué ou masqué, si les lampes teintes colorent ce qu'elles éclairent et s'il veut un halo autour des lentilles. Avec un pack de shaders Iris, les faisceaux sont dessinés après l'image du pack ; l'auteur a testé Complementary Reimagined, BSL, Solas, Bliss et Photon.</p>"
+    },
+    {
+      "id": "modpack",
+      "title": "Dans le prochain modpack Create France",
+      "html": "<p>Lightworks ne fait pas partie du modpack Create France actuel : il est prévu pour la prochaine version, en préparation. Ces pages décrivent la 1.0.1, celle qui y entrera. Les chiffres donnés sont les réglages par défaut du mod ; un serveur peut raccourcir les faisceaux ou inverser la redstone.</p>"
+    }
+  ],
+  "related": [
+    "lightworks-projecteurs",
+    "lightworks-signalisation",
+    "lightworks-feux-de-vehicule",
+    "create-aeronautics",
+    "assembler-un-train",
+    "roulement-mecanique",
+    "lunettes-d-ingenieur",
+    "filtres"
+  ],
+  "sources": [
+    "Create: Lightworks 1.0.1 (createlightworks-neoforge-1.21.1-1.0.1.jar) : code du dépôt public github.com/Goldsk1n/CreateLightworks au tag v1.0.1, recettes du dossier data du jar, scènes Ponder rejouées par notre moteur.",
+    "Mod de GoldskinMC, sous licence MIT : modèles et textures de ses auteurs, rendus à partir du jar ; aucun texte du mod n'est recopié.",
+    "Liste des blocs : registry/LightworksBlocks.java ; portées et angles : content/LightType.java ; réglages : LightworksConfig.java (serverLightBlocks, invertRedstone, maxBeamRange 48, de 8 à 64) et LightworksClientConfig.java (beamVisual, colouredLight, lensGlow, clientLightBlocks, beamsAfterShaderPack).",
+    "Lumière de faisceau : light/BeamLightBlock.java, light/ServerBeamLight.java ; lumière des lampes mobiles : compat/DynamicLights.java (LambDynamicLights, Sodium Dynamic Lights) ; versions requises et packs de shaders testés : README du dépôt."
+  ],
+  "en": {
+    "slugEn": "create-lightworks-guide",
+    "name": "Create: Lightworks",
+    "title": "Create: Lightworks — mod guide",
+    "description": "Create: Lightworks guide: a Create addon with searchlights, rotating beacons, warning lights, edge lights, headlights and tail lights for vehicles.",
+    "intro": "<strong>Create: Lightworks</strong> is a Create addon about lighting. Its lamps do more than glow in place: they cast a beam that genuinely lights the block it reaches, and they keep doing so once they ride a contraption, a train or a Create Aeronautics vehicle. Searchlights, floodlights, rotating beacons, warning lamps, runway markers, headlights and tail lights: eight blocks, all crafted from Create parts.",
+    "facts": [
+      {
+        "label": "Mod",
+        "value": "Create: Lightworks 1.0.1 (id lightworks)"
+      },
+      {
+        "label": "Author",
+        "value": "GoldskinMC, code under the MIT licence"
+      },
+      {
+        "label": "Requires",
+        "value": "Create 6.0.x, NeoForge 21.1.125 or newer, Minecraft 1.21.1"
+      },
+      {
+        "label": "Blocks",
+        "value": "8 lights, plus the Beam Light, an invisible technical block"
+      },
+      {
+        "label": "Optional",
+        "value": "LambDynamicLights or the Sodium Dynamic Lights mod (client); Sable 1.0.4+ with Create Aeronautics"
+      },
+      {
+        "label": "Version",
+        "value": "Create: Lightworks 1.0.1 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Glass",
+          null
+        ],
+        [
+          "Brass Sheet",
+          "Electron Tube",
+          "Brass Sheet"
+        ],
+        [
+          null,
+          "Brass Casing",
+          null
+        ]
+      ],
+      "result": "1 Searchlight"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "role",
+        "title": "What the addon adds",
+        "alt": "A Searchlight on the floor lighting a stone brick wall across the plate",
+        "html": "<p>In vanilla Minecraft a lamp lights the space around it and nothing more. Lightworks adds <strong>directed</strong> light: the beam leaves the lens, follows the angle you set and leaves its light on the first block in the way, sometimes dozens of blocks off. The lamps are set up the Create way, with value boxes, the Wrench, the Clipboard and Engineer's Goggles. The recipe shown here makes the <strong>Searchlight</strong>: Glass, two Brass Sheets, an Electron Tube and Brass Casing.</p>"
+      },
+      {
+        "id": "premier",
+        "title": "A good first project",
+        "alt": "A Floodlight hanging from a stone gantry, lighting a wide patch of floor",
+        "html": "<p>Start with your factory yard: hang a <strong>Floodlight</strong> under a gantry four or five blocks up and point it at the ground. Then put a <strong>Warning Light</strong> on a blinking pattern over the hangar door, and a <strong>Rotating Beacon</strong> on a shaft at the top of a tower: it spins with the shaft, so your water wheel doubles as a lighthouse. After that, kit out your train.</p>"
+      },
+      {
+        "id": "projecteurs",
+        "title": "Searchlights and the Pan-Tilt Head",
+        "alt": "A Pan-Tilt Head swinging a Searchlight to and fro",
+        "html": "<p>The <a href=\"/en/wiki/lightworks-searchlights-and-floodlights\">searchlights and floodlights</a> page covers the <strong>Searchlight</strong>, a narrow beam that reaches far, the <strong>Floodlight</strong>, a short wide cone, and the <strong>Pan-Tilt Head</strong>, a kinetic mount: the shaft swings the lamp on top and a redstone signal raises it. Put the two together and you have a watchtower lamp scanning its sector.</p>"
+      },
+      {
+        "id": "signalisation",
+        "title": "Signalling",
+        "alt": "A Rotating Beacon on a Creative Motor casting two opposite beams",
+        "html": "<p>Three blocks are mostly there to be seen; they are covered on <a href=\"/en/wiki/lightworks-beacons-and-warning-lights\">beacons and warning lights</a>. The <strong>Rotating Beacon</strong> spins two back-to-back beams. The <strong>Warning Light</strong> is an amber lamp running one of six patterns, all day or after dark only. The <strong>Edge Light</strong> is a low marker for lining an airstrip or a station platform, and you cross it without noticing.</p>"
+      },
+      {
+        "id": "vehicules",
+        "title": "Vehicle lights",
+        "alt": "A brass cart with a Headlight at each end: only the front one is on",
+        "html": "<p>The <a href=\"/en/wiki/lightworks-vehicle-lights\">vehicle lights</a> page deals with the two blocks made to drive or fly. A <strong>Headlight</strong> shines only on the side the vehicle is heading: fit one at each end of a <a href=\"/en/wiki/train-assembly\">train</a> and they hand over on their own when it changes direction. The <strong>Tail and Brake Light</strong> gives off a soft red and flares for a second each time the vehicle slows.</p>"
+      },
+      {
+        "id": "lumiere",
+        "title": "How the light reaches the ground",
+        "alt": "The Searchlight's beam making a bright patch on the wall",
+        "html": "<p>A fixed lamp places a <strong>Beam Light</strong> where its beam lands: an invisible technical block with no collision, which cannot be mined or picked up and simply emits light. The server places it, so every player benefits with nothing to install. For a lamp that moves (on a contraption, a train, a Sable vehicle or a turning head), each client does the lighting itself: with <strong>LambDynamicLights</strong> or the <strong>Sodium Dynamic Lights</strong> mod if present, otherwise with light blocks added to that player's own copy of the world.</p>"
+      },
+      {
+        "id": "reglages",
+        "title": "Settings and shaders",
+        "html": "<p>The server controls three things: whether Beam Lights are placed, the longest beam (48 blocks by default, 8 to 64) and inverted redstone. Each player decides whether the visible beam is full, faint or hidden, whether dyed lamps tint what they light, and whether lenses get a soft halo. Under an Iris shader pack the beams are drawn after the pack's own picture; the author tested Complementary Reimagined, BSL, Solas, Bliss and Photon.</p>"
+      },
+      {
+        "id": "modpack",
+        "title": "In the next Create France modpack",
+        "html": "<p>Lightworks is not part of the current Create France modpack: it is planned for the next release, still in preparation. These pages describe 1.0.1, the version going into it. The numbers given are the mod's default settings; a server can shorten the beams or invert the redstone.</p>"
+      }
+    ],
+    "sources": [
+      "Create: Lightworks 1.0.1 (createlightworks-neoforge-1.21.1-1.0.1.jar): code from the public repository github.com/Goldsk1n/CreateLightworks at tag v1.0.1, recipes from the jar's data folder, Ponder scenes replayed by our engine.",
+      "Mod by GoldskinMC, MIT licence: models and textures by its authors, rendered from the jar; no text from the mod is copied.",
+      "Block list: registry/LightworksBlocks.java; ranges and angles: content/LightType.java; settings: LightworksConfig.java (serverLightBlocks, invertRedstone, maxBeamRange 48, 8 to 64) and LightworksClientConfig.java (beamVisual, colouredLight, lensGlow, clientLightBlocks, beamsAfterShaderPack).",
+      "Beam Light: light/BeamLightBlock.java, light/ServerBeamLight.java; moving lamps: compat/DynamicLights.java (LambDynamicLights, Sodium Dynamic Lights); required versions and tested shader packs: the repository README."
+    ]
+  }
+}

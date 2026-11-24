@@ -6,7 +6,7 @@
   "title": "Déployeur — Create : guide en français",
   "description": "Le déployeur de Create : la main mécanique qui pose, utilise, récolte et frappe à votre place, portée de 2 blocs, modes, filtre, redstone et contraptions.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "Le <strong>déployeur</strong> est une main mécanique qui imite un joueur. Il tient un objet et s'en sert devant lui : il <strong>pose des blocs</strong>, <strong>utilise des objets</strong>, actionne des leviers, récolte, et peut même frapper des créatures. Il sert aussi de poste d'assemblage : posé au-dessus d'un tapis, il applique un objet sur chaque objet qui passe, par exemple des planches sur un rotor pour fabriquer des roues dentées.",
@@ -90,19 +90,49 @@
       "id": "deployer_modes",
       "name": "Déployeur : clic droit ou clic gauche",
       "description": "Avec une houe en main, le déployeur laboure d'abord l'herbe devant lui en imitant un clic droit, puis, réglé à la clé en clic gauche, casse le bloc.",
-      "duration": "PT20S"
+      "duration": "PT20S",
+      "chapters": [
+        {
+          "t": 3.21,
+          "section": "modes"
+        },
+        {
+          "t": 7.75,
+          "section": "clic-gauche"
+        }
+      ]
     },
     {
       "id": "deployer_processing",
       "name": "Déployeur : traiter les objets sur un dépôt ou un tapis",
       "description": "Un déployeur au-dessus d'un dépôt puis d'un tapis roulant applique l'objet qu'il tient sur chaque objet qui passe sous lui.",
-      "duration": "PT20S"
+      "duration": "PT20S",
+      "chapters": [
+        {
+          "t": 3.08,
+          "section": "traitement"
+        },
+        {
+          "t": 11.94,
+          "section": "traitement-tapis"
+        }
+      ]
     },
     {
       "id": "deployer_redstone",
       "name": "Déployeur : l'arrêter et le déclencher à la redstone",
       "description": "Un levier bloque le déployeur ; une brève coupure du signal lui fait faire un seul cycle.",
-      "duration": "PT18S"
+      "duration": "PT18S",
+      "chapters": [
+        {
+          "t": 5.15,
+          "section": "redstone"
+        },
+        {
+          "t": 12.6,
+          "section": "impulsion"
+        }
+      ]
     },
     {
       "id": "deployer_contraption",
@@ -140,7 +170,12 @@
       "image": "deployer_modes_clic-gauche.webp",
       "alt": "Déployeur face à un bloc de terre, réglé pour frapper comme un clic gauche",
       "video": "deployer_modes",
-      "html": "<p>Par défaut, le déployeur imite un <strong>clic droit</strong> : il utilise et pose. Un coup de <strong>clé</strong> le passe en <strong>clic gauche</strong> : il frappe et casse, avec l'outil qu'il tient. Une pioche en main, il mine ; une épée en main, il attaque les créatures devant lui. Pratique pour casser des blocs que la perceuse ne doit pas toucher, ou pour une ferme à monstres. Dans l'animation, il tient une houe en or : en clic droit, il laboure l'herbe ; passé en clic gauche, il frappe la terre jusqu'à la casser.</p>"
+      "html": "<p>Par défaut, le déployeur imite un <strong>clic droit</strong> : il utilise et pose. Dans l'animation, il tient une houe en or et laboure l'herbe devant lui, comme le ferait un joueur.</p>"
+    },
+    {
+      "id": "clic-gauche",
+      "title": "Passer en clic gauche",
+      "html": "<p>Un coup de <strong>clé</strong> le passe en <strong>clic gauche</strong> : il frappe et casse, avec l'outil qu'il tient. Une pioche en main, il mine ; une épée en main, il attaque les créatures devant lui. Pratique pour casser des blocs que la perceuse ne doit pas toucher, ou pour une ferme à monstres. Dans l'animation, la houe frappe la terre jusqu'à la casser.</p>"
     },
     {
       "id": "traitement",
@@ -148,14 +183,24 @@
       "image": "deployer_processing_tapis.webp",
       "alt": "Déployeur au-dessus d'un tapis roulant, des objets attendent leur tour sur le tapis",
       "video": "deployer_processing",
-      "html": "<p>Posé deux blocs au-dessus d'un <a href=\"/wiki/depot\">dépôt</a> ou d'un <a href=\"/wiki/tapis-roulant\">tapis roulant</a>, le déployeur <strong>applique l'objet qu'il tient</strong> sur ce qui passe dessous : un rotor plus des planches donne une roue dentée, une hache retire la cire ou l'oxydation du cuivre, un alliage d'andésite sur une bûche écorcée donne un boîtier d'andésite. Sur un tapis, chaque objet est retenu le temps du cycle, puis repart. C'est aussi la machine clé de l'assemblage séquencé. Dans l’animation, il tient une feuille de <a href=\"/wiki/papier-de-verre\">papier de verre</a> et polit du quartz rose, sur le dépôt puis au passage sur le tapis.</p>"
+      "html": "<p>Posé deux blocs au-dessus d'un <a href=\"/wiki/depot\">dépôt</a>, le déployeur <strong>applique l'objet qu'il tient</strong> sur ce qu'on y dépose : un rotor plus des planches donne une roue dentée, une hache retire la cire ou l'oxydation du cuivre, un alliage d'andésite sur une bûche écorcée donne un boîtier d'andésite. Dans l’animation, il tient une feuille de <a href=\"/wiki/papier-de-verre\">papier de verre</a> et polit du quartz rose posé sur le dépôt.</p>"
+    },
+    {
+      "id": "traitement-tapis",
+      "title": "Sur un tapis roulant",
+      "html": "<p>Au-dessus d'un <a href=\"/wiki/tapis-roulant\">tapis roulant</a>, c'est automatique : chaque objet qui passe est <strong>retenu</strong> sous la main le temps du cycle, traité, puis repart. C'est aussi la machine clé de l'assemblage séquencé.</p>"
     },
     {
       "id": "redstone",
       "title": "Le piloter à la redstone",
       "image": "deployer_redstone_redstone.webp",
       "alt": "Déployeur relié à un levier qui l'empêche de s'activer",
-      "html": "<p>Un signal de <strong>redstone</strong> arrête le déployeur ; il termine d'abord le cycle en cours. Une <strong>impulsion négative</strong>, c'est-à-dire un signal coupé un instant, lui fait donc faire <strong>exactement un cycle</strong>. C'est la façon la plus simple de poser un bloc sur commande, par exemple avec un bouton relié à un inverseur de signal.</p>"
+      "html": "<p>Un signal de <strong>redstone</strong> arrête le déployeur ; il termine d'abord le cycle en cours, sans jamais s'interrompre main tendue.</p>"
+    },
+    {
+      "id": "impulsion",
+      "title": "Un cycle sur commande",
+      "html": "<p>Une <strong>impulsion négative</strong>, c'est-à-dire un signal coupé un instant, lui fait donc faire <strong>exactement un cycle</strong>. C'est la façon la plus simple de poser un bloc sur commande, par exemple avec un bouton relié à un inverseur de signal.</p>"
     },
     {
       "id": "contraption",
@@ -184,7 +229,8 @@
     "chargement-des-canons",
     "detonateurs-et-traceurs",
     "fabrication-des-canons",
-    "aeronautics-roulement-gyroscopique"
+    "aeronautics-roulement-gyroscopique",
+    "engrais-pour-arbres"
   ],
   "sources": [
     "Stress : AllBlocks.java, DEPLOYER, CStress.setImpact(4.0)",
@@ -301,19 +347,34 @@
         "id": "modes",
         "title": "Right-click or left-click",
         "alt": "A Deployer facing a dirt block, set to mimic a left-click",
-        "html": "<p>By default, the Deployer mimics a <strong>right-click</strong>: it uses and places. One click with the <strong>Wrench</strong> switches it to <strong>left-click</strong>: it punches and breaks, with whatever tool it holds. With a pickaxe it mines; with a sword it attacks mobs in front of it. Handy for breaking blocks a drill should not touch, or for a mob farm. In the animation it holds a golden hoe: in right-click mode it tills the grass; switched to left-click, it strikes the dirt until it breaks.</p>"
+        "html": "<p>By default, the Deployer mimics a <strong>right-click</strong>: it uses and places. In the animation it holds a golden hoe and tills the grass in front of it, as a player would.</p>"
+      },
+      {
+        "id": "clic-gauche",
+        "title": "Switching to left-click",
+        "html": "<p>One click with the <strong>Wrench</strong> switches it to <strong>left-click</strong>: it punches and breaks, with whatever tool it holds. With a pickaxe it mines; with a sword it attacks mobs in front of it. Handy for breaking blocks a drill should not touch, or for a mob farm. In the animation, the hoe strikes the dirt until it breaks.</p>"
       },
       {
         "id": "traitement",
         "title": "Processing items on a depot or a belt",
         "alt": "A Deployer above a Mechanical Belt, with items waiting their turn on the belt",
-        "html": "<p>Placed two blocks above a <a href=\"/en/wiki/depot\">Depot</a> or a <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a>, the Deployer <strong>applies its held item</strong> to whatever passes underneath: a shaft plus planks gives a cogwheel, an axe strips wax or oxidation off copper, Andesite Alloy on a stripped log gives Andesite Casing. On a belt, each item is held for the length of the cycle and then moves on. It is also the key machine of sequenced assembly. In the animation it holds a sheet of <a href=\"/en/wiki/sand-paper\">Sand Paper</a> and polishes rose quartz, first on the Depot and then on the belt as it goes by.</p>"
+        "html": "<p>Placed two blocks above a <a href=\"/en/wiki/depot\">Depot</a>, the Deployer <strong>applies its held item</strong> to whatever is put there: a shaft plus planks gives a cogwheel, an axe strips wax or oxidation off copper, Andesite Alloy on a stripped log gives Andesite Casing. In the animation it holds a sheet of <a href=\"/en/wiki/sand-paper\">Sand Paper</a> and polishes rose quartz placed on the Depot.</p>"
+      },
+      {
+        "id": "traitement-tapis",
+        "title": "On a belt",
+        "html": "<p>Above a <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a> it is automatic: each item passing by is <strong>held</strong> under the hand for the length of the cycle, processed, then moves on. It is also the key machine of sequenced assembly.</p>"
       },
       {
         "id": "redstone",
         "title": "Controlling it with redstone",
         "alt": "A Deployer linked to a lever that keeps it from activating",
-        "html": "<p>A <strong>redstone</strong> signal stops the Deployer, after it finishes the cycle in progress. A <strong>negative pulse</strong>, meaning a signal cut for an instant, therefore makes it do <strong>exactly one cycle</strong>. It is the simplest way to place a block on command, for example with a button wired through a signal inverter.</p>"
+        "html": "<p>A <strong>redstone</strong> signal stops the Deployer, after it finishes the cycle in progress: it never freezes with its hand out.</p>"
+      },
+      {
+        "id": "impulsion",
+        "title": "One cycle on command",
+        "html": "<p>A <strong>negative pulse</strong>, meaning a signal cut for an instant, therefore makes it do <strong>exactly one cycle</strong>. It is the simplest way to place a block on command, for example with a button wired through a signal inverter.</p>"
       },
       {
         "id": "contraption",

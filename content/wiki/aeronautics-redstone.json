@@ -1,0 +1,466 @@
+{
+  "slug": "aeronautics-redstone",
+  "name": "Redstone de Simulated",
+  "blockId": "simulated:modulating_linked_receiver",
+  "category": "aeronautics",
+  "title": "Redstone de Simulated — Create Aeronautics, guide",
+  "description": "Récepteurs liés modulé et directionnel, accumulateur, inducteur, aimant et clavier lié : la redstone de Simulated pour piloter un navire.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Aeronautics 1.3.3",
+  "mcVersion": "1.21.1",
+  "intro": "Simulated ajoute des blocs de redstone pensés pour les engins en mouvement. Deux récepteurs écoutent les <a href=\"/wiki/liaison-de-redstone\">liaisons de redstone</a> de Create autrement : le <strong>récepteur lié modulé</strong> (Modulating Linked Receiver) mesure la distance, le <strong>récepteur lié directionnel</strong> (Directional Linked Receiver) l'angle. L'<strong>accumulateur</strong> et l'<strong>inducteur</strong> font évoluer un signal dans le temps, l'<strong>aimant de redstone</strong> attire ou repousse, et le <strong>clavier lié</strong> pilote tout au clavier.",
+  "facts": [
+    {
+      "label": "Récepteur modulé",
+      "value": "Signal selon la distance : plein en deçà du minimum, nul au-delà du maximum"
+    },
+    {
+      "label": "Récepteur directionnel",
+      "value": "Signal selon l'angle ; rien derrière lui"
+    },
+    {
+      "label": "Accumulateur",
+      "value": "Monte par l’arrière, descend par les côtés"
+    },
+    {
+      "label": "Inducteur",
+      "value": "Rejoint le signal d'entrée progressivement"
+    },
+    {
+      "label": "Délais",
+      "value": "Jusqu'à une heure, au panneau de valeur"
+    },
+    {
+      "label": "Aimant",
+      "value": "Pôles opposés attirés ; force 1 000 (réglage physique)"
+    },
+    {
+      "label": "Clavier lié",
+      "value": "Touches associées à des fréquences de liaison"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Quartz rose poli",
+        null
+      ],
+      [
+        "Poudre de redstone",
+        "Plaque de laiton",
+        "Torche de redstone"
+      ],
+      [
+        "Roche",
+        "Roche",
+        "Roche"
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "create:polished_rose_quartz",
+        null
+      ],
+      [
+        "minecraft:redstone",
+        "create:brass_sheet",
+        "minecraft:redstone_torch"
+      ],
+      [
+        "minecraft:stone",
+        "minecraft:stone",
+        "minecraft:stone"
+      ]
+    ],
+    "result": "1 accumulateur de redstone",
+    "resultItem": "simulated:redstone_accumulator"
+  },
+  "videos": [
+    {
+      "id": "sim_mod_recv",
+      "name": "Le récepteur lié modulé",
+      "description": "Le signal reçu dépend de la distance entre la liaison et le récepteur.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 1.15,
+          "section": "module"
+        },
+        {
+          "t": 3.14,
+          "section": "portees"
+        },
+        {
+          "t": 4.81,
+          "section": "portees"
+        },
+        {
+          "t": 7.2,
+          "section": "portees"
+        },
+        {
+          "t": 9.88,
+          "section": "portees"
+        },
+        {
+          "t": 12.99,
+          "section": "portees"
+        },
+        {
+          "t": 20.53,
+          "section": "portees"
+        }
+      ]
+    },
+    {
+      "id": "sim_dir_recv",
+      "name": "Le récepteur lié directionnel",
+      "description": "Le signal reçu dépend de l'angle sous lequel le récepteur voit la liaison.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 1.24,
+          "section": "directionnel"
+        },
+        {
+          "t": 3.26,
+          "section": "directionnel"
+        },
+        {
+          "t": 8.7,
+          "section": "angle"
+        },
+        {
+          "t": 12.43,
+          "section": "angle"
+        },
+        {
+          "t": 20.42,
+          "section": "angle"
+        }
+      ]
+    },
+    {
+      "id": "sim_accu",
+      "name": "L'accumulateur de redstone",
+      "description": "Le signal stocké monte et descend selon le côté alimenté.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 2.67,
+          "section": "accumulateur"
+        },
+        {
+          "t": 7.06,
+          "section": "accumulateur"
+        },
+        {
+          "t": 11.14,
+          "section": "accumulateur"
+        }
+      ]
+    },
+    {
+      "id": "sim_inductor",
+      "name": "L'inducteur de redstone",
+      "description": "La sortie rejoint lentement l'entrée.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 8.54,
+          "section": "inducteur"
+        }
+      ]
+    },
+    {
+      "id": "sim_magnet",
+      "name": "L'aimant de redstone",
+      "description": "Deux chariots s'attirent ou se repoussent selon leurs pôles.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 2.16,
+          "section": "aimant"
+        },
+        {
+          "t": 6.58,
+          "section": "poles"
+        },
+        {
+          "t": 12.13,
+          "section": "poles"
+        },
+        {
+          "t": 19.5,
+          "section": "poles"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "module",
+      "title": "Le récepteur lié modulé",
+      "image": "sim_mod_recv_e1.webp",
+      "alt": "Un récepteur lié modulé et plusieurs liaisons de redstone",
+      "video": "sim_mod_recv",
+      "html": "<p>Le récepteur modulé reçoit les liaisons de redstone réglées sur ses fréquences (les deux mêmes objets), mais sa sortie dépend de la distance. Clic droit pour ouvrir son interface.</p>"
+    },
+    {
+      "id": "portees",
+      "title": "Portée minimale et maximale",
+      "image": "sim_mod_recv_e4.webp",
+      "alt": "Les deux cercles de portée du récepteur",
+      "html": "<p>On règle une portée minimale et une maximale. En deçà du minimum, le signal est plein ; au-delà du maximum, il est nul ; entre les deux, il décroît avec la distance. Idéal pour savoir à quelle distance se trouve un quai.</p>"
+    },
+    {
+      "id": "directionnel",
+      "title": "Le récepteur lié directionnel",
+      "image": "sim_dir_recv_e1.webp",
+      "alt": "Un récepteur lié directionnel face à une liaison",
+      "video": "sim_dir_recv",
+      "html": "<p>Le récepteur directionnel reçoit pleinement une liaison placée droit devant lui ; plus elle est de biais, plus le signal faiblit.</p>"
+    },
+    {
+      "id": "angle",
+      "title": "Viser une balise",
+      "image": "sim_dir_recv_e3.webp",
+      "alt": "Le signal qui baisse quand la liaison passe sur le côté",
+      "html": "<p>Une liaison derrière lui n'est pas reçue. Deux récepteurs tournés vers la gauche et la droite donnent de quoi orienter un navire automatiquement vers une balise.</p>"
+    },
+    {
+      "id": "accumulateur",
+      "title": "L'accumulateur de redstone",
+      "image": "sim_accu_e1.webp",
+      "alt": "Un accumulateur de redstone et des tubes nixie qui affichent sa sortie",
+      "video": "sim_accu",
+      "html": "<p>L'accumulateur garde un signal analogique en mémoire. Alimenté par l'arrière, il monte ; par les côtés, il descend. Le panneau de valeur règle la vitesse de variation, avec des délais allant jusqu'à une heure : parfait pour un régulateur de gaz.</p>"
+    },
+    {
+      "id": "inducteur",
+      "title": "L'inducteur de redstone",
+      "image": "sim_inductor_e1.webp",
+      "alt": "Un inducteur de redstone dont la sortie suit l'entrée",
+      "video": "sim_inductor",
+      "html": "<p>L'inducteur suit son entrée, mais progressivement : sa sortie glisse vers le signal reçu au rythme réglé. Il adoucit les commandes brusques, par exemple pour ne pas mettre une hélice à fond d'un coup.</p>"
+    },
+    {
+      "id": "aimant",
+      "title": "L'aimant de redstone",
+      "image": "sim_magnet_e1.webp",
+      "alt": "Deux chariots portant des aimants de redstone",
+      "video": "sim_magnet",
+      "html": "<p>Alimentés, les aimants de redstone attirent ou repoussent d'autres aimants, même d'une contraption à l'autre.</p>"
+    },
+    {
+      "id": "poles",
+      "title": "Les pôles",
+      "image": "sim_magnet_e3.webp",
+      "alt": "Deux aimants qui s'alignent en s'attirant",
+      "html": "<p>Des pôles opposés s'attirent, des pôles identiques se repoussent, et deux aimants qui s'attirent cherchent à s'aligner : de quoi guider un amarrage en douceur. La force par défaut est de 1 000.</p>"
+    },
+    {
+      "id": "faq",
+      "title": "Questions fréquentes",
+      "html": "<p><strong>Faut-il des liaisons spéciales ?</strong> Non, les récepteurs écoutent les liaisons de redstone ordinaires de Create, avec les mêmes fréquences. <strong>L'accumulateur garde-t-il sa valeur si on le casse ?</strong> Non, il repart de zéro une fois reposé. <strong>Les aimants marchent-ils entre deux navires ?</strong> Oui, c'est leur usage principal : rapprocher ou écarter deux contraptions.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Un pilote automatique simple",
+      "html": "<p>Une balise au sol (une liaison de redstone allumée), deux récepteurs directionnels à l'avant du navire, l'un tourné à gauche, l'autre à droite : chacun commande l'hélice du côté opposé. Le navire tourne vers la balise jusqu'à ce que les deux signaux s'équilibrent. Ajoutez un récepteur modulé pour ralentir à l'approche.</p>"
+    },
+    {
+      "id": "recettes",
+      "title": "Fabrication",
+      "html": "<p>Les deux récepteurs se font avec un émetteur de liaison de Create, une plaque (fer pour le directionnel, or pour le modulé) et un boîtier en laiton. L'accumulateur et l'inducteur partagent une base de trois roches, de la redstone, une torche et une plaque de laiton, coiffée de quartz rose poli ou d'une plaque de cuivre. L'aimant demande de la redstone, une plaque de cuivre et un bloc de fer industriel.</p>"
+    },
+    {
+      "id": "clavier",
+      "title": "Le clavier lié",
+      "image": "gal_redstone_redstone.webp",
+      "alt": "Les récepteurs liés, le clavier lié, l’accumulateur, l’inducteur et l’aimant",
+      "html": "<p>Le <strong>clavier lié</strong> (Linked Typewriter) associe des touches du clavier à des fréquences de liaison. Activé, il prend les commandes de déplacement et les touches choisies ; une télécommande de Create peut lui transmettre ses fréquences, et un mode d'association lie une touche d'un simple appui.</p>"
+    }
+  ],
+  "related": [
+    "create-aeronautics",
+    "aeronautics-capteurs",
+    "aeronautics-pilotage",
+    "liaison-de-redstone",
+    "tube-nixie"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Aeronautics 1.3.3 (dépôt Creators-of-Aeronautics/Simulated-Project, commit 900122e, code sous licence MIT, ressources « tous droits réservés », The Simulated Team / The Creators of Aeronautics), identiques au jar du modpack (instance de test 1.3.3)",
+    "Réglages serveur par défaut de Simulated 1.3.3 (SimBlocks, SimPhysics, SimItems) et coûts en stress (SimStress, AeroStress, OffroadStress)",
+    "Recettes : data/simulated/recipe/redstone_accumulator.json, redstone_inductor.json, redstone_magnet.json, modulating_linked_receiver.json, directional_linked_receiver.json, mechanical_crafting/linked_typewriter.json",
+    "Vidéos : scènes Ponder de Create Aeronautics / Simulated (modulating_receiver, directional_receiver, redstone_accumulator, redstone_inductor, redstone_magnet) rejouées par notre moteur ; modèles et textures du mod (© The Simulated Team / The Creators of Aeronautics)",
+    "Images : blocs du mod posés sur la plaque et rendus par notre moteur (© The Simulated Team / The Creators of Aeronautics)"
+  ],
+  "en": {
+    "slugEn": "aeronautics-redstone",
+    "name": "Simulated redstone",
+    "title": "Simulated Redstone — Create Aeronautics guide",
+    "description": "Modulating and Directional Linked Receivers, Redstone Accumulator, Inductor, Magnet and Linked Typewriter: Simulated's redstone to fly a ship. Videos.",
+    "intro": "Simulated adds redstone blocks designed for moving machines. Two receivers listen to Create <a href=\"/en/wiki/redstone-link\">Redstone Links</a> differently: the <strong>Modulating Linked Receiver</strong> measures distance, the <strong>Directional Linked Receiver</strong> measures the angle. The <strong>Redstone Accumulator</strong> and <strong>Redstone Inductor</strong> change a signal over time, the <strong>Redstone Magnet</strong> attracts or repels, and the <strong>Linked Typewriter</strong> puts everything on the keyboard.",
+    "facts": [
+      {
+        "label": "Modulating receiver",
+        "value": "Signal by distance: full inside the minimum, none beyond the maximum"
+      },
+      {
+        "label": "Directional receiver",
+        "value": "Signal by angle; nothing behind it"
+      },
+      {
+        "label": "Accumulator",
+        "value": "Rises from the back, falls from the sides"
+      },
+      {
+        "label": "Inductor",
+        "value": "Gradually catches up with its input"
+      },
+      {
+        "label": "Delays",
+        "value": "Up to an hour, on the value panel"
+      },
+      {
+        "label": "Magnet",
+        "value": "Opposite poles attract; strength 1,000 (physics setting)"
+      },
+      {
+        "label": "Linked Typewriter",
+        "value": "Keys bound to link frequencies"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Polished Rose Quartz",
+          null
+        ],
+        [
+          "Redstone Dust",
+          "Brass Sheet",
+          "Redstone Torch"
+        ],
+        [
+          "Stone",
+          "Stone",
+          "Stone"
+        ]
+      ],
+      "result": "1 Redstone Accumulator"
+    },
+    "videos": [
+      {
+        "id": "sim_mod_recv",
+        "name": "The Modulating Linked Receiver",
+        "description": "The received signal depends on the distance between link and receiver."
+      },
+      {
+        "id": "sim_dir_recv",
+        "name": "The Directional Linked Receiver",
+        "description": "The received signal depends on the angle at which the receiver sees the link."
+      },
+      {
+        "id": "sim_accu",
+        "name": "The Redstone Accumulator",
+        "description": "The stored signal goes up and down depending on the powered side."
+      },
+      {
+        "id": "sim_inductor",
+        "name": "The Redstone Inductor",
+        "description": "The output slowly catches up with the input."
+      },
+      {
+        "id": "sim_magnet",
+        "name": "The Redstone Magnet",
+        "description": "Two carts attract or repel each other depending on their poles."
+      }
+    ],
+    "sections": [
+      {
+        "id": "module",
+        "title": "The Modulating Linked Receiver",
+        "alt": "A Modulating Linked Receiver and several Redstone Links",
+        "html": "<p>The modulating receiver picks up Redstone Links set to its frequencies (the same two items), but its output depends on distance. Right-click to open its interface.</p>"
+      },
+      {
+        "id": "portees",
+        "title": "Minimum and maximum range",
+        "alt": "The receiver's two range circles",
+        "html": "<p>You set a minimum and a maximum range. Inside the minimum the signal is full; beyond the maximum it is zero; in between it fades with distance. Ideal to know how far away a quay is.</p>"
+      },
+      {
+        "id": "directionnel",
+        "title": "The Directional Linked Receiver",
+        "alt": "A Directional Linked Receiver facing a link",
+        "html": "<p>The directional receiver gets a link straight ahead at full strength; the further off to the side it is, the weaker the signal.</p>"
+      },
+      {
+        "id": "angle",
+        "title": "Homing on a beacon",
+        "alt": "The signal dropping as the link moves sideways",
+        "html": "<p>A link behind it is not received. Two receivers turned left and right give you what you need to steer a ship towards a beacon automatically.</p>"
+      },
+      {
+        "id": "accumulateur",
+        "title": "The Redstone Accumulator",
+        "alt": "A Redstone Accumulator and nixie tubes showing its output",
+        "html": "<p>The accumulator keeps an analog signal in memory. Powered from the back it rises; from the sides it falls. The value panel sets how fast it changes, with delays up to an hour: perfect for a throttle governor.</p>"
+      },
+      {
+        "id": "inducteur",
+        "title": "The Redstone Inductor",
+        "alt": "A Redstone Inductor whose output follows its input",
+        "html": "<p>The inductor follows its input, but gradually: its output slides towards the received signal at the set pace. It smooths out abrupt commands, for instance so a propeller does not jump to full power.</p>"
+      },
+      {
+        "id": "aimant",
+        "title": "The Redstone Magnet",
+        "alt": "Two carts carrying Redstone Magnets",
+        "html": "<p>When powered, Redstone Magnets attract or repel other magnets, even from one contraption to another.</p>"
+      },
+      {
+        "id": "poles",
+        "title": "Poles",
+        "alt": "Two magnets lining up as they attract",
+        "html": "<p>Opposite poles attract, matching poles repel, and two attracting magnets try to line up: a gentle way to guide a docking. The default strength is 1,000.</p>"
+      },
+      {
+        "id": "faq",
+        "title": "Frequently asked questions",
+        "html": "<p><strong>Do I need special links?</strong> No, the receivers listen to ordinary Create Redstone Links, with the same frequencies. <strong>Does the accumulator keep its value when broken?</strong> No, it starts from zero once placed again. <strong>Do magnets work between two ships?</strong> Yes, that is their main use: pulling two contraptions together or pushing them apart.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "A simple autopilot",
+        "html": "<p>A beacon on the ground (a powered Redstone Link), two directional receivers at the front of the ship, one turned left, the other right: each drives the propeller on the opposite side. The ship turns towards the beacon until both signals balance. Add a modulating receiver to slow down on approach.</p>"
+      },
+      {
+        "id": "recettes",
+        "title": "Crafting",
+        "html": "<p>Both receivers are made from a Create link transmitter, a sheet (iron for the directional one, gold for the modulating one) and a brass casing. The accumulator and the inductor share a base of three stones, redstone, a torch and a brass sheet, topped with polished rose quartz or a copper sheet. The magnet takes redstone, a copper sheet and a Block of Industrial Iron. The Linked Typewriter is made on a Mechanical Crafter with buttons, gold sheets, a precision mechanism and a transmitter.</p>"
+      },
+      {
+        "id": "clavier",
+        "title": "The Linked Typewriter",
+        "alt": "The linked receivers, the Linked Typewriter, the accumulator, inductor and magnet",
+        "html": "<p>The <strong>Linked Typewriter</strong> binds keyboard keys to link frequencies. Switched on, it takes over movement controls and the chosen keys; a Create Linked Controller can hand it its frequencies, and a bind mode ties a key with a single press.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Aeronautics 1.3.3 (Creators-of-Aeronautics/Simulated-Project repository, commit 900122e, code under the MIT licence, assets « all rights reserved », The Simulated Team / The Creators of Aeronautics), identical to the modpack jar (1.3.3 test instance)",
+      "Simulated 1.3.3 default server settings (SimBlocks, SimPhysics, SimItems) and stress costs (SimStress, AeroStress, OffroadStress)",
+      "Recipes: data/simulated/recipe/redstone_accumulator.json, redstone_inductor.json, redstone_magnet.json, modulating_linked_receiver.json, directional_linked_receiver.json, mechanical_crafting/linked_typewriter.json",
+      "Videos: Create Aeronautics / Simulated Ponder scenes (modulating_receiver, directional_receiver, redstone_accumulator, redstone_inductor, redstone_magnet) replayed by our engine; mod models and textures (© The Simulated Team / The Creators of Aeronautics)",
+      "Images: mod blocks placed on the plate and rendered by our engine (© The Simulated Team / The Creators of Aeronautics)"
+    ]
+  }
+}

@@ -235,6 +235,84 @@
     "link_freq",
     "link_modes"
   ],
+  "loconautics-assembler-une-locomotive": [
+    "loco_casing_bogeys",
+    "loco_casing_shaft",
+    "loco_train_assembly"
+  ],
+  "loconautics-chaudiere": [
+    "loco_boiler_assembly",
+    "loco_boiler_firebox",
+    "loco_boiler_ratio",
+    "loco_boiler_smokestack",
+    "loco_boiler_water"
+  ],
+  "loconautics-chaudiere-pression": [
+    "loco_boiler_failure",
+    "loco_boiler_gauge",
+    "loco_boiler_pressure",
+    "loco_boiler_takeoff"
+  ],
+  "loconautics-controleur-analogique": [
+    "loco_analog_frequency",
+    "loco_analog_intro",
+    "loco_train_controls"
+  ],
+  "loconautics-essieu-moteur": [
+    "loco_train_frequency",
+    "loco_train_front",
+    "loco_train_wheels"
+  ],
+  "loconautics-moteur-a-combustion": [
+    "loco_engine_panel",
+    "loco_engine_pipes",
+    "loco_engine_redstone",
+    "loco_engine_single",
+    "loco_engine_tandem"
+  ],
+  "loconautics-panneaux-de-commande": [
+    "loco_dashboard_desk",
+    "loco_panel_controls",
+    "loco_panel_glass",
+    "loco_panel_gui",
+    "loco_panel_look",
+    "loco_panel_parts"
+  ],
+  "loconautics-plaque-tournante": [
+    "loco_turntable_assembly",
+    "loco_turntable_instructions",
+    "loco_turntable_schedule",
+    "loco_turntable_trigger"
+  ],
+  "loconautics-plaque-tournante-depot": [
+    "loco_turntable_diagonal",
+    "loco_turntable_maneuver",
+    "loco_turntable_parking",
+    "loco_turntable_signals"
+  ],
+  "loconautics-raccord-de-tuyau": [
+    "loco_hose_connector",
+    "loco_hose_connectorlink",
+    "loco_hose_connectorspeed",
+    "loco_hose_ropeconnector",
+    "loco_hose_ropeconnector_run"
+  ],
+  "loconautics-transmission": [
+    "loco_train_drivetrain",
+    "loco_transmission_direction",
+    "loco_transmission_frequency",
+    "loco_transmission_panel",
+    "loco_transmission_single"
+  ],
+  "loconautics-tuyau-et-treuil": [
+    "loco_hose_boiler",
+    "loco_hose_connect",
+    "loco_hose_fluid",
+    "loco_hose_freespin",
+    "loco_hose_nozzle",
+    "loco_hose_socket",
+    "loco_hose_winch"
+  ],
   "manivelle": [
     "hand_crank",
     "valve_handle"

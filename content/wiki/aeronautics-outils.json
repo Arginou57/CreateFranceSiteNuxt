@@ -1,0 +1,404 @@
+{
+  "slug": "aeronautics-outils",
+  "name": "Outils et objets",
+  "blockId": "simulated:honey_glue",
+  "category": "aeronautics",
+  "title": "Outils et objets — Create Aeronautics, guide",
+  "description": "Colle au miel, colle fusionnée, canon à patate monté, lunettes d'aviateur, schéma de machine, bâton de physique : les outils de Create Aeronautics. Vidéos.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Aeronautics 1.3.3",
+  "mcVersion": "1.21.1",
+  "intro": "Construire un navire demande quelques outils. La <strong>colle au miel</strong> (Honey Glue) délimite ce qui sera assemblé ; la <strong>colle fusionnée</strong> (Merging Glue) soude deux contraptions ; les <strong>lunettes d'aviateur</strong> (Aviator's Goggles) et le <strong>schéma de machine</strong> (Contraption Diagram) affichent ce qui se passe. Pour se défendre, une arme se pose sur le pont : <strong>canon à patate monté</strong> (Mounted Potato Cannon).",
+  "facts": [
+    {
+      "label": "Colle au miel",
+      "value": "Zone jusqu’à 48 blocs ; bec verseur : miel + plaque de fer"
+    },
+    {
+      "label": "Colle fusionnée",
+      "value": "Soude deux contraptions à 4 blocs au plus"
+    },
+    {
+      "label": "Canon à patate monté",
+      "value": "Stress 2 SU par tr/min ; munitions du canon à patate"
+    },
+    {
+      "label": "Recul du canon",
+      "value": "0,2 (réglage serveur)"
+    },
+    {
+      "label": "Lunettes d'aviateur",
+      "value": "Lunettes d’ingénieur + cuir"
+    },
+    {
+      "label": "Schéma de machine",
+      "value": "Papier + assembleur de physique"
+    },
+    {
+      "label": "Bâton de physique créatif",
+      "value": "Créatif : fige, traîne ou tourne une contraption"
+    }
+  ],
+  "recipe": {
+    "label": "Remplissage (bec verseur)",
+    "grid": [
+      [
+        null,
+        "Fiole de miel",
+        null
+      ],
+      [
+        null,
+        "Plaque de fer",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "minecraft:honey_bottle",
+        null
+      ],
+      [
+        null,
+        "create:iron_sheet",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 colle au miel",
+    "resultItem": "simulated:honey_glue"
+  },
+  "videos": [
+    {
+      "id": "sim_honey",
+      "name": "La colle au miel",
+      "description": "Deux clics créent une zone collée, réglée à la molette ; elle ne colle que les contraptions simulées.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 0.62,
+          "section": "colle-au-miel"
+        },
+        {
+          "t": 2.27,
+          "section": "zone"
+        },
+        {
+          "t": 11.43,
+          "section": "contraptions"
+        },
+        {
+          "t": 17.83,
+          "section": "contraptions"
+        }
+      ]
+    },
+    {
+      "id": "sim_honey_super",
+      "name": "Colle au miel ou super colle",
+      "description": "Sur un véhicule complexe, la colle au miel évite les liaisons indésirables.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 2.52,
+          "section": "super-colle"
+        },
+        {
+          "t": 5.24,
+          "section": "super-colle"
+        },
+        {
+          "t": 8.09,
+          "section": "super-colle"
+        },
+        {
+          "t": 14.41,
+          "section": "super-colle"
+        }
+      ]
+    },
+    {
+      "id": "aero_potato",
+      "name": "Canon à patate monté",
+      "description": "Le canon est chargé par un entonnoir, armé par la rotation puis tire à la redstone.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 3.27,
+          "section": "canon"
+        },
+        {
+          "t": 11.38,
+          "section": "canon-tir"
+        },
+        {
+          "t": 13.31,
+          "section": "canon-tir"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "colle-au-miel",
+      "title": "La colle au miel",
+      "image": "sim_honey_e1.webp",
+      "alt": "Une zone de colle au miel autour de planches",
+      "video": "sim_honey",
+      "html": "<p>La colle au miel remplace la <a href=\"/wiki/colle-extra-forte\">super colle</a> pour les contraptions simulées. Elle se fabrique au <a href=\"/wiki/bec-verseur\">bec verseur</a>, en versant du miel sur une plaque de fer.</p>"
+    },
+    {
+      "id": "zone",
+      "title": "Tracer la zone",
+      "image": "sim_honey_e2.webp",
+      "alt": "La zone de colle agrandie à la molette",
+      "html": "<p>Deux clics posent les coins opposés d'une boîte ; Ctrl + molette l'agrandit ou la réduit, et Alt permet de placer un coin en l'air. Une zone peut mesurer jusqu'à 48 blocs.</p>"
+    },
+    {
+      "id": "contraptions",
+      "title": "Seulement pour les contraptions simulées",
+      "image": "sim_honey_e4.webp",
+      "alt": "Une contraption simulée assemblée grâce à la colle au miel",
+      "html": "<p>À l'inverse de la super colle, la colle au miel ignore les contraptions animées de Create (pistons, roulements mécaniques) : elle ne compte que pour l'<a href=\"/wiki/assembleur-physique\">assembleur de physique</a> et le <a href=\"/wiki/aeronautics-roulement-pivot\">roulement pivot</a>.</p>"
+    },
+    {
+      "id": "super-colle",
+      "title": "Avec la super colle",
+      "image": "sim_honey_super_e2.webp",
+      "alt": "Un véhicule portant les deux colles, super et au miel",
+      "video": "sim_honey_super",
+      "html": "<p>Sur un engin compliqué, la super colle lie parfois des blocs qu'on voulait garder séparés. Mieux vaut alors employer la colle au miel. À l'assemblage, une zone de colle au miel emporte la super colle qui la recoupe ; l'inverse n'est pas vrai.</p>"
+    },
+    {
+      "id": "colle-fusion",
+      "title": "La colle fusionnée et l’hélice intelligente",
+      "image": "gal_outils_blocs.webp",
+      "alt": "L'hélice intelligente, la colle fusionnée et le canon sur son support",
+      "html": "<p>La <strong>colle fusionnée</strong> (Merging Glue) relie deux contraptions simulées en une seule, à 4 blocs au plus. L'<strong>hélice intelligente</strong> (Smart Propeller) est une petite hélice (stress 4 SU par tr/min) qui s'incline d'elle-même pour pousser vers le haut ; la clé inverse sa poussée.</p>"
+    },
+    {
+      "id": "canon",
+      "title": "Canon à patate monté",
+      "image": "aero_potato_e1.webp",
+      "alt": "Le canon sur le pont, alimenté par un entonnoir",
+      "video": "aero_potato",
+      "html": "<p>Le canon monté reprend le <a href=\"/wiki/canon-a-pomme-de-terre\">canon à pomme de terre</a> sous forme de bloc : mêmes munitions, rechargées par entonnoir ou tapis.</p>"
+    },
+    {
+      "id": "canon-tir",
+      "title": "Armer et tirer",
+      "image": "aero_potato_e3.webp",
+      "alt": "Le canon qui tire une patate",
+      "html": "<p>La rotation (2 SU par tr/min) arme le canon ; une fois chargé, un signal de redstone déclenche le tir, et un signal maintenu tire en continu. Sur un navire, chaque tir donne un léger recul.</p>"
+    },
+    {
+      "id": "objets",
+      "title": "Lunettes, schéma et autres objets",
+      "image": "hero_outils_objets.webp",
+      "alt": "Les lunettes d'aviateur, la colle au miel, le lance-ventouse, le schéma, le couplage et le seau de mélange",
+      "html": "<p>Les <strong>lunettes d'aviateur</strong> (Aviator's Goggles) font tout ce que font les <a href=\"/wiki/lunettes-d-ingenieur\">lunettes d'ingénieur</a> et ajoutent des informations sur les blocs du mod. Le <strong>schéma de machine</strong> (Contraption Diagram) montre les forces qui agissent sur une contraption. Le <strong>seau de mélange de lévitite</strong> (Levitite Blend Bucket) transporte le fluide de la <a href=\"/wiki/aeronautics-levitite\">lévitite</a>.</p>"
+    },
+    {
+      "id": "faq",
+      "title": "Questions fréquentes",
+      "html": "<p><strong>Quelle colle choisir ?</strong> Pour un navire ou un véhicule simulé : colle au miel. Pour un piston ou un roulement mécanique de Create : super colle. <strong>La colle au miel se voit-elle en jeu ?</strong> Seulement avec l'objet en main, comme la super colle. <strong>Le canon peut-il viser ?</strong> Posé sur un <a href=\"/wiki/aeronautics-roulement-pivot\">roulement pivot</a>, il s'oriente avec la roue dentée. <strong>Le bâton de physique existe-t-il en survie ?</strong> Non, il est réservé au mode créatif.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils",
+      "html": "<p>Tracez la zone de colle au miel avant de poser l'assembleur : on voit mieux ce qui sera emporté. Gardez vos lunettes d'aviateur sur la tête pendant la construction, elles affichent la poussée des hélices et la portance des ballons, ce qui évite bien des essais.</p>"
+    },
+    {
+      "id": "recettes",
+      "title": "Où trouver ces objets",
+      "html": "<p>La colle au miel sort d'un bec verseur ; le schéma de machine se fabrique avec du papier et un assembleur de physique ; les lunettes d'aviateur, avec des lunettes d'ingénieur et du cuir ; le canon monté, à l'établi mécanique avec des plaques de cuivre, une roue dentée, des tuyaux, de la redstone et un bloc d'algues séchées. La colle fusionnée n'a pas de recette dans la 1.3.3.</p>"
+    },
+    {
+      "id": "baton",
+      "title": "Le bâton de physique créatif",
+      "image": "hero_pieces_pieces.webp",
+      "alt": "Les pièces de moteur, le mécanisme gyroscopique et le bâton de physique créatif",
+      "html": "<p>En créatif, le <strong>bâton de physique créatif</strong> (Creative Physics Staff) fige une contraption sur place, la traîne, la fait tourner ou règle sa distance : l'outil idéal pour mettre en scène un navire.</p>"
+    }
+  ],
+  "related": [
+    "create-aeronautics",
+    "assembleur-physique",
+    "aeronautics-roulement-pivot",
+    "aeronautics-cordes-et-amarrage",
+    "colle-extra-forte",
+    "canon-a-pomme-de-terre",
+    "lunettes-d-ingenieur"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Aeronautics 1.3.3 (dépôt Creators-of-Aeronautics/Simulated-Project, commit 900122e, code sous licence MIT, ressources « tous droits réservés », The Simulated Team / The Creators of Aeronautics), identiques au jar du modpack (instance de test 1.3.3)",
+    "Réglages serveur par défaut de Simulated 1.3.3 (SimBlocks, SimPhysics, SimItems) et coûts en stress (SimStress, AeroStress, OffroadStress)",
+    "Recettes : data/simulated/recipe/filling/honey_glue.json, contraption_diagram.json ; data/aeronautics/recipe/aviators_goggles.json, smart_propeller.json, mechanical_crafting/mounted_potato_cannon.json",
+    "Vidéos : scènes Ponder de Create Aeronautics / Simulated (honey_glue/intro, honey_glue/super_glue, mounted_potato_cannon) rejouées par notre moteur ; modèles et textures du mod (© The Simulated Team / The Creators of Aeronautics)",
+    "Images : blocs du mod posés sur la plaque et rendus par notre moteur (© The Simulated Team / The Creators of Aeronautics)"
+  ],
+  "en": {
+    "slugEn": "aeronautics-tools",
+    "name": "Tools and items",
+    "title": "Tools and Items — Create Aeronautics guide",
+    "description": "Honey Glue, Merging Glue, Mounted Potato Cannon, Aviator's Goggles, Contraption Diagram, physics staff: the Create Aeronautics tools. Videos.",
+    "intro": "Building a ship takes a few tools. <strong>Honey Glue</strong> marks what will be assembled; <strong>Merging Glue</strong> welds two contraptions; <strong>Aviator's Goggles</strong> and the <strong>Contraption Diagram</strong> show what is going on. For defence, the <strong>Mounted Potato Cannon</strong> sits on the deck.",
+    "facts": [
+      {
+        "label": "Honey Glue",
+        "value": "Area up to 48 blocks; Spout: honey + iron sheet"
+      },
+      {
+        "label": "Merging Glue",
+        "value": "Welds two contraptions up to 4 blocks apart"
+      },
+      {
+        "label": "Mounted Potato Cannon",
+        "value": "Stress 2 SU per RPM; Potato Cannon ammo"
+      },
+      {
+        "label": "Cannon recoil",
+        "value": "0.2 (server setting)"
+      },
+      {
+        "label": "Aviator's Goggles",
+        "value": "Engineer's Goggles + leather"
+      },
+      {
+        "label": "Contraption Diagram",
+        "value": "Paper + Physics Assembler"
+      },
+      {
+        "label": "Creative Physics Staff",
+        "value": "Creative: freeze, drag or turn a contraption"
+      }
+    ],
+    "recipe": {
+      "label": "Filling (Spout)",
+      "grid": [
+        [
+          null,
+          "Honey Bottle",
+          null
+        ],
+        [
+          null,
+          "Iron Sheet",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Honey Glue"
+    },
+    "videos": [
+      {
+        "id": "sim_honey",
+        "name": "Honey Glue",
+        "description": "Two clicks make a glued area, resized with the scroll wheel; it only binds simulated contraptions."
+      },
+      {
+        "id": "sim_honey_super",
+        "name": "Honey Glue or Super Glue",
+        "description": "On a complex vehicle, Honey Glue avoids unwanted links."
+      },
+      {
+        "id": "aero_potato",
+        "name": "The Mounted Potato Cannon",
+        "description": "The cannon is loaded by a funnel, charged by rotation, then fires on redstone."
+      }
+    ],
+    "sections": [
+      {
+        "id": "colle-au-miel",
+        "title": "Honey Glue",
+        "alt": "A Honey Glue area around planks",
+        "html": "<p>When building simulated contraptions, Honey Glue takes the place of <a href=\"/en/wiki/super-glue\">Super Glue</a>. It is made with a <a href=\"/en/wiki/spout\">Spout</a>, pouring honey onto an iron sheet.</p>"
+      },
+      {
+        "id": "zone",
+        "title": "Drawing the area",
+        "alt": "The glue area enlarged with the scroll wheel",
+        "html": "<p>Two clicks set the opposite corners of a box; Ctrl + scroll grows or shrinks it, and Alt lets you place a corner in mid-air. An area can be up to 48 blocks across.</p>"
+      },
+      {
+        "id": "contraptions",
+        "title": "Only for simulated contraptions",
+        "alt": "A simulated contraption assembled thanks to Honey Glue",
+        "html": "<p>Unlike Super Glue, Honey Glue ignores Create's animated contraptions (pistons, mechanical bearings): it only counts for the <a href=\"/en/wiki/physics-assembler\">Physics Assembler</a> and the <a href=\"/en/wiki/aeronautics-swivel-bearing\">Swivel Bearing</a>.</p>"
+      },
+      {
+        "id": "super-colle",
+        "title": "Alongside Super Glue",
+        "alt": "A vehicle with both Super Glue and Honey Glue",
+        "html": "<p>On an intricate machine, Super Glue sometimes binds blocks you wanted to keep apart. Honey Glue is then the safer choice. On assembly, a Honey Glue area takes along any Super Glue that overlaps it; the reverse is not true.</p>"
+      },
+      {
+        "id": "colle-fusion",
+        "title": "Merging Glue and the Smart Propeller",
+        "alt": "The Smart Propeller, Merging Glue and the Mounted Potato Cannon",
+        "html": "<p><strong>Merging Glue</strong> joins two simulated contraptions into one, up to 4 blocks apart. The <strong>Smart Propeller</strong> is a small propeller (stress 4 SU per RPM) that tilts by itself to push upwards; the wrench reverses its thrust.</p>"
+      },
+      {
+        "id": "canon",
+        "title": "The Mounted Potato Cannon",
+        "alt": "A Mounted Potato Cannon fed by a funnel",
+        "html": "<p>This deck-mounted cousin of the <a href=\"/en/wiki/potato-cannon\">Potato Cannon</a> takes the same ammunition and reloads from a funnel or a belt.</p>"
+      },
+      {
+        "id": "canon-tir",
+        "title": "Charging and firing",
+        "alt": "The cannon firing a potato",
+        "html": "<p>Rotation (2 SU per RPM) charges the cannon; once full, a redstone signal fires it, and a held signal keeps firing. On a ship every shot gives a slight recoil.</p>"
+      },
+      {
+        "id": "objets",
+        "title": "Goggles, diagram and other items",
+        "alt": "The Aviator's Goggles, Honey Glue, the Plunger Launcher, the diagram, the coupling and the blend bucket",
+        "html": "<p><strong>Aviator's Goggles</strong> do everything <a href=\"/en/wiki/engineers-goggles\">Engineer's Goggles</a> do and add information about the mod's blocks. The <strong>Contraption Diagram</strong> shows the forces acting on a contraption. The <strong>Levitite Blend Bucket</strong> carries the fluid behind <a href=\"/en/wiki/levitite\">levitite</a>.</p>"
+      },
+      {
+        "id": "faq",
+        "title": "Frequently asked questions",
+        "html": "<p><strong>Which glue should I use?</strong> For a simulated ship or vehicle, Honey Glue; for a Create piston or Mechanical Bearing, Super Glue. <strong>Is Honey Glue visible in game?</strong> Only while holding the item, as with Super Glue. <strong>Can the cannon aim?</strong> Placed on a <a href=\"/en/wiki/aeronautics-swivel-bearing\">Swivel Bearing</a>, it turns with the cogwheel. <strong>Is the physics staff available in survival?</strong> No, it is creative-only.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<p>Draw the Honey Glue area before placing the assembler: you see better what will be taken along. Wear Aviator's Goggles while building, they show propeller thrust and balloon lift, which saves many test flights. Keep a Contraption Diagram in the hotbar as well: one click on the finished ship shows where the forces act and why it leans.</p>"
+      },
+      {
+        "id": "recettes",
+        "title": "Where to get these items",
+        "html": "<p>Honey Glue comes out of a Spout; the Contraption Diagram is crafted from paper and a Physics Assembler; Aviator's Goggles from Engineer's Goggles and leather; the mounted cannon on a Mechanical Crafter, from copper sheets, a cogwheel, fluid pipes, redstone and a dried kelp block. Merging Glue has no recipe in 1.3.3, so it is only available through creative mode or commands for now. The Creative Physics Staff and the music disc are not craftable either; every other item listed on this page has a normal survival recipe.</p>"
+      },
+      {
+        "id": "baton",
+        "title": "The Creative Physics Staff",
+        "alt": "Engine Assembly, the Gyroscopic Mechanism and the Creative Physics Staff",
+        "html": "<p>In creative mode, the <strong>Creative Physics Staff</strong> freezes a contraption in place, drags it, turns it or sets its distance: the perfect tool to stage a ship.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Aeronautics 1.3.3 (Creators-of-Aeronautics/Simulated-Project repository, commit 900122e, code under the MIT licence, assets « all rights reserved », The Simulated Team / The Creators of Aeronautics), identical to the modpack jar (1.3.3 test instance)",
+      "Simulated 1.3.3 default server settings (SimBlocks, SimPhysics, SimItems) and stress costs (SimStress, AeroStress, OffroadStress)",
+      "Recipes: data/simulated/recipe/filling/honey_glue.json, contraption_diagram.json; data/aeronautics/recipe/aviators_goggles.json, smart_propeller.json, mechanical_crafting/mounted_potato_cannon.json",
+      "Videos: Create Aeronautics / Simulated Ponder scenes (honey_glue/intro, honey_glue/super_glue, mounted_potato_cannon) replayed by our engine; mod models and textures (© The Simulated Team / The Creators of Aeronautics)",
+      "Images: mod blocks placed on the plate and rendered by our engine (© The Simulated Team / The Creators of Aeronautics)"
+    ]
+  }
+}

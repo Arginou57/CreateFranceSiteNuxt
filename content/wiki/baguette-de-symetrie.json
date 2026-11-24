@@ -1,0 +1,299 @@
+{
+  "slug": "baguette-de-symetrie",
+  "name": "Baguette de symétrie",
+  "blockId": "create:wand_of_symmetry",
+  "category": "outils",
+  "title": "Baguette de symétrie — Create : guide",
+  "description": "La baguette de symétrie de Create : poser un miroir, construire en double, en quatre ou en huit, et ce qu'elle copie quand on casse.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>baguette de symétrie</strong> pose un miroir dans le monde : chaque bloc que tu poses d'un côté apparaît aussi de l'autre, et chaque bloc cassé disparaît des deux côtés. Trois modes donnent une, trois ou sept copies. Pour un château, une église ou une gare symétrique, elle divise le travail par deux, quatre ou huit.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Outils et équipement"
+    },
+    {
+      "label": "Modes",
+      "value": "Miroir une fois (×2), Rectangulaire (×4), Octogonal (×8)"
+    },
+    {
+      "label": "Portée",
+      "value": "50 blocs autour du miroir"
+    },
+    {
+      "label": "Copie",
+      "value": "La pose et la casse"
+    },
+    {
+      "label": "Survie",
+      "value": "Chaque copie consomme un bloc de l’inventaire"
+    },
+    {
+      "label": "Où la garder",
+      "value": "N’importe où dans la barre d’action"
+    },
+    {
+      "label": "Fabrication",
+      "value": "Établi mécanique (5 rangées)"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Établi mécanique (3 × 5, ici les 3 rangées du haut ; dessous : lingot de laiton, obsidienne)",
+    "grid": [
+      [
+        null,
+        "Verre",
+        null
+      ],
+      [
+        "Verre",
+        "Perle de l'Ender",
+        "Verre"
+      ],
+      [
+        null,
+        "Mécanisme de précision",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "minecraft:glass",
+        null
+      ],
+      [
+        "minecraft:glass",
+        "minecraft:ender_pearl",
+        "minecraft:glass"
+      ],
+      [
+        null,
+        "create:precision_mechanism",
+        null
+      ]
+    ],
+    "result": "1 baguette de symétrie",
+    "resultItem": "create:wand_of_symmetry"
+  },
+  "videos": [
+    {
+      "id": "symmetry_wand",
+      "name": "Baguette de symétrie : construire en miroir",
+      "description": "Un miroir plan est posé ; chaque bloc posé d'un côté apparaît de l'autre. En mode rectangulaire, un bloc en donne quatre. Un bloc cassé à la main fait disparaître ses copies.",
+      "duration": "PT17S",
+      "chapters": [
+        {
+          "t": 2.4,
+          "section": "miroir"
+        },
+        {
+          "t": 7.2,
+          "section": "copie"
+        },
+        {
+          "t": 11.65,
+          "section": "modes"
+        },
+        {
+          "t": 13.95,
+          "section": "casser"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "miroir",
+      "title": "Poser le miroir",
+      "image": "symmetry_wand_miroir.webp",
+      "alt": "Le miroir posé au centre de la plaque",
+      "video": "symmetry_wand",
+      "html": "<p>Baguette en main, vise un bloc et fais un clic droit : le <strong>miroir</strong> se pose dans le bloc juste devant la face visée. Il flotte doucement, et un nouveau clic ailleurs le déplace. Un miroir plan prend l'orientation de ton regard : face au nord ou au sud, il coupe selon Z, sinon selon X. Un clic droit dans le vide désactive la baguette.</p>"
+    },
+    {
+      "id": "copie",
+      "title": "Construire en double",
+      "image": "symmetry_wand_copie.webp",
+      "alt": "Chaque bloc posé a sa copie de l’autre côté du miroir",
+      "html": "<p>Tant que la baguette est dans ta <strong>barre d'action</strong>, même si tu tiens autre chose, chaque bloc posé à moins de 50 blocs du miroir est recopié de l'autre côté, orienté en miroir : escaliers, portes et bûches sont retournés comme il faut. En survie, chaque copie prend un bloc dans ton inventaire, et une copie n'est posée que sur un emplacement libre : herbe, air ou eau.</p>"
+    },
+    {
+      "id": "modes",
+      "title": "Trois modes",
+      "image": "symmetry_wand_rectangulaire.webp",
+      "alt": "En mode rectangulaire, un bloc en donne quatre",
+      "html": "<p>Accroupi, clic droit : l'interface choisit le mode. <strong>Miroir une fois</strong> donne une copie, orientée sur X ou sur Z. <strong>Rectangulaire</strong> donne trois copies, soit quatre blocs, en croix droite ou en diagonale. <strong>Octogonal</strong> donne sept copies, huit blocs en tout, pour les tours et les rosaces. Le modèle du miroir change avec le mode.</p>"
+    },
+    {
+      "id": "casser",
+      "title": "Casser aussi",
+      "image": "symmetry_wand_casser.webp",
+      "alt": "Le bloc cassé et ses trois copies ont disparu",
+      "html": "<p>La baguette copie aussi la casse : un bloc cassé à la main fait disparaître ses copies, si ce sont les mêmes blocs. Les objets tombent à l'endroit du bloc cassé, pas aux quatre coins. Pratique pour corriger une erreur, dangereux si on oublie que la baguette est active : range-la avant de démolir ailleurs.</p>"
+    },
+    {
+      "id": "fabriquer",
+      "title": "La fabriquer",
+      "image": "symmetry_hero_objet.webp",
+      "alt": "La baguette de symétrie",
+      "html": "<p>La baguette se fabrique sur un <a href=\"/wiki/etabli-mecanique\">établi mécanique</a>, sur une grille de trois de large et cinq de haut : du verre en croix autour d'une perle de l'Ender, puis un <a href=\"/wiki/papier-de-verre\">mécanisme de précision</a>, un lingot de laiton et une obsidienne en colonne. C'est un objet unique par pile, de rareté peu commune.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Astuces",
+      "html": "<p>Pose le miroir au centre exact du bâtiment, sur l'axe d'une porte par exemple : un plan de six blocs de large a son axe entre deux blocs, impossible à atteindre ; préfère un nombre impair de blocs. En créatif, les copies ne coûtent rien. Pour les grands motifs circulaires, le mode octogonal fait gagner un temps énorme.</p>"
+    },
+    {
+      "id": "portee",
+      "title": "Portée et limites",
+      "html": "<p>Les blocs posés à plus de <strong>50 blocs</strong> du miroir ne sont pas recopiés : pour un très grand bâtiment, déplace le miroir d'une aile à l'autre. En survie, une copie qui tomberait sur un bloc déjà occupé est sautée sans rien casser, et chaque copie coûte un bloc : garde de quoi suivre dans l'inventaire.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Oublier la baguette dans la barre d'action en minant ailleurs : chaque bloc cassé à moins de 50 blocs du miroir est recopié. Poser le miroir sur un sol pair : la symétrie tombe sur une ligne de blocs et décale tout d'un cran. Chercher le miroir invisible : il n'apparaît que tant que la baguette est active.</p>"
+    }
+  ],
+  "related": [
+    "schematiques",
+    "etabli-mecanique",
+    "papier-de-verre",
+    "pierres-et-blocs-de-deco"
+  ],
+  "sources": [
+    "Recette : mechanical_crafting/wand_of_symmetry.json (verre, perle de l'Ender, mécanisme de précision, lingot de laiton, obsidienne ; miroir accepté)",
+    "Usage : SymmetryWandItem (pose du miroir, désactivation, interface), SymmetryHandler (barre d'action, pose et casse copiées, maxSymmetryWandRange 50 dans CEquipment), PlaneMirror / CrossPlaneMirror / TriplePlaneMirror",
+    "Scène écrite pour ce wiki (Create n'a pas de scène Ponder sur ce sujet) : WIKI/c2c_scenes.py, rendue par notre moteur (pièces animées relues dans les BlockEntityRenderer de Create : WIKI/c2c_parts.py) ; miroir dessiné d'après SymmetryHandler.onRenderWorld",
+    "Images : blocs et objets du jeu (modèles de Create) rendus par notre moteur, joueur non dessiné"
+  ],
+  "en": {
+    "slugEn": "wand-of-symmetry",
+    "name": "Wand of Symmetry",
+    "title": "Wand of Symmetry — Create mod guide",
+    "description": "The Create Wand of Symmetry: placing a mirror, building in two, four or eight copies, and what it copies when you break blocks.",
+    "intro": "The <strong>Wand of Symmetry</strong> places a mirror in the world: every block you place on one side also appears on the other, and every block you break disappears on both sides. Three modes give one, three or seven copies. For a symmetrical castle, church or station, it divides the work by two, four or eight.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Tools and equipment"
+      },
+      {
+        "label": "Modes",
+        "value": "Mirror Once (×2), Rectangular (×4), Octagonal (×8)"
+      },
+      {
+        "label": "Range",
+        "value": "50 blocks around the mirror"
+      },
+      {
+        "label": "Copies",
+        "value": "Placing and breaking"
+      },
+      {
+        "label": "Survival",
+        "value": "Each copy uses a block from your inventory"
+      },
+      {
+        "label": "Where to keep it",
+        "value": "Anywhere in the hotbar"
+      },
+      {
+        "label": "Crafting",
+        "value": "Mechanical Crafter (5 rows)"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Mechanical Crafter (3 × 5, top 3 rows shown; below: Brass Ingot, Obsidian)",
+      "grid": [
+        [
+          null,
+          "Glass",
+          null
+        ],
+        [
+          "Glass",
+          "Ender Pearl",
+          "Glass"
+        ],
+        [
+          null,
+          "Precision Mechanism",
+          null
+        ]
+      ],
+      "result": "1 Wand of Symmetry"
+    },
+    "videos": [
+      {
+        "id": "symmetry_wand",
+        "name": "Wand of Symmetry: building in mirror",
+        "description": "A plane mirror is placed; every block placed on one side appears on the other. In rectangular mode, one block gives four. A block broken by hand makes its copies disappear."
+      }
+    ],
+    "sections": [
+      {
+        "id": "miroir",
+        "title": "Placing the mirror",
+        "alt": "The mirror placed in the middle of the plate",
+        "html": "<p>Wand in hand, a right-click on a block places the <strong>mirror</strong> in the block right in front of the face you aim at. It floats gently, and a new click elsewhere moves it. A plane mirror takes the orientation of your gaze: facing north or south, it splits along Z, otherwise along X. A right-click into the air switches the wand off.</p>"
+      },
+      {
+        "id": "copie",
+        "title": "Building in two",
+        "alt": "Every placed block has its copy on the other side of the mirror",
+        "html": "<p>As long as the wand is in your <strong>hotbar</strong>, even while you hold something else, every block placed within 50 blocks of the mirror is copied to the other side, mirrored: stairs, doors and logs are flipped properly. In survival, each copy takes a block from your inventory, and a copy is only placed on a free spot: grass, air or water. That makes it ideal for walls, arches and facades that must match exactly.</p>"
+      },
+      {
+        "id": "modes",
+        "title": "Three modes",
+        "alt": "In rectangular mode, one block gives four",
+        "html": "<p>Sneak-right-click: the screen picks the mode. <strong>Mirror Once</strong> gives one copy, along X or Z. <strong>Rectangular</strong> gives three copies, four blocks in all, in a straight cross or diagonally. <strong>Octagonal</strong> gives seven copies, eight blocks in all, for towers and rose windows. The mirror model changes with the mode, so you always know which one is active.</p>"
+      },
+      {
+        "id": "casser",
+        "title": "Breaking too",
+        "alt": "The broken block and its three copies are gone",
+        "html": "<p>The wand also copies breaking: a block broken by hand makes its copies disappear, if they are the same blocks. Drops fall where the broken block was, not at the four corners. Handy to fix a mistake, risky if you forget the wand is active: put it away before demolishing elsewhere.</p>"
+      },
+      {
+        "id": "fabriquer",
+        "title": "Crafting it",
+        "alt": "The Wand of Symmetry",
+        "html": "<p>The wand is crafted on a <a href=\"/en/wiki/mechanical-crafter\">Mechanical Crafter</a>, on a grid three wide and five tall: glass in a cross around an Ender Pearl, then a <a href=\"/en/wiki/sand-paper\">Precision Mechanism</a>, a Brass Ingot and Obsidian in a column. It stacks to one and is uncommon.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<p>Place the mirror at the exact centre of the build, on the axis of a door for instance: a plan six blocks wide has its axis between two blocks, which you cannot reach; prefer an odd number of blocks. In creative, copies cost nothing. For large circular patterns, octagonal mode saves a huge amount of time.</p>"
+      },
+      {
+        "id": "portee",
+        "title": "Range and limits",
+        "html": "<p>Blocks placed more than <strong>50 blocks</strong> from the mirror are not copied: for a very large build, move the mirror from one wing to the next. In survival, a copy that would land on an occupied spot is skipped without breaking anything, and each copy costs a block: carry enough to keep up.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>Leaving the wand in the hotbar while mining elsewhere: every block broken within 50 blocks of the mirror is copied. Putting the mirror on an even-width floor: the symmetry falls on a row of blocks and shifts everything by one. Looking for an invisible mirror: it only shows while the wand is active.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: mechanical_crafting/wand_of_symmetry.json (glass, Ender Pearl, Precision Mechanism, Brass Ingot, Obsidian; mirrored accepted)",
+      "Use: SymmetryWandItem (placing the mirror, switching off, screen), SymmetryHandler (hotbar, placing and breaking copied, maxSymmetryWandRange 50 in CEquipment), PlaneMirror / CrossPlaneMirror / TriplePlaneMirror",
+      "Scene written for this wiki (Create has no Ponder scene on this topic): WIKI/c2c_scenes.py, rendered by our engine (moving parts read from Create's BlockEntityRenderers: WIKI/c2c_parts.py); mirror drawn after SymmetryHandler.onRenderWorld",
+      "Images: the game's blocks and items (Create's models) rendered by our engine, player not drawn"
+    ]
+  }
+}

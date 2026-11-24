@@ -1,0 +1,256 @@
+{
+  "slug": "propulsion-ailes",
+  "name": "Ailes",
+  "blockId": "createpropulsion:wing",
+  "category": "propulsion",
+  "title": "Ailes et ailes imitatrices — Create Propulsion, guide",
+  "description": "Les ailes de Create Propulsion : aile, aile trempée et ailes imitatrices de 4, 8 et 12 m pour faire planer un engin de Sable.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Propulsion: Simulated 1.1.5",
+  "mcVersion": "1.21.1",
+  "intro": "Les <strong>ailes</strong> donnent de la portance à un engin qui avance : posées à plat, elles transforment la vitesse en force vers le haut, comme une aile d'avion. Le mod en propose trois sortes : l'<strong>aile</strong> (Wing), l'<strong>aile trempée</strong> (Tempered Wing) et l'<strong>aile imitatrice</strong> (Copycat Wing), qui prend l'apparence d'un autre bloc et existe en trois largeurs.",
+  "facts": [
+    {
+      "label": "Recette",
+      "value": "4 ailes par fabrication"
+    },
+    {
+      "label": "Aile trempée",
+      "value": "une aile cuite au four (200 ticks)"
+    },
+    {
+      "label": "Portance",
+      "value": "selon la face plate, réglée par Sable"
+    },
+    {
+      "label": "Imitatrice",
+      "value": "largeurs 4, 8 et 12 m : portance 0,475 / 0,7125 / 0,95"
+    },
+    {
+      "label": "Agrandir",
+      "value": "clic accroupi avec une aile imitatrice"
+    },
+    {
+      "label": "Masse",
+      "value": "très légère (imitatrices)"
+    },
+    {
+      "label": "Tag",
+      "value": "create:windmill_sails"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Plaque de fer",
+        "Pépite de fer",
+        "Plaque de fer"
+      ],
+      [
+        "Pépite de fer",
+        "Alliage d'andésite",
+        "Pépite de fer"
+      ],
+      [
+        "Plaque de fer",
+        "Pépite de fer",
+        "Plaque de fer"
+      ]
+    ],
+    "items": [
+      [
+        "create:iron_sheet",
+        "minecraft:iron_nugget",
+        "create:iron_sheet"
+      ],
+      [
+        "minecraft:iron_nugget",
+        "create:andesite_alloy",
+        "minecraft:iron_nugget"
+      ],
+      [
+        "create:iron_sheet",
+        "minecraft:iron_nugget",
+        "create:iron_sheet"
+      ]
+    ],
+    "result": "4 ailes",
+    "resultItem": "createpropulsion:wing"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "portance",
+      "title": "Comment une aile porte",
+      "image": "prop_gal_wings_ailes.webp",
+      "alt": "Une rangée de trois ailes en fer et une rangée de trois ailes trempées, posées à plat sur la plaque",
+      "html": "<p>Une aile agit selon l'axe de sa face : posée à plat, elle résiste au mouvement vertical et, quand l'engin avance, l'air qui la frappe sous un angle la pousse vers le haut. C'est le moteur physique <strong>Sable</strong> qui calcule cette force, comme pour les voiles de <a href=\"/wiki/aeronautics-voiles-et-enveloppes\">Create Aeronautics</a>. Une aile ne fait rien seule : il faut un <a href=\"/wiki/propulsion-propulseur\">propulseur</a> ou une <a href=\"/wiki/aeronautics-helices\">hélice</a> pour la mettre en vitesse.</p><p>Orientez l'aile avec sa face principale vers le haut (ou vers le côté pour une dérive). Plusieurs blocs côte à côte forment une surface continue, et la texture se raccorde d'un bloc à l'autre.</p>"
+    },
+    {
+      "id": "trempee",
+      "title": "L'aile trempée",
+      "html": "<p>L'<strong>aile trempée</strong> s'obtient en faisant cuire une aile ordinaire au four. Elle a exactement les mêmes propriétés : seule la couleur change, plus sombre et bleutée, pour décorer un appareil. Les deux comptent comme des voiles de moulin pour Create : un <a href=\"/wiki/support-de-moulin-a-vent\">support de moulin à vent</a> les accepte, ce qui permet aussi de les faire tourner.</p>"
+    },
+    {
+      "id": "imitatrice",
+      "title": "L'aile imitatrice",
+      "image": "prop_gal_wings_copycat.webp",
+      "alt": "Trois ailes imitatrices de largeur croissante, posées côte à côte",
+      "html": "<p>L'<strong>aile imitatrice</strong> (Copycat Wing) se comporte comme les blocs imitateurs de Create : on lui donne un bloc en main pour qu'elle en prenne l'aspect, ce qui permet des ailes en bois, en pierre ou en verre. Elle existe en trois largeurs : 4 m, puis 8 m (Copycat Wing (8m)) et 12 m (Copycat Wing (12m)), de plus en plus porteuses (0,475, 0,7125 puis 0,95). Pour l'élargir, faites un clic droit accroupi dessus avec une autre aile imitatrice : elle passe à la taille suivante en gardant son matériau. Cassée, elle rend une aile par tranche de 4 m.</p>"
+    },
+    {
+      "id": "fabriquer",
+      "title": "Fabriquer les ailes",
+      "html": "<p>La recette donne quatre ailes à partir de plaques de fer, de pépites de fer et d'un alliage d'andésite. L'aile imitatrice se taille dans une aile : une à la <a href=\"/wiki/scie-mecanique\">scie mécanique</a> de Create, ou quatre au tailleur de pierre. Les imitatrices de 4 et 8 m sont très légères pour Sable, celle de 12 m légère : elles alourdissent peu un planeur.</p>"
+    },
+    {
+      "id": "exemple",
+      "title": "Exemple : un planeur",
+      "html": "<p>Assemblez une plateforme légère de six blocs sur deux, garnissez ses côtés d'ailes à plat, ajoutez une petite dérive verticale à l'arrière, puis un propulseur au milieu, jet vers l'arrière. Lancé depuis une hauteur, le planeur avance et descend lentement au lieu de tomber. Avec plus de poussée, il prend de l'altitude. Les ailes imitatrices habillées de bois rendent l'engin plus discret dans une base.</p>"
+    },
+    {
+      "id": "masse",
+      "title": "Masse et équilibre",
+      "html": "<p>Sable calcule le centre de masse de l'engin et y applique la gravité, tandis que chaque aile pousse là où elle se trouve. Si la portance est en avant du centre de masse, le nez se lève ; en arrière, il pique. Commencez avec des ailes symétriques autour du centre, puis déplacez-les d'un bloc à la fois en essayant.</p>"
+    },
+    {
+      "id": "moulin",
+      "title": "Des ailes sur un moulin",
+      "html": "<p>Comme ce sont des voiles de moulin pour Create, les ailes peuvent aussi garnir un moulin à vent ; elles y comptent comme des voiles ordinaires.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils de vol",
+      "html": "<p>Placez les ailes autour du centre de masse de l'engin, sinon il pique du nez. Une petite surface verticale à l'arrière, comme une dérive, le garde dans l'axe. Pour gouverner, montez une rangée d'ailes sur un <a href=\"/wiki/roulement-mecanique\">roulement</a> commandé par un <a href=\"/wiki/propulsion-adaptateur-inclinaison\">adaptateur d'inclinaison</a> : la redstone règle alors l'angle de la gouverne au degré près.</p>"
+    }
+  ],
+  "related": [
+    "create-propulsion",
+    "propulsion-propulseur",
+    "propulsion-adaptateur-inclinaison",
+    "aeronautics-voiles-et-enveloppes",
+    "aeronautics-helices",
+    "support-de-moulin-a-vent",
+    "assembleur-physique",
+    "scie-mecanique"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Propulsion: Simulated 1.1.5 (dépôt Propulsion-Team/create-propulsion-simulated, commit 36f83a1 du 23/07/2026, licence MIT, © Sergey Feduk, Tronco_78, Bunting_chj, SSnowly, KyivSec), identique au jar de l’instance de test du modpack",
+    "Ailes : WingBlock.java, CopycatWingBlock.java (portance 0,475 / 0,7125 / 0,95), CopycatWingItem.java",
+    "Données : data/create/tags/block/windmill_sails.json, data/sable/tags/block",
+    "Recettes : data/createpropulsion/recipe/crafting/wing.json, smelting/tempered_wing.json, cutting et stonecutting/copycat_wing.json",
+    "Images : blocs du mod posés sur la plaque et rendus par notre moteur (licence MIT, © Propulsion Team)"
+  ],
+  "en": {
+    "slugEn": "propulsion-wings",
+    "name": "Wings",
+    "title": "Wings and Copycat Wings — Create Propulsion guide",
+    "description": "Create Propulsion wings: the Wing, the Tempered Wing and the 4, 8 and 12 m Copycat Wings that let a Sable machine glide and stay in the air.",
+    "intro": "<strong>Wings</strong> give lift to a moving machine: laid flat, they turn speed into an upward force, like an aircraft wing. The mod offers three kinds: the <strong>Wing</strong>, the <strong>Tempered Wing</strong> and the <strong>Copycat Wing</strong>, which takes the look of another block and comes in three widths.",
+    "facts": [
+      {
+        "label": "Recipe",
+        "value": "4 wings per craft"
+      },
+      {
+        "label": "Tempered Wing",
+        "value": "a wing cooked in a furnace (200 ticks)"
+      },
+      {
+        "label": "Lift",
+        "value": "along the flat face, computed by Sable"
+      },
+      {
+        "label": "Copycat",
+        "value": "4, 8 and 12 m widths: lift 0.475 / 0.7125 / 0.95"
+      },
+      {
+        "label": "Widening",
+        "value": "sneak-click with a Copycat Wing"
+      },
+      {
+        "label": "Mass",
+        "value": "very light (copycat wings)"
+      },
+      {
+        "label": "Tag",
+        "value": "create:windmill_sails"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Iron Sheet",
+          "Iron Nugget",
+          "Iron Sheet"
+        ],
+        [
+          "Iron Nugget",
+          "Andesite Alloy",
+          "Iron Nugget"
+        ],
+        [
+          "Iron Sheet",
+          "Iron Nugget",
+          "Iron Sheet"
+        ]
+      ],
+      "result": "4 Wings"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "portance",
+        "title": "How a wing lifts",
+        "alt": "A row of three iron Wings and a row of three Tempered Wings laid flat on the plate",
+        "html": "<p>A wing acts along the axis of its face: laid flat, it resists vertical motion and, when the machine moves forward, the air hitting it at an angle pushes it up. The <strong>Sable</strong> physics engine computes that force, as for the sails of <a href=\"/en/wiki/aeronautics-sails-and-envelopes\">Create Aeronautics</a>. A wing does nothing on its own: a <a href=\"/en/wiki/propulsion-thruster\">Thruster</a> or a <a href=\"/en/wiki/aeronautics-propellers\">propeller</a> has to get it moving.</p><p>Point the wing's main face up (or sideways for a fin). Several blocks side by side form one continuous surface, and the texture connects from block to block.</p>"
+      },
+      {
+        "id": "trempee",
+        "title": "The Tempered Wing",
+        "html": "<p>The <strong>Tempered Wing</strong> is made by cooking a plain wing in a furnace. It has exactly the same properties: only the colour changes, darker and bluish, to dress up a craft. Both count as windmill sails for Create: a <a href=\"/en/wiki/windmill-bearing\">Windmill Bearing</a> accepts them, so they can also be spun.</p>"
+      },
+      {
+        "id": "imitatrice",
+        "title": "The Copycat Wing",
+        "alt": "Three Copycat Wings of growing width placed side by side",
+        "html": "<p>The <strong>Copycat Wing</strong> behaves like Create's copycat blocks: give it a block to copy its look, for wooden, stone or glass wings. It comes in three widths: 4 m, then 8 m (Copycat Wing (8m)) and 12 m (Copycat Wing (12m)), each giving more lift (0.475, 0.7125 then 0.95). To widen it, sneak-right-click it with another Copycat Wing: it moves to the next size and keeps its material. When broken, it gives back one wing per 4 m.</p>"
+      },
+      {
+        "id": "fabriquer",
+        "title": "Making wings",
+        "html": "<p>The recipe gives four wings from iron sheets, iron nuggets and an andesite alloy. The Copycat Wing is cut from a wing: one with Create's <a href=\"/en/wiki/mechanical-saw\">Mechanical Saw</a>, or four on a stonecutter. The 4 and 8 m copycats are super light for Sable, the 12 m one light: they barely weigh down a glider.</p>"
+      },
+      {
+        "id": "exemple",
+        "title": "Example: a glider",
+        "html": "<p>Assemble a light six-by-two platform, line its sides with flat wings, add a small vertical fin at the back, then a Thruster in the middle with its jet pointing back. Launched from a height, the glider moves forward and sinks slowly instead of dropping. With more thrust it climbs. Copycat Wings dressed in wood make the machine blend into a base.</p>"
+      },
+      {
+        "id": "masse",
+        "title": "Mass and balance",
+        "html": "<p>Sable works out the machine's centre of mass and applies gravity there, while each wing pushes where it sits. If the lift is ahead of the centre of mass the nose rises; behind it, the nose drops. Start with wings placed symmetrically around the centre, then shift them block by block while testing.</p>"
+      },
+      {
+        "id": "moulin",
+        "title": "Wings on a windmill",
+        "html": "<p>Since they count as windmill sails for Create, wings can also dress a windmill, where they work like ordinary sails. It is a cheap way to reuse spare wings around a base.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Flight tips",
+        "html": "<p>Place wings around the machine's centre of mass, otherwise it noses down. A small vertical surface at the back, like a fin, keeps it straight. To steer, mount a row of wings on a <a href=\"/en/wiki/mechanical-bearing\">bearing</a> driven by a <a href=\"/en/wiki/propulsion-tilt-adapter\">Tilt Adapter</a>: redstone then sets the control surface's angle to the degree.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Propulsion: Simulated 1.1.5 (Propulsion-Team/create-propulsion-simulated repository, commit 36f83a1 of 2026-07-23, MIT licence, © Sergey Feduk, Tronco_78, Bunting_chj, SSnowly, KyivSec), identical to the modpack test instance jar",
+      "Wings: WingBlock.java, CopycatWingBlock.java (lift 0.475 / 0.7125 / 0.95), CopycatWingItem.java",
+      "Data: data/create/tags/block/windmill_sails.json, data/sable/tags/block",
+      "Recipes: data/createpropulsion/recipe/crafting/wing.json, smelting/tempered_wing.json, cutting and stonecutting/copycat_wing.json",
+      "Images: mod blocks placed on the plate and rendered by our engine (MIT licence, © Propulsion Team)"
+    ]
+  }
+}

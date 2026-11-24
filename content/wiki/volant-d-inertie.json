@@ -1,0 +1,310 @@
+{
+  "slug": "volant-d-inertie",
+  "name": "Volant d'inertie",
+  "blockId": "create:flywheel",
+  "category": "cinetique",
+  "title": "Volant d'inertie — Create : guide",
+  "description": "Le volant d'inertie de Create : un grand volant de laiton qui transmet la rotation sans rien coûter et qui prend sa vitesse avec un temps de retard.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>volant d'inertie</strong> est une grande roue de laiton qui se monte sur une ligne de <a href=\"/wiki/rotor\">rotors</a>. Il transmet la rotation comme un rotor, ne coûte aucune contrainte et ne produit rien : c'est un bloc de <strong>décor</strong>. Sa particularité se voit à l'œil nu : il met quelques secondes à prendre sa vitesse, et continue de tourner un moment après l'arrêt de la machine.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Cinétique"
+    },
+    {
+      "label": "Contrainte",
+      "value": "Aucune (0 SU), ne fournit pas de puissance"
+    },
+    {
+      "label": "Transmission",
+      "value": "Sur son axe, des deux côtés, comme un rotor"
+    },
+    {
+      "label": "Effet",
+      "value": "Décoratif : vitesse affichée avec retard"
+    },
+    {
+      "label": "Retard",
+      "value": "Rattrape 1/64 de l’écart par tick : 63 % en 3 s, 95 % en 10 s environ"
+    },
+    {
+      "label": "Taille",
+      "value": "Celle d’une grande roue dentée, sans dents qui engrènent"
+    },
+    {
+      "label": "Outil",
+      "value": "Hache ou pioche"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Lingot de laiton",
+        "Lingot de laiton",
+        "Lingot de laiton"
+      ],
+      [
+        "Lingot de laiton",
+        "Rotor",
+        "Lingot de laiton"
+      ],
+      [
+        "Lingot de laiton",
+        "Lingot de laiton",
+        "Lingot de laiton"
+      ]
+    ],
+    "items": [
+      [
+        "create:brass_ingot",
+        "create:brass_ingot",
+        "create:brass_ingot"
+      ],
+      [
+        "create:brass_ingot",
+        "create:shaft",
+        "create:brass_ingot"
+      ],
+      [
+        "create:brass_ingot",
+        "create:brass_ingot",
+        "create:brass_ingot"
+      ]
+    ],
+    "result": "1 volant d'inertie",
+    "resultItem": "create:flywheel"
+  },
+  "videos": [
+    {
+      "id": "flywheel_spin",
+      "name": "Volant d'inertie : l'élan et l'arrêt",
+      "description": "Un moteur créatif entraîne deux volants d'inertie par des rotors. Les rotors suivent la vitesse tout de suite, les volants la rattrapent peu à peu, puis continuent de tourner quand le moteur s'arrête.",
+      "duration": "PT21S",
+      "chapters": [
+        {
+          "t": 2.7,
+          "section": "pose"
+        },
+        {
+          "t": 5.45,
+          "section": "retard"
+        },
+        {
+          "t": 10.95,
+          "section": "vitesse"
+        },
+        {
+          "t": 15.45,
+          "section": "arret"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "pose",
+      "title": "Le poser sur une ligne",
+      "image": "flywheel_spin_pose.webp",
+      "alt": "Un moteur, des rotors et deux volants d'inertie à l'arrêt",
+      "video": "flywheel_spin",
+      "html": "<p>Le volant se pose comme un rotor : son axe suit la face sur laquelle on clique, à la verticale ou à l'horizontale. Il a un raccord de chaque côté de son axe, donc il s'intercale n'importe où sur une ligne. Dans la boucle, un <a href=\"/wiki/moteur-creatif\">moteur créatif</a> entraîne un premier volant, puis deux rotors mènent la rotation jusqu'à un second.</p>"
+    },
+    {
+      "id": "retard",
+      "title": "Un élan qui se voit",
+      "image": "flywheel_spin_elan.webp",
+      "alt": "Les rotors tournent, les volants prennent leur élan",
+      "html": "<p>Quand le moteur démarre, les rotors tournent tout de suite à 32 tr/min. Les volants, eux, partent lentement : à chaque tick, leur vitesse affichée rattrape 1/64 de l'écart avec la vraie vitesse. Il leur faut environ trois secondes pour atteindre les deux tiers de la vitesse, et une dizaine pour la rejoindre. C'est l'effet d'un volant lourd qui prend son élan.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "Plus vite, toujours avec retard",
+      "image": "flywheel_spin_vite.webp",
+      "alt": "Les volants à 128 tr/min",
+      "html": "<p>Le moteur passe à 128 tr/min : les rotors accélèrent d'un coup, les volants suivent en douceur. Plus l'écart est grand, plus ils accélèrent fort au début, puis ralentissent leur rattrapage en approchant de la cible. Une fois à la bonne vitesse, rien ne les distingue d'une roue ordinaire.</p>"
+    },
+    {
+      "id": "arret",
+      "title": "Il tourne encore à l'arrêt",
+      "image": "flywheel_spin_arret.webp",
+      "alt": "Les rotors arrêtés, les volants tournent encore",
+      "html": "<p>Le moteur s'arrête : les rotors s'immobilisent aussitôt, mais les volants continuent sur leur lancée et ralentissent pendant une dizaine de secondes. Ce n'est qu'une image : aucune machine ne profite de cette rotation restante, le réseau est bien à l'arrêt.</p>"
+    },
+    {
+      "id": "reseau",
+      "title": "Aucun effet sur le réseau",
+      "html": "<p>Le volant n'a <strong>aucun impact de contrainte</strong> et n'apporte aucune capacité. Il ne stocke pas d'énergie, ne lisse pas les à-coups et ne garde pas une machine en marche. Le <a href=\"/wiki/stressometre-compteur-de-vitesse\">stressomètre</a> ne le compte pas, et un compteur de vitesse posé à côté lit la vraie vitesse de la ligne, pas celle que l'on voit tourner.</p>"
+    },
+    {
+      "id": "engrenages",
+      "title": "Pas une roue dentée",
+      "html": "<p>Le volant a la taille d'une <a href=\"/wiki/roue-dentee\">grande roue dentée</a>, mais il n'engrène avec rien : une roue dentée posée contre lui ne tourne pas. La rotation ne passe que par son axe, comme dans un rotor. Prévois donc un rotor ou un boîtier à chaque bout si la ligne doit continuer.</p>"
+    },
+    {
+      "id": "idees",
+      "title": "Idées de décor",
+      "html": "<p>Un volant donne vie à une salle des machines : à côté d'un <a href=\"/wiki/moteur-a-vapeur\">moteur à vapeur</a>, au pied d'un moulin, ou au bout d'une ligne pour montrer qu'elle tourne. Son élan rend les démarrages et les arrêts plus crédibles. Plusieurs volants sur un même arbre ne coûtent rien de plus, et les rotors à côté peuvent recevoir un <a href=\"/wiki/rotor\">support en bois ou en métal</a> pour faire plus solide.</p>"
+    },
+    {
+      "id": "fabriquer",
+      "title": "Le fabriquer",
+      "html": "<p>Huit lingots de laiton autour d'un rotor donnent un volant. Le laiton se fait au <a href=\"/wiki/mixeur-mecanique\">mixeur</a> chauffé, avec du cuivre et du zinc. Le volant se casse à la hache ou à la pioche et revient entier.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Compter sur lui pour garder une machine en marche : il ne stocke rien, une presse s'arrête en même temps que le moteur. Le coller contre une roue dentée en espérant qu'elle suive : il faut passer par l'axe. Croire qu'il est bloqué parce qu'il tourne lentement juste après le démarrage : attends quelques secondes, il rattrape la vitesse de la ligne.</p>"
+    }
+  ],
+  "related": [
+    "rotor",
+    "roue-dentee",
+    "moteur-a-vapeur",
+    "moteur-creatif",
+    "stressometre-compteur-de-vitesse",
+    "materiaux"
+  ],
+  "sources": [
+    "Bloc : FlywheelBlock (RotatedPillarKineticBlock, raccords sur les deux faces de l'axe), AllBlocks (CStress.setNoImpact)",
+    "Retard : FlywheelBlockEntity (visualSpeed.chase(vitesse, 1/64, EXP) chaque tick, angle += visualSpeed × 3/10)",
+    "Recette : crafting/kinetics/flywheel.json (8 lingots de laiton autour d'un rotor)",
+    "Scène écrite pour ce wiki (Create n'a pas de scène Ponder sur ce sujet) : WIKI/c2c_scenes.py, rendue par notre moteur (pièces animées relues dans les BlockEntityRenderer de Create : WIKI/c2c_parts.py) ; vitesses recalculées par WIKI/redstone_sim.py, retard du volant rejoué tick par tick",
+    "Images : blocs et objets du jeu (modèles de Create) rendus par notre moteur, joueur non dessiné"
+  ],
+  "en": {
+    "slugEn": "flywheel",
+    "name": "Flywheel",
+    "title": "Flywheel — Create mod guide",
+    "description": "The Create Flywheel: a big brass wheel that passes rotation on at no cost and visibly takes time to speed up and slow down. Recipe, behaviour and ideas.",
+    "intro": "The <strong>Flywheel</strong> is a large brass wheel that sits on a line of <a href=\"/en/wiki/shaft\">shafts</a>. It passes rotation on like a shaft, costs no stress and produces nothing: it is a <strong>decorative</strong> block. What makes it special is visible at a glance: it takes a few seconds to reach its speed, and keeps spinning for a while after the machine stops.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Kinetics"
+      },
+      {
+        "label": "Stress",
+        "value": "None (0 SU), provides no power"
+      },
+      {
+        "label": "Transmission",
+        "value": "Along its axis, on both sides, like a shaft"
+      },
+      {
+        "label": "Effect",
+        "value": "Decorative: displayed speed lags behind"
+      },
+      {
+        "label": "Lag",
+        "value": "Closes 1/64 of the gap per tick: 63% in 3 s, about 95% in 10 s"
+      },
+      {
+        "label": "Size",
+        "value": "That of a Large Cogwheel, with no meshing teeth"
+      },
+      {
+        "label": "Tool",
+        "value": "Axe or pickaxe"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Brass Ingot",
+          "Brass Ingot",
+          "Brass Ingot"
+        ],
+        [
+          "Brass Ingot",
+          "Shaft",
+          "Brass Ingot"
+        ],
+        [
+          "Brass Ingot",
+          "Brass Ingot",
+          "Brass Ingot"
+        ]
+      ],
+      "result": "1 Flywheel"
+    },
+    "videos": [
+      {
+        "id": "flywheel_spin",
+        "name": "Flywheel: spinning up and coasting",
+        "description": "A Creative Motor drives two Flywheels through shafts. The shafts follow the speed at once, the flywheels catch up gradually, then keep turning when the motor stops."
+      }
+    ],
+    "sections": [
+      {
+        "id": "pose",
+        "title": "Placing it on a line",
+        "alt": "A motor, shafts and two Flywheels at rest",
+        "html": "<p>The Flywheel is placed like a shaft: its axis follows the face you click, vertical or horizontal. It has a connection on each side of its axis, so it fits anywhere along a line. In the loop, a <a href=\"/en/wiki/creative-motor\">Creative Motor</a> drives a first flywheel, then two shafts carry the rotation on to a second one.</p>"
+      },
+      {
+        "id": "retard",
+        "title": "A visible run-up",
+        "alt": "The shafts turn, the flywheels gather speed",
+        "html": "<p>When the motor starts, the shafts turn at 32 RPM straight away. The flywheels start slowly: every tick, their displayed speed closes 1/64 of the gap with the real speed. They need about three seconds to reach two thirds of it, and around ten to catch up fully. It looks like a heavy wheel gathering momentum.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "Faster, still lagging",
+        "alt": "The flywheels at 128 RPM",
+        "html": "<p>The motor goes to 128 RPM: the shafts jump to the new speed, the flywheels follow smoothly. The bigger the gap, the harder they accelerate at first, then the catch-up slows as they near the target. Once at speed, nothing sets them apart from an ordinary wheel.</p>"
+      },
+      {
+        "id": "arret",
+        "title": "Still turning after the stop",
+        "alt": "The shafts stopped, the flywheels still turning",
+        "html": "<p>The motor stops: the shafts freeze at once, but the flywheels carry on and slow down over about ten seconds. It is only a visual: no machine benefits from that leftover spin, the network really is stopped.</p>"
+      },
+      {
+        "id": "reseau",
+        "title": "No effect on the network",
+        "html": "<p>The Flywheel has <strong>no stress impact</strong> and adds no capacity. It stores no energy, does not smooth anything out and does not keep a machine running. The <a href=\"/en/wiki/stressometer-speedometer\">Stressometer</a> ignores it, and a Speedometer next to it reads the real speed of the line, not the one you see spinning.</p>"
+      },
+      {
+        "id": "engrenages",
+        "title": "Not a cogwheel",
+        "html": "<p>The Flywheel is the size of a <a href=\"/en/wiki/cogwheel\">Large Cogwheel</a>, but it meshes with nothing: a cogwheel set against it does not turn. Rotation only goes through its axis, as in a shaft. So plan a shaft or a casing at each end if the line has to go on.</p>"
+      },
+      {
+        "id": "idees",
+        "title": "Decoration ideas",
+        "html": "<p>A flywheel brings an engine room to life: next to a <a href=\"/en/wiki/steam-engine\">Steam Engine</a>, at the foot of a windmill, or at the end of a line to show that it runs. Its momentum makes start-ups and shutdowns look more believable. Several flywheels on one shaft cost nothing extra, and the shafts around them can take a <a href=\"/en/wiki/shaft\">wooden or metal bracket</a> for a sturdier look.</p>"
+      },
+      {
+        "id": "fabriquer",
+        "title": "Crafting it",
+        "html": "<p>Eight Brass Ingots around a Shaft make one Flywheel. Brass comes from a heated <a href=\"/en/wiki/mechanical-mixer\">Mechanical Mixer</a>, with copper and zinc. The Flywheel breaks with an axe or a pickaxe and drops whole.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>Relying on it to keep a machine running: it stores nothing, a press stops as soon as the motor does. Setting it against a cogwheel and expecting the cog to turn: rotation has to go through the axis. Thinking it is stuck because it turns slowly right after start-up: wait a few seconds, it catches up with the line's speed.</p>"
+      }
+    ],
+    "sources": [
+      "Block: FlywheelBlock (RotatedPillarKineticBlock, connections on both faces of the axis), AllBlocks (CStress.setNoImpact)",
+      "Lag: FlywheelBlockEntity (visualSpeed.chase(speed, 1/64, EXP) every tick, angle += visualSpeed × 3/10)",
+      "Recipe: crafting/kinetics/flywheel.json (8 Brass Ingots around a Shaft)",
+      "Scene written for this wiki (Create has no Ponder scene on this topic): WIKI/c2c_scenes.py, rendered by our engine (moving parts read from Create's BlockEntityRenderers: WIKI/c2c_parts.py); speeds recomputed by WIKI/redstone_sim.py, flywheel lag replayed tick by tick",
+      "Images: the game's blocks and items (Create's models) rendered by our engine, player not drawn"
+    ]
+  }
+}

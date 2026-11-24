@@ -6,7 +6,7 @@
   "title": "Bras mécanique — Create : guide en français",
   "description": "Le bras mécanique de Create : choisir ses entrées et sorties avant la pose, portée de 5 blocs, modes de distribution, filtre par entonnoir et redstone.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "Le <strong>bras mécanique</strong> prend un objet à un endroit et le dépose à un autre, dans un rayon de quelques blocs. Il remplace des mètres de tapis et d'entonnoirs dans les usines compactes : il nourrit un brûleur à blaze, sert plusieurs dépôts à tour de rôle, alimente une scie ou un établi mécanique. Tout le secret est dans la <strong>configuration avant la pose</strong> : le bras ne sait atteindre que les cibles que tu lui as montrées.",
@@ -96,19 +96,53 @@
       "id": "arm_modes",
       "name": "Bras mécanique : répartir entre plusieurs sorties",
       "description": "Un bras distribue les objets d'un tapis sur plusieurs dépôts à tour de rôle, en sautant ceux qui sont pleins.",
-      "duration": "PT22S"
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 2.61,
+          "section": "modes"
+        },
+        {
+          "t": 12.6,
+          "section": "tourniquet"
+        },
+        {
+          "t": 21.03,
+          "section": "tourniquet-force"
+        }
+      ]
     },
     {
       "id": "arm_modes_prefer",
       "name": "Bras mécanique : priorité et tourniquet forcé",
       "description": "Le même bras réglé pour servir d'abord sa première sortie, puis pour attendre chaque sortie à tour de rôle sans jamais en sauter.",
-      "duration": "PT22S"
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 0.28,
+          "section": "tourniquet-force"
+        },
+        {
+          "t": 9.75,
+          "section": "priorite"
+        }
+      ]
     },
     {
       "id": "arm_redstone",
       "name": "Bras mécanique : contrôle par redstone",
       "description": "Un levier met le bras en pause ; une impulsion négative lui fait faire un seul transfert.",
-      "duration": "PT20S"
+      "duration": "PT20S",
+      "chapters": [
+        {
+          "t": 5.75,
+          "section": "redstone"
+        },
+        {
+          "t": 17.2,
+          "section": "impulsion"
+        }
+      ]
     }
   ],
   "sections": [
@@ -155,7 +189,22 @@
       "image": "arm_modes_tourniquet.webp",
       "alt": "Bras mécanique qui dépose un objet sur chacun de ses dépôts de sortie à tour de rôle",
       "video": "arm_modes",
-      "html": "<p>Quand plusieurs sorties sont possibles, le panneau de valeur du bras règle sa stratégie. En <strong>tourniquet</strong>, le réglage par défaut, il les sert chacune leur tour et <strong>saute</strong> celles qui sont pleines. En <strong>priorité au premier</strong>, il remplit d'abord la première cible sélectionnée et ne passe à la suivante que si elle est pleine. En <strong>tourniquet forcé</strong>, il ne saute jamais une sortie : il attend qu'elle se libère.</p>"
+      "html": "<p>Quand plusieurs sorties peuvent recevoir l'objet, le bras doit choisir. C'est le <strong>panneau de valeur</strong> posé sur son socle qui règle sa stratégie : trois modes, détaillés ci-dessous.</p>"
+    },
+    {
+      "id": "tourniquet",
+      "title": "Le tourniquet",
+      "html": "<p>En <strong>tourniquet</strong>, le réglage par défaut, il sert les sorties chacune leur tour. Si l'une est pleine, il la <strong>saute</strong> et passe à la suivante, sans jamais rester bloqué.</p>"
+    },
+    {
+      "id": "priorite",
+      "title": "La priorité au premier",
+      "html": "<p>En <strong>priorité au premier</strong>, il remplit d'abord la première cible choisie quand on l'a configuré, et ne passe à la suivante que si elle est pleine. Pratique pour garder une machine principale toujours servie.</p>"
+    },
+    {
+      "id": "tourniquet-force",
+      "title": "Le tourniquet forcé",
+      "html": "<p>En <strong>tourniquet forcé</strong>, il ne saute jamais une sortie : si c'est son tour et qu'elle est pleine, il attend qu'elle se libère. Chaque sortie reçoit ainsi exactement la même part.</p>"
     },
     {
       "id": "exemples",
@@ -168,7 +217,12 @@
       "image": "arm_redstone_redstone.webp",
       "alt": "Bras mécanique relié à un levier, au repos tant que le signal est actif",
       "video": "arm_redstone",
-      "html": "<p>Comme le déployeur, le bras <strong>s'arrête</strong> quand il reçoit un signal de redstone, après avoir terminé le mouvement en cours. Une <strong>impulsion négative</strong> lui fait donc faire un seul transfert : idéal pour doser exactement un objet, par exemple un combustible par cycle de chaudière.</p>"
+      "html": "<p>Comme le déployeur, le bras <strong>s'arrête</strong> quand il reçoit un signal de redstone, après avoir terminé le mouvement en cours : il ne lâche jamais un objet en plein vol.</p>"
+    },
+    {
+      "id": "impulsion",
+      "title": "Un transfert à la fois",
+      "html": "<p>Une <strong>impulsion négative</strong>, un signal coupé un court instant, lui fait donc faire un seul transfert : idéal pour doser exactement un objet, par exemple un combustible par cycle de chaudière.</p>"
     }
   ],
   "related": [
@@ -284,7 +338,7 @@
         "id": "selection",
         "title": "Selecting inputs and outputs",
         "alt": "Depots outlined in white, selected as targets for the arm",
-        "html": "<p><strong>Right-click</strong> a depot, a belt, a funnel… while holding the arm to add it. Right-clicking the same target again switches it from <strong>input (blue)</strong>, where the arm picks items up, to <strong>output (yellow)</strong>, where it drops them off. <strong>Left-click</strong> removes a target from the selection.</p>"
+        "html": "<p><strong>Right-click</strong> a depot, a belt, a funnel… with the arm in hand to add it. Right-clicking the same target again switches it from <strong>input (blue)</strong>, where the arm picks items up, to <strong>output (yellow)</strong>, where it drops them off. <strong>Left-click</strong> removes a target from the selection.</p>"
       },
       {
         "id": "portee",
@@ -302,13 +356,28 @@
         "id": "filtre",
         "title": "Filtering with a Brass Funnel",
         "alt": "Brass Funnels with a filter, targeted as outputs by the Mechanical Arm",
-        "html": "<p>The arm has <strong>no filter</strong> of its own. To make it sort, target <strong>Brass Funnels</strong> set with a filter: the arm reads their filter and only brings them the items they accept. It is even smart enough <strong>not to pick up</strong> an item that no output can take, so it never gets stuck holding something.</p>"
+        "html": "<p>The arm has <strong>no filter</strong> of its own. To make it sort, target <strong>Brass Funnels</strong> set with a filter: the arm reads their filter and only brings them the items they accept. It is even clever enough to <strong>leave alone</strong> an item that no output can take, so it never gets stuck holding something.</p>"
       },
       {
         "id": "modes",
         "title": "Choosing how to share",
         "alt": "A Mechanical Arm dropping an item on each of its output depots in turn",
-        "html": "<p>When several outputs are available, the arm's value panel sets its strategy. In <strong>Round Robin</strong>, the default, it serves each one in turn and <strong>skips</strong> the full ones. In <strong>Prefer First</strong>, it fills the first selected target first and only moves on to the next when it is full. In <strong>Forced Round Robin</strong>, it never skips an output: it waits until it is free.</p>"
+        "html": "<p>When several outputs can take the item, the arm has to choose. Its strategy is chosen on the <strong>value panel</strong> of its base: three modes, detailed below.</p>"
+      },
+      {
+        "id": "tourniquet",
+        "title": "Round Robin",
+        "html": "<p>In <strong>Round Robin</strong>, the default, it serves the outputs one after another. If one is full, it <strong>skips</strong> it and moves on to the next, so it never gets stuck.</p>"
+      },
+      {
+        "id": "priorite",
+        "title": "Prefer First",
+        "html": "<p>In <strong>Prefer First</strong>, it fills the target selected first when it was set up, and only moves on to the next one when that is full. Handy to keep a main machine always supplied.</p>"
+      },
+      {
+        "id": "tourniquet-force",
+        "title": "Forced Round Robin",
+        "html": "<p>In <strong>Forced Round Robin</strong>, it never skips an output: if it is its turn and it is full, the arm waits until it frees up. Each output thus gets exactly the same share.</p>"
       },
       {
         "id": "exemples",
@@ -319,7 +388,12 @@
         "id": "redstone",
         "title": "Controlling it with redstone",
         "alt": "A Mechanical Arm linked to a lever, resting while the signal is on",
-        "html": "<p>Like the Deployer, the arm <strong>stops</strong> when it gets a redstone signal, after finishing its current move. A <strong>negative pulse</strong> therefore makes it do a single transfer: perfect for dosing exactly one item, for example one piece of fuel per boiler cycle.</p>"
+        "html": "<p>Like the Deployer, the arm <strong>stops</strong> when it gets a redstone signal, after finishing its current move: it never drops an item halfway.</p>"
+      },
+      {
+        "id": "impulsion",
+        "title": "One transfer at a time",
+        "html": "<p>A <strong>negative pulse</strong>, a signal cut for a brief moment, therefore makes it do a single transfer: perfect for dosing exactly one item, for example one piece of fuel per boiler cycle.</p>"
       }
     ],
     "sources": [

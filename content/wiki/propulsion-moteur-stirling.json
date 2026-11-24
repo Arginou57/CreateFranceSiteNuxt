@@ -1,0 +1,309 @@
+{
+  "slug": "propulsion-moteur-stirling",
+  "name": "Moteur Stirling",
+  "blockId": "createpropulsion:stirling_engine",
+  "category": "propulsion",
+  "title": "Moteur Stirling — Create Propulsion, guide",
+  "description": "Le moteur Stirling de Create Propulsion : posé sur un brûleur, il fournit 4 096 SU à 64, 128, 192 ou 256 tr/min.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Propulsion: Simulated 1.1.5",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>moteur Stirling</strong> (Stirling Engine) transforme la chaleur d'un brûleur en rotation. Posé sur un <a href=\"/wiki/propulsion-bruleurs\">brûleur</a> allumé, il fait tourner son arbre et fournit 4 096 unités de contrainte (SU) à un réseau de Create, à la vitesse de son choix. C'est un petit moteur compact, sans eau ni chaudière.",
+  "facts": [
+    {
+      "label": "Puissance",
+      "value": "4 096 SU, à toutes les vitesses"
+    },
+    {
+      "label": "Vitesses",
+      "value": "64, 128, 192 ou 256 tr/min, deux sens"
+    },
+    {
+      "label": "Chaleur",
+      "value": "vitesse / 256 unité par tick (1 à 256 tr/min)"
+    },
+    {
+      "label": "Source",
+      "value": "brûleur du mod, ou brûleur à Blaze au moins faiblissant"
+    },
+    {
+      "label": "Seuil",
+      "value": "brûleur chargé à plus de 10 %"
+    },
+    {
+      "label": "Redstone",
+      "value": "un signal l’arrête"
+    },
+    {
+      "label": "Sortie",
+      "value": "un arbre à l’arrière"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Plaque de cuivre",
+        "Rotor",
+        "Plaque de cuivre"
+      ],
+      [
+        "Alliage d'andésite",
+        "Roue dentée",
+        "Alliage d'andésite"
+      ],
+      [
+        "Plaque de cuivre",
+        "Plaque de cuivre",
+        "Plaque de cuivre"
+      ]
+    ],
+    "items": [
+      [
+        "create:copper_sheet",
+        "create:shaft",
+        "create:copper_sheet"
+      ],
+      [
+        "create:andesite_alloy",
+        "create:cogwheel",
+        "create:andesite_alloy"
+      ],
+      [
+        "create:copper_sheet",
+        "create:copper_sheet",
+        "create:copper_sheet"
+      ]
+    ],
+    "result": "1 moteur Stirling",
+    "resultItem": "createpropulsion:stirling_engine"
+  },
+  "videos": [
+    {
+      "id": "prop_stirling_solid",
+      "name": "Sur un brûleur à charbon",
+      "description": "Un charbon dans le brûleur : les pistons s'agitent et l'arbre tourne, puis tout s'arrête quand le feu s'éteint.",
+      "duration": "PT11S",
+      "chapters": [
+        {
+          "t": 0.2,
+          "section": "poser"
+        },
+        {
+          "t": 3.7,
+          "section": "tourner"
+        }
+      ]
+    },
+    {
+      "id": "prop_stirling_liquid",
+      "name": "Sur un brûleur à liquide",
+      "description": "Une pompe alimente le brûleur ; quand l'embrayage coupe la pompe, le moteur finit par s'arrêter.",
+      "duration": "PT19S",
+      "chapters": [
+        {
+          "t": 0.7,
+          "section": "poser"
+        },
+        {
+          "t": 7.5,
+          "section": "tourner"
+        },
+        {
+          "t": 9.7,
+          "section": "carburant"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "poser",
+      "title": "Le poser sur un brûleur",
+      "image": "prop_stirling_solid_tourne.webp",
+      "alt": "Un moteur Stirling posé sur un brûleur à combustible solide allumé, son arbre sur le côté",
+      "video": "prop_stirling_solid",
+      "html": "<p>Le moteur se pose directement sur le brûleur : c'est le bloc du dessus qui reçoit la chaleur. Il accepte les deux <a href=\"/wiki/propulsion-bruleurs\">brûleurs du mod</a> et, si l'option n'est pas coupée, un <a href=\"/wiki/bruleur-a-blaze\">brûleur à Blaze</a> au niveau faiblissant ou plus. Son arbre sort à l'arrière : branchez-y un <a href=\"/wiki/rotor\">rotor</a> ou une roue dentée.</p>"
+    },
+    {
+      "id": "tourner",
+      "title": "Démarrer",
+      "image": "prop_stirling_liquid_tourne.webp",
+      "alt": "Le moteur Stirling qui tourne sur un brûleur à liquide, une pompe et un embrayage à côté",
+      "video": "prop_stirling_liquid",
+      "html": "<p>Dès que le brûleur dépasse 10 % de sa réserve, le moteur démarre : ses quatre pistons montent et descendent par paires, d'autant plus vite que la vitesse choisie est haute, et l'arbre tourne. Quand le feu s'éteint, le moteur s'arrête aussitôt (première vidéo).</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "Choisir la vitesse",
+      "html": "<p>Un panneau de réglage propose quatre vitesses, 64, 128, 192 ou 256 tr/min, sur deux rangées pour les deux sens de rotation (256 par défaut). La puissance ne change pas : le moteur fournit toujours 4 096 SU, soit 16 SU par tr/min à 256 et 64 SU par tr/min à 64. Choisir la vitesse la plus basse qui suffit économise donc le combustible : la chaleur prise vaut la vitesse divisée par 256, une unité par tick à fond.</p>"
+    },
+    {
+      "id": "carburant",
+      "title": "Garder le brûleur allumé",
+      "image": "prop_stirling_liquid_embrayage.webp",
+      "alt": "L'embrayage alimenté par la redstone coupe la pompe qui nourrit le brûleur",
+      "html": "<p>Dans la seconde vidéo, l'embrayage coupe la pompe : le brûleur à liquide ne reçoit plus rien, vide sa réserve, et le moteur s'arrête. Prévoyez une alimentation continue, ou un <a href=\"/wiki/detecteur-de-seuil\">détecteur de seuil</a> sur le réservoir pour être prévenu. Un signal de redstone sur le moteur lui-même l'arrête aussi.</p>"
+    },
+    {
+      "id": "exemple",
+      "title": "Exemple : un treuil volant",
+      "html": "<p>Un engin a souvent besoin de rotation à bord : un <a href=\"/wiki/poulie-a-corde\">treuil</a>, une perceuse, une pompe. Posez un brûleur à liquide branché sur le réservoir de carburant, un moteur Stirling dessus réglé à 128 tr/min, et reliez son arbre à la machine par des <a href=\"/wiki/roue-dentee\">roues dentées</a>. Avec 4 096 SU, il fait tourner une perceuse et une pompe à la fois. Une <a href=\"/wiki/propulsion-transmission-redstone\">transmission redstone</a> placée ensuite dose la vitesse depuis le poste de pilotage.</p><p>Le moteur se fabrique avec un rotor, une roue dentée, deux alliages d'andésite et six plaques de cuivre. Un <a href=\"/wiki/stressometre-compteur-de-vitesse\">stressomètre</a> sur le réseau montre la marge restante.</p>"
+    },
+    {
+      "id": "faq",
+      "title": "Il ne tourne pas ?",
+      "html": "<p>Vérifiez trois choses. Le brûleur doit être juste dessous et dépasser 10 % de sa chaleur : laissez-lui quelques secondes après l'allumage. Aucun signal de redstone ne doit toucher le moteur, sinon il s'arrête. Enfin, avec un brûleur à Blaze, l'option du serveur doit l'autoriser et le Blaze doit être au moins au niveau faiblissant. Si le réseau tourne mais cale, comparez la contrainte demandée aux 4 096 SU disponibles.</p>"
+    },
+    {
+      "id": "sens",
+      "title": "Changer de sens",
+      "html": "<p>Les deux rangées du panneau de réglage correspondent aux deux sens de rotation : choisir 128 sur la seconde rangée fait tourner l'arbre à 128 tr/min dans l'autre sens. Pratique pour inverser une machine sans ajouter d'inverseur de rotation.</p>"
+    },
+    {
+      "id": "comparaison",
+      "title": "Face au moteur à vapeur",
+      "html": "<p>Un <a href=\"/wiki/moteur-a-vapeur\">moteur à vapeur</a> de Create demande une chaudière, de l'eau et beaucoup de place ; il devient bien plus puissant en grand. Le moteur Stirling tient dans deux blocs avec son brûleur, sans eau, et se monte facilement sur un engin de Sable : c'est le moteur des petites machines volantes et des usines compactes.</p>"
+    }
+  ],
+  "related": [
+    "create-propulsion",
+    "propulsion-bruleurs",
+    "moteur-a-vapeur",
+    "bruleur-a-blaze",
+    "rotor",
+    "pompe-mecanique",
+    "stressometre-compteur-de-vitesse",
+    "propulsion-carburants"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Propulsion: Simulated 1.1.5 (dépôt Propulsion-Team/create-propulsion-simulated, commit 36f83a1 du 23/07/2026, licence MIT, © Sergey Feduk, Tronco_78, Bunting_chj, SSnowly, KyivSec), identique au jar de l’instance de test du modpack",
+    "Moteur : StirlingEngineBlockEntity.java (MAX_GENERATED_RPM 256), StirlingScrollValueBehaviour.java, StirlingEngineRenderer.java",
+    "Valeurs par défaut : PropulsionConfig.java (configuration commune et serveur du mod)",
+    "Recette : data/createpropulsion/recipe/crafting/stirling_engine.json",
+    "Vidéos : scènes Ponder de Create Propulsion: Simulated (stirling_engine_solid, stirling_engine_liquid) rejouées par notre moteur ; modèles, textures et particules du mod (licence MIT, © Propulsion Team)"
+  ],
+  "en": {
+    "slugEn": "propulsion-stirling-engine",
+    "name": "Stirling Engine",
+    "title": "Stirling Engine — Create Propulsion guide",
+    "description": "The Create Propulsion Stirling Engine: placed on a burner, it supplies 4,096 SU at 64, 128, 192 or 256 RPM to a Create network.",
+    "intro": "The <strong>Stirling Engine</strong> turns a burner's heat into rotation. Placed on a lit <a href=\"/en/wiki/propulsion-burners\">burner</a>, it spins its shaft and supplies 4,096 stress units (SU) to a Create network, at the speed you pick. It is a small, compact engine with no water and no boiler.",
+    "facts": [
+      {
+        "label": "Power",
+        "value": "4,096 SU at every speed"
+      },
+      {
+        "label": "Speeds",
+        "value": "64, 128, 192 or 256 RPM, both directions"
+      },
+      {
+        "label": "Heat",
+        "value": "speed / 256 unit per tick (1 at 256 RPM)"
+      },
+      {
+        "label": "Source",
+        "value": "a mod burner, or a Blaze Burner at fading or above"
+      },
+      {
+        "label": "Threshold",
+        "value": "burner more than 10% charged"
+      },
+      {
+        "label": "Redstone",
+        "value": "a signal stops it"
+      },
+      {
+        "label": "Output",
+        "value": "a shaft at the back"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Copper Sheet",
+          "Shaft",
+          "Copper Sheet"
+        ],
+        [
+          "Andesite Alloy",
+          "Cogwheel",
+          "Andesite Alloy"
+        ],
+        [
+          "Copper Sheet",
+          "Copper Sheet",
+          "Copper Sheet"
+        ]
+      ],
+      "result": "1 Stirling Engine"
+    },
+    "videos": [
+      {
+        "id": "prop_stirling_solid",
+        "name": "On a coal burner",
+        "description": "Coal in the burner: the pistons pump and the shaft turns, then everything stops when the fire goes out."
+      },
+      {
+        "id": "prop_stirling_liquid",
+        "name": "On a Liquid Burner",
+        "description": "A pump feeds the burner; once the clutch cuts the pump, the engine eventually stops."
+      }
+    ],
+    "sections": [
+      {
+        "id": "poser",
+        "title": "Placing it on a burner",
+        "alt": "A Stirling Engine on a lit Solid Burner, its shaft on the side",
+        "html": "<p>The engine sits right on the burner: the block above is the one that gets the heat. It accepts both <a href=\"/en/wiki/propulsion-burners\">mod burners</a> and, unless the option is turned off, a <a href=\"/en/wiki/blaze-burner\">Blaze Burner</a> at fading level or above. Its shaft comes out the back: connect a <a href=\"/en/wiki/shaft\">Shaft</a> or a cogwheel.</p>"
+      },
+      {
+        "id": "tourner",
+        "title": "Starting up",
+        "alt": "The Stirling Engine running on a Liquid Burner, with a pump and a clutch beside it",
+        "html": "<p>As soon as the burner holds more than 10% of its buffer, the engine starts: its four pistons move in pairs, faster at higher speeds, and the shaft turns. When the fire dies, the engine stops right away (first video).</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "Choosing the speed",
+        "html": "<p>A setting panel offers four speeds, 64, 128, 192 or 256 RPM, on two rows for the two directions (256 by default). Power does not change: the engine always supplies 4,096 SU, which is 16 SU per RPM at 256 and 64 SU per RPM at 64. Picking the lowest speed that does the job therefore saves fuel: the heat taken equals the speed divided by 256, one unit per tick at full speed.</p>"
+      },
+      {
+        "id": "carburant",
+        "title": "Keeping the burner lit",
+        "alt": "A redstone-powered clutch cuts the pump that feeds the burner",
+        "html": "<p>In the second video, the Clutch cuts the pump: the Liquid Burner gets nothing more, empties its buffer, and the engine stops. Plan a steady supply, or put a <a href=\"/en/wiki/threshold-switch\">Threshold Switch</a> on the tank to get a warning. A redstone signal on the engine itself also stops it.</p>"
+      },
+      {
+        "id": "exemple",
+        "title": "Example: a flying winch",
+        "html": "<p>A machine often needs rotation on board: a <a href=\"/en/wiki/rope-pulley\">winch</a>, a drill, a pump. Place a Liquid Burner connected to the fuel tank, a Stirling Engine on it set to 128 RPM, and link its shaft to the machine with <a href=\"/en/wiki/cogwheel\">cogwheels</a>. With 4,096 SU it runs a drill and a pump at once. A <a href=\"/en/wiki/propulsion-redstone-transmission\">Redstone Transmission</a> placed after it sets the speed from the cockpit.</p><p>The engine is crafted from a shaft, a cogwheel, two andesite alloys and six copper sheets. A <a href=\"/en/wiki/stressometer-speedometer\">Stressometer</a> on the network shows the margin left.</p>"
+      },
+      {
+        "id": "faq",
+        "title": "It will not turn?",
+        "html": "<p>Check three things. The burner must sit right below and hold more than 10% of its heat: give it a few seconds after lighting. No redstone signal may reach the engine, otherwise it stops. Finally, with a Blaze Burner, the server option must allow it and the Blaze must be at least at fading level. If the network spins but stalls, compare the required stress with the 4,096 SU available.</p>"
+      },
+      {
+        "id": "sens",
+        "title": "Changing direction",
+        "html": "<p>The two rows of the setting panel match the two directions of rotation: picking 128 on the second row spins the shaft at 128 RPM the other way. Handy to reverse a machine without adding a gearshift to the network.</p>"
+      },
+      {
+        "id": "comparaison",
+        "title": "Compared with the steam engine",
+        "html": "<p>A Create <a href=\"/en/wiki/steam-engine\">Steam Engine</a> needs a boiler, water and plenty of room; it gets far stronger when built big. The Stirling Engine fits in two blocks with its burner, needs no water and is easy to mount on a Sable machine: it is the engine of small flying machines and compact factories.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Propulsion: Simulated 1.1.5 (Propulsion-Team/create-propulsion-simulated repository, commit 36f83a1 of 2026-07-23, MIT licence, © Sergey Feduk, Tronco_78, Bunting_chj, SSnowly, KyivSec), identical to the modpack test instance jar",
+      "Engine: StirlingEngineBlockEntity.java (MAX_GENERATED_RPM 256), StirlingScrollValueBehaviour.java, StirlingEngineRenderer.java",
+      "Default values: PropulsionConfig.java (the mod’s common and server configuration)",
+      "Recipe: data/createpropulsion/recipe/crafting/stirling_engine.json",
+      "Videos: Create Propulsion: Simulated Ponder scenes (stirling_engine_solid, stirling_engine_liquid) replayed by our engine; mod models, textures and particles (MIT licence, © Propulsion Team)"
+    ]
+  }
+}

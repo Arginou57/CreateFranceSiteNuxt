@@ -6,7 +6,7 @@
   "title": "Rail de train — Create : guide en français",
   "description": "Le rail de train de Create : fabrication, poser des voies en ligne, virages, pentes, pavage automatique, portails du Nether et chunks non chargés.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "Le <strong>rail de train</strong> est la voie des trains de Create, différente des rails de wagonnet. On le pose bloc par bloc ou par tronçons entiers, en ligne droite, en virage ou en pente, et il traverse même les portails du Nether. C'est sur lui que se fixent la <a href=\"/wiki/station-de-train\">station</a>, les <a href=\"/wiki/signal-de-train\">signaux</a> et les <a href=\"/wiki/observateur-de-train\">observateurs</a>.",
@@ -84,7 +84,7 @@
       "title": "Poser toute une rangée",
       "image": "track_placement_rangee.webp",
       "alt": "Premier rail sélectionné",
-      "html": "<p>Pas besoin de poser chaque bloc : fais un <strong>clic droit sur un rail existant</strong> avec des rails en main. Il se met en surbrillance, et tu peux choisir le point d'arrivée.</p>"
+      "html": "<p>Pas besoin de poser chaque bloc : fais un <strong>clic droit visant un rail existant</strong> avec des rails en main. Il se met en surbrillance, et tu peux choisir le point d'arrivée.</p>"
     },
     {
       "id": "second",
@@ -133,7 +133,7 @@
       "id": "portail",
       "title": "Vers le Nether",
       "image": "track_portal_portail.webp",
-      "alt": "Rail posé contre un portail du Nether",
+      "alt": "Rail posé contre un portail vers le Nether",
       "video": "track_portal",
       "html": "<p>Un rail <strong>accolé à un portail du Nether</strong> essaie de créer sa voie jumelle de l'autre côté. Le mieux est que le portail soit déjà relié à son jumeau de l'autre côté.</p>"
     },
@@ -168,6 +168,11 @@
       "id": "conseils",
       "title": "Astuces",
       "html": "<p>Prévois des <strong>rails droits</strong> devant chaque station : c'est là qu'on pose les bogies et qu'on assemble les trains. Garde de la place sur les côtés pour les <a href=\"/wiki/signal-de-train\">signaux</a> et les quais, et vise des virages larges sur les lignes principales.</p>"
+    },
+    {
+      "id": "carte",
+      "title": "Les rails sur les cartes",
+      "html": "<p>Le long des rails courbes, le jeu pose des blocs invisibles : chacun est une <strong>balise de rails pour carte</strong>. Ils ne gênent rien, ne s'obtiennent pas, et donnent une couleur métal aux courbes sur les cartes du jeu, pour que les virages y apparaissent comme les lignes droites. Ils disparaissent seuls quand le rail est retiré. Au passage, le rail lui-même sort d'un assemblage séquencé : entre deux étapes du déployeur et de la presse, l'objet sur le tapis est un <strong>rail incomplet</strong>.</p>"
     },
     {
       "id": "ponts",
@@ -337,6 +342,11 @@
         "id": "conseils",
         "title": "Tips",
         "html": "<p>Plan <strong>straight tracks</strong> in front of every station: that is where bogeys go and trains get assembled. Keep room on the sides for <a href=\"/en/wiki/train-signal\">signals</a> and platforms, and aim for wide turns on main lines.</p>"
+      },
+      {
+        "id": "carte",
+        "title": "Tracks on maps",
+        "html": "<p>Along curved track, the game places invisible blocks: each one is a <strong>Track Marker for Maps</strong>. They get in nobody's way, cannot be obtained, and give curves a metal colour on the game's maps, so that bends show up like the straight parts. They go away on their own when the track is removed. Incidentally, the track itself comes from sequenced assembly: between the deployer and press steps, the item on the belt is an <strong>Incomplete Track</strong>.</p>"
       },
       {
         "id": "ponts",

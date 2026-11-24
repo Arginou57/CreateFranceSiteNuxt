@@ -1,0 +1,301 @@
+{
+  "slug": "propulsion-adaptateur-inclinaison",
+  "name": "Adaptateur d'inclinaison",
+  "blockId": "createpropulsion:tilt_adapter",
+  "category": "propulsion",
+  "title": "Adaptateur d'inclinaison — Create Propulsion, guide",
+  "description": "L'adaptateur d'inclinaison de Create Propulsion tourne un arbre d'un angle réglé par deux signaux de redstone ; version avancée.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Propulsion: Simulated 1.1.5",
+  "mcVersion": "1.21.1",
+  "intro": "L'<strong>adaptateur d'inclinaison</strong> (Tilt Adapter) tourne son arbre de sortie d'un angle précis, choisi par deux signaux de redstone, puis le tient. Il remplace un <a href=\"/wiki/inverseur-de-rotation-sequence\">inverseur séquencé</a> pour braquer une gouverne, une aile ou une tuyère montée sur roulement, et revient tout seul au neutre quand les signaux tombent.",
+  "facts": [
+    {
+      "label": "Angle",
+      "value": "gauche/15 × limite − droite/15 × limite"
+    },
+    {
+      "label": "Limite",
+      "value": "±45° (réglable de 0 à 180° par la configuration)"
+    },
+    {
+      "label": "Entrée",
+      "value": "arbre à l’arrière, la vitesse règle la rapidité du mouvement"
+    },
+    {
+      "label": "Sortie",
+      "value": "arbre à l’avant, ne tourne que pendant un changement"
+    },
+    {
+      "label": "Neutre",
+      "value": "sans signal, retour à 0°"
+    },
+    {
+      "label": "Version avancée",
+      "value": "limites séparées, jusqu’à 90° par défaut"
+    },
+    {
+      "label": "Contrainte",
+      "value": "aucune"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Plaque de fer",
+        null
+      ],
+      [
+        "Rotor de portique",
+        "Roue dentée",
+        "Rotor de portique"
+      ],
+      [
+        "Poudre de redstone",
+        "Boitier d'andésite",
+        "Poudre de redstone"
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "create:iron_sheet",
+        null
+      ],
+      [
+        "create:gantry_shaft",
+        "create:cogwheel",
+        "create:gantry_shaft"
+      ],
+      [
+        "minecraft:redstone",
+        "create:andesite_casing",
+        "minecraft:redstone"
+      ]
+    ],
+    "result": "1 adaptateur d'inclinaison",
+    "resultItem": "createpropulsion:tilt_adapter"
+  },
+  "videos": [
+    {
+      "id": "prop_tilt",
+      "name": "Commander l'inclinaison",
+      "description": "Deux leviers analogiques de chaque côté : à égalité rien ne bouge, à 15 contre 3 le portique penche, puis dans l'autre sens.",
+      "duration": "PT21S",
+      "chapters": [
+        {
+          "t": 1.2,
+          "section": "principe"
+        },
+        {
+          "t": 4.2,
+          "section": "egal"
+        },
+        {
+          "t": 8.7,
+          "section": "gauche"
+        },
+        {
+          "t": 13.7,
+          "section": "droite"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "principe",
+      "title": "Un arbre qui tourne d’un angle",
+      "image": "prop_tilt_adaptateur.webp",
+      "alt": "Un adaptateur d'inclinaison sur des boîtiers d'andésite, un moteur créatif derrière lui",
+      "video": "prop_tilt",
+      "html": "<p>La rotation entre par l'arrière ; elle ne sort pas en continu, elle sert à déplacer l'arbre de sortie jusqu'à l'angle demandé. Plus l'entrée tourne vite, plus le mouvement est rapide. Une fois l'angle atteint, la sortie s'arrête et tient sa position. Deux portiques rouges sur les flancs montrent l'angle actuel et rougissent avec le signal de leur côté.</p>"
+    },
+    {
+      "id": "egal",
+      "title": "Deux signaux égaux",
+      "image": "prop_tilt_egal.webp",
+      "alt": "Deux leviers analogiques à 8 de part et d'autre de l'adaptateur, portiques droits",
+      "html": "<p>Chaque flanc reçoit un signal de redstone. L'angle visé vaut le signal gauche sur 15 fois la limite, moins le signal droit sur 15 fois la limite. Avec 8 de chaque côté, les deux parts s'annulent : l'angle reste à 0°.</p>"
+    },
+    {
+      "id": "gauche",
+      "title": "Plus fort à gauche",
+      "image": "prop_tilt_gauche.webp",
+      "alt": "Le levier de gauche à 15, celui de droite à 3, les portiques penchés",
+      "html": "<p>À 15 contre 3, l'angle vaut 45 − 9 = 36° : la sortie tourne de 36° et s'arrête, les portiques penchent d'autant. Une <a href=\"/wiki/liaison-de-redstone\">liaison de redstone</a> analogique depuis un poste de pilotage suffit à commander une gouverne à distance.</p>"
+    },
+    {
+      "id": "droite",
+      "title": "Plus fort à droite",
+      "image": "prop_tilt_droite.webp",
+      "alt": "Le levier de droite à 14, celui de gauche à 2, les portiques penchés dans l'autre sens",
+      "html": "<p>À 2 contre 14, l'angle passe à −36° : la sortie repart dans l'autre sens. Sans aucun signal, l'adaptateur revient au neutre. La limite de ±45° se change dans la configuration du mod (0 à 180°).</p>"
+    },
+    {
+      "id": "exemple",
+      "title": "Exemple : une gouverne",
+      "html": "<p>Pour un engin à ailes, montez une rangée d'<a href=\"/wiki/propulsion-ailes\">ailes</a> sur un <a href=\"/wiki/roulement-mecanique\">roulement mécanique</a> à l'arrière, et entraînez le roulement par la sortie de l'adaptateur. Un moteur ou un <a href=\"/wiki/propulsion-moteur-stirling\">moteur Stirling</a> du bord alimente l'entrée. Au poste de pilotage, deux <a href=\"/wiki/liaison-de-redstone\">liaisons</a> analogiques envoient les signaux gauche et droite : le pilote incline la gouverne à volonté et elle revient à plat quand il lâche. Le même montage sert à orienter une tuyère de <a href=\"/wiki/propulsion-propulseur\">propulseur</a> sur roulement.</p><p>L'adaptateur se fabrique avec une plaque de fer, deux rotors de portique, une roue dentée, un boitier d'andésite et deux poudres de redstone. Il ne demande aucune contrainte au réseau.</p>"
+    },
+    {
+      "id": "faq",
+      "title": "Questions fréquentes",
+      "html": "<p><strong>La sortie ne bouge pas ?</strong> L'entrée doit tourner : sans rotation, l'adaptateur garde son angle actuel même si les signaux changent. <strong>Le mouvement est trop lent ?</strong> Augmentez la vitesse d'entrée, l'angle reste le même. <strong>Il dépasse la cible ?</strong> Non : chaque mouvement s'arrête à l'angle demandé, puis repart vers la nouvelle cible si les signaux ont changé entre-temps. <strong>Quel côté est le gauche ?</strong> Chaque face latérale porte un portique : celle qui fait pencher la sortie dans le sens positif est le côté gauche ; un essai avec un levier lève le doute.</p>"
+    },
+    {
+      "id": "difference",
+      "title": "Adaptateur ou inverseur séquencé ?",
+      "html": "<p>Un <a href=\"/wiki/inverseur-de-rotation-sequence\">inverseur de rotation séquencé</a> tourne d'un angle à chaque impulsion et garde la somme ; l'adaptateur vise un angle absolu, fixé par la redstone, et y revient toujours. Pour une gouverne pilotée au levier, l'adaptateur est bien plus simple : pas de compteur à tenir, pas de dérive.</p>"
+    },
+    {
+      "id": "avance",
+      "title": "L'adaptateur d'inclinaison avancé",
+      "image": "prop_gal_advanced_tilt_avance.webp",
+      "alt": "Un adaptateur d'inclinaison avancé posé devant un moteur créatif",
+      "html": "<p>L'<strong>adaptateur d'inclinaison avancé</strong> (Advanced Tilt Adapter) fonctionne pareil mais règle ses deux limites séparément, avec des valeurs jusqu'à 90° par défaut ; la touche Ctrl relie les deux réglages. On le fabrique en ajoutant un mécanisme de précision à un adaptateur simple. Il sert quand une gouverne doit monter plus qu'elle ne descend.</p>"
+    }
+  ],
+  "related": [
+    "create-propulsion",
+    "propulsion-transmission-redstone",
+    "inverseur-de-rotation-sequence",
+    "liaison-de-redstone",
+    "roulement-mecanique",
+    "propulsion-propulseur-vectoriel",
+    "aeronautics-pilotage",
+    "aeronautics-redstone"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Propulsion: Simulated 1.1.5 (dépôt Propulsion-Team/create-propulsion-simulated, commit 36f83a1 du 23/07/2026, licence MIT, © Sergey Feduk, Tronco_78, Bunting_chj, SSnowly, KyivSec), identique au jar de l’instance de test du modpack",
+    "Adaptateur : TiltAdapterBlockEntity.java, TiltAdapterMotionState.java, AbstractTiltAdapterBlock.java, TiltAdapterRenderer.java",
+    "Version avancée : AdvancedTiltAdapterBlockEntity.java",
+    "Valeurs par défaut : PropulsionConfig.java (configuration commune et serveur du mod)",
+    "Recettes : data/createpropulsion/recipe/crafting/tilt_adapter.json, advanced_tilt_adapter.json",
+    "Vidéos : scènes Ponder de Create Propulsion: Simulated (tilt_adapter) rejouées par notre moteur ; modèles, textures et particules du mod (licence MIT, © Propulsion Team)",
+    "Images : blocs du mod posés sur la plaque et rendus par notre moteur (licence MIT, © Propulsion Team)"
+  ],
+  "en": {
+    "slugEn": "propulsion-tilt-adapter",
+    "name": "Tilt Adapter",
+    "title": "Tilt Adapter — Create Propulsion guide",
+    "description": "The Create Propulsion Tilt Adapter turns a shaft by an exact angle set by two redstone signals, and the Advanced Tilt Adapter with split limits.",
+    "intro": "The <strong>Tilt Adapter</strong> turns its output shaft by an exact angle, chosen with two redstone signals, then holds it. It replaces a <a href=\"/en/wiki/sequenced-gearshift\">Sequenced Gearshift</a> to swing a control surface, a wing or a nozzle mounted on a bearing, and goes back to neutral on its own when the signals drop.",
+    "facts": [
+      {
+        "label": "Angle",
+        "value": "left/15 × limit − right/15 × limit"
+      },
+      {
+        "label": "Limit",
+        "value": "±45° (0 to 180° in the config)"
+      },
+      {
+        "label": "Input",
+        "value": "shaft at the back, its speed sets how fast it moves"
+      },
+      {
+        "label": "Output",
+        "value": "shaft at the front, only turns during a change"
+      },
+      {
+        "label": "Neutral",
+        "value": "no signal: back to 0°"
+      },
+      {
+        "label": "Advanced version",
+        "value": "separate limits, up to 90° by default"
+      },
+      {
+        "label": "Stress",
+        "value": "none"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Iron Sheet",
+          null
+        ],
+        [
+          "Gantry Shaft",
+          "Cogwheel",
+          "Gantry Shaft"
+        ],
+        [
+          "Redstone Dust",
+          "Andesite Casing",
+          "Redstone Dust"
+        ]
+      ],
+      "result": "1 Tilt Adapter"
+    },
+    "videos": [
+      {
+        "id": "prop_tilt",
+        "name": "Controlling the tilt",
+        "description": "Two analog levers on each side: equal means nothing moves, 15 against 3 tilts the gantry, then the other way."
+      }
+    ],
+    "sections": [
+      {
+        "id": "principe",
+        "title": "A shaft that turns by an angle",
+        "alt": "A Tilt Adapter on andesite casings with a Creative Motor behind it",
+        "html": "<p>Rotation comes in at the back; it does not come out continuously, it is used to move the output shaft to the requested angle. The faster the input turns, the faster the move. Once the angle is reached, the output stops and holds its position. Two red gantries on the sides show the current angle and glow with the signal on their side.</p>"
+      },
+      {
+        "id": "egal",
+        "title": "Two equal signals",
+        "alt": "Two analog levers at 8 on either side of the adapter, gantries upright",
+        "html": "<p>Each side receives a redstone signal. The target angle is the left signal over 15 times the limit, minus the right signal over 15 times the limit. With 8 on each side, the two parts cancel out: the angle stays at 0°.</p>"
+      },
+      {
+        "id": "gauche",
+        "title": "Stronger on the left",
+        "alt": "The left lever at 15, the right one at 3, the gantries tilted",
+        "html": "<p>At 15 against 3, the angle is 45 − 9 = 36°: the output turns 36° and stops, and the gantries tilt as much. An analog <a href=\"/en/wiki/redstone-link\">Redstone Link</a> from a cockpit is enough to drive a control surface remotely.</p>"
+      },
+      {
+        "id": "droite",
+        "title": "Stronger on the right",
+        "alt": "The right lever at 14, the left one at 2, the gantries tilted the other way",
+        "html": "<p>At 2 against 14, the angle goes to −36°: the output heads back the other way. With no signal at all, the adapter returns to neutral. The ±45° limit is a setting of the mod's config (0 to 180°).</p>"
+      },
+      {
+        "id": "exemple",
+        "title": "Example: a control surface",
+        "html": "<p>For a winged machine, mount a row of <a href=\"/en/wiki/propulsion-wings\">wings</a> on a <a href=\"/en/wiki/mechanical-bearing\">Mechanical Bearing</a> at the back, and drive the bearing from the adapter's output. An on-board motor or <a href=\"/en/wiki/propulsion-stirling-engine\">Stirling Engine</a> powers the input. At the cockpit, two analog <a href=\"/en/wiki/redstone-link\">links</a> send the left and right signals: the pilot tilts the surface at will and it flattens again on release. The same setup aims a <a href=\"/en/wiki/propulsion-thruster\">Thruster</a> nozzle mounted on a bearing.</p><p>The adapter is crafted from an iron sheet, two gantry shafts, a cogwheel, an andesite casing and two redstone dust. It takes no stress from the network.</p>"
+      },
+      {
+        "id": "faq",
+        "title": "FAQ",
+        "html": "<p><strong>The output does not move?</strong> The input must turn: without rotation, the adapter keeps its current angle even if the signals change. <strong>The motion is too slow?</strong> Raise the input speed, the angle stays the same. <strong>Does it overshoot?</strong> No: each move stops at the requested angle, then heads for the new target if the signals changed meanwhile. <strong>Which side is left?</strong> Each side face carries a gantry: the one that tilts the output the positive way is the left side; a quick test with a lever settles it.</p>"
+      },
+      {
+        "id": "difference",
+        "title": "Adapter or sequenced gearshift?",
+        "html": "<p>A <a href=\"/en/wiki/sequenced-gearshift\">Sequenced Gearshift</a> turns by an angle on each pulse and keeps the running total; the adapter aims at an absolute angle set by redstone and always comes back to it. For a control surface steered with a lever, the adapter is much simpler: no counter to track, no drift over time.</p>"
+      },
+      {
+        "id": "avance",
+        "title": "The Advanced Tilt Adapter",
+        "alt": "An Advanced Tilt Adapter placed in front of a Creative Motor",
+        "html": "<p>The <strong>Advanced Tilt Adapter</strong> works the same way but sets its two limits separately, up to 90° by default; holding Ctrl links the two settings. It is made by adding a Precision Mechanism to a plain adapter. Use it when a control surface must swing further up than down.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Propulsion: Simulated 1.1.5 (Propulsion-Team/create-propulsion-simulated repository, commit 36f83a1 of 2026-07-23, MIT licence, © Sergey Feduk, Tronco_78, Bunting_chj, SSnowly, KyivSec), identical to the modpack test instance jar",
+      "Adapter: TiltAdapterBlockEntity.java, TiltAdapterMotionState.java, AbstractTiltAdapterBlock.java, TiltAdapterRenderer.java",
+      "Advanced version: AdvancedTiltAdapterBlockEntity.java",
+      "Default values: PropulsionConfig.java (the mod’s common and server configuration)",
+      "Recipes: data/createpropulsion/recipe/crafting/tilt_adapter.json, advanced_tilt_adapter.json",
+      "Videos: Create Propulsion: Simulated Ponder scenes (tilt_adapter) replayed by our engine; mod models, textures and particles (MIT licence, © Propulsion Team)",
+      "Images: mod blocks placed on the plate and rendered by our engine (MIT licence, © Propulsion Team)"
+    ]
+  }
+}

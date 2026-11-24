@@ -1,0 +1,328 @@
+{
+  "slug": "lightworks-feux-de-vehicule",
+  "name": "Phares et feux arrière",
+  "blockId": "lightworks:headlight",
+  "category": "lightworks",
+  "title": "Phares et feux arrière — Create Lightworks, guide",
+  "description": "Phare et feu arrière et stop de Create: Lightworks, addon de Create : marche avant, marche arrière, freinage et redstone sur trains et véhicules.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create: Lightworks 1.0.1 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Deux blocs de Lightworks sont faits pour les véhicules. Le <strong>phare</strong> éclaire la route et s'allume tout seul du bon côté, et le <strong>feu arrière et stop</strong> rougeoie à l'arrière puis s'intensifie quand on freine. Ils marchent sur les machines de Create, les trains et les appareils de Create Aeronautics.",
+  "facts": [
+    {
+      "label": "Phare",
+      "value": "18° de chaque côté de l’axe (+ 12° de bord), plein jusqu’à 12 blocs, éteint à 20"
+    },
+    {
+      "label": "En mouvement",
+      "value": "seuls les phares tournés vers l’avant s’allument"
+    },
+    {
+      "label": "Redstone à l’assemblage",
+      "value": "phare allumé dans les deux sens, atténué par le signal"
+    },
+    {
+      "label": "Feu arrière",
+      "value": "rouge, lentille à 45 % ; lumière de bloc 6 au maximum"
+    },
+    {
+      "label": "Freinage",
+      "value": "20 ticks (1 s) à pleine luminosité après un ralentissement ou un arrêt"
+    },
+    {
+      "label": "Recettes",
+      "value": "2 phares ou 2 feux arrière par fabrication"
+    },
+    {
+      "label": "Version",
+      "value": "Create: Lightworks 1.0.1 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l’établi",
+    "grid": [
+      [
+        null,
+        "Verre",
+        null
+      ],
+      [
+        "Plaque de fer",
+        "Tube électronique",
+        "Plaque de fer"
+      ],
+      [
+        null,
+        "Plaque de laiton",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "minecraft:glass",
+        null
+      ],
+      [
+        "create:iron_sheet",
+        "create:electron_tube",
+        "create:iron_sheet"
+      ],
+      [
+        null,
+        "create:brass_sheet",
+        null
+      ]
+    ],
+    "result": "2 phares",
+    "resultItem": "lightworks:headlight"
+  },
+  "videos": [
+    {
+      "id": "lw_headlight",
+      "name": "Les phares d'un chariot",
+      "description": "Un chariot en laiton avec un phare à chaque bout avance, recule, puis roule avec ses deux phares alimentés par la redstone.",
+      "duration": "PT19S",
+      "chapters": [
+        {
+          "t": 1.5,
+          "section": "phare"
+        },
+        {
+          "t": 3.5,
+          "section": "marche-avant"
+        },
+        {
+          "t": 8.5,
+          "section": "marche-arriere"
+        },
+        {
+          "t": 12.5,
+          "section": "phare-redstone"
+        }
+      ]
+    },
+    {
+      "id": "lw_tail",
+      "name": "Le feu arrière et stop",
+      "description": "Un chariot avec un phare à l'avant et un feu arrière : le feu s'intensifie à l'arrêt, puis de nouveau après la marche arrière.",
+      "duration": "PT14S",
+      "chapters": [
+        {
+          "t": 1.5,
+          "section": "feu-arriere"
+        },
+        {
+          "t": 5.8,
+          "section": "freinage"
+        },
+        {
+          "t": 10.8,
+          "section": "pose"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "phare",
+      "title": "Phare",
+      "image": "lw_headlight_phares.webp",
+      "alt": "Un chariot de boitiers en laiton avec un phare à chaque extrémité",
+      "video": "lw_headlight",
+      "html": "<p>Le <strong>phare</strong> (Headlight, recette ci-contre : verre, deux plaques de fer, tube électronique et plaque de laiton, pour deux phares) est un projecteur court et large pensé pour les véhicules : 18° de chaque côté de l'axe plus 12° de bord, plein jusqu'à 12 blocs, éteint à 20. Il se vise avec ses boîtes Pan et Tilt et se teint comme un <a href=\"/wiki/lightworks-projecteurs\">projecteur</a>. Posé dans le monde, il reste allumé en permanence, et la redstone l'atténue.</p>"
+    },
+    {
+      "id": "marche-avant",
+      "title": "En marche avant",
+      "image": "lw_headlight_marche-avant.webp",
+      "alt": "Le chariot avance : le phare avant éclaire, celui de l'arrière est éteint",
+      "html": "<p>Sur une machine en mouvement, un train ou un véhicule Sable, chaque phare compare le déplacement à la direction de son faisceau. Ceux qui regardent dans le sens de la marche restent allumés, les autres s'éteignent. À l'assemblage, tous brillent jusqu'au premier mouvement, puis le tri se fait.</p>"
+    },
+    {
+      "id": "marche-arriere",
+      "title": "En marche arrière",
+      "image": "lw_headlight_marche-arriere.webp",
+      "alt": "Le chariot recule : c'est maintenant l'autre phare qui éclaire",
+      "html": "<p>Quand le véhicule repart dans l'autre sens, les rôles s'échangent : le phare de queue devient celui de tête. Mets donc un phare à chaque bout d'un <a href=\"/wiki/assembler-un-train\">train</a> réversible, d'un <a href=\"/wiki/assembleur-de-wagonnet\">wagonnet assemblé</a> ou d'un <a href=\"/wiki/piston-mecanique\">piston</a> qui va et vient : il n'y a rien à câbler.</p>"
+    },
+    {
+      "id": "phare-redstone",
+      "title": "Allumés dans les deux sens",
+      "image": "lw_headlight_redstone.webp",
+      "alt": "Les deux phares alimentés avant l'assemblage restent allumés pendant le trajet",
+      "html": "<p>Pour des phares toujours allumés, comme des feux de position, donne-leur un signal de redstone <strong>avant</strong> d'assembler. Ils ignorent alors le sens de marche et brillent des deux côtés, atténués comme d'habitude : avec un signal de 4, ils sont à 11 sur 15. Les <a href=\"/wiki/lunettes-d-ingenieur\">lunettes d'ingénieur</a> indiquent le mode, automatique ou forcé par la redstone.</p>"
+    },
+    {
+      "id": "feu-arriere",
+      "title": "Feu arrière et stop",
+      "image": "lw_tail_feu-arriere.webp",
+      "alt": "Le feu arrière et stop rouge à l'arrière du chariot, un phare à l'avant",
+      "video": "lw_tail",
+      "html": "<p>Le <strong>feu arrière et stop</strong> (Tail and Brake Light : verre, deux teintures rouges, tube électronique et plaque de fer, pour deux feux) est une lampe rouge sans faisceau. En temps normal, sa lentille brille à 45 % : on la voit de loin sans être ébloui. Il se pose sur toutes les faces, à l'arrière du véhicule de préférence.</p>"
+    },
+    {
+      "id": "freinage",
+      "title": "Le freinage",
+      "image": "lw_tail_freinage.webp",
+      "alt": "Le chariot s’arrête : le feu arrière passe au rouge vif",
+      "html": "<p>Sur un véhicule en mouvement, le feu surveille la vitesse. Quand elle chute nettement, ou que le véhicule s'immobilise, il passe à pleine puissance pendant 20 ticks, une seconde. Le mod compare la vitesse moyenne des trois derniers ticks aux trois précédents et ignore la première seconde après un départ, pour éviter les faux freinages au démarrage.</p>"
+    },
+    {
+      "id": "pose",
+      "title": "Posé dans le décor",
+      "image": "lw_tail_pose.webp",
+      "alt": "Le feu arrière et stop rouge au bout du chariot",
+      "html": "<p>Posé dans le monde, hors de tout véhicule, il ne freine jamais : il luit simplement en rouge, avec une lumière de bloc de 6 au plus, ce qui en fait une lampe d'ambiance pour un dépôt. La redstone l'atténue, une teinture change sa couleur et les <a href=\"/wiki/controles-de-machine\">contrôles de machine</a> l'éteignent sur une machine assemblée.</p>"
+    },
+    {
+      "id": "equiper",
+      "title": "Équiper un véhicule complet",
+      "html": "<p>Un bon kit : deux phares devant, deux derrière, deux feux arrière et stop, et un <a href=\"/wiki/lightworks-signalisation\">gyrophare</a> sur le toit pour un engin de service. Sur un dirigeable de <a href=\"/wiki/create-aeronautics\">Create Aeronautics</a>, monté avec l'<a href=\"/wiki/assembleur-physique\">assembleur de physique</a>, les phares suivent le sens du vol de la même façon. Sans mod de lumière dynamique, l'éclairage au sol d'un véhicule passe par des blocs de lumière propres à chaque joueur.</p>"
+    }
+  ],
+  "related": [
+    "create-lightworks",
+    "lightworks-projecteurs",
+    "lightworks-signalisation",
+    "assembler-un-train",
+    "assembleur-de-wagonnet",
+    "roulement-mecanique",
+    "controles-de-machine",
+    "create-aeronautics",
+    "assembleur-physique"
+  ],
+  "sources": [
+    "Create: Lightworks 1.0.1 (createlightworks-neoforge-1.21.1-1.0.1.jar) : code du dépôt public github.com/Goldsk1n/CreateLightworks au tag v1.0.1, recettes du dossier data du jar, scènes Ponder rejouées par notre moteur.",
+    "Mod de GoldskinMC, sous licence MIT : modèles et textures de ses auteurs, rendus à partir du jar ; aucun texte du mod n'est recopié.",
+    "Phare : content/LightType.java (HEADLIGHT ConeFalloff(18, 12, 12, 20), Kind.HEADLIGHT), content/MovingBeam.java (allumé seulement en tête, sauf signal à l'assemblage ; allumé jusqu'au premier mouvement), content/directional/DirectionalLightMovement.java, DirectionalLightBlockEntity.java (véhicules Sable).",
+    "Feu arrière et stop : content/signal/BrakeLight.java (BRAKE_TICKS 20, fenêtres de 3 ticks, SETTLE_TICKS 20), content/signal/SignalLampBlockEntity.java (TAIL_GLOW 0,45), content/LightType.java (TAIL_LIGHT, lumière 6), content/signal/SignalLampMovement.java (contrôles de machine) ; recettes : data/lightworks/recipe/headlight.json, tail_light.json (2 par fabrication)."
+  ],
+  "en": {
+    "slugEn": "lightworks-vehicle-lights",
+    "name": "Headlight and Tail and Brake Light",
+    "title": "Vehicle Lights — Create Lightworks guide",
+    "description": "Headlight and Tail and Brake Light from Create: Lightworks, a Create addon: driving forward, reversing, braking and redstone on trains and vehicles.",
+    "intro": "Two Lightworks blocks are made for vehicles. The <strong>Headlight</strong> lights the road and switches on by itself on the correct end, while the <strong>Tail and Brake Light</strong> glows at the back and flares up under braking. They work on Create contraptions, trains and Create Aeronautics craft.",
+    "facts": [
+      {
+        "label": "Headlight",
+        "value": "18° either side of the axis (+ 12° soft edge), at full strength to 12 blocks, gone at 20"
+      },
+      {
+        "label": "On the move",
+        "value": "only Headlights facing the direction of travel are lit"
+      },
+      {
+        "label": "Redstone at assembly",
+        "value": "Headlight lit in both directions, dimmed by the signal"
+      },
+      {
+        "label": "Tail light",
+        "value": "red, lens at 45%; up to 6 block light"
+      },
+      {
+        "label": "Braking",
+        "value": "20 ticks (1 s) at full brightness after slowing down or stopping"
+      },
+      {
+        "label": "Recipes",
+        "value": "2 Headlights or 2 Tail and Brake Lights per craft"
+      },
+      {
+        "label": "Version",
+        "value": "Create: Lightworks 1.0.1 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Glass",
+          null
+        ],
+        [
+          "Iron Sheet",
+          "Electron Tube",
+          "Iron Sheet"
+        ],
+        [
+          null,
+          "Brass Sheet",
+          null
+        ]
+      ],
+      "result": "2 Headlights"
+    },
+    "videos": [
+      {
+        "id": "lw_headlight",
+        "name": "A cart's Headlights",
+        "description": "A brass cart with a Headlight at each end drives forward, backs up, then rolls with both Headlights redstone powered."
+      },
+      {
+        "id": "lw_tail",
+        "name": "The Tail and Brake Light",
+        "description": "A cart with a Headlight at the front and a tail light at the back: the lamp flares as it stops, then again after reversing."
+      }
+    ],
+    "sections": [
+      {
+        "id": "phare",
+        "title": "Headlight",
+        "alt": "A cart of Brass Casing with a Headlight at each end",
+        "html": "<p>The <strong>Headlight</strong> (recipe shown here: Glass, two Iron Sheets, an Electron Tube and a Brass Sheet, for two) is a short, wide Searchlight meant for vehicles: 18° either side of the axis plus a 12° edge, at full strength to 12 blocks, dark by 20. It is aimed with its Pan and Tilt boxes and dyed just like a <a href=\"/en/wiki/lightworks-searchlights-and-floodlights\">Searchlight</a>. Placed in the world it stays on all the time, and redstone dims it.</p>"
+      },
+      {
+        "id": "marche-avant",
+        "title": "Driving forward",
+        "alt": "The cart moving forward: the front Headlight shines, the rear one is off",
+        "html": "<p>On a moving contraption, a train or a Sable vehicle, each Headlight compares the motion with the direction of its beam. Those facing the direction of travel stay on and the rest go dark. Right after assembly they are all on until the first movement sorts them out.</p>"
+      },
+      {
+        "id": "marche-arriere",
+        "title": "Reversing",
+        "alt": "The cart backing up: now the other Headlight is the one shining",
+        "html": "<p>When the vehicle sets off the other way, the roles swap: the rear lamp becomes the leading one. So fit a Headlight at each end of a reversible <a href=\"/en/wiki/train-assembly\">train</a>, a <a href=\"/en/wiki/cart-assembler\">minecart contraption</a> or a <a href=\"/en/wiki/mechanical-piston\">piston</a> going back and forth: there is no wiring to do.</p>"
+      },
+      {
+        "id": "phare-redstone",
+        "title": "Lit in both directions",
+        "alt": "Both Headlights, powered before assembly, staying on during the trip",
+        "html": "<p>For lamps that are always on, like position lights, give them a redstone signal <strong>before</strong> assembling. They then ignore the direction of travel and shine either way, dimmed as usual: with a signal of 4 they sit at 11 out of 15. <a href=\"/en/wiki/engineers-goggles\">Engineer's Goggles</a> show the mode, automatic or redstone override.</p>"
+      },
+      {
+        "id": "feu-arriere",
+        "title": "Tail and Brake Light",
+        "alt": "The red Tail and Brake Light at the back of the cart, a Headlight at the front",
+        "html": "<p>The <strong>Tail and Brake Light</strong> (Glass, two Red Dye, an Electron Tube and an Iron Sheet, for two) is a red lamp with no beam. Normally its lens runs at 45%: visible from afar without dazzling anyone. It goes on any face, ideally at the back of the vehicle.</p>"
+      },
+      {
+        "id": "freinage",
+        "title": "Braking",
+        "alt": "The cart stopping: the tail light turns bright red",
+        "html": "<p>On a moving vehicle the lamp keeps an eye on the speed. When it drops sharply, or the vehicle comes to a halt, it goes to full power for 20 ticks, one second. The mod compares the average speed of the last three ticks with the three before and ignores the first second after setting off, so starting under load does not trigger false brake lights.</p>"
+      },
+      {
+        "id": "pose",
+        "title": "As a fixed lamp",
+        "alt": "The red Tail and Brake Light at the end of the cart",
+        "html": "<p>Placed in the world, away from any vehicle, it never brakes: it simply shines red with up to 6 block light, which makes it a nice mood lamp for a depot. Redstone dims it, a dye changes its colour and <a href=\"/en/wiki/contraption-controls\">Contraption Controls</a> switch it off on an assembled contraption.</p>"
+      },
+      {
+        "id": "equiper",
+        "title": "Kitting out a vehicle",
+        "html": "<p>A good set: two Headlights at the front, two at the back, two Tail and Brake Lights, plus a <a href=\"/en/wiki/lightworks-beacons-and-warning-lights\">Rotating Beacon</a> on the roof for a service vehicle. On a <a href=\"/en/wiki/create-aeronautics-guide\">Create Aeronautics</a> airship built with the <a href=\"/en/wiki/physics-assembler\">Physics Assembler</a>, Headlights follow the direction of flight the same way. Without a dynamic lights mod, a vehicle lights the ground through light blocks that exist only for each player. Test the set on a short track or a flat field first: it is much easier to swap a lamp that faces the wrong way before the vehicle is assembled.</p>"
+      }
+    ],
+    "sources": [
+      "Create: Lightworks 1.0.1 (createlightworks-neoforge-1.21.1-1.0.1.jar): code from the public repository github.com/Goldsk1n/CreateLightworks at tag v1.0.1, recipes from the jar's data folder, Ponder scenes replayed by our engine.",
+      "Mod by GoldskinMC, MIT licence: models and textures by its authors, rendered from the jar; no text from the mod is copied.",
+      "Headlight: content/LightType.java (HEADLIGHT ConeFalloff(18, 12, 12, 20), Kind.HEADLIGHT), content/MovingBeam.java (lit only while leading unless powered at assembly; lit until the first motion), content/directional/DirectionalLightMovement.java, DirectionalLightBlockEntity.java (Sable vehicles).",
+      "Tail and Brake Light: content/signal/BrakeLight.java (BRAKE_TICKS 20, 3-tick windows, SETTLE_TICKS 20), content/signal/SignalLampBlockEntity.java (TAIL_GLOW 0.45), content/LightType.java (TAIL_LIGHT, light 6), content/signal/SignalLampMovement.java (Contraption Controls); recipes: data/lightworks/recipe/headlight.json, tail_light.json (2 per craft)."
+    ]
+  }
+}

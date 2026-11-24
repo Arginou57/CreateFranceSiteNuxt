@@ -1,0 +1,372 @@
+{
+  "slug": "aeronautics-capteurs",
+  "name": "Capteurs",
+  "blockId": "simulated:altitude_sensor",
+  "category": "aeronautics",
+  "title": "Capteurs — Create Aeronautics, guide",
+  "description": "Capteurs d'altitude, gyroscopique et de vitesse, table de navigation, pointeur et capteur laser, capteur optique : mesurer pour piloter un navire. Vidéos.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Aeronautics 1.3.3",
+  "mcVersion": "1.21.1",
+  "intro": "Un pilote automatique commence par des mesures. Simulated fournit des capteurs qui transforment l'état d'un navire en signal de redstone : le <strong>capteur d'altitude</strong> (Altitude Sensor), le <strong>capteur gyroscopique</strong> (Gimbal Sensor) pour l'inclinaison, le <strong>capteur de vitesse</strong> (Velocity Sensor) et la <strong>table de navigation</strong> (Navigation Table) pour le cap. Trois blocs travaillent au laser : le <strong>pointeur laser</strong> (Laser Pointer), le <strong>capteur laser</strong> (Laser Sensor) et le <strong>capteur optique</strong> (Optical Sensor).",
+  "facts": [
+    {
+      "label": "Capteur d'altitude",
+      "value": "Signal selon la hauteur, bornes réglables, sens inversable"
+    },
+    {
+      "label": "Capteur gyroscopique",
+      "value": "Signal vers le côté qui descend ; un réglage par axe"
+    },
+    {
+      "label": "Capteur de vitesse",
+      "value": "Signal selon la vitesse le long de son axe"
+    },
+    {
+      "label": "Table de navigation",
+      "value": "Signal vers la cible de l’objet de navigation posé"
+    },
+    {
+      "label": "Pointeur laser",
+      "value": "Portée 100 blocs ; couleur au filtre"
+    },
+    {
+      "label": "Capteur optique",
+      "value": "Portée 15 blocs ; signal selon la distance du bloc vu"
+    },
+    {
+      "label": "Lunettes",
+      "value": "L'altitude exacte et la pression de l'air s'affichent"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Papier",
+        null
+      ],
+      [
+        null,
+        "Plaque de fer",
+        null
+      ],
+      [
+        null,
+        "Boitier d'andésite",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "minecraft:paper",
+        null
+      ],
+      [
+        null,
+        "create:iron_sheet",
+        null
+      ],
+      [
+        null,
+        "create:andesite_casing",
+        null
+      ]
+    ],
+    "result": "1 capteur d'altitude",
+    "resultItem": "simulated:altitude_sensor"
+  },
+  "videos": [
+    {
+      "id": "sim_altitude",
+      "name": "Le capteur d'altitude",
+      "description": "Une plateforme monte dans les nuages ; le signal suit l'altitude.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 0.73,
+          "section": "altitude"
+        },
+        {
+          "t": 2.54,
+          "section": "altitude"
+        },
+        {
+          "t": 6.72,
+          "section": "altitude-reglages"
+        },
+        {
+          "t": 8.17,
+          "section": "altitude-reglages"
+        },
+        {
+          "t": 13.07,
+          "section": "altitude-reglages"
+        },
+        {
+          "t": 15.43,
+          "section": "altitude-reglages"
+        }
+      ]
+    },
+    {
+      "id": "sim_gimbal",
+      "name": "Le capteur gyroscopique",
+      "description": "Une plateforme s'incline ; le capteur émet du côté qui penche.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 9.19,
+          "section": "gyroscope"
+        },
+        {
+          "t": 15.05,
+          "section": "gyroscope"
+        }
+      ]
+    },
+    {
+      "id": "sim_navtable",
+      "name": "La table de navigation",
+      "description": "Avec un objet de navigation, la table indique la direction de la cible.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 13.59,
+          "section": "navigation"
+        },
+        {
+          "t": 16.61,
+          "section": "navigation"
+        }
+      ]
+    },
+    {
+      "id": "sim_velocity",
+      "name": "Le capteur de vitesse",
+      "description": "Un bateau accélère ; le signal grandit avec sa vitesse.",
+      "duration": "PT22S"
+    }
+  ],
+  "sections": [
+    {
+      "id": "altitude",
+      "title": "Le capteur d'altitude",
+      "image": "sim_altitude_e1.webp",
+      "alt": "Une plateforme avec un capteur d'altitude qui s'élève",
+      "video": "sim_altitude",
+      "html": "<p>Le capteur d'altitude émet un signal qui dépend de sa hauteur. Par défaut, plus il monte, plus le signal est fort : relié à un <a href=\"/wiki/aeronautics-ballons\">brûleur</a>, il permet de tenir une altitude.</p>"
+    },
+    {
+      "id": "altitude-reglages",
+      "title": "Bornes et lecture",
+      "image": "sim_altitude_e3.webp",
+      "alt": "L'interface du capteur d'altitude",
+      "html": "<p>Son interface fixe l'altitude minimale et maximale du signal, et peut inverser le sens. Avec des lunettes, on lit l'altitude exacte et la pression de l'air, qui fait faiblir hélices et brûleurs en hauteur ; la clé montre les petites variations.</p>"
+    },
+    {
+      "id": "gyroscope",
+      "title": "Le capteur gyroscopique",
+      "image": "sim_gimbal_e1.webp",
+      "alt": "Une plateforme inclinée et son capteur gyroscopique",
+      "video": "sim_gimbal",
+      "html": "<p>Le capteur gyroscopique émet vers le côté qui descend. Ses panneaux de valeur règlent l'angle pour lequel le signal vaut 15 et le sens de sortie, chaque axe séparément : la base d'une stabilisation automatique.</p>"
+    },
+    {
+      "id": "navigation",
+      "title": "La table de navigation",
+      "image": "sim_navtable_e1.webp",
+      "alt": "Une table de navigation avec une carte posée dessus",
+      "video": "sim_navtable",
+      "html": "<p>Posez un objet de navigation (une boussole, une carte...) sur la table : elle émet un signal vers la destination, plus faible si le navire ne lui fait pas face. Chaque objet vise sa propre cible.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "Le capteur de vitesse",
+      "image": "gal_capteurs_capteurs.webp",
+      "alt": "Les capteurs d'altitude, gyroscopique et de vitesse et la table de navigation",
+      "video": "sim_velocity",
+      "html": "<p>Le capteur de vitesse donne un signal selon la vitesse de la contraption, mesurée le long de l'axe de son hélice. Par défaut il émet à l'opposé du mouvement ; on peut régler la vitesse du signal maximal et le côté de sortie.</p>"
+    },
+    {
+      "id": "faq",
+      "title": "Questions fréquentes",
+      "html": "<p><strong>Le capteur d'altitude mesure-t-il depuis le sol ?</strong> Non, il lit la hauteur absolue du monde, entre les bornes réglées. <strong>Quel capteur pour garder un navire à plat ?</strong> Le capteur gyroscopique : son signal sort du côté qui penche, il suffit d'y relier l'hélice de ce côté. <strong>Les lasers traversent-ils le verre ?</strong> Le rayon s'arrête sur les blocs pleins. <strong>Faut-il des lunettes ?</strong> Non, mais elles affichent l'altitude exacte et la pression de l'air.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Exemple : tenir une altitude",
+      "html": "<p>Un capteur d'altitude réglé pour donner 15 sous la hauteur voulue et 0 au-dessus, relié à un brûleur à air chaud : le ballon chauffe quand on descend et se refroidit quand on monte. Un inducteur placé entre les deux adoucit la réponse et évite le yo-yo.</p>"
+    },
+    {
+      "id": "recettes",
+      "title": "Fabrication",
+      "html": "<p>Le capteur d'altitude demande du papier, une plaque de fer et un boîtier en andésite ; le capteur gyroscopique, une boussole, un mécanisme gyroscopique et un boîtier en laiton ; le capteur de vitesse, une hélice de Create, un tonneau et un boîtier en andésite. La table de navigation se fait avec une plaque de laiton, un mécanisme de précision et un boîtier en laiton ; les lasers utilisent un éclat d'améthyste comme lentille.</p>"
+    },
+    {
+      "id": "lasers",
+      "title": "Lasers et capteur optique",
+      "image": "gal_capteurs_lasers.webp",
+      "alt": "Un pointeur laser, un capteur laser et un capteur optique",
+      "html": "<p>Alimenté, le <strong>pointeur laser</strong> projette un rayon jusqu'à 100 blocs, arrêté par les blocs pleins ; un <strong>capteur laser</strong> touché émet selon la puissance du rayon, et un filtre ne retient qu'une couleur. Le <strong>capteur optique</strong> lance son propre rayon (15 blocs) et donne un signal selon la distance du bloc qui le coupe. Pour ces trois blocs, le rayon n'est pas encore dessiné par notre moteur : pas de vidéo pour l'instant.</p>"
+    }
+  ],
+  "related": [
+    "create-aeronautics",
+    "aeronautics-redstone",
+    "aeronautics-pilotage",
+    "aeronautics-ballons",
+    "lunettes-d-ingenieur",
+    "tube-nixie"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Aeronautics 1.3.3 (dépôt Creators-of-Aeronautics/Simulated-Project, commit 900122e, code sous licence MIT, ressources « tous droits réservés », The Simulated Team / The Creators of Aeronautics), identiques au jar du modpack (instance de test 1.3.3)",
+    "Réglages serveur par défaut de Simulated 1.3.3 (SimBlocks, SimPhysics, SimItems) et coûts en stress (SimStress, AeroStress, OffroadStress)",
+    "Recettes : data/simulated/recipe/altitude_sensor.json, gimbal_sensor.json, velocity_sensor.json, navigation_table.json, laser_pointer.json, laser_sensor.json, optical_sensor.json",
+    "Vidéos : scènes Ponder de Create Aeronautics / Simulated (altitude_sensor, gimbal_sensor, navigation_table, velocity_sensor) rejouées par notre moteur ; modèles et textures du mod (© The Simulated Team / The Creators of Aeronautics)",
+    "Images : blocs du mod posés sur la plaque et rendus par notre moteur (© The Simulated Team / The Creators of Aeronautics)"
+  ],
+  "en": {
+    "slugEn": "aeronautics-sensors",
+    "name": "Sensors",
+    "title": "Sensors — Create Aeronautics guide",
+    "description": "Altitude, Gimbal and Velocity Sensors, Navigation Table, Laser Pointer, Laser Sensor and Optical Sensor: measuring to fly a ship. Videos.",
+    "intro": "An autopilot starts with measurements. Simulated provides sensors that turn a ship's state into a redstone signal: the <strong>Altitude Sensor</strong>, the <strong>Gimbal Sensor</strong> for tilt, the <strong>Velocity Sensor</strong> and the <strong>Navigation Table</strong> for heading. Three blocks work with lasers: the <strong>Laser Pointer</strong>, the <strong>Laser Sensor</strong> and the <strong>Optical Sensor</strong>.",
+    "facts": [
+      {
+        "label": "Altitude Sensor",
+        "value": "Signal by height, adjustable bounds, can be inverted"
+      },
+      {
+        "label": "Gimbal Sensor",
+        "value": "Signal towards the lower side; one setting per axis"
+      },
+      {
+        "label": "Velocity Sensor",
+        "value": "Signal by speed along its axis"
+      },
+      {
+        "label": "Navigation Table",
+        "value": "Signal towards the target of the navigation item placed on it"
+      },
+      {
+        "label": "Laser Pointer",
+        "value": "100-block range; colour by filter"
+      },
+      {
+        "label": "Optical Sensor",
+        "value": "15-block range; signal by distance to the block it sees"
+      },
+      {
+        "label": "Goggles",
+        "value": "Show exact altitude and air pressure"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Paper",
+          null
+        ],
+        [
+          null,
+          "Iron Sheet",
+          null
+        ],
+        [
+          null,
+          "Andesite Casing",
+          null
+        ]
+      ],
+      "result": "1 Altitude Sensor"
+    },
+    "videos": [
+      {
+        "id": "sim_altitude",
+        "name": "The Altitude Sensor",
+        "description": "A platform rises into the clouds; the signal follows the altitude."
+      },
+      {
+        "id": "sim_gimbal",
+        "name": "The Gimbal Sensor",
+        "description": "A platform tilts; the sensor outputs on the side that dips."
+      },
+      {
+        "id": "sim_navtable",
+        "name": "The Navigation Table",
+        "description": "With a navigation item, the table points towards the target."
+      },
+      {
+        "id": "sim_velocity",
+        "name": "The Velocity Sensor",
+        "description": "A boat speeds up; the signal grows with its speed."
+      }
+    ],
+    "sections": [
+      {
+        "id": "altitude",
+        "title": "The Altitude Sensor",
+        "alt": "A platform with an Altitude Sensor rising",
+        "html": "<p>This sensor emits a signal that depends on its height. By default, the higher it goes, the stronger the signal: wired to a <a href=\"/en/wiki/aeronautics-hot-air-balloons\">burner</a>, it holds an altitude.</p>"
+      },
+      {
+        "id": "altitude-reglages",
+        "title": "Bounds and readings",
+        "alt": "The Altitude Sensor interface",
+        "html": "<p>Its interface sets the minimum and maximum altitude of the signal and can flip the direction. With goggles you read the exact altitude and the air pressure, which weakens propellers and burners up high; the wrench shows small changes.</p>"
+      },
+      {
+        "id": "gyroscope",
+        "title": "The Gimbal Sensor",
+        "alt": "A tilted platform and its Gimbal Sensor",
+        "html": "<p>The Gimbal Sensor outputs towards the side that goes down. Its value panels set the angle that gives full signal and the output direction, for each axis separately: the basis of automatic levelling.</p>"
+      },
+      {
+        "id": "navigation",
+        "title": "The Navigation Table",
+        "alt": "A Navigation Table with a map on it",
+        "html": "<p>Put a navigation item (a compass, a map...) on the table: it outputs a signal towards the destination, weaker if the ship is not facing it. Each item aims at its own target.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "The Velocity Sensor",
+        "alt": "The Altitude, Gimbal and Velocity Sensors and the Navigation Table",
+        "html": "<p>The Velocity Sensor gives a signal based on the contraption's speed, measured along the axis of its propeller. By default it outputs away from the motion; you can set the speed for full signal and the output side.</p>"
+      },
+      {
+        "id": "faq",
+        "title": "Frequently asked questions",
+        "html": "<p><strong>Does the Altitude Sensor measure from the ground?</strong> No, it reads the absolute world height, between the set bounds. <strong>Which sensor keeps a ship level?</strong> The Gimbal Sensor: its signal comes out on the side that dips, just wire it to the propeller on that side. <strong>Do lasers pass through glass?</strong> The beam stops on solid blocks. <strong>Do I need goggles?</strong> No, but they show the exact altitude and air pressure.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Example: holding an altitude",
+        "html": "<p>An Altitude Sensor set to output 15 below the wanted height and 0 above it, wired to a Hot Air Burner: the balloon heats up when you sink and cools when you rise. A Redstone Inductor between the two smooths the response and avoids bobbing.</p>"
+      },
+      {
+        "id": "recettes",
+        "title": "Crafting",
+        "html": "<p>The Altitude Sensor takes paper, an iron sheet and an andesite casing; the Gimbal Sensor a compass, a Gyroscopic Mechanism and a brass casing; the Velocity Sensor a Create propeller, a barrel and an andesite casing. The Navigation Table is made from a brass sheet, a precision mechanism and a brass casing; the laser blocks use an amethyst shard as their lens, with a redstone torch for the pointer and tinted glass for the sensor. The Optical Sensor uses an amethyst shard, an electron tube and a brass casing. Every sensor here is an ordinary block: place it on the contraption and wire it like any other redstone source.</p>"
+      },
+      {
+        "id": "lasers",
+        "title": "Lasers and the Optical Sensor",
+        "alt": "A Laser Pointer, a Laser Sensor and an Optical Sensor",
+        "html": "<p>When powered, the <strong>Laser Pointer</strong> casts a beam up to 100 blocks, stopped by solid blocks; a <strong>Laser Sensor</strong> it hits outputs according to the beam's power, and a filter keeps a single colour. The <strong>Optical Sensor</strong> casts its own beam (15 blocks) and gives a signal based on the distance of the block cutting it. Our engine does not draw these beams yet: no video for now.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Aeronautics 1.3.3 (Creators-of-Aeronautics/Simulated-Project repository, commit 900122e, code under the MIT licence, assets « all rights reserved », The Simulated Team / The Creators of Aeronautics), identical to the modpack jar (1.3.3 test instance)",
+      "Simulated 1.3.3 default server settings (SimBlocks, SimPhysics, SimItems) and stress costs (SimStress, AeroStress, OffroadStress)",
+      "Recipes: data/simulated/recipe/altitude_sensor.json, gimbal_sensor.json, velocity_sensor.json, navigation_table.json, laser_pointer.json, laser_sensor.json, optical_sensor.json",
+      "Videos: Create Aeronautics / Simulated Ponder scenes (altitude_sensor, gimbal_sensor, navigation_table, velocity_sensor) replayed by our engine; mod models and textures (© The Simulated Team / The Creators of Aeronautics)",
+      "Images: mod blocks placed on the plate and rendered by our engine (© The Simulated Team / The Creators of Aeronautics)"
+    ]
+  }
+}

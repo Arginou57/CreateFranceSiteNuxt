@@ -6,22 +6,72 @@
   "title": "Presse mécanique — Create : guide en français",
   "description": "La presse mécanique de Create : où la placer, quelle vitesse, plaques de fer et de cuivre, compactage en bassin. Guide illustré en français.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "La <strong>presse mécanique</strong> est souvent la première machine de traitement que l'on construit avec Create. Elle écrase ce qui passe sous sa tête : un lingot devient une plaque, une canne à sucre devient du papier. Posée au-dessus d'un bassin, elle sert aussi à <strong>compacter</strong> plusieurs objets en un seul bloc. Voici comment l'installer, l'alimenter et l'automatiser.",
   "facts": [
-    { "label": "Catégorie", "value": "Traitement" },
-    { "label": "Stress", "value": "8 SU par tr/min (256 SU à 32 tr/min)" },
-    { "label": "Cycle", "value": "≈ 3 s à 32 tr/min · ≈ 1,5 s à 64 · ≈ 0,45 s à 256" },
-    { "label": "Zone de travail", "value": "2 blocs sous la presse (tapis, dépôt, bassin) ou objet au sol juste dessous" },
-    { "label": "Rotation", "value": "Par l'axe horizontal, sur un côté" },
-    { "label": "Version", "value": "Create 6.0.8 · Minecraft 1.21.1" }
+    {
+      "label": "Catégorie",
+      "value": "Traitement"
+    },
+    {
+      "label": "Stress",
+      "value": "8 SU par tr/min (256 SU à 32 tr/min)"
+    },
+    {
+      "label": "Cycle",
+      "value": "≈ 3 s à 32 tr/min · ≈ 1,5 s à 64 · ≈ 0,45 s à 256"
+    },
+    {
+      "label": "Zone de travail",
+      "value": "2 blocs sous la presse (tapis, dépôt, bassin) ou objet au sol juste dessous"
+    },
+    {
+      "label": "Rotation",
+      "value": "Par l'axe horizontal, sur un côté"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
   ],
   "recipe": {
     "label": "Fabrication à l'établi",
-    "grid": [[null, "Arbre", null], [null, "Boîtier d'andésite", null], [null, "Bloc de fer", null]],
-    "items": [[null, "create:shaft", null], [null, "create:andesite_casing", null], [null, "minecraft:iron_block", null]],
+    "grid": [
+      [
+        null,
+        "Arbre",
+        null
+      ],
+      [
+        null,
+        "Boîtier d'andésite",
+        null
+      ],
+      [
+        null,
+        "Bloc de fer",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "create:shaft",
+        null
+      ],
+      [
+        null,
+        "create:andesite_casing",
+        null
+      ],
+      [
+        null,
+        "minecraft:iron_block",
+        null
+      ]
+    ],
     "result": "1 presse mécanique",
     "resultItem": "create:mechanical_press"
   },
@@ -52,7 +102,7 @@
       "title": "Presser un objet à la main sur un dépôt",
       "image": "mechanical_press_depot.webp",
       "alt": "La tête de la presse descend sur un lingot de cuivre posé sur un dépôt",
-      "html": "<p>Pour un usage manuel, le plus simple est un <strong>dépôt</strong> sous la presse. Clic droit avec un lingot pour le poser : la tête descend, et le lingot ressort en plaque. L'écrasement se fait à mi-course, environ 1,5 s après le début du cycle à 32 tr/min.</p><p>Sans dépôt, tu peux aussi jeter les objets <strong>au sol, juste sous la presse</strong> (un seul bloc d'écart dans ce cas). Par défaut, elle n'en traite qu'un à chaque coup, même si tu lances une pile entière : le réglage serveur <code>bulkPressing</code> est désactivé.</p>"
+      "html": "<p>Pour un usage manuel, le plus simple est un <strong>dépôt</strong> placé sous la presse. Clic droit avec un lingot pour le poser : la tête descend, et le lingot ressort en plaque. L'écrasement se fait à mi-course, environ 1,5 s après le début du cycle à 32 tr/min.</p><p>Sans dépôt, tu peux aussi jeter les objets <strong>au sol, juste sous la presse</strong> (un seul bloc d'écart dans ce cas). Par défaut, elle n'en traite qu'un à chaque coup, même si tu lances une pile entière : le réglage serveur <code>bulkPressing</code> est désactivé.</p>"
     },
     {
       "id": "tapis",
@@ -70,7 +120,7 @@
     },
     {
       "id": "compactage",
-      "title": "Compacter des objets dans un bassin",
+      "title": "Compacter des objets en bassin",
       "image": "mechanical_press_compacting_bassin.webp",
       "alt": "Presse mécanique au-dessus d'un bassin, alimenté par un tapis vertical",
       "video": "mechanical_press_compacting",
@@ -103,7 +153,15 @@
       "html": "<ul><li><strong>La presse ne bouge pas</strong> : réseau surchargé (8 SU par tr/min) ou rotation branchée sur le mauvais côté.</li><li><strong>Elle descend dans le vide</strong> : l'objet est trop haut ou trop bas. Tapis, dépôt et bassin se placent deux blocs sous la presse.</li><li><strong>Rien ne sort du bassin</strong> : recette incomplète, sortie du bassin bouchée, ou filtre réglé sur un autre objet.</li></ul>"
     }
   ],
-  "related": ["tapis-roulant", "perceuse-mecanique", "rail-de-train", "papier-de-verre", "carburants", "outils-diesel-generators"],
+  "related": [
+    "tapis-roulant",
+    "perceuse-mecanique",
+    "rail-de-train",
+    "papier-de-verre",
+    "carburants",
+    "outils-diesel-generators",
+    "materiaux"
+  ],
   "sources": [
     "Stress : AllBlocks.java, MECHANICAL_PRESS, CStress.setImpact(8.0) ; roue à eau CStress.setCapacity(32)",
     "Cycle : PressingBehaviour.java (CYCLE = 240, getRunningTickSpeed = lerp(|vitesse| / 512, 1, 60), écrasement à CYCLE / 2)",
@@ -190,7 +248,7 @@
         "id": "depot",
         "title": "Pressing an item by hand on a depot",
         "alt": "The press head comes down on a copper ingot sitting on a depot",
-        "html": "<p>For manual use, the simplest option is a <strong>Depot</strong> under the press. Right-click it with an ingot to place it: the head comes down and the ingot comes out as a sheet. The pressing happens halfway through the stroke, about 1.5 s after the start of the cycle at 32 RPM.</p><p>Without a depot, you can also throw items <strong>on the ground right below the press</strong> (only one block of gap in that case). By default it only processes one item per stroke, even if you drop a whole stack: the <code>bulkPressing</code> server setting is off.</p>"
+        "html": "<p>For manual use, the simplest option is a <strong>Depot</strong> placed under the press. Right-click it with an ingot to place it: the head comes down and the ingot comes out as a sheet. The pressing happens halfway through the stroke, about 1.5 s after the start of the cycle at 32 RPM.</p><p>Without a depot, you can also throw items <strong>on the ground right below the press</strong> (only one block of gap in that case). By default it only processes one item per stroke, even if you drop a whole stack: the <code>bulkPressing</code> server setting is off.</p>"
       },
       {
         "id": "tapis",

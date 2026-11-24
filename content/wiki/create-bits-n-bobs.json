@@ -1,0 +1,283 @@
+{
+  "slug": "create-bits-n-bobs",
+  "name": "Create Bits 'n' Bobs",
+  "blockId": "bits_n_bobs:large_flanged_cogwheel",
+  "category": "bitsnbobs",
+  "title": "Create Bits 'n' Bobs — guide complet en français",
+  "description": "Create Bits 'n' Bobs, addon de Create : chaînes de roues dentées, tuyaux teints, panneaux Nixie, entretoises, volant, déco et lumières. Guide du mod.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Bits 'n' Bobs 2.3.5 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "<strong>Create Bits 'n' Bobs</strong> rassemble les « petits bouts » qui manquaient à Create : des chaînes qu'on tend entre des roues dentées, des roues à flasque pour les guider, des tuyaux et des réservoirs de couleur, des panneaux et de grands tubes Nixie, des entretoises qui traversent le vide en biais, des boitiers en fer, un volant d'inertie, une poulie à chaîne, et quantité de blocs décoratifs et de lumières. Rien ne remplace Create : chaque ajout se branche sur une pièce que tu connais déjà.",
+  "facts": [
+    {
+      "label": "Mod",
+      "value": "Create Bits 'n' Bobs 2.3.5 (id bits_n_bobs)"
+    },
+    {
+      "label": "Auteurs",
+      "value": "Cake, Kipti, NormalGuy, Astral et Spydnel, licence MIT"
+    },
+    {
+      "label": "Requiert",
+      "value": "Create 6.0.10, NeoForge 21.1.219, Minecraft 1.21.1, Azimuth 1.4.6 et Strut Your Stuff"
+    },
+    {
+      "label": "Familles",
+      "value": "chaînes, teinture, Nixie, structures, mécanismes, déco et lumières"
+    },
+    {
+      "label": "Réglages",
+      "value": "chaque bloc a son interrupteur dans la config commune (section featureFlags)"
+    },
+    {
+      "label": "Serveur Create France",
+      "value": "en ligne : 0.0.44 ; ces pages décrivent la 2.3.5 de la prochaine version du modpack"
+    },
+    {
+      "label": "Version",
+      "value": "Create Bits 'n' Bobs 2.3.5 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (sans disposition)",
+    "grid": [
+      [
+        "Grande roue dentée",
+        "Pépite de fer",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "items": [
+      [
+        "create:large_cogwheel",
+        "minecraft:iron_nugget",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 grande roue dentée à flasque",
+    "resultItem": "bits_n_bobs:large_flanged_cogwheel"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "role",
+      "title": "Ce que l'addon apporte",
+      "image": "bnb_gal_roues_flasques.webp",
+      "alt": "Une petite et une grande roue dentée à flasque à côté d'une roue dentée de Create",
+      "html": "<p>Create sait déjà faire tourner une usine, mais certains gestes y restent pénibles : relier deux roues éloignées sans aligner dix rotors, distinguer d'un coup d'œil le tuyau d'eau du tuyau de lave, afficher un grand nombre lisible de loin, poser une poutre en diagonale. Bits 'n' Bobs ajoute ces pièces une par une. La recette ci-contre en donne une des plus utiles : une <a href=\"/wiki/roue-dentee\">grande roue dentée</a> de Create et une pépite de fer font une <strong>grande roue dentée à flasque</strong> (Large Flanged Cogwheel).</p>"
+    },
+    {
+      "id": "premier",
+      "title": "Premier projet conseillé",
+      "image": "bnb_chain_flat_chaine.webp",
+      "alt": "Une chaîne posée à plat autour de plusieurs roues dentées",
+      "html": "<p>Pose deux roues dentées de Create à quelques blocs l'une de l'autre, sur le même plan, prends des chaînes en main et clique la première roue, puis la seconde, puis de nouveau la première pour fermer la boucle. La chaîne apparaît et les deux roues tournent ensemble. Il faut une chaîne pour 5 blocs de longueur. Ensuite, teins tes tuyaux d'une couleur par fluide : c'est le changement qui se voit le plus dans une base.</p>"
+    },
+    {
+      "id": "chaines",
+      "title": "Chaînes et roues à flasque",
+      "image": "bnb_gal_roues_boitiers-flasques.webp",
+      "alt": "Les roues dentées à flasque dans leurs boitiers d’andésite, de laiton, de fer industriel et de fer érodé",
+      "html": "<p>La page <a href=\"/wiki/bnb-chaines-de-roues-dentees\">chaînes de roues dentées</a> explique les trois sortes de liens (chaîne, courroie, corde), la <strong>petite roue dentée à flasque</strong> (Flanged Cogwheel) et la grande, leurs huit versions enchâssées (petites et grandes, en andésite, en laiton, en fer industriel et en fer érodé) et le <strong>chariot de chaîne de roues dentées</strong> (Cogwheel Chain Carriage), qui fait rouler une petite machine le long de la chaîne.</p>"
+    },
+    {
+      "id": "teinture",
+      "title": "Tuyaux et réservoirs teints",
+      "image": "bnb_dyed_tank_teinture.webp",
+      "alt": "Un réservoir à fluide teint en rouge relié à des tuyaux",
+      "html": "<p>Avec une teinture, tes <a href=\"/wiki/tuyau-a-fluide\">tuyaux à fluide</a> et tes <a href=\"/wiki/reservoir-a-fluide\">réservoirs</a> prennent l'une des seize couleurs de Minecraft. Au-delà du look, la couleur décide des raccords : deux lignes de couleurs différentes posées côte à côte ne se mélangent plus. Tout est détaillé sur la page <a href=\"/wiki/bnb-tuyaux-et-reservoirs-teints\">tuyaux et réservoirs teints</a>.</p>"
+    },
+    {
+      "id": "nixie",
+      "title": "Affichages Nixie",
+      "image": "bnb_nixie_board_panneau.webp",
+      "alt": "Une rangée de panneaux Nixie qui affiche du texte",
+      "html": "<p>Le <strong>panneau Nixie</strong> (Nixie Board) et le <strong>grand tube Nixie</strong> (Large Nixie Tube) prolongent le <a href=\"/wiki/tube-nixie\">tube Nixie</a> de Create : des rangées jusqu'à 100 blocs, plusieurs modes d'affichage et seize couleurs. La page <a href=\"/wiki/bnb-nixie\">panneaux et grands tubes Nixie</a> montre comment y écrire.</p>"
+    },
+    {
+      "id": "structures",
+      "title": "Entretoises et structures",
+      "image": "bnb_strut_entretoise.webp",
+      "alt": "Une entretoise de poutre tendue en biais entre deux fixations",
+      "html": "<p>Les <a href=\"/wiki/bnb-entretoises\">entretoises</a> se tendent entre deux fixations, jusqu'à 30 blocs : <strong>entretoise de poutre</strong> (Girder Strut), <strong>entretoise de poutre patinée</strong> (Weathered Girder Strut) et <strong>entretoise de poutre à câble</strong> (Cable Girder Strut). La même page présente la <strong>grille industrielle</strong> (Industrial Grating) et son <strong>panneau</strong>, le <strong>treillis métallique</strong> (Metal Truss) avec ses versions tuyau et rotor (Metal Truss Pipe, Industrial Truss Shaft), la <strong>poutre métallique patinée</strong> (Weathered Metal Girder), le <strong>rotor dans une poutre métallique patinée</strong> et le <strong>support métallique patiné</strong> (Weathered Metal Bracket).</p>"
+    },
+    {
+      "id": "mecanismes",
+      "title": "Mécanismes",
+      "image": "bnb_gal_mecanismes_volant.webp",
+      "alt": "Un roulement de volant d'inertie qui porte une roue en blocs",
+      "html": "<p>Côté <a href=\"/wiki/bnb-mecanismes\">mécanismes</a> : le <strong>roulement de volant d'inertie</strong> (Flywheel Bearing), la <strong>poulie à chaîne</strong> (Chain Pulley) avec son <strong>aimant</strong> et son <strong>câble en chaîne</strong> (Chain Rope), les roues dentées, grandes roues dentées et rotors dans un boitier de fer industriel ou de fer érodé, les barres d'extension de piston enchâssées (andésite, laiton, fer industriel, fer érodé) et la <strong>roue dentée gigantesque</strong> (Gigantic Cogwheel), dont les huit blocs du tour sont des <strong>satellites</strong> (Gigantic Cogwheel Satellite). Attention : dans la 2.3.5, la roue gigantesque est encore verrouillée par les auteurs.</p>"
+    },
+    {
+      "id": "deco",
+      "title": "Déco et lumières",
+      "image": "bnb_gal_deco_chaises.webp",
+      "alt": "Des chaises de plusieurs couleurs alignées en banquette",
+      "html": "<p>La page <a href=\"/wiki/bnb-deco-et-lumieres\">déco et lumières</a> réunit les carrelages des pierres de Create et de Minecraft (Andesite, Asurine, Calcite, Crimsite, Deepslate, Diorite, Dripstone, Granite, Limestone, Ochrum, Scorchia, Scoria, Tuff et Veridium Tiles, avec dalles, escaliers et murets), les <strong>chaises</strong> en seize couleurs (de la White Chair à la Black Chair), l'<strong>ampoule</strong> (Lightbulb), la <strong>lampe frontale</strong> (Headlamp), l'ancienne <strong>lampe en laiton</strong> (Brass Lamp) et le <strong>levier d'accélération</strong> (Throttle Lever), verrouillé lui aussi dans la 2.3.5.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur le serveur Create France",
+      "html": "<p>Le modpack Create France en ligne aujourd'hui contient Bits 'n' Bobs 0.0.44, une version très différente de la 2.3.5. Ces pages décrivent la 2.3.5, celle de la prochaine version du modpack : une partie des blocs présentés ici n'existe pas encore sur le serveur actuel, et ceux qui existent peuvent s'y comporter autrement. Les chiffres donnés sont les réglages par défaut du mod ; un serveur peut couper un bloc dans la config commune ou changer les limites des chaînes et du volant dans la config serveur.</p>"
+    }
+  ],
+  "related": [
+    "bnb-chaines-de-roues-dentees",
+    "bnb-tuyaux-et-reservoirs-teints",
+    "bnb-nixie",
+    "bnb-entretoises",
+    "bnb-mecanismes",
+    "bnb-deco-et-lumieres",
+    "roue-dentee",
+    "tuyau-a-fluide",
+    "tube-nixie"
+  ],
+  "sources": [
+    "Create Bits 'n' Bobs 2.3.5 (bits_n_bobs-2.3.5.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/Aztech-Modding/Create-Bits-n-Bobs au commit 3794a38 « 2.3.5 », recettes du dossier data du jar, scènes Ponder rejouées par notre moteur.",
+    "Mod de Cake, Kipti, NormalGuy, Astral et Spydnel, sous licence MIT : modèles et textures de ses auteurs, rendus à partir du jar ; aucun texte du mod n'est recopié.",
+    "Liste des blocs : registry/content/blocks/BnbKineticBlocks.java, BnbTrinketBlocks.java, BnbBracketBlocks.java, deco/BnbDecorativeBlocks.java, encased/BnbEncasedBlockLists.java et BnbExtraEncasedBlocks.java ; interrupteurs : registry/core/BnbFeatureFlag.java et foundation/config/BnbCommonConfig.java ; limites : foundation/config/BnbServerConfig.java.",
+    "Dépendances : META-INF/neoforge.mods.toml du jar (create 6.0.10, neoforge 21.1.219, azimuth 1.4.6, struts) ; recette : data/bits_n_bobs/recipe/crafting/large_bevel_cogwheel.json."
+  ],
+  "en": {
+    "slugEn": "create-bits-n-bobs-guide",
+    "name": "Create Bits 'n' Bobs",
+    "title": "Create Bits 'n' Bobs — mod guide",
+    "description": "Create Bits 'n' Bobs guide: a Create addon with cogwheel chains, dyed pipes and tanks, Nixie boards, girder struts, a flywheel, decor blocks and lights.",
+    "intro": "<strong>Create Bits 'n' Bobs</strong> collects the small odds and ends Create was missing: chains you stretch between cogwheels, flanged wheels to guide them, coloured pipes and tanks, Nixie boards and large Nixie tubes, struts that cross a gap at an angle, iron casings, a flywheel, a chain pulley, and a whole range of decor blocks and lights. Nothing replaces Create: every addition plugs into a part you already know.",
+    "facts": [
+      {
+        "label": "Mod",
+        "value": "Create Bits 'n' Bobs 2.3.5 (id bits_n_bobs)"
+      },
+      {
+        "label": "Authors",
+        "value": "Cake, Kipti, NormalGuy, Astral and Spydnel, MIT licence"
+      },
+      {
+        "label": "Requires",
+        "value": "Create 6.0.10, NeoForge 21.1.219, Minecraft 1.21.1, Azimuth 1.4.6 and Strut Your Stuff"
+      },
+      {
+        "label": "Families",
+        "value": "chains, dyeing, Nixie, structures, mechanisms, decor and lights"
+      },
+      {
+        "label": "Settings",
+        "value": "every block has its own switch in the common config (featureFlags section)"
+      },
+      {
+        "label": "Create France server",
+        "value": "online: 0.0.44; these pages cover 2.3.5 from the next modpack release"
+      },
+      {
+        "label": "Version",
+        "value": "Create Bits 'n' Bobs 2.3.5 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Shapeless crafting recipe",
+      "grid": [
+        [
+          "Large Cogwheel",
+          "Iron Nugget",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Large Flanged Cogwheel"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "role",
+        "title": "What the addon brings",
+        "alt": "A Flanged Cogwheel and a Large Flanged Cogwheel next to a Create Cogwheel",
+        "html": "<p>Create can already run a factory, but a few jobs stay fiddly: linking two distant wheels without lining up ten shafts, telling the water pipe from the lava pipe at a glance, showing a big number you can read from afar, laying a girder diagonally. Bits 'n' Bobs adds those parts one at a time. The recipe shown here makes one of the most useful: a Create <a href=\"/en/wiki/cogwheel\">Large Cogwheel</a> and an Iron Nugget give a <strong>Large Flanged Cogwheel</strong>.</p>"
+      },
+      {
+        "id": "premier",
+        "title": "A good first project",
+        "alt": "A chain laid flat around several cogwheels",
+        "html": "<p>Place two Create cogwheels a few blocks apart on the same plane, hold some chains, click the first wheel, then the second, then the first one again to close the loop. The chain appears and both wheels turn together. You need one chain for every 5 blocks of length. Next, dye your pipes one colour per fluid: it is the change you will notice most around a base.</p>"
+      },
+      {
+        "id": "chaines",
+        "title": "Chains and flanged wheels",
+        "alt": "The flanged cogwheels in andesite, brass, industrial iron and weathered iron casings",
+        "html": "<p>The <a href=\"/en/wiki/bnb-cogwheel-chains\">cogwheel chains</a> page explains the three kinds of link (chain, belt, rope), the small <strong>Flanged Cogwheel</strong> and the large one, their eight encased versions (small and large, in andesite, brass, industrial iron and weathered iron) and the <strong>Cogwheel Chain Carriage</strong>, which carries a small machine along the chain.</p>"
+      },
+      {
+        "id": "teinture",
+        "title": "Dyed pipes and tanks",
+        "alt": "A Fluid Tank dyed red and connected to pipes",
+        "html": "<p>With a dye, your <a href=\"/en/wiki/fluid-pipe\">Fluid Pipes</a> and <a href=\"/en/wiki/fluid-tank\">Fluid Tanks</a> take on one of Minecraft's sixteen colours. Beyond looks, the colour decides which pieces join: two lines of different colours laid side by side no longer mix. The details are on the <a href=\"/en/wiki/bnb-dyed-pipes-and-tanks\">dyed pipes and tanks</a> page.</p>"
+      },
+      {
+        "id": "nixie",
+        "title": "Nixie displays",
+        "alt": "A row of Nixie Boards showing text",
+        "html": "<p>The <strong>Nixie Board</strong> and the <strong>Large Nixie Tube</strong> build on Create's <a href=\"/en/wiki/nixie-tube\">Nixie Tube</a>: rows up to 100 blocks long, several display modes and sixteen colours. The <a href=\"/en/wiki/bnb-nixie-displays\">Nixie boards and large tubes</a> page shows how to write on them.</p>"
+      },
+      {
+        "id": "structures",
+        "title": "Struts and structures",
+        "alt": "A Girder Strut stretched at an angle between two anchors",
+        "html": "<p><a href=\"/en/wiki/bnb-girder-struts\">Struts</a> stretch between two anchors, up to 30 blocks apart: the <strong>Girder Strut</strong>, the <strong>Weathered Girder Strut</strong> and the <strong>Cable Girder Strut</strong>. The same page covers the <strong>Industrial Grating</strong> and its <strong>panel</strong>, the <strong>Metal Truss</strong> with its pipe and shaft versions (Metal Truss Pipe, Industrial Truss Shaft), the <strong>Weathered Metal Girder</strong>, the <strong>Weathered Metal Girder Encased Shaft</strong> and the <strong>Weathered Metal Bracket</strong>.</p>"
+      },
+      {
+        "id": "mecanismes",
+        "title": "Mechanisms",
+        "alt": "A Flywheel Bearing carrying a wheel made of blocks",
+        "html": "<p>On the <a href=\"/en/wiki/bnb-mechanisms\">mechanisms</a> side: the <strong>Flywheel Bearing</strong>, the <strong>Chain Pulley</strong> with its <strong>Chain Pulley Magnet</strong> and <strong>Chain Rope</strong>, cogwheels, large cogwheels and shafts in industrial iron or weathered iron casings, encased Piston Extension Poles (andesite, brass, industrial iron, weathered iron) and the <strong>Gigantic Cogwheel</strong>, whose eight outer blocks are <strong>Gigantic Cogwheel Satellites</strong>. Be aware that in 2.3.5 the gigantic wheel is still locked by the authors.</p>"
+      },
+      {
+        "id": "deco",
+        "title": "Decor and lights",
+        "alt": "Chairs of several colours lined up as a bench",
+        "html": "<p>The <a href=\"/en/wiki/bnb-decor-and-lights\">decor and lights</a> page gathers the tiles made from Create and Minecraft stones (Andesite, Asurine, Calcite, Crimsite, Deepslate, Diorite, Dripstone, Granite, Limestone, Ochrum, Scorchia, Scoria, Tuff and Veridium Tiles, with slabs, stairs and walls), <strong>chairs</strong> in sixteen colours (from the White Chair to the Black Chair), the <strong>Lightbulb</strong>, the <strong>Headlamp</strong>, the old <strong>Brass Lamp</strong> and the <strong>Throttle Lever</strong>, also locked in 2.3.5.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On the Create France server",
+        "html": "<p>The Create France modpack running today ships Bits 'n' Bobs 0.0.44, a very different version from 2.3.5. These pages describe 2.3.5, the one in the next modpack release: some of the blocks shown here do not exist on the current server yet, and those that do may behave differently there. The numbers given are the mod's default settings; a server can switch a block off in the common config or change the chain and flywheel limits in the server config.</p>"
+      }
+    ],
+    "sources": [
+      "Create Bits 'n' Bobs 2.3.5 (bits_n_bobs-2.3.5.jar from the next Create France modpack release): code from the public repository github.com/Aztech-Modding/Create-Bits-n-Bobs at commit 3794a38 \"2.3.5\", recipes from the jar's data folder, Ponder scenes replayed by our engine.",
+      "Mod by Cake, Kipti, NormalGuy, Astral and Spydnel, MIT licence: models and textures by its authors, rendered from the jar; no text from the mod is copied.",
+      "Block list: registry/content/blocks/BnbKineticBlocks.java, BnbTrinketBlocks.java, BnbBracketBlocks.java, deco/BnbDecorativeBlocks.java, encased/BnbEncasedBlockLists.java and BnbExtraEncasedBlocks.java; switches: registry/core/BnbFeatureFlag.java and foundation/config/BnbCommonConfig.java; limits: foundation/config/BnbServerConfig.java.",
+      "Dependencies: the jar's META-INF/neoforge.mods.toml (create 6.0.10, neoforge 21.1.219, azimuth 1.4.6, struts); recipe: data/bits_n_bobs/recipe/crafting/large_bevel_cogwheel.json."
+    ]
+  }
+}

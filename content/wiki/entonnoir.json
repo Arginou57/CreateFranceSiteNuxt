@@ -6,7 +6,7 @@
   "title": "Entonnoir — Create : guide en français",
   "description": "Les entonnoirs de Create : extraire ou insérer dans un inventaire, sur un tapis, sens à la clé, redstone, entonnoir en laiton, quantité et filtre.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "L'<strong>entonnoir</strong> est la porte d'entrée et de sortie de tous les inventaires dans Create. Fixé sur un coffre, il en sort les objets ou les y range ; posé au bout d'un tapis roulant, il le vide ou le remplit. Il existe en deux versions : l'<strong>entonnoir d'andésite</strong>, simple et bon marché, qui déplace un objet à la fois, et l'<strong>entonnoir de laiton</strong>, qui déplace des piles entières et sait filtrer.",
@@ -114,7 +114,21 @@
       "id": "funnel_brass",
       "name": "Entonnoir de laiton : piles entières et filtre",
       "description": "Un entonnoir d'andésite sort les objets un par un, un entonnoir de laiton par piles, avec une quantité réglable et un filtre.",
-      "duration": "PT20S"
+      "duration": "PT20S",
+      "chapters": [
+        {
+          "t": 2.88,
+          "section": "laiton"
+        },
+        {
+          "t": 5.58,
+          "section": "laiton-quantite"
+        },
+        {
+          "t": 11.68,
+          "section": "laiton-filtre"
+        }
+      ]
     }
   ],
   "sections": [
@@ -155,6 +169,11 @@
       "html": "<p>Au bout d'un <a href=\"/wiki/tapis-roulant\">tapis roulant</a>, l'entonnoir s'adapte au <strong>sens de marche</strong> : si le tapis avance vers lui, il prend les objets qui arrivent et les range dans l'inventaire derrière lui ; si le tapis s'éloigne, il y dépose les objets qu'il extrait. Un entonnoir posé sur le côté d'un tapis peut aussi y piocher au passage.</p>"
     },
     {
+      "id": "sur-tapis",
+      "title": "L’entonnoir sur tapis roulant",
+      "html": "<p>Posé sur le côté d'un bloc, au-dessus d'un <a href=\"/wiki/tapis-roulant\">tapis</a>, d'un <a href=\"/wiki/depot\">dépôt</a>, d'un égouttoir ou d'une scie, l'entonnoir change de forme : il devient un <strong>entonnoir d'andésite sur tapis roulant</strong> ou un <strong>entonnoir de laiton sur tapis roulant</strong>. Perpendiculaire au tapis, il pousse ou tire les objets ; dans l'axe, il reste replié, et la clé le déplie. Ce n'est qu'une forme : cassé, il rend l'entonnoir ordinaire, et redevient normal si le tapis disparaît.</p>"
+    },
+    {
       "id": "compat",
       "title": "Avec d'autres machines",
       "image": "funnel_compat_compat.webp",
@@ -184,7 +203,17 @@
       "image": "funnel_brass_laiton.webp",
       "alt": "Entonnoir de laiton qui sort une pile entière d'objets",
       "video": "funnel_brass",
-      "html": "<p>L'<strong>entonnoir de laiton</strong> sort jusqu'à <strong>une pile entière</strong> à chaque fois. Son panneau de valeur règle la quantité exacte, et son <strong>emplacement de filtre</strong> limite les transferts aux objets choisis : idéal pour trier, ou pour cibler un bras mécanique qui lira son filtre.</p>"
+      "html": "<p>Un entonnoir d'andésite ne sort les objets qu'<strong>un par un</strong>. L'<strong>entonnoir de laiton</strong>, lui, sort jusqu'à <strong>une pile entière</strong> à chaque fois.</p>"
+    },
+    {
+      "id": "laiton-quantite",
+      "title": "Régler la quantité",
+      "html": "<p>Son <strong>panneau de valeur</strong> règle la quantité exacte sortie à chaque passage, d'un seul objet à une pile complète : de quoi envoyer des lots réguliers à une machine.</p>"
+    },
+    {
+      "id": "laiton-filtre",
+      "title": "Le filtre",
+      "html": "<p>Son <strong>emplacement de filtre</strong> limite les transferts aux objets choisis : idéal pour trier, ou pour cibler un bras mécanique qui lira son filtre.</p>"
     },
     {
       "id": "erreurs",
@@ -200,7 +229,8 @@
     "interface-de-stockage-portable",
     "cle",
     "filtres",
-    "autocanons"
+    "autocanons",
+    "trappe-a-objets"
   ],
   "sources": [
     "Quantité : FunnelBlockEntity.getAmountToExtract (filtre inactif : 1 objet ; entonnoir de laiton : quantité du filtre, jusqu'à 64)",
@@ -230,7 +260,7 @@
       },
       {
         "label": "Brass",
-        "value": "Up to a full stack per extraction, adjustable amount, filter"
+        "value": "As much as a whole stack per extraction, adjustable amount, filter"
       },
       {
         "label": "Rate",
@@ -330,6 +360,11 @@
         "html": "<p>At the end of a <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a>, the funnel adapts to the <strong>direction of travel</strong>: if the belt moves towards it, it takes the arriving items and stores them in the inventory behind it; if the belt moves away, it drops the items it pulls onto it. A funnel on the side of a belt can also grab items as they go past.</p>"
       },
       {
+        "id": "sur-tapis",
+        "title": "The funnel on a belt",
+        "html": "<p>Placed on the side of a block above a <a href=\"/en/wiki/conveyor-belt\">belt</a>, a <a href=\"/en/wiki/depot\">Depot</a>, an Item Drain or a saw, the funnel changes shape: it becomes an <strong>Andesite Belt Funnel</strong> or a <strong>Brass Belt Funnel</strong>. Across the belt it pushes or pulls items; along it, it stays folded, and the Wrench unfolds it. It is only a shape: broken, it gives the ordinary funnel back, and turns normal again if the belt goes away.</p>"
+      },
+      {
         "id": "compat",
         "title": "With other machines",
         "alt": "Funnels attached to a vertical Mechanical Saw, a Depot and an Item Drain",
@@ -351,7 +386,17 @@
         "id": "laiton",
         "title": "The Brass Funnel: stacks and filtering",
         "alt": "A Brass Funnel taking a whole stack of items out",
-        "html": "<p>The <strong>Brass Funnel</strong> pulls up to <strong>a full stack</strong> each time. Its value panel sets the exact amount, and its <strong>filter slot</strong> restricts transfers to the chosen items: ideal for sorting, or as a target for a Mechanical Arm, which reads its filter.</p>"
+        "html": "<p>An Andesite Funnel only pulls items <strong>one at a time</strong>. The <strong>Brass Funnel</strong> pulls as much as <strong>a whole stack</strong> each time.</p>"
+      },
+      {
+        "id": "laiton-quantite",
+        "title": "Setting the amount",
+        "html": "<p>Its <strong>value panel</strong> sets the exact amount pulled each time, from a single item to a full stack: a way to send regular batches to a machine.</p>"
+      },
+      {
+        "id": "laiton-filtre",
+        "title": "The filter",
+        "html": "<p>Its <strong>filter slot</strong> restricts transfers to the chosen items: ideal for sorting, or as a target for a Mechanical Arm, which reads its filter.</p>"
       },
       {
         "id": "erreurs",

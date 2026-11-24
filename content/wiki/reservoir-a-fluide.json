@@ -6,7 +6,7 @@
   "title": "Réservoir à fluide — Create : guide en français",
   "description": "Le réservoir à fluide de Create : 8 seaux par bloc, base jusqu'à 3 × 3, 32 blocs de haut, fenêtre, comparateur et réservoir créatif sans fond.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "Le <strong>réservoir à fluide</strong> stocke les liquides de Create. Chaque bloc contient 8 seaux, et les blocs voisins s'assemblent en un seul grand réservoir, jusqu'à 3 × 3 de base et 32 blocs de haut. On le remplit et on le vide par des <a href=\"/wiki/tuyau-a-fluide\">tuyaux</a> et une <a href=\"/wiki/pompe-mecanique\">pompe</a>, on lit son niveau au comparateur, et c'est aussi la chaudière du <a href=\"/wiki/moteur-a-vapeur\">moteur à vapeur</a>.",
@@ -104,7 +104,17 @@
       "id": "tank_creative",
       "name": "Réservoir à fluide créatif",
       "description": "Un réservoir créatif réglé sur la lave remplit sans fin un réservoir voisin, puis avale ce qu'on lui renvoie.",
-      "duration": "PT15S"
+      "duration": "PT15S",
+      "chapters": [
+        {
+          "t": 2.85,
+          "section": "creatif"
+        },
+        {
+          "t": 11.95,
+          "section": "creatif-poubelle"
+        }
+      ]
     }
   ],
   "sections": [
@@ -172,7 +182,12 @@
       "image": "tank_creative_infini.webp",
       "alt": "Réservoir créatif réglé sur la lave qui remplit un réservoir voisin",
       "video": "tank_creative",
-      "html": "<p>En mode créatif, le <strong>réservoir à fluide créatif</strong> fournit un fluide sans fin. Un clic droit avec un seau le règle sur ce fluide, puis les pompes peuvent en tirer autant qu'elles veulent. Tout fluide qu'on lui renvoie disparaît : c'est aussi une poubelle à liquides, pratique pour tester une usine.</p>"
+      "html": "<p>En mode créatif, un <strong>réservoir à fluide créatif</strong> fournit un fluide sans fin. Un clic droit avec un seau le règle sur ce fluide, puis les pompes peuvent en tirer autant qu'elles veulent.</p>"
+    },
+    {
+      "id": "creatif-poubelle",
+      "title": "Une poubelle à liquides",
+      "html": "<p>Tout fluide qu'on renvoie dans le réservoir créatif <strong>disparaît</strong> : c'est aussi une poubelle à liquides, pratique pour tester une usine sans noyer l'atelier.</p>"
     },
     {
       "id": "chaudiere",
@@ -341,7 +356,12 @@
         "id": "creatif",
         "title": "The Creative Fluid Tank",
         "alt": "Creative tank set to lava filling a neighbouring tank",
-        "html": "<p>In Creative mode, the <strong>Creative Fluid Tank</strong> supplies an endless fluid. Right-click it with a bucket to set that fluid, then pumps can draw as much as they like. Any fluid sent back into it vanishes: it is also a liquid bin, handy to test a factory.</p>"
+        "html": "<p>In Creative mode, the <strong>Creative Fluid Tank</strong> supplies an endless fluid. Right-click it with a bucket to set that fluid, then pumps can draw as much as they like.</p>"
+      },
+      {
+        "id": "creatif-poubelle",
+        "title": "A liquid bin",
+        "html": "<p>Any fluid sent back into the Creative Fluid Tank <strong>vanishes</strong>: it is also a liquid bin, handy to test a factory without flooding the workshop.</p>"
       },
       {
         "id": "chaudiere",

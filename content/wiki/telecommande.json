@@ -1,0 +1,266 @@
+{
+  "slug": "telecommande",
+  "name": "Télécommande et pupitre",
+  "blockId": "create:linked_controller",
+  "category": "redstone",
+  "title": "Télécommande et pupitre — Create : guide",
+  "description": "La télécommande de Create : six boutons liés à des liens de redstone, la portée, et le pupitre qui sert de poste de pilotage fixe.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>télécommande</strong> est une manette à six boutons. Chaque bouton envoie un signal sans fil à des <a href=\"/wiki/liaison-de-redstone\">liens de redstone</a>, comme un bouton qu'on emporterait partout. Posée sur un pupitre, elle devient un <strong>pupitre avec une télécommande</strong> : un poste de commande fixe, idéal pour piloter une grue, un ascenseur ou des portes.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Redstone"
+    },
+    {
+      "label": "Boutons",
+      "value": "6 : avancer, reculer, gauche, droite, sauter, s’accroupir"
+    },
+    {
+      "label": "Fréquences",
+      "value": "2 objets par bouton (12 emplacements)"
+    },
+    {
+      "label": "Signal",
+      "value": "Force 15, depuis la position du joueur"
+    },
+    {
+      "label": "Portée",
+      "value": "256 blocs (comme les liens de redstone)"
+    },
+    {
+      "label": "Pupitre",
+      "value": "Télécommande posée sur un pupitre sans livre"
+    },
+    {
+      "label": "Comparateur sur le pupitre",
+      "value": "Lit 15"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Télécommande à l'établi",
+    "grid": [
+      [
+        "Bouton en bois",
+        "Bouton en bois",
+        "Bouton en bois"
+      ],
+      [
+        null,
+        "Lien de redstone",
+        null
+      ],
+      [
+        "Bouton en bois",
+        "Bouton en bois",
+        "Bouton en bois"
+      ]
+    ],
+    "items": [
+      [
+        "minecraft:oak_button",
+        "minecraft:oak_button",
+        "minecraft:oak_button"
+      ],
+      [
+        null,
+        "create:redstone_link",
+        null
+      ],
+      [
+        "minecraft:oak_button",
+        "minecraft:oak_button",
+        "minecraft:oak_button"
+      ]
+    ],
+    "result": "1 télécommande",
+    "resultItem": "create:linked_controller"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "boutons",
+      "title": "Six boutons, six fréquences",
+      "image": "controller_still_pupitre.webp",
+      "alt": "Une télécommande, un pupitre avec télécommande et un lien de redstone récepteur",
+      "html": "<p>Les six boutons correspondent aux touches de déplacement : avancer, reculer, gauche, droite, sauter et s'accroupir. Chacun porte une <strong>fréquence</strong> faite de deux objets, exactement comme les deux cases d'un lien de redstone. Un bouton enfoncé active tous les liens récepteurs réglés sur ses deux objets, à <strong>256 blocs</strong> au plus.</p>"
+    },
+    {
+      "id": "lier",
+      "title": "Lier un bouton",
+      "html": "<p>Le plus rapide : clic droit avec la télécommande sur un lien de redstone déjà réglé. Elle passe en mode liaison ; appuie alors sur la touche voulue, et ce bouton reçoit les deux objets du lien. Sinon, accroupi, clic droit dans le vide ouvre son interface : on y pose à la main deux objets par bouton.</p>"
+    },
+    {
+      "id": "utiliser",
+      "title": "L'utiliser",
+      "html": "<p>Clic droit sans viser de bloc : la télécommande s'active. Tes touches de déplacement ne te déplacent plus, elles appuient sur les boutons, et un bouton maintenu garde son signal. Un nouveau clic droit, la touche Échap, l'ouverture d'un écran ou le fait de ranger la télécommande la coupent. Le signal part de ta position : c'est toi qui dois être à portée des récepteurs.</p>"
+    },
+    {
+      "id": "pupitre",
+      "title": "Le pupitre avec télécommande",
+      "html": "<p>Clic droit avec la télécommande sur un <strong>pupitre vide</strong> : elle s'y installe. Un clic droit sur le pupitre te met aux commandes, à condition d'être tout près, à moins de deux blocs environ. Un seul joueur à la fois peut s'en servir. On le quitte en s'éloignant ou avec Échap. Accroupi, clic droit : la télécommande tombe et le pupitre redevient normal ; avec une autre télécommande en main, les deux sont échangées.</p>"
+    },
+    {
+      "id": "comparateur",
+      "title": "Pupitre et redstone",
+      "html": "<p>Un comparateur contre le pupitre lit toujours 15 : pratique pour savoir qu'une télécommande y est posée et allumer un voyant. Casser le pupitre rend le pupitre et la télécommande. Comme le signal part toujours du joueur, un pupitre placé au cœur de la machine garde tous les récepteurs à portée.</p>"
+    },
+    {
+      "id": "idees",
+      "title": "Idées de montages",
+      "html": "<p>Une grue sur <a href=\"/wiki/chariot-de-portique\">portique</a> : avancer et reculer inversent le sens, gauche et droite pilotent un second axe. Un <a href=\"/wiki/poulie-d-ascenseur\">ascenseur</a> commandé par « sauter » et « s'accroupir ». Des portes de hangar ouvertes depuis le cockpit d'un <a href=\"/wiki/controles-de-train\">train</a>. Chaque bouton peut actionner plusieurs récepteurs à la fois.</p>"
+    },
+    {
+      "id": "portee",
+      "title": "Portée et position",
+      "html": "<p>La portée de <strong>256 blocs</strong> se compte entre toi et chaque lien récepteur, pas entre la télécommande et un émetteur : il n'y a pas d'émetteur, c'est toi qui en tiens lieu. En vol ou sur un train, le signal te suit. Les récepteurs doivent être dans des zones chargées : une machine à l'autre bout du monde ne répond pas, même si elle est sur la bonne fréquence.</p>"
+    },
+    {
+      "id": "ou",
+      "title": "Télécommande ou leviers ?",
+      "html": "<p>Pour une commande posée à un endroit fixe, quelques leviers et des liens émetteurs suffisent. La télécommande brille quand il faut piloter <strong>en restant appuyé</strong> : un bouton maintenu fait avancer un portique, le relâcher l'arrête aussitôt, comme une vraie manette. Le pupitre combine les deux : un poste fixe avec des commandes au doigt.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Oublier que le lien posé doit être en mode <strong>récepteur</strong> : un émetteur ne réagit pas. Se croire bloqué : tant que la télécommande est active, on ne marche plus, il suffit de la couper. Être trop loin : le signal part du joueur, et au-delà de 256 blocs des récepteurs, rien ne se passe.</p>"
+    }
+  ],
+  "related": [
+    "liaison-de-redstone",
+    "chariot-de-portique",
+    "poulie-d-ascenseur",
+    "controles-de-machine",
+    "controles-de-train"
+  ],
+  "sources": [
+    "Recette : crafting/appliances/linked_controller.json (6 boutons en bois + lien de redstone) ; pupitre : LinkedControllerItem.onItemUseFirst (pupitre sans livre)",
+    "Boutons et fréquences : ControlsUtil.getControls (6 touches), LinkedControllerItem (12 emplacements, toFrequency), LinkedControllerClientHandler (activation, coupure, PACKET_RATE 5), linkRange 256 (CLogistics)",
+    "Pupitre : LecternControllerBlock (useItemOn, comparateur 15), LecternControllerBlockEntity (portée, un joueur)",
+    "Images : blocs et objets du jeu (modèles de Create) rendus par notre moteur, joueur non dessiné ; télécommande posée d'après LecternControllerRenderer"
+  ],
+  "en": {
+    "slugEn": "linked-controller",
+    "name": "Linked Controller and Lectern",
+    "title": "Linked Controller and Lectern — Create guide",
+    "description": "The Create Linked Controller: six buttons bound to Redstone Links, its range, and the Lectern Controller that turns it into a fixed control desk.",
+    "intro": "The <strong>Linked Controller</strong> is a six-button remote. Each button sends a wireless signal to <a href=\"/en/wiki/redstone-link\">Redstone Links</a>, like a button you can carry anywhere. Placed on a lectern, it becomes a <strong>Lectern Controller</strong>: a fixed control desk, ideal to drive a crane, an elevator or doors.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Redstone"
+      },
+      {
+        "label": "Buttons",
+        "value": "6: forward, back, left, right, jump, sneak"
+      },
+      {
+        "label": "Frequencies",
+        "value": "2 items per button (12 slots)"
+      },
+      {
+        "label": "Signal",
+        "value": "Strength 15, from the player’s position"
+      },
+      {
+        "label": "Range",
+        "value": "256 blocks (as Redstone Links)"
+      },
+      {
+        "label": "Lectern",
+        "value": "Controller placed on a lectern with no book"
+      },
+      {
+        "label": "Comparator on the lectern",
+        "value": "Reads 15"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Linked Controller, crafting table",
+      "grid": [
+        [
+          "Wooden Button",
+          "Wooden Button",
+          "Wooden Button"
+        ],
+        [
+          null,
+          "Redstone Link",
+          null
+        ],
+        [
+          "Wooden Button",
+          "Wooden Button",
+          "Wooden Button"
+        ]
+      ],
+      "result": "1 Linked Controller"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "boutons",
+        "title": "Six buttons, six frequencies",
+        "alt": "A Linked Controller, a Lectern Controller and a receiving Redstone Link",
+        "html": "<p>The six buttons match the movement keys: forward, back, left, right, jump and sneak. Each holds a <strong>frequency</strong> made of two items, just like the two slots of a Redstone Link. A pressed button powers every receiving link set to its two items, up to <strong>256 blocks</strong> away.</p>"
+      },
+      {
+        "id": "lier",
+        "title": "Binding a button",
+        "html": "<p>The quickest way: right-click an already set Redstone Link with the controller. It goes into binding mode; press the key you want, and that button takes the link's two items. Otherwise, sneak and right-click the air to open its screen: you place two items per button by hand.</p>"
+      },
+      {
+        "id": "utiliser",
+        "title": "Using it",
+        "html": "<p>Right-click without aiming at a block: the controller switches on. Your movement keys no longer move you, they press the buttons, and a held button keeps its signal. Another right-click, the Escape key, opening a screen or putting the controller away switch it off. The signal starts from your position: you are the one who has to be in range of the receivers.</p>"
+      },
+      {
+        "id": "pupitre",
+        "title": "The Lectern Controller",
+        "html": "<p>Right-click an <strong>empty lectern</strong> with the controller: it settles on it. A right-click on the lectern puts you at the controls, as long as you stand close, within about two blocks. Only one player at a time can use it. You leave by walking away or with Escape. Sneak-right-click: the controller drops and the lectern is plain again; with another controller in hand, the two are swapped.</p>"
+      },
+      {
+        "id": "comparateur",
+        "title": "Lectern and redstone",
+        "html": "<p>A comparator against the lectern always reads 15: handy to know a controller sits there and light a telltale. Breaking the lectern gives back both the lectern and the controller. Since the signal always starts from the player, a lectern in the heart of the machine keeps every receiver in range.</p>"
+      },
+      {
+        "id": "idees",
+        "title": "Build ideas",
+        "html": "<p>A crane on a <a href=\"/en/wiki/gantry-carriage\">gantry</a>: forward and back flip the direction, left and right drive a second axis. An <a href=\"/en/wiki/elevator-pulley\">elevator</a> controlled with jump and sneak. Hangar doors opened from a <a href=\"/en/wiki/train-controls\">train</a> cab. Each button can trigger several receivers at once.</p>"
+      },
+      {
+        "id": "portee",
+        "title": "Range and position",
+        "html": "<p>The <strong>256-block</strong> range is counted between you and each receiving link, not between the controller and a transmitter: there is no transmitter, you are the transmitter. In flight or on a train, the signal follows you. Receivers must be in loaded areas: a machine at the other end of the world does not answer, even on the right frequency.</p>"
+      },
+      {
+        "id": "ou",
+        "title": "Controller or levers?",
+        "html": "<p>For a control fixed in one place, a few levers and transmitting links are enough. The controller shines when you need to drive <strong>by holding a button</strong>: a held button moves a gantry, releasing it stops it at once, like a real gamepad. The lectern combines both: a fixed station with fingertip controls.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>Forgetting that the placed link must be in <strong>receiver</strong> mode: a transmitter does not react. Thinking you are stuck: while the controller is on, you cannot walk, just switch it off. Being too far away: the signal starts from the player, and beyond 256 blocks from the receivers nothing happens.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/appliances/linked_controller.json (6 wooden buttons + Redstone Link); lectern: LinkedControllerItem.onItemUseFirst (lectern with no book)",
+      "Buttons and frequencies: ControlsUtil.getControls (6 keys), LinkedControllerItem (12 slots, toFrequency), LinkedControllerClientHandler (switching on and off, PACKET_RATE 5), linkRange 256 (CLogistics)",
+      "Lectern: LecternControllerBlock (useItemOn, comparator 15), LecternControllerBlockEntity (range, one player)",
+      "Images: the game's blocks and items (Create's models) rendered by our engine, player not drawn; controller on the lectern drawn after LecternControllerRenderer"
+    ]
+  }
+}

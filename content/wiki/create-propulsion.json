@@ -1,0 +1,174 @@
+{
+  "slug": "create-propulsion",
+  "name": "Create Propulsion: Simulated",
+  "blockId": "createpropulsion:thruster",
+  "category": "propulsion",
+  "title": "Create Propulsion: Simulated — guide du mod",
+  "description": "Create Propulsion: Simulated : propulseurs à carburant, ioniques et vectoriels, brûleurs, moteur Stirling, ailes et platine pour les engins de Sable.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Propulsion: Simulated 1.1.5",
+  "mcVersion": "1.21.1",
+  "intro": "<strong>Create Propulsion: Simulated</strong> ajoute à Create de quoi faire avancer les engins physiques de <a href=\"/wiki/create-aeronautics\">Create Aeronautics</a> (moteur <strong>Sable</strong>) sans hélice : des <strong>propulseurs</strong> (Thruster) qui crachent un jet, des tuyères orientables, des ailes, et toute une chaîne autour : brûleurs, moteur Stirling, platine, câbles d'énergie et carburants. Le mod est dans le modpack Create France ; ce guide suit la version 1.1.5.",
+  "facts": [
+    {
+      "label": "Version",
+      "value": "1.1.5 (NeoForge 1.21.1)"
+    },
+    {
+      "label": "Dépend de",
+      "value": "Create 6.0.6 ou plus, Sable, Create Aeronautics"
+    },
+    {
+      "label": "Propulseurs",
+      "value": "carburant liquide, combustible solide, ionique (FE), vectoriels, créatifs"
+    },
+    {
+      "label": "Chaleur",
+      "value": "brûleur à combustible solide, brûleur à liquide, moteur Stirling"
+    },
+    {
+      "label": "Commande",
+      "value": "redstone 0 à 15, transmission redstone, adaptateur d’inclinaison"
+    },
+    {
+      "label": "Nouveau minerai",
+      "value": "platine (Overworld, profondeurs)"
+    },
+    {
+      "label": "Licence",
+      "value": "MIT"
+    }
+  ],
+  "videos": [],
+  "sections": [
+    {
+      "id": "principe",
+      "title": "À quoi sert le mod",
+      "image": "prop_gal_home_propulseurs.webp",
+      "alt": "Les propulseurs du mod posés en rang sur une plaque blanche : propulseur gris, propulseur à combustible solide, propulseur ionique, deux tuyères vectorielles sur leurs boîtiers",
+      "html": "<p>Un engin assemblé avec l'<a href=\"/wiki/assembleur-physique\">assembleur de physique</a> devient un objet physique : il a une masse, il tombe et il glisse. Les hélices d'Aeronautics le poussent en brassant l'air ; ce mod le pousse par réaction. Un <strong>propulseur</strong> placé sur l'engin applique une force dans la direction de sa face avant, à l'opposé de son jet. Plus le signal de redstone est fort, plus il pousse.</p><p>Il en existe plusieurs familles, qui diffèrent surtout par leur source d'énergie : carburant liquide pompé dans un tuyau, objet combustible (charbon, bûches), énergie électrique en FE, ou rien du tout pour les versions créatives. Les versions <strong>vectorielles</strong> orientent leur tuyère jusqu'à 30° pour diriger l'engin.</p>"
+    },
+    {
+      "id": "chaleur",
+      "title": "Chaleur et rotation",
+      "image": "prop_gal_home_chaleur.webp",
+      "alt": "Un brûleur allumé sous un moteur Stirling, un brûleur à liquide, un générateur à corail, une transmission redstone et un adaptateur d'inclinaison posés sur la plaque",
+      "html": "<p>Le mod ajoute aussi deux <a href=\"/wiki/propulsion-bruleurs\">brûleurs</a> qui chauffent le bloc posé dessus, comme un <a href=\"/wiki/bruleur-a-blaze\">brûleur à Blaze</a>, mais sans Blaze : l'un brûle des objets, l'autre du carburant liquide. Au-dessus, le <a href=\"/wiki/propulsion-moteur-stirling\">moteur Stirling</a> transforme cette chaleur en rotation pour un réseau de Create. Les brûleurs chauffent aussi les chaudières du <a href=\"/wiki/moteur-a-vapeur\">moteur à vapeur</a> et les bassins des mixeurs.</p><p>Pour la commande, la <a href=\"/wiki/propulsion-transmission-redstone\">transmission redstone</a> règle une vitesse de rotation au signal près, et l'<a href=\"/wiki/propulsion-adaptateur-inclinaison\">adaptateur d'inclinaison</a> tourne un arbre d'un angle précis : de quoi braquer un gouvernail ou une tuyère sur roulement.</p>"
+    },
+    {
+      "id": "premier",
+      "title": "Premier projet : une plateforme qui décolle",
+      "html": "<p>Construisez une petite plateforme, collez-la et assemblez-la. Posez dessous quatre <a href=\"/wiki/propulsion-propulseur\">propulseurs</a> tournés vers le haut (jet vers le bas), aux quatre coins pour garder l'équilibre. Chaque propulseur reçoit son carburant par la face arrière : un <a href=\"/wiki/reservoir-a-fluide\">réservoir</a> de lave ou de térébenthine, une <a href=\"/wiki/pompe-mecanique\">pompe</a> et des tuyaux suffisent. Un levier analogique commun règle la poussée : montez doucement le signal jusqu'à ce que la plateforme quitte le sol.</p><p>Laissez au moins dix blocs libres derrière chaque tuyère : un obstacle proche réduit la poussée. Ensuite, passez aux <a href=\"/wiki/propulsion-propulseur-vectoriel\">propulseurs vectoriels</a> pour diriger l'engin sans le faire pivoter, et ajoutez des <a href=\"/wiki/propulsion-ailes\">ailes</a> pour planer.</p>"
+    },
+    {
+      "id": "ressources",
+      "title": "Ressources du mod",
+      "html": "<p>Le <a href=\"/wiki/propulsion-platine\">platine</a> est le métal du mod : on le trouve en profondeur dans l'Overworld et il sert aux tuyères vectorielles, aux câbles et aux réservoirs renforcés. Les <a href=\"/wiki/propulsion-carburants\">carburants</a> maison sont la térébenthine (tirée de la résine de pin) et le comburant des gros propulseurs ; le corail liquide alimente le générateur à corail, cœur du <a href=\"/wiki/propulsion-energie\">réseau électrique</a> des propulseurs ioniques.</p>"
+    },
+    {
+      "id": "outils",
+      "title": "Outils créatifs",
+      "html": "<p>Un onglet d'outils (son icône, Tools Tab Icon, n'est pas un vrai objet) réunit cinq outils sans recette, pensés pour le mode créatif et les constructeurs : l'<strong>assemblage automatique</strong> (Auto Assembly) assemble ou désassemble un engin d'un clic ; la <strong>colle automatique</strong> (Auto Glue) entoure une structure d'une seule zone de colle au miel, jusqu'à 8 192 blocs ; le <strong>déplaceur</strong> (Contraption Mover) et le <strong>cloneur</strong> (Contraption Cloner) prennent un engin collé pour le reposer ailleurs comme un schéma, le premier en effaçant l'original ; l'<strong>effaceur</strong> (Contraption Remover) le supprime d'un coup.</p>"
+    },
+    {
+      "id": "pages",
+      "title": "Les pages du mod",
+      "html": "<p>Chaque bloc a sa page : <a href=\"/wiki/propulsion-propulseur\">propulseurs</a>, <a href=\"/wiki/propulsion-propulseur-vectoriel\">propulseurs vectoriels et ioniques</a>, <a href=\"/wiki/propulsion-bruleurs\">brûleurs</a>, <a href=\"/wiki/propulsion-moteur-stirling\">moteur Stirling</a>, <a href=\"/wiki/propulsion-transmission-redstone\">transmission et convertisseur redstone</a>, <a href=\"/wiki/propulsion-adaptateur-inclinaison\">adaptateurs d'inclinaison</a>, <a href=\"/wiki/propulsion-ailes\">ailes</a>, <a href=\"/wiki/propulsion-platine\">platine</a>, <a href=\"/wiki/propulsion-energie\">câbles et énergie</a>, <a href=\"/wiki/propulsion-carburants\">carburants</a>. Les vidéos rejouent les scènes Ponder du mod, que l'on retrouve en jeu en maintenant la touche W sur un bloc.</p>"
+    }
+  ],
+  "related": [
+    "propulsion-propulseur",
+    "propulsion-propulseur-vectoriel",
+    "propulsion-bruleurs",
+    "propulsion-moteur-stirling",
+    "create-aeronautics",
+    "assembleur-physique",
+    "aeronautics-helices",
+    "create-coasters-simulated"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Propulsion: Simulated 1.1.5 (dépôt Propulsion-Team/create-propulsion-simulated, commit 36f83a1 du 23/07/2026, licence MIT, © Sergey Feduk, Tronco_78, Bunting_chj, SSnowly, KyivSec), identique au jar de l’instance de test du modpack",
+    "Valeurs par défaut : PropulsionConfig.java (configuration commune et serveur du mod)",
+    "Outils : assemblerstick/item/ModItems.java, AssemblerStickInteractionHandler.java",
+    "Images : blocs du mod posés sur la plaque et rendus par notre moteur (licence MIT, © Propulsion Team)"
+  ],
+  "en": {
+    "slugEn": "create-propulsion-guide",
+    "name": "Create Propulsion: Simulated",
+    "title": "Create Propulsion: Simulated — mod guide",
+    "description": "Create Propulsion: Simulated guide: fuel, ion and vector thrusters, burners, Stirling engine, wings and platinum for Sable-powered Create machines.",
+    "intro": "<strong>Create Propulsion: Simulated</strong> gives Create the means to move the physics machines of <a href=\"/en/wiki/create-aeronautics-guide\">Create Aeronautics</a> (the <strong>Sable</strong> engine) without propellers: <strong>Thrusters</strong> that blast a jet, steerable nozzles, wings, and a whole chain around them: burners, a Stirling Engine, platinum, power cables and fuels. The mod is in the Create France modpack; this guide covers version 1.1.5.",
+    "facts": [
+      {
+        "label": "Version",
+        "value": "1.1.5 (NeoForge 1.21.1)"
+      },
+      {
+        "label": "Requires",
+        "value": "Create 6.0.6 or newer, Sable, Create Aeronautics"
+      },
+      {
+        "label": "Thrusters",
+        "value": "liquid fuel, solid fuel, ion (FE), vector, creative"
+      },
+      {
+        "label": "Heat",
+        "value": "Solid Burner, Liquid Burner, Stirling Engine"
+      },
+      {
+        "label": "Control",
+        "value": "redstone 0 to 15, Redstone Transmission, Tilt Adapter"
+      },
+      {
+        "label": "New ore",
+        "value": "platinum (Overworld, deep down)"
+      },
+      {
+        "label": "Licence",
+        "value": "MIT"
+      }
+    ],
+    "videos": [],
+    "sections": [
+      {
+        "id": "principe",
+        "title": "What the mod is for",
+        "alt": "The mod's thrusters lined up on a white plate: grey Thruster, Solid Fuel Thruster, Ion Thruster, two vector nozzles on their casings",
+        "html": "<p>A machine built with the <a href=\"/en/wiki/physics-assembler\">Physics Assembler</a> becomes a physical object: it has mass, it falls and it slides. Aeronautics propellers push it by moving air; this mod pushes it by reaction. A <strong>Thruster</strong> mounted on the machine applies a force toward its front face, away from its jet. The stronger the redstone signal, the harder it pushes.</p><p>There are several families, mostly told apart by their power source: liquid fuel pumped through a pipe, a burnable item (coal, logs), electrical energy in FE, or nothing at all for the creative versions. The <strong>vector</strong> versions swing their nozzle up to 30° to steer the machine.</p>"
+      },
+      {
+        "id": "chaleur",
+        "title": "Heat and rotation",
+        "alt": "A lit burner under a Stirling Engine, a Liquid Burner, a Coral Generator, a Redstone Transmission and a Tilt Adapter on the plate",
+        "html": "<p>The mod also adds two <a href=\"/en/wiki/propulsion-burners\">burners</a> that heat the block placed on them, like a <a href=\"/en/wiki/blaze-burner\">Blaze Burner</a> without the Blaze: one burns items, the other liquid fuel. On top, the <a href=\"/en/wiki/propulsion-stirling-engine\">Stirling Engine</a> turns that heat into rotation for a Create network. The burners also heat <a href=\"/en/wiki/steam-engine\">steam engine</a> boilers and mixer basins.</p><p>For control, the <a href=\"/en/wiki/propulsion-redstone-transmission\">Redstone Transmission</a> sets a rotation speed from a signal, and the <a href=\"/en/wiki/propulsion-tilt-adapter\">Tilt Adapter</a> turns a shaft by an exact angle: handy to steer a rudder or a nozzle mounted on a bearing.</p>"
+      },
+      {
+        "id": "premier",
+        "title": "First project: a lifting platform",
+        "html": "<p>Build a small platform, glue it and assemble it. Put four <a href=\"/en/wiki/propulsion-thruster\">Thrusters</a> under it, facing up (jet pointing down), one per corner to keep it balanced. Each Thruster takes its fuel through its back face: a <a href=\"/en/wiki/fluid-tank\">Fluid Tank</a> of lava or turpentine, a <a href=\"/en/wiki/mechanical-pump\">Mechanical Pump</a> and pipes are enough. One shared analog lever sets the thrust: raise the signal slowly until the platform leaves the ground.</p><p>Keep at least ten free blocks behind each nozzle: anything close cuts the thrust. Then move on to <a href=\"/en/wiki/propulsion-vector-thruster\">vector thrusters</a> to steer without turning the whole machine, and add <a href=\"/en/wiki/propulsion-wings\">wings</a> to glide.</p>"
+      },
+      {
+        "id": "ressources",
+        "title": "Mod resources",
+        "html": "<p><a href=\"/en/wiki/propulsion-platinum\">Platinum</a> is the mod's metal: it is found deep in the Overworld and goes into vector nozzles, cables and reinforced tanks. The mod's own <a href=\"/en/wiki/propulsion-fuels\">fuels</a> are turpentine (made from pine resin) and the oxidizer used by large thrusters; liquid coral feeds the Coral Generator, the heart of the <a href=\"/en/wiki/propulsion-energy-and-cables\">power network</a> for ion thrusters.</p>"
+      },
+      {
+        "id": "outils",
+        "title": "Creative tools",
+        "html": "<p>A tools tab (its icon, the Tools Tab Icon, is not a real item) gathers five tools with no recipe, meant for creative mode and builders: <strong>Auto Assembly</strong> assembles or disassembles a machine in one click; <strong>Auto Glue</strong> wraps a structure in a single honey glue box, up to 8,192 blocks; the <strong>Contraption Mover</strong> and <strong>Contraption Cloner</strong> pick up a glued machine to place it elsewhere like a schematic, the first one deleting the original; the <strong>Contraption Remover</strong> wipes it out at once.</p>"
+      },
+      {
+        "id": "pages",
+        "title": "The mod pages",
+        "html": "<p>Every block has its page: <a href=\"/en/wiki/propulsion-thruster\">thrusters</a>, <a href=\"/en/wiki/propulsion-vector-thruster\">vector and ion thrusters</a>, <a href=\"/en/wiki/propulsion-burners\">burners</a>, <a href=\"/en/wiki/propulsion-stirling-engine\">Stirling Engine</a>, <a href=\"/en/wiki/propulsion-redstone-transmission\">Redstone Transmission and Converter</a>, <a href=\"/en/wiki/propulsion-tilt-adapter\">tilt adapters</a>, <a href=\"/en/wiki/propulsion-wings\">wings</a>, <a href=\"/en/wiki/propulsion-platinum\">platinum</a>, <a href=\"/en/wiki/propulsion-energy-and-cables\">cables and power</a>, <a href=\"/en/wiki/propulsion-fuels\">fuels</a>. The videos replay the mod's Ponder scenes, which you can open in game by holding W over a block.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Propulsion: Simulated 1.1.5 (Propulsion-Team/create-propulsion-simulated repository, commit 36f83a1 of 2026-07-23, MIT licence, © Sergey Feduk, Tronco_78, Bunting_chj, SSnowly, KyivSec), identical to the modpack test instance jar",
+      "Default values: PropulsionConfig.java (the mod’s common and server configuration)",
+      "Tools: assemblerstick/item/ModItems.java, AssemblerStickInteractionHandler.java",
+      "Images: mod blocks placed on the plate and rendered by our engine (MIT licence, © Propulsion Team)"
+    ]
+  }
+}

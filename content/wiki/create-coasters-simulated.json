@@ -1,0 +1,189 @@
+{
+  "slug": "create-coasters-simulated",
+  "name": "Create: Coasters Simulated",
+  "blockId": "simulatedcoasters:coaster_cart",
+  "category": "coasters",
+  "title": "Create: Coasters Simulated — guide du mod",
+  "description": "Create: Coasters Simulated : des montagnes russes physiques avec Create et Sable : rails courbes, chaînes de levage, wagons, rivets, ballons.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create: Coasters Simulated 0.1.6",
+  "mcVersion": "1.21.1",
+  "intro": "<strong>Create: Coasters Simulated</strong> construit de vraies <strong>montagnes russes</strong> : des rails courbes tendus entre des points d'ancrage, des chaînes de levage entraînées par Create, et des wagons que le moteur physique <strong>Sable</strong> fait rouler, monter et redescendre par la gravité. Il complète <a href=\"/wiki/create-aeronautics\">Create Aeronautics</a> ; ce guide suit la version 0.1.6, celle de la prochaine mise à jour du modpack Create France.",
+  "facts": [
+    {
+      "label": "Version",
+      "value": "0.1.6 (NeoForge 1.21.1)"
+    },
+    {
+      "label": "Dépend de",
+      "value": "Create 6.0.10 ou plus, Sable 2.0"
+    },
+    {
+      "label": "Rail",
+      "value": "jusqu’à 45 blocs entre deux points d’ancrage"
+    },
+    {
+      "label": "Chaîne de levage",
+      "value": "jusqu’à 64 blocs, 16 blocs/s à 256 tr/min"
+    },
+    {
+      "label": "Wagons",
+      "value": "reliés par attelages de 1,5 à 7 blocs"
+    },
+    {
+      "label": "Extras",
+      "value": "rivet, ballon rouge"
+    },
+    {
+      "label": "Licence",
+      "value": "MIT"
+    }
+  ],
+  "videos": [],
+  "sections": [
+    {
+      "id": "principe",
+      "title": "Des montagnes russes physiques",
+      "image": "coast_gal_home_blocs.webp",
+      "alt": "De gauche à droite : un point d'ancrage, un point d'ancrage à arbre de chaîne, un wagon avec un siège, un rivet et un ballon rouge",
+      "html": "<p>Contrairement aux <a href=\"/wiki/rail-de-train\">rails de train</a> de Create, ces rails ne sont pas des blocs posés au sol : ce sont des courbes tendues dans le vide entre des <strong>points d'ancrage</strong> (Track Anchorpoint), qui peuvent monter, descendre, tourner en boucle et s'incliner. Un <strong>wagon</strong> (Coaster Cart) posé dessus devient un engin physique de Sable : il roule tant que la pente l'entraîne, comme sur de vraies montagnes russes.</p>"
+    },
+    {
+      "id": "premier",
+      "title": "Premières montagnes russes",
+      "html": "<p>Posez quelques points d'ancrage le long du parcours voulu, plus haut au départ qu'à l'arrivée. Avec un <a href=\"/wiki/coasters-rails\">rail de montagnes russes</a> en main, cliquez un ancrage puis le suivant pour tendre chaque tronçon : le mod lisse automatiquement les virages. Ajoutez une <strong>chaîne de levage</strong> sur la première montée et faites tourner l'arbre de son ancrage avec un moteur de Create. Posez enfin un <a href=\"/wiki/coasters-wagons\">wagon</a>, attelez-en d'autres derrière, installez des sièges, et lancez le train.</p>"
+    },
+    {
+      "id": "blocs",
+      "title": "Les blocs et objets",
+      "html": "<p>Le mod reste compact : le <strong>rail de montagnes russes</strong> (Coaster Track) et son étape de fabrication, le rail inachevé (Incomplete Coaster Track) ; le <strong>point d'ancrage</strong> ; le <strong>wagon</strong> ; le <strong>rivet</strong> (Rivet), qui fixe un décor de biais ; le <strong>ballon rouge</strong> (Red Balloon), un ballon de fête qui allège ce à quoi on l'attache. Le matériau de rail (Coaster Track Material) est un bloc technique invisible, sans objet ni recette.</p>"
+    },
+    {
+      "id": "pages",
+      "title": "Les pages",
+      "html": "<p>La page des <a href=\"/wiki/coasters-rails\">rails</a> explique la pose, le réglage à la clé, la teinture et les chaînes de levage ; celle des <a href=\"/wiki/coasters-wagons\">wagons</a> montre les attelages, le décor et les deux accessoires. Les vidéos rejouent les trois scènes Ponder du mod.</p>"
+    },
+    {
+      "id": "sable",
+      "title": "Sable et la physique",
+      "html": "<p>Tout repose sur <strong>Sable</strong>, le moteur physique de <a href=\"/wiki/create-aeronautics\">Create Aeronautics</a> : chaque wagon est un petit « sous-niveau » qui a une masse, une inertie et des collisions. Le mod retire au wagon la traînée générale de Sable pour qu'il garde sa vitesse, et l'accroche aux rails par ses roues. Sur la voie, un train lancé du haut d'une colline remonte presque aussi haut de l'autre côté. Les passagers s'assoient sur des sièges de Create posés sur les wagons.</p><p>Le mod demande Create 6.0.10 et Sable 2.0 ; il fonctionne avec les blocs de Simulated (plaques nominatives, colle au miel) et ceux d'Aeronautics pour décorer ou motoriser un train.</p>"
+    },
+    {
+      "id": "recettes",
+      "title": "Recettes rapides",
+      "html": "<p>Deux points d'ancrage : une poutre en métal sur un bloc de fer industriel. Un rail : assemblage séquencé sur une poutre en métal (deux pépites puis la presse). Un wagon : une dalle de bois, quatre algues séchées, un bloc de fer industriel et un rotor. Un rivet : une plaque de fer sur une pépite de fer. Un ballon : laine rouge, ficelle et pépite de fer.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur le serveur",
+      "html": "<p>Le modpack Create France embarque déjà une version précédente du mod ; la 0.1.6 arrive avec la prochaine mise à jour.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils",
+      "html": "<p>Gardez des virages doux : le mod refuse les angles trop fermés entre deux tronçons. Un ancrage ne prend que deux tronçons, pas d'aiguillage. Comme tout engin de Sable, un wagon garde son élan : prévoyez des montées pour le ralentir avant la gare, le mod n'a pas de frein. Le prix d'un tronçon vaut sa longueur en rails, rendus si on le casse.</p>"
+    }
+  ],
+  "related": [
+    "coasters-rails",
+    "coasters-wagons",
+    "create-aeronautics",
+    "assembleur-physique",
+    "rail-de-train",
+    "cle",
+    "create-propulsion",
+    "aeronautics-cordes-et-amarrage"
+  ],
+  "sources": [
+    "Code et données : Create: Coasters Simulated 0.1.6 (jar de l’instance de test du modpack, licence MIT, © SilverGold) ; code lu dans la version 0.1.5 décompilée (Vineflower, fork public sjzeero) et comparé à la 0.1.6 avec javap",
+    "Réglages : Config.java (maxTrackConnectionSpanBlocks 45, maxChainLiftSpanBlocks 64)",
+    "Images : blocs du mod posés sur la plaque et rendus par notre moteur (licence MIT, © SilverGold)"
+  ],
+  "en": {
+    "slugEn": "create-coasters-simulated-guide",
+    "name": "Create: Coasters Simulated",
+    "title": "Create: Coasters Simulated — mod guide",
+    "description": "Create: Coasters Simulated guide: physics roller coasters with Create and Sable, with curved tracks, chain lifts, linked carts, rivets and balloons.",
+    "intro": "<strong>Create: Coasters Simulated</strong> builds real <strong>roller coasters</strong>: curved tracks stretched between anchorpoints, chain lifts driven by Create, and carts that the <strong>Sable</strong> physics engine rolls up and down under gravity. It complements <a href=\"/en/wiki/create-aeronautics-guide\">Create Aeronautics</a>; this guide covers version 0.1.6, the one in the next Create France modpack update.",
+    "facts": [
+      {
+        "label": "Version",
+        "value": "0.1.6 (NeoForge 1.21.1)"
+      },
+      {
+        "label": "Requires",
+        "value": "Create 6.0.10 or newer, Sable 2.0"
+      },
+      {
+        "label": "Track",
+        "value": "up to 45 blocks between two anchorpoints"
+      },
+      {
+        "label": "Chain lift",
+        "value": "up to 64 blocks, 16 blocks/s at 256 RPM"
+      },
+      {
+        "label": "Carts",
+        "value": "linked by 1.5 to 7 block couplings"
+      },
+      {
+        "label": "Extras",
+        "value": "Rivet, Red Balloon"
+      },
+      {
+        "label": "Licence",
+        "value": "MIT"
+      }
+    ],
+    "videos": [],
+    "sections": [
+      {
+        "id": "principe",
+        "title": "Physics roller coasters",
+        "alt": "From left to right: a Track Anchorpoint, an anchorpoint with a chain shaft, a cart with a seat, a Rivet and a Red Balloon",
+        "html": "<p>Unlike Create's <a href=\"/en/wiki/train-track\">train tracks</a>, these tracks are not blocks lying on the ground: they are curves stretched through the air between <strong>Track Anchorpoints</strong>, which can climb, drop, loop and bank. A <strong>Coaster Cart</strong> placed on them becomes a Sable physics machine: it rolls as long as the slope pulls it, like a real roller coaster.</p>"
+      },
+      {
+        "id": "premier",
+        "title": "Your first coaster",
+        "html": "<p>Place a few anchorpoints along the intended route, higher at the start than at the end. With a <a href=\"/en/wiki/coasters-track\">Coaster Track</a> in hand, click one anchor then the next to stretch each span: the mod smooths the turns automatically. Add a <strong>chain lift</strong> on the first climb and spin its anchor's shaft with a Create motor. Finally place a <a href=\"/en/wiki/coasters-carts\">cart</a>, couple more behind it, add seats and let the train go.</p>"
+      },
+      {
+        "id": "blocs",
+        "title": "Blocks and items",
+        "html": "<p>The mod stays compact: the <strong>Coaster Track</strong> and its crafting step, the <strong>Incomplete Coaster Track</strong>; the <strong>Track Anchorpoint</strong>; the <strong>Coaster Cart</strong>; the <strong>Rivet</strong>, which fixes decorations at an angle; the <strong>Red Balloon</strong>, a party balloon that lightens whatever it is tied to. The Coaster Track Material is an invisible technical block, with no item and no recipe.</p>"
+      },
+      {
+        "id": "pages",
+        "title": "The pages",
+        "html": "<p>The <a href=\"/en/wiki/coasters-track\">track</a> page explains placing, wrench editing, dyeing and chain lifts; the <a href=\"/en/wiki/coasters-carts\">carts</a> page shows couplings, decorations and the two accessories. The videos replay the mod's three Ponder scenes.</p>"
+      },
+      {
+        "id": "sable",
+        "title": "Sable and physics",
+        "html": "<p>Everything relies on <strong>Sable</strong>, the physics engine of <a href=\"/en/wiki/create-aeronautics-guide\">Create Aeronautics</a>: each cart is a small \"sub-level\" with mass, inertia and collisions. The mod removes Sable's general drag from the cart so it keeps its speed, and holds it to the rails by its wheels. On the track, a train launched from the top of a hill climbs almost as high on the other side. Passengers sit on Create seats placed on the carts.</p><p>The mod needs Create 6.0.10 and Sable 2.0; it works with Simulated blocks (nameplates, honey glue) and Aeronautics blocks to decorate or power a train.</p>"
+      },
+      {
+        "id": "recettes",
+        "title": "Quick recipes",
+        "html": "<p>Two anchorpoints: a Metal Girder on a Block of Industrial Iron. A track: sequenced assembly on a Metal Girder (two nuggets then the press). A cart: a wooden slab, four dried kelp, a Block of Industrial Iron and a shaft. A rivet: an iron sheet on an iron nugget. A balloon: red wool, string and an iron nugget.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On the server",
+        "html": "<p>The Create France modpack already ships an earlier version of the mod; 0.1.6 comes with the next update. This guide describes 0.1.6, checked against the code of both versions.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<p>Keep the bends gentle: the mod refuses angles that are too tight between two spans. An anchor only takes two spans, so there are no switches. Like any Sable machine, a cart keeps its momentum: plan climbs to slow it before the station, the mod has no brake. A span costs its length in tracks, given back if you break it.</p>"
+      }
+    ],
+    "sources": [
+      "Code and data: Create: Coasters Simulated 0.1.6 (modpack test instance jar, MIT licence, © SilverGold); code read from the decompiled 0.1.5 (Vineflower, public sjzeero fork) and compared with 0.1.6 using javap",
+      "Settings: Config.java (maxTrackConnectionSpanBlocks 45, maxChainLiftSpanBlocks 64)",
+      "Images: mod blocks placed on the plate and rendered by our engine (MIT licence, © SilverGold)"
+    ]
+  }
+}

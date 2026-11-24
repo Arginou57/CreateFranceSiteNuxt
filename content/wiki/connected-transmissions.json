@@ -1,0 +1,352 @@
+{
+  "slug": "connected-transmissions",
+  "name": "Boîtes à roues dentées et roues de manivelle",
+  "blockId": "create_connected:crank_wheel",
+  "category": "connected",
+  "title": "Boîtes et manivelles — Create Connected, guide",
+  "description": "Roue de manivelle, roue dentée à chaîne, boîtes à roues dentées parallèle, à 6 voies et en laiton, connecteur croisé : transmissions de Create Connected.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Connected 1.3.3 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Create Connected ajoute une série de pièces de transmission qui évitent les montages tordus. La <strong>roue de manivelle</strong> est une manivelle qui engrène directement les roues dentées ; la <strong>roue dentée à chaîne enchâssée</strong> mélange chaîne et engrenage ; trois nouvelles boîtes à roues dentées règlent le sens des sorties ; le <strong>connecteur croisé</strong> laisse deux lignes se croiser dans le même bloc.",
+  "facts": [
+    {
+      "label": "Roues de manivelle",
+      "value": "32 tr/min, 256 su (8 su par tr/min, CStress)"
+    },
+    {
+      "label": "Boîtes et connecteur",
+      "value": "aucun impact de stress (CStress.setNoImpact)"
+    },
+    {
+      "label": "Boîte à 6 voies",
+      "value": "faces haut et bas à demi-vitesse"
+    },
+    {
+      "label": "Boîte en laiton",
+      "value": "sens de chacune des 4 faces réglable à la clé"
+    },
+    {
+      "label": "Versions verticales",
+      "value": "conversion à l’établi, un bloc contre l’autre"
+    },
+    {
+      "label": "Version",
+      "value": "Create Connected 1.3.3 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l’établi (sans disposition)",
+    "grid": [
+      [
+        "Manivelle",
+        "Roue dentée",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "items": [
+      [
+        "create:hand_crank",
+        "create:cogwheel",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 roue de manivelle",
+    "resultItem": "create_connected:crank_wheel"
+  },
+  "videos": [
+    {
+      "id": "conn_crank_wheel",
+      "name": "Les roues de manivelle dans les deux sens",
+      "description": "Deux roues de manivelle, petite et grande, font tourner des compteurs de vitesse : clic droit maintenu dans un sens, puis accroupi pour l'autre sens.",
+      "duration": "PT12S",
+      "chapters": [
+        {
+          "t": 1.8,
+          "section": "roue-manivelle"
+        },
+        {
+          "t": 4.6,
+          "section": "sens-manivelle"
+        }
+      ]
+    },
+    {
+      "id": "conn_chain_cogwheel",
+      "name": "La roue dentée à chaîne dans une rangée",
+      "description": "Une rangée de chaînes de transmission avec des roues dentées à chaîne : même sens partout, une roue dentée branchée au milieu, un maillon tourné d'un quart de tour à la clé.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 3.5,
+          "section": "chaine"
+        },
+        {
+          "t": 12.8,
+          "section": "chaine-rangee"
+        }
+      ]
+    },
+    {
+      "id": "conn_parallel_gearbox",
+      "name": "Boîte à roues dentées parallèle",
+      "description": "Le montage à quatre roues dentées qu'on ne peut pas construire, puis la boîte parallèle qui le remplace, et le sens des sorties en angle et en ligne droite.",
+      "duration": "PT16S",
+      "chapters": [
+        {
+          "t": 1.8,
+          "section": "parallele"
+        },
+        {
+          "t": 9.2,
+          "section": "parallele-sens"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "roue-manivelle",
+      "title": "Roue de manivelle et grande roue",
+      "image": "conn_crank_wheel_roues.webp",
+      "alt": "Une roue de manivelle et une grande roue de manivelle reliées à deux compteurs de vitesse",
+      "video": "conn_crank_wheel",
+      "html": "<p>La <strong>roue de manivelle</strong> (Crank Wheel, recette ci-contre) se comporte comme la <a href=\"/wiki/manivelle\">manivelle</a> de Create, mais son corps est une <a href=\"/wiki/roue-dentee\">roue dentée</a> : elle engrène directement les roues voisines, sans rotor intermédiaire. La <strong>grande roue de manivelle</strong> (Large Crank Wheel, manivelle et grande roue dentée) engrène comme une grande roue, en diagonale. Les deux donnent 32 tr/min et 256 su.</p>"
+    },
+    {
+      "id": "sens-manivelle",
+      "title": "Choisir le sens",
+      "image": "conn_crank_wheel_antihoraire.webp",
+      "alt": "Les deux roues de manivelle qui tournent pendant le clic droit maintenu",
+      "video": "conn_crank_wheel",
+      "html": "<p>Garde le clic droit enfoncé sur la roue : elle tourne dans le sens inverse des aiguilles d'une montre tant que tu tiens le bouton, et s'arrête dès que tu le relâches. Accroupi, le même geste la fait tourner dans l'autre sens. Comme avec la manivelle de Create, tourner à la main creuse l'appétit.</p>"
+    },
+    {
+      "id": "chaine",
+      "title": "Roue dentée à chaîne enchâssée",
+      "image": "conn_chain_cogwheel_roue-a-chaine.webp",
+      "alt": "Une rangée de chaînes de transmission avec des roues dentées à chaîne, reliée à un compteur de vitesse",
+      "video": "conn_chain_cogwheel",
+      "html": "<p>La <strong>roue dentée à chaîne enchâssée</strong> (Encased Chain Cogwheel) se fabrique avec une <a href=\"/wiki/chaine-de-transmission\">chaîne de transmission</a> et une roue dentée. Comme elle, elle se relie en rangée aux blocs à chaîne voisins et partage leur rotation. En plus, une roue dentée dépasse du boitier pour engrener d'autres roues.</p>"
+    },
+    {
+      "id": "chaine-rangee",
+      "title": "Dans une rangée de chaînes",
+      "image": "conn_chain_cogwheel_roues-dentees.webp",
+      "alt": "Une grande roue dentée engrenée sur une roue dentée à chaîne au milieu de la rangée",
+      "video": "conn_chain_cogwheel",
+      "html": "<p>Les rotors qui sortent d'une rangée tournent tous dans le même sens, comme avec des chaînes simples. Tu peux brancher une roue dentée ou une grande roue sur n'importe quel maillon de la rangée, pas seulement aux bouts. Un coup de <a href=\"/wiki/cle\">clé</a> fait pivoter un maillon d'un quart de tour : la rangée continue, mais ce maillon sort à la verticale.</p>"
+    },
+    {
+      "id": "parallele",
+      "title": "Boîte à roues dentées parallèle",
+      "image": "conn_parallel_gearbox_montage.webp",
+      "alt": "Quatre roues dentées autour d’une grande roue dentée : un montage que Create ne permet pas",
+      "video": "conn_parallel_gearbox",
+      "html": "<p>Imagine une grande roue dentée couchée, entourée de quatre petites roues qui portent chacune un rotor : les quatre rotors tourneraient dans le même sens, mais Create refuse ce placement. La <strong>boîte à roues dentées parallèle</strong> (Parallel Gearbox) le range dans un seul bloc. Elle a quatre faces de sortie autour de son axe, comme la <a href=\"/wiki/boite-a-roues-dentees\">boîte à roues dentées</a> de Create, et ne consomme rien.</p>"
+    },
+    {
+      "id": "parallele-sens",
+      "title": "Le sens des sorties",
+      "image": "conn_parallel_gearbox_angles.webp",
+      "alt": "Deux rotors en angle sur la boîte parallèle, qui tournent dans le même sens",
+      "video": "conn_parallel_gearbox",
+      "html": "<p>Deux sorties voisines, à angle droit, tournent dans le même sens. Deux sorties opposées, en ligne droite, tournent en sens contraire : c'est la différence avec la boîte de Create, où les sorties en angle sont en miroir. La <strong>boîte parallèle verticale</strong> (Vertical Parallel Gearbox) a son axe couché : deux de ses faces regardent le haut et le bas. On passe d'une version à l'autre en posant le bloc seul dans l'établi.</p>"
+    },
+    {
+      "id": "six-voies",
+      "title": "Boîte à roues dentées à 6 voies",
+      "image": "conn_gal_boites_six-voies.webp",
+      "alt": "La boîte à roues dentées à 6 voies avec un rotor sur chaque face",
+      "html": "<p>La <strong>boîte à roues dentées à 6 voies</strong> (6-way Gearbox) a une sortie sur chaque face. Les quatre faces du tour se comportent comme la boîte parallèle ; les faces du haut et du bas tournent deux fois moins vite. Si tu l'alimentes par le haut, c'est l'inverse : le tour part au double. Elle se fabrique en forme (roues, grandes roues et boitier d'andésite) ou sans disposition depuis une boîte de Create ou une boîte parallèle. Sa version verticale (Vertical 6-way Gearbox) se couche sur le côté.</p>"
+    },
+    {
+      "id": "laiton",
+      "title": "Boîte à roues dentées en laiton",
+      "image": "conn_gal_boites_laiton.webp",
+      "alt": "La boîte à roues dentées en laiton et ses quatre rotors",
+      "html": "<p>La <strong>boîte à roues dentées en laiton</strong> (Brass Gearbox) se fabrique avec un <a href=\"/wiki/controleur-de-vitesse-de-rotation\">contrôleur de vitesse de rotation</a> entouré de quatre roues dentées. Chacune de ses quatre faces garde un réglage propre : clique une face à la clé pour inverser son sens, sans toucher aux autres. Plus besoin d'<a href=\"/wiki/inverseur-de-rotation\">inverseur de rotation</a> par sortie. La version verticale (Vertical Brass Gearbox) suit la même logique.</p>"
+    },
+    {
+      "id": "connecteur",
+      "title": "Connecteur croisé",
+      "image": "conn_gal_boites_connecteurs.webp",
+      "alt": "Le connecteur croisé nu, puis dans un boitier d’andésite et dans un boitier de laiton",
+      "html": "<p>Le <strong>connecteur croisé</strong> (Cross Connector : une boîte de Create et quatre <a href=\"/wiki/rotor\">rotors</a>) n'est pas une pièce tournante : il laisse passer tout droit deux lignes perpendiculaires qui ne se touchent pas. Plusieurs connecteurs peuvent se suivre. Clic droit avec un boitier d'andésite ou de laiton pour obtenir le <strong>connecteur croisé dans un boitier d'andésite</strong> ou <strong>de laiton</strong> ; clé accroupi pour retirer le boitier.</p>"
+    }
+  ],
+  "related": [
+    "create-connected",
+    "connected-embrayages",
+    "manivelle",
+    "roue-dentee",
+    "boite-a-roues-dentees",
+    "chaine-de-transmission",
+    "inverseur-de-rotation",
+    "stressometre-compteur-de-vitesse"
+  ],
+  "sources": [
+    "Create Connected 1.3.3 (create_connected-1.3.3-mc1.21.1.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/hlysine/create_connected au tag 1.3.3-mc1.21.1, recettes du dossier data du jar, scènes Ponder rejouées par notre moteur.",
+    "Mod de Lysine (hlysine), sous licence GNU AGPL v3 : modèles et textures de ses auteurs, rendus à partir du jar ; aucun texte du mod n'est recopié.",
+    "Roues de manivelle : registries/CCBlocks.java (CStress.setCapacity(8.0), setGeneratorSpeed(32)), content/crankwheel/CrankWheelBlock.java (roue dentée, ICogWheel) ; faim : HandCrankBlock de Create 6.0.10.",
+    "Boîtes : content/parallelgearbox/ParallelGearboxBlockEntity.java, content/sixwaygearbox/SixWayGearboxBlockEntity.java (× 0,5 et × 2), content/brassgearbox/BrassGearboxBlock.java (FACE_1..4_FLIPPED, onWrenched).",
+    "Connecteur croisé : content/crossconnector/CrossConnectorBlock.java (forwardConnection), EncasedCrossConnectorBlock.java.",
+    "Recettes : data/create_connected/recipe/crafting/kinetics/ (crank_wheel, large_crank_wheel, encased_chain_cogwheel, parallel_gearbox, six_way_gearbox*, brass_gearbox, cross_connector, vertical_*_from_conversion)."
+  ],
+  "en": {
+    "slugEn": "connected-gearboxes-and-crank-wheels",
+    "name": "Gearboxes and Crank Wheels",
+    "title": "Gearboxes and Crank Wheels — Create Connected guide",
+    "description": "Crank Wheel, Encased Chain Cogwheel, Parallel, 6-way and Brass Gearboxes and the Cross Connector: the drivetrain parts of Create Connected.",
+    "intro": "Create Connected adds a set of drivetrain parts that save you from awkward builds. The <strong>Crank Wheel</strong> is a hand crank that meshes straight into cogwheels; the <strong>Encased Chain Cogwheel</strong> mixes chain and gears; three new gearboxes sort out the direction of their outputs; the <strong>Cross Connector</strong> lets two lines cross inside the same block. None of these parts uses any stress.",
+    "facts": [
+      {
+        "label": "Crank wheels",
+        "value": "32 RPM, 256 SU (8 SU per RPM, CStress)"
+      },
+      {
+        "label": "Gearboxes and connector",
+        "value": "no stress impact (CStress.setNoImpact)"
+      },
+      {
+        "label": "6-way Gearbox",
+        "value": "top and bottom faces at half speed"
+      },
+      {
+        "label": "Brass Gearbox",
+        "value": "direction of each of the 4 faces set with a Wrench"
+      },
+      {
+        "label": "Vertical versions",
+        "value": "converted at the crafting table, one block for the other"
+      },
+      {
+        "label": "Version",
+        "value": "Create Connected 1.3.3 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Shapeless crafting recipe",
+      "grid": [
+        [
+          "Hand Crank",
+          "Cogwheel",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Crank Wheel"
+    },
+    "videos": [
+      {
+        "id": "conn_crank_wheel",
+        "name": "Crank wheels in both directions",
+        "description": "Two crank wheels, small and large, drive Speedometers: right-click held for one direction, then sneaking for the other."
+      },
+      {
+        "id": "conn_chain_cogwheel",
+        "name": "The chain cogwheel in a row",
+        "description": "A row of Encased Chain Drives with chain cogwheels: one direction everywhere, a cogwheel meshed in the middle, one link turned a quarter turn with the Wrench."
+      },
+      {
+        "id": "conn_parallel_gearbox",
+        "name": "Parallel Gearbox",
+        "description": "The four-cogwheel setup you cannot build, then the Parallel Gearbox that replaces it, and the direction of its outputs around corners and in a straight line."
+      }
+    ],
+    "sections": [
+      {
+        "id": "roue-manivelle",
+        "title": "Crank Wheel and Large Crank Wheel",
+        "alt": "A Crank Wheel and a Large Crank Wheel connected to two Speedometers",
+        "html": "<p>The <strong>Crank Wheel</strong> (recipe shown here) works like Create's <a href=\"/en/wiki/hand-crank\">Hand Crank</a>, but its body is a <a href=\"/en/wiki/cogwheel\">Cogwheel</a>: it meshes directly with the wheels next to it, no shaft in between. The <strong>Large Crank Wheel</strong> (Hand Crank plus Large Cogwheel) meshes like a large cogwheel, diagonally. Both give 32 RPM and 256 SU, enough for a Mechanical Press or a test Deployer.</p>"
+      },
+      {
+        "id": "sens-manivelle",
+        "title": "Picking the direction",
+        "alt": "Both crank wheels turning while right-click is held",
+        "html": "<p>Keep right-click pressed on the wheel: it spins counter-clockwise for as long as you hold the button and stops as soon as you let go. Sneaking, the same move turns it the other way. As with Create's Hand Crank, cranking by hand makes you hungry, so bring food if you run a machine for a long time.</p>"
+      },
+      {
+        "id": "chaine",
+        "title": "Encased Chain Cogwheel",
+        "alt": "A row of Encased Chain Drives with chain cogwheels, connected to a Speedometer",
+        "html": "<p>The <strong>Encased Chain Cogwheel</strong> is crafted from an <a href=\"/en/wiki/encased-chain-drive\">Encased Chain Drive</a> and a Cogwheel. It does everything the chain drive does: it links up with chain blocks placed next to it in a row and shares their rotation. On top of that, a cogwheel sticks out of the casing to mesh with other wheels.</p>"
+      },
+      {
+        "id": "chaine-rangee",
+        "title": "Inside a row of chains",
+        "alt": "A Large Cogwheel meshed with a chain cogwheel in the middle of the row",
+        "html": "<p>Shafts coming out of a row all turn the same way, just like with plain chain drives. You can mesh a Cogwheel or a Large Cogwheel with any link of the row, not only at the ends. A click with the <a href=\"/en/wiki/wrench\">Wrench</a> turns one link by a quarter turn: the row carries on, but that link now points vertically.</p>"
+      },
+      {
+        "id": "parallele",
+        "title": "Parallel Gearbox",
+        "alt": "Four cogwheels around a Large Cogwheel: a setup Create does not allow",
+        "html": "<p>Picture a Large Cogwheel lying flat, ringed by four small cogwheels that each carry a shaft: the four shafts would all turn the same way, but Create will not let you place it. The <strong>Parallel Gearbox</strong> packs that into a single block. It has four output faces around its axis, like Create's <a href=\"/en/wiki/gearbox\">Gearbox</a>, and uses nothing.</p>"
+      },
+      {
+        "id": "parallele-sens",
+        "title": "Output directions",
+        "alt": "Two shafts at a corner of the Parallel Gearbox, turning the same way",
+        "html": "<p>Two neighbouring outputs at a right angle spin the same way. Two opposite outputs in a straight line spin in opposite directions: that is the difference from Create's Gearbox, where corner outputs are mirrored. The <strong>Vertical Parallel Gearbox</strong> has its axis lying down, so two of its faces look up and down. Put the block alone in a crafting grid to switch between versions.</p>"
+      },
+      {
+        "id": "six-voies",
+        "title": "6-way Gearbox",
+        "alt": "The 6-way Gearbox with a shaft on every face",
+        "html": "<p>The <strong>6-way Gearbox</strong> has an output on every face. The four faces around it behave like the Parallel Gearbox; the top and bottom faces turn at half speed. Feed it from the top and it works the other way round: the sides run twice as fast. Three recipes: large cogwheels, cogwheels and Andesite Casing in a pattern, a Create Gearbox with two Large Cogwheels, or a Parallel Gearbox with one Large Cogwheel. The Vertical 6-way Gearbox lies on its side.</p>"
+      },
+      {
+        "id": "laiton",
+        "title": "Brass Gearbox",
+        "alt": "The Brass Gearbox and its four shafts",
+        "html": "<p>The <strong>Brass Gearbox</strong> is a <a href=\"/en/wiki/rotation-speed-controller\">Rotation Speed Controller</a> surrounded by four Cogwheels. Each of its four faces keeps its own setting: click a face with the Wrench to flip its direction without touching the others. No more <a href=\"/en/wiki/gearshift\">Gearshift</a> on every output. The Vertical Brass Gearbox follows the same logic.</p>"
+      },
+      {
+        "id": "connecteur",
+        "title": "Cross Connector",
+        "alt": "The bare Cross Connector, then in an andesite casing and in a brass casing",
+        "html": "<p>The <strong>Cross Connector</strong> (a Create Gearbox and four <a href=\"/en/wiki/shaft\">Shafts</a>) is not a rotating part: it lets two perpendicular lines pass straight through without touching each other. Handy for crossing one line over another without merging them, and several connectors can follow each other. Right-click with Andesite Casing or Brass Casing to get the <strong>Andesite Encased Cross Connector</strong> or the <strong>Brass Encased Cross Connector</strong>; sneak with the Wrench to take the casing off.</p>"
+      }
+    ],
+    "sources": [
+      "Create Connected 1.3.3 (create_connected-1.3.3-mc1.21.1.jar from the next Create France modpack release): code from the public repository github.com/hlysine/create_connected at tag 1.3.3-mc1.21.1, recipes from the jar's data folder, Ponder scenes replayed by our engine.",
+      "Mod by Lysine (hlysine), GNU AGPL v3 licence: models and textures by its authors, rendered from the jar; no text from the mod is copied.",
+      "Crank wheels: registries/CCBlocks.java (CStress.setCapacity(8.0), setGeneratorSpeed(32)), content/crankwheel/CrankWheelBlock.java (cogwheel, ICogWheel); hunger: Create 6.0.10 HandCrankBlock.",
+      "Gearboxes: content/parallelgearbox/ParallelGearboxBlockEntity.java, content/sixwaygearbox/SixWayGearboxBlockEntity.java (× 0.5 and × 2), content/brassgearbox/BrassGearboxBlock.java (FACE_1..4_FLIPPED, onWrenched).",
+      "Cross Connector: content/crossconnector/CrossConnectorBlock.java (forwardConnection), EncasedCrossConnectorBlock.java.",
+      "Recipes: data/create_connected/recipe/crafting/kinetics/ (crank_wheel, large_crank_wheel, encased_chain_cogwheel, parallel_gearbox, six_way_gearbox*, brass_gearbox, cross_connector, vertical_*_from_conversion)."
+    ]
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "slug": "propulsion-platine",
+  "name": "Platine",
+  "blockId": "createpropulsion:platinum_ore",
+  "category": "propulsion",
+  "title": "Platine, boîtier et réservoirs — Create Propulsion",
+  "description": "Le platine de Create Propulsion : où trouver le minerai, le traiter avec Create, boîtier, réservoirs et cuves de 16 000 mB par bloc.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Propulsion: Simulated 1.1.5",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>platine</strong> est le métal du mod. On l'extrait de son minerai en profondeur, on le traite comme le fer de Create, et il sert aux pièces avancées : tuyères vectorielles, câbles, convertisseur redstone, générateur à corail. Il donne aussi un <strong>boîtier</strong> et des <strong>réservoirs</strong> deux fois plus grands que ceux de Create.",
+  "facts": [
+    {
+      "label": "Minerai",
+      "value": "Overworld, du fond de la carte jusqu’à 80 blocs au-dessus"
+    },
+    {
+      "label": "Outil",
+      "value": "pioche en fer ou mieux"
+    },
+    {
+      "label": "Objets",
+      "value": "platine brut, lingot, pépite, plaque"
+    },
+    {
+      "label": "Blocs",
+      "value": "bloc de platine, bloc de platine brut"
+    },
+    {
+      "label": "Boîtier",
+      "value": "bloc de fer industriel + lingot de platine"
+    },
+    {
+      "label": "Réservoirs",
+      "value": "16 000 mB par bloc (2 × Create)"
+    },
+    {
+      "label": "Masse",
+      "value": "blocs de platine très lourds"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (réservoir à fluide en platine)",
+    "grid": [
+      [
+        null,
+        "Plaque de platine",
+        null
+      ],
+      [
+        null,
+        "Réservoir à fluide",
+        null
+      ],
+      [
+        null,
+        "Plaque de platine",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "createpropulsion:platinum_sheet",
+        null
+      ],
+      [
+        null,
+        "create:fluid_tank",
+        null
+      ],
+      [
+        null,
+        "createpropulsion:platinum_sheet",
+        null
+      ]
+    ],
+    "result": "1 réservoir à fluide en platine",
+    "resultItem": "createpropulsion:platinum_fluid_tank"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "minerai",
+      "title": "Trouver le minerai",
+      "image": "prop_gal_platinum_minerai.webp",
+      "alt": "De gauche à droite : minerai de platine, minerai de platine des abîmes, bloc de platine brut, bloc de platine et boîtier de platine",
+      "html": "<p>Le <strong>minerai de platine</strong> (Platinum Ore) et sa version des abîmes (Deepslate Platinum Ore) se cachent en profondeur dans l'Overworld : plusieurs sortes de filons, de 4 à 12 blocs, entre le fond de la carte et 80 blocs plus haut, plus fréquents vers le bas. Une partie ne touche jamais l'air : creusez des tunnels, les grottes n'en montrent que peu. Il faut une pioche en fer ; le minerai donne du <strong>platine brut</strong> (Raw Platinum), davantage avec Fortune.</p>"
+    },
+    {
+      "id": "traiter",
+      "title": "Le traiter avec Create",
+      "html": "<p>Le platine brut se fond en <strong>lingot de platine</strong> (Platinum Ingot). Avec Create on gagne plus : les <a href=\"/wiki/roues-de-concassage\">roues de concassage</a> changent le minerai en platine brut concassé (Crushed Raw Platinum), qu'un <a href=\"/wiki/ventilateur-enchasse\">ventilateur</a> lave en neuf <strong>pépites de platine</strong> (Platinum Nugget), avec parfois une pépite d'or. La <a href=\"/wiki/presse-mecanique\">presse mécanique</a> aplatit un lingot en <strong>plaque de platine</strong> (Platinum Sheet), l'ingrédient le plus utilisé. Bonus : le lavage du minerai d'or concassé donne parfois une pépite de platine.</p>"
+    },
+    {
+      "id": "stockage",
+      "title": "Blocs de stockage",
+      "html": "<p>Neuf lingots font un <strong>bloc de platine</strong> (Block of Platinum), neuf platines brutes un <strong>bloc de platine brut</strong> (Block of Raw Platinum), neuf pépites un lingot. Attention : pour Sable ces blocs sont très lourds ; un engin qui en transporte aura besoin de beaucoup de poussée.</p>"
+    },
+    {
+      "id": "boitier",
+      "title": "Le boîtier de platine",
+      "html": "<p>Le <strong>boîtier de platine</strong> (Platinum Casing) s'obtient en appliquant un lingot de platine sur un <em>bloc de fer industriel</em>, à la main ou avec un <a href=\"/wiki/deployeur\">déployeur</a>. Ses textures se raccordent entre blocs voisins ; il entre dans la recette du relais de <a href=\"/wiki/propulsion-energie\">câble</a>.</p>"
+    },
+    {
+      "id": "usages",
+      "title": "À quoi sert le platine",
+      "html": "<p>Les plaques et les pépites de platine entrent dans les pièces haut de gamme du mod : le <a href=\"/wiki/propulsion-propulseur-vectoriel\">propulseur vectoriel</a> (deux plaques, deux pépites), les <a href=\"/wiki/propulsion-energie\">câbles</a> et leur relais, le générateur à corail (quatre plaques), le convertisseur redstone et les réservoirs renforcés. Un petit filon couvre déjà plusieurs tuyères ; une usine de concassage et de lavage double le rendement.</p><p>Pour transporter beaucoup de carburant sur un engin, préférez les réservoirs en platine aux réservoirs de Create : deux fois plus de fluide dans le même volume, donc moins de blocs à soulever, même si chaque bloc pèse.</p>"
+    },
+    {
+      "id": "etapes",
+      "title": "Le traitement pas à pas",
+      "html": "<p>Un circuit simple : les minerais tombent sur un tapis qui les mène aux roues de concassage ; le platine brut concassé passe devant un ventilateur qui souffle à travers de l'eau ; les pépites sont reprises par un entonnoir, puis assemblées en lingots à la main ou à l'établi mécanique ; enfin une presse fait des plaques sur un dépôt. Le haut fourneau fond le minerai deux fois plus vite qu'un four, mais sans le bonus du concassage.</p><p>Le minerai casse à la pioche en fer ; Toucher de soie rend le bloc de minerai lui-même, à concasser plus tard pour un meilleur rendement.</p>"
+    },
+    {
+      "id": "raccourcis",
+      "title": "Raccourcis",
+      "html": "<p>Bloc de platine et bloc brut se redéfont en neuf lingots ou neuf platines brutes à l'établi.</p>"
+    },
+    {
+      "id": "reservoirs",
+      "title": "Réservoirs et cuves en platine",
+      "image": "prop_gal_platinum_reservoirs.webp",
+      "alt": "Un réservoir en platine de deux blocs de haut et une cuve horizontale de trois blocs de long",
+      "html": "<p>Le <strong>réservoir à fluide en platine</strong> (Platinum Fluid Tank) se fabrique avec un <a href=\"/wiki/reservoir-a-fluide\">réservoir de Create</a> et deux plaques de platine. Il s'empile comme lui mais stocke deux fois plus : 16 000 mB par bloc. La <strong>cuve à fluide en platine</strong> (Platinum Fluid Vessel) est sa version couchée, jusqu'à trois blocs de large. Les deux se convertissent l'un en l'autre à l'établi, et tous deux fonctionnent sur un engin en mouvement : parfait pour emporter beaucoup de carburant.</p>"
+    }
+  ],
+  "related": [
+    "create-propulsion",
+    "propulsion-energie",
+    "propulsion-propulseur-vectoriel",
+    "reservoir-a-fluide",
+    "roues-de-concassage",
+    "ventilateur-enchasse",
+    "presse-mecanique",
+    "deployeur"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Propulsion: Simulated 1.1.5 (dépôt Propulsion-Team/create-propulsion-simulated, commit 36f83a1 du 23/07/2026, licence MIT, © Sergey Feduk, Tronco_78, Bunting_chj, SSnowly, KyivSec), identique au jar de l’instance de test du modpack",
+    "Minerai : data/createpropulsion/worldgen/configured_feature, placed_feature, neoforge/biome_modifier",
+    "Traitement : data/createpropulsion/recipe (crushing, splashing, pressing, smelting, blasting), data/create/recipe/splashing/crushed_raw_gold.json",
+    "Réservoirs : PlatinumFluidTankBlockEntity.java, PlatinumFluidVesselBlockEntity.java",
+    "Masses : data/sable/tags/block",
+    "Images : blocs du mod posés sur la plaque et rendus par notre moteur (licence MIT, © Propulsion Team)"
+  ],
+  "en": {
+    "slugEn": "propulsion-platinum",
+    "name": "Platinum",
+    "title": "Platinum, casing and tanks — Create Propulsion guide",
+    "description": "Create Propulsion platinum: where to find the ore, processing it with Create, Platinum Casing, and fluid tanks and vessels holding 16,000 mB per block.",
+    "intro": "<strong>Platinum</strong> is the mod's metal. It is mined from its ore deep underground, processed like Create's iron, and used in the advanced parts: vector nozzles, cables, the Redstone Converter, the Coral Generator. It also gives a <strong>casing</strong> and <strong>tanks</strong> twice the size of Create's.",
+    "facts": [
+      {
+        "label": "Ore",
+        "value": "Overworld, from the bottom of the world up to 80 blocks above"
+      },
+      {
+        "label": "Tool",
+        "value": "iron pickaxe or better"
+      },
+      {
+        "label": "Items",
+        "value": "raw platinum, ingot, nugget, sheet"
+      },
+      {
+        "label": "Blocks",
+        "value": "Block of Platinum, Block of Raw Platinum"
+      },
+      {
+        "label": "Casing",
+        "value": "Block of Industrial Iron + Platinum Ingot"
+      },
+      {
+        "label": "Tanks",
+        "value": "16,000 mB per block (2 × Create)"
+      },
+      {
+        "label": "Mass",
+        "value": "platinum blocks are super heavy"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (Platinum Fluid Tank)",
+      "grid": [
+        [
+          null,
+          "Platinum Sheet",
+          null
+        ],
+        [
+          null,
+          "Fluid Tank",
+          null
+        ],
+        [
+          null,
+          "Platinum Sheet",
+          null
+        ]
+      ],
+      "result": "1 Platinum Fluid Tank"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "minerai",
+        "title": "Finding the ore",
+        "alt": "From left to right: Platinum Ore, Deepslate Platinum Ore, Block of Raw Platinum, Block of Platinum and Platinum Casing",
+        "html": "<p><strong>Platinum Ore</strong> and its <strong>Deepslate Platinum Ore</strong> variant hide deep in the Overworld: several kinds of veins, 4 to 12 blocks, between the bottom of the world and 80 blocks above, more common further down. Some never touch air: dig tunnels, caves show little of it. It needs an iron pickaxe; the ore drops <strong>Raw Platinum</strong>, more with Fortune.</p>"
+      },
+      {
+        "id": "traiter",
+        "title": "Processing it with Create",
+        "html": "<p>Raw platinum smelts into a <strong>Platinum Ingot</strong>. Create gives more: <a href=\"/en/wiki/crushing-wheel\">Crushing Wheels</a> turn the ore into Crushed Raw Platinum, which an <a href=\"/en/wiki/encased-fan\">Encased Fan</a> washes into nine <strong>Platinum Nuggets</strong>, sometimes with a gold nugget. The <a href=\"/en/wiki/mechanical-press\">Mechanical Press</a> flattens an ingot into a <strong>Platinum Sheet</strong>, the most used ingredient. Bonus: washing crushed gold ore sometimes yields a platinum nugget.</p>"
+      },
+      {
+        "id": "stockage",
+        "title": "Storage blocks",
+        "html": "<p>Nine ingots make a <strong>Block of Platinum</strong>, nine raw platinum a <strong>Block of Raw Platinum</strong>, nine nuggets an ingot. Careful: Sable treats these blocks as super heavy; a machine carrying them needs plenty of thrust.</p>"
+      },
+      {
+        "id": "boitier",
+        "title": "Platinum Casing",
+        "html": "<p><strong>Platinum Casing</strong> is made by applying a platinum ingot to a <em>Block of Industrial Iron</em>, by hand or with a <a href=\"/en/wiki/deployer\">Deployer</a>. Its textures connect between neighbours; it goes into the <a href=\"/en/wiki/propulsion-energy-and-cables\">Cable Relay</a> recipe.</p>"
+      },
+      {
+        "id": "usages",
+        "title": "What platinum is for",
+        "html": "<p>Platinum sheets and nuggets go into the mod's high-end parts: the <a href=\"/en/wiki/propulsion-vector-thruster\">Vector Thruster</a> (two sheets, two nuggets), <a href=\"/en/wiki/propulsion-energy-and-cables\">cables</a> and their relay, the Coral Generator (four sheets), the Redstone Converter and the reinforced tanks. A small vein already covers several nozzles; a crushing and washing line doubles the yield.</p><p>To carry a lot of fuel on a machine, pick platinum tanks over Create tanks: twice the fluid in the same volume, so fewer blocks to lift, even if each block is heavy.</p>"
+      },
+      {
+        "id": "etapes",
+        "title": "Processing step by step",
+        "html": "<p>A simple line: ores drop onto a belt that takes them to Crushing Wheels; the crushed raw platinum passes in front of a fan blowing through water; the nuggets are picked up by a funnel, then put together into ingots by hand or with a Mechanical Crafter; finally a press turns ingots into sheets on a depot. The blast furnace smelts the ore twice as fast as a furnace, but without the crushing bonus.</p><p>The ore breaks with an iron pickaxe; Silk Touch gives the ore block itself, to be crushed later for a better yield.</p>"
+      },
+      {
+        "id": "raccourcis",
+        "title": "Shortcuts",
+        "html": "<p>Blocks of platinum and of raw platinum turn back into nine ingots or nine raw platinum at the crafting table, so storing metal as blocks costs nothing. Nine nuggets also make one ingot, which is handy after washing crushed ore.</p>"
+      },
+      {
+        "id": "reservoirs",
+        "title": "Platinum tanks and vessels",
+        "alt": "A two-block-high Platinum Fluid Tank and a three-block-long horizontal vessel",
+        "html": "<p>The <strong>Platinum Fluid Tank</strong> is crafted from a Create <a href=\"/en/wiki/fluid-tank\">Fluid Tank</a> and two platinum sheets. It stacks like it but holds twice as much: 16,000 mB per block. The <strong>Platinum Fluid Vessel</strong> is its horizontal version, up to three blocks wide. The two convert into each other at the crafting table, and both work on a moving machine: ideal to carry plenty of fuel.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Propulsion: Simulated 1.1.5 (Propulsion-Team/create-propulsion-simulated repository, commit 36f83a1 of 2026-07-23, MIT licence, © Sergey Feduk, Tronco_78, Bunting_chj, SSnowly, KyivSec), identical to the modpack test instance jar",
+      "Ore: data/createpropulsion/worldgen/configured_feature, placed_feature, neoforge/biome_modifier",
+      "Processing: data/createpropulsion/recipe (crushing, splashing, pressing, smelting, blasting), data/create/recipe/splashing/crushed_raw_gold.json",
+      "Tanks: PlatinumFluidTankBlockEntity.java, PlatinumFluidVesselBlockEntity.java",
+      "Masses: data/sable/tags/block",
+      "Images: mod blocks placed on the plate and rendered by our engine (MIT licence, © Propulsion Team)"
+    ]
+  }
+}

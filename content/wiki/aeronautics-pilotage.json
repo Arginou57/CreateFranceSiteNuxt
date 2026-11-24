@@ -1,0 +1,392 @@
+{
+  "slug": "aeronautics-pilotage",
+  "name": "Pilotage",
+  "blockId": "simulated:steering_wheel",
+  "category": "aeronautics",
+  "title": "Pilotage — Create Aeronautics, guide",
+  "description": "Piloter un véhicule de Create Aeronautics : gouvernail, levier d'accélération, buse et ventilateur, poignées et plaques nominatives. Vidéos.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Aeronautics 1.3.3",
+  "mcVersion": "1.21.1",
+  "intro": "Pour diriger un navire ou un véhicule, Simulated fournit des commandes faites pour être tenues en main : le <strong>gouvernail</strong> (Steering Wheel), qui produit une rotation précise, le <strong>levier d'accélération</strong> (Throttle Lever), une source de redstone analogique, la <strong>buse</strong> de Create montée sur un ventilateur pour repousser le sol, ainsi que des <strong>poignées</strong> (Handles) et des <strong>plaques nominatives</strong> (Nameplates) pour l'équipage.",
+  "facts": [
+    {
+      "label": "Gouvernail",
+      "value": "Source de rotation ; capacité 16 SU par tr/min"
+    },
+    {
+      "label": "Angle",
+      "value": "Angle maximal réglable ; Maj pour des crans de 45°"
+    },
+    {
+      "label": "Comparateur",
+      "value": "Lit l'angle du gouvernail, ou s'il est utilisé (à l'arrière)"
+    },
+    {
+      "label": "Levier d'accélération",
+      "value": "Signal de 0 à 15 réglé en glissant ; inversion à la clé"
+    },
+    {
+      "label": "Buse sur ventilateur",
+      "value": "Repousse la contraption loin des surfaces proches, fluides compris"
+    },
+    {
+      "label": "Poignées",
+      "value": "Se tenir ou déplacer la contraption ; fer, cuivre et 16 couleurs"
+    },
+    {
+      "label": "Plaques nominatives",
+      "value": "Donnent un nom à la contraption ; teinture, cire pour verrouiller"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Grande roue dentée",
+        null
+      ],
+      [
+        null,
+        "Boitier d'andésite",
+        null
+      ],
+      [
+        null,
+        "Rotor",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "create:large_cogwheel",
+        null
+      ],
+      [
+        null,
+        "create:andesite_casing",
+        null
+      ],
+      [
+        null,
+        "create:shaft",
+        null
+      ]
+    ],
+    "result": "1 gouvernail",
+    "resultItem": "simulated:steering_wheel"
+  },
+  "videos": [
+    {
+      "id": "sim_wheel",
+      "name": "Le gouvernail",
+      "description": "On saisit le gouvernail, on le tourne par crans, on règle son angle maximal et son bois.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 2.54,
+          "section": "gouvernail"
+        },
+        {
+          "t": 7.28,
+          "section": "gouvernail"
+        },
+        {
+          "t": 12.02,
+          "section": "gouvernail-reglages"
+        },
+        {
+          "t": 17.87,
+          "section": "gouvernail-reglages"
+        }
+      ]
+    },
+    {
+      "id": "sim_wheel_cmp",
+      "name": "Lire le gouvernail au comparateur",
+      "description": "Un comparateur traduit l'angle du gouvernail en signal.",
+      "duration": "PT17S",
+      "chapters": [
+        {
+          "t": 2.0,
+          "section": "comparateur"
+        }
+      ]
+    },
+    {
+      "id": "sim_throttle",
+      "name": "Le levier d'accélération",
+      "description": "Le levier fixe la force du signal qui allume une lampe, puis il est inversé.",
+      "duration": "PT18S",
+      "chapters": [
+        {
+          "t": 1.75,
+          "section": "levier"
+        },
+        {
+          "t": 7.7,
+          "section": "levier"
+        },
+        {
+          "t": 11.3,
+          "section": "levier"
+        }
+      ]
+    },
+    {
+      "id": "sim_nozzle",
+      "name": "La buse sur un ventilateur",
+      "description": "Des ventilateurs à buse repoussent un navire loin du sol, d’un mur puis de l’eau.",
+      "duration": "PT18S",
+      "chapters": [
+        {
+          "t": 5.0,
+          "section": "buse"
+        },
+        {
+          "t": 8.75,
+          "section": "buse"
+        },
+        {
+          "t": 14.5,
+          "section": "buse"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "gouvernail",
+      "title": "Le gouvernail",
+      "image": "sim_wheel_e1.webp",
+      "alt": "Un gouvernail posé sur un roulement, avec une voile",
+      "video": "sim_wheel",
+      "html": "<p>Le gouvernail est une source de rotation commandée à la main : on maintient le clic droit pour le saisir, puis un mouvement de souris le fait pivoter. Sneak tout en tournant fait avancer par crans de 45°. La rotation produite fait pivoter un roulement, un safran ou une gouverne ; sa capacité est de 16 SU par tr/min.</p>"
+    },
+    {
+      "id": "gouvernail-reglages",
+      "title": "Angle maximal et apparence",
+      "image": "sim_wheel_e3.webp",
+      "alt": "Le gouvernail et son panneau de réglage",
+      "html": "<p>Le panneau de valeur fixe l'angle maximal de rotation. Comme le gouvernail revient au centre, les roulements qu'il entraîne doivent être réglés pour ne jamais se désassembler. Un clic droit avec des planches change le bois du volant.</p>"
+    },
+    {
+      "id": "comparateur",
+      "title": "Lire son angle",
+      "image": "sim_wheel_cmp_e1.webp",
+      "alt": "Un comparateur devant un gouvernail",
+      "video": "sim_wheel_cmp",
+      "html": "<p>Un comparateur posé contre le gouvernail donne un signal proportionnel à l'angle, rapporté à l'angle maximal configuré. Posé à l'arrière, il indique seulement si quelqu'un tient le gouvernail.</p>"
+    },
+    {
+      "id": "levier",
+      "title": "Le levier d'accélération",
+      "image": "sim_throttle_e2.webp",
+      "alt": "Un levier d'accélération relié à une lampe par de la poudre de redstone",
+      "video": "sim_throttle",
+      "html": "<p>Le levier d'accélération est une petite source de signal, très précise : clic droit et glisser pour régler le signal de 0 à 15. La clé l'inverse. Il commande idéalement un brûleur à air chaud, une transmission analogique ou des hélices via des liaisons de redstone.</p>"
+    },
+    {
+      "id": "buse",
+      "title": "La buse sur un ventilateur",
+      "image": "sim_nozzle_e1.webp",
+      "alt": "Un navire dont les ventilateurs à buse le maintiennent au-dessus du sol",
+      "video": "sim_nozzle",
+      "html": "<p>Sur une contraption simulée, une <strong>buse</strong> de Create posée sur un <a href=\"/wiki/ventilateur-enchasse\">ventilateur enchâssé</a> repousse l'appareil loin des surfaces proches : le sol, un mur à l'horizontale, et même l'eau. C'est un coussin d'air pour aéroglisseur.</p>"
+    },
+    {
+      "id": "poignees",
+      "title": "Poignées et plaques nominatives",
+      "image": "gal_pilotage_poignees-plaques.webp",
+      "alt": "Poignées en fer, en cuivre et colorées, et plaques nominatives",
+      "html": "<p>Les <strong>poignées</strong> s'accrochent à un bloc : clic droit maintenu pour s'y tenir, Maj pour déplacer la contraption elle-même, molette pour régler la distance. Il y a la <strong>poignée en fer</strong> (Iron Handle), la <strong>poignée en cuivre</strong> (Copper Handle) et seize couleurs. Les <strong>plaques nominatives</strong> affichent le nom de la contraption : clic droit pour l'écrire, teinture pour la couleur, rayon de miel pour le verrouiller.</p>"
+    },
+    {
+      "id": "helice-intelligente",
+      "title": "L'hélice intelligente",
+      "html": "<p>Pour un drone ou un petit hélicoptère, l'<strong>hélice intelligente</strong> (Smart Propeller) de Create Aeronautics est précieuse : posée sur une contraption, elle incline d'elle-même son plateau pour continuer à pousser vers le haut quand l'appareil penche. Elle se fabrique avec une hélice de Create, un mécanisme gyroscopique et un boîtier en laiton (deux exemplaires), coûte 4 SU par tr/min et sa poussée s'inverse à la clé. Associée à un levier d'accélération qui règle sa vitesse, elle donne un vol stable sans électronique.</p>"
+    },
+    {
+      "id": "faq",
+      "title": "Questions fréquentes",
+      "html": "<p><strong>Le gouvernail tourne-t-il sans fin ?</strong> Non : il s'arrête à l'angle maximal choisi et revient au centre quand on le lâche. Pour une rotation continue, utilisez un moteur. <strong>Comment diriger un navire volant ?</strong> Le plus simple : un gouvernail sur un roulement pivot qui porte une voile symétrique, ou deux hélices dont on règle la vitesse avec des leviers d'accélération reliés par liaison de redstone. <strong>La buse marche-t-elle au-dessus du vide ?</strong> Non, elle a besoin d'une surface proche, sol, mur ou eau, pour s'appuyer.</p>"
+    },
+    {
+      "id": "poste",
+      "title": "Monter un poste de pilotage",
+      "html": "<p>Un bon poste de pilotage tient sur quelques blocs : un siège de Create pour le pilote, le gouvernail devant lui, un levier d'accélération à portée de main et une plaque nominative pour baptiser l'appareil. Le gouvernail envoie sa rotation vers l'arrière par un rotor, jusqu'au roulement pivot du safran ; le levier transmet son signal par une liaison de redstone vers les hélices ou le brûleur. Ajoutez une poignée près de l'échelle d'accès : pendant le vol, c'est elle qui évite de tomber quand le navire tangue.</p>"
+    },
+    {
+      "id": "table",
+      "title": "Les autres commandes",
+      "image": "gal_pilotage_commandes.webp",
+      "alt": "Un gouvernail, un levier d'accélération, une table de navigation, un roulement pivot et une buse",
+      "html": "<p>La <a href=\"/wiki/aeronautics-capteurs\">table de navigation</a> oriente un navire vers une cible et le <a href=\"/wiki/aeronautics-roulement-pivot\">roulement pivot</a> fait tourner une partie de la contraption, comme un safran. Combinés au gouvernail, ils donnent un pilotage précis.</p>"
+    }
+  ],
+  "related": [
+    "create-aeronautics",
+    "aeronautics-moteurs-et-transmission",
+    "aeronautics-capteurs",
+    "aeronautics-roulement-pivot",
+    "aeronautics-helices",
+    "ventilateur-enchasse",
+    "liaison-de-redstone"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Aeronautics 1.3.3 (dépôt Creators-of-Aeronautics/Simulated-Project, commit 900122e, code sous licence MIT, ressources « tous droits réservés », The Simulated Team / The Creators of Aeronautics), identiques au jar du modpack (instance de test 1.3.3)",
+    "Réglages par défaut : SimStress (stress : ressort de torsion 16 et capacité 8, tarière 0,5, moteur portatif capacité 64, gouvernail capacité 16), PortableEngineBlockEntity (32 tr/min, x2 en surchauffe)",
+    "Recettes : data/simulated/recipe/steering_wheel.json, throttle_lever.json",
+    "Vidéos : scènes Ponder de Create Aeronautics / Simulated (steering_wheel/intro, steering_wheel/comparator, redstone/throttle_lever, nozzle) rejouées par notre moteur ; modèles et textures du mod (© The Simulated Team / The Creators of Aeronautics)",
+    "Images : blocs du mod posés sur la plaque et rendus par notre moteur (© The Simulated Team / The Creators of Aeronautics)"
+  ],
+  "en": {
+    "slugEn": "aeronautics-piloting",
+    "name": "Piloting",
+    "title": "Piloting — Create Aeronautics guide",
+    "description": "Piloting a Create Aeronautics vehicle: Steering Wheel, Throttle Lever, nozzle on a fan, Handles and Nameplates, with videos.",
+    "intro": "To steer a ship or a vehicle, Simulated provides controls made to be held: the <strong>Steering Wheel</strong>, which outputs precise rotation, the <strong>Throttle Lever</strong>, an analog redstone source, Create's <strong>Nozzle</strong> mounted on a fan to push away from the ground, as well as <strong>Handles</strong> and <strong>Nameplates</strong> for the crew.",
+    "facts": [
+      {
+        "label": "Steering Wheel",
+        "value": "Rotation source; capacity 16 SU per RPM"
+      },
+      {
+        "label": "Angle",
+        "value": "Adjustable maximum angle; sneak for 45° steps"
+      },
+      {
+        "label": "Comparator",
+        "value": "Reads the wheel angle, or whether it is in use (at the back)"
+      },
+      {
+        "label": "Throttle Lever",
+        "value": "Signal 0 to 15 set by dragging; invert with the wrench"
+      },
+      {
+        "label": "Nozzle on a fan",
+        "value": "Pushes the contraption away from nearby surfaces, fluids included"
+      },
+      {
+        "label": "Handles",
+        "value": "Hold on or move the contraption; iron, copper and 16 colours"
+      },
+      {
+        "label": "Nameplates",
+        "value": "Name the contraption; dye, honeycomb to lock"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Large Cogwheel",
+          null
+        ],
+        [
+          null,
+          "Andesite Casing",
+          null
+        ],
+        [
+          null,
+          "Shaft",
+          null
+        ]
+      ],
+      "result": "1 Steering Wheel"
+    },
+    "videos": [
+      {
+        "id": "sim_wheel",
+        "name": "The Steering Wheel",
+        "description": "The wheel is grabbed, turned in steps, its maximum angle and wood set."
+      },
+      {
+        "id": "sim_wheel_cmp",
+        "name": "Reading the wheel with a comparator",
+        "description": "A comparator turns the wheel's angle into a signal."
+      },
+      {
+        "id": "sim_throttle",
+        "name": "The Throttle Lever",
+        "description": "The lever sets the strength of the signal lighting a lamp, then it is inverted."
+      },
+      {
+        "id": "sim_nozzle",
+        "name": "The nozzle on a fan",
+        "description": "Nozzle fans push a ship away from the ground, from a wall, then from water."
+      }
+    ],
+    "sections": [
+      {
+        "id": "gouvernail",
+        "title": "The Steering Wheel",
+        "alt": "A Steering Wheel on a bearing, with a sail",
+        "html": "<p>The Steering Wheel is a hand-operated rotation source: keep right-click pressed to take hold of it, then move the mouse. Sneaking while turning moves it in 45° steps. The rotation it outputs swings a bearing, a rudder or a control surface; its capacity is 16 SU per RPM.</p>"
+      },
+      {
+        "id": "gouvernail-reglages",
+        "title": "Maximum angle and looks",
+        "alt": "The Steering Wheel and its setting panel",
+        "html": "<p>The value panel sets the maximum turning angle. Since the wheel returns to centre, the bearings it drives must be set never to disassemble. Right-click with planks to change the wood of the wheel.</p>"
+      },
+      {
+        "id": "comparateur",
+        "title": "Reading its angle",
+        "alt": "A comparator in front of a Steering Wheel",
+        "html": "<p>A comparator against the wheel outputs a signal proportional to its angle, relative to the configured maximum. Placed at the back, it only tells whether someone is holding the wheel.</p>"
+      },
+      {
+        "id": "levier",
+        "title": "The Throttle Lever",
+        "alt": "A Throttle Lever wired to a lamp with redstone dust",
+        "html": "<p>The Throttle Lever is a compact, precise redstone source: drag while right-clicking to pick any strength between 0 and 15. The wrench inverts it. It is ideal to drive a Hot Air Burner, an Analog Transmission or propellers through redstone links.</p>"
+      },
+      {
+        "id": "buse",
+        "title": "The nozzle on a fan",
+        "alt": "A ship kept above the ground by its nozzle fans",
+        "html": "<p>On a simulated contraption, a Create <strong>Nozzle</strong> on an <a href=\"/en/wiki/encased-fan\">Encased Fan</a> pushes the craft away from nearby surfaces: the ground, a wall sideways, even water. It is an air cushion for a hovercraft.</p>"
+      },
+      {
+        "id": "poignees",
+        "title": "Handles and Nameplates",
+        "alt": "Iron, copper and coloured Handles, and Nameplates",
+        "html": "<p><strong>Handles</strong> attach to a block: hold right-click to hang on, sneak to move the contraption itself, scroll to adjust the distance. There is the <strong>Iron Handle</strong>, the <strong>Copper Handle</strong> and sixteen colours. <strong>Nameplates</strong> show the contraption's name: right-click to write it, dye for the colour, honeycomb to lock it.</p>"
+      },
+      {
+        "id": "helice-intelligente",
+        "title": "The Smart Propeller",
+        "html": "<p>For a drone or a small helicopter, Create Aeronautics' <strong>Smart Propeller</strong> is precious: placed on a contraption, it tilts its own plate to keep pushing upwards when the craft leans. It is crafted from a Create propeller, a Gyroscopic Mechanism and a brass casing (two of them), costs 4 SU per RPM and its thrust flips with the wrench. Paired with a Throttle Lever setting its speed, it gives stable flight without any circuitry.</p>"
+      },
+      {
+        "id": "faq",
+        "title": "Frequently asked questions",
+        "html": "<p><strong>Does the Steering Wheel turn forever?</strong> No: it stops at the chosen maximum angle and returns to centre when released. For continuous rotation, use an engine. <strong>How do I steer a flying ship?</strong> The simplest way: a Steering Wheel on a Swivel Bearing carrying a symmetric sail, or two propellers whose speed is set by Throttle Levers wired through redstone links. <strong>Does the nozzle work over the void?</strong> No, it needs a nearby surface, ground, wall or water, to push against.</p>"
+      },
+      {
+        "id": "poste",
+        "title": "Building a cockpit",
+        "html": "<p>A good cockpit fits in a few blocks: a Create seat for the pilot, the Steering Wheel in front of it, a Throttle Lever within reach and a Nameplate to christen the craft. The Steering Wheel sends its rotation backwards through a shaft to the rudder's Swivel Bearing; the lever passes its signal through a Redstone Link to the propellers or the burner. Add a Handle near the access ladder: in flight, it is what keeps you from falling off when the ship rolls. Keep the controls close together so a single player can fly without moving around.</p>"
+      },
+      {
+        "id": "table",
+        "title": "Other controls",
+        "alt": "A Steering Wheel, a Throttle Lever, a Navigation Table, a Swivel Bearing and a nozzle",
+        "html": "<p>The <a href=\"/en/wiki/aeronautics-sensors\">Navigation Table</a> points a ship towards a target and the <a href=\"/en/wiki/aeronautics-swivel-bearing\">Swivel Bearing</a> turns part of the contraption, like a rudder. Combined with the Steering Wheel, they give precise control.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Aeronautics 1.3.3 (Creators-of-Aeronautics/Simulated-Project repository, commit 900122e, code under the MIT licence, assets « all rights reserved », The Simulated Team / The Creators of Aeronautics), identical to the modpack jar (1.3.3 test instance)",
+      "Default settings: SimStress (stress: torsion spring 16 and capacity 8, auger 0.5, portable engine capacity 64, steering wheel capacity 16), PortableEngineBlockEntity (32 RPM, x2 when superheated)",
+      "Recipes: data/simulated/recipe/steering_wheel.json, throttle_lever.json",
+      "Videos: Create Aeronautics / Simulated Ponder scenes (steering_wheel/intro, steering_wheel/comparator, redstone/throttle_lever, nozzle) replayed by our engine; mod models and textures (© The Simulated Team / The Creators of Aeronautics)",
+      "Images: mod blocks placed on the plate and rendered by our engine (© The Simulated Team / The Creators of Aeronautics)"
+    ]
+  }
+}

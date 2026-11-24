@@ -1,0 +1,298 @@
+{
+  "slug": "bnb-tuyaux-et-reservoirs-teints",
+  "name": "Tuyaux et réservoirs teints",
+  "blockId": "create:fluid_pipe",
+  "category": "bitsnbobs",
+  "title": "Tuyaux et réservoirs teints — Bits 'n' Bobs, guide",
+  "description": "Teindre les tuyaux à fluide et les réservoirs de Create avec Bits 'n' Bobs : seize couleurs, règles de raccord et teinture en main secondaire.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Bits 'n' Bobs 2.3.5 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Avec Bits 'n' Bobs, une simple teinture de Minecraft colore tes <a href=\"/wiki/tuyau-a-fluide\">tuyaux à fluide</a> et tes <a href=\"/wiki/reservoir-a-fluide\">réservoirs à fluide</a>. C'est d'abord un repère visuel, une couleur par fluide, mais la couleur change aussi la façon dont les pièces se raccordent : tu peux enfin poser deux lignes l'une contre l'autre sans qu'elles se rejoignent.",
+  "facts": [
+    {
+      "label": "Couleurs",
+      "value": "les 16 teintures de Minecraft"
+    },
+    {
+      "label": "Tuyaux",
+      "value": "tuyau à fluide, tuyau avec fenêtre et tuyau dans un boitier"
+    },
+    {
+      "label": "Réservoirs",
+      "value": "tout le réservoir d’un clic ; un seul bloc en étant accroupi"
+    },
+    {
+      "label": "Raccords",
+      "value": "même couleur ensemble ; un tuyau sans teinture se raccorde à tout"
+    },
+    {
+      "label": "À la pose",
+      "value": "une teinture en main secondaire colore le bloc posé"
+    },
+    {
+      "label": "Version",
+      "value": "Create Bits 'n' Bobs 2.3.5 · Create 6.0.10"
+    }
+  ],
+  "videos": [
+    {
+      "id": "bnb_dyed_pipes",
+      "name": "Teindre des tuyaux",
+      "description": "Des lignes de tuyaux teintes en plusieurs couleurs : celles de même couleur se rejoignent, les autres restent séparées, et un tuyau neutre fait le lien.",
+      "duration": "PT17S",
+      "chapters": [
+        {
+          "t": 1.2,
+          "section": "tuyaux"
+        },
+        {
+          "t": 6.4,
+          "section": "meme-couleur"
+        },
+        {
+          "t": 8.9,
+          "section": "sans-teinture"
+        },
+        {
+          "t": 11.9,
+          "section": "main-secondaire"
+        }
+      ]
+    },
+    {
+      "id": "bnb_dyed_tank",
+      "name": "Teindre des réservoirs",
+      "description": "Un grand réservoir teint d'un coup, puis un seul bloc teint en étant accroupi, et les raccords avec des tuyaux de plusieurs couleurs.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 1.8,
+          "section": "reservoir"
+        },
+        {
+          "t": 6.6,
+          "section": "un-bloc"
+        },
+        {
+          "t": 10.0,
+          "section": "separes"
+        },
+        {
+          "t": 15.5,
+          "section": "reservoir-meme-couleur"
+        },
+        {
+          "t": 17.3,
+          "section": "couleurs-differentes"
+        },
+        {
+          "t": 19.1,
+          "section": "reservoir-sans-teinture"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "tuyaux",
+      "title": "Colorer un tuyau",
+      "image": "bnb_dyed_pipes_tuyaux.webp",
+      "alt": "Des tuyaux à fluide teints en plusieurs couleurs",
+      "video": "bnb_dyed_pipes",
+      "html": "<p>Vise un tuyau, une teinture en main, et clique : il prend sa couleur. Ça marche sur le tuyau à fluide, le tuyau à fluide avec fenêtre et le tuyau à fluide dans un boitier, et la couleur reste si tu passes de l'un à l'autre à la <a href=\"/wiki/cle\">clé</a>. Le premier tuyau teint te vaut le progrès « Avez-vous teint ? ». Tu peux recolorer un tuyau autant de fois que tu veux, une teinture à chaque fois.</p>"
+    },
+    {
+      "id": "meme-couleur",
+      "title": "Une couleur, une ligne",
+      "image": "bnb_dyed_pipes_meme-couleur.webp",
+      "alt": "Deux lignes de tuyaux de couleurs différentes posées côte à côte sans se raccorder",
+      "html": "<p>Un tuyau teint ne se branche tout seul qu'à ses voisins de la même couleur. Deux lignes, une verte et une rouge, peuvent donc courir collées l'une à l'autre sans former de coude ni mélanger leurs fluides. Plus besoin de laisser un bloc vide entre deux réseaux ou de tout recâbler à la clé.</p>"
+    },
+    {
+      "id": "sans-teinture",
+      "title": "Le tuyau neutre",
+      "image": "bnb_dyed_pipes_sans-teinture.webp",
+      "alt": "Un tuyau sans teinture qui se raccorde à des tuyaux de deux couleurs",
+      "html": "<p>Un tuyau sans couleur reste universel : il se raccorde à n'importe quelle couleur, comme avant. Il sert de pont quand tu veux justement relier deux lignes, par exemple pour vider un réseau dans un autre. Les règles de Create restent valables par ailleurs : une <a href=\"/wiki/pompe-mecanique\">pompe</a> ou un <a href=\"/wiki/tuyau-a-fluide-intelligent\">tuyau intelligent</a> se branche comme d'habitude.</p>"
+    },
+    {
+      "id": "main-secondaire",
+      "title": "Teindre à la pose",
+      "image": "bnb_dyed_pipes_main-secondaire.webp",
+      "alt": "Un joueur qui pose des tuyaux avec une teinture en main secondaire",
+      "html": "<p>Mets une teinture dans ta main secondaire et pose tes tuyaux avec la main principale : chacun arrive déjà coloré, sans dépenser la teinture. C'est la façon la plus rapide de tirer une longue ligne. La même astuce marche avec les réservoirs. Les pompes, tuyaux intelligents, vannes et moteurs à vapeur de Create acceptent aussi une teinture.</p>"
+    },
+    {
+      "id": "reservoir",
+      "title": "Colorer un réservoir",
+      "image": "bnb_dyed_tank_teinture.webp",
+      "alt": "Un grand réservoir à fluide teint en rouge",
+      "video": "bnb_dyed_tank",
+      "html": "<p>Applique une teinture sur un réservoir : tout le réservoir change de couleur, quelle que soit sa taille : les réservoirs de 3 × 3 sur plusieurs étages changent d'un coup. Si tu poses un nouveau réservoir dessus ou dessous un réservoir teint, il reprend sa couleur, ce qui évite de recommencer à chaque étage.</p>"
+    },
+    {
+      "id": "un-bloc",
+      "title": "Un seul bloc",
+      "image": "bnb_dyed_tank_un-bloc.webp",
+      "alt": "Un réservoir dont un seul bloc a été teint en étant accroupi",
+      "html": "<p>Accroupi, la teinture ne touche qu'un bloc du réservoir. Le réservoir se coupe alors : le bloc teint sort de l'ensemble et le reste se reforme autour de lui. Pratique pour séparer une petite réserve dans une tour de stockage, mais garde en tête que le fluide se répartit entre les nouveaux réservoirs.</p>"
+    },
+    {
+      "id": "separes",
+      "title": "Réservoirs séparés",
+      "image": "bnb_dyed_tank_separes.webp",
+      "alt": "Deux réservoirs de couleurs différentes posés côte à côte",
+      "html": "<p>Deux réservoirs ne fusionnent que s'ils ont exactement la même couleur. Contrairement aux tuyaux, un réservoir sans teinture ne se joint pas à un réservoir teint : il faut deux réservoirs neutres, ou deux de la même couleur. Tu peux ainsi empiler des réservoirs différents sans qu'ils deviennent un seul bloc géant.</p>"
+    },
+    {
+      "id": "reservoir-meme-couleur",
+      "title": "Tuyau et réservoir de même couleur",
+      "image": "bnb_dyed_tank_meme-couleur.webp",
+      "alt": "Un tuyau rouge raccordé à un réservoir rouge",
+      "html": "<p>Entre tuyau et réservoir, la règle est celle des tuyaux. Un tuyau rouge se raccorde à un réservoir rouge, et le fluide passe comme d'habitude, dans un sens comme dans l'autre, que la pompe pousse ou aspire.</p>"
+    },
+    {
+      "id": "couleurs-differentes",
+      "title": "Couleurs différentes",
+      "image": "bnb_dyed_tank_couleurs-differentes.webp",
+      "alt": "Un tuyau bleu posé contre un réservoir rouge, sans raccord",
+      "html": "<p>Un tuyau bleu posé contre ce même réservoir rouge reste fermé de ce côté : aucun fluide ne passe.</p>"
+    },
+    {
+      "id": "reservoir-sans-teinture",
+      "title": "Le neutre se raccorde à tout",
+      "image": "bnb_dyed_tank_sans-teinture.webp",
+      "alt": "Un tuyau sans teinture raccordé à un réservoir teint",
+      "html": "<p>Un tuyau neutre se branche sur un réservoir de n'importe quelle couleur, et un tuyau teint sur un réservoir neutre. Pour une installation lisible, garde des tuyaux neutres aux endroits où plusieurs fluides doivent se croiser volontairement, et teins tout le reste.</p>"
+    }
+  ],
+  "related": [
+    "create-bits-n-bobs",
+    "tuyau-a-fluide",
+    "reservoir-a-fluide",
+    "pompe-mecanique",
+    "tuyau-a-fluide-intelligent",
+    "bnb-entretoises"
+  ],
+  "sources": [
+    "Create Bits 'n' Bobs 2.3.5 (bits_n_bobs-2.3.5.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/Aztech-Modding/Create-Bits-n-Bobs au commit 3794a38 « 2.3.5 », recettes du dossier data du jar, scènes Ponder rejouées par notre moteur.",
+    "Mod de Cake, Kipti, NormalGuy, Astral et Spydnel, sous licence MIT : modèles et textures de ses auteurs, rendus à partir du jar ; aucun texte du mod n'est recopié.",
+    "Teinture : content/decoration/dyeable/BaseDyeableBehaviour.java (clic avec une DyeItem, accroupi = un seul bloc), tanks/DyeableTankBehaviour.java, pipes/DyeablePipeBehaviour.java et DyeablePipeBlockItem.java (main secondaire), DyeableBlockItemHelper.java ; blocs concernés : registry/azimuth/BnbBehaviourApplicators.java.",
+    "Raccords : mixin/dyeable/pipes/FluidPipeBlockMixin.java (null ou même couleur), mixin/dyeable/fluid_tank/ConnectivityHandlerMixin.java (réservoirs : couleur identique) et FluidTankItemMixin.java (couleur reprise du réservoir du dessus ou du dessous) ; interrupteurs dyeablePipes et dyeableTanks : registry/core/BnbFeatureFlag.java ; progrès : advancement dye_fluid_component."
+  ],
+  "en": {
+    "slugEn": "bnb-dyed-pipes-and-tanks",
+    "name": "Dyed Pipes and Tanks",
+    "title": "Dyed Pipes and Tanks — Create Bits 'n' Bobs guide",
+    "description": "Dye Create's Fluid Pipes and Fluid Tanks with Bits 'n' Bobs: sixteen colours, connection rules and dyeing from your off hand while placing.",
+    "intro": "With Bits 'n' Bobs, a plain Minecraft dye colours your <a href=\"/en/wiki/fluid-pipe\">Fluid Pipes</a> and <a href=\"/en/wiki/fluid-tank\">Fluid Tanks</a>. It is first a visual cue, one colour per fluid, but the colour also changes how pieces join up: at last you can run two lines right against each other without them merging.",
+    "facts": [
+      {
+        "label": "Colours",
+        "value": "Minecraft's 16 dyes"
+      },
+      {
+        "label": "Pipes",
+        "value": "Fluid Pipe, Glass Fluid Pipe and Encased Fluid Pipe"
+      },
+      {
+        "label": "Tanks",
+        "value": "the whole tank in one click; a single block while sneaking"
+      },
+      {
+        "label": "Connections",
+        "value": "same colour together; an undyed pipe joins anything"
+      },
+      {
+        "label": "When placing",
+        "value": "holding a dye in your second hand colours the placed block"
+      },
+      {
+        "label": "Version",
+        "value": "Create Bits 'n' Bobs 2.3.5 · Create 6.0.10"
+      }
+    ],
+    "videos": [
+      {
+        "id": "bnb_dyed_pipes",
+        "name": "Dyeing pipes",
+        "description": "Lines of pipes dyed in several colours: matching ones join, the others stay apart, and a neutral pipe bridges them."
+      },
+      {
+        "id": "bnb_dyed_tank",
+        "name": "Dyeing tanks",
+        "description": "A big tank dyed in one go, then a single block dyed while sneaking, and the connections with pipes of several colours."
+      }
+    ],
+    "sections": [
+      {
+        "id": "tuyaux",
+        "title": "Colouring a pipe",
+        "alt": "Fluid Pipes dyed in several colours",
+        "html": "<p>Right-click a pipe with a dye and it takes that colour. This works on the Fluid Pipe, the Glass Fluid Pipe and the Encased Fluid Pipe, and the colour stays when you switch between them with the <a href=\"/en/wiki/wrench\">Wrench</a>. Your first dyed pipe earns the 'Did you dye?' advancement. You can recolour a pipe as often as you like, one dye each time.</p>"
+      },
+      {
+        "id": "meme-couleur",
+        "title": "One colour, one line",
+        "alt": "Two lines of pipes in different colours side by side, not joined",
+        "html": "<p>A dyed pipe only hooks up on its own with neighbours of the same colour. So two lines, one green and one red, can run pressed against each other without forming an elbow or mixing their fluids. No more leaving an empty block between two networks or fixing every joint with the Wrench.</p>"
+      },
+      {
+        "id": "sans-teinture",
+        "title": "The neutral pipe",
+        "alt": "An undyed pipe joined to pipes of two colours",
+        "html": "<p>An uncoloured pipe stays universal: it hooks up to any colour, as before. It works as a bridge when you actually want to link two lines, for instance to drain one network into another. Create's usual rules still apply otherwise: a <a href=\"/en/wiki/mechanical-pump\">Mechanical Pump</a> or a <a href=\"/en/wiki/smart-fluid-pipe\">Smart Fluid Pipe</a> connects as it always did.</p>"
+      },
+      {
+        "id": "main-secondaire",
+        "title": "Dyeing while placing",
+        "alt": "A player placing pipes while holding a dye in the other hand",
+        "html": "<p>Put a dye in your off hand and place pipes with your main hand: each one comes out already coloured, and the dye is not used up. It is the quickest way to run a long line. The same trick works with tanks. Create's Mechanical Pumps, Smart Fluid Pipes, Fluid Valves and Steam Engines take a dye as well.</p>"
+      },
+      {
+        "id": "reservoir",
+        "title": "Colouring a tank",
+        "alt": "A large Fluid Tank dyed red",
+        "html": "<p>Right-clicking a tank with a dye colours the whole tank, whatever its size: a 3 × 3 tank several storeys tall changes in one go. If you place a new tank on top of or below a dyed one, it picks up that colour, so you do not have to start again on every level.</p>"
+      },
+      {
+        "id": "un-bloc",
+        "title": "A single block",
+        "alt": "A tank with a single block dyed while sneaking",
+        "html": "<p>While sneaking, the dye only touches one block of the tank. The tank then splits: the dyed block leaves the group and the rest forms again around it. Handy for setting aside a small reserve in a storage tower, but remember that the fluid gets shared out between the new tanks.</p>"
+      },
+      {
+        "id": "separes",
+        "title": "Separate tanks",
+        "alt": "Two tanks of different colours placed side by side",
+        "html": "<p>Two tanks only merge when they have exactly the same colour. Unlike pipes, an undyed tank does not join a dyed one: you need two neutral tanks, or two of the same colour. That way you can stack different tanks without them turning into one giant block.</p>"
+      },
+      {
+        "id": "reservoir-meme-couleur",
+        "title": "Pipe and tank of one colour",
+        "alt": "A red pipe joined to a red tank",
+        "html": "<p>Between a pipe and a tank, the pipe rule applies. A red pipe connects to a red tank and fluid flows as usual, either way, whether the pump is pushing or pulling.</p>"
+      },
+      {
+        "id": "couleurs-differentes",
+        "title": "Different colours",
+        "alt": "A blue pipe placed against a red tank, not connected",
+        "html": "<p>A blue pipe set against that same red tank stays closed on that side: no fluid gets through.</p>"
+      },
+      {
+        "id": "reservoir-sans-teinture",
+        "title": "Neutral joins everything",
+        "alt": "An undyed pipe joined to a dyed tank",
+        "html": "<p>A neutral pipe connects to a tank of any colour, and a dyed pipe to a neutral tank. For a tidy setup, keep neutral pipes where several fluids are meant to meet, and dye everything else.</p>"
+      }
+    ],
+    "sources": [
+      "Create Bits 'n' Bobs 2.3.5 (bits_n_bobs-2.3.5.jar from the next Create France modpack release): code from the public repository github.com/Aztech-Modding/Create-Bits-n-Bobs at commit 3794a38 \"2.3.5\", recipes from the jar's data folder, Ponder scenes replayed by our engine.",
+      "Mod by Cake, Kipti, NormalGuy, Astral and Spydnel, MIT licence: models and textures by its authors, rendered from the jar; no text from the mod is copied.",
+      "Dyeing: content/decoration/dyeable/BaseDyeableBehaviour.java (click with a DyeItem, sneaking = one block), tanks/DyeableTankBehaviour.java, pipes/DyeablePipeBehaviour.java and DyeablePipeBlockItem.java (off hand), DyeableBlockItemHelper.java; affected blocks: registry/azimuth/BnbBehaviourApplicators.java.",
+      "Connections: mixin/dyeable/pipes/FluidPipeBlockMixin.java (null or same colour), mixin/dyeable/fluid_tank/ConnectivityHandlerMixin.java (tanks: identical colour) and FluidTankItemMixin.java (colour copied from the tank above or below); dyeablePipes and dyeableTanks switches: registry/core/BnbFeatureFlag.java; advancement: dye_fluid_component."
+    ]
+  }
+}

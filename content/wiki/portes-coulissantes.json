@@ -160,7 +160,8 @@
     "poulie-d-ascenseur",
     "liaison-de-redstone",
     "pierres-et-blocs-de-deco",
-    "contact-de-redstone"
+    "contact-de-redstone",
+    "blocs-imitateurs"
   ],
   "sources": [
     "Recettes : crafting/kinetics/andesite_door.json, brass_door.json, copper_door.json, train_door.json, framed_glass_door.json (porte en bois + boîtier ou verre)",

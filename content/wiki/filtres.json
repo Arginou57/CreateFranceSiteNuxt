@@ -6,7 +6,7 @@
   "title": "Filtres et presse-papiers — Create : guide",
   "description": "Les filtres de Create : filtre de liste, filtre d'attribut et filtre de colis, où les poser, et le presse-papiers qui copie les réglages.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "Les <strong>filtres</strong> disent à une machine quels objets elle a le droit de prendre. Un <strong>filtre de liste</strong> nomme des objets précis, un <strong>filtre d'attribut</strong> décrit une famille (« tout ce qui se cuit », « tout ce qui est enchanté »), un <strong>filtre de colis</strong> lit les adresses. Le <strong>presse-papiers</strong>, lui, copie ces réglages d'un bloc à l'autre.",
@@ -117,12 +117,12 @@
       "title": "Le presse-papiers",
       "image": "filters_hero_presse-papiers.webp",
       "alt": "Le presse-papiers à côté des filtres",
-      "html": "<p>Un clic droit dans le vide ouvre une liste de tâches : des pages à cocher, avec des icônes d'objets, jusqu'à 51 pages. Accroupi, un clic droit sur un mur, un sol ou un plafond le pose comme une affiche ; un clic droit l'ouvre, un clic gauche le reprend. Il se fabrique avec un alliage d'andésite, une feuille de papier et des planches.</p>"
+      "html": "<p>Un clic droit dans le vide ouvre une liste de tâches : des pages à cocher, avec des icônes d'objets, jusqu'à 51 pages. Accroupi, un clic droit visant un mur, un sol ou un plafond le pose comme une affiche ; un clic droit l'ouvre, un clic gauche le reprend. Il se fabrique avec un alliage d'andésite, une feuille de papier et des planches.</p>"
     },
     {
       "id": "copier",
       "title": "Copier les réglages",
-      "html": "<p>Presse-papiers en main, un <strong>clic droit</strong> sur un bloc copie ses réglages, un <strong>clic gauche</strong> sur un autre bloc les colle. Ça copie les filtres, les valeurs réglées à la molette (vitesse d'un moteur ou d'un contrôleur, délai d'une diode en laiton), les fréquences d'une <a href=\"/wiki/liaison-de-redstone\">liaison de redstone</a> ou la portée d'un châssis. Pour régler vingt entonnoirs pareils, c'est imbattable.</p>"
+      "html": "<p>Presse-papiers en main, un <strong>clic droit</strong> visant un bloc copie ses réglages, un <strong>clic gauche</strong> sur un autre bloc les colle. Ça copie les filtres, les valeurs réglées à la molette (vitesse d'un moteur ou d'un contrôleur, délai d'une diode en laiton), les fréquences d'une <a href=\"/wiki/liaison-de-redstone\">liaison de redstone</a> ou la portée d'un châssis. Pour régler vingt entonnoirs pareils, c'est imbattable.</p>"
     },
     {
       "id": "exemple",
@@ -138,7 +138,9 @@
     "bras-mecanique",
     "observateur-intelligent",
     "emballeur",
-    "cle"
+    "cle",
+    "trappe-a-objets",
+    "schematiques"
   ],
   "sources": [
     "Recettes : crafting/kinetics/filter.json, attribute_filter.json, package_filter.json (ASA), crafting/appliances/clipboard.json",

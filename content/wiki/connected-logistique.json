@@ -1,0 +1,371 @@
+{
+  "slug": "connected-logistique",
+  "name": "Port d'accès, pont d'inventaire, tableau de bord et stockage",
+  "blockId": "create_connected:inventory_access_port",
+  "category": "connected",
+  "title": "Ports, pont, silo et citerne — Create Connected, guide",
+  "description": "Port d'accès aux stocks, pont d'inventaire, tableau de bord, goulotte en laiton, silo et citerne : la logistique de Create Connected pour Create.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Connected 1.3.3 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Create Connected comble plusieurs trous de la logistique de Create : atteindre un coffre coincé derrière un mur, faire de deux inventaires un seul, afficher des infos au conducteur, descendre des piles entières d'un coup et stocker à la verticale ou à l'horizontale. Au menu : <strong>port d'accès aux stocks</strong> (Inventory Access Port), <strong>pont d'inventaire</strong> (Inventory Bridge), <strong>tableau de bord</strong> (Dashboard), <strong>goulotte en laiton</strong> (Brass Chute), <strong>silo à objet</strong> (Item Silo) et <strong>citerne à fluide</strong> (Fluid Vessel).",
+  "facts": [
+    {
+      "label": "Port d’accès",
+      "value": "2 par recette ; aucun emplacement propre"
+    },
+    {
+      "label": "Goulotte en laiton",
+      "value": "64 objets par prise (16 pour la chute de Create)"
+    },
+    {
+      "label": "Silo à objet",
+      "value": "section 3 × 3 au plus, hauteur jusqu’à 3 × la largeur ; 20 piles par bloc"
+    },
+    {
+      "label": "Citerne à fluide",
+      "value": "8 seaux par bloc ; section 3 × 3 et 32 blocs de long au plus"
+    },
+    {
+      "label": "Citerne en chaudière",
+      "value": "puissance × 0,8125, chaleur × 0,5 (vesselBoilerStressMultiplier, vesselHeatMultiplier)"
+    },
+    {
+      "label": "Tableau de bord",
+      "value": "4 lignes ; 15 caractères par ligne depuis une liaison d’affichage"
+    },
+    {
+      "label": "Version",
+      "value": "Create Connected 1.3.3 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (2 ports par recette)",
+    "grid": [
+      [
+        null,
+        "Boitier de laiton",
+        null
+      ],
+      [
+        null,
+        "Chute",
+        null
+      ],
+      [
+        null,
+        "Tube électronique",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "create:brass_casing",
+        null
+      ],
+      [
+        null,
+        "create:chute",
+        null
+      ],
+      [
+        null,
+        "create:electron_tube",
+        null
+      ]
+    ],
+    "result": "2 ports d'accès aux stocks",
+    "resultItem": "create_connected:inventory_access_port"
+  },
+  "videos": [
+    {
+      "id": "conn_access_port",
+      "name": "Port d'accès aux stocks",
+      "description": "Un coffre enfermé derrière d'autres blocs : des ports collés contre lui laissent entonnoirs et bras mécanique s'y servir, jusqu'à ce qu'un signal de redstone les coupe.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 1.7,
+          "section": "port"
+        }
+      ]
+    },
+    {
+      "id": "conn_bridge",
+      "name": "Le pont d'inventaire",
+      "description": "Un pont posé entre deux coffres : ce qui est branché sur le pont voit les deux à la fois ; plusieurs ponts cohabitent, mais deux ponts collés ne se relaient pas.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 1.0,
+          "section": "pont"
+        }
+      ]
+    },
+    {
+      "id": "conn_bridge_filter",
+      "name": "Trier avec les filtres du pont",
+      "description": "Du fer filtré d'un côté, de l'or de l'autre : chaque lingot part vers son coffre, le reste est refusé, puis les filtres jouent aussi à la sortie et devant une liaison de stock.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 2.8,
+          "section": "filtres"
+        },
+        {
+          "t": 20.4,
+          "section": "filtres-stock"
+        }
+      ]
+    },
+    {
+      "id": "conn_dashboard",
+      "name": "Le tableau de bord",
+      "description": "Un tableau de bord devant un siège : texte d'un presse-papiers, puis d'une liaison d'affichage, couleur et encre luisante, lignes reçues par le joueur assis, remise à zéro.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 0.8,
+          "section": "tableau"
+        },
+        {
+          "t": 12.6,
+          "section": "hud"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "port",
+      "title": "Port d'accès aux stocks",
+      "image": "conn_access_port_port.webp",
+      "alt": "Des ports d'accès collés à un coffre entouré de blocs",
+      "video": "conn_access_port",
+      "html": "<p>Le port se colle contre un inventaire, face tournée vers lui, et lui sert de rallonge : un <a href=\"/wiki/entonnoir\">entonnoir</a>, un <a href=\"/wiki/bras-mecanique\">bras mécanique</a> ou une chute branché sur le port agit exactement comme s'il touchait le coffre. Le port lui-même ne garde rien. Tu peux en coller plusieurs sur un même coffre, mais un port contre un autre port ne mène nulle part. Un signal de redstone le met hors service, et un comparateur posé contre lui lit le remplissage du coffre caché.</p>"
+    },
+    {
+      "id": "pont",
+      "title": "Le pont d'inventaire",
+      "image": "conn_bridge_pont.webp",
+      "alt": "Un pont d'inventaire posé entre deux coffres",
+      "video": "conn_bridge",
+      "html": "<p>Le pont, fait de deux ports à l'établi, se pose entre deux inventaires alignés. Ce qui le touche par ses autres faces voit les deux comme un seul stock : les emplacements du premier, puis ceux du second. Lui non plus n'a pas de place à lui. Il ne relie que ses deux voisins : un entonnoir collé sur un des coffres ne voit toujours que ce coffre. Les ponts ne s'enchaînent pas, mais plusieurs peuvent partager les mêmes coffres ; la redstone les coupe et un comparateur rend la moyenne des deux remplissages.</p>"
+    },
+    {
+      "id": "filtres",
+      "title": "Les filtres du pont",
+      "image": "conn_bridge_filter_filtres.webp",
+      "alt": "Les deux emplacements de filtre du pont, fer d'un côté et or de l'autre",
+      "video": "conn_bridge_filter",
+      "html": "<p>Chaque bout du pont porte un emplacement de filtre, qui accepte aussi les <a href=\"/wiki/filtres\">filtres</a> de Create : il décide quels objets partent de ce côté. Fer à l'ouest et or à l'est : un lingot de fer inséré dans le pont file à l'ouest, l'or à l'est, et un objet qui ne colle à aucun des deux est refusé. Si un seul côté a un filtre, il passe en priorité : ce qui lui correspond ne peut plus aller du côté vide, qui récupère tout le reste.</p>"
+    },
+    {
+      "id": "filtres-stock",
+      "title": "Filtres en sortie et liaison de stock",
+      "image": "conn_bridge_filter_stock.webp",
+      "alt": "Le pont filtré relié à un réseau de liaison de stock",
+      "html": "<p>Les filtres comptent aussi quand on vide le pont : un objet rangé du côté sans filtre mais réclamé par le filtre d'en face devient invisible par le pont. Ces objets cachés n'apparaissent pas non plus dans le réseau d'une <a href=\"/wiki/liaison-de-stock\">liaison de stock</a> branchée dessus. Pratique pour garder une réserve hors de portée du <a href=\"/wiki/telescripteur-de-stock\">télescripteur</a> tout en n'ayant qu'un seul point d'accès.</p>"
+    },
+    {
+      "id": "tableau",
+      "title": "Le tableau de bord",
+      "image": "conn_dashboard_ecran.webp",
+      "alt": "Un tableau de bord posé devant un siège, écran tourné vers le joueur",
+      "video": "conn_dashboard",
+      "html": "<p>Le tableau de bord est un petit écran de quatre lignes, fait d'un panneau d'affichage posé sur un boîtier de laiton. Pour du texte fixe, clique dessus avec un presse-papiers rempli : chacune de ses lignes devient une ligne de l'écran. Une étiquette renommée écrit la première ligne. Pour du texte qui bouge (vitesse, stock, arrivée d'un train), vise-le avec une <a href=\"/wiki/liaison-d-affichage\">liaison d'affichage</a> : il prend 15 caractères par ligne.</p>"
+    },
+    {
+      "id": "hud",
+      "title": "Couleurs, affichage au siège et remise à zéro",
+      "image": "conn_dashboard_hud.webp",
+      "alt": "Le joueur assis devant le tableau voit ses lignes au-dessus de sa barre d'objets",
+      "html": "<p>Une teinture change la couleur du texte et une poche d'encre luisante le fait briller, comme sur un panneau. Le vrai plus : un joueur assis sur le bloc juste devant (siège, wagonnet…) lit les lignes au-dessus de sa barre d'objets sans quitter la route des yeux. Si plusieurs tableaux entourent la même place, leurs textes alternent toutes les 2 s. Un coup de <a href=\"/wiki/cle\">clé</a> coupe ou rétablit cet envoi, et un clic main vide efface l'écran.</p>"
+    },
+    {
+      "id": "goulotte",
+      "title": "La goulotte en laiton",
+      "image": "conn_gal_logistique_goulotte-laiton.webp",
+      "alt": "Goulottes en laiton : simple, à fenêtre et encastrée dans le laiton",
+      "html": "<p>La goulotte en laiton est la version rapide de la <a href=\"/wiki/chute\">chute</a> de Create : elle se pose, se coude et s'utilise pareil, mais tire jusqu'à 64 objets d'un coup dans l'inventaire au-dessus d'elle, contre 16 pour la chute. Deux plaques et un lingot de laiton en donnent quatre. La clé ajoute ou retire une fenêtre, un bloc de laiton l'encastre, et un <a href=\"/wiki/ventilateur-enchasse\">ventilateur</a> la fait toujours monter.</p>"
+    },
+    {
+      "id": "silo",
+      "title": "Le silo à objet",
+      "image": "conn_gal_logistique_silo.webp",
+      "alt": "Six silos à objet en deux colonnes de trois",
+      "html": "<p>Le silo est la version debout du <a href=\"/wiki/coffre-a-objet-renforce\">coffre à objet renforcé</a> : les blocs posés ensemble fusionnent en un seul stock vertical. La section va de 1 × 1 à 3 × 3 et la hauteur peut atteindre trois fois la largeur, soit 9 blocs pour un silo de 3 de large. Chaque bloc garde 20 piles, comme le coffre renforcé : un silo complet de 3 × 3 × 9 tient 1 620 piles. Une recette d'une case le change en coffre renforcé, et inversement.</p>"
+    },
+    {
+      "id": "citerne",
+      "title": "La citerne à fluide",
+      "image": "conn_gal_logistique_citerne.webp",
+      "alt": "Une citerne à fluide couchée de trois blocs, avec une fenêtre au milieu",
+      "html": "<p>La citerne est un <a href=\"/wiki/reservoir-a-fluide\">réservoir à fluide</a> couché : 8 seaux par bloc, section jusqu'à 3 × 3 et 32 blocs de long. La clé change la forme des fenêtres. Elle peut servir de chaudière à des <a href=\"/wiki/moteur-a-vapeur\">moteurs à vapeur</a>, en moins bien : puissance × 0,8125, chaleur des brûleurs comptée à moitié, niveau plafonné par vesselMaxLevel (18). La <strong>citerne à fluide créative</strong> (Creative Fluid Vessel) fournit sans fin le fluide choisi, comme le réservoir créatif.</p>"
+    }
+  ],
+  "related": [
+    "create-connected",
+    "liaison-de-stock",
+    "chute",
+    "entonnoir",
+    "coffre-a-objet-renforce",
+    "reservoir-a-fluide",
+    "liaison-d-affichage",
+    "filtres",
+    "moteur-a-vapeur",
+    "connected-redstone"
+  ],
+  "sources": [
+    "Create Connected 1.3.3 (create_connected-1.3.3-mc1.21.1.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/hlysine/create_connected au tag 1.3.3-mc1.21.1, recettes du dossier data du jar, scènes Ponder rejouées par notre moteur.",
+    "Mod de Lysine (hlysine), sous licence GNU AGPL v3 : modèles et textures de ses auteurs, rendus à partir du jar ; aucun texte du mod n'est recopié.",
+    "Classes : content/inventoryaccessport (InventoryAccessPortBlock, InventoryAccessPortBlockEntity), content/inventorybridge (InventoryBridgeBlock, InventoryBridgeBlockEntity), content/dashboard (DashboardBlock, DashboardBlockEntity, DashboardDisplayTarget), content/brasschute (BrassChuteBlock, BrassChuteBlockEntity), content/itemsilo (ItemSiloBlockEntity), content/fluidvessel (FluidVesselBlockEntity, BoilerData), config/CServer.",
+    "Réglages de Create 6.0.10 repris par ces blocs : vaultCapacity (20), fluidTankCapacity (8), fluidTankMaxHeight (32).",
+    "Scènes Ponder InventoryAccessPortScenes, InventoryBridgeScenes et DashboardScenes rejouées par notre moteur."
+  ],
+  "en": {
+    "slugEn": "connected-logistics",
+    "name": "Inventory Access Port, Inventory Bridge, Dashboard and storage",
+    "title": "Access Port, Bridge, Silo & Vessel — Create Connected guide",
+    "description": "Inventory Access Port, Inventory Bridge, Dashboard, Brass Chute, Item Silo and Fluid Vessel: the logistics blocks Create Connected adds to Create.",
+    "intro": "Create Connected fills several gaps in Create's logistics: reaching a chest stuck behind a wall, turning two inventories into one, showing information to the driver, dropping whole stacks at once and storing goods standing up or lying down. On the menu: the <strong>Inventory Access Port</strong>, the <strong>Inventory Bridge</strong>, the <strong>Dashboard</strong>, the <strong>Brass Chute</strong>, the <strong>Item Silo</strong> and the <strong>Fluid Vessel</strong>.",
+    "facts": [
+      {
+        "label": "Access port",
+        "value": "2 per craft; no slots of its own"
+      },
+      {
+        "label": "Brass Chute",
+        "value": "64 items per pull (16 for the Create Chute)"
+      },
+      {
+        "label": "Item Silo",
+        "value": "up to 3 × 3 across, height up to 3 × the width; 20 stacks per block"
+      },
+      {
+        "label": "Fluid Vessel",
+        "value": "8 buckets per block; up to 3 × 3 across and 32 blocks long"
+      },
+      {
+        "label": "Vessel as a boiler",
+        "value": "output × 0.8125, heat × 0.5 (vesselBoilerStressMultiplier, vesselHeatMultiplier)"
+      },
+      {
+        "label": "Dashboard",
+        "value": "4 lines; 15 characters per line from a Display Link"
+      },
+      {
+        "label": "Version",
+        "value": "Create Connected 1.3.3 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (2 ports per craft)",
+      "grid": [
+        [
+          null,
+          "Brass Casing",
+          null
+        ],
+        [
+          null,
+          "Chute",
+          null
+        ],
+        [
+          null,
+          "Electron Tube",
+          null
+        ]
+      ],
+      "result": "2 Inventory Access Ports"
+    },
+    "videos": [
+      {
+        "id": "conn_access_port",
+        "name": "The Inventory Access Port",
+        "description": "A chest boxed in behind other blocks: ports stuck to it let funnels and a Mechanical Arm reach inside, until a redstone signal shuts them off."
+      },
+      {
+        "id": "conn_bridge",
+        "name": "The Inventory Bridge",
+        "description": "A bridge between two chests: anything plugged into the bridge sees both at once; several bridges can share them, but two bridges side by side do not relay."
+      },
+      {
+        "id": "conn_bridge_filter",
+        "name": "Sorting with the bridge's filters",
+        "description": "Iron filtered on one side, gold on the other: each ingot goes to its chest and the rest is refused, then the filters also apply on the way out and in front of a Stock Link."
+      },
+      {
+        "id": "conn_dashboard",
+        "name": "The Dashboard",
+        "description": "A Dashboard in front of a seat: text from a Clipboard, then from a Display Link, colour and Glow Ink Sac, lines sent to the seated player, and a reset."
+      }
+    ],
+    "sections": [
+      {
+        "id": "port",
+        "title": "The Inventory Access Port",
+        "alt": "Access ports stuck to a chest that is walled in",
+        "html": "<p>The port goes against an inventory, facing it, and works as an extension cord: a <a href=\"/en/wiki/funnel\">funnel</a>, a <a href=\"/en/wiki/mechanical-arm\">Mechanical Arm</a> or a chute attached to the port behaves exactly as if it touched the chest. The port itself holds nothing. You can stick several onto one chest, but a port against another port leads nowhere. A redstone signal switches it off, and a comparator placed against it reads how full the hidden chest is.</p>"
+      },
+      {
+        "id": "pont",
+        "title": "The Inventory Bridge",
+        "alt": "An Inventory Bridge placed between two chests",
+        "html": "<p>The bridge, crafted from two ports, sits between two inventories in a line. Whatever touches its other faces sees both as a single store: the slots of the first, then those of the second. It has no room of its own either. It only joins its two neighbours: a funnel stuck on one of the chests still sees that chest alone. Bridges do not chain, but several can share the same chests; redstone turns them off and a comparator returns the average of both fill levels.</p>"
+      },
+      {
+        "id": "filtres",
+        "title": "The bridge's filters",
+        "alt": "The two filter slots of the bridge, iron on one side and gold on the other",
+        "html": "<p>Each end of the bridge has a filter slot, which also takes Create's <a href=\"/en/wiki/filters\">filter items</a>: it decides which items leave on that side. Iron to the west and gold to the east: an iron ingot pushed into the bridge heads west, gold heads east, and an item matching neither is refused. If only one side has a filter, it takes priority: what it matches can no longer go to the empty side, which gets everything else.</p>"
+      },
+      {
+        "id": "filtres-stock",
+        "title": "Filters on the way out and Stock Links",
+        "alt": "The filtered bridge connected to a Stock Link network",
+        "html": "<p>Filters also count when you empty the bridge: an item stored on the unfiltered side but claimed by the opposite filter becomes invisible through the bridge. Those hidden items do not show up in the network of a <a href=\"/en/wiki/stock-link\">Stock Link</a> attached to it either. Useful to keep a reserve away from the <a href=\"/en/wiki/stock-ticker\">Stock Ticker</a> while keeping a single access point.</p>"
+      },
+      {
+        "id": "tableau",
+        "title": "The Dashboard",
+        "alt": "A Dashboard in front of a seat, screen facing the player",
+        "html": "<p>The Dashboard is a small four-line screen, made from a Display Board on top of Brass Casing. For fixed text, click it with a filled Clipboard: each of its lines becomes a line on the screen. A renamed Name Tag writes the first line. For live text (speed, stock, the next train), point a <a href=\"/en/wiki/display-link\">Display Link</a> at it: it takes 15 characters per line.</p>"
+      },
+      {
+        "id": "hud",
+        "title": "Colours, seat display and reset",
+        "alt": "The seated player sees the lines above the hotbar",
+        "html": "<p>A dye changes the text colour and a Glow Ink Sac makes it glow, just like on a sign. The real bonus: a player sitting on the block right in front (a seat, a minecart…) reads the lines above the hotbar without taking their eyes off the road. If several dashboards surround the same spot, their texts take turns every 2 s. A <a href=\"/en/wiki/wrench\">Wrench</a> turns that feed off or back on, and an empty-hand click wipes the screen.</p>"
+      },
+      {
+        "id": "goulotte",
+        "title": "The Brass Chute",
+        "alt": "Brass Chutes: plain, with a window and encased in brass",
+        "html": "<p>The Brass Chute is the fast version of Create's <a href=\"/en/wiki/chute\">Chute</a>: you place it, bend it and use it the same way, but it pulls up to 64 items at once from the inventory above, against 16 for the regular chute. Two Brass Sheets and a Brass Ingot make four. The wrench adds or removes a window, a Brass Block encases it, and an <a href=\"/en/wiki/encased-fan\">Encased Fan</a> still pushes items up it.</p>"
+      },
+      {
+        "id": "silo",
+        "title": "The Item Silo",
+        "alt": "Six Item Silos in two columns of three",
+        "html": "<p>The silo is an <a href=\"/en/wiki/item-vault\">Item Vault</a> standing up: blocks placed together merge into a single vertical store. It ranges from 1 × 1 to 3 × 3 across, and its height can reach three times its width, so 9 blocks for a silo 3 wide. Each block holds 20 stacks, like the vault: a full 3 × 3 × 9 silo stores 1,620 stacks. A one-item recipe turns it into an Item Vault and back.</p>"
+      },
+      {
+        "id": "citerne",
+        "title": "The Fluid Vessel",
+        "alt": "A three-block Fluid Vessel lying down, with a window in the middle",
+        "html": "<p>The vessel is a <a href=\"/en/wiki/fluid-tank\">Fluid Tank</a> lying on its side: 8 buckets per block, up to 3 × 3 across and 32 blocks long. The wrench cycles the window shapes. It can act as a boiler for <a href=\"/en/wiki/steam-engine\">Steam Engines</a>, but less well: output × 0.8125, burner heat counted at half, level capped by vesselMaxLevel (18). The <strong>Creative Fluid Vessel</strong> supplies the chosen fluid endlessly, like the creative tank.</p>"
+      }
+    ],
+    "sources": [
+      "Create Connected 1.3.3 (create_connected-1.3.3-mc1.21.1.jar from the next Create France modpack release): code from the public repository github.com/hlysine/create_connected at tag 1.3.3-mc1.21.1, recipes from the jar's data folder, Ponder scenes replayed by our engine.",
+      "Mod by Lysine (hlysine), GNU AGPL v3 licence: models and textures by its authors, rendered from the jar; no text from the mod is copied.",
+      "Classes: content/inventoryaccessport (InventoryAccessPortBlock, InventoryAccessPortBlockEntity), content/inventorybridge (InventoryBridgeBlock, InventoryBridgeBlockEntity), content/dashboard (DashboardBlock, DashboardBlockEntity, DashboardDisplayTarget), content/brasschute (BrassChuteBlock, BrassChuteBlockEntity), content/itemsilo (ItemSiloBlockEntity), content/fluidvessel (FluidVesselBlockEntity, BoilerData), config/CServer.",
+      "Create 6.0.10 settings used by these blocks: vaultCapacity (20), fluidTankCapacity (8), fluidTankMaxHeight (32).",
+      "Ponder scenes InventoryAccessPortScenes, InventoryBridgeScenes and DashboardScenes replayed by our engine."
+    ]
+  }
+}

@@ -6,7 +6,7 @@
   "title": "Roues de concassage — Create : guide en français",
   "description": "Les roues de concassage de Create : monter la paire, sens de rotation, minerais concassés, poudre de blaze, cadence selon la vitesse et automatisation.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "Les <strong>roues de concassage</strong> sont le broyeur lourd de Create. Deux grandes roues qui tournent l'une vers l'autre écrasent tout ce qui tombe entre elles : <strong>minerais</strong>, pierres, os, laine, tiges de blaze… Elles travaillent sur des piles entières, connaissent toutes les recettes de la meule et des recettes de concassage en plus. C'est la base de toute usine de minerai.",
@@ -61,6 +61,11 @@
       "html": "<p>Une roue de concassage seule ne fait rien : il faut <strong>deux roues sur le même axe horizontal, séparées d'un bloc vide</strong>. Entre elles apparaît alors une zone de broyage invisible. Chaque roue occupe un bloc mais déborde d'environ un demi-bloc tout autour : au centre, les deux roues se touchent presque.</p><p>Chaque roue consomme <strong>8 SU par tr/min</strong> : la paire en demande donc 16, soit 512 SU à 32 tr/min. Une petite roue à eau ne suffit pas, il en faut au moins deux, ou une grande roue à eau.</p>"
     },
     {
+      "id": "controleur",
+      "title": "Le contrôleur invisible",
+      "html": "<p>Entre deux roues de même axe, à deux blocs l'une de l'autre, le jeu pose un bloc invisible : le <strong>contrôleur de roue de concassage</strong>. C'est lui qui attrape les objets et les créatures et fait le broyage, dans le sens des roues. Il ne fonctionne que si elles tournent l'une vers l'autre, et inflige 4 points de dégâts aux créatures prises dedans. Il ne s'obtient pas et disparaît avec les roues.</p>"
+    },
+    {
       "id": "sens",
       "title": "Elles doivent tourner l'une vers l'autre",
       "image": "crushing_wheel_sens.webp",
@@ -100,7 +105,8 @@
     "pierres-et-blocs-de-deco",
     "blocs-diesel-generators",
     "aeronautics-levitite",
-    "ore-excavation-filons"
+    "ore-excavation-filons",
+    "minerai-de-zinc"
   ],
   "sources": [
     "Stress : AllBlocks.java, CRUSHING_WHEEL, CStress.setImpact(8.0)",
@@ -163,6 +169,11 @@
         "title": "Always in pairs",
         "alt": "Two Crushing Wheels placed side by side with a one-block gap",
         "html": "<p>A single crushing wheel does nothing: you need <strong>two wheels on the same horizontal axis, with one empty block between them</strong>, right where your input will fall, usually under the end of a belt or a chute. An invisible crushing zone then appears in the gap. Each wheel takes one block but sticks out about half a block all around, so in the middle the two wheels almost touch.</p><p>Each wheel uses <strong>8 SU per RPM</strong>, so the pair takes 16, or 512 SU at 32 RPM. One small water wheel is not enough; you need at least two, or a large water wheel.</p>"
+      },
+      {
+        "id": "controleur",
+        "title": "The invisible controller",
+        "html": "<p>Between two wheels on the same axis, two blocks apart, the game places an invisible block: the <strong>Crushing Wheel Controller</strong>. It is the one that catches items and creatures and does the crushing, in the wheels' direction. It only works if they turn toward each other, and deals 4 damage to creatures caught in it. It cannot be obtained and disappears with the wheels.</p>"
       },
       {
         "id": "sens",

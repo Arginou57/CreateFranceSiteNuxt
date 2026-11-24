@@ -150,7 +150,8 @@
     "emballeur",
     "jauge-d-usine",
     "etabli-mecanique",
-    "telescripteur-de-stock"
+    "telescripteur-de-stock",
+    "armure-en-carton"
   ],
   "sources": [
     "Réemballeur : RepackagerBlockEntity (sous-classe de PackagerBlockEntity), PackageRepackageHelper.isFragmented / addPackageFragment / repack",

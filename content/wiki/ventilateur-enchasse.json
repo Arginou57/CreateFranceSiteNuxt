@@ -6,7 +6,7 @@
   "title": "Ventilateur enchâssé — Create : guide en français",
   "description": "Le ventilateur enchâssé de Create : souffler ou aspirer, portée selon la vitesse, cuisson par la lave, fumage, lavage dans l'eau et hantise.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "Le <strong>ventilateur enchâssé</strong> crée un courant d'air qui pousse ou attire les objets et les créatures. Mais son vrai talent est ailleurs : quand ce courant traverse de la <strong>lave</strong>, du <strong>feu</strong> ou de l'<strong>eau</strong>, il transforme les objets qu'il touche. C'est un four, un fumoir et une station de lavage géants, qui traitent des piles entières posées au sol, sur un dépôt ou sur un tapis roulant.",
@@ -29,7 +29,7 @@
     },
     {
       "label": "Traitement",
-      "value": "7,5 s par paquet de 16 objets, quelle que soit la vitesse"
+      "value": "7,5 s par paquet de 16 objets, peu importe la vitesse"
     },
     {
       "label": "Types",
@@ -106,7 +106,7 @@
       "title": "Souffler ou aspirer",
       "image": "fan_direction_sens.webp",
       "alt": "Le même ventilateur après inversion du sens de rotation",
-      "html": "<p>Le <strong>sens de rotation</strong> décide si le ventilateur souffle devant lui ou aspire vers lui. Pour changer de sens, inverse la rotation : un inverseur de rotation commandé par un levier, une boîte à roues dentées ou une roue dentée de plus. Dans l'animation d'origine, un perroquet montre le courant ; nos images ne gardent que le ventilateur, les créatures n'étant pas rendues par notre moteur.</p>"
+      "html": "<p>Le <strong>sens de rotation</strong> décide si le ventilateur souffle devant lui ou aspire vers lui. Pour changer de sens, inverse la rotation : un inverseur de rotation commandé par un levier, la boîte à roues dentées ou une roue dentée de plus. Dans l'animation d'origine, un perroquet montre le courant ; nos images ne gardent que le ventilateur, les créatures n'étant pas rendues par notre moteur.</p>"
     },
     {
       "id": "lave",
@@ -160,7 +160,9 @@
     "bruleur-a-blaze",
     "pierres-et-blocs-de-deco",
     "fabrication-des-canons",
-    "aeronautics-ballons"
+    "aeronautics-ballons",
+    "cloches",
+    "minerai-de-zinc"
   ],
   "sources": [
     "Stress : AllBlocks.java, ENCASED_FAN, CStress.setImpact(2.0)",

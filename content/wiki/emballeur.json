@@ -6,7 +6,7 @@
   "title": "Emballeur (packager) — Create : guide en français",
   "description": "L'emballeur de Create 6 : mettre un inventaire en colis, déballer les colis reçus, écrire une adresse et trier les colis avec un filtre de colis.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "L'<strong>emballeur</strong> est la porte d'entrée du réseau de colis de Create 6. Collé à un coffre, il en met le contenu dans un <strong>colis</strong> en carton qui peut voyager sur des tapis, des roues à chaîne ou des trains. Dans l'autre sens, il déballe les colis qu'on lui livre et range leur contenu dans son coffre. Avec une adresse écrite sur le colis, chaque envoi sait où il doit arriver.",
@@ -107,7 +107,7 @@
       "title": "Faire un colis",
       "image": "packager_tapis.webp",
       "alt": "Colis en carton qui part de l'emballeur sur un tapis roulant",
-      "html": "<p>À chaque <strong>impulsion de redstone</strong>, l'emballeur prend le contenu de son inventaire et en fait un colis, jusqu'à 9 piles par colis. S'il y a plus, il en fait plusieurs. Le colis sort sur ce qui se trouve devant : <a href=\"/wiki/tapis-roulant\">tapis</a>, <a href=\"/wiki/entonnoir\">entonnoir</a>, <a href=\"/wiki/chute\">chute</a>, crapauport ou boîte aux lettres. Un colis est un objet ordinaire : il se transporte avec tous les outils de Create.</p>"
+      "html": "<p>Chaque fois qu’il reçoit une <strong>impulsion de redstone</strong>, l'emballeur prend le contenu de son inventaire et en fait un colis, jusqu'à 9 piles par colis. S'il y a plus, il en fait plusieurs. Le colis sort sur ce qui se trouve devant : <a href=\"/wiki/tapis-roulant\">tapis</a>, <a href=\"/wiki/entonnoir\">entonnoir</a>, <a href=\"/wiki/chute\">chute</a>, crapauport ou boîte aux lettres. Un colis est un objet ordinaire : il se transporte avec tous les outils de Create.</p>"
     },
     {
       "id": "deballer",
@@ -146,6 +146,11 @@
       "html": "<p>Une <a href=\"/wiki/liaison-d-affichage\">liaison d'affichage</a> posée sur un dépôt ou un tapis peut écrire sur un panneau l'<strong>adresse du colis</strong> qui s'y trouve : idéal pour un quai de chargement. Attention aux colis sans adresse : ils ne passent que par les filtres de colis laissés vides.</p>"
     },
     {
+      "id": "colis-rare",
+      "title": "Le colis rare",
+      "html": "<p>Une fois sur 7 500, l'emballeur choisit un emballage <strong>rare</strong> : l'un des dix colis rares aux motifs particuliers. Son contenu ne change pas. Voir aussi l'<a href=\"/wiki/armure-en-carton\">armure en carton</a>, faite du même carton.</p>"
+    },
+    {
       "id": "reseau",
       "title": "Dans le réseau de colis",
       "html": "<p>Un emballeur relié au réseau par une <a href=\"/wiki/liaison-de-stock\">liaison de stock</a> n'attend plus la redstone : il emballe tout seul les objets commandés depuis un <a href=\"/wiki/telescripteur-de-stock\">téléscripteur de stock</a> ou un <a href=\"/wiki/commandeur-a-redstone\">commandeur à redstone</a>, avec l'adresse demandée. C'est le maillon qui transforme un coffre ordinaire en entrepôt consultable de partout.</p>"
@@ -167,7 +172,8 @@
     "reemballeur",
     "roue-a-chaine-roulante",
     "tunnel",
-    "filtres"
+    "filtres",
+    "armure-en-carton"
   ],
   "sources": [
     "Colis : PackageItem.SLOTS = 9 ; adresse : PackageItem.addAddress / matchAddress (« * » et jokers Glob)",
@@ -286,6 +292,11 @@
         "title": "Reading a package's address",
         "alt": "Package on a Depot next to a Packager",
         "html": "<p>A <a href=\"/en/wiki/display-link\">Display Link</a> placed on a Depot or a belt can write the <strong>address of the package</strong> sitting there onto a board: ideal for a loading bay. Watch out for packages without an address: they only go through Package Filters left empty.</p>"
+      },
+      {
+        "id": "colis-rare",
+        "title": "The rare package",
+        "html": "<p>One time in 7,500, the Packager picks a <strong>rare</strong> wrapping: one of ten Rare Packages with special designs. Its contents do not change. See also the <a href=\"/en/wiki/cardboard-armor\">cardboard armour</a>, made from the same cardboard.</p>"
       },
       {
         "id": "reseau",

@@ -1,0 +1,258 @@
+{
+  "slug": "bnb-mecanismes",
+  "name": "Roue gigantesque, volant d'inertie et poulie à chaîne",
+  "blockId": "bits_n_bobs:flywheel_bearing",
+  "category": "bitsnbobs",
+  "title": "Volant, poulie et boitiers — Bits 'n' Bobs, guide",
+  "description": "Roulement de volant d'inertie, poulie à chaîne, roue dentée gigantesque, boitiers en fer et barres de piston enchâssées de Create Bits 'n' Bobs.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Bits 'n' Bobs 2.3.5 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Bits 'n' Bobs ajoute quelques mécanismes qui prolongent ceux de Create : un <strong>roulement de volant d'inertie</strong> qui donne du poids à ce qu'il fait tourner, une <strong>poulie à chaîne</strong>, des roues et rotors dans des <strong>boitiers en fer</strong>, des barres de piston qui traversent un boitier, et une <strong>roue dentée gigantesque</strong> encore en préparation.",
+  "facts": [
+    {
+      "label": "Roue gigantesque",
+      "value": "3 × 3 blocs, rapport 5 : 1 ; verrouillée dans la 2.3.5"
+    },
+    {
+      "label": "Volant : masses",
+      "value": "bois 0,5, pierre 2, blocs de stockage 4, autres blocs 1"
+    },
+    {
+      "label": "Volant : réaction",
+      "value": "de 100 % à 0,5 % de l’écart rattrapé par tick selon l’inertie"
+    },
+    {
+      "label": "Stockage du volant",
+      "value": "désactivé par défaut (réglage serveur flywheelBearingStorageCapability)"
+    },
+    {
+      "label": "Poulie à chaîne",
+      "value": "même portée que la poulie de Create : 384 blocs par défaut (maxRopeLength)"
+    },
+    {
+      "label": "Version",
+      "value": "Create Bits 'n' Bobs 2.3.5 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (dalle : n'importe quelle dalle en bois)",
+    "grid": [
+      [
+        null,
+        "Dalle de chêne",
+        null
+      ],
+      [
+        "Alliage d'andésite",
+        "Boitier de laiton",
+        "Alliage d'andésite"
+      ],
+      [
+        null,
+        "Grande roue dentée",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "minecraft:oak_slab",
+        null
+      ],
+      [
+        "create:andesite_alloy",
+        "create:brass_casing",
+        "create:andesite_alloy"
+      ],
+      [
+        null,
+        "create:large_cogwheel",
+        null
+      ]
+    ],
+    "result": "1 roulement de volant d'inertie",
+    "resultItem": "bits_n_bobs:flywheel_bearing"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "gigantesque",
+      "title": "La roue dentée gigantesque",
+      "image": "bnb_gal_mecanismes_roue-gigantesque.webp",
+      "alt": "La roue dentée gigantesque, large de trois blocs",
+      "html": "<p>La <strong>roue dentée gigantesque</strong> (Gigantic Cogwheel) occupe 3 × 3 blocs : le bloc central et huit <strong>satellites</strong> (Gigantic Cogwheel Satellite), des blocs techniques qu'elle pose seule autour d'elle et qui renvoient vers le centre. Elle engrène une petite <a href=\"/wiki/roue-dentee\">roue dentée</a> posée à 3 blocs de son centre, dans son plan, avec un rapport de 5 : la petite tourne cinq fois plus vite, en sens inverse. Elle accepte aussi l'habillage en planches.</p>"
+    },
+    {
+      "id": "verrou",
+      "title": "Pas encore disponible",
+      "html": "<p>Dans la 2.3.5, les auteurs ont verrouillé la roue gigantesque comme « contenu à venir » : elle n'apparaît pas dans l'onglet créatif, n'a pas de recette, et la commande /give la refuse en dehors d'un environnement de développement. On la présente pour que tu la reconnaisses quand elle sera ouverte.</p>"
+    },
+    {
+      "id": "volant",
+      "title": "Le roulement de volant d'inertie",
+      "image": "bnb_gal_mecanismes_volant.webp",
+      "alt": "Un roulement de volant d'inertie qui fait tourner une roue construite en blocs",
+      "html": "<p>Le <strong>roulement de volant d'inertie</strong> (Flywheel Bearing, recette ci-contre) s'utilise comme un <a href=\"/wiki/roulement-mecanique\">roulement mécanique</a> : colle des blocs sur sa face, il les assemble quand il se met à tourner, ou au clic droit main vide. Lui-même engrène comme une grande roue dentée. La différence, c'est l'inertie : la roue ne suit pas la vitesse de l'arbre d'un coup, elle accélère et ralentit doucement.</p>"
+    },
+    {
+      "id": "inertie",
+      "title": "Le calcul de l'inertie",
+      "html": "<p>Chaque bloc pèse selon sa matière : 0,5 pour le bois (bûches, planches, dalles, escaliers…), 2 pour la pierre, 4 pour les blocs de stockage et le fer industriel, 1 pour le reste. Son poids compte au carré de sa distance à l'axe plus un. À chaque tick, la roue rattrape une part de l'écart égale à 1 divisé par cette inertie, entre 100 % et 0,5 %. Une grande roue en pierre met donc une dizaine de secondes (200 ticks) à suivre l'arbre.</p>"
+    },
+    {
+      "id": "stockage",
+      "title": "Le mode stockage",
+      "html": "<p>Le code contient un vrai stockage d'énergie : le volant absorberait le surplus du réseau et le rendrait quand la charge augmente, jusqu'à 64 tr/min. Ce mode est désactivé par défaut et marqué « en développement » par les auteurs ; tant que le serveur ne l'active pas, le volant reste un bel effet visuel qui ne fournit pas de force.</p>"
+    },
+    {
+      "id": "poulie",
+      "title": "La poulie à chaîne",
+      "image": "bnb_gal_mecanismes_poulie-a-chaine.webp",
+      "alt": "Une poulie à chaîne avec son câble en chaîne et son aimant",
+      "html": "<p>La <strong>poulie à chaîne</strong> (Chain Pulley) est une <a href=\"/wiki/poulie-a-corde\">poulie à corde</a> de Create à l'allure plus lourde. Pour l'obtenir, clique une poulie à corde avec une chaîne : la chaîne n'est pas consommée. Elle descend un <strong>câble en chaîne</strong> (Chain Rope) terminé par un <strong>aimant de poulie à chaîne</strong> (Chain Pulley Magnet), avec la même portée, 384 blocs par défaut. On peut grimper le long du câble. Accroupi, un coup de <a href=\"/wiki/cle\">clé</a> la rend en poulie à corde.</p>"
+    },
+    {
+      "id": "boitiers",
+      "title": "Boitiers en fer industriel et en fer érodé",
+      "image": "bnb_gal_mecanismes_boitiers-fer.webp",
+      "alt": "Des roues dentées, grandes roues et rotors dans des boitiers de fer industriel et de fer érodé",
+      "html": "<p>Create enferme ses roues dans de l'andésite ou du laiton ; Bits 'n' Bobs ajoute deux matières. Clique une roue dentée, une grande roue dentée ou un rotor avec un bloc de fer industriel ou un bloc de fer érodé : tu obtiens la <strong>roue dentée dans un boitier de fer industriel</strong> (Industrial Iron Encased Cogwheel), la grande version (Industrial Iron Encased Large Cogwheel), le <strong>rotor dans un boitier de fer industriel</strong> (Industrial Iron Encased Shaft), et leurs équivalents en fer érodé (Weathered Iron Encased Cogwheel, Large Cogwheel et Shaft).</p>"
+    },
+    {
+      "id": "poteaux",
+      "title": "Barres d'extension de piston enchâssées",
+      "image": "bnb_gal_mecanismes_poteaux.webp",
+      "alt": "Des barres d'extension de piston dans des boitiers d'andésite, de laiton, de fer industriel et de fer érodé",
+      "html": "<p>Clique une barre d'extension de <a href=\"/wiki/piston-mecanique\">piston mécanique</a> avec un boitier d'andésite, de laiton, un bloc de fer industriel ou de fer érodé pour l'enfermer  (Andesite Encased Piston Extension Pole et ses cousines Brass Encased Piston Extension Pole, Industrial Iron Encased Piston Extension Pole et Weathered Iron Encased Piston Extension Pole). Quand le piston se rétracte, la barre glisse hors du boitier, qui reste en place, vide ; elle y revient quand le piston se déploie. Un piston peut ainsi traverser un mur sans laisser de trou.</p>"
+    }
+  ],
+  "related": [
+    "create-bits-n-bobs",
+    "bnb-chaines-de-roues-dentees",
+    "roulement-mecanique",
+    "poulie-a-corde",
+    "piston-mecanique",
+    "roue-dentee",
+    "rotor"
+  ],
+  "sources": [
+    "Create Bits 'n' Bobs 2.3.5 (bits_n_bobs-2.3.5.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/Aztech-Modding/Create-Bits-n-Bobs au commit 3794a38 « 2.3.5 », recettes du dossier data du jar, scènes Ponder rejouées par notre moteur.",
+    "Mod de Cake, Kipti, NormalGuy, Astral et Spydnel, sous licence MIT : modèles et textures de ses auteurs, rendus à partir du jar ; aucun texte du mod n'est recopié.",
+    "Roue gigantesque : content/kinetics/gigantic_cogwheel/GiganticCogwheelBlock.java (3 × 3, huit satellites), GiganticCogwheelBlockEntity.java (propagateRotationTo −5 et −1/5, isValidDiff : 3 blocs dans le plan), GiganticCogwheelSatelliteBlock.java ; verrou : registry/core/BnbFeatureFlag.java (GIGANTIC_COGWHEEL releaseLocked), mixin/ItemInputMixin.java, registry/datagen/BnbCreativeTabs.java.",
+    "Volant : content/kinetics/flywheel_bearing/FlywheelBearingBlock(Entity).java (assemblage, grande roue dentée), mechanics/FlywheelMovementMechanics.java (masses 0,5 / 1 / 2 / 4, inertie Σ m·(d+1)², réactivité clamp(1/inertie, 0,005, 1)) ; tags bits_n_bobs:light, heavy, super_heavy ; foundation/config/BnbServerConfig.java (flywheelBearingStorageCapability false, flywheelMaxRpmFactor 0,25 × 256).",
+    "Poulie : content/kinetics/chain_pulley/ChainPulleyBlock(Entity).java ; portée : PulleyBlockEntity.getExtensionRange et CKinetics.maxRopeLength = 384 de Create 6.0.10 ; recette data/bits_n_bobs/recipe/item_application/chain_pulley_from_rope_pulley.json (keep_held_item).",
+    "Boitiers : registry/content/blocks/encased/BnbExtraEncasedBlocks.java et BnbEncasedBlockLists.java ; barres : content/kinetics/encased_blocks/piston_pole/EncasedPistonExtensionPoleBlock.java (propriété EMPTY), mixin/encasable_piston_poles/PistonContraptionMixin.java ; recette data/bits_n_bobs/recipe/crafting/flywheel_bearing.json."
+  ],
+  "en": {
+    "slugEn": "bnb-mechanisms",
+    "name": "Gigantic Cogwheel, Flywheel Bearing and Chain Pulley",
+    "title": "Flywheel and Chain Pulley — Create Bits 'n' Bobs guide",
+    "description": "Flywheel Bearing, Chain Pulley, Gigantic Cogwheel, iron casings and encased Piston Extension Poles from Create Bits 'n' Bobs, explained.",
+    "intro": "Bits 'n' Bobs adds a few mechanisms that extend Create's own: a <strong>Flywheel Bearing</strong> that gives weight to whatever it spins, a <strong>Chain Pulley</strong>, wheels and shafts in <strong>iron casings</strong>, piston poles that pass through a casing, and a <strong>Gigantic Cogwheel</strong> that is still being prepared.",
+    "facts": [
+      {
+        "label": "Gigantic Cogwheel",
+        "value": "3 × 3 blocks, 5 : 1 ratio; locked in 2.3.5"
+      },
+      {
+        "label": "Flywheel: masses",
+        "value": "wood 0.5, stone 2, storage blocks 4, other blocks 1"
+      },
+      {
+        "label": "Flywheel: response",
+        "value": "from 100% down to 0.5% of the gap closed per tick, depending on inertia"
+      },
+      {
+        "label": "Flywheel storage",
+        "value": "off by default (server setting flywheelBearingStorageCapability)"
+      },
+      {
+        "label": "Chain Pulley",
+        "value": "the Rope Pulley's reach: 384 blocks by default (Create's maxRopeLength)"
+      },
+      {
+        "label": "Version",
+        "value": "Create Bits 'n' Bobs 2.3.5 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (slab: any wooden slab)",
+      "grid": [
+        [
+          null,
+          "Oak Slab",
+          null
+        ],
+        [
+          "Andesite Alloy",
+          "Brass Casing",
+          "Andesite Alloy"
+        ],
+        [
+          null,
+          "Large Cogwheel",
+          null
+        ]
+      ],
+      "result": "1 Flywheel Bearing"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "gigantesque",
+        "title": "The Gigantic Cogwheel",
+        "alt": "The Gigantic Cogwheel, three blocks wide",
+        "html": "<p>The <strong>Gigantic Cogwheel</strong> takes up 3 × 3 blocks: the centre block and eight <strong>Gigantic Cogwheel Satellites</strong>, technical blocks it places around itself that point back to the centre. It meshes with a small <a href=\"/en/wiki/cogwheel\">Cogwheel</a> set 3 blocks from its centre, in its plane, with a ratio of 5: the small wheel spins five times as fast, the other way round. It also takes the plank skin.</p>"
+      },
+      {
+        "id": "verrou",
+        "title": "Not available yet",
+        "html": "<p>In 2.3.5 the authors have locked the gigantic wheel as 'upcoming content': it does not show up in the creative tab, has no recipe, and the /give command refuses it outside a development environment. We cover it so you will recognise it once it opens up.</p>"
+      },
+      {
+        "id": "volant",
+        "title": "The Flywheel Bearing",
+        "alt": "A Flywheel Bearing spinning a wheel built from blocks",
+        "html": "<p>The <strong>Flywheel Bearing</strong> (recipe shown here) is used like a <a href=\"/en/wiki/mechanical-bearing\">Mechanical Bearing</a>: glue blocks to its face and it assembles them when it starts turning, or when you right-click it bare-handed. It meshes like a large cogwheel itself. The difference is inertia: the wheel does not match the shaft speed at once, it speeds up and slows down gently.</p>"
+      },
+      {
+        "id": "inertie",
+        "title": "How inertia is worked out",
+        "html": "<p>Each block weighs according to its material: 0.5 for wood (logs, planks, slabs, stairs…), 2 for stone, 4 for storage blocks and industrial iron, 1 for the rest. Its weight counts with the square of its distance to the axis plus one. Every tick, the wheel closes a share of the gap equal to 1 divided by that inertia, between 100% and 0.5%. A big stone wheel therefore takes about ten seconds (200 ticks) to follow the shaft.</p>"
+      },
+      {
+        "id": "stockage",
+        "title": "Storage mode",
+        "html": "<p>The code holds a real energy store: the flywheel would soak up the network's surplus and hand it back when the load goes up, up to 64 RPM. This mode is off by default and marked 'in development' by the authors; until the server turns it on, the flywheel stays a fine visual effect that provides no stress capacity.</p>"
+      },
+      {
+        "id": "poulie",
+        "title": "The Chain Pulley",
+        "alt": "A Chain Pulley with its Chain Rope and magnet",
+        "html": "<p>The <strong>Chain Pulley</strong> is a Create <a href=\"/en/wiki/rope-pulley\">Rope Pulley</a> with a heavier look. To get one, click a Rope Pulley with a Chain: the chain is not used up. It lowers a <strong>Chain Rope</strong> ending in a <strong>Chain Pulley Magnet</strong>, with the same reach, 384 blocks by default. You can climb the rope. Sneaking with a <a href=\"/en/wiki/wrench\">Wrench</a> turns it back into a Rope Pulley.</p>"
+      },
+      {
+        "id": "boitiers",
+        "title": "Industrial iron and weathered iron casings",
+        "alt": "Cogwheels, large cogwheels and shafts in industrial iron and weathered iron casings",
+        "html": "<p>Create encases its wheels in andesite or brass; Bits 'n' Bobs adds two materials. Click a Cogwheel, a Large Cogwheel or a Shaft with a Block of Industrial Iron or a Block of Weathered Iron: you get the <strong>Industrial Iron Encased Cogwheel</strong>, the <strong>Industrial Iron Encased Large Cogwheel</strong>, the <strong>Industrial Iron Encased Shaft</strong>, and their weathered iron versions (Weathered Iron Encased Cogwheel, Large Cogwheel and Shaft).</p>"
+      },
+      {
+        "id": "poteaux",
+        "title": "Encased Piston Extension Poles",
+        "alt": "Piston Extension Poles in andesite, brass, industrial iron and weathered iron casings",
+        "html": "<p>Click a <a href=\"/en/wiki/mechanical-piston\">Mechanical Piston</a> extension pole with Andesite Casing, Brass Casing, a Block of Industrial Iron or a Block of Weathered Iron to enclose it: the Andesite Encased Piston Extension Pole, Brass Encased Piston Extension Pole, Industrial Iron Encased Piston Extension Pole or Weathered Iron Encased Piston Extension Pole. When the piston pulls back, the pole slides out of the casing, which stays in place, empty; it goes back in when the piston extends. A piston can pass through a wall this way without leaving a hole.</p>"
+      }
+    ],
+    "sources": [
+      "Create Bits 'n' Bobs 2.3.5 (bits_n_bobs-2.3.5.jar from the next Create France modpack release): code from the public repository github.com/Aztech-Modding/Create-Bits-n-Bobs at commit 3794a38 \"2.3.5\", recipes from the jar's data folder, Ponder scenes replayed by our engine.",
+      "Mod by Cake, Kipti, NormalGuy, Astral and Spydnel, MIT licence: models and textures by its authors, rendered from the jar; no text from the mod is copied.",
+      "Gigantic Cogwheel: content/kinetics/gigantic_cogwheel/GiganticCogwheelBlock.java (3 × 3, eight satellites), GiganticCogwheelBlockEntity.java (propagateRotationTo −5 and −1/5, isValidDiff: 3 blocks in the plane), GiganticCogwheelSatelliteBlock.java; lock: registry/core/BnbFeatureFlag.java (GIGANTIC_COGWHEEL releaseLocked), mixin/ItemInputMixin.java, registry/datagen/BnbCreativeTabs.java.",
+      "Flywheel: content/kinetics/flywheel_bearing/FlywheelBearingBlock(Entity).java (assembly, large cogwheel), mechanics/FlywheelMovementMechanics.java (masses 0.5 / 1 / 2 / 4, inertia Σ m·(d+1)², response clamp(1/inertia, 0.005, 1)); tags bits_n_bobs:light, heavy, super_heavy; foundation/config/BnbServerConfig.java (flywheelBearingStorageCapability false, flywheelMaxRpmFactor 0.25 × 256).",
+      "Pulley: content/kinetics/chain_pulley/ChainPulleyBlock(Entity).java; reach: PulleyBlockEntity.getExtensionRange and CKinetics.maxRopeLength = 384 in Create 6.0.10; recipe data/bits_n_bobs/recipe/item_application/chain_pulley_from_rope_pulley.json (keep_held_item).",
+      "Casings: registry/content/blocks/encased/BnbExtraEncasedBlocks.java and BnbEncasedBlockLists.java; poles: content/kinetics/encased_blocks/piston_pole/EncasedPistonExtensionPoleBlock.java (EMPTY property), mixin/encasable_piston_poles/PistonContraptionMixin.java; recipe data/bits_n_bobs/recipe/crafting/flywheel_bearing.json."
+    ]
+  }
+}

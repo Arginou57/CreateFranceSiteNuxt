@@ -1,0 +1,262 @@
+{
+  "slug": "minerai-de-zinc",
+  "name": "Minerai de zinc et minerais concassés",
+  "blockId": "create:zinc_ore",
+  "category": "traitement",
+  "title": "Minerai de zinc et minerais concassés — Create",
+  "description": "Le zinc de Create : où trouver le minerai, l'outil qu'il faut, et doubler ses lingots avec les roues de concassage et le lavage des minerais concassés.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>minerai de zinc</strong> est le seul minerai ajouté par Create, et le zinc entre dans le laiton, les imitateurs et bien des machines. Miné à la main, il donne du <strong>zinc brut</strong>, à fondre au four. Passé aux <a href=\"/wiki/roues-de-concassage\">roues de concassage</a>, il devient du <strong>zinc brut concassé</strong>, et lavé au <a href=\"/wiki/ventilateur-enchasse\">ventilateur</a>, il rend plus de métal : c'est le cœur de toute usine de minerais.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Traitement"
+    },
+    {
+      "label": "Hauteur",
+      "value": "De Y −63 à Y 70, dans tout l’Overworld"
+    },
+    {
+      "label": "Filons",
+      "value": "8 par tronçon, jusqu’à 12 blocs chacun"
+    },
+    {
+      "label": "Outil",
+      "value": "Pioche en fer au minimum"
+    },
+    {
+      "label": "Au four",
+      "value": "1 lingot (1 XP pour le minerai, 0,7 pour le zinc brut)"
+    },
+    {
+      "label": "Concassage",
+      "value": "Minerai : 1 + 75 % 1 concassé, 75 % pépite d’expérience"
+    },
+    {
+      "label": "Lavage",
+      "value": "1 concassé → 9 pépites de zinc + 25 % poudre à canon"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Bloc de zinc brut à l'établi",
+    "grid": [
+      [
+        "Zinc brut",
+        "Zinc brut",
+        "Zinc brut"
+      ],
+      [
+        "Zinc brut",
+        "Zinc brut",
+        "Zinc brut"
+      ],
+      [
+        "Zinc brut",
+        "Zinc brut",
+        "Zinc brut"
+      ]
+    ],
+    "items": [
+      [
+        "create:raw_zinc",
+        "create:raw_zinc",
+        "create:raw_zinc"
+      ],
+      [
+        "create:raw_zinc",
+        "create:raw_zinc",
+        "create:raw_zinc"
+      ],
+      [
+        "create:raw_zinc",
+        "create:raw_zinc",
+        "create:raw_zinc"
+      ]
+    ],
+    "result": "1 bloc de zinc brut",
+    "resultItem": "create:raw_zinc_block"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "trouver",
+      "title": "Où le trouver",
+      "image": "zinc_blocks_blocs.webp",
+      "alt": "Minerai de zinc, minerai de zinc des abîmes, bloc de zinc brut et bloc de zinc, puis zinc brut, concassé, pépite, lingot et pépite d’expérience",
+      "html": "<p>Le minerai de zinc apparaît dans tout l'Overworld, de <strong>Y −63 à Y 70</strong>, réparti uniformément : huit filons par tronçon de 16 × 16, de 12 blocs au plus. Dans la pierre, c'est le <strong>minerai de zinc</strong> ; dans l'ardoise des abîmes, sous Y 0, le <strong>minerai de zinc des abîmes</strong>, un peu plus dur. Il se reconnaît à ses taches gris-vert pâle. Les pierres de Create (asurine) en contiennent aussi un peu, une fois broyées.</p>"
+    },
+    {
+      "id": "miner",
+      "title": "Le miner",
+      "html": "<p>Il faut une <strong>pioche en fer</strong> au minimum, comme pour l'or : une pioche en pierre ne donne rien. Le minerai lâche un <strong>zinc brut</strong>, plus avec Fortune, et ne donne pas d'expérience au minage. Avec Toucher de soie, on récupère le bloc de minerai lui-même, utile pour le concasser plus tard. Neuf zincs bruts se compactent en un <strong>bloc de zinc brut</strong>, réversible à l'établi.</p>"
+    },
+    {
+      "id": "fondre",
+      "title": "Le fondre",
+      "html": "<p>Au four ou au haut fourneau, deux fois plus vite, le zinc brut donne un <strong>lingot de zinc</strong> et 0,7 point d'expérience, le minerai entier un lingot et 1 point. Neuf pépites font un lingot, neuf lingots un <strong>bloc de zinc</strong>, qui sert de base à une balise. C'est la voie la plus simple au début du jeu.</p>"
+    },
+    {
+      "id": "concasser",
+      "title": "Le concasser",
+      "html": "<p>Les <a href=\"/wiki/roues-de-concassage\">roues de concassage</a> changent un minerai de zinc en un zinc brut concassé, plus un second dans 75 % des cas, avec une chance sur huit de rendre de la pierre et trois sur quatre une <a href=\"/wiki/materiaux\">pépite d'expérience</a>. Le minerai des abîmes donne deux concassés, plus un dans 25 % des cas. Le zinc brut seul donne un concassé et une pépite d'expérience à 75 %. La <a href=\"/wiki/meule\">meule</a>, elle, ne prend pas les minerais.</p>"
+    },
+    {
+      "id": "laver",
+      "title": "Laver les concassés",
+      "image": "crushed_ores_concasses.webp",
+      "alt": "Fer, or, cuivre et zinc bruts, leurs concassés et leurs pépites",
+      "html": "<p>Un ventilateur qui souffle à travers de l'eau <strong>lave</strong> les objets : un zinc brut concassé donne <strong>neuf pépites de zinc</strong>, plus une poudre à canon une fois sur quatre. Neuf pépites font un lingot : on obtient donc un lingot par concassé, et souvent deux concassés par minerai. Cuit directement, un concassé donne aussi un lingot, avec peu d'expérience.</p>"
+    },
+    {
+      "id": "autres",
+      "title": "Les autres minerais concassés",
+      "html": "<p>Le même chemin vaut pour le fer, l'or et le cuivre. Lavés, le fer concassé donne neuf pépites de fer et de la redstone à 75 %, l'or neuf pépites d'or et du quartz à 50 %, le cuivre neuf pépites de cuivre et de l'argile à 50 %. Le minerai de cuivre broyé donne même cinq concassés d'un coup. Create prévoit aussi des concassés d'osmium, d'argent, d'étain, de plomb, d'aluminium, d'uranium, de nickel, de platine et de mercure : ils n'apparaissent que si un autre mod ajoute ces minerais.</p>"
+    },
+    {
+      "id": "usine",
+      "title": "Une petite usine",
+      "html": "<p>Des minerais jetés sur un <a href=\"/wiki/tapis-roulant\">tapis</a>, deux roues de concassage face à face, puis un second tapis qui passe devant un ventilateur soufflant à travers une source d'eau, et des <a href=\"/wiki/entonnoir\">entonnoirs</a> pour ranger les pépites. Pour le zinc, compter une ligne qui transforme chaque minerai en près de deux lingots, plus de l'expérience en bonus.</p>"
+    },
+    {
+      "id": "usages",
+      "title": "À quoi sert le zinc",
+      "html": "<p>Le zinc et le cuivre font le <a href=\"/wiki/materiaux\">laiton</a> au mixeur chauffé, le métal de toutes les machines avancées. Un lingot de zinc donne quatre <a href=\"/wiki/blocs-imitateurs\">blocs imitateurs</a>, des pépites de zinc peuvent remplacer le fer dans l'alliage d'andésite, et le zinc entre dans de nombreuses recettes de Create.</p>"
+    }
+  ],
+  "related": [
+    "roues-de-concassage",
+    "ventilateur-enchasse",
+    "materiaux",
+    "meule",
+    "mixeur-mecanique",
+    "blocs-imitateurs"
+  ],
+  "sources": [
+    "Génération : worldgen/configured_feature/zinc_ore.json (filon 12), placed_feature/zinc_ore.json (8 par tronçon, Y −63 à 70, uniforme), biome_modifier/zinc_ore.json (Overworld) ; disableWorldGen (CWorldGen)",
+    "Outil : tag minecraft:needs_iron_tool ; butin : loot_table/blocks/zinc_ore.json (ore_drops, Toucher de soie)",
+    "Four : smelting / blasting zinc_ingot_from_ore (1 XP), _from_raw_ore (0,7), _from_crushed (0,1)",
+    "Broyage : crushing/zinc_ore.json, deepslate_zinc_ore.json, raw_zinc.json, raw_zinc_block.json ; lavage : splashing/crushed_raw_*.json ; concassés de compatibilité : AllItems, CommonMetal",
+    "Images : blocs et objets du jeu (modèles de Create) rendus par notre moteur, joueur non dessiné"
+  ],
+  "en": {
+    "slugEn": "zinc-ore",
+    "name": "Zinc Ore and crushed ores",
+    "title": "Zinc Ore and crushed raw ores — Create guide",
+    "description": "Zinc in Create: where to find the ore, the tool you need, and how to double your ingots with Crushing Wheels and washing crushed raw ores.",
+    "intro": "<strong>Zinc Ore</strong> is the only ore Create adds, and zinc goes into brass, copycats and many machines. Mined by hand it gives <strong>Raw Zinc</strong>, to smelt in a furnace. Passed through <a href=\"/en/wiki/crushing-wheel\">Crushing Wheels</a> it becomes <strong>Crushed Raw Zinc</strong>, and washed with an <a href=\"/en/wiki/encased-fan\">Encased Fan</a> it yields more metal: the heart of every ore factory.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Processing"
+      },
+      {
+        "label": "Height",
+        "value": "From Y −63 to Y 70, across the Overworld"
+      },
+      {
+        "label": "Veins",
+        "value": "8 per chunk, up to 12 blocks each"
+      },
+      {
+        "label": "Tool",
+        "value": "Iron pickaxe at least"
+      },
+      {
+        "label": "Furnace",
+        "value": "1 ingot (1 XP for the ore, 0.7 for Raw Zinc)"
+      },
+      {
+        "label": "Crushing",
+        "value": "Ore: 1 + 75% 1 crushed, 75% Experience Nugget"
+      },
+      {
+        "label": "Washing",
+        "value": "1 crushed → 9 Zinc Nuggets + 25% gunpowder"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Block of Raw Zinc, crafting table",
+      "grid": [
+        [
+          "Raw Zinc",
+          "Raw Zinc",
+          "Raw Zinc"
+        ],
+        [
+          "Raw Zinc",
+          "Raw Zinc",
+          "Raw Zinc"
+        ],
+        [
+          "Raw Zinc",
+          "Raw Zinc",
+          "Raw Zinc"
+        ]
+      ],
+      "result": "1 Block of Raw Zinc"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "trouver",
+        "title": "Where to find it",
+        "alt": "Zinc Ore, Deepslate Zinc Ore, Block of Raw Zinc and Block of Zinc, then raw zinc, crushed, nugget, ingot and experience nugget",
+        "html": "<p>Zinc ore spawns all over the Overworld, from <strong>Y −63 to Y 70</strong>, evenly spread: eight veins per 16 × 16 chunk, up to 12 blocks each. In stone it is <strong>Zinc Ore</strong>; in deepslate, below Y 0, <strong>Deepslate Zinc Ore</strong>, a little harder. You can tell it by its pale grey-green spots. Create's stones (asurine) also hold a little, once crushed.</p>"
+      },
+      {
+        "id": "miner",
+        "title": "Mining it",
+        "html": "<p>You need an <strong>iron pickaxe</strong> at least, as for gold: a stone pickaxe gets nothing. The ore drops one <strong>Raw Zinc</strong>, more with Fortune, and gives no experience when mined. With Silk Touch you get the ore block itself, useful to crush later. Nine Raw Zinc compact into a <strong>Block of Raw Zinc</strong>, reversible at the crafting table.</p>"
+      },
+      {
+        "id": "fondre",
+        "title": "Smelting it",
+        "html": "<p>In a furnace, or twice as fast in a blast furnace, Raw Zinc gives a <strong>Zinc Ingot</strong> and 0.7 experience, the whole ore an ingot and 1 point. Nine nuggets make an ingot, nine ingots a <strong>Block of Zinc</strong>, which works as a beacon base. It is the simplest route early in the game.</p>"
+      },
+      {
+        "id": "concasser",
+        "title": "Crushing it",
+        "html": "<p><a href=\"/en/wiki/crushing-wheel\">Crushing Wheels</a> turn one Zinc Ore into one Crushed Raw Zinc, plus a second one 75% of the time, with a one-in-eight chance of giving back cobblestone and a three-in-four chance of an <a href=\"/en/wiki/create-materials\">Experience Nugget</a>. Deepslate ore gives two crushed, plus one 25% of the time. Raw Zinc alone gives one crushed and an Experience Nugget 75% of the time. The <a href=\"/en/wiki/millstone\">Millstone</a> does not take ores.</p>"
+      },
+      {
+        "id": "laver",
+        "title": "Washing the crushed ore",
+        "alt": "Raw iron, gold, copper and zinc, their crushed forms and their nuggets",
+        "html": "<p>A fan blowing through water <strong>washes</strong> items: one Crushed Raw Zinc gives <strong>nine Zinc Nuggets</strong>, plus a Gunpowder one time in four. Nine nuggets make an ingot: so you get one ingot per crushed ore, and often two crushed per ore. Smelted directly, a crushed ore also gives an ingot, with little experience.</p>"
+      },
+      {
+        "id": "autres",
+        "title": "Other crushed ores",
+        "html": "<p>The same route works for iron, gold and copper. Washed, crushed iron gives nine Iron Nuggets and redstone 75% of the time, gold nine Gold Nuggets and quartz 50%, copper nine Copper Nuggets and clay 50%. Crushed copper ore even gives five crushed at once. Create also has crushed osmium, silver, tin, lead, aluminum, uranium, nickel, platinum and quicksilver: they only show up if another mod adds those ores.</p>"
+      },
+      {
+        "id": "usine",
+        "title": "A small factory",
+        "html": "<p>Ores dropped on a <a href=\"/en/wiki/conveyor-belt\">belt</a>, two facing Crushing Wheels, then a second belt running past a fan blowing through a water source, and <a href=\"/en/wiki/funnel\">funnels</a> to store the nuggets. For zinc, expect a line that turns each ore into almost two ingots, with experience as a bonus.</p>"
+      },
+      {
+        "id": "usages",
+        "title": "What zinc is for",
+        "html": "<p>Zinc and copper make <a href=\"/en/wiki/create-materials\">brass</a> in a heated mixer, the metal of every advanced machine. One Zinc Ingot gives four <a href=\"/en/wiki/copycat-blocks\">copycat blocks</a>, zinc nuggets can replace iron in Andesite Alloy, and zinc goes into many other Create recipes as well.</p>"
+      }
+    ],
+    "sources": [
+      "Generation: worldgen/configured_feature/zinc_ore.json (vein 12), placed_feature/zinc_ore.json (8 per chunk, Y −63 to 70, uniform), biome_modifier/zinc_ore.json (Overworld); disableWorldGen (CWorldGen)",
+      "Tool: minecraft:needs_iron_tool tag; drops: loot_table/blocks/zinc_ore.json (ore_drops, Silk Touch)",
+      "Furnace: smelting / blasting zinc_ingot_from_ore (1 XP), _from_raw_ore (0.7), _from_crushed (0.1)",
+      "Crushing: crushing/zinc_ore.json, deepslate_zinc_ore.json, raw_zinc.json, raw_zinc_block.json; washing: splashing/crushed_raw_*.json; compatibility crushed ores: AllItems, CommonMetal",
+      "Images: the game's blocks and items (Create's models) rendered by our engine, player not drawn"
+    ]
+  }
+}

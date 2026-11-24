@@ -1,0 +1,328 @@
+{
+  "slug": "connected-embrayages",
+  "name": "Embrayages, frein et goupille de cisaillement",
+  "blockId": "create_connected:inverted_clutch",
+  "category": "connected",
+  "title": "Embrayages et frein — Create Connected, guide",
+  "description": "Embrayage inversé, inverseur inversé, embrayages centrifuge, à roue libre et de surcharge, frein et goupille de cisaillement de Create Connected.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Connected 1.3.3 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Create a deux blocs pour contrôler une ligne : l'<a href=\"/wiki/inverseur-de-rotation\">embrayage et l'inverseur de rotation</a>. Create Connected en ajoute sept. Deux font l'inverse des originaux, trois décident seuls d'après la vitesse, le sens ou la charge du réseau, et deux servent à arrêter : le <strong>frein</strong>, qu'on commande, et la <strong>goupille de cisaillement</strong>, qui casse. Aucun ne consomme de stress tant qu'il laisse passer la rotation.",
+  "facts": [
+    {
+      "label": "Impact de stress",
+      "value": "aucun (CStress.setNoImpact), sauf le frein alimenté"
+    },
+    {
+      "label": "Frein alimenté",
+      "value": "16 384 su par tr/min (réglage serveur brakeActiveStress)"
+    },
+    {
+      "label": "Embrayage centrifuge",
+      "value": "seuil réglable de −256 à 256 tr/min, 64 par défaut"
+    },
+    {
+      "label": "Embrayage de surcharge",
+      "value": "délai réglable de 1 tick à 60 min"
+    },
+    {
+      "label": "Goupille de cisaillement",
+      "value": "casse 0 à 4 ticks après la surcharge, sans rien laisser"
+    },
+    {
+      "label": "Version",
+      "value": "Create Connected 1.3.3 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Conversion à l’établi (sans disposition)",
+    "grid": [
+      [
+        "Embrayage",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "items": [
+      [
+        "create:clutch",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 embrayage inversé",
+    "resultItem": "create_connected:inverted_clutch"
+  },
+  "videos": [
+    {
+      "id": "conn_inverted_clutch",
+      "name": "L'embrayage inversé",
+      "description": "Un embrayage inversé entre deux rotors : la ligne reste à l'arrêt, puis tourne quand un levier l'alimente.",
+      "duration": "PT8S",
+      "chapters": [
+        {
+          "t": 2.2,
+          "section": "embrayage-inverse"
+        },
+        {
+          "t": 4.8,
+          "section": "embrayage-inverse-alimente"
+        }
+      ]
+    },
+    {
+      "id": "conn_inverted_gearshift",
+      "name": "L'inverseur de rotation inversé",
+      "description": "Un inverseur de rotation inversé sur une ligne droite : la sortie tourne à l'envers, puis dans le même sens que l'entrée quand la redstone l'alimente.",
+      "duration": "PT14S",
+      "chapters": [
+        {
+          "t": 2.2,
+          "section": "inverseur-inverse"
+        },
+        {
+          "t": 5.2,
+          "section": "inverseur-inverse-alimente"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "embrayage-inverse",
+      "title": "Embrayage inversé",
+      "image": "conn_inverted_clutch_coupe.webp",
+      "alt": "Un embrayage inversé sans signal : le rotor de sortie reste immobile",
+      "video": "conn_inverted_clutch",
+      "html": "<p>L'<strong>embrayage inversé</strong> (Inverted Clutch) est l'embrayage de Create pris à rebours. Sans signal, il coupe : l'entrée tourne, la sortie reste immobile. On l'obtient en posant un embrayage seul dans l'établi (recette ci-contre), et la même conversion rend l'embrayage d'origine.</p>"
+    },
+    {
+      "id": "embrayage-inverse-alimente",
+      "title": "Alimenté, il transmet",
+      "image": "conn_inverted_clutch_alimente.webp",
+      "alt": "Le même embrayage inversé alimenté par un levier : les deux rotors tournent",
+      "video": "conn_inverted_clutch",
+      "html": "<p>Dès que la redstone l'alimente, il accouple les deux côtés. C'est le bon choix pour une machine qui doit rester à l'arrêt par défaut : un bouton, un capteur ou une <a href=\"/wiki/liaison-de-redstone\">liaison de redstone</a> la met en route le temps du signal, et la coupure revient toute seule.</p>"
+    },
+    {
+      "id": "inverseur-inverse",
+      "title": "Inverseur de rotation inversé",
+      "image": "conn_inverted_gearshift_inverse.webp",
+      "alt": "Un inverseur de rotation inversé sans signal : la sortie tourne à l’envers",
+      "video": "conn_inverted_gearshift",
+      "html": "<p>L'<strong>inverseur de rotation inversé</strong> (Inverted Gearshift) suit la même idée. Sans signal, il renverse le sens entre son entrée et sa sortie, qui sont alignées. Il se fabrique lui aussi par conversion d'un <a href=\"/wiki/inverseur-de-rotation\">inverseur de rotation</a> de Create, dans un sens comme dans l'autre.</p>"
+    },
+    {
+      "id": "inverseur-inverse-alimente",
+      "title": "Alimenté, il laisse le sens",
+      "image": "conn_inverted_gearshift_alimente.webp",
+      "alt": "L’inverseur inversé alimenté : la sortie tourne comme l’entrée",
+      "video": "conn_inverted_gearshift",
+      "html": "<p>Sous redstone, la sortie reprend le sens de l'entrée. Pratique quand le sens « normal » d'une machine est l'inverse de ce que donne ta source : tu poses l'inverseur inversé et c'est le signal qui sert d'exception, pas l'état de repos.</p>"
+    },
+    {
+      "id": "centrifuge",
+      "title": "Embrayage centrifuge",
+      "image": "conn_gal_embrayages_centrifuge.webp",
+      "alt": "L'embrayage centrifuge posé entre deux rotors",
+      "html": "<p>L'<strong>embrayage centrifuge</strong> (Centrifugal Clutch : boitier d'andésite, rotor, plaque de fer et compteur de vitesse) n'accouple que si l'entrée atteint un seuil, 64 tr/min par défaut, réglable jusqu'à 256. Une valeur négative inverse la règle : il transmet seulement en dessous du seuil. Idéal pour qu'une machine ne démarre pas à basse vitesse, ou pour protéger une pièce trop rapide.</p>"
+    },
+    {
+      "id": "roue-libre",
+      "title": "Embrayage à roue libre",
+      "image": "conn_gal_embrayages_roue-libre.webp",
+      "alt": "L'embrayage à roue libre posé entre deux rotors",
+      "html": "<p>L'<strong>embrayage à roue libre</strong> (Freewheel Clutch : boitier d'andésite, rotor, plaque de fer et roue dentée) transmet dans un seul sens, choisi sur son panneau : horaire ou antihoraire. Si l'entrée tourne dans l'autre sens, il décroche. Avec deux sources qui tournent en sens opposés sur la même sortie, chacune ne passe que quand c'est son tour.</p>"
+    },
+    {
+      "id": "surcharge",
+      "title": "Embrayage de surcharge",
+      "image": "conn_gal_embrayages_surcharge.webp",
+      "alt": "L'embrayage de surcharge posé entre deux rotors",
+      "html": "<p>L'<strong>embrayage de surcharge</strong> (Overstress Clutch : boitier d'andésite, rotor, plaque de fer et tube électronique) décroche quand son réseau est en surcharge, après un délai réglable de 1 tick à 60 minutes. Il reste ouvert : répare la cause, puis réarme-le d'un clic droit à la <a href=\"/wiki/cle\">clé</a> ou d'une impulsion de redstone. Tant qu'il est alimenté, il ne se déclenche pas.</p>"
+    },
+    {
+      "id": "frein",
+      "title": "Frein",
+      "image": "conn_gal_embrayages_frein.webp",
+      "alt": "Le frein posé entre deux rotors",
+      "html": "<p>Le <strong>frein</strong> (Brake : boitier d'andésite, rotor, poudre de redstone et obsidienne) laisse passer la rotation sans rien coûter. Alimenté, il réclame 16 384 su par tr/min, soit plus de 260 000 su à 16 tr/min : le réseau entre en surcharge et tout s'arrête, en fumant. C'est un arrêt d'urgence simple pour une ligne entière.</p>"
+    },
+    {
+      "id": "goupille",
+      "title": "Goupille de cisaillement",
+      "image": "conn_gal_embrayages_goupille.webp",
+      "alt": "La goupille de cisaillement entre deux rotors",
+      "html": "<p>La <strong>goupille de cisaillement</strong> (Shear Pin) se pose comme un <a href=\"/wiki/rotor\">rotor</a>. Au premier passage en surcharge, elle casse en quelques ticks et ne laisse rien : la partie en aval s'arrête, la source repart. Elle ne se fabrique pas à l'établi : passe un rotor sous une <a href=\"/wiki/scie-mecanique\">scie mécanique</a>. Garde-en quelques-unes d'avance.</p>"
+    }
+  ],
+  "related": [
+    "create-connected",
+    "connected-transmissions",
+    "connected-pont-cinetique",
+    "inverseur-de-rotation",
+    "liaison-de-redstone",
+    "stressometre-compteur-de-vitesse",
+    "scie-mecanique"
+  ],
+  "sources": [
+    "Create Connected 1.3.3 (create_connected-1.3.3-mc1.21.1.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/hlysine/create_connected au tag 1.3.3-mc1.21.1, recettes du dossier data du jar, scènes Ponder rejouées par notre moteur.",
+    "Mod de Lysine (hlysine), sous licence GNU AGPL v3 : modèles et textures de ses auteurs, rendus à partir du jar ; aucun texte du mod n'est recopié.",
+    "Embrayage et inverseur inversés : content/invertedclutch/InvertedClutchBlockEntity.java, content/invertedgearshift/InvertedGearshiftBlockEntity.java.",
+    "Embrayage centrifuge : content/centrifugalclutch/CentrifugalClutchBlockEntity.java (DEFAULT_SPEED 64, MAX_SPEED 256) ; à roue libre : content/freewheelclutch/FreewheelClutchBlockEntity.java ; de surcharge : content/overstressclutch/OverstressClutchBlockEntity.java (délai 1 à 72 000 ticks, réarmement).",
+    "Frein : config/CServer.java (brakeActiveStress = 16 384), content/brake/BrakeBlockEntity.java ; goupille : content/shearpin/ShearPinBlockEntity.java (RANDOM_DELAY 5), ShearPinBlock.java (destroyBlock sans butin).",
+    "Recettes : data/create_connected/recipe/crafting/kinetics/ (inverted_*_from_conversion, centrifugal_clutch, freewheel_clutch, overstress_clutch, brake) ; data/create/recipe/cutting/shaft.json (goupille)."
+  ],
+  "en": {
+    "slugEn": "connected-clutches-and-brakes",
+    "name": "Clutches, Brake and Shear Pin",
+    "title": "Clutches and Brake — Create Connected guide",
+    "description": "Inverted Clutch, Inverted Gearshift, Centrifugal, Freewheel and Overstress Clutches, Brake and Shear Pin from the Create Connected addon.",
+    "intro": "Create has two blocks to control a line: the <a href=\"/en/wiki/gearshift\">Clutch and Gearshift</a>. Create Connected adds seven. Two do the opposite of the originals, three decide by themselves based on the speed, direction or load of the network, and two are for stopping: the <strong>Brake</strong>, which you command, and the <strong>Shear Pin</strong>, which snaps. None of them uses stress while it lets rotation through.",
+    "facts": [
+      {
+        "label": "Stress impact",
+        "value": "none (CStress.setNoImpact), except the powered Brake"
+      },
+      {
+        "label": "Powered Brake",
+        "value": "16,384 SU per RPM (server setting brakeActiveStress)"
+      },
+      {
+        "label": "Centrifugal Clutch",
+        "value": "threshold from −256 to 256 RPM, 64 by default"
+      },
+      {
+        "label": "Overstress Clutch",
+        "value": "delay from 1 tick to 60 min"
+      },
+      {
+        "label": "Shear Pin",
+        "value": "snaps 0 to 4 ticks after overstress, drops nothing"
+      },
+      {
+        "label": "Version",
+        "value": "Create Connected 1.3.3 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Shapeless crafting recipe",
+      "grid": [
+        [
+          "Clutch",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Inverted Clutch"
+    },
+    "videos": [
+      {
+        "id": "conn_inverted_clutch",
+        "name": "The Inverted Clutch",
+        "description": "An Inverted Clutch between two shafts: the line stays still, then turns once a lever powers it."
+      },
+      {
+        "id": "conn_inverted_gearshift",
+        "name": "The Inverted Gearshift",
+        "description": "An Inverted Gearshift on a straight line: the output runs backwards, then matches the input once redstone powers it."
+      }
+    ],
+    "sections": [
+      {
+        "id": "embrayage-inverse",
+        "title": "Inverted Clutch",
+        "alt": "An Inverted Clutch with no signal: the output shaft stays still",
+        "html": "<p>The <strong>Inverted Clutch</strong> is Create's Clutch the other way round. Without a signal it disconnects: the input turns, the output stays still. You get it by putting a Clutch alone in the crafting grid (recipe shown here), and the same conversion gives the original back.</p>"
+      },
+      {
+        "id": "embrayage-inverse-alimente",
+        "title": "Powered, it connects",
+        "alt": "The same Inverted Clutch powered by a lever: both shafts turn",
+        "html": "<p>As soon as it gets a redstone signal it couples both sides. It is the right pick for a machine that should stay off by default: a button, a sensor or a <a href=\"/en/wiki/redstone-link\">Redstone Link</a> starts it for as long as the signal lasts, and it cuts out again on its own.</p>"
+      },
+      {
+        "id": "inverseur-inverse",
+        "title": "Inverted Gearshift",
+        "alt": "An Inverted Gearshift with no signal: the output runs backwards",
+        "html": "<p>The <strong>Inverted Gearshift</strong> follows the same idea. Without a signal it flips the direction between its input and output, which sit in line. It is also made by converting a Create <a href=\"/en/wiki/gearshift\">Gearshift</a>, either way.</p>"
+      },
+      {
+        "id": "inverseur-inverse-alimente",
+        "title": "Powered, it keeps the direction",
+        "alt": "The powered Inverted Gearshift: the output turns like the input",
+        "html": "<p>Under redstone, the output follows the input's direction. Handy when the \"normal\" direction of a machine is the opposite of what your source gives: place the Inverted Gearshift and the signal becomes the exception, not the resting state.</p>"
+      },
+      {
+        "id": "centrifuge",
+        "title": "Centrifugal Clutch",
+        "alt": "The Centrifugal Clutch placed between two shafts",
+        "html": "<p>The <strong>Centrifugal Clutch</strong> (Andesite Casing, Shaft, Iron Sheet and Speedometer) only couples when the input reaches a threshold, 64 RPM by default, adjustable up to 256. A negative value flips the rule: it then connects only below the threshold. Ideal to keep a machine from starting at low speed, or to protect a part that should not spin too fast.</p>"
+      },
+      {
+        "id": "roue-libre",
+        "title": "Freewheel Clutch",
+        "alt": "The Freewheel Clutch placed between two shafts",
+        "html": "<p>The <strong>Freewheel Clutch</strong> (Andesite Casing, Shaft, Iron Sheet and Cogwheel) passes rotation in one direction only, picked on its panel: clockwise or counter-clockwise. If the input turns the other way, it lets go. With two sources spinning in opposite directions on the same output, each one gets through only when it is its turn.</p>"
+      },
+      {
+        "id": "surcharge",
+        "title": "Overstress Clutch",
+        "alt": "The Overstress Clutch placed between two shafts",
+        "html": "<p>The <strong>Overstress Clutch</strong> (Andesite Casing, Shaft, Iron Sheet and Electron Tube) uncouples when its network overstresses, after a delay you set from 1 tick to 60 minutes. It stays open: fix the cause, then reset it with a right-click of the <a href=\"/en/wiki/wrench\">Wrench</a> or a redstone pulse. While it is powered, it never trips.</p>"
+      },
+      {
+        "id": "frein",
+        "title": "Brake",
+        "alt": "The Brake placed between two shafts",
+        "html": "<p>The <strong>Brake</strong> (Andesite Casing, Shaft, Redstone Dust and Obsidian) lets rotation through for free. Powered, it demands 16,384 SU per RPM, more than 260,000 SU at 16 RPM: the network overstresses and everything stops, in a puff of smoke. It is a simple emergency stop for a whole line.</p>"
+      },
+      {
+        "id": "goupille",
+        "title": "Shear Pin",
+        "alt": "The Shear Pin between two shafts",
+        "html": "<p>The <strong>Shear Pin</strong> is placed like a <a href=\"/en/wiki/shaft\">Shaft</a>. The first time the network overstresses, it breaks within a few ticks and leaves nothing behind: everything downstream stops and the source runs again. It is not made at the crafting table: feed a Shaft to a <a href=\"/en/wiki/mechanical-saw\">Mechanical Saw</a>. Keep a few spares around.</p>"
+      }
+    ],
+    "sources": [
+      "Create Connected 1.3.3 (create_connected-1.3.3-mc1.21.1.jar from the next Create France modpack release): code from the public repository github.com/hlysine/create_connected at tag 1.3.3-mc1.21.1, recipes from the jar's data folder, Ponder scenes replayed by our engine.",
+      "Mod by Lysine (hlysine), GNU AGPL v3 licence: models and textures by its authors, rendered from the jar; no text from the mod is copied.",
+      "Inverted Clutch and Gearshift: content/invertedclutch/InvertedClutchBlockEntity.java, content/invertedgearshift/InvertedGearshiftBlockEntity.java.",
+      "Centrifugal Clutch: content/centrifugalclutch/CentrifugalClutchBlockEntity.java (DEFAULT_SPEED 64, MAX_SPEED 256); Freewheel: content/freewheelclutch/FreewheelClutchBlockEntity.java; Overstress: content/overstressclutch/OverstressClutchBlockEntity.java (delay 1 to 72,000 ticks, reset).",
+      "Brake: config/CServer.java (brakeActiveStress = 16,384), content/brake/BrakeBlockEntity.java; Shear Pin: content/shearpin/ShearPinBlockEntity.java (RANDOM_DELAY 5), ShearPinBlock.java (destroyBlock without drops).",
+      "Recipes: data/create_connected/recipe/crafting/kinetics/ (inverted_*_from_conversion, centrifugal_clutch, freewheel_clutch, overstress_clutch, brake); data/create/recipe/cutting/shaft.json (Shear Pin)."
+    ]
+  }
+}

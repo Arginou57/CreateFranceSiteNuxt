@@ -6,7 +6,7 @@
   "title": "Liaison de redstone — Create : guide en français",
   "description": "La liaison de redstone de Create : envoyer un signal sans fil jusqu'à 256 blocs, émetteur ou récepteur, fréquences à deux objets et télécommande.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "La <strong>liaison de redstone</strong> fait voyager un signal de redstone <strong>sans aucun fil</strong>. Une liaison qui reçoit du courant le transmet, toutes celles qui écoutent la même fréquence le rendent, jusqu'à 256 blocs plus loin. Avec la <strong>télécommande</strong>, le joueur devient lui-même l'émetteur : idéal pour piloter une porte, une usine ou un ascenseur à distance.",
@@ -145,7 +145,7 @@
     {
       "id": "telecommande",
       "title": "La télécommande",
-      "html": "<p>La <strong>télécommande</strong> se fabrique avec une liaison entourée de boutons en bois. Elle a six touches, chacune réglée sur sa propre paire d'objets. Clic droit pour l'activer : tes touches de déplacement envoient alors un signal aux récepteurs de ces fréquences tant que tu les tiens. Posée sur un pupitre, elle sert à n'importe quel joueur qui s'y installe.</p>"
+      "html": "<p>La <strong>télécommande</strong> se fabrique avec une liaison entourée de boutons en bois. Elle a six touches, chacune réglée sur sa propre paire d'objets. Clic droit pour l'activer : tes touches de déplacement envoient alors un signal aux récepteurs de ces fréquences tant que tu les tiens. Posée sur un pupitre, elle sert à n'importe quel joueur qui s'y installe. Tout le détail est sur la page <a href=\"/wiki/telecommande\">télécommande et pupitre</a>.</p>"
     },
     {
       "id": "montages",
@@ -175,7 +175,8 @@
     "verrou-alimente",
     "inverseur-de-rotation",
     "poulie-d-ascenseur",
-    "cle"
+    "cle",
+    "telecommande"
   ],
   "sources": [
     "Recettes : crafting/logistics/redstone_link.json (2 liaisons), crafting/appliances/linked_controller.json",
@@ -299,7 +300,7 @@
       {
         "id": "telecommande",
         "title": "The Linked Controller",
-        "html": "<p>The <strong>Linked Controller</strong> is crafted from a link surrounded by wooden buttons. It has six buttons, each tuned to its own item pair. Right-click to switch it on: your movement keys then send a signal to the receivers on those frequencies for as long as you hold them. Placed on a lectern, it works for any player who steps up to it.</p>"
+        "html": "<p>The <strong>Linked Controller</strong> is crafted from a link surrounded by wooden buttons. It has six buttons, each tuned to its own item pair. Right-click to switch it on: your movement keys then send a signal to the receivers on those frequencies for as long as you hold them. Placed on a lectern, it works for any player who steps up to it. All the details are on the <a href=\"/en/wiki/linked-controller\">Linked Controller and Lectern</a> page.</p>"
       },
       {
         "id": "montages",

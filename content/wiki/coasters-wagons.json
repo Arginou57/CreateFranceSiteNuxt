@@ -1,0 +1,299 @@
+{
+  "slug": "coasters-wagons",
+  "name": "Wagons, rivets et ballons",
+  "blockId": "simulatedcoasters:coaster_cart",
+  "category": "coasters",
+  "title": "Wagons, rivets et ballons — Coasters Simulated, guide",
+  "description": "Les wagons de Create: Coasters Simulated : pose sur la voie, attelages, cisailles, chaîne, clé, décor ; rivet et ballon rouge.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create: Coasters Simulated 0.1.6",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>wagon de montagnes russes</strong> (Coaster Cart) est un engin de Sable qui s'accroche à la voie. On en attelle plusieurs pour former un train, on construit dessus des sièges et du décor, et la gravité fait le reste. Deux accessoires complètent le mod : le <strong>rivet</strong> et le <strong>ballon rouge</strong>.",
+  "facts": [
+    {
+      "label": "Pose",
+      "value": "sur un rail ou un point d’ancrage (accroche à 2,5 blocs)"
+    },
+    {
+      "label": "Attelage",
+      "value": "1,5 à 7 blocs, 2 par wagon"
+    },
+    {
+      "label": "Détacher",
+      "value": "cisailles (1 point d’usure)"
+    },
+    {
+      "label": "Rattacher",
+      "value": "une chaîne entre deux wagons"
+    },
+    {
+      "label": "Longueur",
+      "value": "clé : +0,5 ; accroupi : −0,5 (1,5 à 6)"
+    },
+    {
+      "label": "Décor",
+      "value": "tout bloc posé sur le wagon"
+    },
+    {
+      "label": "Frein",
+      "value": "aucun"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Dalle en chêne",
+        null
+      ],
+      [
+        "Algue séchée",
+        "Bloc de fer industriel",
+        "Algue séchée"
+      ],
+      [
+        "Algue séchée",
+        "Rotor",
+        "Algue séchée"
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "minecraft:oak_slab",
+        null
+      ],
+      [
+        "minecraft:dried_kelp",
+        "create:industrial_iron_block",
+        "minecraft:dried_kelp"
+      ],
+      [
+        "minecraft:dried_kelp",
+        "create:shaft",
+        "minecraft:dried_kelp"
+      ]
+    ],
+    "result": "1 wagon de montagnes russes",
+    "resultItem": "simulatedcoasters:coaster_cart"
+  },
+  "videos": [
+    {
+      "id": "coast_cart",
+      "name": "Poser et atteler des wagons",
+      "description": "Un wagon posé sur la voie, un second attelé derrière, l'attelage coupé aux cisailles puis refait à la chaîne, et enfin un petit train décoré.",
+      "duration": "PT26S",
+      "chapters": [
+        {
+          "t": 1.1,
+          "section": "poser"
+        },
+        {
+          "t": 5.2,
+          "section": "atteler"
+        },
+        {
+          "t": 11.8,
+          "section": "detacher"
+        },
+        {
+          "t": 22.2,
+          "section": "decor"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "poser",
+      "title": "Poser un wagon",
+      "image": "coast_cart_wagon.webp",
+      "alt": "Un wagon gris au dessus vert posé au milieu d'une voie droite",
+      "video": "coast_cart",
+      "html": "<p>Clic droit avec un wagon sur un rail ou un point d'ancrage : un nouveau wagon apparaît et s'accroche à la voie la plus proche, à 2,5 blocs au plus. Le wagon est un engin physique de Sable : posé sur une pente, il part tout seul. Ses roues prennent le rail par-dessus et par-dessous. Utilisé sur un engin déjà assemblé, l'objet le transforme en wagon.</p>"
+    },
+    {
+      "id": "atteler",
+      "title": "Atteler deux wagons",
+      "image": "coast_cart_attelage.webp",
+      "alt": "Deux wagons reliés par un attelage métallique",
+      "html": "<p>Cliquez un wagon déjà posé avec un autre wagon en main, puis posez le second : les deux sont attelés. L'attelage mesure entre 1,5 et 7 blocs d'axe en axe ; à la pose il se règle par pas de 0,5 jusqu'à 6. Chaque wagon accepte deux attelages, un devant et un derrière, sans boucle : on forme ainsi un train complet.</p>"
+    },
+    {
+      "id": "detacher",
+      "title": "Détacher, rattacher, régler",
+      "image": "coast_cart_cisailles.webp",
+      "alt": "Les deux wagons séparés après le passage des cisailles",
+      "html": "<p>Des <strong>cisailles</strong> coupent tous les attelages du wagon visé, pour un point d'usure. Une <strong>chaîne</strong>, non consommée, en refait un : cliquez un wagon puis l'autre. La <a href=\"/wiki/cle\">clé</a> allonge l'attelage d'un demi-bloc ; accroupi, elle le raccourcit, entre 1,5 et 6 blocs. Des wagons trop serrés se touchent dans les virages : laissez de la marge.</p>"
+    },
+    {
+      "id": "decor",
+      "title": "Construire sur les wagons",
+      "image": "coast_cart_decor.webp",
+      "alt": "Trois wagons attelés, chacun avec un siège rouge et des plaques nominatives",
+      "html": "<p>Comme le wagon est un engin de Sable, tout bloc posé dessus en fait partie : sièges de Create, plaques nominatives de Simulated, carrosserie. Le poids compte : un train lourd prend plus d'élan dans les descentes. Le mod n'a ni frein ni booster : seuls la <a href=\"/wiki/coasters-rails\">chaîne de levage</a> et la pente règlent la vitesse.</p>"
+    },
+    {
+      "id": "gare",
+      "title": "Une gare simple",
+      "html": "<p>Pour faire monter les joueurs, arrêtez le train dans une cuvette : une petite montée à la sortie de la gare et une autre à l'entrée le ralentissent naturellement. Une chaîne de levage juste après la gare relance le train, et la pente fait le reste. Placez les sièges face à l'avant et gardez un bloc de marge entre deux wagons.</p>"
+    },
+    {
+      "id": "recettes",
+      "title": "Fabrication",
+      "html": "<p>Le wagon se fabrique avec une dalle de bois en haut, quatre algues séchées sur les côtés, un bloc de fer industriel au centre et un rotor en bas. Le rivet est une plaque de fer posée sur une pépite de fer. Le ballon rouge empile de la laine rouge, une ficelle et une pépite de fer.</p>"
+    },
+    {
+      "id": "monter",
+      "title": "Monter à bord",
+      "html": "<p>Les joueurs s'assoient sur des sièges de Create posés sur les wagons : un clic droit pour s'asseoir, accroupi pour descendre. Le train peut partir avec ou sans passagers.</p>"
+    },
+    {
+      "id": "rivet",
+      "title": "Le rivet et le ballon rouge",
+      "image": "coast_gal_extras_rivet-ballon.webp",
+      "alt": "Un rivet, un wagon et un ballon rouge posés côte à côte",
+      "html": "<p>Le <strong>rivet</strong> (Rivet) se pose sur la face d'un bloc et devient son propre petit engin : ce qu'on y attache peut être de biais, décalé d'un demi-bloc (Ctrl pour placer librement) ou tourné par pas de 15° avec Alt. Parfait pour des panneaux et du décor de travers. Le <strong>ballon rouge</strong> (Red Balloon) se pose sur un bloc d'engin : il flotte 2,5 blocs au-dessus au bout d'une ficelle et allège l'engin d'au plus 48 unités de masse tant qu'il reste près du sol. Une flèche le fait éclater, et ses voisins avec.</p>"
+    }
+  ],
+  "related": [
+    "create-coasters-simulated",
+    "coasters-rails",
+    "cle",
+    "assembleur-physique",
+    "create-aeronautics",
+    "aeronautics-cordes-et-amarrage",
+    "colle-extra-forte",
+    "controles-de-train"
+  ],
+  "sources": [
+    "Code et données : Create: Coasters Simulated 0.1.6 (jar de l’instance de test du modpack, licence MIT, © SilverGold) ; code lu dans la version 0.1.5 décompilée (Vineflower, fork public sjzeero) et comparé à la 0.1.6 avec javap",
+    "Wagons : CoasterCartItem.java, CoasterCartTrackSnap.java, CoasterCartLinkPlacement.java, CoasterCartLinkDistanceEdit.java",
+    "Rivet : RivetPlacement.java ; ballon : BalloonTetherController.java, data/simulatedcoasters/physics_block_properties",
+    "Recettes : data/simulatedcoasters/recipe/coaster_cart.json, rivet.json, red_balloon.json",
+    "Vidéos : scènes Ponder de Create: Coasters Simulated (coaster_track/ponder_cart) rejouées par notre moteur ; rails dessinés d’après AnchorPeerTrackCurveBerRender et BezierConnection de Create ; modèles et textures du mod (licence MIT, © SilverGold)",
+    "Images : blocs du mod posés sur la plaque et rendus par notre moteur (licence MIT, © SilverGold)"
+  ],
+  "en": {
+    "slugEn": "coasters-carts",
+    "name": "Carts, rivets and balloons",
+    "title": "Carts, rivets and balloons — Coasters Simulated",
+    "description": "Create: Coasters Simulated carts: placing them on track, couplings, shears, chains, wrench and decorations, plus the Rivet and the Red Balloon.",
+    "intro": "The <strong>Coaster Cart</strong> is a Sable machine that clings to the track. Couple several to form a train, build seats and decorations on them, and gravity does the rest. Two accessories round off the mod: the <strong>Rivet</strong> and the <strong>Red Balloon</strong>.",
+    "facts": [
+      {
+        "label": "Placing",
+        "value": "on a track or an anchorpoint (snaps within 2.5 blocks)"
+      },
+      {
+        "label": "Coupling",
+        "value": "1.5 to 7 blocks, 2 per cart"
+      },
+      {
+        "label": "Unlinking",
+        "value": "shears (1 durability)"
+      },
+      {
+        "label": "Relinking",
+        "value": "a chain between two carts"
+      },
+      {
+        "label": "Length",
+        "value": "wrench: +0.5; sneaking: −0.5 (1.5 to 6)"
+      },
+      {
+        "label": "Decoration",
+        "value": "any block placed on the cart"
+      },
+      {
+        "label": "Brake",
+        "value": "none"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Oak Slab",
+          null
+        ],
+        [
+          "Dried Kelp",
+          "Block of Industrial Iron",
+          "Dried Kelp"
+        ],
+        [
+          "Dried Kelp",
+          "Shaft",
+          "Dried Kelp"
+        ]
+      ],
+      "result": "1 Coaster Cart"
+    },
+    "videos": [
+      {
+        "id": "coast_cart",
+        "name": "Placing and coupling carts",
+        "description": "A cart placed on the track, a second coupled behind, the coupling cut with shears then rebuilt with a chain, and finally a small decorated train."
+      }
+    ],
+    "sections": [
+      {
+        "id": "poser",
+        "title": "Placing a cart",
+        "alt": "A grey cart with a green top on a straight track, halfway between the anchors",
+        "html": "<p>Right-click a track or an anchorpoint with a cart: a new cart appears and snaps to the nearest track, within 2.5 blocks. The cart is a Sable physics machine: placed on a slope, it moves off on its own. Its wheels grip the rail from above and below. Used on an already assembled machine, the item turns it into a cart.</p>"
+      },
+      {
+        "id": "atteler",
+        "title": "Coupling two carts",
+        "alt": "Two carts joined by a metal coupling",
+        "html": "<p>With a cart in hand, click one already on the track, then place the new one: the two are coupled. The coupling spans 1.5 to 7 blocks from centre to centre; when placed it snaps in 0.5 steps up to 6. Each cart takes two couplings, one in front and one behind, with no loop: that is how a full train is formed.</p>"
+      },
+      {
+        "id": "detacher",
+        "title": "Unlinking, relinking, adjusting",
+        "alt": "The two carts apart after the shears",
+        "html": "<p><strong>Shears</strong> cut every coupling of the targeted cart, for one point of durability. A <strong>chain</strong>, not consumed, makes a new one: click one cart then the other. The <a href=\"/en/wiki/wrench\">Wrench</a> lengthens the coupling by half a block; sneaking, it shortens it, between 1.5 and 6 blocks. Carts that are too close bump in the bends: leave some room.</p>"
+      },
+      {
+        "id": "decor",
+        "title": "Building on carts",
+        "alt": "Three coupled carts, each with a red seat and nameplates",
+        "html": "<p>Since the cart is a Sable machine, any block placed on it becomes part of it: Create seats, Simulated nameplates, bodywork. Weight matters: a heavy train builds more momentum going down. The mod has no brakes or boosters: only the <a href=\"/en/wiki/coasters-track\">chain lift</a> and the slope set the speed.</p>"
+      },
+      {
+        "id": "gare",
+        "title": "A simple station",
+        "html": "<p>To let players board, stop the train in a dip: a small climb out of the station and another into it slow it down naturally. A chain lift right after the station sends the train off again, and the slope does the rest. Face the seats forward and keep a block of space between two carts.</p>"
+      },
+      {
+        "id": "recettes",
+        "title": "Crafting",
+        "html": "<p>The cart is crafted with a wooden slab on top, four dried kelp on the sides, a Block of Industrial Iron in the middle and a shaft at the bottom. The rivet is an iron sheet over an iron nugget. The Red Balloon stacks red wool, string and an iron nugget.</p>"
+      },
+      {
+        "id": "monter",
+        "title": "Getting on board",
+        "html": "<p>Players sit on Create seats placed on the carts: right-click to sit down, sneak to get off. The train can leave with or without passengers, and seats can face any direction, which allows backwards rides for the brave.</p>"
+      },
+      {
+        "id": "rivet",
+        "title": "The Rivet and the Red Balloon",
+        "alt": "A Rivet, a cart and a Red Balloon side by side",
+        "html": "<p>The <strong>Rivet</strong> is placed on a block face and becomes its own little machine: whatever is attached to it can sit at an angle, offset by half a block (Ctrl for free placement) or turned in 15° steps with Alt. Perfect for skewed signs and decorations. The <strong>Red Balloon</strong> goes on a machine block: it floats 2.5 blocks above on a string and lightens the machine by up to 48 mass units while it stays close to the ground. An arrow pops it, and its neighbours too.</p>"
+      }
+    ],
+    "sources": [
+      "Code and data: Create: Coasters Simulated 0.1.6 (modpack test instance jar, MIT licence, © SilverGold); code read from the decompiled 0.1.5 (Vineflower, public sjzeero fork) and compared with 0.1.6 using javap",
+      "Carts: CoasterCartItem.java, CoasterCartTrackSnap.java, CoasterCartLinkPlacement.java, CoasterCartLinkDistanceEdit.java",
+      "Rivet: RivetPlacement.java; balloon: BalloonTetherController.java, data/simulatedcoasters/physics_block_properties",
+      "Recipes: data/simulatedcoasters/recipe/coaster_cart.json, rivet.json, red_balloon.json",
+      "Videos: Create: Coasters Simulated Ponder scenes (coaster_track/ponder_cart) replayed by our engine; tracks drawn after AnchorPeerTrackCurveBerRender and Create’s BezierConnection; mod models and textures (MIT licence, © SilverGold)",
+      "Images: mod blocks placed on the plate and rendered by our engine (MIT licence, © SilverGold)"
+    ]
+  }
+}

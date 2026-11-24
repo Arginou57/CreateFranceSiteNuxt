@@ -1,0 +1,374 @@
+{
+  "slug": "aeronautics-voiles-et-enveloppes",
+  "name": "Voiles et enveloppes",
+  "blockId": "simulated:white_symmetric_sail",
+  "category": "aeronautics",
+  "title": "Voiles et enveloppes — Create Aeronautics, guide",
+  "description": "Voiles de Create et voiles symétriques de Simulated sur un appareil en vol : portance, traînée, moulins ; enveloppes et rotors d'enveloppe colorés. Vidéos.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Aeronautics 1.3.3",
+  "mcVersion": "1.21.1",
+  "intro": "Sur une contraption simulée en mouvement, les voiles ne sont plus de simples décors. Une <strong>voile</strong> de Create produit de la <strong>portance</strong>, perpendiculaire à sa surface ; une <strong>voile symétrique</strong> (Symmetric Sail) de Simulated ne produit que de la <strong>traînée</strong>, utile pour tourner ou stabiliser. Cette page regroupe aussi les variantes colorées des enveloppes à air chaud et des rotors d'enveloppe.",
+  "facts": [
+    {
+      "label": "Voile de Create",
+      "value": "Portance proportionnelle à la vitesse, perpendiculaire à la voile"
+    },
+    {
+      "label": "Voile symétrique",
+      "value": "Traînée seulement ; sans effet parallèle au mouvement"
+    },
+    {
+      "label": "Moulin",
+      "value": "S'accrochent entre elles et aux blocs sans colle"
+    },
+    {
+      "label": "Couleurs",
+      "value": "16 ; se teignent sur place"
+    },
+    {
+      "label": "Enveloppes",
+      "value": "16 couleurs, comptent comme blocs étanches"
+    },
+    {
+      "label": "Rotor d'enveloppe",
+      "value": "Rotor caché dans une enveloppe, 16 couleurs"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication sans forme",
+    "grid": [
+      [
+        "Voile",
+        "Voile",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "items": [
+      [
+        "create:white_sail",
+        "create:white_sail",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "2 voiles symétriques blanches",
+    "resultItem": "simulated:white_symmetric_sail"
+  },
+  "videos": [
+    {
+      "id": "sim_sail",
+      "name": "La portance des voiles",
+      "description": "Un avion à hélice prend de la vitesse ; ses voiles le soulèvent jusqu'au vol.",
+      "duration": "PT26S",
+      "chapters": [
+        {
+          "t": 0.7,
+          "section": "portance"
+        },
+        {
+          "t": 6.38,
+          "section": "vitesse"
+        },
+        {
+          "t": 12.32,
+          "section": "vol"
+        },
+        {
+          "t": 18.81,
+          "section": "vol"
+        }
+      ]
+    },
+    {
+      "id": "sim_sail_drag",
+      "name": "La traînée des voiles symétriques",
+      "description": "Les voiles symétriques freinent seulement quand elles sont de biais.",
+      "duration": "PT26S",
+      "chapters": [
+        {
+          "t": 3.02,
+          "section": "trainee"
+        },
+        {
+          "t": 9.86,
+          "section": "stabiliser"
+        }
+      ]
+    },
+    {
+      "id": "sim_sail_mill",
+      "name": "Un moulin en voiles symétriques",
+      "description": "Les voiles s'accrochent seules au moulin, puis sont teintes.",
+      "duration": "PT14S",
+      "chapters": [
+        {
+          "t": 2.2,
+          "section": "moulin"
+        },
+        {
+          "t": 4.2,
+          "section": "moulin"
+        },
+        {
+          "t": 10.35,
+          "section": "couleurs"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "portance",
+      "title": "Les voiles portent",
+      "image": "sim_sail_e1.webp",
+      "alt": "Un petit avion à hélice et ses voiles blanches",
+      "video": "sim_sail",
+      "html": "<p>Quand une contraption simulée avance, chaque <a href=\"/wiki/support-de-moulin-a-vent\">voile de Create</a> qu'elle porte crée une force perpendiculaire à sa surface : la portance. Une aile se fait donc avec des voiles posées à plat.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "Plus vite, plus de portance",
+      "image": "sim_sail_e2.webp",
+      "alt": "L'avion qui accélère sur la piste",
+      "html": "<p>La portance grandit avec la vitesse de la voile. Il faut donc une poussée, une <a href=\"/wiki/aeronautics-helices\">hélice</a> par exemple, pour prendre de l'élan.</p>"
+    },
+    {
+      "id": "vol",
+      "title": "Décoller",
+      "image": "sim_sail_e4.webp",
+      "alt": "L'avion en vol au-dessus du sol qui défile",
+      "html": "<p>Quand la portance dépasse le poids, l'appareil quitte le sol. C'est la manière la plus légère de voler, sans ballon ni lévitite.</p>"
+    },
+    {
+      "id": "trainee",
+      "title": "Les voiles symétriques freinent",
+      "image": "sim_sail_drag_e1.webp",
+      "alt": "L'appareil et ses voiles symétriques noires",
+      "video": "sim_sail_drag",
+      "html": "<p>La voile symétrique ne porte pas : elle ne crée que de la traînée. Alignée avec le mouvement, elle ne fait rien ; de biais, elle freine le côté où elle se trouve.</p>"
+    },
+    {
+      "id": "stabiliser",
+      "title": "Tourner et stabiliser",
+      "image": "sim_sail_drag_e2.webp",
+      "alt": "Les voiles symétriques inclinées",
+      "html": "<p>Placées à l'arrière comme les plumes d'une flèche, elles gardent l'appareil dans l'axe ; montées sur un <a href=\"/wiki/aeronautics-roulement-pivot\">roulement pivot</a>, elles servent de gouvernail.</p>"
+    },
+    {
+      "id": "moulin",
+      "title": "Des moulins sans colle",
+      "image": "sim_sail_mill_e1.webp",
+      "alt": "Un moulin à vent fait de voiles symétriques",
+      "video": "sim_sail_mill",
+      "html": "<p>Les voiles symétriques s'accrochent aux blocs voisins et entre elles sans super colle ni châssis : un moulin à vent se monte en quelques clics.</p>"
+    },
+    {
+      "id": "couleurs",
+      "title": "Teindre les voiles",
+      "image": "sim_sail_mill_e3.webp",
+      "alt": "Une voile symétrique teinte en bleu",
+      "html": "<p>Une teinture appliquée d'un clic droit change la couleur ; les seize couleurs existent aussi en recette.</p>"
+    },
+    {
+      "id": "faq",
+      "title": "Questions fréquentes",
+      "html": "<p><strong>Faut-il des voiles pour voler ?</strong> Non : hélices, ballons et lévitite suffisent ; les voiles donnent de la portance gratuite quand on avance vite. <strong>Les voiles symétriques portent-elles ?</strong> Non, elles ne font que freiner. <strong>Pourquoi mon avion pique-t-il ?</strong> Le centre de portance est trop en avant ou en arrière du centre de masse : déplacez les ailes. <strong>Une voile de Create sur un roulement fait-elle un moulin ?</strong> Oui, comme d'habitude ; sur une contraption simulée en mouvement, elle porte en plus. <strong>Les couleurs changent-elles quelque chose ?</strong> Non, elles sont purement décoratives, pour les voiles comme pour les enveloppes et les rotors d'enveloppe.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils de construction",
+      "html": "<p>Commencez par des ailes larges et plates, une hélice à l'arrière et une queue de voiles symétriques : c'est la forme qui pardonne le plus. Gardez l'appareil léger, des planches plutôt que de la pierre, et placez le moteur près du centre. Pour décoller court, inclinez légèrement les ailes vers le haut ; pour atterrir, réduisez la vitesse progressivement avec un levier d'accélération.</p>"
+    },
+    {
+      "id": "recettes",
+      "title": "Fabrication",
+      "image": "gal_couleurs_voiles-enveloppes.webp",
+      "alt": "Voiles symétriques et enveloppes de plusieurs couleurs",
+      "html": "<p>Deux voiles de Create donnent deux voiles symétriques, sans forme imposée ; on les teint ensuite à volonté. Les enveloppes se teignent de la même manière, d'un clic droit. Le rotor dans une enveloppe n'a pas de recette : il apparaît quand on place un rotor contre une enveloppe, et il garde la couleur de celle-ci. Les voiles et les enveloppes sont légères (0,25 pour la laine dans Sable), ce qui en fait de bons matériaux pour un appareil volant.</p>"
+    },
+    {
+      "id": "enveloppes",
+      "title": "Enveloppes et rotors colorés",
+      "image": "gal_couleurs_arbres-moteurs.webp",
+      "alt": "Des rotors d'enveloppe et des moteurs portatifs de plusieurs couleurs",
+      "html": "<p>Les <a href=\"/wiki/aeronautics-ballons\">enveloppes à air chaud</a> existent en seize couleurs, comme le <strong>rotor dans une enveloppe</strong> (Envelope Encased Shaft) : un rotor posé dans une enveloppe, qui transmet la rotation sans percer le ballon. On l'obtient en plaçant un rotor contre l'enveloppe.</p>"
+    }
+  ],
+  "related": [
+    "create-aeronautics",
+    "aeronautics-helices",
+    "aeronautics-ballons",
+    "aeronautics-roulement-pivot",
+    "support-de-moulin-a-vent"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Aeronautics 1.3.3 (dépôt Creators-of-Aeronautics/Simulated-Project, commit 900122e, code sous licence MIT, ressources « tous droits réservés », The Simulated Team / The Creators of Aeronautics), identiques au jar du modpack (instance de test 1.3.3)",
+    "Recettes : data/simulated/recipe/white_symmetric_sail.json (et couleurs)",
+    "Vidéos : scènes Ponder de Create Aeronautics / Simulated (symmetric_sail/main, symmetric_sail/windmill) rejouées par notre moteur ; modèles et textures du mod (© The Simulated Team / The Creators of Aeronautics)",
+    "Images : blocs du mod posés sur la plaque et rendus par notre moteur (© The Simulated Team / The Creators of Aeronautics)"
+  ],
+  "en": {
+    "slugEn": "aeronautics-sails-and-envelopes",
+    "name": "Sails and envelopes",
+    "title": "Sails and Envelopes — Create Aeronautics guide",
+    "description": "Create sails and Simulated Symmetric Sails on a flying craft: lift, drag, windmills; coloured envelopes and envelope encased shafts. Videos.",
+    "intro": "On a moving simulated contraption, sails are no longer just decoration. A Create <strong>Sail</strong> makes <strong>lift</strong>, perpendicular to its surface; a Simulated <strong>Symmetric Sail</strong> only makes <strong>drag</strong>, useful to turn or to stabilise. This page also covers the coloured hot air envelopes and envelope encased shafts.",
+    "facts": [
+      {
+        "label": "Create sail",
+        "value": "Lift grows with speed, perpendicular to the sail"
+      },
+      {
+        "label": "Symmetric Sail",
+        "value": "Drag only; no effect parallel to motion"
+      },
+      {
+        "label": "Windmill",
+        "value": "Attach to each other and to blocks without glue"
+      },
+      {
+        "label": "Colours",
+        "value": "16; right-click with dye"
+      },
+      {
+        "label": "Envelopes",
+        "value": "16 colours, count as airtight blocks"
+      },
+      {
+        "label": "Envelope Encased Shaft",
+        "value": "A shaft hidden in an envelope, 16 colours"
+      }
+    ],
+    "recipe": {
+      "label": "Shapeless crafting",
+      "grid": [
+        [
+          "Sail",
+          "Sail",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "2 White Symmetric Sails"
+    },
+    "videos": [
+      {
+        "id": "sim_sail",
+        "name": "Lift from sails",
+        "description": "A propeller plane speeds up; its sails lift it until it flies."
+      },
+      {
+        "id": "sim_sail_drag",
+        "name": "Drag from symmetric sails",
+        "description": "Symmetric sails only brake when they sit at an angle."
+      },
+      {
+        "id": "sim_sail_mill",
+        "name": "A symmetric sail windmill",
+        "description": "The sails attach to the windmill by themselves, then get dyed."
+      }
+    ],
+    "sections": [
+      {
+        "id": "portance",
+        "title": "Sails give lift",
+        "alt": "A small propeller plane and its white sails",
+        "html": "<p>When a simulated contraption moves, every <a href=\"/en/wiki/windmill-bearing\">Create sail</a> it carries makes a force perpendicular to its surface: lift. A wing is therefore made of sails laid flat.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "Faster means more lift",
+        "alt": "The plane speeding up along the runway",
+        "html": "<p>Lift grows with the sail's speed. You need thrust, a <a href=\"/en/wiki/aeronautics-propellers\">propeller</a> for instance, to build up speed.</p>"
+      },
+      {
+        "id": "vol",
+        "title": "Taking off",
+        "alt": "The plane flying over the scrolling ground",
+        "html": "<p>Once lift exceeds weight, the craft leaves the ground. It is the lightest way to fly, with no balloon or levitite.</p>"
+      },
+      {
+        "id": "trainee",
+        "title": "Symmetric sails brake",
+        "alt": "The craft and its black symmetric sails",
+        "html": "<p>A symmetric sail does not lift: it only makes drag. Lined up with the motion it does nothing; at an angle it slows down the side it sits on.</p>"
+      },
+      {
+        "id": "stabiliser",
+        "title": "Turning and stabilising",
+        "alt": "The symmetric sails tilted",
+        "html": "<p>Placed at the back like the feathers of an arrow, they keep the craft straight; mounted on a <a href=\"/en/wiki/aeronautics-swivel-bearing\">Swivel Bearing</a>, they act as a rudder.</p>"
+      },
+      {
+        "id": "moulin",
+        "title": "Glue-free windmills",
+        "alt": "A windmill made of symmetric sails",
+        "html": "<p>Symmetric sails attach to nearby blocks and to each other without Super Glue or chassis: a windmill goes up in a few clicks.</p>"
+      },
+      {
+        "id": "couleurs",
+        "title": "Dyeing sails",
+        "alt": "A symmetric sail dyed blue",
+        "html": "<p>Right-clicking with a dye changes the colour; all sixteen colours can be crafted too.</p>"
+      },
+      {
+        "id": "faq",
+        "title": "Frequently asked questions",
+        "html": "<p><strong>Do I need sails to fly?</strong> No: propellers, balloons and levitite are enough; sails give free lift when moving fast. <strong>Do symmetric sails lift?</strong> No, they only brake. <strong>Why does my plane nose down?</strong> The centre of lift sits too far ahead of or behind the centre of mass: move the wings. <strong>Does a Create sail on a bearing make a windmill?</strong> Yes, as usual; on a moving simulated contraption it also lifts. <strong>Do colours change anything?</strong> No, they are purely decorative, for sails as well as envelopes and envelope encased shafts.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Building tips",
+        "html": "<p>Start with wide flat wings, a propeller at the back and a tail of symmetric sails: it is the most forgiving shape. Keep the craft light, planks rather than stone, and place the engine near the centre. For a short take-off, tilt the wings slightly upwards; to land, slow down gradually with a Throttle Lever. Test the first flights low over water: a crash there costs nothing.</p>"
+      },
+      {
+        "id": "recettes",
+        "title": "Crafting",
+        "alt": "Symmetric sails and envelopes in several colours",
+        "html": "<p>Two Create sails give two symmetric sails, shapeless; they can then be dyed at will. Envelopes are dyed the same way, with a right-click. The Envelope Encased Shaft has no recipe: it appears when a shaft is placed against an envelope, and it keeps the envelope's colour. Sails and envelopes are light (wool weighs 0.25 in Sable), which makes them good materials for a flying craft. Large wings made of sails therefore add lift without adding much weight, and a balloon built from envelopes stays light even when it is very large. Heavier materials belong low in the hull, where they also help keep the craft upright.</p>"
+      },
+      {
+        "id": "enveloppes",
+        "title": "Coloured envelopes and shafts",
+        "alt": "Envelope encased shafts and Portable Engines in several colours",
+        "html": "<p><a href=\"/en/wiki/aeronautics-hot-air-balloons\">Hot air envelopes</a> come in sixteen colours, like the <strong>Envelope Encased Shaft</strong>: a shaft set inside an envelope, carrying rotation without piercing the balloon. Make one by placing a shaft against the envelope.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Aeronautics 1.3.3 (Creators-of-Aeronautics/Simulated-Project repository, commit 900122e, code under the MIT licence, assets « all rights reserved », The Simulated Team / The Creators of Aeronautics), identical to the modpack jar (1.3.3 test instance)",
+      "Recipes: data/simulated/recipe/white_symmetric_sail.json (and colours)",
+      "Videos: Create Aeronautics / Simulated Ponder scenes (symmetric_sail/main, symmetric_sail/windmill) replayed by our engine; mod models and textures (© The Simulated Team / The Creators of Aeronautics)",
+      "Images: mod blocks placed on the plate and rendered by our engine (© The Simulated Team / The Creators of Aeronautics)"
+    ]
+  }
+}

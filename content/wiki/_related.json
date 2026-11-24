@@ -1,18 +1,23 @@
 {
   "assembler-un-train": [
-    "loconautics-assembler-une-locomotive"
+    "loconautics-assembler-une-locomotive",
+    "lightworks-feux-de-vehicule"
   ],
   "station-de-train": [
     "loconautics-assembler-une-locomotive"
   ],
   "colle-extra-forte": [
-    "loconautics-assembler-une-locomotive"
+    "loconautics-assembler-une-locomotive",
+    "aeronautics-outils"
   ],
   "rail-de-train": [
-    "loconautics-plaque-tournante"
+    "loconautics-plaque-tournante",
+    "coasters-rails"
   ],
   "roue-dentee": [
-    "loconautics-plaque-tournante"
+    "loconautics-plaque-tournante",
+    "bnb-chaines-de-roues-dentees",
+    "connected-transmissions"
   ],
   "planning-de-train": [
     "loconautics-plaque-tournante"
@@ -24,42 +29,160 @@
     "loconautics-controleur-analogique"
   ],
   "liaison-de-redstone": [
-    "loconautics-controleur-analogique"
+    "loconautics-controleur-analogique",
+    "aeronautics-redstone",
+    "connected-redstone",
+    "propulsion-propulseur-vectoriel"
   ],
   "controleur-de-vitesse-de-rotation": [
-    "loconautics-transmission"
+    "loconautics-transmission",
+    "propulsion-transmission-redstone"
   ],
   "inverseur-de-rotation": [
-    "loconautics-transmission"
+    "loconautics-transmission",
+    "connected-embrayages"
   ],
   "pompe-mecanique": [
-    "loconautics-tuyau-et-treuil"
+    "loconautics-tuyau-et-treuil",
+    "propulsion-propulseur"
   ],
   "poulie-a-tuyau": [
     "loconautics-tuyau-et-treuil"
   ],
   "tuyau-a-fluide": [
-    "loconautics-raccord-de-tuyau"
+    "loconautics-raccord-de-tuyau",
+    "bnb-tuyaux-et-reservoirs-teints"
   ],
   "reservoir-a-fluide": [
-    "loconautics-chaudiere"
+    "loconautics-chaudiere",
+    "bnb-tuyaux-et-reservoirs-teints",
+    "propulsion-platine"
   ],
   "moteur-a-vapeur": [
-    "loconautics-chaudiere"
+    "loconautics-chaudiere",
+    "propulsion-moteur-stirling"
   ],
   "carburants": [
-    "loconautics-moteur-a-combustion"
+    "loconautics-moteur-a-combustion",
+    "propulsion-carburants"
   ],
   "moteur-diesel": [
     "loconautics-moteur-a-combustion"
   ],
   "create-aeronautics": [
-    "create-loconautics"
+    "create-loconautics",
+    "aeronautics-moteurs-et-transmission",
+    "aeronautics-pilotage",
+    "aeronautics-roulement-pivot",
+    "aeronautics-cordes-et-amarrage",
+    "aeronautics-outils",
+    "aeronautics-voiles-et-enveloppes",
+    "aeronautics-redstone",
+    "aeronautics-capteurs",
+    "offroad-vehicules-a-roues",
+    "lightworks-feux-de-vehicule",
+    "create-propulsion",
+    "create-coasters-simulated"
   ],
   "presse-mecanique": [
     "loconautics-blocs-et-objets"
   ],
   "bec-verseur": [
     "loconautics-blocs-et-objets"
+  ],
+  "assembleur-physique": [
+    "aeronautics-outils",
+    "aeronautics-moteurs-et-transmission",
+    "lightworks-feux-de-vehicule",
+    "create-propulsion"
+  ],
+  "aeronautics-helices": [
+    "aeronautics-pilotage",
+    "aeronautics-voiles-et-enveloppes",
+    "propulsion-propulseur"
+  ],
+  "aeronautics-roulement-gyroscopique": [
+    "aeronautics-capteurs"
+  ],
+  "aeronautics-ballons": [
+    "aeronautics-voiles-et-enveloppes",
+    "aeronautics-capteurs"
+  ],
+  "aeronautics-levitite": [
+    "aeronautics-outils"
+  ],
+  "canon-a-pomme-de-terre": [
+    "aeronautics-outils"
+  ],
+  "lunettes-d-ingenieur": [
+    "aeronautics-outils"
+  ],
+  "roulement-mecanique": [
+    "aeronautics-roulement-pivot"
+  ],
+  "poulie-a-corde": [
+    "aeronautics-cordes-et-amarrage",
+    "bnb-mecanismes"
+  ],
+  "perceuse-mecanique": [
+    "offroad-vehicules-a-roues"
+  ],
+  "support-de-moulin-a-vent": [
+    "aeronautics-voiles-et-enveloppes"
+  ],
+  "boite-a-roues-dentees": [
+    "connected-transmissions"
+  ],
+  "manivelle": [
+    "connected-transmissions"
+  ],
+  "chaine-de-transmission": [
+    "connected-transmissions",
+    "bnb-chaines-de-roues-dentees"
+  ],
+  "stressometre-compteur-de-vitesse": [
+    "connected-pont-cinetique",
+    "connected-batterie-cinetique"
+  ],
+  "horloges-et-impulsions": [
+    "connected-redstone"
+  ],
+  "inverseur-de-rotation-sequence": [
+    "connected-redstone",
+    "propulsion-adaptateur-inclinaison"
+  ],
+  "coffre-a-objet-renforce": [
+    "connected-logistique"
+  ],
+  "chute": [
+    "connected-logistique"
+  ],
+  "liaison-d-affichage": [
+    "connected-logistique",
+    "bnb-nixie"
+  ],
+  "ventilateur-enchasse": [
+    "connected-catalyseurs"
+  ],
+  "tube-nixie": [
+    "bnb-nixie"
+  ],
+  "pierres-et-blocs-de-deco": [
+    "bnb-deco-et-lumieres"
+  ],
+  "deep-seas-propulseur": [
+    "propulsion-propulseur"
+  ],
+  "bruleur-a-blaze": [
+    "propulsion-bruleurs"
+  ],
+  "aeronautics-voiles-et-enveloppes": [
+    "propulsion-ailes"
+  ],
+  "minerai-de-zinc": [
+    "ore-excavation-filons"
+  ],
+  "ore-excavation-filons": [
+    "minerai-de-zinc"
   ]
 }

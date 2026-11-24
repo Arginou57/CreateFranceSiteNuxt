@@ -229,7 +229,8 @@
     "piston-mecanique",
     "liaison-de-redstone",
     "contact-de-redstone",
-    "portes-coulissantes"
+    "portes-coulissantes",
+    "telecommande"
   ],
   "sources": [
     "Recette : crafting/kinetics/elevator_pulley.json",

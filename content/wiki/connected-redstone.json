@@ -1,0 +1,345 @@
+{
+  "slug": "connected-redstone",
+  "name": "Générateur d'impulsions séquencé et transmetteur lié",
+  "blockId": "create_connected:sequenced_pulse_generator",
+  "category": "connected",
+  "title": "Impulsions et transmetteurs liés — Create Connected, guide",
+  "description": "Générateur d'impulsions séquencé, transmetteur lié, boutons et leviers liés, joker de liaison : la redstone de Create Connected, l'addon de Create.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Connected 1.3.3 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Create Connected ajoute deux outils de redstone qui manquaient à Create. Le <strong>générateur d'impulsions séquencé</strong> (Sequenced Pulse Generator) joue une petite partition de signaux, réglée ligne par ligne. Le <strong>transmetteur lié</strong> (Linked Transmitter) se clipse sur un bouton ou un levier déjà posé et en fait un émetteur de <a href=\"/wiki/liaison-de-redstone\">liaison de redstone</a>, sans bloc de plus. Le <strong>joker de liaison de redstone</strong> (Redstone Link Wildcard) permet enfin d'écouter toute une famille de fréquences.",
+  "facts": [
+    {
+      "label": "Instructions",
+      "value": "7 au maximum par générateur (INSTRUCTION_CAPACITY)"
+    },
+    {
+      "label": "Durée d’une sortie",
+      "value": "1 à 600 ticks (30 s au plus), force 0 à 15"
+    },
+    {
+      "label": "Boucle comptée",
+      "value": "1 à 100 tours (instruction Loop for)"
+    },
+    {
+      "label": "Portée des liaisons",
+      "value": "256 blocs (réglage linkRange de Create)"
+    },
+    {
+      "label": "Supports du transmetteur",
+      "value": "13 boutons, levier, levier analogique, levier d’accélération"
+    },
+    {
+      "label": "Joker",
+      "value": "un seul des deux emplacements par liaison (allowDualWildcardLink = false)"
+    },
+    {
+      "label": "Version",
+      "value": "Create Connected 1.3.3 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (roche : toute pierre du tag c:stones)",
+    "grid": [
+      [
+        "Tube électronique",
+        "Puce de contrôle",
+        null
+      ],
+      [
+        "Tube électronique",
+        "Plaque de laiton",
+        "Torche de redstone"
+      ],
+      [
+        "Roche",
+        "Roche",
+        "Roche"
+      ]
+    ],
+    "items": [
+      [
+        "create:electron_tube",
+        "create_connected:control_chip",
+        null
+      ],
+      [
+        "create:electron_tube",
+        "create:brass_sheet",
+        "minecraft:redstone_torch"
+      ],
+      [
+        "minecraft:stone",
+        "minecraft:stone",
+        "minecraft:stone"
+      ]
+    ],
+    "result": "1 générateur d'impulsions séquencé",
+    "resultItem": "create_connected:sequenced_pulse_generator"
+  },
+  "videos": [
+    {
+      "id": "conn_pulse_gen",
+      "name": "Le générateur d'impulsions séquencé",
+      "description": "Un bouton à l'arrière lance la séquence, un comparateur suit la ligne en cours sur un tube nixie, puis un levier branché sur le côté coupe tout en pleine course.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 0.9,
+          "section": "generateur"
+        },
+        {
+          "t": 4.1,
+          "section": "instructions"
+        },
+        {
+          "t": 8.8,
+          "section": "progression"
+        },
+        {
+          "t": 11.2,
+          "section": "reset"
+        }
+      ]
+    },
+    {
+      "id": "conn_linked_tx",
+      "name": "Le transmetteur lié sur un levier",
+      "description": "Le module se fixe sur un levier, allume une liaison réglée sur les mêmes objets, se verrouille à la cire puis passe sur des boutons et un levier analogique.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 1.3,
+          "section": "transmetteur"
+        },
+        {
+          "t": 6.1,
+          "section": "frequences"
+        },
+        {
+          "t": 13.4,
+          "section": "cire"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "generateur",
+      "title": "Un séquenceur de signaux",
+      "image": "conn_pulse_gen_sequence.webp",
+      "alt": "Le générateur d'impulsions séquencé posé entre son bouton d'entrée et sa ligne de sortie",
+      "video": "conn_pulse_gen",
+      "html": "<p>Le générateur se pose au sol comme un répéteur : il écoute par l'arrière et n'émet que vers l'avant. Un clic droit ouvre son écran de programmation, une liste de sept lignes au plus. Chaque ligne choisit une instruction, une force de sortie (0 à 15) et un réglage. Neuf, il contient une sortie de 10 ticks à force 15 suivie d'une fin : c'est déjà un générateur d'impulsion d'une demi-seconde. Là où les <a href=\"/wiki/horloges-et-impulsions\">répéteurs et minuteurs d'impulsions</a> de Create font une seule chose, lui enchaîne plusieurs étapes dans un seul bloc.</p>"
+    },
+    {
+      "id": "instructions",
+      "title": "Les instructions",
+      "image": "conn_pulse_gen_lancement.webp",
+      "alt": "Le bouton arrière vient d'être pressé : la sortie du générateur s'allume",
+      "html": "<p><strong>Sortie</strong> tient une force donnée pendant 1 à 600 ticks. Les instructions d'attente émettent aussi leur force tant qu'elles patientent : jusqu'à ce que l'entrée s'allume ou s'éteigne, ou jusqu'à ce qu'elle passe un seuil minimal, maximal ou exact. <strong>Transformer</strong> calcule la sortie à partir de l'entrée et d'une constante (addition, soustraction, produit, division, ET, OU, OU exclusif, décalages) jusqu'au prochain changement d'entrée. Côté boucles : refaire 1 à 100 fois, refaire selon l'état ou la force de l'entrée, ou tourner sans fin. <strong>Fin</strong> clôt la liste.</p>"
+    },
+    {
+      "id": "progression",
+      "title": "Démarrage et suivi au comparateur",
+      "image": "conn_pulse_gen_comparateur.webp",
+      "alt": "Un comparateur lit la progression du générateur, affichée sur un tube nixie",
+      "html": "<p>Un signal reçu par l'arrière lance la séquence depuis la première ligne. Pendant qu'elle tourne, les nouveaux signaux arrière sont ignorés ; arrivée au bout, la sortie retombe à 0 et le bloc attend le déclenchement suivant. Un comparateur posé contre lui donne le numéro de la ligne en cours plus un : 0 au repos, 1 sur la première ligne, et ainsi de suite. Branche-le sur un <a href=\"/wiki/tube-nixie\">tube nixie</a> pour voir la partition avancer, ou sers-t'en pour déclencher autre chose à une étape précise.</p>"
+    },
+    {
+      "id": "reset",
+      "title": "Tout arrêter par le côté",
+      "image": "conn_pulse_gen_cotes.webp",
+      "alt": "Le levier de remise à zéro branché sur le côté du générateur",
+      "html": "<p>Les deux côtés servent de remise à zéro. Dès qu'un signal y arrive, la séquence s'interrompt, la sortie s'éteint et le générateur revient à sa première ligne ; tant que le côté reste alimenté, l'arrière n'a plus d'effet. Méfie-toi des boucles sans attente : le bloc limite à dix les étapes instantanées enchaînées dans un même tick et lâche de la fumée pour montrer qu'il tourne à vide.</p>"
+    },
+    {
+      "id": "transmetteur",
+      "title": "Le transmetteur lié",
+      "image": "conn_linked_tx_attacher.webp",
+      "alt": "Le transmetteur lié fixé sur un levier, avec ses deux emplacements de fréquence",
+      "video": "conn_linked_tx",
+      "html": "<p>Le transmetteur lié est un module : tiens-le en main et clique droit sur un bouton ou un levier déjà posé. Il s'y fixe et le bouton devient un émetteur sans fil. Le levier fonctionne comme avant ; c'est le petit boîtier posé dessus qui envoie son état. On l'obtient en passant une liaison de redstone de Create seule à l'établi (la recette inverse existe). Un clic à la <a href=\"/wiki/cle\">clé</a> décroche le module et te le rend ; si tu casses le bloc, tu récupères les deux.</p>"
+    },
+    {
+      "id": "frequences",
+      "title": "Fréquences et portée",
+      "image": "conn_linked_tx_frequence.webp",
+      "alt": "Un lingot de fer et une pousse de chêne réglés dans les emplacements du transmetteur",
+      "html": "<p>Comme sur une liaison de Create, deux emplacements reçoivent chacun un objet et la paire forme la fréquence. Une liaison de redstone en mode récepteur réglée sur la même paire rend le signal, force comprise, jusqu'à 256 blocs plus loin (réglage linkRange du serveur). Les liaisons réglées autrement ne bougent pas. Le transmetteur ne fait qu'émettre : pour recevoir, il te faut toujours une liaison classique.</p>"
+    },
+    {
+      "id": "cire",
+      "title": "Cirer pour éviter les fausses manœuvres",
+      "image": "conn_linked_tx_cire.webp",
+      "alt": "Le transmetteur ciré : ses emplacements de fréquence ne sont plus affichés",
+      "html": "<p>Sur un bouton qu'on presse souvent, on finit par cliquer sur un emplacement et changer la fréquence sans le vouloir. Un rayon de miel appliqué sur le module le verrouille : les emplacements disparaissent et le boîtier s'aplatit. Pour régler de nouveau, gratte-le avec une hache, qui retire la cire comme sur le cuivre.</p>"
+    },
+    {
+      "id": "boutons",
+      "title": "Les boutons liés",
+      "image": "conn_gal_liaisons_boutons.webp",
+      "alt": "Boutons liés en chêne, pierre, pierre noire polie, cerisier et carmin",
+      "html": "<p>Chaque bouton du jeu a sa version liée : bouton lié en chêne, épicéa, bouleau, acajou, acacia, chêne noir, palétuvier, cerisier, bambou, carmin et biscornu (Linked Oak Button à Linked Warped Button), plus le <strong>bouton de pierre lié</strong> (Linked Stone Button) et le <strong>bouton de pierre noire polie lié</strong> (Linked Polished Blackstone Button). Ils gardent la durée d'appui de leur modèle. Pratique pour appeler un ascenseur ou ouvrir une porte de base à distance.</p>"
+    },
+    {
+      "id": "leviers",
+      "title": "Leviers liés et joker",
+      "image": "conn_gal_liaisons_leviers.webp",
+      "alt": "Levier lié, levier analogique lié et levier d'accélération lié",
+      "html": "<p>Le <strong>levier lié</strong> (Linked Lever) envoie un signal continu. Le <strong>levier analogique lié</strong> (Linked Analog Lever) part du <a href=\"/wiki/tube-nixie\">levier analogique</a> de Create et transmet sa force de 0 à 15. Avec le mod Simulated, le <strong>levier d'accélération lié</strong> (Linked Throttle Lever) fait pareil avec sa manette des gaz. Le <strong>joker</strong>, fait d'un transmetteur et d'un couvercle d'emplacement d'établi, se met dans un emplacement de fréquence d'une liaison et vaut n'importe quel objet à la même place : « joker + fer » parle à toutes les liaisons qui ont du fer en second. Par défaut, un seul des deux emplacements peut être un joker.</p>"
+    }
+  ],
+  "related": [
+    "create-connected",
+    "liaison-de-redstone",
+    "horloges-et-impulsions",
+    "tube-nixie",
+    "inverseur-de-rotation-sequence",
+    "verrou-alimente",
+    "connected-logistique",
+    "connected-transmissions"
+  ],
+  "sources": [
+    "Create Connected 1.3.3 (create_connected-1.3.3-mc1.21.1.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/hlysine/create_connected au tag 1.3.3-mc1.21.1, recettes du dossier data du jar, scènes Ponder rejouées par notre moteur.",
+    "Mod de Lysine (hlysine), sous licence GNU AGPL v3 : modèles et textures de ses auteurs, rendus à partir du jar ; aucun texte du mod n'est recopié.",
+    "Classes : content/sequencedpulsegenerator (SequencedPulseGeneratorBlock, SequencedPulseGeneratorBlockEntity, instructions/*), content/linkedtransmitter (LinkedTransmitterItem, LinkedTransmitterBlock, LinkedButtonBlock, LinkedLeverBlock, LinkedAnalogLeverBlock, LinkedThrottleLeverBlock), content/redstonelinkwildcard (LinkWildcardNetworkHandler), config/CServer (allowDualWildcardLink).",
+    "Portée : réglage serveur linkRange de Create 6.0.10 (CLogistics), lu par LinkWildcardNetworkHandler.withinRange.",
+    "Scènes Ponder SequencedPulseGeneratorScenes et LinkedTransmitterScenes rejouées par notre moteur."
+  ],
+  "en": {
+    "slugEn": "connected-redstone-guide",
+    "name": "Sequenced Pulse Generator and Linked Transmitter",
+    "title": "Pulse Generator and Linked Redstone — Create Connected guide",
+    "description": "Sequenced Pulse Generator, Linked Transmitter, linked buttons and levers, Redstone Link Wildcard: the redstone side of Create Connected for Create.",
+    "intro": "Create Connected adds two redstone tools that Create was missing. The <strong>Sequenced Pulse Generator</strong> plays a short score of signals, programmed line by line. The <strong>Linked Transmitter</strong> clips onto a button or lever you already placed and turns it into a <a href=\"/en/wiki/redstone-link\">Redstone Link</a> transmitter, with no extra block. Finally, the <strong>Redstone Link Wildcard</strong> lets one link talk to a whole family of frequencies.",
+    "facts": [
+      {
+        "label": "Instructions",
+        "value": "up to 7 per generator (INSTRUCTION_CAPACITY)"
+      },
+      {
+        "label": "Output duration",
+        "value": "1 to 600 ticks (30 s at most), strength 0 to 15"
+      },
+      {
+        "label": "Counted loop",
+        "value": "1 to 100 rounds (Loop for instruction)"
+      },
+      {
+        "label": "Link range",
+        "value": "256 blocks (Create linkRange setting)"
+      },
+      {
+        "label": "Transmitter bases",
+        "value": "13 buttons, lever, analog lever, throttle lever"
+      },
+      {
+        "label": "Wildcard",
+        "value": "only one of the two slots per link (allowDualWildcardLink = false)"
+      },
+      {
+        "label": "Version",
+        "value": "Create Connected 1.3.3 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (Stone: any block of the c:stones tag)",
+      "grid": [
+        [
+          "Electron Tube",
+          "Control Chip",
+          null
+        ],
+        [
+          "Electron Tube",
+          "Brass Sheet",
+          "Redstone Torch"
+        ],
+        [
+          "Stone",
+          "Stone",
+          "Stone"
+        ]
+      ],
+      "result": "1 Sequenced Pulse Generator"
+    },
+    "videos": [
+      {
+        "id": "conn_pulse_gen",
+        "name": "The Sequenced Pulse Generator",
+        "description": "A button at the back starts the sequence, a comparator tracks the current line on a Nixie Tube, then a lever wired to the side cuts it off halfway through."
+      },
+      {
+        "id": "conn_linked_tx",
+        "name": "The Linked Transmitter on a lever",
+        "description": "The module snaps onto a lever, lights up a link set to the same items, gets locked with wax and then moves onto buttons and an analog lever."
+      }
+    ],
+    "sections": [
+      {
+        "id": "generateur",
+        "title": "A signal sequencer",
+        "alt": "The Sequenced Pulse Generator between its input button and its output line",
+        "html": "<p>The generator sits on the floor like a repeater: it listens at the back and only outputs at the front. Its programming screen opens on a right-click: a list of up to seven lines. Each line picks an instruction, an output strength (0 to 15) and a setting. Fresh from the crafting grid it holds a 10-tick output at strength 15 followed by an end: already a half-second pulse maker. Where Create's <a href=\"/en/wiki/pulse-repeater-extender-timer\">pulse repeaters and timers</a> do a single job, this one chains several steps in one block.</p>"
+      },
+      {
+        "id": "instructions",
+        "title": "The instructions",
+        "alt": "The back button was just pressed: the generator output turns on",
+        "html": "<p><strong>Output</strong> holds a strength for 1 to 600 ticks. The waiting instructions also emit their strength while they wait: until the input turns on or off, or until it crosses a minimum, maximum or exact level. <strong>Transform</strong> computes the output from the input and a constant (add, subtract, multiply, divide, AND, OR, XOR, bit shifts) until the input changes again. For loops: repeat 1 to 100 times, repeat depending on the input state or strength, or loop forever. <strong>End</strong> closes the list.</p>"
+      },
+      {
+        "id": "progression",
+        "title": "Starting it and tracking it",
+        "alt": "A comparator reads the generator progress, shown on a Nixie Tube",
+        "html": "<p>A signal arriving at the back starts the sequence from the first line. While it runs, further back signals are ignored; once it reaches the end the output drops to 0 and the block waits for the next trigger. A comparator placed against it gives the current line number plus one: 0 when idle, 1 on the first line, and so on. Wire it to a <a href=\"/en/wiki/nixie-tube\">Nixie Tube</a> to watch the score move along, or use it to trigger something else at a given step.</p>"
+      },
+      {
+        "id": "reset",
+        "title": "Stopping it from the side",
+        "alt": "The reset lever wired to the side of the generator",
+        "html": "<p>Both sides act as a reset. As soon as a signal reaches one, the sequence stops, the output turns off and the generator jumps back to its first line; while the side stays powered, the back input does nothing. Beware of loops without any wait: the block caps instant steps at ten in a single tick and puffs smoke to show it is spinning on nothing.</p>"
+      },
+      {
+        "id": "transmetteur",
+        "title": "The Linked Transmitter",
+        "alt": "The Linked Transmitter attached to a lever, with its two frequency slots",
+        "html": "<p>The Linked Transmitter is a module: hold it and right-click a button or lever that is already placed. It clips on and the input becomes a wireless sender. The lever keeps working as usual; the small box on top is what broadcasts its state. You get one by putting a Create Redstone Link alone in a crafting grid (the reverse recipe exists too). A click with a <a href=\"/en/wiki/wrench\">Wrench</a> removes the module and gives it back; breaking the block drops both.</p>"
+      },
+      {
+        "id": "frequences",
+        "title": "Frequencies and range",
+        "alt": "An Iron Ingot and an Oak Sapling set in the transmitter slots",
+        "html": "<p>As on a Create link, two slots take one item each and the pair makes the frequency. A Redstone Link in receiver mode set to the same pair outputs the signal, strength included, up to 256 blocks away (the server's linkRange setting). Links set to other items stay quiet. The transmitter only sends: to receive, you still need a regular link.</p>"
+      },
+      {
+        "id": "cire",
+        "title": "Wax it to avoid misclicks",
+        "alt": "The waxed transmitter: its frequency slots are no longer shown",
+        "html": "<p>On a button you press all the time, sooner or later you hit a slot and change the frequency by accident. Use Honeycomb on the module to lock it: the slots vanish and the box gets flatter. To change the frequency again, scrape it with an axe, which removes the wax just like on copper.</p>"
+      },
+      {
+        "id": "boutons",
+        "title": "Linked buttons",
+        "alt": "Linked Oak, Stone, Polished Blackstone, Cherry and Crimson Buttons",
+        "html": "<p>Every button in the game has a linked version: the Linked Oak Button, Spruce, Birch, Jungle, Acacia, Dark Oak, Mangrove, Cherry, Bamboo, Crimson and Linked Warped Button, plus the <strong>Linked Stone Button</strong> and the <strong>Linked Polished Blackstone Button</strong>. Each keeps the press duration of the button it came from. Handy for calling a lift or opening a base door from a distance.</p>"
+      },
+      {
+        "id": "leviers",
+        "title": "Linked levers and the wildcard",
+        "alt": "Linked Lever, Linked Analog Lever and Linked Throttle Lever",
+        "html": "<p>The <strong>Linked Lever</strong> sends a steady signal. The <strong>Linked Analog Lever</strong> starts from Create's <a href=\"/en/wiki/nixie-tube\">Analog Lever</a> and sends its strength from 0 to 15. With the Simulated mod installed, the <strong>Linked Throttle Lever</strong> does the same with its throttle handle. The <strong>wildcard</strong>, made from a Transmitter and a Crafter Slot Cover, goes into one frequency slot of a link and stands for any item in that position: \"wildcard + iron\" talks to every link with iron in the second slot. By default only one of the two slots can hold a wildcard.</p>"
+      }
+    ],
+    "sources": [
+      "Create Connected 1.3.3 (create_connected-1.3.3-mc1.21.1.jar from the next Create France modpack release): code from the public repository github.com/hlysine/create_connected at tag 1.3.3-mc1.21.1, recipes from the jar's data folder, Ponder scenes replayed by our engine.",
+      "Mod by Lysine (hlysine), GNU AGPL v3 licence: models and textures by its authors, rendered from the jar; no text from the mod is copied.",
+      "Classes: content/sequencedpulsegenerator (SequencedPulseGeneratorBlock, SequencedPulseGeneratorBlockEntity, instructions/*), content/linkedtransmitter (LinkedTransmitterItem, LinkedTransmitterBlock, LinkedButtonBlock, LinkedLeverBlock, LinkedAnalogLeverBlock, LinkedThrottleLeverBlock), content/redstonelinkwildcard (LinkWildcardNetworkHandler), config/CServer (allowDualWildcardLink).",
+      "Range: Create 6.0.10 server setting linkRange (CLogistics), read by LinkWildcardNetworkHandler.withinRange.",
+      "Ponder scenes SequencedPulseGeneratorScenes and LinkedTransmitterScenes replayed by our engine."
+    ]
+  }
+}

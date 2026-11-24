@@ -156,7 +156,7 @@
     "name": "Create Aeronautics",
     "version": "1.3.3",
     "icon": "aeronautics:propeller_bearing",
-    "description": "Faire voler les machines de Create : assembleur de physique, hélices, ballons à air chaud et lévitite.",
+    "description": "Faire voler et rouler les machines de Create : hélices, ballons, lévitite, pilotage, cordes et capteurs (avec Simulated et Offroad).",
     "start": [
       {
         "slug": "create-aeronautics",
@@ -167,31 +167,41 @@
         "label": "Assembler un véhicule"
       },
       {
+        "slug": "aeronautics-moteurs-et-transmission",
+        "label": "Le motoriser"
+      },
+      {
         "slug": "aeronautics-helices",
         "label": "Le faire avancer"
+      },
+      {
+        "slug": "aeronautics-pilotage",
+        "label": "Le piloter"
       },
       {
         "slug": "aeronautics-ballons",
         "label": "Le faire voler"
       },
       {
-        "slug": "aeronautics-levitite",
-        "label": "Le faire flotter"
+        "slug": "aeronautics-capteurs",
+        "label": "Automatiser avec des capteurs"
       },
       {
-        "slug": "aeronautics-roulement-gyroscopique",
-        "label": "Construire un hélicoptère"
+        "slug": "offroad-vehicules-a-roues",
+        "label": "Rouler sur terre"
       }
     ],
     "en": {
-      "description": "Make Create machines fly: physics assembler, propellers, hot air balloons and levitite.",
+      "description": "Fly and drive your Create machines: propellers, balloons, levitite, controls, ropes and sensors (with Simulated and Offroad).",
       "start": [
         "Overview",
         "Assemble a vehicle",
+        "Power it",
         "Make it move",
+        "Steer it",
         "Make it fly",
-        "Make it float",
-        "Build a helicopter"
+        "Automate with sensors",
+        "Drive on land"
       ]
     }
   },
@@ -319,6 +329,206 @@
         "Assembling a locomotive",
         "Turntable",
         "Blocks and items"
+      ]
+    }
+  },
+  {
+    "id": "propulsion",
+    "name": "Create Propulsion: Simulated",
+    "version": "1.1.5",
+    "icon": "createpropulsion:thruster",
+    "description": "Faire voler et diriger les engins de Sable avec des propulseurs, des tuyères orientables et des ailes.",
+    "start": [
+      {
+        "slug": "create-propulsion",
+        "label": "Comprendre le mod"
+      },
+      {
+        "slug": "propulsion-propulseur",
+        "label": "Premier propulseur"
+      },
+      {
+        "slug": "propulsion-carburants",
+        "label": "Le carburant"
+      },
+      {
+        "slug": "propulsion-propulseur-vectoriel",
+        "label": "Diriger"
+      },
+      {
+        "slug": "propulsion-ailes",
+        "label": "Planer"
+      },
+      {
+        "slug": "propulsion-moteur-stirling",
+        "label": "Du courant à bord"
+      }
+    ],
+    "en": {
+      "description": "Fly and steer Sable machines with thrusters, swivelling nozzles and wings.",
+      "start": [
+        "Understand the mod",
+        "First thruster",
+        "Fuel",
+        "Steer",
+        "Glide",
+        "Power on board"
+      ]
+    }
+  },
+  {
+    "id": "coasters",
+    "name": "Create: Coasters Simulated",
+    "version": "0.1.6",
+    "icon": "simulatedcoasters:coaster_cart",
+    "description": "Construire des montagnes russes physiques avec Create et Sable.",
+    "start": [
+      {
+        "slug": "create-coasters-simulated",
+        "label": "Le principe"
+      },
+      {
+        "slug": "coasters-rails",
+        "label": "Poser la voie"
+      },
+      {
+        "slug": "coasters-wagons",
+        "label": "Atteler les wagons"
+      }
+    ],
+    "en": {
+      "description": "Build physics roller coasters with Create and Sable.",
+      "start": [
+        "The idea",
+        "Lay the track",
+        "Couple the carts"
+      ]
+    }
+  },
+  {
+    "id": "connected",
+    "name": "Create Connected",
+    "version": "1.3.3",
+    "icon": "create_connected:parallel_gearbox",
+    "description": "Les blocs qui manquaient à Create : boîtes à roues dentées, embrayages, batterie et pont cinétiques, redstone sans fil, logistique, imitations et catalyseurs.",
+    "start": [
+      {
+        "slug": "create-connected",
+        "label": "Vue d'ensemble"
+      },
+      {
+        "slug": "connected-transmissions",
+        "label": "Boîtes et manivelles"
+      },
+      {
+        "slug": "connected-embrayages",
+        "label": "Embrayages et frein"
+      },
+      {
+        "slug": "connected-batterie-cinetique",
+        "label": "Stocker la rotation"
+      },
+      {
+        "slug": "connected-pont-cinetique",
+        "label": "Séparer deux réseaux"
+      },
+      {
+        "slug": "connected-redstone",
+        "label": "Redstone sans fil"
+      },
+      {
+        "slug": "connected-logistique",
+        "label": "Ports et ponts d'inventaire"
+      }
+    ],
+    "en": {
+      "description": "The blocks Create was missing: gearboxes, clutches, kinetic battery and bridge, wireless redstone, logistics, copycats and fan catalysts.",
+      "start": [
+        "Overview",
+        "Gearboxes and crank wheels",
+        "Clutches and brake",
+        "Store rotation",
+        "Split two networks",
+        "Wireless redstone",
+        "Inventory ports and bridges"
+      ]
+    }
+  },
+  {
+    "id": "bitsnbobs",
+    "name": "Create Bits 'n' Bobs",
+    "version": "2.3.5",
+    "icon": "bits_n_bobs:large_flanged_cogwheel",
+    "description": "Les petits bouts qui manquaient à Create : chaînes de roues dentées, tuyaux teints, Nixie, entretoises, mécanismes, déco et lumières.",
+    "start": [
+      {
+        "slug": "create-bits-n-bobs",
+        "label": "Vue d'ensemble"
+      },
+      {
+        "slug": "bnb-chaines-de-roues-dentees",
+        "label": "Relier des roues par chaîne"
+      },
+      {
+        "slug": "bnb-tuyaux-et-reservoirs-teints",
+        "label": "Teindre tuyaux et réservoirs"
+      },
+      {
+        "slug": "bnb-nixie",
+        "label": "Afficher du texte"
+      },
+      {
+        "slug": "bnb-entretoises",
+        "label": "Tendre des entretoises"
+      },
+      {
+        "slug": "bnb-deco-et-lumieres",
+        "label": "Décorer et éclairer"
+      }
+    ],
+    "en": {
+      "description": "The little bits Create was missing: cogwheel chains, dyed pipes, Nixie displays, girder struts, mechanisms, decor and lights.",
+      "start": [
+        "Overview",
+        "Chain your cogwheels",
+        "Dye pipes and tanks",
+        "Display text",
+        "Span girder struts",
+        "Decorate and light"
+      ]
+    }
+  },
+  {
+    "id": "lightworks",
+    "name": "Create: Lightworks",
+    "version": "1.0.1",
+    "icon": "lightworks:searchlight",
+    "description": "Des lumières qui marchent sur tout ce que Create construit : projecteurs à faisceau, gyrophares, feux d'alerte, balises, phares et feux arrière (prévu pour le prochain modpack).",
+    "start": [
+      {
+        "slug": "create-lightworks",
+        "label": "Vue d'ensemble"
+      },
+      {
+        "slug": "lightworks-projecteurs",
+        "label": "Projecteurs et tête orientable"
+      },
+      {
+        "slug": "lightworks-signalisation",
+        "label": "Gyrophares, alerte, balises"
+      },
+      {
+        "slug": "lightworks-feux-de-vehicule",
+        "label": "Phares et feux arrière"
+      }
+    ],
+    "en": {
+      "description": "Lights that keep working on anything Create builds: beam searchlights, rotating beacons, warning lights, edge lights, headlights and tail lights (planned for the next modpack).",
+      "start": [
+        "Overview",
+        "Searchlights and pan-tilt head",
+        "Beacons, warning and edge lights",
+        "Headlights and tail lights"
       ]
     }
   }

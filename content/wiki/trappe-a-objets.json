@@ -1,0 +1,256 @@
+{
+  "slug": "trappe-a-objets",
+  "name": "Trappe à objets",
+  "blockId": "create:item_hatch",
+  "category": "logistique",
+  "title": "Trappe à objets — Create : guide",
+  "description": "La trappe à objets de Create : vider son inventaire dans un coffre ou un coffre-fort d'un clic, avec un filtre, et ce qu'elle ne prend pas.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>trappe à objets</strong> se fixe sur le côté d'un inventaire : coffre, tonneau, <a href=\"/wiki/coffre-a-objet-renforce\">coffre-fort renforcé</a> ou toute machine qui garde des objets. Un clic droit dessus y dépose l'objet que tu tiens ; accroupi, elle avale tout ton inventaire, sauf la barre d'action. C'est le moyen le plus rapide de vider ses poches en rentrant de la mine.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Logistique"
+    },
+    {
+      "label": "Pose",
+      "value": "Sur le côté d’un inventaire, jamais dessus ni dessous"
+    },
+    {
+      "label": "Clic droit",
+      "value": "Dépose l’objet de la case sélectionnée"
+    },
+    {
+      "label": "Accroupi + clic droit",
+      "value": "Dépose tout l’inventaire principal, barre d’action exclue"
+    },
+    {
+      "label": "Filtre",
+      "value": "Oui : seuls les objets correspondants entrent"
+    },
+    {
+      "label": "Refusés",
+      "value": "Boîtes de Shulker et objets qui ne vont pas dans un conteneur (les colis passent)"
+    },
+    {
+      "label": "Animation",
+      "value": "Elle s’ouvre puis se referme 10 ticks plus tard"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (sans forme)",
+    "grid": [
+      [
+        "Alliage d'andésite",
+        "Trappe en fer",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "items": [
+      [
+        "create:andesite_alloy",
+        "minecraft:iron_trapdoor",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 trappe à objets",
+    "resultItem": "create:item_hatch"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "poser",
+      "title": "La poser contre un inventaire",
+      "image": "hatch_still_trappes.webp",
+      "alt": "Une trappe fermée sur un coffre et une trappe ouverte sur un tonneau",
+      "html": "<p>La trappe se pose en cliquant sur la face <strong>latérale</strong> d'un bloc qui a un inventaire : elle regarde ce bloc et y versera les objets. Sur le dessus ou le dessous, la pose est refusée, et contre un bloc sans inventaire aussi. Coffre, tonneau, coffre-fort renforcé, <a href=\"/wiki/depot\">dépôt</a> ou <a href=\"/wiki/bassin\">bassin</a> : tout ce qui accepte des objets convient. Sur un coffre-fort de plusieurs blocs, une seule trappe suffit : elle remplit l'ensemble, et on peut en mettre une sur chaque face accessible pour entrer de partout.</p>"
+    },
+    {
+      "id": "un-objet",
+      "title": "Déposer l'objet tenu",
+      "html": "<p>Un clic droit, sans t'accroupir, dépose l'objet de la case sélectionnée de ta barre d'action. S'il reste de la place, toute la pile entre ; sinon, seulement ce qui tient. Un message confirme le dépôt et la trappe s'ouvre un instant, puis se referme d'elle-même dix ticks plus tard.</p>"
+    },
+    {
+      "id": "tout",
+      "title": "Vider tout l'inventaire",
+      "html": "<p>Accroupi, le clic droit dépose <strong>tout l'inventaire principal</strong> : les 27 cases du sac. La barre d'action n'est pas touchée, ni l'armure, ni la main secondaire : tes outils, ta nourriture et tes blocs de construction restent sur toi. Range donc dans la barre ce que tu veux garder, et laisse le reste au sac.</p>"
+    },
+    {
+      "id": "filtre",
+      "title": "Le filtre",
+      "html": "<p>La trappe a un emplacement de <a href=\"/wiki/filtres\">filtre</a>. Vide, elle prend tout ; avec un objet ou un filtre de liste, elle ne laisse entrer que ce qui correspond et laisse le reste dans ton inventaire. Une trappe filtrée sur les minerais, une autre sur la pierre, une troisième sur le bois : en trois clics accroupi, le butin d'une expédition est trié.</p>"
+    },
+    {
+      "id": "refus",
+      "title": "Ce qu’elle ne prend pas",
+      "html": "<p>Les objets qui ne peuvent pas aller dans un conteneur, comme les boîtes de Shulker, restent dans ton inventaire. Les <a href=\"/wiki/emballeur\">colis</a> font exception : ils passent. La trappe ne marche qu'avec un vrai joueur : un <a href=\"/wiki/deployeur\">déployeur</a> qui clique dessus ne dépose rien. Accroupi avec une clé en main, c'est la clé qui agit, pour tourner ou ramasser la trappe.</p>"
+    },
+    {
+      "id": "base",
+      "title": "Une base bien rangée",
+      "html": "<p>Pose une rangée de coffres-forts derrière un mur, une trappe filtrée sur chacun, et un <a href=\"/wiki/tapis-roulant\">tapis</a> ou des <a href=\"/wiki/entonnoir\">entonnoirs</a> pour la suite : le tri commence dès l'entrée. Avec le réseau de colis, la trappe sur le coffre-fort d'un <a href=\"/wiki/liaison-de-stock\">stock</a> le remplit à la main sans ouvrir aucune interface.</p>"
+    },
+    {
+      "id": "entonnoir",
+      "title": "Trappe ou entonnoir ?",
+      "html": "<p>Un <a href=\"/wiki/entonnoir\">entonnoir</a> travaille seul : il ramasse ce qui tombe devant lui ou ce qu'un tapis lui apporte. La trappe, elle, ne réagit qu'à un joueur qui clique : c'est une porte d'entrée pour tes mains, pas un tuyau d'objets. Les deux se combinent bien : la trappe pour rentrer le butin, les entonnoirs et les tapis pour le distribuer ensuite aux machines.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Cliquer accroupi en espérant vider aussi la barre d'action : elle n'est jamais touchée. Oublier qu'un filtre est réglé : les objets refusés restent dans le sac sans message d'erreur. Poser la trappe sur le dessus d'un coffre : la pose est refusée, il faut viser un côté.</p>"
+    }
+  ],
+  "related": [
+    "coffre-a-objet-renforce",
+    "filtres",
+    "entonnoir",
+    "liaison-de-stock",
+    "depot"
+  ],
+  "sources": [
+    "Recette : crafting/logistics/item_hatch.json (alliage d'andésite + trappe en fer)",
+    "Pose : ItemHatchBlock.getStateForPlacement (faces latérales seulement, FACING vers l'inventaire)",
+    "Dépôt : ItemHatchBlockEntity / ItemHatchHandler (case sélectionnée ; accroupi : inventaire principal sauf barre d'action ; FakePlayer ignoré ; canFitInsideContainerItems), FilteringBehaviour ; ouverture : scheduleTick 10",
+    "Images : blocs et objets du jeu (modèles de Create) rendus par notre moteur, joueur non dessiné"
+  ],
+  "en": {
+    "slugEn": "item-hatch",
+    "name": "Item Hatch",
+    "title": "Item Hatch — Create mod guide",
+    "description": "The Create Item Hatch: emptying your inventory into a chest or an Item Vault in one click, with a filter, and what it refuses to take.",
+    "intro": "The <strong>Item Hatch</strong> attaches to the side of an inventory: chest, barrel, <a href=\"/en/wiki/item-vault\">Item Vault</a> or any machine that holds items. A right-click on it drops in the item you are holding; sneaking, it swallows your whole inventory except the hotbar. It is the quickest way to empty your pockets when you come back from the mine.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Logistics"
+      },
+      {
+        "label": "Placing",
+        "value": "On the side of an inventory, never on top or below"
+      },
+      {
+        "label": "Right-click",
+        "value": "Deposits the selected hotbar item"
+      },
+      {
+        "label": "Sneak + right-click",
+        "value": "Deposits the whole main inventory, hotbar excluded"
+      },
+      {
+        "label": "Filter",
+        "value": "Yes: only matching items go in"
+      },
+      {
+        "label": "Refused",
+        "value": "Shulker boxes and items that cannot go in containers (packages pass)"
+      },
+      {
+        "label": "Animation",
+        "value": "It opens, then closes 10 ticks later"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table (shapeless)",
+      "grid": [
+        [
+          "Andesite Alloy",
+          "Iron Trapdoor",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Item Hatch"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "poser",
+        "title": "Placing it against an inventory",
+        "alt": "A closed hatch on a chest and an open hatch on a barrel",
+        "html": "<p>The hatch is placed by clicking the <strong>side</strong> face of a block with an inventory: it faces that block and will pour items into it. On the top or bottom face placement is refused, and against a block with no inventory too. Chest, barrel, Item Vault, <a href=\"/en/wiki/depot\">Depot</a> or <a href=\"/en/wiki/basin\">Basin</a>: anything that accepts items works. On a vault several blocks wide, a single hatch is enough: it fills the whole thing, and you can put one on every reachable face to come in from anywhere.</p>"
+      },
+      {
+        "id": "un-objet",
+        "title": "Depositing the held item",
+        "html": "<p>A right-click, without sneaking, deposits the item in your selected hotbar slot. If there is room, the whole stack goes in; otherwise only what fits. A message confirms it and the hatch opens for a moment, then closes by itself ten ticks later.</p>"
+      },
+      {
+        "id": "tout",
+        "title": "Emptying the whole inventory",
+        "html": "<p>Sneaking, the right-click deposits <strong>the whole main inventory</strong>: the 27 backpack slots. The hotbar is left alone, as are armour and the off hand: your tools, food and building blocks stay with you. So keep what you want in the hotbar and leave the rest in the backpack. Your worn gear is never taken, so a sneak-click is safe even in full armour.</p>"
+      },
+      {
+        "id": "filtre",
+        "title": "The filter",
+        "html": "<p>The hatch has a <a href=\"/en/wiki/filters\">filter</a> slot. Empty, it takes everything; with an item or a list filter, it only lets matching items in and leaves the rest in your inventory. One hatch filtered for ores, another for stone, a third for wood: three sneaking clicks and a trip's loot is sorted.</p>"
+      },
+      {
+        "id": "refus",
+        "title": "What it refuses",
+        "html": "<p>Items that cannot go into a container, such as shulker boxes, stay in your inventory. <a href=\"/en/wiki/packager\">Packages</a> are the exception: they go through. The hatch only works for a real player: a <a href=\"/en/wiki/deployer\">Deployer</a> clicking it deposits nothing. Sneaking with a Wrench in hand, the Wrench takes over, to rotate or pick up the hatch.</p>"
+      },
+      {
+        "id": "base",
+        "title": "A tidy base",
+        "html": "<p>Put a row of Item Vaults behind a wall, a filtered hatch on each, and a <a href=\"/en/wiki/conveyor-belt\">belt</a> or <a href=\"/en/wiki/funnel\">funnels</a> for what comes next: sorting starts at the front door. With the package network, a hatch on the vault of a <a href=\"/en/wiki/stock-link\">stock</a> fills it by hand without opening any screen.</p>"
+      },
+      {
+        "id": "entonnoir",
+        "title": "Hatch or funnel?",
+        "html": "<p>A <a href=\"/en/wiki/funnel\">Funnel</a> works on its own: it picks up what falls in front of it or what a belt brings. The hatch only reacts to a player who clicks: it is a door for your hands, not an item pipe. The two combine well: the hatch to bring the loot in, funnels and belts to hand it to the machines afterwards.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>Sneak-clicking and expecting the hotbar to be emptied too: it is never touched. Forgetting that a filter is set: refused items stay in the backpack with no error message. Placing the hatch on top of a chest: placement is refused, aim at a side.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/logistics/item_hatch.json (Andesite Alloy + Iron Trapdoor)",
+      "Placing: ItemHatchBlock.getStateForPlacement (side faces only, FACING toward the inventory)",
+      "Deposit: ItemHatchBlockEntity / ItemHatchHandler (selected slot; sneaking: main inventory except hotbar; FakePlayer ignored; canFitInsideContainerItems), FilteringBehaviour; opening: scheduleTick 10",
+      "Images: the game's blocks and items (Create's models) rendered by our engine, player not drawn"
+    ]
+  }
+}

@@ -1,0 +1,261 @@
+{
+  "slug": "engrais-pour-arbres",
+  "name": "Engrais pour arbres",
+  "blockId": "create:tree_fertilizer",
+  "category": "outils",
+  "title": "Engrais pour arbres — Create : guide",
+  "description": "L'engrais pour arbres de Create : faire pousser un arbre d'un coup, même sans place autour, sa recette et son usage dans une ferme à arbres.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "L'<strong>engrais pour arbres</strong> fait pousser une pousse en arbre adulte <strong>immédiatement</strong>, d'un seul clic, là où la poudre d'os demande plusieurs essais. Il fait même pousser l'arbre quand la place manque autour. Utilisé par un <a href=\"/wiki/deployeur\">déployeur</a>, il accélère beaucoup une ferme à bois automatique.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Outils et équipement"
+    },
+    {
+      "label": "Effet",
+      "value": "La pousse devient un arbre adulte tout de suite"
+    },
+    {
+      "label": "Usage",
+      "value": "1 engrais par arbre"
+    },
+    {
+      "label": "Fabrication",
+      "value": "2 fleurs + 1 corail + 1 poudre d’os → 2 engrais"
+    },
+    {
+      "label": "Arbres 2 × 2",
+      "value": "Oui, si quatre pousses identiques sont en carré"
+    },
+    {
+      "label": "Place",
+      "value": "L’arbre pousse même à l’étroit ; les feuilles ne remplacent pas les blocs solides"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (sans forme)",
+    "grid": [
+      [
+        "Coquelicot",
+        "Pissenlit",
+        "Corail corné"
+      ],
+      [
+        "Poudre d’os",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "items": [
+      [
+        "minecraft:poppy",
+        "minecraft:dandelion",
+        "minecraft:horn_coral"
+      ],
+      [
+        "minecraft:bone_meal",
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "2 engrais pour arbres",
+    "resultItem": "create:tree_fertilizer"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "recette",
+      "title": "Le fabriquer",
+      "image": "fertilizer_hero_objet.webp",
+      "alt": "Fleurs, corail et poudre d’os, et l’engrais pour arbres",
+      "html": "<p>Deux <strong>petites fleurs</strong> au choix, un <strong>corail</strong> (corné, cerveau, tube, bulle ou feu, le corail vivant, pas le bloc) et une <strong>poudre d'os</strong> donnent deux engrais. Les fleurs se cultivent à la poudre d'os sur l'herbe ; le corail se ramasse avec Toucher de soie dans les récifs des océans chauds.</p>"
+    },
+    {
+      "id": "pousser",
+      "title": "Faire pousser d'un coup",
+      "image": "fertilizer_tree_pousse.webp",
+      "alt": "Une pousse de chêne sur l’herbe",
+      "html": "<p>Clic droit sur une pousse : l'arbre adulte apparaît aussitôt et un engrais est consommé (rien en créatif). La croissance est d'abord calculée dans un monde vide, puis recopiée à sa place : l'arbre pousse même si un mur ou un toit le gênerait d'ordinaire. Le sol sous la pousse est respecté, la boue compte comme de la terre.</p>"
+    },
+    {
+      "id": "place",
+      "title": "Quand la place manque",
+      "image": "fertilizer_tree_arbre.webp",
+      "alt": "Le chêne adulte, poussé en un clic",
+      "html": "<p>Au moment de recopier l'arbre, les feuilles et les autres blocs non pleins ne remplacent jamais un bloc solide, et la bedrock n'est jamais touchée. Un arbre qui pousse contre un mur s'arrête donc proprement contre lui, sans le percer. Le podzol des grands sapins n'est pas posé.</p>"
+    },
+    {
+      "id": "grands",
+      "title": "Les arbres 2 × 2",
+      "html": "<p>Quatre pousses identiques en carré (chêne noir, sapin géant, jungle géant) donnent l'arbre géant : l'engrais tient compte des pousses voisines dans un carré de trois sur trois. Un seul clic sur l'une d'elles suffit pour les quatre. Prévois tout de même de l'espace : un arbre géant est large, et ses feuilles s'arrêtent contre le moindre mur.</p>"
+    },
+    {
+      "id": "ferme",
+      "title": "Dans une ferme à arbres",
+      "html": "<p>Un <a href=\"/wiki/deployeur\">déployeur</a> chargé de pousses en pose une, un second déployeur chargé d'engrais la fait pousser, puis des <a href=\"/wiki/scie-mecanique\">scies mécaniques</a> sur un piston ou un <a href=\"/wiki/roulement-mecanique\">roulement</a> abattent le tronc. Sans attente de croissance, la ferme tourne aussi vite que les machines. Les feuilles qui tombent rendent des pousses pour la suite.</p>"
+    },
+    {
+      "id": "rentable",
+      "title": "Est-ce rentable ?",
+      "html": "<p>Un engrais donne un arbre entier : quatre à six bûches pour un chêne, bien plus pour un arbre 2 × 2. Le corail est la seule ressource un peu rare : de la poudre d'os sur le fond d'un océan chaud en fait pousser en quantité. Pour un petit besoin, la poudre d'os seule reste plus simple.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Le clic ne fait rien sur un buisson, une fleur ou une propagule de palétuvier suspendue : seules les pousses posées au sol sont acceptées. Utiliser un bloc de corail au lieu du corail : la recette demande le petit corail.</p>"
+    },
+    {
+      "id": "corail",
+      "title": "Trouver le corail",
+      "html": "<p>Les récifs de corail se trouvent dans les océans chauds, à faible profondeur. Il faut un outil enchanté <strong>Toucher de soie</strong> pour ramasser le corail vivant ; hors de l'eau, il meurt et devient gris, mais le corail mort ne convient pas à la recette. Garde-le dans un coffre, pas posé à l'air libre.</p>"
+    },
+    {
+      "id": "poudre-os",
+      "title": "Engrais ou poudre d'os ?",
+      "html": "<p>La poudre d'os fait avancer la pousse d'un stade au hasard : il en faut souvent plusieurs, et l'arbre refuse de pousser s'il manque de place. L'engrais ne rate jamais et ignore la place, mais coûte plus cher : une poudre d'os, deux fleurs et un demi-corail par engrais. Pour une ferme compacte sous un plafond bas, l'engrais est le seul qui marche à coup sûr.</p>"
+    }
+  ],
+  "related": [
+    "deployeur",
+    "scie-mecanique",
+    "roulement-mecanique",
+    "recolteur-mecanique"
+  ],
+  "sources": [
+    "Recette : crafting/appliances/tree_fertilizer.json (2 petites fleurs, 1 corail, 1 poudre d'os → 2)",
+    "Effet : TreeFertilizerItem.useOn (tag minecraft:saplings, monde vide TreesDreamWorld, carré 3 × 3, bedrock, blocs non pleins, podzol)",
+    "Images : blocs et objets du jeu (modèles de Create) rendus par notre moteur, joueur non dessiné"
+  ],
+  "en": {
+    "slugEn": "tree-fertilizer",
+    "name": "Tree Fertilizer",
+    "title": "Tree Fertilizer — Create mod guide",
+    "description": "The Create Tree Fertilizer: growing a tree at once, even with no room around it, its recipe and its use in an automatic tree farm with deployers.",
+    "intro": "<strong>Tree Fertilizer</strong> turns a sapling into a full-grown tree <strong>immediately</strong>, in a single click, where bone meal needs several tries. It even grows the tree when room is short around it. Used by a <a href=\"/en/wiki/deployer\">Deployer</a>, it speeds up an automatic wood farm a lot.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Tools and equipment"
+      },
+      {
+        "label": "Effect",
+        "value": "The sapling becomes a grown tree at once"
+      },
+      {
+        "label": "Use",
+        "value": "1 fertilizer per tree"
+      },
+      {
+        "label": "Crafting",
+        "value": "2 flowers + 1 coral + 1 bone meal → 2 fertilizers"
+      },
+      {
+        "label": "2 × 2 trees",
+        "value": "Yes, if four identical saplings form a square"
+      },
+      {
+        "label": "Room",
+        "value": "The tree grows even when cramped; leaves do not replace solid blocks"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table (shapeless)",
+      "grid": [
+        [
+          "Poppy",
+          "Dandelion",
+          "Horn Coral"
+        ],
+        [
+          "Bone Meal",
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "2 Tree Fertilizer"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "recette",
+        "title": "Crafting it",
+        "alt": "Flowers, coral and bone meal, and the Tree Fertilizer",
+        "html": "<p>Two <strong>small flowers</strong> of any kind, one <strong>coral</strong> (horn, brain, tube, bubble or fire, the live coral, not the block) and one <strong>Bone Meal</strong> make two fertilizers, which keeps the cost per tree down. Flowers grow with bone meal on grass; coral is collected with Silk Touch in warm ocean reefs.</p>"
+      },
+      {
+        "id": "pousser",
+        "title": "Growing at once",
+        "alt": "An oak sapling on grass",
+        "html": "<p>Right-click a sapling: the grown tree appears straight away and one fertilizer is used (none in creative). Growth is first computed in an empty world, then copied in place: the tree grows even where a wall or a roof would normally stop it. The ground under the sapling is kept, mud counts as dirt.</p>"
+      },
+      {
+        "id": "place",
+        "title": "When room is short",
+        "alt": "The grown oak, in one click",
+        "html": "<p>When the tree is copied in, leaves and other non-full blocks never replace a solid block, and bedrock is never touched. A tree growing against a wall therefore stops neatly against it, without breaking through. The podzol of giant spruces is not placed.</p>"
+      },
+      {
+        "id": "grands",
+        "title": "2 × 2 trees",
+        "html": "<p>Four identical saplings in a square (dark oak, giant spruce, giant jungle) give the big tree: the fertilizer takes neighbouring saplings within a three-by-three square into account. One click on any of them is enough for all four. Still leave some room: a giant tree is wide, and its leaves stop against the slightest wall.</p>"
+      },
+      {
+        "id": "ferme",
+        "title": "In a tree farm",
+        "html": "<p>A <a href=\"/en/wiki/deployer\">Deployer</a> loaded with saplings plants one, a second deployer loaded with fertilizer grows it, then <a href=\"/en/wiki/mechanical-saw\">Mechanical Saws</a> on a piston or a <a href=\"/en/wiki/mechanical-bearing\">bearing</a> fell the trunk. With no waiting for growth, the farm runs as fast as the machines. Falling leaves drop saplings for the next round, and the leaves left behind decay on their own once the trunk is gone.</p>"
+      },
+      {
+        "id": "rentable",
+        "title": "Is it worth it?",
+        "html": "<p>One fertilizer gives a whole tree: four to six logs for an oak, many more for a 2 × 2 tree. Coral is the only slightly rare ingredient: bone meal on the floor of a warm ocean grows plenty. For a small need, bone meal alone stays simpler.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>The click does nothing on a bush, a flower or a hanging mangrove propagule: only saplings planted on the ground are accepted. Using a coral block instead of coral: the recipe wants the small coral.</p>"
+      },
+      {
+        "id": "corail",
+        "title": "Finding coral",
+        "html": "<p>Coral reefs are found in warm oceans, in shallow water. You need a tool with <strong>Silk Touch</strong> to collect live coral; placed out of water it dies and turns grey, and dead coral does not work in the recipe. Keep it in a chest, not placed in the open air.</p>"
+      },
+      {
+        "id": "poudre-os",
+        "title": "Fertilizer or bone meal?",
+        "html": "<p>Bone meal moves the sapling on by a random stage: it often takes several, and the tree refuses to grow if it lacks room. The fertilizer never misses and ignores room, but costs more: one bone meal, two flowers and half a coral per fertilizer. For a compact farm under a low ceiling, fertilizer is the only sure thing.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/appliances/tree_fertilizer.json (2 small flowers, 1 coral, 1 bone meal → 2)",
+      "Effect: TreeFertilizerItem.useOn (minecraft:saplings tag, empty world TreesDreamWorld, 3 × 3 square, bedrock, non-full blocks, podzol)",
+      "Images: the game's blocks and items (Create's models) rendered by our engine, player not drawn"
+    ]
+  }
+}

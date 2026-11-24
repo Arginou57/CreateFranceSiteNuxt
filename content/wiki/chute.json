@@ -6,7 +6,7 @@
   "title": "Chute — Create : guide en français",
   "description": "La chute de Create : descendre des objets à 4 blocs par seconde, les monter avec un ventilateur, chutes en diagonale et chute intelligente filtrée.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "La <strong>chute</strong> est un tuyau vertical pour les objets. Empilées, les chutes font descendre ce qu'on y met d'un inventaire à l'autre, sans rotation ni redstone : la gravité suffit. Avec un ventilateur, elles montent aussi. La <strong>chute intelligente</strong> ajoute un filtre, une quantité précise et un arrêt par redstone. Ensemble, elles relient les étages d'une usine bien plus simplement qu'un tapis en pente.",
@@ -90,7 +90,21 @@
       "id": "chute_up",
       "name": "Chute : monter avec un ventilateur",
       "description": "Un ventilateur souffle sous une colonne de chutes : un bloc venu d'un tapis remonte jusqu'en haut.",
-      "duration": "PT10S"
+      "duration": "PT10S",
+      "chapters": [
+        {
+          "t": 2.0,
+          "section": "monter"
+        },
+        {
+          "t": 4.0,
+          "section": "sens"
+        },
+        {
+          "t": 6.5,
+          "section": "bout-ferme"
+        }
+      ]
     },
     {
       "id": "chute_smart",
@@ -135,7 +149,17 @@
       "image": "chute_up_montee.webp",
       "alt": "Ventilateur enchâssé sous une colonne de chutes, un bloc qui remonte",
       "video": "chute_up",
-      "html": "<p>Un <a href=\"/wiki/ventilateur-enchasse\">ventilateur enchâssé</a> placé <strong>sous la colonne</strong> et soufflant vers le haut inverse le courant : les objets montent, à tr/min ÷ 64 blocs par seconde, soit 0,5 bloc par seconde à 32 tr/min et jusqu'à 20 blocs par seconde à pleine vitesse. Un ventilateur en haut qui aspire marche aussi. Dans ce sens, la chute prend les objets d'un tapis passant dessous ou d'un inventaire placé en bas.</p>"
+      "html": "<p>Un <a href=\"/wiki/ventilateur-enchasse\">ventilateur enchâssé</a> placé <strong>sous la colonne</strong> et soufflant vers le haut inverse le courant : les objets montent, à tr/min ÷ 64 blocs par seconde, soit 0,5 bloc par seconde à 32 tr/min et jusqu'à 20 blocs par seconde à pleine vitesse. Un ventilateur en haut qui aspire marche aussi.</p>"
+    },
+    {
+      "id": "sens",
+      "title": "Voir le sens du courant",
+      "html": "<p>Avec les <a href=\"/wiki/lunettes-d-ingenieur\">lunettes d'ingénieur</a>, un regard sur la chute indique dans quel sens elle déplace les objets : utile dans une longue colonne où l'on ne voit pas le ventilateur.</p>"
+    },
+    {
+      "id": "bout-ferme",
+      "title": "Le bout fermé par le ventilateur",
+      "html": "<p>Du côté du ventilateur, la colonne est fermée : les objets ne peuvent plus entrer ni sortir par ce bout, il faut passer par les côtés de la chute, avec un entonnoir par exemple.</p>"
     },
     {
       "id": "intelligente",
@@ -284,7 +308,17 @@
         "id": "monter",
         "title": "Going up with a fan",
         "alt": "Encased Fan under a column of chutes, a block rising",
-        "html": "<p>An <a href=\"/en/wiki/encased-fan\">Encased Fan</a> placed <strong>under the column</strong> and blowing upwards reverses the flow: items rise at RPM ÷ 64 blocks per second, that is 0.5 block per second at 32 RPM and up to 20 blocks per second at full speed. A fan at the top pulling air works too. In this direction the chute takes items from a belt running underneath or from an inventory at the bottom.</p>"
+        "html": "<p>An <a href=\"/en/wiki/encased-fan\">Encased Fan</a> placed <strong>under the column</strong> and blowing upwards reverses the flow: items rise at RPM ÷ 64 blocks per second, that is 0.5 block per second at 32 RPM and up to 20 blocks per second at full speed. A fan at the top pulling air works too.</p>"
+      },
+      {
+        "id": "sens",
+        "title": "Seeing which way it flows",
+        "html": "<p>With <a href=\"/en/wiki/engineers-goggles\">Engineer's Goggles</a>, a look at the chute tells you which way it moves items: useful in a long column where the fan is out of sight.</p>"
+      },
+      {
+        "id": "bout-ferme",
+        "title": "The end closed by the fan",
+        "html": "<p>On the fan's side the column is closed: items can no longer go in or out through that end, they have to use the sides of the chute, with a funnel for instance.</p>"
       },
       {
         "id": "intelligente",

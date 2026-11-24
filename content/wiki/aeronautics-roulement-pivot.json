@@ -1,0 +1,337 @@
+{
+  "slug": "aeronautics-roulement-pivot",
+  "name": "Roulement pivot",
+  "blockId": "simulated:swivel_bearing",
+  "category": "aeronautics",
+  "title": "Roulement pivot — Create Aeronautics, guide",
+  "description": "Le roulement pivot de Simulated : faire tourner une partie d'un navire, la libérer à la redstone, transmettre la rotation à travers. Vidéos.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Aeronautics 1.3.3",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>roulement pivot</strong> (Swivel Bearing) de Simulated fait tourner un groupe de blocs collés comme une contraption simulée à part entière : un safran, une tourelle, un bras de grue ou une tête de foreuse. Contrairement au roulement mécanique de Create, ce qu'il porte reste soumis à la physique de Sable : le bloc tourné a une masse, peut heurter le décor et peut même pivoter librement.",
+  "facts": [
+    {
+      "label": "Entrée",
+      "value": "Roue dentée latérale (rotation du pivot) et arbre traversant"
+    },
+    {
+      "label": "Stress",
+      "value": "4 SU par tr/min"
+    },
+    {
+      "label": "Vitesse maximale",
+      "value": "96 tr/min (réglage serveur)"
+    },
+    {
+      "label": "Liaison",
+      "value": "Bloc de liaison de roulement pivot posé devant, à l’assemblage"
+    },
+    {
+      "label": "Redstone",
+      "value": "Déverrouille le pivot : la partie tourne librement"
+    },
+    {
+      "label": "Raideur / frottement",
+      "value": "1 600 / 0,3 (réglages physiques par défaut)"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Dalle en chêne",
+        null
+      ],
+      [
+        null,
+        "Bloc de fer industriel",
+        null
+      ],
+      [
+        null,
+        "Roue dentée",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "minecraft:oak_slab",
+        null
+      ],
+      [
+        null,
+        "create:industrial_iron_block",
+        null
+      ],
+      [
+        null,
+        "create:cogwheel",
+        null
+      ]
+    ],
+    "result": "1 roulement pivot",
+    "resultItem": "simulated:swivel_bearing"
+  },
+  "videos": [
+    {
+      "id": "sim_swivel",
+      "name": "Le roulement pivot",
+      "description": "Une poutre collée sur le pivot est assemblée puis tourne avec la roue dentée.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 5.02,
+          "section": "colle"
+        },
+        {
+          "t": 6.9,
+          "section": "assemblage"
+        }
+      ]
+    },
+    {
+      "id": "sim_swivel_unlock",
+      "name": "Déverrouiller à la redstone",
+      "description": "Sous signal, la partie portée tourne librement, puis le réglage change ce comportement.",
+      "duration": "PT16S",
+      "chapters": [
+        {
+          "t": 5.25,
+          "section": "deverrouiller"
+        },
+        {
+          "t": 13.25,
+          "section": "reglage"
+        }
+      ]
+    },
+    {
+      "id": "sim_swivel_pass",
+      "name": "L'arbre traversant",
+      "description": "Une perceuse orientable reçoit sa rotation à travers le pivot pendant qu’il tourne.",
+      "duration": "PT16S",
+      "chapters": [
+        {
+          "t": 3.25,
+          "section": "traversant"
+        },
+        {
+          "t": 13.05,
+          "section": "traversant"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "colle",
+      "title": "Délimiter la partie qui pivote",
+      "image": "sim_swivel_e1.webp",
+      "alt": "Le roulement pivot et la zone de colle verte au-dessus",
+      "video": "sim_swivel",
+      "html": "<p>Le pivot s'accroche au bloc posé devant sa face. Pour emporter davantage, on entoure le groupe de <a href=\"/wiki/colle-extra-forte\">super colle</a> ou bien de <a href=\"/wiki/aeronautics-outils\">colle au miel</a> : tout ce qui est collé devient une seule contraption.</p>"
+    },
+    {
+      "id": "assemblage",
+      "title": "L'assemblage",
+      "image": "sim_swivel_e2.webp",
+      "alt": "La poutre assemblée qui tourne au-dessus du pivot",
+      "html": "<p>Dès que la roue dentée latérale reçoit de la rotation, le pivot assemble le groupe et le fait tourner. Le bloc qui touchait la face devient un <strong>bloc de liaison de roulement pivot</strong> (Swivel Bearing Link Block) : c'est lui qui relie physiquement les deux corps. Le pivot coûte 4 SU par tr/min et plafonne à 96 tr/min.</p>"
+    },
+    {
+      "id": "deverrouiller",
+      "title": "Libérer le pivot",
+      "image": "sim_swivel_unlock_e1.webp",
+      "alt": "Le roulement pivot alimenté par un levier, la partie portée libre",
+      "video": "sim_swivel_unlock",
+      "html": "<p>Un signal de redstone déverrouille le pivot : la partie portée ne suit plus la roue dentée et tourne librement, entraînée par son poids ou par une hélice. Pratique pour une girouette, une porte battante ou un bras qui doit s'aligner seul.</p>"
+    },
+    {
+      "id": "reglage",
+      "title": "Changer ce comportement",
+      "image": "sim_swivel_unlock_e2.webp",
+      "alt": "Le panneau de valeur du roulement pivot",
+      "html": "<p>Le panneau de valeur du pivot choisit ce que fait la redstone, par exemple verrouiller au lieu de libérer. Les réglages physiques du serveur fixent la raideur (1 600), le frottement (0,3) et l'amortissement (40) du pivot libre.</p>"
+    },
+    {
+      "id": "traversant",
+      "title": "Faire passer la rotation à travers",
+      "image": "sim_swivel_pass_e1.webp",
+      "alt": "Un arbre qui traverse le roulement pivot jusqu'à une perceuse",
+      "video": "sim_swivel_pass",
+      "html": "<p>L'arbre qui traverse le pivot transmet sa propre rotation à la partie portée, sans être gêné quand le pivot tourne : une perceuse ou une scie montée sur une tourelle continue de travailler pendant qu'on l'oriente. On pilote donc deux choses avec un seul bloc, la direction par la roue dentée et l'outil par l'arbre.</p>"
+    },
+    {
+      "id": "faq",
+      "title": "Questions fréquentes",
+      "html": "<p><strong>Quelle différence avec le roulement mécanique ?</strong> Le <a href=\"/wiki/roulement-mecanique\">roulement mécanique</a> de Create anime un bloc rigide qui traverse tout ; le roulement pivot crée une contraption simulée, avec une masse, des collisions et la possibilité de tourner librement. <strong>Peut-on empiler des pivots ?</strong> Oui : une tourelle sur un pivot peut porter un second pivot pour lever un canon, chacun piloté par sa roue dentée. <strong>Pourquoi ma partie tombe-t-elle ?</strong> Le pivot ne garde que ce qui est relié au bloc de liaison ; vérifiez la colle. <strong>Et si je casse le pivot ?</strong> La partie portée reste une contraption simulée, posée là où elle se trouve.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils",
+      "html": "<p>Gardez la vitesse modérée : au-delà d'une trentaine de tr/min, une grande partie lourde secoue tout le navire. Pour un safran, une transmission analogique entre le gouvernail et le pivot démultiplie le mouvement et rend la direction plus douce. Enfin, pensez au poids : un bras de grue en bois pèse deux fois moins qu'en pierre.</p>"
+    },
+    {
+      "id": "recette",
+      "title": "Fabrication et coût",
+      "html": "<p>Le roulement pivot se fabrique à l'établi avec une dalle de bois, un bloc de fer industriel et une roue dentée, empilés de haut en bas. C'est un bloc de milieu de partie : le fer industriel demande déjà une ligne de production de Create. Côté énergie, 4 SU par tr/min restent modestes ; un seul moteur portatif suffit à orienter plusieurs tourelles.</p>"
+    },
+    {
+      "id": "usages",
+      "title": "Idées de montages",
+      "image": "gal_pilotage_commandes.webp",
+      "alt": "Un roulement pivot et son bloc de liaison, à côté du gouvernail et du levier",
+      "html": "<p>Relié à un <a href=\"/wiki/aeronautics-pilotage\">gouvernail</a>, le pivot fait un safran précis ; avec un <a href=\"/wiki/aeronautics-moteurs-et-transmission\">ressort de torsion</a>, une gouverne qui revient au neutre. Sur un véhicule, il oriente une grue, un canon ou un projecteur sans désassembler le reste.</p>"
+    }
+  ],
+  "related": [
+    "create-aeronautics",
+    "aeronautics-pilotage",
+    "aeronautics-outils",
+    "assembleur-physique",
+    "roulement-mecanique",
+    "colle-extra-forte",
+    "perceuse-mecanique"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Aeronautics 1.3.3 (dépôt Creators-of-Aeronautics/Simulated-Project, commit 900122e, code sous licence MIT, ressources « tous droits réservés », The Simulated Team / The Creators of Aeronautics), identiques au jar du modpack (instance de test 1.3.3)",
+    "Réglages serveur par défaut de Simulated 1.3.3 (SimBlocks, SimPhysics, SimItems) et coûts en stress (SimStress, AeroStress, OffroadStress)",
+    "Recette : data/simulated/recipe/swivel_bearing.json",
+    "Vidéos : scènes Ponder de Create Aeronautics / Simulated (swivel_bearing/intro, unlocking, passthrough) rejouées par notre moteur ; modèles et textures du mod (© The Simulated Team / The Creators of Aeronautics)",
+    "Images : blocs du mod posés sur la plaque et rendus par notre moteur (© The Simulated Team / The Creators of Aeronautics)"
+  ],
+  "en": {
+    "slugEn": "aeronautics-swivel-bearing",
+    "name": "Swivel Bearing",
+    "title": "Swivel Bearing — Create Aeronautics guide",
+    "description": "Simulated's Swivel Bearing: turn part of a ship or machine, free it with redstone, pass rotation through it. Videos and numbers.",
+    "intro": "Simulated's <strong>Swivel Bearing</strong> turns a group of glued blocks as a simulated contraption of its own: a rudder, a turret, a crane arm or a drill head. Unlike Create's Mechanical Bearing, what it carries stays under Sable's physics: the turned part has mass, can hit the scenery and can even swing freely.",
+    "facts": [
+      {
+        "label": "Input",
+        "value": "Side cogwheel (turns the swivel) and a pass-through shaft"
+      },
+      {
+        "label": "Stress",
+        "value": "4 SU per RPM"
+      },
+      {
+        "label": "Top speed",
+        "value": "96 RPM (server setting)"
+      },
+      {
+        "label": "Link",
+        "value": "Swivel Bearing Link Block placed in front when assembling"
+      },
+      {
+        "label": "Redstone",
+        "value": "Unlocks the swivel: the part spins freely"
+      },
+      {
+        "label": "Stiffness / friction",
+        "value": "1,600 / 0.3 (default physics settings)"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Oak Slab",
+          null
+        ],
+        [
+          null,
+          "Block of Industrial Iron",
+          null
+        ],
+        [
+          null,
+          "Cogwheel",
+          null
+        ]
+      ],
+      "result": "1 Swivel Bearing"
+    },
+    "videos": [
+      {
+        "id": "sim_swivel",
+        "name": "The Swivel Bearing",
+        "description": "A beam glued onto the swivel is assembled, then turns with the cogwheel."
+      },
+      {
+        "id": "sim_swivel_unlock",
+        "name": "Unlocking with redstone",
+        "description": "With a signal the carried part spins freely, then the setting changes that."
+      },
+      {
+        "id": "sim_swivel_pass",
+        "name": "The pass-through shaft",
+        "description": "A steerable drill gets its rotation through the swivel while it turns."
+      }
+    ],
+    "sections": [
+      {
+        "id": "colle",
+        "title": "Marking the part that turns",
+        "alt": "The Swivel Bearing with the green glue area above it",
+        "html": "<p>The swivel grabs the block placed against its face. To take more, surround the group with <a href=\"/en/wiki/aeronautics-tools\">Honey Glue</a> or <a href=\"/en/wiki/super-glue\">Super Glue</a>: everything glued becomes one contraption.</p>"
+      },
+      {
+        "id": "assemblage",
+        "title": "Assembling",
+        "alt": "The assembled beam turning above the swivel",
+        "html": "<p>As soon as the side cogwheel gets rotation, the swivel assembles the group and turns it. The block that touched the face becomes a <strong>Swivel Bearing Link Block</strong>: it is the physical joint between the two bodies. The swivel costs 4 SU per RPM and is capped at 96 RPM.</p>"
+      },
+      {
+        "id": "deverrouiller",
+        "title": "Freeing the swivel",
+        "alt": "The Swivel Bearing powered by a lever, the carried part free",
+        "html": "<p>A redstone signal unlocks the swivel: the carried part stops following the cogwheel and turns freely, pushed by its own weight or by a propeller. Handy for a weathervane, a swinging door or an arm that should line itself up.</p>"
+      },
+      {
+        "id": "reglage",
+        "title": "Changing that behaviour",
+        "alt": "The Swivel Bearing value panel",
+        "html": "<p>The swivel's value panel chooses what redstone does, for instance locking instead of freeing. The server physics settings set the stiffness (1,600), friction (0.3) and damping (40) of a free swivel.</p>"
+      },
+      {
+        "id": "traversant",
+        "title": "Passing rotation through",
+        "alt": "A shaft going through the Swivel Bearing to a drill",
+        "html": "<p>The shaft running through the swivel hands its own rotation to the carried part, undisturbed while the swivel turns: a drill or saw on a turret keeps working while you aim it. One block drives two things, the heading through the cogwheel and the tool through the shaft.</p>"
+      },
+      {
+        "id": "faq",
+        "title": "Frequently asked questions",
+        "html": "<p><strong>How is it different from the Mechanical Bearing?</strong> Create's <a href=\"/en/wiki/mechanical-bearing\">Mechanical Bearing</a> animates a rigid block that passes through everything; the Swivel Bearing creates a simulated contraption, with mass, collisions and the option to spin freely. <strong>Can swivels be stacked?</strong> Yes: a turret on a swivel can carry a second swivel to raise a cannon, each driven by its own cogwheel. <strong>Why does my part fall off?</strong> The swivel only keeps what is connected to the link block; check the glue. <strong>What if I break the swivel?</strong> The carried part stays a simulated contraption, resting where it is.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<p>Keep the speed moderate: above thirty or so RPM, a large heavy part shakes the whole ship. For a rudder, an Analog Transmission between the Steering Wheel and the swivel gears the motion down and makes steering smoother. Finally, mind the weight: a wooden crane arm weighs half as much as a stone one.</p>"
+      },
+      {
+        "id": "recette",
+        "title": "Crafting and cost",
+        "html": "<p>The Swivel Bearing is crafted at a crafting table from a wooden slab, a Block of Industrial Iron and a cogwheel, stacked top to bottom. It is a mid-game block: Industrial Iron already needs a Create production line. Energy-wise, 4 SU per RPM is modest; a single Portable Engine is enough to aim several turrets at once, and the pass-through shaft adds no extra cost of its own beyond what the driven tool consumes.</p>"
+      },
+      {
+        "id": "usages",
+        "title": "Build ideas",
+        "alt": "A Swivel Bearing and its link block, next to the Steering Wheel and the lever",
+        "html": "<p>Wired to a <a href=\"/en/wiki/aeronautics-piloting\">Steering Wheel</a>, the swivel makes a precise rudder; with a <a href=\"/en/wiki/aeronautics-engines-and-transmission\">Torsion Spring</a>, a control surface that returns to neutral. On a vehicle it aims a crane, a cannon or a searchlight without disassembling the rest.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Aeronautics 1.3.3 (Creators-of-Aeronautics/Simulated-Project repository, commit 900122e, code under the MIT licence, assets « all rights reserved », The Simulated Team / The Creators of Aeronautics), identical to the modpack jar (1.3.3 test instance)",
+      "Simulated 1.3.3 default server settings (SimBlocks, SimPhysics, SimItems) and stress costs (SimStress, AeroStress, OffroadStress)",
+      "Recipe: data/simulated/recipe/swivel_bearing.json",
+      "Videos: Create Aeronautics / Simulated Ponder scenes (swivel_bearing/intro, unlocking, passthrough) replayed by our engine; mod models and textures (© The Simulated Team / The Creators of Aeronautics)",
+      "Images: mod blocks placed on the plate and rendered by our engine (© The Simulated Team / The Creators of Aeronautics)"
+    ]
+  }
+}

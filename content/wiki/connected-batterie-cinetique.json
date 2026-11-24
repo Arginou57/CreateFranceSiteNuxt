@@ -1,0 +1,373 @@
+{
+  "slug": "connected-batterie-cinetique",
+  "name": "Batterie cinétique",
+  "blockId": "create_connected:kinetic_battery",
+  "category": "connected",
+  "title": "Batterie cinétique — Create Connected, guide",
+  "description": "Batterie cinétique de Create Connected : stocker la rotation de Create, la rendre sur un signal de redstone, chaîner et automatiser les batteries.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Connected 1.3.3 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>batterie cinétique</strong> (Kinetic Battery) met de la rotation de côté. Sans signal, elle prend du stress sur son avant et se remplit ; quand la redstone l'alimente, elle devient une source qui tourne à vitesse fixe. Elle garde sa charge quand on la casse, ce qui permet de transporter de l'énergie à pied, au <a href=\"/wiki/deployeur\">déployeur</a> ou au <a href=\"/wiki/bras-mecanique\">bras mécanique</a>.",
+  "facts": [
+    {
+      "label": "Capacité",
+      "value": "512 su·h (réglage serveur batteryCapacity)"
+    },
+    {
+      "label": "Décharge",
+      "value": "64 tr/min (batteryDischargeRPM), 2 048 su (32 su par tr/min)"
+    },
+    {
+      "label": "Charge",
+      "value": "64 su par tr/min pris en entrée (CStress)"
+    },
+    {
+      "label": "Temps de charge",
+      "value": "7 min 30 s à 64 tr/min, 15 min à 32 tr/min"
+    },
+    {
+      "label": "Autonomie",
+      "value": "15 min à pleine charge de 2 048 su, plus si le réseau en prend moins"
+    },
+    {
+      "label": "Recette",
+      "value": "8 batteries par fabrication"
+    },
+    {
+      "label": "Version",
+      "value": "Create Connected 1.3.3 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Mécanisme de précision",
+        null
+      ],
+      [
+        null,
+        "Boitier de laiton",
+        null
+      ],
+      [
+        "Plaque de fer",
+        "Poudre de redstone",
+        "Plaque de fer"
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "create:precision_mechanism",
+        null
+      ],
+      [
+        null,
+        "create:brass_casing",
+        null
+      ],
+      [
+        "create:iron_sheet",
+        "minecraft:redstone",
+        "create:iron_sheet"
+      ]
+    ],
+    "result": "8 batteries cinétiques",
+    "resultItem": "create_connected:kinetic_battery"
+  },
+  "videos": [
+    {
+      "id": "conn_battery",
+      "name": "Charger et décharger une batterie cinétique",
+      "description": "Une batterie se charge sur un rotor, fait tourner des scies quand on l'alimente, puis on lit son niveau au comparateur, au détecteur de seuil et à la liaison d'affichage.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 0.5,
+          "section": "principe"
+        },
+        {
+          "t": 2.6,
+          "section": "charge"
+        },
+        {
+          "t": 6.8,
+          "section": "decharge"
+        },
+        {
+          "t": 11.5,
+          "section": "autres-sources"
+        },
+        {
+          "t": 15.5,
+          "section": "lecture"
+        }
+      ]
+    },
+    {
+      "id": "conn_battery_chain",
+      "name": "Chaîner les batteries",
+      "description": "La sortie arrière d'une batterie, son couplage quand elle est pleine ou vide, une chaîne de batteries pour durer plus longtemps et des batteries côte à côte pour plus de capacité.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 2.4,
+          "section": "chaine"
+        },
+        {
+          "t": 19.7,
+          "section": "parallele"
+        }
+      ]
+    },
+    {
+      "id": "conn_battery_auto",
+      "name": "Échanger l'énergie en objet",
+      "description": "Une batterie cassée garde sa charge ; on recharge ou on vide une batterie posée avec une autre en main, puis un déployeur fait l'échange tout seul.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 3.0,
+          "section": "objet"
+        },
+        {
+          "t": 18.8,
+          "section": "automatisation"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "principe",
+      "title": "Une réserve de rotation",
+      "image": "conn_battery_batterie.webp",
+      "alt": "Une batterie cinétique posée au bout d’un rotor",
+      "video": "conn_battery",
+      "html": "<p>La batterie se pose comme un bloc orienté : son avant reçoit la rotation, son arrière sert de sortie de chaînage. Elle contient au plus 512 su·h, c'est-à-dire 512 su fournis pendant une heure, ou 2 048 su pendant un quart d'heure. Son niveau s'affiche sur le bloc en cinq crans et, en détail, dans les <a href=\"/wiki/lunettes-d-ingenieur\">lunettes d'ingénieur</a>.</p>"
+    },
+    {
+      "id": "charge",
+      "title": "La charge",
+      "image": "conn_battery_charge.webp",
+      "alt": "La batterie qui se charge sur un rotor en rotation",
+      "video": "conn_battery",
+      "html": "<p>Sans signal de redstone, la batterie se comporte comme une machine : elle prend 64 su par tr/min sur son avant et range ce stress. À 64 tr/min, cela fait 4 096 su et un plein en 7 min 30 s ; à 32 tr/min, 2 048 su et 15 min. Vérifie que ta source tient la charge, sinon le réseau entier passe en surcharge.</p>"
+    },
+    {
+      "id": "decharge",
+      "title": "La décharge",
+      "image": "conn_battery_decharge.webp",
+      "alt": "La batterie alimentée par la redstone qui fait tourner une scie",
+      "video": "conn_battery",
+      "html": "<p>Avec un signal, elle devient une source : 64 tr/min et 2 048 su de capacité, dans le sens choisi sur son panneau. Elle ne dépense que ce que le réseau utilise vraiment : une scie au repos coûte peu, une ligne pleine vide la batterie en un quart d'heure. Même sans aucune charge, elle consomme un minimum de 1 su par tick si un <a href=\"/wiki/tapis-roulant\">tapis roulant</a> est branché.</p>"
+    },
+    {
+      "id": "autres-sources",
+      "title": "Avec d’autres sources",
+      "image": "conn_battery_autres-sources.webp",
+      "alt": "Une batterie en décharge sur un réseau qui a déjà une autre source",
+      "video": "conn_battery",
+      "html": "<p>Si une autre source du même réseau suffit à couvrir le besoin, la batterie en décharge ne perd rien : elle ne paie que la part qui manque. C'est le bon montage pour une roue à eau ou un moulin un peu justes, avec la batterie en appoint pour les pointes.</p>"
+    },
+    {
+      "id": "lecture",
+      "title": "Lire le niveau",
+      "image": "conn_battery_comparateur.webp",
+      "alt": "Un comparateur posé contre la batterie, qui allume une ligne de redstone",
+      "video": "conn_battery",
+      "html": "<p>Un comparateur sort une puissance de 0 à 15 selon la charge. Pour un seuil précis, le <a href=\"/wiki/detecteur-de-seuil\">détecteur de seuil</a> lit la batterie en su·h, de 0 à 512. Une <a href=\"/wiki/liaison-d-affichage\">liaison d'affichage</a> écrit la charge en nombre, en pourcentage ou en barre de progression sur un panneau ou un <a href=\"/wiki/tube-nixie\">tube Nixie</a>.</p>"
+    },
+    {
+      "id": "chaine",
+      "title": "Chaîner des batteries",
+      "image": "conn_battery_chain_couplage.webp",
+      "alt": "Une batterie pleine qui relie son entrée à sa sortie arrière",
+      "video": "conn_battery_chain",
+      "html": "<p>Tant qu'elle travaille, la batterie isole sa sortie arrière. Une fois pleine en charge, ou vide en décharge, elle relie l'avant à l'arrière et laisse passer la rotation. Aligne plusieurs batteries dans le même sens : elles se remplissent puis se vident l'une après l'autre. Un seul signal suffit, il se propage le long de la chaîne en perdant un cran par batterie.</p>"
+    },
+    {
+      "id": "parallele",
+      "title": "Plus de capacité : en parallèle",
+      "image": "conn_battery_chain_parallele.webp",
+      "alt": "Des batteries posées côte à côte sur un même réseau",
+      "video": "conn_battery_chain",
+      "html": "<p>La chaîne allonge la durée, pas la puissance : une seule batterie travaille à la fois. Pour plus de capacité, branche les batteries côte à côte sur le même réseau, par exemple chacune sur sa sortie d'une <a href=\"/wiki/connected-transmissions\">boîte parallèle</a>. Chacune ajoute ses 2 048 su et elles se partagent la dépense.</p>"
+    },
+    {
+      "id": "objet",
+      "title": "La charge en objet",
+      "image": "conn_battery_auto_objet.webp",
+      "alt": "Une batterie cinétique ramassée à la clé, avec sa charge",
+      "video": "conn_battery_auto",
+      "html": "<p>Une batterie cassée garde sa charge. Batterie en main, vise une batterie posée et clic droit : si le bloc est en décharge, l'objet le recharge ; s'il est en charge, il remplit l'objet. Fabriquée seule dans l'établi, elle repart vide. L'ancienne <strong>batterie cinétique chargée</strong> (Charged Kinetic Battery), abandonnée depuis la 1.3.0, se convertit à l'établi en batterie pleine.</p>"
+    },
+    {
+      "id": "automatisation",
+      "title": "Automatiser l’échange",
+      "image": "conn_battery_auto_automatisation.webp",
+      "alt": "Un déployeur qui échange des batteries contre une batterie posée",
+      "video": "conn_battery_auto",
+      "html": "<p>Un <a href=\"/wiki/deployeur\">déployeur</a> ou un <a href=\"/wiki/bras-mecanique\">bras mécanique</a> fait le même geste que toi. Une station de charge près de ta roue à eau remplit les batteries, un tapis les emmène, et une station en décharge à l'autre bout de la base les vide dans une machine isolée, sans un seul rotor entre les deux.</p>"
+    }
+  ],
+  "related": [
+    "create-connected",
+    "connected-pont-cinetique",
+    "connected-transmissions",
+    "detecteur-de-seuil",
+    "liaison-d-affichage",
+    "deployeur",
+    "bras-mecanique",
+    "roue-a-eau"
+  ],
+  "sources": [
+    "Create Connected 1.3.3 (create_connected-1.3.3-mc1.21.1.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/hlysine/create_connected au tag 1.3.3-mc1.21.1, recettes du dossier data du jar, scènes Ponder rejouées par notre moteur.",
+    "Mod de Lysine (hlysine), sous licence GNU AGPL v3 : modèles et textures de ses auteurs, rendus à partir du jar ; aucun texte du mod n'est recopié.",
+    "Réglages : config/CServer.java (batteryCapacity 512, batteryDischargeRPM 64, batteryMinDischarge 1) ; registries/CCBlocks.java (CStress.setCapacity(32.0), setImpact(64.0)).",
+    "Comportement : content/kineticbattery/KineticBatteryBlockEntity.java (charge = impact × vitesse par tick, consommation selon la capacité manquante, 36 864 000 unités au plein), KineticBatteryBlock.java (signal propagé le long de la chaîne, comparateur sur 15 crans, échange tryInsert), KineticBatteryDisplaySource.java.",
+    "Recettes : data/create_connected/recipe/crafting/kinetics/kinetic_battery.json (8 batteries), kinetic_battery_discharge.json, kinetic_battery_from_charged.json ; ChargedKineticBatteryItem.java (@Deprecated depuis 1.3.0)."
+  ],
+  "en": {
+    "slugEn": "connected-kinetic-battery",
+    "name": "Kinetic Battery",
+    "title": "Kinetic Battery — Create Connected guide",
+    "description": "Create Connected Kinetic Battery: store Create rotation, release it on a redstone signal, chain several batteries and automate swapping them.",
+    "intro": "The <strong>Kinetic Battery</strong> puts rotation aside. Without a signal it takes stress at its front and fills up; with a redstone signal it becomes a source spinning at a fixed speed. It keeps its charge when broken, so you can carry energy around on foot, with a <a href=\"/en/wiki/deployer\">Deployer</a> or a <a href=\"/en/wiki/mechanical-arm\">Mechanical Arm</a>.",
+    "facts": [
+      {
+        "label": "Capacity",
+        "value": "512 su·h (server setting batteryCapacity)"
+      },
+      {
+        "label": "Discharge",
+        "value": "64 RPM (batteryDischargeRPM), 2,048 SU (32 SU per RPM)"
+      },
+      {
+        "label": "Charge",
+        "value": "64 SU per RPM taken at the input (CStress)"
+      },
+      {
+        "label": "Charge time",
+        "value": "7 min 30 s at 64 RPM, 15 min at 32 RPM"
+      },
+      {
+        "label": "Run time",
+        "value": "15 min at a full 2,048 SU load, longer if the network uses less"
+      },
+      {
+        "label": "Recipe",
+        "value": "8 batteries per craft"
+      },
+      {
+        "label": "Version",
+        "value": "Create Connected 1.3.3 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Precision Mechanism",
+          null
+        ],
+        [
+          null,
+          "Brass Casing",
+          null
+        ],
+        [
+          "Iron Sheet",
+          "Redstone Dust",
+          "Iron Sheet"
+        ]
+      ],
+      "result": "8 Kinetic Batteries"
+    },
+    "videos": [
+      {
+        "id": "conn_battery",
+        "name": "Charging and discharging a Kinetic Battery",
+        "description": "A battery charges from a shaft, runs saws once it is powered, then its level is read with a comparator, a Threshold Switch and a Display Link."
+      },
+      {
+        "id": "conn_battery_chain",
+        "name": "Chaining batteries",
+        "description": "A battery's rear output, how it couples once full or empty, a chain of batteries for a longer run and batteries side by side for more capacity."
+      },
+      {
+        "id": "conn_battery_auto",
+        "name": "Trading energy as items",
+        "description": "A broken battery keeps its charge; a placed battery is filled or emptied with another one in hand, then a Deployer does the swap by itself."
+      }
+    ],
+    "sections": [
+      {
+        "id": "principe",
+        "title": "A reserve of rotation",
+        "alt": "A Kinetic Battery placed at the end of a shaft",
+        "html": "<p>The battery is placed like a directional block: its front takes rotation in, its back is the chaining output. It holds up to 512 su·h, meaning 512 SU supplied for an hour, or 2,048 SU for a quarter of an hour. Its level shows on the block in five steps and, in detail, through <a href=\"/en/wiki/engineers-goggles\">Engineer's Goggles</a>.</p>"
+      },
+      {
+        "id": "charge",
+        "title": "Charging",
+        "alt": "The battery charging on a spinning shaft",
+        "html": "<p>Without a redstone signal the battery acts like a machine: it takes 64 SU per RPM at its front and banks that stress. At 64 RPM that is 4,096 SU and a full charge in 7 min 30 s; at 32 RPM, 2,048 SU and 15 min. Make sure your source can carry the load, or the whole network overstresses.</p>"
+      },
+      {
+        "id": "decharge",
+        "title": "Discharging",
+        "alt": "The redstone-powered battery running a saw",
+        "html": "<p>With a signal it turns into a source: 64 RPM and 2,048 SU of capacity, in the direction picked on its panel. It only spends what the network really uses: an idle saw costs little, a full line drains the battery in a quarter of an hour. Even with no load at all, it burns a minimum of 1 SU per tick if a <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a> is connected.</p>"
+      },
+      {
+        "id": "autres-sources",
+        "title": "Alongside other sources",
+        "alt": "A discharging battery on a network that already has another source",
+        "html": "<p>If another source on the same network covers the need, a discharging battery loses nothing: it only pays for the missing share. That is the right setup for a water wheel or windmill that is a little short, with the battery topping up the peaks.</p>"
+      },
+      {
+        "id": "lecture",
+        "title": "Reading the level",
+        "alt": "A comparator against the battery, lighting a redstone line",
+        "html": "<p>A comparator outputs 0 to 15 depending on the charge. For a precise threshold, the <a href=\"/en/wiki/threshold-switch\">Threshold Switch</a> reads the battery in su·h, from 0 to 512. A <a href=\"/en/wiki/display-link\">Display Link</a> writes the charge as a number, a percentage or a progress bar on a board or a <a href=\"/en/wiki/nixie-tube\">Nixie Tube</a>.</p>"
+      },
+      {
+        "id": "chaine",
+        "title": "Chaining batteries",
+        "alt": "A full battery linking its input to its rear output",
+        "html": "<p>While it is working, the battery keeps its rear output disconnected. Once full when charging, or empty when discharging, it links front to back and lets rotation through. Line up several batteries facing the same way: they fill and then drain one after another. One signal is enough; it travels down the chain, losing one level per battery.</p>"
+      },
+      {
+        "id": "parallele",
+        "title": "More capacity: in parallel",
+        "alt": "Batteries placed side by side on one network",
+        "html": "<p>A chain makes the run longer, not stronger: only one battery works at a time. For more capacity, connect the batteries side by side on the same network, for example each on its own output of a <a href=\"/en/wiki/connected-gearboxes-and-crank-wheels\">Parallel Gearbox</a>. Each one adds its 2,048 SU and they split the cost.</p>"
+      },
+      {
+        "id": "objet",
+        "title": "Charge in item form",
+        "alt": "A Kinetic Battery picked up with the Wrench, charge included",
+        "html": "<p>A broken battery keeps its charge. Right-click a placed battery with a battery in hand: if the block is discharging, the item tops it up; if it is charging, it fills the item. Crafted on its own, a battery comes out empty. The old <strong>Charged Kinetic Battery</strong>, deprecated since 1.3.0, converts into a full battery at the crafting table.</p>"
+      },
+      {
+        "id": "automatisation",
+        "title": "Automating the swap",
+        "alt": "A Deployer swapping batteries against a placed battery",
+        "html": "<p>A <a href=\"/en/wiki/deployer\">Deployer</a> or a <a href=\"/en/wiki/mechanical-arm\">Mechanical Arm</a> makes the same move you do. A charging station by your water wheel fills batteries, a belt carries them away, and a discharging station at the far end of the base empties them into an isolated machine, without a single shaft between the two.</p>"
+      }
+    ],
+    "sources": [
+      "Create Connected 1.3.3 (create_connected-1.3.3-mc1.21.1.jar from the next Create France modpack release): code from the public repository github.com/hlysine/create_connected at tag 1.3.3-mc1.21.1, recipes from the jar's data folder, Ponder scenes replayed by our engine.",
+      "Mod by Lysine (hlysine), GNU AGPL v3 licence: models and textures by its authors, rendered from the jar; no text from the mod is copied.",
+      "Settings: config/CServer.java (batteryCapacity 512, batteryDischargeRPM 64, batteryMinDischarge 1); registries/CCBlocks.java (CStress.setCapacity(32.0), setImpact(64.0)).",
+      "Behaviour: content/kineticbattery/KineticBatteryBlockEntity.java (charge = impact × speed per tick, drain based on the missing capacity, 36,864,000 units when full), KineticBatteryBlock.java (signal passed down the chain, 15-level comparator output, tryInsert swap), KineticBatteryDisplaySource.java.",
+      "Recipes: data/create_connected/recipe/crafting/kinetics/kinetic_battery.json (8 batteries), kinetic_battery_discharge.json, kinetic_battery_from_charged.json; ChargedKineticBatteryItem.java (@Deprecated since 1.3.0)."
+    ]
+  }
+}

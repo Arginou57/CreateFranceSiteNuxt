@@ -6,7 +6,7 @@
   "title": "Brûleur à blaze — Create : guide en français",
   "description": "Le brûleur à blaze de Create : capturer un blaze, le nourrir, chaleur normale ou surchauffée au cake, durées de combustion et automatisation.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "Le <strong>brûleur à blaze</strong> est la source de chaleur de Create : une cage dans laquelle vit un vrai blaze, qu'il faut nourrir avec du combustible. Placé sous un <strong>bassin</strong>, il débloque les recettes chauffées du mixeur, dont le laiton ; sous une <strong>chaudière</strong>, il fait tourner les moteurs à vapeur. Bien nourri au <strong>cake pour blaze</strong>, il passe en surchauffe et ouvre les recettes les plus exigeantes.",
@@ -83,7 +83,7 @@
     {
       "id": "blaze_burner",
       "name": "Brûleur à blaze : nourrir le blaze",
-      "description": "Un brûleur à blaze sous un bassin reçoit des planches et s'allume, puis un cake pour blaze le fait passer en surchauffe ; un déployeur prend ensuite le relais pour le nourrir.",
+      "description": "Un brûleur à blaze sous un bassin reçoit des planches et s'allume, puis un cake pour blaze qui le fait passer en surchauffe ; un déployeur prend ensuite le relais pour le nourrir.",
       "duration": "PT17S"
     },
     {
@@ -100,7 +100,7 @@
       "image": "empty_blaze_burner_spawner.webp",
       "alt": "Générateur de blazes en cage, sur lequel on utilise le brûleur vide",
       "video": "empty_blaze_burner",
-      "html": "<p>Tout commence par un <strong>brûleur à blaze vide</strong>, fabriqué avec quatre plaques de fer autour d'un bloc de netherrack. Va ensuite dans une forteresse du Nether : <strong>clic droit sur un blaze</strong> avec le brûleur vide en main pour l'enfermer dedans, ou clic droit directement sur un <strong>générateur de blazes</strong>, plus sûr et sans combat. Le brûleur plein se pose ensuite où tu veux, il ne se vide jamais. Cassé à la pioche, il revient avec son blaze toujours à l'intérieur.</p>"
+      "html": "<p>Tout commence par un <strong>brûleur à blaze vide</strong>, fabriqué avec quatre plaques de fer autour d'un bloc de netherrack. Va ensuite dans une forteresse du Nether : <strong>clic droit visant un blaze</strong> avec le brûleur vide en main pour l'enfermer dedans, ou clic droit directement sur un <strong>générateur de blazes</strong>, plus sûr et sans combat. Le brûleur plein se pose ensuite où tu veux, il ne se vide jamais. Cassé à la pioche, il revient avec son blaze toujours à l'intérieur.</p>"
     },
     {
       "id": "chaleur",
@@ -121,7 +121,12 @@
       "title": "La surchauffe au cake pour blaze",
       "image": "blaze_burner_cake.webp",
       "alt": "Le brûleur surchauffé brille d'une flamme bleue",
-      "html": "<p>Le <strong>cake pour blaze</strong> le fait passer en <strong>surchauffe</strong> (flamme bleue) pendant 160 secondes, puis il reste alimenté 250 secondes de plus. Seules quelques recettes l'exigent, comme la lave à partir de pierre au mixeur, mais une chaudière compte un brûleur surchauffé comme deux niveaux de chaleur. Le cake se prépare en deux temps : compacter un œuf, du sucre et de la farine de braise en base de cake, puis la remplir de 250 mB de lave avec un bec verseur.</p>"
+      "html": "<p>Le <strong>cake pour blaze</strong> le fait passer en <strong>surchauffe</strong> (flamme bleue) pendant 160 secondes, puis il reste alimenté 250 secondes de plus. Seules quelques recettes l'exigent, comme la lave à partir de pierre au mixeur, mais une chaudière compte un brûleur surchauffé comme deux niveaux de chaleur. Le cake se prépare en deux temps : compacter un œuf, de la farine de braise et du sucre en base de cake, puis la remplir de 250 mB de lave avec un bec verseur.</p>"
+    },
+    {
+      "id": "cake-creatif",
+      "title": "Le cake pour blaze créatif",
+      "html": "<p>En mode créatif, le <strong>cake pour blaze créatif</strong> rend le brûleur inépuisable : plus besoin de combustible, et chaque nouvelle utilisation le fait passer au niveau de chaleur suivant, jusqu'à la surchauffe. Pratique pour tester une recette chauffée sans monter toute la chaîne de combustible.</p>"
     },
     {
       "id": "automatiser",
@@ -237,7 +242,7 @@
         "id": "capturer",
         "title": "Catching a blaze",
         "alt": "A caged blaze spawner, on which the empty burner is used",
-        "html": "<p>It all starts with an <strong>Empty Blaze Burner</strong>, crafted from four iron sheets around a netherrack block. Then head to a Nether fortress: <strong>right-click a blaze</strong> with the empty burner in hand to trap it inside, or right-click a <strong>blaze spawner</strong> directly, which is safer and needs no fight. The filled burner can then be placed wherever you like, and it never empties. Mining it with a pickaxe gives you the burner back with its blaze still inside.</p>"
+        "html": "<p>It all starts with an <strong>Empty Blaze Burner</strong>, crafted from four iron sheets around a netherrack block. Then head to a Nether fortress: holding the empty burner, <strong>right-click a blaze</strong> to trap it inside, or right-click a <strong>blaze spawner</strong> directly, which is safer and needs no fight. The filled burner can then be placed wherever you like, and it never empties. Mining it with a pickaxe gives you the burner back with its blaze still inside.</p>"
       },
       {
         "id": "chaleur",
@@ -256,6 +261,11 @@
         "title": "Superheating with a Blaze Cake",
         "alt": "The superheated burner glows with a blue flame",
         "html": "<p>A <strong>Blaze Cake</strong> makes it <strong>superheated</strong> (blue flame) for 160 seconds, after which it stays kindled for another 250 seconds. Only a few recipes need it, like lava from cobblestone in the mixer, but a boiler counts a superheated burner as two heat levels. The cake takes two steps: compact an egg, sugar and Cinder Flour into a cake base, then fill it with 250 mB of lava using a Spout.</p>"
+      },
+      {
+        "id": "cake-creatif",
+        "title": "The Creative Blaze Cake",
+        "html": "<p>In creative mode, the <strong>Creative Blaze Cake</strong> makes the burner endless: no fuel needed any more, and each new use moves it to the next heat level, up to superheated. Handy to test a heated recipe without setting up the whole fuel chain.</p>"
       },
       {
         "id": "automatiser",

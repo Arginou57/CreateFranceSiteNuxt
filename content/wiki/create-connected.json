@@ -1,0 +1,265 @@
+{
+  "slug": "create-connected",
+  "name": "Create Connected",
+  "blockId": "create_connected:parallel_gearbox",
+  "category": "connected",
+  "title": "Create Connected — guide en français",
+  "description": "Create Connected, addon de Create : boîtes à roues dentées, embrayages, batterie cinétique, redstone sans fil, logistique et imitations. Guide du mod.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Connected 1.3.3 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "<strong>Create Connected</strong> est un addon de Create qui comble les petits manques du mod de base. Rien de spectaculaire, mais beaucoup de blocs qu'on finit par chercher : des boîtes à roues dentées plus souples, des embrayages qui réagissent tout seuls, une batterie qui garde l'énergie cinétique pour plus tard, de la redstone sans fil, des blocs de logistique, des imitations supplémentaires et des catalyseurs pour le ventilateur. Chaque bloc se fabrique avec des pièces de Create et reste dans son esprit.",
+  "facts": [
+    {
+      "label": "Mod",
+      "value": "Create Connected 1.3.3 (id create_connected)"
+    },
+    {
+      "label": "Auteur",
+      "value": "Lysine (hlysine), licence GNU AGPL v3"
+    },
+    {
+      "label": "Requiert",
+      "value": "Create 6.0.10, NeoForge, Minecraft 1.21.1"
+    },
+    {
+      "label": "Familles",
+      "value": "transmissions, embrayages, énergie, redstone, logistique, imitations, catalyseurs"
+    },
+    {
+      "label": "Réglages",
+      "value": "chaque bloc se désactive dans la config commune (sections features et feature_categories)"
+    },
+    {
+      "label": "Version",
+      "value": "Create Connected 1.3.3 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l’établi (sans disposition)",
+    "grid": [
+      [
+        "Boîte à roues dentées",
+        "Grande roue dentée",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "items": [
+      [
+        "create:gearbox",
+        "create:large_cogwheel",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 boîte à roues dentées parallèle",
+    "resultItem": "create_connected:parallel_gearbox"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "role",
+      "title": "Ce que l'addon change",
+      "image": "conn_parallel_gearbox_boite.webp",
+      "alt": "Boîte à roues dentées parallèle posée au centre de quatre rotors",
+      "html": "<p>Dans Create, certains montages demandent trois blocs là où un seul suffirait, et quelques besoins n'ont tout simplement pas de réponse : couper un réseau qui se met en surcharge, stocker la rotation produite la nuit par une roue à eau, envoyer un signal de redstone depuis sa poche. Create Connected ajoute ces pièces une par une. La recette ci-contre (boîte à roues dentées plus grande roue dentée) donne la plus utilisée : la boîte à roues dentées parallèle.</p>"
+    },
+    {
+      "id": "premier",
+      "title": "Premier projet conseillé",
+      "image": "conn_battery_charge.webp",
+      "alt": "Une batterie cinétique qui se charge sur un arbre en rotation",
+      "html": "<p>Commence par remplacer ta boîte à roues dentées ordinaire par une <strong>boîte parallèle</strong> : tes quatre sorties tournent sans que tu aies à corriger le sens avec un inverseur. Glisse ensuite une <strong>goupille de cisaillement</strong> sur la ligne qui alimente tes machines : c'est un fusible qui casse au lieu de bloquer toute l'usine. Quand tu as des mécanismes de précision, pose une <strong>batterie cinétique</strong> derrière ta roue à eau : elle se charge pendant que tu explores et fait tourner les scies quand tu reviens.</p>"
+    },
+    {
+      "id": "transmissions",
+      "title": "Transmissions et boîtes",
+      "image": "conn_crank_wheel_roues.webp",
+      "alt": "Une roue de manivelle et une grande roue de manivelle reliées à des compteurs de vitesse",
+      "html": "<p>La page <a href=\"/wiki/connected-transmissions\">boîtes à roues dentées et roues de manivelle</a> réunit la <strong>roue de manivelle</strong> et la <strong>grande roue de manivelle</strong> (Crank Wheel, Large Crank Wheel), la <strong>roue dentée à chaîne enchâssée</strong>, la boîte parallèle, la <strong>boîte à 6 voies</strong> (6-way Gearbox), la <strong>boîte en laiton</strong> (Brass Gearbox), leurs versions verticales, et le <strong>connecteur croisé</strong> (Cross Connector) avec ses deux boitiers, andésite et laiton.</p>"
+    },
+    {
+      "id": "embrayages",
+      "title": "Embrayages et frein",
+      "image": "conn_gal_embrayages_frein.webp",
+      "alt": "Un frein posé entre deux rotors",
+      "html": "<p>Sept blocs coupent, inversent ou arrêtent la rotation, détaillés dans <a href=\"/wiki/connected-embrayages\">embrayages, frein et goupille</a> : l'<strong>embrayage inversé</strong> et l'<strong>inverseur de rotation inversé</strong>, qui font l'inverse de leurs cousins de Create, l'<strong>embrayage centrifuge</strong> (selon la vitesse), l'<strong>embrayage à roue libre</strong> (selon le sens), l'<strong>embrayage de surcharge</strong>, le <strong>frein</strong> et la <strong>goupille de cisaillement</strong> (Shear Pin).</p>"
+    },
+    {
+      "id": "energie",
+      "title": "Transférer et stocker la rotation",
+      "image": "conn_kinetic_bridge_transfert.webp",
+      "alt": "Un pont cinétique entre deux réseaux, alimenté par une roue à eau",
+      "html": "<p>Le <a href=\"/wiki/connected-pont-cinetique\">pont cinétique</a> fait passer une capacité fixe vers un second réseau sans les fusionner : une surcharge d'un côté ne bloque plus tout. La <a href=\"/wiki/connected-batterie-cinetique\">batterie cinétique</a> accumule jusqu'à 512 su·h et les rend à 64 tr/min sur un signal de redstone ; l'ancien objet <strong>batterie cinétique chargée</strong> se convertit en batterie pleine à l'établi.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "Redstone sans fil",
+      "html": "<p>Côté <a href=\"/wiki/connected-redstone\">redstone</a>, le <strong>générateur d'impulsions séquencé</strong> (Sequenced Pulse Generator) joue une suite d'instructions ; sa recette demande une <strong>puce de contrôle</strong> (Control Chip), assemblée en séquence sur une plaque d'or. Le <strong>transmetteur lié</strong> (Linked Transmitter) se fixe sur un bouton ou un levier pour en faire une liaison : boutons liés de chaque bois, de pierre et de pierre noire polie, levier lié (Linked Lever), levier analogique lié (Linked Analog Lever) et, avec Simulated, Linked Throttle Lever. Le <strong>joker de liaison de redstone</strong> (Redstone Link Wildcard) écoute toutes les fréquences d'un emplacement.</p>"
+    },
+    {
+      "id": "logistique",
+      "title": "Logistique",
+      "html": "<p>La page <a href=\"/wiki/connected-logistique\">logistique</a> présente : <strong>port d'accès aux stocks</strong> (Inventory Access Port), <strong>pont d'inventaire</strong> (Inventory Bridge), <strong>tableau de bord</strong> (Dashboard), <strong>chute en laiton</strong> (Brass Chute), <strong>silo à objet</strong> (Item Silo), <strong>citerne à fluide</strong> (Fluid Vessel), un réservoir couché qui peut servir de chaudière, et sa version créative (Creative Fluid Vessel).</p>"
+    },
+    {
+      "id": "imitations",
+      "title": "Imitations, catalyseurs et disques",
+      "html": "<p>Les <a href=\"/wiki/connected-imitations\">imitations</a> (Copycat) complètent celles de Create : imitation bloc, dalle, escaliers, muret, barrière, portillon, poutre, panneau, dalle verticale, boîte et passerelle, plus quatre versions enveloppées (Wrapped) : escaliers, barrière, portillon et muret. Les <a href=\"/wiki/connected-catalyseurs\">catalyseurs de ventilateur</a> partent du catalyseur vide (Empty Fan Catalyst) : fonte, fumage, lavage et hantise marchent avec Create seul ; teinture (Fan Dyeing Catalyst), gel, sablage et les autres demandent l'addon qui ajoute le traitement. Enfin, deux <strong>disques de musique</strong> (Music Disc) de Kevin MacLeod tombent des creepers tués par un squelette.</p>"
+    },
+    {
+      "id": "serveur",
+      "title": "Sur le serveur Create France",
+      "html": "<p>Create Connected fait partie du modpack Create France. La version en ligne aujourd'hui est la 1.3.2 ; ces pages décrivent la 1.3.3, celle de la prochaine version du modpack, et les écarts entre les deux sont minimes. Les chiffres donnés sont les réglages par défaut du mod : un serveur peut changer la capacité de la batterie, sa vitesse ou la force du frein.</p>"
+    }
+  ],
+  "related": [
+    "connected-transmissions",
+    "connected-embrayages",
+    "connected-pont-cinetique",
+    "connected-batterie-cinetique",
+    "connected-redstone",
+    "connected-logistique",
+    "connected-imitations",
+    "connected-catalyseurs",
+    "boite-a-roues-dentees",
+    "ventilateur-enchasse"
+  ],
+  "sources": [
+    "Create Connected 1.3.3 (create_connected-1.3.3-mc1.21.1.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/hlysine/create_connected au tag 1.3.3-mc1.21.1, recettes du dossier data du jar, scènes Ponder rejouées par notre moteur.",
+    "Mod de Lysine (hlysine), sous licence GNU AGPL v3 : modèles et textures de ses auteurs, rendus à partir du jar ; aucun texte du mod n'est recopié.",
+    "Liste des blocs : registries/CCBlocks.java et CCItems.java ; réglages : config/CServer.java, config/CStress.java, config/CCommon.java (features, feature_categories) ; disques : data/create_connected/jukebox_song et le tag minecraft:creeper_drop_music_discs."
+  ],
+  "en": {
+    "slugEn": "create-connected-guide",
+    "name": "Create Connected",
+    "title": "Create Connected — mod guide",
+    "description": "Create Connected guide: a Create addon with new gearboxes, smart clutches, a kinetic battery, wireless redstone, logistics blocks and more copycats.",
+    "intro": "<strong>Create Connected</strong> is a Create addon that fills the small gaps of the base mod. Nothing flashy, but plenty of blocks you end up wishing for: more flexible gearboxes, clutches that react on their own, a battery that keeps kinetic energy for later, wireless redstone, logistics blocks, extra copycats and new catalysts for the fan. Every block is crafted from Create parts and fits its style.",
+    "facts": [
+      {
+        "label": "Mod",
+        "value": "Create Connected 1.3.3 (id create_connected)"
+      },
+      {
+        "label": "Author",
+        "value": "Lysine (hlysine), GNU AGPL v3 licence"
+      },
+      {
+        "label": "Requires",
+        "value": "Create 6.0.10, NeoForge, Minecraft 1.21.1"
+      },
+      {
+        "label": "Families",
+        "value": "drivetrain, clutches, energy, redstone, logistics, copycats, catalysts"
+      },
+      {
+        "label": "Settings",
+        "value": "every block can be disabled in the common config (features and feature_categories sections)"
+      },
+      {
+        "label": "Version",
+        "value": "Create Connected 1.3.3 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Shapeless crafting recipe",
+      "grid": [
+        [
+          "Gearbox",
+          "Large Cogwheel",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Parallel Gearbox"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "role",
+        "title": "What the addon changes",
+        "alt": "A Parallel Gearbox surrounded by four shafts",
+        "html": "<p>In Create, some builds take three blocks where one would do, and a few needs have no answer at all: cutting off a network that overstresses, saving the rotation a water wheel produces at night, sending a redstone signal from your pocket. Create Connected adds those parts one at a time. The recipe shown here, a Gearbox plus a Large Cogwheel, makes the one you will use most: the Parallel Gearbox.</p>"
+      },
+      {
+        "id": "premier",
+        "title": "A good first project",
+        "alt": "A Kinetic Battery charging on a spinning shaft",
+        "html": "<p>Start by swapping an ordinary Gearbox for a <strong>Parallel Gearbox</strong>: your four outputs turn without a Gearshift to fix their direction. Then slip a <strong>Shear Pin</strong> into the line that feeds your machines; it is a fuse that snaps instead of jamming the whole factory. Once you have Precision Mechanisms, put a <strong>Kinetic Battery</strong> behind your water wheel: it charges while you are out exploring and runs the saws when you come back.</p>"
+      },
+      {
+        "id": "transmissions",
+        "title": "Drivetrain and gearboxes",
+        "alt": "A Crank Wheel and a Large Crank Wheel connected to Speedometers",
+        "html": "<p>The <a href=\"/en/wiki/connected-gearboxes-and-crank-wheels\">gearboxes and crank wheels</a> page covers the <strong>Crank Wheel</strong> and <strong>Large Crank Wheel</strong>, the <strong>Encased Chain Cogwheel</strong>, the Parallel Gearbox, the <strong>6-way Gearbox</strong>, the <strong>Brass Gearbox</strong>, their vertical versions, and the <strong>Cross Connector</strong> with its two casings, andesite and brass.</p>"
+      },
+      {
+        "id": "embrayages",
+        "title": "Clutches and brake",
+        "alt": "A Brake placed between two shafts",
+        "html": "<p>Seven blocks cut, flip or stop rotation, explained on <a href=\"/en/wiki/connected-clutches-and-brakes\">clutches, brake and shear pin</a>: the <strong>Inverted Clutch</strong> and <strong>Inverted Gearshift</strong>, which do the opposite of their Create cousins, the <strong>Centrifugal Clutch</strong> (speed based), the <strong>Freewheel Clutch</strong> (direction based), the <strong>Overstress Clutch</strong>, the <strong>Brake</strong> and the <strong>Shear Pin</strong>.</p>"
+      },
+      {
+        "id": "energie",
+        "title": "Moving and storing rotation",
+        "alt": "A Kinetic Bridge between two networks, driven by a water wheel",
+        "html": "<p>The <a href=\"/en/wiki/connected-kinetic-bridge\">Kinetic Bridge</a> moves a fixed share of capacity over to a second network without merging them, so an overload on one side no longer stalls everything. The <a href=\"/en/wiki/connected-kinetic-battery\">Kinetic Battery</a> stores up to 512 su·h and gives it back at 64 RPM when it gets a redstone signal; the old <strong>Charged Kinetic Battery</strong> item turns into a full battery at the crafting table.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "Wireless redstone",
+        "html": "<p>On the <a href=\"/en/wiki/connected-redstone-guide\">redstone</a> side, the <strong>Sequenced Pulse Generator</strong> plays a list of instructions; its recipe needs a <strong>Control Chip</strong>, made by sequenced assembly on a Golden Sheet. The <strong>Linked Transmitter</strong> attaches to a button or lever and turns it into a link: the Linked Oak Button and its other wood versions, the Linked Stone Button and Linked Polished Blackstone Button, the Linked Lever, the Linked Analog Lever and, with Simulated installed, the Linked Throttle Lever. The <strong>Redstone Link Wildcard</strong> listens to every frequency in one slot.</p>"
+      },
+      {
+        "id": "logistique",
+        "title": "Logistics",
+        "html": "<p>The <a href=\"/en/wiki/connected-logistics\">logistics</a> page covers the <strong>Inventory Access Port</strong>, the <strong>Inventory Bridge</strong>, the <strong>Dashboard</strong>, the <strong>Brass Chute</strong>, the <strong>Item Silo</strong>, the <strong>Fluid Vessel</strong>, a tank lying on its side that can also work as a boiler, and its creative version, the Creative Fluid Vessel.</p>"
+      },
+      {
+        "id": "imitations",
+        "title": "Copycats, catalysts and discs",
+        "html": "<p>The <a href=\"/en/wiki/connected-copycats\">copycats</a> extend Create's own: Copycat Block, Copycat Slab, Copycat Stairs, Copycat Wall, Copycat Fence, Copycat Fence Gate, Copycat Beam, Copycat Board, Copycat Vertical Step, Copycat Box and Copycat Catwalk, plus the Wrapped Copycat Stairs, Wrapped Copycat Fence, Wrapped Copycat Fence Gate and Wrapped Copycat Wall. The <a href=\"/en/wiki/connected-fan-catalysts\">fan catalysts</a> start from the Empty Fan Catalyst. The Fan Blasting Catalyst, Fan Smoking Catalyst, Fan Washing Catalyst and Fan Haunting Catalyst work with Create alone; dyeing (Fan Dyeing Catalyst), freezing, sanding and the rest need the addon that provides that processing type. Finally, two <strong>Music Discs</strong> by Kevin MacLeod drop from creepers killed by a skeleton.</p>"
+      },
+      {
+        "id": "serveur",
+        "title": "On the Create France server",
+        "html": "<p>Create Connected is part of the Create France modpack. The version online today is 1.3.2; these pages describe 1.3.3, the one in the next modpack release, and the differences between the two are minor. The numbers given are the mod's default settings: a server can change the battery capacity, its speed or the strength of the brake.</p>"
+      }
+    ],
+    "sources": [
+      "Create Connected 1.3.3 (create_connected-1.3.3-mc1.21.1.jar from the next Create France modpack release): code from the public repository github.com/hlysine/create_connected at tag 1.3.3-mc1.21.1, recipes from the jar's data folder, Ponder scenes replayed by our engine.",
+      "Mod by Lysine (hlysine), GNU AGPL v3 licence: models and textures by its authors, rendered from the jar; no text from the mod is copied.",
+      "Block list: registries/CCBlocks.java and CCItems.java; settings: config/CServer.java, config/CStress.java, config/CCommon.java (features, feature_categories); discs: data/create_connected/jukebox_song and the minecraft:creeper_drop_music_discs tag."
+    ]
+  }
+}

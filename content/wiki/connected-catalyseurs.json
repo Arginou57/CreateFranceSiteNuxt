@@ -1,0 +1,262 @@
+{
+  "slug": "connected-catalyseurs",
+  "name": "Catalyseurs de ventilateur",
+  "blockId": "create_connected:empty_fan_catalyst",
+  "category": "connected",
+  "title": "Catalyseurs de ventilateur — Create Connected, guide",
+  "description": "Les catalyseurs de ventilateur de Create Connected : fonte, fumage, lavage, hantise et traitements des addons de Create, sans lave, feu ni eau qui coule.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Connected 1.3.3 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Le <a href=\"/wiki/ventilateur-enchasse\">ventilateur enchâssé</a> de Create traite les objets selon ce que son souffle traverse : lave pour la fonte, feu pour le fumage, eau pour le lavage, feu des âmes pour la hantise. Les <strong>catalyseurs de ventilateur</strong> (Fan Catalysts) de Create Connected remplacent ces blocs par un boîtier propre : pas de source de lave à poser, pas d'eau qui coule, pas de feu qui se propage. On part du <strong>catalyseur vide de ventilateur</strong> (Empty Fan Catalyst), qu'on remplit de la matière voulue.",
+  "facts": [
+    {
+      "label": "Catalyseur vide",
+      "value": "4 lingots de laiton et 4 barreaux de fer à l’établi"
+    },
+    {
+      "label": "Remplissage",
+      "value": "objet appliqué (main ou déployeur) ou 1 000 mB au bec verseur"
+    },
+    {
+      "label": "Retour au vide",
+      "value": "le catalyseur plein seul à l’établi (contenu perdu)"
+    },
+    {
+      "label": "Traitements de Create",
+      "value": "fonte, fumage, lavage, hantise"
+    },
+    {
+      "label": "Pour d’autres mods",
+      "value": "15 catalyseurs actifs en 1.21.1, plus 32 de teinture"
+    },
+    {
+      "label": "Décomposition",
+      "value": "désactivée en 1.21.1 : aucun mod ne la gère"
+    },
+    {
+      "label": "Version",
+      "value": "Create Connected 1.3.3 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Lingot de laiton",
+        "Barreaux de fer",
+        "Lingot de laiton"
+      ],
+      [
+        "Barreaux de fer",
+        null,
+        "Barreaux de fer"
+      ],
+      [
+        "Lingot de laiton",
+        "Barreaux de fer",
+        "Lingot de laiton"
+      ]
+    ],
+    "items": [
+      [
+        "create:brass_ingot",
+        "minecraft:iron_bars",
+        "create:brass_ingot"
+      ],
+      [
+        "minecraft:iron_bars",
+        null,
+        "minecraft:iron_bars"
+      ],
+      [
+        "create:brass_ingot",
+        "minecraft:iron_bars",
+        "create:brass_ingot"
+      ]
+    ],
+    "result": "1 catalyseur vide de ventilateur",
+    "resultItem": "create_connected:empty_fan_catalyst"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "principe",
+      "title": "Un bloc à la place de la lave",
+      "image": "conn_gal_catalyseurs_classiques.webp",
+      "alt": "Un ventilateur enchâssé, puis les catalyseurs de fonte, de fumage, de lavage, de hantise et le catalyseur vide",
+      "html": "<p>Le catalyseur est une cage en laiton que l'air du ventilateur traverse librement. Pose-le dans le courant, en général juste devant le ventilateur, là où tu aurais mis la lave ou l'eau : tout ce qui passe ensuite dans le souffle, objets au sol, sur un <a href=\"/wiki/depot\">dépôt</a> ou sur un <a href=\"/wiki/tapis-roulant\">tapis roulant</a>, reçoit le traitement. Son contenu n'agit pas sur ce qui l'entoure : pas de brûlure, pas d'inondation, rien qui s'éteint. Plusieurs catalyseurs donnent aussi de la lumière, 10 pour la fonte par exemple.</p>"
+    },
+    {
+      "id": "remplir",
+      "title": "Remplir et vider un catalyseur",
+      "html": "<p>Pour charger le catalyseur vide, applique-lui un objet : clic droit à la main ou par un <a href=\"/wiki/deployeur\">déployeur</a>, comme un recouvrement de Create. Les traitements à base de fluide acceptent aussi 1 000 mB versés par un <a href=\"/wiki/bec-verseur\">bec verseur</a>. Pour changer de traitement, passe le catalyseur plein seul à l'établi : il redevient vide, mais son contenu est perdu. Il se casse à la pioche.</p>"
+    },
+    {
+      "id": "create",
+      "title": "Les quatre traitements de Create",
+      "html": "<p>Le <strong>catalyseur de fonte de ventilateur</strong> (Fan Blasting Catalyst) se charge d'un seau de lave ou de 1 000 mB de lave. Le <strong>catalyseur de fumage</strong> (Fan Smoking Catalyst) prend un bloc de netherrack. Le <strong>catalyseur de lavage</strong> (Fan Washing Catalyst) prend un seau d'eau ou 1 000 mB d'eau. Le <strong>catalyseur de hantise</strong> (Fan Haunting Catalyst) prend du sable des âmes. Ils marchent avec Create seul et rendent exactement les mêmes recettes que la lave, le feu, l'eau et le feu des âmes.</p>"
+    },
+    {
+      "id": "mods-1",
+      "title": "Gel, sablage, bouillonnement, enrichissement",
+      "image": "conn_gal_catalyseurs_mods-1.webp",
+      "alt": "Catalyseurs de gel, de sablage, de bouillonnement, d'enrichissement et de décomposition",
+      "html": "<p>Ces catalyseurs n'existent que si le mod qui définit le traitement est installé. Le <strong>catalyseur de gel</strong> (Fan Freezing Catalyst, seau de neige poudreuse) sert Create: Garnished, Dreams &amp; Desires ou Dragons Plus. Le <strong>catalyseur de sablage</strong> (Fan Sanding Catalyst, sable) sert Dreams &amp; Desires ou Dragons Plus ; le <strong>catalyseur de bouillonnement</strong> (Fan Seething Catalyst, gâteau de blaze) sert Dreams &amp; Desires. Le <strong>catalyseur d'enrichissement</strong> (Fan Enriched Catalyst) se remplit de terre des âmes enrichie de Create: Nuclear. Le <strong>catalyseur de décomposition</strong> (Fan Withering Catalyst, rose de wither) est désactivé en 1.21.1.</p>"
+    },
+    {
+      "id": "mods-2",
+      "title": "Ending, explosion, assombrissement, sculk",
+      "image": "conn_gal_catalyseurs_mods-2.webp",
+      "alt": "Catalyseurs d'ending à tête de dragon et au souffle de dragon, d'explosion, d'assombrissement et de sculk",
+      "html": "<p>Pour l'ending de Dragons Plus, deux variantes : le <strong>catalyseur d'ending à tête de dragon</strong> (Fan Ending Catalyst with Dragon Head), qui affiche une tête qui bouge, et le <strong>catalyseur d'ending au souffle de dragon</strong> (Fan Ending Catalyst with Dragon's Breath), chargé d'un seau de souffle du dragon. Le <strong>catalyseur d'explosion</strong> (Fan Exploding Catalyst) prend une tête de creeper et le <strong>catalyseur de sculk</strong> (Fan Sculking Catalyst) un catalyseur de sculk, tous deux pour Create More Catalysts. Le <strong>catalyseur d'assombrissement</strong> (Fan Glooming Catalyst) sert Create Shimmer et se charge d'essence exanimée de Twilight Forest.</p>"
+    },
+    {
+      "id": "mods-3",
+      "title": "Enrobages, purification, résonance et autres",
+      "image": "conn_gal_catalyseurs_mods-3.webp",
+      "alt": "Catalyseurs d'enrobage au chocolat et au miel, de purification, de résonance, d'arrachage d'âme et de transmutation",
+      "html": "<p>Create More Catalysts gère aussi le <strong>catalyseur d'enrobage au chocolat</strong> (Fan Chocolate Coating Catalyst) et celui <strong>au miel</strong> (Fan Honey Coating Catalyst), remplis de chocolat ou de miel de Create, le <strong>catalyseur de purification</strong> (Fan Purifying Catalyst), qui avale une balise, et le <strong>catalyseur de résonance</strong> (Fan Resonance Catalyst), qui prend une grappe d'améthyste. Le <strong>catalyseur d'arrachage d'âme</strong> (Fan Soul Stripping Catalyst) sert Create: Nether Industry. Le <strong>catalyseur de transmutation</strong> (Fan Transmutation Catalyst) se remplit de shimmer, pour Create Shimmer.</p>"
+    },
+    {
+      "id": "teinture",
+      "title": "Les catalyseurs de teinture",
+      "image": "conn_gal_catalyseurs_teinture.webp",
+      "alt": "Catalyseurs de teinture rouge, jaune, vert clair et bleu, puis ambre et teal de Dye Depot",
+      "html": "<p>Avec Dragons Plus ou Create: Garnished, le ventilateur peut teindre en masse : chaque couleur a son catalyseur de teinture (Fan Dyeing Catalyst), du blanc au noir pour les seize couleurs du jeu. On le charge d'un seau de teinture liquide de Dragons Plus ou de résine mastic colorée de Garnished. Avec Dye Depot en plus, seize couleurs s'ajoutent, sous leur nom anglais : amber, aqua, beige, coral, forest, ginger, indigo, maroon, mint, navy, olive, rose, slate, tan, teal et verdant. Sur l'image : rouge, jaune, vert clair, bleu, puis l'amber et le teal de Dye Depot.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils",
+      "html": "<p>Un catalyseur ne change ni la portée ni la vitesse du ventilateur : seul le traitement change. Les blocs d'avant, lave ou feu, restent valables si tu préfères. Pour une ligne qui fond puis lave, enchaîne deux ventilateurs et deux catalyseurs plutôt que de jongler avec les fluides. Et range les catalyseurs vides : ils se rechargent à volonté.</p>"
+    }
+  ],
+  "related": [
+    "create-connected",
+    "ventilateur-enchasse",
+    "bec-verseur",
+    "deployeur",
+    "depot",
+    "tapis-roulant",
+    "connected-imitations"
+  ],
+  "sources": [
+    "Create Connected 1.3.3 (create_connected-1.3.3-mc1.21.1.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/hlysine/create_connected au tag 1.3.3-mc1.21.1, recettes du dossier data du jar, scènes Ponder rejouées par notre moteur.",
+    "Mod de Lysine (hlysine), sous licence GNU AGPL v3 : modèles et textures de ses auteurs, rendus à partir du jar ; aucun texte du mod n'est recopié.",
+    "Classes : registries/CCBlocks (EMPTY_FAN_CATALYST, FAN_*_CATALYST, FAN_DYEING_CATALYSTS et leurs conditions de mods), compat/Mods, compat/DyeDepotCompat, content/fancatalyst (FanCatalystRotatingHeadBlock).",
+    "Données du jar : tags create:fan_processing_catalysts/* et ceux des mods compatibles (dndesires, garnished, create_dragons_plus, createnuclear, create_more_catalysts, create_shimmer, createnetherindustry, c:dyes) ; recettes recipe/item_application, recipe/filling et crafting/kinetics/empty_fan_catalyst_from_*."
+  ],
+  "en": {
+    "slugEn": "connected-fan-catalysts",
+    "name": "Fan Catalysts",
+    "title": "Fan Catalysts — Create Connected guide",
+    "description": "Create Connected Fan Catalysts: blasting, smoking, washing, haunting and the processing of other Create addons, with no lava, fire or flowing water.",
+    "intro": "Create's <a href=\"/en/wiki/encased-fan\">Encased Fan</a> processes items according to what its airflow passes through: lava for blasting, fire for smoking, water for washing, soul fire for haunting. The <strong>Fan Catalysts</strong> from Create Connected replace those blocks with a tidy casing: no lava source to place, no flowing water, no fire spreading. You start from the <strong>Empty Fan Catalyst</strong> and fill it with the material you need.",
+    "facts": [
+      {
+        "label": "Empty catalyst",
+        "value": "4 Brass Ingots and 4 Iron Bars in a crafting grid"
+      },
+      {
+        "label": "Filling",
+        "value": "item applied (by hand or Deployer) or 1,000 mB from a Spout"
+      },
+      {
+        "label": "Back to empty",
+        "value": "the full catalyst alone in a crafting grid (contents lost)"
+      },
+      {
+        "label": "Create processing",
+        "value": "blasting, smoking, washing, haunting"
+      },
+      {
+        "label": "For other mods",
+        "value": "15 catalysts active in 1.21.1, plus 32 dyeing ones"
+      },
+      {
+        "label": "Withering",
+        "value": "disabled in 1.21.1: no mod supports it"
+      },
+      {
+        "label": "Version",
+        "value": "Create Connected 1.3.3 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Brass Ingot",
+          "Iron Bars",
+          "Brass Ingot"
+        ],
+        [
+          "Iron Bars",
+          null,
+          "Iron Bars"
+        ],
+        [
+          "Brass Ingot",
+          "Iron Bars",
+          "Brass Ingot"
+        ]
+      ],
+      "result": "1 Empty Fan Catalyst"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "principe",
+        "title": "A block instead of lava",
+        "alt": "An Encased Fan, then the blasting, smoking, washing and haunting catalysts and the empty one",
+        "html": "<p>The catalyst is a brass cage the fan's air passes through freely. Put it in the airflow, usually right in front of the fan where the lava or water would go: everything further along the stream, items on the ground, on a <a href=\"/en/wiki/depot\">Depot</a> or on a <a href=\"/en/wiki/conveyor-belt\">Mechanical Belt</a>, gets processed. Its contents leave the surroundings alone: nothing burns, nothing floods, nothing goes out. Several catalysts also give off light, 10 for blasting for example.</p>"
+      },
+      {
+        "id": "remplir",
+        "title": "Filling and emptying a catalyst",
+        "html": "<p>To charge the empty catalyst, apply an item to it: right-click by hand or with a <a href=\"/en/wiki/deployer\">Deployer</a>, like casing a block in Create. Fluid-based processing also accepts 1,000 mB poured by a <a href=\"/en/wiki/spout\">Spout</a>. To switch processing, put the full catalyst alone in a crafting grid: it comes back empty, but its contents are lost. Mine it with a pickaxe.</p>"
+      },
+      {
+        "id": "create",
+        "title": "Create's four processing types",
+        "html": "<p>The <strong>Fan Blasting Catalyst</strong> takes a Lava Bucket or 1,000 mB of lava. The <strong>Fan Smoking Catalyst</strong> takes a block of Netherrack. The <strong>Fan Washing Catalyst</strong> takes a Water Bucket or 1,000 mB of water. The <strong>Fan Haunting Catalyst</strong> takes Soul Sand. They work with Create alone and give exactly the same recipes as lava, fire, water and soul fire.</p>"
+      },
+      {
+        "id": "mods-1",
+        "title": "Freezing, sanding, seething, enriched",
+        "alt": "Freezing, sanding, seething, enriched and withering catalysts",
+        "html": "<p>These catalysts only exist when the mod defining the processing is installed. The <strong>Fan Freezing Catalyst</strong> (Powder Snow Bucket) serves Create: Garnished, Dreams &amp; Desires or Dragons Plus. The <strong>Fan Sanding Catalyst</strong> (Sand) serves Dreams &amp; Desires or Dragons Plus; the <strong>Fan Seething Catalyst</strong> (Blaze Cake) serves Dreams &amp; Desires. The <strong>Fan Enriched Catalyst</strong> is filled with enriched soul soil from Create: Nuclear. The <strong>Fan Withering Catalyst</strong> (Wither Rose) is disabled in 1.21.1.</p>"
+      },
+      {
+        "id": "mods-2",
+        "title": "Ending, exploding, glooming, sculking",
+        "alt": "Fan Ending Catalysts with Dragon Head and with Dragon's Breath, exploding, glooming and sculking catalysts",
+        "html": "<p>Dragons Plus ending comes in two flavours: the <strong>Fan Ending Catalyst with Dragon Head</strong>, which shows a moving head, and the <strong>Fan Ending Catalyst with Dragon's Breath</strong>, charged with a bucket of dragon's breath. The <strong>Fan Exploding Catalyst</strong> takes a Creeper Head and the <strong>Fan Sculking Catalyst</strong> a Sculk Catalyst, both for Create More Catalysts. The <strong>Fan Glooming Catalyst</strong> serves Create Shimmer and is charged with Twilight Forest's exanimate essence.</p>"
+      },
+      {
+        "id": "mods-3",
+        "title": "Coatings, purifying, resonance and more",
+        "alt": "Chocolate and honey coating, purifying, resonance, soul stripping and transmutation catalysts",
+        "html": "<p>Create More Catalysts also handles the <strong>Fan Chocolate Coating Catalyst</strong> and the <strong>Fan Honey Coating Catalyst</strong>, filled with Create's chocolate or honey, the <strong>Fan Purifying Catalyst</strong>, which swallows a Beacon, and the <strong>Fan Resonance Catalyst</strong>, which takes an Amethyst Cluster. The <strong>Fan Soul Stripping Catalyst</strong> serves Create: Nether Industry. The <strong>Fan Transmutation Catalyst</strong> is filled with shimmer, for Create Shimmer.</p>"
+      },
+      {
+        "id": "teinture",
+        "title": "Dyeing catalysts",
+        "alt": "Red, Yellow, Lime and Blue dyeing catalysts, then Dye Depot amber and teal",
+        "html": "<p>With Dragons Plus or Create: Garnished, the fan can dye in bulk: each colour has its own Fan Dyeing Catalyst, from White to Black for the sixteen vanilla colours. Charge it with a bucket of liquid dye from Dragons Plus or coloured mastic resin from Garnished. With Dye Depot as well, sixteen more colours join in: the Amber Fan Dyeing Catalyst, Aqua Fan Dyeing Catalyst, Beige Fan Dyeing Catalyst, Coral Fan Dyeing Catalyst, Forest Fan Dyeing Catalyst, Ginger Fan Dyeing Catalyst, Indigo Fan Dyeing Catalyst, Maroon Fan Dyeing Catalyst, Mint Fan Dyeing Catalyst, Navy Fan Dyeing Catalyst, Olive Fan Dyeing Catalyst, Rose Fan Dyeing Catalyst, Slate Fan Dyeing Catalyst, Tan Fan Dyeing Catalyst, Teal Fan Dyeing Catalyst and Verdant Fan Dyeing Catalyst. In the picture: red, yellow, lime, blue, then Dye Depot amber and teal.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<p>A catalyst changes neither the fan's reach nor its speed: only the processing changes. The old blocks, lava or fire, still work if you prefer them. For a line that blasts and then washes, chain two fans and two catalysts instead of juggling fluids. And keep your empty catalysts: they can be refilled as often as you like.</p>"
+      }
+    ],
+    "sources": [
+      "Create Connected 1.3.3 (create_connected-1.3.3-mc1.21.1.jar from the next Create France modpack release): code from the public repository github.com/hlysine/create_connected at tag 1.3.3-mc1.21.1, recipes from the jar's data folder, Ponder scenes replayed by our engine.",
+      "Mod by Lysine (hlysine), GNU AGPL v3 licence: models and textures by its authors, rendered from the jar; no text from the mod is copied.",
+      "Classes: registries/CCBlocks (EMPTY_FAN_CATALYST, FAN_*_CATALYST, FAN_DYEING_CATALYSTS and their mod conditions), compat/Mods, compat/DyeDepotCompat, content/fancatalyst (FanCatalystRotatingHeadBlock).",
+      "Jar data: create:fan_processing_catalysts/* tags and those of the compatible mods (dndesires, garnished, create_dragons_plus, createnuclear, create_more_catalysts, create_shimmer, createnetherindustry, c:dyes); recipes recipe/item_application, recipe/filling and crafting/kinetics/empty_fan_catalyst_from_*."
+    ]
+  }
+}

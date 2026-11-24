@@ -6,7 +6,7 @@
   "title": "Pierres et blocs de déco de Create : guide",
   "description": "Les pierres de Create (asurine, crimsite, calcaire, ochrum, scorie, scorchia, veridium), leurs variantes, le cuivre, les verres et les échafaudages.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "Create apporte sa propre palette de construction : <strong>sept pierres</strong> à lui, chacune déclinée en six variantes avec escaliers, dalles et murets, plus des <strong>tuiles de cuivre</strong> qui s'oxydent, des <strong>verres encadrés</strong>, du fer industriel et des <strong>échafaudages</strong> métalliques. Voici à quoi elles ressemblent, posées sur la plaque, et comment les obtenir.",
@@ -122,6 +122,20 @@
       "html": "<p>Les échafaudages d'<strong>andésite</strong>, de <strong>laiton</strong> et de <strong>cuivre</strong> sortent du tailleur de pierre, deux par alliage ou lingot. Ils se grimpent comme l'échafaudage en bambou, mais ne tombent jamais : pas de limite de distance. Un clic sur un échafaudage avec le même objet le prolonge vers le haut, ou à l'horizontale jusqu'à 7 blocs.</p>"
     },
     {
+      "id": "metal",
+      "title": "Échelles, barreaux et couvre-tables",
+      "image": "deco_metal_echelles.webp",
+      "alt": "Échelles d’andésite, de laiton et de cuivre, barreaux, et couvre-tables sur des planches",
+      "html": "<p>Au tailleur de pierre, un alliage d'andésite, un lingot de laiton ou de cuivre donne deux <strong>échelles</strong> (échelle d'andésite, échelle de laiton, échelle de cuivre), quatre <strong>barreaux</strong> (barreaux d'andésite, barreaux de laiton, barreaux de cuivre) ou deux <strong>couvre-tables</strong> (couvre-table d'andésite, couvre-table de laiton, couvre-table de cuivre). L'échafaudage de laiton se fait de même. Un couvre-table expose jusqu'à quatre objets, et sert aussi de boutique au réseau de colis.</p>"
+    },
+    {
+      "id": "vitres",
+      "title": "Verres et fenêtres",
+      "image": "deco_glass_vitres.webp",
+      "alt": "Verre encadré horizontal et sa vitre, fenêtre en fer industriel et sa vitre, tuiles de quartz rose",
+      "html": "<p>Le <strong>verre encadré horizontal</strong> sort du tailleur de pierre ; six donnent seize <strong>vitres encadrées horizontales</strong>. La <strong>fenêtre en fer industriel</strong> (trois blocs de fer industriel autour d'un verre, pour deux) donne seize <strong>vitres en fer industriel</strong>. Les <strong>tuiles de quartz rose</strong> et petites tuiles viennent du quartz rose poli.</p>"
+    },
+    {
       "id": "trouver",
       "title": "Où les trouver",
       "html": "<p>Les couches de pierres de Create apparaissent sous terre dans l'Overworld, entre les hauteurs −30 et 70, en bandes de deux à cinq blocs d'épaisseur mêlées au tuf, à l'ardoise des abîmes ou à la calcite. Dans le Nether, la scorie et la scorchia se trouvent entre 40 et 90. Un tunnel de mine en traverse vite plusieurs.</p>"
@@ -137,7 +151,9 @@
     "meule",
     "ventilateur-enchasse",
     "portes-coulissantes",
-    "papier-de-verre"
+    "papier-de-verre",
+    "blocs-imitateurs",
+    "horloge-a-coucou"
   ],
   "sources": [
     "Pierres et variantes : AllPaletteStoneTypes, PaletteBlockPattern (6 variantes, escalier / dalle / muret), tags create:stone_types/* (tailleur de pierre)",
@@ -254,6 +270,18 @@
         "title": "Scaffolding",
         "alt": "Andesite, brass and copper scaffolding",
         "html": "<p><strong>Andesite</strong>, <strong>brass</strong> and <strong>copper</strong> scaffolding come out of the stonecutter, two per alloy or ingot. You climb them like bamboo scaffolding, but they never fall: no distance limit. Clicking a scaffold with the same item extends it upward, or sideways up to 7 blocks.</p>"
+      },
+      {
+        "id": "metal",
+        "title": "Ladders, bars and table covers",
+        "alt": "Andesite, brass and copper ladders, bars, and table covers on planks",
+        "html": "<p>In a stonecutter, one Andesite Alloy, Brass Ingot or Copper Ingot gives two <strong>ladders</strong> (Andesite Ladder, Brass Ladder, Copper Ladder), four <strong>bars</strong> (Andesite Bars, Brass Bars, Copper Bars) or two <strong>table covers</strong> (Andesite Table Cover, Brass Table Cover, Copper Table Cover). The Brass Scaffolding is made the same way. A table cover displays up to four items, and also works as a shop on the package network.</p>"
+      },
+      {
+        "id": "vitres",
+        "title": "Glass and windows",
+        "alt": "Horizontal Framed Glass and its pane, Industrial Iron Window and its pane, Rose Quartz Tiles",
+        "html": "<p><strong>Horizontal Framed Glass</strong> comes from the stonecutter; six make sixteen <strong>Horizontal Framed Glass Panes</strong>. The <strong>Industrial Iron Window</strong> (three Blocks of Industrial Iron around a glass, for two) gives sixteen <strong>Industrial Iron Window Panes</strong>. <strong>Rose Quartz Tiles</strong> and small tiles come from polished rose quartz.</p>"
       },
       {
         "id": "trouver",

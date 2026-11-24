@@ -6,7 +6,7 @@
   "title": "Liaison d'affichage — Create : guide en français",
   "description": "La liaison d'affichage de Create : relier une source à un panneau d'affichage, une pancarte ou un tube Nixie, les sources disponibles et la redstone.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "La <strong>liaison d'affichage</strong> lit une information sur un bloc, l'heure, un stock, une vitesse, l'état d'un train, et l'écrit à distance sur un écran. Le plus grand de ces écrans est le <strong>panneau d'affichage</strong>, un tableau à palettes comme dans les gares, que l'on agrandit à volonté. Ensemble, ils transforment une usine en tableau de bord lisible de loin : production du jour, stocks restants, prochain départ.",
@@ -107,7 +107,7 @@
       "title": "Régler ce qui s'affiche",
       "image": "display_link_autre-source.webp",
       "alt": "La même liaison déplacée sur une autre source, une horloge",
-      "html": "<p>Un clic droit sur la liaison ouvre ses réglages : choix de l'information quand la source en offre plusieurs, ligne de départ sur l'écran, format. On peut empiler plusieurs liaisons vers le même panneau, chacune sur sa ligne, pour construire un vrai tableau de bord.</p>"
+      "html": "<p>La liaison ouvre ses réglages d’un clic droit : choix de l'information quand la source en offre plusieurs, ligne de départ sur l'écran, format. On peut empiler plusieurs liaisons vers le même panneau, chacune sur sa ligne, pour construire un vrai tableau de bord.</p>"
     },
     {
       "id": "panneau",
@@ -156,7 +156,8 @@
     "liaison-de-redstone",
     "tube-nixie",
     "gisements-de-petrole",
-    "deep-seas-sonar-barometre"
+    "deep-seas-sonar-barometre",
+    "horloge-a-coucou"
   ],
   "sources": [
     "Portée : CLogistics.displayLinkRange = 64",

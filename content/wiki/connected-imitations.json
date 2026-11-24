@@ -1,0 +1,197 @@
+{
+  "slug": "connected-imitations",
+  "name": "Imitations (copycats)",
+  "blockId": "create_connected:copycat_block",
+  "category": "connected",
+  "title": "Blocs imitation (copycats) — Create Connected, guide",
+  "description": "Les imitations de Create Connected : bloc, dalle, escaliers, muret, barrière, portillon, poutre, panneau, boîte et passerelle, l'habillage façon Create.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Connected 1.3.3 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Create sait déjà faire des <strong>imitations</strong> : un support en zinc qui prend l'apparence du bloc plein qu'on lui donne, avec sa marche et son panneau imitateurs. Create Connected élargit nettement la gamme : <strong>imitation bloc</strong> (Copycat Block), dalle, escaliers, muret, barrière, portillon, poutre, panneau, dalle verticale, plus deux objets qui posent des panneaux tout faits, la boîte et la passerelle. De quoi faire une rambarde en cuivre ou un plancher en boîtier d'andésite sans quitter la forme voulue.",
+  "facts": [
+    {
+      "label": "Fabrication",
+      "value": "tailleur de pierre, à partir d’un lingot de zinc"
+    },
+    {
+      "label": "Par lingot",
+      "value": "bloc, escaliers, muret, barrière, portillon : 1 ; dalle : 2 ; poutre, dalle verticale : 4 ; panneau : 8"
+    },
+    {
+      "label": "Boîte et passerelle",
+      "value": "6 et 3 imitations panneau à l’établi"
+    },
+    {
+      "label": "Matériau",
+      "value": "presque tout bloc plein ; la clé le rend"
+    },
+    {
+      "label": "Blocs enveloppés",
+      "value": "4 blocs techniques internes, sans objet à fabriquer"
+    },
+    {
+      "label": "Version",
+      "value": "Create Connected 1.3.3 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Tailleur de pierre (1 lingot de zinc)",
+    "grid": [
+      [
+        "Lingot de zinc"
+      ]
+    ],
+    "items": [
+      [
+        "create:zinc_ingot"
+      ]
+    ],
+    "result": "1 imitation bloc",
+    "resultItem": "create_connected:copycat_block"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "principe",
+      "title": "Le principe des imitations",
+      "image": "conn_gal_imitations_formes.webp",
+      "alt": "Imitation bloc, dalle, escaliers, dalle verticale, poutre et panneau, chacune habillée d'un matériau différent",
+      "html": "<p>Une imitation posée nue montre un support métallique. Clique dessus avec un bloc en main : elle en prend la texture, la teinte et même les textures connectées, tout en gardant sa forme. Le bloc tenu est consommé et rangé dedans ; tu le récupères en cassant l'imitation. Sur l'image, de gauche à droite puis au fond : bloc en planches de chêne, dalle en boîtier d'andésite, escaliers en cuivre, dalle verticale en briques de pierre, poutre en laiton et panneau en épicéa.</p>"
+    },
+    {
+      "id": "materiau",
+      "title": "Changer, régler et retirer le matériau",
+      "html": "<p>Reclique avec le même bloc pour faire défiler ses variantes : une bûche change d'axe, un bloc qui a un état alimenté s'allume ou s'éteint. Pour changer de matériau, retire d'abord l'ancien : un clic droit à la <a href=\"/wiki/cle\">clé</a> te le rend et laisse le support nu ; accroupi, la clé ramasse en plus l'imitation. Astuce de chantier : garde le matériau dans ta seconde main, chaque imitation posée l'applique d'elle-même. Les blocs à inventaire ou à comportement particulier ne sont pas acceptés.</p>"
+    },
+    {
+      "id": "formes",
+      "title": "Bloc, dalle, escaliers et dalle verticale",
+      "html": "<p>L'<strong>imitation bloc</strong> est un cube entier, utile pour un matériau qui n'existe pas en bloc plein posable partout. L'<strong>imitation dalle</strong> (Copycat Slab) se pose à plat ou debout, sur les trois axes, et deux dalles se complètent en bloc. L'<strong>imitation escaliers</strong> (Copycat Stairs) suit les règles des escaliers du jeu, angles compris, même si ses textures connectées raccordent parfois mal. L'<strong>imitation dalle verticale</strong> (Copycat Vertical Step) est un quart de bloc debout, idéal pour des piliers fins.</p>"
+    },
+    {
+      "id": "poutre-panneau",
+      "title": "Poutre et panneau",
+      "html": "<p>L'<strong>imitation poutre</strong> (Copycat Beam) est une barre de section carrée qui suit un axe ; tenue en main face à une poutre déjà posée, elle prolonge la ligne comme un rotor. L'<strong>imitation panneau</strong> (Copycat Board) est une plaque fine collée sur une face. Plusieurs panneaux tiennent dans le même bloc, un par face : accroupi, la clé n'en retire qu'un, celui que tu vises. Huit panneaux par lingot, c'est la forme la plus économique pour habiller un mur.</p>"
+    },
+    {
+      "id": "barrieres",
+      "title": "Barrière, muret et portillon",
+      "image": "conn_gal_imitations_barrieres.webp",
+      "alt": "Imitation barrière, muret et portillon, avec les versions enveloppées de la barrière, du muret et des escaliers",
+      "html": "<p>L'<strong>imitation barrière</strong> (Copycat Fence) et l'<strong>imitation muret</strong> (Copycat Wall) se raccordent entre elles et aux barrières ou murets ordinaires. L'<strong>imitation portillon</strong> (Copycat Fence Gate) s'ouvre à la main ou par la redstone, comme un vrai portillon. Pour y arriver, chacune s'appuie sur un bloc caché : imitation barrière, portillon, escaliers et muret enveloppés (Wrapped Copycat Fence, Wrapped Copycat Fence Gate, Wrapped Copycat Stairs, Wrapped Copycat Wall). Ce sont des blocs techniques sans objet : ils prêtent leur forme et leurs raccords, tu ne les poses jamais toi-même.</p>"
+    },
+    {
+      "id": "boite-passerelle",
+      "title": "Boîte et passerelle",
+      "html": "<p>Deux objets posent des panneaux déjà assemblés. L'<strong>imitation boîte</strong> (Copycat Box), six panneaux à l'établi, place un bloc dont les six faces sont couvertes : une caisse creuse. L'<strong>imitation passerelle</strong> (Copycat Catwalk), trois panneaux en V, pose un plancher et deux garde-corps le long de ta direction de marche, sans plafond. Une fois posés, ce sont des panneaux comme les autres : habille-les, puis retire un côté à la clé pour ouvrir un passage.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Recettes et compatibilité",
+      "html": "<p>Toutes les imitations sortent du tailleur de pierre à partir d'un lingot de zinc. Des recettes de conversion relient aussi les formes : deux dalles donnent un bloc, deux poutres ou deux marches de Create une dalle, et la dalle verticale s'échange contre la marche imitatrice de Create. Si le mod Copycats+ est installé, ses versions prennent le relais et une recette d'une case convertit les tiennes. Les imitations voyagent sans souci sur les contraptions.</p>"
+    }
+  ],
+  "related": [
+    "create-connected",
+    "cle",
+    "pierres-et-blocs-de-deco",
+    "connected-logistique",
+    "connected-catalyseurs"
+  ],
+  "sources": [
+    "Create Connected 1.3.3 (create_connected-1.3.3-mc1.21.1.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/hlysine/create_connected au tag 1.3.3-mc1.21.1, recettes du dossier data du jar, scènes Ponder rejouées par notre moteur.",
+    "Mod de Lysine (hlysine), sous licence GNU AGPL v3 : modèles et textures de ses auteurs, rendus à partir du jar ; aucun texte du mod n'est recopié.",
+    "Classes : content/copycat (CopycatBlockBlock, CopycatSlabBlock, CopycatStairsBlock, CopycatVerticalStepBlock, CopycatBeamBlock, CopycatBoardBlock, CopycatBoxItem, CopycatCatwalkItem, CopycatFenceBlock, CopycatWallBlock, CopycatFenceGateBlock, Wrapped*Block, MigratingCopycatBlock), registries/CCBlocks ; comportement de base : CopycatBlock de Create 6.0.10.",
+    "Recettes : dossier recipe/crafting/palettes du jar (tailleur de pierre, conversions et compatibilité Copycats+)."
+  ],
+  "en": {
+    "slugEn": "connected-copycats",
+    "name": "Copycat blocks",
+    "title": "Copycat Blocks — Create Connected guide",
+    "description": "Create Connected copycats: block, slab, stairs, wall, fence, fence gate, beam, board, box and catwalk that take the look of any block, the Create way.",
+    "intro": "Create can already make <strong>copycats</strong>: a zinc frame that takes on the look of whatever full block you give it, with its Copycat Step and Copycat Panel. Create Connected widens the range a lot: the <strong>Copycat Block</strong>, slab, stairs, wall, fence, fence gate, beam, board and vertical step, plus two items that place ready-made boards, the box and the catwalk. Enough for a copper railing or an Andesite Casing floor in exactly the shape you want.",
+    "facts": [
+      {
+        "label": "Crafting",
+        "value": "Stonecutter, from one Zinc Ingot"
+      },
+      {
+        "label": "Per ingot",
+        "value": "block, stairs, wall, fence, fence gate: 1; slab: 2; beam, vertical step: 4; board: 8"
+      },
+      {
+        "label": "Box and catwalk",
+        "value": "6 and 3 Copycat Boards in a crafting grid"
+      },
+      {
+        "label": "Material",
+        "value": "almost any full block; the wrench gives it back"
+      },
+      {
+        "label": "Wrapped blocks",
+        "value": "4 internal technical blocks, with no item to craft"
+      },
+      {
+        "label": "Version",
+        "value": "Create Connected 1.3.3 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Stonecutter recipe (1 Zinc Ingot)",
+      "grid": [
+        [
+          "Zinc Ingot"
+        ]
+      ],
+      "result": "1 Copycat Block"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "principe",
+        "title": "How copycats work",
+        "alt": "Copycat Block, Slab, Stairs, Vertical Step, Beam and Board, each dressed in a different material",
+        "html": "<p>An empty copycat shows a bare metal frame. Click it with a block in hand: it takes on that block's texture, colour and even connected textures while keeping its own shape. The block you held is used up and stored inside; you get it back when you break the copycat. In the picture, left to right then at the back: a block in Oak Planks, a slab in Andesite Casing, stairs in copper, a vertical step in Stone Bricks, a beam in brass and a board in spruce.</p>"
+      },
+      {
+        "id": "materiau",
+        "title": "Changing, tuning and removing the material",
+        "html": "<p>Click again with the same block to cycle its variants: a log changes axis, a block with a powered state turns on or off. To switch materials, remove the old one first: a right-click with the <a href=\"/en/wiki/wrench\">Wrench</a> returns it and leaves the frame bare; sneaking, the wrench also picks up the copycat. A builder's trick: keep the material in your off hand and every copycat you place applies it on its own. Blocks with an inventory or special behaviour are not accepted.</p>"
+      },
+      {
+        "id": "formes",
+        "title": "Block, slab, stairs and vertical step",
+        "html": "<p>The <strong>Copycat Block</strong> is a full cube, handy for a material that cannot be placed as a full block everywhere. The <strong>Copycat Slab</strong> lies flat or stands up, on all three axes, and two slabs complete a block. The <strong>Copycat Stairs</strong> follow vanilla stair rules, corners included, even if their connected textures sometimes join badly. The <strong>Copycat Vertical Step</strong> is an upright quarter block, perfect for thin pillars.</p>"
+      },
+      {
+        "id": "poutre-panneau",
+        "title": "Beam and board",
+        "html": "<p>The <strong>Copycat Beam</strong> is a square bar that follows an axis; held while facing a beam already in place, it extends the line like a shaft. The <strong>Copycat Board</strong> is a thin plate stuck to one face. Several boards fit in the same block, one per face: sneaking, the wrench removes only the one you aim at. At eight boards per ingot, it is the cheapest way to clad a wall.</p>"
+      },
+      {
+        "id": "barrieres",
+        "title": "Fence, wall and fence gate",
+        "alt": "Copycat Fence, Wall and Fence Gate, with the wrapped versions of the fence, wall and stairs",
+        "html": "<p>The <strong>Copycat Fence</strong> and <strong>Copycat Wall</strong> connect to each other and to regular fences or walls. The <strong>Copycat Fence Gate</strong> opens by hand or with redstone, like a real gate. To pull this off, each one leans on a hidden block: the Wrapped Copycat Fence, Wrapped Copycat Fence Gate, Wrapped Copycat Stairs and Wrapped Copycat Wall. These are technical blocks with no item: they lend their shape and connections, and you never place them yourself.</p>"
+      },
+      {
+        "id": "boite-passerelle",
+        "title": "Box and catwalk",
+        "html": "<p>Two items place pre-assembled boards. The <strong>Copycat Box</strong>, six boards in a grid, places a block with all six faces covered: a hollow crate. The <strong>Copycat Catwalk</strong>, three boards in a V, places a floor and two railings along the direction you walk, with no ceiling. Once placed they are ordinary boards: dress them, then wrench one side off to open a passage.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Recipes and compatibility",
+        "html": "<p>Every copycat comes out of the Stonecutter from a Zinc Ingot. Conversion recipes also link the shapes: two slabs make a block, two beams or two Create Copycat Steps make a slab, and the vertical step swaps for Create's Copycat Step. If the Copycats+ mod is installed, its versions take over and a one-item recipe converts yours. Copycats travel on contraptions without trouble.</p>"
+      }
+    ],
+    "sources": [
+      "Create Connected 1.3.3 (create_connected-1.3.3-mc1.21.1.jar from the next Create France modpack release): code from the public repository github.com/hlysine/create_connected at tag 1.3.3-mc1.21.1, recipes from the jar's data folder, Ponder scenes replayed by our engine.",
+      "Mod by Lysine (hlysine), GNU AGPL v3 licence: models and textures by its authors, rendered from the jar; no text from the mod is copied.",
+      "Classes: content/copycat (CopycatBlockBlock, CopycatSlabBlock, CopycatStairsBlock, CopycatVerticalStepBlock, CopycatBeamBlock, CopycatBoardBlock, CopycatBoxItem, CopycatCatwalkItem, CopycatFenceBlock, CopycatWallBlock, CopycatFenceGateBlock, Wrapped*Block, MigratingCopycatBlock), registries/CCBlocks; base behaviour: CopycatBlock from Create 6.0.10.",
+      "Recipes: the jar's recipe/crafting/palettes folder (stonecutting, conversions and Copycats+ compatibility)."
+    ]
+  }
+}

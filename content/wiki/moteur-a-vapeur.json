@@ -6,7 +6,7 @@
   "title": "Moteur à vapeur — Create : guide en français",
   "description": "Le moteur à vapeur de Create : chaudière en réservoirs, eau, chaleur des brûleurs à blaze, niveaux de puissance, 64 tr/min et 16 384 SU par moteur.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "Le <strong>moteur à vapeur</strong> est la grosse source d'énergie de Create. Posé contre une chaudière faite de <strong>réservoirs à fluide</strong>, chauffée par des <strong>brûleurs à blaze</strong> et alimentée en eau, il fournit une puissance sans commune mesure avec une roue à eau. Le principe tient en trois ingrédients à équilibrer : la <strong>chaleur</strong>, l'<strong>eau</strong> et la <strong>taille de la chaudière</strong>. Le plus faible des trois fixe le niveau.",
@@ -83,7 +83,7 @@
     {
       "id": "steam_engine",
       "name": "Moteur à vapeur : installer une chaudière minimale",
-      "description": "Un moteur à vapeur est fixé sur un réservoir à fluide, un rotor branché sur sa sortie, puis la chaudière reçoit de l'eau, de la chaleur et la taille de quatre réservoirs.",
+      "description": "Un moteur à vapeur est fixé contre un réservoir à fluide, un rotor branché sur sa sortie, puis la chaudière reçoit de l'eau, de la chaleur et la taille de quatre réservoirs.",
       "duration": "PT20S"
     },
     {
@@ -158,7 +158,8 @@
     "pompe-mecanique",
     "moteur-diesel",
     "moteur-diesel-enorme",
-    "aeronautics-ballons"
+    "aeronautics-ballons",
+    "volant-d-inertie"
   ],
   "sources": [
     "Vitesse : PoweredShaftBlockEntity.getGeneratedSpeed = 16 × getSpeedModifier (1 + 3 à pleine efficacité, sinon min(2, ⌊efficacité × 4⌋)) -> 16 à 64 tr/min",

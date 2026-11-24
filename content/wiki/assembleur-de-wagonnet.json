@@ -6,7 +6,7 @@
   "title": "Assembleur de wagonnet — Create : guide en français",
   "description": "L'assembleur de wagonnet de Create : monter une structure sur un wagonnet, la démonter, orientation, attelages à deux wagonnets et types de rails.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "Avant les trains, Create permettait déjà de faire rouler des machines sur des rails vanilla. L'<strong>assembleur de wagonnet</strong> se pose comme un rail : alimenté, il <strong>monte la structure</strong> posée sur lui sur le wagonnet qui passe ; sans signal, il la remet en blocs. Parfait pour une petite foreuse, un manège ou un convoi léger.",
@@ -130,7 +130,7 @@
       "title": "L’emporter dans l’inventaire",
       "image": "cart_anchor_cle.webp",
       "alt": "La clé sur le wagonnet",
-      "html": "<p>Un clic à la <strong>clé</strong> sur le wagonnet ramasse toute la machine : elle devient un objet <strong>machine sur wagonnet</strong>, que l'on repose plus loin sur des rails.</p>"
+      "html": "<p>Un clic à la <strong>clé</strong> sur le wagonnet ramasse toute la machine : elle devient un objet <strong>machine sur wagonnet</strong> (ou <strong>machine sur wagonnet de stockage</strong>, <strong>machine sur wagonnet motorisé</strong> selon le wagonnet), que l'on repose plus loin d'un clic droit sur des rails. Dans la structure assemblée, l'assembleur est remplacé par une <strong>ancre de wagonnet</strong>, un bloc technique qui ne se pose jamais au désassemblage.</p>"
     },
     {
       "id": "orientation",
@@ -338,7 +338,7 @@
         "id": "cle",
         "title": "Taking it into your inventory",
         "alt": "The Wrench on the minecart",
-        "html": "<p>A click with the <strong>Wrench</strong> on the minecart picks up the whole machine: it becomes a <strong>Minecart Contraption</strong> item that you place again further along some rails.</p>"
+        "html": "<p>A click with the <strong>Wrench</strong> on the minecart picks up the whole machine: it becomes a <strong>Minecart Contraption</strong> item (or a <strong>Chest Minecart Contraption</strong>, <strong>Furnace Minecart Contraption</strong> depending on the cart), which you place again with a right-click on some rails. In the assembled structure, the assembler is replaced by a <strong>Minecart Anchor</strong>, a technical block that is never placed on disassembly.</p>"
       },
       {
         "id": "orientation",

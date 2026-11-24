@@ -2,11 +2,11 @@
  "aeronautics-ballons": {
   "aero_burner": [
    {
-    "t": 3.72,
+    "t": 1.44,
     "section": "bruleur"
    },
    {
-    "t": 10.65,
+    "t": 8.23,
     "section": "reglage"
    },
    {
@@ -30,11 +30,11 @@
   ],
   "aero_envelope": [
    {
-    "t": 6.18,
+    "t": 1.7,
     "section": "enveloppe"
    },
    {
-    "t": 18.27,
+    "t": 15.45,
     "section": "arbre"
    },
    {
@@ -46,15 +46,15 @@
  "aeronautics-helices": {
   "aero_thrust": [
    {
-    "t": 7.63,
+    "t": 2.3,
     "section": "dirigeable"
    },
    {
-    "t": 10.39,
+    "t": 7.63,
     "section": "inversion"
    },
    {
-    "t": 18.09,
+    "t": 15.17,
     "section": "air"
    }
   ],
@@ -62,10 +62,6 @@
    {
     "t": 2.27,
     "section": "petites"
-   },
-   {
-    "t": 4.65,
-    "section": "dirigeable"
    },
    {
     "t": 7.54,
@@ -90,21 +86,21 @@
  "aeronautics-levitite": {
   "aero_levitite_blend": [
    {
-    "t": 1.99,
+    "t": 0.85,
     "section": "melange"
    },
    {
-    "t": 7.97,
+    "t": 1.99,
     "section": "chaleur"
    },
    {
-    "t": 13.04,
-    "section": "propagation"
+    "t": 18.93,
+    "section": "moule"
    }
   ],
   "aero_levitite": [
    {
-    "t": 7.44,
+    "t": 1.76,
     "section": "flotter"
    },
    {
@@ -210,15 +206,11 @@
  "assembleur-physique": {
   "aero_assembler": [
    {
-    "t": 3.75,
-    "section": "coller"
-   },
-   {
     "t": 6.52,
     "section": "levier"
    },
    {
-    "t": 14.61,
+    "t": 12.64,
     "section": "desassembler"
    }
   ]

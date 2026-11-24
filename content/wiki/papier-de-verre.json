@@ -6,7 +6,7 @@
   "title": "Papier de verre et polissage — Create : guide",
   "description": "Le papier de verre de Create : polir le quartz rose à la main ou au déployeur, puis fabriquer tubes électroniques et mécanismes de précision.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "Le <strong>papier de verre</strong> sert à <strong>polir</strong>. Dans Create, une seule recette en dépend, mais elle est capitale : le <strong>quartz rose poli</strong>, qui donne le tube électronique, et toute la chaîne qui mène au <strong>mécanisme de précision</strong>. On polit à la main pour démarrer, puis un <a href=\"/wiki/deployeur\">déployeur</a> tient la feuille et le fait tout seul.",
@@ -134,7 +134,7 @@
     {
       "id": "cuivre",
       "title": "Gratter le cuivre",
-      "html": "<p>Un clic droit sur un bloc de cuivre oxydé retire une couche de vert-de-gris, comme une hache ; sur un bloc ciré, il enlève la cire. Une durabilité par usage. Pratique pour les <a href=\"/wiki/pierres-et-blocs-de-deco\">tuiles et bardeaux de cuivre</a> de Create.</p>"
+      "html": "<p>Sur un bloc de cuivre oxydé, un clic droit retire une couche de vert-de-gris, comme une hache ; sur un bloc ciré, il enlève la cire. Une durabilité par usage. Pratique pour les <a href=\"/wiki/pierres-et-blocs-de-deco\">tuiles et bardeaux de cuivre</a> de Create.</p>"
     },
     {
       "id": "usine",
@@ -158,7 +158,8 @@
     "tapis-roulant",
     "presse-mecanique",
     "main-extensible",
-    "canon-a-pomme-de-terre"
+    "canon-a-pomme-de-terre",
+    "materiaux"
   ],
   "sources": [
     "Recettes : crafting/materials/sand_paper.json, red_sand_paper.json, rose_quartz.json, electron_tube.json",

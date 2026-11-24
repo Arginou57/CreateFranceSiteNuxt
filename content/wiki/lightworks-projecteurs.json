@@ -1,0 +1,487 @@
+{
+  "slug": "lightworks-projecteurs",
+  "name": "Projecteurs et tête orientable",
+  "blockId": "lightworks:floodlight",
+  "category": "lightworks",
+  "title": "Projecteurs — Create Lightworks, guide",
+  "description": "Projecteur, projecteur de zone et tête orientable de Create: Lightworks, addon de Create : portée, visée, redstone, teinture et balayage.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create: Lightworks 1.0.1 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>projecteur</strong> envoie un faisceau étroit qui porte loin, le <strong>projecteur de zone</strong> un cône large pour éclairer une surface. Tous deux se visent au degré près et allument vraiment le bloc qu'ils touchent. Posés sur une <strong>tête orientable</strong>, ils pivotent avec un arbre et se relèvent à la redstone.",
+  "facts": [
+    {
+      "label": "Projecteur",
+      "value": "6° de chaque côté de l’axe (+ 4° de bord), plein jusqu’à 32 blocs, éteint à 48"
+    },
+    {
+      "label": "Projecteur de zone",
+      "value": "30° de chaque côté de l’axe (+ 15° de bord), plein jusqu’à 12 blocs, éteint à 20"
+    },
+    {
+      "label": "Tête orientable",
+      "value": "2 su par tr/min ; pivote à la vitesse de l’arbre"
+    },
+    {
+      "label": "Inclinaison",
+      "value": "6° par niveau de redstone, 90° à 15, rejointe à 3° par tick"
+    },
+    {
+      "label": "Balayage",
+      "value": "de ±5° à ±180° par crans de 5°, ou tours complets"
+    },
+    {
+      "label": "Redstone",
+      "value": "luminosité = 15 − signal (inversible : option invertRedstone)"
+    },
+    {
+      "label": "Version",
+      "value": "Create: Lightworks 1.0.1 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l’établi",
+    "grid": [
+      [
+        "Verre",
+        "Verre",
+        "Verre"
+      ],
+      [
+        "Plaque de laiton",
+        "Tube électronique",
+        "Plaque de laiton"
+      ],
+      [
+        null,
+        "Boitier de laiton",
+        null
+      ]
+    ],
+    "items": [
+      [
+        "minecraft:glass",
+        "minecraft:glass",
+        "minecraft:glass"
+      ],
+      [
+        "create:brass_sheet",
+        "create:electron_tube",
+        "create:brass_sheet"
+      ],
+      [
+        null,
+        "create:brass_casing",
+        null
+      ]
+    ],
+    "result": "1 projecteur de zone",
+    "resultItem": "lightworks:floodlight"
+  },
+  "videos": [
+    {
+      "id": "lw_searchlight",
+      "name": "Le projecteur, du mur à la teinture",
+      "description": "Un projecteur posé au sol éclaire un mur de briques, se fait viser plus haut, s'éteint avec un levier puis passe au bleu clair.",
+      "duration": "PT18S",
+      "chapters": [
+        {
+          "t": 2.0,
+          "section": "projecteur"
+        },
+        {
+          "t": 3.8,
+          "section": "cible"
+        },
+        {
+          "t": 5.8,
+          "section": "viser"
+        },
+        {
+          "t": 8.6,
+          "section": "redstone"
+        },
+        {
+          "t": 11.9,
+          "section": "teinture"
+        },
+        {
+          "t": 13.7,
+          "section": "vehicule"
+        }
+      ]
+    },
+    {
+      "id": "lw_floodlight",
+      "name": "Éclairer le sol avec le projecteur de zone",
+      "description": "Un projecteur de zone accroché sous une potence de pierre éclaire une large surface, se fait réorienter puis passe au rouge.",
+      "duration": "PT14S",
+      "chapters": [
+        {
+          "t": 2.0,
+          "section": "zone"
+        },
+        {
+          "t": 3.8,
+          "section": "zone-hauteur"
+        },
+        {
+          "t": 6.3,
+          "section": "zone-viser"
+        },
+        {
+          "t": 8.3,
+          "section": "fixation"
+        },
+        {
+          "t": 10.4,
+          "section": "zone-teinture"
+        }
+      ]
+    },
+    {
+      "id": "lw_pan_tilt",
+      "name": "La tête orientable en action",
+      "description": "Un moteur créatif fait pivoter un projecteur posé sur une tête orientable ; un levier analogique le relève, puis la tête balaie ±45° et s'arrête.",
+      "duration": "PT20S",
+      "chapters": [
+        {
+          "t": 2.5,
+          "section": "tete"
+        },
+        {
+          "t": 4.8,
+          "section": "rotation"
+        },
+        {
+          "t": 8.0,
+          "section": "inclinaison"
+        },
+        {
+          "t": 13.2,
+          "section": "balayage"
+        },
+        {
+          "t": 16.2,
+          "section": "arret"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "projecteur",
+      "title": "Projecteur : un faisceau qui porte loin",
+      "image": "lw_searchlight_faisceau.webp",
+      "alt": "Un projecteur posé au sol éclaire un mur de briques de pierre à cinq blocs",
+      "video": "lw_searchlight",
+      "html": "<p>Le <strong>projecteur</strong> (Searchlight : verre, deux plaques de laiton, tube électronique, boitier de laiton) a le faisceau le plus serré du mod : 6° de chaque côté de l'axe, plus 4° de bord adouci. Il garde toute sa force jusqu'à 32 blocs et s'éteint à 48. Posé, il vise à l'horizontale.</p>"
+    },
+    {
+      "id": "cible",
+      "title": "La lumière là où il se pose",
+      "image": "lw_searchlight_cible.webp",
+      "alt": "La tache de lumière du faisceau sur le mur",
+      "html": "<p>Le bloc atteint est éclairé pour de bon, monstres compris. Le mod place devant lui une <strong>lumière de faisceau</strong> (Beam Light) : invisible, sans collision, ignorée des observateurs. Elle se loge dans l'air ou une source d'eau et s'efface si sa lampe ne la vise plus. Dans nos vidéos, le faisceau est un volume lumineux doux : notre moteur n'a pas le rendu additif du mod.</p>"
+    },
+    {
+      "id": "viser",
+      "title": "Viser avec Pan et Tilt",
+      "image": "lw_searchlight_viser.webp",
+      "alt": "Le projecteur relevé vers le haut du mur après le réglage",
+      "html": "<p>Chaque côté de la lampe porte deux boîtes de valeur. Garde le clic droit sur <strong>Pan</strong> pour la faire pivoter, sur <strong>Tilt</strong> pour l'incliner, puis choisis l'angle. Au sol ou au plafond, Pan va jusqu'à 180° de chaque côté ; au mur, 90°. Au sol, impossible de viser sous l'horizon ; au plafond, au-dessus.</p>"
+    },
+    {
+      "id": "redstone",
+      "title": "Atténuer à la redstone",
+      "image": "lw_searchlight_redstone.webp",
+      "alt": "Le levier activé : le projecteur est éteint",
+      "html": "<p>La luminosité vaut 15 moins le signal reçu : un levier sert d'interrupteur, un <a href=\"/wiki/tube-nixie\">levier analogique</a> de variateur. L'option serveur <strong>invertRedstone</strong> renverse la règle : lampe éteinte sans signal, plus forte à mesure que le signal monte. Les <a href=\"/wiki/lunettes-d-ingenieur\">lunettes d'ingénieur</a> affichent la luminosité sur 15.</p>"
+    },
+    {
+      "id": "teinture",
+      "title": "Changer la couleur",
+      "image": "lw_searchlight_teinture.webp",
+      "alt": "Le projecteur teint en bleu clair",
+      "html": "<p>Un clic droit, teinture en main : lentille, faisceau et tache lumineuse prennent sa couleur. Le <a href=\"/wiki/filtres\">presse-papiers</a> copie la visée et la couleur d'une lampe pour les coller sur une autre, contre une teinture.</p>"
+    },
+    {
+      "id": "vehicule",
+      "title": "Sur une machine ou un véhicule",
+      "image": "lw_searchlight_vehicule.webp",
+      "alt": "Le projecteur bleu clair, son faisceau toujours posé sur le mur",
+      "html": "<p>Sur un <a href=\"/wiki/roulement-mecanique\">roulement mécanique</a>, un train ou un appareil de <a href=\"/wiki/create-aeronautics\">Create Aeronautics</a>, le faisceau est recalculé à chaque tick et garde son angle. C'est alors le client qui éclaire. Les <a href=\"/wiki/controles-de-machine\">contrôles de machine</a> coupent la lampe.</p>"
+    },
+    {
+      "id": "zone",
+      "title": "Projecteur de zone",
+      "image": "lw_floodlight_faisceau.webp",
+      "alt": "Un projecteur de zone suspendu éclaire un carré de sol de cinq blocs de côté",
+      "video": "lw_floodlight",
+      "html": "<p>Le <strong>projecteur de zone</strong> (Floodlight, recette ci-contre : trois verres au lieu d'un) ouvre un cône large : 30° de chaque côté de l'axe, plus 15° de bord. Il porte moins loin, plein jusqu'à 12 blocs, noir à 20. Idéal pour les cours et les quais.</p>"
+    },
+    {
+      "id": "zone-hauteur",
+      "title": "En hauteur, braqué vers le bas",
+      "image": "lw_floodlight_hauteur.webp",
+      "alt": "La potence de pierre et la lampe tournée vers le sol",
+      "html": "<p>Accroche-le à quatre ou six blocs de haut et vise le sol : la tache reste régulière. Le mod répartit plusieurs lumières de faisceau sur tout ce que le cône touche, assez serrées pour que leurs halos se rejoignent.</p>"
+    },
+    {
+      "id": "zone-viser",
+      "title": "Régler le cône",
+      "image": "lw_floodlight_viser.webp",
+      "alt": "Le projecteur de zone réorienté, sa tache décalée sur le sol",
+      "html": "<p>Pour une rangée de lampes, règle la première et colle sa visée aux autres au presse-papiers : elle est mémorisée par rapport au support, les lampes restent parallèles.</p>"
+    },
+    {
+      "id": "fixation",
+      "title": "Sol, mur ou plafond",
+      "image": "lw_floodlight_fixation.webp",
+      "alt": "Le projecteur de zone accroché sous le bras de la potence",
+      "html": "<p>Les deux projecteurs se posent sur toutes les faces. Au sol ou au plafond, ils regardent du même côté que toi au moment de la pose ; au mur, ils partent droit devant. La visée part de là, à 0° et 0°.</p>"
+    },
+    {
+      "id": "zone-teinture",
+      "title": "Une cour en couleur",
+      "image": "lw_floodlight_teinture.webp",
+      "alt": "Le projecteur de zone teint en rouge, le sol éclairé en rouge",
+      "html": "<p>Une teinture rouge, et toute la zone éclairée vire au rouge : pratique pour un quai de chargement ou une zone dangereuse.</p>"
+    },
+    {
+      "id": "tete",
+      "title": "Tête orientable",
+      "image": "lw_pan_tilt_tete.webp",
+      "alt": "Un projecteur posé sur une tête orientable, elle-même sur un moteur créatif",
+      "video": "lw_pan_tilt",
+      "html": "<p>La <strong>tête orientable</strong> (Pan-Tilt Head : plaque de laiton, deux roues dentées, boitier de laiton, rotor) porte un projecteur, un projecteur de zone ou un phare. Pose la lampe sur sa face avant, amène l'arbre par l'arrière. Elle consomme 2 su par tr/min et remplace les boîtes Pan et Tilt de la lampe.</p>"
+    },
+    {
+      "id": "rotation",
+      "title": "La rotation par l'arbre",
+      "image": "lw_pan_tilt_rotation.webp",
+      "alt": "Le moteur créatif à 16 tr/min fait pivoter le projecteur",
+      "html": "<p>La lampe pivote au rythme exact de l'arbre, 0,3° par tick et par tr/min : à 16 tr/min, un tour prend 3,75 secondes. Tant qu'elle tourne, c'est une lampe mobile, éclairée par le client.</p>"
+    },
+    {
+      "id": "inclinaison",
+      "title": "L'inclinaison à la redstone",
+      "image": "lw_pan_tilt_inclinaison.webp",
+      "alt": "Un levier analogique relève le projecteur",
+      "html": "<p>Un signal relève la lampe de 6° par niveau : 30° à 5, 60° à 10, 90° à 15, dans l'axe de la tête. La tête ne conduit pas la redstone : le signal qui l'incline n'atténue pas la lampe.</p>"
+    },
+    {
+      "id": "balayage",
+      "title": "Le balayage aller-retour",
+      "image": "lw_pan_tilt_balayage.webp",
+      "alt": "La tête réglée sur ±45° fait aller et venir le faisceau",
+      "html": "<p>Garde le clic droit sur la boîte de la tête pour choisir un arc, de ±5° à ±180° par crans de 5°. La lampe va et vient autour de sa position du moment, sans ralentir aux extrémités ; sur « Off », elle fait des tours complets.</p>"
+    },
+    {
+      "id": "arret",
+      "title": "À l'arrêt",
+      "image": "lw_pan_tilt_arret.webp",
+      "alt": "L'arbre arrêté, le projecteur garde son orientation",
+      "html": "<p>Coupe la rotation : la lampe se fige et redevient une lampe fixe qui pose ses lumières de faisceau. Sur une machine assemblée, la tête ne tourne plus ; la lampe garde les angles de l'assemblage.</p>"
+    }
+  ],
+  "related": [
+    "create-lightworks",
+    "lightworks-signalisation",
+    "lightworks-feux-de-vehicule",
+    "moteur-creatif",
+    "tube-nixie",
+    "rotor",
+    "lunettes-d-ingenieur",
+    "filtres",
+    "roulement-mecanique"
+  ],
+  "sources": [
+    "Create: Lightworks 1.0.1 (createlightworks-neoforge-1.21.1-1.0.1.jar) : code du dépôt public github.com/Goldsk1n/CreateLightworks au tag v1.0.1, recettes du dossier data du jar, scènes Ponder rejouées par notre moteur.",
+    "Mod de GoldskinMC, sous licence MIT : modèles et textures de ses auteurs, rendus à partir du jar ; aucun texte du mod n'est recopié.",
+    "Faisceaux : content/LightType.java (SEARCHLIGHT ConeFalloff(6, 4, 32, 48), FLOODLIGHT ConeFalloff(30, 15, 12, 20)), beam/ConeFalloff.java ; lumières de faisceau : light/BeamLightBlock.java (air ou source d'eau, contrôle toutes les 100 ticks), light/BeamArea.java (plusieurs lumières pour un faisceau large).",
+    "Visée : content/directional/AimBoard.java, beam/PanTilt.java (Pan ±180° au sol et au plafond, ±90° au mur ; pas sous l'horizon au sol, pas au-dessus au plafond) ; redstone : LightworksConfig.brightnessFor (15 − signal, invertRedstone) ; teinture : content/Dyeing.java, content/LightClipboard.java.",
+    "Tête orientable : content/pantilt/PanTiltHeadBlockEntity.java (TILT_PER_SIGNAL 6, TILT_PER_TICK 3), content/SpinAngle.java (0,3° par tick et par tr/min), content/pantilt/SweepBoard.java (crans de 5°, 36 crans), beam/Sweep.java ; impact 2 su par tr/min et recettes : registry/LightworksBlocks.java, data/lightworks/recipe/searchlight.json, floodlight.json, pan_tilt_head.json."
+  ],
+  "en": {
+    "slugEn": "lightworks-searchlights-and-floodlights",
+    "name": "Searchlight, Floodlight and Pan-Tilt Head",
+    "title": "Searchlights and Floodlights — Create Lightworks guide",
+    "description": "Searchlight, Floodlight and Pan-Tilt Head from Create: Lightworks, a Create addon: beam range, aiming, redstone dimming, dyes and sweeping.",
+    "intro": "The <strong>Searchlight</strong> casts a tight beam that carries a long way, the <strong>Floodlight</strong> a wide cone for lighting an area. Both are aimed to the degree and really light the block they hit. Mounted on a <strong>Pan-Tilt Head</strong>, they swing round with a shaft and lift with redstone.",
+    "facts": [
+      {
+        "label": "Searchlight",
+        "value": "6° either side of the axis (+ 4° soft edge), at full strength to 32 blocks, gone at 48"
+      },
+      {
+        "label": "Floodlight",
+        "value": "30° either side of the axis (+ 15° soft edge), at full strength to 12 blocks, gone at 20"
+      },
+      {
+        "label": "Pan-Tilt Head",
+        "value": "2 SU per RPM; turns at the speed of its shaft"
+      },
+      {
+        "label": "Tilt",
+        "value": "6° per redstone level, 90° at 15, reached at 3° per tick"
+      },
+      {
+        "label": "Sweep",
+        "value": "±5° to ±180° in 5° steps, or full turns"
+      },
+      {
+        "label": "Redstone",
+        "value": "brightness = 15 − signal (can be inverted: invertRedstone option)"
+      },
+      {
+        "label": "Version",
+        "value": "Create: Lightworks 1.0.1 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Glass",
+          "Glass",
+          "Glass"
+        ],
+        [
+          "Brass Sheet",
+          "Electron Tube",
+          "Brass Sheet"
+        ],
+        [
+          null,
+          "Brass Casing",
+          null
+        ]
+      ],
+      "result": "1 Floodlight"
+    },
+    "videos": [
+      {
+        "id": "lw_searchlight",
+        "name": "The Searchlight, from wall to dye",
+        "description": "A Searchlight on the floor lights a brick wall, is aimed higher, goes dark with a lever and is then dyed light blue."
+      },
+      {
+        "id": "lw_floodlight",
+        "name": "Lighting the ground with a Floodlight",
+        "description": "A Floodlight hung from a stone gantry lights a broad patch of floor, is re-aimed and then turns red."
+      },
+      {
+        "id": "lw_pan_tilt",
+        "name": "The Pan-Tilt Head at work",
+        "description": "A Creative Motor swings a Searchlight sitting on a Pan-Tilt Head; an Analog Lever raises it, then the head sweeps ±45° and stops."
+      }
+    ],
+    "sections": [
+      {
+        "id": "projecteur",
+        "title": "Searchlight: a beam that carries",
+        "alt": "A Searchlight on the floor lighting a stone brick wall five blocks away",
+        "html": "<p>The <strong>Searchlight</strong> (Glass, two Brass Sheets, an Electron Tube and Brass Casing) has the tightest beam in the mod: 6° either side of the axis plus a 4° soft edge. It keeps its full strength up to 32 blocks and fades out by 48. Once placed, it points horizontally.</p>"
+      },
+      {
+        "id": "cible",
+        "title": "Light where it lands",
+        "alt": "The beam's bright patch on the wall",
+        "html": "<p>The block it reaches is properly lit, as far as mob spawning is concerned too. The mod puts a <strong>Beam Light</strong> just in front of it: invisible, no collision, unnoticed by Observers. It fits into air or a water source and removes itself if its lamp stops aiming at it (checked every 5 s). In our videos the beam is drawn as a soft glowing volume: our engine lacks the mod's additive rendering.</p>"
+      },
+      {
+        "id": "viser",
+        "title": "Aiming with Pan and Tilt",
+        "alt": "The Searchlight raised towards the top of the wall after aiming",
+        "html": "<p>Each side of the lamp carries two value boxes. Keep right-click held on <strong>Pan</strong> to swing it, on <strong>Tilt</strong> to raise or lower it, then pick the angle. Floor- or ceiling-mounted, Pan goes up to 180° each way; on a wall, 90°. A floor lamp cannot aim below the horizon, a ceiling lamp not above it.</p>"
+      },
+      {
+        "id": "redstone",
+        "title": "Dimming with redstone",
+        "alt": "The lever switched on: the Searchlight is dark",
+        "html": "<p>Brightness equals 15 minus the incoming signal, so a lever works as a switch and an <a href=\"/en/wiki/nixie-tube\">Analog Lever</a> as a dimmer. The server option <strong>invertRedstone</strong> flips the rule: no signal means off, and a stronger signal means brighter. <a href=\"/en/wiki/engineers-goggles\">Engineer's Goggles</a> show the brightness out of 15.</p>"
+      },
+      {
+        "id": "teinture",
+        "title": "Changing the colour",
+        "alt": "The Searchlight dyed light blue",
+        "html": "<p>Use a dye on it and its lens, beam and lit patch all take on that colour. The <a href=\"/en/wiki/filters\">Clipboard</a> copies one lamp's aim and colour and pastes them onto another, for the price of one dye.</p>"
+      },
+      {
+        "id": "vehicule",
+        "title": "On contraptions and vehicles",
+        "alt": "The light blue Searchlight, its beam still resting on the wall",
+        "html": "<p>On a <a href=\"/en/wiki/mechanical-bearing\">Mechanical Bearing</a>, a train or a <a href=\"/en/wiki/create-aeronautics-guide\">Create Aeronautics</a> craft, the beam is traced again every tick and holds its angle. The client then handles the lighting. <a href=\"/en/wiki/contraption-controls\">Contraption Controls</a> switch the lamp off.</p>"
+      },
+      {
+        "id": "zone",
+        "title": "Floodlight",
+        "alt": "A hanging Floodlight lighting a five-by-five patch of floor",
+        "html": "<p>The <strong>Floodlight</strong> (recipe shown here: three Glass instead of one) opens a wide cone: 30° either side of the axis plus a 15° edge. It reaches less far, bright to 12 blocks and dark at 20. Ideal for yards and platforms.</p>"
+      },
+      {
+        "id": "zone-hauteur",
+        "title": "High up, pointing down",
+        "alt": "The stone gantry and the lamp turned towards the ground",
+        "html": "<p>Hang it four to six blocks up and aim at the ground: the patch stays even. The mod spreads several Beam Lights over everything the cone touches, close enough for their glows to merge.</p>"
+      },
+      {
+        "id": "zone-viser",
+        "title": "Adjusting the cone",
+        "alt": "The Floodlight re-aimed, its patch shifted across the floor",
+        "html": "<p>Pan and Tilt work as on the Searchlight. For a row of lamps, set the first one and paste its aim onto the rest with the Clipboard: aim is stored relative to the mount, so the lamps stay parallel.</p>"
+      },
+      {
+        "id": "fixation",
+        "title": "Floor, wall or ceiling",
+        "alt": "The Floodlight fixed under the gantry's arm",
+        "html": "<p>Both lamps go on any face. On floors and ceilings they face the way you were looking when you placed them; on a wall they start pointing straight ahead. Aiming starts from there, at 0° and 0°.</p>"
+      },
+      {
+        "id": "zone-teinture",
+        "title": "A yard in colour",
+        "alt": "The Floodlight dyed red, the floor lit red",
+        "html": "<p>One red dye and the whole lit area turns red: handy for marking a loading bay or a danger zone.</p>"
+      },
+      {
+        "id": "tete",
+        "title": "Pan-Tilt Head",
+        "alt": "A Searchlight on a Pan-Tilt Head, itself on a Creative Motor",
+        "html": "<p>The <strong>Pan-Tilt Head</strong> (a Brass Sheet, two Cogwheels, Brass Casing and a Shaft) carries a Searchlight, a Floodlight or a Headlight. Put the lamp on its front face and bring the shaft in from the back. It costs 2 SU per RPM, and the lamp's own Pan and Tilt boxes vanish: the head does the aiming.</p>"
+      },
+      {
+        "id": "rotation",
+        "title": "Turning with the shaft",
+        "alt": "The Creative Motor at 16 RPM swinging the Searchlight",
+        "html": "<p>The lamp keeps exact pace with the shaft, 0.3° per tick per RPM: at 16 RPM a full turn takes 3.75 seconds. While it turns it counts as a moving lamp, lit by the client.</p>"
+      },
+      {
+        "id": "inclinaison",
+        "title": "Tilting with redstone",
+        "alt": "An Analog Lever raising the Searchlight",
+        "html": "<p>A signal lifts the lamp 6° for each level: 30° at 5, 60° at 10, 90° at 15, in line with the head. The head does not conduct redstone, so the signal that tilts it does not dim the lamp.</p>"
+      },
+      {
+        "id": "balayage",
+        "title": "Back-and-forth sweep",
+        "alt": "The head set to ±45° moving the beam to and fro",
+        "html": "<p>Keep right-click held on the head's box to choose an arc, from ±5° to ±180° in 5° steps. The lamp then swings around wherever it currently points, with no slowdown at the ends; set to Off, it goes round in full turns.</p>"
+      },
+      {
+        "id": "arret",
+        "title": "When it stops",
+        "alt": "The shaft stopped, the Searchlight keeping its aim",
+        "html": "<p>Cut the rotation and the lamp freezes, becoming a fixed lamp again that places its Beam Lights. On an assembled contraption the head no longer turns; the lamp keeps the angles it had at assembly.</p>"
+      }
+    ],
+    "sources": [
+      "Create: Lightworks 1.0.1 (createlightworks-neoforge-1.21.1-1.0.1.jar): code from the public repository github.com/Goldsk1n/CreateLightworks at tag v1.0.1, recipes from the jar's data folder, Ponder scenes replayed by our engine.",
+      "Mod by GoldskinMC, MIT licence: models and textures by its authors, rendered from the jar; no text from the mod is copied.",
+      "Beams: content/LightType.java (SEARCHLIGHT ConeFalloff(6, 4, 32, 48), FLOODLIGHT ConeFalloff(30, 15, 12, 20)), beam/ConeFalloff.java; Beam Lights: light/BeamLightBlock.java (air or water source, checked every 100 ticks), light/BeamArea.java (several lights for a wide beam).",
+      "Aiming: content/directional/AimBoard.java, beam/PanTilt.java (Pan ±180° on floor and ceiling, ±90° on a wall; no lower than level on a floor, no higher on a ceiling); redstone: LightworksConfig.brightnessFor (15 − signal, invertRedstone); dyes: content/Dyeing.java, content/LightClipboard.java.",
+      "Pan-Tilt Head: content/pantilt/PanTiltHeadBlockEntity.java (TILT_PER_SIGNAL 6, TILT_PER_TICK 3), content/SpinAngle.java (0.3° per tick per RPM), content/pantilt/SweepBoard.java (5° steps, 36 steps), beam/Sweep.java; 2 SU per RPM impact and recipes: registry/LightworksBlocks.java, data/lightworks/recipe/searchlight.json, floodlight.json, pan_tilt_head.json."
+    ]
+  }
+}

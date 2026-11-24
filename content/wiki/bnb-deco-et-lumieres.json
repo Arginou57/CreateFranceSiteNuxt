@@ -1,0 +1,257 @@
+{
+  "slug": "bnb-deco-et-lumieres",
+  "name": "Carrelages, chaises et lumières",
+  "blockId": "bits_n_bobs:white_chair",
+  "category": "bitsnbobs",
+  "title": "Carrelages, chaises et lumières — Bits 'n' Bobs, guide",
+  "description": "Carrelages de pierre, chaises en seize couleurs, ampoule, lampe frontale, lampe en laiton et levier d'accélération de Create Bits 'n' Bobs.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Bits 'n' Bobs 2.3.5 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Le dernier tiroir de Bits 'n' Bobs est celui de la déco : des <strong>carrelages</strong> pour quatorze pierres, des <strong>chaises</strong> qui font aussi office de sièges de Create, et des <strong>lumières</strong> commandées par la redstone. Rien de mécanique ici, mais ce sont souvent les blocs qu'on pose le plus.",
+  "facts": [
+    {
+      "label": "Carrelages",
+      "value": "14 pierres × 4 formes (bloc, dalle, escaliers, muret)"
+    },
+    {
+      "label": "Chaises",
+      "value": "16 couleurs ; laine + escaliers en bois"
+    },
+    {
+      "label": "Lumière",
+      "value": "égale à la puissance du signal (0 à 15), 15 en mode toujours allumé"
+    },
+    {
+      "label": "Lampe frontale",
+      "value": "2 par ampoule ; jusqu’à 9 dans un même bloc"
+    },
+    {
+      "label": "Désactivés",
+      "value": "lampe en laiton (réglage) ; levier d’accélération (verrouillé dans la 2.3.5)"
+    },
+    {
+      "label": "Version",
+      "value": "Create Bits 'n' Bobs 2.3.5 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (sans disposition ; escaliers : n'importe quels escaliers en bois)",
+    "grid": [
+      [
+        "Laine blanche",
+        "Escaliers en chêne",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "items": [
+      [
+        "minecraft:white_wool",
+        "minecraft:oak_stairs",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 chaise blanche",
+    "resultItem": "bits_n_bobs:white_chair"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "carrelages",
+      "title": "Les carrelages",
+      "image": "bnb_gal_deco_carrelages.webp",
+      "alt": "Les quatorze carrelages de pierre posés en damier",
+      "html": "<p>Chaque pierre a son carrelage : andésite, asurine, calcite, crimsite, ardoise des abîmes, diorite, spéléothème, granite, calcaire, ochrum, scorchia, scorie, tuf et véridium (Andesite, Asurine, Calcite, Crimsite, Deepslate, Diorite, Dripstone, Granite, Limestone, Ochrum, Scorchia, Scoria, Tuff et Veridium Tiles). Les pierres de Create sont décrites sur la page <a href=\"/wiki/pierres-et-blocs-de-deco\">pierres et blocs de déco</a>. Au tailleur de pierre, n'importe quel bloc de la famille donne un bloc carrelé, et l'inverse marche aussi.</p>"
+    },
+    {
+      "id": "formes",
+      "title": "Dalles, escaliers et murets",
+      "image": "bnb_gal_deco_formes.webp",
+      "alt": "Le carrelage d'andésite en bloc, dalle, escaliers et muret",
+      "html": "<p>Chaque carrelage existe en dalle (par exemple Andesite Tile Slab), en escaliers (Andesite Tile Stairs) et en muret (Andesite Tile Wall). Au tailleur de pierre, un bloc de pierre donne 2 dalles, 1 escalier ou 1 muret. À l'établi, 3 carrelages font 6 dalles, 6 carrelages font 4 escaliers ou 6 murets.</p>"
+    },
+    {
+      "id": "chaises",
+      "title": "Les chaises",
+      "image": "bnb_gal_deco_chaises.webp",
+      "alt": "Des chaises de plusieurs couleurs, en ligne et en angle",
+      "html": "<p>Une laine et n'importe quels escaliers en bois donnent une chaise de la couleur de la laine (recette ci-contre), et une teinture recolore une chaise déjà faite. Clic droit pour s'asseoir. Côte à côte, les chaises perdent leurs accoudoirs et forment une banquette, avec des coins. Collée sur une machine, une chaise retient le joueur comme un siège de Create.</p>"
+    },
+    {
+      "id": "chaises-cle",
+      "title": "Régler le dossier",
+      "html": "<p>Une chaise adossée à un bloc plein ou à une autre chaise prend un dossier plat. Un coup de <a href=\"/wiki/cle\">clé</a> force un dossier plat même sans appui ; un second coup rend la main au réglage automatique. Un animal tenu en laisse peut aussi s'asseoir à ta place.</p>"
+    },
+    {
+      "id": "lumieres",
+      "title": "L'ampoule et la lampe frontale",
+      "image": "bnb_gal_deco_lumieres.webp",
+      "alt": "L'ampoule avec et sans cage, la lampe frontale et la lampe en laiton",
+      "html": "<p>L'<strong>ampoule</strong> (Lightbulb) se fabrique avec une poudre de redstone, une poudre lumineuse et du verre, pour 3. Sa lumière suit le signal de redstone, de 0 à 15 ; un clic droit main vide la laisse toujours allumée à 15, et la clé ajoute ou retire sa cage. Une ampoule donne 2 <strong>lampes frontales</strong> (Headlamp), de petits phares : jusqu'à 9 tiennent dans un bloc, et chacune se teint. Avec CC: Tweaked, un ordinateur peut les piloter.</p>"
+    },
+    {
+      "id": "lampe-laiton",
+      "title": "La lampe en laiton",
+      "html": "<p>La <strong>lampe en laiton</strong> (Brass Lamp), une ampoule coiffée d'une plaque de laiton, est un ancien bloc gardé pour les vieux mondes. Elle est désactivée par défaut : il faut que le serveur l'active dans la config commune pour la voir. Pour un éclairage commandé, la <a href=\"/wiki/lampe-a-quartz-rose\">lampe à quartz rose</a> de Create reste une bonne alternative.</p>"
+    },
+    {
+      "id": "levier",
+      "title": "Le levier d'accélération",
+      "image": "bnb_gal_deco_levier.webp",
+      "alt": "Le levier d'accélération fixé sur un bloc",
+      "html": "<p>Le <strong>levier d'accélération</strong> (Throttle Lever) est un levier analogique : on le fait glisser pour régler une puissance de redstone comprise entre 0 et 15. Comme la roue gigantesque, il est verrouillé dans la 2.3.5 : pas de recette, pas d'onglet créatif. Sur le serveur actuel, qui a encore la 0.0.44, la plupart de ces blocs n'existent pas non plus ; ils arrivent avec la prochaine version du modpack.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Idées de décoration",
+      "html": "<p>Un carrelage d'ardoise des abîmes au sol et des murets de calcite donnent tout de suite un hall de gare élégant. Aligne des chaises d'une même couleur pour une salle d'attente, puis glisse quelques chaises dans un wagon : elles retiennent les passagers pendant le trajet. À l'avant d'une locomotive, deux lampes frontales branchées sur la même ligne de redstone que les feux font des phares crédibles. Les ampoules en cage vont bien dans une mine ou une usine.</p>"
+    }
+  ],
+  "related": [
+    "create-bits-n-bobs",
+    "pierres-et-blocs-de-deco",
+    "lampe-a-quartz-rose",
+    "cle",
+    "bnb-nixie",
+    "bnb-entretoises"
+  ],
+  "sources": [
+    "Create Bits 'n' Bobs 2.3.5 (bits_n_bobs-2.3.5.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/Aztech-Modding/Create-Bits-n-Bobs au commit 3794a38 « 2.3.5 », recettes du dossier data du jar, scènes Ponder rejouées par notre moteur.",
+    "Mod de Cake, Kipti, NormalGuy, Astral et Spydnel, sous licence MIT : modèles et textures de ses auteurs, rendus à partir du jar ; aucun texte du mod n'est recopié.",
+    "Carrelages : registry/worldgen/BnbPaletteStoneTypes.java (14 pierres) ; recettes data/bits_n_bobs/recipe/*_tile_slab.json (3 → 6), *_tile_stairs.json (6 → 4), *_tile_wall.json (6 → 6) et *_stonecutting.json (tag create:stone_types/<pierre> ; dalle × 2).",
+    "Chaises : content/trinkets/chair/ChairBlock.java (SeatBlock de Create, accoudoirs, coins, FORCED_BACK_FLAT à la clé, animal en laisse) ; recettes crafting/<couleur>_chair.json et <couleur>_chair_from_other_chair.json.",
+    "Lumières : content/trinkets/light/foundation/LightBlock.java (lumière = POWER, FORCED_ON → 15), lightbulb/LightbulbBlock.java (CAGE à la clé), headlamp/HeadlampBlockEntity.java (9 emplacements), compat/computercraft ; recettes crafting/lightbulb.json (3), headlamp.json (2), brass_lamp.json.",
+    "Désactivés : registry/core/BnbFeatureFlag.java (BRASS_LAMP défaut false ; THROTTLE_LEVER releaseLocked) ; levier : content/kinetics/throttle_lever/ThrottleLeverBlock(Entity).java (POWER 0 à 15, DragInteractionBehaviour)."
+  ],
+  "en": {
+    "slugEn": "bnb-decor-and-lights",
+    "name": "Tiles, Chairs and Lights",
+    "title": "Tiles, Chairs and Lights — Create Bits 'n' Bobs guide",
+    "description": "Stone tiles, chairs in sixteen colours, Lightbulb, Headlamp, Brass Lamp and Throttle Lever from Create Bits 'n' Bobs: the decor guide.",
+    "intro": "Bits 'n' Bobs' last drawer is the decor one: <strong>tiles</strong> for fourteen stones, <strong>chairs</strong> that double as Create seats, and <strong>lights</strong> driven by redstone. Nothing mechanical here, but these are often the blocks you place the most.",
+    "facts": [
+      {
+        "label": "Tiles",
+        "value": "14 stones × 4 shapes (block, slab, stairs, wall)"
+      },
+      {
+        "label": "Chairs",
+        "value": "16 colours; wool + wooden stairs"
+      },
+      {
+        "label": "Light",
+        "value": "equal to the signal strength (0 to 15), 15 in always-on mode"
+      },
+      {
+        "label": "Headlamp",
+        "value": "2 per Lightbulb; up to 9 in one block"
+      },
+      {
+        "label": "Disabled",
+        "value": "Brass Lamp (setting); Throttle Lever (locked in 2.3.5)"
+      },
+      {
+        "label": "Version",
+        "value": "Create Bits 'n' Bobs 2.3.5 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Shapeless crafting recipe (stairs: any wooden stairs)",
+      "grid": [
+        [
+          "White Wool",
+          "Oak Stairs",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 White Chair"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "carrelages",
+        "title": "Tiles",
+        "alt": "The fourteen stone tiles laid in a checkerboard",
+        "html": "<p>Every stone has its tiles: Andesite, Asurine, Calcite, Crimsite, Deepslate, Diorite, Dripstone, Granite, Limestone, Ochrum, Scorchia, Scoria, Tuff and Veridium Tiles. Create's stones are covered on the <a href=\"/en/wiki/decorative-stones-and-blocks\">decorative stones and blocks</a> page. At the stonecutter, any block of the family gives a tiled block, and it works the other way too.</p>"
+      },
+      {
+        "id": "formes",
+        "title": "Slabs, stairs and walls",
+        "alt": "Andesite Tiles as a block, slab, stairs and wall",
+        "html": "<p>Each tile comes as a slab (for example Andesite Tile Slab), stairs (Andesite Tile Stairs) and a wall (Andesite Tile Wall). At the stonecutter, one stone block gives 2 slabs, 1 stairs or 1 wall. At the crafting table, 3 tiles make 6 slabs, and 6 tiles make 4 stairs or 6 walls. The stonecutter is the cheaper route for stairs.</p>"
+      },
+      {
+        "id": "chaises",
+        "title": "Chairs",
+        "alt": "Chairs of several colours, in a row and around a corner",
+        "html": "<p>A wool block and any wooden stairs give a chair in the wool's colour (recipe shown here), and a dye recolours an existing chair. Right-click to sit down. Side by side, chairs drop their armrests and form a bench, with corners, which is perfect for a lounge or a dining room. Glued to a contraption, a chair holds the player like a Create seat.</p>"
+      },
+      {
+        "id": "chaises-cle",
+        "title": "Adjusting the backrest",
+        "html": "<p>A chair backed against a full block or another chair gets a flat backrest. A tap with the <a href=\"/en/wiki/wrench\">Wrench</a> forces a flat back even with nothing behind it; a second tap hands control back to the automatic shape. A mob on a lead can also take the seat in your place.</p>"
+      },
+      {
+        "id": "lumieres",
+        "title": "The Lightbulb and the Headlamp",
+        "alt": "The Lightbulb with and without its cage, the Headlamp and the Brass Lamp",
+        "html": "<p>The <strong>Lightbulb</strong> is made from Redstone Dust, Glowstone Dust and glass, giving 3. Its light follows the redstone signal from 0 to 15; right-clicking it bare-handed keeps it always on at 15, and the Wrench adds or removes its cage. One Lightbulb gives 2 <strong>Headlamps</strong>, small vehicle lights: up to 9 fit in one block, and each one can be dyed. With CC: Tweaked, a computer can drive them.</p>"
+      },
+      {
+        "id": "lampe-laiton",
+        "title": "The Brass Lamp",
+        "html": "<p>The <strong>Brass Lamp</strong>, a Lightbulb topped with a Brass Sheet, is an old block kept for older worlds. It is disabled by default: the server has to turn it on in the common config before you can see it. For switched lighting, Create's <a href=\"/en/wiki/rose-quartz-lamp\">Rose Quartz Lamp</a> remains a good alternative.</p>"
+      },
+      {
+        "id": "levier",
+        "title": "The Throttle Lever",
+        "alt": "The Throttle Lever fixed on a block",
+        "html": "<p>The <strong>Throttle Lever</strong> is an analogue lever: you drag it to pick a redstone strength between 0 and 15. Like the gigantic cogwheel, it is locked in 2.3.5: no recipe, no creative tab. On the current server, which still runs 0.0.44, most of these blocks do not exist either; they arrive with the next modpack release.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Decorating ideas",
+        "html": "<p>Deepslate tiles on the floor and calcite tile walls instantly give you an elegant station hall. Line up chairs of one colour for a waiting room, then slip a few chairs into a train carriage: they keep passengers in place during the trip. At the front of a locomotive, two Headlamps wired to the same redstone line as the signals make convincing headlights. Caged Lightbulbs look right at home in a mine or a factory, and the Asurine or Veridium tiles add a splash of colour to a plain stone wall.</p>"
+      }
+    ],
+    "sources": [
+      "Create Bits 'n' Bobs 2.3.5 (bits_n_bobs-2.3.5.jar from the next Create France modpack release): code from the public repository github.com/Aztech-Modding/Create-Bits-n-Bobs at commit 3794a38 \"2.3.5\", recipes from the jar's data folder, Ponder scenes replayed by our engine.",
+      "Mod by Cake, Kipti, NormalGuy, Astral and Spydnel, MIT licence: models and textures by its authors, rendered from the jar; no text from the mod is copied.",
+      "Tiles: registry/worldgen/BnbPaletteStoneTypes.java (14 stones); recipes data/bits_n_bobs/recipe/*_tile_slab.json (3 → 6), *_tile_stairs.json (6 → 4), *_tile_wall.json (6 → 6) and *_stonecutting.json (create:stone_types/<stone> tag; slab × 2).",
+      "Chairs: content/trinkets/chair/ChairBlock.java (Create's SeatBlock, armrests, corners, FORCED_BACK_FLAT with the Wrench, leashed mob); recipes crafting/<colour>_chair.json and <colour>_chair_from_other_chair.json.",
+      "Lights: content/trinkets/light/foundation/LightBlock.java (light = POWER, FORCED_ON → 15), lightbulb/LightbulbBlock.java (CAGE with the Wrench), headlamp/HeadlampBlockEntity.java (9 slots), compat/computercraft; recipes crafting/lightbulb.json (3), headlamp.json (2), brass_lamp.json.",
+      "Disabled: registry/core/BnbFeatureFlag.java (BRASS_LAMP default false; THROTTLE_LEVER releaseLocked); lever: content/kinetics/throttle_lever/ThrottleLeverBlock(Entity).java (POWER 0 to 15, DragInteractionBehaviour)."
+    ]
+  }
+}

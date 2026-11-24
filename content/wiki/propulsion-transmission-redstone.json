@@ -1,0 +1,317 @@
+{
+  "slug": "propulsion-transmission-redstone",
+  "name": "Transmission redstone",
+  "blockId": "createpropulsion:redstone_transmission",
+  "category": "propulsion",
+  "title": "Transmission redstone — Create Propulsion, guide",
+  "description": "La transmission redstone de Create Propulsion : vitesse de sortie réglée au signal, mode direct ou incrémental ; le convertisseur redstone.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Propulsion: Simulated 1.1.5",
+  "mcVersion": "1.21.1",
+  "intro": "La <strong>transmission redstone</strong> (Redstone Transmission) est un arbre coupé en deux : ce qui entre d'un côté ressort de l'autre à une vitesse réglée par la redstone, de l'arrêt à la pleine vitesse, en 256 crans. On s'en sert pour doser une hélice, un treuil ou une pompe depuis un poste de commande. La page présente aussi le <strong>convertisseur redstone</strong>.",
+  "facts": [
+    {
+      "label": "Sortie",
+      "value": "entrée × décalage / 256"
+    },
+    {
+      "label": "Mode direct",
+      "value": "décalage = signal le plus fort / 15 × 256"
+    },
+    {
+      "label": "Mode incrémental",
+      "value": "monte ou descend de la différence des deux côtés, toutes les 10 ticks environ"
+    },
+    {
+      "label": "Comparateur",
+      "value": "décalage / 256 × 15"
+    },
+    {
+      "label": "Contrainte",
+      "value": "aucune"
+    },
+    {
+      "label": "Cadran",
+      "value": "aiguille qui suit le décalage"
+    },
+    {
+      "label": "Convertisseur",
+      "value": "signal fixe de 1 à 15 en sortie"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Poudre de redstone",
+        "Comparateur de redstone",
+        "Poudre de redstone"
+      ],
+      [
+        "Tube électronique",
+        "Boitier de laiton",
+        "Tube électronique"
+      ],
+      [
+        null,
+        "Poudre de redstone",
+        null
+      ]
+    ],
+    "items": [
+      [
+        "minecraft:redstone",
+        "minecraft:comparator",
+        "minecraft:redstone"
+      ],
+      [
+        "create:electron_tube",
+        "create:brass_casing",
+        "create:electron_tube"
+      ],
+      [
+        null,
+        "minecraft:redstone",
+        null
+      ]
+    ],
+    "result": "1 transmission redstone",
+    "resultItem": "createpropulsion:redstone_transmission"
+  },
+  "videos": [
+    {
+      "id": "prop_transmission_direct",
+      "name": "Le mode direct",
+      "description": "Un levier analogique à 7 fait tourner la sortie à peu près à moitié, à 15 à pleine vitesse.",
+      "duration": "PT15S",
+      "chapters": [
+        {
+          "t": 0.7,
+          "section": "principe"
+        },
+        {
+          "t": 4.2,
+          "section": "direct"
+        }
+      ]
+    },
+    {
+      "id": "prop_transmission_incremental",
+      "name": "Le mode incrémental",
+      "description": "On change de mode à la molette ; un levier fait monter la vitesse, l'autre la fait baisser, puis les deux à la fois.",
+      "duration": "PT26S",
+      "chapters": [
+        {
+          "t": 0.4,
+          "section": "principe"
+        },
+        {
+          "t": 2.7,
+          "section": "incremental"
+        },
+        {
+          "t": 17.6,
+          "section": "deux-cotes"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "principe",
+      "title": "Un arbre à vitesse réglable",
+      "image": "prop_transmission_direct_repos.webp",
+      "alt": "Une transmission redstone en laiton posée sur la boîte à roues dentées, sous un compteur de vitesse",
+      "video": "prop_transmission_direct",
+      "html": "<p>La rotation arrive par un côté de l'axe, depuis la source du réseau, et repart de l'autre côté multipliée par le <strong>décalage</strong>, un nombre de 0 à 256 : à 0 la sortie est arrêtée, à 128 elle tourne à moitié, à 256 à la même vitesse que l'entrée. Le cadran de la face avant montre la position, et deux voyants + et − rougissent avec le signal reçu sur les côtés. La transmission ne consomme aucune contrainte.</p>"
+    },
+    {
+      "id": "direct",
+      "title": "Le mode direct",
+      "image": "prop_transmission_direct_moitie.webp",
+      "alt": "Le levier analogique réglé à 7 et le compteur de vitesse du haut qui indique la moitié environ",
+      "html": "<p>En mode direct, le décalage suit le signal le plus fort reçu sur n'importe quelle face : signal / 15 × 256. Dans la vidéo, un levier analogique à 7 donne un décalage de 119 et la sortie tourne à 7/15 de l'entrée ; à 15 elle rattrape l'entrée. C'est la façon simple de régler une vitesse à distance, avec une <a href=\"/wiki/liaison-de-redstone\">liaison de redstone</a>.</p>"
+    },
+    {
+      "id": "incremental",
+      "title": "Le mode incrémental",
+      "image": "prop_transmission_incremental_monte.webp",
+      "alt": "Un levier allumé contre le flanc + de la transmission, la vitesse de sortie qui monte",
+      "video": "prop_transmission_incremental",
+      "html": "<p>La molette de la face arrière fait passer au mode <strong>incrémental</strong>. La transmission garde alors sa position quand le signal disparaît : le côté marqué + la fait monter, le côté marqué − la fait descendre, d'autant plus vite que le signal est fort, par pas toutes les dix ticks environ. Un bouton suffit pour accélérer ou ralentir d'un cran, comme une manette des gaz.</p>"
+    },
+    {
+      "id": "deux-cotes",
+      "title": "Les deux côtés à la fois",
+      "image": "prop_transmission_incremental_deux.webp",
+      "alt": "Deux leviers allumés de chaque côté de la transmission",
+      "html": "<p>Si les deux côtés reçoivent un signal, c'est la différence qui compte : 12 du côté + et 4 du côté − font monter de 8 à chaque pas, comme dans la dernière partie de la vidéo. Un <a href=\"/wiki/stressometre-compteur-de-vitesse\">compteur de vitesse</a> sur la sortie aide à viser juste, et un comparateur lit la position de 0 à 15.</p>"
+    },
+    {
+      "id": "usages",
+      "title": "Idées d’utilisation",
+      "html": "<p>La transmission brille partout où une vitesse doit varier sans arrêter le réseau : régler les hélices d'un dirigeable d'Aeronautics avec un seul levier, ralentir une perceuse quand la charge devient trop lourde, doser une pompe qui remplit un réservoir. En mode incrémental, deux boutons « plus » et « moins » au poste de pilotage font une manette des gaz qui garde sa position. Elle se fabrique avec un comparateur, deux tubes électroniques, un boitier de laiton et trois poudres de redstone.</p>"
+    },
+    {
+      "id": "lire",
+      "title": "Lire l'état",
+      "html": "<p>Avec les lunettes d'ingénieur, la transmission affiche son mode et son réglage : sur 15 en mode direct, sur 256 en mode incrémental, avec la vitesse de sortie obtenue. Le cadran de la face avant en donne une idée d'un coup d'œil, et l'aiguille rejoint sa nouvelle position en douceur.</p>"
+    },
+    {
+      "id": "contrainte",
+      "title": "Contrainte et réseau",
+      "html": "<p>La transmission ne demande aucune contrainte. La sortie hérite de la contrainte du réseau d'entrée : ralentir la sortie ne crée pas de puissance en plus.</p>"
+    },
+    {
+      "id": "convertisseur",
+      "title": "Le convertisseur redstone",
+      "image": "prop_gal_converter_convertisseur.webp",
+      "alt": "Deux convertisseurs redstone, l'un éteint, l'autre allumé par un levier",
+      "html": "<p>Le <strong>convertisseur redstone</strong> (Redstone Converter) est une petite diode : dès qu'il reçoit un signal sur sa face d'entrée, même de force 1, il émet par sa face de sortie un signal fixe choisi à la molette, de 1 à 15 (15 par défaut). Il transforme un simple bouton en commande exacte pour une transmission, un propulseur ou un <a href=\"/wiki/propulsion-adaptateur-inclinaison\">adaptateur d'inclinaison</a>. Sa recette demande deux torches, une plaque de platine, de la redstone et un accumulateur de redstone de Simulated.</p>"
+    }
+  ],
+  "related": [
+    "create-propulsion",
+    "propulsion-adaptateur-inclinaison",
+    "controleur-de-vitesse-de-rotation",
+    "inverseur-de-rotation-sequence",
+    "liaison-de-redstone",
+    "stressometre-compteur-de-vitesse",
+    "propulsion-propulseur",
+    "aeronautics-redstone"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Propulsion: Simulated 1.1.5 (dépôt Propulsion-Team/create-propulsion-simulated, commit 36f83a1 du 23/07/2026, licence MIT, © Sergey Feduk, Tronco_78, Bunting_chj, SSnowly, KyivSec), identique au jar de l’instance de test du modpack",
+    "Transmission : RedstoneTransmissionBlockEntity.java (MAX_VALUE 256), RedstoneTransmissionRenderer.java",
+    "Convertisseur : RedstoneConverterBlock.java, RedstoneConverterBlockEntity.java",
+    "Recettes : data/createpropulsion/recipe/crafting/redstone_transmission.json, redstone_converter.json",
+    "Vidéos : scènes Ponder de Create Propulsion: Simulated (redstone_transmission (deux storyboards)) rejouées par notre moteur ; modèles, textures et particules du mod (licence MIT, © Propulsion Team)",
+    "Images : blocs du mod posés sur la plaque et rendus par notre moteur (licence MIT, © Propulsion Team)"
+  ],
+  "en": {
+    "slugEn": "propulsion-redstone-transmission",
+    "name": "Redstone Transmission",
+    "title": "Redstone Transmission — Create Propulsion guide",
+    "description": "The Create Propulsion Redstone Transmission: output speed set by a redstone signal, direct or incremental mode; plus the Redstone Converter.",
+    "intro": "The <strong>Redstone Transmission</strong> is a shaft split in two: what comes in on one side leaves the other at a speed set by redstone, from stopped to full speed, in 256 steps. It is used to throttle a propeller, a winch or a pump from a control desk. The page also covers the <strong>Redstone Converter</strong>.",
+    "facts": [
+      {
+        "label": "Output",
+        "value": "input × shift / 256"
+      },
+      {
+        "label": "Direct mode",
+        "value": "shift = strongest signal / 15 × 256"
+      },
+      {
+        "label": "Incremental mode",
+        "value": "goes up or down by the difference of the two sides, about every 10 ticks"
+      },
+      {
+        "label": "Comparator",
+        "value": "shift / 256 × 15"
+      },
+      {
+        "label": "Stress",
+        "value": "none"
+      },
+      {
+        "label": "Dial",
+        "value": "a needle that follows the shift"
+      },
+      {
+        "label": "Converter",
+        "value": "fixed output signal from 1 to 15"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Redstone Dust",
+          "Redstone Comparator",
+          "Redstone Dust"
+        ],
+        [
+          "Electron Tube",
+          "Brass Casing",
+          "Electron Tube"
+        ],
+        [
+          null,
+          "Redstone Dust",
+          null
+        ]
+      ],
+      "result": "1 Redstone Transmission"
+    },
+    "videos": [
+      {
+        "id": "prop_transmission_direct",
+        "name": "Direct mode",
+        "description": "An analog lever at 7 spins the output at about half speed, at 15 at full speed."
+      },
+      {
+        "id": "prop_transmission_incremental",
+        "name": "Incremental mode",
+        "description": "The mode is changed with the scroll wheel; one lever raises the speed, the other lowers it, then both at once."
+      }
+    ],
+    "sections": [
+      {
+        "id": "principe",
+        "title": "A speed-controlled shaft",
+        "alt": "A brass Redstone Transmission between a Gearbox and a Speedometer",
+        "html": "<p>Rotation comes in on one side of the axis, from the network's source, and leaves on the other side multiplied by the <strong>shift</strong>, a number from 0 to 256: at 0 the output stands still, at 128 it turns at half speed, at 256 at the input's speed. The dial on the front shows the position, and two + and − lights turn red with the signal received on the sides. The transmission uses no stress.</p>"
+      },
+      {
+        "id": "direct",
+        "title": "Direct mode",
+        "alt": "The analog lever set to 7 and the top Speedometer reading about half",
+        "html": "<p>In direct mode, the shift follows the strongest signal received on any face: signal / 15 × 256. In the video, an analog lever at 7 gives a shift of 119 and the output turns at 7/15 of the input; at 15 it catches up with the input. It is the simple way to set a speed remotely, with a <a href=\"/en/wiki/redstone-link\">Redstone Link</a>.</p>"
+      },
+      {
+        "id": "incremental",
+        "title": "Incremental mode",
+        "alt": "A lit lever against the + side of the transmission, the output speed rising",
+        "html": "<p>The scroll value on the back face switches to <strong>incremental</strong> mode. The transmission then keeps its position when the signal goes away: the side marked + raises it, the side marked − lowers it, faster with a stronger signal, in steps roughly every ten ticks. A button is enough to speed up or slow down one notch, like a throttle lever.</p>"
+      },
+      {
+        "id": "deux-cotes",
+        "title": "Both sides at once",
+        "alt": "Two lit levers on each side of the transmission",
+        "html": "<p>If both sides receive a signal, the difference is what counts: 12 on the + side and 4 on the − side raise it by 8 each step, as in the last part of the video. A <a href=\"/en/wiki/stressometer-speedometer\">Speedometer</a> on the output helps hit the target, and a comparator reads the position from 0 to 15.</p>"
+      },
+      {
+        "id": "usages",
+        "title": "Ideas",
+        "html": "<p>The transmission shines wherever a speed must change without stopping the network: throttling the propellers of an Aeronautics airship with a single lever, slowing a drill when the load gets too heavy, metering a pump that fills a tank. In incremental mode, two \"plus\" and \"minus\" buttons at the cockpit make a throttle that keeps its position. It is crafted from a comparator, two electron tubes, a brass casing and three redstone dust.</p>"
+      },
+      {
+        "id": "lire",
+        "title": "Reading its state",
+        "html": "<p>With Engineer's Goggles, the transmission shows its mode and setting: out of 15 in direct mode, out of 256 in incremental mode, with the resulting output speed. The dial on the front gives an idea at a glance, and the needle eases to its new position.</p>"
+      },
+      {
+        "id": "contrainte",
+        "title": "Stress and network",
+        "html": "<p>The transmission asks for no stress itself. The output shares the input network's capacity: slowing the output down does not create any extra power, it only lowers the speed of what follows.</p>"
+      },
+      {
+        "id": "convertisseur",
+        "title": "The Redstone Converter",
+        "alt": "Two Redstone Converters, one off, the other turned on by a lever",
+        "html": "<p>The <strong>Redstone Converter</strong> is a small diode: as soon as it gets a signal on its input face, even of strength 1, it outputs a fixed signal set with the scroll wheel, from 1 to 15 (15 by default). It turns a simple button into an exact command for a transmission, a thruster or a <a href=\"/en/wiki/propulsion-tilt-adapter\">Tilt Adapter</a>. Its recipe takes two torches, a platinum sheet, redstone and a Simulated Redstone Accumulator.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Propulsion: Simulated 1.1.5 (Propulsion-Team/create-propulsion-simulated repository, commit 36f83a1 of 2026-07-23, MIT licence, © Sergey Feduk, Tronco_78, Bunting_chj, SSnowly, KyivSec), identical to the modpack test instance jar",
+      "Transmission: RedstoneTransmissionBlockEntity.java (MAX_VALUE 256), RedstoneTransmissionRenderer.java",
+      "Converter: RedstoneConverterBlock.java, RedstoneConverterBlockEntity.java",
+      "Recipes: data/createpropulsion/recipe/crafting/redstone_transmission.json, redstone_converter.json",
+      "Videos: Create Propulsion: Simulated Ponder scenes (redstone_transmission (two storyboards)) replayed by our engine; mod models, textures and particles (MIT licence, © Propulsion Team)",
+      "Images: mod blocks placed on the plate and rendered by our engine (MIT licence, © Propulsion Team)"
+    ]
+  }
+}

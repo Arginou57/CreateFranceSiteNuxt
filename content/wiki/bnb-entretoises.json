@@ -1,0 +1,303 @@
+{
+  "slug": "bnb-entretoises",
+  "name": "Entretoises de poutre et structures métalliques",
+  "blockId": "bits_n_bobs:girder_strut",
+  "category": "bitsnbobs",
+  "title": "Entretoises et structures — Bits 'n' Bobs, guide",
+  "description": "Entretoises de poutre, patinées et à câble, grilles industrielles, treillis métallique et poutres patinées de Create Bits 'n' Bobs : le guide.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Bits 'n' Bobs 2.3.5 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Les poutres de Create ne vont que tout droit. Les <strong>entretoises</strong> de Bits 'n' Bobs se tendent entre deux fixations, en biais, pour faire des contreventements, des haubans ou des charpentes de pont. Elles viennent de la librairie <strong>Strut Your Stuff</strong> de Cake, installée avec le mod. La page présente aussi les grilles, le treillis et la famille patinée, pour habiller une usine en métal.",
+  "facts": [
+    {
+      "label": "Portée",
+      "value": "jusqu'à 30 blocs entre les deux fixations (StrutBlock.MAX_SPAN)"
+    },
+    {
+      "label": "Angles",
+      "value": "libres sur deux axes à la fois, sans courbure ni montée verticale pure"
+    },
+    {
+      "label": "Coût",
+      "value": "une entretoise par fixation posée, la longueur est gratuite"
+    },
+    {
+      "label": "Recettes",
+      "value": "6 entretoises par fabrication ; 3 grilles ou 6 panneaux par lingot de fer"
+    },
+    {
+      "label": "Patiné",
+      "value": "poutre, entretoise et support passent au lavage en masse"
+    },
+    {
+      "label": "Version",
+      "value": "Create Bits 'n' Bobs 2.3.5 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Alliage d'andésite",
+        null,
+        null
+      ],
+      [
+        "Poutre en métal",
+        "Poutre en métal",
+        "Poutre en métal"
+      ],
+      [
+        null,
+        null,
+        "Alliage d'andésite"
+      ]
+    ],
+    "items": [
+      [
+        "create:andesite_alloy",
+        null,
+        null
+      ],
+      [
+        "create:metal_girder",
+        "create:metal_girder",
+        "create:metal_girder"
+      ],
+      [
+        null,
+        null,
+        "create:andesite_alloy"
+      ]
+    ],
+    "result": "6 entretoises de poutre",
+    "resultItem": "bits_n_bobs:girder_strut"
+  },
+  "videos": [
+    {
+      "id": "bnb_strut",
+      "name": "Poser des entretoises",
+      "description": "Une entretoise tendue entre deux blocs, puis sous plusieurs angles, la limite des deux axes, et les versions patinée et à câble.",
+      "duration": "PT16S",
+      "chapters": [
+        {
+          "t": 1.2,
+          "section": "entretoise"
+        },
+        {
+          "t": 6.8,
+          "section": "angles"
+        },
+        {
+          "t": 12.3,
+          "section": "limite"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "entretoise",
+      "title": "Tendre une entretoise",
+      "image": "bnb_strut_entretoise.webp",
+      "alt": "Une entretoise de poutre tendue entre deux blocs éloignés",
+      "video": "bnb_strut",
+      "html": "<p>L'<strong>entretoise de poutre</strong> (Girder Strut, recette ci-contre : trois poutres en métal et deux alliages d'andésite) se pose en deux clics. Clique d'abord la face où doit commencer la poutre : l'objet se met à briller pour montrer qu'il garde ce point. Clique ensuite une seconde face, jusqu'à 30 blocs plus loin. Chaque fixation nouvelle coûte une entretoise, la longueur ne coûte rien. Casser une fixation fait tomber toute l'entretoise.</p>"
+    },
+    {
+      "id": "angles",
+      "title": "Les angles permis",
+      "image": "bnb_strut_angles.webp",
+      "alt": "Plusieurs entretoises posées sous des angles différents",
+      "html": "<p>Une entretoise peut partir en diagonale dans n'importe quelle direction, du moment que chaque bout s'éloigne vers l'avant de la face sur laquelle il est fixé. Tu peux ainsi relier un pilier à un plafond, un mur à un sol plus bas, ou deux poutres de Create entre elles. Nos vidéos dessinent les entretoises de façon simplifiée : un segment droit, sans la découpe exacte aux fixations.</p>"
+    },
+    {
+      "id": "limite",
+      "title": "La limite des deux axes",
+      "image": "bnb_strut_limite.webp",
+      "alt": "Une entretoise refusée parce que ses deux bouts diffèrent sur les trois axes",
+      "html": "<p>Les deux fixations peuvent différer sur deux axes à la fois, jamais sur les trois : une entretoise ne se tord pas pour rattraper un décalage dans la troisième direction. Elle ne peut pas non plus monter tout droit à la verticale ; pour ça, une poutre en métal de Create fait l'affaire. Si le mod refuse, aligne une des fixations sur l'autre.</p>"
+    },
+    {
+      "id": "patinee",
+      "title": "L'entretoise patinée",
+      "image": "bnb_strut_weathered_angles.webp",
+      "alt": "Des entretoises de poutre patinées sous plusieurs angles",
+      "html": "<p>L'<strong>entretoise de poutre patinée</strong> (Weathered Girder Strut) se comporte de la même façon avec un aspect rouillé. Deux façons de l'obtenir : la même recette avec des poutres métalliques patinées, ou un lavage en masse d'entretoises ordinaires devant un <a href=\"/wiki/ventilateur-enchasse\">ventilateur enchâssé</a> qui souffle à travers de l'eau.</p>"
+    },
+    {
+      "id": "cable",
+      "title": "L'entretoise à câble",
+      "image": "bnb_strut_cable_angles.webp",
+      "alt": "Des entretoises de poutre à câble tendues sous plusieurs angles",
+      "html": "<p>L'<strong>entretoise de poutre à câble</strong> (Cable Girder Strut) remplace la poutre par un câble fin : idéal pour un pont suspendu, une tyrolienne décorative ou des haubans de grue. Sa recette remplace les poutres par trois pépites de fer, pour 6 câbles. Les règles de pose sont les mêmes.</p>"
+    },
+    {
+      "id": "grilles",
+      "title": "Grille industrielle et panneau",
+      "image": "bnb_gal_structures_grilles.webp",
+      "alt": "La grille industrielle et le panneau de grille industrielle",
+      "html": "<p>La <strong>grille industrielle</strong> (Industrial Grating) est un bloc ajouré en fer, et le <strong>panneau de grille industrielle</strong> (Industrial Grating Panel) sa version mince, posée contre une face. Au tailleur de pierre, un lingot de fer donne 3 grilles ou 6 panneaux. Les deux peuvent être immergés ; clique un panneau posé en tenant un autre panneau : il se place dans le prolongement.</p>"
+    },
+    {
+      "id": "treillis",
+      "title": "Le treillis métallique",
+      "image": "bnb_gal_structures_treillis.webp",
+      "alt": "Le treillis métallique seul, autour d’un tuyau et autour d’un rotor",
+      "html": "<p>Le <strong>treillis métallique</strong> (Metal Truss : six plaques de fer autour de trois pépites de fer, pour 8) est une poutre en croisillons. Clique un <a href=\"/wiki/tuyau-a-fluide\">tuyau à fluide</a> avec le treillis en main : il devient un <strong>tuyau dans un treillis métallique</strong> (Metal Truss Pipe) qui garde son fluide et sa couleur. Sur un <a href=\"/wiki/rotor\">rotor</a>, tu obtiens le <strong>rotor dans un treillis métallique</strong> (Industrial Truss Shaft).</p>"
+    },
+    {
+      "id": "patines",
+      "title": "Poutre, rotor et support patinés",
+      "image": "bnb_gal_structures_poutres-patinees.webp",
+      "alt": "La poutre métallique patinée, le rotor dans une poutre patinée et le support métallique patiné",
+      "html": "<p>Le lavage en masse transforme aussi la poutre en métal de Create en <strong>poutre métallique patinée</strong> (Weathered Metal Girder) et le support en métal en <strong>support métallique patiné</strong> (Weathered Metal Bracket), qui se fixe sur les rotors, roues dentées et tuyaux. Clique une poutre patinée avec un rotor pour obtenir le <strong>rotor dans une poutre métallique patinée</strong> (Weathered Metal Girder Encased Shaft).</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Idées de construction",
+      "html": "<p>Sous un pont, deux entretoises croisées entre les piles suffisent à donner l'impression d'une vraie charpente. Pour une grue, tends des entretoises à câble du sommet du mât jusqu'au bout de la flèche. Mélange les versions neuves et patinées pour vieillir un quartier industriel, et pose des panneaux de grille comme passerelles au-dessus de tes machines : on voit à travers, et on y marche sans risque.</p>"
+    }
+  ],
+  "related": [
+    "create-bits-n-bobs",
+    "pierres-et-blocs-de-deco",
+    "ventilateur-enchasse",
+    "tuyau-a-fluide",
+    "rotor",
+    "bnb-tuyaux-et-reservoirs-teints",
+    "bnb-mecanismes"
+  ],
+  "sources": [
+    "Create Bits 'n' Bobs 2.3.5 (bits_n_bobs-2.3.5.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/Aztech-Modding/Create-Bits-n-Bobs au commit 3794a38 « 2.3.5 », recettes du dossier data du jar, scènes Ponder rejouées par notre moteur.",
+    "Mod de Cake, Kipti, NormalGuy, Astral et Spydnel, sous licence MIT : modèles et textures de ses auteurs, rendus à partir du jar ; aucun texte du mod n'est recopié.",
+    "Entretoises : librairie Strut Your Stuff 1.3.1 de Cake (struts-1.3.1.jar, licence MIT) : StrutBlock.MAX_SPAN = 30, StrutBlockItem.isValidConnection (au plus deux axes non nuls, pas de vertical pur, longueur² ≤ 900, chaque bout dans les 90° de sa face) et consumeAnchors (une entretoise par fixation) ; blocs : registry/content/blocks/deco/BnbDecorativeBlocks.java et BnbStrutDefinitions.java.",
+    "Structures : content/decoration/grating (GratingBlock immergeable, aide de placement du panneau), truss/TrussBlockItem.java (tuyau → Metal Truss Pipe en gardant flux et couleur), truss/TrussShaftBlock.java, weathered_girder/WeatheredGirderBlock.java (rotor → poutre avec rotor) ; BnbBracketBlocks.java (BracketBlock de Create).",
+    "Recettes : data/bits_n_bobs/recipe/crafting/girder_strut.json, weathered_girder_strut.json, cable_strut.json, industrial_truss.json ; stonecutting/industrial_grating(_panel)_from_iron.json ; splashing/weathered_girder.json, weathered_girder_strut.json, weathered_metal_bracket.json."
+  ],
+  "en": {
+    "slugEn": "bnb-girder-struts",
+    "name": "Girder Struts and Metal Structures",
+    "title": "Girder Struts — Create Bits 'n' Bobs guide",
+    "description": "Girder Struts, weathered and cable struts, Industrial Grating, Metal Truss and weathered girders from Create Bits 'n' Bobs: the full guide.",
+    "intro": "Create's girders only go straight. Bits 'n' Bobs' <strong>struts</strong> stretch between two anchors at an angle, for bracing, guy lines or bridge frames. They come from Cake's <strong>Strut Your Stuff</strong> library, installed alongside the mod. This page also covers gratings, the truss and the weathered family, to dress up a metal factory.",
+    "facts": [
+      {
+        "label": "Span",
+        "value": "up to 30 blocks between the two anchors (StrutBlock.MAX_SPAN)"
+      },
+      {
+        "label": "Angles",
+        "value": "free on two axes at once, with no bending and no pure vertical rise"
+      },
+      {
+        "label": "Cost",
+        "value": "one strut per anchor placed, length is free"
+      },
+      {
+        "label": "Recipes",
+        "value": "6 struts per craft; 3 gratings or 6 panels per Iron Ingot"
+      },
+      {
+        "label": "Weathered",
+        "value": "girder, strut and bracket change through bulk washing"
+      },
+      {
+        "label": "Version",
+        "value": "Create Bits 'n' Bobs 2.3.5 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Andesite Alloy",
+          null,
+          null
+        ],
+        [
+          "Metal Girder",
+          "Metal Girder",
+          "Metal Girder"
+        ],
+        [
+          null,
+          null,
+          "Andesite Alloy"
+        ]
+      ],
+      "result": "6 Girder Struts"
+    },
+    "videos": [
+      {
+        "id": "bnb_strut",
+        "name": "Placing struts",
+        "description": "A strut stretched between two blocks, then at several angles, the two-axis limit, and the weathered and cable versions."
+      }
+    ],
+    "sections": [
+      {
+        "id": "entretoise",
+        "title": "Stretching a strut",
+        "alt": "A Girder Strut stretched between two distant blocks",
+        "html": "<p>The <strong>Girder Strut</strong> (recipe shown here: three Metal Girders and two Andesite Alloy) goes down in two clicks. First click the face where the beam should start: the item starts to glow to show it remembers that point. Then click a second face, up to 30 blocks away. Every new anchor costs one strut; the length costs nothing, so a long span is as cheap as a short one. Breaking an anchor brings the whole strut down.</p>"
+      },
+      {
+        "id": "angles",
+        "title": "Allowed angles",
+        "alt": "Several struts placed at different angles",
+        "html": "<p>A strut can run diagonally in any direction, as long as each end heads out in front of the face it is fixed to. You can tie a pillar to a ceiling, a wall to a lower floor, or two Create girders together. Our videos draw the struts in a simplified way: a straight segment, without the exact cut at the anchors.</p>"
+      },
+      {
+        "id": "limite",
+        "title": "The two-axis limit",
+        "alt": "A strut refused because its two ends differ on all three axes",
+        "html": "<p>The two anchors can differ on two axes at once, never on all three: a strut does not twist to make up an offset in the third direction. It cannot rise straight up either; a Create Metal Girder does that job. If the mod refuses, line one anchor up with the other.</p>"
+      },
+      {
+        "id": "patinee",
+        "title": "The weathered strut",
+        "alt": "Weathered Girder Struts at several angles",
+        "html": "<p>The <strong>Weathered Girder Strut</strong> works the same way with a rusty look. Two ways to get it: the same recipe with Weathered Metal Girders, or bulk washing ordinary struts in front of an <a href=\"/en/wiki/encased-fan\">Encased Fan</a> blowing through water.</p>"
+      },
+      {
+        "id": "cable",
+        "title": "The cable strut",
+        "alt": "Cable Girder Struts stretched at several angles",
+        "html": "<p>The <strong>Cable Girder Strut</strong> swaps the beam for a thin cable: ideal for a suspension bridge, a decorative zip line or crane guy lines. Its recipe replaces the girders with three Iron Nuggets and makes 6 cables. The placing rules are the same.</p>"
+      },
+      {
+        "id": "grilles",
+        "title": "Industrial Grating and panel",
+        "alt": "The Industrial Grating and the Industrial Grating Panel",
+        "html": "<p>The <strong>Industrial Grating</strong> is an open iron block, and the <strong>Industrial Grating Panel</strong> its thin version set against a face. At the stonecutter, one Iron Ingot gives 3 gratings or 6 panels. Both can be waterlogged; with a panel in hand, right-clicking a placed panel adds the next one in line.</p>"
+      },
+      {
+        "id": "treillis",
+        "title": "The Metal Truss",
+        "alt": "The Metal Truss on its own, around a pipe and around a shaft",
+        "html": "<p>The <strong>Metal Truss</strong> (six Iron Sheets around three Iron Nuggets, making 8) is a criss-cross beam. Click a <a href=\"/en/wiki/fluid-pipe\">Fluid Pipe</a> with the truss in hand and it becomes a <strong>Metal Truss Pipe</strong> that keeps its fluid and its colour. On a <a href=\"/en/wiki/shaft\">Shaft</a>, you get the <strong>Industrial Truss Shaft</strong>.</p>"
+      },
+      {
+        "id": "patines",
+        "title": "Weathered girder, shaft and bracket",
+        "alt": "The Weathered Metal Girder, the Weathered Metal Girder Encased Shaft and the Weathered Metal Bracket",
+        "html": "<p>Bulk washing also turns Create's Metal Girder into a <strong>Weathered Metal Girder</strong> and the Metal Bracket into a <strong>Weathered Metal Bracket</strong>, which fits on shafts, cogwheels and pipes. Click a weathered girder with a Shaft to get the <strong>Weathered Metal Girder Encased Shaft</strong>.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Building ideas",
+        "html": "<p>Under a bridge, two struts crossed between the piers are enough to suggest a real steel frame. For a crane, run cable struts from the top of the mast to the tip of the jib. Mix new and weathered versions to age an industrial district, and lay grating panels as walkways above your machines: you can see through them and walk on them safely. A weathered bracket on an exposed shaft finishes the look.</p>"
+      }
+    ],
+    "sources": [
+      "Create Bits 'n' Bobs 2.3.5 (bits_n_bobs-2.3.5.jar from the next Create France modpack release): code from the public repository github.com/Aztech-Modding/Create-Bits-n-Bobs at commit 3794a38 \"2.3.5\", recipes from the jar's data folder, Ponder scenes replayed by our engine.",
+      "Mod by Cake, Kipti, NormalGuy, Astral and Spydnel, MIT licence: models and textures by its authors, rendered from the jar; no text from the mod is copied.",
+      "Struts: Cake's Strut Your Stuff 1.3.1 library (struts-1.3.1.jar, MIT licence): StrutBlock.MAX_SPAN = 30, StrutBlockItem.isValidConnection (at most two non-zero axes, no pure vertical, length² ≤ 900, each end within 90° of its face) and consumeAnchors (one strut per anchor); blocks: registry/content/blocks/deco/BnbDecorativeBlocks.java and BnbStrutDefinitions.java.",
+      "Structures: content/decoration/grating (waterloggable GratingBlock, panel placement helper), truss/TrussBlockItem.java (pipe → Metal Truss Pipe keeping flow and colour), truss/TrussShaftBlock.java, weathered_girder/WeatheredGirderBlock.java (shaft → girder with shaft); BnbBracketBlocks.java (Create's BracketBlock).",
+      "Recipes: data/bits_n_bobs/recipe/crafting/girder_strut.json, weathered_girder_strut.json, cable_strut.json, industrial_truss.json; stonecutting/industrial_grating(_panel)_from_iron.json; splashing/weathered_girder.json, weathered_girder_strut.json, weathered_metal_bracket.json."
+    ]
+  }
+}

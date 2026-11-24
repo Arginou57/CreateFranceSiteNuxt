@@ -6,7 +6,7 @@
   "title": "Établi mécanique — Create : guide en français",
   "description": "L'établi mécanique de Create : monter une grille, orienter les flèches, relier les entrées, couvercles d'emplacement et démarrage par redstone.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "L'<strong>établi mécanique</strong> automatise l'artisanat. Un établi tout seul ne sert à rien : on en assemble plusieurs en une <strong>grille</strong> qui reproduit la grille de fabrication, chaque bloc tenant un ingrédient. Dès que la grille est complète et qu'elle tourne, les établis se passent les objets jusqu'à un établi de sortie qui livre le résultat. Il réalise les recettes ordinaires et les grandes recettes de Create, jusqu'à 9 × 9.",
@@ -91,7 +91,7 @@
     {
       "id": "fleches",
       "title": "Les flèches dirigent les objets",
-      "html": "<p>Chaque établi affiche une <strong>flèche</strong> sur sa face. Elle indique où il enverra son ingrédient au moment de la fabrication. Toutes les flèches doivent finir par converger vers un seul établi, celui qui sortira le résultat. Un coup de <strong>clé</strong> sur un établi fait tourner sa flèche. Par défaut, la pose les oriente déjà de façon logique, du haut vers le bas.</p>"
+      "html": "<p>Chaque établi affiche une <strong>flèche</strong> sur sa face. Elle indique où il enverra son ingrédient au moment de la fabrication. Toutes les flèches doivent finir par converger vers un seul établi, celui qui sortira le résultat. Un coup de <strong>clé</strong> sur un établi fait tourner sa flèche. Par défaut, la pose les oriente déjà de façon logique, de haut en bas.</p>"
     },
     {
       "id": "rotation",
@@ -150,7 +150,9 @@
     "canon-a-pomme-de-terre",
     "main-extensible",
     "obus-de-canon",
-    "ore-excavation-foreuse"
+    "ore-excavation-foreuse",
+    "baguette-de-symetrie",
+    "plan-de-fabrication"
   ],
   "sources": [
     "Stress : AllBlocks.java, MECHANICAL_CRAFTER, CStress.setImpact(2.0)",

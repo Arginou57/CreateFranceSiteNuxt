@@ -159,10 +159,13 @@ function videoOf(id: string) {
 
 // key moments of a video, labelled with the title of the page section they explain (so they follow the language)
 function chaptersOf(v: WikiVideo) {
-  return wikiVideoChapters(props.page.slug, v).map((c) => ({
-    t: c.t,
-    label: c.label || props.page.sections.find((s) => s.id === c.section)?.title || '',
-  }))
+  // consecutive moments explained by the same section are one chapter; a single chapter is not worth a list
+  const out: { t: number; label: string; section?: string }[] = []
+  for (const c of [...wikiVideoChapters(props.page.slug, v)].sort((a, b) => a.t - b.t)) {
+    if (out.length && c.section && out[out.length - 1].section === c.section) continue
+    out.push({ t: c.t, section: c.section, label: c.label || props.page.sections.find((s) => s.id === c.section)?.title || '' })
+  }
+  return out.length >= 2 ? out : []
 }
 
 function formatDate(d: string) {

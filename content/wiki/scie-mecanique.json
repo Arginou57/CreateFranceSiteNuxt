@@ -200,7 +200,8 @@
     "piston-mecanique",
     "recolteur-mecanique",
     "deployeur",
-    "chariot-de-portique"
+    "chariot-de-portique",
+    "engrais-pour-arbres"
   ],
   "sources": [
     "Recette : crafting/kinetics/mechanical_saw.json",

@@ -1,0 +1,261 @@
+{
+  "slug": "armure-en-carton",
+  "name": "Armure et épée en carton",
+  "blockId": "create:cardboard_chestplate",
+  "category": "colis",
+  "title": "Armure et épée en carton — Create : guide",
+  "description": "Le carton de Create : l'armure qui te déguise en colis, l'épée qui repousse sans blesser, les blocs de carton et la fabrication du carton.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>carton</strong> des colis sert aussi à s'habiller. L'<strong>armure en carton</strong> protège à peine, mais l'ensemble complet a un pouvoir : accroupi, tu deviens un <strong>colis</strong>, et les monstres te perdent de vue. L'<strong>épée en carton</strong> ne blesse presque rien mais repousse loin. Et les blocs de carton font de bons murs d'entrepôt.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Colis"
+    },
+    {
+      "label": "Armure",
+      "value": "1 point par pièce, 4 pour l’ensemble"
+    },
+    {
+      "label": "Ensemble complet + accroupi",
+      "value": "Déguisé en colis, ignoré des monstres"
+    },
+    {
+      "label": "Épée",
+      "value": "Repousse sans dégâts, sauf contre les arthropodes"
+    },
+    {
+      "label": "Carton",
+      "value": "Pulpe pressée ; pulpe = 4 bambous, cannes ou pousses + 250 mB d’eau au mixeur"
+    },
+    {
+      "label": "Combustible",
+      "value": "Carton 50 s, bloc de carton 200 s"
+    },
+    {
+      "label": "Réparation",
+      "value": "Avec du carton"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Plastron en carton à l'établi",
+    "grid": [
+      [
+        "Carton",
+        null,
+        "Carton"
+      ],
+      [
+        "Carton",
+        "Carton",
+        "Carton"
+      ],
+      [
+        "Carton",
+        "Carton",
+        "Carton"
+      ]
+    ],
+    "items": [
+      [
+        "create:cardboard",
+        null,
+        "create:cardboard"
+      ],
+      [
+        "create:cardboard",
+        "create:cardboard",
+        "create:cardboard"
+      ],
+      [
+        "create:cardboard",
+        "create:cardboard",
+        "create:cardboard"
+      ]
+    ],
+    "result": "1 plastron en carton",
+    "resultItem": "create:cardboard_chestplate"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "carton",
+      "title": "Fabriquer le carton",
+      "image": "cardboard_armor_armure.webp",
+      "alt": "Casque, plastron, jambières et bottes en carton ; carton, épée et pulpe",
+      "html": "<p>Au <a href=\"/wiki/mixeur-mecanique\">mixeur</a>, quatre bambous, cannes à sucre ou pousses d'arbre avec 250 mB d'eau donnent une <strong>pulpe</strong> ; la <a href=\"/wiki/presse-mecanique\">presse</a> en fait une feuille de <strong>carton</strong>. Le carton sert aux colis, à l'<a href=\"/wiki/emballeur\">emballeur</a>, et aussi au livre, au cadre ou à l'étiquette. Il brûle : une feuille tient 50 secondes dans un four.</p>"
+    },
+    {
+      "id": "armure",
+      "title": "L'armure en carton",
+      "html": "<p>Casque en carton, plastron en carton, jambières en carton et bottes en carton se fabriquent comme les armures du jeu, avec du carton. Chaque pièce ne donne qu'<strong>un point d'armure</strong>, sans robustesse : c'est un costume plus qu'une protection. Elle s'enchante un peu, se répare avec du carton, accepte les garnitures et brûle comme le carton.</p>"
+    },
+    {
+      "id": "colis",
+      "title": "Se cacher dans un colis",
+      "html": "<p>Avec les <strong>quatre pièces</strong> sur toi, accroupis-toi : tu prends l'apparence d'un colis, choisi au hasard parmi les colis ordinaires, et ta silhouette rétrécit à la taille d'une boîte. Les monstres ne te voient plus : ceux qui te visaient perdent leur cible, les créatures neutres se calment. Il ne faut pas voler en créatif. Un voile en carton s'affiche sur ton écran tant que dure la cachette, et un succès récompense la première fois.</p>"
+    },
+    {
+      "id": "epee",
+      "title": "L'épée en carton",
+      "html": "<p>Deux cartons au-dessus d'un bâton. Contre presque tout ce qui vit, elle ne fait <strong>aucun dégât</strong> mais <strong>repousse</strong> fort, encore plus en courant, et ralentit beaucoup les animaux qu'elle touche. Seuls les arthropodes (araignées, poissons d'argent, abeilles) prennent de vrais dégâts. Elle ne s'use jamais et n'accepte que l'enchantement Recul.</p>"
+    },
+    {
+      "id": "blocs",
+      "title": "Les blocs de carton",
+      "image": "cardboard_blocks_blocs.webp",
+      "alt": "Bloc de carton, bloc de carton lié et un colis",
+      "html": "<p>Quatre cartons font un <strong>bloc de carton</strong>, et un bloc avec une ficelle un <strong>bloc de carton lié</strong>, ficelé comme un paquet ; on peut aussi appliquer la ficelle directement sur le bloc posé. Ils se cassent à la hache, très vite, et brûlent : 200 secondes dans un four, mais aussi en cas d'incendie. Cassé, le bloc lié rend sa ficelle et son bloc, sauf au Toucher de soie.</p>"
+    },
+    {
+      "id": "colis-rares",
+      "title": "Les colis rares",
+      "html": "<p>Chaque fois qu'un <a href=\"/wiki/emballeur\">emballeur</a> fait un colis, il y a une chance sur 7 500 qu'il utilise un emballage <strong>rare</strong> : l'un des dix colis aux motifs particuliers (un creeper, des membres de l'équipe de Create…). Son contenu ne change pas, seul l'aspect est différent. Les colis rares ne s'obtiennent pas autrement et ne servent jamais de déguisement à l'armure en carton.</p>"
+    },
+    {
+      "id": "idees",
+      "title": "Idées",
+      "html": "<p>Un entrepôt de colis aux murs de carton lié, des cartons empilés comme une réserve de marchandises, un garde déguisé en colis au milieu d'une file de <a href=\"/wiki/roue-a-chaine-roulante\">roues à chaîne</a>, ou une partie de cache-cache sur le serveur : le carton est surtout là pour s'amuser.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Il manque une pièce : sans les quatre, pas de déguisement, même accroupi. Frapper un monstre avec l'épée en espérant le tuer : seuls les arthropodes sont blessés. Stocker du carton près d'une lave ou d'un feu : les blocs s'enflamment facilement. Et le déguisement cesse dès que tu te relèves : reste accroupi tant que le danger rôde.</p>"
+    }
+  ],
+  "related": [
+    "emballeur",
+    "reemballeur",
+    "mixeur-mecanique",
+    "presse-mecanique",
+    "roue-a-chaine-roulante"
+  ],
+  "sources": [
+    "Carton : mixing/cardboard_pulp.json (4 #create:pulpifiable + 250 mB d'eau), pressing/cardboard.json ; combustible : AllItems / AllBlocks (1000 et 4000 ticks)",
+    "Armure : crafting/appliances/cardboard_*.json, AllArmorMaterials.CARDBOARD (1 par pièce, enchantabilité 4, réparation au carton) ; cachette : CardboardArmorHandler (4 pièces, accroupi, pas en vol), CardboardArmorHandlerClient, CardboardArmorStealthOverlay",
+    "Épée : crafting/appliances/cardboard_sword.json, CardboardSwordItem (recul, Lenteur, arthropodes), AllToolMaterials",
+    "Blocs : crafting/materials/cardboard_block.json, bound_cardboard_block.json, item_application/bound_cardboard_inworld.json, CardboardBlock ; colis rares : PackageStyles (RARE_CHANCE 7500)",
+    "Images : blocs et objets du jeu (modèles de Create) rendus par notre moteur, joueur non dessiné"
+  ],
+  "en": {
+    "slugEn": "cardboard-armor",
+    "name": "Cardboard armour and sword",
+    "title": "Cardboard Armor and Sword — Create mod guide",
+    "description": "Cardboard in Create: the armour that disguises you as a package, the sword that knocks back without hurting, cardboard blocks and making cardboard.",
+    "intro": "The <strong>cardboard</strong> of packages can also be worn. <strong>Cardboard armour</strong> barely protects, but the full set has a power: sneaking, you turn into a <strong>package</strong>, and monsters lose track of you. The <strong>Cardboard Sword</strong> hurts almost nothing but knocks back far. And cardboard blocks make good warehouse walls.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Packages"
+      },
+      {
+        "label": "Armour",
+        "value": "1 point per piece, 4 for the set"
+      },
+      {
+        "label": "Full set + sneaking",
+        "value": "Disguised as a package, ignored by monsters"
+      },
+      {
+        "label": "Sword",
+        "value": "Knocks back without damage, except against arthropods"
+      },
+      {
+        "label": "Cardboard",
+        "value": "Pressed pulp; pulp = 4 bamboo, sugar cane or saplings + 250 mB water in a mixer"
+      },
+      {
+        "label": "Fuel",
+        "value": "Cardboard 50 s, Block of Cardboard 200 s"
+      },
+      {
+        "label": "Repair",
+        "value": "With cardboard"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Cardboard Chestplate, crafting table",
+      "grid": [
+        [
+          "Cardboard",
+          null,
+          "Cardboard"
+        ],
+        [
+          "Cardboard",
+          "Cardboard",
+          "Cardboard"
+        ],
+        [
+          "Cardboard",
+          "Cardboard",
+          "Cardboard"
+        ]
+      ],
+      "result": "1 Cardboard Chestplate"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "carton",
+        "title": "Making cardboard",
+        "alt": "Cardboard Helmet, Chestplate, Leggings and Boots; cardboard, sword and pulp",
+        "html": "<p>In a <a href=\"/en/wiki/mechanical-mixer\">Mechanical Mixer</a>, four bamboo, sugar cane or saplings with 250 mB of water give a <strong>Pulp</strong>; the <a href=\"/en/wiki/mechanical-press\">press</a> turns it into a sheet of <strong>Cardboard</strong>. Cardboard goes into packages, the <a href=\"/en/wiki/packager\">Packager</a>, and also books, item frames and name tags. It burns: one sheet lasts 50 seconds in a furnace.</p>"
+      },
+      {
+        "id": "armure",
+        "title": "Cardboard armour",
+        "html": "<p>Cardboard Helmet, Cardboard Chestplate, Cardboard Leggings and Cardboard Boots are crafted like the game's armour, out of cardboard. Each piece gives only <strong>one armour point</strong>, with no toughness: it is a costume more than protection. It takes a few enchantments, is repaired with cardboard, accepts armour trims and burns like cardboard. Wear it for the look and the hiding trick, not for a fight.</p>"
+      },
+      {
+        "id": "colis",
+        "title": "Hiding in a package",
+        "html": "<p>With all <strong>four pieces</strong> on, sneak: you take the look of a package, picked at random among the ordinary ones, and your hitbox shrinks to the size of a box. Monsters no longer see you: those targeting you lose their target, neutral mobs calm down. You must not be flying in creative. A cardboard overlay covers your screen while you hide, and an advancement rewards the first time.</p>"
+      },
+      {
+        "id": "epee",
+        "title": "The Cardboard Sword",
+        "html": "<p>Two cardboard on top of a stick. Against almost everything alive it deals <strong>no damage</strong> but <strong>knocks back</strong> hard, even more when sprinting, and strongly slows the animals it hits. Only arthropods (spiders, silverfish, bees) take real damage. It never wears out and only accepts the Knockback enchantment.</p>"
+      },
+      {
+        "id": "blocs",
+        "title": "Cardboard blocks",
+        "alt": "Block of Cardboard, Bound Block of Cardboard and a package",
+        "html": "<p>Four cardboard make a <strong>Block of Cardboard</strong>, and a block plus string a <strong>Bound Block of Cardboard</strong>, tied up like a parcel; you can also apply the string straight onto the placed block. They break with an axe, very quickly, and burn: 200 seconds in a furnace, but also in a fire. Broken, the bound block gives back its string and its block, unless mined with Silk Touch.</p>"
+      },
+      {
+        "id": "colis-rares",
+        "title": "Rare packages",
+        "html": "<p>Every time a <a href=\"/en/wiki/packager\">Packager</a> makes a package, there is a 1 in 7,500 chance it uses a <strong>rare</strong> wrapping: one of ten packages with special designs (a creeper, members of the Create team…). Its contents do not change, only the look. Rare packages cannot be obtained any other way and are never used as the cardboard armour's disguise.</p>"
+      },
+      {
+        "id": "idees",
+        "title": "Ideas",
+        "html": "<p>A package warehouse with bound cardboard walls, stacked cardboard as a stock of goods, a guard disguised as a package in the middle of a <a href=\"/en/wiki/chain-conveyor\">chain conveyor</a> line, or a game of hide and seek on the server: cardboard is mostly there for fun.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>A piece is missing: without all four, no disguise, even when sneaking. Hitting a monster with the sword and expecting to kill it: only arthropods are hurt. Storing cardboard near lava or fire: the blocks catch fire easily. And the disguise ends as soon as you stand up: stay crouched while danger is around.</p>"
+      }
+    ],
+    "sources": [
+      "Cardboard: mixing/cardboard_pulp.json (4 #create:pulpifiable + 250 mB water), pressing/cardboard.json; fuel: AllItems / AllBlocks (1000 and 4000 ticks)",
+      "Armour: crafting/appliances/cardboard_*.json, AllArmorMaterials.CARDBOARD (1 per piece, enchantability 4, repaired with cardboard); hiding: CardboardArmorHandler (4 pieces, sneaking, not flying), CardboardArmorHandlerClient, CardboardArmorStealthOverlay",
+      "Sword: crafting/appliances/cardboard_sword.json, CardboardSwordItem (knockback, Slowness, arthropods), AllToolMaterials",
+      "Blocks: crafting/materials/cardboard_block.json, bound_cardboard_block.json, item_application/bound_cardboard_inworld.json, CardboardBlock; rare packages: PackageStyles (RARE_CHANCE 7500)",
+      "Images: the game's blocks and items (Create's models) rendered by our engine, player not drawn"
+    ]
+  }
+}

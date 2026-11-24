@@ -6,7 +6,7 @@
   "title": "Tuyau à fluide — Create : guide en français",
   "description": "Le tuyau à fluide de Create : relier réservoirs et machines, fenêtre à la clé, boîtier de cuivre, vanne à fluide et blocs qu'un tuyau sait vider.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "Le <strong>tuyau à fluide</strong> est la plomberie de Create. Il relie entre eux les réservoirs, bassins, becs verseurs, égouttoirs et poulies, et transporte l'eau, la lave, le miel, le chocolat ou le lait d'un bout à l'autre du réseau. Un tuyau seul ne fait rien : c'est une <a href=\"/wiki/pompe-mecanique\">pompe mécanique</a> qui met le fluide en mouvement. Cette page couvre aussi le tuyau avec fenêtre, le boîtier de cuivre et la vanne à fluide.",
@@ -94,7 +94,17 @@
       "id": "pipe_encasing",
       "name": "Tuyau à fluide : le boîtier de cuivre",
       "description": "Un boîtier de cuivre posé sur un tuyau fige ses connexions : les tuyaux voisins ne s'y raccordent plus.",
-      "duration": "PT11S"
+      "duration": "PT11S",
+      "chapters": [
+        {
+          "t": 2.1,
+          "section": "boitier"
+        },
+        {
+          "t": 4.35,
+          "section": "boitier-verrou"
+        }
+      ]
     },
     {
       "id": "pipe_interaction",
@@ -138,7 +148,12 @@
       "image": "pipe_encasing_verrouille.webp",
       "alt": "Tuyau dans un boitier de cuivre dont les connexions restent figées",
       "video": "pipe_encasing",
-      "html": "<p>Un clic droit avec un <strong>boitier de cuivre</strong> enferme un tuyau dans un bloc plein, plus propre dans une usine. Ce n'est pas que décoratif : un tuyau dans un boîtier garde exactement les connexions qu'il avait. Poser ou retirer un tuyau à côté ne change plus rien, ce qui évite qu'un réseau se raccorde par erreur à une conduite voisine. La clé retire le boîtier.</p>"
+      "html": "<p>Un clic droit avec un <strong>boitier de cuivre</strong> enferme un tuyau dans un bloc plein, plus propre dans une usine. La clé retire le boîtier et rend le tuyau nu.</p>"
+    },
+    {
+      "id": "boitier-verrou",
+      "title": "Des connexions verrouillées",
+      "html": "<p>Ce n'est pas que décoratif : un tuyau dans un boîtier garde exactement les connexions qu'il avait. Poser ou retirer un tuyau à côté ne change plus rien, ce qui évite qu'un réseau se raccorde par erreur à une conduite voisine.</p>"
     },
     {
       "id": "extremites",
@@ -160,7 +175,7 @@
       "title": "Le miel des ruches",
       "image": "pipe_interaction_ruche.webp",
       "alt": "Un tuyau tire le miel d'un nid d'abeilles vers un réservoir",
-      "html": "<p>Quelques blocs ordinaires se vident directement : un tuyau collé à une <strong>ruche</strong> ou à un nid d'abeilles plein en tire le miel, sans fiole ni ciseaux. Avec un réservoir au bout, la ferme d'abeilles devient une source de miel liquide pour les becs verseurs.</p>"
+      "html": "<p>Quelques blocs ordinaires se vident directement : un tuyau collé à une <strong>ruche</strong> ou à un nid d'abeilles plein (niveau de miel 5) en tire 250 mB de miel, sans fiole ni ciseaux. Avec un réservoir au bout, la ferme d'abeilles devient une source de miel liquide pour les becs verseurs. Un seau vide sur le réservoir donne un <strong>seau de miel</strong>, qu'on ne peut pas boire mais qu'on peut verser. Au contact de la lave, une source de miel donne de l'obsidienne, et du miel qui coule du calcaire.</p>"
     },
     {
       "id": "vanne",
@@ -310,7 +325,12 @@
         "id": "boitier",
         "title": "Copper Casing",
         "alt": "Pipe in Copper Casing whose connections stay locked",
-        "html": "<p>Right-clicking with <strong>Copper Casing</strong> wraps a pipe in a full block, which looks tidier in a factory. It is not only cosmetic: an Encased Fluid Pipe keeps exactly the connections it had. Placing or removing a pipe next to it changes nothing any more, so a network cannot accidentally join a neighbouring line. A Wrench takes the casing off.</p>"
+        "html": "<p>Right-clicking with <strong>Copper Casing</strong> wraps a pipe in a full block, which looks tidier in a factory. A Wrench takes the casing off and leaves the bare pipe.</p>"
+      },
+      {
+        "id": "boitier-verrou",
+        "title": "Locked connections",
+        "html": "<p>It is not only cosmetic: an Encased Fluid Pipe keeps exactly the connections it had. Placing or removing a pipe next to it changes nothing any more, so a network cannot accidentally join a neighbouring line.</p>"
       },
       {
         "id": "extremites",
@@ -328,7 +348,7 @@
         "id": "ruche",
         "title": "Honey from beehives",
         "alt": "A pipe pulls honey from a bee nest towards a tank",
-        "html": "<p>A few ordinary blocks can be emptied directly: a pipe against a full <strong>beehive</strong> or bee nest pulls its honey out, no bottle or shears needed. With a tank at the other end, a bee farm becomes a liquid honey supply for your spouts.</p>"
+        "html": "<p>A few ordinary blocks can be emptied directly: a pipe against a full <strong>beehive</strong> or bee nest (honey level 5) pulls 250 mB of honey out, no bottle or shears needed. With a tank at the other end, a bee farm becomes a liquid honey supply for your spouts. An empty bucket on the tank gives a <strong>Honey Bucket</strong>, which you cannot drink but can pour out. Touching lava, a honey source turns into obsidian, and flowing honey into limestone.</p>"
       },
       {
         "id": "vanne",

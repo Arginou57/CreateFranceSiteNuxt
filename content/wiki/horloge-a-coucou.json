@@ -1,0 +1,313 @@
+{
+  "slug": "horloge-a-coucou",
+  "name": "Horloge à coucou",
+  "blockId": "create:cuckoo_clock",
+  "category": "deco",
+  "title": "Horloge à coucou — Create : guide",
+  "description": "L'horloge à coucou de Create : la faire tourner, lire l'heure, le cochon de midi, le creeper du soir, et la version piégée qui explose.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "L'<strong>horloge à coucou</strong> est une petite maison en bois qui donne l'heure du monde. Elle a besoin de rotation pour marcher : branchée par l'arrière, ses aiguilles rejoignent l'heure du jeu, et à midi un <strong>cochon</strong> sort trois fois par la porte. Le soir, c'est un creeper. Il existe une version piégée, identique en apparence, qui explose à ces moments-là.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Décoration (bloc cinétique)"
+    },
+    {
+      "label": "Rotation",
+      "value": "Par l’arrière ; sans rotation, elle s’arrête"
+    },
+    {
+      "label": "Contrainte",
+      "value": "1 SU par tr/min (32 SU à 32 tr/min)"
+    },
+    {
+      "label": "Midi",
+      "value": "De 12 h 00 à 12 h 04 : un cochon sort"
+    },
+    {
+      "label": "Soir",
+      "value": "De 18 h 32 à 18 h 35 : un creeper sort"
+    },
+    {
+      "label": "Version piégée",
+      "value": "Explosion de puissance 3 (comme un creeper), le bloc disparaît"
+    },
+    {
+      "label": "Lien d’affichage",
+      "value": "Source « Temps du jour » ou « Chronomètre » (horloge normale)"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Planches",
+        null
+      ],
+      [
+        null,
+        "Boîtier d'andésite",
+        null
+      ],
+      [
+        null,
+        "Horloge",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "minecraft:oak_planks",
+        null
+      ],
+      [
+        null,
+        "create:andesite_casing",
+        null
+      ],
+      [
+        null,
+        "minecraft:clock",
+        null
+      ]
+    ],
+    "result": "1 horloge à coucou",
+    "resultItem": "create:cuckoo_clock"
+  },
+  "videos": [
+    {
+      "id": "cuckoo_clock",
+      "name": "Horloge à coucou : midi",
+      "description": "L'horloge reçoit la rotation par l'arrière ; ses aiguilles rejoignent 9 h. Le temps est ensuite accéléré jusqu'à midi, et le cochon sort trois fois.",
+      "duration": "PT20S",
+      "chapters": [
+        {
+          "t": 2.2,
+          "section": "pose"
+        },
+        {
+          "t": 5.15,
+          "section": "heure"
+        },
+        {
+          "t": 9.45,
+          "section": "temps"
+        },
+        {
+          "t": 14.9,
+          "section": "midi"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "pose",
+      "title": "La brancher par l’arrière",
+      "image": "cuckoo_clock_pose.webp",
+      "alt": "L'horloge, un rotor et un moteur à l'arrêt",
+      "video": "cuckoo_clock",
+      "html": "<p>L'horloge se pose face au joueur. Son arbre d'entrée est <strong>à l'arrière</strong>, à l'opposé du cadran : c'est là qu'il faut amener un <a href=\"/wiki/rotor\">rotor</a> ou un moteur. Sans rotation, elle reste figée : aiguilles immobiles, pas de tic-tac, pas d'animation. Elle demande 1 SU par tr/min, presque rien.</p>"
+    },
+    {
+      "id": "heure",
+      "title": "Lire l'heure",
+      "image": "cuckoo_clock_heure.webp",
+      "alt": "Les aiguilles indiquent 9 h",
+      "html": "<p>Dès qu'elle tourne, les aiguilles rejoignent l'heure du monde en quelques ticks. L'aiguille des heures fait un tour en douze heures de jeu, celle des minutes un tour par heure de jeu, soit 50 secondes réelles. Le jour commence à 6 h dans Minecraft : un monde qui vient de démarrer affiche donc 6 h, et midi tombe au milieu de la journée.</p>"
+    },
+    {
+      "id": "temps",
+      "title": "Le temps qui passe",
+      "image": "cuckoo_clock_accelere.webp",
+      "alt": "Le temps accéléré, les aiguilles en mouvement",
+      "html": "<p>Dans la boucle, le temps est <strong>accéléré</strong> de 9 h à midi, comme avec la commande <code>/time add</code> : les aiguilles suivent, la grande fait trois tours. Dans le jeu, cela prend trois heures de jeu, soit deux minutes et demie. La vitesse de la rotation ne change rien à l'heure affichée.</p>"
+    },
+    {
+      "id": "midi",
+      "title": "Le cochon de midi",
+      "image": "cuckoo_clock_midi.webp",
+      "alt": "Midi : le cochon sort par les portes",
+      "html": "<p>Entre <strong>12 h 00 et 12 h 04</strong>, les portes s'ouvrent et un cochon sort, rentre, ressort, trois fois de suite, avec un carillon. L'animation dure environ cinq secondes. Entre 18 h 32 et 18 h 35, au moment où les joueurs peuvent aller dormir, c'est un <strong>creeper</strong> qui sort : un rappel qu'il est temps de rentrer.</p>"
+    },
+    {
+      "id": "piegee",
+      "title": "L'horloge piégée",
+      "image": "clock_still_mysterieuse.webp",
+      "alt": "Une horloge normale (cochon) et une horloge piégée (creeper)",
+      "html": "<p>Une horloge entourée de quatre <strong>poudres à canon</strong> à l'établi donne une horloge piégée. Elle porte le même nom et le même aspect. À midi ou le soir, au lieu du cochon ou du creeper, elle fume, siffle comme une mèche, puis <strong>explose</strong> : puissance 3, celle d'un creeper, blocs cassés, et l'horloge disparaît sans rien laisser. Une farce à offrir, ou un piège à retardement.</p>"
+    },
+    {
+      "id": "ailleurs",
+      "title": "Dans le Nether et l’End",
+      "html": "<p>Hors de l'Overworld, le temps n'a pas de sens : les aiguilles s'emballent, l'horloge fait tic-tac très vite et aucune animation ne se joue. Une horloge piégée posée dans le Nether n'explose donc jamais.</p>"
+    },
+    {
+      "id": "affichage",
+      "title": "Sur un panneau d’affichage",
+      "html": "<p>L'horloge normale peut servir de source à un <a href=\"/wiki/liaison-d-affichage\">lien d'affichage</a> : en mode « Temps du jour », elle écrit l'heure sur un tableau ou un <a href=\"/wiki/tube-nixie\">tube Nixie</a> ; en mode « Chronomètre », elle compte le temps écoulé. L'horloge piégée ne le permet pas, ce qui est le seul moyen de la démasquer sans attendre midi.</p>"
+    },
+    {
+      "id": "fabriquer",
+      "title": "La fabriquer",
+      "html": "<p>Une planche, un <strong>boîtier d'andésite</strong> et une <strong>horloge</strong> du jeu, empilés dans une colonne de l'établi. L'horloge vient de quatre lingots d'or autour d'une poudre de redstone ; le boîtier d'andésite, d'un alliage d'andésite appliqué sur une bûche écorcée. L'horloge à coucou se mine à la hache ou à la pioche.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Amener le rotor par le côté ou par le cadran : seul l'arrière est raccordé. Attendre le cochon à minuit : il ne sort qu'à midi, et le creeper vers 18 h 30. Offrir une horloge sans savoir d'où elle vient : en cas de doute, branche-la sur un lien d'affichage avant de la poser chez toi.</p>"
+    }
+  ],
+  "related": [
+    "rotor",
+    "moteur-creatif",
+    "liaison-d-affichage",
+    "tube-nixie",
+    "cloches",
+    "pierres-et-blocs-de-deco"
+  ],
+  "sources": [
+    "Recettes : crafting/kinetics/cuckoo_clock.json (planches, boîtier d'andésite, horloge), mysterious_cuckoo_clock.json (horloge + 4 poudres à canon)",
+    "Comportement : CuckooClockBlockEntity (vitesse nulle : rien ; heures = (dayTime / 1000 + 6) % 24 ; cochon à 12 h 00-12 h 04, creeper à 18 h 32-18 h 35 ; surprise : explosion de puissance 3 au tick 50 ; dimensions non naturelles), CuckooClockBlock (arbre à l'arrière), BuilderTransformers.cuckooClock (impact 1)",
+    "Animation : CuckooClockRenderer (aiguilles, portes à 135°, cochon / creeper), lien d'affichage : AllBlocks",
+    "Scène écrite pour ce wiki (Create n'a pas de scène Ponder sur ce sujet) : WIKI/c2c_scenes.py, rendue par notre moteur (pièces animées relues dans les BlockEntityRenderer de Create : WIKI/c2c_parts.py) ; heure accélérée pour la boucle",
+    "Images : blocs et objets du jeu (modèles de Create) rendus par notre moteur, joueur non dessiné"
+  ],
+  "en": {
+    "slugEn": "cuckoo-clock",
+    "name": "Cuckoo Clock",
+    "title": "Cuckoo Clock — Create mod guide",
+    "description": "The Create Cuckoo Clock: powering it, reading the time, the noon pig, the evening creeper, and the trapped version that explodes.",
+    "intro": "The <strong>Cuckoo Clock</strong> is a little wooden house that shows the world's time. It needs rotation to work: powered from the back, its hands move to the game time, and at noon a <strong>pig</strong> pops out of the door three times. In the evening, it is a creeper. There is a trapped version, identical to look at, that explodes at those moments.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Decoration (kinetic block)"
+      },
+      {
+        "label": "Rotation",
+        "value": "From the back; without it, the clock stops"
+      },
+      {
+        "label": "Stress",
+        "value": "1 SU per RPM (32 SU at 32 RPM)"
+      },
+      {
+        "label": "Noon",
+        "value": "From 12:00 to 12:04: a pig comes out"
+      },
+      {
+        "label": "Evening",
+        "value": "From 18:32 to 18:35: a creeper comes out"
+      },
+      {
+        "label": "Trapped version",
+        "value": "Power 3 explosion (like a creeper), the block is gone"
+      },
+      {
+        "label": "Display Link",
+        "value": "“Time of Day” or “Stopwatch” source (normal clock)"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Planks",
+          null
+        ],
+        [
+          null,
+          "Andesite Casing",
+          null
+        ],
+        [
+          null,
+          "Clock",
+          null
+        ]
+      ],
+      "result": "1 Cuckoo Clock"
+    },
+    "videos": [
+      {
+        "id": "cuckoo_clock",
+        "name": "Cuckoo Clock: noon",
+        "description": "The clock gets rotation from the back; its hands move to 9 o'clock. Time is then sped up until noon, and the pig comes out three times."
+      }
+    ],
+    "sections": [
+      {
+        "id": "pose",
+        "title": "Powering it from the back",
+        "alt": "The clock, a shaft and a motor, stopped",
+        "html": "<p>The clock is placed facing the player. Its input shaft is <strong>at the back</strong>, opposite the dial: that is where a <a href=\"/en/wiki/shaft\">shaft</a> or a motor must come in. Without rotation it stays frozen: still hands, no ticking, no animation. It needs 1 SU per RPM, almost nothing.</p>"
+      },
+      {
+        "id": "heure",
+        "title": "Reading the time",
+        "alt": "The hands show 9 o'clock",
+        "html": "<p>As soon as it turns, the hands move to the world's time within a few ticks. The hour hand goes round once in twelve game hours, the minute hand once per game hour, which is 50 real seconds. The day starts at 6 o'clock in Minecraft: a freshly started world shows 6, and noon falls in the middle of the day.</p>"
+      },
+      {
+        "id": "temps",
+        "title": "Time going by",
+        "alt": "Time sped up, the hands moving",
+        "html": "<p>In the loop, time is <strong>sped up</strong> from 9 to noon, as with the <code>/time add</code> command: the hands follow and the big one goes round three times. In the game this takes three game hours, two and a half minutes. The rotation speed does not change the time shown.</p>"
+      },
+      {
+        "id": "midi",
+        "title": "The noon pig",
+        "alt": "Noon: the pig comes out of the doors",
+        "html": "<p>Between <strong>12:00 and 12:04</strong>, the doors open and a pig comes out, goes back in and out again, three times, with a chime. The animation lasts about five seconds. Between 18:32 and 18:35, when players can go to sleep, a <strong>creeper</strong> comes out instead: a reminder that it is time to head home.</p>"
+      },
+      {
+        "id": "piegee",
+        "title": "The trapped clock",
+        "alt": "A normal clock (pig) and a trapped clock (creeper)",
+        "html": "<p>A clock surrounded by four <strong>Gunpowder</strong> in a crafting table gives a trapped clock. It has the same name and the same look. At noon or in the evening, instead of the pig or the creeper, it smokes, hisses like a fuse, then <strong>explodes</strong>: power 3, that of a creeper, blocks broken, and the clock vanishes without a drop. A prank to give away, or a time bomb.</p>"
+      },
+      {
+        "id": "ailleurs",
+        "title": "In the Nether and the End",
+        "html": "<p>Outside the Overworld, time makes no sense: the hands spin wildly, the clock ticks very fast and no animation plays. A trapped clock placed in the Nether therefore never goes off.</p>"
+      },
+      {
+        "id": "affichage",
+        "title": "On a display",
+        "html": "<p>The normal clock can be a source for a <a href=\"/en/wiki/display-link\">Display Link</a>: in “Time of Day” mode it writes the time on a board or a <a href=\"/en/wiki/nixie-tube\">Nixie Tube</a>; in “Stopwatch” mode it counts elapsed time. The trapped clock cannot do this, which is the only way to unmask it without waiting for noon.</p>"
+      },
+      {
+        "id": "fabriquer",
+        "title": "Crafting it",
+        "html": "<p>A plank, an <strong>Andesite Casing</strong> and a vanilla <strong>Clock</strong>, stacked in one column of the crafting table. The Clock comes from four Gold Ingots around a Redstone Dust; the Andesite Casing from Andesite Alloy applied to a stripped log. The Cuckoo Clock is mined with an axe or a pickaxe.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>Bringing the shaft in from a side or from the dial: only the back is connected. Waiting for the pig at midnight: it only comes out at noon, and the creeper around 18:30. Giving away a clock without knowing where it came from: if in doubt, hook it to a Display Link before placing it in your home.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: crafting/kinetics/cuckoo_clock.json (planks, Andesite Casing, Clock), mysterious_cuckoo_clock.json (clock + 4 Gunpowder)",
+      "Behaviour: CuckooClockBlockEntity (zero speed: nothing; hours = (dayTime / 1000 + 6) % 24; pig at 12:00-12:04, creeper at 18:32-18:35; surprise: power 3 explosion at tick 50; non-natural dimensions), CuckooClockBlock (shaft at the back), BuilderTransformers.cuckooClock (impact 1)",
+      "Animation: CuckooClockRenderer (hands, doors at 135°, pig / creeper); Display Link: AllBlocks",
+      "Scene written for this wiki (Create has no Ponder scene on this topic): WIKI/c2c_scenes.py, rendered by our engine (moving parts read from Create's BlockEntityRenderers: WIKI/c2c_parts.py); time sped up for the loop",
+      "Images: the game's blocks and items (Create's models) rendered by our engine, player not drawn"
+    ]
+  }
+}

@@ -1,0 +1,257 @@
+{
+  "slug": "propulsion-energie",
+  "name": "Câbles et énergie",
+  "blockId": "createpropulsion:coral_generator",
+  "category": "propulsion",
+  "title": "Câbles et générateur à corail — Create Propulsion",
+  "description": "L'énergie de Create Propulsion : générateur à corail (5 000 FE par tick), câbles, relais et concentrateur pour les propulseurs ioniques.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Propulsion: Simulated 1.1.5",
+  "mcVersion": "1.21.1",
+  "intro": "Les propulseurs ioniques et vectoriels tournent à l'énergie <strong>FE</strong>, l'unité commune à beaucoup de mods. Create Propulsion fournit sa propre source, le <strong>générateur à corail</strong> (Coral Generator), et de quoi la transporter : <strong>câbles</strong>, <strong>relais</strong> et <strong>concentrateur</strong>.",
+  "facts": [
+    {
+      "label": "Générateur",
+      "value": "10 mB de corail par tick → 5 000 FE par tick"
+    },
+    {
+      "label": "Réserve",
+      "value": "1 000 000 FE, réservoir de 8 000 mB"
+    },
+    {
+      "label": "Sorties",
+      "value": "les deux faces de son axe"
+    },
+    {
+      "label": "Câble",
+      "value": "1 000 FE par tick et par nœud du réseau"
+    },
+    {
+      "label": "Relais",
+      "value": "nœud du réseau, partage un signal de redstone"
+    },
+    {
+      "label": "Concentrateur",
+      "value": "50 000 FE, sans recette"
+    },
+    {
+      "label": "Bobine",
+      "value": "non obtenable en 1.1.5"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (générateur à corail)",
+    "grid": [
+      [
+        "Plaque de platine",
+        "Connecteur d'amarrage",
+        "Plaque de platine"
+      ],
+      [
+        "Plaque renforcée",
+        "Détecteur de seuil",
+        "Plaque renforcée"
+      ],
+      [
+        "Plaque de platine",
+        "Connecteur d'amarrage",
+        "Plaque de platine"
+      ]
+    ],
+    "items": [
+      [
+        "createpropulsion:platinum_sheet",
+        "simulated:docking_connector",
+        "createpropulsion:platinum_sheet"
+      ],
+      [
+        "create:sturdy_sheet",
+        "create:stockpile_switch",
+        "create:sturdy_sheet"
+      ],
+      [
+        "createpropulsion:platinum_sheet",
+        "simulated:docking_connector",
+        "createpropulsion:platinum_sheet"
+      ]
+    ],
+    "result": "1 générateur à corail",
+    "resultItem": "createpropulsion:coral_generator"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "generateur",
+      "title": "Le générateur à corail",
+      "image": "prop_gal_energy_reseau.webp",
+      "alt": "Un générateur à corail relié par des câbles noirs à un relais, puis à un propulseur ionique ; un concentrateur branché sur le côté",
+      "html": "<p>Le générateur brûle du <strong>corail</strong> liquide : 10 mB par tick, qui donnent 5 000 FE par tick avec la configuration par défaut. Il garde 8 000 mB de corail et jusqu'à un million de FE. Il pousse son énergie par les deux faces de son axe : le haut et le bas s'il est posé debout. Dans la scène Ponder du <a href=\"/wiki/propulsion-propulseur-vectoriel\">propulseur vectoriel</a>, il est posé juste dessous et le charge par contact.</p>"
+    },
+    {
+      "id": "corail",
+      "title": "Le corail liquide",
+      "html": "<p>Le corail (Coral) se prépare dans un <a href=\"/wiki/mixeur-mecanique\">mixeur</a> sur un <a href=\"/wiki/bruleur-a-blaze\">brûleur à Blaze</a> surchauffé : 500 mB de potion de soin, de la poudre de redstone et de la poudre de Blaze. On le transporte en tuyau ou dans un seau de corail (Coral Bucket). Gare à la baignade : il inflige de lourds dégâts chaque seconde, sauf avec un scaphandre complet en netherite.</p>"
+    },
+    {
+      "id": "cables",
+      "title": "Câbles et relais",
+      "html": "<p>Le <strong>câble</strong> (Cable) se pose comme un bloc et se relie tout seul à ses voisins ; quatre câbles sortent d'une recette à base de platine et de teinture noire. Un réseau peut faire passer 1 000 FE par tick pour chacun de ses nœuds, partagés entre les machines qui reçoivent. Le <strong>relais de câble</strong> (Cable Relay) est un nœud du réseau ; un groupe de relais qui se touchent partage le plus fort signal de redstone reçu, ce qui permet d'envoyer une commande le long des câbles.</p>"
+    },
+    {
+      "id": "stockage",
+      "title": "Concentrateur et bobine",
+      "html": "<p>Le <strong>concentrateur de câbles</strong> (Cable Hub) stocke 50 000 FE ; il n'a pas de recette et n'apparaît pas dans l'onglet créatif en 1.1.5. La <strong>bobine de câble</strong> (Cable Spool) existe dans les fichiers du mod mais n'est pas enregistrée : elle n'est pas obtenable dans cette version.</p>"
+    },
+    {
+      "id": "fabrication",
+      "title": "Fabriquer le réseau",
+      "html": "<p>Le générateur à corail se fabrique avec quatre plaques de platine, deux connecteurs d'amarrage de Simulated, deux plaques renforcées et un <a href=\"/wiki/detecteur-de-seuil\">détecteur de seuil</a>. Le câble demande une plaque et une pépite de platine, une poudre de redstone et une teinture noire ; le relais entoure un boitier de platine de quatre câbles et quatre pépites.</p><p>Le corail se pompe comme n'importe quel fluide : un <a href=\"/wiki/tuyau-a-fluide\">tuyau</a> branché sur le générateur le remplit. Gardez un détecteur de seuil sur la réserve pour ne jamais tomber en panne en vol.</p>"
+    },
+    {
+      "id": "chiffres",
+      "title": "Quelques calculs",
+      "html": "<p>Un plein de 8 000 mB de corail brûle en 800 ticks, soit 40 secondes, et produit 4 millions de FE ; la réserve interne n'en garde qu'un million. Un propulseur ionique à fond prend 40 FE par tick : la réserve pleine l'alimente plus de 20 minutes. Les câbles limitent le débit à 1 000 FE par tick et par nœud : ajoutez des relais sur les longues lignes qui servent beaucoup de propulseurs.</p>"
+    },
+    {
+      "id": "autres",
+      "title": "Avec d'autres mods",
+      "html": "<p>Les câbles transportent le FE de n'importe quel mod, et le générateur à corail en fournit à toute machine qui l'accepte.</p>"
+    },
+    {
+      "id": "reseau",
+      "title": "Monter un réseau",
+      "html": "<p>Placez le générateur sur l'engin, remplissez-le de corail par tuyau depuis un <a href=\"/wiki/propulsion-platine\">réservoir en platine</a>, puis tirez des câbles jusqu'aux propulseurs ioniques et aux tuyères vectorielles. Chaque propulseur ionique consomme jusqu'à 40 FE par tick : un seul générateur en alimente plus d'une centaine. Les sources de FE d'autres mods conviennent aussi.</p>"
+    }
+  ],
+  "related": [
+    "create-propulsion",
+    "propulsion-propulseur-vectoriel",
+    "propulsion-platine",
+    "propulsion-carburants",
+    "mixeur-mecanique",
+    "bruleur-a-blaze",
+    "detecteur-de-seuil",
+    "tuyau-a-fluide"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Propulsion: Simulated 1.1.5 (dépôt Propulsion-Team/create-propulsion-simulated, commit 36f83a1 du 23/07/2026, licence MIT, © Sergey Feduk, Tronco_78, Bunting_chj, SSnowly, KyivSec), identique au jar de l’instance de test du modpack",
+    "Générateur : CoralGeneratorBlockEntity.java, CoralGeneratorFuelManager.java (500 FE/mB en configuration)",
+    "Câbles : CableNetworkManager.java, CableRelayBlock.java, CableHubBlockEntity.java, PropulsionItems.java (bobine désactivée)",
+    "Corail : data/createpropulsion/recipe/mixing, ForgeEvents.java",
+    "Valeurs par défaut : PropulsionConfig.java (configuration commune et serveur du mod)",
+    "Recette : data/createpropulsion/recipe/crafting/coral_generator.json, cable.json, cable_relay.json",
+    "Images : blocs du mod posés sur la plaque et rendus par notre moteur (licence MIT, © Propulsion Team)"
+  ],
+  "en": {
+    "slugEn": "propulsion-energy-and-cables",
+    "name": "Cables and power",
+    "title": "Cables and Coral Generator — Create Propulsion guide",
+    "description": "Power in Create Propulsion: the Coral Generator (5,000 FE per tick), Cables, Cable Relays and the Cable Hub that feed ion and vector thrusters.",
+    "intro": "Ion and vector thrusters run on <strong>FE</strong> energy, the unit shared by many mods. Create Propulsion provides its own source, the <strong>Coral Generator</strong>, and the means to carry the energy: <strong>Cables</strong>, <strong>Cable Relays</strong> and the <strong>Cable Hub</strong>.",
+    "facts": [
+      {
+        "label": "Generator",
+        "value": "10 mB of coral per tick → 5,000 FE per tick"
+      },
+      {
+        "label": "Buffer",
+        "value": "1,000,000 FE, 8,000 mB tank"
+      },
+      {
+        "label": "Outputs",
+        "value": "the two faces on its axis"
+      },
+      {
+        "label": "Cable",
+        "value": "1,000 FE per tick per network node"
+      },
+      {
+        "label": "Relay",
+        "value": "network node, shares a redstone signal"
+      },
+      {
+        "label": "Hub",
+        "value": "50,000 FE, no recipe"
+      },
+      {
+        "label": "Spool",
+        "value": "not obtainable in 1.1.5"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (Coral Generator)",
+      "grid": [
+        [
+          "Platinum Sheet",
+          "Docking Connector",
+          "Platinum Sheet"
+        ],
+        [
+          "Sturdy Sheet",
+          "Threshold Switch",
+          "Sturdy Sheet"
+        ],
+        [
+          "Platinum Sheet",
+          "Docking Connector",
+          "Platinum Sheet"
+        ]
+      ],
+      "result": "1 Coral Generator"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "generateur",
+        "title": "The Coral Generator",
+        "alt": "A Coral Generator connected by black Cables to a Cable Relay, then to an Ion Thruster; a Cable Hub on the side",
+        "html": "<p>The generator burns liquid <strong>coral</strong>: 10 mB per tick, which gives 5,000 FE per tick with the default config. It holds 8,000 mB of coral and up to a million FE. It pushes energy out of the two faces on its axis: top and bottom when standing upright. In the <a href=\"/en/wiki/propulsion-vector-thruster\">Vector Thruster</a> Ponder scene it sits right below and charges it by contact.</p>"
+      },
+      {
+        "id": "corail",
+        "title": "Liquid coral",
+        "html": "<p>Coral is made in a <a href=\"/en/wiki/mechanical-mixer\">Mechanical Mixer</a> over a superheated <a href=\"/en/wiki/blaze-burner\">Blaze Burner</a>: 500 mB of Healing potion, redstone dust and blaze powder. It travels by pipe or in a Coral Bucket. Do not swim in it: it deals heavy damage every second, unless you wear a full netherite diving suit.</p>"
+      },
+      {
+        "id": "cables",
+        "title": "Cables and relays",
+        "html": "<p>The <strong>Cable</strong> is placed like a block and connects to its neighbours by itself; one recipe made of platinum and black dye gives four. A network can carry 1,000 FE per tick for each of its nodes, shared between the receiving machines. The <strong>Cable Relay</strong> is a network node; a group of touching relays shares the strongest redstone signal it receives, which sends a command along the cables.</p>"
+      },
+      {
+        "id": "stockage",
+        "title": "Hub and spool",
+        "html": "<p>The <strong>Cable Hub</strong> stores 50,000 FE; it has no recipe and does not show up in the creative tab in 1.1.5. The <strong>Cable Spool</strong> exists in the mod files but is not registered: it cannot be obtained in this version.</p>"
+      },
+      {
+        "id": "fabrication",
+        "title": "Crafting the network",
+        "html": "<p>The Coral Generator is crafted from four platinum sheets, two Simulated Docking Connectors, two sturdy sheets and a <a href=\"/en/wiki/threshold-switch\">Threshold Switch</a>. The cable takes a platinum sheet and nugget, redstone dust and black dye; the relay surrounds a platinum casing with four cables and four nuggets.</p><p>Coral is pumped like any fluid: a <a href=\"/en/wiki/fluid-pipe\">pipe</a> connected to the generator fills it. Keep a Threshold Switch on the reserve so you never run dry in flight.</p>"
+      },
+      {
+        "id": "chiffres",
+        "title": "A few numbers",
+        "html": "<p>A full 8,000 mB load of coral burns in 800 ticks, that is 40 seconds, and makes 4 million FE; the internal buffer only keeps one million. An Ion Thruster at full power takes 40 FE per tick: a full buffer feeds it for more than 20 minutes. Cables cap the flow at 1,000 FE per tick per node: add relays on long lines that serve many thrusters.</p>"
+      },
+      {
+        "id": "autres",
+        "title": "With other mods",
+        "html": "<p>Cables carry FE from any mod, and the Coral Generator supplies any machine that accepts FE. Conversely, generators from other mods can charge Ion and Vector Thrusters directly, by touching them or through Propulsion cables, so you can mix sources freely on a large base.</p>"
+      },
+      {
+        "id": "reseau",
+        "title": "Building a network",
+        "html": "<p>Put the generator on the machine, fill it with coral by pipe from a <a href=\"/en/wiki/propulsion-platinum\">platinum tank</a>, then run cables to the Ion Thrusters and vector nozzles. Each Ion Thruster uses up to 40 FE per tick: one generator feeds more than a hundred. FE sources from other mods work as well.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Propulsion: Simulated 1.1.5 (Propulsion-Team/create-propulsion-simulated repository, commit 36f83a1 of 2026-07-23, MIT licence, © Sergey Feduk, Tronco_78, Bunting_chj, SSnowly, KyivSec), identical to the modpack test instance jar",
+      "Generator: CoralGeneratorBlockEntity.java, CoralGeneratorFuelManager.java (500 FE/mB in the config)",
+      "Cables: CableNetworkManager.java, CableRelayBlock.java, CableHubBlockEntity.java, PropulsionItems.java (spool disabled)",
+      "Coral: data/createpropulsion/recipe/mixing, ForgeEvents.java",
+      "Default values: PropulsionConfig.java (the mod’s common and server configuration)",
+      "Recipe: data/createpropulsion/recipe/crafting/coral_generator.json, cable.json, cable_relay.json",
+      "Images: mod blocks placed on the plate and rendered by our engine (MIT licence, © Propulsion Team)"
+    ]
+  }
+}

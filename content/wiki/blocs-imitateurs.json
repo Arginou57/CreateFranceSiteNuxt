@@ -1,0 +1,302 @@
+{
+  "slug": "blocs-imitateurs",
+  "name": "Blocs imitateurs (copycats)",
+  "blockId": "create:copycat_panel",
+  "category": "deco",
+  "title": "Blocs imitateurs (copycats) — Create : guide",
+  "description": "Le panneau et la marche imitateurs de Create : leur appliquer un bloc, ce qu'ils acceptent, les retirer à la clé, et des idées de construction.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Les <strong>blocs imitateurs</strong> (« copycats ») sont des pièces fines qui prennent l'aspect du bloc qu'on leur donne. Le <strong>panneau imitateur</strong> fait 3 pixels d'épaisseur, la <strong>marche imitatrice</strong> un quart de bloc. On les pose vides, puis un clic droit avec un bloc les habille : panneaux de bois, marches de pierre, cadres de fenêtre, tout ce qui manque aux dalles et escaliers du jeu.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Décoration"
+    },
+    {
+      "label": "Fabrication",
+      "value": "1 lingot de zinc au tailleur de pierre → 4 panneaux ou 4 marches"
+    },
+    {
+      "label": "Panneau",
+      "value": "3 pixels d’épaisseur, contre n’importe quelle face"
+    },
+    {
+      "label": "Marche",
+      "value": "Un quart de bloc (16 × 8 × 8), en haut ou en bas"
+    },
+    {
+      "label": "Matériau",
+      "value": "Un bloc plein, sans entité de bloc ; le panneau accepte aussi barreaux et trappes"
+    },
+    {
+      "label": "Retirer",
+      "value": "Clé : le matériau revient dans l’inventaire"
+    },
+    {
+      "label": "Lumière",
+      "value": "Reprend celle du matériau"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Tailleur de pierre (1 lingot → 4)",
+    "grid": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "Lingot de zinc",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        "create:zinc_ingot",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "4 panneaux imitateurs (ou 4 marches imitatrices)",
+    "resultItem": "create:copycat_panel"
+  },
+  "videos": [
+    {
+      "id": "copycat_apply",
+      "name": "Blocs imitateurs : leur donner un aspect",
+      "description": "Des panneaux et des marches imitateurs sont posés vides, puis un bloc est appliqué sur chacun : planches de chêne, pierre moussue, chêne noir, briques, ochrum poli, verre et asurine.",
+      "duration": "PT16S",
+      "chapters": [
+        {
+          "t": 2.5,
+          "section": "poser"
+        },
+        {
+          "t": 5.7,
+          "section": "appliquer"
+        },
+        {
+          "t": 8.65,
+          "section": "marches"
+        },
+        {
+          "t": 12.8,
+          "section": "mur"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "poser",
+      "title": "Les poser vides",
+      "image": "copycat_apply_vides.webp",
+      "alt": "Panneaux et marches imitateurs posés vides",
+      "video": "copycat_apply",
+      "html": "<p>Un panneau se pose contre n'importe quelle face, au sol, au plafond ou au mur. Une marche occupe la moitié basse ou haute d'un demi-bloc, selon l'endroit visé. Vides, ils ont un aspect neutre, une sorte de grille claire : c'est la <strong>base imitatrice</strong>, un bloc technique qui sert d'apparence par défaut et qu'on ne peut pas obtenir. Clic droit sur un panneau avec un autre panneau : le suivant se pose à côté, dans la même orientation.</p>"
+    },
+    {
+      "id": "appliquer",
+      "title": "Appliquer un bloc",
+      "image": "copycat_apply_panneaux.webp",
+      "alt": "Chêne, briques de pierre moussues et chêne noir sur trois panneaux posés au sol",
+      "html": "<p>Clic droit sur la pièce avec un bloc en main : elle en prend l'aspect, et un exemplaire du bloc est consommé (rien en créatif). On peut aussi tenir le matériau dans la main secondaire au moment de poser la pièce : il s'applique tout seul. Recliquer avec le même bloc fait tourner son orientation, pratique pour les bûches ou les piliers. Une pièce voisine qui porte déjà ce bloc lui transmet son orientation.</p>"
+    },
+    {
+      "id": "marches",
+      "title": "Les marches",
+      "image": "copycat_apply_marches.webp",
+      "alt": "Briques de pierre, briques et ochrum poli sur trois marches",
+      "html": "<p>La marche est un quart de bloc : posée en bas, elle fait une contremarche fine ; posée en haut, elle complète un escalier ou une corniche. Habillée de briques ou de pierre taillée, elle donne des escaliers plus fins que ceux du jeu, et toutes les pierres de <a href=\"/wiki/pierres-et-blocs-de-deco\">Create</a> s'y prêtent.</p>"
+    },
+    {
+      "id": "mur",
+      "title": "Panneaux muraux et vitrés",
+      "image": "copycat_apply_mur.webp",
+      "alt": "Un mur de panneaux en sapin, verre et asurine polie",
+      "html": "<p>Debout, les panneaux deviennent lambris, volets ou cadres de fenêtre. Le verre fonctionne aussi : un panneau vitré fait une vitre épaisse de 3 pixels, alignée sur le mur. La pièce reprend aussi la <strong>lumière</strong> du matériau, le son, la glissance, la résistance aux explosions et l'outil qu'il faut pour la miner.</p>"
+    },
+    {
+      "id": "accepte",
+      "title": "Ce qui est accepté",
+      "html": "<p>Le matériau doit être un bloc plein et solide. Sont refusés : les blocs à entité (coffres, fours, machines), les escaliers, les blocs non cubiques, les autres imitateurs, et la liste noire du jeu : chaudrons, pousses et blocs à escalader. Le tonneau, lui, est accepté d'office. Le panneau prend en plus les <strong>barreaux</strong> (les « barreaux imitateurs », un modèle technique dessine alors des barreaux au bon endroit) et les <strong>trappes</strong>, orientées selon la face.</p>"
+    },
+    {
+      "id": "retirer",
+      "title": "Retirer ou changer le matériau",
+      "image": "copycat_uses_usages.webp",
+      "alt": "Un escalier fin en chêne, un mur en crimsite polie et des panneaux vitrés",
+      "html": "<p>Un clic à la <a href=\"/wiki/cle\">clé</a> retire le matériau, qui revient dans l'inventaire : la pièce redevient vide. Accroupi, la clé retire le matériau puis ramasse la pièce. On ne peut pas appliquer un autre bloc par-dessus : il faut d'abord retirer le premier. Casser la pièce rend aussi le matériau.</p>"
+    },
+    {
+      "id": "idees",
+      "title": "Idées de construction",
+      "html": "<p>Un escalier fait de marches décalées, un plancher surélevé de 3 pixels, des volets autour d'une fenêtre, un comptoir de bar fin, un toit en pente douce : les imitateurs remplacent souvent un bloc entier là où il ferait trop massif. Ils peuvent aussi contenir de l'eau. Comme un lingot de zinc en donne quatre, ils reviennent peu cher une fois le zinc lancé.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Un clic avec un coffre, un escalier ou une dalle ne fait rien : ces blocs sont refusés. Un clic avec un autre bloc sur une pièce déjà habillée ne change rien non plus : passe d'abord la clé. Et la clé ne tourne pas une pièce vide : pour changer l'orientation d'un panneau, casse-le et repose-le contre la bonne face.</p>"
+    }
+  ],
+  "related": [
+    "pierres-et-blocs-de-deco",
+    "portes-coulissantes",
+    "cle",
+    "minerai-de-zinc",
+    "materiaux"
+  ],
+  "sources": [
+    "Recettes : copycat_panel_from_ingots_zinc_stonecutting.json et copycat_step_from_ingots_zinc_stonecutting.json (1 lingot de zinc → 4)",
+    "Pose et matériau : CopycatBlock (useItemOn, setPlacedBy, getAcceptedBlockState, onWrenched), CopycatBlockEntity (cycleMaterial, setMaterial, updateLight), tags create:copycat_allow / copycat_deny",
+    "Formes : CopycatPanelBlock (3 px, barreaux et trappes : CopycatSpecialCases), CopycatStepBlock (HALF, FACING) ; base imitatrice et barreaux imitateurs : blocs techniques sans objet (AllBlocks)",
+    "Scène écrite pour ce wiki (Create n'a pas de scène Ponder sur ce sujet) : WIKI/c2c_scenes.py, rendue par notre moteur (pièces animées relues dans les BlockEntityRenderer de Create : WIKI/c2c_parts.py) ; découpe des matériaux d'après CopycatPanelModel / CopycatStepModel (cropAndMove)",
+    "Images : blocs et objets du jeu (modèles de Create) rendus par notre moteur, joueur non dessiné"
+  ],
+  "en": {
+    "slugEn": "copycat-blocks",
+    "name": "Copycat blocks",
+    "title": "Copycat Panel and Step — Create mod guide",
+    "description": "Create's Copycat Panel and Copycat Step: applying a block, what they accept, removing it with the Wrench, and building ideas for thin details.",
+    "intro": "<strong>Copycat blocks</strong> are thin pieces that take on the look of the block you give them. The <strong>Copycat Panel</strong> is 3 pixels thick, the <strong>Copycat Step</strong> a quarter of a block. You place them empty, then a right-click with a block dresses them: wooden panels, stone steps, window frames, everything the game's slabs and stairs cannot do.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Decoration"
+      },
+      {
+        "label": "Crafting",
+        "value": "1 Zinc Ingot in a stonecutter → 4 panels or 4 steps"
+      },
+      {
+        "label": "Panel",
+        "value": "3 pixels thick, against any face"
+      },
+      {
+        "label": "Step",
+        "value": "A quarter block (16 × 8 × 8), top or bottom"
+      },
+      {
+        "label": "Material",
+        "value": "A full block with no block entity; the panel also takes bars and trapdoors"
+      },
+      {
+        "label": "Removing",
+        "value": "Wrench: the material goes back to your inventory"
+      },
+      {
+        "label": "Light",
+        "value": "Copies the material’s light"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Stonecutter (1 ingot → 4)",
+      "grid": [
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          "Zinc Ingot",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "4 Copycat Panels (or 4 Copycat Steps)"
+    },
+    "videos": [
+      {
+        "id": "copycat_apply",
+        "name": "Copycat blocks: giving them a look",
+        "description": "Copycat Panels and Steps are placed empty, then a block is applied to each: oak, mossy stone bricks, dark oak, bricks, polished ochrum, glass and asurine."
+      }
+    ],
+    "sections": [
+      {
+        "id": "poser",
+        "title": "Placing them empty",
+        "alt": "Copycat Panels and Steps placed empty",
+        "html": "<p>A panel goes against any face, on the floor, the ceiling or a wall. A step fills the lower or upper half of a half block, depending on where you aim. Empty, they have a neutral look, a sort of light grid: that is the <strong>Copycat Base</strong>, a technical block used as the default look, which you cannot obtain. Right-click a panel while holding another panel: the next one goes beside it, facing the same way.</p>"
+      },
+      {
+        "id": "appliquer",
+        "title": "Applying a block",
+        "alt": "Oak, mossy stone bricks and dark oak on three floor panels",
+        "html": "<p>Right-click the piece with a block in hand: it takes on that look and one of the blocks is used up (nothing in creative). You can also hold the material in your off hand when you place the piece: it is applied by itself. Clicking again with the same block cycles its orientation, handy for logs and pillars. A neighbouring piece that already holds that block passes its orientation on.</p>"
+      },
+      {
+        "id": "marches",
+        "title": "Steps",
+        "alt": "Stone bricks, bricks and polished ochrum on three steps",
+        "html": "<p>The step is a quarter block: at the bottom it makes a thin riser; at the top it completes a staircase or a cornice. Dressed in bricks or cut stone it gives finer stairs than the game's, and every stone of <a href=\"/en/wiki/decorative-stones-and-blocks\">Create</a> works.</p>"
+      },
+      {
+        "id": "mur",
+        "title": "Wall and glass panels",
+        "alt": "A wall of spruce, glass and polished asurine panels",
+        "html": "<p>Standing up, panels become wainscoting, shutters or window frames. Glass works too: a glass panel makes a 3-pixel pane flush with the wall. The piece also copies the material's <strong>light</strong>, its sound, slipperiness, blast resistance and the tool needed to mine it.</p>"
+      },
+      {
+        "id": "accepte",
+        "title": "What is accepted",
+        "html": "<p>The material must be a full, solid block. Refused: blocks with a block entity (chests, furnaces, machines), stairs, non-cubic blocks, other copycats, and the game's deny list: cauldrons, saplings and climbable blocks. The barrel is always accepted. The panel also takes <strong>bars</strong> (the \"Copycat Bars\", a technical model then draws bars in the right place) and <strong>trapdoors</strong>, oriented by the face.</p>"
+      },
+      {
+        "id": "retirer",
+        "title": "Removing or changing the material",
+        "alt": "A thin oak staircase, a polished crimsite wall and glass panels",
+        "html": "<p>A click with the <a href=\"/en/wiki/wrench\">Wrench</a> removes the material, which goes back to your inventory: the piece is empty again. Sneaking, the Wrench removes the material and then picks up the piece. You cannot apply another block on top: remove the first one before. Breaking the piece also gives the material back.</p>"
+      },
+      {
+        "id": "idees",
+        "title": "Building ideas",
+        "html": "<p>A staircase of offset steps, a floor raised by 3 pixels, shutters around a window, a slim bar counter, a gently sloped roof: copycats often replace a whole block where it would look too bulky. They can also hold water. Since one Zinc Ingot gives four, they are cheap once your zinc supply is running.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>Clicking with a chest, stairs or a slab does nothing: those blocks are refused. Clicking another block on an already dressed piece changes nothing either: use the Wrench first. And the Wrench does not rotate an empty piece: to change a panel's orientation, break it and place it again against the right face.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: copycat_panel_from_ingots_zinc_stonecutting.json and copycat_step_from_ingots_zinc_stonecutting.json (1 Zinc Ingot → 4)",
+      "Placing and material: CopycatBlock (useItemOn, setPlacedBy, getAcceptedBlockState, onWrenched), CopycatBlockEntity (cycleMaterial, setMaterial, updateLight), tags create:copycat_allow / copycat_deny",
+      "Shapes: CopycatPanelBlock (3 px, bars and trapdoors: CopycatSpecialCases), CopycatStepBlock (HALF, FACING); Copycat Base and Copycat Bars: technical blocks with no item (AllBlocks)",
+      "Scene written for this wiki (Create has no Ponder scene on this topic): WIKI/c2c_scenes.py, rendered by our engine (moving parts read from Create's BlockEntityRenderers: WIKI/c2c_parts.py); materials cut as in CopycatPanelModel / CopycatStepModel (cropAndMove)",
+      "Images: the game's blocks and items (Create's models) rendered by our engine, player not drawn"
+    ]
+  }
+}

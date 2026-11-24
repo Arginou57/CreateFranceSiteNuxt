@@ -1,0 +1,314 @@
+{
+  "slug": "schematiques",
+  "name": "Schémas et schémacanon",
+  "blockId": "create:schematicannon",
+  "category": "outils",
+  "title": "Schémas et schémacanon — Create : guide",
+  "description": "Les schémas de Create : enregistrer un bâtiment avec le schéma et plume, l'envoyer à la table à schéma, puis le faire construire par le schémacanon.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Avec les <strong>schémas</strong>, Create copie des constructions entières. Le <strong>schéma et plume</strong> enregistre une zone dans un fichier ; la <strong>table à schéma</strong> écrit ce fichier sur un schéma vide ; le <strong>schémacanon</strong> le reconstruit bloc par bloc en tirant les matériaux d'un coffre. C'est l'outil pour bâtir une usine en série, partager un plan ou reconstruire une gare à l'identique.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Outils et équipement"
+    },
+    {
+      "label": "Schémacanon",
+      "value": "1 tir toutes les 10 ticks (2 blocs par seconde)"
+    },
+    {
+      "label": "Carburant",
+      "value": "1 poudre à canon pour 400 blocs"
+    },
+    {
+      "label": "Portée",
+      "value": "Schéma à moins de 256 blocs du canon"
+    },
+    {
+      "label": "Rotation",
+      "value": "Aucune : le schémacanon n’en a pas besoin"
+    },
+    {
+      "label": "Fichiers",
+      "value": "Dossier schematics/ du jeu, 256 Ko au plus par envoi sur un serveur"
+    },
+    {
+      "label": "Par joueur",
+      "value": "10 schémas envoyés, le plus ancien est remplacé"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Schémacanon à l'établi",
+    "grid": [
+      [
+        null,
+        "Bloc de fer",
+        null
+      ],
+      [
+        "Bûche",
+        "Bloc de fer",
+        "Bûche"
+      ],
+      [
+        "Pierre lisse",
+        "Distributeur",
+        "Pierre lisse"
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "minecraft:iron_block",
+        null
+      ],
+      [
+        "minecraft:oak_log",
+        "minecraft:iron_block",
+        "minecraft:oak_log"
+      ],
+      [
+        "minecraft:smooth_stone",
+        "minecraft:dispenser",
+        "minecraft:smooth_stone"
+      ]
+    ],
+    "result": "1 schémacanon",
+    "resultItem": "create:schematicannon"
+  },
+  "videos": [
+    {
+      "id": "schematicannon_build",
+      "name": "Schémacanon : construire une maison",
+      "description": "La table à schéma écrit un schéma sur un schéma vide. Le schéma va au schémacanon, la zone du bâtiment est encadrée, puis le canon tire les blocs un par un, couche après couche, jusqu'à la maison finie.",
+      "duration": "PT24S",
+      "chapters": [
+        {
+          "t": 3.64,
+          "section": "table"
+        },
+        {
+          "t": 6.99,
+          "section": "placer"
+        },
+        {
+          "t": 13.84,
+          "section": "canon"
+        },
+        {
+          "t": 20.84,
+          "section": "ordre"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "enregistrer",
+      "title": "Enregistrer avec le schéma et plume",
+      "image": "schematic_items_objets.webp",
+      "alt": "Schéma vide, schéma et plume, schéma",
+      "html": "<p>Le <strong>schéma vide</strong> se fait avec du papier et un colorant bleu clair ; ajoute une plume pour le <strong>schéma et plume</strong>. En main, un clic droit marque un premier coin, un second clic l'autre coin : une boîte apparaît. On vise jusqu'à 75 blocs ; avec Ctrl, on place un coin dans le vide, à une distance réglée à la molette. Ctrl et molette sur une face agrandit ou réduit la boîte. Un troisième clic demande un nom : le fichier <code>.nbt</code> part dans le dossier <code>schematics</code> du jeu, entités comprises.</p>"
+    },
+    {
+      "id": "table",
+      "title": "La table à schéma",
+      "image": "schematicannon_build_table.webp",
+      "alt": "La table à schéma écrit le schéma",
+      "video": "schematicannon_build",
+      "html": "<p>La table à schéma n'a besoin ni de rotation ni de redstone. On y pose un schéma vide, on choisit un fichier dans la liste, et la table l'envoie au serveur puis rend un <strong>schéma</strong> prêt à l'emploi. Sur un serveur, l'envoi est limité à <strong>256 Ko</strong> par fichier et à dix schémas par joueur ; les gros fichiers prennent un moment, environ 2 Ko par seconde. Le bouton « enregistrer et envoyer » du schéma et plume fait les deux d'un coup.</p>"
+    },
+    {
+      "id": "placer",
+      "title": "Placer le fantôme",
+      "image": "schematicannon_build_deployer.webp",
+      "alt": "Le schéma remis au schémacanon, la zone du bâtiment encadrée",
+      "html": "<p>Schéma en main, un clic droit pose une version fantôme du bâtiment. Alt gauche ouvre le menu des outils : déplacer à l'horizontale ou en hauteur, positionner, tourner, retourner. Ctrl et molette appliquent l'outil choisi, et Maj + clic droit ouvre un écran pour saisir les coordonnées exactes. En créatif, l'outil « Imprimer » pose tout d'un coup ; en survie, c'est le travail du schémacanon.</p>"
+    },
+    {
+      "id": "canon",
+      "title": "Le schémacanon",
+      "image": "schematicannon_build_tir.webp",
+      "alt": "Le schémacanon tire les blocs un par un",
+      "html": "<p>Le canon prend le schéma placé, la <strong>poudre à canon</strong> et les matériaux dans les inventaires collés à ses six faces. Il tire un bloc toutes les <strong>10 ticks</strong>, soit deux par seconde ; une poudre suffit pour 400 blocs. Le bâtiment doit être à moins de 256 blocs, et le canon ne pose rien à moins de deux blocs de lui. Une caisse créative collée fournit tout, sans poudre.</p>"
+    },
+    {
+      "id": "ordre",
+      "title": "Couche après couche",
+      "image": "schematicannon_build_fini.webp",
+      "alt": "La maison terminée, le canon au repos",
+      "html": "<p>Le canon avance comme une imprimante : d'ouest en est sur une ligne, puis ligne après ligne, puis couche après couche, de bas en haut. Les blocs fragiles (torches, portes, rails, plantes) sont gardés pour la fin, quand leur support existe. Il pose aussi les cadres et porte-armures avec leur contenu. À la fin, il rend un schéma vide, réutilisable.</p>"
+    },
+    {
+      "id": "options",
+      "title": "Les réglages du canon",
+      "html": "<p>Quatre modes de remplacement : ne pas toucher aux blocs solides, remplacer un solide par un solide, remplacer un solide par n'importe quoi (par défaut), ou remplacer par du vide, qui vide aussi la zone. « Ignorer les blocs manquants » passe au bloc suivant au lieu d'attendre ; « Protéger les blocs entités » laisse les coffres et machines en place. Attention : un bloc remplacé disparaît sans rien laisser.</p>"
+    },
+    {
+      "id": "liste",
+      "title": "La liste des matériaux",
+      "html": "<p>Un <a href=\"/wiki/filtres\">presse-papiers</a> ou un livre posé dans le canon en ressort avec la liste complète des blocs du schéma et leur quantité. Pratique pour remplir le coffre avant de lancer le chantier, ou pour savoir ce qui manque quand le canon se met en pause.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Astuces",
+      "html": "<p>Enregistre tes modules d'usine dès qu'ils marchent : une presse, un four à laver, une gare. Le canon les reconstruit ailleurs avec les machines déjà orientées. Garde un coffre-fort plein de pierre et de planches à côté du canon, et vérifie la liste des matériaux pour les blocs rares. Les outils à durabilité qu'un bloc exige perdent un point par pose.</p>"
+    },
+    {
+      "id": "terraformeur",
+      "title": "En créatif : le terraformeur portable",
+      "html": "<p>Pour les constructeurs en créatif, Create ajoute le <strong>terraformeur portable créatif</strong>, qui modèle le terrain jusqu'à 128 blocs de distance. On choisit une forme (cube, sphère, cylindre, surface, amas), un outil (remplir, placer, remplacer, effacer, recouvrir, aplanir) et un matériau, puis chaque clic l'applique là où l'on vise. Il ne se fabrique pas : c'est un outil de mode créatif.</p>"
+    }
+  ],
+  "related": [
+    "filtres",
+    "coffre-a-objet-renforce",
+    "baguette-de-symetrie",
+    "cle",
+    "materiaux"
+  ],
+  "sources": [
+    "Recettes : crafting/schematics/schematic_table.json, schematicannon.json, empty_schematic.json, schematic_and_quill.json",
+    "Config CSchematics : schematicannonDelay 10, schematicannonShotsPerGunpowder 400, maxSchematics 10, maxTotalSchematicSize 256, maxSchematicPacketSize 1024, schematicIdleTimeout 600",
+    "Canon : SchematicannonBlockEntity (inventaires voisins, caisse créative, MAX_ANCHOR_DISTANCE 256, 2 blocs, options, liste de matériaux), SchematicPrinter (ordre x, z, y ; blocs fragiles différés), LaunchedItem (vol)",
+    "Schéma et plume : SchematicAndQuillHandler (75 blocs, Ctrl, molette), SchematicExport ; outils : ToolType",
+    "Scène écrite pour ce wiki (Create n'a pas de scène Ponder sur ce sujet) : WIKI/c2c_scenes.py, rendue par notre moteur (pièces animées relues dans les BlockEntityRenderer de Create : WIKI/c2c_parts.py) ; canon orienté et blocs en vol d'après SchematicannonRenderer",
+    "Images : blocs et objets du jeu (modèles de Create) rendus par notre moteur, joueur non dessiné"
+  ],
+  "en": {
+    "slugEn": "schematics",
+    "name": "Schematics and Schematicannon",
+    "title": "Schematics and Schematicannon — Create guide",
+    "description": "Create schematics: saving a build with the Schematic and Quill, uploading it at the Schematic Table, then having the Schematicannon build it.",
+    "intro": "With <strong>schematics</strong>, Create copies entire builds. The <strong>Schematic and Quill</strong> saves an area to a file; the <strong>Schematic Table</strong> writes that file onto an Empty Schematic; the <strong>Schematicannon</strong> rebuilds it block by block, taking materials from a chest. It is the tool to mass-produce a factory, share a design or rebuild a station identically.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Tools and equipment"
+      },
+      {
+        "label": "Schematicannon",
+        "value": "1 shot every 10 ticks (2 blocks per second)"
+      },
+      {
+        "label": "Fuel",
+        "value": "1 Gunpowder for 400 blocks"
+      },
+      {
+        "label": "Range",
+        "value": "Schematic within 256 blocks of the cannon"
+      },
+      {
+        "label": "Rotation",
+        "value": "None: the Schematicannon does not need it"
+      },
+      {
+        "label": "Files",
+        "value": "The game’s schematics/ folder, at most 256 KB per upload on a server"
+      },
+      {
+        "label": "Per player",
+        "value": "10 uploaded schematics, the oldest is replaced"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Schematicannon, crafting table",
+      "grid": [
+        [
+          null,
+          "Block of Iron",
+          null
+        ],
+        [
+          "Log",
+          "Block of Iron",
+          "Log"
+        ],
+        [
+          "Smooth Stone",
+          "Dispenser",
+          "Smooth Stone"
+        ]
+      ],
+      "result": "1 Schematicannon"
+    },
+    "videos": [
+      {
+        "id": "schematicannon_build",
+        "name": "Schematicannon: building a house",
+        "description": "The Schematic Table writes a schematic onto an Empty Schematic. The schematic goes to the Schematicannon, the build area is outlined, then the cannon fires the blocks one by one, layer after layer, until the house is done."
+      }
+    ],
+    "sections": [
+      {
+        "id": "enregistrer",
+        "title": "Saving with the Schematic and Quill",
+        "alt": "Empty Schematic, Schematic and Quill, Schematic",
+        "html": "<p>The <strong>Empty Schematic</strong> is made from paper and light blue dye; add a feather for the <strong>Schematic and Quill</strong>. In hand, a right-click marks a first corner, a second click the other corner: a box appears. You can aim up to 75 blocks away; with Ctrl, you set a corner in mid-air, at a distance chosen with the scroll wheel. Ctrl and scroll on a face grows or shrinks the box. A third click asks for a name: the <code>.nbt</code> file goes to the game's <code>schematics</code> folder, entities included.</p>"
+      },
+      {
+        "id": "table",
+        "title": "The Schematic Table",
+        "alt": "The Schematic Table writes the schematic",
+        "html": "<p>The Schematic Table needs neither rotation nor redstone. Put an Empty Schematic in it, pick a file from the list, and the table uploads it to the server and returns a <strong>Schematic</strong> ready to use. On a server, uploads are limited to <strong>256 KB</strong> per file and ten schematics per player; big files take a while, about 2 KB per second. The Schematic and Quill's \"save and upload\" button does both at once.</p>"
+      },
+      {
+        "id": "placer",
+        "title": "Placing the ghost",
+        "alt": "The schematic handed to the Schematicannon, the build area outlined",
+        "html": "<p>Schematic in hand, a right-click places a ghost version of the build. Left Alt opens the tool menu: move horizontally or vertically, position, rotate, mirror. Ctrl and scroll apply the chosen tool, and Shift + right-click opens a screen to type exact coordinates. In creative, the \"Print\" tool places everything at once; in survival, that is the Schematicannon's job.</p>"
+      },
+      {
+        "id": "canon",
+        "title": "The Schematicannon",
+        "alt": "The Schematicannon fires the blocks one by one",
+        "html": "<p>The cannon takes the placed schematic, <strong>Gunpowder</strong> and the materials from the inventories touching its six faces. It fires one block every <strong>10 ticks</strong>, two per second; one Gunpowder lasts 400 blocks. The build must be within 256 blocks, and the cannon places nothing within two blocks of itself. A Creative Crate attached to it supplies everything, without gunpowder.</p>"
+      },
+      {
+        "id": "ordre",
+        "title": "Layer after layer",
+        "alt": "The finished house, the cannon at rest",
+        "html": "<p>The cannon moves like a printer: west to east along a row, then row after row, then layer after layer, bottom to top. Fragile blocks (torches, doors, rails, plants) are kept for the end, once their support exists. It also places item frames and armour stands with their contents. When done, it returns an Empty Schematic, ready to reuse.</p>"
+      },
+      {
+        "id": "options",
+        "title": "Cannon settings",
+        "html": "<p>Four replace modes: leave solid blocks alone, replace solid with solid, replace solid with anything (the default), or replace with empty, which also clears the area. \"Skip missing blocks\" moves on instead of waiting; \"Protect block entities\" leaves chests and machines in place. Careful: a replaced block vanishes without dropping anything.</p>"
+      },
+      {
+        "id": "liste",
+        "title": "The material list",
+        "html": "<p>A <a href=\"/en/wiki/filters\">Clipboard</a> or a book placed in the cannon comes out with the full list of blocks in the schematic and their amounts. Handy to fill the chest before starting, or to see what is missing when the cannon pauses.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<p>Save your factory modules as soon as they work: a press, a washing line, a station. The cannon rebuilds them elsewhere with the machines already facing the right way. Keep an Item Vault full of stone and planks next to the cannon, and check the material list for rare blocks. Tools with durability that a block requires lose one point per placement.</p>"
+      },
+      {
+        "id": "terraformeur",
+        "title": "In creative: the Worldshaper",
+        "html": "<p>For creative builders, Create adds the <strong>Creative Worldshaper</strong>, which shapes terrain up to 128 blocks away. You pick a shape (cuboid, sphere, cylinder, surface, cluster), a tool (fill, place, replace, clear, overlay, flatten) and a material, then each click applies it where you aim. It cannot be crafted: it is a creative-mode tool.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: crafting/schematics/schematic_table.json, schematicannon.json, empty_schematic.json, schematic_and_quill.json",
+      "CSchematics config: schematicannonDelay 10, schematicannonShotsPerGunpowder 400, maxSchematics 10, maxTotalSchematicSize 256, maxSchematicPacketSize 1024, schematicIdleTimeout 600",
+      "Cannon: SchematicannonBlockEntity (neighbouring inventories, Creative Crate, MAX_ANCHOR_DISTANCE 256, 2 blocks, options, material list), SchematicPrinter (x, z, y order; fragile blocks deferred), LaunchedItem",
+      "Schematic and Quill: SchematicAndQuillHandler (75 blocks, Ctrl, scroll), SchematicExport; tools: ToolType",
+      "Scene written for this wiki (Create has no Ponder scene on this topic): WIKI/c2c_scenes.py, rendered by our engine (moving parts read from Create's BlockEntityRenderers: WIKI/c2c_parts.py); cannon aim and flying blocks after SchematicannonRenderer",
+      "Images: the game's blocks and items (Create's models) rendered by our engine, player not drawn"
+    ]
+  }
+}

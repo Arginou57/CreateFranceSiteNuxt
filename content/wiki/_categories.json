@@ -136,10 +136,10 @@
     "mod": "aeronautics",
     "icon": "aeronautics:propeller_bearing",
     "name": "Create Aeronautics",
-    "description": "Dirigeables et engins volants : assembleur de physique, hélices, roulement gyroscopique, ballons à air chaud et lévitite (Create Aeronautics 1.3.3).",
+    "description": "Dirigeables, véhicules et engins volants : assembleur de physique, hélices, ballons, lévitite, moteurs, pilotage, cordes, capteurs, redstone et véhicules à roues (Create Aeronautics 1.3.3, avec Simulated et Offroad).",
     "en": {
       "name": "Create Aeronautics",
-      "description": "Airships and flying machines: Physics Assembler, propellers, gyroscopic bearing, hot air balloons and levitite (Create Aeronautics 1.3.3)."
+      "description": "Airships, vehicles and flying machines: Physics Assembler, propellers, balloons, levitite, engines, controls, ropes, sensors, redstone and wheeled vehicles (Create Aeronautics 1.3.3, with Simulated and Offroad)."
     }
   },
   {
@@ -173,6 +173,61 @@
     "en": {
       "name": "Create: Loconautics",
       "description": "Physics trains: Bearing Axle, Transmission, controller, turntable, hoses, panels (Create: Loconautics 0.1.3 BETA)."
+    }
+  },
+  {
+    "id": "propulsion",
+    "mod": "propulsion",
+    "icon": "createpropulsion:thruster",
+    "name": "Create Propulsion: Simulated",
+    "description": "Propulseurs à réaction, tuyères vectorielles, brûleurs, moteur Stirling, ailes, platine et énergie pour les engins de Sable (Create Propulsion 1.1.5).",
+    "en": {
+      "name": "Create Propulsion: Simulated",
+      "description": "Jet thrusters, vector nozzles, burners, Stirling Engine, wings, platinum and power for Sable machines (Create Propulsion 1.1.5)."
+    }
+  },
+  {
+    "id": "coasters",
+    "mod": "coasters",
+    "icon": "simulatedcoasters:coaster_cart",
+    "name": "Create: Coasters Simulated",
+    "description": "Montagnes russes physiques : rails courbes, chaînes de levage, wagons attelés, rivets et ballons (Coasters Simulated 0.1.6).",
+    "en": {
+      "name": "Create: Coasters Simulated",
+      "description": "Physics roller coasters: curved tracks, chain lifts, coupled carts, rivets and balloons (Coasters Simulated 0.1.6)."
+    }
+  },
+  {
+    "id": "connected",
+    "mod": "connected",
+    "icon": "create_connected:parallel_gearbox",
+    "name": "Create Connected",
+    "description": "Addon de Create : transmissions, embrayages, stockage d'énergie cinétique, redstone et logistique (Create Connected 1.3.3).",
+    "en": {
+      "name": "Create Connected",
+      "description": "Create addon: transmissions, clutches, kinetic energy storage, redstone and logistics (Create Connected 1.3.3)."
+    }
+  },
+  {
+    "id": "bitsnbobs",
+    "mod": "bitsnbobs",
+    "icon": "bits_n_bobs:large_flanged_cogwheel",
+    "name": "Create Bits 'n' Bobs",
+    "description": "Addon de Create : chaînes, Nixie, tuyaux teints, structures et déco (Bits 'n' Bobs 2.3.5).",
+    "en": {
+      "name": "Create Bits 'n' Bobs",
+      "description": "Create addon: chains, Nixie displays, dyed pipes, structures and decor (Bits 'n' Bobs 2.3.5)."
+    }
+  },
+  {
+    "id": "lightworks",
+    "mod": "lightworks",
+    "icon": "lightworks:searchlight",
+    "name": "Create: Lightworks",
+    "description": "Addon d'éclairage pour Create (prévu pour le prochain modpack Create France).",
+    "en": {
+      "name": "Create: Lightworks",
+      "description": "Lighting addon for Create (planned for the next Create France modpack)."
     }
   }
 ]

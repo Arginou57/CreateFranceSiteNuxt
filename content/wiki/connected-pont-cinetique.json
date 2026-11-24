@@ -1,0 +1,302 @@
+{
+  "slug": "connected-pont-cinetique",
+  "name": "Pont cinétique",
+  "blockId": "create_connected:kinetic_bridge",
+  "category": "connected",
+  "title": "Pont cinétique — Create Connected, guide",
+  "description": "Pont cinétique de Create Connected : faire passer une capacité de stress fixe d'un réseau de Create à un autre sans les relier, et isoler les surcharges.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Connected 1.3.3 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>pont cinétique</strong> (Kinetic Bridge) relie deux réseaux sans les fusionner. Côté entrée, il se comporte comme une machine qui consomme une quantité fixe de stress ; côté sortie, comme une source qui offre exactement cette quantité, à la même vitesse. Les deux réseaux restent séparés : une surcharge en aval ne remonte pas jusqu'à ta roue à eau.",
+  "facts": [
+    {
+      "label": "Taille",
+      "value": "2 blocs : entrée et sortie, posés ensemble"
+    },
+    {
+      "label": "Réglage",
+      "value": "impact par tr/min de 1 × à 65 536 ×, 16 × par défaut"
+    },
+    {
+      "label": "Vitesse transmise",
+      "value": "celle de l’entrée"
+    },
+    {
+      "label": "Capacité offerte",
+      "value": "égale au stress pris à l’entrée"
+    },
+    {
+      "label": "Mod id",
+      "value": "create_connected:kinetic_bridge"
+    },
+    {
+      "label": "Version",
+      "value": "Create Connected 1.3.3 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        null,
+        "Boitier de laiton",
+        null
+      ],
+      [
+        "Rotor",
+        "Embrayage",
+        "Rotor"
+      ],
+      [
+        null,
+        "Boitier de laiton",
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "create:brass_casing",
+        null
+      ],
+      [
+        "create:shaft",
+        "create:clutch",
+        "create:shaft"
+      ],
+      [
+        null,
+        "create:brass_casing",
+        null
+      ]
+    ],
+    "result": "1 pont cinétique",
+    "resultItem": "create_connected:kinetic_bridge"
+  },
+  "videos": [
+    {
+      "id": "conn_kinetic_bridge",
+      "name": "Le pont cinétique entre deux réseaux",
+      "description": "Une roue à eau et un contrôleur de vitesse alimentent des scies et un pont cinétique, qui fait tourner d'autres scies. On règle le pont, on surcharge un côté puis l'autre, et on finit par un embrayage de surcharge.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 2.0,
+          "section": "poser"
+        },
+        {
+          "t": 4.0,
+          "section": "reseaux"
+        },
+        {
+          "t": 5.6,
+          "section": "reglage"
+        },
+        {
+          "t": 7.7,
+          "section": "surcharge-aval"
+        },
+        {
+          "t": 11.0,
+          "section": "surcharge-source"
+        },
+        {
+          "t": 17.5,
+          "section": "embrayage"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "poser",
+      "title": "Poser le pont",
+      "image": "conn_kinetic_bridge_transfert.webp",
+      "alt": "Le pont cinétique entre le réseau de la roue à eau et un second réseau de scies",
+      "video": "conn_kinetic_bridge",
+      "html": "<p>Le pont occupe deux blocs : quand tu le poses, la partie sortie apparaît devant la partie entrée, et la case doit être libre. La rotation arrive par l'arrière, la sortie est à l'opposé. Dans la scène, une <a href=\"/wiki/roue-a-eau\">roue à eau</a> passe par un <a href=\"/wiki/controleur-de-vitesse-de-rotation\">contrôleur de vitesse de rotation</a>, alimente deux scies et le pont, qui fait tourner deux autres scies.</p>"
+    },
+    {
+      "id": "reseaux",
+      "title": "Deux réseaux, pas un",
+      "image": "conn_kinetic_bridge_reseaux-separes.webp",
+      "alt": "Le réseau source et le réseau de destination, chacun entouré de sa couleur",
+      "video": "conn_kinetic_bridge",
+      "html": "<p>Pour Create, ce sont deux réseaux distincts. En amont, le pont compte comme une machine ; en aval, il compte comme une source. Un <a href=\"/wiki/stressometre-compteur-de-vitesse\">stressomètre</a> de chaque côté le montre bien : la capacité offerte en aval est exactement l'impact pris en amont, et la vitesse est la même des deux côtés.</p>"
+    },
+    {
+      "id": "reglage",
+      "title": "Régler la capacité transférée",
+      "image": "conn_kinetic_bridge_reglage.webp",
+      "alt": "Le panneau de réglage du pont cinétique ouvert d’un clic droit",
+      "video": "conn_kinetic_bridge",
+      "html": "<p>Clic droit sur le panneau du pont pour choisir l'impact par tr/min, affiché sous la forme « 16x ». L'échelle est logarithmique : la valeur double tous les dix crans, de 1 × à 65 536 ×. À 16 × et 64 tr/min, le pont prend 1 024 su en amont et en offre 1 024 en aval. Règle-le juste au-dessus du besoin réel de l'aval, pas plus.</p>"
+    },
+    {
+      "id": "surcharge-aval",
+      "title": "Surcharge en aval",
+      "image": "conn_kinetic_bridge_surcharge-aval.webp",
+      "alt": "Une scie de trop sur le réseau de destination : seul ce réseau s’arrête",
+      "video": "conn_kinetic_bridge",
+      "html": "<p>Ajoute une scie de trop sur le réseau de sortie : il passe en surcharge et s'arrête, avec sa fumée. Le réseau d'entrée, lui, continue comme si de rien n'était, car le pont lui demande toujours la même quantité. C'est tout l'intérêt : une erreur dans un atelier n'arrête plus la ligne principale.</p>"
+    },
+    {
+      "id": "surcharge-source",
+      "title": "Surcharge en amont",
+      "image": "conn_kinetic_bridge_surcharge-source.webp",
+      "alt": "Une scie de trop sur le réseau source : la source et le pont s’arrêtent",
+      "video": "conn_kinetic_bridge",
+      "html": "<p>L'inverse ne marche pas. Si le réseau d'entrée dépasse sa capacité, il s'arrête, et le pont avec lui : plus rien ne passe en aval. Dans la scène, la source a 256 su, les deux scies prennent 72 su chacune et le pont en réclame 144, soit 288 su : c'est trop. Le pont garde sa demande même quand il ne transmet plus.</p>"
+    },
+    {
+      "id": "embrayage",
+      "title": "Un embrayage de surcharge devant",
+      "image": "conn_kinetic_bridge_embrayage-surcharge.webp",
+      "alt": "Un embrayage de surcharge entre le réseau source et le pont",
+      "video": "conn_kinetic_bridge",
+      "html": "<p>La parade : un <a href=\"/wiki/connected-embrayages\">embrayage de surcharge</a> entre la source et le pont. Quand la source sature, l'embrayage décroche, le pont ne compte plus (0 su) et les scies d'amont repartent avec 144 su sur 256. Une fois le problème réglé, réarme l'embrayage à la clé ou par une impulsion de redstone.</p>"
+    },
+    {
+      "id": "usages",
+      "title": "Quand s’en servir",
+      "html": "<p>Le pont sert à partager une grosse source entre plusieurs ateliers indépendants, chacun avec son quota, ou à protéger une ligne principale des expériences. Il ne change pas la vitesse et ne crée aucune énergie : ce qu'il offre en aval, il le prend en amont. Pour garder la rotation en réserve, regarde plutôt la <a href=\"/wiki/connected-batterie-cinetique\">batterie cinétique</a>.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Les erreurs fréquentes",
+      "html": "<p>Premier piège : poser le pont à l'envers. L'arbre d'entrée doit toucher le réseau qui fournit l'énergie, sinon rien ne passe. Deuxième piège : un réglage trop haut. Le pont réserve toute sa demande en amont, même si l'aval n'en utilise qu'une partie, et peut ainsi faire tomber la source en surcharge. Enfin, deux ponts branchés sur le même réseau additionnent leurs demandes : vérifie chaque étage avec un stressomètre avant d'agrandir l'usine.</p>"
+    }
+  ],
+  "related": [
+    "create-connected",
+    "connected-embrayages",
+    "connected-batterie-cinetique",
+    "stressometre-compteur-de-vitesse",
+    "controleur-de-vitesse-de-rotation",
+    "roue-a-eau",
+    "scie-mecanique"
+  ],
+  "sources": [
+    "Create Connected 1.3.3 (create_connected-1.3.3-mc1.21.1.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/hlysine/create_connected au tag 1.3.3-mc1.21.1, recettes du dossier data du jar, scènes Ponder rejouées par notre moteur.",
+    "Mod de Lysine (hlysine), sous licence GNU AGPL v3 : modèles et textures de ses auteurs, rendus à partir du jar ; aucun texte du mod n'est recopié.",
+    "Pont cinétique : content/kineticbridge/KineticBridgeBlockEntity.java (valeur 40 par défaut), StressImpactScrollValueBehaviour.java (2^(valeur/10), panneau limité à 160 crans), KineticBridgeDestinationBlockEntity.java (vitesse et capacité recopiées de l'entrée), KineticBridgeBlock.java (partie sortie posée devant).",
+    "Recette : data/create_connected/recipe/crafting/kinetics/kinetic_bridge.json ; scène : ponder/KineticBridgeScene.java (valeurs de 256, 72 et 144 su)."
+  ],
+  "en": {
+    "slugEn": "connected-kinetic-bridge",
+    "name": "Kinetic Bridge",
+    "title": "Kinetic Bridge — Create Connected guide",
+    "description": "Create Connected Kinetic Bridge: move a fixed share of stress capacity between two Create networks without joining them, and keep overstress contained.",
+    "intro": "The <strong>Kinetic Bridge</strong> links two networks without merging them. On the input side it behaves like a machine with a fixed stress cost; on the output side, like a source that provides exactly that much, at the same speed. The two networks stay separate: an overload downstream does not travel back to your water wheel.",
+    "facts": [
+      {
+        "label": "Size",
+        "value": "2 blocks: input and output, placed together"
+      },
+      {
+        "label": "Setting",
+        "value": "impact per RPM from 1× to 65,536×, 16× by default"
+      },
+      {
+        "label": "Speed passed on",
+        "value": "same as the input"
+      },
+      {
+        "label": "Capacity provided",
+        "value": "equal to the stress taken at the input"
+      },
+      {
+        "label": "Mod id",
+        "value": "create_connected:kinetic_bridge"
+      },
+      {
+        "label": "Version",
+        "value": "Create Connected 1.3.3 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          null,
+          "Brass Casing",
+          null
+        ],
+        [
+          "Shaft",
+          "Clutch",
+          "Shaft"
+        ],
+        [
+          null,
+          "Brass Casing",
+          null
+        ]
+      ],
+      "result": "1 Kinetic Bridge"
+    },
+    "videos": [
+      {
+        "id": "conn_kinetic_bridge",
+        "name": "The Kinetic Bridge between two networks",
+        "description": "A water wheel and a speed controller drive saws and a Kinetic Bridge, which runs more saws. The bridge is adjusted, one side then the other is overloaded, and an Overstress Clutch closes the scene."
+      }
+    ],
+    "sections": [
+      {
+        "id": "poser",
+        "title": "Placing the bridge",
+        "alt": "The Kinetic Bridge between the water wheel network and a second network of saws",
+        "html": "<p>The bridge takes two blocks: when you place it, the output part appears in front of the input part, and that space must be free. Rotation comes in at the back and leaves on the far side. In the scene, a <a href=\"/en/wiki/water-wheel\">Water Wheel</a> goes through a <a href=\"/en/wiki/rotation-speed-controller\">Rotation Speed Controller</a>, drives two saws and the bridge, and the bridge runs two more saws.</p>"
+      },
+      {
+        "id": "reseaux",
+        "title": "Two networks, not one",
+        "alt": "The source and destination networks, each outlined in its colour",
+        "html": "<p>As far as Create is concerned, these are two different networks. Upstream, the bridge counts as a machine; downstream, as a source. A <a href=\"/en/wiki/stressometer-speedometer\">Stressometer</a> on each side makes it clear: the capacity offered downstream is exactly the impact taken upstream, and the speed matches on both sides.</p>"
+      },
+      {
+        "id": "reglage",
+        "title": "Setting the transferred capacity",
+        "alt": "The Kinetic Bridge's value panel opened with a right-click",
+        "html": "<p>Right-click the bridge's panel to pick the impact per RPM, shown as \"16x\". The scale is logarithmic: the value doubles every ten notches, from 1× to 65,536×. At 16× and 64 RPM the bridge takes 1,024 SU upstream and offers 1,024 downstream. Set it just above what the downstream side really needs, no more.</p>"
+      },
+      {
+        "id": "surcharge-aval",
+        "title": "Overload downstream",
+        "alt": "One saw too many on the destination network: only that network stops",
+        "html": "<p>Add one saw too many on the output network: it overstresses and stops, smoking. The input network keeps going as if nothing happened, because the bridge still asks it for the same amount. That is the whole point: a mistake in one workshop no longer halts the main line.</p>"
+      },
+      {
+        "id": "surcharge-source",
+        "title": "Overload upstream",
+        "alt": "One saw too many on the source network: the source and the bridge stop",
+        "html": "<p>The reverse does not work. If the input network goes over its capacity, it stops, and the bridge with it: nothing reaches the downstream side. In the scene the source has 256 SU, the two saws take 72 SU each and the bridge asks for 144, so 288 SU in total: too much. The bridge keeps its demand even when it no longer passes anything on.</p>"
+      },
+      {
+        "id": "embrayage",
+        "title": "Guarding the source with a clutch",
+        "alt": "An Overstress Clutch between the source network and the bridge",
+        "html": "<p>The fix: an <a href=\"/en/wiki/connected-clutches-and-brakes\">Overstress Clutch</a> between the source and the bridge. When the source saturates, the clutch lets go, the bridge drops to 0 SU and the upstream saws start again with 144 SU out of 256. Once the problem is solved, reset the clutch with the Wrench or a redstone pulse.</p>"
+      },
+      {
+        "id": "usages",
+        "title": "When to use it",
+        "html": "<p>The bridge is for sharing a big source between several independent workshops, each with its own quota, or for shielding a main line from experiments. It does not change the speed and creates no energy: whatever it offers downstream, it takes upstream. To keep rotation in reserve, look at the <a href=\"/en/wiki/connected-kinetic-battery\">Kinetic Battery</a> instead.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>First trap: placing the bridge backwards. The input shaft must touch the network that supplies the power, otherwise nothing gets through. Second trap: a setting that is too high. The bridge reserves its whole demand upstream even when the downstream side only uses part of it, which can push the source into overstress. Finally, two bridges fed by the same network add up their demands: check every stage with a Stressometer before you grow the factory.</p>"
+      }
+    ],
+    "sources": [
+      "Create Connected 1.3.3 (create_connected-1.3.3-mc1.21.1.jar from the next Create France modpack release): code from the public repository github.com/hlysine/create_connected at tag 1.3.3-mc1.21.1, recipes from the jar's data folder, Ponder scenes replayed by our engine.",
+      "Mod by Lysine (hlysine), GNU AGPL v3 licence: models and textures by its authors, rendered from the jar; no text from the mod is copied.",
+      "Kinetic Bridge: content/kineticbridge/KineticBridgeBlockEntity.java (default value 40), StressImpactScrollValueBehaviour.java (2^(value/10), panel capped at 160 notches), KineticBridgeDestinationBlockEntity.java (speed and capacity copied from the input), KineticBridgeBlock.java (output part placed in front).",
+      "Recipe: data/create_connected/recipe/crafting/kinetics/kinetic_bridge.json; scene: ponder/KineticBridgeScene.java (values of 256, 72 and 144 SU)."
+    ]
+  }
+}

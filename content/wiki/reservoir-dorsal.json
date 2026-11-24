@@ -6,7 +6,7 @@
   "title": "Réservoir dorsal et plongée — Create : guide",
   "description": "Le réservoir dorsal de Create : le remplir avec un moteur, sa capacité d'air, le casque et les bottes de plongée en cuivre ou en Netherite.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "Le <strong>réservoir dorsal</strong> est une bouteille d'air comprimé qu'on porte sur le dos. Posé au sol et entraîné par un rotor, il se <strong>remplit</strong> ; porté en plastron, il nourrit le <strong>casque de plongée</strong>, la <a href=\"/wiki/main-extensible\">main extensible</a> et le <a href=\"/wiki/canon-a-pomme-de-terre\">canon à pomme de terre</a>. En Netherite, avec le casque et les bottes assortis, il permet même de marcher dans la lave.",
@@ -98,7 +98,7 @@
       "image": "backtank_fill_pose.webp",
       "alt": "Deux réservoirs dorsaux posés sur la plaque",
       "video": "backtank_fill",
-      "html": "<p>Avec le réservoir en main, fais un clic droit sur un bloc : il se pose. Son arbre d'entrée est <strong>sur le dessus</strong> : c'est là qu'il faut amener la rotation, par un <a href=\"/wiki/rotor\">rotor</a>, une roue dentée ou un moteur posé dessus. Pour le reprendre, clic droit sans t'accroupir, l'emplacement de plastron libre : il revient directement sur ton dos.</p>"
+      "html": "<p>Avec le réservoir en main, vise un bloc et fais un clic droit : il se pose. Son arbre d'entrée est <strong>sur le dessus</strong> : c'est là qu'il faut amener la rotation, par un <a href=\"/wiki/rotor\">rotor</a>, une roue dentée ou un moteur posé dessus. Pour le reprendre, clic droit sans t'accroupir, l'emplacement de plastron libre : il revient directement sur ton dos.</p>"
     },
     {
       "id": "remplir",
@@ -119,7 +119,7 @@
       "title": "Casque et bottes de plongée",
       "image": "diving_hero_equipement.webp",
       "alt": "Casques et bottes de plongée en cuivre et en Netherite",
-      "html": "<p>Le <strong>casque de plongée</strong> se fabrique avec cinq lingots de cuivre et un bloc de verre, les <strong>bottes de plongée</strong> avec quatre lingots de cuivre et deux alliages d'andésite. Avec un réservoir plein sur le dos, le casque te laisse respirer sous l'eau en puisant <strong>1 unité d'air par seconde</strong>, et la vue sous l'eau porte six fois plus loin. Les bottes te gardent au fond : tu marches sur le sable au lieu de nager, et un saut depuis le fond donne un bon élan.</p>"
+      "html": "<p>Le <strong>casque de plongée en cuivre</strong> se fabrique avec cinq lingots de cuivre et un bloc de verre, les <strong>bottes de plongée en cuivre</strong> avec quatre lingots de cuivre et deux alliages d'andésite. Avec un réservoir plein sur le dos, le casque te laisse respirer sous l'eau en puisant <strong>1 unité d'air par seconde</strong>, et la vue sous l'eau porte six fois plus loin. Les bottes te gardent au fond : tu marches sur le sable au lieu de nager, et un saut depuis le fond donne un bon élan.</p>"
     },
     {
       "id": "cuivre-netherite",
@@ -127,6 +127,11 @@
       "image": "diving_hero_cuivre-netherite.webp",
       "alt": "Les deux ensembles de plongée côte à côte",
       "html": "<p>Les versions en Netherite s'obtiennent à la table de forgeron, avec un modèle d'amélioration en Netherite et un lingot. Elles ne brûlent pas et protègent comme une armure en Netherite. Avec le <strong>casque, le réservoir et les bottes en Netherite</strong> et des jambières résistantes au feu, tu deviens insensible au feu et à la lave, le casque te laisse voir à 20 blocs dans la lave et les bottes y accélèrent la marche.</p>"
+    },
+    {
+      "id": "placable",
+      "title": "Les noms techniques",
+      "html": "<p>Dans les commandes et certains menus, on croise les noms « Réservoir dorsal en cuivre plaçable » et « Réservoir dorsal en Netherite plaçable » : ce sont des objets internes qui permettent de poser le réservoir comme un bloc. Le joueur n'en a jamais besoin. Les <strong>bottes de plongée en Netherite</strong> et le casque assorti sont les versions améliorées à la table de forgeron.</p>"
     },
     {
       "id": "consommation",
@@ -260,13 +265,18 @@
         "id": "equipement",
         "title": "Diving Helmet and Boots",
         "alt": "Copper and Netherite Diving Helmets and Boots",
-        "html": "<p>The <strong>Diving Helmet</strong> takes five copper ingots and a glass block, the <strong>Diving Boots</strong> four copper ingots and two andesite alloys. With a full tank on your back, the helmet lets you breathe underwater by drawing <strong>1 air per second</strong>, and underwater view reaches six times further. The boots keep you on the bottom: you walk on the sand instead of swimming, and a jump from the floor gives a good boost.</p>"
+        "html": "<p>The <strong>Copper Diving Helmet</strong> takes five copper ingots and a glass block, the <strong>Copper Diving Boots</strong> four copper ingots and two andesite alloys. With a full tank on your back, the helmet lets you breathe underwater by drawing <strong>1 air per second</strong>, and underwater view reaches six times further. The boots keep you on the bottom: you walk on the sand instead of swimming, and a jump from the floor gives a good boost.</p>"
       },
       {
         "id": "cuivre-netherite",
         "title": "Copper or Netherite",
         "alt": "The two diving sets side by side",
         "html": "<p>The Netherite versions come from the smithing table, with a Netherite upgrade template and an ingot. They do not burn and protect like Netherite armour. With the <strong>Netherite helmet, tank and boots</strong> plus fire-resistant leggings, you become immune to fire and lava, the helmet lets you see 20 blocks through lava and the boots speed up your walk in it.</p>"
+      },
+      {
+        "id": "placable",
+        "title": "Technical names",
+        "html": "<p>In commands and some menus you may come across a \"Copper Backtank Placeable\" and a \"Netherite Backtank Placeable\": these are internal items that let the tank be placed as a block. Players never need them. The <strong>Netherite Diving Boots</strong> and the matching helmet are the versions upgraded at the smithing table.</p>"
       },
       {
         "id": "consommation",

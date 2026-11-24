@@ -6,7 +6,7 @@
   "title": "Poulie à corde — Create : guide en français",
   "description": "La poulie à corde de Create : lever et descendre une structure, vitesse, longueur de corde, modes d'arrêt, poulies synchronisées et poulies embarquées.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "La <strong>poulie à corde</strong> déplace une structure à la verticale : elle déroule une corde terminée par un aimant, attrape ce qui se trouve dessous et le monte ou le descend. Monte-charge, plateforme, pont-levis, trappe géante : c'est le piston vertical de Create, sans barres à poser.",
@@ -139,6 +139,11 @@
       "alt": "La structure posée redevient des blocs",
       "video": "pulley_modes",
       "html": "<p>Quand la poulie s'arrête, la structure redevient de vrais blocs, et la corde reste en place. Si la structure bute sur un bloc solide en chemin, la poulie s'arrête juste avant.</p>"
+    },
+    {
+      "id": "aimant",
+      "title": "L’aimant de poulie",
+      "html": "<p>Quand la poulie s'arrête avec la corde déroulée, un <strong>aimant de poulie</strong> reste au bout, sous la dernière corde. On peut s'y accrocher comme à une échelle. Il ne s'obtient pas : casser l'aimant ou un bout de corde casse toute la chaîne, et la poulie le reprend en remontant.</p>"
     },
     {
       "id": "modes",
@@ -326,6 +331,11 @@
         "title": "Back to plain blocks when stopped",
         "alt": "The structure turns back into blocks",
         "html": "<p>When the pulley stops, the structure turns back into real blocks, and the rope stays in place. If the structure runs into a solid block on the way, the pulley stops just short of it.</p>"
+      },
+      {
+        "id": "aimant",
+        "title": "The Pulley Magnet",
+        "html": "<p>When the pulley stops with its rope let out, a <strong>Pulley Magnet</strong> stays at the end, below the last rope. You can climb it like a ladder. It cannot be obtained: breaking the magnet or a piece of rope breaks the whole chain, and the pulley takes it back when it reels in.</p>"
       },
       {
         "id": "modes",

@@ -1,0 +1,265 @@
+{
+  "slug": "materiaux",
+  "name": "Matériaux de Create",
+  "blockId": "create:brass_ingot",
+  "category": "traitement",
+  "title": "Lingots, blocs et matériaux — Create : guide",
+  "description": "Les matériaux de Create : alliage d'andésite, zinc, laiton, quartz rose, expérience, plaque renforcée, leurs blocs et les objets d'autrefois.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Toute la progression de Create repose sur quelques <strong>matériaux</strong> : l'<strong>alliage d'andésite</strong> des premières machines, le <strong>zinc</strong>, le <strong>laiton</strong> des machines avancées, le <strong>quartz rose</strong> de l'électronique. Chacun a sa pépite, son lingot et son bloc de stockage. Cette page rassemble leurs recettes, plus la <strong>plaque renforcée</strong>, l'expérience en pépites et quelques objets qui ne s'obtiennent plus.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Traitement"
+    },
+    {
+      "label": "Alliage d’andésite",
+      "value": "2 andésites + 2 pépites de fer (ou de zinc)"
+    },
+    {
+      "label": "Laiton",
+      "value": "Mixeur chauffé : 1 cuivre + 1 zinc → 2 lingots"
+    },
+    {
+      "label": "Quartz rose",
+      "value": "1 quartz du Nether + 8 poudres de redstone"
+    },
+    {
+      "label": "Pépite d’expérience",
+      "value": "3 points d’expérience, par broyage seulement"
+    },
+    {
+      "label": "Bases de balise",
+      "value": "Blocs de zinc, de laiton et d’expérience"
+    },
+    {
+      "label": "Paiement de balise",
+      "value": "Alliage d’andésite, lingot de zinc, lingot de laiton"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Alliage d'andésite à l'établi",
+    "grid": [
+      [
+        "Andésite",
+        "Pépite de fer",
+        null
+      ],
+      [
+        "Pépite de fer",
+        "Andésite",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "items": [
+      [
+        "minecraft:andesite",
+        "minecraft:iron_nugget",
+        null
+      ],
+      [
+        "minecraft:iron_nugget",
+        "minecraft:andesite",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 alliage d'andésite",
+    "resultItem": "create:andesite_alloy"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "andesite",
+      "title": "L'alliage d'andésite",
+      "image": "materials_blocks_blocs.webp",
+      "alt": "Blocs d'alliage d'andésite, de zinc, de laiton, de quartz rose et d'expérience ; tuiles de quartz rose et boîtiers d'autrefois",
+      "html": "<p>Deux andésites et deux pépites de fer en diagonale donnent <strong>un alliage d'andésite</strong>, la base des rotors, roues dentées et boîtiers. Des pépites de zinc marchent aussi. Au <a href=\"/wiki/mixeur-mecanique\">mixeur</a>, sans chaleur, une andésite et une pépite suffisent : deux fois moins de matière. Neuf alliages font un <strong>bloc d'alliage d'andésite</strong>, aussi facile à miner que l'andésite.</p>"
+    },
+    {
+      "id": "zinc-laiton",
+      "title": "Zinc et laiton",
+      "image": "materials_items_objets.webp",
+      "alt": "Alliage, lingots et pépite ; obsidienne, poudre, plaque non traitée et plaque renforcée ; objets d'autrefois et pépite d'expérience",
+      "html": "<p>Le <a href=\"/wiki/minerai-de-zinc\">zinc</a> se fond ou se lave en pépites. Le <strong>laiton</strong> se fait au mixeur sur un <a href=\"/wiki/bruleur-a-blaze\">brûleur à blaze</a> allumé : un lingot de cuivre et un lingot de zinc donnent deux lingots de laiton. Pour les deux métaux, neuf pépites font un lingot (la pépite de laiton se recycle ainsi) et neuf lingots un bloc, et l'inverse. Les <strong>blocs de zinc et de laiton</strong> demandent une pioche en fer et servent de base à une balise.</p>"
+    },
+    {
+      "id": "plaques",
+      "title": "Les plaques",
+      "html": "<p>Sous la <a href=\"/wiki/presse-mecanique\">presse mécanique</a>, un lingot de fer, d'or, de cuivre ou de laiton devient une <strong>plaque</strong> : plaque de fer, plaque d'or, plaque de cuivre, plaque de laiton. Une plaque par lingot, sans perte. Elles entrent dans les recettes des machines : la plaque d'or dans le sifflet à vapeur et la clochette, la plaque de laiton dans la cloche particulière, la plaque de fer dans les poutres.</p>"
+    },
+    {
+      "id": "quartz",
+      "title": "Le quartz rose",
+      "html": "<p>Un quartz du Nether entouré de huit poudres de redstone donne un <strong>quartz rose</strong>. Poli au <a href=\"/wiki/papier-de-verre\">papier de verre</a>, il devient du quartz rose poli, pour les tubes électroniques. Au tailleur de pierre, un quartz rose donne deux <strong>blocs de quartz rose</strong> (le bloc de quartz rose se pose comme un pilier), et un quartz rose poli deux <strong>tuiles</strong> ou deux <strong>petites tuiles de quartz rose</strong>, convertibles l'une en l'autre à l'établi. Ces blocs ne se défont pas.</p>"
+    },
+    {
+      "id": "experience",
+      "title": "L'expérience en pépites",
+      "html": "<p>Broyer un minerai donne souvent une <strong>pépite d'expérience</strong>, la seule façon d'en obtenir. Un clic droit avec la pile la consomme entièrement et rend <strong>3 points</strong> par pépite ; accroupi, une seule pépite. Neuf pépites font un <strong>bloc d'expérience</strong>, qui brille d'une lumière de 15 et lâche des étincelles : une réserve d'expérience décorative.</p>"
+    },
+    {
+      "id": "plaque",
+      "title": "La plaque renforcée",
+      "html": "<p>Les roues de concassage changent l'obsidienne en <strong>poudre d'obsidienne</strong>, et rendent souvent l'obsidienne. En assemblage séquencé, la poudre reçoit 500 mB de lave au <a href=\"/wiki/bec-verseur\">bec verseur</a>, puis deux coups de <a href=\"/wiki/presse-mecanique\">presse</a> : la <strong>plaque d'obsidienne non traitée</strong> devient une <strong>plaque renforcée</strong>. Une plaque et un papier font quatre <a href=\"/wiki/planning-de-train\">plannings de train</a>, et elle sert aussi au boîtier de train.</p>"
+    },
+    {
+      "id": "balise",
+      "title": "Balises",
+      "html": "<p>Les blocs de <strong>zinc</strong>, de <strong>laiton</strong> et d'<strong>expérience</strong> comptent comme blocs de base d'une balise ; l'alliage d'andésite et le quartz rose non. Pour activer un pouvoir, la balise accepte aussi un alliage d'andésite, un lingot de zinc ou un lingot de laiton, comme un lingot de fer.</p>"
+    },
+    {
+      "id": "ancien",
+      "title": "Les objets d'autrefois",
+      "html": "<p>Le <strong>composé chromatique</strong>, la <strong>radiance raffinée</strong>, l'<strong>acier sombre</strong> et leurs boîtiers (en radiance raffinée, en acier sombre) viennent d'anciennes versions. Ils n'ont plus de recette ni de place dans l'inventaire créatif : on ne les a que par commande ou dans un vieux monde. Un composé chromatique lâché au-dessus d'une balise active, ou au milieu de dix sources de lumière, devient de la radiance ; lâché dans le vide sous le monde, de l'acier sombre. Les deux boîtiers sont de simples blocs de décor, celui en radiance éclaire à 12.</p>"
+    }
+  ],
+  "related": [
+    "minerai-de-zinc",
+    "mixeur-mecanique",
+    "papier-de-verre",
+    "roues-de-concassage",
+    "presse-mecanique",
+    "bec-verseur",
+    "bruleur-a-blaze"
+  ],
+  "sources": [
+    "Alliage : crafting/materials/andesite_alloy.json, andesite_alloy_from_zinc.json, mixing/andesite_alloy*.json ; blocs : crafting/materials/*_block*.json",
+    "Laiton : mixing/brass_ingot.json (chauffé) ; quartz rose : crafting/materials/rose_quartz.json, sandpaper_polishing/rose_quartz.json, *_from_*rose_quartz_stonecutting.json, *_tiles_from_conversion.json",
+    "Expérience : ExperienceNuggetItem (3 points), ExperienceBlock (lumière 15) ; balises : tags minecraft:beacon_base_blocks et beacon_payment_items (#create:create_ingots)",
+    "Plaque renforcée : crushing/obsidian.json, sequenced_assembly/sturdy_sheet.json (500 mB de lave, deux pressages, 1 boucle), crafting/kinetics/schedule.json, item_application/railway_casing.json",
+    "Objets d'autrefois : ChromaticCompoundItem (balise, 10 sources de lumière, vide), CRecipes, AllCreativeModeTabs, AllBlocks (boîtier en radiance : lumière 12)",
+    "Images : blocs et objets du jeu (modèles de Create) rendus par notre moteur, joueur non dessiné"
+  ],
+  "en": {
+    "slugEn": "create-materials",
+    "name": "Create materials",
+    "title": "Ingots, blocks and materials — Create mod guide",
+    "description": "Create's materials: Andesite Alloy, zinc, brass, rose quartz, experience, Sturdy Sheet, their storage blocks and the legacy items you can no longer craft.",
+    "intro": "All of Create's progression rests on a few <strong>materials</strong>: the <strong>Andesite Alloy</strong> of early machines, <strong>zinc</strong>, the <strong>brass</strong> of advanced machines, the <strong>rose quartz</strong> of electronics. Each has its nugget, ingot and storage block. This page gathers their recipes, plus the <strong>Sturdy Sheet</strong>, experience in nugget form and a few items that can no longer be obtained.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Processing"
+      },
+      {
+        "label": "Andesite Alloy",
+        "value": "2 andesite + 2 iron (or zinc) nuggets"
+      },
+      {
+        "label": "Brass",
+        "value": "Heated mixer: 1 copper + 1 zinc → 2 ingots"
+      },
+      {
+        "label": "Rose Quartz",
+        "value": "1 Nether Quartz + 8 Redstone Dust"
+      },
+      {
+        "label": "Nugget of Experience",
+        "value": "3 experience points, from crushing only"
+      },
+      {
+        "label": "Beacon base",
+        "value": "Blocks of Zinc, Brass and Experience"
+      },
+      {
+        "label": "Beacon payment",
+        "value": "Andesite Alloy, Zinc Ingot, Brass Ingot"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Andesite Alloy, crafting table",
+      "grid": [
+        [
+          "Andesite",
+          "Iron Nugget",
+          null
+        ],
+        [
+          "Iron Nugget",
+          "Andesite",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Andesite Alloy"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "andesite",
+        "title": "Andesite Alloy",
+        "alt": "Blocks of Andesite Alloy, Zinc, Brass, Rose Quartz and Experience; rose quartz tiles and legacy casings",
+        "html": "<p>Two andesite and two Iron Nuggets set diagonally give <strong>one Andesite Alloy</strong>, the base of shafts, cogwheels and casings. Zinc Nuggets work too. In a <a href=\"/en/wiki/mechanical-mixer\">Mechanical Mixer</a>, unheated, one andesite and one nugget are enough: half the material. Nine alloys make a <strong>Block of Andesite Alloy</strong>, as easy to mine as andesite.</p>"
+      },
+      {
+        "id": "zinc-laiton",
+        "title": "Zinc and brass",
+        "alt": "Alloy, ingots and nugget; obsidian, powder, unprocessed sheet and Sturdy Sheet; legacy items and experience nugget",
+        "html": "<p><a href=\"/en/wiki/zinc-ore\">Zinc</a> is smelted or washed into nuggets. <strong>Brass</strong> is made in a mixer over a lit <a href=\"/en/wiki/blaze-burner\">Blaze Burner</a>: one Copper Ingot and one Zinc Ingot give two Brass Ingots. For both metals, nine nuggets make an ingot (that is how a Brass Nugget gets used) and nine ingots a block, and back. <strong>Blocks of Zinc and Brass</strong> need an iron pickaxe and work as beacon bases.</p>"
+      },
+      {
+        "id": "plaques",
+        "title": "Sheets",
+        "html": "<p>Under a <a href=\"/en/wiki/mechanical-press\">Mechanical Press</a>, an iron, gold, copper or brass ingot becomes a <strong>sheet</strong>: Iron Sheet, Golden Sheet, Copper Sheet, Brass Sheet. One sheet per ingot, no loss. They go into machine recipes: the Golden Sheet into the Steam Whistle and the Desk Bell, the Brass Sheet into the Peculiar Bell, the Iron Sheet into girders.</p>"
+      },
+      {
+        "id": "quartz",
+        "title": "Rose quartz",
+        "html": "<p>A Nether Quartz surrounded by eight Redstone Dust gives a <strong>Rose Quartz</strong>. Polished with <a href=\"/en/wiki/sand-paper\">Sand Paper</a>, it becomes Polished Rose Quartz, for Electron Tubes. In a stonecutter, one Rose Quartz gives two <strong>Blocks of Rose Quartz</strong> (a Block of Rose Quartz is placed like a pillar), and one polished quartz two <strong>Rose Quartz Tiles</strong> or two <strong>Small Rose Quartz Tiles</strong>, which convert into each other at the crafting table. These blocks cannot be undone.</p>"
+      },
+      {
+        "id": "experience",
+        "title": "Experience in nuggets",
+        "html": "<p>Crushing an ore often gives a <strong>Nugget of Experience</strong>, the only way to get one. A right-click with the stack uses all of it and gives <strong>3 points</strong> per nugget; sneaking, just one nugget. Nine nuggets make a <strong>Block of Experience</strong>, which glows at light level 15 and gives off sparkles: a decorative experience store.</p>"
+      },
+      {
+        "id": "plaque",
+        "title": "The Sturdy Sheet",
+        "html": "<p>Crushing Wheels turn obsidian into <strong>Powdered Obsidian</strong>, often giving the obsidian back. In sequenced assembly, the powder gets 500 mB of lava from a <a href=\"/en/wiki/spout\">Spout</a>, then two strokes of a <a href=\"/en/wiki/mechanical-press\">press</a>: the <strong>Unprocessed Obsidian Sheet</strong> becomes a <strong>Sturdy Sheet</strong>. One sheet and one paper make four <a href=\"/en/wiki/train-schedule\">Train Schedules</a>, and it is also used for the Train Casing.</p>"
+      },
+      {
+        "id": "balise",
+        "title": "Beacons",
+        "html": "<p>Blocks of <strong>Zinc</strong>, <strong>Brass</strong> and <strong>Experience</strong> count as beacon base blocks; Andesite Alloy and rose quartz do not. To activate a power, the beacon also accepts an Andesite Alloy, a Zinc Ingot or a Brass Ingot, like an Iron Ingot.</p>"
+      },
+      {
+        "id": "ancien",
+        "title": "Legacy items",
+        "html": "<p><strong>Chromatic Compound</strong>, <strong>Refined Radiance</strong>, <strong>Shadow Steel</strong> and their casings (Radiant Casing, Shadow Casing) come from older versions. They have no recipe any more and are not in the creative inventory: you only get them by command or in an old world. A Chromatic Compound dropped above an active beacon, or among ten light sources, becomes Refined Radiance; dropped into the void below the world, Shadow Steel. Both casings are plain decorative blocks, the Radiant Casing gives light 12.</p>"
+      }
+    ],
+    "sources": [
+      "Alloy: crafting/materials/andesite_alloy.json, andesite_alloy_from_zinc.json, mixing/andesite_alloy*.json; blocks: crafting/materials/*_block*.json",
+      "Brass: mixing/brass_ingot.json (heated); rose quartz: crafting/materials/rose_quartz.json, sandpaper_polishing/rose_quartz.json, *_from_*rose_quartz_stonecutting.json, *_tiles_from_conversion.json",
+      "Experience: ExperienceNuggetItem (3 points), ExperienceBlock (light 15); beacons: tags minecraft:beacon_base_blocks and beacon_payment_items (#create:create_ingots)",
+      "Sturdy Sheet: crushing/obsidian.json, sequenced_assembly/sturdy_sheet.json (500 mB lava, two pressings, 1 loop), crafting/kinetics/schedule.json, item_application/railway_casing.json",
+      "Legacy items: ChromaticCompoundItem (beacon, 10 light sources, void), CRecipes, AllCreativeModeTabs, AllBlocks (Radiant Casing: light 12)",
+      "Images: the game's blocks and items (Create's models) rendered by our engine, player not drawn"
+    ]
+  }
+}

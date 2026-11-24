@@ -1,0 +1,377 @@
+{
+  "slug": "bnb-nixie",
+  "name": "Panneau Nixie et grand tube Nixie",
+  "blockId": "bits_n_bobs:nixie_board",
+  "category": "bitsnbobs",
+  "title": "Panneau et grand tube Nixie — Bits 'n' Bobs, guide",
+  "description": "Panneau Nixie et grand tube Nixie de Create Bits 'n' Bobs : rangées, modes d'affichage, presse-papiers, liaison d'affichage et seize couleurs.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create Bits 'n' Bobs 2.3.5 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Le <a href=\"/wiki/tube-nixie\">tube Nixie</a> de Create n'affiche que deux caractères. Bits 'n' Bobs ajoute deux afficheurs du même style, au rendu orangé par défaut : le <strong>panneau Nixie</strong>, une plaque fine qui se colle à un mur ou au sol, et le <strong>grand tube Nixie</strong>, un tube haut pour les gros chiffres. Les deux se mettent en rangée, changent de mode à la clé et prennent seize couleurs.",
+  "facts": [
+    {
+      "label": "Panneau Nixie",
+      "value": "8 par fabrication ; modes à 1, 2 ou 3 caractères par bloc, 2 lignes pour le dernier"
+    },
+    {
+      "label": "Grand tube Nixie",
+      "value": "4 par fabrication ; modes normal et « toujours droit »"
+    },
+    {
+      "label": "Rangée",
+      "value": "jusqu’à 100 blocs lus comme un seul afficheur"
+    },
+    {
+      "label": "Texte",
+      "value": "presse-papiers, étiquette renommée ou liaison d’affichage"
+    },
+    {
+      "label": "Couleurs",
+      "value": "orange par défaut, 16 teintures applicables à toute la rangée"
+    },
+    {
+      "label": "Version",
+      "value": "Create Bits 'n' Bobs 2.3.5 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Quartz rose poli",
+        "Quartz rose poli",
+        "Quartz rose poli"
+      ],
+      [
+        "Quartz rose poli",
+        "Quartz rose poli",
+        "Quartz rose poli"
+      ],
+      [
+        null,
+        "Plaque de fer",
+        null
+      ]
+    ],
+    "items": [
+      [
+        "create:polished_rose_quartz",
+        "create:polished_rose_quartz",
+        "create:polished_rose_quartz"
+      ],
+      [
+        "create:polished_rose_quartz",
+        "create:polished_rose_quartz",
+        "create:polished_rose_quartz"
+      ],
+      [
+        null,
+        "create:iron_sheet",
+        null
+      ]
+    ],
+    "result": "8 panneaux Nixie",
+    "resultItem": "bits_n_bobs:nixie_board"
+  },
+  "videos": [
+    {
+      "id": "bnb_nixie_board",
+      "name": "Le panneau Nixie",
+      "description": "Un panneau posé seul, puis en rangée et en hauteur, un texte écrit au presse-papiers, et les modes d'affichage changés à la clé avant une teinture.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 1.0,
+          "section": "panneau"
+        },
+        {
+          "t": 3.0,
+          "section": "rangee"
+        },
+        {
+          "t": 5.3,
+          "section": "empilement"
+        },
+        {
+          "t": 6.2,
+          "section": "texte"
+        },
+        {
+          "t": 11.5,
+          "section": "cle"
+        },
+        {
+          "t": 14.2,
+          "section": "modes"
+        },
+        {
+          "t": 17.4,
+          "section": "teinture"
+        }
+      ]
+    },
+    {
+      "id": "bnb_large_nixie",
+      "name": "Le grand tube Nixie",
+      "description": "Un grand tube posé, une rangée de tubes qui partagent le texte, le mode « toujours droit » à la clé et deux teintures.",
+      "duration": "PT22S",
+      "chapters": [
+        {
+          "t": 2.0,
+          "section": "grand-tube"
+        },
+        {
+          "t": 4.7,
+          "section": "grand-rangee"
+        },
+        {
+          "t": 12.3,
+          "section": "grand-cle"
+        },
+        {
+          "t": 15.6,
+          "section": "grand-teinture"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "panneau",
+      "title": "Le panneau Nixie",
+      "image": "bnb_nixie_board_panneau.webp",
+      "alt": "Un panneau Nixie posé sur un bloc",
+      "video": "bnb_nixie_board",
+      "html": "<p>Le <strong>panneau Nixie</strong> (Nixie Board) se fabrique avec six quartz rose poli et une plaque de fer (recette ci-contre, 8 panneaux). C'est une plaque mince qui se pose sur n'importe quelle face, au mur comme au sol ou au plafond ; le sens de lecture suit la direction dans laquelle tu regardes au moment de la pose. Sans texte, il reste éteint.</p>"
+    },
+    {
+      "id": "rangee",
+      "title": "Former une rangée",
+      "image": "bnb_nixie_board_rangee.webp",
+      "alt": "Une rangée de panneaux Nixie qui forment un seul cadre",
+      "html": "<p>Pose des panneaux côte à côte dans le même sens : leurs cadres se rejoignent et la rangée devient un seul afficheur, jusqu'à 100 blocs. Un panneau en main, clique la rangée : le suivant s'ajoute au bout, comme pour les poutres de Create. Le texte se répartit de gauche à droite sur toute la longueur.</p>"
+    },
+    {
+      "id": "empilement",
+      "title": "Empiler les rangées",
+      "image": "bnb_nixie_board_empilement.webp",
+      "alt": "Deux rangées de panneaux Nixie posées l’une au-dessus de l’autre",
+      "html": "<p>Empile des rangées les unes sur les autres : leurs cadres se soudent aussi, tu obtiens un grand tableau sans joints. Chaque rangée garde son propre texte, ce qui te permet de faire un tableau de gare avec un nom par ligne.</p>"
+    },
+    {
+      "id": "texte",
+      "title": "Écrire un texte",
+      "image": "bnb_nixie_board_texte.webp",
+      "alt": "Un presse-papiers appliqué sur un panneau Nixie qui affiche « txt »",
+      "html": "<p>Trois sources de texte : un clic droit avec un <a href=\"/wiki/filtres\">presse-papiers</a> écrit ses dernières lignes ; une étiquette renommée à l'enclume écrit son nom ; une <a href=\"/wiki/liaison-d-affichage\">liaison d'affichage</a> envoie en continu ce qu'elle lit (stock, vitesse, heure…). Dans nos vidéos, le texte affiché est « txt », comme dans la scène Ponder du mod.</p>"
+    },
+    {
+      "id": "cle",
+      "title": "Changer de mode à la clé",
+      "image": "bnb_nixie_board_cle.webp",
+      "alt": "Une clé utilisée sur une rangée de panneaux Nixie",
+      "html": "<p>Un clic droit à la <a href=\"/wiki/cle\">clé</a> fait passer toute la rangée au mode suivant. Le texte est recalculé aussitôt pour remplir la nouvelle grille, inutile de le réécrire.</p>"
+    },
+    {
+      "id": "modes",
+      "title": "Les trois modes du panneau",
+      "image": "bnb_nixie_board_modes.webp",
+      "alt": "Une même rangée de panneaux Nixie dans ses trois modes",
+      "html": "<p>Le panneau a trois modes : 1 grand caractère par bloc, 2 caractères par bloc, ou 3 caractères par bloc sur 2 lignes. Plus il y a de caractères, plus ils sont petits ; le dernier mode est le seul qui donne deux lignes à une liaison d'affichage, et les deux blocs des bouts y perdent un caractère. Une rangée de 8 panneaux affiche donc 8 ou 16 caractères, ou deux lignes de 22.</p>"
+    },
+    {
+      "id": "teinture",
+      "title": "Teindre le panneau",
+      "image": "bnb_nixie_board_teinture.webp",
+      "alt": "Une rangée de panneaux Nixie passée en couleur",
+      "html": "<p>Une teinture appliquée sur un seul panneau colore toute la rangée d'un coup, en gardant le texte et le mode. Les seize couleurs existent (de White Nixie Board à Black Nixie Board) ; sans teinture, la lueur est orange comme celle de Create.</p>"
+    },
+    {
+      "id": "grand-tube",
+      "title": "Le grand tube Nixie",
+      "image": "bnb_large_nixie_grand-tube.webp",
+      "alt": "Un grand tube Nixie posé au sol",
+      "video": "bnb_large_nixie",
+      "html": "<p>Le <strong>grand tube Nixie</strong> (Large Nixie Tube) se fabrique avec quatre quartz rose poli et deux plaques de fer, pour 4 tubes. Chaque tube montre un seul caractère, très haut : idéal pour une horloge, un compteur de production ou un numéro de quai visible de loin.</p>"
+    },
+    {
+      "id": "grand-rangee",
+      "title": "Une rangée de tubes",
+      "image": "bnb_large_nixie_rangee.webp",
+      "alt": "Une rangée de grands tubes Nixie qui affichent un mot",
+      "html": "<p>Alignés dans le même sens, les tubes se lisent comme un seul afficheur et le texte passe de l'un à l'autre. Le presse-papiers, l'étiquette et la liaison d'affichage s'utilisent comme sur le panneau.</p>"
+    },
+    {
+      "id": "grand-cle",
+      "title": "Le mode « toujours droit »",
+      "image": "bnb_large_nixie_cle.webp",
+      "alt": "Des grands tubes Nixie posés sur le côté, avec leurs caractères à l’endroit",
+      "html": "<p>Le grand tube a deux modes. À la clé, tu passes au mode « toujours droit » (ALWAYS_UP dans le code) : même si les tubes sont posés couchés ou au plafond, les caractères restent à l'endroit. Pratique sous un pont ou sur le flanc d'une machine.</p>"
+    },
+    {
+      "id": "grand-teinture",
+      "title": "Teindre les tubes",
+      "image": "bnb_large_nixie_teinture.webp",
+      "alt": "Une rangée de grands tubes Nixie teinte en violet puis en bleu",
+      "html": "<p>Comme le panneau, une teinture appliquée sur un tube recolore toute la rangée. Les seize couleurs (de White Large Nixie Tube à Black Large Nixie Tube) se mélangent bien avec les <a href=\"/wiki/tube-nixie\">tubes Nixie</a> teints de Create.</p>"
+    }
+  ],
+  "related": [
+    "create-bits-n-bobs",
+    "tube-nixie",
+    "liaison-d-affichage",
+    "filtres",
+    "cle",
+    "lampe-a-quartz-rose"
+  ],
+  "sources": [
+    "Create Bits 'n' Bobs 2.3.5 (bits_n_bobs-2.3.5.jar de la prochaine version du modpack Create France) : code du dépôt public github.com/Aztech-Modding/Create-Bits-n-Bobs au commit 3794a38 « 2.3.5 », recettes du dossier data du jar, scènes Ponder rejouées par notre moteur.",
+    "Mod de Cake, Kipti, NormalGuy, Astral et Spydnel, sous licence MIT : modèles et textures de ses auteurs, rendus à partir du jar ; aucun texte du mod n'est recopié.",
+    "Blocs : content/trinkets/nixie/nixie_board/NixieBoardBlockNixie.java (modes NONE, DOUBLE_CHAR, DOUBLE_CHAR_DOUBLE_LINES ; aide de placement ; couleur par défaut orange), large_nixie_tube/LargeNixieTubeBlockNixie.java (modes NONE, ALWAYS_UP).",
+    "Comportement : nixie/foundation/GenericNixieDisplayBlockEntity.java (largeur et lignes de chaque mode, MAX_STRUCTURE_LENGTH = 100, EndClipping : un caractère de moins aux bouts en mode double ligne), GenericNixieDisplayBlock.java (clé, presse-papiers, étiquette renommée, teinture de toute la rangée), GenericNixieDisplayTarget.java (liaison d'affichage, 2 lignes en mode double ligne).",
+    "Recettes : data/bits_n_bobs/recipe/crafting/nixie_board.json (8) et large_nixie_tube.json (4)."
+  ],
+  "en": {
+    "slugEn": "bnb-nixie-displays",
+    "name": "Nixie Board and Large Nixie Tube",
+    "title": "Nixie Boards and Tubes — Create Bits 'n' Bobs guide",
+    "description": "Nixie Board and Large Nixie Tube from Create Bits 'n' Bobs: rows, display modes, Clipboard, Display Link and sixteen colours explained.",
+    "intro": "Create's <a href=\"/en/wiki/nixie-tube\">Nixie Tube</a> only shows two characters. Bits 'n' Bobs adds two displays in the same style, glowing orange by default: the <strong>Nixie Board</strong>, a thin plate that sits on a wall or floor, and the <strong>Large Nixie Tube</strong>, a tall tube for big digits. Both line up in rows, switch mode with the Wrench and come in sixteen colours.",
+    "facts": [
+      {
+        "label": "Nixie Board",
+        "value": "8 per craft; modes with 1, 2 or 3 characters per block, 2 lines for the last one"
+      },
+      {
+        "label": "Large Nixie Tube",
+        "value": "4 per craft; normal and 'always upright' modes"
+      },
+      {
+        "label": "Row",
+        "value": "up to 100 blocks read as a single display"
+      },
+      {
+        "label": "Text",
+        "value": "Clipboard, renamed Name Tag or Display Link"
+      },
+      {
+        "label": "Colours",
+        "value": "orange by default, 16 dyes applied to the whole row"
+      },
+      {
+        "label": "Version",
+        "value": "Create Bits 'n' Bobs 2.3.5 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Polished Rose Quartz",
+          "Polished Rose Quartz",
+          "Polished Rose Quartz"
+        ],
+        [
+          "Polished Rose Quartz",
+          "Polished Rose Quartz",
+          "Polished Rose Quartz"
+        ],
+        [
+          null,
+          "Iron Sheet",
+          null
+        ]
+      ],
+      "result": "8 Nixie Boards"
+    },
+    "videos": [
+      {
+        "id": "bnb_nixie_board",
+        "name": "The Nixie Board",
+        "description": "A single board, then a row and a stack, text written with a Clipboard, and the display modes switched with the Wrench before a dye."
+      },
+      {
+        "id": "bnb_large_nixie",
+        "name": "The Large Nixie Tube",
+        "description": "One large tube, a row of tubes sharing the text, the 'always upright' mode set with the Wrench, and two dyes."
+      }
+    ],
+    "sections": [
+      {
+        "id": "panneau",
+        "title": "The Nixie Board",
+        "alt": "A Nixie Board placed on a block",
+        "html": "<p>The <strong>Nixie Board</strong> is made from six Polished Rose Quartz and an Iron Sheet (recipe shown here, 8 boards). It is a thin plate that goes on any face, wall, floor or ceiling; the reading direction follows the way you are looking when you place it. Without text it stays dark.</p>"
+      },
+      {
+        "id": "rangee",
+        "title": "Building a row",
+        "alt": "A row of Nixie Boards forming a single frame",
+        "html": "<p>Place boards side by side facing the same way: their frames merge and the row becomes one display, up to 100 blocks long. With a board in hand, right-clicking the row adds the next one at the end, as with Create's girders. The text spreads from left to right over the whole length.</p>"
+      },
+      {
+        "id": "empilement",
+        "title": "Stacking rows",
+        "alt": "Two rows of Nixie Boards placed one above the other",
+        "html": "<p>Stack rows on top of each other and their frames fuse too, so you get one big board with no seams. Each row keeps its own text, which lets you build a station board with one name per line.</p>"
+      },
+      {
+        "id": "texte",
+        "title": "Writing text",
+        "alt": "A Clipboard used on a Nixie Board that shows 'txt'",
+        "html": "<p>Three text sources: right-clicking with a <a href=\"/en/wiki/filters\">Clipboard</a> writes its last lines; a Name Tag renamed on an anvil writes its name; a <a href=\"/en/wiki/display-link\">Display Link</a> keeps sending whatever it reads (stock, speed, time…). In our videos the text shown is 'txt', as in the mod's own Ponder scene.</p>"
+      },
+      {
+        "id": "cle",
+        "title": "Switching mode with the Wrench",
+        "alt": "A Wrench used on a row of Nixie Boards",
+        "html": "<p>Right-clicking with the <a href=\"/en/wiki/wrench\">Wrench</a> moves the whole row to the next mode. The text is laid out again right away to fill the new grid, so there is no need to write it again.</p>"
+      },
+      {
+        "id": "modes",
+        "title": "The board's three modes",
+        "alt": "One row of Nixie Boards in its three modes",
+        "html": "<p>The board has three modes: 1 large character per block, 2 characters per block, or 3 characters per block over 2 lines. The more characters, the smaller they get; the last mode is the only one that gives a Display Link two lines, and the two end blocks lose one character in it. A row of 8 boards therefore shows 8 or 16 characters, or two lines of 22.</p>"
+      },
+      {
+        "id": "teinture",
+        "title": "Dyeing the board",
+        "alt": "A row of Nixie Boards switched to a colour",
+        "html": "<p>Right-clicking with a dye colours the whole row at once, keeping the text and the mode. All sixteen colours exist (from the White Nixie Board to the Black Nixie Board); undyed, the glow is orange like Create's.</p>"
+      },
+      {
+        "id": "grand-tube",
+        "title": "The Large Nixie Tube",
+        "alt": "A Large Nixie Tube standing on the ground",
+        "html": "<p>The <strong>Large Nixie Tube</strong> is made from four Polished Rose Quartz and two Iron Sheets, giving 4 tubes. Each tube shows a single, very tall character: ideal for a clock, a production counter or a platform number you can read from far away.</p>"
+      },
+      {
+        "id": "grand-rangee",
+        "title": "A row of tubes",
+        "alt": "A row of Large Nixie Tubes showing a word",
+        "html": "<p>Lined up facing the same way, the tubes read as one display and the text runs from one to the next. The Clipboard, Name Tag and Display Link work just as they do on the board.</p>"
+      },
+      {
+        "id": "grand-cle",
+        "title": "The 'always upright' mode",
+        "alt": "Large Nixie Tubes lying on their side with upright characters",
+        "html": "<p>The large tube has two modes. With the Wrench you switch to 'always upright' (ALWAYS_UP in the code): even when the tubes lie on their side or hang from a ceiling, the characters stay the right way up. Handy under a bridge or on the side of a machine.</p>"
+      },
+      {
+        "id": "grand-teinture",
+        "title": "Dyeing the tubes",
+        "alt": "A row of Large Nixie Tubes dyed purple, then blue",
+        "html": "<p>As with the board, a dye applied to one tube recolours the whole row. The sixteen colours (from the White Large Nixie Tube to the Black Large Nixie Tube) blend well with Create's dyed <a href=\"/en/wiki/nixie-tube\">Nixie Tubes</a>.</p>"
+      }
+    ],
+    "sources": [
+      "Create Bits 'n' Bobs 2.3.5 (bits_n_bobs-2.3.5.jar from the next Create France modpack release): code from the public repository github.com/Aztech-Modding/Create-Bits-n-Bobs at commit 3794a38 \"2.3.5\", recipes from the jar's data folder, Ponder scenes replayed by our engine.",
+      "Mod by Cake, Kipti, NormalGuy, Astral and Spydnel, MIT licence: models and textures by its authors, rendered from the jar; no text from the mod is copied.",
+      "Blocks: content/trinkets/nixie/nixie_board/NixieBoardBlockNixie.java (NONE, DOUBLE_CHAR, DOUBLE_CHAR_DOUBLE_LINES modes; placement helper; orange default colour), large_nixie_tube/LargeNixieTubeBlockNixie.java (NONE, ALWAYS_UP modes).",
+      "Behaviour: nixie/foundation/GenericNixieDisplayBlockEntity.java (width and lines of each mode, MAX_STRUCTURE_LENGTH = 100, EndClipping: one character fewer at the ends in the double-line mode), GenericNixieDisplayBlock.java (Wrench, Clipboard, renamed Name Tag, dyeing the whole row), GenericNixieDisplayTarget.java (Display Link, 2 lines in the double-line mode).",
+      "Recipes: data/bits_n_bobs/recipe/crafting/nixie_board.json (8) and large_nixie_tube.json (4)."
+    ]
+  }
+}

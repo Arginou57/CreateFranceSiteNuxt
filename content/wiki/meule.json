@@ -6,7 +6,7 @@
   "title": "Meule — Create : guide en français",
   "description": "La meule de Create : moudre blé, fleurs, os ou gravier, l'alimenter par le côté ou par-dessous, temps de broyage selon la vitesse et sorties.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "La <strong>meule</strong> est la machine de broyage la plus simple de Create : un bloc qui moud ce qu'on lui jette dessus. Elle transforme le <strong>blé en farine</strong>, les fleurs en colorants, les os en poudre d'os, le gravier en silex ou les pierres en sable. Elle est plus lente et moins rentable que les roues de concassage, mais elle ne demande qu'un seul bloc et presque rien en énergie : c'est la machine idéale pour débuter.",
@@ -137,7 +137,8 @@
     "tapis-roulant",
     "entonnoir",
     "roue-dentee",
-    "pierres-et-blocs-de-deco"
+    "pierres-et-blocs-de-deco",
+    "minerai-de-zinc"
   ],
   "sources": [
     "Stress : AllBlocks.java, MILLSTONE, CStress.setImpact(4.0)",
@@ -250,7 +251,7 @@
       {
         "id": "erreurs",
         "title": "Common mistakes",
-        "html": "<ul><li><strong>The millstone will not take the item</strong>: it has no milling recipe, or the output slots are full.</li><li><strong>It does not turn</strong>: a shaft against the side does not connect; only cogwheels work on the sides, and a shaft has to come from below.</li><li><strong>It is very slow</strong>: at 16 RPM or less, the millstone only removes one point per tick. Speed it up.</li></ul>"
+        "html": "<ul><li><strong>The millstone refuses the item</strong>: it has no milling recipe, or the output slots are full.</li><li><strong>It does not turn</strong>: a shaft against the side does not connect; only cogwheels work on the sides, and a shaft has to come from below.</li><li><strong>It is very slow</strong>: at 16 RPM or less, the millstone only removes one point per tick. Speed it up.</li></ul>"
       }
     ],
     "sources": [

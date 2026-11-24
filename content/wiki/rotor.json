@@ -4,9 +4,9 @@
   "blockId": "create:shaft",
   "category": "cinetique",
   "title": "Rotor (arbre) — Create : guide en français",
-  "description": "Le rotor de Create, l'arbre de transmission du mod : transmettre la rotation en ligne droite, limite de 256 tr/min, boîtiers d'andésite et de laiton.",
+  "description": "Le rotor de Create, l'arbre de transmission du mod : transmettre la rotation tout droit, limite de 256 tr/min, boîtiers d'andésite et de laiton.",
   "datePublished": "2026-10-27",
-  "dateModified": "2026-10-27",
+  "dateModified": "2026-11-24",
   "createVersion": "6.0.8",
   "mcVersion": "1.21.1",
   "intro": "Le <strong>rotor</strong>, que beaucoup de joueurs appellent simplement « arbre », est la pièce la plus simple de Create : une barre qui tourne sur son axe et fait passer la rotation d'un bloc à l'autre. C'est lui qui relie un moulin, une roue à eau ou un moteur à tes machines. Il ne consomme rien, mais il a ses règles : une seule direction, une vitesse partagée et une limite à ne pas dépasser.",
@@ -78,7 +78,7 @@
   "videos": [
     {
       "id": "shaft_relay",
-      "name": "Rotor : transmettre la rotation en ligne droite",
+      "name": "Rotor : transmettre la rotation tout droit",
       "description": "Une ligne de rotors posée bloc par bloc relie une roue dentée entraînée à un compteur de vitesse, qui se met à tourner dès que la ligne est complète.",
       "duration": "PT5S"
     },
@@ -92,7 +92,7 @@
   "sections": [
     {
       "id": "relais",
-      "title": "Transmettre la rotation en ligne droite",
+      "title": "Transmettre la rotation tout droit",
       "image": "shaft_relay_relais.webp",
       "alt": "Ligne de rotors reliant une roue dentée à un compteur de vitesse sur une plaque blanche",
       "html": "<p>Un rotor se pose comme un pilier : son axe suit la face sur laquelle tu le places. Mets-en plusieurs bout à bout et la rotation parcourt toute la ligne, quelle que soit sa longueur. Astuce : vise l'extrémité d'un rotor déjà posé avec un autre rotor en main, le jeu prolonge la ligne dans le même axe.</p><p>Tous les blocs d'une même ligne tournent <strong>à la même vitesse et dans le même sens</strong>. Dans l'animation, le compteur de vitesse au bout ne s'anime qu'au moment où le dernier rotor ferme la ligne : tant qu'un bloc manque, rien ne passe.</p>"
@@ -105,7 +105,7 @@
     {
       "id": "brancher",
       "title": "Brancher un rotor sur une machine",
-      "html": "<p>Presque toutes les machines de Create prennent la rotation par un axe : il suffit qu'un rotor arrive dans cet axe, contre la bonne face. Une presse mécanique la reçoit par un côté, une perceuse par l'arrière, un mixeur par le dessus. Si le rotor touche la machine par une face qui n'a pas d'axe, il tourne dans le vide sans rien entraîner.</p><p>Le rotor sert aussi à changer de hauteur ou de direction avec d'autres blocs : à chaque extrémité, tu peux poser une roue dentée, une boîte à roues dentées ou une poulie de tapis.</p>"
+      "html": "<p>Presque toutes les machines de Create prennent la rotation par un axe : il suffit qu'un rotor arrive dans cet axe, contre la bonne face. Une presse mécanique la reçoit par un côté, une perceuse par l'arrière, un mixeur par le dessus. Si le rotor touche la machine par une face qui n'a pas d'axe, il tourne dans le vide sans rien entraîner.</p><p>Le rotor sert aussi à changer de hauteur ou de direction avec d'autres blocs : à chaque extrémité, tu peux poser une roue dentée, une poulie de tapis ou encore la boîte à roues dentées.</p>"
     },
     {
       "id": "limite",
@@ -121,9 +121,21 @@
       "html": "<p>Clic droit sur un rotor avec un <strong>boîtier d'andésite</strong> ou un <strong>boîtier de laiton</strong> en main : il devient un rotor dans un boîtier, un bloc plein qui continue de transmettre la rotation. C'est surtout esthétique, mais pratique pour faire passer une transmission dans un mur ou un sol sans voir de barre qui dépasse.</p><p>Pour revenir au rotor nu, accroupis-toi et clique avec la clé sur le bloc habillé.</p>"
     },
     {
+      "id": "poutre",
+      "title": "Un rotor dans une poutre",
+      "html": "<p>Clic droit sur une <strong>poutre en métal</strong> avec un rotor (ou sur un rotor horizontal avec une poutre) : on obtient un <strong>rotor dans une poutre en métal</strong>, qui transmet la rotation à travers la charpente. Un rotor est consommé. Ça ne marche qu'à l'horizontale ; la clé rend la poutre et le rotor.</p>"
+    },
+    {
+      "id": "supports",
+      "title": "Les supports",
+      "image": "rotor_brackets_supports.webp",
+      "alt": "Un rotor dans une poutre, deux rotors avec un support en bois et en métal, un tuyau avec un support",
+      "html": "<p>Le <strong>support en bois</strong> (bâtons, planches, alliage d'andésite) et le <strong>support en métal</strong> (pépites et lingots de fer) se font par quatre. Ils ne se posent pas seuls : clic droit sur un rotor, une roue dentée ou un <a href=\"/wiki/tuyau-a-fluide\">tuyau</a> pour l'accrocher. C'est du décor, sauf sur un tuyau, dont il fige les raccords. La clé le retire.</p>"
+    },
+    {
       "id": "erreurs",
       "title": "Erreurs fréquentes",
-      "html": "<ul><li><strong>Rien ne tourne au bout de la ligne</strong> : un rotor est posé dans le mauvais axe, ou il manque un bloc. Vérifie la ligne avec les lunettes d'ingénieur.</li><li><strong>Un bloc saute</strong> : la vitesse dépasse 256 tr/min ou deux sources tournent en sens contraire sur le même réseau.</li><li><strong>Besoin de tourner à angle droit</strong> : un rotor ne le fait pas. Utilise une <a href=\"/wiki/boite-a-roues-dentees\">boîte à roues dentées</a>, des <a href=\"/wiki/roue-dentee\">roues dentées</a> ou un <a href=\"/wiki/tapis-roulant\">tapis roulant</a>.</li></ul>"
+      "html": "<ul><li><strong>Rien ne tourne au bout de la ligne</strong> : un rotor est posé dans le mauvais axe, ou il manque un bloc. Vérifie la ligne avec les lunettes d'ingénieur.</li><li><strong>Un bloc saute</strong> : la vitesse dépasse 256 tr/min ou deux sources tournent en sens contraire sur le même réseau.</li><li><strong>Besoin de tourner à angle droit</strong> : un rotor ne le fait pas. Passe par la <a href=\"/wiki/boite-a-roues-dentees\">boîte à roues dentées</a>, des <a href=\"/wiki/roue-dentee\">roues dentées</a> ou un <a href=\"/wiki/tapis-roulant\">tapis roulant</a>.</li></ul>"
     }
   ],
   "related": [
@@ -138,7 +150,8 @@
     "cle",
     "reservoir-dorsal",
     "moteur-creatif",
-    "moteur-diesel-enorme"
+    "moteur-diesel-enorme",
+    "volant-d-inertie"
   ],
   "sources": [
     "Stress : AllBlocks.java, SHAFT, CStress.setNoImpact()",
@@ -151,7 +164,7 @@
     "slugEn": "shaft",
     "name": "Shaft",
     "title": "Shaft — Create mod guide",
-    "description": "The Create Shaft explained: carrying rotation in a straight line, the 256 RPM limit, and dressing shafts up with Andesite or Brass Casing.",
+    "description": "The Create Shaft explained: carrying rotation along a straight line, the 256 RPM limit, and dressing shafts up with Andesite or Brass Casing.",
     "intro": "The <strong>Shaft</strong> is the simplest part in Create: a rod that spins on its axis and passes rotation from one block to the next. It is what links a windmill, a water wheel or a motor to your machines. It costs nothing to run, but it follows a few rules: one axis, one shared speed, and a hard limit you should never cross.",
     "facts": [
       {
@@ -203,7 +216,7 @@
     "videos": [
       {
         "id": "shaft_relay",
-        "name": "Shaft: carrying rotation in a straight line",
+        "name": "Shaft: carrying rotation along a straight line",
         "description": "A line of shafts is laid block by block between a powered cogwheel and a speedometer, which starts turning as soon as the line is complete."
       },
       {
@@ -215,7 +228,7 @@
     "sections": [
       {
         "id": "relais",
-        "title": "Carrying rotation in a straight line",
+        "title": "Carrying rotation along a straight line",
         "alt": "A line of shafts linking a cogwheel to a speedometer on a white plate",
         "html": "<p>A shaft is placed like a pillar: its axis follows the face you click. Put several end to end and the rotation travels the whole line, however long it is. Tip: aim at the end of a shaft you already placed while holding another one, and the game extends the line along the same axis.</p><p>Every block on a line spins <strong>at the same speed and in the same direction</strong>. In the animation, the speedometer at the far end only comes to life when the last shaft closes the gap: as long as one block is missing, nothing gets through.</p>"
       },
@@ -239,6 +252,17 @@
         "title": "Putting a shaft in a casing",
         "alt": "A shaft line with one block in Andesite Casing and another in Brass Casing",
         "html": "<p>Right-click a shaft while holding <strong>Andesite Casing</strong> or <strong>Brass Casing</strong>: it becomes an encased shaft, a full block that still carries rotation. It is mostly cosmetic, but handy when a drive line has to pass through a wall or a floor without a rod sticking out.</p><p>To get the bare shaft back, sneak and use the Wrench on the encased block.</p>"
+      },
+      {
+        "id": "poutre",
+        "title": "A shaft inside a girder",
+        "html": "<p>Right-click a <strong>Metal Girder</strong> with a shaft (or a horizontal shaft with a girder): you get a <strong>Metal Girder Encased Shaft</strong>, which carries rotation through the framework. One shaft is used up. It only works horizontally; the Wrench gives the girder and the shaft back.</p>"
+      },
+      {
+        "id": "supports",
+        "title": "Brackets",
+        "alt": "A girder encased shaft, two shafts with a wooden and a metal bracket, a pipe with a bracket",
+        "html": "<p>The <strong>Wooden Bracket</strong> (sticks, planks, Andesite Alloy) and the <strong>Metal Bracket</strong> (iron nuggets and ingots) come in fours. They are never placed on their own: right-click a shaft, a cogwheel or a <a href=\"/en/wiki/fluid-pipe\">pipe</a> to attach one. It is decoration, except on a pipe, whose connections it locks. The Wrench removes it.</p>"
       },
       {
         "id": "erreurs",

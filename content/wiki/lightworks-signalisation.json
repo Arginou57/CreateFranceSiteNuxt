@@ -1,0 +1,435 @@
+{
+  "slug": "lightworks-signalisation",
+  "name": "Gyrophare, feu d'alerte et balise de bord",
+  "blockId": "lightworks:rotating_beacon",
+  "category": "lightworks",
+  "title": "Gyrophare et feux d'alerte — Create Lightworks, guide",
+  "description": "Gyrophare, feu d'alerte et balise de bord de Create: Lightworks, addon de Create : vitesse, motifs de clignotement, mode nuit, teinture et redstone.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "Create: Lightworks 1.0.1 · Create 6.0.10",
+  "mcVersion": "1.21.1",
+  "intro": "Trois lampes de Lightworks servent avant tout à être vues. Le <strong>gyrophare</strong> fait tourner deux faisceaux au rythme d'un arbre, le <strong>feu d'alerte</strong> clignote selon six motifs et la <strong>balise de bord</strong> trace le contour d'une piste ou d'un quai. Toutes se teignent et s'atténuent à la redstone.",
+  "facts": [
+    {
+      "label": "Gyrophare",
+      "value": "2 faisceaux opposés, 5° de chaque côté de l’axe (+ 4°), pleins jusqu’à 20 blocs, éteints à 32"
+    },
+    {
+      "label": "Rotation",
+      "value": "0,3° par tick et par tr/min ; 1 su par tr/min"
+    },
+    {
+      "label": "Feu d’alerte",
+      "value": "orange, lumière de bloc 12 ; 6 motifs, toujours ou la nuit seulement"
+    },
+    {
+      "label": "Nuit",
+      "value": "de 13 000 à 23 000 ticks de la journée ; toujours dans le Nether et l’End"
+    },
+    {
+      "label": "Balise de bord",
+      "value": "lumière de bloc 4, sans collision, 8 par recette"
+    },
+    {
+      "label": "Redstone",
+      "value": "luminosité = 15 − signal ; 15 éteint"
+    },
+    {
+      "label": "Version",
+      "value": "Create: Lightworks 1.0.1 · Create 6.0.10"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l’établi",
+    "grid": [
+      [
+        "Verre",
+        "Verre",
+        "Verre"
+      ],
+      [
+        "Verre",
+        "Tube électronique",
+        "Verre"
+      ],
+      [
+        null,
+        "Boitier de laiton",
+        null
+      ]
+    ],
+    "items": [
+      [
+        "minecraft:glass",
+        "minecraft:glass",
+        "minecraft:glass"
+      ],
+      [
+        "minecraft:glass",
+        "create:electron_tube",
+        "minecraft:glass"
+      ],
+      [
+        null,
+        "create:brass_casing",
+        null
+      ]
+    ],
+    "result": "1 gyrophare",
+    "resultItem": "lightworks:rotating_beacon"
+  },
+  "videos": [
+    {
+      "id": "lw_beacon",
+      "name": "Le gyrophare et la vitesse de l'arbre",
+      "description": "Un gyrophare sur un moteur créatif tourne à 8 tr/min, puis à 32, s'arrête avec ses faisceaux immobiles et repart teint en rouge.",
+      "duration": "PT12S",
+      "chapters": [
+        {
+          "t": 2.0,
+          "section": "gyrophare"
+        },
+        {
+          "t": 4.0,
+          "section": "vitesse"
+        },
+        {
+          "t": 6.0,
+          "section": "arret"
+        },
+        {
+          "t": 8.6,
+          "section": "teinture"
+        }
+      ]
+    },
+    {
+      "id": "lw_warning",
+      "name": "Les motifs du feu d'alerte",
+      "description": "Un feu d'alerte orange passe du clignotant à la pulsation, au double éclat puis au stroboscope, avant d'être teint en rouge.",
+      "duration": "PT16S",
+      "chapters": [
+        {
+          "t": 1.5,
+          "section": "feu"
+        },
+        {
+          "t": 4.0,
+          "section": "motifs"
+        },
+        {
+          "t": 8.8,
+          "section": "nuit"
+        },
+        {
+          "t": 11.0,
+          "section": "lumiere"
+        },
+        {
+          "t": 13.1,
+          "section": "feu-teinture"
+        }
+      ]
+    },
+    {
+      "id": "lw_edge",
+      "name": "Baliser une piste",
+      "description": "Deux rangées de balises de bord le long d'une bande de tapis gris, teintes en bleu puis éteintes par la redstone.",
+      "duration": "PT12S",
+      "chapters": [
+        {
+          "t": 2.2,
+          "section": "balises"
+        },
+        {
+          "t": 4.2,
+          "section": "passage"
+        },
+        {
+          "t": 6.6,
+          "section": "balise-teinture"
+        },
+        {
+          "t": 8.3,
+          "section": "balise-redstone"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "gyrophare",
+      "title": "Gyrophare",
+      "image": "lw_beacon_gyrophare.webp",
+      "alt": "Un gyrophare sur un moteur créatif projette deux faisceaux en sens opposés",
+      "video": "lw_beacon",
+      "html": "<p>Le <strong>gyrophare</strong> (Rotating Beacon, recette ci-contre) porte deux faisceaux dos à dos, à l'horizontale de son support. Chacun ressemble à celui d'un projecteur en plus court : 5° de chaque côté de l'axe, plein jusqu'à 20 blocs, éteint à 32. Branche un arbre par-dessous et les faisceaux tournent : c'est le feu tournant des tours de contrôle, des dirigeables et des locomotives.</p>"
+    },
+    {
+      "id": "vitesse",
+      "title": "La vitesse vient de l'arbre",
+      "image": "lw_beacon_vitesse.webp",
+      "alt": "Le moteur passe à 32 tr/min, les faisceaux tournent bien plus vite",
+      "html": "<p>Le rotor suit l'arbre, 0,3° par tick et par tr/min : un tour toutes les 7,5 secondes à 8 tr/min, toutes les 1,9 seconde à 32. Il consomme 1 su par tr/min. Pour une cadence précise, règle l'arbre avec un <a href=\"/wiki/controleur-de-vitesse-de-rotation\">contrôleur de vitesse de rotation</a>.</p>"
+    },
+    {
+      "id": "arret",
+      "title": "À l'arrêt",
+      "image": "lw_beacon_arret.webp",
+      "alt": "Moteur arrêté : les deux faisceaux restent fixes et éclairent là où ils tombent",
+      "html": "<p>Quand l'arbre s'arrête, les faisceaux se figent et chacun pose sa lumière de faisceau, comme deux projecteurs fixes. En rotation, ce sont des lumières mobiles, éclairées par chaque client. La redstone l'atténue comme les autres lampes ; à 15, il s'éteint.</p>"
+    },
+    {
+      "id": "teinture",
+      "title": "Colorer le gyrophare",
+      "image": "lw_beacon_teinture.webp",
+      "alt": "Le gyrophare teint en rouge tourne à 16 tr/min",
+      "html": "<p>Une teinture colore la lentille et les deux faisceaux. Rouge pour un obstacle, orange pour un chantier, bleu pour un poste de secours : le code couleur est à toi.</p>"
+    },
+    {
+      "id": "feu",
+      "title": "Feu d'alerte",
+      "image": "lw_warning_feu.webp",
+      "alt": "Un feu d'alerte orange posé au sol",
+      "video": "lw_warning",
+      "html": "<p>Le <strong>feu d'alerte</strong> (Warning Light) n'a pas de faisceau : c'est une lampe orange qui émet une lumière de bloc de 12 au maximum. Sa recette en croix (verre, deux teintures orange, tube électronique, plaque de laiton) donne deux feux. Il se pose sur n'importe quelle face.</p>"
+    },
+    {
+      "id": "motifs",
+      "title": "Six motifs",
+      "image": "lw_warning_motifs.webp",
+      "alt": "Le feu d'alerte change de motif",
+      "html": "<p>Garde le clic droit sur sa boîte de valeur : <strong>fixe</strong> (Steady) ; <strong>clignotant</strong> (Blink, une demi-seconde allumé, une demi-seconde éteint) ; <strong>clignotant opposé</strong> (Opposite Blink, l'inverse, pour deux feux qui alternent comme à un passage à niveau) ; <strong>pulsation</strong> (Pulse, montée et descente en 1,5 seconde) ; <strong>double éclat</strong> (Double Flash, deux éclairs brefs toutes les 1,5 seconde) ; <strong>stroboscope</strong> (Strobe, un éclair par seconde). Les motifs suivent l'horloge du jeu : tous les feux battent ensemble.</p>"
+    },
+    {
+      "id": "nuit",
+      "title": "Seulement la nuit",
+      "image": "lw_warning_nuit.webp",
+      "alt": "Le feu d’alerte passé en mode stroboscope",
+      "html": "<p>La boîte a deux rangées : celle du haut joue le motif en permanence, celle du bas seulement la nuit, de 13 000 à 23 000 ticks dans la journée, à peu près du coucher au lever du soleil. Seule l'heure compte, pas le ciel visible : un feu sous un toit et un feu dehors s'allument ensemble. Dans le Nether et l'End, il fait toujours nuit pour lui.</p>"
+    },
+    {
+      "id": "lumiere",
+      "title": "Une lumière qui suit le rythme",
+      "image": "lw_warning_lumiere.webp",
+      "alt": "La lumière autour du feu d'alerte varie avec le motif",
+      "html": "<p>La lumière de bloc suit aussi le motif : le sol s'allume et s'éteint avec le clignotant. Pour ne pas recalculer l'éclairage sans arrêt, la pulsation avance par quarts et le stroboscope garde un quart de sa lumière en continu. Sur une machine en mouvement, le feu clignote toujours et teinte les blocs voisins, sans éclairage dynamique.</p>"
+    },
+    {
+      "id": "feu-teinture",
+      "title": "Changer sa couleur",
+      "image": "lw_warning_teinture.webp",
+      "alt": "Le feu d'alerte teint en rouge",
+      "html": "<p>Une teinture change sa couleur et celle de la lueur qu'il répand. Un feu rouge en double éclat au sommet d'une grue imite un feu d'obstacle d'aviation.</p>"
+    },
+    {
+      "id": "balises",
+      "title": "Balise de bord",
+      "image": "lw_edge_balises.webp",
+      "alt": "Deux rangées de trois balises de bord encadrent une bande de tapis gris",
+      "video": "lw_edge",
+      "html": "<p>La <strong>balise de bord</strong> (Edge Light) est un petit plot lumineux pour border une piste d'atterrissage, une voie de circulation ou un quai de gare. Une recette en colonne (verre, tube électronique, plaque de laiton) en donne huit. Sa lumière de bloc de 4 montre le sol autour, sans éclairer la piste.</p>"
+    },
+    {
+      "id": "passage",
+      "title": "On passe dessus",
+      "image": "lw_edge_passage.webp",
+      "alt": "Les balises au ras du sol, de part et d’autre de la bande",
+      "html": "<p>Elle n'a aucune collision : on marche dessus, les véhicules roulent par-dessus. Rien ne tourne en continu et sa couleur est rangée dans l'état du bloc : des centaines de balises ne pèsent presque rien. Une machine assemblée l'emporte avec le bloc qui la porte.</p>"
+    },
+    {
+      "id": "balise-teinture",
+      "title": "Couleur de la lentille",
+      "image": "lw_edge_teinture.webp",
+      "alt": "Les balises teintes en bleu",
+      "html": "<p>Une teinture change la couleur de sa lentille, et seulement elle : la balise ne colore pas les blocs voisins. Bleu pour les voies de circulation, vert pour le seuil de piste, blanc pour les bords.</p>"
+    },
+    {
+      "id": "balise-redstone",
+      "title": "Allumer la piste à distance",
+      "image": "lw_edge_redstone.webp",
+      "alt": "Les balises éteintes par la redstone",
+      "html": "<p>La redstone l'atténue et un signal de 15 l'éteint. Branche ta rangée sur une <a href=\"/wiki/liaison-de-redstone\">liaison de redstone</a> pour gérer la piste depuis la tour de contrôle.</p>"
+    }
+  ],
+  "related": [
+    "create-lightworks",
+    "lightworks-projecteurs",
+    "lightworks-feux-de-vehicule",
+    "moteur-creatif",
+    "controleur-de-vitesse-de-rotation",
+    "liaison-de-redstone",
+    "create-aeronautics",
+    "assembleur-physique"
+  ],
+  "sources": [
+    "Create: Lightworks 1.0.1 (createlightworks-neoforge-1.21.1-1.0.1.jar) : code du dépôt public github.com/Goldsk1n/CreateLightworks au tag v1.0.1, recettes du dossier data du jar, scènes Ponder rejouées par notre moteur.",
+    "Mod de GoldskinMC, sous licence MIT : modèles et textures de ses auteurs, rendus à partir du jar ; aucun texte du mod n'est recopié.",
+    "Gyrophare : content/LightType.java (ROTATING_BEACON ConeFalloff(5, 4, 20, 32)), content/beacon/RotatingBeaconBlockEntity.java (lumières mobiles en rotation, lumière de faisceau à l'arrêt), content/SpinAngle.java (0,3° par tick et par tr/min) ; impact 1 su par tr/min : registry/LightworksBlocks.java.",
+    "Feu d'alerte : content/LightType.java (WARNING_LIGHT, lumière 12), content/signal/WarningPattern.java (durées des motifs, stroboscope à 25 % de lumière de bloc, pulsation par quarts), beam/DayCycle.java (nuit de 13 000 à 23 000), SignalLampBlockEntity.isDark (Nether, End), content/signal/SignalLampMovement.java.",
+    "Balise de bord : content/signal/EdgeLightBlock.java (FULL_LIGHT 4, sans collision, couleur et luminosité dans l'état du bloc, lentille seule teinte) ; recettes : data/lightworks/recipe/rotating_beacon.json, warning_light.json (2 feux), edge_light.json (8 balises)."
+  ],
+  "en": {
+    "slugEn": "lightworks-beacons-and-warning-lights",
+    "name": "Rotating Beacon, Warning Light and Edge Light",
+    "title": "Beacons and Warning Lights — Create Lightworks guide",
+    "description": "Rotating Beacon, Warning Light and Edge Light from Create: Lightworks, a Create addon: spin speed, flash patterns, night mode, dyes and redstone.",
+    "intro": "Three Lightworks lamps are mainly there to be seen. The <strong>Rotating Beacon</strong> spins two beams in time with a shaft, the <strong>Warning Light</strong> flashes in six patterns and the <strong>Edge Light</strong> outlines a runway or a platform. All of them take dye and dim with redstone.",
+    "facts": [
+      {
+        "label": "Rotating Beacon",
+        "value": "2 opposite beams, 5° either side of the axis (+ 4°), at full strength to 20 blocks, gone at 32"
+      },
+      {
+        "label": "Rotation",
+        "value": "0.3° per tick per RPM; 1 SU per RPM"
+      },
+      {
+        "label": "Warning Light",
+        "value": "amber, block light 12; 6 patterns, always or at night only"
+      },
+      {
+        "label": "Night",
+        "value": "from 13,000 to 23,000 ticks into the day; always in the Nether and the End"
+      },
+      {
+        "label": "Edge Light",
+        "value": "block light 4, no collision, 8 per craft"
+      },
+      {
+        "label": "Redstone",
+        "value": "brightness = 15 − signal; 15 switches it off"
+      },
+      {
+        "label": "Version",
+        "value": "Create: Lightworks 1.0.1 · Create 6.0.10"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Glass",
+          "Glass",
+          "Glass"
+        ],
+        [
+          "Glass",
+          "Electron Tube",
+          "Glass"
+        ],
+        [
+          null,
+          "Brass Casing",
+          null
+        ]
+      ],
+      "result": "1 Rotating Beacon"
+    },
+    "videos": [
+      {
+        "id": "lw_beacon",
+        "name": "The Rotating Beacon and shaft speed",
+        "description": "A Rotating Beacon on a Creative Motor spins at 8 RPM, then 32, stops with its beams frozen and starts again dyed red."
+      },
+      {
+        "id": "lw_warning",
+        "name": "Warning Light patterns",
+        "description": "An amber Warning Light goes from blink to pulse, double flash and strobe before being dyed red."
+      },
+      {
+        "id": "lw_edge",
+        "name": "Marking out a runway",
+        "description": "Two rows of Edge Lights along a strip of gray carpet, dyed blue and then switched off with redstone."
+      }
+    ],
+    "sections": [
+      {
+        "id": "gyrophare",
+        "title": "Rotating Beacon",
+        "alt": "A Rotating Beacon on a Creative Motor casting two beams in opposite directions",
+        "html": "<p>The <strong>Rotating Beacon</strong> (recipe shown here) carries two back-to-back beams, level with its mount. Each is like a shorter Searchlight beam: 5° either side of the axis, at full strength to 20 blocks, dark by 32. Run a shaft into its base and the beams spin: the classic rotating lamp for control towers, airships and locomotives.</p>"
+      },
+      {
+        "id": "vitesse",
+        "title": "Speed comes from the shaft",
+        "alt": "The motor at 32 RPM, the beams spinning much faster",
+        "html": "<p>The rotor follows the shaft at 0.3° per tick per RPM: one turn every 7.5 seconds at 8 RPM, every 1.9 seconds at 32. It costs 1 SU per RPM. For an exact rhythm, set the shaft with a <a href=\"/en/wiki/rotation-speed-controller\">Rotational Speed Controller</a>.</p>"
+      },
+      {
+        "id": "arret",
+        "title": "At a standstill",
+        "alt": "Motor stopped: both beams stay put and light where they fall",
+        "html": "<p>When the shaft stops, the beams freeze and each places its own Beam Light, like two fixed Searchlights. While spinning they are moving lights, lit by each client. Redstone dims it like the other lamps; at 15 it goes dark.</p>"
+      },
+      {
+        "id": "teinture",
+        "title": "Dyeing the beacon",
+        "alt": "The red-dyed Rotating Beacon turning at 16 RPM",
+        "html": "<p>A dye colours the lens and both beams. Red for an obstacle, amber for roadworks, blue for a rescue post: the colour code is yours to choose.</p>"
+      },
+      {
+        "id": "feu",
+        "title": "Warning Light",
+        "alt": "An amber Warning Light placed on the floor",
+        "html": "<p>The <strong>Warning Light</strong> has no beam: it is an amber lamp giving up to 12 block light. Its cross-shaped recipe (Glass, two Orange Dye, an Electron Tube and a Brass Sheet) makes two. It can be placed on any face.</p>"
+      },
+      {
+        "id": "motifs",
+        "title": "Six patterns",
+        "alt": "The Warning Light switching patterns",
+        "html": "<p>Keep right-click held on its value box: <strong>Steady</strong>; <strong>Blink</strong>, half a second on and half a second off; <strong>Opposite Blink</strong>, the reverse, so a pair alternates like a level crossing; <strong>Pulse</strong>, rising and fading over 1.5 seconds; <strong>Double Flash</strong>, two short flashes every 1.5 seconds; <strong>Strobe</strong>, one flash per second. Patterns run on the game clock, so every lamp flashes in sync.</p>"
+      },
+      {
+        "id": "nuit",
+        "title": "Night only",
+        "alt": "The Warning Light switched to Strobe",
+        "html": "<p>The box has two rows: the top one plays the pattern all the time, the bottom one only at night, from 13,000 to 23,000 ticks into the day, roughly sunset to sunrise. Only the clock matters, not the visible sky, so a lamp under a roof and one outdoors switch on together. In the Nether and the End it is always night for them.</p>"
+      },
+      {
+        "id": "lumiere",
+        "title": "Light that keeps the beat",
+        "alt": "The light around the Warning Light changing with the pattern",
+        "html": "<p>The block light follows the pattern as well: the floor brightens and darkens with each blink. To avoid constant relighting, Pulse moves in quarter steps and Strobe keeps a steady quarter of its light. On a moving contraption the lamp still flashes and tints nearby blocks, with no dynamic light.</p>"
+      },
+      {
+        "id": "feu-teinture",
+        "title": "Changing its colour",
+        "alt": "The Warning Light dyed red",
+        "html": "<p>A dye changes its colour and the colour of the glow it spreads. A red lamp on Double Flash at the top of a crane makes a convincing aircraft obstruction light.</p>"
+      },
+      {
+        "id": "balises",
+        "title": "Edge Light",
+        "alt": "Two rows of three Edge Lights framing a strip of gray carpet",
+        "html": "<p>The <strong>Edge Light</strong> is a small glowing stud for lining an airstrip, a taxi lane or a station platform. A column recipe (Glass, an Electron Tube, a Brass Sheet) gives eight. Its block light of 4 shows the ground around it without lighting the strip.</p>"
+      },
+      {
+        "id": "passage",
+        "title": "Walk and drive over it",
+        "alt": "The markers flush with the floor on both sides of the strip",
+        "html": "<p>It has no collision at all: you walk on it and vehicles drive straight over. Nothing ticks and its colour lives in the block state, so hundreds of them cost almost nothing. An assembled contraption takes it along with the block it sits on.</p>"
+      },
+      {
+        "id": "balise-teinture",
+        "title": "Lens colour",
+        "alt": "The Edge Lights dyed blue",
+        "html": "<p>A dye changes its lens colour and nothing else: the marker does not tint nearby blocks. Blue for taxi lanes, green for the runway threshold, white for the sides.</p>"
+      },
+      {
+        "id": "balise-redstone",
+        "title": "Switching the runway remotely",
+        "alt": "The Edge Lights turned off by a redstone signal",
+        "html": "<p>Redstone dims it and a signal of 15 turns it off. Hook the row up to a <a href=\"/en/wiki/redstone-link\">Redstone Link</a> to run the runway from the control tower.</p>"
+      }
+    ],
+    "sources": [
+      "Create: Lightworks 1.0.1 (createlightworks-neoforge-1.21.1-1.0.1.jar): code from the public repository github.com/Goldsk1n/CreateLightworks at tag v1.0.1, recipes from the jar's data folder, Ponder scenes replayed by our engine.",
+      "Mod by GoldskinMC, MIT licence: models and textures by its authors, rendered from the jar; no text from the mod is copied.",
+      "Rotating Beacon: content/LightType.java (ROTATING_BEACON ConeFalloff(5, 4, 20, 32)), content/beacon/RotatingBeaconBlockEntity.java (moving lights while spinning, Beam Light when stopped), content/SpinAngle.java (0.3° per tick per RPM); 1 SU per RPM impact: registry/LightworksBlocks.java.",
+      "Warning Light: content/LightType.java (WARNING_LIGHT, light 12), content/signal/WarningPattern.java (pattern timings, strobe at 25% block light, pulse in quarter steps), beam/DayCycle.java (night 13,000 to 23,000), SignalLampBlockEntity.isDark (Nether, End), content/signal/SignalLampMovement.java.",
+      "Edge Light: content/signal/EdgeLightBlock.java (FULL_LIGHT 4, no collision, colour and brightness in the block state, only the lens is tinted); recipes: data/lightworks/recipe/rotating_beacon.json, warning_light.json (2 lamps), edge_light.json (8 markers)."
+    ]
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "slug": "cloches",
+  "name": "Clochette, cloche particulière et cloche hantée",
+  "blockId": "create:haunted_bell",
+  "category": "outils",
+  "title": "Clochette et cloches hantées — Create : guide",
+  "description": "Les cloches de Create : la clochette qui donne un signal, la cloche particulière, et la cloche hantée qui montre où les monstres peuvent apparaître.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Create ajoute trois cloches. La <strong>clochette</strong> se pose sur un comptoir et donne une impulsion de redstone. La <strong>cloche particulière</strong>, en laiton, sonne comme une cloche de village avec un son à elle. Passée au feu des âmes, elle devient <strong>cloche hantée</strong> : quand elle sonne, des âmes montrent tous les endroits sombres où un monstre pourrait apparaître.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Outils et équipement"
+    },
+    {
+      "label": "Clochette",
+      "value": "Signal de 15 pendant 20 ticks (1 s)"
+    },
+    {
+      "label": "Cloche particulière",
+      "value": "Bloc de laiton au-dessus d’une plaque de laiton"
+    },
+    {
+      "label": "Cloche hantée",
+      "value": "Cloche particulière hantée (feu des âmes ou ventilateur)"
+    },
+    {
+      "label": "Portée de la cloche hantée",
+      "value": "10 blocs, un cran toutes les 6 ticks"
+    },
+    {
+      "label": "Recharge",
+      "value": "65 ticks entre deux sonneries"
+    },
+    {
+      "label": "Ce qu’elle montre",
+      "value": "Sol où un monstre peut apparaître (lumière de bloc à 0)"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Cloche particulière à l'établi",
+    "grid": [
+      [
+        null,
+        "Bloc de laiton",
+        null
+      ],
+      [
+        null,
+        "Plaque de laiton",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "create:brass_block",
+        null
+      ],
+      [
+        null,
+        "create:brass_sheet",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 cloche particulière",
+    "resultItem": "create:peculiar_bell"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "clochette",
+      "title": "La clochette",
+      "image": "bells_still_cloches.webp",
+      "alt": "La clochette, la cloche particulière et deux cloches hantées, dont une sur un feu de camp des âmes",
+      "html": "<p>La clochette se fait avec un <strong>boîtier d'andésite</strong> et une <strong>plaque d'or</strong>. Elle se pose sur n'importe quelle face, même sous l'eau, et se tourne à la clé. Un clic droit la fait tinter et envoie un signal de redstone de 15 pendant une seconde, aussi bien autour d'elle que dans le bloc qui la porte. Un bouton qui sonne, en somme : parfait pour appeler un <a href=\"/wiki/commandeur-a-redstone\">commandeur à redstone</a> à un comptoir.</p>"
+    },
+    {
+      "id": "particuliere",
+      "title": "La cloche particulière",
+      "html": "<p>Un bloc de laiton posé sur une plaque de laiton donne une cloche particulière. Elle fonctionne comme la cloche du jeu : on la frappe sur un côté, ou un signal de redstone la fait sonner, avec un son plus grave qui lui est propre. Elle se pose au sol, au plafond ou au mur. Son seul autre intérêt est de pouvoir devenir une cloche hantée.</p>"
+    },
+    {
+      "id": "hanter",
+      "title": "La rendre hantée",
+      "html": "<p>Deux façons. La plus simple : poser la cloche particulière juste <strong>au-dessus d'un feu des âmes</strong> ou d'un feu de camp des âmes allumé, ou allumer ce feu sous elle : elle se change aussitôt, dans un nuage d'âmes. Sinon, la passer dans le courant d'un <a href=\"/wiki/ventilateur-enchasse\">ventilateur</a> qui souffle à travers un feu des âmes ou un feu de camp des âmes : c'est la « hantise », un traitement du ventilateur comme le lavage ou la cuisson.</p>"
+    },
+    {
+      "id": "ames",
+      "title": "Ce que montrent les âmes",
+      "html": "<p>Sonnée, la cloche hantée lance une onde qui s'étend sur <strong>10 blocs</strong>, un cran toutes les six ticks. Partout où un monstre pourrait apparaître, une âme s'élève : un sol solide, assez de place, et une <strong>lumière de bloc à zéro</strong>. Seules les torches, lampes et autres sources comptent, pas la lumière du ciel : un pré sombre la nuit mais éclairé le jour s'affiche quand même. Il faut 65 ticks avant de pouvoir la sonner à nouveau.</p>"
+    },
+    {
+      "id": "en-main",
+      "title": "Tenue en main",
+      "html": "<p>Il n'est même pas nécessaire de la poser : tenue dans une main, après une demi-seconde, la cloche hantée lance de petites ondes de <strong>3 blocs</strong> autour de toi, en continu. On se promène dans sa base et on voit tout de suite où il manque une torche. Posée sur une machine en mouvement, elle sonne à chaque nouvel emplacement, au plus une fois toutes les 65 ticks.</p>"
+    },
+    {
+      "id": "machines",
+      "title": "Sur les machines et les trains",
+      "html": "<p>Clochette et cloche particulière sonnent aussi quand elles voyagent sur une contraption : au départ, à chaque changement de sens et à l'arrêt. Sur un train, la clochette se tait, mais une cloche hantée joue son propre son à l'arrivée en gare. Une clochette sur la cabine d'un <a href=\"/wiki/poulie-d-ascenseur\">ascenseur</a> annonce ainsi chaque arrêt.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Astuces",
+      "html": "<p>Pour sécuriser une grande base, fais le tour avec la cloche hantée en main et pose une lampe partout où une âme apparaît. Une clochette sur un comptoir, reliée à une porte ou à une alarme, rend une boutique plus vivante. Et une cloche particulière est un bon cadeau : il suffit d'un feu des âmes pour en faire un outil.</p>"
+    }
+  ],
+  "related": [
+    "ventilateur-enchasse",
+    "commandeur-a-redstone",
+    "horloge-a-coucou",
+    "poulie-d-ascenseur",
+    "materiaux"
+  ],
+  "sources": [
+    "Recettes : crafting/logistics/desk_bell.json (boîtier d'andésite + plaque d'or), crafting/curiosities/peculiar_bell.json (bloc de laiton sur plaque de laiton), haunting/haunted_bell.json",
+    "Clochette : DeskBellBlock / DeskBellBlockEntity (signal 15, 20 ticks, signal fort vers le support)",
+    "Cloche hantée : PeculiarBellBlock.tryConvert (feu des âmes dessous), HauntedBellBlockEntity et SoulPulseEffect (10 blocs, 6 ticks par cran, recharge 65 ticks, lumière de bloc < 1), HauntedBellPulser (en main : 3 blocs), HauntedBellMovementBehaviour, BellMovementBehaviour",
+    "Images : blocs et objets du jeu (modèles de Create) rendus par notre moteur, joueur non dessiné ; corps des cloches dessiné d'après BellRenderer"
+  ],
+  "en": {
+    "slugEn": "bells",
+    "name": "Desk Bell, Peculiar Bell and Haunted Bell",
+    "title": "Desk Bell and Haunted Bell — Create mod guide",
+    "description": "Create's bells: the Desk Bell that sends a redstone pulse, the Peculiar Bell, and the Haunted Bell that shows where monsters can spawn.",
+    "intro": "Create adds three bells. The <strong>Desk Bell</strong> sits on a counter and sends a redstone pulse. The <strong>Peculiar Bell</strong>, made of brass, rings like a village bell with a sound of its own. Passed through soul fire, it becomes a <strong>Haunted Bell</strong>: when it rings, souls show every dark spot where a monster could spawn, which makes it the best tool to light up a base properly.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Tools and equipment"
+      },
+      {
+        "label": "Desk Bell",
+        "value": "Signal of 15 for 20 ticks (1 s)"
+      },
+      {
+        "label": "Peculiar Bell",
+        "value": "Block of Brass on top of a Brass Sheet"
+      },
+      {
+        "label": "Haunted Bell",
+        "value": "Haunted Peculiar Bell (soul fire or fan)"
+      },
+      {
+        "label": "Haunted Bell range",
+        "value": "10 blocks, one step every 6 ticks"
+      },
+      {
+        "label": "Recharge",
+        "value": "65 ticks between rings"
+      },
+      {
+        "label": "What it shows",
+        "value": "Ground where a monster can spawn (block light 0)"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Peculiar Bell, crafting table",
+      "grid": [
+        [
+          null,
+          "Block of Brass",
+          null
+        ],
+        [
+          null,
+          "Brass Sheet",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Peculiar Bell"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "clochette",
+        "title": "The Desk Bell",
+        "alt": "The Desk Bell, the Peculiar Bell and two Haunted Bells, one on a soul campfire",
+        "html": "<p>The Desk Bell is made from an <strong>Andesite Casing</strong> and a <strong>Golden Sheet</strong>. It goes on any face, even underwater, and turns with the Wrench. A right-click makes it ding and sends a redstone signal of 15 for one second, both around it and into the block holding it. A button that rings, really: perfect to call a <a href=\"/en/wiki/redstone-requester\">Redstone Requester</a> at a counter.</p>"
+      },
+      {
+        "id": "particuliere",
+        "title": "The Peculiar Bell",
+        "html": "<p>A Block of Brass on top of a Brass Sheet gives a Peculiar Bell. It works like the game's bell: you hit it on a side, or a redstone signal rings it, with a deeper sound of its own. It goes on the floor, the ceiling or a wall. Its only other use is to become a Haunted Bell.</p>"
+      },
+      {
+        "id": "hanter",
+        "title": "Haunting it",
+        "html": "<p>Two ways. The easiest: place the Peculiar Bell right <strong>above soul fire</strong> or a lit soul campfire, or light that fire under it: it changes at once, in a cloud of souls. Otherwise, put it in the stream of an <a href=\"/en/wiki/encased-fan\">Encased Fan</a> blowing through soul fire or a soul campfire: that is \"haunting\", a fan process like washing or smoking.</p>"
+      },
+      {
+        "id": "ames",
+        "title": "What the souls show",
+        "html": "<p>Rung, the Haunted Bell sends out a wave spreading over <strong>10 blocks</strong>, one step every six ticks. Wherever a monster could spawn, a soul rises: solid ground, enough room, and <strong>block light at zero</strong>. Only torches, lamps and other sources count, not sky light: a meadow dark at night but lit by day still shows up. It takes 65 ticks before it can ring again.</p>"
+      },
+      {
+        "id": "en-main",
+        "title": "Held in hand",
+        "html": "<p>You do not even need to place it: held in either hand, after half a second, the Haunted Bell sends small <strong>3-block</strong> waves around you, continuously. Walk around your base and you see right away where a torch is missing. Mounted on a moving contraption, it rings at each new position, at most once every 65 ticks.</p>"
+      },
+      {
+        "id": "machines",
+        "title": "On contraptions and trains",
+        "html": "<p>The Desk Bell and the Peculiar Bell also ring when they travel on a contraption: when it starts, at every change of direction and when it stops. On a train the Desk Bell stays quiet, but a Haunted Bell plays its own sound when the train pulls into a station. A Desk Bell on an <a href=\"/en/wiki/elevator-pulley\">elevator</a> cab thus announces every stop.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Tips",
+        "html": "<p>To secure a large base, walk around with the Haunted Bell in hand and place a lamp wherever a soul shows up. A Desk Bell on a counter, wired to a door or an alarm, livens up a shop. And a Peculiar Bell makes a fine gift: one soul fire is all it takes to turn it into a tool. Keep it in your off hand while building: the souls follow you and flag every dark corner as you go.</p>"
+      }
+    ],
+    "sources": [
+      "Recipes: crafting/logistics/desk_bell.json (Andesite Casing + Golden Sheet), crafting/curiosities/peculiar_bell.json (Block of Brass on Brass Sheet), haunting/haunted_bell.json",
+      "Desk Bell: DeskBellBlock / DeskBellBlockEntity (signal 15, 20 ticks, strong signal into the support)",
+      "Haunted Bell: PeculiarBellBlock.tryConvert (soul fire below), HauntedBellBlockEntity and SoulPulseEffect (10 blocks, 6 ticks per step, 65-tick recharge, block light < 1), HauntedBellPulser (held: 3 blocks), HauntedBellMovementBehaviour, BellMovementBehaviour",
+      "Images: the game's blocks and items (Create's models) rendered by our engine, player not drawn; bell bodies drawn after BellRenderer"
+    ]
+  }
+}

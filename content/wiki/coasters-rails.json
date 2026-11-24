@@ -1,0 +1,332 @@
+{
+  "slug": "coasters-rails",
+  "name": "Rails et chaînes de levage",
+  "blockId": "simulatedcoasters:coaster_anchorpoint",
+  "category": "coasters",
+  "title": "Rails et chaînes de levage — Coasters Simulated, guide",
+  "description": "Poser les rails de Create: Coasters Simulated entre des points d'ancrage, les régler à la clé, les teindre, ajouter une chaîne de levage.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create: Coasters Simulated 0.1.6",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>rail de montagnes russes</strong> (Coaster Track) se tend entre deux <strong>points d'ancrage</strong> (Track Anchorpoint) : le mod calcule une courbe lisse, que l'on retouche ensuite à la <a href=\"/wiki/cle\">clé</a>. Une <strong>chaîne de levage</strong>, entraînée par un arbre de Create, hisse les wagons dans les montées.",
+  "facts": [
+    {
+      "label": "Portée",
+      "value": "jusqu’à 45 blocs par tronçon"
+    },
+    {
+      "label": "Coût",
+      "value": "la longueur du tronçon en rails (rien en créatif)"
+    },
+    {
+      "label": "Par ancrage",
+      "value": "2 tronçons au plus"
+    },
+    {
+      "label": "Lissage",
+      "value": "automatique, désactivé avec Alt"
+    },
+    {
+      "label": "Teinture",
+      "value": "colorants (non consommés) ; la hache retire la couleur"
+    },
+    {
+      "label": "Chaîne de levage",
+      "value": "64 blocs au plus ; vitesse 16 × tr/min / 256 blocs/s"
+    },
+    {
+      "label": "Rail",
+      "value": "assemblage séquencé sur une poutre en métal"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (point d'ancrage)",
+    "grid": [
+      [
+        null,
+        "Poutre en métal",
+        null
+      ],
+      [
+        null,
+        "Bloc de fer industriel",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "items": [
+      [
+        null,
+        "create:metal_girder",
+        null
+      ],
+      [
+        null,
+        "create:industrial_iron_block",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "2 points d'ancrage",
+    "resultItem": "simulatedcoasters:coaster_anchorpoint"
+  },
+  "videos": [
+    {
+      "id": "coast_track",
+      "name": "Poser et régler les rails",
+      "description": "Deux ancrages reliés par un rail, la courbe reprise à la clé, un circuit lissé sur plusieurs ancrages, puis teint et détaché à la hache.",
+      "duration": "PT26S",
+      "chapters": [
+        {
+          "t": 1.2,
+          "section": "poser"
+        },
+        {
+          "t": 6.2,
+          "section": "cle"
+        },
+        {
+          "t": 11.7,
+          "section": "lissage"
+        },
+        {
+          "t": 19.1,
+          "section": "teinture"
+        }
+      ]
+    },
+    {
+      "id": "coast_chainlift",
+      "name": "La chaîne de levage",
+      "description": "Une chaîne choisit le début et la fin d'un tronçon ; l'arbre de l'ancrage de départ l'entraîne ; la clé l'enlève.",
+      "duration": "PT16S",
+      "chapters": [
+        {
+          "t": 1.2,
+          "section": "chaine"
+        },
+        {
+          "t": 6.0,
+          "section": "moteur"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "poser",
+      "title": "Tendre un rail",
+      "image": "coast_track_spline.webp",
+      "alt": "Un rail gris à deux rangs tendu en ligne droite entre deux points d'ancrage",
+      "video": "coast_track",
+      "html": "<p>Posez deux points d'ancrage ; ils ressemblent à de petits socles. Rail en main, cliquez le premier puis le second : une courbe se tend entre les deux, et autant de rails que de blocs de distance sont dépensés (rien en créatif). Accroupi, on annule la sélection. Un tronçon mesure 45 blocs au plus, ne peut pas relier deux engins différents ni se croiser lui-même, et un ancrage ne tient que deux tronçons.</p>"
+    },
+    {
+      "id": "cle",
+      "title": "Régler la courbe à la clé",
+      "image": "coast_track_cle.webp",
+      "alt": "Le rail redessiné en S entre les deux ancrages",
+      "html": "<p>La clé affiche des poignées sur le tronçon. On peut allonger ou orienter les poignées de chaque extrémité (jusqu'à 0,7 fois la distance et 60° hors de l'axe), soulever un point d'ancrage de 0,25 à 2,5 blocs, et incliner la voie jusqu'à 90°, par crans de 15°. Alt désactive les crans. Dans la vidéo, un rail droit devient un S.</p>"
+    },
+    {
+      "id": "lissage",
+      "title": "Les circuits lissés",
+      "image": "coast_track_lissage.webp",
+      "alt": "Un circuit en spirale sur sept ancrages",
+      "html": "<p>Quand on relie plusieurs ancrages à la suite, le mod choisit la forme la plus douce : une boucle complète, un demi-cercle, un quart de cercle ou, à défaut, une courbe de Bézier optimisée, et raccorde chaque tronçon au précédent. Maintenir Alt pendant la pose coupe ce lissage pour garder la courbe brute. Les angles trop fermés (moins de 80° entre deux tronçons) sont refusés.</p>"
+    },
+    {
+      "id": "teinture",
+      "title": "Teindre la voie",
+      "image": "coast_track_teinture.webp",
+      "alt": "Le même circuit, chaque tronçon teint d'une couleur différente, du rouge au violet",
+      "html": "<p>Un clic droit avec un colorant sur un tronçon le colore, sans consommer la teinture : les rails prennent la couleur, la poutre centrale garde la sienne. Une <strong>hache</strong> retire la couleur, une couche à la fois, sans s'user. Ancrages et poutrelles restent gris. Pour un circuit lisible, réservez une couleur par section.</p>"
+    },
+    {
+      "id": "chaine",
+      "title": "Poser une chaîne de levage",
+      "image": "coast_chainlift_chaine.webp",
+      "alt": "Une chaîne tendue au milieu du rail entre les deux ancrages",
+      "video": "coast_chainlift",
+      "html": "<p>Une simple <strong>chaîne</strong> de Minecraft, non consommée, sert d'outil : cliquez l'ancrage de départ, puis la fin du passage voulu sur la voie connectée. La chaîne court au milieu de la voie sur 64 blocs au plus, sans chevaucher une autre chaîne. L'axe de l'arbre se choisit d'après votre regard au premier clic.</p>"
+    },
+    {
+      "id": "moteur",
+      "title": "Entraîner la chaîne",
+      "image": "coast_chainlift_arbre.webp",
+      "alt": "L'ancrage de départ muni de son arbre, la chaîne qui part vers l'autre ancrage",
+      "html": "<p>L'ancrage de départ reçoit un arbre : branchez-le à un réseau de Create, comme un <a href=\"/wiki/rotor\">rotor</a>. La chaîne file à 16 × tr/min / 256 blocs par seconde, soit 16 blocs/s à 256 tr/min, et entraîne les wagons vers cette vitesse (accélération de 64 blocs/s²). La clé tourne l'axe de l'arbre ; accroupi, elle retire la chaîne, comme à la fin de la vidéo.</p>"
+    },
+    {
+      "id": "conseils",
+      "title": "Conseils de tracé",
+      "html": "<p>Tracez d'abord la silhouette avec les ancrages seuls, puis tendez les rails : on corrige plus facilement un ancrage mal placé avant que la voie existe. Gardez les tronçons courts dans les virages serrés et longs dans les lignes droites.</p>"
+    },
+    {
+      "id": "faq",
+      "title": "Le rail refuse de se poser ?",
+      "html": "<p>Vérifiez la distance (45 blocs au plus), que l'ancrage n'a pas déjà deux tronçons, et que l'angle avec le tronçon voisin n'est pas trop fermé. En survie, il faut aussi assez de rails en main pour toute la longueur.</p>"
+    },
+    {
+      "id": "fabriquer",
+      "title": "Fabriquer rails et ancrages",
+      "html": "<p>Une poutre en métal sur un bloc de fer industriel donne deux points d'ancrage. Le rail sort d'un assemblage séquencé sur une poutre en métal : deux pépites de fer (ou de zinc) au <a href=\"/wiki/deployeur\">déployeur</a>, puis un passage sous la <a href=\"/wiki/presse-mecanique\">presse</a>. Entre deux étapes, c'est un rail inachevé.</p>"
+    }
+  ],
+  "related": [
+    "create-coasters-simulated",
+    "coasters-wagons",
+    "cle",
+    "rail-de-train",
+    "rotor",
+    "deployeur",
+    "presse-mecanique",
+    "moteur-creatif"
+  ],
+  "sources": [
+    "Code et données : Create: Coasters Simulated 0.1.6 (jar de l’instance de test du modpack, licence MIT, © SilverGold) ; code lu dans la version 0.1.5 décompilée (Vineflower, fork public sjzeero) et comparé à la 0.1.6 avec javap",
+    "Rails : CoasterTrackItem.java, CoasterTrackPlacement.java, CoasterTrackGauge.java, CoasterCircularLoopPlacement.java, CoasterCurveDyeInteraction.java, CoasterCurveTieredDye.java",
+    "Chaîne de levage : ChainLiftCommitPayload.java, ChainLiftConfig.java, CoasterCartChainLiftDrive.java",
+    "Recettes : data/simulatedcoasters/recipe/coaster_anchorpoint.json, sequenced_assembly/coaster_track.json",
+    "Vidéos : scènes Ponder de Create: Coasters Simulated (coaster_track/ponder_track_placement, coaster_track/ponder_chainlift) rejouées par notre moteur ; rails dessinés d’après AnchorPeerTrackCurveBerRender et BezierConnection de Create ; modèles et textures du mod (licence MIT, © SilverGold)"
+  ],
+  "en": {
+    "slugEn": "coasters-track",
+    "name": "Track and chain lifts",
+    "title": "Track and chain lifts — Coasters Simulated guide",
+    "description": "Placing Create: Coasters Simulated track between anchorpoints, editing it with a wrench, dyeing it, and adding a chain lift driven by a shaft.",
+    "intro": "<strong>Coaster Track</strong> is stretched between two <strong>Track Anchorpoints</strong>: the mod works out a smooth curve, which you then reshape with the <a href=\"/en/wiki/wrench\">Wrench</a>. A <strong>chain lift</strong>, driven by a Create shaft, hauls the carts up the climbs.",
+    "facts": [
+      {
+        "label": "Reach",
+        "value": "up to 45 blocks per span"
+      },
+      {
+        "label": "Cost",
+        "value": "the span length in tracks (free in creative)"
+      },
+      {
+        "label": "Per anchor",
+        "value": "2 spans at most"
+      },
+      {
+        "label": "Smoothing",
+        "value": "automatic, turned off with Alt"
+      },
+      {
+        "label": "Dye",
+        "value": "dyes (not consumed); an axe removes the colour"
+      },
+      {
+        "label": "Chain lift",
+        "value": "64 blocks at most; speed 16 × RPM / 256 blocks/s"
+      },
+      {
+        "label": "Track",
+        "value": "sequenced assembly on a Metal Girder"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe (Track Anchorpoint)",
+      "grid": [
+        [
+          null,
+          "Metal Girder",
+          null
+        ],
+        [
+          null,
+          "Block of Industrial Iron",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "2 Track Anchorpoints"
+    },
+    "videos": [
+      {
+        "id": "coast_track",
+        "name": "Placing and shaping track",
+        "description": "Two anchors joined by track, the curve reshaped with the wrench, a smoothed circuit over several anchors, then dyed and cleaned with an axe."
+      },
+      {
+        "id": "coast_chainlift",
+        "name": "The chain lift",
+        "description": "A chain marks where the lift begins and ends; the first anchor’s shaft drives it; the wrench removes it."
+      }
+    ],
+    "sections": [
+      {
+        "id": "poser",
+        "title": "Stretching a span",
+        "alt": "Grey two-rail track stretched in a straight line between two anchorpoints",
+        "html": "<p>Place two anchorpoints; they look like small pedestals. With track in hand, click the first then the second: a curve stretches between them, and as many tracks as blocks of distance are spent (none in creative). Sneaking cancels the selection. A span is 45 blocks at most, cannot link two different machines or cross itself, and an anchor holds only two spans.</p>"
+      },
+      {
+        "id": "cle",
+        "title": "Shaping the curve with the Wrench",
+        "alt": "The track redrawn as an S between the two anchors",
+        "html": "<p>The wrench shows handles on the span. You can stretch or swing each end's handles (up to 0.7 times the distance and 60° off the axis), lift an anchorpoint by 0.25 to 2.5 blocks, and bank the track up to 90°, in 15° steps. Alt turns the steps off. In the video, straight track becomes an S.</p>"
+      },
+      {
+        "id": "lissage",
+        "title": "Smoothed circuits",
+        "alt": "A spiral circuit over seven anchors",
+        "html": "<p>When several anchors are joined in a row, the mod picks the gentlest shape: a full loop, a half circle, a quarter circle or, failing that, an optimised Bézier curve, and blends each span into the previous one. Holding Alt while placing turns smoothing off to keep the raw curve. Angles that are too tight (under 80° between two spans) are refused.</p>"
+      },
+      {
+        "id": "teinture",
+        "title": "Dyeing the track",
+        "alt": "The same circuit, each span dyed a different colour, from red to purple",
+        "html": "<p>Right-clicking a span with a dye colours it, without using the dye up: the rails take the colour, the centre beam keeps its own. An <strong>axe</strong> removes the colour, one layer at a time, without wearing out. Anchors and girders stay grey. For a readable circuit, keep one colour per section.</p>"
+      },
+      {
+        "id": "chaine",
+        "title": "Placing a chain lift",
+        "alt": "A chain running along the middle of the track between the two anchors",
+        "html": "<p>A plain Minecraft <strong>chain</strong>, not consumed, is the tool: click the starting anchor, then the end of the stretch you want on the connected track. The chain runs along the middle of the track for 64 blocks at most, without overlapping another chain. The shaft axis is picked from where you look on the first click.</p>"
+      },
+      {
+        "id": "moteur",
+        "title": "Driving the chain",
+        "alt": "The starting anchor fitted with its shaft, the chain heading to the other anchor",
+        "html": "<p>The starting anchor gets a shaft: connect it to a Create network, like a <a href=\"/en/wiki/shaft\">Shaft</a>. The chain moves at 16 × RPM / 256 blocks per second, so 16 blocks/s at 256 RPM, and pulls carts toward that speed (64 blocks/s² of acceleration). The wrench turns the shaft's axis; sneaking, it removes the chain, as at the end of the video.</p>"
+      },
+      {
+        "id": "conseils",
+        "title": "Layout tips",
+        "html": "<p>Sketch the outline with the anchors alone first, then stretch the track: a misplaced anchor is easier to fix before the track exists. Keep spans short in tight bends and long on straights.</p>"
+      },
+      {
+        "id": "faq",
+        "title": "Track will not place?",
+        "html": "<p>Check the distance (45 blocks at most), that the anchor does not already hold two spans, and that the angle with the neighbouring span is not too tight. In survival you also need enough track in hand for the whole length.</p>"
+      },
+      {
+        "id": "fabriquer",
+        "title": "Making track and anchors",
+        "html": "<p>A Metal Girder on a Block of Industrial Iron gives two anchorpoints. Track comes out of a sequenced assembly on a Metal Girder: two iron (or zinc) nuggets with a <a href=\"/en/wiki/deployer\">Deployer</a>, then a pass under the <a href=\"/en/wiki/mechanical-press\">press</a>. Between steps it is an Incomplete Coaster Track.</p>"
+      }
+    ],
+    "sources": [
+      "Code and data: Create: Coasters Simulated 0.1.6 (modpack test instance jar, MIT licence, © SilverGold); code read from the decompiled 0.1.5 (Vineflower, public sjzeero fork) and compared with 0.1.6 using javap",
+      "Track: CoasterTrackItem.java, CoasterTrackPlacement.java, CoasterTrackGauge.java, CoasterCircularLoopPlacement.java, CoasterCurveDyeInteraction.java, CoasterCurveTieredDye.java",
+      "Chain lift: ChainLiftCommitPayload.java, ChainLiftConfig.java, CoasterCartChainLiftDrive.java",
+      "Recipes: data/simulatedcoasters/recipe/coaster_anchorpoint.json, sequenced_assembly/coaster_track.json",
+      "Videos: Create: Coasters Simulated Ponder scenes (coaster_track/ponder_track_placement, coaster_track/ponder_chainlift) replayed by our engine; tracks drawn after AnchorPeerTrackCurveBerRender and Create’s BezierConnection; mod models and textures (MIT licence, © SilverGold)"
+    ]
+  }
+}

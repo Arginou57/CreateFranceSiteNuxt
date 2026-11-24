@@ -1,0 +1,387 @@
+{
+  "slug": "propulsion-propulseur-vectoriel",
+  "name": "Propulseurs vectoriel et ionique",
+  "blockId": "createpropulsion:vector_thruster",
+  "category": "propulsion",
+  "title": "Propulseurs vectoriels et ionique — Create Propulsion",
+  "description": "Propulseurs vectoriels de Create Propulsion : tuyère orientable à 30°, liaisons redstone, versions FE, liquide et créative, propulseur ionique.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Propulsion: Simulated 1.1.5",
+  "mcVersion": "1.21.1",
+  "intro": "Un <strong>propulseur vectoriel</strong> (Vector Thruster) oriente sa tuyère pour pousser de biais : on dirige l'engin sans le faire tourner. Il existe en trois versions, électrique, à liquide et créative ; la version électrique dérive du <strong>propulseur ionique</strong> (Ion Thruster), présenté en bas de page.",
+  "facts": [
+    {
+      "label": "Inclinaison",
+      "value": "jusqu’à 30° dans deux axes"
+    },
+    {
+      "label": "Commande",
+      "value": "4 liaisons redstone intégrées + signal de puissance"
+    },
+    {
+      "label": "Vectoriel (FE)",
+      "value": "733,33 kN, 4 000 FE, 40 FE par tick à fond"
+    },
+    {
+      "label": "Vectoriel à liquide",
+      "value": "733,33 kN, réservoir de 1 000 mB, 1 mB par tick"
+    },
+    {
+      "label": "Vectoriel créatif",
+      "value": "666,67 kN au départ, jusqu’à 6 666,67 kN"
+    },
+    {
+      "label": "Propulseur ionique",
+      "value": "800 kN, 4 000 FE, 40 FE par tick"
+    },
+    {
+      "label": "Multibloc",
+      "value": "non (ionique : oui)"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi",
+    "grid": [
+      [
+        "Plaque de platine",
+        "Propulseur ionique",
+        "Plaque de platine"
+      ],
+      [
+        "Pépite de platine",
+        "Capteur gyroscopique",
+        "Pépite de platine"
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "items": [
+      [
+        "createpropulsion:platinum_sheet",
+        "createpropulsion:ion_thruster",
+        "createpropulsion:platinum_sheet"
+      ],
+      [
+        "createpropulsion:platinum_nugget",
+        "simulated:gimbal_sensor",
+        "createpropulsion:platinum_nugget"
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 propulseur vectoriel",
+    "resultItem": "createpropulsion:vector_thruster"
+  },
+  "videos": [
+    {
+      "id": "prop_vector_fe",
+      "name": "Le propulseur vectoriel",
+      "description": "Un générateur à corail le charge, quatre leviers analogiques font tourner la tuyère en cercle, puis le jet part.",
+      "duration": "PT28S",
+      "chapters": [
+        {
+          "t": 1.4,
+          "section": "tuyere"
+        },
+        {
+          "t": 3.2,
+          "section": "energie"
+        },
+        {
+          "t": 7.1,
+          "section": "orientation"
+        },
+        {
+          "t": 17.5,
+          "section": "liaisons"
+        },
+        {
+          "t": 22.4,
+          "section": "poussee"
+        }
+      ]
+    },
+    {
+      "id": "prop_vector_creative",
+      "name": "La version créative",
+      "description": "Sans énergie : la poussée se règle à la molette, la tuyère suit les mêmes leviers.",
+      "duration": "PT28S",
+      "chapters": [
+        {
+          "t": 0.9,
+          "section": "tuyere"
+        },
+        {
+          "t": 2.9,
+          "section": "variantes"
+        },
+        {
+          "t": 4.4,
+          "section": "orientation"
+        },
+        {
+          "t": 16.2,
+          "section": "liaisons"
+        },
+        {
+          "t": 21.7,
+          "section": "poussee"
+        }
+      ]
+    },
+    {
+      "id": "prop_vector_liquid",
+      "name": "La version à liquide",
+      "description": "Une pompe le remplit par-dessous, puis la tuyère s'oriente et souffle.",
+      "duration": "PT28S",
+      "chapters": [
+        {
+          "t": 1.5,
+          "section": "tuyere"
+        },
+        {
+          "t": 3.4,
+          "section": "variantes"
+        },
+        {
+          "t": 6.0,
+          "section": "orientation"
+        },
+        {
+          "t": 17.0,
+          "section": "liaisons"
+        },
+        {
+          "t": 22.1,
+          "section": "poussee"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "tuyere",
+      "title": "Une tuyère orientable",
+      "image": "prop_vector_fe_tuyere.webp",
+      "alt": "Un propulseur vectoriel posé sur un générateur à corail, tuyère vers le haut, entouré de leviers analogiques",
+      "video": "prop_vector_fe",
+      "html": "<p>Le bloc garde un carter fixe ; la tuyère et ses quatre volets bougent par-dessus. Comme les autres propulseurs, il pousse vers sa face avant, et la force du signal de redstone règle la puissance. Quand il travaille, les volets se resserrent ; au repos ils s'écartent.</p>"
+    },
+    {
+      "id": "energie",
+      "title": "Le charger en énergie",
+      "image": "prop_vector_fe_generateur.webp",
+      "alt": "Le propulseur vectoriel sur son générateur à corail, une pompe et un réservoir à côté",
+      "html": "<p>La version de base fonctionne à l'énergie (FE). Elle stocke 4 000 FE et en consomme jusqu'à 40 par tick à pleine puissance. Dans la scène, un <a href=\"/wiki/propulsion-energie\">générateur à corail</a> placé dessous la remplit ; n'importe quelle source de FE d'un autre mod convient aussi, par contact ou par <a href=\"/wiki/propulsion-energie\">câbles</a>.</p>"
+    },
+    {
+      "id": "orientation",
+      "title": "Orienter la tuyère",
+      "image": "prop_vector_fe_orientation.webp",
+      "alt": "La tuyère penchée vers un côté pendant que deux leviers analogiques sont poussés",
+      "html": "<p>Quatre signaux décident de l'angle : ouest contre est pour un axe, bas contre haut pour l'autre. Chaque côté compte de 0 à 15, et la différence des deux, ramenée à 15, donne l'inclinaison jusqu'à 30°. La tuyère rejoint sa cible en douceur, un cinquième du chemin restant à chaque tick. Dans la vidéo, les leviers font faire un tour complet à la tuyère.</p>"
+    },
+    {
+      "id": "liaisons",
+      "title": "Les liaisons intégrées",
+      "html": "<p>Inutile de poser des fils autour : le bloc contient quatre récepteurs de <a href=\"/wiki/liaison-de-redstone\">liaison de redstone</a>, un par face latérale, avec leurs deux emplacements de fréquence. Réglez sur chaque face la même fréquence qu'un émetteur posé au poste de pilotage, et la tuyère obéit à distance, même sur un engin en vol. La caméra de la scène fait le tour du bloc pour montrer les quatre faces.</p>"
+    },
+    {
+      "id": "poussee",
+      "title": "Mettre les gaz",
+      "image": "prop_vector_fe_poussee.webp",
+      "alt": "Le jet bleuté du propulseur vectoriel qui monte au-dessus de la tuyère",
+      "html": "<p>Le signal de puissance est celui que le bloc reçoit directement. Le jet ionique, bleu clair, suit l'orientation de la tuyère. La version électrique délivre 733 kN à fond, un peu moins qu'un propulseur ionique seul.</p>"
+    },
+    {
+      "id": "variantes",
+      "title": "Versions à liquide et créative",
+      "image": "prop_vector_liquid_carburant.webp",
+      "alt": "Le propulseur vectoriel à liquide alimenté par une pompe et un réservoir créatif",
+      "video": "prop_vector_liquid",
+      "html": "<p>Le <strong>propulseur vectoriel à liquide</strong> (Liquid Vector Thruster) prend un carburant liquide par le dessous dans un réservoir de 1 000 mB et en brûle 1 mB par tick à fond, pour la même poussée. Le <strong>propulseur vectoriel créatif</strong> (Creative Vector Thruster) ne consomme rien : sa poussée se règle à la molette jusqu'à 6 666 kN et il ignore les obstacles.</p>"
+    },
+    {
+      "id": "pilotage",
+      "title": "Exemple de pilotage",
+      "html": "<p>Sur un petit vaisseau, posez une tuyère vectorielle sous chaque coin, toutes reliées aux mêmes quatre fréquences. Au poste de pilotage, quatre leviers analogiques émettent ouest, est, bas et haut : pousser le levier ouest incline toutes les tuyères ensemble et l'engin glisse de côté sans tourner. Une cinquième liaison commune règle la puissance. Les fréquences se règlent comme sur une liaison de Create, avec deux objets par face.</p>"
+    },
+    {
+      "id": "recettes",
+      "title": "Les recettes",
+      "html": "<p>Le propulseur vectoriel se fabrique avec un propulseur ionique, deux plaques et deux pépites de platine et un capteur gyroscopique de Simulated. La version à liquide part d'un propulseur à carburant, avec deux plaques et deux pépites de cuivre et le même capteur. La version créative n'a pas de recette.</p>"
+    },
+    {
+      "id": "ionique",
+      "title": "Le propulseur ionique",
+      "image": "prop_gal_ion_ionique.webp",
+      "alt": "Deux propulseurs ioniques, l'un vers le haut, l'autre vers l'avant, et une tuyère vectorielle",
+      "html": "<p>Le <strong>propulseur ionique</strong> (Ion Thruster) est un propulseur fixe à l'énergie : 800 kN, 4 000 FE de réserve, 40 FE par tick à fond, branché par n'importe quelle face. Comme le propulseur à carburant, il se soude en cube de 2×2×2 (×1,30) ou de 3×3×3 (×1,40), mais pas avec des blocs d'un autre type. Avec l'option d'atmosphère activée, il ne donne qu'un cinquième de sa force au sol et toute sa force près du plafond du monde.</p>"
+    }
+  ],
+  "related": [
+    "create-propulsion",
+    "propulsion-propulseur",
+    "propulsion-energie",
+    "liaison-de-redstone",
+    "propulsion-platine",
+    "aeronautics-capteurs",
+    "assembleur-physique",
+    "propulsion-adaptateur-inclinaison"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Propulsion: Simulated 1.1.5 (dépôt Propulsion-Team/create-propulsion-simulated, commit 36f83a1 du 23/07/2026, licence MIT, © Sergey Feduk, Tronco_78, Bunting_chj, SSnowly, KyivSec), identique au jar de l’instance de test du modpack",
+    "Tuyère : VectorThrusterBlockEntity.java (MAX_VISUAL_TILT_DEGREES 30, tweenTowards 0,2), VectorThrusterRenderer.java",
+    "Propulseur ionique : IonThrusterBlockEntity.java",
+    "Versions : LiquidVectorThrusterBlockEntity.java, CreativeVectorThrusterBlockEntity.java",
+    "Valeurs par défaut : PropulsionConfig.java (configuration commune et serveur du mod)",
+    "Recette : data/createpropulsion/recipe/crafting/vector_thruster.json",
+    "Vidéos : scènes Ponder de Create Propulsion: Simulated (ponder_vector_thruster_normal, ponder_creative_vector_thruster, ponder_liquid_vector_thruster) rejouées par notre moteur ; modèles, textures et particules du mod (licence MIT, © Propulsion Team)",
+    "Images : blocs du mod posés sur la plaque et rendus par notre moteur (licence MIT, © Propulsion Team)"
+  ],
+  "en": {
+    "slugEn": "propulsion-vector-thruster",
+    "name": "Vector and Ion Thrusters",
+    "title": "Vector and Ion Thrusters — Create Propulsion guide",
+    "description": "Create Propulsion vector thrusters: a nozzle that tilts up to 30°, built-in redstone links, FE, liquid and creative versions, plus the Ion Thruster.",
+    "intro": "A <strong>Vector Thruster</strong> swings its nozzle to push at an angle: you steer the machine without turning it. It comes in three versions, electric, liquid and creative; the electric one is derived from the <strong>Ion Thruster</strong>, covered at the bottom of the page.",
+    "facts": [
+      {
+        "label": "Tilt",
+        "value": "up to 30° on two axes"
+      },
+      {
+        "label": "Control",
+        "value": "4 built-in redstone links + a power signal"
+      },
+      {
+        "label": "Vector (FE)",
+        "value": "733.33 kN, 4,000 FE, 40 FE per tick at full power"
+      },
+      {
+        "label": "Liquid Vector",
+        "value": "733.33 kN, 1,000 mB tank, 1 mB per tick"
+      },
+      {
+        "label": "Creative Vector",
+        "value": "666.67 kN by default, up to 6,666.67 kN"
+      },
+      {
+        "label": "Ion Thruster",
+        "value": "800 kN, 4,000 FE, 40 FE per tick"
+      },
+      {
+        "label": "Multiblock",
+        "value": "no (ion: yes)"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table recipe",
+      "grid": [
+        [
+          "Platinum Sheet",
+          "Ion Thruster",
+          "Platinum Sheet"
+        ],
+        [
+          "Platinum Nugget",
+          "Gimbal Sensor",
+          "Platinum Nugget"
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Vector Thruster"
+    },
+    "videos": [
+      {
+        "id": "prop_vector_fe",
+        "name": "The Vector Thruster",
+        "description": "A Coral Generator charges it, four analog levers swing the nozzle in a circle, then the jet fires."
+      },
+      {
+        "id": "prop_vector_creative",
+        "name": "The creative version",
+        "description": "No energy needed: thrust is set with the scroll wheel, the nozzle follows the same levers."
+      },
+      {
+        "id": "prop_vector_liquid",
+        "name": "The liquid version",
+        "description": "A pump fills it from below, then the nozzle swings and blows."
+      }
+    ],
+    "sections": [
+      {
+        "id": "tuyere",
+        "title": "A swivelling nozzle",
+        "alt": "A Vector Thruster on a Coral Generator, nozzle up, surrounded by analog levers",
+        "html": "<p>The block keeps a fixed housing; the nozzle and its four flaps move on top of it. Like the other thrusters, it pushes toward its front face, and the strength of the redstone signal sets the power. When it works the flaps close in; at rest they open wide.</p>"
+      },
+      {
+        "id": "energie",
+        "title": "Charging it",
+        "alt": "The Vector Thruster on its Coral Generator, with a pump and a tank beside it",
+        "html": "<p>The base version runs on energy (FE). It stores 4,000 FE and uses up to 40 per tick at full power. In the scene, a <a href=\"/en/wiki/propulsion-energy-and-cables\">Coral Generator</a> placed below fills it; any FE source from another mod works as well, by contact or through <a href=\"/en/wiki/propulsion-energy-and-cables\">cables</a>.</p>"
+      },
+      {
+        "id": "orientation",
+        "title": "Aiming the nozzle",
+        "alt": "The nozzle tilted to one side while two analog levers are pushed",
+        "html": "<p>Four signals decide the angle: west against east for one axis, down against up for the other. Each side counts from 0 to 15, and the difference of the two, scaled to 15, gives the tilt up to 30°. The nozzle eases toward its target, a fifth of the remaining way each tick. In the video, the levers take the nozzle around a full circle.</p>"
+      },
+      {
+        "id": "liaisons",
+        "title": "Built-in links",
+        "html": "<p>No need for wires around it: the block holds four <a href=\"/en/wiki/redstone-link\">Redstone Link</a> receivers, one per side face, each with its two frequency slots. Set the same frequency as a transmitter at the cockpit on each face, and the nozzle obeys from afar, even on a flying machine. The scene's camera goes around the block to show all four faces.</p>"
+      },
+      {
+        "id": "poussee",
+        "title": "Opening the throttle",
+        "alt": "The Vector Thruster's bluish jet rising above the nozzle",
+        "html": "<p>The power signal is the one the block receives directly. The light blue ion jet follows the nozzle's direction. The electric version delivers 733 kN at full power, a little less than a single Ion Thruster.</p>"
+      },
+      {
+        "id": "variantes",
+        "title": "Liquid and creative versions",
+        "alt": "The Liquid Vector Thruster fed by a pump and a Creative Fluid Tank",
+        "html": "<p>The <strong>Liquid Vector Thruster</strong> takes a liquid fuel from below into a 1,000 mB tank and burns 1 mB per tick at full power, for the same thrust. The <strong>Creative Vector Thruster</strong> uses nothing: its thrust is set with the scroll wheel up to 6,666 kN and it ignores obstacles.</p>"
+      },
+      {
+        "id": "pilotage",
+        "title": "Steering example",
+        "html": "<p>On a small ship, put a vector nozzle under each corner, all tuned to the same four frequencies. At the cockpit, four analog levers transmit west, east, down and up: pushing the west lever tilts every nozzle together and the machine slides sideways without turning. A fifth shared link sets the power. Frequencies are set like on a Create link, with two items per face.</p>"
+      },
+      {
+        "id": "recettes",
+        "title": "Recipes",
+        "html": "<p>The Vector Thruster is crafted from an Ion Thruster, two platinum sheets, two platinum nuggets and a Simulated Gimbal Sensor. The liquid version starts from a fuel Thruster, with two copper sheets, two copper nuggets and the same sensor. The creative version has no recipe.</p>"
+      },
+      {
+        "id": "ionique",
+        "title": "The Ion Thruster",
+        "alt": "Two Ion Thrusters, one facing up, one facing forward, and a vector nozzle",
+        "html": "<p>The <strong>Ion Thruster</strong> is a fixed electric thruster: 800 kN, a 4,000 FE buffer, 40 FE per tick at full power, connected from any face. Like the fuel Thruster it fuses into a 2×2×2 (×1.30) or 3×3×3 (×1.40) cube, but not with blocks of another type. With the atmosphere option turned on, it only gives a fifth of its force at ground level and its full force near the world's height limit.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Propulsion: Simulated 1.1.5 (Propulsion-Team/create-propulsion-simulated repository, commit 36f83a1 of 2026-07-23, MIT licence, © Sergey Feduk, Tronco_78, Bunting_chj, SSnowly, KyivSec), identical to the modpack test instance jar",
+      "Nozzle: VectorThrusterBlockEntity.java (MAX_VISUAL_TILT_DEGREES 30, tweenTowards 0.2), VectorThrusterRenderer.java",
+      "Ion Thruster: IonThrusterBlockEntity.java",
+      "Versions: LiquidVectorThrusterBlockEntity.java, CreativeVectorThrusterBlockEntity.java",
+      "Default values: PropulsionConfig.java (the mod’s common and server configuration)",
+      "Recipe: data/createpropulsion/recipe/crafting/vector_thruster.json",
+      "Videos: Create Propulsion: Simulated Ponder scenes (ponder_vector_thruster_normal, ponder_creative_vector_thruster, ponder_liquid_vector_thruster) replayed by our engine; mod models, textures and particles (MIT licence, © Propulsion Team)",
+      "Images: mod blocks placed on the plate and rendered by our engine (MIT licence, © Propulsion Team)"
+    ]
+  }
+}

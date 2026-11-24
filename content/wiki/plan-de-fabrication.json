@@ -1,0 +1,263 @@
+{
+  "slug": "plan-de-fabrication",
+  "name": "Plan de fabrication",
+  "blockId": "create:crafting_blueprint",
+  "category": "outils",
+  "title": "Plan de fabrication — Create : guide",
+  "description": "Le plan de fabrication de Create : un tableau qui garde jusqu'à neuf recettes et les fabrique d'un clic avec les objets de ton inventaire.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.8",
+  "mcVersion": "1.21.1",
+  "intro": "Le <strong>plan de fabrication</strong> s'accroche au mur comme un tableau. Chacune de ses cases retient une recette d'établi ; un clic droit dessus la fabrique aussitôt, avec les ingrédients pris dans ton <strong>inventaire</strong>, sans ouvrir d'établi. Pour les objets qu'on fabrique sans arrêt (torches, rails, planches, alliage), c'est un gain de temps considérable.",
+  "facts": [
+    {
+      "label": "Catégorie",
+      "value": "Outils et équipement"
+    },
+    {
+      "label": "Taille",
+      "value": "3 × 3, sinon 2 × 2, sinon 1 × 1 selon la place"
+    },
+    {
+      "label": "Recettes",
+      "value": "9, 4 ou 1 (une par case)"
+    },
+    {
+      "label": "Clic droit",
+      "value": "Fabrique une fois depuis ton inventaire"
+    },
+    {
+      "label": "Accroupi + clic droit",
+      "value": "Répète jusqu’à 64 objets"
+    },
+    {
+      "label": "Clic gauche",
+      "value": "Efface la recette de la case"
+    },
+    {
+      "label": "Recettes acceptées",
+      "value": "Celles de l’établi seulement"
+    },
+    {
+      "label": "Version",
+      "value": "Create 6.0.8 · Minecraft 1.21.1"
+    }
+  ],
+  "recipe": {
+    "label": "Fabrication à l'établi (sans forme)",
+    "grid": [
+      [
+        "Tableau",
+        "Établi",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "items": [
+      [
+        "minecraft:painting",
+        "minecraft:crafting_table",
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ],
+      [
+        null,
+        null,
+        null
+      ]
+    ],
+    "result": "1 plan de fabrication",
+    "resultItem": "create:crafting_blueprint"
+  },
+  "videos": [],
+  "sections": [
+    {
+      "id": "poser",
+      "title": "L'accrocher",
+      "image": "blueprint_hero_objet.webp",
+      "alt": "Tableau et établi, et le plan de fabrication",
+      "html": "<p>Le plan se pose comme un tableau, sur un mur, au sol ou au plafond. Il prend la plus grande taille possible : <strong>3 × 3 blocs</strong> si la place le permet, sinon 2 × 2, sinon un seul bloc. Chaque bloc de la surface est une case indépendante, donc neuf, quatre ou une recette par plan.</p>"
+    },
+    {
+      "id": "regler",
+      "title": "Régler une recette",
+      "html": "<p>Clic droit sur une case vide : une grille d'établi fantôme s'ouvre. On y place les ingrédients sans les consommer, et le résultat s'affiche. Avec JEI, le bouton de transfert remplit la grille d'un coup. Un ingrédient à plusieurs choix (n'importe quelles planches, par exemple) devient un <a href=\"/wiki/filtres\">filtre</a>, ce qui permet d'utiliser toutes les variantes. La clé, d'un clic droit, rouvre la grille d'une case déjà réglée.</p>"
+    },
+    {
+      "id": "fabriquer",
+      "title": "Fabriquer",
+      "html": "<p>Clic droit sur une case réglée : la recette est fabriquée <strong>une fois</strong> avec ce que tu as sur toi, et le résultat arrive dans ton inventaire, avec les restes (seaux vides, par exemple). Accroupi, le clic répète la fabrication tant que les ingrédients suffisent, jusqu'à 64 objets. Un clic gauche efface la recette.</p>"
+    },
+    {
+      "id": "limites",
+      "title": "Ses limites",
+      "html": "<p>Seules les recettes de l'<strong>établi</strong> sont acceptées : pas de four, pas de tailleur de pierre, pas de machine de Create. Le plan ne marche qu'avec un vrai joueur : un <a href=\"/wiki/deployeur\">déployeur</a> qui clique dessus ne fabrique rien. Pour automatiser une recette, il faut un <a href=\"/wiki/etabli-mecanique\">établi mécanique</a>.</p>"
+    },
+    {
+      "id": "ou",
+      "title": "Où le poser",
+      "html": "<p>À côté de la sortie de la mine, un plan de torches, de rails et de planches. Dans l'atelier, les pièces de Create qu'on refait souvent : rotors, roues dentées, tapis, boîtiers. Dans une gare, les plannings et les sièges. Neuf recettes au mur, c'est neuf allers-retours à l'établi en moins.</p>"
+    },
+    {
+      "id": "cassé",
+      "title": "Le reprendre",
+      "html": "<p>Casser le plan le fait tomber et rend l'objet, sauf en créatif. Les recettes réglées ne sont pas gardées dans l'objet : un plan reposé ailleurs repart vierge. Pense à le fabriquer en plusieurs exemplaires si tu as plusieurs ateliers.</p>"
+    },
+    {
+      "id": "erreurs",
+      "title": "Erreurs fréquentes",
+      "html": "<p>Un clic sur une case réglée qui ne donne rien : un ingrédient manque dans l'inventaire principal. Un plan trop petit : il prend la taille de la place libre au moment de la pose, dégage le mur avant. Une recette de four qui ne s'affiche pas : seul l'établi est pris en charge.</p>"
+    },
+    {
+      "id": "filtres",
+      "title": "Les filtres dans la grille",
+      "html": "<p>Quand une recette accepte plusieurs objets pour une case, le plan y met un filtre de liste (jusqu'à 18 objets) ou un filtre d'attribut « appartient au tag ». On peut aussi y glisser soi-même un <a href=\"/wiki/filtres\">filtre</a> réglé à la main : la fabrication prendra n'importe quel objet qui y correspond dans l'inventaire.</p>"
+    },
+    {
+      "id": "exemples",
+      "title": "Exemples de recettes à garder",
+      "html": "<p>Un plan de neuf cases près de l'entrée de la base : torches, échelles, échafaudages, rails, <a href=\"/wiki/rotor\">rotors</a>, <a href=\"/wiki/roue-dentee\">roues dentées</a>, planches, bâtons et coffres. Avec un filtre pour les planches, un seul réglage accepte chêne, sapin ou bouleau. On remplit ses poches en passant, sans s'arrêter à l'établi.</p>"
+    }
+  ],
+  "related": [
+    "etabli-mecanique",
+    "filtres",
+    "deployeur",
+    "schematiques"
+  ],
+  "sources": [
+    "Recette : crafting/appliances/crafting_blueprint.json (tableau + établi)",
+    "Usage : BlueprintItem.useOn et BlueprintEntity (tailles 3 à 1, sections, interactAt : fabrication depuis l'inventaire, accroupi jusqu'à 64, clic gauche efface, FakePlayer ignoré, RecipeType.CRAFTING), BlueprintAssignCompleteRecipePacket (JEI), convertIngredientToFilter",
+    "Images : blocs et objets du jeu (modèles de Create) rendus par notre moteur, joueur non dessiné"
+  ],
+  "en": {
+    "slugEn": "crafting-blueprint",
+    "name": "Crafting Blueprint",
+    "title": "Crafting Blueprint — Create mod guide",
+    "description": "The Create Crafting Blueprint: a painting-like board that stores up to nine recipes and crafts them in one click from your inventory.",
+    "intro": "The <strong>Crafting Blueprint</strong> hangs on a wall like a painting. Each of its cells remembers a crafting recipe; a right-click on it crafts the recipe straight away, with the ingredients taken from your <strong>inventory</strong>, without opening a crafting table. For items you craft all the time (torches, rails, planks, alloy), it saves a lot of time.",
+    "facts": [
+      {
+        "label": "Category",
+        "value": "Tools and equipment"
+      },
+      {
+        "label": "Size",
+        "value": "3 × 3, else 2 × 2, else 1 × 1 depending on room"
+      },
+      {
+        "label": "Recipes",
+        "value": "9, 4 or 1 (one per cell)"
+      },
+      {
+        "label": "Right-click",
+        "value": "Crafts once from your inventory"
+      },
+      {
+        "label": "Sneak + right-click",
+        "value": "Repeats up to 64 items"
+      },
+      {
+        "label": "Left-click",
+        "value": "Clears the cell’s recipe"
+      },
+      {
+        "label": "Accepted recipes",
+        "value": "Crafting table only"
+      },
+      {
+        "label": "Version",
+        "value": "Create 6.0.8 · Minecraft 1.21.1"
+      }
+    ],
+    "recipe": {
+      "label": "Crafting table (shapeless)",
+      "grid": [
+        [
+          "Painting",
+          "Crafting Table",
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null
+        ]
+      ],
+      "result": "1 Crafting Blueprint"
+    },
+    "videos": [],
+    "sections": [
+      {
+        "id": "poser",
+        "title": "Hanging it",
+        "alt": "Painting and crafting table, and the Crafting Blueprint",
+        "html": "<p>The blueprint is placed like a painting, on a wall, the floor or the ceiling. It takes the largest size possible: <strong>3 × 3 blocks</strong> if there is room, else 2 × 2, else a single block. Each block of the surface is an independent cell, so nine, four or one recipe per blueprint.</p>"
+      },
+      {
+        "id": "regler",
+        "title": "Setting a recipe",
+        "html": "<p>Right-click an empty cell: a ghost crafting grid opens. You put the ingredients in without using them up, and the result shows. With JEI, the transfer button fills the grid at once. An ingredient with several options (any planks, for instance) becomes a <a href=\"/en/wiki/filters\">filter</a>, so every variant works. Using the Wrench on a cell that is already set reopens its grid.</p>"
+      },
+      {
+        "id": "fabriquer",
+        "title": "Crafting",
+        "html": "<p>Right-click a set cell: the recipe is crafted <strong>once</strong> with what you carry, and the result lands in your inventory right away, along with leftovers (empty buckets, for example). Sneaking, the click repeats the craft while ingredients last, up to 64 items. A left-click clears the recipe, ready for a new one.</p>"
+      },
+      {
+        "id": "limites",
+        "title": "Its limits",
+        "html": "<p>Only <strong>crafting table</strong> recipes are accepted: no furnace, no stonecutter, no Create machine. The blueprint only works for a real player: a <a href=\"/en/wiki/deployer\">Deployer</a> clicking it crafts nothing. To automate a recipe, you need a <a href=\"/en/wiki/mechanical-crafter\">Mechanical Crafter</a>, fed by belts, which also handles large batches.</p>"
+      },
+      {
+        "id": "ou",
+        "title": "Where to put it",
+        "html": "<p>Next to the mine exit, a blueprint of torches, rails and planks. In the workshop, the Create parts you make again and again: shafts, cogwheels, belts, casings. In a station, schedules and seats. Nine recipes on the wall means nine trips to the crafting table saved. A blueprint above a chest of raw materials makes a neat crafting corner.</p>"
+      },
+      {
+        "id": "cassé",
+        "title": "Taking it back",
+        "html": "<p>Breaking the blueprint drops it and gives the item back, except in creative. The recipes you set are not stored in the item: a blueprint placed elsewhere starts blank. Craft several if you have several workshops.</p>"
+      },
+      {
+        "id": "erreurs",
+        "title": "Common mistakes",
+        "html": "<p>A click on a set cell that gives nothing: an ingredient is missing from your main inventory. A blueprint that is too small: it takes the size of the free space when placed, so clear the wall first. A furnace recipe that does not show: only the crafting table is supported.</p>"
+      },
+      {
+        "id": "filtres",
+        "title": "Filters in the grid",
+        "html": "<p>When a recipe accepts several items for one slot, the blueprint puts a list filter there (up to 18 items) or an attribute filter \"is in tag\". You can also drop in a <a href=\"/en/wiki/filters\">filter</a> of your own: the craft will then take any matching item from your inventory.</p>"
+      },
+      {
+        "id": "exemples",
+        "title": "Recipes worth keeping",
+        "html": "<p>A nine-cell blueprint near the base entrance: torches, ladders, scaffolding, rails, <a href=\"/en/wiki/shaft\">shafts</a>, <a href=\"/en/wiki/cogwheel\">cogwheels</a>, planks, sticks and chests. With a filter for the planks, one setting accepts oak, spruce or birch. You stock up on the way past, without stopping at the crafting table.</p>"
+      }
+    ],
+    "sources": [
+      "Recipe: crafting/appliances/crafting_blueprint.json (painting + crafting table)",
+      "Use: BlueprintItem.useOn and BlueprintEntity (sizes 3 to 1, sections, interactAt: crafting from the inventory, sneaking up to 64, left-click clears, FakePlayer ignored, RecipeType.CRAFTING), BlueprintAssignCompleteRecipePacket (JEI), convertIngredientToFilter",
+      "Images: the game's blocks and items (Create's models) rendered by our engine, player not drawn"
+    ]
+  }
+}

@@ -140,7 +140,8 @@
     "tuyau-a-fluide-intelligent",
     "carburants",
     "blocs-diesel-generators",
-    "aeronautics-levitite"
+    "aeronautics-levitite",
+    "materiaux"
   ],
   "sources": [
     "Stress : AllBlocks.java, MECHANICAL_MIXER, CStress.setImpact(4.0)",

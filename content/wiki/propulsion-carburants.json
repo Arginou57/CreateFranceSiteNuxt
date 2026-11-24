@@ -1,0 +1,193 @@
+{
+  "slug": "propulsion-carburants",
+  "name": "Carburants",
+  "blockId": "createpropulsion:turpentine",
+  "category": "propulsion",
+  "title": "Carburants et térébenthine — Create Propulsion, guide",
+  "description": "Les carburants de Create Propulsion : térébenthine, résine de pin, comburant, lave et carburants d'autres mods, avec poussée et débit.",
+  "datePublished": "2026-11-24",
+  "dateModified": "2026-11-24",
+  "createVersion": "6.0.10 · Create Propulsion: Simulated 1.1.5",
+  "mcVersion": "1.21.1",
+  "intro": "Les propulseurs à liquide et le brûleur à liquide n'acceptent que des <strong>carburants</strong> reconnus. Le mod apporte le sien, la <strong>térébenthine</strong> (Turpentine), tirée de la <strong>résine de pin</strong> (Pine Resin), plus un <strong>comburant</strong> (Oxidizer) pour les gros propulseurs, et reconnaît les carburants de nombreux autres mods.",
+  "facts": [
+    {
+      "label": "Térébenthine",
+      "value": "résine de pin + 250 mB d’eau → 250 mB (mixeur)"
+    },
+    {
+      "label": "Résine de pin",
+      "value": "broyage d’une bûche d’épicéa (60 %)"
+    },
+    {
+      "label": "Comburant",
+      "value": "verrue du Nether + plaque de fer + 1 000 mB d’eau, surchauffé"
+    },
+    {
+      "label": "Lave",
+      "value": "poussée × 0,75, débit × 1"
+    },
+    {
+      "label": "Meilleurs",
+      "value": "essence ×1,5, kérosène ×2,4 (autres mods)"
+    },
+    {
+      "label": "Seaux",
+      "value": "térébenthine, comburant, corail"
+    },
+    {
+      "label": "Danger",
+      "value": "la térébenthine qui touche la lave devient de la pierre"
+    }
+  ],
+  "videos": [],
+  "sections": [
+    {
+      "id": "circuit",
+      "title": "Amener le carburant",
+      "image": "prop_gal_fuels_circuit.webp",
+      "alt": "Un réservoir de Create, une pompe et un tuyau qui alimentent un brûleur à liquide sous un moteur Stirling et un propulseur",
+      "html": "<p>Un carburant se stocke dans un <a href=\"/wiki/reservoir-a-fluide\">réservoir</a> (ou un <a href=\"/wiki/propulsion-platine\">réservoir en platine</a>, deux fois plus grand) et se pompe vers les consommateurs : <a href=\"/wiki/propulsion-propulseur\">propulseurs</a>, propulseur vectoriel à liquide, <a href=\"/wiki/propulsion-bruleurs\">brûleur à liquide</a>. Chaque carburant a deux chiffres : un multiplicateur de poussée (il compte aussi pour la chaleur du brûleur) et un débit, qui multiplie la consommation.</p>"
+    },
+    {
+      "id": "terebenthine",
+      "title": "La térébenthine",
+      "html": "<p>Le carburant du mod est facile à produire. Broyez des bûches d'épicéa aux <a href=\"/wiki/roues-de-concassage\">roues de concassage</a> : 60 % de chances d'obtenir une <strong>résine de pin</strong>. Dans un <a href=\"/wiki/mixeur-mecanique\">mixeur</a>, sans chaleur, une résine et 250 mB d'eau donnent 250 mB de <strong>térébenthine</strong>. Elle pousse comme la référence (×1) mais brûle 1,5 fois plus vite. La résine seule brûle aussi dans un four, 1 200 ticks. Évitez de la verser contre de la lave : la rencontre forme de la pierre. Elle se garde en seau de térébenthine (Turpentine Bucket).</p>"
+    },
+    {
+      "id": "autres",
+      "title": "Les carburants des autres mods",
+      "html": "<p>Les valeurs viennent des données du mod corrigées par sa configuration. Avec <a href=\"/wiki/create-diesel-generators\">Create Diesel Generators</a>, l'<a href=\"/wiki/carburants\">essence</a> est excellente (poussée ×1,5, débit ×0,8), le diesel solide (×1,1 pour ×1), le biodiesel correct, l'éthanol et l'huile végétale faibles. La lave marche partout mais ne donne que les trois quarts de la poussée. D'autres mods ajoutent kérosène, hydrogène ou méthane, reconnus automatiquement quand ils sont installés.</p>"
+    },
+    {
+      "id": "comburant",
+      "title": "Le comburant",
+      "html": "<p>Le <strong>comburant</strong> (Oxidizer) se mélange dans un mixeur sur un brûleur surchauffé : une verrue du Nether, une plaque de fer et 1 000 mB d'eau donnent 1 000 mB. Seuls les gros <a href=\"/wiki/propulsion-propulseur\">propulseurs</a> de 2×2×2 et 3×3×3 l'utilisent, dans un second réservoir : ils dépensent alors moins de carburant et poussent plus fort. Il se transporte en seau de comburant (Oxidizer Bucket).</p>"
+    },
+    {
+      "id": "tableau",
+      "title": "Tableau des carburants",
+      "html": "<table><thead><tr><th>Carburant</th><th>Poussée</th><th>Débit</th></tr></thead><tbody><tr><td>Térébenthine (Propulsion)</td><td>× 1</td><td>× 1,5</td></tr><tr><td>Lave</td><td>× 0,75</td><td>× 1</td></tr><tr><td>Essence (Diesel Generators)</td><td>× 1,5</td><td>× 0,8</td></tr><tr><td>Diesel (Diesel Generators)</td><td>× 1,1</td><td>× 1</td></tr><tr><td>Biodiesel</td><td>× 0,9</td><td>× 1,1</td></tr><tr><td>Éthanol</td><td>× 0,665</td><td>× 1,4</td></tr><tr><td>Huile végétale</td><td>× 0,495</td><td>× 1,7</td></tr><tr><td>Kérosène (TFMG)</td><td>× 2,415</td><td>× 0,9</td></tr></tbody></table><p>La poussée multiplie la force du propulseur ; le débit multiplie la consommation (1 mB par tick à fond). La térébenthine, toujours disponible, reste le choix sûr ; l'essence de Create Diesel Generators pousse plus fort et dure plus longtemps. Les carburants absents du modpack sont simplement ignorés.</p>"
+    },
+    {
+      "id": "autonomie",
+      "title": "Calculer l'autonomie",
+      "html": "<p>Quatre propulseurs à fond sur de la térébenthine consomment chacun 1 × 1,5 = 1,5 mB par tick, soit 6 mB par tick pour l'engin. Un réservoir en platine de 16 000 mB tient alors 2 667 ticks, un peu plus de deux minutes. À mi-gaz, la durée double. Les gros propulseurs en cube, et plus encore avec du comburant, consomment beaucoup moins par bloc : ce sont eux qu'il faut pour les longs voyages.</p>"
+    },
+    {
+      "id": "stockage",
+      "title": "Stocker le carburant",
+      "html": "<p>Sur un engin, un réservoir en platine garde deux fois plus de carburant qu'un réservoir de Create.</p>"
+    },
+    {
+      "id": "corail",
+      "title": "Et le corail ?",
+      "html": "<p>Le corail liquide n'est pas un carburant de propulseur : il ne sert qu'au <a href=\"/wiki/propulsion-energie\">générateur à corail</a>, qui en fait de l'énergie pour les propulseurs ioniques. Le bloc du fluide, posé dans le monde, est dangereux pour qui s'y baigne.</p>"
+    }
+  ],
+  "related": [
+    "create-propulsion",
+    "propulsion-propulseur",
+    "propulsion-bruleurs",
+    "propulsion-energie",
+    "carburants",
+    "create-diesel-generators",
+    "mixeur-mecanique",
+    "roues-de-concassage"
+  ],
+  "sources": [
+    "Code, données et storyboards : Create Propulsion: Simulated 1.1.5 (dépôt Propulsion-Team/create-propulsion-simulated, commit 36f83a1 du 23/07/2026, licence MIT, © Sergey Feduk, Tronco_78, Bunting_chj, SSnowly, KyivSec), identique au jar de l’instance de test du modpack",
+    "Carburants : data/createpropulsion/thruster_fuels, ThrusterFuelManager.java, configuration « fuelProperties » (PropulsionConfig.java)",
+    "Recettes : data/createpropulsion/recipe/mixing (turpentine, oxidizer, coral), crushing/spruce_log",
+    "Effets : ForgeEvents.java (térébenthine et lave, corail)",
+    "Images : blocs du mod posés sur la plaque et rendus par notre moteur (licence MIT, © Propulsion Team)"
+  ],
+  "en": {
+    "slugEn": "propulsion-fuels",
+    "name": "Fuels",
+    "title": "Fuels and turpentine — Create Propulsion guide",
+    "description": "Create Propulsion fuels: turpentine from pine resin, oxidizer, lava and other mods' fuels, with the thrust and burn rate of each one.",
+    "intro": "Liquid thrusters and the Liquid Burner only accept known <strong>fuels</strong>. The mod brings its own, <strong>Turpentine</strong>, made from <strong>Pine Resin</strong>, plus an <strong>Oxidizer</strong> for large thrusters, and recognises the fuels of many other mods.",
+    "facts": [
+      {
+        "label": "Turpentine",
+        "value": "pine resin + 250 mB water → 250 mB (mixer)"
+      },
+      {
+        "label": "Pine Resin",
+        "value": "crushing a spruce log (60%)"
+      },
+      {
+        "label": "Oxidizer",
+        "value": "nether wart + iron sheet + 1,000 mB water, superheated"
+      },
+      {
+        "label": "Lava",
+        "value": "thrust × 0.75, burn rate × 1"
+      },
+      {
+        "label": "Best ones",
+        "value": "gasoline ×1.5, kerosene ×2.4 (other mods)"
+      },
+      {
+        "label": "Buckets",
+        "value": "turpentine, oxidizer, coral"
+      },
+      {
+        "label": "Hazard",
+        "value": "turpentine touching lava turns into stone"
+      }
+    ],
+    "videos": [],
+    "sections": [
+      {
+        "id": "circuit",
+        "title": "Bringing the fuel in",
+        "alt": "A Create Fluid Tank, a pump and a pipe feeding a Liquid Burner under a Stirling Engine and a Thruster",
+        "html": "<p>Fuel is stored in a <a href=\"/en/wiki/fluid-tank\">Fluid Tank</a> (or a <a href=\"/en/wiki/propulsion-platinum\">platinum tank</a>, twice as big) and pumped to the consumers: <a href=\"/en/wiki/propulsion-thruster\">Thrusters</a>, the Liquid Vector Thruster, the <a href=\"/en/wiki/propulsion-burners\">Liquid Burner</a>. Each fuel has two numbers: a thrust multiplier (it also counts for the burner's heat) and a burn rate, which multiplies fuel use.</p>"
+      },
+      {
+        "id": "terebenthine",
+        "title": "Turpentine",
+        "html": "<p>The mod's fuel is easy to make. Crush spruce logs with <a href=\"/en/wiki/crushing-wheel\">Crushing Wheels</a>: a 60% chance of <strong>Pine Resin</strong>. In a <a href=\"/en/wiki/mechanical-mixer\">Mechanical Mixer</a>, with no heat, one resin and 250 mB of water give 250 mB of <strong>Turpentine</strong>. It pushes like the reference (×1) but burns 1.5 times faster. The resin alone also burns in a furnace, 1,200 ticks. Do not pour it against lava: the two make stone. It is kept in a Turpentine Bucket.</p>"
+      },
+      {
+        "id": "autres",
+        "title": "Other mods' fuels",
+        "html": "<p>Values come from the mod's data, adjusted by its config. With <a href=\"/en/wiki/create-diesel-generators-guide\">Create Diesel Generators</a>, <a href=\"/en/wiki/diesel-generators-fuels\">gasoline</a> is excellent (thrust ×1.5, burn rate ×0.8), diesel solid (×1.1 for ×1), biodiesel fair, ethanol and plant oil weak. Lava works anywhere but gives only three quarters of the thrust. Other mods add kerosene, hydrogen or methane, recognised automatically when installed.</p>"
+      },
+      {
+        "id": "comburant",
+        "title": "The oxidizer",
+        "html": "<p>The <strong>Oxidizer</strong> is mixed in a mixer over a superheated burner: a nether wart, an iron sheet and 1,000 mB of water give 1,000 mB. Only big 2×2×2 and 3×3×3 <a href=\"/en/wiki/propulsion-thruster\">Thrusters</a> use it, in a second tank: they then spend less fuel and push harder. It is carried in an Oxidizer Bucket.</p>"
+      },
+      {
+        "id": "tableau",
+        "title": "Fuel table",
+        "html": "<table><thead><tr><th>Fuel</th><th>Thrust</th><th>Burn rate</th></tr></thead><tbody><tr><td>Turpentine (Propulsion)</td><td>× 1</td><td>× 1.5</td></tr><tr><td>Lava</td><td>× 0.75</td><td>× 1</td></tr><tr><td>Gasoline (Diesel Generators)</td><td>× 1.5</td><td>× 0.8</td></tr><tr><td>Diesel (Diesel Generators)</td><td>× 1.1</td><td>× 1</td></tr><tr><td>Biodiesel</td><td>× 0.9</td><td>× 1.1</td></tr><tr><td>Ethanol</td><td>× 0.665</td><td>× 1.4</td></tr><tr><td>Plant oil</td><td>× 0.495</td><td>× 1.7</td></tr><tr><td>Kerosene (TFMG)</td><td>× 2.415</td><td>× 0.9</td></tr></tbody></table><p>Thrust multiplies the thruster's force; the burn rate multiplies fuel use (1 mB per tick at full power). Turpentine, always available, is the safe choice; Create Diesel Generators gasoline pushes harder and lasts longer. Fuels from mods missing from the modpack are simply ignored.</p>"
+      },
+      {
+        "id": "autonomie",
+        "title": "Working out the range",
+        "html": "<p>Four Thrusters at full power on turpentine each use 1 × 1.5 = 1.5 mB per tick, so 6 mB per tick for the machine. A 16,000 mB platinum tank then lasts 2,667 ticks, a little over two minutes. At half throttle the time doubles. Big cube thrusters, even more with oxidizer, use far less per block: they are the ones for long trips.</p>"
+      },
+      {
+        "id": "stockage",
+        "title": "Storing fuel",
+        "html": "<p>On a machine, a platinum tank holds twice as much fuel as a Create tank. On the ground any tank works, and the vessel version lies flat, which fits better under a deck.</p>"
+      },
+      {
+        "id": "corail",
+        "title": "What about coral?",
+        "html": "<p>Liquid coral is not a thruster fuel: it only feeds the <a href=\"/en/wiki/propulsion-energy-and-cables\">Coral Generator</a>, which turns it into energy for Ion Thrusters. The fluid block, placed in the world, is dangerous to anyone swimming in it.</p>"
+      }
+    ],
+    "sources": [
+      "Code, data and storyboards: Create Propulsion: Simulated 1.1.5 (Propulsion-Team/create-propulsion-simulated repository, commit 36f83a1 of 2026-07-23, MIT licence, © Sergey Feduk, Tronco_78, Bunting_chj, SSnowly, KyivSec), identical to the modpack test instance jar",
+      "Fuels: data/createpropulsion/thruster_fuels, ThrusterFuelManager.java, the \"fuelProperties\" config (PropulsionConfig.java)",
+      "Recipes: data/createpropulsion/recipe/mixing (turpentine, oxidizer, coral), crushing/spruce_log",
+      "Effects: ForgeEvents.java (turpentine and lava, coral)",
+      "Images: mod blocks placed on the plate and rendered by our engine (MIT licence, © Propulsion Team)"
+    ]
+  }
+}
