@@ -11,11 +11,11 @@
       <p class="wiki-kicker">{{ t('wiki.kicker') }}</p>
       <h1>{{ t('wiki.h1') }}</h1>
       <p class="wiki-lead" v-html="t('wiki.lead', { count: pages.length })" />
-      <WikiSearch class="wiki-home-search" size="lg" :initial="initialQ" shortcut />
     </header>
 
     <!-- one tab per mod (sticky): only the chosen mod is shown, every link stays in the HTML for search engines -->
     <WikiModBar :lang="lang" :active="activeMod" />
+    <WikiSearch class="wiki-home-search" size="lg" :initial="initialQ" shortcut />
 
     <section
       v-for="m in tree"
@@ -242,7 +242,7 @@ useHead({
 .wiki-home-head h1 { font-family: 'Orbitron', sans-serif; color: var(--terre-cuite); font-weight: 900; font-size: clamp(1.7rem, 6vw, 2.7rem); line-height: 1.15; margin-bottom: 0.9rem; }
 .wiki-lead { color: var(--text-primary); font-size: 1rem; line-height: 1.75; font-weight: 300; max-width: 780px; }
 .wiki-lead :deep(strong) { color: var(--mandarine-light); font-weight: 600; }
-.wiki-home-search { margin-top: 1.3rem; max-width: 720px; }
+.wiki-home-search { margin: 1rem 0 0; max-width: 720px; }
 
 .wiki-card { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 14px; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
 

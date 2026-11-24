@@ -144,7 +144,9 @@ function onKey(e: KeyboardEvent) {
   const el = document.activeElement as HTMLElement | null
   if (el && (el.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName))) return
   e.preventDefault()
-  input.value?.focus()
+  // bring the field back into view (it may be under the sticky bars after scrolling), then focus it
+  root.value?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  input.value?.focus({ preventScroll: true })
 }
 
 onMounted(() => {
@@ -160,6 +162,8 @@ onUnmounted(() => {
 <style scoped>
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .wsearch { position: relative; z-index: 30; }
+/* open: the results go over the sticky mod tabs (z 40), still under the site navbar (z 100) */
+.wsearch.open { z-index: 60; }
 .wsearch-form {
   display: flex; align-items: center; gap: 0.6rem; padding: 0 0.9rem; border-radius: 12px;
   background: rgba(0, 0, 0, 0.32); border: 1px solid rgba(212, 118, 78, 0.28); transition: border-color 0.2s, box-shadow 0.2s;
