@@ -147,7 +147,7 @@ const prev = computed(() => (pos.value > 0 ? siblings.value[pos.value - 1] : nul
 const next = computed(() => (pos.value >= 0 && pos.value < siblings.value.length - 1 ? siblings.value[pos.value + 1] : null))
 // related pages that exist in this language (no link to a page that is not translated yet)
 const related = computed(() =>
-  props.page.related
+  wikiRelated(props.page)
     .map((s) => getWikiPage(s))
     .filter((p): p is WikiPage => !!p && !!wikiPagePath(p, lang.value))
     .map((p) => localizeWikiPage(p, lang.value)),

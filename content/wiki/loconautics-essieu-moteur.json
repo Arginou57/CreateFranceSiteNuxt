@@ -1,0 +1,331 @@
+{
+ "slug": "loconautics-essieu-moteur",
+ "name": "Essieu moteur",
+ "blockId": "loconautics:bearing_axle",
+ "category": "loconautics",
+ "title": "Essieu moteur — Create: Loconautics, guide",
+ "description": "L'essieu moteur de Create: Loconautics fait avancer un train physique : placement contre le bogie, avant de la locomotive, fréquences.",
+ "datePublished": "2026-11-24",
+ "dateModified": "2026-11-24",
+ "createVersion": "6.0.10 · Create: Loconautics 0.1.3 BETA",
+ "mcVersion": "1.21.1",
+ "intro": "L'<strong>essieu moteur</strong> (Bearing Axle) est le bloc qui transforme un train de Create en vraie locomotive dans Create: Loconautics. Posé contre un bogie, il entraîne ses roues avec la rotation qu'il reçoit, et c'est lui qui dit au train où se trouve son avant. Il écoute aussi deux fréquences de <a href=\"/wiki/liaison-de-redstone\">liaison de redstone</a> pour tourner à gauche ou à droite aux aiguillages.",
+ "facts": [
+  {
+   "label": "Rôle",
+   "value": "Entraîne les roues du bogie voisin, marque l'avant du train"
+  },
+  {
+   "label": "Placement",
+   "value": "Contre le bogie, au niveau de sa voie ; un seul essieu par bogie"
+  },
+  {
+   "label": "Rotation",
+   "value": "Par son arbre, à l'arrière (souvent une transmission)"
+  },
+  {
+   "label": "Vitesse de pointe",
+   "value": "Celle des trains de Create à 256 tr/min (bearingAxleMaxSpeed = -1)"
+  },
+  {
+   "label": "Stress",
+   "value": "Variable ; ×1,5 quand deux locomotives tirent l'une contre l'autre"
+  },
+  {
+   "label": "Fréquences",
+   "value": "Gauche et droite, deux objets chacune"
+  },
+  {
+   "label": "Version",
+   "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10"
+  }
+ ],
+ "recipe": {
+  "label": "Fabrication à l'établi",
+  "grid": [
+   [
+    null,
+    "Liaison de redstone",
+    null
+   ],
+   [
+    null,
+    "Bloc de fer industriel",
+    null
+   ],
+   [
+    null,
+    "Inverseur directionnel (Simulated)",
+    null
+   ]
+  ],
+  "items": [
+   [
+    null,
+    "create:redstone_link",
+    null
+   ],
+   [
+    null,
+    "create:industrial_iron_block",
+    null
+   ],
+   [
+    null,
+    "simulated:directional_gearshift",
+    null
+   ]
+  ],
+  "result": "1 essieu moteur",
+  "resultItem": "loconautics:bearing_axle"
+ },
+ "videos": [
+  {
+   "id": "loco_train_wheels",
+   "name": "Essieu moteur : le poser contre le bogie",
+   "description": "Un bogie sur la voie, puis l'essieu moteur posé juste à côté, sur la même ligne de rail ; le contour vert marque le bogie entraîné.",
+   "duration": "PT13S",
+   "chapters": [
+    {
+     "t": 3.0,
+     "section": "train-wheels"
+    },
+    {
+     "t": 5.0,
+     "section": "train-wheels"
+    },
+    {
+     "t": 7.0,
+     "section": "train-wheels"
+    },
+    {
+     "t": 9.75,
+     "section": "train-wheels"
+    }
+   ]
+  },
+  {
+   "id": "loco_train_front",
+   "name": "Essieu moteur : l'avant de la locomotive",
+   "description": "L'essieu et son bogie ; le côté du bogie est marqué en vert comme l'avant, le côté de l'arbre en rouge comme l'arrière.",
+   "duration": "PT11S",
+   "chapters": [
+    {
+     "t": 1.5,
+     "section": "train-front"
+    },
+    {
+     "t": 3.5,
+     "section": "train-front"
+    },
+    {
+     "t": 5.5,
+     "section": "train-front"
+    },
+    {
+     "t": 7.5,
+     "section": "train-front"
+    }
+   ]
+  },
+  {
+   "id": "loco_train_frequency",
+   "name": "Essieu moteur : les fréquences gauche et droite",
+   "description": "L'interface de l'essieu s'ouvre ; la rangée gauche reçoit un lingot de cuivre et une émeraude, la rangée droite du quartz et un éclat d'améthyste.",
+   "duration": "PT20S",
+   "chapters": [
+    {
+     "t": 2.0,
+     "section": "train-frequency"
+    },
+    {
+     "t": 4.4,
+     "section": "train-frequency"
+    },
+    {
+     "t": 9.9,
+     "section": "train-frequency"
+    },
+    {
+     "t": 15.4,
+     "section": "train-frequency"
+    }
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "id": "train-wheels",
+   "title": "Le poser contre le bogie",
+   "image": "loco_train_wheels_vue.webp",
+   "alt": "Un essieu moteur posé à côté d'un petit bogie de Create, sur la voie",
+   "html": "<p>Pose d'abord un bogie sur la <a href=\"/wiki/rail-de-train\">voie</a>, comme pour un train ordinaire, puis l'essieu moteur <strong>juste à côté</strong>, à la même hauteur que le bogie. Il doit le toucher sur sa ligne de rail : posé plus haut ou plus bas, il ne sert à rien. Un bogie ne peut être entraîné que par un seul essieu ; pour une locomotive plus puissante, entraîne plusieurs bogies. Les lunettes d'ingénieur, pointées sur l'essieu, disent s'il est bien placé.</p>",
+   "video": "loco_train_wheels"
+  },
+  {
+   "id": "train-front",
+   "title": "L'avant de la locomotive",
+   "image": "loco_train_front_vue.webp",
+   "alt": "L'essieu moteur avec l'avant (vert, côté bogie) et l'arrière (rouge, côté arbre)",
+   "html": "<p>L'essieu a deux bouts différents : celui qui touche le bogie et celui où sort son arbre. Le côté du <strong>bogie est l'avant</strong> de la locomotive, le côté de l'<strong>arbre est toujours l'arrière</strong>. La <a href=\"/wiki/station-de-train\">station</a> s'en sert à l'assemblage pour savoir dans quel sens le train regarde, et pour l'arrêter dans le bon sens. Tourne donc l'essieu avant de monter le reste de la locomotive : le corriger après oblige à tout réassembler.</p>",
+   "video": "loco_train_front"
+  },
+  {
+   "id": "train-frequency",
+   "title": "Les fréquences gauche et droite",
+   "image": "loco_train_frequency_vue.webp",
+   "alt": "L'interface de l'essieu avec deux rangées de deux objets",
+   "html": "<p>Un clic droit à main vide ouvre l'interface de l'essieu. Elle a deux rangées : la première est la fréquence qui fait prendre au train la <strong>branche de gauche</strong>, la seconde celle de <strong>droite</strong>. Chaque fréquence se compose de deux objets, exactement comme une <a href=\"/wiki/liaison-de-redstone\">liaison de redstone</a> (dans la vidéo : cuivre et émeraude à gauche, quartz et améthyste à droite). Un émetteur réglé sur la même paire, par exemple le <a href=\"/wiki/loconautics-controleur-analogique\">contrôleur analogique</a>, choisit ainsi la direction aux aiguillages.</p>",
+   "video": "loco_train_frequency"
+  },
+  {
+   "id": "vitesse",
+   "title": "Vitesse et stress",
+   "html": "<p>L'essieu ne produit rien : il transmet aux roues la rotation qu'il reçoit par son arbre. Plus l'arbre tourne vite, plus le train roule vite ; à 256 tr/min, il atteint la vitesse de pointe des trains de Create (réglage <code>bearingAxleMaxSpeed</code>, -1 par défaut = la vitesse de Create). Son coût en stress varie avec la charge, et il est multiplié par 1,5 quand deux locomotives d'un même convoi tirent l'une contre l'autre (<code>opposedStressFactor</code>). La façon simple de lui donner une vitesse réglable est de placer une <a href=\"/wiki/loconautics-transmission\">transmission</a> contre son arbre.</p>"
+  },
+  {
+   "id": "a-savoir",
+   "title": "À savoir",
+   "html": "<p><strong>Rapports et surmultiplication.</strong> Par défaut, l'essieu roule en « rapport 0 » : à 256 tr/min, il atteint la vitesse de pointe des trains de Create. Un signal de redstone envoyé dans l'essieu peut le passer sur un rapport de surmultiplication (option <code>gearing.enabled</code>, activée) : chaque SU libre du réseau achète alors un peu de vitesse en plus (<code>overdriveScale</code> = 1). L'option <code>capAtCreateTopSpeed</code> (désactivée) plafonne tous les rapports à la vitesse de Create, et <code>trainMaxSpeed</code> (-1) fixe un plafond absolu pour tous les trains ; sans lui, seule la limite de sécurité de la physique (200) s'applique. Ces réglages sont ceux du serveur : demande à un administrateur avant de compter dessus.</p>"
+  },
+  {
+   "id": "conseils",
+   "title": "Conseils",
+   "html": "<p>Erreurs fréquentes : un essieu posé une case trop haut (sur le bogie au lieu d'à côté), deux essieux sur le même bogie, ou un essieu tourné à l'envers, si bien que la locomotive démarre en marche arrière. Pour une rame réversible, place un essieu à chaque bout, tournés vers l'extérieur, et donne-leur les mêmes fréquences de direction. Un essieu ne freine pas : sans rotation, la locomotive roule sur son élan et ralentit seulement par la résistance au roulement, alors prévois une transmission pour pouvoir couper la traction.</p>"
+  }
+ ],
+ "related": [
+  "create-loconautics",
+  "loconautics-transmission",
+  "loconautics-controleur-analogique",
+  "loconautics-assembler-une-locomotive",
+  "assembler-un-train",
+  "rail-de-train",
+  "station-de-train",
+  "liaison-de-redstone"
+ ],
+ "sources": [
+  "Code, données et storyboards Ponder : Create: Loconautics 0.1.3 BETA, dépôt public github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (dernier avant le passage à 0.1.4) ; ses 26 structures Ponder et son en_us.json sont identiques octet pour octet au jar loconautics-0.1.3BETA.jar du modpack Create France",
+  "Licence : code et données sous MIT ; textures, modèles, sons et fichiers de langue « tous droits réservés » (Lycoris). Nos vidéos et images sont des rendus de notre moteur ; nos textes sont originaux, aucun texte du Ponder n'est recopié",
+  "Chiffres : config/LoconauticsConfig.java (valeurs par défaut), content/combustion/SmallEngineTuning.java et CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java ; fonctions expérimentales : common/experimental/ExperimentalFeature.java et config/loconautics-experimental.toml du modpack",
+  "Recettes : data/loconautics/recipe/*.json du jar 0.1.3 BETA",
+  "Blocs de Simulated 1.3.2 (moteur portable, raccord de corde, assembleur physique) : jar livré avec Create Aeronautics 1.3.2 ; code MIT, art tous droits réservés (The Simulated Team)"
+ ],
+ "en": {
+  "slugEn": "loconautics-bearing-axle",
+  "name": "Bearing Axle",
+  "title": "Bearing Axle — Create: Loconautics guide",
+  "description": "The Bearing Axle of Create: Loconautics drives a physics train: where to place it against the bogey, the front of the locomotive and its steering frequencies.",
+  "intro": "The <strong>Bearing Axle</strong> is the block that turns a Create train into a real locomotive in Create: Loconautics. Placed against a bogey, it drives its wheels with the rotation it receives, and it tells the train where its front is. It also listens to two <a href=\"/en/wiki/redstone-link\">Redstone Link</a> frequencies to steer left or right at junctions.",
+  "facts": [
+   {
+    "label": "Role",
+    "value": "Powers the wheels of the adjacent bogey and defines the front of the train"
+   },
+   {
+    "label": "Placement",
+    "value": "Beside the bogey, level with its rails; one axle per bogey"
+   },
+   {
+    "label": "Rotation",
+    "value": "Comes in through its shaft at the rear (usually from a Transmission)"
+   },
+   {
+    "label": "Top speed",
+    "value": "Create train top speed with the shaft at 256 RPM (bearingAxleMaxSpeed = -1)"
+   },
+   {
+    "label": "Stress",
+    "value": "Varies with load; ×1.5 when two engines of one consist fight each other"
+   },
+   {
+    "label": "Frequencies",
+    "value": "One for left, one for right, two items each"
+   },
+   {
+    "label": "Version",
+    "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10"
+   }
+  ],
+  "recipe": {
+   "label": "Crafting table recipe",
+   "grid": [
+    [
+     null,
+     "Redstone Link",
+     null
+    ],
+    [
+     null,
+     "Block of Industrial Iron",
+     null
+    ],
+    [
+     null,
+     "Directional Gearshift (Simulated)",
+     null
+    ]
+   ],
+   "result": "1 Bearing Axle"
+  },
+  "videos": [
+   {
+    "id": "loco_train_wheels",
+    "name": "Bearing Axle: where it goes",
+    "description": "A small bogey appears on the rails, then the Bearing Axle lands right next to it at the same height; a green box highlights the bogey it will power."
+   },
+   {
+    "id": "loco_train_front",
+    "name": "Bearing Axle: which end is the front",
+    "description": "The axle and its bogey again; the bogey end lights up green (front), the shaft end red (rear)."
+   },
+   {
+    "id": "loco_train_frequency",
+    "name": "Bearing Axle: steering frequencies",
+    "description": "The axle screen pops up; copper and emerald go in the first row, quartz and amethyst in the second."
+   }
+  ],
+  "sections": [
+   {
+    "id": "train-wheels",
+    "title": "Where the axle goes",
+    "alt": "A Bearing Axle placed next to a small Create bogey on the track",
+    "html": "<p>Start like any Create train: a bogey on the <a href=\"/en/wiki/train-track\">track</a>. Then set the Bearing Axle <strong>directly beside it</strong>, level with the bogey and in line with its rails. An axle one block higher or lower has no effect. Each bogey accepts a single axle, so a heavier locomotive simply powers more bogeys. Looking at the axle through Engineer's Goggles confirms whether its position is valid.</p>"
+   },
+   {
+    "id": "train-front",
+    "title": "Which end is the front",
+    "alt": "The Bearing Axle with the front outlined in green and the rear in red",
+    "html": "<p>The two ends of the axle are not alike. The end facing the bogey is the <strong>front</strong> of your locomotive; the end with the shaft sticking out is <strong>always the rear</strong>. When it builds the train, the <a href=\"/en/wiki/train-station\">Train Station</a> reads this to decide where the nose of the train points and how to park it. Get the orientation right before adding the rest: turning it afterwards means taking the whole thing apart.</p>"
+   },
+   {
+    "id": "train-frequency",
+    "title": "Steering frequencies",
+    "alt": "The axle's screen with two rows of two items",
+    "html": "<p>Use the axle with nothing in your hand to bring up its screen. Row one holds the frequency that makes the train turn <strong>left</strong> at a junction, row two the one for turning <strong>right</strong>. Every frequency is two items, the same idea as a <a href=\"/en/wiki/redstone-link\">Redstone Link</a> pair (copper and emerald, then quartz and amethyst in the video). Any transmitter tuned to those pairs, the <a href=\"/en/wiki/loconautics-analog-controller\">Analog Controller</a> first of all, then chooses the branch.</p>"
+   },
+   {
+    "id": "vitesse",
+    "title": "Speed and stress",
+    "html": "<p>The axle produces nothing: it passes the rotation it gets through its shaft on to the wheels. The faster the shaft turns, the faster the train goes; at 256 RPM it reaches Create's train top speed (setting <code>bearingAxleMaxSpeed</code>, -1 by default = Create's speed). Its stress cost changes with the load, and it is multiplied by 1.5 when two locomotives of the same consist pull against each other (<code>opposedStressFactor</code>). The simple way to give it an adjustable speed is to put a <a href=\"/en/wiki/loconautics-transmission-block\">Transmission</a> against its shaft.</p>"
+   },
+   {
+    "id": "a-savoir",
+    "title": "Good to know",
+    "html": "<p><strong>Gears and overdrive.</strong> By default the axle runs in « gear 0 »: at 256 RPM it reaches Create's train top speed. A redstone signal fed into the axle can move the axle up to an overdrive gear (option <code>gearing.enabled</code>, on): every spare SU of the network then buys a little extra speed (<code>overdriveScale</code> = 1). The <code>capAtCreateTopSpeed</code> option (off) keeps all gears under Create's speed, and <code>trainMaxSpeed</code> (-1) sets a hard ceiling for every train; without it only the physics safety limit of 200 applies. These are server settings: ask an admin before relying on them.</p>"
+   },
+   {
+    "id": "conseils",
+    "title": "Tips",
+    "html": "<p>Common mistakes: an axle placed one block too high (on the bogey instead of beside it), two axles on the same bogey, or an axle facing the wrong way, so the locomotive pulls away in reverse. For a push-pull train, put an axle at each end, facing outwards, and give them the same steering frequencies. An axle does not brake: without rotation the locomotive coasts and only slows down through rolling resistance, so plan a Transmission to cut the power.</p>"
+   }
+  ],
+  "sources": [
+   "Code, data and Ponder storyboards: Create: Loconautics 0.1.3 BETA, public repository github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (last before the move to 0.1.4); its 26 Ponder structures and en_us.json are byte-identical to the loconautics-0.1.3BETA.jar of the Create France modpack",
+   "License: code and data under MIT; textures, models, sounds and lang files all rights reserved (Lycoris). Our videos and images are renders from our own engine; our texts are original, no Ponder text is copied",
+   "Numbers: config/LoconauticsConfig.java (defaults), content/combustion/SmallEngineTuning.java and CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java; experimental features: common/experimental/ExperimentalFeature.java and the modpack's config/loconautics-experimental.toml",
+   "Recipes: data/loconautics/recipe/*.json in the 0.1.3 BETA jar",
+   "Simulated 1.3.2 blocks (Portable Engine, Rope Connector, Physics Assembler): jar shipped with Create Aeronautics 1.3.2; code MIT, art all rights reserved (The Simulated Team)"
+  ]
+ }
+}

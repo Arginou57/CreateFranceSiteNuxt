@@ -1,0 +1,427 @@
+{
+ "slug": "loconautics-panneaux-de-commande",
+ "name": "Panneaux de commande",
+ "blockId": "loconautics:locomotive_gauge",
+ "category": "loconautics",
+ "title": "Panneaux de commande — Create: Loconautics, guide",
+ "description": "Les panneaux de Create: Loconautics : bouton, interrupteur, levier, volant et jauges, liaisons de redstone, réglages, vitre de protection et pupitres.",
+ "datePublished": "2026-11-24",
+ "dateModified": "2026-11-24",
+ "createVersion": "6.0.10 · Create: Loconautics 0.1.3 BETA",
+ "mcVersion": "1.21.1",
+ "intro": "Le <strong>panneau de locomotive</strong> (Locomotive Gauge) est une plaque qu'on fixe sur n'importe quelle face et qui reçoit jusqu'à quatre petites commandes : <strong>bouton</strong>, <strong>interrupteur</strong>, <strong>levier</strong>, <strong>volant</strong> ou <strong>jauge</strong>. Elles commandent une <a href=\"/wiki/liaison-de-redstone\">liaison de redstone</a>, une <a href=\"/wiki/loconautics-transmission\">transmission</a> ou un moteur, et se règlent à la clé. Le <strong>pupitre</strong> (Dashboard) est sa version inclinée, pour la cabine.",
+ "facts": [
+  {
+   "label": "Emplacements",
+   "value": "4 par panneau (un par quart), 2 par pupitre"
+  },
+  {
+   "label": "Bouton",
+   "value": "Signal 15 pendant 1 seconde (20 ticks)"
+  },
+  {
+   "label": "Interrupteur",
+   "value": "Signal 15 tant qu'il est allumé"
+  },
+  {
+   "label": "Levier",
+   "value": "Signal analogique de 0 à 15"
+  },
+  {
+   "label": "Volant",
+   "value": "Ouvre une soupape ou règle un moteur"
+  },
+  {
+   "label": "Pupitres",
+   "value": "Jusqu'à 5 côte à côte forment un seul bureau"
+  },
+  {
+   "label": "Version",
+   "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10"
+  }
+ ],
+ "recipe": {
+  "label": "Panneau de locomotive (établi, ×8)",
+  "grid": [
+   [
+    "Mécanisme de précision",
+    "Plaque de fer industriel"
+   ]
+  ],
+  "items": [
+   [
+    "create:precision_mechanism",
+    "loconautics:industrial_iron_sheet"
+   ]
+  ],
+  "result": "8 panneaux de locomotive",
+  "resultItem": "loconautics:locomotive_gauge"
+ },
+ "videos": [
+  {
+   "id": "loco_panel_parts",
+   "name": "Panneaux : poser et retirer les pièces",
+   "description": "Un bouton seul se place au centre, un second le pousse dans un coin ; on remplit les quarts, puis la clé retire une pièce.",
+   "duration": "PT18S",
+   "chapters": [
+    {
+     "t": 0.75,
+     "section": "panel-parts"
+    },
+    {
+     "t": 3.6,
+     "section": "panel-parts"
+    },
+    {
+     "t": 7.8,
+     "section": "panel-parts"
+    },
+    {
+     "t": 10.65,
+     "section": "panel-parts"
+    }
+   ]
+  },
+  {
+   "id": "loco_panel_controls",
+   "name": "Panneaux : bouton, interrupteur et levier",
+   "description": "Le bouton allume la lampe une seconde, l'interrupteur la garde allumée, le levier monte de 0 à 15 ; deux commandes sur la même liaison : la plus forte gagne.",
+   "duration": "PT22S",
+   "chapters": [
+    {
+     "t": 2.1,
+     "section": "panel-controls"
+    },
+    {
+     "t": 5.95,
+     "section": "panel-controls"
+    },
+    {
+     "t": 9.9,
+     "section": "panel-controls"
+    },
+    {
+     "t": 15.4,
+     "section": "panel-controls"
+    },
+    {
+     "t": 18.25,
+     "section": "panel-controls"
+    }
+   ]
+  },
+  {
+   "id": "loco_panel_gui",
+   "name": "Panneaux : l'interface d'une pièce",
+   "description": "À la clé, l'interface de la pièce s'ouvre : étiquette, fréquence, aperçu et styles ; la pièce change sur le panneau.",
+   "duration": "PT21S",
+   "chapters": [
+    {
+     "t": 2.85,
+     "section": "panel-gui"
+    },
+    {
+     "t": 5.25,
+     "section": "panel-gui"
+    },
+    {
+     "t": 7.25,
+     "section": "panel-gui"
+    },
+    {
+     "t": 11.75,
+     "section": "panel-gui"
+    },
+    {
+     "t": 13.75,
+     "section": "panel-gui"
+    }
+   ]
+  },
+  {
+   "id": "loco_panel_look",
+   "name": "Panneaux : l'apparence d'une pièce",
+   "description": "Corps, couleur, plaque, lumière et vitre : le bouton du panneau change de boîtier et de couleur une fois validé.",
+   "duration": "PT22S",
+   "chapters": [
+    {
+     "t": 3.24,
+     "section": "panel-look"
+    },
+    {
+     "t": 6.6,
+     "section": "panel-look"
+    },
+    {
+     "t": 9.97,
+     "section": "panel-look"
+    },
+    {
+     "t": 13.76,
+     "section": "panel-look"
+    },
+    {
+     "t": 17.54,
+     "section": "panel-look"
+    }
+   ]
+  },
+  {
+   "id": "loco_panel_glass",
+   "name": "Panneaux : la vitre de protection",
+   "description": "Le bouton sous sa vitre fermée ne réagit pas ; accroupi, la vitre s'ouvre, le bouton allume la lampe, puis la vitre se referme.",
+   "duration": "PT17S",
+   "chapters": [
+    {
+     "t": 2.85,
+     "section": "panel-glass"
+    },
+    {
+     "t": 6.45,
+     "section": "panel-glass"
+    },
+    {
+     "t": 10.3,
+     "section": "panel-glass"
+    },
+    {
+     "t": 13.9,
+     "section": "panel-glass"
+    }
+   ]
+  },
+  {
+   "id": "loco_dashboard_desk",
+   "name": "Panneaux : le pupitre",
+   "description": "Trois pupitres posés côte à côte se rejoignent en un bureau ; un levier et un interrupteur y prennent place.",
+   "duration": "PT14S",
+   "chapters": [
+    {
+     "t": 1.0,
+     "section": "dashboard-desk"
+    },
+    {
+     "t": 5.5,
+     "section": "dashboard-desk"
+    },
+    {
+     "t": 8.0,
+     "section": "dashboard-desk"
+    },
+    {
+     "t": 11.0,
+     "section": "dashboard-desk"
+    }
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "id": "panel-parts",
+   "title": "Poser les pièces",
+   "image": "loco_panel_parts_vue.webp",
+   "alt": "Un panneau de locomotive fixé sur un boîtier, avec un bouton et un levier",
+   "html": "<p>Un panneau tient jusqu'à <strong>quatre pièces</strong>, une par quart. Une pièce seule se place <strong>au centre</strong> ; quand une deuxième arrive, la première part dans un coin. Vise un quart libre pour y poser la pièce suivante. Accroupi, un clic droit à la <a href=\"/wiki/cle\">clé</a> reprend une pièce ; casser le panneau rend ses pièces une par une.</p>",
+   "video": "loco_panel_parts"
+  },
+  {
+   "id": "panel-controls",
+   "title": "Les commandes",
+   "image": "loco_panel_controls_vue.webp",
+   "alt": "Un panneau et deux lampes de redstone reliées par des liaisons",
+   "html": "<p>Chaque commande se <strong>lie d'abord à une liaison de redstone réceptrice</strong> (clic droit sur la liaison avec la pièce en main). Le <strong>bouton</strong> envoie un signal plein pendant une seconde, l'<strong>interrupteur</strong> garde son signal tant qu'on ne le rebascule pas, et le <strong>levier</strong> est analogique : on le tire de 0 à 15. Deux commandes sur la même liaison ne se battent pas : la plus forte l'emporte.</p>",
+   "video": "loco_panel_controls"
+  },
+  {
+   "id": "panel-gui",
+   "title": "L'interface d'une pièce",
+   "image": "loco_panel_gui_vue.webp",
+   "alt": "Un bouton de panneau en gros plan",
+   "html": "<p>Une <a href=\"/wiki/cle\">clé</a> sur une pièce ouvre son interface (elle n'est pas reproduite dans la vidéo, qui garde la vue sur le panneau). La barre du haut porte une <strong>étiquette</strong>. La ligne <strong>signal</strong> prend deux objets : la fréquence sur laquelle la pièce émet. Un aperçu montre la pièce telle qu'elle sera, et des flèches et des points en dessous passent d'un <strong>style</strong> à l'autre (par exemple le gros bouton ou le levier à boule).</p>",
+   "video": "loco_panel_gui"
+  },
+  {
+   "id": "panel-look",
+   "title": "Changer l'apparence",
+   "image": "loco_panel_look_vue.webp",
+   "alt": "Un bouton de panneau repeint, avec sa lumière et sa vitre",
+   "html": "<p>Dans la même interface, la colonne <strong>corps</strong> choisit le boîtier de la pièce et la colonne <strong>couleur</strong> peint son capuchon, sa poignée ou son volant (35 teintes) ; le corps a 4 variantes. Des bascules ajoutent une <strong>plaque</strong>, une <strong>lumière</strong> ou une <strong>vitre</strong>. <strong>Inverser</strong> échange le signal (allumé envoie éteint et l'inverse), et <strong>valider</strong> applique le nouveau look.</p>",
+   "video": "loco_panel_look"
+  },
+  {
+   "id": "panel-glass",
+   "title": "La vitre de protection",
+   "image": "loco_panel_glass_vue.webp",
+   "alt": "Un bouton de panneau sous sa vitre de protection",
+   "html": "<p>Une pièce sous <strong>vitre fermée</strong> ne peut pas être utilisée : pratique pour un arrêt d'urgence ou une commande à ne pas toucher par erreur. Accroupi, un clic droit <strong>ouvre</strong> la vitre ; la pièce marche alors normalement. Accroupi, un nouveau clic droit la referme.</p>",
+   "video": "loco_panel_glass"
+  },
+  {
+   "id": "dashboard-desk",
+   "title": "Le pupitre",
+   "image": "loco_dashboard_desk_vue.webp",
+   "alt": "Trois pupitres rouges réunis en un seul bureau, avec un levier et un interrupteur",
+   "html": "<p>Le <strong>pupitre</strong> (Dashboard) est un bureau incliné qui tient des pièces de panneau : <strong>deux par pupitre</strong>, une de chaque côté. Posés côte à côte, des pupitres se rejoignent en un seul bureau de <strong>5 au plus</strong>. La clé règle la pièce qu'elle vise, comme sur un panneau. Les pupitres existent en 16 couleurs.</p>",
+   "video": "loco_dashboard_desk"
+  },
+  {
+   "id": "a-savoir",
+   "title": "À savoir",
+   "html": "<p><strong>Ce que lisent les jauges.</strong> Une jauge de panneau peut afficher une cinquantaine de mesures : température, pression, vapeur produite et rendement d'une chaudière, poids du train, vitesse et charge des compteurs de Create, état des vannes, mais aussi régime et carburant des moteurs de Create Diesel Generators et des petits moteurs, vitesse, altitude et hélices de Create Aeronautics. Elle a quatre styles d'aiguille et 36 fonds.</p>"
+  },
+  {
+   "id": "conseils",
+   "title": "Conseils",
+   "html": "<p>Le bouton, l'interrupteur et le levier de panneau se fabriquent par 8, à partir d'une plaque de fer industriel et, selon la pièce, d'un bouton, d'un levier ou d'un levier analogique. Le volant (Valve) demande une tige de fer industriel, expérimentale en 0.1.3 : il n'est pas fabricable tant que « industrialFluids » est désactivé. Une cabine typique : un pupitre avec le levier de vitesse lié à la transmission et l'interrupteur de sens, et un panneau mural avec les jauges.</p>"
+  }
+ ],
+ "related": [
+  "create-loconautics",
+  "loconautics-transmission",
+  "loconautics-moteur-a-combustion",
+  "loconautics-chaudiere-pression",
+  "liaison-de-redstone",
+  "cle"
+ ],
+ "sources": [
+  "Code, données et storyboards Ponder : Create: Loconautics 0.1.3 BETA, dépôt public github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (dernier avant le passage à 0.1.4) ; ses 26 structures Ponder et son en_us.json sont identiques octet pour octet au jar loconautics-0.1.3BETA.jar du modpack Create France",
+  "Licence : code et données sous MIT ; textures, modèles, sons et fichiers de langue « tous droits réservés » (Lycoris). Nos vidéos et images sont des rendus de notre moteur ; nos textes sont originaux, aucun texte du Ponder n'est recopié",
+  "Chiffres : config/LoconauticsConfig.java (valeurs par défaut), content/combustion/SmallEngineTuning.java et CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java ; fonctions expérimentales : common/experimental/ExperimentalFeature.java et config/loconautics-experimental.toml du modpack",
+  "Recettes : data/loconautics/recipe/*.json du jar 0.1.3 BETA",
+  "Blocs de Simulated 1.3.2 (moteur portable, raccord de corde, assembleur physique) : jar livré avec Create Aeronautics 1.3.2 ; code MIT, art tous droits réservés (The Simulated Team)"
+ ],
+ "en": {
+  "slugEn": "loconautics-instrument-panels",
+  "name": "Instrument panels",
+  "title": "Instrument panels — Create: Loconautics guide",
+  "description": "Create: Loconautics panels: button, switch, lever, valve and gauges, Redstone Links, settings, the glass case and dashboards.",
+  "intro": "The <strong>Locomotive Gauge</strong> is a small plate that mounts on any face and carries up to four miniature controls: <strong>button</strong>, <strong>switch</strong>, <strong>lever</strong>, <strong>hand wheel</strong> or <strong>dial</strong>. They operate a <a href=\"/en/wiki/redstone-link\">Redstone Link</a>, a <a href=\"/en/wiki/loconautics-transmission-block\">Transmission</a> or an engine, and are tuned with the wrench. The <strong>Dashboard</strong> is the angled cab version.",
+  "facts": [
+   {
+    "label": "Slots",
+    "value": "Four per panel (one per quarter), two per Dashboard"
+   },
+   {
+    "label": "Button",
+    "value": "Strength 15 for 1 second (20 ticks)"
+   },
+   {
+    "label": "Switch",
+    "value": "Strength 15 for as long as it is on"
+   },
+   {
+    "label": "Lever",
+    "value": "Analog, 0 to 15"
+   },
+   {
+    "label": "Hand wheel",
+    "value": "Opens a relief valve or throttles an engine"
+   },
+   {
+    "label": "Dashboards",
+    "value": "Up to five merge into one console"
+   },
+   {
+    "label": "Version",
+    "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10"
+   }
+  ],
+  "recipe": {
+   "label": "Locomotive Gauge (crafting table, ×8)",
+   "grid": [
+    [
+     "Precision Mechanism",
+     "Industrial Iron Sheet"
+    ]
+   ],
+   "result": "8 Locomotive Gauges"
+  },
+  "videos": [
+   {
+    "id": "loco_panel_parts",
+    "name": "Panels: adding and removing controls",
+    "description": "A single button goes to the middle, a second control moves it into a corner; the quarters fill up, then the wrench takes one away."
+   },
+   {
+    "id": "loco_panel_controls",
+    "name": "Panels: button, switch and lever",
+    "description": "The button lights the lamp briefly, the switch keeps it lit, the lever rises from 0 to 15; when two controls share a link, the stronger signal counts."
+   },
+   {
+    "id": "loco_panel_gui",
+    "name": "Panels: a control's settings",
+    "description": "The wrench opens the settings of a control: name, channel, preview and style; the video keeps showing the panel."
+   },
+   {
+    "id": "loco_panel_look",
+    "name": "Panels: restyling a control",
+    "description": "Body, colour, plate, light and glass: the button gets a new casing and colour once the change is confirmed."
+   },
+   {
+    "id": "loco_panel_glass",
+    "name": "Panels: the glass cover",
+    "description": "Under its shut cover the button does nothing; with Shift the cover opens, the button lights the lamp, then the cover shuts again."
+   },
+   {
+    "id": "loco_dashboard_desk",
+    "name": "Panels: the Dashboard",
+    "description": "Three Dashboards set next to each other merge into a single desk; a lever and a switch are added to it."
+   }
+  ],
+  "sections": [
+   {
+    "id": "panel-parts",
+    "title": "Adding controls",
+    "alt": "A Locomotive Gauge on a casing, with a button and a lever",
+    "html": "<p>A panel has room for <strong>four controls</strong>, one per quarter. While it carries just one, that control is <strong>centred</strong>; as soon as a second is added, the first slides into a corner. Aim at an empty quarter to fill it next. A Shift-use with the <a href=\"/en/wiki/wrench\">Wrench</a> pulls a control off; breaking the panel releases the controls one by one.</p>"
+   },
+   {
+    "id": "panel-controls",
+    "title": "The controls",
+    "alt": "A panel and two redstone lamps reached through links",
+    "html": "<p>Every control must <strong>be tied to a receiving Redstone Link</strong> before use: use the control item on the link. A <strong>button</strong> fires a strength-15 signal for one second, a <strong>switch</strong> stays on until flipped back, and a <strong>lever</strong> is analog, dragged anywhere from 0 to 15. When two controls feed one link, there is no conflict: the higher strength is used.</p>"
+   },
+   {
+    "id": "panel-gui",
+    "title": "A control's settings",
+    "alt": "A panel button seen close up",
+    "html": "<p>Using the <a href=\"/en/wiki/wrench\">Wrench</a> on a control opens its settings (we keep the camera on the panel instead of drawing that screen). Along the top sits a <strong>name</strong> field. The <strong>signal</strong> line takes two items, the channel the control transmits on. A preview shows the result, and the arrows and dots under it cycle through <strong>styles</strong>, such as the big button or the ball-topped lever.</p>"
+   },
+   {
+    "id": "panel-look",
+    "title": "Restyling a control",
+    "alt": "A repainted panel button with its light and glass",
+    "html": "<p>On that settings screen, one column swaps the <strong>casing</strong> (4 variants) and another recolours the button cap, lever knob or hand wheel (35 shades). Toggles fit a <strong>backing plate</strong>, a <strong>lamp</strong> or a <strong>glass cover</strong>. <strong>Invert</strong> reverses what the control sends, so on means off and off means on, and the confirm button applies the restyle.</p>"
+   },
+   {
+    "id": "panel-glass",
+    "title": "The glass cover",
+    "alt": "A panel button under its glass cover",
+    "html": "<p>A control behind a <strong>shut glass cover</strong> is locked, ideal for an emergency stop or anything you do not want hit by accident. Shift-use it to <strong>lift</strong> the cover and the control works normally; Shift-use it once more to lower the cover.</p>"
+   },
+   {
+    "id": "dashboard-desk",
+    "title": "The Dashboard",
+    "alt": "Three red Dashboards merged into one desk, with a lever and a switch",
+    "html": "<p>The <strong>Dashboard</strong> is an angled console carrying panel controls, <strong>two each</strong>, left and right. Set several next to each other and they merge into a single console, <strong>five at most</strong>. The wrench edits whichever control it is aimed at, as on a panel, and Dashboards come in 16 colours.</p>"
+   },
+   {
+    "id": "a-savoir",
+    "title": "Good to know",
+    "html": "<p><strong>What dials can read.</strong> A panel dial can show about fifty readings: temperature, pressure, steam output and efficiency of a boiler, train weight, speed and load from Create's gauges, valve state, but also RPM and fuel of Create Diesel Generators engines and small combustion engines, speed, altitude and propellers from Create Aeronautics. It has four needle styles and 36 backgrounds.</p>"
+   },
+   {
+    "id": "conseils",
+    "title": "Tips",
+    "html": "<p>The gauge button, switch and lever are crafted by 8, from an industrial iron sheet and, depending on the part, a button, a lever or an analog lever. The Valve needs an industrial iron rod, experimental in 0.1.3: it cannot be crafted while « industrialFluids » is off. A typical cab: a dashboard with the speed lever bound to the Transmission and the direction switch, and a wall panel with the gauges.</p>"
+   }
+  ],
+  "sources": [
+   "Code, data and Ponder storyboards: Create: Loconautics 0.1.3 BETA, public repository github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (last before the move to 0.1.4); its 26 Ponder structures and en_us.json are byte-identical to the loconautics-0.1.3BETA.jar of the Create France modpack",
+   "License: code and data under MIT; textures, models, sounds and lang files all rights reserved (Lycoris). Our videos and images are renders from our own engine; our texts are original, no Ponder text is copied",
+   "Numbers: config/LoconauticsConfig.java (defaults), content/combustion/SmallEngineTuning.java and CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java; experimental features: common/experimental/ExperimentalFeature.java and the modpack's config/loconautics-experimental.toml",
+   "Recipes: data/loconautics/recipe/*.json in the 0.1.3 BETA jar",
+   "Simulated 1.3.2 blocks (Portable Engine, Rope Connector, Physics Assembler): jar shipped with Create Aeronautics 1.3.2; code MIT, art all rights reserved (The Simulated Team)"
+  ]
+ }
+}

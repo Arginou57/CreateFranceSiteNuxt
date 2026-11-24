@@ -1,0 +1,417 @@
+{
+ "slug": "loconautics-moteur-a-combustion",
+ "name": "Petit moteur à combustion",
+ "blockId": "loconautics:red_small_combustion_engine",
+ "category": "loconautics",
+ "title": "Moteur à combustion — Create: Loconautics, guide",
+ "description": "Le petit moteur à combustion de Create: Loconautics : 256 tr/min et 8 192 SU, carburants, rangées de 3, redstone, panneau.",
+ "datePublished": "2026-11-24",
+ "dateModified": "2026-11-24",
+ "createVersion": "6.0.10 · Create: Loconautics 0.1.3 BETA",
+ "mcVersion": "1.21.1",
+ "intro": "Le <strong>petit moteur à combustion</strong> (Small Combustion Engine) brûle un carburant liquide pour produire de la rotation : jusqu'à <strong>256 tr/min et 8 192 SU</strong> pour un seul bloc. Plusieurs moteurs alignés se couplent en une rangée qui additionne leur puissance, et la redstone ou un <a href=\"/wiki/loconautics-panneaux-de-commande\">panneau</a> en règle le régime. Il accepte aussi les carburants de <a href=\"/wiki/create-diesel-generators\">Create Diesel Generators</a>.",
+ "facts": [
+  {
+   "label": "Sortie",
+   "value": "256 tr/min au plus, 8 192 SU par moteur qui tourne"
+  },
+  {
+   "label": "Réservoir",
+   "value": "1 000 mB, rempli au seau ou par le dessous"
+  },
+  {
+   "label": "Rangée",
+   "value": "Jusqu'à 3 moteurs alignés ; le moteur de tête donne la rotation"
+  },
+  {
+   "label": "Redstone",
+   "value": "Chaque point retire 1/16 de la vitesse ; 15 = arrêt"
+  },
+  {
+   "label": "Meilleur carburant",
+   "value": "Cérisène : 256 tr/min pour 1 mB/s"
+  },
+  {
+   "label": "Disponibilité",
+   "value": "Expérimental : désactivé par défaut (dieselworks)"
+  },
+  {
+   "label": "Version",
+   "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10"
+  }
+ ],
+ "recipe": {
+  "label": "Moteur rouge (établi ; recette chargée seulement si « dieselworks » est activé)",
+  "grid": [
+   [
+    "Plaque de fer industriel",
+    "Colorant rouge",
+    "Plaque de fer industriel"
+   ],
+   [
+    "Bloc moteur (Simulated)",
+    "Réservoir industriel",
+    "Bloc moteur (Simulated)"
+   ],
+   [
+    "Plaque de fer industriel",
+    "Rotor",
+    "Plaque de fer industriel"
+   ]
+  ],
+  "items": [
+   [
+    "loconautics:industrial_iron_sheet",
+    "minecraft:red_dye",
+    "loconautics:industrial_iron_sheet"
+   ],
+   [
+    "simulated:engine_assembly",
+    "loconautics:industrial_fluid_tank",
+    "simulated:engine_assembly"
+   ],
+   [
+    "loconautics:industrial_iron_sheet",
+    "create:shaft",
+    "loconautics:industrial_iron_sheet"
+   ]
+  ],
+  "result": "1 petit moteur à combustion rouge",
+  "resultItem": "loconautics:red_small_combustion_engine"
+ },
+ "videos": [
+  {
+   "id": "loco_engine_single",
+   "name": "Moteur à combustion : un moteur seul",
+   "description": "Le moteur rouge reçoit du carburant au seau ; ses pistons s'agitent et l'arbre de sortie tourne à l'avant.",
+   "duration": "PT16S",
+   "chapters": [
+    {
+     "t": 1.0,
+     "section": "engine-single"
+    },
+    {
+     "t": 4.0,
+     "section": "engine-single"
+    },
+    {
+     "t": 6.25,
+     "section": "engine-single"
+    },
+    {
+     "t": 10.0,
+     "section": "engine-single"
+    },
+    {
+     "t": 12.75,
+     "section": "engine-single"
+    }
+   ]
+  },
+  {
+   "id": "loco_engine_pipes",
+   "name": "Moteur à combustion : l'alimenter par tuyaux",
+   "description": "Un réservoir, un tuyau et une pompe mécanique sous le moteur ; la pompe en marche envoie le carburant et le moteur démarre.",
+   "duration": "PT16S",
+   "chapters": [
+    {
+     "t": 1.25,
+     "section": "engine-pipes"
+    },
+    {
+     "t": 5.75,
+     "section": "engine-pipes"
+    },
+    {
+     "t": 7.5,
+     "section": "engine-pipes"
+    },
+    {
+     "t": 10.25,
+     "section": "engine-pipes"
+    }
+   ]
+  },
+  {
+   "id": "loco_engine_tandem",
+   "name": "Moteur à combustion : une rangée de trois",
+   "description": "Trois moteurs alignés dans le même sens se couplent ; le moteur de tête fait tourner l'arbre pour toute la rangée.",
+   "duration": "PT19S",
+   "chapters": [
+    {
+     "t": 2.25,
+     "section": "engine-tandem"
+    },
+    {
+     "t": 6.5,
+     "section": "engine-tandem"
+    },
+    {
+     "t": 10.5,
+     "section": "engine-tandem"
+    },
+    {
+     "t": 14.25,
+     "section": "engine-tandem"
+    }
+   ]
+  },
+  {
+   "id": "loco_engine_redstone",
+   "name": "Moteur à combustion : régler à la redstone",
+   "description": "Un levier analogique règle la rangée : plein régime sans signal, moitié à 8, le plus lent à 14, arrêt à 15.",
+   "duration": "PT19S",
+   "chapters": [
+    {
+     "t": 5.0,
+     "section": "engine-redstone"
+    },
+    {
+     "t": 7.85,
+     "section": "engine-redstone"
+    },
+    {
+     "t": 13.9,
+     "section": "engine-redstone"
+    },
+    {
+     "t": 15.4,
+     "section": "engine-redstone"
+    }
+   ]
+  },
+  {
+   "id": "loco_engine_panel",
+   "name": "Moteur à combustion : levier, interrupteur et volant de panneau",
+   "description": "Un panneau de locomotive reçoit un levier, un interrupteur puis un volant liés au moteur de tête ; chacun règle la rangée.",
+   "duration": "PT22S",
+   "chapters": [
+    {
+     "t": 6.83,
+     "section": "engine-panel"
+    },
+    {
+     "t": 12.93,
+     "section": "engine-panel"
+    },
+    {
+     "t": 16.34,
+     "section": "engine-panel"
+    }
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "id": "engine-single",
+   "title": "Un moteur seul",
+   "image": "loco_engine_single_vue.webp",
+   "alt": "Le petit moteur à combustion rouge et son arbre de sortie",
+   "html": "<p>Un clic droit avec un seau de carburant remplit le réservoir du moteur (1 000 mB). La rotation sort par l'<strong>arbre de la face avant</strong> : au plus <strong>256 tr/min et 8 192 SU</strong>. Le carburant décide de la vitesse maximale et de la consommation (tableau plus bas) : le cérisène est le meilleur, la lave le moins bon. Les <a href=\"/wiki/lunettes-d-ingenieur\">lunettes d'ingénieur</a> disent si le moteur tourne ou s'il est à sec.</p>",
+   "video": "loco_engine_single"
+  },
+  {
+   "id": "engine-pipes",
+   "title": "L'alimenter par tuyaux",
+   "image": "loco_engine_pipes_vue.webp",
+   "alt": "Un réservoir et une pompe qui alimentent le moteur par en dessous",
+   "html": "<p>Le moteur reçoit son carburant <strong>par le dessous</strong>. Un <a href=\"/wiki/reservoir-a-fluide\">réservoir</a> et des <a href=\"/wiki/tuyau-a-fluide\">tuyaux</a> peuvent l'alimenter, mais les tuyaux seuls ne déplacent rien : il faut une <a href=\"/wiki/pompe-mecanique\">pompe mécanique</a> en marche. Le moteur tourne alors tant que le réservoir n'est pas vide.</p>",
+   "video": "loco_engine_pipes"
+  },
+  {
+   "id": "engine-tandem",
+   "title": "Une rangée de moteurs",
+   "image": "loco_engine_tandem_vue.webp",
+   "alt": "Trois petits moteurs à combustion couplés en rangée",
+   "html": "<p>Des moteurs posés en ligne, tournés du même côté, <strong>se couplent</strong> et changent de modèle pour s'emboîter (arrière, milieu, avant). Une rangée compte <strong>3 moteurs</strong> au plus. Seul le moteur de tête sort la rotation de toute la rangée : chaque moteur qui tourne ajoute 8 192 SU à la sortie. Le carburant est partagé, et un moteur cassé transmet le sien aux autres.</p>",
+   "video": "loco_engine_tandem"
+  },
+  {
+   "id": "engine-redstone",
+   "title": "Régler à la redstone",
+   "image": "loco_engine_redstone_vue.webp",
+   "alt": "Un levier analogique posé contre la rangée de moteurs",
+   "html": "<p>Sans signal, les moteurs tournent <strong>à fond</strong>. Chaque point de signal retire un seizième de la vitesse : à 8, il en reste la moitié ; à 14, c'est le régime le plus lent ; <strong>15 les arrête</strong>. Un signal sur n'importe quel moteur de la rangée règle toute la rangée.</p>",
+   "video": "loco_engine_redstone"
+  },
+  {
+   "id": "engine-panel",
+   "title": "Le commander depuis un panneau",
+   "image": "loco_engine_panel_vue.webp",
+   "alt": "Un panneau de locomotive à côté de la rangée de moteurs",
+   "html": "<p>Utilise un <strong>levier de panneau</strong> sur un moteur pour le lier ; posé sur un <a href=\"/wiki/loconautics-panneaux-de-commande\">panneau</a>, sa puissance agit comme un signal de redstone (15 arrête le moteur). Un <strong>interrupteur de panneau</strong> fait l'inverse : allumé, plein régime. Un <strong>volant</strong> se lie de la même façon et va du plein régime au plus lent, sans jamais arrêter le moteur.</p>",
+   "video": "loco_engine_panel"
+  },
+  {
+   "id": "carburants",
+   "title": "Les carburants",
+   "html": "<p>Le moteur reconnaît le cérisène et la lave, et les fluides des tags <code>c:diesel</code>, <code>c:gasoline</code>, <code>c:refined_fuel</code>, <code>c:biodiesel</code>, <code>c:heavy_oil</code> et <code>c:ethanol</code> : ceux de <a href=\"/wiki/carburants\">Create Diesel Generators</a> conviennent donc. Valeurs du code (CombustionFuel) :</p><table><tr><th>Carburant</th><th>Vitesse maximale</th><th>Consommation</th></tr><tr><td>Cérisène</td><td>256 tr/min</td><td>1,0 mB/s</td></tr><tr><td>Diesel</td><td>240 tr/min</td><td>1,2 mB/s</td></tr><tr><td>Essence</td><td>224 tr/min</td><td>1,5 mB/s</td></tr><tr><td>Carburant raffiné</td><td>208 tr/min</td><td>1,8 mB/s</td></tr><tr><td>Biodiesel</td><td>192 tr/min</td><td>2,1 mB/s</td></tr><tr><td>Huile lourde</td><td>176 tr/min</td><td>2,4 mB/s</td></tr><tr><td>Éthanol</td><td>160 tr/min</td><td>3,0 mB/s</td></tr><tr><td>Lave</td><td>128 tr/min</td><td>6,0 mB/s</td></tr></table><p>Avec un plein de 1 000 mB de cérisène, un moteur tourne donc environ 16 minutes.</p><p><strong>Fonction expérimentale.</strong> Dans Loconautics 0.1.3 BETA, les petits moteurs à combustion font partie des fonctions « dieselworks » <strong>désactivées par défaut</strong> (<code>loconautics-experimental.toml</code>, aussi à <code>false</code> dans le modpack Create France) : cachés de l'inventaire créatif, impossibles à poser, recettes non chargées. Le cérisène et le réservoir industriel sont aussi expérimentaux (« industrialFluids »). Le Ponder du jeu montre quand même le moteur ; cette page le suit.</p>"
+  },
+  {
+   "id": "conseils",
+   "title": "Conseils",
+   "html": "<p>Le moteur rouge des scènes n'est qu'une couleur : il existe en 16 teintes, chacune fabriquée avec son colorant. Pour une locomotive, une rangée de trois moteurs donne 24 576 SU à 256 tr/min, de quoi faire tourner une transmission et plusieurs essieux.</p>"
+  },
+  {
+   "id": "couleurs",
+   "title": "Les 16 couleurs du moteur",
+   "html": "<p>Le moteur se fabrique directement dans la teinte du colorant placé en haut de la recette : Small White Combustion Engine, Small Orange Combustion Engine, Small Magenta Combustion Engine, Small Light Blue Combustion Engine, Small Yellow Combustion Engine, Small Lime Combustion Engine, Small Pink Combustion Engine, Small Gray Combustion Engine, Small Light Gray Combustion Engine, Small Cyan Combustion Engine, Small Purple Combustion Engine, Small Blue Combustion Engine, Small Brown Combustion Engine, Small Green Combustion Engine, Small Red Combustion Engine, Small Black Combustion Engine. Toutes les couleurs ont les mêmes réglages ; seule la carrosserie change.</p>"
+  }
+ ],
+ "related": [
+  "create-loconautics",
+  "loconautics-panneaux-de-commande",
+  "loconautics-transmission",
+  "carburants",
+  "moteur-diesel",
+  "pompe-mecanique",
+  "reservoir-a-fluide",
+  "tuyau-a-fluide"
+ ],
+ "sources": [
+  "Code, données et storyboards Ponder : Create: Loconautics 0.1.3 BETA, dépôt public github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (dernier avant le passage à 0.1.4) ; ses 26 structures Ponder et son en_us.json sont identiques octet pour octet au jar loconautics-0.1.3BETA.jar du modpack Create France",
+  "Licence : code et données sous MIT ; textures, modèles, sons et fichiers de langue « tous droits réservés » (Lycoris). Nos vidéos et images sont des rendus de notre moteur ; nos textes sont originaux, aucun texte du Ponder n'est recopié",
+  "Chiffres : config/LoconauticsConfig.java (valeurs par défaut), content/combustion/SmallEngineTuning.java et CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java ; fonctions expérimentales : common/experimental/ExperimentalFeature.java et config/loconautics-experimental.toml du modpack",
+  "Recettes : data/loconautics/recipe/*.json du jar 0.1.3 BETA",
+  "Blocs de Simulated 1.3.2 (moteur portable, raccord de corde, assembleur physique) : jar livré avec Create Aeronautics 1.3.2 ; code MIT, art tous droits réservés (The Simulated Team)"
+ ],
+ "en": {
+  "slugEn": "loconautics-small-combustion-engine",
+  "name": "Small Combustion Engine",
+  "title": "Small Combustion Engine — Create: Loconautics guide",
+  "description": "The Create: Loconautics Small Combustion Engine: 256 RPM and 8,192 SU, fuels, rows of 3, redstone and panel control. An experimental feature.",
+  "intro": "The <strong>Small Combustion Engine</strong> burns liquid fuel to generate rotation: up to <strong>256 RPM and 8,192 SU</strong> from a single block. Engines in a line couple into a row that adds up their power, and redstone or a <a href=\"/en/wiki/loconautics-instrument-panels\">panel</a> sets the throttle. It also takes the fuels of <a href=\"/en/wiki/create-diesel-generators-guide\">Create Diesel Generators</a>.",
+  "facts": [
+   {
+    "label": "Output",
+    "value": "Up to 256 RPM and 8,192 SU for each running engine"
+   },
+   {
+    "label": "Tank",
+    "value": "1,000 mB, filled by bucket or from underneath"
+   },
+   {
+    "label": "Tandem",
+    "value": "Up to 3 engines nose to tail; the leading one delivers the rotation"
+   },
+   {
+    "label": "Redstone",
+    "value": "Each point costs 1/16 of the speed; 15 stops it"
+   },
+   {
+    "label": "Best fuel",
+    "value": "Cerisene: 256 RPM burning 1 mB/s"
+   },
+   {
+    "label": "Availability",
+    "value": "Experimental, disabled by default (dieselworks)"
+   },
+   {
+    "label": "Version",
+    "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10"
+   }
+  ],
+  "recipe": {
+   "label": "Red engine (crafting table; recipe only loads with « dieselworks » on)",
+   "grid": [
+    [
+     "Industrial Iron Sheet",
+     "Red Dye",
+     "Industrial Iron Sheet"
+    ],
+    [
+     "Engine Assembly (Simulated)",
+     "Industrial Fluid Tank",
+     "Engine Assembly (Simulated)"
+    ],
+    [
+     "Industrial Iron Sheet",
+     "Shaft",
+     "Industrial Iron Sheet"
+    ]
+   ],
+   "result": "1 Small Red Combustion Engine"
+  },
+  "videos": [
+   {
+    "id": "loco_engine_single",
+    "name": "Combustion engine: one engine on its own",
+    "description": "A bucket fills the red engine; its pistons start to jolt and its output shaft turns."
+   },
+   {
+    "id": "loco_engine_pipes",
+    "name": "Combustion engine: piped fuel",
+    "description": "A tank, a pipe and a Mechanical Pump below the engine; once the pump turns, fuel flows up and the engine fires."
+   },
+   {
+    "id": "loco_engine_tandem",
+    "name": "Combustion engine: three in a row",
+    "description": "Three engines lined up nose to tail merge into one unit; only the leading engine drives the shaft for all of them."
+   },
+   {
+    "id": "loco_engine_redstone",
+    "name": "Combustion engine: throttling with redstone",
+    "description": "An Analog Lever throttles the unit: flat out unpowered, half speed at 8, crawling at 14, stopped at 15."
+   },
+   {
+    "id": "loco_engine_panel",
+    "name": "Combustion engine: lever, switch and hand wheel on a panel",
+    "description": "A Locomotive Gauge receives a lever, then a switch, then a hand wheel, each linked to the leading engine and throttling the unit."
+   }
+  ],
+  "sections": [
+   {
+    "id": "engine-single",
+    "title": "One engine on its own",
+    "alt": "The Small Red Combustion Engine and its output shaft",
+    "html": "<p>Empty a bucket of fuel into the engine to fill its 1,000 mB tank. Power leaves through the <strong>front-facing shaft</strong>: <strong>256 RPM and 8,192 SU</strong> at best. Which fuel you burn sets both the ceiling and the consumption (see the table further down), Cerisene being the top choice and Lava the poorest. Engineer's Goggles tell you whether the engine is working or has run dry.</p>"
+   },
+   {
+    "id": "engine-pipes",
+    "title": "Piped fuel",
+    "alt": "A tank and a pump supplying the engine from underneath",
+    "html": "<p>Fuel enters the engine <strong>through its underside</strong>. Supply it from a <a href=\"/en/wiki/fluid-tank\">Fluid Tank</a> through <a href=\"/en/wiki/fluid-pipe\">pipes</a>, keeping in mind that pipes never move anything by themselves: a turning <a href=\"/en/wiki/mechanical-pump\">Mechanical Pump</a> is required. After that, the engine keeps running until its supply is used up.</p>"
+   },
+   {
+    "id": "engine-tandem",
+    "title": "Engines in tandem",
+    "alt": "Three small combustion engines merged into a row",
+    "html": "<p>Line engines up nose to tail, all pointing the same direction, and they <strong>merge</strong>, swapping their looks for rear, middle and front pieces. Three is the maximum per unit. The leading engine alone delivers the rotation for the unit, and every engine that runs adds 8,192 SU to it. All of them draw on one shared fuel supply, and breaking one hands its fuel over to the rest.</p>"
+   },
+   {
+    "id": "engine-redstone",
+    "title": "Throttling with redstone",
+    "alt": "An Analog Lever against the row of engines",
+    "html": "<p>Unpowered, the engines go <strong>flat out</strong>. Each point of redstone takes away one sixteenth of the pace: strength 8 leaves half, 14 is the crawl, and <strong>15 shuts them down</strong>. Powering any single engine of the unit throttles all of them.</p>"
+   },
+   {
+    "id": "engine-panel",
+    "title": "Panel control",
+    "alt": "A Locomotive Gauge beside the row of engines",
+    "html": "<p>Use a <strong>Gauge Lever</strong> on an engine to link them; once it sits on a <a href=\"/en/wiki/loconautics-instrument-panels\">panel</a>, the lever behaves like a redstone strength, with 15 stopping the engine. A <strong>Gauge Switch</strong> is inverted: flipped on means full power. A <strong>Valve</strong> hand wheel links in the same fashion and sweeps from full power down to the crawl, but it can never stop the engine.</p>"
+   },
+   {
+    "id": "carburants",
+    "title": "Fuels",
+    "html": "<p>The engine recognises Cerisene and Lava, and the fluids of the <code>c:diesel</code>, <code>c:gasoline</code>, <code>c:refined_fuel</code>, <code>c:biodiesel</code>, <code>c:heavy_oil</code> and <code>c:ethanol</code> tags: the ones from <a href=\"/en/wiki/diesel-generators-fuels\">Create Diesel Generators</a> work. Values from the code (CombustionFuel):</p><table><tr><th>Fuel</th><th>Top speed</th><th>Burn rate</th></tr><tr><td>Cerisene</td><td>256 RPM</td><td>1.0 mB/s</td></tr><tr><td>Diesel</td><td>240 RPM</td><td>1.2 mB/s</td></tr><tr><td>Gasoline</td><td>224 RPM</td><td>1.5 mB/s</td></tr><tr><td>Refined fuel</td><td>208 RPM</td><td>1.8 mB/s</td></tr><tr><td>Biodiesel</td><td>192 RPM</td><td>2.1 mB/s</td></tr><tr><td>Heavy oil</td><td>176 RPM</td><td>2.4 mB/s</td></tr><tr><td>Ethanol</td><td>160 RPM</td><td>3.0 mB/s</td></tr><tr><td>Lava</td><td>128 RPM</td><td>6.0 mB/s</td></tr></table><p>A full 1,000 mB of Cerisene thus keeps one engine running for about 16 minutes.</p><p><strong>Experimental feature.</strong> In Loconautics 0.1.3 BETA the small combustion engines belong to the « dieselworks » features, <strong>off by default</strong> (<code>loconautics-experimental.toml</code>, also <code>false</code> in the Create France modpack): hidden from the creative inventory, cannot be placed, recipes not loaded. Cerisene and the industrial fluid tank are experimental too (« industrialFluids »). The in-game Ponder still shows the engine; this page follows it.</p>"
+   },
+   {
+    "id": "conseils",
+    "title": "Tips",
+    "html": "<p>The red engine of the scenes is just one colour: it comes in 16 dyes, each crafted with its own dye. For a locomotive, a row of three engines gives 24,576 SU at 256 RPM, enough to drive a Transmission and several axles.</p>"
+   },
+   {
+    "id": "couleurs",
+    "title": "The 16 engine colours",
+    "html": "<p>The engine is crafted straight away in the shade of the dye placed in the top slot of the recipe: Small White Combustion Engine, Small Orange Combustion Engine, Small Magenta Combustion Engine, Small Light Blue Combustion Engine, Small Yellow Combustion Engine, Small Lime Combustion Engine, Small Pink Combustion Engine, Small Gray Combustion Engine, Small Light Gray Combustion Engine, Small Cyan Combustion Engine, Small Purple Combustion Engine, Small Blue Combustion Engine, Small Brown Combustion Engine, Small Green Combustion Engine, Small Red Combustion Engine, Small Black Combustion Engine. Every colour has the same tuning; only the bodywork differs.</p>"
+   }
+  ],
+  "sources": [
+   "Code, data and Ponder storyboards: Create: Loconautics 0.1.3 BETA, public repository github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (last before the move to 0.1.4); its 26 Ponder structures and en_us.json are byte-identical to the loconautics-0.1.3BETA.jar of the Create France modpack",
+   "License: code and data under MIT; textures, models, sounds and lang files all rights reserved (Lycoris). Our videos and images are renders from our own engine; our texts are original, no Ponder text is copied",
+   "Numbers: config/LoconauticsConfig.java (defaults), content/combustion/SmallEngineTuning.java and CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java; experimental features: common/experimental/ExperimentalFeature.java and the modpack's config/loconautics-experimental.toml",
+   "Recipes: data/loconautics/recipe/*.json in the 0.1.3 BETA jar",
+   "Simulated 1.3.2 blocks (Portable Engine, Rope Connector, Physics Assembler): jar shipped with Create Aeronautics 1.3.2; code MIT, art all rights reserved (The Simulated Team)"
+  ]
+ }
+}

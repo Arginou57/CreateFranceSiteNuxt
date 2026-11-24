@@ -1,0 +1,231 @@
+{
+ "slug": "loconautics-blocs-et-objets",
+ "name": "Blocs et objets de Create: Loconautics",
+ "blockId": "loconautics:knuckle",
+ "category": "loconautics",
+ "title": "Blocs et objets — Create: Loconautics, guide",
+ "description": "Tous les blocs et objets de Create: Loconautics 0.1.3 BETA : attelages, tampons, chapeaux, câble, fluides industriels, cérisène, ingrédients et variantes.",
+ "datePublished": "2026-11-24",
+ "dateModified": "2026-11-24",
+ "createVersion": "6.0.10 · Create: Loconautics 0.1.3 BETA",
+ "mcVersion": "1.21.1",
+ "intro": "Cette page fait le tour de <strong>tout ce que contient Create: Loconautics 0.1.3 BETA</strong>, y compris ce qui n'a pas de scène Ponder : attelages et tampons des voitures, équipement du conducteur, câble d'acier, fluides industriels, cérisène et ingrédients de fabrication. Pour chaque groupe : à quoi il sert, comment l'obtenir et s'il est disponible par défaut. Les noms anglais officiels sont donnés entre parenthèses ; le mod n'a pas de traduction française.",
+ "facts": [
+  {
+   "label": "Blocs et objets",
+   "value": "Environ 95 groupes dans le fichier de langue (couleurs et matériaux regroupés)"
+  },
+  {
+   "label": "Couleurs",
+   "value": "16 teintes pour moteurs, contrôleurs, pupitres, tampons, chaudières, chapeaux"
+  },
+  {
+   "label": "Matériaux de chaudière",
+   "value": "Industriel, andésite, laiton, cuivre, zinc (+ 16 teintes) × 5 motifs"
+  },
+  {
+   "label": "Expérimental",
+   "value": "Chaudière, moteur, fluides industriels, attelage à vis, frein à main"
+  },
+  {
+   "label": "Noms sans objet",
+   "value": "7 noms de langue ne correspondent à aucun objet en 0.1.3"
+  },
+  {
+   "label": "Version",
+   "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10"
+  }
+ ],
+ "recipe": {
+  "label": "Plaque de fer industriel (assemblage séquencé)",
+  "grid": [
+   [
+    "Plaque de fer",
+    "Remplissage : 100 mB de lave",
+    null
+   ],
+   [
+    "Pressage",
+    "Pressage",
+    null
+   ],
+   [
+    null,
+    null,
+    null
+   ]
+  ],
+  "items": [
+   [
+    "create:iron_sheet",
+    "minecraft:lava_bucket",
+    null
+   ],
+   [
+    "create:mechanical_press",
+    "create:mechanical_press",
+    null
+   ],
+   [
+    null,
+    null,
+    null
+   ]
+  ],
+  "result": "1 plaque de fer industriel",
+  "resultItem": "loconautics:industrial_iron_sheet"
+ },
+ "videos": [],
+ "sections": [
+  {
+   "id": "catalog-blocks",
+   "title": "Attelages et tampons",
+   "image": "loco_catalog_blocks_attelages.webp",
+   "alt": "Attelage automatique, tampon rouge, traverse copiable, attelage à vis et frein à main, dans des cases d'inventaire",
+   "html": "<p>L'<strong>attelage automatique</strong> (Knuckle) relie deux voitures : quand deux attelages se rencontrent, ils se verrouillent sur un pivot, et la rame tient ensemble dans les courbes. Une clé le dételle, ou le fait pivoter s'il est libre. La recette donne 2 attelages (traverse copiable, plaque de fer industriel, bloc de fer industriel). Le <strong>tampon</strong> (Buffer, en 16 couleurs, rouge par défaut) est un ressort amorti entre deux voitures : il se comprime au contact et rend le choc doucement. La <strong>traverse copiable</strong> (Copycat Headstock), taillée par 4 dans un lingot de zinc au tailleur de pierre, prend l'apparence d'un autre bloc et forme le bout de la caisse ; elle sert aussi à fabriquer les attelages. L'<strong>attelage à vis</strong> (Screw Link Headstock) et le <strong>frein à main</strong> (Handbrake, qui immobilise une voiture tant qu'il reçoit un signal de redstone) sont expérimentaux.</p>"
+  },
+  {
+   "id": "catalog-fluids",
+   "title": "Fluides industriels et cérisène",
+   "image": "loco_catalog_fluids_fluides.webp",
+   "alt": "Tuyaux industriels, pompe, vanne, réservoir industriel, bloc de cérisène et ballon de plage",
+   "html": "<p>Le groupe expérimental « industrialFluids » ajoute une tuyauterie industrielle : <strong>tuyau industriel</strong> (Industrial Fluid Pipe), <strong>tuyau industriel vitré</strong> (Industrial Glass Fluid Pipe), <strong>tuyau industriel intelligent</strong> (Industrial Smart Fluid Pipe), <strong>vanne industrielle</strong> (Industrial Fluid Valve), <strong>pompe mécanique industrielle</strong> (Industrial Mechanical Pump), qui pousse plus loin qu'une pompe de Create, et <strong>réservoir industriel</strong> (Industrial Fluid Tank) : 12 000 mB par bloc, posable couché ou debout, jusqu'à 5 blocs de large.</p><p>Le <strong>cérisène</strong> (Cerisene) est le meilleur carburant du <a href=\"/wiki/loconautics-moteur-a-combustion\">petit moteur à combustion</a>. Le <strong>cérisène brut</strong> (Raw Cerisene) se mélange au bassin (100 mB de lave, 2 farines de cendres, 2 poudres de pierre lumineuse) ; quatre se compactent en <strong>bloc de cérisène</strong> (Cerisene Block), qui chauffe près de la lave ou d'un brûleur à blaze et peut exploser sans casser de blocs. Mélangé avec 250 mB d'eau, un bloc (ou quatre bruts) donne 1 000 mB de cérisène liquide, récupérable au <strong>seau de cérisène</strong> (Cerisene Bucket) ; ces recettes sont du groupe « industrialFluids ». Le brut brûle aussi au four (3 200 ticks, 12 800 pour le bloc) ; le manger n'est pas une bonne idée.</p>"
+  },
+  {
+   "id": "catalog-items",
+   "title": "Équipement et ingrédients",
+   "image": "loco_catalog_items_objets.webp",
+   "alt": "Chapeau, lunettes, câble d'acier, replaceur, plaques, tige, tubes, distribution, cérisène, seau, tuyau et volant, dans des cases d'inventaire",
+   "html": "<p>Le <strong>chapeau de conducteur</strong> (Conductor's Hat, 16 couleurs) se porte sur la tête ; assemblé avec des lunettes d'ingénieur, il donne les <strong>lunettes de conducteur</strong> (Conductor's Goggles), qui affichent les mêmes informations que les lunettes de Create. Le <strong>câble d'acier</strong> (Steel Cable) relie deux raccords de corde comme une corde, mais avec une portée double, 64 blocs au plus (<code>steel_cable.maxRange</code>). Le <strong>replaceur de train créatif</strong> (Creative Train Relocator), réservé au mode créatif, soulève un train déraillé et le repose sur un rail. Le <strong>ballon de plage</strong> (Beach Ball) se fabrique avec neuf laines (blanches, bleues, jaunes et rouges). Le chapeau se fabrique en rouge ; sa couleur, comme celle des lunettes, se change ensuite dans le menu de sélection (touche V par défaut), l'objet en main.</p>"
+  },
+  {
+   "id": "ingredients",
+   "title": "Ingrédients de fabrication",
+   "html": "<p>La <strong>plaque de fer industriel</strong> (Industrial Iron Sheet) entre dans la plupart des recettes du mod. Elle se fait par assemblage séquencé : une plaque de fer de Create devient une <strong>plaque de fer renforcé non traitée</strong> (Unprocessed Reinforced Iron Sheet), remplie de 100 mB de lave puis pressée deux fois. Trois plaques en colonne donnent six <strong>tiges de fer industriel</strong> (Industrial Iron Rod), qui servent au câble d'acier, au volant de vanne et à la <strong>distribution</strong> (Valve Gear, dont l'icône reprend encore celle de la plaque) ; cinq tuyaux à fluide en croix font des <strong>tubes de chaudière</strong> (Boiler Tubes). Attention : en 0.1.3, la recette de la tige est rangée dans « industrialFluids », celle des tubes et de la distribution dans « boilerworks » ; tant que ces groupes sont désactivés, le câble d'acier et le volant ne se fabriquent pas.</p>"
+  },
+  {
+   "id": "variantes",
+   "title": "Couleurs et matériaux",
+   "html": "<p>Moteurs, contrôleurs analogiques, pupitres, tampons, chapeaux et lunettes existent en 16 teintes ; les corps de chaudière en cinq motifs, 16 teintes et cinq matériaux. La liste complète est sur la page du <a href=\"/wiki/loconautics-moteur-a-combustion\">moteur</a> et sur celle de la <a href=\"/wiki/loconautics-chaudiere\">chaudière</a>.</p>"
+  },
+  {
+   "id": "fantomes",
+   "title": "Des noms sans objet",
+   "html": "<p>Le fichier de langue anglais du jar nomme sept choses qui <strong>n'existent pas dans le jeu en 0.1.3</strong> : Compression Chamber, Crankshaft, Fuel Injector, Piston Assembly, Power Coupling, Tank Insert, Firebox Controller. Leurs modèles sont livrés (un modèle d'objet pour les six pièces, un modèle de bloc pour le contrôleur de foyer), mais aucun objet ni bloc n'est enregistré sous ces noms. Ce sont peut-être des pièces prévues pour une version future : ne les cherche pas, elles ne s'obtiennent pas, même en créatif.</p>"
+  }
+ ],
+ "related": [
+  "create-loconautics",
+  "loconautics-moteur-a-combustion",
+  "loconautics-chaudiere",
+  "loconautics-assembler-une-locomotive",
+  "loconautics-raccord-de-tuyau",
+  "aeronautics-cordes-et-amarrage",
+  "presse-mecanique",
+  "bec-verseur"
+ ],
+ "sources": [
+  "Code, données et storyboards Ponder : Create: Loconautics 0.1.3 BETA, dépôt public github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (dernier avant le passage à 0.1.4) ; ses 26 structures Ponder et son en_us.json sont identiques octet pour octet au jar loconautics-0.1.3BETA.jar du modpack Create France",
+  "Licence : code et données sous MIT ; textures, modèles, sons et fichiers de langue « tous droits réservés » (Lycoris). Nos vidéos et images sont des rendus de notre moteur ; nos textes sont originaux, aucun texte du Ponder n'est recopié",
+  "Chiffres : config/LoconauticsConfig.java (valeurs par défaut), content/combustion/SmallEngineTuning.java et CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java ; fonctions expérimentales : common/experimental/ExperimentalFeature.java et config/loconautics-experimental.toml du modpack",
+  "Recettes : data/loconautics/recipe/*.json du jar 0.1.3 BETA",
+  "Blocs de Simulated 1.3.2 (moteur portable, raccord de corde, assembleur physique) : jar livré avec Create Aeronautics 1.3.2 ; code MIT, art tous droits réservés (The Simulated Team)"
+ ],
+ "en": {
+  "slugEn": "loconautics-blocks-and-items",
+  "name": "Create: Loconautics blocks and items",
+  "title": "Blocks and items — Create: Loconautics guide",
+  "description": "Every block and item of Create: Loconautics 0.1.3 BETA: couplers, buffers, hats, cable, industrial fluids, Cerisene, ingredients and colour variants.",
+  "intro": "This page goes through <strong>everything Create: Loconautics 0.1.3 BETA contains</strong>, including what has no Ponder scene: car couplers and buffers, the driver's gear, steel cable, industrial fluids, Cerisene and crafting ingredients. For each group: what it does, how to get it and whether it is available by default.",
+  "facts": [
+   {
+    "label": "Blocks and items",
+    "value": "About 95 groups in the lang file (colours and materials grouped)"
+   },
+   {
+    "label": "Colours",
+    "value": "16 dyes for engines, controllers, dashboards, buffers, boilers, hats"
+   },
+   {
+    "label": "Boiler materials",
+    "value": "Industrial, andesite, brass, copper, zinc (+ 16 dyes) × 5 patterns"
+   },
+   {
+    "label": "Experimental",
+    "value": "Boiler, engine, industrial fluids, screw link, handbrake"
+   },
+   {
+    "label": "Names without an item",
+    "value": "7 lang names match no item in 0.1.3"
+   },
+   {
+    "label": "Version",
+    "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10"
+   }
+  ],
+  "recipe": {
+   "label": "Industrial Iron Sheet (sequenced assembly)",
+   "grid": [
+    [
+     "Iron Sheet",
+     "Filling: 100 mB of lava",
+     null
+    ],
+    [
+     "Pressing",
+     "Pressing",
+     null
+    ],
+    [
+     null,
+     null,
+     null
+    ]
+   ],
+   "result": "1 Industrial Iron Sheet"
+  },
+  "videos": [],
+  "sections": [
+   {
+    "id": "catalog-blocks",
+    "title": "Couplers and buffers",
+    "alt": "Knuckle, red Buffer, Copycat Headstock, Screw Link Headstock and Handbrake in inventory slots",
+    "html": "<p>The <strong>Knuckle</strong> is an automatic coupler: when two of them meet, they latch onto each other and swivel, so the cars stay joined through curves. A wrench uncouples it, or turns it when it is free. The recipe makes 2 (Copycat Headstock, industrial iron sheet, block of industrial iron). The <strong>Buffer</strong> (16 colours, red by default) is a damped spring between two cars: it compresses on contact and softens the knock. The <strong>Copycat Headstock</strong>, cut 4 at a time from a zinc ingot on a stonecutter, takes on the look of another block to finish the end of a car body; it is also an ingredient of couplers. The <strong>Screw Link Headstock</strong> and the <strong>Handbrake</strong> (which pins a car in place while it receives redstone) are experimental.</p>"
+   },
+   {
+    "id": "catalog-fluids",
+    "title": "Industrial fluids and Cerisene",
+    "alt": "Industrial pipes, pump, valve, industrial tank, Cerisene Block and Beach Ball",
+    "html": "<p>The experimental « industrialFluids » group adds industrial plumbing: <strong>Industrial Fluid Pipe</strong>, <strong>Industrial Glass Fluid Pipe</strong>, <strong>Industrial Smart Fluid Pipe</strong>, <strong>Industrial Fluid Valve</strong>, <strong>Industrial Mechanical Pump</strong>, which pushes further than a Create pump, and the <strong>Industrial Fluid Tank</strong>: 12,000 mB per block, placed lying or standing, up to 5 blocks wide.</p><p><strong>Cerisene</strong> is the top fuel for the <a href=\"/en/wiki/loconautics-small-combustion-engine\">Small Combustion Engine</a>. <strong>Raw Cerisene</strong> is mixed in a basin (100 mB of lava, 2 cinder flour, 2 glowstone dust); four compact into a <strong>Cerisene Block</strong>, which heats up near lava or a blaze burner and can blow without breaking blocks. Mixed with 250 mB of water, one block (or four raw lumps) gives 1,000 mB of liquid Cerisene, collected with a <strong>Cerisene Bucket</strong>; these recipes belong to « industrialFluids ». The raw lump also burns in a furnace (3,200 ticks, 12,800 for the block); eating it is a bad idea.</p>"
+   },
+   {
+    "id": "catalog-items",
+    "title": "Gear and ingredients",
+    "alt": "Hat, goggles, steel cable, relocator, sheets, rod, tubes, valve gear, Cerisene, bucket, hose and valve in inventory slots",
+    "html": "<p>The <strong>Conductor's Hat</strong> (16 colours) is worn on the head; combined with Engineer's Goggles it becomes <strong>Conductor's Goggles</strong>, which show the same readouts as Create's goggles. <strong>Steel Cable</strong> joins two rope connectors like a rope, but with twice the range, 64 blocks at most (<code>steel_cable.maxRange</code>). The <strong>Creative Train Relocator</strong>, creative only, lifts a derailed train and sets it back on a rail. The <strong>Beach Ball</strong> is crafted from nine wools (white, blue, yellow and red). The hat is crafted red; its colour, like the goggles', is then changed in the selection menu (V by default) while you hold it.</p>"
+   },
+   {
+    "id": "ingredients",
+    "title": "Crafting ingredients",
+    "html": "<p>The <strong>Industrial Iron Sheet</strong> goes into most of the mod's recipes. It is made by sequenced assembly: a Create iron sheet becomes an <strong>Unprocessed Reinforced Iron Sheet</strong>, filled with 100 mB of lava then pressed twice. Three sheets in a column make six <strong>Industrial Iron Rods</strong>, used for steel cable, the valve hand wheel and the <strong>Valve Gear</strong> (its icon still reuses the sheet's); five fluid pipes in a cross make <strong>Boiler Tubes</strong>. Careful: in 0.1.3 the rod recipe belongs to « industrialFluids », the tubes and valve gear to « boilerworks »; while those groups are off, steel cable and the valve cannot be crafted.</p>"
+   },
+   {
+    "id": "variantes",
+    "title": "Colours and materials",
+    "html": "<p>Engines, analog controllers, dashboards, buffers, hats and goggles come in 16 dyes; boiler bodies in five patterns, 16 dyes and five materials. The full lists sit on the <a href=\"/en/wiki/loconautics-small-combustion-engine\">engine</a> and <a href=\"/en/wiki/loconautics-locomotive-boiler\">boiler</a> pages.</p>"
+   },
+   {
+    "id": "fantomes",
+    "title": "Names without an item",
+    "html": "<p>The jar's English lang file names seven things that <strong>do not exist in the game in 0.1.3</strong>: Compression Chamber, Crankshaft, Fuel Injector, Piston Assembly, Power Coupling, Tank Insert, Firebox Controller. Their models ship with the mod (an item model for the six parts, a block model for the firebox controller), but no item or block is registered under those names. They may be parts planned for a later version: do not look for them, they cannot be obtained, even in creative.</p>"
+   }
+  ],
+  "sources": [
+   "Code, data and Ponder storyboards: Create: Loconautics 0.1.3 BETA, public repository github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (last before the move to 0.1.4); its 26 Ponder structures and en_us.json are byte-identical to the loconautics-0.1.3BETA.jar of the Create France modpack",
+   "License: code and data under MIT; textures, models, sounds and lang files all rights reserved (Lycoris). Our videos and images are renders from our own engine; our texts are original, no Ponder text is copied",
+   "Numbers: config/LoconauticsConfig.java (defaults), content/combustion/SmallEngineTuning.java and CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java; experimental features: common/experimental/ExperimentalFeature.java and the modpack's config/loconautics-experimental.toml",
+   "Recipes: data/loconautics/recipe/*.json in the 0.1.3 BETA jar",
+   "Simulated 1.3.2 blocks (Portable Engine, Rope Connector, Physics Assembler): jar shipped with Create Aeronautics 1.3.2; code MIT, art all rights reserved (The Simulated Team)"
+  ]
+ }
+}

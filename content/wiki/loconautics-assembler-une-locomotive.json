@@ -1,0 +1,295 @@
+{
+ "slug": "loconautics-assembler-une-locomotive",
+ "name": "Assembler une locomotive",
+ "blockId": "loconautics:bearing_axle",
+ "category": "loconautics",
+ "title": "Assembler une locomotive — Create: Loconautics, guide",
+ "description": "Assembler une locomotive physique avec Create: Loconautics : station en mode assemblage, train Sable, boitier de train, bogies et arbre traversant.",
+ "datePublished": "2026-11-24",
+ "dateModified": "2026-11-24",
+ "createVersion": "6.0.10 · Create: Loconautics 0.1.3 BETA",
+ "mcVersion": "1.21.1",
+ "intro": "Avec Create: Loconautics, un train n'est plus seulement une contraption qui glisse sur ses rails : assemblé comme <strong>train Sable</strong>, il devient un objet physique qui a une masse, accélère, freine et peut dérailler. Cette page montre les deux façons de le monter : à la <a href=\"/wiki/station-de-train\">station</a>, comme un train de Create, ou avec le <strong>boitier de train</strong> et l'<strong>assembleur physique</strong> de Simulated.",
+ "facts": [
+  {
+   "label": "Locomotive",
+   "value": "Un bogie entraîné : essieu moteur + transmission"
+  },
+  {
+   "label": "Assemblage",
+   "value": "Station → « Nouveau train » → « Assembler en train Sable »"
+  },
+  {
+   "label": "Désassemblage",
+   "value": "Station ou assembleur physique"
+  },
+  {
+   "label": "Bogies par voiture",
+   "value": "2 au plus (maxBogeysPerCarriage)"
+  },
+  {
+   "label": "Accélération",
+   "value": "3 blocs/s² pour 400 de masse (referenceMass), inversement à la masse"
+  },
+  {
+   "label": "Freinage",
+   "value": "3 blocs/s² ; roue libre 0,6"
+  },
+  {
+   "label": "Version",
+   "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10"
+  }
+ ],
+ "videos": [
+  {
+   "id": "loco_train_assembly",
+   "name": "Assembler une locomotive à la station",
+   "description": "La station passe en mode assemblage, la locomotive est assemblée en train Sable, puis le contrôleur la fait accélérer, ralentir et s'arrêter à une autre station.",
+   "duration": "PT24S",
+   "chapters": [
+    {
+     "t": 1.79,
+     "section": "train-assembly"
+    },
+    {
+     "t": 3.59,
+     "section": "train-assembly"
+    },
+    {
+     "t": 5.31,
+     "section": "train-assembly"
+    },
+    {
+     "t": 8.18,
+     "section": "train-assembly"
+    },
+    {
+     "t": 11.77,
+     "section": "train-assembly"
+    },
+    {
+     "t": 16.43,
+     "section": "train-assembly"
+    },
+    {
+     "t": 18.94,
+     "section": "train-assembly"
+    },
+    {
+     "t": 21.63,
+     "section": "train-assembly"
+    }
+   ]
+  },
+  {
+   "id": "loco_casing_bogeys",
+   "name": "Le boitier de train et les bogies",
+   "description": "Le boitier de train, échangé contre un bogie dans le menu, pose deux bogies sur la voie ; des boitiers de train forment la caisse, collée puis assemblée par l'assembleur physique.",
+   "duration": "PT22S",
+   "chapters": [
+    {
+     "t": 1.96,
+     "section": "casing-bogeys"
+    },
+    {
+     "t": 4.53,
+     "section": "casing-bogeys"
+    },
+    {
+     "t": 7.33,
+     "section": "casing-bogeys"
+    },
+    {
+     "t": 11.77,
+     "section": "casing-bogeys"
+    },
+    {
+     "t": 15.04,
+     "section": "casing-bogeys"
+    },
+    {
+     "t": 18.68,
+     "section": "casing-bogeys"
+    }
+   ]
+  },
+  {
+   "id": "loco_casing_shaft",
+   "name": "Faire passer la rotation à travers un bogie",
+   "description": "Un arbre ajouté au bogie laisse passer la rotation d'un moteur créatif d'un côté à l'autre ; retiré à la clé, la rotation s'arrête au bogie.",
+   "duration": "PT14S",
+   "chapters": [
+    {
+     "t": 2.5,
+     "section": "casing-shaft"
+    },
+    {
+     "t": 5.5,
+     "section": "casing-shaft"
+    },
+    {
+     "t": 8.5,
+     "section": "casing-shaft"
+    },
+    {
+     "t": 10.5,
+     "section": "casing-shaft"
+    }
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "id": "train-assembly",
+   "title": "À la station",
+   "image": "loco_train_assembly_vue.webp",
+   "alt": "La locomotive assemblée roule le long de la voie",
+   "html": "<p>Pose la locomotive sur la voie devant une <a href=\"/wiki/station-de-train\">station</a> : bogie, <a href=\"/wiki/loconautics-essieu-moteur\">essieu moteur</a>, <a href=\"/wiki/loconautics-transmission\">transmission</a>, source de rotation et <a href=\"/wiki/loconautics-controleur-analogique\">contrôleur analogique</a>. Ouvre la station, passe en mode assemblage avec le bouton <strong>nouveau train</strong>, puis choisis <strong>assembler en train Sable</strong> : la locomotive devient un train physique. Au contrôleur, chaque cran d'accélérateur fait monter la vitesse ; en relâchant, la sortie et le train redescendent. Près d'une station, garde la touche <strong>espace</strong> pour t'y garer ; un assembleur physique peut aussi remettre le train en blocs.</p>",
+   "video": "loco_train_assembly"
+  },
+  {
+   "id": "casing-bogeys",
+   "title": "Boitier de train et assembleur physique",
+   "image": "loco_casing_bogeys_vue.webp",
+   "alt": "Deux bogies et une caisse de boitiers de train sur la voie",
+   "html": "<p>Une autre façon de faire : avec un <strong>boitier de train</strong> en main, la touche <strong>V</strong> (réglage par défaut du sélecteur de boîtier ; la bulle du Ponder parle encore de C) ouvre un menu où la molette échange le boitier contre un <strong>bogie</strong>. Clique droit sur la voie pour poser ce bogie. Des boitiers de train posés entre deux bogies forment la caisse. <a href=\"/wiki/colle-extra-forte\">Colle</a> le tout, puis maintiens le clic droit sur un <strong>assembleur physique</strong> (Physics Assembler, de Simulated) : le bloc assemblé compte comme un train et peut s'arrêter aux stations.</p>",
+   "video": "loco_casing_bogeys"
+  },
+  {
+   "id": "casing-shaft",
+   "title": "Un arbre à travers le bogie",
+   "image": "loco_casing_shaft_vue.webp",
+   "alt": "Un bogie traversé par un arbre entre un moteur créatif et une roue dentée",
+   "html": "<p>Utilise un <a href=\"/wiki/rotor\">rotor</a> sur un bogie pour y glisser un arbre : la rotation qui arrive d'un côté passe alors tout droit de l'autre, comme dans un rotor enchâssé. C'est utile pour relier deux parties d'une locomotive à travers ses bogies. Accroupi, un clic droit à la <a href=\"/wiki/cle\">clé</a> retire l'arbre ; sans lui, la rotation s'arrête au bogie.</p>",
+   "video": "loco_casing_shaft"
+  },
+  {
+   "id": "physique",
+   "title": "Un train physique",
+   "html": "<p>Les trains Sable obéissent à la physique : une rame de 400 de masse (<code>referenceMass</code>) accélère à 3 blocs/s², une rame plus lourde moins fort, et le freinage vaut 3 blocs/s² quelle que soit la charge. Une voiture sans traction ni frein ralentit d'elle-même (résistance au roulement 0,6). Les pentes coûtent du stress, et un train peut quitter les rails au bout d'une voie ou après un choc de plus de 8 blocs/s. Les trains de Create restent disponibles : la station sait assembler les deux sortes (<code>enableSableTrains</code> et <code>enableCreateTrains</code> sont activés par défaut).</p>"
+  },
+  {
+   "id": "a-savoir",
+   "title": "À savoir",
+   "html": "<p><strong>Train Sable ou train de Create ?</strong> Un train de Create assemblé normalement suit ses rails sans inertie. Un train Sable a une masse, prend les pentes (elles coûtent du stress, option <code>slopeEffects</code>), et peut quitter la voie au bout d'un rail ou après un choc. Les deux sortes de trains roulent sur les mêmes voies et s'arrêtent aux mêmes stations.</p>"
+  },
+  {
+   "id": "conseils",
+   "title": "Conseils",
+   "html": "<p>Avant d'assembler, colle bien toute la caisse : un bloc oublié reste sur la voie. Une voiture porte deux bogies au plus. Pour démonter un train Sable, arrête-le à une station et utilise-la, ou l'assembleur physique. Si un train sort des rails, la remise sur la voie automatique (activée par défaut) le replace quand il roule à moins de 0,5 bloc par seconde près d'une voie ; sinon, il faut le désassembler.</p>"
+  }
+ ],
+ "related": [
+  "create-loconautics",
+  "assembler-un-train",
+  "station-de-train",
+  "rail-de-train",
+  "loconautics-essieu-moteur",
+  "loconautics-transmission",
+  "loconautics-controleur-analogique",
+  "colle-extra-forte"
+ ],
+ "sources": [
+  "Code, données et storyboards Ponder : Create: Loconautics 0.1.3 BETA, dépôt public github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (dernier avant le passage à 0.1.4) ; ses 26 structures Ponder et son en_us.json sont identiques octet pour octet au jar loconautics-0.1.3BETA.jar du modpack Create France",
+  "Licence : code et données sous MIT ; textures, modèles, sons et fichiers de langue « tous droits réservés » (Lycoris). Nos vidéos et images sont des rendus de notre moteur ; nos textes sont originaux, aucun texte du Ponder n'est recopié",
+  "Chiffres : config/LoconauticsConfig.java (valeurs par défaut), content/combustion/SmallEngineTuning.java et CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java ; fonctions expérimentales : common/experimental/ExperimentalFeature.java et config/loconautics-experimental.toml du modpack",
+  "Recettes : data/loconautics/recipe/*.json du jar 0.1.3 BETA",
+  "Blocs de Simulated 1.3.2 (moteur portable, raccord de corde, assembleur physique) : jar livré avec Create Aeronautics 1.3.2 ; code MIT, art tous droits réservés (The Simulated Team)"
+ ],
+ "en": {
+  "slugEn": "loconautics-locomotive-assembly",
+  "name": "Assembling a locomotive",
+  "title": "Assembling a locomotive — Create: Loconautics guide",
+  "description": "Assembling a physics locomotive with Create: Loconautics: the station's assembly mode, Sable trains, Train Casing, bogeys and a shaft through the bogey.",
+  "intro": "With Create: Loconautics a train is no longer just a contraption sliding along its rails: assembled as a <strong>Sable train</strong>, it becomes a physics object with mass, acceleration, braking and the ability to derail. This page shows both ways to build one: at the <a href=\"/en/wiki/train-station\">Train Station</a>, like a Create train, or with <strong>Train Casing</strong> and Simulated's <strong>Physics Assembler</strong>.",
+  "facts": [
+   {
+    "label": "Locomotive",
+    "value": "One driven bogey: Bearing Axle + Transmission"
+   },
+   {
+    "label": "Assembly",
+    "value": "Station → New Train → Assemble as Sable Train"
+   },
+   {
+    "label": "Disassembly",
+    "value": "Station or Physics Assembler"
+   },
+   {
+    "label": "Bogeys per carriage",
+    "value": "2 at most (maxBogeysPerCarriage)"
+   },
+   {
+    "label": "Acceleration",
+    "value": "3 blocks/s² for a mass of 400 (referenceMass), inversely with mass"
+   },
+   {
+    "label": "Braking",
+    "value": "3 blocks/s²; coasting resistance 0.6"
+   },
+   {
+    "label": "Version",
+    "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10"
+   }
+  ],
+  "videos": [
+   {
+    "id": "loco_train_assembly",
+    "name": "Building a locomotive at a station",
+    "description": "The station enters assembly mode, the locomotive is built as a Sable train, then the controller makes it accelerate, slow down and halt at another station."
+   },
+   {
+    "id": "loco_casing_bogeys",
+    "name": "Train Casing and bogeys",
+    "description": "The Train Casing, exchanged for a bogey in the picker, puts two bogeys on the rails; more casing builds the body, which is glued and assembled by the Physics Assembler."
+   },
+   {
+    "id": "loco_casing_shaft",
+    "name": "Running rotation through a bogey",
+    "description": "A shaft slotted into the bogey carries a Creative Motor's rotation across it; taken out with the wrench, the rotation ends at the bogey."
+   }
+  ],
+  "sections": [
+   {
+    "id": "train-assembly",
+    "title": "At the station",
+    "alt": "The assembled locomotive rolling along the track",
+    "html": "<p>Set the locomotive on the rails facing a <a href=\"/en/wiki/train-station\">Train Station</a>: bogey, <a href=\"/en/wiki/loconautics-bearing-axle\">Bearing Axle</a>, <a href=\"/en/wiki/loconautics-transmission-block\">Transmission</a>, a power source and an <a href=\"/en/wiki/loconautics-analog-controller\">Analog Controller</a>. Open the station screen, press <strong>New Train</strong> to enter assembly mode, then choose <strong>Assemble as Sable Train</strong>: the result is a physics train. Every throttle notch at the controller adds speed; releasing it lets both the notches and the train come down. Close to a station, keep <strong>Space</strong> held to dock there. A Physics Assembler is the other tool for breaking a train down into blocks again.</p>"
+   },
+   {
+    "id": "casing-bogeys",
+    "title": "Train Casing and the Physics Assembler",
+    "alt": "Two bogeys and a body of Train Casing on the track",
+    "html": "<p>There is a second route. Holding <strong>Train Casing</strong>, press <strong>V</strong> (the default key of the casing picker; the Ponder bubble still mentions C) and scroll until the picker offers a <strong>bogey</strong> instead, then click the rails to set it down. Casing blocks between two bogeys make up the body. Glue everything with <a href=\"/en/wiki/super-glue\">Super Glue</a> and keep the use key held on a <strong>Physics Assembler</strong> (a Simulated block): what it assembles behaves as a train and stops at stations like one.</p>"
+   },
+   {
+    "id": "casing-shaft",
+    "title": "A shaft through the bogey",
+    "alt": "A bogey with a shaft between a Creative Motor and a cogwheel",
+    "html": "<p>Use a <a href=\"/en/wiki/shaft\">Shaft</a> on a bogey to slot one through it. Rotation entering on either side now carries straight across, just like an encased shaft, which helps when two halves of a locomotive have to share power through their bogeys. A Shift-use with the <a href=\"/en/wiki/wrench\">Wrench</a> takes the shaft out again, and from then on the rotation goes no further than the bogey.</p>"
+   },
+   {
+    "id": "physique",
+    "title": "A physics train",
+    "html": "<p>Sable trains follow physics: a consist with a mass of 400 (<code>referenceMass</code>) accelerates at 3 blocks/s², a heavier one less, and braking is 3 blocks/s² whatever the load. A car with no traction and no brake slows down on its own (rolling resistance 0.6). Slopes cost stress, and a train can leave the rails at the end of a track or after a hit of more than 8 blocks/s. Create trains are still available: the station can assemble both kinds (<code>enableSableTrains</code> and <code>enableCreateTrains</code> are on by default).</p>"
+   },
+   {
+    "id": "a-savoir",
+    "title": "Good to know",
+    "html": "<p><strong>Sable train or Create train?</strong> A Create train assembled the usual way follows its rails with no inertia. A Sable train has mass, feels slopes (they cost stress, option <code>slopeEffects</code>), and can leave the rails at a track end or after a hit. Both kinds share the same tracks and stop at the same stations.</p>"
+   },
+   {
+    "id": "conseils",
+    "title": "Tips",
+    "html": "<p>Before assembling, glue the whole body: a forgotten block stays on the track. A carriage holds two bogeys at most. To take a Sable train apart, stop it at a station and use the station, or the Physics Assembler. If a train derails, automatic rerailing (on by default) puts it back when it moves at under 0.5 blocks per second near a track; otherwise you have to disassemble it.</p>"
+   }
+  ],
+  "sources": [
+   "Code, data and Ponder storyboards: Create: Loconautics 0.1.3 BETA, public repository github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (last before the move to 0.1.4); its 26 Ponder structures and en_us.json are byte-identical to the loconautics-0.1.3BETA.jar of the Create France modpack",
+   "License: code and data under MIT; textures, models, sounds and lang files all rights reserved (Lycoris). Our videos and images are renders from our own engine; our texts are original, no Ponder text is copied",
+   "Numbers: config/LoconauticsConfig.java (defaults), content/combustion/SmallEngineTuning.java and CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java; experimental features: common/experimental/ExperimentalFeature.java and the modpack's config/loconautics-experimental.toml",
+   "Recipes: data/loconautics/recipe/*.json in the 0.1.3 BETA jar",
+   "Simulated 1.3.2 blocks (Portable Engine, Rope Connector, Physics Assembler): jar shipped with Create Aeronautics 1.3.2; code MIT, art all rights reserved (The Simulated Team)"
+  ]
+ }
+}

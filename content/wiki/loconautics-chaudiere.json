@@ -1,0 +1,425 @@
+{
+ "slug": "loconautics-chaudiere",
+ "name": "Chaudière de locomotive",
+ "blockId": "loconautics:firebox",
+ "category": "loconautics",
+ "title": "Chaudière de locomotive — Create: Loconautics",
+ "description": "La chaudière de Create: Loconautics : foyer, corps, cheminée, prise de buse, eau et rapport foyer/corps. Expérimentale en 0.1.3 BETA.",
+ "datePublished": "2026-11-24",
+ "dateModified": "2026-11-24",
+ "createVersion": "6.0.10 · Create: Loconautics 0.1.3 BETA",
+ "mcVersion": "1.21.1",
+ "intro": "La <strong>chaudière</strong> de Create: Loconautics est une vraie chaudière de locomotive à vapeur : un <strong>foyer</strong> brûle du combustible, un <strong>corps de chaudière</strong> en forme de tonneau contient l'eau, une <strong>cheminée</strong> évacue les fumées et des <strong>prises de vapeur</strong> en tirent de la rotation. Contrairement au <a href=\"/wiki/moteur-a-vapeur\">moteur à vapeur</a> de Create, elle chauffe lentement, monte en pression et peut exploser.",
+ "facts": [
+  {
+   "label": "Foyer",
+   "value": "Un stack de combustible ; chargeur dessous : 9 stacks"
+  },
+  {
+   "label": "Rapport",
+   "value": "1 foyer pour 3 blocs de corps"
+  },
+  {
+   "label": "Corps",
+   "value": "8 blocs de long au plus ; 8 000 mB d'eau par bloc"
+  },
+  {
+   "label": "Mise en chauffe",
+   "value": "1 800 ticks (90 s) jusqu'à 200 °C"
+  },
+  {
+   "label": "Fumées",
+   "value": "Sans cheminée, la sortie est étouffée en 45 s"
+  },
+  {
+   "label": "Disponibilité",
+   "value": "Expérimental : désactivé par défaut (boilerworks)"
+  },
+  {
+   "label": "Version",
+   "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10"
+  }
+ ],
+ "recipe": {
+  "label": "Foyer (établi ; recette chargée seulement si « boilerworks » est activé)",
+  "grid": [
+   [
+    "Bloc de fer industriel",
+    "Boitier de train",
+    "Bloc de fer industriel"
+   ],
+   [
+    "Plaque de fer industriel",
+    "Barreaux de fer",
+    "Plaque de fer industriel"
+   ],
+   [
+    "Bloc de fer industriel",
+    "Charbon de bois",
+    "Bloc de fer industriel"
+   ]
+  ],
+  "items": [
+   [
+    "create:industrial_iron_block",
+    "create:railway_casing",
+    "create:industrial_iron_block"
+   ],
+   [
+    "loconautics:industrial_iron_sheet",
+    "minecraft:iron_bars",
+    "loconautics:industrial_iron_sheet"
+   ],
+   [
+    "create:industrial_iron_block",
+    "minecraft:charcoal",
+    "create:industrial_iron_block"
+   ]
+  ],
+  "result": "1 foyer",
+  "resultItem": "loconautics:firebox"
+ },
+ "videos": [
+  {
+   "id": "loco_boiler_firebox",
+   "name": "Chaudière : le foyer",
+   "description": "Le foyer sur un pied d'échafaudage s'allume avec du combustible, puis s'éteint ; un chargeur de foyer prend la place du pied.",
+   "duration": "PT17S",
+   "chapters": [
+    {
+     "t": 1.0,
+     "section": "boiler-firebox"
+    },
+    {
+     "t": 3.75,
+     "section": "boiler-firebox"
+    },
+    {
+     "t": 8.25,
+     "section": "boiler-firebox"
+    },
+    {
+     "t": 11.0,
+     "section": "boiler-firebox"
+    },
+    {
+     "t": 13.75,
+     "section": "boiler-firebox"
+    }
+   ]
+  },
+  {
+   "id": "loco_boiler_assembly",
+   "name": "Chaudière : assembler la chaudière",
+   "description": "Trois corps de chaudière contre le foyer, une cheminée, une prise de buse pour l'eau et une prise de vapeur sur le côté.",
+   "duration": "PT12S",
+   "chapters": [
+    {
+     "t": 1.0,
+     "section": "boiler-assembly"
+    },
+    {
+     "t": 2.75,
+     "section": "boiler-assembly"
+    },
+    {
+     "t": 5.0,
+     "section": "boiler-assembly"
+    },
+    {
+     "t": 6.75,
+     "section": "boiler-assembly"
+    },
+    {
+     "t": 8.5,
+     "section": "boiler-assembly"
+    }
+   ]
+  },
+  {
+   "id": "loco_boiler_ratio",
+   "name": "Chaudière : le rapport foyer / corps",
+   "description": "Un foyer et trois corps de chaudière : le bon rapport ; plus de corps ou plus de foyers dégradent l'efficacité.",
+   "duration": "PT10S",
+   "chapters": [
+    {
+     "t": 1.0,
+     "section": "boiler-ratio"
+    },
+    {
+     "t": 2.75,
+     "section": "boiler-ratio"
+    },
+    {
+     "t": 4.5,
+     "section": "boiler-ratio"
+    },
+    {
+     "t": 6.25,
+     "section": "boiler-ratio"
+    }
+   ]
+  },
+  {
+   "id": "loco_boiler_smokestack",
+   "name": "Chaudière : la cheminée",
+   "description": "Sans cheminée, les fumées s'accumulent dans le tonneau ; la cheminée posée les évacue deux fois plus vite.",
+   "duration": "PT13S",
+   "chapters": [
+    {
+     "t": 1.0,
+     "section": "boiler-smokestack"
+    },
+    {
+     "t": 3.5,
+     "section": "boiler-smokestack"
+    },
+    {
+     "t": 8.0,
+     "section": "boiler-smokestack"
+    }
+   ]
+  },
+  {
+   "id": "loco_boiler_water",
+   "name": "Chaudière : l'eau",
+   "description": "Une prise de buse contre le corps, puis un raccord de tuyau de chaudière, des tuyaux et une pompe qui envoie l'eau des réservoirs dans le tonneau.",
+   "duration": "PT16S",
+   "chapters": [
+    {
+     "t": 1.25,
+     "section": "boiler-water"
+    },
+    {
+     "t": 5.75,
+     "section": "boiler-water"
+    },
+    {
+     "t": 8.5,
+     "section": "boiler-water"
+    },
+    {
+     "t": 11.25,
+     "section": "boiler-water"
+    },
+    {
+     "t": 13.0,
+     "section": "boiler-water"
+    }
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "id": "boiler-firebox",
+   "title": "Le foyer",
+   "image": "loco_boiler_firebox_vue.webp",
+   "alt": "Le foyer posé sur un pied d'échafaudage en andésite",
+   "html": "<p>Le <strong>foyer</strong> (Firebox) brûle le combustible qui chauffe la chaudière. Un clic droit avec n'importe quel combustible de four l'allume. Il ne contient qu'<strong>un stack</strong> et le brûle plus vite quand la chaudière débite beaucoup. À main vide, un clic ouvre ou ferme ses portes ; une pelle retire le feu. Pour plus d'autonomie, un <strong>chargeur de foyer</strong> (Firebox Stoker) posé dessous garde 9 stacks de combustible.</p>",
+   "video": "loco_boiler_firebox"
+  },
+  {
+   "id": "boiler-assembly",
+   "title": "Assembler la chaudière",
+   "image": "loco_boiler_assembly_vue.webp",
+   "alt": "Une chaudière complète : foyer, trois corps de chaudière, cheminée et prise de vapeur",
+   "html": "<p>Les <strong>corps de chaudière</strong> (Boiler Body) posés en ligne contre le foyer forment le tonneau ; ils existent en cinq motifs (nervuré, à panneaux, plaqué, à cadres, à lattes) et en couleurs. Une <strong>cheminée</strong> sur n'importe quel bloc du corps évacue les fumées, une <strong>prise de buse</strong> (Nozzle Socket) contre le corps sert d'entrée d'eau, et une <strong>prise de vapeur</strong> contre le tonneau transforme la vapeur en rotation. Les <a href=\"/wiki/lunettes-d-ingenieur\">lunettes d'ingénieur</a> pointées sur le foyer nomment la prochaine pièce qui manque.</p>",
+   "video": "loco_boiler_assembly"
+  },
+  {
+   "id": "boiler-ratio",
+   "title": "Le bon rapport",
+   "image": "loco_boiler_ratio_vue.webp",
+   "alt": "Un foyer et trois blocs de corps de chaudière",
+   "html": "<p>Un foyer chauffe <strong>trois blocs de corps</strong>. Avec trop de tonneau, la chaudière est sous-chauffée et n'atteint pas sa pleine pression ; avec trop de feu, elle ne gagne rien et brûle plus vite son combustible. La mesure d'<strong>efficacité</strong> du foyer (aux lunettes ou sur une jauge) dit à quel point les deux s'accordent. Chaque bloc de corps rapporte 83 SU (<code>suPerBodyBlock</code>), sur 8 blocs de long au plus.</p>",
+   "video": "loco_boiler_ratio"
+  },
+  {
+   "id": "boiler-smokestack",
+   "title": "La cheminée",
+   "image": "loco_boiler_smokestack_vue.webp",
+   "alt": "La cheminée posée sur le dernier bloc du corps de chaudière",
+   "html": "<p>Les fumées sortent par une <strong>cheminée</strong> posée sur n'importe quel bloc du corps. Sans cheminée, elles s'accumulent dans le tonneau et <strong>étouffent</strong> complètement la sortie au bout de 45 secondes (900 ticks, <code>draftChokeTicks</code>). Une fois la cheminée en place, le tonneau se vide deux fois plus vite qu'il ne s'est rempli. La couleur de la fumée trahit la température de la chaudière.</p>",
+   "video": "loco_boiler_smokestack"
+  },
+  {
+   "id": "boiler-water",
+   "title": "L'eau",
+   "image": "loco_boiler_water_vue.webp",
+   "alt": "Une pompe mécanique et des réservoirs reliés au corps de chaudière",
+   "html": "<p>Une <strong>prise de buse</strong> contre un bloc du corps est une entrée d'eau : une buse de <a href=\"/wiki/loconautics-tuyau-et-treuil\">tuyau souple</a> peut s'y amarrer pour remplir la chaudière. On peut aussi utiliser un <a href=\"/wiki/tuyau-a-fluide\">tuyau</a> sur le tonneau : il y pose un <strong>raccord de tuyau de chaudière</strong>. Les tuyaux seuls ne déplacent rien ; une <a href=\"/wiki/pompe-mecanique\">pompe mécanique</a> alimentée pousse l'eau dedans. Le raccord ne fait qu'entrer l'eau : il ne vide jamais la chaudière. Chaque bloc du corps contient 8 000 mB.</p>",
+   "video": "loco_boiler_water"
+  },
+  {
+   "id": "experimental",
+   "title": "Une fonction expérimentale",
+   "html": "<p><strong>Fonction expérimentale.</strong> Dans Loconautics 0.1.3 BETA, la chaudière fait partie des fonctions « boilerworks » <strong>désactivées par défaut</strong> (fichier <code>loconautics-experimental.toml</code>, aussi à <code>false</code> dans le modpack Create France) : ses blocs sont cachés de l'inventaire créatif, ne peuvent pas être posés et leurs recettes ne se chargent pas. Le Ponder du jeu les montre quand même ; cette page le suit, pour le jour où la fonction sera activée.</p>"
+  },
+  {
+   "id": "conseils",
+   "title": "Conseils",
+   "html": "<p>La chaudière met du temps à chauffer : 1 800 ticks, soit 90 secondes, pour atteindre ses 200 °C de travail (réglages <code>warmupTicks</code> et <code>workingTemperatureC</code>). Prévois de l'eau d'avance : chaque bloc de corps en contient 8 000 mB, et le réservoir d'injection 8 000 mB de plus.</p>"
+  },
+  {
+   "id": "materiaux",
+   "title": "Motifs, teintes et matériaux des corps",
+   "html": "<p>Un corps de chaudière se reteint avec un colorant (de White Ribbed Boiler Body à Black Slatted Boiler Body), ou change de matériau avec un alliage d'andésite, un lingot de laiton, de cuivre ou de zinc, ou une plaque de fer industriel (recettes « boilerworks ») : Industrial Ribbed Boiler Body, Industrial Paneled Boiler Body, Industrial Plated Boiler Body, Industrial Framed Boiler Body, Industrial Slatted Boiler Body, Andesite Ribbed Boiler Body, Andesite Paneled Boiler Body, Andesite Plated Boiler Body, Andesite Framed Boiler Body, Andesite Slatted Boiler Body, Brass Ribbed Boiler Body, Brass Paneled Boiler Body, Brass Plated Boiler Body, Brass Framed Boiler Body, Brass Slatted Boiler Body, Copper Ribbed Boiler Body, Copper Paneled Boiler Body, Copper Plated Boiler Body, Copper Framed Boiler Body, Copper Slatted Boiler Body, Zinc Ribbed Boiler Body, Zinc Paneled Boiler Body, Zinc Plated Boiler Body, Zinc Framed Boiler Body, Zinc Slatted Boiler Body. Le matériau ne change que l'aspect.</p>"
+  }
+ ],
+ "related": [
+  "create-loconautics",
+  "loconautics-chaudiere-pression",
+  "loconautics-tuyau-et-treuil",
+  "moteur-a-vapeur",
+  "pompe-mecanique",
+  "tuyau-a-fluide",
+  "reservoir-a-fluide",
+  "lunettes-d-ingenieur"
+ ],
+ "sources": [
+  "Code, données et storyboards Ponder : Create: Loconautics 0.1.3 BETA, dépôt public github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (dernier avant le passage à 0.1.4) ; ses 26 structures Ponder et son en_us.json sont identiques octet pour octet au jar loconautics-0.1.3BETA.jar du modpack Create France",
+  "Licence : code et données sous MIT ; textures, modèles, sons et fichiers de langue « tous droits réservés » (Lycoris). Nos vidéos et images sont des rendus de notre moteur ; nos textes sont originaux, aucun texte du Ponder n'est recopié",
+  "Chiffres : config/LoconauticsConfig.java (valeurs par défaut), content/combustion/SmallEngineTuning.java et CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java ; fonctions expérimentales : common/experimental/ExperimentalFeature.java et config/loconautics-experimental.toml du modpack",
+  "Recettes : data/loconautics/recipe/*.json du jar 0.1.3 BETA",
+  "Blocs de Simulated 1.3.2 (moteur portable, raccord de corde, assembleur physique) : jar livré avec Create Aeronautics 1.3.2 ; code MIT, art tous droits réservés (The Simulated Team)"
+ ],
+ "en": {
+  "slugEn": "loconautics-locomotive-boiler",
+  "name": "Locomotive boiler",
+  "title": "Locomotive boiler — Create: Loconautics guide",
+  "description": "The Create: Loconautics boiler: firebox, boiler bodies, smokestack, nozzle sockets, water and the firebox-to-body ratio. An experimental feature in 0.1.3 BETA.",
+  "intro": "The Create: Loconautics <strong>boiler</strong> is a real steam locomotive boiler: a <strong>Firebox</strong> burns fuel, a barrel of <strong>Boiler Body</strong> blocks holds the water, a <strong>Smokestack</strong> lets the waste gas out and <strong>Steam Takeoffs</strong> draw rotation from it. Unlike Create's <a href=\"/en/wiki/steam-engine\">Steam Engine</a>, it warms up slowly, builds pressure and can explode.",
+  "facts": [
+   {
+    "label": "Firebox",
+    "value": "Holds one stack of fuel; a Firebox Stoker below stores 9"
+   },
+   {
+    "label": "Balance",
+    "value": "1 Firebox for every 3 body blocks"
+   },
+   {
+    "label": "Barrel",
+    "value": "8 blocks long at most; 8,000 mB of water per block"
+   },
+   {
+    "label": "Warm-up",
+    "value": "1,800 ticks (90 s) to reach 200 °C"
+   },
+   {
+    "label": "Exhaust",
+    "value": "Output smothered after 45 s without a stack"
+   },
+   {
+    "label": "Availability",
+    "value": "Experimental, disabled by default (boilerworks)"
+   },
+   {
+    "label": "Version",
+    "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10"
+   }
+  ],
+  "recipe": {
+   "label": "Firebox (crafting table; recipe only loads with « boilerworks » on)",
+   "grid": [
+    [
+     "Block of Industrial Iron",
+     "Train Casing",
+     "Block of Industrial Iron"
+    ],
+    [
+     "Industrial Iron Sheet",
+     "Iron Bars",
+     "Industrial Iron Sheet"
+    ],
+    [
+     "Block of Industrial Iron",
+     "Charcoal",
+     "Block of Industrial Iron"
+    ]
+   ],
+   "result": "1 Firebox"
+  },
+  "videos": [
+   {
+    "id": "loco_boiler_firebox",
+    "name": "Boiler: the Firebox",
+    "description": "The Firebox stands on a scaffolding leg, gets lit, then goes out; a Firebox Stoker then replaces the leg."
+   },
+   {
+    "id": "loco_boiler_assembly",
+    "name": "Boiler: putting it together",
+    "description": "Three boiler bodies against the Firebox, a Smokestack, a Nozzle Socket as the water inlet and a Steam Takeoff on the side."
+   },
+   {
+    "id": "loco_boiler_ratio",
+    "name": "Boiler: fire versus barrel",
+    "description": "One Firebox for three boiler bodies is the balance; extra bodies or extra fireboxes cost efficiency."
+   },
+   {
+    "id": "loco_boiler_smokestack",
+    "name": "Boiler: the Smokestack",
+    "description": "With no Smokestack, exhaust piles up inside the barrel; once one is added, it clears at double speed."
+   },
+   {
+    "id": "loco_boiler_water",
+    "name": "Boiler: getting water in",
+    "description": "A Nozzle Socket on the body, then a Boiler Pipe Connector, pipes and a pump moving water from the tanks into the barrel."
+   }
+  ],
+  "sections": [
+   {
+    "id": "boiler-firebox",
+    "title": "The Firebox",
+    "alt": "The Firebox on an andesite scaffolding leg",
+    "html": "<p>The <strong>Firebox</strong> is where the fire lives. Any item a furnace would burn lights it when used on it. It stores <strong>a single stack</strong> and eats through it quicker when the boiler is under heavy load. Bare-handed, you open or shut its doors; a shovel pulls the fire out. A <strong>Firebox Stoker</strong> placed underneath adds a 9-stack fuel store.</p>"
+   },
+   {
+    "id": "boiler-assembly",
+    "title": "Putting it together",
+    "alt": "A complete boiler: Firebox, three boiler bodies, Smokestack and Steam Takeoff",
+    "html": "<p>Line up <strong>Boiler Body</strong> blocks against the Firebox to make the barrel; five surface patterns (ribbed, paneled, plated, framed, slatted) and many colours exist. Top any body block with a <strong>Smokestack</strong> for the exhaust, attach a <strong>Nozzle Socket</strong> to the body as the water inlet, and mount a <strong>Steam Takeoff</strong> on the barrel to turn steam into rotation. Through <a href=\"/en/wiki/engineers-goggles\">Engineer's Goggles</a>, the Firebox tells you which part is still missing.</p>"
+   },
+   {
+    "id": "boiler-ratio",
+    "title": "Fire versus barrel",
+    "alt": "One Firebox and three boiler body blocks",
+    "html": "<p>Each Firebox can heat <strong>three body blocks</strong>. Too long a barrel and the fire cannot keep up, so full pressure is never reached; too much fire and you just waste fuel. The Firebox's efficiency figure, on goggles or a gauge, shows how close to the balance you are. Every body block adds 83 SU (<code>suPerBodyBlock</code>), and a barrel stops working past 8 blocks.</p>"
+   },
+   {
+    "id": "boiler-smokestack",
+    "title": "The Smokestack",
+    "alt": "The Smokestack on the last boiler body block",
+    "html": "<p>Exhaust escapes through a <strong>Smokestack</strong> standing on any of the body blocks. Without one, it piles up inside and the output is <strong>smothered</strong> entirely after 45 seconds (900 ticks, <code>draftChokeTicks</code>). Add the stack and the barrel clears at twice the rate it filled up. The colour of what comes out hints at the boiler's temperature.</p>"
+   },
+   {
+    "id": "boiler-water",
+    "title": "Getting water in",
+    "alt": "A Mechanical Pump and fluid tanks connected to the boiler body",
+    "html": "<p>Attach a <strong>Nozzle Socket</strong> against one of the body blocks and you have a water intake; a <a href=\"/en/wiki/loconautics-hose-and-winch\">hose</a> nozzle docked in it tops the boiler up. Alternatively, clicking the barrel with a <a href=\"/en/wiki/fluid-pipe\">Fluid Pipe</a> item fits a <strong>Boiler Pipe Connector</strong> to it. Pipes on their own do nothing; a running <a href=\"/en/wiki/mechanical-pump\">Mechanical Pump</a> has to drive the water. The connector is one-way, in only, so it can never drain the boiler. A body block holds 8,000 mB.</p>"
+   },
+   {
+    "id": "experimental",
+    "title": "An experimental feature",
+    "html": "<p><strong>Experimental feature.</strong> In Loconautics 0.1.3 BETA the boiler belongs to the « boilerworks » features, <strong>off by default</strong> (file <code>loconautics-experimental.toml</code>, also <code>false</code> in the Create France modpack): its blocks are hidden from the creative inventory, cannot be placed and their recipes do not load. The in-game Ponder still shows them; this page follows it, for the day the feature is switched on.</p>"
+   },
+   {
+    "id": "conseils",
+    "title": "Tips",
+    "html": "<p>The boiler takes its time to warm up: 1,800 ticks, i.e. 90 seconds, to reach its 200 °C working temperature (settings <code>warmupTicks</code> and <code>workingTemperatureC</code>). Have water ready: each body block holds 8,000 mB, and the injector tank another 8,000 mB.</p><p>A cold boiler starts from the ambient temperature (<code>ambientTemperatureC</code>, 20 °C by default) and only produces steam once it gets near its working temperature; temperatures can be shown in Celsius, Fahrenheit or Kelvin (client option <code>temperatureUnit</code>).</p>"
+   },
+   {
+    "id": "materiaux",
+    "title": "Body patterns, dyes and materials",
+    "html": "<p>A boiler body can be re-dyed (from White Ribbed Boiler Body to Black Slatted Boiler Body) or switched to a material with andesite alloy, a brass, copper or zinc ingot, or an industrial iron sheet (« boilerworks » recipes): Industrial Ribbed Boiler Body, Industrial Paneled Boiler Body, Industrial Plated Boiler Body, Industrial Framed Boiler Body, Industrial Slatted Boiler Body, Andesite Ribbed Boiler Body, Andesite Paneled Boiler Body, Andesite Plated Boiler Body, Andesite Framed Boiler Body, Andesite Slatted Boiler Body, Brass Ribbed Boiler Body, Brass Paneled Boiler Body, Brass Plated Boiler Body, Brass Framed Boiler Body, Brass Slatted Boiler Body, Copper Ribbed Boiler Body, Copper Paneled Boiler Body, Copper Plated Boiler Body, Copper Framed Boiler Body, Copper Slatted Boiler Body, Zinc Ribbed Boiler Body, Zinc Paneled Boiler Body, Zinc Plated Boiler Body, Zinc Framed Boiler Body, Zinc Slatted Boiler Body. The material only changes the look.</p>"
+   }
+  ],
+  "sources": [
+   "Code, data and Ponder storyboards: Create: Loconautics 0.1.3 BETA, public repository github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (last before the move to 0.1.4); its 26 Ponder structures and en_us.json are byte-identical to the loconautics-0.1.3BETA.jar of the Create France modpack",
+   "License: code and data under MIT; textures, models, sounds and lang files all rights reserved (Lycoris). Our videos and images are renders from our own engine; our texts are original, no Ponder text is copied",
+   "Numbers: config/LoconauticsConfig.java (defaults), content/combustion/SmallEngineTuning.java and CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java; experimental features: common/experimental/ExperimentalFeature.java and the modpack's config/loconautics-experimental.toml",
+   "Recipes: data/loconautics/recipe/*.json in the 0.1.3 BETA jar",
+   "Simulated 1.3.2 blocks (Portable Engine, Rope Connector, Physics Assembler): jar shipped with Create Aeronautics 1.3.2; code MIT, art all rights reserved (The Simulated Team)"
+  ]
+ }
+}

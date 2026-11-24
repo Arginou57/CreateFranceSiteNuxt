@@ -1,0 +1,307 @@
+{
+ "slug": "loconautics-plaque-tournante-depot",
+ "name": "Plaque tournante : dépôts et signaux",
+ "blockId": "loconautics:turntable_bearing",
+ "category": "loconautics",
+ "title": "Dépôt à plaque tournante — Create: Loconautics",
+ "description": "Construire un dépôt à plaque tournante avec Create: Loconautics : branches diagonales, signaux liés, garages partagés et manœuvre de sortie des trains.",
+ "datePublished": "2026-11-24",
+ "dateModified": "2026-11-24",
+ "createVersion": "6.0.10 · Create: Loconautics 0.1.3 BETA",
+ "mcVersion": "1.21.1",
+ "intro": "Une fois la <a href=\"/wiki/loconautics-plaque-tournante\">plaque tournante</a> pilotée par les horaires, on peut lui accrocher tout un dépôt : des branches dans n'importe quelle direction, des signaux qui la protègent, des voies de garage qui portent le même nom de station, et des culs-de-sac d'où les trains ressortent en marche arrière. Ces quatre scènes montrent comment les trains Sable de Create: Loconautics s'en servent tout seuls. Le roulement lui-même se construit et se règle comme sur la page précédente.",
+ "facts": [
+  {
+   "label": "Angles",
+   "value": "N'importe lequel : les branches peuvent partir en diagonale"
+  },
+  {
+   "label": "Signaux",
+   "value": "Liés au roulement : rouges tant que la plaque tourne ou porte un train"
+  },
+  {
+   "label": "Garages",
+   "value": "Même nom de station sur plusieurs branches, avec * pour les regrouper"
+  },
+  {
+   "label": "Manœuvre",
+   "value": "Instruction de planning, jusqu'à 75 % de la vitesse maximale"
+  },
+  {
+   "label": "Version",
+   "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10"
+  }
+ ],
+ "videos": [
+  {
+   "id": "loco_turntable_diagonal",
+   "name": "Plaque tournante : une branche en diagonale",
+   "description": "Une branche diagonale autour de la plaque ; le train s'arrête au centre, la plaque le tourne de 135° et il repart tout droit sur la diagonale.",
+   "duration": "PT20S",
+   "chapters": [
+    {
+     "t": 2.25,
+     "section": "turntable-diagonal"
+    },
+    {
+     "t": 7.35,
+     "section": "turntable-diagonal"
+    },
+    {
+     "t": 12.6,
+     "section": "turntable-diagonal"
+    },
+    {
+     "t": 16.35,
+     "section": "turntable-diagonal"
+    }
+   ]
+  },
+  {
+   "id": "loco_turntable_signals",
+   "name": "Plaque tournante : les signaux liés",
+   "description": "Accroupi, un clic droit avec un signal de train lie le roulement ; les signaux posés ensuite passent au rouge quand la plaque tourne, au vert quand elle s'arrête.",
+   "duration": "PT16S",
+   "chapters": [
+    {
+     "t": 3.0,
+     "section": "turntable-signals"
+    },
+    {
+     "t": 6.0,
+     "section": "turntable-signals"
+    },
+    {
+     "t": 8.0,
+     "section": "turntable-signals"
+    },
+    {
+     "t": 12.0,
+     "section": "turntable-signals"
+    }
+   ]
+  },
+  {
+   "id": "loco_turntable_parking",
+   "name": "Plaque tournante : des garages partagés",
+   "description": "Trois stations portent le même nom sur trois branches ; le train envoyé vers ce nom prend une station libre et la plaque le tourne vers elle.",
+   "duration": "PT22S",
+   "chapters": [
+    {
+     "t": 3.04,
+     "section": "turntable-parking"
+    },
+    {
+     "t": 5.84,
+     "section": "turntable-parking"
+    },
+    {
+     "t": 8.64,
+     "section": "turntable-parking"
+    },
+    {
+     "t": 16.58,
+     "section": "turntable-parking"
+    }
+   ]
+  },
+  {
+   "id": "loco_turntable_maneuver",
+   "name": "Plaque tournante : la manœuvre de sortie",
+   "description": "Un train garé dans un cul-de-sac : la plaque se tourne vers lui, il recule à vitesse de manœuvre jusqu'au centre, la plaque le tourne et il repart en avant.",
+   "duration": "PT24S",
+   "chapters": [
+    {
+     "t": 2.15,
+     "section": "turntable-maneuver"
+    },
+    {
+     "t": 3.64,
+     "section": "turntable-maneuver"
+    },
+    {
+     "t": 6.28,
+     "section": "turntable-maneuver"
+    },
+    {
+     "t": 9.26,
+     "section": "turntable-maneuver"
+    },
+    {
+     "t": 10.74,
+     "section": "turntable-maneuver"
+    },
+    {
+     "t": 12.73,
+     "section": "turntable-maneuver"
+    },
+    {
+     "t": 15.37,
+     "section": "turntable-maneuver"
+    },
+    {
+     "t": 16.86,
+     "section": "turntable-maneuver"
+    },
+    {
+     "t": 20.83,
+     "section": "turntable-maneuver"
+    }
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "id": "turntable-diagonal",
+   "title": "Une branche en diagonale",
+   "image": "loco_turntable_diagonal_vue.webp",
+   "alt": "La plaque tournée vers une branche diagonale, un train dessus",
+   "html": "<p>La plaque peut s'arrêter à <strong>n'importe quel angle</strong> : une branche peut donc la quitter en diagonale. Un train dont le planning passe par cette branche se gare au centre de la plaque, qui le tourne exactement de l'angle voulu (ici 135°), puis il roule tout droit sur la diagonale.</p>",
+   "video": "loco_turntable_diagonal"
+  },
+  {
+   "id": "turntable-signals",
+   "title": "Les signaux liés",
+   "image": "loco_turntable_signals_vue.webp",
+   "alt": "La plaque tournante entourée de deux signaux de train",
+   "html": "<p>Accroupi, utilise un <a href=\"/wiki/signal-de-train\">signal de train</a> sur le roulement : le voilà lié ; les signaux posés ensuite sont attachés à ce roulement. Ils restent <strong>rouges</strong> tant que la plaque tourne ou porte un train, et repassent au <strong>vert</strong> une fois la plaque immobile. Les autres trains attendent ainsi leur tour au lieu de tomber dans le vide.</p>",
+   "video": "loco_turntable_signals"
+  },
+  {
+   "id": "turntable-parking",
+   "title": "Des garages partagés",
+   "image": "loco_turntable_parking_vue.webp",
+   "alt": "Un dépôt en étoile : la plaque au centre, des stations sur trois branches",
+   "html": "<p>Des <a href=\"/wiki/station-de-train\">stations</a> sur des branches différentes peuvent porter <strong>le même nom</strong> ; un <code>*</code> dans le nom les regroupe toutes. Un train envoyé vers ce nom choisit une station <strong>libre</strong> : la plaque le tourne vers la branche qui en a une, il s'y gare, et la plaque revient à son angle de départ.</p>",
+   "video": "loco_turntable_parking"
+  },
+  {
+   "id": "turntable-maneuver",
+   "title": "La manœuvre de sortie",
+   "image": "loco_turntable_maneuver_vue.webp",
+   "alt": "Un train qui recule hors d'un cul-de-sac vers la plaque tournante",
+   "html": "<p>Un train garé dans un cul-de-sac doit en <strong>ressortir en marche arrière</strong>. La plaque se tourne d'abord vers sa branche. Dans le <a href=\"/wiki/planning-de-train\">planning</a>, une instruction <strong>Manœuvre</strong> se place entre deux destinations : sa vitesse est une part de la vitesse maximale, jusqu'à 75 %, et la destination qui la suit est l'endroit où le train manœuvre (elle est donc obligatoire). Le train recule à cette vitesse, s'arrête centré sur la plaque, qui le tourne face à la branche suivante ; il repart alors en marche avant.</p>",
+   "video": "loco_turntable_maneuver"
+  },
+  {
+   "id": "a-savoir",
+   "title": "À savoir",
+   "html": "<p><strong>Monter un dépôt pas à pas.</strong> Construis d'abord la plaque et règle sa première instruction sur « horaire ». Pose ensuite les branches tout autour, rails alignés sur ceux de la plaque, en ligne droite ou en diagonale. Lie un signal par branche au roulement. Place les stations de garage au bout des branches, avec un nom commun et un <code>*</code>. Enfin, écris les plannings : la destination « dépôt », puis, pour repartir d'un cul-de-sac, une instruction « manœuvre » suivie de la destination suivante. Teste avec un seul train avant d'en envoyer plusieurs, préfère des trains courts, qui doivent tenir en entier sur la plaque, et garde une branche libre pour laisser passer un train pendant qu'un autre manœuvre.</p><p>Tout repose sur les trains Sable de Loconautics : un train de Create ordinaire ne sait pas s'arrêter centré sur la plaque ni demander qu'elle tourne.</p>"
+  },
+  {
+   "id": "conseils",
+   "title": "Conseils",
+   "html": "<p>Prévois un signal lié sur chaque branche qui arrive à la plaque, sinon un second train peut s'y engager pendant qu'elle tourne. Les garages partagés marchent mieux avec un nom court et un <code>*</code>, par exemple <code>Dépôt *</code> pour <code>Dépôt 1</code>, <code>Dépôt 2</code>... Une manœuvre lente (25 à 50 %) laisse au train le temps de s'arrêter pile au centre.</p>"
+  }
+ ],
+ "related": [
+  "loconautics-plaque-tournante",
+  "create-loconautics",
+  "signal-de-train",
+  "station-de-train",
+  "planning-de-train",
+  "rail-de-train",
+  "loconautics-assembler-une-locomotive"
+ ],
+ "sources": [
+  "Code, données et storyboards Ponder : Create: Loconautics 0.1.3 BETA, dépôt public github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (dernier avant le passage à 0.1.4) ; ses 26 structures Ponder et son en_us.json sont identiques octet pour octet au jar loconautics-0.1.3BETA.jar du modpack Create France",
+  "Licence : code et données sous MIT ; textures, modèles, sons et fichiers de langue « tous droits réservés » (Lycoris). Nos vidéos et images sont des rendus de notre moteur ; nos textes sont originaux, aucun texte du Ponder n'est recopié",
+  "Chiffres : config/LoconauticsConfig.java (valeurs par défaut), content/combustion/SmallEngineTuning.java et CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java ; fonctions expérimentales : common/experimental/ExperimentalFeature.java et config/loconautics-experimental.toml du modpack",
+  "Recettes : data/loconautics/recipe/*.json du jar 0.1.3 BETA",
+  "Blocs de Simulated 1.3.2 (moteur portable, raccord de corde, assembleur physique) : jar livré avec Create Aeronautics 1.3.2 ; code MIT, art tous droits réservés (The Simulated Team)"
+ ],
+ "en": {
+  "slugEn": "loconautics-turntable-depots",
+  "name": "Turntable depots and signals",
+  "title": "Turntable depots — Create: Loconautics guide",
+  "description": "Building a turntable depot with Create: Loconautics: diagonal legs, bound signals, shared parking stations and the reversing manoeuvre out of a dead end.",
+  "intro": "Once the <a href=\"/en/wiki/loconautics-turntable-bearing\">turntable</a> is driven by schedules, a whole depot can hang off it: legs in any direction, signals that protect it, parking tracks sharing one station name, and dead ends that trains back out of. These four scenes show how Create: Loconautics Sable trains use it on their own.",
+  "facts": [
+   {
+    "label": "Angles",
+    "value": "Any: branches may leave on a slant"
+   },
+   {
+    "label": "Signals",
+    "value": "Tied to the bearing: red whenever the deck moves or carries a train"
+   },
+   {
+    "label": "Bays",
+    "value": "One station name over several branches, * to group them"
+   },
+   {
+    "label": "Maneuver",
+    "value": "Schedule line, at 75% of full speed at most"
+   },
+   {
+    "label": "Version",
+    "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10"
+   }
+  ],
+  "videos": [
+   {
+    "id": "loco_turntable_diagonal",
+    "name": "Turntable: a diagonal branch",
+    "description": "A branch leaves at a slant; the train halts in the middle, the deck turns it by 135° and it heads straight out along the slant."
+   },
+   {
+    "id": "loco_turntable_signals",
+    "name": "Turntable: signals tied to the deck",
+    "description": "Shift-clicking the bearing while holding a Train Signal ties the two together; the signals placed next go red as the deck moves and green when it stops."
+   },
+   {
+    "id": "loco_turntable_parking",
+    "name": "Turntable: one name, several bays",
+    "description": "Three stations on three branches carry one name; the train sent there grabs a vacant one and the deck turns it towards it."
+   },
+   {
+    "id": "loco_turntable_maneuver",
+    "name": "Turntable: backing out of a dead end",
+    "description": "A train stands in a dead-end bay: the deck lines up with it, it reverses at shunting speed onto the middle, gets turned and leaves nose first."
+   }
+  ],
+  "sections": [
+   {
+    "id": "turntable-diagonal",
+    "title": "A diagonal branch",
+    "alt": "The deck aimed at a diagonal branch with a train on it",
+    "html": "<p>Because the deck can stop at <strong>whatever angle</strong> is required, a branch is free to leave it on a slant. A train routed through that branch halts in the middle; the deck rotates it by exactly the right amount (135° in the video) and the train heads straight out along the diagonal.</p>"
+   },
+   {
+    "id": "turntable-signals",
+    "title": "Signals tied to the deck",
+    "alt": "The turntable with two train signals around it",
+    "html": "<p>Hold Shift and use a <a href=\"/en/wiki/train-signal\">Train Signal</a> on the bearing to tie them together; any signal you place next belongs to that bearing. Those signals show <strong>red</strong> whenever the deck is moving or carrying a train, and flip back to <strong>green</strong> when it is still and empty. Other trains queue up instead of rolling off the end of a missing track.</p>"
+   },
+   {
+    "id": "turntable-parking",
+    "title": "One name, several bays",
+    "alt": "A star-shaped shed: the deck in the centre, stations on three branches",
+    "html": "<p>Several <a href=\"/en/wiki/train-station\">stations</a> on separate branches may carry <strong>a single name</strong>, and a <code>*</code> in that name groups them. A train told to go there grabs a <strong>vacant</strong> bay: the deck aims it at a branch with room, the train pulls in, and the deck returns to where it began.</p>"
+   },
+   {
+    "id": "turntable-maneuver",
+    "title": "Backing out of a dead end",
+    "alt": "A train reversing out of a dead end towards the turntable",
+    "html": "<p>A train parked at the end of a dead end can only leave <strong>tail first</strong>. First the deck lines up with its branch. In its <a href=\"/en/wiki/train-schedule\">schedule</a>, a <strong>Maneuver</strong> line goes between two stops; its speed is set as a percentage, 75% at most, and the stop right after it is the place the train shunts to, so that stop cannot be left out. The train backs up at that pace, comes to rest in the middle of the deck, gets turned towards its next branch and leaves nose first.</p>"
+   },
+   {
+    "id": "a-savoir",
+    "title": "Good to know",
+    "html": "<p><strong>Building a shed step by step.</strong> Build the deck first and set its first line to « schedule ». Lay the branches around it next, with rails lined up with the deck, straight or slanted. Tie one signal per branch to the bearing. Put the parking stations at the branch ends, with a shared name and a <code>*</code>. Finally write the schedules: the « depot » stop, then, to leave a dead end, a « maneuver » line followed by the next stop. Try it with a single train before sending several, and keep one branch free so that a train can get through while another one is shunting. Shorter trains make everything easier, since a train has to fit entirely on the deck that turns it.</p><p>All of this relies on Loconautics Sable trains: an ordinary Create train cannot halt in the middle of the deck or ask it to turn.</p>"
+   },
+   {
+    "id": "conseils",
+    "title": "Tips",
+    "html": "<p>Put a bound signal on every leg leading to the plate, or a second train may drive onto it while it turns. Shared parking works best with a short name and a <code>*</code>, for example <code>Depot *</code> for <code>Depot 1</code>, <code>Depot 2</code>... A slow manoeuvre (25 to 50%) gives the train time to stop right in the centre.</p>"
+   }
+  ],
+  "sources": [
+   "Code, data and Ponder storyboards: Create: Loconautics 0.1.3 BETA, public repository github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (last before the move to 0.1.4); its 26 Ponder structures and en_us.json are byte-identical to the loconautics-0.1.3BETA.jar of the Create France modpack",
+   "License: code and data under MIT; textures, models, sounds and lang files all rights reserved (Lycoris). Our videos and images are renders from our own engine; our texts are original, no Ponder text is copied",
+   "Numbers: config/LoconauticsConfig.java (defaults), content/combustion/SmallEngineTuning.java and CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java; experimental features: common/experimental/ExperimentalFeature.java and the modpack's config/loconautics-experimental.toml",
+   "Recipes: data/loconautics/recipe/*.json in the 0.1.3 BETA jar",
+   "Simulated 1.3.2 blocks (Portable Engine, Rope Connector, Physics Assembler): jar shipped with Create Aeronautics 1.3.2; code MIT, art all rights reserved (The Simulated Team)"
+  ]
+ }
+}

@@ -163,5 +163,16 @@
       "name": "Create Ore Excavation",
       "description": "Hidden ore veins, vein finder, drilling machine and sample drill (Create Ore Excavation 1.6.8, not in the modpack)."
     }
+  },
+  {
+    "id": "loconautics",
+    "mod": "loconautics",
+    "icon": "loconautics:bearing_axle",
+    "name": "Create: Loconautics",
+    "description": "Trains physiques : essieu moteur, transmission, contrôleur, plaque tournante, tuyaux souples, panneaux (Create: Loconautics 0.1.3 BETA).",
+    "en": {
+      "name": "Create: Loconautics",
+      "description": "Physics trains: Bearing Axle, Transmission, controller, turntable, hoses, panels (Create: Loconautics 0.1.3 BETA)."
+    }
   }
 ]

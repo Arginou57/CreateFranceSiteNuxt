@@ -1,0 +1,339 @@
+{
+ "slug": "loconautics-controleur-analogique",
+ "name": "Contrôleur analogique",
+ "blockId": "loconautics:red_analog_controller",
+ "category": "loconautics",
+ "title": "Contrôleur analogique — Create: Loconautics, guide",
+ "description": "Le contrôleur analogique de Create: Loconautics pilote une locomotive : accélérateur à 15 crans, direction, fréquences et copie sur la transmission.",
+ "datePublished": "2026-11-24",
+ "dateModified": "2026-11-24",
+ "createVersion": "6.0.10 · Create: Loconautics 0.1.3 BETA",
+ "mcVersion": "1.21.1",
+ "intro": "Le <strong>contrôleur analogique</strong> (Analog Controller) est le poste de conduite des locomotives de Create: Loconautics. On en prend le contrôle d'un clic droit ; il envoie alors quatre fréquences de <a href=\"/wiki/liaison-de-redstone\">liaison de redstone</a> : vitesse en avant, vitesse en arrière, gauche et droite. La <a href=\"/wiki/loconautics-transmission\">transmission</a> écoute les deux premières, l'<a href=\"/wiki/loconautics-essieu-moteur\">essieu moteur</a> les deux autres.",
+ "facts": [
+  {
+   "label": "Rôle",
+   "value": "Accélérateur et direction d'une locomotive, par fréquences"
+  },
+  {
+   "label": "Sortie",
+   "value": "0 à 15, un cran à la fois en maintenant « avancer »"
+  },
+  {
+   "label": "Relâcher",
+   "value": "Redescend d'un cran toutes les 20 ticks (decayTicks)"
+  },
+  {
+   "label": "Fréquences",
+   "value": "Avant, arrière, gauche, droite (deux objets chacune)"
+  },
+  {
+   "label": "Raccourcis",
+   "value": "Sprint : bloque la sortie ; molette : plafond de la sortie"
+  },
+  {
+   "label": "Couleurs",
+   "value": "16 teintes (contrôleur rouge dans les scènes)"
+  },
+  {
+   "label": "Version",
+   "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10"
+  }
+ ],
+ "recipe": {
+  "label": "Fabrication à l'établi (contrôleur rouge)",
+  "grid": [
+   [
+    null,
+    "Levier analogique",
+    null
+   ],
+   [
+    "Plaque de fer industriel",
+    "Boitier de train",
+    "Plaque de fer industriel"
+   ],
+   [
+    "Transmetteur",
+    "Mécanisme de précision",
+    "Transmetteur"
+   ]
+  ],
+  "items": [
+   [
+    null,
+    "create:analog_lever",
+    null
+   ],
+   [
+    "loconautics:industrial_iron_sheet",
+    "create:railway_casing",
+    "loconautics:industrial_iron_sheet"
+   ],
+   [
+    "create:transmitter",
+    "create:precision_mechanism",
+    "create:transmitter"
+   ]
+  ],
+  "result": "1 contrôleur analogique rouge",
+  "resultItem": "loconautics:red_analog_controller"
+ },
+ "videos": [
+  {
+   "id": "loco_analog_intro",
+   "name": "Contrôleur analogique : accélérer et relâcher",
+   "description": "Le levier de vitesse du contrôleur monte cran par cran jusqu'à 15, redescend quand on relâche, puis reste bloqué à 8.",
+   "duration": "PT24S",
+   "chapters": [
+    {
+     "t": 0.62,
+     "section": "analog-intro"
+    },
+    {
+     "t": 2.18,
+     "section": "analog-intro"
+    },
+    {
+     "t": 3.27,
+     "section": "analog-intro"
+    },
+    {
+     "t": 12.92,
+     "section": "analog-intro"
+    },
+    {
+     "t": 20.7,
+     "section": "analog-intro"
+    },
+    {
+     "t": 21.95,
+     "section": "analog-intro"
+    }
+   ]
+  },
+  {
+   "id": "loco_analog_frequency",
+   "name": "Contrôleur analogique : ses quatre fréquences",
+   "description": "L'interface du contrôleur, quatre rangées : avant, arrière, gauche et droite reçoivent chacune leur paire d'objets.",
+   "duration": "PT22S",
+   "chapters": [
+    {
+     "t": 1.59,
+     "section": "analog-frequency"
+    },
+    {
+     "t": 3.77,
+     "section": "analog-frequency"
+    },
+    {
+     "t": 7.86,
+     "section": "analog-frequency"
+    },
+    {
+     "t": 11.95,
+     "section": "analog-frequency"
+    },
+    {
+     "t": 16.05,
+     "section": "analog-frequency"
+    }
+   ]
+  },
+  {
+   "id": "loco_train_controls",
+   "name": "Contrôleur analogique : piloter une locomotive",
+   "description": "Le contrôleur posé sur la locomotive ; ses fréquences sont réglées, puis copiées d'un clic accroupi sur la transmission et l'essieu.",
+   "duration": "PT22S",
+   "chapters": [
+    {
+     "t": 1.78,
+     "section": "train-controls"
+    },
+    {
+     "t": 4.01,
+     "section": "train-controls"
+    },
+    {
+     "t": 6.15,
+     "section": "train-controls"
+    },
+    {
+     "t": 10.38,
+     "section": "train-controls"
+    },
+    {
+     "t": 16.39,
+     "section": "train-controls"
+    },
+    {
+     "t": 19.06,
+     "section": "train-controls"
+    }
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "id": "analog-intro",
+   "title": "Accélérer et relâcher",
+   "image": "loco_analog_intro_vue.webp",
+   "alt": "Le contrôleur analogique rouge, son levier de vitesse incliné",
+   "html": "<p>Un clic droit sur le contrôleur en prend le contrôle : tes touches de déplacement deviennent celles du train. Maintenir <strong>avancer</strong> fait monter la sortie <strong>d'un cran à la fois</strong>, de 0 à 15 ; le grand levier du bloc suit. En relâchant, la sortie redescend d'elle-même, un cran toutes les 20 ticks par défaut. La touche de <strong>sprint</strong> bloque la sortie là où elle est, pour rouler à vitesse constante sans garder le doigt appuyé, et la <strong>molette</strong> fixe le cran maximal que la sortie peut atteindre.</p>",
+   "video": "loco_analog_intro"
+  },
+  {
+   "id": "analog-frequency",
+   "title": "Quatre fréquences",
+   "image": "loco_analog_frequency_vue.webp",
+   "alt": "L'interface à quatre rangées du contrôleur analogique",
+   "html": "<p>Accroupi, un clic droit ouvre l'interface. Ses quatre rangées sont, dans l'ordre : la fréquence envoyée en roulant <strong>en avant</strong>, celle envoyée <strong>en arrière</strong>, puis celles de <strong>gauche</strong> et de <strong>droite</strong>. Chaque fréquence est une paire d'objets, comme sur une <a href=\"/wiki/liaison-de-redstone\">liaison de redstone</a>. La force du signal envoyé est le cran de la sortie.</p>",
+   "video": "loco_analog_frequency"
+  },
+  {
+   "id": "train-controls",
+   "title": "Piloter une locomotive",
+   "image": "loco_train_controls_vue.webp",
+   "alt": "Le contrôleur analogique posé au-dessus de l'essieu moteur d'une locomotive",
+   "html": "<p>Sur la locomotive, les fréquences <strong>avant et arrière</strong> doivent être celles de la <a href=\"/wiki/loconautics-transmission\">transmission</a> (vitesse et sens), et <strong>gauche et droite</strong> celles de l'<a href=\"/wiki/loconautics-essieu-moteur\">essieu moteur</a>. Inutile de les recopier à la main : accroupi, un clic droit sur le contrôleur avec une transmission ou un essieu en main <strong>copie</strong> ses fréquences sur l'objet, puis on pose le bloc. Accroupi, un clic droit dans le vide efface la copie.</p>",
+   "video": "loco_train_controls"
+  },
+  {
+   "id": "a-savoir",
+   "title": "À savoir",
+   "html": "<p><strong>Ce qu'affiche le contrôleur.</strong> Quand tu es aux commandes, une barre apparaît au-dessus de la barre d'expérience : elle montre où en est la sortie, de 0 à 15. Le cran est la force du signal envoyé sur la fréquence avant ou arrière ; la transmission le traduit en vitesse (arrondi supérieur de cran × 256 / 15 tr/min). Les fréquences gauche et droite, elles, servent à choisir la branche aux aiguillages.</p><p><strong>Réglages.</strong> La vitesse de retombée se règle côté serveur (<code>decayTicks</code>, 20 ticks par cran par défaut). Le contrôleur existe en 16 couleurs, et une recette sans colorant le remet en rouge. Comme il n'émet que des fréquences ordinaires, il peut aussi piloter un ascenseur, un pont-levis ou toute autre machine à liaisons de redstone. Pense enfin à poser le contrôleur dans la partie assemblée du train : collé à la caisse, il voyage avec la locomotive et reste à portée du conducteur.</p>"
+  },
+  {
+   "id": "conseils",
+   "title": "Conseils",
+   "html": "<p>Le contrôleur existe en 16 couleurs ; une recette sans colorant le remet à zéro (recette « reset »). Pose-le dans la cabine, à portée de clic depuis la place du conducteur. Pour plusieurs locomotives couplées, règle-les toutes sur les mêmes fréquences : un seul contrôleur les commande ensemble. Pense aussi au plafond de la molette : limiter la sortie à 8 ou 10 évite d'arriver trop vite sur une station ou une plaque tournante. Le contrôleur envoie aussi des fréquences ordinaires : il peut piloter n'importe quel montage à liaisons de redstone, pas seulement un train.</p>"
+  }
+ ],
+ "related": [
+  "create-loconautics",
+  "loconautics-transmission",
+  "loconautics-essieu-moteur",
+  "loconautics-assembler-une-locomotive",
+  "liaison-de-redstone",
+  "controles-de-train"
+ ],
+ "sources": [
+  "Code, données et storyboards Ponder : Create: Loconautics 0.1.3 BETA, dépôt public github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (dernier avant le passage à 0.1.4) ; ses 26 structures Ponder et son en_us.json sont identiques octet pour octet au jar loconautics-0.1.3BETA.jar du modpack Create France",
+  "Licence : code et données sous MIT ; textures, modèles, sons et fichiers de langue « tous droits réservés » (Lycoris). Nos vidéos et images sont des rendus de notre moteur ; nos textes sont originaux, aucun texte du Ponder n'est recopié",
+  "Chiffres : config/LoconauticsConfig.java (valeurs par défaut), content/combustion/SmallEngineTuning.java et CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java ; fonctions expérimentales : common/experimental/ExperimentalFeature.java et config/loconautics-experimental.toml du modpack",
+  "Recettes : data/loconautics/recipe/*.json du jar 0.1.3 BETA",
+  "Blocs de Simulated 1.3.2 (moteur portable, raccord de corde, assembleur physique) : jar livré avec Create Aeronautics 1.3.2 ; code MIT, art tous droits réservés (The Simulated Team)"
+ ],
+ "en": {
+  "slugEn": "loconautics-analog-controller",
+  "name": "Analog Controller",
+  "title": "Analog Controller — Create: Loconautics guide",
+  "description": "The Create: Loconautics Analog Controller drives a locomotive: a 15-step throttle, steering, its four frequencies and copying them onto the Transmission.",
+  "intro": "The <strong>Analog Controller</strong> is where you sit to drive a Create: Loconautics locomotive. Use it to take the controls; it then broadcasts four <a href=\"/en/wiki/redstone-link\">Redstone Link</a> channels: ahead, reverse, left and right. The <a href=\"/en/wiki/loconautics-transmission-block\">Transmission</a> listens to the first pair, the <a href=\"/en/wiki/loconautics-bearing-axle\">Bearing Axle</a> to the second. Each channel is keyed by a pair of items, just like a Redstone Link frequency.",
+  "facts": [
+   {
+    "label": "Role",
+    "value": "Throttle and steering of a locomotive, over frequencies"
+   },
+   {
+    "label": "Output",
+    "value": "0 to 15, one step at a time while holding forward"
+   },
+   {
+    "label": "Letting go",
+    "value": "Drops one step every 20 ticks (decayTicks)"
+   },
+   {
+    "label": "Frequencies",
+    "value": "Forward, backward, left, right (two items each)"
+   },
+   {
+    "label": "Shortcuts",
+    "value": "Sprint locks the output; mouse wheel sets its ceiling"
+   },
+   {
+    "label": "Colors",
+    "value": "16 dyes (red controller in the scenes)"
+   },
+   {
+    "label": "Version",
+    "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10"
+   }
+  ],
+  "recipe": {
+   "label": "Crafting table recipe (red controller)",
+   "grid": [
+    [
+     null,
+     "Analog Lever",
+     null
+    ],
+    [
+     "Industrial Iron Sheet",
+     "Train Casing",
+     "Industrial Iron Sheet"
+    ],
+    [
+     "Transmitter",
+     "Precision Mechanism",
+     "Transmitter"
+    ]
+   ],
+   "result": "1 Red Analog Controller"
+  },
+  "videos": [
+   {
+    "id": "loco_analog_intro",
+    "name": "Analog Controller: throttle up, ease off",
+    "description": "The speed lever of the controller climbs notch by notch to 15, falls back once released, then holds at 8."
+   },
+   {
+    "id": "loco_analog_frequency",
+    "name": "Analog Controller: four channels",
+    "description": "The controller screen has four rows, for driving ahead, reversing, steering left and steering right, each getting a pair of items."
+   },
+   {
+    "id": "loco_train_controls",
+    "name": "Analog Controller: in a locomotive",
+    "description": "The controller sits on the locomotive; its channels are set, then copied with a Shift click onto the Transmission and the axle."
+   }
+  ],
+  "sections": [
+   {
+    "id": "analog-intro",
+    "title": "Throttle up, ease off",
+    "alt": "The red Analog Controller with its speed lever tilted",
+    "html": "<p>Use the controller to sit at it: from now on your movement keys drive. Keeping <strong>forward</strong> pressed adds <strong>one notch after another</strong>, from 0 up to 15, and the big lever on top tilts along. Release it and the notches drain away again, one every 20 ticks with default settings. Pressing <strong>sprint</strong> freezes the current notch, perfect for cruising, and scrolling the <strong>mouse wheel</strong> caps how high the throttle may go.</p>"
+   },
+   {
+    "id": "analog-frequency",
+    "title": "Four channels",
+    "alt": "The four-row screen of the Analog Controller",
+    "html": "<p>Shift-use the controller to open its screen. From top to bottom the four rows hold the channel broadcast while going <strong>ahead</strong>, the one broadcast while <strong>reversing</strong>, then the <strong>left</strong> and <strong>right</strong> steering channels. Each channel is an item pair, as on a <a href=\"/en/wiki/redstone-link\">Redstone Link</a>, and the broadcast strength equals the current notch.</p>"
+   },
+   {
+    "id": "train-controls",
+    "title": "In a locomotive",
+    "alt": "The Analog Controller above the Bearing Axle of a locomotive",
+    "html": "<p>In a locomotive, the <strong>ahead and reverse</strong> channels have to match the <a href=\"/en/wiki/loconautics-transmission-block\">Transmission</a> (speed and direction), and <strong>left and right</strong> must match the <a href=\"/en/wiki/loconautics-bearing-axle\">Bearing Axle</a>. You do not have to type them twice: holding Shift, use the controller while carrying a Transmission or an axle item and its channels are <strong>copied</strong> onto that item, ready to place. A Shift-use aimed at nothing wipes the copied channels.</p>"
+   },
+   {
+    "id": "a-savoir",
+    "title": "Good to know",
+    "html": "<p><strong>What the controller shows.</strong> While you hold the controls, a bar appears above the experience bar: it shows where the output stands, from 0 to 15. The notch is the signal's strength on the ahead or reverse channel; the Transmission turns it into speed (notch × 256 / 15 RPM, rounded up). The left and right channels are there to pick the branch at junctions.</p><p><strong>Settings.</strong> How quickly the notches drain is a server option (<code>decayTicks</code>, 20 ticks per notch by default). The controller comes in 16 colours, and a dye-free recipe turns it back to red. Since it only sends ordinary channels, it can also drive a lift, a drawbridge or any other Redstone Link machine. Finally, place the controller inside the assembled part of the train: glued to the body, it travels with the locomotive and stays within the driver's reach, wherever the train goes. A spare controller left at a station is useless once the train has gone. Several controllers can share the same channels, for instance one at each end of a push-pull train, so the driver can change ends without reprogramming anything.</p>"
+   },
+   {
+    "id": "conseils",
+    "title": "Tips",
+    "html": "<p>The controller comes in 16 colours; a recipe without dye resets it (the « reset » recipe). Put it in the cab, within reach of the driver's spot. For several coupled locomotives, set them all to the same frequencies: one controller drives them together. Mind the mouse-wheel ceiling too: capping the output at 8 or 10 avoids arriving too fast at a station or a turntable. The controller sends ordinary frequencies: it can drive any Redstone Link contraption, not only a train.</p>"
+   }
+  ],
+  "sources": [
+   "Code, data and Ponder storyboards: Create: Loconautics 0.1.3 BETA, public repository github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (last before the move to 0.1.4); its 26 Ponder structures and en_us.json are byte-identical to the loconautics-0.1.3BETA.jar of the Create France modpack",
+   "License: code and data under MIT; textures, models, sounds and lang files all rights reserved (Lycoris). Our videos and images are renders from our own engine; our texts are original, no Ponder text is copied",
+   "Numbers: config/LoconauticsConfig.java (defaults), content/combustion/SmallEngineTuning.java and CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java; experimental features: common/experimental/ExperimentalFeature.java and the modpack's config/loconautics-experimental.toml",
+   "Recipes: data/loconautics/recipe/*.json in the 0.1.3 BETA jar",
+   "Simulated 1.3.2 blocks (Portable Engine, Rope Connector, Physics Assembler): jar shipped with Create Aeronautics 1.3.2; code MIT, art all rights reserved (The Simulated Team)"
+  ]
+ }
+}

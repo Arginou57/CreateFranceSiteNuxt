@@ -1,0 +1,404 @@
+{
+ "slug": "loconautics-transmission",
+ "name": "Transmission",
+ "blockId": "loconautics:transmission",
+ "category": "loconautics",
+ "title": "Transmission — Create: Loconautics, guide",
+ "description": "La transmission de Create: Loconautics règle la vitesse et le sens d'une rotation par la redstone, une fréquence ou un panneau : jusqu'à 256 tr/min.",
+ "datePublished": "2026-11-24",
+ "dateModified": "2026-11-24",
+ "createVersion": "6.0.10 · Create: Loconautics 0.1.3 BETA",
+ "mcVersion": "1.21.1",
+ "intro": "La <strong>transmission</strong> (Transmission) laisse passer une rotation en réglant sa vitesse et son sens. Sans signal, la sortie est à l'arrêt ; un signal de redstone, une fréquence de <a href=\"/wiki/liaison-de-redstone\">liaison</a> ou une pièce de panneau la fait tourner jusqu'à 256 tr/min, peu importe la vitesse d'entrée. C'est la boîte de vitesses des locomotives de Create: Loconautics : on la pose contre l'arbre de l'<a href=\"/wiki/loconautics-essieu-moteur\">essieu moteur</a>.",
+ "facts": [
+  {
+   "label": "Entrée",
+   "value": "L'arbre d'un bout (le côté d'où vient la rotation)"
+  },
+  {
+   "label": "Sortie",
+   "value": "L'autre bout : arrêtée sans signal"
+  },
+  {
+   "label": "Vitesse de sortie",
+   "value": "Arrondi supérieur de signal × 256 / 15 tr/min (18 tr/min à 1, 256 à 15)"
+  },
+  {
+   "label": "Sens",
+   "value": "Inversé par un signal sur la face opposée ou la fréquence « direction »"
+  },
+  {
+   "label": "Stress",
+   "value": "8 SU par défaut (transmission suImpact), proportionnel à sortie / entrée"
+  },
+  {
+   "label": "Commandes",
+   "value": "Redstone, 2 fréquences de liaison, levier et interrupteur de panneau"
+  },
+  {
+   "label": "Version",
+   "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10"
+  }
+ ],
+ "recipe": {
+  "label": "Fabrication à l'établi",
+  "grid": [
+   [
+    null,
+    "Liaison de redstone",
+    null
+   ],
+   [
+    null,
+    "Bloc de fer industriel",
+    null
+   ],
+   [
+    null,
+    "Transmission analogique (Simulated)",
+    null
+   ]
+  ],
+  "items": [
+   [
+    null,
+    "create:redstone_link",
+    null
+   ],
+   [
+    null,
+    "create:industrial_iron_block",
+    null
+   ],
+   [
+    null,
+    "simulated:analog_transmission",
+    null
+   ]
+  ],
+  "result": "1 transmission",
+  "resultItem": "loconautics:transmission"
+ },
+ "videos": [
+  {
+   "id": "loco_transmission_single",
+   "name": "Transmission : régler la vitesse avec la redstone",
+   "description": "La rotation entre par un bout ; sans signal la sortie est arrêtée, puis un levier analogique monte la vitesse de sortie jusqu'à 256 tr/min.",
+   "duration": "PT16S",
+   "chapters": [
+    {
+     "t": 1.0,
+     "section": "transmission-single"
+    },
+    {
+     "t": 3.5,
+     "section": "transmission-single"
+    },
+    {
+     "t": 8.0,
+     "section": "transmission-single"
+    },
+    {
+     "t": 12.45,
+     "section": "transmission-single"
+    }
+   ]
+  },
+  {
+   "id": "loco_transmission_direction",
+   "name": "Transmission : inverser le sens",
+   "description": "Un levier sur la face opposée inverse le sens de la sortie : même vitesse, rotation dans l'autre sens.",
+   "duration": "PT8S",
+   "chapters": [
+    {
+     "t": 1.75,
+     "section": "transmission-direction"
+    }
+   ]
+  },
+  {
+   "id": "loco_transmission_frequency",
+   "name": "Transmission : vitesse et sens par fréquences",
+   "description": "L'interface de la transmission : la rangée vitesse reçoit un lingot d'or et de la redstone, la rangée sens un lingot de fer et du lapis.",
+   "duration": "PT20S",
+   "chapters": [
+    {
+     "t": 1.75,
+     "section": "transmission-frequency"
+    },
+    {
+     "t": 4.15,
+     "section": "transmission-frequency"
+    },
+    {
+     "t": 9.65,
+     "section": "transmission-frequency"
+    },
+    {
+     "t": 15.15,
+     "section": "transmission-frequency"
+    }
+   ]
+  },
+  {
+   "id": "loco_transmission_panel",
+   "name": "Transmission : levier et interrupteur de panneau",
+   "description": "Un panneau de locomotive monté à côté reçoit un levier de panneau (vitesse) et un interrupteur (sens), liés à la transmission.",
+   "duration": "PT15S",
+   "chapters": [
+    {
+     "t": 3.0,
+     "section": "transmission-panel"
+    },
+    {
+     "t": 5.0,
+     "section": "transmission-panel"
+    },
+    {
+     "t": 7.75,
+     "section": "transmission-panel"
+    },
+    {
+     "t": 11.5,
+     "section": "transmission-panel"
+    }
+   ]
+  },
+  {
+   "id": "loco_train_drivetrain",
+   "name": "Transmission : la chaîne de traction d'une locomotive",
+   "description": "Bogie et essieu moteur, la transmission contre l'arbre de l'essieu, puis un moteur portable (remplacé un instant par un moteur créatif et une roue à eau) ; le signal de vitesse lance l'essieu.",
+   "duration": "PT22S",
+   "chapters": [
+    {
+     "t": 4.25,
+     "section": "train-drivetrain"
+    },
+    {
+     "t": 7.0,
+     "section": "train-drivetrain"
+    },
+    {
+     "t": 9.5,
+     "section": "train-drivetrain"
+    },
+    {
+     "t": 11.5,
+     "section": "train-drivetrain"
+    },
+    {
+     "t": 13.5,
+     "section": "train-drivetrain"
+    },
+    {
+     "t": 15.25,
+     "section": "train-drivetrain"
+    },
+    {
+     "t": 18.0,
+     "section": "train-drivetrain"
+    }
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "id": "transmission-single",
+   "title": "Régler la vitesse avec la redstone",
+   "image": "loco_transmission_single_vue.webp",
+   "alt": "Une transmission entre deux arbres, un levier analogique à côté",
+   "html": "<p>La rotation entre par l'arbre d'un bout de la transmission. Sans signal, l'arbre de sortie reste <strong>immobile</strong>. Un signal de redstone sur un côté règle la vitesse de sortie : elle vaut l'arrondi supérieur de signal × 256 / 15, soit 18 tr/min à 1, 120 tr/min à 7 et <strong>256 tr/min à 15</strong>, peu importe la vitesse d'entrée. Un levier analogique est donc le moyen le plus simple de doser la vitesse. Le stress demandé suit le rapport entre la sortie et l'entrée.</p>",
+   "video": "loco_transmission_single"
+  },
+  {
+   "id": "transmission-direction",
+   "title": "Inverser le sens",
+   "image": "loco_transmission_direction_vue.webp",
+   "alt": "La transmission avec un levier sur la face opposée",
+   "html": "<p>Un signal sur la face <strong>opposée</strong> inverse la sortie : la vitesse reste la même, seul le sens change. Sur une locomotive, c'est la marche arrière : la vitesse vient d'un côté, le sens de l'autre.</p>",
+   "video": "loco_transmission_direction"
+  },
+  {
+   "id": "transmission-frequency",
+   "title": "Vitesse et sens par fréquences",
+   "image": "loco_transmission_frequency_vue.webp",
+   "alt": "L'interface de la transmission avec ses deux fréquences",
+   "html": "<p>À main vide, un clic droit ouvre l'interface. La première rangée est la fréquence de <strong>vitesse</strong>, la seconde celle du <strong>sens</strong> ; chacune prend deux objets. Une <a href=\"/wiki/liaison-de-redstone\">liaison de redstone</a> émettrice réglée sur ces paires commande alors la transmission à distance, sans fil : la force du signal donne la vitesse, comme un signal direct.</p>",
+   "video": "loco_transmission_frequency"
+  },
+  {
+   "id": "transmission-panel",
+   "title": "Commander par un panneau",
+   "image": "loco_transmission_panel_vue.webp",
+   "alt": "Un panneau avec un levier et un interrupteur reliés à la transmission",
+   "html": "<p>Les pièces d'un <a href=\"/wiki/loconautics-panneaux-de-commande\">panneau</a> se lient directement à la transmission : accroupi, clic droit sur la transmission avec un <strong>levier de panneau</strong> (Gauge Lever) en main pour le lier, puis pose-le sur le panneau. Le levier règle la vitesse de 0 à 15 ; un <strong>interrupteur de panneau</strong> lié de la même façon règle le sens. Tant qu'un panneau la pilote, la transmission ignore les signaux de redstone.</p>",
+   "video": "loco_transmission_panel"
+  },
+  {
+   "id": "train-drivetrain",
+   "title": "La chaîne de traction",
+   "image": "loco_train_drivetrain_vue.webp",
+   "alt": "Bogie, essieu moteur, transmission et moteur portable alignés sur la voie",
+   "html": "<p>Sur une locomotive, la transmission se pose contre l'<strong>arbre de l'essieu moteur</strong>, à l'arrière. De l'autre côté vient la source de rotation : dans la scène, un moteur portable de Simulated qu'on allume avec du charbon, mais un <a href=\"/wiki/moteur-creatif\">moteur créatif</a>, une <a href=\"/wiki/roue-a-eau\">roue à eau</a> ou n'importe quelle rotation conviennent. Tant que la transmission ne reçoit pas de signal de vitesse, l'essieu ne bouge pas ; avec un signal, il tourne à la vitesse demandée, jusqu'à 256 tr/min.</p>",
+   "video": "loco_train_drivetrain"
+  },
+  {
+   "id": "a-savoir",
+   "title": "À savoir",
+   "html": "<p><strong>Transmission ou blocs de Create ?</strong> Le bloc <a href=\"/wiki/controleur-de-vitesse-de-rotation\">contrôleur de vitesse de rotation</a> de Create règle aussi une vitesse, mais à la molette, sans redstone, et l'<a href=\"/wiki/inverseur-de-rotation\">inverseur de rotation</a> inverse le sens sans toucher à la vitesse. La transmission réunit les deux et se commande à distance : c'est ce qui la rend indispensable sur un train, où le conducteur est loin de la mécanique. Avec le mod ComputerCraft, un ordinateur peut aussi la piloter (option <code>remoteControl</code>, activée), comme les trains, les signaux et les plaques tournantes.</p>"
+  },
+  {
+   "id": "conseils",
+   "title": "Conseils",
+   "html": "<p>La transmission ne crée pas de rotation : elle en a besoin en entrée, et elle demande un peu de stress à la source (8 SU par défaut, mis à l'échelle du rapport sortie / entrée). Une entrée lente suffit donc : même une petite roue à eau peut faire tourner la sortie à 256 tr/min, tant que la capacité suit. Sur une locomotive, donne la fréquence de vitesse au contrôleur analogique et la fréquence de sens à sa marche arrière : avancer et reculer deviennent les deux touches de déplacement.</p>"
+  }
+ ],
+ "related": [
+  "create-loconautics",
+  "loconautics-essieu-moteur",
+  "loconautics-controleur-analogique",
+  "loconautics-panneaux-de-commande",
+  "liaison-de-redstone"
+ ],
+ "sources": [
+  "Code, données et storyboards Ponder : Create: Loconautics 0.1.3 BETA, dépôt public github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (dernier avant le passage à 0.1.4) ; ses 26 structures Ponder et son en_us.json sont identiques octet pour octet au jar loconautics-0.1.3BETA.jar du modpack Create France",
+  "Licence : code et données sous MIT ; textures, modèles, sons et fichiers de langue « tous droits réservés » (Lycoris). Nos vidéos et images sont des rendus de notre moteur ; nos textes sont originaux, aucun texte du Ponder n'est recopié",
+  "Chiffres : config/LoconauticsConfig.java (valeurs par défaut), content/combustion/SmallEngineTuning.java et CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java ; fonctions expérimentales : common/experimental/ExperimentalFeature.java et config/loconautics-experimental.toml du modpack",
+  "Recettes : data/loconautics/recipe/*.json du jar 0.1.3 BETA",
+  "Blocs de Simulated 1.3.2 (moteur portable, raccord de corde, assembleur physique) : jar livré avec Create Aeronautics 1.3.2 ; code MIT, art tous droits réservés (The Simulated Team)"
+ ],
+ "en": {
+  "slugEn": "loconautics-transmission-block",
+  "name": "Transmission",
+  "title": "Transmission — Create: Loconautics guide",
+  "description": "The Create: Loconautics Transmission sets the speed and direction of rotation from a redstone signal, a frequency or a panel part: up to 256 RPM.",
+  "intro": "The <strong>Transmission</strong> lets rotation through and decides how fast and which way it comes out. Left alone it outputs nothing; feed it redstone, a <a href=\"/en/wiki/redstone-link\">Redstone Link</a> frequency or a panel control and the output shaft runs at up to 256 RPM, no matter how fast the input turns. In Create: Loconautics it is the gearbox of every locomotive, mounted on the shaft of the <a href=\"/en/wiki/loconautics-bearing-axle\">Bearing Axle</a>.",
+  "facts": [
+   {
+    "label": "Input",
+    "value": "The shaft at one end, where rotation arrives"
+   },
+   {
+    "label": "Output",
+    "value": "The opposite end; idle while unpowered"
+   },
+   {
+    "label": "Output speed",
+    "value": "Signal × 256 / 15 RPM, rounded up (18 RPM at 1, 256 at 15)"
+   },
+   {
+    "label": "Direction",
+    "value": "Flipped by redstone on the far face or by the direction frequency"
+   },
+   {
+    "label": "Stress",
+    "value": "8 SU by default (transmission suImpact), scaled by output over input"
+   },
+   {
+    "label": "Controls",
+    "value": "Redstone, two link frequencies, panel lever and switch"
+   },
+   {
+    "label": "Version",
+    "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10"
+   }
+  ],
+  "recipe": {
+   "label": "Crafting table recipe",
+   "grid": [
+    [
+     null,
+     "Redstone Link",
+     null
+    ],
+    [
+     null,
+     "Block of Industrial Iron",
+     null
+    ],
+    [
+     null,
+     "Analog Transmission (Simulated)",
+     null
+    ]
+   ],
+   "result": "1 Transmission"
+  },
+  "videos": [
+   {
+    "id": "loco_transmission_single",
+    "name": "Transmission: dialling the speed with redstone",
+    "description": "Rotation arrives at one end; unpowered, the far shaft does not move, then an Analog Lever brings it up to 256 RPM."
+   },
+   {
+    "id": "loco_transmission_direction",
+    "name": "Transmission: running it backwards",
+    "description": "A lever on the other face flips the output: the shaft keeps its speed but spins the other way."
+   },
+   {
+    "id": "loco_transmission_frequency",
+    "name": "Transmission: wireless speed and direction",
+    "description": "The Transmission screen: gold ingot and redstone in the speed row, iron ingot and lapis in the direction row."
+   },
+   {
+    "id": "loco_transmission_panel",
+    "name": "Transmission: panel throttle and reverser",
+    "description": "A Locomotive Gauge beside it receives a Gauge Lever for speed and a Gauge Switch for direction, both linked to the Transmission."
+   },
+   {
+    "id": "loco_train_drivetrain",
+    "name": "Transmission: a locomotive's drive chain",
+    "description": "Bogey and Bearing Axle, the Transmission on the axle shaft, then a Portable Engine (swapped for a moment for a Creative Motor and a Water Wheel); a speed signal gets the axle turning."
+   }
+  ],
+  "sections": [
+   {
+    "id": "transmission-single",
+    "title": "Dialling the speed with redstone",
+    "alt": "A Transmission between two shafts, an Analog Lever beside it",
+    "html": "<p>Rotation arrives through the shaft at one end. Until it gets redstone, the shaft at the far end <strong>does not move at all</strong>. Power one side and that signal picks the output speed: 256 / 15 RPM per point, rounded up, which gives 18 RPM at strength 1, 120 RPM at 7 and <strong>256 RPM at 15</strong>, independently of how fast the input spins. An Analog Lever makes a handy throttle. The stress drawn from the source grows with the output-to-input ratio.</p>"
+   },
+   {
+    "id": "transmission-direction",
+    "title": "Running it backwards",
+    "alt": "The Transmission with a lever on its opposite face",
+    "html": "<p>Redstone on the <strong>other face</strong> turns the output around: same RPM, reversed spin. That is the reverse gear of a locomotive, with speed coming from one side and direction from the other.</p>"
+   },
+   {
+    "id": "transmission-frequency",
+    "title": "Wireless speed and direction",
+    "alt": "The Transmission's screen with its two frequencies",
+    "html": "<p>Use the Transmission empty-handed to open its screen. Row one is the <strong>speed</strong> frequency, row two the <strong>direction</strong> frequency, two items each. A <a href=\"/en/wiki/redstone-link\">Redstone Link</a> transmitting on those pairs now drives it from a distance, its signal strength standing in for a wired signal.</p>"
+   },
+   {
+    "id": "transmission-panel",
+    "title": "Driving it from a panel",
+    "alt": "A panel with a lever and a switch linked to the Transmission",
+    "html": "<p><a href=\"/en/wiki/loconautics-instrument-panels\">Panel</a> controls can be tied to the Transmission itself. Hold Shift and use a <strong>Gauge Lever</strong> on the Transmission to link it, then mount the lever on a panel: its position, anywhere between 0 and 15, picks the speed. A <strong>Gauge Switch</strong> linked in exactly that manner picks the direction. As long as a panel is in charge, wired redstone is ignored.</p>"
+   },
+   {
+    "id": "train-drivetrain",
+    "title": "The drive chain",
+    "alt": "Bogey, Bearing Axle, Transmission and Portable Engine lined up on the track",
+    "html": "<p>On a locomotive the Transmission sits on the <strong>Bearing Axle's shaft</strong>, at the back. The power source goes behind it: the scene uses a Simulated Portable Engine fed with coal, though a <a href=\"/en/wiki/creative-motor\">Creative Motor</a>, a <a href=\"/en/wiki/water-wheel\">Water Wheel</a> or any other rotation is just as good. The axle stays put until the Transmission receives a speed signal; then it spins at the requested RPM, 256 at most.</p>"
+   },
+   {
+    "id": "a-savoir",
+    "title": "Good to know",
+    "html": "<p><strong>Transmission or Create blocks?</strong> Create's <a href=\"/en/wiki/rotation-speed-controller\">Rotation Speed Controller</a> also sets a speed, but with a scroll value and no redstone, and the <a href=\"/en/wiki/gearshift\">Gearshift</a> flips direction without changing speed. The Transmission does both and can be driven remotely, which is what makes it essential on a train, where the driver sits far from the machinery. With ComputerCraft installed, a computer can drive it too (option <code>remoteControl</code>, on), like trains, signals and turntables.</p>"
+   },
+   {
+    "id": "conseils",
+    "title": "Tips",
+    "html": "<p>The Transmission does not create rotation: it needs some at its input, and it asks the source for a little stress (8 SU by default, scaled by the output / input ratio). A slow input is enough: even a small water wheel can drive the output at 256 RPM, as long as the capacity keeps up. On a locomotive, give the speed frequency to the Analog Controller and the direction frequency to its reverse: forward and backward become your two movement keys.</p>"
+   }
+  ],
+  "sources": [
+   "Code, data and Ponder storyboards: Create: Loconautics 0.1.3 BETA, public repository github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (last before the move to 0.1.4); its 26 Ponder structures and en_us.json are byte-identical to the loconautics-0.1.3BETA.jar of the Create France modpack",
+   "License: code and data under MIT; textures, models, sounds and lang files all rights reserved (Lycoris). Our videos and images are renders from our own engine; our texts are original, no Ponder text is copied",
+   "Numbers: config/LoconauticsConfig.java (defaults), content/combustion/SmallEngineTuning.java and CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java; experimental features: common/experimental/ExperimentalFeature.java and the modpack's config/loconautics-experimental.toml",
+   "Recipes: data/loconautics/recipe/*.json in the 0.1.3 BETA jar",
+   "Simulated 1.3.2 blocks (Portable Engine, Rope Connector, Physics Assembler): jar shipped with Create Aeronautics 1.3.2; code MIT, art all rights reserved (The Simulated Team)"
+  ]
+ }
+}

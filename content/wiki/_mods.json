@@ -272,5 +272,54 @@
         "Know the veins"
       ]
     }
+  },
+  {
+    "id": "loconautics",
+    "name": "Create: Loconautics",
+    "version": "0.1.3 BETA",
+    "icon": "loconautics:bearing_axle",
+    "description": "Les trains de Create deviennent des trains physiques : essieu moteur, transmission, conduite analogique, plaques tournantes, tuyaux souples et panneaux de commande.",
+    "start": [
+      {
+        "slug": "create-loconautics",
+        "label": "Vue d'ensemble"
+      },
+      {
+        "slug": "loconautics-essieu-moteur",
+        "label": "Essieu moteur"
+      },
+      {
+        "slug": "loconautics-transmission",
+        "label": "Transmission"
+      },
+      {
+        "slug": "loconautics-controleur-analogique",
+        "label": "Conduire"
+      },
+      {
+        "slug": "loconautics-assembler-une-locomotive",
+        "label": "Assembler une locomotive"
+      },
+      {
+        "slug": "loconautics-plaque-tournante",
+        "label": "Plaque tournante"
+      },
+      {
+        "slug": "loconautics-blocs-et-objets",
+        "label": "Blocs et objets"
+      }
+    ],
+    "en": {
+      "description": "Create trains become physics trains: bearing axle, transmission, analog driving, turntables, hoses and instrument panels.",
+      "start": [
+        "Overview",
+        "Bearing Axle",
+        "Transmission",
+        "Driving",
+        "Assembling a locomotive",
+        "Turntable",
+        "Blocks and items"
+      ]
+    }
   }
 ]

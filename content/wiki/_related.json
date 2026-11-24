@@ -1,0 +1,65 @@
+{
+  "assembler-un-train": [
+    "loconautics-assembler-une-locomotive"
+  ],
+  "station-de-train": [
+    "loconautics-assembler-une-locomotive"
+  ],
+  "colle-extra-forte": [
+    "loconautics-assembler-une-locomotive"
+  ],
+  "rail-de-train": [
+    "loconautics-plaque-tournante"
+  ],
+  "roue-dentee": [
+    "loconautics-plaque-tournante"
+  ],
+  "planning-de-train": [
+    "loconautics-plaque-tournante"
+  ],
+  "signal-de-train": [
+    "loconautics-plaque-tournante-depot"
+  ],
+  "controles-de-train": [
+    "loconautics-controleur-analogique"
+  ],
+  "liaison-de-redstone": [
+    "loconautics-controleur-analogique"
+  ],
+  "controleur-de-vitesse-de-rotation": [
+    "loconautics-transmission"
+  ],
+  "inverseur-de-rotation": [
+    "loconautics-transmission"
+  ],
+  "pompe-mecanique": [
+    "loconautics-tuyau-et-treuil"
+  ],
+  "poulie-a-tuyau": [
+    "loconautics-tuyau-et-treuil"
+  ],
+  "tuyau-a-fluide": [
+    "loconautics-raccord-de-tuyau"
+  ],
+  "reservoir-a-fluide": [
+    "loconautics-chaudiere"
+  ],
+  "moteur-a-vapeur": [
+    "loconautics-chaudiere"
+  ],
+  "carburants": [
+    "loconautics-moteur-a-combustion"
+  ],
+  "moteur-diesel": [
+    "loconautics-moteur-a-combustion"
+  ],
+  "create-aeronautics": [
+    "create-loconautics"
+  ],
+  "presse-mecanique": [
+    "loconautics-blocs-et-objets"
+  ],
+  "bec-verseur": [
+    "loconautics-blocs-et-objets"
+  ]
+}

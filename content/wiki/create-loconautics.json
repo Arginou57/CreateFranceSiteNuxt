@@ -1,0 +1,156 @@
+{
+ "slug": "create-loconautics",
+ "name": "Create: Loconautics",
+ "blockId": "loconautics:bearing_axle",
+ "category": "loconautics",
+ "title": "Create: Loconautics — guide du mod (trains physiques)",
+ "description": "Create: Loconautics transforme les trains de Create en trains physiques : locomotives, plaques tournantes, tuyaux souples, panneaux. Guide 0.1.3 BETA.",
+ "datePublished": "2026-11-24",
+ "dateModified": "2026-11-24",
+ "createVersion": "6.0.10 · Create: Loconautics 0.1.3 BETA",
+ "mcVersion": "1.21.1",
+ "intro": "<strong>Create: Loconautics</strong> fait rouler les trains de <a href=\"/wiki/assembler-un-train\">Create</a> avec le moteur physique <strong>Sable</strong> (celui de Create Aeronautics et Simulated) : un train a une masse, accélère, freine, et peut dérailler. Le mod ajoute ce qu'il faut pour les conduire et les entretenir : essieu moteur, transmission, contrôleur analogique, plaque tournante, tuyaux souples pour faire le plein, panneaux et pupitres de cabine. La version du modpack Create France est la <strong>0.1.3 BETA</strong> : certaines parties (chaudière, petit moteur à combustion) y sont encore expérimentales et désactivées.",
+ "facts": [
+  {
+   "label": "Version",
+   "value": "0.1.3 BETA (Minecraft 1.21.1, NeoForge)"
+  },
+  {
+   "label": "Auteurs",
+   "value": "Lycoris, MDLOP, Basilforrealss, TugKanTheMan, Hatchet"
+  },
+  {
+   "label": "Dépend de",
+   "value": "Create 6, Sable 2.0.5 et Simulated 1.3 (livrés avec Create Aeronautics)"
+  },
+  {
+   "label": "Licence",
+   "value": "Code MIT ; textures, modèles et textes tous droits réservés"
+  },
+  {
+   "label": "Ponder",
+   "value": "53 scènes sur 26 structures"
+  },
+  {
+   "label": "Expérimental",
+   "value": "Chaudière, moteur à combustion, fluides industriels : désactivés par défaut"
+  }
+ ],
+ "videos": [],
+ "sections": [
+  {
+   "id": "overview",
+   "title": "Les blocs du mod",
+   "image": "loco_overview_traction.webp",
+   "alt": "Les blocs de Create: Loconautics posés sur une plaque",
+   "html": "<p>Une locomotive Loconautics se monte autour d'un bogie de Create : l'<a href=\"/wiki/loconautics-essieu-moteur\">essieu moteur</a> entraîne ses roues, la <a href=\"/wiki/loconautics-transmission\">transmission</a> règle la vitesse, le <a href=\"/wiki/loconautics-controleur-analogique\">contrôleur analogique</a> sert de poste de conduite. Le <a href=\"/wiki/loconautics-plaque-tournante\">roulement de plaque tournante</a> fait pivoter les voies des dépôts. Le <a href=\"/wiki/loconautics-tuyau-et-treuil\">treuil à tuyau</a> et ses buses font le plein des trains, et les <a href=\"/wiki/loconautics-panneaux-de-commande\">panneaux</a> et pupitres équipent la cabine.</p>"
+  },
+  {
+   "id": "premier-train",
+   "title": "Ton premier train physique",
+   "html": "<p>Pose un petit bogie sur une voie devant une <a href=\"/wiki/station-de-train\">station</a>, l'essieu moteur juste à côté de lui, une transmission contre l'arbre de l'essieu et une source de rotation derrière (moteur portable de Simulated, moteur créatif...). Ajoute un contrôleur analogique et copie ses fréquences sur la transmission et l'essieu (accroupi, clic droit avec le bloc en main). Ouvre la station, choisis <strong>nouveau train</strong> puis <strong>assembler en train Sable</strong>. Prends le contrôle du contrôleur : chaque cran d'accélérateur fait avancer le train. Tout le détail est sur la page <a href=\"/wiki/loconautics-assembler-une-locomotive\">assembler une locomotive</a>.</p>"
+  },
+  {
+   "id": "pages",
+   "title": "Les pages du mod",
+   "html": "<ul><li><a href=\"/wiki/loconautics-essieu-moteur\">Essieu moteur</a> : entraîner un bogie, l'avant du train, les fréquences de direction.</li><li><a href=\"/wiki/loconautics-transmission\">Transmission</a> : vitesse et sens, redstone, fréquences, panneau.</li><li><a href=\"/wiki/loconautics-controleur-analogique\">Contrôleur analogique</a> : conduire.</li><li><a href=\"/wiki/loconautics-assembler-une-locomotive\">Assembler une locomotive</a> : station, boitier de train, assembleur physique.</li><li><a href=\"/wiki/loconautics-plaque-tournante\">Plaque tournante</a> et <a href=\"/wiki/loconautics-plaque-tournante-depot\">dépôts</a> : programme, horaires, signaux, garages, manœuvres.</li><li><a href=\"/wiki/loconautics-tuyau-et-treuil\">Tuyau souple et treuil</a>, <a href=\"/wiki/loconautics-raccord-de-tuyau\">raccord de tuyau</a> : faire le plein.</li><li><a href=\"/wiki/loconautics-panneaux-de-commande\">Panneaux de commande</a> et pupitres.</li><li><a href=\"/wiki/loconautics-chaudiere\">Chaudière</a>, <a href=\"/wiki/loconautics-chaudiere-pression\">pression et sécurité</a>, <a href=\"/wiki/loconautics-moteur-a-combustion\">moteur à combustion</a> : expérimentaux en 0.1.3.</li><li><a href=\"/wiki/loconautics-blocs-et-objets\">Blocs et objets</a> : attelages, tampons, chapeaux, câble, fluides industriels, cérisène, ingrédients et toutes les variantes.</li></ul>",
+   "image": "loco_overview_cabine.webp",
+   "alt": "Treuil, buse, raccord de tuyau, pupitre et foyer de Create: Loconautics"
+  },
+  {
+   "id": "beta",
+   "title": "Une bêta : ce qui marche et ce qui est caché",
+   "html": "<p>Loconautics est en bêta et avance vite (son dépôt public est déjà passé à la 0.1.4). Dans la 0.1.3 du modpack, le fichier <code>loconautics-experimental.toml</code> laisse à <code>false</code> cinq groupes : <strong>boilerworks</strong> (foyer, corps de chaudière, cheminée, prise de vapeur, soupape intelligente), <strong>dieselworks</strong> (petits moteurs à combustion), <strong>industrialFluids</strong> (tuyaux, pompe, réservoir et vanne industriels, cérisène, plaque et tige de fer industriel), l'attelage à vis et le frein à main. Ces blocs sont cachés et impossibles à poser, et leurs recettes ne se chargent pas. La plaque de fer industriel reste fabricable par assemblage séquencé à partir d'une plaque de fer, si bien que les recettes qui l'utilisent (contrôleur, treuil, buse, panneaux...) marchent. Le Ponder du jeu montre quand même les blocs expérimentaux : leurs pages le suivent et le signalent en tête.</p>"
+  },
+  {
+   "id": "conseils",
+   "title": "Conseils",
+   "html": "<p>Commence par une locomotive courte : un bogie entraîné, la cabine et une seule voiture. Un train Sable a une masse : plus il est long, plus il démarre doucement, et un virage pris trop vite peut le faire sortir de la voie selon les réglages du serveur. Garde les essieux moteurs à l'avant de chaque partie qui tire, et vérifie aux lunettes d'ingénieur qu'ils sont valides avant d'assembler. En cas de doute, la station sait toujours assembler un train de Create ordinaire : les deux sortes de trains cohabitent sur le même réseau.</p>"
+  }
+ ],
+ "related": [
+  "assembler-un-train",
+  "station-de-train",
+  "rail-de-train",
+  "planning-de-train",
+  "loconautics-essieu-moteur",
+  "loconautics-assembler-une-locomotive",
+  "create-diesel-generators"
+ ],
+ "sources": [
+  "Code, données et storyboards Ponder : Create: Loconautics 0.1.3 BETA, dépôt public github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (dernier avant le passage à 0.1.4) ; ses 26 structures Ponder et son en_us.json sont identiques octet pour octet au jar loconautics-0.1.3BETA.jar du modpack Create France",
+  "Licence : code et données sous MIT ; textures, modèles, sons et fichiers de langue « tous droits réservés » (Lycoris). Nos vidéos et images sont des rendus de notre moteur ; nos textes sont originaux, aucun texte du Ponder n'est recopié",
+  "Chiffres : config/LoconauticsConfig.java (valeurs par défaut), content/combustion/SmallEngineTuning.java et CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java ; fonctions expérimentales : common/experimental/ExperimentalFeature.java et config/loconautics-experimental.toml du modpack",
+  "Recettes : data/loconautics/recipe/*.json du jar 0.1.3 BETA",
+  "Blocs de Simulated 1.3.2 (moteur portable, raccord de corde, assembleur physique) : jar livré avec Create Aeronautics 1.3.2 ; code MIT, art tous droits réservés (The Simulated Team)"
+ ],
+ "en": {
+  "slugEn": "create-loconautics-mod",
+  "name": "Create: Loconautics",
+  "title": "Create: Loconautics — mod guide (physics trains)",
+  "description": "Create: Loconautics turns Create trains into physics trains: locomotives, turntables, hoses and panels. A guide to the 0.1.3 BETA.",
+  "intro": "<strong>Create: Loconautics</strong> runs <a href=\"/en/wiki/train-assembly\">Create</a> trains on the <strong>Sable</strong> physics engine (the one behind Create Aeronautics and Simulated): a train has mass, accelerates, brakes and can derail. The mod adds what you need to drive and service them: Bearing Axle, Transmission, Analog Controller, turntable, hoses for refuelling, cab panels and dashboards. The Create France modpack runs <strong>0.1.3 BETA</strong>: some parts (boiler, small combustion engine) are still experimental and switched off there.",
+  "facts": [
+   {
+    "label": "Version",
+    "value": "0.1.3 BETA (Minecraft 1.21.1, NeoForge)"
+   },
+   {
+    "label": "Authors",
+    "value": "Lycoris, MDLOP, Basilforrealss, TugKanTheMan, Hatchet"
+   },
+   {
+    "label": "Requires",
+    "value": "Create 6, Sable 2.0.5 and Simulated 1.3 (shipped with Create Aeronautics)"
+   },
+   {
+    "label": "License",
+    "value": "Code MIT; textures, models and texts all rights reserved"
+   },
+   {
+    "label": "Ponder",
+    "value": "53 scenes over 26 structures"
+   },
+   {
+    "label": "Experimental",
+    "value": "Boiler, combustion engine, industrial fluids: off by default"
+   }
+  ],
+  "videos": [],
+  "sections": [
+   {
+    "id": "overview",
+    "title": "The blocks of the mod",
+    "alt": "Create: Loconautics blocks laid out on a plate",
+    "html": "<p>A Loconautics locomotive is built around a Create bogey: the <a href=\"/en/wiki/loconautics-bearing-axle\">Bearing Axle</a> drives its wheels, the <a href=\"/en/wiki/loconautics-transmission-block\">Transmission</a> sets the speed, the <a href=\"/en/wiki/loconautics-analog-controller\">Analog Controller</a> is the driving seat. The <a href=\"/en/wiki/loconautics-turntable-bearing\">Turntable Bearing</a> turns depot tracks. The <a href=\"/en/wiki/loconautics-hose-and-winch\">Hose Winch</a> and its nozzles refuel trains, and <a href=\"/en/wiki/loconautics-instrument-panels\">panels</a> and dashboards fit out the cab.</p>"
+   },
+   {
+    "id": "premier-train",
+    "title": "Your first physics train",
+    "html": "<p>Put a small bogey on a track in front of a <a href=\"/en/wiki/train-station\">Train Station</a>, the Bearing Axle right next to it, a Transmission on the axle's shaft and a rotation source behind (a Simulated Portable Engine, a Creative Motor...). Add an Analog Controller and copy its channels onto the Transmission and the axle items (hold Shift and use the controller while carrying that item). Open the station, pick <strong>New Train</strong>, then <strong>Assemble as Sable Train</strong>. Sit at the controller: each throttle notch moves the train. The full walk through is on the <a href=\"/en/wiki/loconautics-locomotive-assembly\">locomotive assembly</a> page.</p>"
+   },
+   {
+    "id": "pages",
+    "title": "Pages of the mod",
+    "html": "<ul><li><a href=\"/en/wiki/loconautics-bearing-axle\">Bearing Axle</a>: driving a bogey, the front of the train, steering frequencies.</li><li><a href=\"/en/wiki/loconautics-transmission-block\">Transmission</a>: speed and direction, redstone, frequencies, panel.</li><li><a href=\"/en/wiki/loconautics-analog-controller\">Analog Controller</a>: driving.</li><li><a href=\"/en/wiki/loconautics-locomotive-assembly\">Assembling a locomotive</a>: station, Train Casing, Physics Assembler.</li><li><a href=\"/en/wiki/loconautics-turntable-bearing\">Turntable</a> and <a href=\"/en/wiki/loconautics-turntable-depots\">depots</a>: program, schedules, signals, parking, manoeuvres.</li><li><a href=\"/en/wiki/loconautics-hose-and-winch\">Hose and Hose Winch</a>, <a href=\"/en/wiki/loconautics-hose-connector\">Hose Connector</a>: refuelling.</li><li><a href=\"/en/wiki/loconautics-instrument-panels\">Instrument panels</a> and dashboards.</li><li><a href=\"/en/wiki/loconautics-locomotive-boiler\">Boiler</a>, <a href=\"/en/wiki/loconautics-boiler-pressure\">pressure and safety</a>, <a href=\"/en/wiki/loconautics-small-combustion-engine\">combustion engine</a>: experimental in 0.1.3.</li><li><a href=\"/en/wiki/loconautics-blocks-and-items\">Blocks and items</a>: couplers, buffers, hats, cable, industrial fluids, Cerisene, ingredients and every variant.</li></ul>"
+   },
+   {
+    "id": "beta",
+    "title": "A beta: what works and what is hidden",
+    "html": "<p>Loconautics is in beta and moves fast (its public repository has already moved on to 0.1.4). In the modpack's 0.1.3, <code>loconautics-experimental.toml</code> leaves five groups at <code>false</code>: <strong>boilerworks</strong> (firebox, boiler bodies, smokestack, steam takeoff, smart safety valve), <strong>dieselworks</strong> (small combustion engines), <strong>industrialFluids</strong> (industrial pipes, pump, tank and valve, Cerisene, industrial iron sheet and rod), the screw link and the handbrake. These blocks are hidden and cannot be placed, and their recipes do not load. The industrial iron sheet can still be made by sequenced assembly from an iron sheet, so the recipes that use it (controller, winch, nozzle, panels...) work. The in-game Ponder still shows the experimental blocks: their pages follow it and say so at the top.</p>"
+   },
+   {
+    "id": "conseils",
+    "title": "Tips",
+    "html": "<p>Start with a short locomotive: one driven bogey, the cab and a single car. A Sable train has mass: the longer it is, the gentler it pulls away, and a curve taken too fast can throw it off the track depending on the server's settings. Keep Bearing Axles at the front of every pulling section, and check with Engineer's Goggles that they are valid before assembling. When in doubt, the station can still assemble an ordinary Create train: both kinds share the same network.</p><p>Loconautics is also the bridge between Create trains and the other Simulated mods. Because a Sable train is a physics object, a train can collide, carry blocks that react to motion and run alongside airships built with Create Aeronautics. Several of its gauges even read values from those mods (propeller speed, altitude, thrusters), and its engines burn the fuels of Create Diesel Generators.</p>"
+   }
+  ],
+  "sources": [
+   "Code, data and Ponder storyboards: Create: Loconautics 0.1.3 BETA, public repository github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (last before the move to 0.1.4); its 26 Ponder structures and en_us.json are byte-identical to the loconautics-0.1.3BETA.jar of the Create France modpack",
+   "License: code and data under MIT; textures, models, sounds and lang files all rights reserved (Lycoris). Our videos and images are renders from our own engine; our texts are original, no Ponder text is copied",
+   "Numbers: config/LoconauticsConfig.java (defaults), content/combustion/SmallEngineTuning.java and CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java; experimental features: common/experimental/ExperimentalFeature.java and the modpack's config/loconautics-experimental.toml",
+   "Recipes: data/loconautics/recipe/*.json in the 0.1.3 BETA jar",
+   "Simulated 1.3.2 blocks (Portable Engine, Rope Connector, Physics Assembler): jar shipped with Create Aeronautics 1.3.2; code MIT, art all rights reserved (The Simulated Team)"
+  ]
+ }
+}

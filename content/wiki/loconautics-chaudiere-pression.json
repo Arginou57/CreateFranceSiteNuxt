@@ -1,0 +1,368 @@
+{
+ "slug": "loconautics-chaudiere-pression",
+ "name": "Chaudière : vapeur, pression et sécurité",
+ "blockId": "loconautics:steam_takeoff",
+ "category": "loconautics",
+ "title": "Pression de chaudière — Create: Loconautics",
+ "description": "Prise de vapeur, pression, soupapes de sûreté, explosion et jauge de la chaudière de Create: Loconautics (fonction expérimentale de la 0.1.3 BETA).",
+ "datePublished": "2026-11-24",
+ "dateModified": "2026-11-24",
+ "createVersion": "6.0.10 · Create: Loconautics 0.1.3 BETA",
+ "mcVersion": "1.21.1",
+ "intro": "Une fois montée, la <a href=\"/wiki/loconautics-chaudiere\">chaudière</a> de Create: Loconautics monte en pression. La <strong>prise de vapeur</strong> en tire de la rotation, les <strong>soupapes de sûreté</strong> relâchent le trop-plein, et une <strong>jauge</strong> affiche ce qui se passe à l'intérieur. Mal surveillée, la chaudière finit par lâcher : manque d'eau ou soupape fermée, et le tonneau explose.",
+ "facts": [
+  {
+   "label": "Prise de vapeur",
+   "value": "De 4 à 128 tr/min selon la pression"
+  },
+  {
+   "label": "Capacité",
+   "value": "Selon la taille du tonneau (83 SU par bloc de corps)"
+  },
+  {
+   "label": "Pression",
+   "value": "Travail 1,0 ; éclatement 1,6"
+  },
+  {
+   "label": "Soupape intelligente",
+   "value": "S'ouvre seule à 3/4 de la pression d'éclatement"
+  },
+  {
+   "label": "À sec",
+   "value": "Une chaudière chaude sans eau lâche en 30 s"
+  },
+  {
+   "label": "Explosion",
+   "value": "Puissance 3 à 9 selon la taille du tonneau"
+  },
+  {
+   "label": "Version",
+   "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10 (expérimental)"
+  }
+ ],
+ "recipe": {
+  "label": "Prise de vapeur (établi ; recette chargée seulement si « boilerworks » est activé)",
+  "grid": [
+   [
+    "Roue dentée",
+    "Rotor",
+    "Plaque de fer industriel"
+   ],
+   [
+    "Boitier d'andésite",
+    "Hélice",
+    "Boitier d'andésite"
+   ],
+   [
+    "Plaque de fer industriel",
+    "Rotor",
+    "Roue dentée"
+   ]
+  ],
+  "items": [
+   [
+    "create:cogwheel",
+    "create:shaft",
+    "loconautics:industrial_iron_sheet"
+   ],
+   [
+    "create:andesite_casing",
+    "create:propeller",
+    "create:andesite_casing"
+   ],
+   [
+    "loconautics:industrial_iron_sheet",
+    "create:shaft",
+    "create:cogwheel"
+   ]
+  ],
+  "result": "1 prise de vapeur",
+  "resultItem": "loconautics:steam_takeoff"
+ },
+ "videos": [
+  {
+   "id": "loco_boiler_takeoff",
+   "name": "Chaudière : la prise de vapeur",
+   "description": "La prise de vapeur contre le tonneau fait tourner son arbre ; la vitesse suit la pression.",
+   "duration": "PT10S",
+   "chapters": [
+    {
+     "t": 1.0,
+     "section": "boiler-takeoff"
+    },
+    {
+     "t": 2.75,
+     "section": "boiler-takeoff"
+    },
+    {
+     "t": 4.5,
+     "section": "boiler-takeoff"
+    },
+    {
+     "t": 6.25,
+     "section": "boiler-takeoff"
+    }
+   ]
+  },
+  {
+   "id": "loco_boiler_pressure",
+   "name": "Chaudière : pression et soupapes",
+   "description": "La chaudière allumée et remplie monte en pression ; une soupape de sûreté apparaît sur le tonneau et devient une soupape intelligente.",
+   "duration": "PT14S",
+   "chapters": [
+    {
+     "t": 1.0,
+     "section": "boiler-pressure"
+    },
+    {
+     "t": 5.0,
+     "section": "boiler-pressure"
+    },
+    {
+     "t": 7.75,
+     "section": "boiler-pressure"
+    },
+    {
+     "t": 10.25,
+     "section": "boiler-pressure"
+    }
+   ]
+  },
+  {
+   "id": "loco_boiler_failure",
+   "name": "Chaudière : quand elle lâche",
+   "description": "La chaudière chaude se vide, le foyer brûle toujours, puis l'eau revient ; un feu plein contre une soupape fermée ferait éclater le tonneau.",
+   "duration": "PT15S",
+   "chapters": [
+    {
+     "t": 2.0,
+     "section": "boiler-failure"
+    },
+    {
+     "t": 5.5,
+     "section": "boiler-failure"
+    },
+    {
+     "t": 7.25,
+     "section": "boiler-failure"
+    },
+    {
+     "t": 11.75,
+     "section": "boiler-failure"
+    }
+   ]
+  },
+  {
+   "id": "loco_boiler_gauge",
+   "name": "Chaudière : la jauge",
+   "description": "Un panneau de locomotive lié au foyer reçoit une jauge de pression.",
+   "duration": "PT13S",
+   "chapters": [
+    {
+     "t": 2.25,
+     "section": "boiler-gauge"
+    },
+    {
+     "t": 5.0,
+     "section": "boiler-gauge"
+    },
+    {
+     "t": 7.75,
+     "section": "boiler-gauge"
+    }
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "id": "boiler-takeoff",
+   "title": "La prise de vapeur",
+   "image": "loco_boiler_takeoff_vue.webp",
+   "alt": "La prise de vapeur contre le corps de chaudière, son arbre tournant",
+   "html": "<p>La <strong>prise de vapeur</strong> (Steam Takeoff) posée contre le tonneau produit de la rotation. Sa vitesse suit la pression : de <strong>4 à 128 tr/min</strong>. Sa capacité de stress suit la taille du tonneau, 83 SU par bloc de corps. Si la chaudière s'arrête, l'arbre ralentit et s'immobilise en 3 secondes.</p>",
+   "video": "loco_boiler_takeoff"
+  },
+  {
+   "id": "boiler-pressure",
+   "title": "Pression et soupapes",
+   "image": "loco_boiler_pressure_vue.webp",
+   "alt": "La chaudière avec une soupape de sûreté intelligente sur le tonneau",
+   "html": "<p>Allumée et remplie d'eau, la chaudière <strong>monte en pression</strong>. La pression de travail est 1,0 ; elle éclate à <strong>1,6</strong>. Les <strong>soupapes de sûreté</strong> posées sur le tonneau relâchent la pression ; un clic droit avec un <strong>volant de vanne</strong> (Valve) sur une soupape la lie, pour l'ouvrir à la main depuis un <a href=\"/wiki/loconautics-panneaux-de-commande\">panneau</a>. La <strong>soupape intelligente</strong> s'ouvre d'elle-même aux trois quarts de la pression d'éclatement. Dans le jar 0.1.3, la simple soupape de la structure Ponder n'existe plus (bloc renommé) : la scène montre directement la soupape intelligente.</p>",
+   "video": "loco_boiler_pressure"
+  },
+  {
+   "id": "boiler-failure",
+   "title": "Quand la chaudière lâche",
+   "image": "loco_boiler_failure_vue.webp",
+   "alt": "La chaudière chauffée, foyer allumé",
+   "html": "<p>Une chaudière chaude <strong>sans eau</strong> lâche au bout de 30 secondes (<code>crownSheetTicks</code> 600) ; la remplir fait redescendre le compte à rebours deux fois plus vite. Un feu plein contre une soupape fermée fait <strong>éclater</strong> le tonneau. Les fumées, elles, n'explosent jamais : elles ne font qu'étouffer la sortie. L'explosion grandit avec la taille du tonneau (de 3 à 9). En mode « Arcade » (réglage <code>boilerRealism</code>), la chaudière se bloque au lieu d'exploser, et une pelle la remet en route.</p>",
+   "video": "loco_boiler_failure"
+  },
+  {
+   "id": "boiler-gauge",
+   "title": "Lire la chaudière",
+   "image": "loco_boiler_gauge_vue.webp",
+   "alt": "La chaudière et le panneau de jauge posé sur son flanc",
+   "html": "<p>Un clic droit sur le foyer avec un <strong>panneau de locomotive</strong> (Locomotive Gauge) en main le lie à cette chaudière ; posé sur n'importe quelle face du même niveau, il affiche une jauge (ici la pression). Une <a href=\"/wiki/cle\">clé</a> ouvre ses réglages : mesure affichée, fond, aiguille, couleurs. Les jauges lisent aussi les compteurs de vitesse, les stressomètres et les vannes à fluide. Dans la scène, le corps de chaudière déborde d'un demi-bloc sur les côtés et la jauge posée contre lui y est presque cachée, comme dans le jeu.</p>",
+   "video": "loco_boiler_gauge"
+  },
+  {
+   "id": "experimental",
+   "title": "Une fonction expérimentale",
+   "html": "<p><strong>Fonction expérimentale.</strong> Dans Loconautics 0.1.3 BETA, la chaudière fait partie des fonctions « boilerworks » <strong>désactivées par défaut</strong> (fichier <code>loconautics-experimental.toml</code>, aussi à <code>false</code> dans le modpack Create France) : ses blocs sont cachés de l'inventaire créatif, ne peuvent pas être posés et leurs recettes ne se chargent pas. Le Ponder du jeu les montre quand même ; cette page le suit, pour le jour où la fonction sera activée.</p>"
+  },
+  {
+   "id": "a-savoir",
+   "title": "À savoir",
+   "html": "<p><strong>Réaliste ou arcade.</strong> Le réglage serveur <code>boilerRealism</code> choisit le comportement : en mode réaliste (par défaut), une chaudière à sec ou en surpression explose ; en mode arcade, elle se met en sécurité et attend un coup de pelle. Le réglage <code>explodeOnCrash</code> (activé) fait aussi exploser une chaudière embarquée quand le train percute violemment un obstacle.</p>"
+  },
+  {
+   "id": "conseils",
+   "title": "Conseils",
+   "html": "<p>Une soupape intelligente sur chaque chaudière est la meilleure assurance : elle s'ouvre seule avant l'éclatement. Sur un train, une collision violente peut aussi faire exploser la chaudière (réglage <code>explodeOnCrash</code>, puissance 4).</p>"
+  }
+ ],
+ "related": [
+  "loconautics-chaudiere",
+  "create-loconautics",
+  "loconautics-panneaux-de-commande",
+  "moteur-a-vapeur",
+  "stressometre-compteur-de-vitesse",
+  "lunettes-d-ingenieur"
+ ],
+ "sources": [
+  "Code, données et storyboards Ponder : Create: Loconautics 0.1.3 BETA, dépôt public github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (dernier avant le passage à 0.1.4) ; ses 26 structures Ponder et son en_us.json sont identiques octet pour octet au jar loconautics-0.1.3BETA.jar du modpack Create France",
+  "Licence : code et données sous MIT ; textures, modèles, sons et fichiers de langue « tous droits réservés » (Lycoris). Nos vidéos et images sont des rendus de notre moteur ; nos textes sont originaux, aucun texte du Ponder n'est recopié",
+  "Chiffres : config/LoconauticsConfig.java (valeurs par défaut), content/combustion/SmallEngineTuning.java et CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java ; fonctions expérimentales : common/experimental/ExperimentalFeature.java et config/loconautics-experimental.toml du modpack",
+  "Recettes : data/loconautics/recipe/*.json du jar 0.1.3 BETA",
+  "Blocs de Simulated 1.3.2 (moteur portable, raccord de corde, assembleur physique) : jar livré avec Create Aeronautics 1.3.2 ; code MIT, art tous droits réservés (The Simulated Team)"
+ ],
+ "en": {
+  "slugEn": "loconautics-boiler-pressure",
+  "name": "Boiler steam, pressure and safety",
+  "title": "Boiler pressure — Create: Loconautics guide",
+  "description": "Steam Takeoff, pressure, safety valves, failure and the gauge of the Create: Loconautics boiler (an experimental feature in 0.1.3 BETA).",
+  "intro": "Once built, the Create: Loconautics <a href=\"/en/wiki/loconautics-locomotive-boiler\">boiler</a> builds up pressure. The <strong>Steam Takeoff</strong> draws rotation from it, <strong>Safety Valves</strong> let the excess out, and a <strong>gauge</strong> shows what happens inside. Left unattended, the boiler eventually fails: no water or a shut valve, and the barrel explodes.",
+  "facts": [
+   {
+    "label": "Steam Takeoff",
+    "value": "Between 4 and 128 RPM, following the pressure"
+   },
+   {
+    "label": "Capacity",
+    "value": "Scales with the barrel (83 SU per body block)"
+   },
+   {
+    "label": "Pressure",
+    "value": "Normal 1.0; rupture at 1.6"
+   },
+   {
+    "label": "Smart Safety Valve",
+    "value": "Opens on its own at 75% of rupture pressure"
+   },
+   {
+    "label": "Running dry",
+    "value": "A hot boiler without water fails within 30 s"
+   },
+   {
+    "label": "Explosion",
+    "value": "Strength 3 to 9, growing with the barrel"
+   },
+   {
+    "label": "Version",
+    "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10 (experimental)"
+   }
+  ],
+  "recipe": {
+   "label": "Steam Takeoff (crafting table; recipe only loads with « boilerworks » on)",
+   "grid": [
+    [
+     "Cogwheel",
+     "Shaft",
+     "Industrial Iron Sheet"
+    ],
+    [
+     "Andesite Casing",
+     "Propeller",
+     "Andesite Casing"
+    ],
+    [
+     "Industrial Iron Sheet",
+     "Shaft",
+     "Cogwheel"
+    ]
+   ],
+   "result": "1 Steam Takeoff"
+  },
+  "videos": [
+   {
+    "id": "loco_boiler_takeoff",
+    "name": "Boiler: the Steam Takeoff",
+    "description": "Mounted on the barrel, the Steam Takeoff spins its shaft; its RPM rises and falls with the pressure."
+   },
+   {
+    "id": "loco_boiler_pressure",
+    "name": "Boiler: pressure and relief valves",
+    "description": "The fired, filled boiler gains pressure; a relief valve spot on the barrel ends up holding a Smart Safety Valve."
+   },
+   {
+    "id": "loco_boiler_failure",
+    "name": "Boiler: when things go wrong",
+    "description": "The hot boiler runs out of water while the fire keeps burning, then water returns; maximum fire against a closed valve would rupture the barrel."
+   },
+   {
+    "id": "loco_boiler_gauge",
+    "name": "Boiler: the gauge",
+    "description": "A Locomotive Gauge linked to the Firebox gets a pressure dial."
+   }
+  ],
+  "sections": [
+   {
+    "id": "boiler-takeoff",
+    "title": "The Steam Takeoff",
+    "alt": "The Steam Takeoff on the boiler body, its shaft turning",
+    "html": "<p>A <strong>Steam Takeoff</strong> mounted on the barrel is the boiler's rotation output. Its RPM tracks the pressure, between <strong>4 and 128 RPM</strong>, and its stress capacity scales with the barrel, 83 SU per body block. Once the boiler quits, the shaft coasts to a halt in about 3 seconds.</p>"
+   },
+   {
+    "id": "boiler-pressure",
+    "title": "Pressure and relief valves",
+    "alt": "The boiler with a Smart Safety Valve on the barrel",
+    "html": "<p>Once fired and full of water, the boiler <strong>gains pressure</strong>. Normal running pressure sits at 1.0, and the barrel ruptures at <strong>1.6</strong>. <strong>Safety Valves</strong> mounted on the barrel let pressure off; a <strong>Valve</strong> item used on one links it, so a hand wheel on a <a href=\"/en/wiki/loconautics-instrument-panels\">panel</a> can open it. The <strong>Smart Safety Valve</strong> needs no hand: it opens on its own at 75% of the rupture pressure. In the 0.1.3 jar, the plain valve stored in the Ponder structure is an unknown block (it was renamed), so the scene goes straight to the smart one.</p>"
+   },
+   {
+    "id": "boiler-failure",
+    "title": "When things go wrong",
+    "alt": "The heated boiler with its fire lit",
+    "html": "<p>Let a hot boiler <strong>run dry</strong> and it fails 30 seconds later (<code>crownSheetTicks</code> 600); pouring water back in rewinds that timer at double speed. Maximum fire with the relief valve held shut <strong>ruptures</strong> the barrel. Exhaust build-up is harmless by comparison: it smothers the output but never blows. The explosion strength goes from 3 to 9 depending on the barrel length. With the <code>boilerRealism</code> setting on Arcade, a failing boiler simply locks itself and a shovel brings it back.</p>"
+   },
+   {
+    "id": "boiler-gauge",
+    "title": "Watching the boiler",
+    "alt": "The boiler and the gauge panel on its side",
+    "html": "<p>Use a <strong>Locomotive Gauge</strong> on the Firebox to link it to that boiler; mounted on any face at that level, it shows a dial, pressure in this case. The <a href=\"/en/wiki/wrench\">Wrench</a> brings up its options: what to measure, dial face, needle, colours. Dials can also mirror a speedometer, a stressometer or a fluid valve. In the scene, the round boiler body bulges half a block past its own block, and the gauge sitting against it is nearly swallowed by the bulge, exactly as it would be in game.</p>"
+   },
+   {
+    "id": "experimental",
+    "title": "An experimental feature",
+    "html": "<p><strong>Experimental feature.</strong> In Loconautics 0.1.3 BETA the boiler belongs to the « boilerworks » features, <strong>off by default</strong> (file <code>loconautics-experimental.toml</code>, also <code>false</code> in the Create France modpack): its blocks are hidden from the creative inventory, cannot be placed and their recipes do not load. The in-game Ponder still shows them; this page follows it, for the day the feature is switched on.</p>"
+   },
+   {
+    "id": "a-savoir",
+    "title": "Good to know",
+    "html": "<p><strong>Realistic or arcade.</strong> The server option <code>boilerRealism</code> picks the behaviour: in realistic mode (the default), a dry or over-pressured boiler explodes; in arcade mode it shuts itself down and waits for a shovel. The <code>explodeOnCrash</code> option (on) also blows up a boiler carried by a train when that train slams into something.</p>"
+   },
+   {
+    "id": "conseils",
+    "title": "Tips",
+    "html": "<p>A Smart Safety Valve on every boiler is the best insurance: it opens by itself before the burst. On a train, a violent crash can also blow up the boiler (setting <code>explodeOnCrash</code>, power 4).</p>"
+   }
+  ],
+  "sources": [
+   "Code, data and Ponder storyboards: Create: Loconautics 0.1.3 BETA, public repository github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (last before the move to 0.1.4); its 26 Ponder structures and en_us.json are byte-identical to the loconautics-0.1.3BETA.jar of the Create France modpack",
+   "License: code and data under MIT; textures, models, sounds and lang files all rights reserved (Lycoris). Our videos and images are renders from our own engine; our texts are original, no Ponder text is copied",
+   "Numbers: config/LoconauticsConfig.java (defaults), content/combustion/SmallEngineTuning.java and CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java; experimental features: common/experimental/ExperimentalFeature.java and the modpack's config/loconautics-experimental.toml",
+   "Recipes: data/loconautics/recipe/*.json in the 0.1.3 BETA jar",
+   "Simulated 1.3.2 blocks (Portable Engine, Rope Connector, Physics Assembler): jar shipped with Create Aeronautics 1.3.2; code MIT, art all rights reserved (The Simulated Team)"
+  ]
+ }
+}

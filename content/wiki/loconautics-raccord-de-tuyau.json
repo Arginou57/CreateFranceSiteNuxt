@@ -1,0 +1,366 @@
+{
+ "slug": "loconautics-raccord-de-tuyau",
+ "name": "Raccord de tuyau",
+ "blockId": "loconautics:hose_connector",
+ "category": "loconautics",
+ "title": "Raccord de tuyau — Create: Loconautics, guide",
+ "description": "Le raccord de tuyau de Create: Loconautics branche un tuyau souple sur un réservoir : pompe, raccord à raccord, longues lignes.",
+ "datePublished": "2026-11-24",
+ "dateModified": "2026-11-24",
+ "createVersion": "6.0.10 · Create: Loconautics 0.1.3 BETA",
+ "mcVersion": "1.21.1",
+ "intro": "Le <strong>raccord de tuyau</strong> (Hose Connector) branche un tuyau souple directement sur un bloc qui contient des fluides, sans buse. Avec un <a href=\"/wiki/loconautics-tuyau-et-treuil\">treuil</a> ou un autre raccord à l'autre bout, il transporte un fluide d'un réservoir à l'autre, et les <strong>raccords de corde</strong> de Simulated permettent de tendre de longues lignes.",
+ "facts": [
+  {
+   "label": "Pose",
+   "value": "Sur la face d'un bloc qui contient des fluides"
+  },
+  {
+   "label": "Tuyaux",
+   "value": "Un seul par raccord ; jusqu'à 2 par raccord de corde (entrée et sortie)"
+  },
+  {
+   "label": "Longueur",
+   "value": "28 blocs par tuyau, 16 tuyaux par chaîne au plus"
+  },
+  {
+   "label": "Pompe",
+   "value": "Ne porte le fluide que jusqu'où la pompe pousse"
+  },
+  {
+   "label": "Démontage",
+   "value": "Clé : d'abord le dernier tuyau, puis le raccord"
+  },
+  {
+   "label": "Version",
+   "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10"
+  }
+ ],
+ "recipe": {
+  "label": "Fabrication à l'établi",
+  "grid": [
+   [
+    "Lingot de fer",
+    "Plaque de fer industriel",
+    "Lingot de fer"
+   ],
+   [
+    "Lingot de fer",
+    "Tuyau à fluide",
+    "Lingot de fer"
+   ]
+  ],
+  "items": [
+   [
+    "minecraft:iron_ingot",
+    "loconautics:industrial_iron_sheet",
+    "minecraft:iron_ingot"
+   ],
+   [
+    "minecraft:iron_ingot",
+    "create:fluid_pipe",
+    "minecraft:iron_ingot"
+   ]
+  ],
+  "result": "1 raccord de tuyau",
+  "resultItem": "loconautics:hose_connector"
+ },
+ "videos": [
+  {
+   "id": "loco_hose_connector",
+   "name": "Raccord de tuyau : du treuil au réservoir",
+   "description": "Un raccord sur un réservoir, relié au treuil par un tuyau ; la pompe remplit le réservoir, puis inversée le vide.",
+   "duration": "PT18S",
+   "chapters": [
+    {
+     "t": 1.0,
+     "section": "hose-connector"
+    },
+    {
+     "t": 6.5,
+     "section": "hose-connector"
+    },
+    {
+     "t": 9.25,
+     "section": "hose-connector"
+    },
+    {
+     "t": 14.0,
+     "section": "hose-connector"
+    }
+   ]
+  },
+  {
+   "id": "loco_hose_connectorspeed",
+   "name": "Raccord de tuyau : la vitesse de la pompe",
+   "description": "À faible vitesse, le fluide s'arrête avant le raccord ; à grande vitesse il arrive au bout ; inversée, la pompe aspire à la même vitesse.",
+   "duration": "PT11S",
+   "chapters": [
+    {
+     "t": 2.5,
+     "section": "hose-connectorspeed"
+    },
+    {
+     "t": 4.25,
+     "section": "hose-connectorspeed"
+    },
+    {
+     "t": 6.0,
+     "section": "hose-connectorspeed"
+    }
+   ]
+  },
+  {
+   "id": "loco_hose_connectorlink",
+   "name": "Raccord de tuyau : d'un raccord à l'autre",
+   "description": "Deux raccords reliés directement par un tuyau, sans treuil ; la pompe derrière le premier envoie le fluide dans le réservoir derrière le second.",
+   "duration": "PT15S",
+   "chapters": [
+    {
+     "t": 1.75,
+     "section": "hose-connectorlink"
+    },
+    {
+     "t": 5.5,
+     "section": "hose-connectorlink"
+    },
+    {
+     "t": 8.25,
+     "section": "hose-connectorlink"
+    }
+   ]
+  },
+  {
+   "id": "loco_hose_ropeconnector",
+   "name": "Raccord de tuyau : relais par raccord de corde",
+   "description": "Un raccord de corde de Simulated reçoit le tuyau du treuil, puis un second tuyau continue jusqu'à un raccord ; l'eau suit la chaîne.",
+   "duration": "PT20S",
+   "chapters": [
+    {
+     "t": 0.75,
+     "section": "hose-ropeconnector"
+    },
+    {
+     "t": 6.25,
+     "section": "hose-ropeconnector"
+    },
+    {
+     "t": 14.0,
+     "section": "hose-ropeconnector"
+    }
+   ]
+  },
+  {
+   "id": "loco_hose_ropeconnector_run",
+   "name": "Raccord de tuyau : une longue ligne",
+   "description": "Neuf raccords de corde tous les trois blocs portent une longue ligne de tuyaux jusqu'au réservoir du bout, que la pompe remplit.",
+   "duration": "PT22S",
+   "chapters": [
+    {
+     "t": 3.79,
+     "section": "hose-ropeconnector-run"
+    },
+    {
+     "t": 15.68,
+     "section": "hose-ropeconnector-run"
+    },
+    {
+     "t": 19.06,
+     "section": "hose-ropeconnector-run"
+    }
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "id": "hose-connector",
+   "title": "Du treuil au réservoir",
+   "image": "loco_hose_connector_vue.webp",
+   "alt": "Un tuyau souple du treuil jusqu'au raccord posé sur un réservoir",
+   "html": "<p>Le raccord se pose sur la face de n'importe quel bloc qui contient des fluides, par exemple un <a href=\"/wiki/reservoir-a-fluide\">réservoir</a>. Clic droit sur le treuil avec un tuyau, puis sur le raccord. Le fluide pompé dans le tuyau entre dans le bloc derrière la plaque ; une pompe inversée le ressort par le même chemin. Une <a href=\"/wiki/cle\">clé</a> retire d'abord le dernier tuyau, puis le raccord lui-même.</p>",
+   "video": "loco_hose_connector"
+  },
+  {
+   "id": "hose-connectorspeed",
+   "title": "La vitesse de la pompe",
+   "image": "loco_hose_connectorspeed_vue.webp",
+   "alt": "Une pompe mécanique lente qui n'envoie pas le fluide jusqu'au raccord",
+   "html": "<p>Un raccord ne reçoit le fluide que <strong>jusqu'où la pompe pousse</strong>. À faible vitesse, le fluide s'arrête en chemin ; à grande vitesse, il arrive au bout du tuyau. Pour aspirer dans l'autre sens, la pompe inversée a besoin de la même vitesse.</p>",
+   "video": "loco_hose_connectorspeed"
+  },
+  {
+   "id": "hose-connectorlink",
+   "title": "D'un raccord à l'autre",
+   "image": "loco_hose_connectorlink_vue.webp",
+   "alt": "Un tuyau tendu entre deux raccords posés sur deux réservoirs",
+   "html": "<p>Un tuyau peut relier <strong>deux raccords</strong> directement, sans treuil : clic droit sur l'un avec le tuyau, puis sur l'autre. Une pompe derrière un raccord pousse le fluide dans le tuyau et jusque dans le bloc derrière l'autre raccord. Un raccord ne tient qu'un seul tuyau et ne relaie pas vers un autre.</p>",
+   "video": "loco_hose_connectorlink"
+  },
+  {
+   "id": "hose-ropeconnector",
+   "title": "Relayer par un raccord de corde",
+   "image": "loco_hose_ropeconnector_vue.webp",
+   "alt": "Un tuyau du treuil passe par un raccord de corde avant d'atteindre le raccord",
+   "html": "<p>Les <strong>raccords de corde</strong> (Rope Connector, de Simulated) tiennent un tuyau aussi bien qu'une corde. Un treuil peut enrouler son tuyau jusqu'à un raccord de corde, et un second tuyau continue vers un raccord de tuyau : le fluide suit la chaîne jusqu'au dernier raccord ou à la dernière buse. Chaque raccord de corde tient au plus <strong>2 tuyaux</strong>, un qui entre et un qui sort.</p>",
+   "video": "loco_hose_ropeconnector"
+  },
+  {
+   "id": "hose-ropeconnector-run",
+   "title": "Une longue ligne",
+   "image": "loco_hose_ropeconnector_run_vue.webp",
+   "alt": "Une longue ligne de tuyaux portée par des raccords de corde",
+   "html": "<p>Un tuyau s'étire sur <strong>28 blocs</strong> par défaut, et une chaîne peut passer par <strong>16 tuyaux</strong> au plus. Dans la scène, neuf raccords de corde tous les trois blocs portent la ligne ; le fluide arrive au dernier réservoir quel que soit le nombre de raccords traversés.</p>",
+   "video": "loco_hose_ropeconnector_run"
+  },
+  {
+   "id": "a-savoir",
+   "title": "À savoir",
+   "html": "<p><strong>Tuyau souple ou tuyaux de Create ?</strong> Les <a href=\"/wiki/tuyau-a-fluide\">tuyaux à fluide</a> de Create sont fixes : ils ne peuvent pas suivre un train qui part. Le tuyau souple, lui, relie deux points qui bougent l'un par rapport à l'autre, par exemple un quai et un train à l'arrêt, ou deux voitures d'un même train. Sa longueur maximale se règle côté serveur (<code>hose.maxLength</code>, 28 blocs par défaut). Les raccords de corde viennent de Simulated, livré avec Create Aeronautics dans le modpack : on les fabrique et on les pose comme pour une corde ordinaire.</p><p>Un raccord sur une locomotive est le moyen le plus simple de la ravitailler depuis un quai : le tuyau part du treuil du quai et se branche sur le raccord, sans buse à manipuler.</p>"
+  },
+  {
+   "id": "conseils",
+   "title": "Conseils",
+   "html": "<p>Le raccord est la bonne pièce pour un branchement qui ne bouge pas : réservoir de quai, citerne, chaudière fixe. Pour une longue ligne, espace les raccords de corde de quelques blocs pour limiter le mou, et souviens-toi que le fluide ne va pas plus loin que la pompe ne pousse : une ligne longue demande une pompe rapide.</p>"
+  }
+ ],
+ "related": [
+  "loconautics-tuyau-et-treuil",
+  "create-loconautics",
+  "reservoir-a-fluide",
+  "pompe-mecanique",
+  "tuyau-a-fluide",
+  "loconautics-chaudiere"
+ ],
+ "sources": [
+  "Code, données et storyboards Ponder : Create: Loconautics 0.1.3 BETA, dépôt public github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (dernier avant le passage à 0.1.4) ; ses 26 structures Ponder et son en_us.json sont identiques octet pour octet au jar loconautics-0.1.3BETA.jar du modpack Create France",
+  "Licence : code et données sous MIT ; textures, modèles, sons et fichiers de langue « tous droits réservés » (Lycoris). Nos vidéos et images sont des rendus de notre moteur ; nos textes sont originaux, aucun texte du Ponder n'est recopié",
+  "Chiffres : config/LoconauticsConfig.java (valeurs par défaut), content/combustion/SmallEngineTuning.java et CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java ; fonctions expérimentales : common/experimental/ExperimentalFeature.java et config/loconautics-experimental.toml du modpack",
+  "Recettes : data/loconautics/recipe/*.json du jar 0.1.3 BETA",
+  "Blocs de Simulated 1.3.2 (moteur portable, raccord de corde, assembleur physique) : jar livré avec Create Aeronautics 1.3.2 ; code MIT, art tous droits réservés (The Simulated Team)"
+ ],
+ "en": {
+  "slugEn": "loconautics-hose-connector",
+  "name": "Hose Connector",
+  "title": "Hose Connector — Create: Loconautics guide",
+  "description": "The Create: Loconautics Hose Connector links a hose to a tank: pump speed, connector to connector and long runs with Rope Connectors.",
+  "intro": "The <strong>Hose Connector</strong> plugs a hose directly into anything that stores fluid, with no nozzle involved. Put a <a href=\"/en/wiki/loconautics-hose-and-winch\">winch</a> or another connector at the far end and it moves fluid between two containers; Simulated's <strong>Rope Connectors</strong> let you hang very long lines.",
+  "facts": [
+   {
+    "label": "Mounting",
+    "value": "On a face of any fluid-storing block"
+   },
+   {
+    "label": "Hoses",
+    "value": "One per connector; two per Rope Connector (incoming and outgoing)"
+   },
+   {
+    "label": "Length",
+    "value": "28 blocks per hose, at most 16 hoses in a chain"
+   },
+   {
+    "label": "Pump",
+    "value": "Fluid travels no further than the pump pressure reaches"
+   },
+   {
+    "label": "Removal",
+    "value": "Wrench: most recent hose first, then the connector"
+   },
+   {
+    "label": "Version",
+    "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10"
+   }
+  ],
+  "recipe": {
+   "label": "Crafting table recipe",
+   "grid": [
+    [
+     "Iron Ingot",
+     "Industrial Iron Sheet",
+     "Iron Ingot"
+    ],
+    [
+     "Iron Ingot",
+     "Fluid Pipe",
+     "Iron Ingot"
+    ]
+   ],
+   "result": "1 Hose Connector"
+  },
+  "videos": [
+   {
+    "id": "loco_hose_connector",
+    "name": "Hose Connector: winch to tank",
+    "description": "A connector on a tank is hooked to the winch by a hose; the pump fills the tank, then running backwards empties it."
+   },
+   {
+    "id": "loco_hose_connectorspeed",
+    "name": "Hose Connector: pump RPM matters",
+    "description": "Too slow, the fluid stalls before reaching the connector; fast enough, it gets there; reversed, the pump needs that same RPM to suck it back."
+   },
+   {
+    "id": "loco_hose_connectorlink",
+    "name": "Hose Connector: two connectors, no winch",
+    "description": "A hose runs straight from one connector to another; the pump behind the first fills the tank behind the second."
+   },
+   {
+    "id": "loco_hose_ropeconnector",
+    "name": "Hose Connector: relaying via a Rope Connector",
+    "description": "A Simulated Rope Connector catches the winch's hose, and a second hose continues to a connector; water flows down the chain."
+   },
+   {
+    "id": "loco_hose_ropeconnector_run",
+    "name": "Hose Connector: a long line",
+    "description": "Nine Rope Connectors spaced three blocks apart hold up a long line of hoses ending at a tank, which the pump then fills."
+   }
+  ],
+  "sections": [
+   {
+    "id": "hose-connector",
+    "title": "Winch to tank",
+    "alt": "A hose from the winch to the connector on a tank",
+    "html": "<p>Fit the connector onto a face of anything that stores fluid, a <a href=\"/en/wiki/fluid-tank\">Fluid Tank</a> for example. With a hose in hand, click the winch, then the connector. Whatever the pump sends down the hose flows through the plate into that block; reverse the pump and it travels back the way it came. The <a href=\"/en/wiki/wrench\">Wrench</a> removes the most recent hose first, and the connector after that.</p>"
+   },
+   {
+    "id": "hose-connectorspeed",
+    "title": "Pump RPM matters",
+    "alt": "A slow Mechanical Pump that cannot push the fluid all the way",
+    "html": "<p>Fluid only reaches a connector <strong>if the pump is strong enough to push it there</strong>. Spin the pump slowly and the flow stalls part way; spin it fast and it arrives. Sucking fluid back calls for the same RPM in reverse.</p>"
+   },
+   {
+    "id": "hose-connectorlink",
+    "title": "Two connectors, no winch",
+    "alt": "A hose strung between two connectors on two tanks",
+    "html": "<p>No winch is needed to join <strong>a pair of connectors</strong>: click one with the hose, then the other. A pump sitting behind one of them drives fluid along the hose into whatever stores fluid behind the second. Each connector takes only one hose and cannot pass fluid on to a further hose.</p>"
+   },
+   {
+    "id": "hose-ropeconnector",
+    "title": "Relaying via a Rope Connector",
+    "alt": "A hose from the winch passing through a Rope Connector on its way to the connector",
+    "html": "<p>Simulated's <strong>Rope Connectors</strong> can carry a hose instead of a rope. Let the winch wind its hose to a Rope Connector, and run another hose from there to a Hose Connector: fluid passes down the whole chain to its final connector or nozzle. A Rope Connector carries <strong>two hoses</strong> at most, an incoming and an outgoing one.</p>"
+   },
+   {
+    "id": "hose-ropeconnector-run",
+    "title": "A long line",
+    "alt": "A long line of hoses held up by Rope Connectors",
+    "html": "<p>With default settings one hose reaches <strong>28 blocks</strong>, and a chain may include <strong>16 hoses</strong>. Here, nine Rope Connectors placed every three blocks hold the line up; the fluid still lands in the far tank, however many relays it went through.</p>"
+   },
+   {
+    "id": "a-savoir",
+    "title": "Good to know",
+    "html": "<p><strong>Hose or Create pipes?</strong> Create's <a href=\"/en/wiki/fluid-pipe\">Fluid Pipes</a> are fixed: they cannot follow a departing train. The hose joins two points that move relative to each other, such as a platform and a stopped train, or two cars of one train. Its maximum length is a server setting (<code>hose.maxLength</code>, 28 blocks by default). Rope Connectors come from Simulated, shipped with Create Aeronautics in the modpack: craft and place them as for an ordinary rope.</p><p>A connector on a locomotive is the simplest way to refuel it from a platform: the hose leaves the platform winch and plugs into the connector, with no nozzle to handle. When the train is ready to leave, run the winch so it reels the slack back in before the train pulls away, or break the link with the wrench. A connector also works between two cars of the same train, to share water or fuel along a consist.</p>"
+   },
+   {
+    "id": "conseils",
+    "title": "Tips",
+    "html": "<p>The connector is the right part for a link that does not move: platform tank, tanker, fixed boiler. For a long run, space the Rope Connectors a few blocks apart to limit the slack, and remember the fluid goes no further than the pump pushes: a long line needs a fast pump.</p>"
+   }
+  ],
+  "sources": [
+   "Code, data and Ponder storyboards: Create: Loconautics 0.1.3 BETA, public repository github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (last before the move to 0.1.4); its 26 Ponder structures and en_us.json are byte-identical to the loconautics-0.1.3BETA.jar of the Create France modpack",
+   "License: code and data under MIT; textures, models, sounds and lang files all rights reserved (Lycoris). Our videos and images are renders from our own engine; our texts are original, no Ponder text is copied",
+   "Numbers: config/LoconauticsConfig.java (defaults), content/combustion/SmallEngineTuning.java and CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java; experimental features: common/experimental/ExperimentalFeature.java and the modpack's config/loconautics-experimental.toml",
+   "Recipes: data/loconautics/recipe/*.json in the 0.1.3 BETA jar",
+   "Simulated 1.3.2 blocks (Portable Engine, Rope Connector, Physics Assembler): jar shipped with Create Aeronautics 1.3.2; code MIT, art all rights reserved (The Simulated Team)"
+  ]
+ }
+}

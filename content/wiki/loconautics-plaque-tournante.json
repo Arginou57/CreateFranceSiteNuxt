@@ -1,0 +1,383 @@
+{
+ "slug": "loconautics-plaque-tournante",
+ "name": "Roulement de plaque tournante",
+ "blockId": "loconautics:turntable_bearing",
+ "category": "loconautics",
+ "title": "Plaque tournante — Create: Loconautics, guide",
+ "description": "Le roulement de plaque tournante de Create: Loconautics fait pivoter des rails : assemblage, programme, déclenchement, horaires.",
+ "datePublished": "2026-11-24",
+ "dateModified": "2026-11-24",
+ "createVersion": "6.0.10 · Create: Loconautics 0.1.3 BETA",
+ "mcVersion": "1.21.1",
+ "intro": "Le <strong>roulement de plaque tournante</strong> (Turntable Bearing) fait pivoter la structure collée au-dessus de lui, voie comprise, par angles exacts. C'est la plaque tournante des dépôts : un train s'y gare, la plaque le tourne vers une autre voie, il repart. Elle obéit à des impulsions de redstone et à un petit programme d'instructions, ou directement aux <a href=\"/wiki/planning-de-train\">horaires</a> des trains.",
+ "facts": [
+  {
+   "label": "Rôle",
+   "value": "Fait tourner la structure collée devant lui, par angles exacts"
+  },
+  {
+   "label": "Vitesse",
+   "value": "Donnée par une roue dentée contre le roulement"
+  },
+  {
+   "label": "Stress",
+   "value": "4 SU par tr/min de la plaque (turntable suImpact)"
+  },
+  {
+   "label": "Programme",
+   "value": "5 instructions : tourner (45° à 360°), délai (jusqu'à 30 s), attendre, fin, horaire"
+  },
+  {
+   "label": "Déclenchement",
+   "value": "Impulsion, répéter tant qu'alimenté, sens alterné"
+  },
+  {
+   "label": "Trains",
+   "value": "Instruction « horaire » : tourne seule pour les trains qui la traversent"
+  },
+  {
+   "label": "Version",
+   "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10"
+  }
+ ],
+ "recipe": {
+  "label": "Fabrication à l'établi",
+  "grid": [
+   [
+    null,
+    "Boussole",
+    null
+   ],
+   [
+    "Lingot de laiton",
+    "Roulement pivotant (Simulated)",
+    "Lingot de laiton"
+   ],
+   [
+    null,
+    "Poudre de redstone",
+    null
+   ]
+  ],
+  "items": [
+   [
+    null,
+    "minecraft:compass",
+    null
+   ],
+   [
+    "create:brass_ingot",
+    "simulated:swivel_bearing",
+    "create:brass_ingot"
+   ],
+   [
+    null,
+    "minecraft:redstone",
+    null
+   ]
+  ],
+  "result": "1 roulement de plaque tournante",
+  "resultItem": "loconautics:turntable_bearing"
+ },
+ "videos": [
+  {
+   "id": "loco_turntable_assembly",
+   "name": "Plaque tournante : assembler et tourner d'un quart de tour",
+   "description": "Le roulement, son plateau et une section de voie collée ; une roue dentée donne la vitesse, chaque appui sur le bouton tourne la voie de 90°.",
+   "duration": "PT22S",
+   "chapters": [
+    {
+     "t": 1.2,
+     "section": "turntable-assembly"
+    },
+    {
+     "t": 5.54,
+     "section": "turntable-assembly"
+    },
+    {
+     "t": 8.04,
+     "section": "turntable-assembly"
+    },
+    {
+     "t": 10.45,
+     "section": "turntable-assembly"
+    },
+    {
+     "t": 15.12,
+     "section": "turntable-assembly"
+    }
+   ]
+  },
+  {
+   "id": "loco_turntable_instructions",
+   "name": "Plaque tournante : le programme d'instructions",
+   "description": "L'interface du roulement : tourner de 90°, attendre 2 s, attendre un signal, tourner de 45° en arrière à double vitesse, fin ; la plaque exécute la liste.",
+   "duration": "PT22S",
+   "chapters": [
+    {
+     "t": 1.49,
+     "section": "turntable-instructions"
+    },
+    {
+     "t": 3.54,
+     "section": "turntable-instructions"
+    },
+    {
+     "t": 5.46,
+     "section": "turntable-instructions"
+    },
+    {
+     "t": 7.38,
+     "section": "turntable-instructions"
+    },
+    {
+     "t": 9.08,
+     "section": "turntable-instructions"
+    },
+    {
+     "t": 18.33,
+     "section": "turntable-instructions"
+    }
+   ]
+  },
+  {
+   "id": "loco_turntable_trigger",
+   "name": "Plaque tournante : les modes de déclenchement",
+   "description": "Le panneau de réglage du roulement : une impulsion joue la liste une fois, puis le mode répéter et le mode sens alterné.",
+   "duration": "PT22S",
+   "chapters": [
+    {
+     "t": 1.19,
+     "section": "turntable-trigger"
+    },
+    {
+     "t": 5.31,
+     "section": "turntable-trigger"
+    },
+    {
+     "t": 7.54,
+     "section": "turntable-trigger"
+    },
+    {
+     "t": 15.46,
+     "section": "turntable-trigger"
+    }
+   ]
+  },
+  {
+   "id": "loco_turntable_schedule",
+   "name": "Plaque tournante : laisser les horaires la piloter",
+   "description": "La première instruction devient « horaire » ; un train dont l'horaire vise l'autre branche s'arrête au centre, la plaque le tourne, il repart et la plaque revient.",
+   "duration": "PT24S",
+   "chapters": [
+    {
+     "t": 3.5,
+     "section": "turntable-schedule"
+    },
+    {
+     "t": 5.9,
+     "section": "turntable-schedule"
+    },
+    {
+     "t": 10.32,
+     "section": "turntable-schedule"
+    },
+    {
+     "t": 13.64,
+     "section": "turntable-schedule"
+    },
+    {
+     "t": 19.72,
+     "section": "turntable-schedule"
+    },
+    {
+     "t": 21.38,
+     "section": "turntable-schedule"
+    }
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "id": "turntable-assembly",
+   "title": "Assembler la plaque",
+   "image": "loco_turntable_assembly_vue.webp",
+   "alt": "Une section de voie posée sur le roulement de plaque tournante, une roue dentée à côté",
+   "html": "<p>Le roulement s'accroche au bloc qui est <strong>devant lui</strong> (au-dessus, posé au sol). Construis la plaque : une section de <a href=\"/wiki/rail-de-train\">voie</a> sur des blocs, puis sélectionne tout ce qui doit tourner avec la <a href=\"/wiki/colle-extra-forte\">colle extra-forte</a>. Le roulement s'assemble ensuite d'un clic droit ; le plateau de plaque tournante apparaît entre les deux. Une <a href=\"/wiki/roue-dentee\">roue dentée</a> contre le roulement fixe la vitesse de rotation. Chaque impulsion de redstone tourne alors la plaque d'un angle donné (90° par défaut), et elle garde cet angle jusqu'à l'impulsion suivante.</p>",
+   "video": "loco_turntable_assembly"
+  },
+  {
+   "id": "turntable-instructions",
+   "title": "Le programme d'instructions",
+   "image": "loco_turntable_instructions_vue.webp",
+   "alt": "Le programme du roulement : cinq instructions, l'une encadrée",
+   "html": "<p>Accroupi, un clic droit ouvre le programme du roulement : <strong>cinq instructions</strong> au plus, lues de haut en bas. <strong>Tourner</strong> fait pivoter d'un angle exact, de 45° en 45° jusqu'à un tour complet ; les flèches à côté choisissent le sens et doublent la vitesse (→, ≫, ←, ≪). <strong>Délai</strong> immobilise la plaque un moment (jusqu'à 600 ticks, soit 30 s). <strong>Attendre</strong> met la liste en pause jusqu'au signal de redstone suivant, et <strong>Fin</strong> l'arrête : elle reprendra au début au signal suivant.</p>",
+   "video": "loco_turntable_instructions"
+  },
+  {
+   "id": "turntable-trigger",
+   "title": "Les modes de déclenchement",
+   "image": "loco_turntable_trigger_vue.webp",
+   "alt": "La plaque tournante qui pivote après une impulsion de redstone",
+   "html": "<p>Le petit panneau de réglage sur le roulement (à régler comme une valeur de Create) choisit comment la redstone lance le programme. <strong>Impulsion</strong> le joue une fois par signal. <strong>Répéter tant qu'alimenté</strong> le recommence tant que le signal dure. <strong>Sens alterné</strong> inverse les rotations à chaque signal : la plaque va, puis revient.</p>",
+   "video": "loco_turntable_trigger"
+  },
+  {
+   "id": "turntable-schedule",
+   "title": "Piloter par les horaires",
+   "image": "loco_turntable_schedule_vue.webp",
+   "alt": "Un train arrêté au centre de la plaque, tourné vers l'autre branche",
+   "html": "<p>Si la première instruction est <strong>Horaire</strong>, ce sont les trains qui commandent : plus besoin de redstone. Les rails de la plaque doivent rejoindre ceux des branches autour. Un train dont le <a href=\"/wiki/planning-de-train\">planning</a> mène à une autre branche s'arrête <strong>centré</strong> sur la plaque, qui le tourne face à cette branche ; il repart, puis la plaque revient à sa position de départ. La roue dentée doit recevoir de la rotation, et la plaque doit être au moins aussi longue que le train.</p>",
+   "video": "loco_turntable_schedule"
+  },
+  {
+   "id": "a-savoir",
+   "title": "À savoir",
+   "html": "<p><strong>Quelques programmes utiles.</strong> Pour une plaque de dépôt à deux voies : « tourner 180° » puis « fin », en mode Impulsion, et un bouton par voie. Pour un pont tournant qui s'ouvre et se referme : « tourner 90° », « délai », « tourner 90° en arrière », « fin ». Pour une plaque qui ne bouge que sur ordre des trains : une seule ligne « horaire ». La plaque tourne à la vitesse de sa roue dentée : une petite vitesse ménage le stress et laisse le temps de voir venir, une grande vitesse fait gagner du temps aux trains.</p>"
+  },
+  {
+   "id": "conseils",
+   "title": "Conseils",
+   "html": "<p>La plaque coûte 4 SU par tr/min de rotation : une plaque lente et légère se contente d'un petit moteur, mais plus elle tourne vite, plus elle demande. Garde les rails de la plaque exactement au niveau de ceux des branches. Pour essayer un programme, laisse le mode Impulsion et un bouton à côté du roulement, puis passe à « Horaire » une fois le dépôt prêt.</p>"
+  }
+ ],
+ "related": [
+  "create-loconautics",
+  "loconautics-plaque-tournante-depot",
+  "planning-de-train",
+  "rail-de-train",
+  "station-de-train",
+  "colle-extra-forte",
+  "signal-de-train"
+ ],
+ "sources": [
+  "Code, données et storyboards Ponder : Create: Loconautics 0.1.3 BETA, dépôt public github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (dernier avant le passage à 0.1.4) ; ses 26 structures Ponder et son en_us.json sont identiques octet pour octet au jar loconautics-0.1.3BETA.jar du modpack Create France",
+  "Licence : code et données sous MIT ; textures, modèles, sons et fichiers de langue « tous droits réservés » (Lycoris). Nos vidéos et images sont des rendus de notre moteur ; nos textes sont originaux, aucun texte du Ponder n'est recopié",
+  "Chiffres : config/LoconauticsConfig.java (valeurs par défaut), content/combustion/SmallEngineTuning.java et CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java ; fonctions expérimentales : common/experimental/ExperimentalFeature.java et config/loconautics-experimental.toml du modpack",
+  "Recettes : data/loconautics/recipe/*.json du jar 0.1.3 BETA",
+  "Blocs de Simulated 1.3.2 (moteur portable, raccord de corde, assembleur physique) : jar livré avec Create Aeronautics 1.3.2 ; code MIT, art tous droits réservés (The Simulated Team)"
+ ],
+ "en": {
+  "slugEn": "loconautics-turntable-bearing",
+  "name": "Turntable Bearing",
+  "title": "Turntable Bearing — Create: Loconautics guide",
+  "description": "The Create: Loconautics Turntable Bearing turns sections of track: assembly, speed, the instruction list, trigger modes and train schedules.",
+  "intro": "The <strong>Turntable Bearing</strong> swings the glued structure above it, rails included, by precise angles. Think of an engine shed: a train rolls onto the deck, the deck aims it at another track, and off it goes. It reacts to redstone pulses and to a five-line program, or takes its orders straight from the trains' <a href=\"/en/wiki/train-schedule\">schedules</a>.",
+  "facts": [
+   {
+    "label": "Role",
+    "value": "Turns the glued structure in front of it by exact angles"
+   },
+   {
+    "label": "Speed",
+    "value": "Set by a cogwheel against the bearing"
+   },
+   {
+    "label": "Stress",
+    "value": "4 SU per RPM of the plate (turntable suImpact)"
+   },
+   {
+    "label": "Program",
+    "value": "5 instructions: turn (45° to 360°), delay (up to 30 s), await, end, schedule"
+   },
+   {
+    "label": "Trigger",
+    "value": "Pulse, repeat while powered, alternate direction"
+   },
+   {
+    "label": "Trains",
+    "value": "Schedule instruction: turns by itself for trains crossing it"
+   },
+   {
+    "label": "Version",
+    "value": "Create: Loconautics 0.1.3 BETA · Create 6.0.10"
+   }
+  ],
+  "recipe": {
+   "label": "Crafting table recipe",
+   "grid": [
+    [
+     null,
+     "Compass",
+     null
+    ],
+    [
+     "Brass Ingot",
+     "Swivel Bearing (Simulated)",
+     "Brass Ingot"
+    ],
+    [
+     null,
+     "Redstone Dust",
+     null
+    ]
+   ],
+   "result": "1 Turntable Bearing"
+  },
+  "videos": [
+   {
+    "id": "loco_turntable_assembly",
+    "name": "Turntable: building it and turning a quarter",
+    "description": "The bearing, its plate and a glued length of track; a cogwheel provides the speed and each button press swings the track round by 90°."
+   },
+   {
+    "id": "loco_turntable_instructions",
+    "name": "Turntable: programming it",
+    "description": "The bearing's program: swing 90°, wait 2 s, wait for redstone, swing 45° back at double speed, stop; the deck plays it through."
+   },
+   {
+    "id": "loco_turntable_trigger",
+    "name": "Turntable: how redstone starts it",
+    "description": "The bearing's value box: a pulse plays the program once, then the repeat mode and the alternating mode."
+   },
+   {
+    "id": "loco_turntable_schedule",
+    "name": "Turntable: run by train schedules",
+    "description": "Its first line becomes Schedule; a train heading for the other branch halts in the middle, the deck turns it, it leaves and the deck swings back."
+   }
+  ],
+  "sections": [
+   {
+    "id": "turntable-assembly",
+    "title": "Building the turntable",
+    "alt": "A section of track on the Turntable Bearing, a cogwheel beside it",
+    "html": "<p>The bearing grabs whatever block <strong>sits on its working face</strong> (the top, for a bearing on the ground). Build the deck: a stretch of <a href=\"/en/wiki/train-track\">track</a> on blocks, then mark everything that must swing with <a href=\"/en/wiki/super-glue\">Super Glue</a>. Using the bearing assembles it, and a Turntable Plate appears in between. A <a href=\"/en/wiki/cogwheel\">cogwheel</a> touching the bearing sets how quickly it swings. From then on, every redstone pulse swings the deck by a fixed amount (90° by default), and it stays there until the following pulse.</p>"
+   },
+   {
+    "id": "turntable-instructions",
+    "title": "Programming it",
+    "alt": "The bearing's program: five lines, one highlighted",
+    "html": "<p>Shift-use the bearing to edit its program: <strong>five lines</strong> at most, played from the top. <strong>Turn</strong> swings the deck by a precise angle in 45° increments, up to 360°; the arrow setting next to it chooses the way round and can double the pace (→, ≫, ←, ≪). <strong>Delay</strong> pauses the deck for a while, 600 ticks (30 s) at most. <strong>Await</strong> holds the program until redstone arrives, and <strong>End</strong> finishes it; the following signal plays it again from the top.</p>"
+   },
+   {
+    "id": "turntable-trigger",
+    "title": "How redstone starts it",
+    "alt": "The turntable swinging after a redstone pulse",
+    "html": "<p>A small value box on the bearing, adjusted like other Create settings, selects what redstone does. <strong>Pulse</strong> plays the program a single time per signal. <strong>Repeat While Powered</strong> keeps replaying it for the length of the signal. <strong>Alternate Direction</strong> mirrors every turn on each new signal, so the deck swings out and then back.</p>"
+   },
+   {
+    "id": "turntable-schedule",
+    "title": "Run by schedules",
+    "alt": "A train halted in the middle of the deck, turned towards the other branch",
+    "html": "<p>Make the first line <strong>Schedule</strong> and the trains take over; redstone is no longer needed. The deck rails have to line up with the rails of the surrounding branches. When a train's <a href=\"/en/wiki/train-schedule\">schedule</a> sends it down another branch, it halts <strong>in the middle</strong> of the deck, the deck points it at that branch, the train leaves, and the deck swings back home. Keep the cogwheel powered and build the deck no shorter than your longest train.</p>"
+   },
+   {
+    "id": "a-savoir",
+    "title": "Good to know",
+    "html": "<p><strong>A few handy programs.</strong> For a two-track shed deck: « turn 180° » then « end », in Pulse mode, with one button per track. For a swing bridge that opens and closes: « turn 90° », « delay », « turn 90° backwards », « end ». For a deck that only moves when trains ask: a single « schedule » line. The deck spins at the speed of its cogwheel: a low speed spares stress and is easy to follow, a high speed saves the trains time. Whatever the program, the deck always comes to rest on the exact angle it was asked for, so the rails meet cleanly.</p>"
+   },
+   {
+    "id": "conseils",
+    "title": "Tips",
+    "html": "<p>The plate costs 4 SU per RPM of rotation: a slow, light plate makes do with a small motor, but the faster it turns, the more it asks. Keep the rails of the plate exactly level with those of the legs. To try a program, keep the Pulse mode and a button next to the bearing, then switch to Schedule once the depot is ready.</p>"
+   }
+  ],
+  "sources": [
+   "Code, data and Ponder storyboards: Create: Loconautics 0.1.3 BETA, public repository github.com/Creators-of-Locomotion/Create-Loconautics, commit 21970ec (last before the move to 0.1.4); its 26 Ponder structures and en_us.json are byte-identical to the loconautics-0.1.3BETA.jar of the Create France modpack",
+   "License: code and data under MIT; textures, models, sounds and lang files all rights reserved (Lycoris). Our videos and images are renders from our own engine; our texts are original, no Ponder text is copied",
+   "Numbers: config/LoconauticsConfig.java (defaults), content/combustion/SmallEngineTuning.java and CombustionFuel.java, content/transmission/TransmissionBlockEntity.java, content/hose/winch/HoseWinchBlockEntity.java, content/boiler/firebox/FireboxBlockEntity.java; experimental features: common/experimental/ExperimentalFeature.java and the modpack's config/loconautics-experimental.toml",
+   "Recipes: data/loconautics/recipe/*.json in the 0.1.3 BETA jar",
+   "Simulated 1.3.2 blocks (Portable Engine, Rope Connector, Physics Assembler): jar shipped with Create Aeronautics 1.3.2; code MIT, art all rights reserved (The Simulated Team)"
+  ]
+ }
+}

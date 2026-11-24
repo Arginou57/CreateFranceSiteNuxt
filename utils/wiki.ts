@@ -258,6 +258,17 @@ export function wikiPagesUsing(id: string, exceptSlug?: string): WikiPage[] {
 // so they can be filled for every page without touching the page files; a "chapters" field in the page wins.
 const chapterFile = (files['../content/wiki/_chapters.json'] as Record<string, Record<string, WikiChapter[]>>) || {}
 
+// Extra « related » links kept apart from the pages (content/wiki/_related.json, { "<slug-fr>": ["<slug-fr>", ...] }), so the
+// main session can link new series from existing pages while other agents edit those page files.
+const relatedFile = (files['../content/wiki/_related.json'] as Record<string, string[]>) || {}
+
+/** related slugs of a page: its own field, then the extra ones (no duplicates) */
+export function wikiRelated(page: Pick<WikiPage, 'slug' | 'related'>): string[] {
+  const out = [...(page.related || [])]
+  for (const s of relatedFile[page.slug] || []) if (!out.includes(s)) out.push(s)
+  return out
+}
+
 export function wikiVideoChapters(slug: string, v: WikiVideo): WikiChapter[] {
   return v.chapters?.length ? v.chapters : chapterFile[slug]?.[v.id] || []
 }
