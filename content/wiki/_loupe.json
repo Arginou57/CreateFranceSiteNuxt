@@ -4,6 +4,18 @@
     "aero_envelope",
     "aero_vent"
   ],
+  "aeronautics-capteurs": [
+    "sim_altitude",
+    "sim_gimbal",
+    "sim_navtable",
+    "sim_velocity"
+  ],
+  "aeronautics-cordes-et-amarrage": [
+    "sim_docking",
+    "sim_rope",
+    "sim_rope_conn",
+    "sim_rope_zip"
+  ],
   "aeronautics-helices": [
     "aero_prop_size",
     "aero_thrust",
@@ -13,10 +25,46 @@
     "aero_levitite",
     "aero_levitite_blend"
   ],
+  "aeronautics-moteurs-et-transmission": [
+    "sim_analog",
+    "sim_auger",
+    "sim_auger_extract",
+    "sim_dir_gearshift",
+    "sim_engine",
+    "sim_torsion"
+  ],
+  "aeronautics-outils": [
+    "aero_potato",
+    "sim_honey",
+    "sim_honey_super"
+  ],
+  "aeronautics-pilotage": [
+    "sim_nozzle",
+    "sim_throttle",
+    "sim_wheel",
+    "sim_wheel_cmp"
+  ],
+  "aeronautics-redstone": [
+    "sim_accu",
+    "sim_dir_recv",
+    "sim_inductor",
+    "sim_magnet",
+    "sim_mod_recv"
+  ],
   "aeronautics-roulement-gyroscopique": [
     "aero_gyro_heli",
     "aero_gyro_island",
     "aero_gyro_redstone"
+  ],
+  "aeronautics-roulement-pivot": [
+    "sim_swivel",
+    "sim_swivel_pass",
+    "sim_swivel_unlock"
+  ],
+  "aeronautics-voiles-et-enveloppes": [
+    "sim_sail",
+    "sim_sail_drag",
+    "sim_sail_mill"
   ],
   "assembler-un-train": [
     "train_bogeys"
@@ -37,12 +85,33 @@
     "cbc_auto_custom",
     "cbc_auto_using"
   ],
+  "baguette-de-symetrie": [
+    "symmetry_wand"
+  ],
   "bassin": [
     "basin",
     "basin_output"
   ],
   "bec-verseur": [
     "spout"
+  ],
+  "blocs-imitateurs": [
+    "copycat_apply"
+  ],
+  "bnb-chaines-de-roues-dentees": [
+    "bnb_chain_axis",
+    "bnb_chain_flat"
+  ],
+  "bnb-entretoises": [
+    "bnb_strut"
+  ],
+  "bnb-nixie": [
+    "bnb_large_nixie",
+    "bnb_nixie_board"
+  ],
+  "bnb-tuyaux-et-reservoirs-teints": [
+    "bnb_dyed_pipes",
+    "bnb_dyed_tank"
   ],
   "boite-a-roues-dentees": [
     "gearbox"
@@ -93,6 +162,13 @@
   "cle": [
     "wrench_rotate"
   ],
+  "coasters-rails": [
+    "coast_chainlift",
+    "coast_track"
+  ],
+  "coasters-wagons": [
+    "coast_cart"
+  ],
   "coffre-a-objet-renforce": [
     "vault_sizes",
     "vault_storage"
@@ -100,6 +176,33 @@
   "colle-extra-forte": [
     "sticker",
     "super_glue"
+  ],
+  "connected-batterie-cinetique": [
+    "conn_battery",
+    "conn_battery_auto",
+    "conn_battery_chain"
+  ],
+  "connected-embrayages": [
+    "conn_inverted_clutch",
+    "conn_inverted_gearshift"
+  ],
+  "connected-logistique": [
+    "conn_access_port",
+    "conn_bridge",
+    "conn_bridge_filter",
+    "conn_dashboard"
+  ],
+  "connected-pont-cinetique": [
+    "conn_kinetic_bridge"
+  ],
+  "connected-redstone": [
+    "conn_linked_tx",
+    "conn_pulse_gen"
+  ],
+  "connected-transmissions": [
+    "conn_chain_cogwheel",
+    "conn_crank_wheel",
+    "conn_parallel_gearbox"
   ],
   "contact-de-redstone": [
     "redstone_contact"
@@ -208,6 +311,9 @@
   "gisements-de-petrole": [
     "cdg_oil_chunk"
   ],
+  "horloge-a-coucou": [
+    "cuckoo_clock"
+  ],
   "horloges-et-impulsions": [
     "pulse_extender",
     "pulse_repeater",
@@ -234,6 +340,20 @@
   "liaison-de-redstone": [
     "link_freq",
     "link_modes"
+  ],
+  "lightworks-feux-de-vehicule": [
+    "lw_headlight",
+    "lw_tail"
+  ],
+  "lightworks-projecteurs": [
+    "lw_floodlight",
+    "lw_pan_tilt",
+    "lw_searchlight"
+  ],
+  "lightworks-signalisation": [
+    "lw_beacon",
+    "lw_edge",
+    "lw_warning"
   ],
   "loconautics-assembler-une-locomotive": [
     "loco_casing_bogeys",
@@ -346,6 +466,12 @@
   "observateur-intelligent": [
     "smart_observer"
   ],
+  "offroad-vehicules-a-roues": [
+    "off_borehead",
+    "off_borehead_dig",
+    "off_borehead_eff",
+    "off_vehicle"
+  ],
   "ore-excavation-foreuse": [
     "exc_drilling"
   ],
@@ -404,6 +530,31 @@
     "mechanical_press",
     "mechanical_press_compacting"
   ],
+  "propulsion-adaptateur-inclinaison": [
+    "prop_tilt"
+  ],
+  "propulsion-bruleurs": [
+    "prop_liquid_burner",
+    "prop_solid_burner"
+  ],
+  "propulsion-moteur-stirling": [
+    "prop_stirling_liquid",
+    "prop_stirling_solid"
+  ],
+  "propulsion-propulseur": [
+    "prop_thruster",
+    "prop_thruster_2x2",
+    "prop_thruster_3x3"
+  ],
+  "propulsion-propulseur-vectoriel": [
+    "prop_vector_creative",
+    "prop_vector_fe",
+    "prop_vector_liquid"
+  ],
+  "propulsion-transmission-redstone": [
+    "prop_transmission_direct",
+    "prop_transmission_incremental"
+  ],
   "rail-de-train": [
     "track_bends",
     "track_chunks",
@@ -454,6 +605,9 @@
     "bearing_stabilized",
     "clockwork_hour",
     "clockwork_minute"
+  ],
+  "schematiques": [
+    "schematicannon_build"
   ],
   "scie-mecanique": [
     "saw_breaker",
@@ -532,5 +686,8 @@
   "verrou-alimente": [
     "powered_latch",
     "toggle_latch"
+  ],
+  "volant-d-inertie": [
+    "flywheel_spin"
   ]
 }
